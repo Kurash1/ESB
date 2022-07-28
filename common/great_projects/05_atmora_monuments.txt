@@ -191,7 +191,7 @@ dragon_sanctuary = {
 	
 	type = monument
 
-	can_use_modifiers_trigger = {
+	build_trigger = {
 		owner = {
 			OR = {
 				religion = dragon_cult
@@ -220,7 +220,7 @@ dragon_sanctuary = {
 		}
 	}
 	
-	can_use_modifiers_trigger = {
+	can_upgrade_trigger = {
 		owner = {
 			OR = {
 				religion = dragon_cult
