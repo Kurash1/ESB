@@ -1,0 +1,53 @@
+cult_of_miraak_overtake = {
+	potential = {
+		owns = 3314
+	}
+	can_start = {
+		all_owned_province = {
+			OR = {
+				area = morrowind_23_la
+				area = morrowind_1_la
+			}
+		}
+		num_of_cities = 20
+		NOT = {
+			religion = miraak_cult
+		}
+		NOT = {
+			has_country_flag = es_miraak_disaster_flag
+		}
+	}
+	
+	can_stop = {
+		always = no
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			always = yes
+		}
+	}
+	
+	can_end = {
+		OR = {
+			religion = miraak_cult
+			has_country_flag = es_miraak_disaster_flag_end
+		}
+	}
+	
+	modifier = {
+		global_unrest = 3
+		religious_unity = -0.1
+		global_missionary_strength = -0.03
+	}
+	
+	on_start = es_miraak.1
+	#on_end = es_6_scenario.11
+	
+	on_monthly = {
+		events = {
+			
+		}
+	}
+}
