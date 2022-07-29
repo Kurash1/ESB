@@ -516,7 +516,7 @@ slave_market_of_tear = {
 
 	build_trigger = { 
 		owner = {
-			has_estate = slavers
+			has_estate = estate_slavers
 		}
 	}
 
@@ -525,12 +525,12 @@ slave_market_of_tear = {
 
 	can_use_modifiers_trigger = {
 		owner = {
-			has_estate = slavers
+			has_estate = estate_slavers
 		}
 	}
 	can_upgrade_trigger = {
 		owner = {
-			has_estate = slavers
+			has_estate = estate_slavers
 		}
 	}
 	keep_trigger = { always = yes }
@@ -551,7 +551,7 @@ slave_market_of_tear = {
 		area_modifier = { }
 		country_modifiers = { 
 			trade_company_investment_cost = -0.15 
-			slavers_loyalty_modifier = 0.1
+			estate_slavers_loyalty_modifier = 0.1
 			global_trade_goods_size_modifier = 0.05
 			ship_power_propagation = 0.05
 		}
@@ -565,7 +565,7 @@ slave_market_of_tear = {
 		area_modifier = { }
 		country_modifiers = { 
 			trade_company_investment_cost = -0.25 
-			slavers_loyalty_modifier = 0.2
+			estate_slavers_loyalty_modifier = 0.2
 			global_trade_goods_size_modifier = 0.075
 			ship_power_propagation = 0.10
 		}
@@ -579,7 +579,7 @@ slave_market_of_tear = {
 		area_modifier = { }
 		country_modifiers = { 
 			trade_company_investment_cost = -0.35 
-			slavers_loyalty_modifier = 0.3
+			estate_slavers_loyalty_modifier = 0.3
 			global_trade_goods_size_modifier = 0.1
 			ship_power_propagation = 0.15
 		}
