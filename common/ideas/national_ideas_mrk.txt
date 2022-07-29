@@ -1,0 +1,57 @@
+MRK_ideas = {
+	start = {
+		tolerance_own = 2.5
+		max_absolutism = 15
+	}
+	bonus = {
+		diplomatic_reputation = 2
+	}
+
+	trigger = {
+		tag = MRK
+	}
+	free = yes
+	
+	# First Dragonborn
+	# Miraak, which means "Allegiance Guide" in the dragon language, was originally a Dragon Priest in the Merethic Era. He is the First Dragonborn, although that term would not become used until after the time of St. Alessia, the first Dragonborn recorded in history. He ruled over the island of Solstheim, where a large temple was dedicated to him.
+	mrk_ideas_1 = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	# Acolyte Priests
+	# Three Dragon Priests, Ahzidal, Dukaan and Zahkriisos, joined him and became his three most powerful servants, called the "Acolyte Priests". They master fire, ice and lightning shouts respectively and wield powerful spells at hand.
+	mrk_ideas_2 = {
+		fire_damage = 0.075
+		shock_damage = 0.075
+	}	
+	# Hermaeus Lore
+	# At some point, Miraak sought out the teachings of Hermaeus Mora, the Demon of Knowledge, and became his champion. Hermaeus Mora taught him the power to bend the will of dragons. Using this knowledge and his innate ability to devour the souls of dragonkind, he turned on his winged overlords and killed a great number of them.
+	mrk_ideas_3 = {
+		all_power_cost = -0.075
+	}
+	# Bend the Will
+	# Your voice bends the very stones to your will. As it gains power, animals, people, and even dragons must do your bidding.
+	mrk_ideas_4 = {
+		capture_ship_chance = 0.1
+		global_manpower_modifier = 0.15
+	}
+	# The Temple of Miraak
+	# The Temple of Miraak is a structure located in the center of the island of Solstheim. It served as the stronghold of Miraak in ancient times, before it was destroyed by the Dragon Cult. Renovations began on the ruins in 4E 201 when Miraak attempted to return to Tamriel, but were left incomplete with Miraak's defeat.
+	mrk_ideas_5 = {
+		governing_capacity_modifier = 0.15
+	}
+	# Seekers
+	# Your lies fall on deaf ears, Deceiver! We know you are the False Dragonborn!
+	mrk_ideas_6 = {
+		diplomats = 1
+		global_spy_defence = 0.10
+	}
+	# All-Maker Stones
+	# Here in his shrine. Here in his temple. That they have forgotten. Here do we toil. That we might remember. By the night we reclaim. Here we reclaim. What by day was stolen. What faithless minds have stolen. Far from ourselves. He grows ever near to us. Our eyes once were blinded. Now through him do we see. Our hands once were idle. Now through them does he speak. And when the world shall listen. And when the world shall see. And when the world remembers. That world will cease to be.
+	mrk_ideas_7 = {
+		province_warscore_cost = -0.2
+	}
+}

@@ -413,6 +413,14 @@ country_event = {
 		name = es_miraak.6.a
 		change_government = theocracy
 		change_religion = miraak_cult
+		
+		change_tag = MRK
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 	}
 	
 	#How about we change our religion?
