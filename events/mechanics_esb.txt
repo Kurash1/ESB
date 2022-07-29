@@ -45,20 +45,28 @@ province_event = {
 	option = {
 		name = es_esb.1.a
 		trigger = {
-			OR = {
-				has_terrain = hills 
-				has_terrain = mountain
-				has_terrain = highlands 
-				has_terrain = deadlands_boiling_coast
-				has_terrain = deadlands_burning_hills
-				
-				has_terrain = dwemer_stronghold
-				has_terrain = deadlands_daedric_keep
-				has_terrain = deadlands_volcanic_peak
-				has_terrain = deadlands_lava_cave
-				
-				has_terrain = ashlands 
-				has_terrain = lava
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					has_terrain = desert
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_sulfuric_desolation
+				}
 			}
 		}
 		
@@ -73,7 +81,7 @@ province_event = {
 				}
 			}
 			
-			# 25 x Base Price x Terrain modifier (50% to 200%)
+			# 25 x Base Price x Terrain modifier (50% to 400%)
 			# 25 x 8.0 x 2.0 = 400
 			
 			adm_power_cost  = 400
@@ -82,8 +90,7 @@ province_event = {
 			
 			change_trade_goods = ebony
 		}
-		
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					has_terrain = dwemer_stronghold
@@ -93,7 +100,7 @@ province_event = {
 				}
 			}
 			
-			# 25 x Base Price x Terrain modifier (50% to 200%)
+			# 25 x Base Price x Terrain modifier (50% to 400%)
 			# 25 x 8.0 x 1.0 = 200
 			
 			adm_power_cost  = 200
@@ -102,8 +109,7 @@ province_event = {
 			
 			change_trade_goods = ebony
 		}
-		
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					has_terrain = ashlands 
@@ -111,7 +117,7 @@ province_event = {
 				}
 			}
 			
-			# 25 x Base Price x Terrain modifier (50% to 200%)
+			# 25 x Base Price x Terrain modifier (50% to 400%)
 			# 25 x 8.0 x 0.5 = 100
 			
 			adm_power_cost  = 100
@@ -119,6 +125,836 @@ province_event = {
 			mil_power_cost  = 100
 			
 			change_trade_goods = ebony
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 8.0 x 4.0 = 100
+			
+			adm_power_cost  = 800
+			dip_power_cost  = 800
+			mil_power_cost  = 800
+			
+			change_trade_goods = ebony
+		}
+	}
+	
+	#Iron
+	option = {
+		name = es_esb.1.b
+		trigger = {
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					has_terrain = desert
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					has_terrain = deadlands_daedric_keep
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					has_terrain = deadlands_sulfuric_desolation
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands 
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 1.5 x 2.0 = 75
+			
+			adm_power_cost  = 75
+			dip_power_cost  = 75
+			mil_power_cost  = 75
+			
+			change_trade_goods = iron
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 1.5 x 1.0 = 200
+			
+			adm_power_cost  = 37
+			dip_power_cost  = 37
+			mil_power_cost  = 37
+			
+			change_trade_goods = iron
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 1.5 x 4.0 = 100
+			
+			adm_power_cost  = 150
+			dip_power_cost  = 150
+			mil_power_cost  = 150
+			
+			change_trade_goods = iron
+		}
+	}
+	
+	#Orichalcum
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					has_terrain = desert
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					has_terrain = deadlands_daedric_keep
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					has_terrain = deadlands_sulfuric_desolation
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands 
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 4.0 x 2.0 = 200
+			
+			adm_power_cost  = 200
+			dip_power_cost  = 200
+			mil_power_cost  = 200
+			
+			change_trade_goods = orichalcum
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 4.0 x 1.0 = 100
+			
+			adm_power_cost  = 100
+			dip_power_cost  = 100
+			mil_power_cost  = 100
+			
+			change_trade_goods = orichalcum
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 4.0 x 4.0 = 400
+			
+			adm_power_cost  = 400
+			dip_power_cost  = 400
+			mil_power_cost  = 400
+			
+			change_trade_goods = orichalcum
+		}
+	}
+	
+	#Quicksilver
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					has_terrain = deadlands_daedric_keep
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					has_terrain = deadlands_sulfuric_desolation
+					
+					region = eastern_deadlands_lr
+					region = western_deadlands_lr
+					region = northern_deadlands_lr
+					region = southern_deadlands_lr
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					has_terrain = desert
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands 
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 4.5 x 2.0 = 225
+			
+			adm_power_cost  = 225
+			dip_power_cost  = 225
+			mil_power_cost  = 225
+			
+			change_trade_goods = quicksilver
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 4.5 x 1.0 = 112
+			
+			adm_power_cost  = 112
+			dip_power_cost  = 112
+			mil_power_cost  = 112
+			
+			change_trade_goods = quicksilver
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 4.5 x 4.0 = 450
+			
+			adm_power_cost  = 450
+			dip_power_cost  = 450
+			mil_power_cost  = 450
+			
+			change_trade_goods = quicksilver
+		}
+	}
+	
+	#Malachite
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					has_terrain = deadlands_daedric_keep
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					has_terrain = desert
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_sulfuric_desolation
+					has_terrain = deadlands_daedric_keep
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					
+					region = wrothgar_lr
+					region = upper_tsakara_lr
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 3.5 x 2.0 = 225
+			
+			adm_power_cost  = 175
+			dip_power_cost  = 175
+			mil_power_cost  = 175
+			
+			change_trade_goods = malachite
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 3.5 x 1.0 = 112
+			
+			adm_power_cost  = 87
+			dip_power_cost  = 87
+			mil_power_cost  = 87
+			
+			change_trade_goods = malachite
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = ashlands 
+					has_terrain = lava
+				}
+			}
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 3.5 x 0.5 = 112
+			
+			adm_power_cost  = 43
+			dip_power_cost  = 43
+			mil_power_cost  = 43
+			
+			change_trade_goods = malachite
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 3.5 x 4.0 = 450
+			
+			adm_power_cost  = 350
+			dip_power_cost  = 350
+			mil_power_cost  = 350
+			
+			change_trade_goods = malachite
+		}
+	}
+	
+	#moonstone
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					region = eastern_deadlands_lr
+					region = eastern_coldharbour_lr
+					
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					has_terrain = deadlands_daedric_keep
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					has_terrain = deadlands_sulfuric_desolation
+					
+					region = eastern_deadlands_lr
+					region = western_deadlands_lr
+					region = northern_deadlands_lr
+					region = southern_deadlands_lr
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					has_terrain = desert
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands 
+					
+					region = eastern_deadlands_lr
+					region = eastern_coldharbour_lr
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 5 x 2.0 = 250
+			
+			adm_power_cost  = 250
+			dip_power_cost  = 250
+			mil_power_cost  = 250
+			
+			change_trade_goods = moonstone
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 5 x 1.0 = 125
+			
+			adm_power_cost  = 125
+			dip_power_cost  = 125
+			mil_power_cost  = 125
+			
+			change_trade_goods = moonstone
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 5 x 4.0 = 500
+			
+			adm_power_cost  = 500
+			dip_power_cost  = 500
+			mil_power_cost  = 500
+			
+			change_trade_goods = moonstone
+		}
+	}
+	
+	#copper
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					has_terrain = deadlands_daedric_keep
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					has_terrain = desert
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					has_terrain = deadlands_sulfuric_desolation
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands 
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 2 x 2.0 = 250
+			
+			adm_power_cost  = 100
+			dip_power_cost  = 100
+			mil_power_cost  = 100
+			
+			change_trade_goods = copper
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 2 x 1.0 = 50
+			
+			adm_power_cost  = 50
+			dip_power_cost  = 50
+			mil_power_cost  = 50
+			
+			change_trade_goods = copper
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 2 x 4.0 = 200
+			
+			adm_power_cost  = 200
+			dip_power_cost  = 200
+			mil_power_cost  = 200
+			
+			change_trade_goods = copper
+		}
+	}
+	
+	#corundum
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					has_terrain = deadlands_daedric_keep
+					
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					has_terrain = deadlands_sulfuric_desolation
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					has_terrain = desert
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands 
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 2.5 x 2.0 = 250
+			
+			adm_power_cost  = 125
+			dip_power_cost  = 125
+			mil_power_cost  = 125
+			
+			change_trade_goods = corundum
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 2 x 1.0 = 50
+			
+			adm_power_cost  = 62
+			dip_power_cost  = 62
+			mil_power_cost  = 62
+			
+			change_trade_goods = corundum
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 2 x 4.0 = 200
+			
+			adm_power_cost  = 250
+			dip_power_cost  = 250
+			mil_power_cost  = 250
+			
+			change_trade_goods = corundum
+		}
+	}
+	
+	#coal
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = mudflats
+					
+					has_terrain = glacier
+					has_terrain = drylands
+					has_terrain = desert
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					has_terrain = deadlands_daedric_keep
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					has_terrain = deadlands_sulfuric_desolation
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands 
+					has_terrain = forest 
+					has_terrain = woods
+					has_terrain = taiga
+					
+					region = dragontail_mountains_lr
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 3 x 2.0 = 150
+			
+			adm_power_cost  = 150
+			dip_power_cost  = 150
+			mil_power_cost  = 150
+			
+			change_trade_goods = coal
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 3 x 1.0 = 75
+			
+			adm_power_cost  = 75
+			dip_power_cost  = 75
+			mil_power_cost  = 75
+			
+			change_trade_goods = coal
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 3 x 4.0 = 300
+			
+			adm_power_cost  = 300
+			dip_power_cost  = 300
+			mil_power_cost  = 300
+			
+			change_trade_goods = coal
+		}
+	}
+	
+	#stalhrim
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = steppe
+					has_terrain = savannah
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = desert
+					has_terrain = coastal_desert
+					has_terrain = coastline
+					has_terrain = dwemer_stronghold
+					has_terrain = salt_plains
+					has_terrain = mudflats		    
+					has_terrain = drylands
+					has_terrain = woods
+					has_terrain = deadlands_ashen_wastes
+					has_terrain = deadlands_smouldering_badlands
+					has_terrain = deadlands_boiling_coast
+					has_terrain = deadlands_burning_hills
+					has_terrain = deadlands_daedric_keep
+					has_terrain = deadlands_volcanic_peak
+					has_terrain = deadlands_lava_cave
+					has_terrain = deadlands_sulfuric_desolation
+					
+					NOT = { region = western_atmora_lr }
+					NOT = { region = eastern_atmora_lr }
+					NOT = { area = morrowind_1_la }
+					NOT = { area = morrowind_23_la }
+					
+					region = eastern_deadlands_lr
+					region = western_deadlands_lr
+					region = northern_deadlands_lr
+					region = southern_deadlands_lr
+					
+					NOT = { has_winter = mild_winter }
+					NOT = { has_winter = normal_winter }
+					NOT = { has_winter = severe_winter }
+					
+					has_climate = arid
+					
+					has_climate = tropical
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_terrain = glacier
+					has_terrain = mountain
+					has_terrain = taiga
+					has_terrain = highlands 
+					has_terrain = hills 
+					has_terrain = forest 
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 6.5 x 2.0 = 325
+			
+			adm_power_cost  = 325
+			dip_power_cost  = 325
+			mil_power_cost  = 325
+			
+			change_trade_goods = stalhrim
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_terrain = barrow
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 6.5 x 0.5 = 81
+			
+			adm_power_cost  = 81
+			dip_power_cost  = 81
+			mil_power_cost  = 81
+			
+			change_trade_goods = stalhrim
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 6.5 x 4.0 = 650
+			
+			adm_power_cost  = 650
+			dip_power_cost  = 650
+			mil_power_cost  = 650
+			
+			change_trade_goods = stalhrim
+		}
+	}
+	
+	#dwemer_metal
+	option = {
+		name = es_esb.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					NOT = { culture_group = dwemer_cg }
+					NOT = { has_terrain = dwemer_stronghold }
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					culture_group = dwemer_cg
+					has_terrain = dwemer_stronghold
+				}
+			}
+			
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 5.5 x 0.5 = 68
+			
+			adm_power_cost  = 68
+			dip_power_cost  = 68
+			mil_power_cost  = 68
+			
+			change_trade_goods = dwemer_metal
+		}
+		else = {
+			# 25 x Base Price x Terrain modifier (50% to 400%)
+			# 25 x 5.5 x 4.0 = 550
+			
+			adm_power_cost  = 550
+			dip_power_cost  = 550
+			mil_power_cost  = 550
+			
+			change_trade_goods = dwemer_metal
 		}
 	}
 }
