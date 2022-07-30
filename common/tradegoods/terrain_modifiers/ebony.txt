@@ -1,0 +1,30 @@
+base_price = 8.0
+terrain_mod = 0
+AND = {
+	OR = {
+		superregion = morrowind_superregion
+		region = rift_lr
+		region = valus_mountains_lr
+		area = cyrodiil_75_la
+		area = cyrodiil_73_la
+		area = cyrodiil_74_la
+		area = cyrodiil_72_la
+	}
+	OR = {
+		has_terrain = mountain
+		has_terrain = dwemer_stronghold
+		has_terrain = ashlands
+		has_terrain = orcish_stronghold
+		has_terrain = urban_ald_ruhn
+		has_terrain = urban_red_mountain 
+		province_id = 4256
+		has_terrain = urban_ebonheart
+		province_id = 952
+		has_terrain = urban_forelhost
+		has_terrain = lava
+		has_terrain = urban_necrom
+		has_terrain = urban_kogoruhn
+	}
+}
+terrain_mod = 1
+always = yes
