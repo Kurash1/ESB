@@ -1,0 +1,11 @@
+base_price = 5.5
+terrain_mod = 0
+OR = {
+	AND = {
+		culture_group = dwemer_cg
+		has_owner_culture = yes
+	}
+	has_terrain = dwemer_stronghold
+}
+terrain_mod = 1
+always = yes

@@ -1,0 +1,20 @@
+base_price = 6.5
+terrain_mod = 0
+NOT = {
+	OR = {
+		has_terrain = glacier
+		has_terrain = mountain
+		has_terrain = highlands 
+		has_terrain = desert
+		has_terrain = coastal_desert
+		has_terrain = lava
+		has_terrain = taiga
+		has_terrain = mudflats
+		has_terrain = salt_plains
+		has_climate = arctic
+		has_winter = severe_winter
+		has_winter = normal_winter
+	}
+}
+terrain_mod = 1
+always = yes

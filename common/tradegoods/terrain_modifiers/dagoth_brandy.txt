@@ -1,0 +1,36 @@
+base_price = 10.0
+terrain_mod = 0
+NOT = {
+	OR = {
+		has_terrain = glacier
+		has_terrain = drylands
+		has_terrain = hills 
+		has_terrain = mountain
+		has_terrain = highlands 
+		has_terrain = desert
+		has_terrain = coastal_desert
+		has_terrain = lava
+		has_terrain = salt_plains
+		has_terrain = taiga
+		has_terrain = deadlands_ashen_wastes
+		has_terrain = deadlands_smouldering_badlands
+		has_terrain = deadlands_boiling_coast
+		has_terrain = deadlands_burning_hills
+		has_terrain = deadlands_daedric_keep
+		has_terrain = deadlands_volcanic_peak
+		has_terrain = deadlands_lava_cave
+		has_terrain = deadlands_sulfuric_desolation
+		has_terrain = urban_ardent_hope
+		has_terrain = urban_mehrunes_dagon
+		has_terrain = urban_jynds_foundry
+		has_terrain = urban_zynoahzs_gaol
+		has_terrain = urban_wretched_spire
+		has_terrain = urban_world_breaker
+		has_terrain = urban_razorworks
+	}
+}
+OR = {
+	superregion = morrowind_superregion
+}
+terrain_mod = 1
+always = yes

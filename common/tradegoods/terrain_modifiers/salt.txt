@@ -1,0 +1,34 @@
+base_price = 4
+terrain_mod = 0
+NOT = {
+	OR = {
+		has_terrain = glacier
+		has_terrain = mudflats
+		has_terrain = farmlands
+		has_terrain = grasslands			
+		has_terrain = forest 
+		has_terrain = woods
+		has_terrain = jungle
+		has_terrain = marsh		
+		has_terrain = bayou
+		has_terrain = savannah
+		has_terrain = taiga
+		has_terrain = deadlands_ashen_wastes
+		has_terrain = deadlands_smouldering_badlands
+		has_terrain = deadlands_boiling_coast
+		has_terrain = deadlands_burning_hills
+		has_terrain = deadlands_daedric_keep
+		has_terrain = deadlands_volcanic_peak
+		has_terrain = deadlands_lava_cave
+		has_terrain = deadlands_sulfuric_desolation
+		has_terrain = urban_ardent_hope
+		has_terrain = urban_mehrunes_dagon
+		has_terrain = urban_jynds_foundry
+		has_terrain = urban_zynoahzs_gaol
+		has_terrain = urban_wretched_spire
+		has_terrain = urban_world_breaker
+		has_terrain = urban_razorworks
+	}
+}
+terrain_mod = 1
+always = yes

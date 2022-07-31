@@ -1,0 +1,15 @@
+base_price = 7.5
+terrain_mod = 0
+NOT = {
+	OR = {
+		has_terrain = ashlands
+		has_terrain = lava
+		has_terrain = desert
+		has_terrain = coastal_desert
+		has_terrain = glacier
+		has_terrain = mountain
+		continent = Oblivion
+	}
+}
+terrain_mod = 1
+always = yes

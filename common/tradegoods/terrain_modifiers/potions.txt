@@ -1,0 +1,10 @@
+base_price = 6.5
+terrain_mod = 0
+NOT = {
+	OR = {
+		has_terrain = glacier
+		has_terrain = mountain
+	}
+}
+terrain_mod = 1
+always = yes
