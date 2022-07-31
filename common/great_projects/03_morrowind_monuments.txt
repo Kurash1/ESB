@@ -181,6 +181,7 @@ clockwork_city = {
 
 	build_trigger = { 
 		religion = tribunal_pantheon
+		has_owner_religion = yes
 	}
 
 	on_built = { }
@@ -188,9 +189,11 @@ clockwork_city = {
 
 	can_use_modifiers_trigger = {
 		religion = tribunal_pantheon
+		has_owner_religion = yes
 	}
 	can_upgrade_trigger = {
 		religion = tribunal_pantheon
+		has_owner_religion = yes
 	}
 	keep_trigger = { always = yes }
 
@@ -265,6 +268,7 @@ tribunal_temple = {
 
 	build_trigger = { 
 		religion = tribunal_pantheon
+		has_owner_religion = yes
 	}
 
 	on_built = { }
@@ -272,9 +276,11 @@ tribunal_temple = {
 
 	can_use_modifiers_trigger = {
 		religion = tribunal_pantheon
+		has_owner_religion = yes
 	}
 	can_upgrade_trigger = {
 		religion = tribunal_pantheon
+		has_owner_religion = yes
 	}
 	keep_trigger = { always = yes }
 
@@ -682,16 +688,19 @@ temple_of_miraak = {
 
 	build_trigger = {
 		religion = miraak_cult
+		has_owner_religion = yes
 	}
 
 	on_built = { }
 	on_destroyed = { }
 
 	can_use_modifiers_trigger = {
-		religion = miraak_cult 
+		religion = miraak_cult
+		has_owner_religion = yes
 	}
 	can_upgrade_trigger = {
-		religion = miraak_cult 
+		religion = miraak_cult
+		has_owner_religion = yes
 	}
 	keep_trigger = { always = yes }
 

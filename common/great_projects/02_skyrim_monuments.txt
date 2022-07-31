@@ -26,6 +26,7 @@ twilight_sepulcher = {
 	type = monument
 	build_trigger = {
 		religion = nocturnal_cult
+		has_owner_religion = yes
 	}
 	on_built = {
 	}
@@ -33,9 +34,11 @@ twilight_sepulcher = {
 	}
 	can_use_modifiers_trigger = {
 		religion = nocturnal_cult
+		has_owner_religion = yes
 	}
 	can_upgrade_trigger = {
 		religion = nocturnal_cult
+		has_owner_religion = yes
 	}
 	keep_trigger = {
 		always = yes
