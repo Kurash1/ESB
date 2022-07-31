@@ -1,5 +1,14 @@
 base_price = 5.5
 terrain_mod = 0
 full_idea_group = alchemical_ideas
+culture = vampire
+owner = {
+	NOT = {
+		OR = {
+			accepted_culture = vampire
+			culture = vampire
+		}
+	}
+}
 terrain_mod = 1
 always = yes
