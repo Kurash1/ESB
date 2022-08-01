@@ -1,0 +1,31 @@
+estate_nobles = {
+	icon = 4
+	color = {
+		204
+		0
+		0
+	}
+	# If true, country will get estate
+	trigger = {
+		always = no
+	}
+	# These scale with loyalty & power
+	country_modifier_happy = {
+	}
+	country_modifier_neutral = {
+	}
+	country_modifier_angry = {
+	}
+	land_ownership_modifier = {
+	}
+	province_independence_weight = {
+		factor = 1
+	}
+	# Influence modifiers
+	base_influence = 10
+	privileges = {
+	}
+	agendas = {
+	}
+	influence_from_dev_modifier = 1	#Determines percent influence from development
+}
