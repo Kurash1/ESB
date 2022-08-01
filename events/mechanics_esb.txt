@@ -67,12 +67,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 237
-                dip_power_cost = 237
-                mil_power_cost = 237
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 197
+                    dip_power_cost = 197
+                    mil_power_cost = 197
+                }
+                change_trade_goods = adamantium
             }
-            change_trade_goods = adamantium
+            else = {
+                owner = {
+                    adm_power_cost = 237
+                    dip_power_cost = 237
+                    mil_power_cost = 237
+                }
+                change_trade_goods = adamantium
+            }
         }
     }
     option = {
@@ -124,12 +137,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = ale
             }
-            change_trade_goods = ale
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = ale
+            }
         }
     }
     option = {
@@ -170,12 +196,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 50
-                dip_power_cost = 50
-                mil_power_cost = 50
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 41
+                    dip_power_cost = 41
+                    mil_power_cost = 41
+                }
+                change_trade_goods = algae
             }
-            change_trade_goods = algae
+            else = {
+                owner = {
+                    adm_power_cost = 50
+                    dip_power_cost = 50
+                    mil_power_cost = 50
+                }
+                change_trade_goods = algae
+            }
         }
     }
     option = {
@@ -222,12 +261,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = alto
             }
-            change_trade_goods = alto
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = alto
+            }
         }
     }
     option = {
@@ -258,12 +310,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = amber
             }
-            change_trade_goods = amber
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = amber
+            }
         }
     }
     option = {
@@ -316,12 +381,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 187
-                dip_power_cost = 187
-                mil_power_cost = 187
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 156
+                    dip_power_cost = 156
+                    mil_power_cost = 156
+                }
+                change_trade_goods = argonian_bloodwine
             }
-            change_trade_goods = argonian_bloodwine
+            else = {
+                owner = {
+                    adm_power_cost = 187
+                    dip_power_cost = 187
+                    mil_power_cost = 187
+                }
+                change_trade_goods = argonian_bloodwine
+            }
         }
     }
     option = {
@@ -342,12 +420,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = ayleid_nose_hash
             }
-            change_trade_goods = ayleid_nose_hash
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = ayleid_nose_hash
+            }
         }
     }
     option = {
@@ -394,12 +485,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = beer
             }
-            change_trade_goods = beer
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = beer
+            }
         }
     }
     option = {
@@ -419,12 +523,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 25
-                dip_power_cost = 25
-                mil_power_cost = 25
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 20
+                    dip_power_cost = 20
+                    mil_power_cost = 20
+                }
+                change_trade_goods = bloodgrass
             }
-            change_trade_goods = bloodgrass
+            else = {
+                owner = {
+                    adm_power_cost = 25
+                    dip_power_cost = 25
+                    mil_power_cost = 25
+                }
+                change_trade_goods = bloodgrass
+            }
         }
     }
     option = {
@@ -456,12 +573,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 37
-                dip_power_cost = 37
-                mil_power_cost = 37
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 31
+                    dip_power_cost = 31
+                    mil_power_cost = 31
+                }
+                change_trade_goods = chalcopyrite
             }
-            change_trade_goods = chalcopyrite
+            else = {
+                owner = {
+                    adm_power_cost = 37
+                    dip_power_cost = 37
+                    mil_power_cost = 37
+                }
+                change_trade_goods = chalcopyrite
+            }
         }
     }
     option = {
@@ -496,12 +626,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = chitin
             }
-            change_trade_goods = chitin
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = chitin
+            }
         }
     }
     option = {
@@ -521,12 +664,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 87
-                dip_power_cost = 87
-                mil_power_cost = 87
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 72
+                    dip_power_cost = 72
+                    mil_power_cost = 72
+                }
+                change_trade_goods = clannfear_claws
             }
-            change_trade_goods = clannfear_claws
+            else = {
+                owner = {
+                    adm_power_cost = 87
+                    dip_power_cost = 87
+                    mil_power_cost = 87
+                }
+                change_trade_goods = clannfear_claws
+            }
         }
     }
     option = {
@@ -575,12 +731,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = cloth
             }
-            change_trade_goods = cloth
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = cloth
+            }
         }
     }
     option = {
@@ -612,12 +781,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 75
-                dip_power_cost = 75
-                mil_power_cost = 75
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = coal
             }
-            change_trade_goods = coal
+            else = {
+                owner = {
+                    adm_power_cost = 75
+                    dip_power_cost = 75
+                    mil_power_cost = 75
+                }
+                change_trade_goods = coal
+            }
         }
     }
     option = {
@@ -664,12 +846,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 137
-                dip_power_cost = 137
-                mil_power_cost = 137
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 114
+                    dip_power_cost = 114
+                    mil_power_cost = 114
+                }
+                change_trade_goods = colovian_battlecry
             }
-            change_trade_goods = colovian_battlecry
+            else = {
+                owner = {
+                    adm_power_cost = 137
+                    dip_power_cost = 137
+                    mil_power_cost = 137
+                }
+                change_trade_goods = colovian_battlecry
+            }
         }
     }
     option = {
@@ -720,12 +915,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 237
-                dip_power_cost = 237
-                mil_power_cost = 237
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 197
+                    dip_power_cost = 197
+                    mil_power_cost = 197
+                }
+                change_trade_goods = colovian_brandy
             }
-            change_trade_goods = colovian_brandy
+            else = {
+                owner = {
+                    adm_power_cost = 237
+                    dip_power_cost = 237
+                    mil_power_cost = 237
+                }
+                change_trade_goods = colovian_brandy
+            }
         }
     }
     option = {
@@ -758,12 +966,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 50
-                dip_power_cost = 50
-                mil_power_cost = 50
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 41
+                    dip_power_cost = 41
+                    mil_power_cost = 41
+                }
+                change_trade_goods = copper
             }
-            change_trade_goods = copper
+            else = {
+                owner = {
+                    adm_power_cost = 50
+                    dip_power_cost = 50
+                    mil_power_cost = 50
+                }
+                change_trade_goods = copper
+            }
         }
     }
     option = {
@@ -803,12 +1024,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 37
-                dip_power_cost = 37
-                mil_power_cost = 37
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 31
+                    dip_power_cost = 31
+                    mil_power_cost = 31
+                }
+                change_trade_goods = corals
             }
-            change_trade_goods = corals
+            else = {
+                owner = {
+                    adm_power_cost = 37
+                    dip_power_cost = 37
+                    mil_power_cost = 37
+                }
+                change_trade_goods = corals
+            }
         }
     }
     option = {
@@ -841,12 +1075,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 62
-                dip_power_cost = 62
-                mil_power_cost = 62
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 52
+                    dip_power_cost = 52
+                    mil_power_cost = 52
+                }
+                change_trade_goods = corundum
             }
-            change_trade_goods = corundum
+            else = {
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = corundum
+            }
         }
     }
     option = {
@@ -886,12 +1133,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 150
-                dip_power_cost = 150
-                mil_power_cost = 150
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = crabs
             }
-            change_trade_goods = crabs
+            else = {
+                owner = {
+                    adm_power_cost = 150
+                    dip_power_cost = 150
+                    mil_power_cost = 150
+                }
+                change_trade_goods = crabs
+            }
         }
     }
     option = {
@@ -941,12 +1201,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 62
-                dip_power_cost = 62
-                mil_power_cost = 62
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 52
+                    dip_power_cost = 52
+                    mil_power_cost = 52
+                }
+                change_trade_goods = crops
             }
-            change_trade_goods = crops
+            else = {
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = crops
+            }
         }
     }
     option = {
@@ -997,12 +1270,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 212
-                dip_power_cost = 212
-                mil_power_cost = 212
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 177
+                    dip_power_cost = 177
+                    mil_power_cost = 177
+                }
+                change_trade_goods = cyrodilic_brandy
             }
-            change_trade_goods = cyrodilic_brandy
+            else = {
+                owner = {
+                    adm_power_cost = 212
+                    dip_power_cost = 212
+                    mil_power_cost = 212
+                }
+                change_trade_goods = cyrodilic_brandy
+            }
         }
     }
     option = {
@@ -1017,17 +1303,35 @@ province_event = {
                 trade_goods = daedra_heart
             }
             full_idea_group = alchemical_ideas
+            owner = {
+            	NOT = {
+            		culture_group = daedric_cg
+            	}
+            }
         }
         if = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 200
-                dip_power_cost = 200
-                mil_power_cost = 200
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 166
+                    dip_power_cost = 166
+                    mil_power_cost = 166
+                }
+                change_trade_goods = daedra_heart
             }
-            change_trade_goods = daedra_heart
+            else = {
+                owner = {
+                    adm_power_cost = 200
+                    dip_power_cost = 200
+                    mil_power_cost = 200
+                }
+                change_trade_goods = daedra_heart
+            }
         }
     }
     option = {
@@ -1047,12 +1351,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 150
-                dip_power_cost = 150
-                mil_power_cost = 150
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = daedra_silk
             }
-            change_trade_goods = daedra_silk
+            else = {
+                owner = {
+                    adm_power_cost = 150
+                    dip_power_cost = 150
+                    mil_power_cost = 150
+                }
+                change_trade_goods = daedra_silk
+            }
         }
     }
     option = {
@@ -1072,12 +1389,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 175
-                dip_power_cost = 175
-                mil_power_cost = 175
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 145
+                    dip_power_cost = 145
+                    mil_power_cost = 145
+                }
+                change_trade_goods = daedra_venin
             }
-            change_trade_goods = daedra_venin
+            else = {
+                owner = {
+                    adm_power_cost = 175
+                    dip_power_cost = 175
+                    mil_power_cost = 175
+                }
+                change_trade_goods = daedra_venin
+            }
         }
     }
     option = {
@@ -1097,12 +1427,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 137
-                dip_power_cost = 137
-                mil_power_cost = 137
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 114
+                    dip_power_cost = 114
+                    mil_power_cost = 114
+                }
+                change_trade_goods = daedroth_teeth
             }
-            change_trade_goods = daedroth_teeth
+            else = {
+                owner = {
+                    adm_power_cost = 137
+                    dip_power_cost = 137
+                    mil_power_cost = 137
+                }
+                change_trade_goods = daedroth_teeth
+            }
         }
     }
     option = {
@@ -1153,12 +1496,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 250
-                dip_power_cost = 250
-                mil_power_cost = 250
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 208
+                    dip_power_cost = 208
+                    mil_power_cost = 208
+                }
+                change_trade_goods = dagoth_brandy
             }
-            change_trade_goods = dagoth_brandy
+            else = {
+                owner = {
+                    adm_power_cost = 250
+                    dip_power_cost = 250
+                    mil_power_cost = 250
+                }
+                change_trade_goods = dagoth_brandy
+            }
         }
     }
     option = {
@@ -1182,12 +1538,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = daril
             }
-            change_trade_goods = daril
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = daril
+            }
         }
     }
     option = {
@@ -1213,12 +1582,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 137
-                dip_power_cost = 137
-                mil_power_cost = 137
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 114
+                    dip_power_cost = 114
+                    mil_power_cost = 114
+                }
+                change_trade_goods = dwemer_metal
             }
-            change_trade_goods = dwemer_metal
+            else = {
+                owner = {
+                    adm_power_cost = 137
+                    dip_power_cost = 137
+                    mil_power_cost = 137
+                }
+                change_trade_goods = dwemer_metal
+            }
         }
     }
     option = {
@@ -1254,12 +1636,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 75
-                dip_power_cost = 75
-                mil_power_cost = 75
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = dyes
             }
-            change_trade_goods = dyes
+            else = {
+                owner = {
+                    adm_power_cost = 75
+                    dip_power_cost = 75
+                    mil_power_cost = 75
+                }
+                change_trade_goods = dyes
+            }
         }
     }
     option = {
@@ -1304,12 +1699,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 200
-                dip_power_cost = 200
-                mil_power_cost = 200
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 166
+                    dip_power_cost = 166
+                    mil_power_cost = 166
+                }
+                change_trade_goods = ebony
             }
-            change_trade_goods = ebony
+            else = {
+                owner = {
+                    adm_power_cost = 200
+                    dip_power_cost = 200
+                    mil_power_cost = 200
+                }
+                change_trade_goods = ebony
+            }
         }
     }
     option = {
@@ -1349,12 +1757,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 87
-                dip_power_cost = 87
-                mil_power_cost = 87
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 72
+                    dip_power_cost = 72
+                    mil_power_cost = 72
+                }
+                change_trade_goods = eggs
             }
-            change_trade_goods = eggs
+            else = {
+                owner = {
+                    adm_power_cost = 87
+                    dip_power_cost = 87
+                    mil_power_cost = 87
+                }
+                change_trade_goods = eggs
+            }
         }
     }
     option = {
@@ -1374,12 +1795,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 100
-                dip_power_cost = 100
-                mil_power_cost = 100
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 83
+                    dip_power_cost = 83
+                    mil_power_cost = 83
+                }
+                change_trade_goods = fire_salts
             }
-            change_trade_goods = fire_salts
+            else = {
+                owner = {
+                    adm_power_cost = 100
+                    dip_power_cost = 100
+                    mil_power_cost = 100
+                }
+                change_trade_goods = fire_salts
+            }
         }
     }
     option = {
@@ -1420,12 +1854,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 37
-                dip_power_cost = 37
-                mil_power_cost = 37
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 31
+                    dip_power_cost = 31
+                    mil_power_cost = 31
+                }
+                change_trade_goods = fish
             }
-            change_trade_goods = fish
+            else = {
+                owner = {
+                    adm_power_cost = 37
+                    dip_power_cost = 37
+                    mil_power_cost = 37
+                }
+                change_trade_goods = fish
+            }
         }
     }
     option = {
@@ -1474,12 +1921,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 175
-                dip_power_cost = 175
-                mil_power_cost = 175
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 145
+                    dip_power_cost = 145
+                    mil_power_cost = 145
+                }
+                change_trade_goods = flin
             }
-            change_trade_goods = flin
+            else = {
+                owner = {
+                    adm_power_cost = 175
+                    dip_power_cost = 175
+                    mil_power_cost = 175
+                }
+                change_trade_goods = flin
+            }
         }
     }
     option = {
@@ -1527,12 +1987,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = frostdew_blanc
             }
-            change_trade_goods = frostdew_blanc
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = frostdew_blanc
+            }
         }
     }
     option = {
@@ -1552,12 +2025,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = frost_salts
             }
-            change_trade_goods = frost_salts
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = frost_salts
+            }
         }
     }
     option = {
@@ -1605,12 +2091,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 75
-                dip_power_cost = 75
-                mil_power_cost = 75
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = fruits_and_vegetables
             }
-            change_trade_goods = fruits_and_vegetables
+            else = {
+                owner = {
+                    adm_power_cost = 75
+                    dip_power_cost = 75
+                    mil_power_cost = 75
+                }
+                change_trade_goods = fruits_and_vegetables
+            }
         }
     }
     option = {
@@ -1657,12 +2156,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 62
-                dip_power_cost = 62
-                mil_power_cost = 62
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 52
+                    dip_power_cost = 52
+                    mil_power_cost = 52
+                }
+                change_trade_goods = fur
             }
-            change_trade_goods = fur
+            else = {
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = fur
+            }
         }
     }
     option = {
@@ -1692,12 +2204,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 175
-                dip_power_cost = 175
-                mil_power_cost = 175
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 145
+                    dip_power_cost = 145
+                    mil_power_cost = 145
+                }
+                change_trade_goods = gems
             }
-            change_trade_goods = gems
+            else = {
+                owner = {
+                    adm_power_cost = 175
+                    dip_power_cost = 175
+                    mil_power_cost = 175
+                }
+                change_trade_goods = gems
+            }
         }
     }
     option = {
@@ -1731,12 +2256,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 150
-                dip_power_cost = 150
-                mil_power_cost = 150
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = glass
             }
-            change_trade_goods = glass
+            else = {
+                owner = {
+                    adm_power_cost = 150
+                    dip_power_cost = 150
+                    mil_power_cost = 150
+                }
+                change_trade_goods = glass
+            }
         }
     }
     option = {
@@ -1822,12 +2360,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 250
-                dip_power_cost = 250
-                mil_power_cost = 250
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 208
+                    dip_power_cost = 208
+                    mil_power_cost = 208
+                }
+                change_trade_goods = gold
             }
-            change_trade_goods = gold
+            else = {
+                owner = {
+                    adm_power_cost = 250
+                    dip_power_cost = 250
+                    mil_power_cost = 250
+                }
+                change_trade_goods = gold
+            }
         }
     }
     option = {
@@ -1878,12 +2429,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 200
-                dip_power_cost = 200
-                mil_power_cost = 200
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 166
+                    dip_power_cost = 166
+                    mil_power_cost = 166
+                }
+                change_trade_goods = greef
             }
-            change_trade_goods = greef
+            else = {
+                owner = {
+                    adm_power_cost = 200
+                    dip_power_cost = 200
+                    mil_power_cost = 200
+                }
+                change_trade_goods = greef
+            }
         }
     }
     option = {
@@ -1907,12 +2471,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 200
-                dip_power_cost = 200
-                mil_power_cost = 200
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 166
+                    dip_power_cost = 166
+                    mil_power_cost = 166
+                }
+                change_trade_goods = hags_breath
             }
-            change_trade_goods = hags_breath
+            else = {
+                owner = {
+                    adm_power_cost = 200
+                    dip_power_cost = 200
+                    mil_power_cost = 200
+                }
+                change_trade_goods = hags_breath
+            }
         }
     }
     option = {
@@ -1932,12 +2509,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 50
-                dip_power_cost = 50
-                mil_power_cost = 50
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 41
+                    dip_power_cost = 41
+                    mil_power_cost = 41
+                }
+                change_trade_goods = harrada_root
             }
-            change_trade_goods = harrada_root
+            else = {
+                owner = {
+                    adm_power_cost = 50
+                    dip_power_cost = 50
+                    mil_power_cost = 50
+                }
+                change_trade_goods = harrada_root
+            }
         }
     }
     option = {
@@ -1982,12 +2572,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 137
-                dip_power_cost = 137
-                mil_power_cost = 137
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 114
+                    dip_power_cost = 114
+                    mil_power_cost = 114
+                }
+                change_trade_goods = herbs
             }
-            change_trade_goods = herbs
+            else = {
+                owner = {
+                    adm_power_cost = 137
+                    dip_power_cost = 137
+                    mil_power_cost = 137
+                }
+                change_trade_goods = herbs
+            }
         }
     }
     option = {
@@ -2008,12 +2611,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 175
-                dip_power_cost = 175
-                mil_power_cost = 175
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 145
+                    dip_power_cost = 145
+                    mil_power_cost = 145
+                }
+                change_trade_goods = hist_sap
             }
-            change_trade_goods = hist_sap
+            else = {
+                owner = {
+                    adm_power_cost = 175
+                    dip_power_cost = 175
+                    mil_power_cost = 175
+                }
+                change_trade_goods = hist_sap
+            }
         }
     }
     option = {
@@ -2049,12 +2665,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = honey_and_wax
             }
-            change_trade_goods = honey_and_wax
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = honey_and_wax
+            }
         }
     }
     option = {
@@ -2078,12 +2707,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 175
-                dip_power_cost = 175
-                mil_power_cost = 175
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 145
+                    dip_power_cost = 145
+                    mil_power_cost = 145
+                }
+                change_trade_goods = human_flesh
             }
-            change_trade_goods = human_flesh
+            else = {
+                owner = {
+                    adm_power_cost = 175
+                    dip_power_cost = 175
+                    mil_power_cost = 175
+                }
+                change_trade_goods = human_flesh
+            }
         }
     }
     option = {
@@ -2116,12 +2758,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = incense_of_mara
             }
-            change_trade_goods = incense_of_mara
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = incense_of_mara
+            }
         }
     }
     option = {
@@ -2198,12 +2853,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 37
-                dip_power_cost = 37
-                mil_power_cost = 37
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 31
+                    dip_power_cost = 31
+                    mil_power_cost = 31
+                }
+                change_trade_goods = iron
             }
-            change_trade_goods = iron
+            else = {
+                owner = {
+                    adm_power_cost = 37
+                    dip_power_cost = 37
+                    mil_power_cost = 37
+                }
+                change_trade_goods = iron
+            }
         }
     }
     option = {
@@ -2235,12 +2903,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 62
-                dip_power_cost = 62
-                mil_power_cost = 62
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 52
+                    dip_power_cost = 52
+                    mil_power_cost = 52
+                }
+                change_trade_goods = ironstone
             }
-            change_trade_goods = ironstone
+            else = {
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = ironstone
+            }
         }
     }
     option = {
@@ -2289,12 +2970,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = ivory
             }
-            change_trade_goods = ivory
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = ivory
+            }
         }
     }
     option = {
@@ -2343,12 +3037,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = julianos_firebelly
             }
-            change_trade_goods = julianos_firebelly
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = julianos_firebelly
+            }
         }
     }
     option = {
@@ -2378,12 +3085,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 175
-                dip_power_cost = 175
-                mil_power_cost = 175
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 145
+                    dip_power_cost = 145
+                    mil_power_cost = 145
+                }
+                change_trade_goods = lapis_lazuli
             }
-            change_trade_goods = lapis_lazuli
+            else = {
+                owner = {
+                    adm_power_cost = 175
+                    dip_power_cost = 175
+                    mil_power_cost = 175
+                }
+                change_trade_goods = lapis_lazuli
+            }
         }
     }
     option = {
@@ -2426,12 +3146,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 87
-                dip_power_cost = 87
-                mil_power_cost = 87
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 72
+                    dip_power_cost = 72
+                    mil_power_cost = 72
+                }
+                change_trade_goods = leather
             }
-            change_trade_goods = leather
+            else = {
+                owner = {
+                    adm_power_cost = 87
+                    dip_power_cost = 87
+                    mil_power_cost = 87
+                }
+                change_trade_goods = leather
+            }
         }
     }
     option = {
@@ -2477,12 +3210,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 87
-                dip_power_cost = 87
-                mil_power_cost = 87
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 72
+                    dip_power_cost = 72
+                    mil_power_cost = 72
+                }
+                change_trade_goods = livestock
             }
-            change_trade_goods = livestock
+            else = {
+                owner = {
+                    adm_power_cost = 87
+                    dip_power_cost = 87
+                    mil_power_cost = 87
+                }
+                change_trade_goods = livestock
+            }
         }
     }
     option = {
@@ -2514,12 +3260,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 212
-                dip_power_cost = 212
-                mil_power_cost = 212
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 177
+                    dip_power_cost = 177
+                    mil_power_cost = 177
+                }
+                change_trade_goods = magic_goods
             }
-            change_trade_goods = magic_goods
+            else = {
+                owner = {
+                    adm_power_cost = 212
+                    dip_power_cost = 212
+                    mil_power_cost = 212
+                }
+                change_trade_goods = magic_goods
+            }
         }
     }
     option = {
@@ -2563,12 +3322,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 87
-                dip_power_cost = 87
-                mil_power_cost = 87
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 72
+                    dip_power_cost = 72
+                    mil_power_cost = 72
+                }
+                change_trade_goods = malachite
             }
-            change_trade_goods = malachite
+            else = {
+                owner = {
+                    adm_power_cost = 87
+                    dip_power_cost = 87
+                    mil_power_cost = 87
+                }
+                change_trade_goods = malachite
+            }
         }
     }
     option = {
@@ -2598,12 +3370,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 187
-                dip_power_cost = 187
-                mil_power_cost = 187
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 156
+                    dip_power_cost = 156
+                    mil_power_cost = 156
+                }
+                change_trade_goods = marble
             }
-            change_trade_goods = marble
+            else = {
+                owner = {
+                    adm_power_cost = 187
+                    dip_power_cost = 187
+                    mil_power_cost = 187
+                }
+                change_trade_goods = marble
+            }
         }
     }
     option = {
@@ -2654,12 +3439,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 87
-                dip_power_cost = 87
-                mil_power_cost = 87
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 72
+                    dip_power_cost = 72
+                    mil_power_cost = 72
+                }
+                change_trade_goods = mazte
             }
-            change_trade_goods = mazte
+            else = {
+                owner = {
+                    adm_power_cost = 87
+                    dip_power_cost = 87
+                    mil_power_cost = 87
+                }
+                change_trade_goods = mazte
+            }
         }
     }
     option = {
@@ -2705,12 +3503,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = mead
             }
-            change_trade_goods = mead
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = mead
+            }
         }
     }
     option = {
@@ -2730,12 +3541,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 250
-                dip_power_cost = 250
-                mil_power_cost = 250
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 208
+                    dip_power_cost = 208
+                    mil_power_cost = 208
+                }
+                change_trade_goods = milk_of_kynareth
             }
-            change_trade_goods = milk_of_kynareth
+            else = {
+                owner = {
+                    adm_power_cost = 250
+                    dip_power_cost = 250
+                    mil_power_cost = 250
+                }
+                change_trade_goods = milk_of_kynareth
+            }
         }
     }
     option = {
@@ -2767,12 +3591,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 187
-                dip_power_cost = 187
-                mil_power_cost = 187
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 156
+                    dip_power_cost = 156
+                    mil_power_cost = 156
+                }
+                change_trade_goods = mithril
             }
-            change_trade_goods = mithril
+            else = {
+                owner = {
+                    adm_power_cost = 187
+                    dip_power_cost = 187
+                    mil_power_cost = 187
+                }
+                change_trade_goods = mithril
+            }
         }
     }
     option = {
@@ -2820,12 +3657,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 87
-                dip_power_cost = 87
-                mil_power_cost = 87
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 72
+                    dip_power_cost = 72
+                    mil_power_cost = 72
+                }
+                change_trade_goods = moonshine
             }
-            change_trade_goods = moonshine
+            else = {
+                owner = {
+                    adm_power_cost = 87
+                    dip_power_cost = 87
+                    mil_power_cost = 87
+                }
+                change_trade_goods = moonshine
+            }
         }
     }
     option = {
@@ -2865,12 +3715,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = moonstone
             }
-            change_trade_goods = moonstone
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = moonstone
+            }
         }
     }
     option = {
@@ -2920,12 +3783,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 175
-                dip_power_cost = 175
-                mil_power_cost = 175
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 145
+                    dip_power_cost = 145
+                    mil_power_cost = 145
+                }
+                change_trade_goods = moon_sugar
             }
-            change_trade_goods = moon_sugar
+            else = {
+                owner = {
+                    adm_power_cost = 175
+                    dip_power_cost = 175
+                    mil_power_cost = 175
+                }
+                change_trade_goods = moon_sugar
+            }
         }
     }
     option = {
@@ -2974,12 +3850,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = mushrooms
             }
-            change_trade_goods = mushrooms
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = mushrooms
+            }
         }
     }
     option = {
@@ -3028,12 +3917,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 75
-                dip_power_cost = 75
-                mil_power_cost = 75
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = naval_supplies
             }
-            change_trade_goods = naval_supplies
+            else = {
+                owner = {
+                    adm_power_cost = 75
+                    dip_power_cost = 75
+                    mil_power_cost = 75
+                }
+                change_trade_goods = naval_supplies
+            }
         }
     }
     option = {
@@ -3053,12 +3955,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = nirncrux
             }
-            change_trade_goods = nirncrux
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = nirncrux
+            }
         }
     }
     option = {
@@ -3088,12 +4003,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 187
-                dip_power_cost = 187
-                mil_power_cost = 187
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 156
+                    dip_power_cost = 156
+                    mil_power_cost = 156
+                }
+                change_trade_goods = nirnroot
             }
-            change_trade_goods = nirnroot
+            else = {
+                owner = {
+                    adm_power_cost = 187
+                    dip_power_cost = 187
+                    mil_power_cost = 187
+                }
+                change_trade_goods = nirnroot
+            }
         }
     }
     option = {
@@ -3141,12 +4069,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = numbskin_mead
             }
-            change_trade_goods = numbskin_mead
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = numbskin_mead
+            }
         }
     }
     option = {
@@ -3177,12 +4118,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = orgnium
             }
-            change_trade_goods = orgnium
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = orgnium
+            }
         }
     }
     option = {
@@ -3206,12 +4160,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 100
-                dip_power_cost = 100
-                mil_power_cost = 100
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 83
+                    dip_power_cost = 83
+                    mil_power_cost = 83
+                }
+                change_trade_goods = orichalcum
             }
-            change_trade_goods = orichalcum
+            else = {
+                owner = {
+                    adm_power_cost = 100
+                    dip_power_cost = 100
+                    mil_power_cost = 100
+                }
+                change_trade_goods = orichalcum
+            }
         }
     }
     option = {
@@ -3253,12 +4220,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = paper
             }
-            change_trade_goods = paper
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = paper
+            }
         }
     }
     option = {
@@ -3272,10 +4252,25 @@ province_event = {
             NOT = {
                 trade_goods = potions
             }
-            NOT = {
+            any_province_in_state = {
             	OR = {
-            		has_terrain = glacier
-            		has_terrain = mountain
+            		trade_goods = void_salts
+            		trade_goods = vampire_dust
+            		trade_goods = scamp_skin
+            		trade_goods = salt
+            		trade_goods = nirnroot
+            		trade_goods = nirncrux
+            		trade_goods = mushrooms
+            		trade_goods = moon_sugar
+            		trade_goods = human_flesh
+            		trade_goods = hist_sap
+            		trade_goods = herbs
+            		trade_goods = harrada_root
+            		trade_goods = fire_salts
+            		trade_goods = eggs
+            		trade_goods = crabs
+            		trade_goods = bloodgrass
+            		trade_goods = algae
             	}
             }
         }
@@ -3283,12 +4278,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = potions
             }
-            change_trade_goods = potions
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = potions
+            }
         }
     }
     option = {
@@ -3365,12 +4373,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = quicksilver
             }
-            change_trade_goods = quicksilver
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = quicksilver
+            }
         }
     }
     option = {
@@ -3419,12 +4440,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 100
-                dip_power_cost = 100
-                mil_power_cost = 100
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 83
+                    dip_power_cost = 83
+                    mil_power_cost = 83
+                }
+                change_trade_goods = salt
             }
-            change_trade_goods = salt
+            else = {
+                owner = {
+                    adm_power_cost = 100
+                    dip_power_cost = 100
+                    mil_power_cost = 100
+                }
+                change_trade_goods = salt
+            }
         }
     }
     option = {
@@ -3448,12 +4482,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 31
-                dip_power_cost = 31
-                mil_power_cost = 31
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 26
+                    dip_power_cost = 26
+                    mil_power_cost = 26
+                }
+                change_trade_goods = sandstone
             }
-            change_trade_goods = sandstone
+            else = {
+                owner = {
+                    adm_power_cost = 31
+                    dip_power_cost = 31
+                    mil_power_cost = 31
+                }
+                change_trade_goods = sandstone
+            }
         }
     }
     option = {
@@ -3473,12 +4520,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 62
-                dip_power_cost = 62
-                mil_power_cost = 62
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 52
+                    dip_power_cost = 52
+                    mil_power_cost = 52
+                }
+                change_trade_goods = scamp_skin
             }
-            change_trade_goods = scamp_skin
+            else = {
+                owner = {
+                    adm_power_cost = 62
+                    dip_power_cost = 62
+                    mil_power_cost = 62
+                }
+                change_trade_goods = scamp_skin
+            }
         }
     }
     option = {
@@ -3500,12 +4560,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 250
-                dip_power_cost = 250
-                mil_power_cost = 250
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 208
+                    dip_power_cost = 208
+                    mil_power_cost = 208
+                }
+                change_trade_goods = scrolls
             }
-            change_trade_goods = scrolls
+            else = {
+                owner = {
+                    adm_power_cost = 250
+                    dip_power_cost = 250
+                    mil_power_cost = 250
+                }
+                change_trade_goods = scrolls
+            }
         }
     }
     option = {
@@ -3531,12 +4604,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 87
-                dip_power_cost = 87
-                mil_power_cost = 87
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 72
+                    dip_power_cost = 72
+                    mil_power_cost = 72
+                }
+                change_trade_goods = shale
             }
-            change_trade_goods = shale
+            else = {
+                owner = {
+                    adm_power_cost = 87
+                    dip_power_cost = 87
+                    mil_power_cost = 87
+                }
+                change_trade_goods = shale
+            }
         }
     }
     option = {
@@ -3585,12 +4671,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 100
-                dip_power_cost = 100
-                mil_power_cost = 100
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 83
+                    dip_power_cost = 83
+                    mil_power_cost = 83
+                }
+                change_trade_goods = shein
             }
-            change_trade_goods = shein
+            else = {
+                owner = {
+                    adm_power_cost = 100
+                    dip_power_cost = 100
+                    mil_power_cost = 100
+                }
+                change_trade_goods = shein
+            }
         }
     }
     option = {
@@ -3636,12 +4735,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 137
-                dip_power_cost = 137
-                mil_power_cost = 137
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 114
+                    dip_power_cost = 114
+                    mil_power_cost = 114
+                }
+                change_trade_goods = silk
             }
-            change_trade_goods = silk
+            else = {
+                owner = {
+                    adm_power_cost = 137
+                    dip_power_cost = 137
+                    mil_power_cost = 137
+                }
+                change_trade_goods = silk
+            }
         }
     }
     option = {
@@ -3674,12 +4786,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 250
-                dip_power_cost = 250
-                mil_power_cost = 250
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 208
+                    dip_power_cost = 208
+                    mil_power_cost = 208
+                }
+                change_trade_goods = silver
             }
-            change_trade_goods = silver
+            else = {
+                owner = {
+                    adm_power_cost = 250
+                    dip_power_cost = 250
+                    mil_power_cost = 250
+                }
+                change_trade_goods = silver
+            }
         }
     }
     option = {
@@ -3700,12 +4825,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 187
-                dip_power_cost = 187
-                mil_power_cost = 187
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 156
+                    dip_power_cost = 156
+                    mil_power_cost = 156
+                }
+                change_trade_goods = skooma
             }
-            change_trade_goods = skooma
+            else = {
+                owner = {
+                    adm_power_cost = 187
+                    dip_power_cost = 187
+                    mil_power_cost = 187
+                }
+                change_trade_goods = skooma
+            }
         }
     }
     option = {
@@ -3729,12 +4867,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 112
-                dip_power_cost = 112
-                mil_power_cost = 112
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 93
+                    dip_power_cost = 93
+                    mil_power_cost = 93
+                }
+                change_trade_goods = slaves
             }
-            change_trade_goods = slaves
+            else = {
+                owner = {
+                    adm_power_cost = 112
+                    dip_power_cost = 112
+                    mil_power_cost = 112
+                }
+                change_trade_goods = slaves
+            }
         }
     }
     option = {
@@ -3757,12 +4908,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 237
-                dip_power_cost = 237
-                mil_power_cost = 237
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 197
+                    dip_power_cost = 197
+                    mil_power_cost = 197
+                }
+                change_trade_goods = sleeping_tree_sap
             }
-            change_trade_goods = sleeping_tree_sap
+            else = {
+                owner = {
+                    adm_power_cost = 237
+                    dip_power_cost = 237
+                    mil_power_cost = 237
+                }
+                change_trade_goods = sleeping_tree_sap
+            }
         }
     }
     option = {
@@ -3782,12 +4946,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 237
-                dip_power_cost = 237
-                mil_power_cost = 237
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 197
+                    dip_power_cost = 197
+                    mil_power_cost = 197
+                }
+                change_trade_goods = sload_soap
             }
-            change_trade_goods = sload_soap
+            else = {
+                owner = {
+                    adm_power_cost = 237
+                    dip_power_cost = 237
+                    mil_power_cost = 237
+                }
+                change_trade_goods = sload_soap
+            }
         }
     }
     option = {
@@ -3812,12 +4989,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 187
-                dip_power_cost = 187
-                mil_power_cost = 187
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 156
+                    dip_power_cost = 156
+                    mil_power_cost = 156
+                }
+                change_trade_goods = soul_gems
             }
-            change_trade_goods = soul_gems
+            else = {
+                owner = {
+                    adm_power_cost = 187
+                    dip_power_cost = 187
+                    mil_power_cost = 187
+                }
+                change_trade_goods = soul_gems
+            }
         }
     }
     option = {
@@ -3865,12 +5055,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = sparkling_honeydew
             }
-            change_trade_goods = sparkling_honeydew
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = sparkling_honeydew
+            }
         }
     }
     option = {
@@ -3919,12 +5122,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 250
-                dip_power_cost = 250
-                mil_power_cost = 250
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 208
+                    dip_power_cost = 208
+                    mil_power_cost = 208
+                }
+                change_trade_goods = spiced_wine
             }
-            change_trade_goods = spiced_wine
+            else = {
+                owner = {
+                    adm_power_cost = 250
+                    dip_power_cost = 250
+                    mil_power_cost = 250
+                }
+                change_trade_goods = spiced_wine
+            }
         }
     }
     option = {
@@ -3944,12 +5160,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 37
-                dip_power_cost = 37
-                mil_power_cost = 37
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 31
+                    dip_power_cost = 31
+                    mil_power_cost = 31
+                }
+                change_trade_goods = spiddal_stick
             }
-            change_trade_goods = spiddal_stick
+            else = {
+                owner = {
+                    adm_power_cost = 37
+                    dip_power_cost = 37
+                    mil_power_cost = 37
+                }
+                change_trade_goods = spiddal_stick
+            }
         }
     }
     option = {
@@ -4006,12 +5235,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = stalhrim
             }
-            change_trade_goods = stalhrim
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = stalhrim
+            }
         }
     }
     option = {
@@ -4047,12 +5289,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 25
-                dip_power_cost = 25
-                mil_power_cost = 25
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 20
+                    dip_power_cost = 20
+                    mil_power_cost = 20
+                }
+                change_trade_goods = stone
             }
-            change_trade_goods = stone
+            else = {
+                owner = {
+                    adm_power_cost = 25
+                    dip_power_cost = 25
+                    mil_power_cost = 25
+                }
+                change_trade_goods = stone
+            }
         }
     }
     option = {
@@ -4100,12 +5355,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 137
-                dip_power_cost = 137
-                mil_power_cost = 137
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 114
+                    dip_power_cost = 114
+                    mil_power_cost = 114
+                }
+                change_trade_goods = stumblefoots_reserve
             }
-            change_trade_goods = stumblefoots_reserve
+            else = {
+                owner = {
+                    adm_power_cost = 137
+                    dip_power_cost = 137
+                    mil_power_cost = 137
+                }
+                change_trade_goods = stumblefoots_reserve
+            }
         }
     }
     option = {
@@ -4157,12 +5425,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 300
-                dip_power_cost = 300
-                mil_power_cost = 300
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 250
+                    dip_power_cost = 250
+                    mil_power_cost = 250
+                }
+                change_trade_goods = sujiamma
             }
-            change_trade_goods = sujiamma
+            else = {
+                owner = {
+                    adm_power_cost = 300
+                    dip_power_cost = 300
+                    mil_power_cost = 300
+                }
+                change_trade_goods = sujiamma
+            }
         }
     }
     option = {
@@ -4182,12 +5463,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 125
-                dip_power_cost = 125
-                mil_power_cost = 125
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 104
+                    dip_power_cost = 104
+                    mil_power_cost = 104
+                }
+                change_trade_goods = tobacco
             }
-            change_trade_goods = tobacco
+            else = {
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = tobacco
+            }
         }
     }
     option = {
@@ -4216,12 +5510,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 137
-                dip_power_cost = 137
-                mil_power_cost = 137
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 114
+                    dip_power_cost = 114
+                    mil_power_cost = 114
+                }
+                change_trade_goods = vampire_dust
             }
-            change_trade_goods = vampire_dust
+            else = {
+                owner = {
+                    adm_power_cost = 137
+                    dip_power_cost = 137
+                    mil_power_cost = 137
+                }
+                change_trade_goods = vampire_dust
+            }
         }
     }
     option = {
@@ -4241,12 +5548,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 150
-                dip_power_cost = 150
-                mil_power_cost = 150
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 125
+                    dip_power_cost = 125
+                    mil_power_cost = 125
+                }
+                change_trade_goods = void_salts
             }
-            change_trade_goods = void_salts
+            else = {
+                owner = {
+                    adm_power_cost = 150
+                    dip_power_cost = 150
+                    mil_power_cost = 150
+                }
+                change_trade_goods = void_salts
+            }
         }
     }
     option = {
@@ -4278,12 +5598,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 187
-                dip_power_cost = 187
-                mil_power_cost = 187
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 156
+                    dip_power_cost = 156
+                    mil_power_cost = 156
+                }
+                change_trade_goods = weapons_and_armor
             }
-            change_trade_goods = weapons_and_armor
+            else = {
+                owner = {
+                    adm_power_cost = 187
+                    dip_power_cost = 187
+                    mil_power_cost = 187
+                }
+                change_trade_goods = weapons_and_armor
+            }
         }
     }
     option = {
@@ -4332,12 +5665,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 187
-                dip_power_cost = 187
-                mil_power_cost = 187
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 156
+                    dip_power_cost = 156
+                    mil_power_cost = 156
+                }
+                change_trade_goods = west_weald_wine
             }
-            change_trade_goods = west_weald_wine
+            else = {
+                owner = {
+                    adm_power_cost = 187
+                    dip_power_cost = 187
+                    mil_power_cost = 187
+                }
+                change_trade_goods = west_weald_wine
+            }
         }
     }
     option = {
@@ -4385,12 +5731,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 162
-                dip_power_cost = 162
-                mil_power_cost = 162
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 135
+                    dip_power_cost = 135
+                    mil_power_cost = 135
+                }
+                change_trade_goods = wine
             }
-            change_trade_goods = wine
+            else = {
+                owner = {
+                    adm_power_cost = 162
+                    dip_power_cost = 162
+                    mil_power_cost = 162
+                }
+                change_trade_goods = wine
+            }
         }
     }
     option = {
@@ -4443,12 +5802,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 37
-                dip_power_cost = 37
-                mil_power_cost = 37
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 31
+                    dip_power_cost = 31
+                    mil_power_cost = 31
+                }
+                change_trade_goods = wood
             }
-            change_trade_goods = wood
+            else = {
+                owner = {
+                    adm_power_cost = 37
+                    dip_power_cost = 37
+                    mil_power_cost = 37
+                }
+                change_trade_goods = wood
+            }
         }
     }
     option = {
@@ -4500,12 +5872,25 @@ province_event = {
             limit = {
                 always = yes
             }
-            owner = {
-                adm_power_cost = 37
-                dip_power_cost = 37
-                mil_power_cost = 37
+            if = {
+                limit = {
+                    owner = { full_idea_group = transmutation_ideas }
+                }
+                owner = {
+                    adm_power_cost = 31
+                    dip_power_cost = 31
+                    mil_power_cost = 31
+                }
+                change_trade_goods = wool
             }
-            change_trade_goods = wool
+            else = {
+                owner = {
+                    adm_power_cost = 37
+                    dip_power_cost = 37
+                    mil_power_cost = 37
+                }
+                change_trade_goods = wool
+            }
         }
     }
 }
