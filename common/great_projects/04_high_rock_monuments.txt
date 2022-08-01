@@ -1,3 +1,4 @@
+# stonetooth_fortress
 # bank_of_daggerfall
 # temple_of_the_divines
 # koeglin_lighthouse
@@ -38,7 +39,7 @@ forgotten_vale = {
 
 	build_trigger = { 
 		culture_group = snow_elves_cg
-		has_owner_accepted_culture = yes
+		has_owner_culture = yes
 	}
 
 	on_built = { }
@@ -46,11 +47,11 @@ forgotten_vale = {
 
 	can_use_modifiers_trigger = {
 		culture_group = snow_elves_cg
-		has_owner_accepted_culture = yes
+		has_owner_culture = yes
 	}
 	can_upgrade_trigger = {
 		culture_group = snow_elves_cg
-		has_owner_accepted_culture = yes
+		has_owner_culture = yes
 	}
 	keep_trigger = { always = yes }
 
@@ -516,6 +517,7 @@ murtag_stronghold = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { 
+			fort_level = 1
 		}
 		area_modifier = { 
 		}
@@ -531,6 +533,7 @@ murtag_stronghold = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = { 
+			fort_level = 1
 		}
 		area_modifier = {
 		}
@@ -546,6 +549,7 @@ murtag_stronghold = {
 		upgrade_time = { months = 360 }
 		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = { 
+			fort_level = 1
 		}
 		area_modifier = {
 		}
@@ -696,8 +700,8 @@ frostbreak_fortress = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		upgrade_time = { months = 12 }
+		cost_to_upgrade = { factor = 100 }
 		province_modifiers = { 
 			fort_level = 1
 		}
@@ -709,8 +713,8 @@ frostbreak_fortress = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		upgrade_time = { months = 24 }
+		cost_to_upgrade = { factor = 250 }
 		province_modifiers = { 
 			fort_level = 2
 		}
@@ -722,8 +726,8 @@ frostbreak_fortress = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		upgrade_time = { months = 36 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { 
 			fort_level = 3
 		}
@@ -869,8 +873,8 @@ bangkorai_garrison = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		upgrade_time = { months = 12 }
+		cost_to_upgrade = { factor = 100 }
 		province_modifiers = { 
 			fort_level = 1
 		}
@@ -882,8 +886,8 @@ bangkorai_garrison = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		upgrade_time = { months = 24 }
+		cost_to_upgrade = { factor = 250 }
 		province_modifiers = { 
 			fort_level = 2
 		}
@@ -895,8 +899,8 @@ bangkorai_garrison = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		upgrade_time = { months = 36 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { 
 			fort_level = 3
 		}
@@ -947,8 +951,8 @@ argent_mine = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		upgrade_time = { months = 12 }
+		cost_to_upgrade = { factor = 100 }
 		province_modifiers = { 
 			trade_goods_size_modifier = 0.1
 		}
@@ -960,8 +964,8 @@ argent_mine = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		upgrade_time = { months = 24 }
+		cost_to_upgrade = { factor = 250 }
 		province_modifiers = { 
 			trade_goods_size_modifier = 0.2
 		}
@@ -973,8 +977,8 @@ argent_mine = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		upgrade_time = { months = 36 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			trade_goods_size_modifier = 0.25
 		}
@@ -1041,7 +1045,11 @@ stonetooth_fortress = {
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { trade_range_modifier = 0.10 }
+		country_modifiers = { 
+			trade_range_modifier = 0.25
+			own_coast_naval_combat_bonus = 0.5
+			trade_steering = 0.1
+		}
 		on_upgraded = { }
 	}
 
@@ -1050,7 +1058,11 @@ stonetooth_fortress = {
 		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { trade_range_modifier = 0.15 }
+		country_modifiers = { 
+			trade_range_modifier = 0.4
+			own_coast_naval_combat_bonus = 1
+			trade_steering = 0.2
+		}
 		on_upgraded = { }
 	}
 
@@ -1059,7 +1071,11 @@ stonetooth_fortress = {
 		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { trade_range_modifier = 0.25 }
+		country_modifiers = { 
+			trade_range_modifier = 0.5
+			own_coast_naval_combat_bonus = 1.5
+			trade_steering = 0.25
+		}
 		on_upgraded = { }
 	}
 }
