@@ -1,0 +1,1419 @@
+# ale: "Ale"
+# aleDESC: "Ale is a type of beer common in Cyrodiil and Skyrim."
+ale = {
+	color = { 0.72 0.43 0.10 }
+	modifier = {
+		state_maintenance_modifier = -0.05
+	}
+	province = {
+		local_state_maintenance_modifier = -0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					superregion = cyrodiil_superregion
+					superregion = skyrim_superregion
+				}
+			}
+		}
+		
+	}
+}
+
+# mazte: "Mazte"
+# mazteDESC: "Mazte is a cheap saltrice beer native to Morrowind. Several different variations on the basic brew exist. For example, Necrom Nights Mazte makes use of ginseng and metheglin, while Blacklight Ginger Mazte is flavored with guarana in addition to the root of its namesake."
+mazte = {
+	color = { 0.57 0.62 0.52 }
+	modifier = {
+		tolerance_heretic = 1.0
+	}
+	province = {
+		local_missionary_maintenance_cost = -0.25
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = {
+				superregion = morrowind_superregion
+			}
+		}
+		
+	}
+}
+
+# dagoth_brandy: "Dagoth Brandy"
+# dagoth_brandyDESC: "This brew is a rare nectar beyond compare. It makes the imbiber feel stronger, but reduces their ability to think and move at a reasonable pace. It is served in special snifters designed specifically to concentrated the bouquet and intensified the flavor."
+dagoth_brandy = {
+	color = { 0.10 0.11 0.11 }
+	modifier = {
+		unjustified_demands = -0.10
+	}
+	province = {
+		local_tax_modifier = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = {
+				superregion = morrowind_superregion
+			}
+		}
+		
+	}
+}
+
+# colovian_brandy: "Colovian Brandy"
+# colovian_brandyDESC: "Colovian Brandy is an expensive brandy made in Colovia."
+colovian_brandy = {
+	color = { 0.43 0.42 0.31 }
+	modifier = {
+		discovered_relations_impact = -0.25
+	}
+	province = {
+		province_trade_power_modifier = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = {
+				region = western_cyrodiil_lr
+			}
+		}
+		
+	}
+}
+
+# cyrodilic_brandy: "Cyrodilic Brandy"
+# cyrodilic_brandyDESC: "Cyrodilic Brandy, sometimes spelled Cyrodiilic Brandy, is an expensive, but invigorating and stimulating alcoholic beverage with few unpleasant side effects. It is made in Cyrodiil and exported across Tamriel."
+cyrodilic_brandy = {
+	color = { 0.23 0.16 0.11 }
+	modifier = {
+		years_of_nationalism = -5
+	}
+	province = {
+		local_years_of_nationalism = -10
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = {
+				superregion = cyrodiil_superregion
+			}
+		}
+		
+	}
+}
+
+# greef: "Greef"
+# greefDESC: "Greef is a comberry brandy native to Morrowind."
+greef = {
+	color = { 0.40 0.41 0.39 }
+	modifier = {
+		tolerance_heathen = 1
+	}
+	province = {
+		local_production_efficiency = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = {
+				superregion = morrowind_superregion
+			}
+		}
+		
+	}
+}
+
+# mead: "Mead"
+# meadDESC: "Mead is an alcoholic beverage made from fermented honey and water, alternatively with molasses, and sometimes strained with mashed grains. It is a very popular drink that can be found primarily in the province of Skyrim, but it can also be seen across the continent of Tamriel, as brewing is the basis of any culture. Meaderies across the provinces have their own ingredients and recipes, mixing in their own spices and fruits like Juniper Berries."
+mead = {
+	color = { 0.29 0.21 0.14 }
+	modifier = {
+		recover_army_morale_speed = 0.025
+	}
+	province = {
+		local_manpower_modifier = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			NOT = {
+				superregion = skyrim_superregion
+			}
+		}
+		
+	}
+}
+
+# black_briar_mead: "Black Briar Mead"
+# black_briar_meadDESC: "Black-Briar Mead is a beverage produced in the Skyrim city of Riften."
+black_briar_mead = {
+	color = { 0.35 0.47 0.56 }
+	modifier = {
+		spy_offence = 0.10
+	}
+	province = {
+		regiment_recruit_speed = -0.15
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+# honningbrew_mead: "Honningbrew Mead"
+# honningbrew_meadDESC: "Honningbrew Mead is a beverage produced in the area around Skyrim city of Whiterun."
+honningbrew_mead = {
+	color = { 0.99 0.45 0.12 }
+	modifier = {
+		global_spy_defence = 0.10
+	}
+	province = {
+		local_regiment_cost = -0.15
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+# numbskin_mead: "Numbskin Mead"
+# numbskin_meadDESC: "Numbskin Mead or Ice Nerveshatter is a mead produced with usage of Dragon's Tongue and Lady's Smock Leaves."
+numbskin_mead = {
+	color = { 0.59 0.58 0.83 }
+	modifier = {
+		core_decay_on_your_own = -0.15
+	}
+	province = {
+		local_core_creation = -0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = marsh
+				has_terrain = mudflats
+			}
+		}
+		
+	}
+}
+
+# sujiamma: "Sujamma"
+# sujiammaDESC: "Sujamma is a liquor native to Morrowind. It is extremely potent, resulting in elevated spirits and increased strength and stamina, but reduced stamina regeneration and vastly reduced intelligence."
+sujiamma = {
+	color = { 0.82 0.83 0.58 }
+	modifier = {
+		liberty_desire_from_subject_development = -0.10
+	}
+	province = {
+		local_autonomy = -0.05
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { culture_group = velothi_cg }
+				NOT = { superregion = morrowind_superregion }
+			}
+		}
+		
+	}
+}
+
+# flin: "Flin"
+# flinDESC: "Flin is an expensive and stimulating Cyrodilic whiskey which has few unpleasant side effects."
+flin = {
+	color = { 0.62 0.52 0.58 }
+	modifier = {
+		sailors_recovery_speed = 0.10
+	}
+	province = {
+		trade_goods_size_modifier = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { superregion = cyrodiil_superregion }
+		}
+		
+	}
+}
+
+# alto: "Alto Wine"
+# altoDESC: "Alto Wine is a common wine found across Skyrim which is made from Jazbay grapes."
+alto = {
+	color = { 0.58 0.60 0.47 }
+	modifier = {
+		same_culture_advisor_cost = -0.05
+	}
+	province = {
+		local_culture_conversion_cost = -0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { superregion = skyrim_superregion }
+		}
+		
+	}
+}
+
+# argonian_bloodwine: "Argonian Bloodwine"
+# argonian_bloodwineDESC: "Argonian Bloodwine doesn’t actually contain any blood, but is so named due to its colour. This beverage is produced from Bergamot Seeds, Foxglove Nectar and a White Seed Pod. It gives a resistance to poison and disease as well as the ability to breathe underwater, although it also damages stamina regeneration. Argonian Bloodwine is not popular among Argonians themselves, as they already can use the benefits of this drink without suffering the unpleasant side effects."
+argonian_bloodwine = {
+	color = { 0.20 0.28 0.25 }
+	modifier = {
+		global_sailors_modifier = 0.10
+	}
+	province = {
+		province_trade_power_value = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			OR = {
+				superregion = black_marsh_superregion
+				culture_group = marsh_cg
+				NOT = { continent = Tamriel }
+			}
+		}
+		
+	}
+}
+
+# colovian_battlecry: "Colovian Battlecry"
+# colovian_battlecryDESC: "Colovian Battlecry is a beverage produced in Colovia."
+colovian_battlecry = {
+	color = { 0.14 0.14 0.0 }
+	modifier = {
+		siege_ability = 0.10
+	}
+	province = {
+		local_defensiveness = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { region = western_cyrodiil_lr }
+		}
+		
+	}
+}
+
+# emberbrand_wine: "Emberbrand Wine"
+# emberbrand_wineDESC: "Emberbrand Wine is a powerful and highly addictive wine produced on Solstheim. Crushed jazbay is used in the brewing process. Most men can barely finish one flask without falling asleep."
+emberbrand_wine = {
+	color = { 0.76 0.79 0.91 }
+	modifier = {
+		improve_relation_modifier = 0.15
+	}
+	province = {
+		province_trade_power_modifier = 0.15
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+# firebrand_wine: "Firebrand Wine"
+# firebrand_wineDESC: "Firebrand Wine is an extremly expensive wine, which can only be created in certain wineries that have the technology and capacity to ferment wine on fire salt."
+firebrand_wine = {
+	color = { 0.32 0.41 0.24 }
+	modifier = {
+		vassal_forcelimit_bonus = 0.10
+	}
+	province = {
+		local_production_efficiency = 0.15
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+# frostdew_blanc: "Frostdew Blanc"
+# frostdew_blancDESC: "Frostdew Blanc is a beverage produced by from Aloe Vera Leaves and Green Stain Cup Caps."
+frostdew_blanc = {
+	color = { 0.14 0.45 0.46 }
+	modifier = {
+		land_attrition = -0.05
+	}
+	province = {
+		local_hostile_attrition = 1
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = marsh
+				has_terrain = mudflats
+			}
+		}
+		
+	}
+}
+
+# julianos_firebelly: "Julianos Firebelly"
+# julianos_firebellyDESC: "Julianos Firebelly is a beverage produced from Sacred Lotus Seeds and Lady's Smock Leaves."
+julianos_firebelly = {
+	color = { 0.51 0.24 0.20 }
+	modifier = {
+		fire_damage = 0.05
+	}
+	province = {
+		local_manpower_modifier = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { continent = Tamriel }
+		}
+		
+	}
+}
+
+# shein: "Shein"
+# sheinDESC: "Shein is a comberry wine native to Morrowind, usually prefered to be bitter and sour, and have a warm ruddy color."
+shein = {
+	color = { 0.50 0.52 0.47 }
+	modifier = {
+		free_leader_pool = 1
+	}
+	province = {
+		local_manpower_modifier = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { superregion = morrowind_superregion }
+		}
+		
+	}
+}
+
+# sparkling_honeydew: "Sparkling Honeydew"
+# sparkling_honeydewDESC: "Sparkling Honeydew is a beverage produced from Lavender Sprig and Summer Bolete."
+sparkling_honeydew = {
+	color = { 0.60 0.61 0.24 }
+	modifier = {
+		build_time = -0.10
+	}
+	province = {
+		local_build_time = -0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = marsh
+				has_terrain = mudflats
+			}
+		}
+		
+	}
+}
+
+# spiced_wine: "Spiced Wine"
+# spiced_wineDESC: "Spiced Wine is a wine commonly drunk in Skyrim. The spices to make it are imported from other regions of the Tamriel, that's why this drink costs more than the other beverages."
+spiced_wine = {
+	color = { 0.62 0.72 0.53 }
+	modifier = {
+		embracement_cost = -0.15
+	}
+	province = {
+		local_institution_spread = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { superregion = skyrim_superregion }
+		}
+		
+	}
+}
+
+# stumblefoots_reserve: "Stumblefoot's Reserve"
+# stumblefoots_reserveDESC: "Stumblefoot's Reserve is a beverage produced from Arrowroot and Flax Seeds."
+stumblefoots_reserve = {
+	color = { 0.38 0.21 0.67 }
+	modifier = {
+		garrison_size = 0.15
+	}
+	province = {
+		local_defensiveness = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = marsh
+				has_terrain = mudflats
+			}
+		}
+		
+	}
+}
+
+# surilie_brothers_wine: "Surilie Brothers Wine"
+# surilie_brothers_wineDESC: "Surilie Brothers Wine is a Skingrad wine made by the Surilie family."
+surilie_brothers_wine = {
+	color = { 0.32 0.26 0.23 }
+	modifier = {
+		development_cost = -0.05
+	}
+	province = {
+		local_development_cost = -0.15
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+# west_weald_wine: "West Weald Wine"
+# west_weald_wineDESC: "West Weald Wine is a Skingrad wine named for the region of the West Weald where it is produced."
+west_weald_wine = {
+	color = { 0.32 0.11 0.11 }
+	modifier = {
+		relation_with_heretics = 15
+	}
+	province = {
+		local_institution_spread = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = { region = western_cyrodiil_lr }
+		}
+		
+	}
+}
+
+# moonshine: "Moonshine"
+# moonshineDESC: "Moonshine is high-proof liquor usually produced by fermintation of various plants."
+moonshine = {
+	color = { 0.33 0.56 0.62 }
+	modifier = {
+		stability_cost_modifier = -0.05
+	}
+	province = {
+		local_production_efficiency = 0.15
+	}
+	chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = drylands
+				has_terrain = hills 
+				has_terrain = mountain
+				has_terrain = highlands 
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = lava
+				has_terrain = salt_plains
+				has_terrain = taiga
+				has_terrain = deadlands_ashen_wastes
+				has_terrain = deadlands_smouldering_badlands
+				has_terrain = deadlands_boiling_coast
+				has_terrain = deadlands_burning_hills
+				has_terrain = deadlands_daedric_keep
+				has_terrain = deadlands_volcanic_peak
+				has_terrain = deadlands_lava_cave
+				has_terrain = deadlands_sulfuric_desolation
+				has_terrain = urban_ardent_hope
+				has_terrain = urban_mehrunes_dagon
+				has_terrain = urban_jynds_foundry
+				has_terrain = urban_zynoahzs_gaol
+				has_terrain = urban_wretched_spire
+				has_terrain = urban_world_breaker
+				has_terrain = urban_razorworks
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_terrain = forest 
+				has_terrain = woods
+				has_terrain = coastline
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = jungle
+				has_terrain = marsh
+				has_terrain = mudflats
+			}
+		}
+		
+	}
+}

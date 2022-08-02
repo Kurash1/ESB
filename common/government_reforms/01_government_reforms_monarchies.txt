@@ -1,0 +1,1007 @@
+monarchy_mechanic = {
+	monarchy = yes
+	heir = yes
+	queen = yes
+	basic_reform = yes # = invisible/does not take up a slot
+	valid_for_nation_designer = no
+	modifiers = {
+		nobility_influence_modifier = 0.25
+		commoners_influence_modifier = -0.15
+	}
+}
+
+autocracy_reform = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { is_emperor_of_china = yes }
+		NOT = { is_revolution_target = yes }
+	}
+	trigger = { OR = { has_reform = autocracy_reform
+	    NOT = { has_country_modifier = 06_the_moot }
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_clergy
+		es_guilds 
+		es_knights
+	}
+	
+	modifiers = {
+		unjustified_demands = -0.15
+		harsh_treatment_cost = -0.25
+		global_autonomy = -0.025
+		global_regiment_cost = -0.10
+		free_mil_policy = 1
+	}
+	
+	start_territory_to_estates = 0.75
+	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
+	
+	ai = {
+		factor = 0.5
+	}
+}
+
+elective_monarchy = {
+	icon = "elective_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { is_emperor_of_china = yes }
+		NOT = { is_revolution_target = yes }
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_clergy 
+		es_traders 
+		es_militarists
+	}
+	
+	modifiers = {
+		diplomatic_reputation = 2.5
+		global_unrest = -1
+		global_autonomy = -0.05
+		governing_capacity = 125
+		free_dip_policy = 1
+	}
+	
+	start_territory_to_estates = 0.75
+
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+	}
+	
+	conditional = {
+	allow = { has_dlc = "The Cossacks" }
+	government_abilities = {
+		cossacks_mechanic
+	}
+	}
+	
+	ai = {
+		factor = 0.5
+	}
+}
+
+### Replace Autocracy Reform
+celestial_empire = {
+	icon = "celestial_empire"
+	allow_normal_conversion = yes
+	potential = {
+		is_emperor_of_china = yes
+		NOT = { has_global_flag = empire_of_china_dismantled }
+		NOT = { is_revolution_target = yes }
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	maintain_dynasty = yes
+	allow_force_tributary = no
+	lock_level_when_selected = yes
+	fixed_rank = 10
+	
+	factions = {
+		es_monks 
+		es_monopolists 
+		es_knights
+	}
+
+	modifiers = {
+		prestige = 0.5
+		global_institution_spread = 0.50
+		governing_capacity = 350
+		global_autonomy = -0.075
+		free_adm_policy = 1
+	}
+	
+	start_territory_to_estates = 0.9
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+		allow_banners = yes
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+### Replace Autocracy Reform
+revolutionary_empire_reform = {
+	icon = "rioting_burning_2"
+	allow_normal_conversion = yes
+	potential = {
+	    NOT = { is_emperor_of_china = yes }
+		is_revolution_target = yes
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_new_country = no
+	uses_revolutionary_zeal = yes
+	revolutionary = yes
+	lock_level_when_selected = yes
+	fixed_rank = 10
+	
+	factions = {
+		es_governors 
+		es_traders 
+		es_generals
+	}
+	
+	modifiers = {
+		global_manpower_modifier = 0.25
+		land_morale = 0.15
+		governing_capacity = 250
+		max_revolutionary_zeal = 50
+		free_mil_policy = 1
+	}
+	
+	start_territory_to_estates = 0.15
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			if = { limit = { has_country_flag = is_revolutionary_china_flag is_revolutionary = no } clr_country_flag = is_revolutionary_china_flag restore_country_name = yes override_country_name = CHINA_STRING set_country_flag = is_china_flag }
+			if = { limit = { has_country_flag = is_revolutionary_turkey_flag is_revolutionary = no } clr_country_flag = is_revolutionary_turkey_flag restore_country_name = yes override_country_name = TURKEY_STRING set_country_flag = is_turkey_flag }
+			if = { limit = { has_country_flag = is_revolutionary_gurkani_flag is_revolutionary = no } clr_country_flag = is_revolutionary_gurkani_flag restore_country_name = yes override_country_name = GURKANI_EMPIRE_STRING set_country_flag = is_gurkani_flag }
+		}
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+#######################################################################
+
+### Get 5 Vassals
+feudalism_reform = {
+	icon = "castle"
+	allow_normal_conversion = yes
+	potential = {
+	    always = yes
+	}
+	trigger = { OR = { has_reform = feudalism_reform
+	    AND = {
+	    num_of_subjects = 5
+		NOT = { has_country_modifier = 06_the_moot }
+		NOT = { calc_true_if = { all_subject_country = { liberty_desire = 50 } amount = 1 } }
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_bureaucrats 
+		es_artisans 
+		es_traditionalists
+	}
+	
+	modifiers = {
+		vassal_income = 0.25
+		global_manpower_modifier = 0.15
+		vassal_forcelimit_bonus = 0.10
+		governing_capacity = 100
+		free_dip_policy = 1
+	}
+	
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+	
+	start_territory_to_estates = 0.75
+	
+	ai = {
+		factor = 5
+	}
+}
+
+### archduchy - become elector of HRE
+austrian_archduchy_reform = {
+	icon = "commander_king_reform"
+	allow_normal_conversion = yes
+	potential = {
+	    always = yes
+	}
+	trigger = { OR = { has_reform = austrian_archduchy_reform
+	    AND = {
+	    is_elector = yes
+		NOT = { has_country_modifier = 06_the_moot }
+		prestige = 25
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_clergy
+		es_guilds 
+		es_knights
+	}
+	
+	modifiers = {
+		liberty_desire_from_subject_development = -0.25
+		diplomatic_reputation = 1.5
+		free_leader_pool = 1
+		governing_capacity = 100
+		free_dip_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	
+	start_territory_to_estates = 0.50
+	
+	ai = {
+		factor = 5
+	}
+}
+
+### own 100 provinces
+grand_duchy_reform = {
+	icon = "peasants"
+	allow_normal_conversion = yes
+	potential = {
+	    always = yes
+	}
+	trigger = { OR = { has_reform = grand_duchy_reform
+	    AND = {
+	    num_of_cities = 100
+		NOT = { has_country_modifier = 06_the_moot }
+		NOT = { average_unrest = 1 }
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_bureaucrats
+		es_artisans 
+		es_traditionalists
+	}
+	
+	modifiers = {
+	    build_time = -0.25
+	    land_forcelimit_modifier = 0.10
+		naval_forcelimit_modifier = 0.10
+		governing_capacity = 175
+		free_mil_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	
+	start_territory_to_estates = 0.75
+	
+	ai = {
+		factor = 5
+	}
+}
+
+### dual monarchy - get personal union
+austrian_dual_monarchy = {
+	icon = "english_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+	    always = yes
+	}
+	trigger = { OR = { has_reform = austrian_dual_monarchy
+	    AND = {
+	    calc_true_if = {
+			all_subject_country = {
+				is_subject_of_type = personal_union 
+			}
+		    amount = 1
+		}
+		NOT = { calc_true_if = { all_subject_country = { liberty_desire = 50 } amount = 1 } }
+		NOT = { has_country_modifier = 06_the_moot }
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_bureaucrats 
+		es_artisans
+		es_traditionalists
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+
+	modifiers = {
+		num_accepted_cultures = 1
+		global_unrest = -1.5
+		stability_cost_modifier = -0.25
+		governing_capacity = 100
+		free_adm_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
+	start_territory_to_estates = 0.50
+	
+	ai = {
+		factor = 5
+	}
+}
+
+### End Goals ###
+
+### Elven 
+
+mamluk_government = {
+	icon = "indian_crown"
+	allow_normal_conversion = yes
+	potential = {
+		is_elven_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = mamluk_government
+		OR = {
+		    owns = 1206
+			calc_true_if = {
+			    all_subject_country = {
+				    NOT = { culture_group = ROOT }
+				}
+				amount = 15
+			}
+			calc_true_if = {
+			    all_owned_province = {
+				    trade_goods = slaves
+				}
+				amount = 25
+			}
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	queen = no
+	
+	factions = {
+		es_clergy
+		es_guilds
+		es_knights
+	}
+
+	modifiers = {
+		num_accepted_cultures = 3
+		monarch_admin_power = 1
+		global_autonomy = -0.05
+		governing_capacity = 250
+		free_adm_policy = 1
+	}
+	
+	start_territory_to_estates = 0.50
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			mamluk_mechanic
+		}
+		heir = no
+		foreign_slave_rulers = yes
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+english_monarchy = {
+	icon = "austrian_dual_monarchy_reform"
+	allow_normal_conversion = yes
+	potential = {
+		is_elven_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = english_monarchy
+	    is_emperor = yes
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_governors 
+		es_monopolists 
+		es_traditionalists
+	}
+	
+	modifiers = {
+		culture_conversion_cost = -0.25
+		stability_cost_modifier = -0.15
+		global_autonomy = -0.025
+	    governing_capacity = 250
+		free_adm_policy = 1
+	}
+	
+	start_territory_to_estates = 0.35
+
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+### Human
+
+prussian_monarchy = {
+	icon = "king"
+	allow_normal_conversion = yes
+    potential = {
+		is_human_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = prussian_monarchy
+	    OR = {
+		    government_rank = 10
+			is_emperor = yes
+			owns = 1206
+		}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	legacy_equivalent = despotic_monarchy
+	
+	factions = {
+		es_governors 
+		es_monopolists 
+		es_traditionalists
+	}
+
+	modifiers = {
+		global_unrest = -2.5
+		monarch_military_power = 1
+		global_autonomy = -0.05
+		reinforce_cost_modifier = -0.25
+		free_mil_policy = 1
+	}
+	
+	start_territory_to_estates = 0.35
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+ottoman_government = {
+	allow_normal_conversion = yes
+	icon = "noble_muslim"
+	potential = {
+		is_human_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = ottoman_government
+	    AND = {
+	    calc_true_if = { all_owned_province = {	continent = Tamriel } amount = 50 }
+		calc_true_if = { all_owned_province = {	NOT = { continent = Tamriel } } amount = 25 }
+		government_rank = 5
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	maintain_dynasty = yes
+	
+	factions = {
+		es_clergy 
+		es_guilds
+		es_knights
+	}
+	
+	modifiers = {
+	    core_creation = -0.25
+		diplomatic_annexation_cost = -0.15
+		unjustified_demands = -0.10
+		governing_capacity = 250
+		free_dip_policy = 1
+	}
+	
+	start_territory_to_estates = 0.35
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		has_harem = yes
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+### Beast
+
+shogunate = {
+	icon = "samurai"
+	allow_normal_conversion = yes
+	potential = {
+		is_beast_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = shogunate
+	    num_of_subjects = 35
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	maintain_dynasty = yes
+	
+	free_concentrate_development = yes
+	
+	factions = {
+		es_bureaucrats 
+		es_artisans 
+		es_traditionalists
+	}
+
+	modifiers = {
+		diplomats = 1
+		state_maintenance_modifier = -0.25
+		reduced_liberty_desire = 15
+		governing_capacity = 250
+		free_dip_policy = 1
+	}
+	
+	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
+		government_abilities = {
+			tribal_federation_mechanic
+		}
+	}
+	
+	start_territory_to_estates = 0.75
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+feudal_theocracy = {
+	icon = "feudal_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		is_beast_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = feudal_theocracy
+	    AND = {
+	    government_rank = 5
+		calc_true_if = {
+			all_owned_province = {
+				religion = root
+			}
+			amount = 750
+		}
+		is_defender_of_faith = yes
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_monks 
+		es_monopolists 
+		es_knights
+	}
+	
+	modifiers = {
+		missionaries = 1
+		global_missionary_strength = 0.025
+		tolerance_own = 1.5
+		governing_capacity = 250
+		free_adm_policy = 1
+	}
+	
+	start_territory_to_estates = 0.75
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+### Akaviri
+
+mughal_government = {
+	icon = "peacock_throne"
+	allow_normal_conversion = yes
+	potential = {
+		is_akaviri_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = mughal_government
+	    AND = {
+	    owns = 724
+		owns = 646
+		owns = 750
+		owns = 691
+		owns = 561
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_governors 
+		es_monopolists 
+		es_traditionalists
+	}
+
+	modifiers = {
+		monarch_diplomatic_power = 1
+		num_accepted_cultures = 2
+		governing_capacity = 250
+		global_autonomy = -0.075
+		free_mil_policy = 1
+	}
+	
+	start_territory_to_estates = 0.50
+
+	assimilation_cultures = {
+		marsh_cg = {
+			ship_durability = 0.10
+		}
+		yokudo_redguard_cg = {
+			free_leader_pool = 1
+		}
+		bosmer_cg = {
+			land_attrition = -0.1
+		}
+		half_blood_cg = {
+			state_maintenance_modifier = -0.10
+		}
+		velothi_cg = {
+			missionaries = 1
+		}
+		kamal_cg = {
+			global_trade_goods_size_modifier = 0.10
+		}
+		transpandomaic_cg = {
+			production_efficiency = 0.10
+		}
+		dead_cg = {
+			diplomats = 1
+		}
+		dwemer_cg = {
+			global_institution_spread = 0.10
+		}
+		sload_cg = {
+			core_creation = -0.1
+		}
+		po_tun_cg = {
+			advisor_cost = -0.1
+		}
+		tsaesci_cg = {
+			land_morale = 0.1
+		}
+		snow_elves_cg = {
+			idea_cost = -0.10
+		}
+		orsimer_cg = {
+			discipline = 0.05
+		}
+		tangmo_cg = {
+			merchants = 1
+		}
+		maormer_cg = {
+			global_sailors_modifier = 0.1
+		}
+		imga_cg = {
+			movement_speed = 0.1
+		}
+		northern_cg = {
+			mil_advisor_cost = -0.1
+		}
+		marsh_men_cg = {
+			caravan_power = 0.1
+		}
+		high_elves_cg = {
+			prestige_decay = -0.01
+		}
+		cyrodiil_cg = {
+			global_autonomy = -0.025
+		}
+		daedra_cg = {
+			leader_land_fire = 1
+		}
+		khajiiti_cg = {
+			trade_efficiency = 0.10
+		}
+		minotaur_cg = {
+		    cavalry_power = 0.10
+		}
+		lilmothiit_cg = {
+		    global_missionary_strength = 0.01
+		}
+		void_cg = {
+		    global_manpower_modifier = 0.10
+		}
+		unknown_cg = {
+		    technology_cost = -0.10
+		}
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+plutocratic_reform = {
+	icon = "asian_scripture"
+	allow_normal_conversion = yes
+	potential = {
+		is_akaviri_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = plutocratic_reform
+	    AND = {
+	    government_rank = 5
+		trade_income_percentage = 50
+		light_ship_fraction = 0.5
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_aristocrats 
+		es_merchants 
+		es_generals
+	}
+	
+	modifiers = {
+		merchants = 1
+		global_trade_power = 0.25
+		governing_capacity = 250
+		global_autonomy = -0.05
+		free_dip_policy = 1
+	}
+	
+	start_territory_to_estates = 0.75
+	
+	custom_attributes = {
+		allow_draft_transport_ships = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
+	boost_income = yes
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+### Daedric
+
+principality = {
+	icon = "russian_principality"
+	allow_normal_conversion = yes
+	potential = {
+		is_daedric_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = principality
+	    OR = { 
+		AND = { capital_scope = { NOT = { continent = Tamriel } } calc_true_if = { all_owned_province = { continent = Tamriel religion = root } amount = 50 } }
+		AND = { capital_scope = { continent = Tamriel } calc_true_if = { all_owned_province = { religion = root } amount = 250 } }
+		AND = { capital_scope = { continent = Tamriel } calc_true_if = { all_owned_province = { culture = root } amount = 100 } }
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_governors 
+		es_monopolists
+		es_traditionalists
+	}
+	
+	modifiers = {
+		manpower_recovery_speed = 0.25
+		global_tax_modifier = 0.10
+		global_autonomy = -0.05
+		governing_capacity = 250
+		free_adm_policy = 1
+	}
+	
+	start_territory_to_estates = 0.75
+
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}
+
+iqta = {
+	icon = "indian_sultanate"
+	allow_normal_conversion = yes
+	potential = {
+		is_daedric_nation_trigger = yes
+	}
+	trigger = { OR = { has_reform = iqta
+	    OR = {
+		    owns = 4075
+			owns = 3188
+			government_rank = 10
+		}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	queen = no
+	
+	factions = {
+		es_governors 
+		es_monopolists
+		es_traditionalists
+	}
+	
+	modifiers = {
+		vassal_income = 0.10
+		land_forcelimit_modifier = 0.15
+		global_autonomy = -0.05
+		governing_capacity = 250
+		free_mil_policy = 1
+	}
+	
+	start_territory_to_estates = 0.75
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	
+	ai = {
+		factor = 1000 # should always be picked if available
+	}
+}

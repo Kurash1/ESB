@@ -13,6 +13,460 @@
 # castle_volkihar
 # skykiller_gallery
 
+#To be done
+
+#1287#arcwind_point
+#1342#bards_college
+#7199#bthardamz
+#2767#fortress_of_ice
+#7080#isle_of_gold
+#1270#kagrenzel
+#1325#labyrinthian
+#7173#kilkreath_temple
+#1355#nchuand-zel
+#3139#redwater_spring
+#2783#saarthal
+#2819#skuldafn
+#2995#vault_of_mhuvnak
+#2812#yngol_barrow
+
+fortress_of_ice = {
+	start = 7080
+	date = 54.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+		is_year = 270
+		culture_group = northern_cg
+		has_owner_accepted_culture = yes
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		is_year = 270
+		culture_group = northern_cg
+		has_owner_accepted_culture = yes
+	}
+	can_upgrade_trigger = {
+		is_year = 270
+		culture_group = northern_cg
+		has_owner_accepted_culture = yes
+	}
+	keep_trigger = {
+		always = yes
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			prestige = 0.5
+			all_power_cost = -0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			prestige = 1
+			all_power_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 360
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			prestige = 1.5
+			all_power_cost = -0.075
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+bthardamz = {
+	start = 7199
+	date = 54.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+
+	}
+	can_upgrade_trigger = {
+
+	}
+	keep_trigger = {
+		always = yes
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			hostile_attrition = 0.5
+			siege_ability = 0.1
+			loot_amount = 0.25
+			available_province_loot = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			hostile_attrition = 1.0
+			siege_ability = 0.2
+			loot_amount = 0.5
+			available_province_loot = 0.5
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 360
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			hostile_attrition = 1.5
+			siege_ability = 0.25
+			loot_amount = 0.75
+			available_province_loot = 0.75
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+bards_college = {
+	start = 1342
+	date = 54.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+
+	}
+	can_upgrade_trigger = {
+
+	}
+	keep_trigger = {
+		always = yes
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			prestige = 0.5
+			monthly_reform_progress_modifier = 0.05
+			improve_relation_modifier = 0.10
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			prestige = 1.5
+			monthly_reform_progress_modifier = 0.10
+			improve_relation_modifier = 0.20
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 360
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+			prestige = 1.5
+			monthly_reform_progress_modifier = 0.15
+			improve_relation_modifier = 0.25
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+arcwind_point = {
+	start = 1287
+	date = 54.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 100
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+		culture_group = northern_cg
+		has_owner_accepted_culture = yes
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		culture_group = northern_cg
+		has_owner_accepted_culture = yes
+	}
+	can_upgrade_trigger = {
+		culture_group = northern_cg
+		has_owner_accepted_culture = yes
+	}
+	keep_trigger = {
+		always = yes
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 12
+		}
+		cost_to_upgrade = {
+			factor = 100
+		}
+		province_modifiers = {
+			fort_level = 1
+			development_cost = -0.1
+		}
+		area_modifier = {
+			defensiveness = 0.1
+		}
+		country_modifiers = {
+
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 24
+		}
+		cost_to_upgrade = {
+			factor = 250
+		}
+		province_modifiers = {
+			fort_level = 2
+			development_cost = -0.2
+		}
+		area_modifier = {
+			defensiveness = 0.2
+		}
+		country_modifiers = {
+	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 36
+		}
+		cost_to_upgrade = {
+			factor = 500
+		}
+		province_modifiers = {
+			fort_level = 3
+			development_cost = -0.25
+		}
+		area_modifier = {
+			defensiveness = 0.25
+		}
+		country_modifiers = {
+		
+		}
+		on_upgraded = {
+		}
+	}
+}
+
 twilight_sepulcher = {
 	start = 1295
 	date = 54.01.01

@@ -1,0 +1,354 @@
+ivory = {
+	color = { 0.75 0.7 0.63 }
+	modifier = {
+		ae_impact = -0.10
+	}
+	province = {
+		trade_value_modifier = 0.15
+	}
+	chance = {
+		factor = 12
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = kamal_lr
+				superregion = skyrim_superregion
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = jungle
+ 		    has_terrain = marsh
+		    has_terrain = drylands
+			has_terrain = hills 
+ 		    has_terrain = mountain
+			has_terrain = desert
+ 		    has_terrain = coastal_desert
+			has_terrain = dwemer_stronghold
+			has_terrain = lava
+			has_terrain = ashlands
+			has_terrain = salt_plains
+			has_terrain = deadlands_ashen_wastes
+			has_terrain = deadlands_smouldering_badlands
+			has_terrain = deadlands_boiling_coast
+			has_terrain = deadlands_burning_hills
+			has_terrain = deadlands_daedric_keep
+			has_terrain = deadlands_volcanic_peak
+			has_terrain = deadlands_lava_cave
+			has_terrain = deadlands_sulfuric_desolation
+			has_terrain = urban_ardent_hope
+			has_terrain = urban_mehrunes_dagon
+			has_terrain = urban_jynds_foundry
+			has_terrain = urban_zynoahzs_gaol
+			has_terrain = urban_wretched_spire
+			has_terrain = urban_world_breaker
+			has_terrain = urban_razorworks
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = forest 
+ 		    has_terrain = woods
+			has_terrain = coastline
+			has_terrain = farmlands
+ 		    has_terrain = grasslands
+ 		    has_terrain = steppe
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {			
+			has_terrain = highlands 
+			has_terrain = hills
+		}
+	}	
+	
+	modifier = {
+		factor = 2.5
+		OR = {			
+		    has_terrain = savannah
+			has_terrain = glacier
+			has_terrain = tundra
+		}
+	}
+		
+	}
+}
+
+crabs = {
+	color = { 0.85 0.41 0.41 }
+	modifier = {
+		sailors_recovery_speed = 0.10
+	}
+	province = {
+		local_sailors_modifier = 0.15
+	}
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_port = yes }
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = high_rock_lr
+			region = auridon_lr
+			}
+		}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+				
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = dwemer_stronghold
+ 		    has_terrain = lava
+			has_terrain = deadlands_ashen_wastes
+			has_terrain = deadlands_smouldering_badlands
+			has_terrain = deadlands_boiling_coast
+			has_terrain = deadlands_burning_hills
+			has_terrain = deadlands_daedric_keep
+			has_terrain = deadlands_volcanic_peak
+			has_terrain = deadlands_lava_cave
+			has_terrain = deadlands_sulfuric_desolation
+			has_terrain = urban_ardent_hope
+			has_terrain = urban_mehrunes_dagon
+			has_terrain = urban_jynds_foundry
+			has_terrain = urban_zynoahzs_gaol
+			has_terrain = urban_wretched_spire
+			has_terrain = urban_world_breaker
+			has_terrain = urban_razorworks
+		}
+	}
+	
+	}
+}
+
+pearls = {
+	color = { 0.94 0.92 0.84 }
+	modifier = {
+		navy_tradition_decay = -0.015
+	}
+	province = {
+		ship_recruit_speed = -0.15
+	}
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_port = yes }
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = yokuda_lr
+			region = northern_islands_lr
+			}
+		}
+		
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+			has_terrain = drylands
+		}
+	}	
+			
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = dwemer_stronghold
+			has_terrain = lava
+			has_terrain = deadlands_ashen_wastes
+			has_terrain = deadlands_smouldering_badlands
+			has_terrain = deadlands_boiling_coast
+			has_terrain = deadlands_burning_hills
+			has_terrain = deadlands_daedric_keep
+			has_terrain = deadlands_volcanic_peak
+			has_terrain = deadlands_lava_cave
+			has_terrain = deadlands_sulfuric_desolation
+			has_terrain = urban_ardent_hope
+			has_terrain = urban_mehrunes_dagon
+			has_terrain = urban_jynds_foundry
+			has_terrain = urban_zynoahzs_gaol
+			has_terrain = urban_wretched_spire
+			has_terrain = urban_world_breaker
+			has_terrain = urban_razorworks
+		}
+	}
+	
+	}
+}
+
+gems = {
+	color = { 0.96 0.78 0.78 }
+	modifier = {
+		interest = -1.5
+	}
+	province = {
+		local_build_time = -0.15
+	}
+	chance = {
+		factor = 12.5
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = vvardenfell_lr
+			region = central_coldharbour_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+ 		    has_terrain = marsh
+ 		    has_terrain = coastline
+			has_terrain = bayou
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+			has_terrain = forest 
+ 		    has_terrain = woods
+			has_terrain = taiga
+			has_terrain = jungle
+			has_terrain = tundra
+			has_terrain = deadlands_ashen_wastes
+			has_terrain = deadlands_smouldering_badlands
+			has_terrain = deadlands_boiling_coast
+			has_terrain = deadlands_burning_hills
+			has_terrain = deadlands_daedric_keep
+			has_terrain = deadlands_volcanic_peak
+			has_terrain = deadlands_lava_cave
+			has_terrain = deadlands_sulfuric_desolation
+			has_terrain = urban_ardent_hope
+			has_terrain = urban_mehrunes_dagon
+			has_terrain = urban_jynds_foundry
+			has_terrain = urban_zynoahzs_gaol
+			has_terrain = urban_wretched_spire
+			has_terrain = urban_world_breaker
+			has_terrain = urban_razorworks
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+			has_terrain = salt_plains
+		}
+	}	
+	
+	modifier = {
+		factor = 2
+		OR = {
+			has_terrain = dwemer_stronghold
+			has_terrain = lava 
+ 		    has_terrain = ashlands
+		}
+	}	
+		
+	}
+}
+
+dyes = {
+	color = { 0.63 0.17 0.50 }
+	modifier = {
+		global_missionary_strength = 0.015
+	}
+	province = {
+		local_institution_spread = 0.15
+	}
+	chance = {
+		factor = 20
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = black_marsh_lr
+			region = murkmire_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+ 		    has_terrain = mountain
+			has_terrain = desert
+ 		    has_terrain = coastal_desert
+			has_terrain = deadlands_daedric_keep
+			has_terrain = urban_ardent_hope
+			has_terrain = urban_mehrunes_dagon
+			has_terrain = urban_jynds_foundry
+			has_terrain = urban_zynoahzs_gaol
+			has_terrain = urban_wretched_spire
+			has_terrain = urban_world_breaker
+			has_terrain = urban_razorworks
+		}
+	}
+			
+	modifier = {
+		factor = 0.25
+		OR = {
+			has_terrain = deadlands_ashen_wastes
+			has_terrain = deadlands_smouldering_badlands
+			has_terrain = deadlands_boiling_coast
+			has_terrain = deadlands_burning_hills
+			has_terrain = deadlands_volcanic_peak
+			has_terrain = deadlands_lava_cave
+			has_terrain = deadlands_sulfuric_desolation
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = farmlands
+ 		    has_terrain = grasslands
+ 		    has_terrain = steppe
+		    has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+			has_terrain = coastline
+		}
+	}
+				
+	modifier = {
+		factor = 4
+		OR = {
+			has_terrain = lava
+		    has_terrain = ashlands
+			has_terrain = hot_springs
+		}
+	}
+	
+	}
+}

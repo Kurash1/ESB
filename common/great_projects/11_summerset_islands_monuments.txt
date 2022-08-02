@@ -9,6 +9,94 @@
 # college_of_sapiarchs
 # eldbur_sanctuary
 # coral_tower
+# crystal_tower
+
+crystal_tower = {
+	start = 263
+	
+	date = 54.01.01
+	
+	time = { months = 0 }
+	
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = { 
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	on_built = { }
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = { 
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	keep_trigger = { always = yes }
+
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { 
+			administrative_efficiency = 0.02
+			idea_cost = -0.05
+			prestige = 0.5
+		}
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { 
+			administrative_efficiency = 0.04
+			idea_cost = -0.10
+			prestige = 1.0
+		}
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 360 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { 
+			administrative_efficiency = 0.05
+			idea_cost = -0.15
+			prestige = 1.5
+		}
+		on_upgraded = { }
+	}
+}
 
 eton_nir = {
 	start = 4617
