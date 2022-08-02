@@ -7,6 +7,7 @@ maritime_ideas = {
 	}
 	bonus = {
 		sea_repair = yes
+		ship_durability = 0.05
 	}
 
 	sea_hawks = {
@@ -14,21 +15,24 @@ maritime_ideas = {
 	}
 	merchant_marine = {
 		global_sailors_modifier = 0.15
+		naval_tradition_from_trade = 0.25
 	}
 	sheltered_ports = {
-		global_ship_repair = 0.15
+		global_ship_repair = 0.25
 	}
 	grand_navy = {
-		naval_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.25
 	}
 	ships_penny = {
-		global_ship_cost = -0.1
+		global_ship_cost = -0.15
 	}
 	excellent_shipwrights = {
 		leader_naval_manuever = 1
+		movement_speed_in_fleet_modifier = 1.5
 	}
 	naval_fighting_instruction = {
 		embargo_efficiency = 0.25
+		blockade_efficiency = 0.25
 	}
 
 	ai_will_do = {
@@ -79,30 +83,31 @@ galle0 = {
 		NOT = { has_idea_group = gross0 }
 	}
 	bonus = {
-		sailors_recovery_speed = 0.2
+		capture_ship_chance = 0.25
 	}
 		
 	
 	galle1 = {
-		naval_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.2
 	}
 	galle2 = {
-		galley_cost = -0.15
+		galley_cost = -0.2
 	}
 	galle3 = {
-		galley_power = 0.10
+		galley_power = 0.15
 	}
 	galle7 = {
 		naval_morale = 0.1
 	}
 	galle5 = {
-		sailor_maintenance_modifer = -0.15
+		blockade_efficiency = 0.25
+		sailor_maintenance_modifer = -0.25
 	}
 	galle6 = {
 		ship_durability = 0.1
 	}
 	galle4 = {
-		blockade_efficiency = 0.25
+		siege_blockade_progress = 1
 	}
 	
 	ai_will_do = {
@@ -129,25 +134,28 @@ handel0 = {
 	}
 	bonus = {
 		merchants = 1
+		naval_tradition_from_trade = 0.25
 	}
 		
 	handel1 = {
 		light_ship_cost = -0.2
 	}
 	handel2 = {
-		light_ship_power = 0.15
+		ship_durability = 0.1
 	}
 	handel3 = {
-		trade_efficiency = 0.1
+		trade_efficiency = 0.15
 	}
 	handel4 = {
-		sailor_maintenance_modifer = -0.10
+		sailor_maintenance_modifer = 0.1
+		sailors_recovery_speed = 0.2
 	}
 	handel5 = {
-		global_ship_trade_power = 0.2
+		naval_forcelimit_modifier = 0.2
 	}
 	handel6 = {
-		privateer_efficiency = 0.25
+		trade_power_in_fleet_modifier = 0.5
+		navy_tradition = 1
 	}
 	handel7 = {
 		naval_morale = 0.10
@@ -180,25 +188,27 @@ gross0 = {
 	}
 		
 	gross1 = {
-		heavy_ship_cost = -0.15
+		heavy_ship_cost = -0.2
 	}
 	gross2 = {
-		heavy_ship_power = 0.10
+		heavy_ship_power = 0.15
 	}
 	gross3 = {
-		global_ship_recruit_speed = -0.15
+		global_ship_recruit_speed = -0.35
+		sailor_maintenance_modifer = -0.2
 	}
 	gross4 = {
-		global_sailors_modifier = 0.25
+		naval_morale = 0.1
 	}
 	gross5 = {
 		ship_durability = 0.10
 	}
 	gross6 = {
-		naval_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.2
 	}
 	gross7 = {
-		sailor_maintenance_modifer = -0.10
+		sailor_maintenance_modifer = 0.1
+		sailors_recovery_speed = 0.2
 	}
 	
 	ai_will_do = {
@@ -240,16 +250,16 @@ diplomatic_ideas = {
 		diplomats = 1
 	}
 	benign_diplomats = {
-		improve_relation_modifier = 0.20
+		improve_relation_modifier = 0.25
 	}
 	experienced_diplomats = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 2
 	}
 	flexible_negotiation = {
-		province_warscore_cost = -0.10
+		province_warscore_cost = -0.2
 	}
 	diplomatic_corps = {
-		dip_tech_cost_modifier = -0.05
+		dip_tech_cost_modifier = -0.1
 	}
 
 	ai_will_do = {
