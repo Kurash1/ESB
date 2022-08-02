@@ -30,8 +30,300 @@
 #2995#vault_of_mhuvnak
 #2812#yngol_barrow
 
-fortress_of_ice = {
+labyrinthian = {
+	start = 1325
+	date = 54.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 100
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+		religion = dragon_cult
+		has_owner_religion = yes
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		religion = dragon_cult
+		has_owner_religion = yes
+	}
+	can_upgrade_trigger = {
+		religion = dragon_cult
+		has_owner_religion = yes
+	}
+	keep_trigger = {
+		always = yes
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 360 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+		}
+		area_modifier = {	
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+}
+
+kagrenzel = {
+	start = 1270
+	date = 54.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 100
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = {
+		always = yes
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 24 }
+		cost_to_upgrade = { factor = 100 }
+		province_modifiers = {
+			development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
+			local_hostile_attrition = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			defensiveness = 0.05
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 48 }
+		cost_to_upgrade = { factor = 250 }
+		province_modifiers = {
+			development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
+			local_hostile_attrition = 2
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.075
+			defensiveness = 0.10
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 72 }
+		cost_to_upgrade = { factor = 500 }
+		province_modifiers = {
+			development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
+			local_hostile_attrition = 3
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			defensiveness = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+}
+
+isle_of_gold = {
 	start = 7080
+	date = 54.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 100
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+	build_trigger = {
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = {
+		always = yes
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 24
+		}
+		cost_to_upgrade = {
+			factor = 100
+		}
+		province_modifiers = {
+			development_cost = -0.05
+			trade_value_modifier = 0.05
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.05
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 48
+		}
+		cost_to_upgrade = {
+			factor = 250
+		}
+		province_modifiers = {
+			development_cost = -0.1
+			trade_value_modifier = 0.1
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.1
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 72
+		}
+		cost_to_upgrade = {
+			factor = 500
+		}
+		province_modifiers = {
+			development_cost = -0.15
+			trade_value_modifier = 0.15
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.15
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+}
+
+fortress_of_ice = {
+	start = 2767
 	date = 54.01.01
 	time = {
 		months = 0

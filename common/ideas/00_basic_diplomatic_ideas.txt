@@ -495,13 +495,14 @@ naval_ideas = {
 		navy_tradition = 1
 	}
 	press_gangs = {
-		sailors_recovery_speed = 0.10
+		sailors_recovery_speed = 0.25
 	}
 	oak_forests_for_ships = {
-		heavy_ship_power = 0.10
+		heavy_ship_power = 0.2
 	}
 	superior_seamanship = {
 		global_naval_engagement_modifier = 0.15
+		naval_morale = 0.15
 	}
 
 	ai_will_do = {
@@ -543,30 +544,33 @@ flottenbasis0 = {
 		NOT = { has_idea_group = naval_ideas }
 	}
 	bonus = {
-		allowed_marine_fraction = 0.30
+		build_cost = -0.15
+		build_time = -0.15
 	}
 		
 	flottenbasis2 = {
-		sailor_maintenance_modifer = -0.15
+		sailor_maintenance_modifer = -0.25
 	}
 	flottenbasis3 = {
-		naval_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.25
 	}
 	flottenbasis1 = {
-		global_manpower_modifier = 0.10
+		global_manpower_modifier = 0.15
+		build_cost = -0.15
 	}
 	flottenbasis4 = {
 		global_sailors_modifier = 0.25
 	}
 
 	flottenbasis5 = {
-		naval_morale = 0.1
+		naval_morale = 0.15
 	}
 	flottenbasis6 = {
-		heavy_ship_power = 0.1
+		galley_power = 0.15
+		transport_power = 0.15
 	}
 	flottenbasis7 = {
-		global_ship_repair = 0.25
+		global_ship_repair = 0.5
 	}
 	
 	ai_will_do = {
@@ -634,19 +638,21 @@ exploration_ideas = {
 		colonists = 1
 	}
 	overseas_exploration = {
-		range = 0.35
+		range = 0.5
 	}
 	land_of_opportunity = {
-		global_colonial_growth = 10
+		global_colonial_growth = 25
 	}
 	vice_roys  = {
 		global_tariffs = 0.15
+		envoy_travel_time = -0.2
  	}
 	free_colonies = {
 		colonist_placement_chance = 0.1
+		expel_minorities_cost = -1.0
 	}
 	global_empire = {
-		naval_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.25
 	}
 
 	ai_will_do = {
@@ -696,7 +702,7 @@ kolonialimperium0 = {
 	}
 	
 	kolonialimperium1 = {
-		governing_capacity_modifier = 0.10
+		governing_capacity_modifier = 0.15
 	}
 	
 	kolonialimperium4 = {
@@ -712,7 +718,8 @@ kolonialimperium0 = {
 	}
 
 	kolonialimperium5 = {
-		build_cost = -0.10
+		build_cost = -0.2
+		build_time = -0.2
 	}
 	
 	kolonialimperium7 = {
@@ -770,17 +777,17 @@ imperialismus0 = {
 	}
 	
 	imperialismus1 = {
-		core_creation = -0.10
+		core_creation = -0.15
 	}
 	imperialismus2 = {
-		global_unrest = -1
+		global_unrest = -3
 	}
 	imperialismus3 = {
 		prestige_decay = -0.01
 	}
 
 	imperialismus4 = {
-		global_tax_modifier = 0.1
+		global_tax_modifier = 0.15
 	}
 
 	imperialismus5 = {
@@ -790,7 +797,7 @@ imperialismus0 = {
 		land_forcelimit_modifier = 0.15
 	}
 	imperialismus7 = {
-		discipline = 0.025
+		discipline = 0.05
 	}
 	
 	ai_will_do = {
@@ -840,29 +847,29 @@ illusion_ideas = {
 	trigger = {
 	}
 	bonus = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 2
 	}
 
 	invisibily = {
-		spy_offence = 0.25
+		spy_offence = 0.3
 	}
 	instill_courage = {
-		land_morale = 0.05
+		land_morale = 0.1
 	}
 	instill_calm = {
 		ae_impact = -0.1
 	}
 	instill_fear = {
-		unjustified_demands = -0.20
+		unjustified_demands = -0.25
 	}
 	instill_frenzy = {
-		rebel_support_efficiency = 0.25
+		rebel_support_efficiency = 0.5
 	}
 	pacify = {
-		global_unrest = -1
+		global_unrest = -2
 	}
 	clairvoyance = {
-		global_institution_spread = 0.20
+		global_institution_spread = 0.25
 	}
 
 	ai_will_do = {
@@ -896,27 +903,27 @@ gesellschaft0 = {
 	}
 		
 	gesellschaft1 = {
-		land_maintenance_modifier = -0.05
+		land_maintenance_modifier = -0.15
 	}
 	gesellschaft2 = {
-		improve_relation_modifier = 0.15
+		improve_relation_modifier = 0.25
 	}
 	gesellschaft3 = {
-		global_institution_spread = 0.20
+		global_institution_spread = 0.25
 	}
 
 	gesellschaft4 = {
-		advisor_cost = -0.1
+		advisor_cost = -0.25
 	}
 
 	gesellschaft5 = {
-		global_spy_defence = 0.1
+		global_spy_defence = 0.25
 	}
 	gesellschaft6 = {
-		global_unrest = -1
+		global_unrest = -2
 	}
 	gesellschaft7 = {
-		land_morale = 0.075
+		land_morale = 0.1
 	}
 	
 	ai_will_do = {
@@ -948,31 +955,32 @@ propaganda0 = {
 		NOT = { has_idea_group = gesellschaft0 }
 	}
 	bonus = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.25
 	}
 		
 	propaganda1 = {
-		war_exhaustion = -0.025
+		war_exhaustion = -0.05
 	}
 	propaganda2 = {
 		diplomats = 1
 	}
 	propaganda3 = {
-		improve_relation_modifier = 0.15
+		improve_relation_modifier = 0.25
 	}
 
 	propaganda4 = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 2
 	}
 
 	propaganda5 = {
-		reform_progress_growth = 0.10
+		reform_progress_growth = 0.15
 	}
 	propaganda6 = {
-		unjustified_demands = -0.15
+		unjustified_demands = -0.25
 	}
 	propaganda7 = {
-		siege_ability = 0.1
+		siege_ability = 0.15
+		defensiveness = 0.15
 	}
 	
 	ai_will_do = {
@@ -1016,32 +1024,32 @@ enchanting_ideas = {
 	trigger = {
 	}
 	bonus = {
-		idea_cost = -0.10
+		idea_cost = -0.25
 	}
 
 	royal_artifacts = {
-		legitimacy = 0.5
-		republican_tradition = 0.25
-		devotion = 0.5
-		horde_unity = 0.5
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
 	}
 	enchanted_infrastructure = {
-		development_cost = -0.1
+		development_cost = -0.15
 	}
 	animated_services = {
-		state_maintenance_modifier = -0.10
+		state_maintenance_modifier = -0.15
 	}
 	enchanted_tools = {
-		technology_cost = -0.05
+		technology_cost = -0.1
 	}
 	enchanted_weaponary = {
 		fire_damage = 0.05
 	}
 	grand_artifacts = {
-		prestige = 0.5
+		prestige = 1
 	}
 	trading_enchanted_items = {
-		global_trade_power = 0.15
+		global_trade_power = 0.25
 	}
 
 	ai_will_do = {
@@ -1079,26 +1087,26 @@ arcane_ideas = {
 		NOT = { has_idea_group = soul_siphon_ideas }
 	}
 	bonus = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 2
 	}
 
 	apprentice_arcanist = {
-		production_efficiency = 0.05
+		production_efficiency = 0.15
 	}
 	court_mages = {
 		diplomats = 1
 	}
 	arcane_enchanters = {
-		prestige = 0.5
+		prestige = 1
 	}
 	evoker_mages = {
 		trade_efficiency = 0.15
 	}
 	the_mystic_archives = {
-		technology_cost = -0.05
+		technology_cost = -0.1
 	}
 	the_orrery_observatoriums = {
-		monthly_splendor = 2
+		monthly_splendor = 3
 	}
 	the_archmage = {
 		yearly_corruption = -0.05
@@ -1147,16 +1155,16 @@ soul_siphon_ideas = {
 		global_trade_power = 0.15
 	}
 	common_soulgems = {
-		caravan_power = 0.20
+		caravan_power = 0.25
 	}
 	greater_soul_gems = {
-		trade_steering = 0.20
+		trade_steering = 0.25
 	}
 	grand_soul_gems = {
-		global_trade_goods_size_modifier = 0.05	
+		global_trade_goods_size_modifier = 0.1	
 	}
 	black_soul_gems = {
-		trade_efficiency = 0.1
+		trade_efficiency = 0.15
 	}
 	azuras_star = {
 		prestige_decay = -0.01

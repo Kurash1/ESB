@@ -87,4 +87,104 @@ country_decisions = {
 			}
 		}
 	}
+	
+	es_16_rebuild_northern_orsinium = {
+	    major = yes
+			potential = {
+				culture_group = orsimer_cg
+				OR = {
+					AND = {
+						6833 = { NOT = { has_province_modifier = 16_n_orsinium } }
+						NOT = { check_variable = { which = num_of_sacked_orsinium value = 1 } }
+					}
+					AND = {
+						1419 = { NOT = { has_province_modifier = 16_n_orsinium } }
+						check_variable = { which = num_of_sacked_orsinium value = 1 }
+						NOT = { check_variable = { which = num_of_sacked_orsinium value = 2 } }
+					}
+					AND = {
+						1391 = { NOT = { has_province_modifier = 16_n_orsinium } }
+						check_variable = { which = num_of_sacked_orsinium value = 2 }
+						NOT = { check_variable = { which = num_of_sacked_orsinium value = 3 } }
+					}
+					AND = {
+						6074 = { NOT = { has_province_modifier = 16_n_orsinium } }
+						check_variable = { which = num_of_sacked_orsinium value = 3 }
+					}
+				}
+			}
+		allow = {
+			treasury = 5000
+			OR = {
+				AND = {
+					6883 = { NOT = { has_province_modifier = 16_n_orsinium } }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 1 } }
+				}
+				AND = {
+					1419 = { NOT = { has_province_modifier = 16_n_orsinium } }
+					check_variable = { which = num_of_sacked_orsinium value = 1 }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 2 } }
+				}
+				AND = {
+					1391 = { NOT = { has_province_modifier = 16_n_orsinium } }
+					check_variable = { which = num_of_sacked_orsinium value = 2 }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 3 } }
+				}
+				AND = {
+					6074 = { NOT = { has_province_modifier = 16_n_orsinium } }
+					check_variable = { which = num_of_sacked_orsinium value = 3 }
+				}
+			}
+        }
+		effect = {
+			add_treasury = -5000
+			log = "[This.num_of_sacked_orsinium.GetValue]"
+			if = {
+				limit = {
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 1 } }
+				}
+				6883 = { 
+					add_permanent_province_modifier = { name = "16_n_orsinium" duration = -1 } 
+					change_province_name = "Orsinium"
+					rename_capital = "Orsinium"
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = num_of_sacked_orsinium value = 1 }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 2 } }
+				}
+				1419 = { 
+					add_permanent_province_modifier = { name = "16_n_orsinium" duration = -1 }
+					change_province_name = "Orsinium"
+					rename_capital = "Orsinium"
+				}
+				6883 = { 
+					change_province_name = "Old Orsinium"
+					rename_capital = "Old Orsinium"
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = num_of_sacked_orsinium value = 2 }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 3 } }
+				}
+				1391 = {
+					add_permanent_province_modifier = { name = "16_n_orsinium" duration = -1 }
+					change_province_name = "New Orsinium"
+					rename_capital = "New Orsinium"
+				}
+			}
+			else = {
+				6074 = { 
+					add_permanent_province_modifier = { name = "16_n_orsinium" duration = -1 } 
+					change_province_name = "Orsinium Nova"
+					rename_capital = "Orsinium Nova"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
