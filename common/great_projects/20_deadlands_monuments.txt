@@ -12,20 +12,35 @@ ganonah = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		culture_group = daedra_cg
+		OR = {
+			has_owner_accepted_culture = yes
+			has_owner_culture = yes
+		}
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		culture_group = daedra_cg
+		OR = {
+			has_owner_accepted_culture = yes
+			has_owner_culture = yes
+		}
 	}
 	can_upgrade_trigger = {
+		culture_group = daedra_cg
+		OR = {
+			has_owner_accepted_culture = yes
+			has_owner_culture = yes
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -48,7 +63,11 @@ ganonah = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			army_tradition = 0.5
+			state_maintenance_modifier = -0.0.5
+			reinforce_speed = 0.1
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -60,7 +79,11 @@ ganonah = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			army_tradition = 1
+			state_maintenance_modifier = -0.1
+			reinforce_speed = 0.2
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -72,7 +95,11 @@ ganonah = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			army_tradition = 1.5
+			state_maintenance_modifier = -0.15
+			reinforce_speed = 0.25
+		}
 		on_upgraded = { }
 	}
 }

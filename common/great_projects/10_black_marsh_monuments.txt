@@ -23,14 +23,20 @@ eld_angavar = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		culture = barsaebic
+		has_owner_culture = yes
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		culture = barsaebic
+		has_owner_culture = yes
 	}
 	can_upgrade_trigger = {
+		culture = barsaebic
+		has_owner_culture = yes
 	}
 	keep_trigger = {
 		always = yes
@@ -53,7 +59,10 @@ eld_angavar = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			all_power_cost = -0.05
+			technology_cost = -0.05
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -65,7 +74,10 @@ eld_angavar = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			all_power_cost = -0.075
+			technology_cost = -0.1
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -77,7 +89,10 @@ eld_angavar = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			all_power_cost = -0.1
+			technology_cost = -0.15
+		}
 		on_upgraded = { }
 	}
 }
@@ -94,14 +109,20 @@ norg_tzel = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		culture_group = marsh_cg
+		has_owner_culture = yes
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		culture_group = marsh_cg
+		has_owner_culture = yes
 	}
 	can_upgrade_trigger = {
+		culture_group = marsh_cg
+		has_owner_culture = yes
 	}
 	keep_trigger = {
 		always = yes
@@ -124,7 +145,11 @@ norg_tzel = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			harsh_treatment_cost = -0.25
+			global_manpower_modifier = 0.1
+			global_unrest = -2
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -136,7 +161,11 @@ norg_tzel = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			harsh_treatment_cost = -0.4
+			global_manpower_modifier = 0.2
+			global_unrest = -4
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -148,7 +177,11 @@ norg_tzel = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			harsh_treatment_cost = -0.5
+			global_manpower_modifier = 0.3
+			global_unrest = -5
+		}
 		on_upgraded = { }
 	}
 }
@@ -165,14 +198,20 @@ mazzatun = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		culture_group = marsh_cg
+		has_owner_culture = yes
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		culture_group = marsh_cg
+		has_owner_culture = yes
 	}
 	can_upgrade_trigger = {
+		culture_group = marsh_cg
+		has_owner_culture = yes
 	}
 	keep_trigger = {
 		always = yes
@@ -195,7 +234,11 @@ mazzatun = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			defensiveness = 0.25
+			prestige = 0.5
+			ae_impact = -0.05
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -207,7 +250,11 @@ mazzatun = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			defensiveness = 0.4
+			prestige = 1
+			ae_impact = -0.1
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -219,7 +266,11 @@ mazzatun = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			defensiveness = 0.5
+			prestige = 1.5
+			ae_impact = -0.15
+		}
 		on_upgraded = { }
 	}
 }

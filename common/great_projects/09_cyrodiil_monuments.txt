@@ -65,10 +65,6 @@ imperial_waterfront = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
-		}
 	}
 	can_upgrade_trigger = {
 		OR = {
@@ -240,6 +236,10 @@ imperial_elven_gardens = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	on_built = {
 	}
@@ -248,6 +248,10 @@ imperial_elven_gardens = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -268,8 +272,13 @@ imperial_elven_gardens = {
 		cost_to_upgrade = {
 			factor = 100
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = { 
+			local_unrest = -2
+			local_development_cost = -0.05
+		}
+		area_modifier = {
+			local_development_cost = -0.05
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
@@ -280,8 +289,13 @@ imperial_elven_gardens = {
 		cost_to_upgrade = {
 			factor = 250
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = { 
+			local_unrest = -4
+			local_development_cost = -0.1
+		}
+		area_modifier = {
+			local_development_cost = -0.075
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
@@ -296,7 +310,9 @@ imperial_elven_gardens = {
 			local_unrest = -5
 			local_development_cost = -0.15
 		}
-		area_modifier = { }
+		area_modifier = {
+			local_development_cost = -0.1
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
@@ -308,12 +324,17 @@ imperial_dragonfire_cathedral = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		OR = {
+			tag = ALE
+			tag = CYR
+			tag = TAM
+		}
 	}
 	on_built = {
 	}
@@ -322,6 +343,11 @@ imperial_dragonfire_cathedral = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
+		OR = {
+			tag = ALE
+			tag = CYR
+			tag = TAM
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -344,7 +370,11 @@ imperial_dragonfire_cathedral = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			legitimacy = 0.5
+			monthly_heir_claim_increase = 0.05
+			stability_cost_modifier = -0.1
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -356,7 +386,11 @@ imperial_dragonfire_cathedral = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			legitimacy = 1
+			monthly_heir_claim_increase = 0.1
+			stability_cost_modifier = -0.2
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -368,7 +402,11 @@ imperial_dragonfire_cathedral = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			legitimacy = 1.5
+			monthly_heir_claim_increase = 0.15
+			stability_cost_modifier = -0.3
+		}
 		on_upgraded = { }
 	}
 }
@@ -385,14 +423,26 @@ imperial_arena = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	can_upgrade_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -415,7 +465,12 @@ imperial_arena = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			global_unrest = -2
+			army_tradition = 0.5
+			drill_gain_modifier = 0.5
+			drill_decay_modifier = -0.1
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -427,7 +482,12 @@ imperial_arena = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			global_unrest = -4
+			army_tradition = 1
+			drill_gain_modifier = 1
+			drill_decay_modifier = -0.2
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -439,7 +499,12 @@ imperial_arena = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			global_unrest = -5
+			army_tradition = 1.5
+			drill_gain_modifier = 1.5
+			drill_decay_modifier = -0.3
+		}
 		on_upgraded = { }
 	}
 }
@@ -450,7 +515,7 @@ imperial_arboretum = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -486,7 +551,11 @@ imperial_arboretum = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			technology_cost = -0.05
+			idea_cost = -0.05
+			prestige_decay = -0.005
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -498,7 +567,11 @@ imperial_arboretum = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			technology_cost = -0.075
+			idea_cost = -0.1
+			prestige_decay = -0.01
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -510,7 +583,11 @@ imperial_arboretum = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			technology_cost = -0.1
+			idea_cost = -0.15
+			prestige_decay = -0.015
+		}
 		on_upgraded = { }
 	}
 }
@@ -521,20 +598,35 @@ temple_of_the_one = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		OR = {
+			religion = nine_divines
+			tag = ORD
+		}
+		has_owner_religion = yes
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		OR = {
+			religion = nine_divines
+			tag = ORD
+		}
+		has_owner_religion = yes
 	}
 	can_upgrade_trigger = {
+		OR = {
+			religion = nine_divines
+			tag = ORD
+		}
+		has_owner_religion = yes
 	}
 	keep_trigger = {
 		always = yes
@@ -557,7 +649,11 @@ temple_of_the_one = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			global_heretic_missionary_strength = 0.01
+			religious_unity = 0.05
+			tolerance_own = 1
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -569,7 +665,11 @@ temple_of_the_one = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			global_heretic_missionary_strength = 0.02
+			religious_unity = 0.1
+			tolerance_own = 2
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -581,7 +681,12 @@ temple_of_the_one = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			global_heretic_missionary_strength = 0.03
+			religious_unity = 0.15
+			missionaries = 1
+			tolerance_own = 3
+		}
 		on_upgraded = { }
 	}
 }
@@ -592,7 +697,7 @@ priory_of_the_nine = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -628,7 +733,11 @@ priory_of_the_nine = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			land_morale = 0.05
+			global_trade_goods_size_modifier = 0.05
+			prestige = 0.5
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -640,7 +749,11 @@ priory_of_the_nine = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			land_morale = 0.1
+			global_trade_goods_size_modifier = 0.075
+			prestige = 1.0
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -652,7 +765,11 @@ priory_of_the_nine = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			land_morale = 0.15
+			global_trade_goods_size_modifier = 0.1
+			prestige = 1.5
+		}
 		on_upgraded = { }
 	}
 }
@@ -692,37 +809,49 @@ pale_pass = {
 
 	tier_1 = {
 		upgrade_time = {
-			months = 120
+			months = 24
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 100
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = { 
+			local_defensiveness = 0.25
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 240
+			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 250
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = { 
+			fort_level = 2
+		}
+		area_modifier = { 
+			local_defensiveness = 0.4
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 360
+			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 500
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = { 
+			fort_level = 3
+		}
+		area_modifier = { 
+			local_defensiveness = 0.5
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
@@ -734,12 +863,16 @@ imperial_city_prison = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	on_built = {
 	}
@@ -748,6 +881,10 @@ imperial_city_prison = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -770,7 +907,11 @@ imperial_city_prison = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			harsh_treatment_cost = -0.25
+			reduced_liberty_desire = 5
+			global_spy_defence = 0.1
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -782,7 +923,11 @@ imperial_city_prison = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			harsh_treatment_cost = -0.4
+			reduced_liberty_desire = 10
+			global_spy_defence = 0.2
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -794,7 +939,11 @@ imperial_city_prison = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			harsh_treatment_cost = -0.5
+			reduced_liberty_desire = 15
+			global_spy_defence = 0.3
+		}
 		on_upgraded = { }
 	}
 }
@@ -805,7 +954,7 @@ green_emperor_way = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -813,12 +962,20 @@ green_emperor_way = {
 	build_trigger = {
 	}
 	on_built = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -841,7 +998,11 @@ green_emperor_way = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			advisor_pool = 1
+			advisor_cost = -0.1
+			monarch_lifespan = 0.05
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -853,7 +1014,11 @@ green_emperor_way = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			advisor_pool = 2
+			advisor_cost = -0.2
+			monarch_lifespan = 0.1
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -865,7 +1030,11 @@ green_emperor_way = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			advisor_pool = 3
+			advisor_cost = -0.25
+			monarch_lifespan = 0.15
+		}
 		on_upgraded = { }
 	}
 }
@@ -876,7 +1045,7 @@ dive_rock = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -912,7 +1081,11 @@ dive_rock = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			land_morale = 0.05
+			prestige = 0.5
+			global_regiment_cost = -0.1
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -924,7 +1097,11 @@ dive_rock = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			land_morale = 0.1
+			prestige = 1
+			global_regiment_cost = -0.2
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -936,7 +1113,11 @@ dive_rock = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			land_morale = 0.15
+			prestige = 1.5
+			global_regiment_cost = -0.25
+		}
 		on_upgraded = { }
 	}
 }
@@ -953,6 +1134,7 @@ battlehorn_castle = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		fort_level = 1
 	}
 	on_built = {
 	}
@@ -961,6 +1143,7 @@ battlehorn_castle = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
+		fort_level = 1
 	}
 	keep_trigger = {
 		always = yes
@@ -976,37 +1159,49 @@ battlehorn_castle = {
 
 	tier_1 = {
 		upgrade_time = {
-			months = 120
+			months = 24
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 100
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			fort_level = 1
+		}
+		area_modifier = { 
+			local_defensiveness = 0.25
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 240
+			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 250
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			fort_level = 2
+		}
+		area_modifier = { 
+			local_defensiveness = 0.4
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 360
+			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 500
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			fort_level = 3
+		}
+		area_modifier = { 
+			local_defensiveness = 0.5
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
@@ -1024,6 +1219,10 @@ arcane_university = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	on_built = {
 	}
@@ -1032,6 +1231,10 @@ arcane_university = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -1054,7 +1257,11 @@ arcane_university = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			fire_damage_received = -0.02
+			fire_damage = 0.05
+			technology_cost = -0.05
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -1066,7 +1273,11 @@ arcane_university = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			fire_damage_received = -0.04
+			fire_damage = 0.075
+			technology_cost = -0.075
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -1078,7 +1289,11 @@ arcane_university = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			fire_damage_received = -0.05
+			fire_damage = 0.1
+			technology_cost = -0.1
+		}
 		on_upgraded = { }
 	}
 }
@@ -1118,37 +1333,49 @@ anvil_castle = {
 
 	tier_1 = {
 		upgrade_time = {
-			months = 120
+			months = 24
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 100
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			fort_level = 1
+		}
+		area_modifier = { 
+			local_defensiveness = 0.25
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 240
+			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 250
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			fort_level = 2
+		}
+		area_modifier = { 
+			local_defensiveness = 0.4
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 360
+			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 500
 		}
-		province_modifiers = { }
-		area_modifier = { }
+		province_modifiers = {
+			fort_level = 3
+		}
+		area_modifier = { 
+			local_defensiveness = 0.5
+		}
 		country_modifiers = { }
 		on_upgraded = { }
 	}
