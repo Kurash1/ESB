@@ -49,20 +49,32 @@ imperial_waterfront = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	can_upgrade_trigger = {
+		OR = {
+			tag = CYR
+			tag = TAM
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -85,7 +97,11 @@ imperial_waterfront = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			trade_efficiency = 0.1
+			sailors_recovery_speed = 0.1
+			prestige = 0.5
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -97,7 +113,11 @@ imperial_waterfront = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			trade_efficiency = 0.2
+			sailors_recovery_speed = 0.2
+			prestige = 1
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -109,7 +129,11 @@ imperial_waterfront = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = { 
+			trade_efficiency = 0.25
+			sailors_recovery_speed = 0.25
+			prestige = 1.5
+		}
 		on_upgraded = { }
 	}
 }
@@ -120,20 +144,26 @@ imperial_talos_plaza = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
 	type = monument
 	build_trigger = {
+		religion = nine_divines
+		has_owner_religion = yes
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		religion = nine_divines
+		has_owner_religion = yes
 	}
 	can_upgrade_trigger = {
+		religion = nine_divines
+		has_owner_religion = yes
 	}
 	keep_trigger = {
 		always = yes
@@ -156,7 +186,11 @@ imperial_talos_plaza = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			tolerance_own = 1
+			global_missionary_strength = 0.01
+			prestige = 0.5
+		}
 		on_upgraded = { }
 	}
 	tier_2 = {
@@ -168,7 +202,11 @@ imperial_talos_plaza = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			tolerance_own = 2
+			global_missionary_strength = 0.02
+			prestige = 1
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
@@ -180,7 +218,12 @@ imperial_talos_plaza = {
 		}
 		province_modifiers = { }
 		area_modifier = { }
-		country_modifiers = { }
+		country_modifiers = {
+			tolerance_own = 3
+			global_missionary_strength = 0.03
+			missionaries = 1
+			prestige = 1.5
+		}
 		on_upgraded = { }
 	}
 }
@@ -220,10 +263,10 @@ imperial_elven_gardens = {
 
 	tier_1 = {
 		upgrade_time = {
-			months = 120
+			months = 24
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 100
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -232,10 +275,10 @@ imperial_elven_gardens = {
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 240
+			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 250
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -244,12 +287,15 @@ imperial_elven_gardens = {
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 360
+			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 500
 		}
-		province_modifiers = { }
+		province_modifiers = { 
+			local_unrest = -5
+			local_development_cost = -0.15
+		}
 		area_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
