@@ -538,6 +538,26 @@ occult_group = {
 	defender_of_faith = yes
 	can_form_personal_unions = yes
 	
+	druidism = {
+		color = { 0 153 0 }
+		icon = 49
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			development_cost = -0.15
+			idea_cost = -0.15
+		}
+		country_as_secondary = {
+			development_cost = -0.1
+		}
+		province = {
+			trade_goods_size_modifier = 0.1
+		}
+		
+		heretic = { DRUIDISM_HERETIC }	
+		
+		uses_karma = yes
+	}
+	
 	chimer_pantheon = {
 		color = { 95 95 95 }
 		icon = 13

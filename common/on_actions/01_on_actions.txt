@@ -1,5 +1,298 @@
 #When adding effects directly in on_actions always consider if it would be best to do so through a scripted effect. on_actions with a lot of script in them are harder to get an overview of.
 
+on_startup = {
+
+	2635 = {
+		cede_province = BLA
+		add_core = BLA
+	}
+
+	if = {
+		limit = {
+			tag = BLA
+			NOT = { has_country_flag = campaign_start }
+		}
+		set_country_flag = campaign_start
+		every_country = {
+			add_stability = 2
+		}
+	}
+
+    set_allow_female_emperor = yes
+	set_hre_religion_treaty = yes
+    emperor = { save_global_event_target_as = Emperor }
+	if = { 
+		limit = { is_emperor_of_china = yes }
+		# Audax Validator "." Ignore_NEXT
+		save_global_event_target_as = EmperorOfChina 
+	}
+
+	if = { limit = { uses_personal_deities = yes } change_available_deities = yes }
+	
+	mundus_towers = yes
+	
+	es_river_estuary = yes
+	
+	country_event = { id = es_start.100 }
+
+    events = {
+		es_holidays.1
+		es_holidays.2
+		es_holidays.3
+		es_holidays.4
+		es_holidays.5
+		es_holidays.6
+		es_holidays.7
+		es_holidays.8
+		es_holidays.9
+		es_holidays.10
+		es_holidays.11
+		es_holidays.12
+		es_holidays.13
+		es_holidays.14
+		es_holidays.15
+		es_holidays.16
+		es_holidays.17
+		es_holidays.18
+		es_holidays.19
+		es_holidays.20
+		es_holidays.21
+		es_holidays.22
+		es_holidays.23
+		es_holidays.24
+		es_holidays.25
+		es_holidays.26
+		es_holidays.27
+		es_holidays.28
+		es_holidays.29
+		es_holidays.30
+		es_holidays.31
+		es_holidays.32
+		es_holidays.33
+		es_holidays.34
+		es_holidays.35
+		es_holidays.36
+		es_holidays.37
+		es_holidays.38
+		es_holidays.39
+		es_holidays.40
+		es_holidays.41
+		es_holidays.42
+		es_holidays.43
+		es_holidays.44
+		es_holidays.45
+		es_holidays.46
+		es_holidays.47
+		es_holidays.48
+		es_holidays.49
+		es_holidays.50
+		es_holidays.51
+		es_holidays.52
+		es_holidays.53
+		es_holidays.54
+		es_holidays.55
+		es_holidays.56
+		es_holidays.57
+		es_holidays.58
+		es_holidays.59
+		es_holidays.60
+		es_holidays.61
+		es_holidays.62
+		es_holidays.63
+	}
+	
+	if = { limit = { NOT = { has_global_flag = on_action_set_up_global_flag } }
+	
+	# On startup every_country effects
+	every_country = {
+		while = {
+			limit = {
+				NOT = {
+					crown_land_share = 40
+				}
+			}
+			take_estate_land_share_massive = {
+				estate = all
+			}
+		}
+		randomise_religious_schools = yes
+		if = {
+			limit = {
+				ai = no
+				NOT = { has_country_flag = es_1_start_flag }
+			}
+			country_event = { id = es_start.1 days = 0 tooltip = es_collapse.2.a.tt }
+			set_country_flag = es_1_start_flag 
+		}
+		
+		set_country_flag = no_dark_advisors_flag
+		
+		es_change_opinion = yes
+		es_change_country_names = yes
+		change_available_deities = yes
+	}
+
+	random_country = {
+		country_event = {
+			id = es_province_discovery.1
+		}
+	}
+
+	es_conquest_notifications_setup = yes
+	
+	set_forts_and_trade_centers = yes
+	
+	province_religious_effects = yes
+	
+	province_natives = yes
+	#es_province_development = yes
+	mundus_towers = yes
+	
+	es_river_estuary = yes
+	
+	### ES History Effects 
+	if = { limit = { NOT = { is_year = 272 } } 
+		history_0_272_ad = yes
+	}
+	if = { limit = { is_year = 272 NOT = { is_year = 535 } } 
+		history_272_535_ad = yes
+	}
+	if = { limit = { is_year = 535 NOT = { is_year = 862 } } 
+		history_535_862_ad = yes
+	}
+	
+	# Dark Brotherhood Late Spawn
+	if = {
+		limit = { is_year = 862 }
+		every_country = { limit = { NOT = { culture_group = velothi_cg } capital_scope = { continent = Tamriel } } country_event = { id = dark_brotherhood_spawn.5 days = 9125 } }
+		every_country = { limit = { culture_group = velothi_cg } set_country_flag = dark_brotherhood_spawn_2_flag }
+	}
+	if = { limit = { is_year = 862 } every_country = { limit = { NOT = { culture_group = velothi_cg } capital_scope = { continent = Tamriel } } country_event = { id = dark_brotherhood_spawn.5 days = 9125 } } }
+	
+	emperor = { save_global_event_target_as = Emperor }
+    if = { limit = { is_emperor_of_china = yes } save_global_event_target_as = EmperorOfChina }
+	
+	set_emperor_of_china = OA8
+	
+	BLA = {
+		add_country_modifier = { name = "red_mountain_eruption" duration = 3650 }
+        add_country_modifier = { name = "sand_storm_1" duration = 3650 }
+        add_country_modifier = { name = "tropical_storm_1" duration = 3650 }	
+        add_country_modifier = { name = "floods_1" duration = 3650 }
+        add_country_modifier = { name = "ice_age_1" duration = 3650 }
+		add_country_modifier = { name = "rise_time" duration = 3650 }
+        add_country_modifier = { name = "crisis_time" duration = 3650 }	
+        add_country_modifier = { name = "trade_time" duration = 3650 }
+		
+		es_remove_countries_for_perfomance = yes
+		
+        # Vvardenfell Ashlands
+		vvardenfell_lr = {
+			if = {
+				limit = {
+					province_distance = { who = 1062 distance = 0 }
+					NOT = { province_distance = { who = 1062 distance = 70 } }
+				}
+				add_permanent_province_modifier = { name = "thick_permanent_ashland" duration = -1 }
+			}
+			else_if = {
+				limit = {
+					province_distance = { who = 1062 distance = 70
+				 }
+					NOT = { province_distance = { who = 1062 distance = 110 } }
+				}
+				add_permanent_province_modifier = { name = "permanent_ashland" duration = -1 }
+			}
+			else = {
+				add_permanent_province_modifier = { name = "thin_permanent_ashland" duration = -1 }
+			}
+		}
+	}
+	
+	3187 = { remove_canal = cold_heart_canal }
+	4074 = { remove_canal = dead_hig_canal }
+	4075 = { remove_canal = dead_cyr_canal }
+	4071 = { remove_canal = dead_arg_canal }
+	
+	3282 = { remove_canal = tel_mora_canal }
+	1773 = { remove_canal = mi_kin_canal }
+	3531 = { remove_canal = nosh_shek_canal }
+	
+	hide_ambient_object = "tel_mora_canal"
+	hide_ambient_object = "mi_kin_canal"
+	hide_ambient_object = "nosh_sheck_canal"
+	
+	set_global_flag = on_action_set_up_global_flag
+	}
+
+	if = { limit = { NOT = { has_country_flag = on_action_setup_flag } }
+	
+	if = { limit = { culture_group = orsimer_cg }
+		add_country_modifier = { name = "orcish_fury" duration = 3650 }	
+		add_country_modifier = { name = "orcish_fury_timer" duration = 9125 hidden = yes }
+		every_neighbor_country = { limit = { ai = no NOT = { culture_group = orsimer_cg } } country_event = { id = es_orcish_flavour.5 days = 31 tooltip = es_orcish_flavour.5.a.tt } }
+	}
+	
+	add_country_modifier = { name = "es_female_advisors" duration = -1 hidden = yes }
+	
+	if = { limit = { is_year = 266 } set_global_flag = ayleid_fall_flag }
+	if = { limit = { is_year = 369 } set_global_flag = marukhism_flag }
+	if = { limit = { is_year = 242 } set_global_flag = etherial_crisis_flag set_global_flag = alessian_rebellion_flag }
+	if = { limit = { is_year = 609 } set_global_flag = fall_of_direnii_flag }
+	if = { limit = { is_year = 750 } set_global_flag = dwemer_dissapearence_flag }
+	if = { limit = { is_year = 810 } set_global_flag = redguard_migration_flag set_global_flag = foundation_of_wayres_flag }
+	
+	add_legitimacy = 100
+	add_republican_tradition = 100
+	add_devotion = 100
+	add_horde_unity = 100
+	add_meritocracy = 100
+	
+	add_yearly_manpower = 5
+	
+	init_variables = yes
+	
+	3188 = { owner = { set_country_flag = molag_bal_country_flag } }
+	4075 = { owner = { set_country_flag = mehrunes_dagon_country_flag } }
+	224 = { owner = { set_country_flag = orgnum_country_flag } }
+	VB1 = { set_country_flag = wilderking_country_flag }
+	
+	es_heirs_immortal_rulers = yes
+	
+	if = { 
+		limit = { 
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		set_country_flag = started_with_port
+	}			 
+	
+	every_owned_province = {
+		add_core = ROOT
+	}
+	
+	if = { limit = { OR = { government = republic is_emperor = yes } } add_ruler_modifier = { name = "is_republic_or_emperor_ruler_modifier" duration = -1 } }
+	if = { limit = { is_half_blood_ruler_trigger = yes } add_ruler_modifier = { name = "is_half_blood_ruler_modifier" duration = -1 } }
+	if = { limit = { is_elven_ruler_trigger = yes } add_ruler_modifier = { name = "is_elven_ruler_modifier" duration = -1 } }
+	if = { limit = { is_unknown_ruler_trigger = yes } add_ruler_modifier = { name = "is_unknown_ruler_modifier" duration = -1 } }
+	if = { limit = { is_immortal_ruler_trigger = yes } add_ruler_modifier = { name = "is_immortal_ruler_modifier" duration = -1 } }
+	
+	set_country_flag = on_action_setup_flag
+	
+	set_country_flag = caravan_policy_timer
+	country_event = { id = es_caravans.1 days = 31 random = 365 }
+	}
+	
+	initialize_schools_effect = yes
+	
+	country_event = { id = es_birthsigns.0 days = 1 }
+}
+
+on_country_released  = {
+	add_stability = 2
+}
+
 # province
 # root = location, from = winning country
 on_siege_lost_province = {

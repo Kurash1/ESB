@@ -1,0 +1,187 @@
+country_decisions = {
+	es_16_rebuild_northern_orsinium = {
+	    major = yes
+			potential = {
+				culture_group = orsimer_cg
+				OR = {
+					AND = {
+						6833 = { NOT = { has_province_modifier = 16_n_orsinium } }
+						NOT = { check_variable = { which = num_of_sacked_orsinium value = 1 } }
+					}
+					AND = {
+						1419 = { NOT = { has_province_modifier = 16_n_orsinium } }
+						check_variable = { which = num_of_sacked_orsinium value = 1 }
+						NOT = { check_variable = { which = num_of_sacked_orsinium value = 2 } }
+					}
+					AND = {
+						1391 = { NOT = { has_province_modifier = 16_n_orsinium } }
+						check_variable = { which = num_of_sacked_orsinium value = 2 }
+						NOT = { check_variable = { which = num_of_sacked_orsinium value = 3 } }
+					}
+					AND = {
+						6074 = { NOT = { has_province_modifier = 16_n_orsinium } }
+						check_variable = { which = num_of_sacked_orsinium value = 3 }
+					}
+				}
+			}
+		allow = {
+			treasury = 5000
+			OR = {
+				AND = {
+					6883 = { NOT = { has_province_modifier = 16_n_orsinium } }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 1 } }
+				}
+				AND = {
+					1419 = { NOT = { has_province_modifier = 16_n_orsinium } }
+					check_variable = { which = num_of_sacked_orsinium value = 1 }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 2 } }
+				}
+				AND = {
+					1391 = { NOT = { has_province_modifier = 16_n_orsinium } }
+					check_variable = { which = num_of_sacked_orsinium value = 2 }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 3 } }
+				}
+				AND = {
+					6074 = { NOT = { has_province_modifier = 16_n_orsinium } }
+					check_variable = { which = num_of_sacked_orsinium value = 3 }
+				}
+			}
+        }
+		effect = {
+			add_treasury = -5000
+			log = "[This.num_of_sacked_orsinium.GetValue]"
+			if = {
+				limit = {
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 1 } }
+				}
+				6883 = { 
+					add_permanent_province_modifier = { name = "16_n_orsinium" duration = -1 } 
+					change_province_name = "Orsinium"
+					rename_capital = "Orsinium"
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = num_of_sacked_orsinium value = 1 }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 2 } }
+				}
+				1419 = { 
+					add_permanent_province_modifier = { name = "16_n_orsinium" duration = -1 }
+					change_province_name = "Orsinium"
+					rename_capital = "Orsinium"
+				}
+				6883 = { 
+					change_province_name = "Old Orsinium"
+					rename_capital = "Old Orsinium"
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = num_of_sacked_orsinium value = 2 }
+					NOT = { check_variable = { which = num_of_sacked_orsinium value = 3 } }
+				}
+				1391 = {
+					add_permanent_province_modifier = { name = "16_n_orsinium" duration = -1 }
+					change_province_name = "New Orsinium"
+					rename_capital = "New Orsinium"
+				}
+			}
+			else = {
+				6074 = { 
+					add_permanent_province_modifier = { name = "16_n_orsinium" duration = -1 } 
+					change_province_name = "Orsinium Nova"
+					rename_capital = "Orsinium Nova"
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Foundation of Wayrest
+	foundation_of_wayrest = {
+		major = yes
+		potential = {
+			primary_culture = breton
+			NOT = { has_global_flag = foundation_of_wayres_flag }
+		}
+		allow = {
+			treasury = 2500
+			owns = 6989
+			adm_power = 1000
+			dip_power = 1000
+			mil_power = 1000
+			NOT = { is_lacking_institutions = yes }
+        }
+		effect = {
+			set_global_flag = foundation_of_wayres_flag
+			country_event = { id = es_18_scenario.7 }
+			add_treasury = -2500
+			add_prestige = 10
+			add_adm_power = -1000
+			add_dip_power = -1000
+			add_mil_power = -1000
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Foundation of Evermore
+	foundation_of_evermore = {
+		major = yes
+		potential = {
+			primary_culture = breton
+			NOT = { has_global_flag = es_21_scenario.5_flag }
+		}
+		allow = {
+			treasury = 1000
+			owns = 6268
+			num_of_owned_provinces_with = {
+				trade_goods = fish
+				value = 1
+			}
+        }
+		effect = {
+			set_global_flag = es_21_scenario.5_flag
+			country_event = { id = es_21_scenario.5 }
+			add_treasury = -1000
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Foundation of Daggerfall
+	foundation_of_daggerfall = {
+		major = yes
+		potential = {
+			capital_scope = { region = high_rock_lr } 
+			NOT = { has_global_flag = es_0_scenario.5_flag }
+		}
+		allow = {
+			treasury = 1000
+			OR = { 
+				tag = BA1
+				AND = {
+					owns = 1369
+					any_country = {
+						primary_culture = nord
+						alliance_with = ROOT
+					}
+				}
+			}
+        }
+		effect = {
+			set_global_flag = es_0_scenario.5_flag
+			country_event = { id = es_0_scenario.5 }
+			add_treasury = -1000
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

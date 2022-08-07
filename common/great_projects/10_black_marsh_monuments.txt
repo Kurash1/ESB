@@ -366,7 +366,7 @@ shrine_of_the_black_maw = {
 
 	build_trigger = { 
 		owner = {
-			has_estate = slavers
+			has_estate = estate_slavers
 		}
 	}
 
@@ -375,12 +375,12 @@ shrine_of_the_black_maw = {
 
 	can_use_modifiers_trigger = {
 		owner = {
-			has_estate = slavers
+			has_estate = estate_slavers
 		}
 	}
 	can_upgrade_trigger = {
 		owner = {
-			has_estate = slavers
+			has_estate = estate_slavers
 		}
 	}
 	keep_trigger = { always = yes }
