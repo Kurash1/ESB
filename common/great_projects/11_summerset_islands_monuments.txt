@@ -243,7 +243,7 @@ artaeum = {
 		area_modifier = { }
 		country_modifiers = { 
 			technology_cost = -0.05
-			prestige = -0.5
+			prestige = 0.5
 			idea_cost = -0.1
 		}
 		on_upgraded = { }
@@ -259,7 +259,7 @@ artaeum = {
 		area_modifier = { }
 		country_modifiers = { 
 			technology_cost = -0.075
-			prestige = -1
+			prestige = 1
 			idea_cost = -0.2
 		}
 		on_upgraded = { }
@@ -275,7 +275,7 @@ artaeum = {
 		area_modifier = { }
 		country_modifiers = { 
 			technology_cost = -0.1
-			prestige = -1.5
+			prestige = 1.5
 			idea_cost = -0.25
 		}
 		on_upgraded = { }
@@ -1562,7 +1562,7 @@ alinor_royal_palace = {
 		country_modifiers = {
 			diplomatic_reputation = 1
 			vassal_income = 0.15
-			reduced_liberty_desire = 0.1
+			reduced_liberty_desire = 10
 		}
 		on_upgraded = { }
 	}
@@ -1575,7 +1575,7 @@ alinor_royal_palace = {
 		country_modifiers = {
 			diplomatic_reputation = 2
 			vassal_income = 0.3
-			reduced_liberty_desire = 0.2
+			reduced_liberty_desire = 20
 		}
 		on_upgraded = { }
 	}
@@ -1589,7 +1589,7 @@ alinor_royal_palace = {
 			administrative_efficiency = 0.05 
 			diplomatic_reputation = 3
 			vassal_income = 0.5
-			reduced_liberty_desire = 0.3
+			reduced_liberty_desire = 30
 		}
 		on_upgraded = { }
 	}

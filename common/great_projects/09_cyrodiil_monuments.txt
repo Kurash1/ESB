@@ -55,9 +55,11 @@ imperial_waterfront = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	on_built = {
@@ -67,9 +69,11 @@ imperial_waterfront = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	keep_trigger = {
@@ -236,9 +240,11 @@ imperial_elven_gardens = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	on_built = {
@@ -248,9 +254,11 @@ imperial_elven_gardens = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	keep_trigger = {
@@ -330,10 +338,12 @@ imperial_dragonfire_cathedral = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			tag = ALE
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = ALE
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	on_built = {
@@ -343,10 +353,12 @@ imperial_dragonfire_cathedral = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
-		OR = {
-			tag = ALE
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = ALE
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	keep_trigger = {
@@ -423,9 +435,11 @@ imperial_arena = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	on_built = {
@@ -433,15 +447,19 @@ imperial_arena = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	keep_trigger = {
@@ -606,7 +624,7 @@ temple_of_the_one = {
 	build_trigger = {
 		OR = {
 			religion = nine_divines
-			tag = ORD
+			owner = { tag = ORD }
 		}
 		has_owner_religion = yes
 	}
@@ -617,14 +635,14 @@ temple_of_the_one = {
 	can_use_modifiers_trigger = {
 		OR = {
 			religion = nine_divines
-			tag = ORD
+			owner = { tag = ORD }
 		}
 		has_owner_religion = yes
 	}
 	can_upgrade_trigger = {
 		OR = {
 			religion = nine_divines
-			tag = ORD
+			owner = { tag = ORD }
 		}
 		has_owner_religion = yes
 	}
@@ -869,9 +887,11 @@ imperial_city_prison = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	on_built = {
@@ -881,9 +901,11 @@ imperial_city_prison = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	keep_trigger = {
@@ -962,9 +984,11 @@ green_emperor_way = {
 	build_trigger = {
 	}
 	on_built = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	on_destroyed = {
@@ -972,9 +996,11 @@ green_emperor_way = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	keep_trigger = {
@@ -1219,9 +1245,11 @@ arcane_university = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	on_built = {
@@ -1231,9 +1259,11 @@ arcane_university = {
 	can_use_modifiers_trigger = {
 	}
 	can_upgrade_trigger = {
-		OR = {
-			tag = CYR
-			tag = TAM
+		owner = {
+			OR = {
+				tag = CYR
+				tag = TAM
+			}
 		}
 	}
 	keep_trigger = {

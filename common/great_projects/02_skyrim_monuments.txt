@@ -46,17 +46,23 @@ olenveld = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		full_idea_group = necromacy_ideas
+		owner = { 
+			full_idea_group = necromacy_ideas
+		}
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		full_idea_group = necromacy_ideas
+		owner = {
+			full_idea_group = necromacy_ideas
+		}
 	}
 	can_upgrade_trigger = {
-		full_idea_group = necromacy_ideas
+		owner = { 
+			full_idea_group = necromacy_ideas
+		}
 	}
 	keep_trigger = {
 		always = yes
@@ -945,7 +951,7 @@ kilkreath_temple = {
 				religion = meridia_cult
 				has_owner_religion = yes
 			}
-			has_country_modifier = meridias_beacon
+			owner = { has_country_modifier = meridias_beacon }
 		}
 	}
 	on_built = {
@@ -958,7 +964,7 @@ kilkreath_temple = {
 				religion = meridia_cult
 				has_owner_religion = yes
 			}
-			has_country_modifier = meridias_beacon
+			owner = { has_country_modifier = meridias_beacon }
 		}
 	}
 	can_upgrade_trigger = {
@@ -967,7 +973,7 @@ kilkreath_temple = {
 				religion = meridia_cult
 				has_owner_religion = yes
 			}
-			has_country_modifier = meridias_beacon
+			owner = { has_country_modifier = meridias_beacon }
 		}
 	}
 	keep_trigger = {
