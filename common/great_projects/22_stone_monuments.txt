@@ -26,6 +26,158 @@
 #cyrodiil_tower_stone
 #cyrodiil_warrior_stone
 
+#cyrodiil_aetherius_stone
+#cyrodiil_dragon_stone
+#cyrodiil_jode_stone
+#cyrodiil_jone_stone
+#cyrodiil_magnus_stone
+#cyrodiil_nirn_stone
+#cyrodiil_shezarr_stone
+#cyrodiil_sithian_stone
+
+#cyrodiil_aetherius_stone
+#cyrodiil_dragon_stone
+#cyrodiil_jode_stone
+#cyrodiil_jone_stone
+#cyrodiil_magnus_stone
+#cyrodiil_nirn_stone
+#cyrodiil_shezarr_stone  = {
+#    start = 5484
+#    date = 54.1.1
+#    build_cost = 1000
+#    can_be_moved = no
+#    starting_tier = 0
+#    type = monument
+#
+#    build_trigger = {
+#		owner = { is_human_nation_trigger = yes }
+#    }
+#    on_built = { }
+#    on_destroyed = { }
+#    can_use_modifiers_trigger = {
+#		owner = { is_human_nation_trigger = yes }
+#    }
+#    can_upgrade_trigger = {
+#		owner = { is_human_nation_trigger = yes }
+#    }
+#    keep_trigger = { always = yes }
+#    
+#	tier_0 = {
+#		upgrade_time = { months = 0 }
+#		cost_to_upgrade = { factor = 0 }
+#		province_modifiers = { }
+#		area_modifier = { }
+#		country_modifiers = { }
+#		on_upgraded = { }
+#	}
+#
+#	tier_1 = {
+#		upgrade_time = { months = 120 }
+#		cost_to_upgrade = { factor = 1000 }
+#		province_modifiers = { }
+#		area_modifier = { }
+#		country_modifiers = { 
+#			shock_damage_received = -0.02
+#			fire_damage_received = -0.02
+#			defensiveness = 0.1
+#		}
+#		on_upgraded = { }
+#	}
+#
+#	tier_2 = {
+#		upgrade_time = { months = 240 }
+#		cost_to_upgrade = { factor = 2500 }
+#		province_modifiers = { }
+#		area_modifier = { }
+#		country_modifiers = { 
+#			shock_damage_received = -0.04
+#			fire_damage_received = -0.04
+#			defensiveness = 0.2
+#		}
+#		on_upgraded = { }
+#	}
+#
+#	tier_3 = {
+#		upgrade_time = { months = 360 }
+#		cost_to_upgrade = { factor = 5000 }
+#		province_modifiers = { }
+#		area_modifier = {}
+#		country_modifiers = { 
+#			shock_damage_received = -0.05
+#			fire_damage_received = -0.05
+#			defensiveness = 0.25
+#		}
+#		on_upgraded = { }
+#	}
+#}
+#
+#cyrodiil_sithian_stone  = {
+#    start = 5718
+#    date = 54.1.1
+#    build_cost = 1000
+#    can_be_moved = no
+#    starting_tier = 0
+#    type = monument
+#
+#    build_trigger = {
+#    }
+#    on_built = { }
+#    on_destroyed = { }
+#    can_use_modifiers_trigger = {
+#    }
+#    can_upgrade_trigger = {
+#    }
+#    keep_trigger = { always = yes }
+#    
+#	tier_0 = {
+#		upgrade_time = { months = 0 }
+#		cost_to_upgrade = { factor = 0 }
+#		province_modifiers = { }
+#		area_modifier = { }
+#		country_modifiers = { }
+#		on_upgraded = { }
+#	}
+#
+#	tier_1 = {
+#		upgrade_time = { months = 120 }
+#		cost_to_upgrade = { factor = 1000 }
+#		province_modifiers = { }
+#		area_modifier = { }
+#		country_modifiers = { 
+#			trade_efficiency = 0.05
+#			improve_relation_modifier = 0.05
+#			global_spy_defence = 0.05
+#		}
+#		on_upgraded = { }
+#	}
+#
+#	tier_2 = {
+#		upgrade_time = { months = 240 }
+#		cost_to_upgrade = { factor = 2500 }
+#		province_modifiers = { }
+#		area_modifier = { }
+#		country_modifiers = { 
+#			trade_efficiency = 0.1
+#			improve_relation_modifier = 0.1
+#			global_spy_defence = 0.1
+#		}
+#		on_upgraded = { }
+#	}
+#
+#	tier_3 = {
+#		upgrade_time = { months = 360 }
+#		cost_to_upgrade = { factor = 5000 }
+#		province_modifiers = { }
+#		area_modifier = {}
+#		country_modifiers = { 
+#			trade_efficiency = 0.15
+#			improve_relation_modifier = 0.15
+#			global_spy_defence = 0.15
+#		}
+#		on_upgraded = { }
+#	}
+#}
+
 cyrodiil_apprentice_stone = {
     start = 5329
     date = 54.1.1
