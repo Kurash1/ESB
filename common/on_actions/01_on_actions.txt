@@ -293,6 +293,57 @@ on_country_released  = {
 	add_stability = 2
 }
 
+# Nation annexed.
+# FROM is the nation being annexe
+on_annexed = {
+	on_annexed_estate_privileges_effect = yes
+	change_variable = {
+		which = annexed_nation
+		value = 1
+	}			
+	FROM = {
+		if = {
+			limit = { is_emperor_of_china = yes }
+			dismantle_empire_of_china = yes
+			set_global_flag = empire_of_china_dismantled
+		}
+        if = {
+			limit = { has_country_modifier = legatus_natus }
+			remove_country_modifier = legatus_natus
+			set_global_flag = no_legatus_natus
+		}
+		if = {
+			limit = { has_country_modifier = primas_germaniae }
+			remove_country_modifier = primas_germaniae
+			set_global_flag = no_primas_germaniae
+        }
+	}
+	if = {
+		limit = { FROM = { is_emperor = yes } }
+		emperor = {
+			add_imperial_influence = -50
+		}
+	}
+	if = {
+		limit = { FROM = { is_elector = yes } }
+		emperor = {
+			add_imperial_influence = -25
+		}
+	}
+	if = {
+		limit = { FROM = { has_reform = free_city } }
+		emperor = {
+			add_imperial_influence = -15
+		}
+	}
+	if = {
+		limit = { FROM = { is_part_of_hre = yes is_emperor = no is_elector = no NOT = { has_reform = free_city } } }
+		emperor = {
+			add_imperial_influence = -5
+		}
+	}
+}
+
 # province
 # root = location, from = winning country
 on_siege_lost_province = {
