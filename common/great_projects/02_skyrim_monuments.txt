@@ -140,7 +140,7 @@ kynes_aegis = {
 	build_trigger = {
 		owner = {
 			OR = {
-				culture = vampire
+				primary_culture = vampire
 				religion = dragon_cult
 			}
 		}
@@ -152,7 +152,7 @@ kynes_aegis = {
 	can_use_modifiers_trigger = {
 			owner = {
 			OR = {
-				culture = vampire
+				primary_culture = vampire
 				religion = dragon_cult
 			}
 		}
@@ -160,7 +160,7 @@ kynes_aegis = {
 	can_upgrade_trigger = {
 			owner = {
 			OR = {
-				culture = vampire
+				primary_culture = vampire
 				religion = dragon_cult
 			}
 		}
@@ -417,8 +417,8 @@ vault_of_mhuvnak = {
 	build_trigger = {
 		culture_group = dwemer_cg
 		OR = {
-			has_owner_accepted_culture
-			has_owner_culture
+			has_owner_accepted_culture = yes
+			has_owner_culture = yes
 		}
 	}
 	on_built = {
@@ -428,15 +428,15 @@ vault_of_mhuvnak = {
 	can_use_modifiers_trigger = {
 		culture_group = dwemer_cg
 		OR = {
-			has_owner_accepted_culture
-			has_owner_culture
+			has_owner_accepted_culture = yes
+			has_owner_culture = yes
 		}
 	}
 	can_upgrade_trigger = {
 		culture_group = dwemer_cg
 		OR = {
-			has_owner_accepted_culture
-			has_owner_culture
+			has_owner_accepted_culture = yes
+			has_owner_culture = yes
 		}
 	}
 	keep_trigger = {
@@ -860,14 +860,6 @@ nchuand-zel = {
 		on_upgraded = {
 		}
 	}
-	tier_0 = {
-		upgrade_time = { months = 0 }
-		cost_to_upgrade = { factor = 0 }
-		province_modifiers = { }
-		area_modifier = { }
-		country_modifiers = { }
-		on_upgraded = { }
-	}
 
 	tier_1 = {
 		upgrade_time = {
@@ -995,14 +987,6 @@ kilkreath_temple = {
 		on_upgraded = {
 		}
 	}
-	tier_0 = {
-		upgrade_time = { months = 0 }
-		cost_to_upgrade = { factor = 0 }
-		province_modifiers = { }
-		area_modifier = { }
-		country_modifiers = { }
-		on_upgraded = { }
-	}
 
 	tier_1 = {
 		upgrade_time = { months = 24 }
@@ -1096,14 +1080,6 @@ bromjunaar = {
 		on_upgraded = {
 		}
 	}
-	tier_0 = {
-		upgrade_time = { months = 0 }
-		cost_to_upgrade = { factor = 0 }
-		province_modifiers = { }
-		area_modifier = { }
-		country_modifiers = { }
-		on_upgraded = { }
-	}
 
 	tier_1 = {
 		upgrade_time = { months = 24 }
@@ -1180,22 +1156,6 @@ kagrenzel = {
 	}
 	keep_trigger = {
 		always = yes
-	}
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-		cost_to_upgrade = {
-			factor = 0
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-		}
-		on_upgraded = {
-		}
 	}
 	tier_0 = {
 		upgrade_time = { months = 0 }
