@@ -1,0 +1,66 @@
+###  Death of Scripted Effects ###
+death_of_heir_scripted_effect = {
+	add_country_modifier = {
+		name = enemy_killed_heir_modifier
+		duration = 720
+	}
+	add_manpower = 5
+	kill_heir = {  }
+	hidden_effect = {
+		random_neighbor_country = {
+		limit = {
+			is_in_war = {
+				defender_leader = ROOT
+			}
+		}
+		country_event = {
+			id = es_health.100
+			days = 10
+			}
+		}
+	}
+}
+killed_heir_scripted_effect = {
+	add_opinion = {
+		who = FROM
+		modifier = es_killed_heir
+	}
+	reverse_add_opinion = {
+		who = FROM
+		modifier = es_killed_heir
+	}
+}
+killed_monarch_scripted_effect = {
+	hidden_effect = {
+		random_neighbor_country = {
+			limit = {
+				is_in_war = {
+					participants = ROOT
+				}
+			}
+			country_event = {
+				id = es_health.101
+				days = 85
+			}
+		}
+	}
+	kill_ruler = yes
+}
+killed_monarch_2_scripted_effect = {
+	add_opinion = {
+		who = FROM
+		modifier = es_killed_monarch
+	}
+	reverse_add_opinion = {
+		who = FROM
+		modifier = es_killed_monarch
+	}
+	hidden_effect = {
+		FROM = {
+			country_event = {
+				id = es_health.102
+				days = 10
+			}
+		}
+	}
+}

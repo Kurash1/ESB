@@ -1,0 +1,311 @@
+namespace = es_flavour_san
+
+# The First Scroll of Baan Dar
+country_event = {
+	id = es_flavour_san.1
+	title = es_flavour_san.1.t
+	desc = es_flavour_san.1.d
+	picture = THE_FIRST_SCROLL_OF_BAAN_DAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	# The proper way to repay a favour, is not to. Pass it on instead.
+	option = {
+		name = es_flavour_san.1.o.a
+		highlight = yes
+		trigger = {
+			# is Khajiiti
+			culture_group = khajiiti_cg
+		}
+		add_prestige = 15
+		add_country_modifier = {
+			name = favourable_diplomacy
+			duration = 5475
+		}
+		every_neighbor_country = {
+			limit = {
+				culture_group = khajiiti_cg
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = pass_favours_forward
+			}
+		}	
+	}
+	
+	# A fascinating tale! The world must know of this.
+	option = {
+		name = es_flavour_san.1.o.b
+		highlight = yes
+		trigger = {
+			# owns Caiecelle : 1369
+			owns = 1369
+		}
+		if = {
+			# Not Khajiiti
+			limit = {
+				NOT = { culture_group = khajiiti_cg }
+			}
+			add_prestige = 20
+			# always add all 5 legitimacies
+			add_legitimacy = -10
+			add_republican_tradition = -10
+			add_devotion = -10
+			add_horde_unity = -10
+			add_meritocracy = -10
+			
+			add_country_modifier = {
+				name = baan_dar_unrest
+				duration = 3650
+			}
+		}
+		if = {
+			# Is Khajiiti
+			limit = {
+				culture_group = khajiiti_cg
+			}
+			add_prestige = 15
+		}
+	}
+	
+	# 'the Wise', you say? Then he will serve us well!
+	option = {
+		name = es_flavour_san.1.o.c
+		highlight = yes
+		trigger = {
+			# owns Caiecelle : 1369 
+			owns = 1369
+		}
+		define_advisor = {
+			name = "Arkan the Wise"
+			type = esu_researcher
+			skill = 3
+			location = 1369
+			culture = breton
+			discount = yes
+		}
+	}
+	
+	# "Bandit God" eh? Well, it suits them.
+	option = {
+		name = es_flavour_san.1.o.d
+		trigger = {
+			NOT = { culture_group = khajiiti_cg }
+		}
+		if = {
+			limit = {
+				any_owned_province = { culture_group = khajiiti_cg }
+				NOT = { 
+					OR = {
+						accepted_culture = khajiiti
+						accepted_culture = anequinan
+						accepted_culture = pellitinian
+					} 	
+				}
+			}
+			add_legitimacy = -5
+			add_republican_tradition = -5
+			add_devotion = -5
+			add_horde_unity = -5
+			add_meritocracy = -5
+			every_owned_province = {
+				limit = { 
+					culture_group = khajiiti_cg
+				}
+				hidden_effect = {
+					add_permanent_province_modifier = {
+						name = heightened_banditry
+						duration = 3650
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+# Effects of the Elder Scrolls
+country_event = {
+	id = es_flavour_san.3
+	title = es_flavour_san.3.t
+	desc = es_flavour_san.3.d
+	picture = EFFECTS_OF_THE_ELDER_SCROLLS_eventPicture
+	
+	is_triggered_only = yes
+	
+	# The Ancestor-what?
+	option = {
+		name = es_flavour_san.3.o.a
+		trigger = {
+			NOT = { religion = cult_of_the_moth }
+		}
+		add_legitimacy = 15
+		add_republican_tradition = 15
+		add_devotion = 15
+		add_horde_unity = 15
+		add_meritocracy = 15
+		add_prestige = -5
+	}
+	
+	# The Elder Scrolls should not be taken lightly...
+	option = {
+		name = es_flavour_san.3.o.b
+		add_country_modifier = { 
+			name = researching_the_Elder_Scrolls
+			duration = 3650  
+		}
+	}
+	
+	# Perhaps these scroll-readers could be of service.
+	option = {
+		name = es_flavour_san.3.o.c
+		add_years_of_income = -0.5
+		define_advisor = {
+			type = esu_monk
+			skill = 3
+			discount = yes
+			religion = cult_of_the_moth
+		}
+		add_country_modifier = {
+			name = recruited_moth_priests
+			duration = 3650
+		}
+	}
+}
+
+# Dragon sighted!
+country_event = {
+	id = es_flavour_san.4
+	title = es_flavour_san.4.t
+	desc = es_flavour_san.4.d
+	picture = Mirmulnir_eventPicture
+	
+	is_triggered_only = yes
+	
+	# It means we must be wary! Keep our patrols on alert.
+	option = {
+		name = es_flavour_san.4.o.a
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = reach_lr
+				}
+				add_permanent_province_modifier = {
+					name = alerted_patrols
+					duration = 1825
+				}
+			}
+		}
+		
+		add_mil_power = -100
+	}
+	
+	# Nothing. The time of dragons has long gone. We should focus on real concerns.
+	option = {
+		name = es_flavour_san.4.o.b
+		add_legitimacy = 5
+		add_adm_power = 100
+	}
+	
+	# A good omen! This is a sign of the inevitable return of our masters.
+	option = {
+		name = es_flavour_san.4.o.c
+		highlight = yes
+		trigger = {
+			religion = dragon_cult
+		}
+		add_patriarch_authority = 15
+		add_country_modifier = {
+			name = good_omen_draconic
+			duration = 3650
+		}
+	}
+}
+
+# Legacy of Tjurhane Fyrre
+country_event = {
+	id = es_flavour_san.5
+	title = es_flavour_san.5.t
+	desc = es_flavour_san.5.d
+	picture = BOOK_WRITING_eventPicture
+
+	is_triggered_only = yes
+	
+	# His legacy of scholarly work shall live on thanks to our sponsorship.
+	option = {
+		name = es_flavour_san.5.o.a
+		add_years_of_income = -3.5
+		add_adm_power = -250
+		change_innovativeness = 5
+		add_country_modifier = {
+			name = gwylim_sponsor
+			duration = 5475
+		}
+	}
+	
+	# Conserving the many lost antiquities of Tamriel is a noble goal.
+	option = {
+		name = es_flavour_san.5.o.b
+		add_years_of_income = -3.5
+		add_dip_power = -250
+		add_prestige = 5
+		add_country_modifier = {
+			name = antiquarian_sponsor
+			duration = 5475
+		}
+	}
+	
+	# A token donation should impress our neigbours.
+	option = {
+		name = es_flavour_san.5.o.c
+		add_years_of_income = -1.5
+		add_prestige = 10
+	}
+
+	# We must turn them down
+	option = {
+		name = es_flavour_san.5.o.d
+		add_prestige = -15
+	}
+}
+
+# Nature of Ayleidic Poesy
+country_event = {
+	id = es_flavour_san.6
+	title = es_flavour_san.6.t
+	desc = es_flavour_san.6.d
+	picture = ORNATE_BOOK_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_flavour_san.6.o.a
+		if = {
+			limit = {
+				culture_group = high_elves_cg
+			}
+			add_stability = 1
+		}
+		else = {
+			add_prestige = 10
+		}
+	}
+}
+
+# Ghraewaj and Viana the Pure
+# trigger this on lainlyn : 1493
+country_event = {
+	id = es_flavour_san.7
+	title = es_flavour_san.7.t
+	desc = es_flavour_san.7.d
+	picture = VIANA_THE_PURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = es_flavour_san.7.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}

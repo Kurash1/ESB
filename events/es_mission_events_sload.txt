@@ -1,0 +1,135 @@
+namespace = sload_missions
+
+country_event = {
+	id = sload_missions.0
+	title = sload_missions.0.t
+	desc = sload_missions.0.d
+	picture = ES_SIEGE_1_eventPicture
+	is_triggered_only = yes
+
+	option = { ## Flavour Event talking about the siege of skywatch
+		trigger = {
+			is_year = 0
+			NOT = { is_year = 1301 }
+		}
+		name = sload_missions.0.a
+	}
+	option = {
+		trigger = {
+			is_year = 1301
+		}
+		name = sload_missions.0.b
+	}
+	option = {
+		trigger = {
+			NOT = { is_year = 0}
+			is_year = 1302
+		}
+		name = sload_missions.0.c
+	}
+}
+
+country_event = {
+	id = sload_missions.1
+	title = sload_missions.1.t
+	desc = sload_missions.1.d
+	picture = ES_THRAS_eventPicture
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = sload_missions.1.form
+		change_tag = COR
+		hidden_effect = {
+			set_country_flag = formed_cor_flag
+		}
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+			set_government_rank = 5
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+			if = { 
+				limit = { has_custom_ideas = no } 
+				country_event = { id = ideagroups.1 } 
+				restore_country_name = yes }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = sload_missions.1.stay
+		custom_tooltip = stay_tooltip
+		set_country_flag = could_form_coral
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = sload_missions.2
+	title = sload_missions.2.t
+	desc = sload_missions.2.d
+	picture = SLOAD_1_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = sload_missions.2.a
+		set_country_flag = jkosda_gained
+		define_advisor = {
+			type = esu_researcher
+			name = "J'Kosde"
+			skill = 3
+			discount = yes
+			female = no
+			culture = ROOT
+			religion = ROOT
+		}
+		add_country_modifier = {
+			name = "jkosda_m_sl"
+			duration = 365500
+		}
+	}
+}
+
+country_event = {
+	id = sload_missions.3
+	title = sload_missions.3.t
+	desc = sload_missions.3.d
+	picture = KING_OF_WORMS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = sload_missions.3.a
+	}
+}
+
+country_event = {
+	id = sload_missions.4
+	title = sload_missions.4.t
+	desc = sload_missions.4.d
+	picture = SLOAD_2_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = sload_missions.4.a
+
+		define_general = {
+			name = "D'Sura"
+			shock = 3
+			fire = 3
+			manuever = 0
+			siege = 5
+		}
+		hidden_effect = {
+			set_country_flag = dsura_gained
+		}
+	}
+}

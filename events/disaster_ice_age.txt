@@ -1,0 +1,199 @@
+namespace = es_ice_age
+
+# Ice Age
+country_event = {
+	id = es_ice_age.1
+	title = es_ice_age.1.t
+	desc = es_ice_age.1.d
+	picture = ES_ICE_AGE_1_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = es_ice_age.1.a
+		add_stability = -1
+		hidden_effect = {
+			country_event = { id = es_ice_age.10 }
+		}
+	}
+}
+
+country_event = {
+	id = es_ice_age.10
+	title = es_ice_age.1.t
+	desc = es_ice_age.1.d
+	picture = ES_ICE_AGE_1_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = yes
+	
+	option = {
+		name = es_ice_age.1.a
+		hidden_effect = {
+			atmora_superregion = {
+				limit = {
+					NOT = { area = kamal_13_la }
+					NOT = { area = atmora_10_la }
+					NOT = { area = kamal_14_la }
+					NOT = { area = atmora_11_la }
+				}
+				add_permanent_province_modifier = {
+					name = "es_ice_age_province_modifier"
+					duration = 95995
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_province = {
+							superregion = atmora_superregion
+							NOT = { area = kamal_13_la }
+							NOT = { area = atmora_10_la }
+							NOT = { area = kamal_14_la }
+							NOT = { area = atmora_11_la }
+							owner = { ai = no }
+						}
+					}
+				}
+				atmora_superregion = {
+					limit = {
+						NOT = { area = kamal_13_la }
+						NOT = { area = atmora_10_la }
+						NOT = { area = kamal_14_la }
+						NOT = { area = atmora_11_la }
+						owner = { NOT = { government = native } }
+					}
+					cede_province = ---
+					add_base_tax = -5
+					add_base_manpower = -5
+					add_base_production = -5
+				}
+			}
+		}
+	}
+}
+
+# End of Ice Age
+country_event = {
+	id = es_ice_age.2
+	title = es_ice_age.2.t
+	desc = es_ice_age.2.d
+	picture = ES_ICE_AGE_2_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = es_ice_age.2.a
+		add_stability = 1
+		hidden_effect = {
+			country_event = { id = es_ice_age.20 }
+		}
+	}
+}
+
+country_event = {
+	id = es_ice_age.20
+	title = es_ice_age.1.t
+	desc = es_ice_age.1.d
+	picture = ES_ICE_AGE_1_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = yes
+	
+	option = {
+		name = es_ice_age.1.a
+		hidden_effect = {
+			atmora_superregion = {
+				limit = {
+					has_province_modifier = es_ice_age_province_modifier
+				}
+				remove_province_modifier = es_ice_age_province_modifier
+			}
+		}
+	}
+}
+
+country_event = {
+	id = es_ice_age.3
+	title = es_ice_age.3.t
+	desc = es_ice_age.3.d
+	picture = ES_ICE_AGE_3_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					superregion = atmora_superregion
+					NOT = { area = kamal_13_la }
+					NOT = { area = atmora_10_la }
+					NOT = { area = kamal_14_la }
+					NOT = { area = atmora_11_la }
+				}
+				save_event_target_as = abandoned_province
+			}
+		}
+	}
+
+	trigger = {
+		NOT = { government = native }
+		any_owned_province = {
+			superregion = atmora_superregion
+			NOT = { area = kamal_13_la }
+			NOT = { area = atmora_10_la }
+			NOT = { area = kamal_14_la }
+			NOT = { area = atmora_11_la }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 0 }
+		trigger = {
+			years_of_income = 1.5
+		}
+		name = es_ice_age.3.a
+		add_years_of_income = -1.25
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		trigger = {
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+		name = es_ice_age.3.b
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+	}
+	option = {
+		ai_chance = { factor = 100 }
+		name = es_ice_age.3.c
+		custom_tooltip = es_ice_age_3_tooltip
+		event_target:abandoned_province = {
+			cede_province = ---
+			add_base_tax = -5
+			add_base_manpower = -5
+			add_base_production = -5
+		}
+	}
+}

@@ -1,0 +1,392 @@
+namespace = es_isolationism
+
+country_event = {
+	id = es_isolationism.1
+	title = "es_isolationism.1.t"
+	desc = "es_isolationism.1.d"
+	picture = es_isolationism_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_isolationism.1.a"
+		add_country_modifier = {
+			name = "es_incident_embrace_technology"
+			duration = -1
+		}
+		capital_scope = {
+			add_next_institution_embracement = 50
+		}
+		add_isolationism = -1
+		end_incident = incident_unknown_technologies
+	}
+	
+	option = {
+		name = "es_isolationism.1.b"
+		add_country_modifier = {
+			name = "es_incident_scrap_technologies"
+			duration = -1
+		}
+		add_adm_power = 500
+		add_dip_power = 500
+		add_mil_power = 500
+		end_incident = incident_unknown_technologies
+	}
+	
+	option = {
+		name = "es_isolationism.1.c"
+		add_country_modifier = {
+			name = "es_incident_ban_researches"
+			duration = -1
+		}
+		define_advisor = {
+			type = esu_priest
+			skill = 3
+			discount = yes
+		}
+		add_isolationism = 1
+		end_incident = incident_unknown_technologies
+	}
+}
+
+country_event = {
+	id = es_isolationism.2
+	title = "es_isolationism.2.t"
+	desc = "es_isolationism.2.d"
+	picture = es_isolationism_2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_isolationism.2.a"
+		add_country_modifier = {
+			name = "es_incident_study_foreign_magic"
+			duration = -1
+		}
+		define_advisor = {
+			type = esu_mage
+			skill = 3
+			discount = yes
+		}
+		add_isolationism = -1
+		end_incident = incident_mages_on_the_battlefield
+	}
+	
+	option = {
+		name = "es_isolationism.2.b"
+		add_country_modifier = {
+			name = "es_incident_perfect_slaves"
+			duration = -1
+		}
+		capital_scope = {
+			add_base_tax = 7
+			add_base_production = 5
+			add_base_manpower = 3
+		}
+		end_incident = incident_mages_on_the_battlefield
+	}
+	
+	option = {
+		name = "es_isolationism.2.c"
+		add_country_modifier = {
+			name = "es_incident_deny_foreign_magic"
+			duration = -1
+		}
+		add_army_tradition = 25
+		add_isolationism = 1
+		end_incident = incident_mages_on_the_battlefield
+	}
+}
+
+country_event = {
+	id = es_isolationism.3
+	title = "es_isolationism.3.t"
+	desc = "es_isolationism.3.d"
+	picture = es_isolationism_3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_isolationism.3.a"
+		add_country_modifier = {
+			name = "es_incident_bend_the_knees"
+			duration = -1
+		}
+		every_country = {
+			limit = {
+				OR = {
+					culture_group = cyrodiil_cg
+					culture_group = northern_cg
+				}
+			}
+			add_truce_with = ROOT
+		}
+		add_isolationism = -1
+		end_incident = incident_the_dragonborn
+	}
+	
+	option = {
+		name = "es_isolationism.3.b"
+		add_country_modifier = {
+			name = "es_incident_multiple_dragonborns"
+			duration = -1
+		}
+		add_war_exhaustion = -10
+		end_incident = incident_the_dragonborn
+	}
+	
+	option = {
+		name = "es_isolationism.3.c"
+		add_country_modifier = {
+			name = "es_incident_the_only_chosen_one"
+			duration = -1
+		}
+		add_prestige = 15
+		add_isolationism = 1
+		end_incident = incident_the_dragonborn
+	}
+}
+
+country_event = {
+	id = es_isolationism.4
+	title = "es_isolationism.4.t"
+	desc = "es_isolationism.4.d"
+	picture = es_isolationism_4
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_isolationism.4.a"
+		add_country_modifier = {
+			name = "es_incident_hire_knights"
+			duration = -1
+		}
+		add_army_professionalism = 0.15
+		add_isolationism = -1
+		end_incident = incident_noble_knights
+	}
+	
+	option = {
+		name = "es_isolationism.4.b"
+		add_country_modifier = {
+			name = "es_incident_liberate_knights"
+			duration = -1
+		}
+		add_stability = 1
+		end_incident = incident_noble_knights
+	}
+	
+	option = {
+		name = "es_isolationism.4.c"
+		add_country_modifier = {
+			name = "es_inciident_consume_knights"
+			duration = -1
+		}
+		add_yearly_manpower = 2.5
+		add_isolationism = 1
+		end_incident = incident_noble_knights
+	}
+}
+
+country_event = {
+	id = es_isolationism.5
+	title = "es_isolationism.5.t"
+	desc = "es_isolationism.5.d"
+	picture = es_isolationism_5
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_isolationism.5.a"
+		add_country_modifier = {
+			name = "es_incident_native_autonomy"
+			duration = -1
+		}
+		if = {
+			limit = {
+				any_owned_province = { culture_group = marsh_cg }
+			}
+			add_accepted_culture = argonian
+		}
+		if = {
+			limit = {
+				any_owned_province = { culture_group = bosmer_cg }
+			}
+			add_accepted_culture = bosmer
+		}
+		add_isolationism = -1
+		end_incident = incident_raids_on_garrisons
+	}
+	
+	option = {
+		name = "es_isolationism.5.b"
+		add_country_modifier = {
+			name = "es_incident_negotiate_with_natives"
+			duration = -1
+		}
+		add_years_of_income = 2.5
+		end_incident = incident_raids_on_garrisons
+	}
+	
+	option = {
+		name = "es_isolationism.5.c"
+		add_country_modifier = {
+			name = "es_incident_purge_natives"
+			duration = -1
+		}
+		create_general = { tradition = 50 }
+		add_isolationism = 1
+		end_incident = incident_raids_on_garrisons
+	}
+}
+
+country_event = {
+	id = es_isolationism.6
+	title = "es_isolationism.6.t"
+	desc = "es_isolationism.6.d"
+	picture = es_isolationism_6
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_isolationism.6.a"
+		add_country_modifier = {
+			name = "es_incident_honour_superior_force"
+			duration = -1
+		}
+		add_navy_tradition = 25
+		add_isolationism = -1
+		end_incident = incident_rulers_of_the_sea
+	}
+	
+	option = {
+		name = "es_isolationism.6.b"
+		add_country_modifier = {
+			name = "es_incident_naval_negotiations"
+			duration = -1
+		}
+		define_advisor = {
+			type = esu_negotiator
+			skill = 3
+			discount = yes
+		}
+		end_incident = incident_rulers_of_the_sea
+	}
+	
+	option = {
+		name = "es_isolationism.6.c"
+		add_country_modifier = {
+			name = "es_incident_prepare_for_war"
+			duration = -1
+		}
+		hidden_effect = { set_variable = { which = my_pl_hea value = 15 } }	
+		while = {
+			limit = {
+				check_variable = { which = my_pl_hea value = 1 }
+			}
+			subtract_variable = { which = my_pl_hea value = 1 }
+			random_owned_province = { limit = { has_port = yes } ROOT = { heavy_ship = PREV } }
+		}
+		add_isolationism = 1
+		end_incident = incident_rulers_of_the_sea
+	}
+}
+
+country_event = {
+	id = es_isolationism.7
+	title = "es_isolationism.7.t"
+	desc = "es_isolationism.7.d"
+	picture = es_isolationism_7
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_isolationism.7.a"
+		add_country_modifier = {
+			name = "es_incident_open_borders"
+			duration = -1
+		}
+		define_advisor = {
+			type = esu_merchant
+			skill = 3
+			discount = yes
+		}
+		add_isolationism = -1
+		end_incident = incident_trade_empire
+	}
+	
+	option = {
+		name = "es_isolationism.7.b"
+		add_country_modifier = {
+			name = "es_incident_introduce_tariffs"
+			duration = -1
+		}
+		add_tariff_value = 0.15
+		end_incident = incident_trade_empire
+	}
+	
+	option = {
+		name = "es_isolationism.7.c"
+		add_country_modifier = {
+			name = "es_incident_ban_foreighn_merchants"
+			duration = -1
+		}
+		add_mercantilism = 5
+		add_isolationism = 1
+		end_incident = incident_trade_empire
+	}
+}
+
+country_event = {
+	id = es_isolationism.8
+	title = "es_isolationism.8.t"
+	desc = "es_isolationism.8.d"
+	picture = es_isolationism_8
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_isolationism.8.a"
+		add_country_modifier = {
+			name = "es_incident_accept_rituals"
+			duration = -1
+		}
+		define_advisor = {
+			type = esu_monk
+			skill = 3
+			discount = yes
+		}
+		add_isolationism = -1
+		end_incident = incident_ancient_rites
+	}
+	
+	option = {
+		name = "es_isolationism.8.b"
+		add_country_modifier = {
+			name = "es_incident_honour_cults"
+			duration = -1
+		}
+		add_legitimacy = 25
+		add_republican_tradition = 25
+		add_devotion = 25
+		add_horde_unity = 25
+		add_meritocracy = 25
+		end_incident = incident_ancient_rites
+	}
+	
+	option = {
+		name = "es_isolationism.8.c"
+		add_country_modifier = {
+			name = "es_incident_purge_holy_cites"
+			duration = -1
+		}
+		every_owned_province = {
+			limit = { 
+				NOT = { religion = ROOT }
+			}
+			change_religion = ROOT
+		}
+		add_isolationism = 1
+		end_incident = incident_ancient_rites
+	}
+}

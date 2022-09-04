@@ -1,0 +1,356 @@
+ancestor_illusionist_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = auger_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = auger_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = auger_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	diplomatic_reputation = 1.0
+	advisor_cost = 0.10
+	nation_designer_cost = 1
+}
+
+ancestor_auger_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = illusionist_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = illusionist_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = illusionist_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	global_trade_goods_size_modifier = 0.10
+	shock_damage = -0.10
+	nation_designer_cost = 1
+}
+
+ancestor_destroyer_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = necromancer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = necromancer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = necromancer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	fire_damage = 0.10
+	ae_impact = 0.10
+	nation_designer_cost = 1
+}
+
+ancestor_necromancer_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = destroyer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = destroyer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = destroyer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	manpower_recovery_speed = 0.10
+	fire_damage_received = 0.10
+	nation_designer_cost = 1
+}
+
+ancestor_conjurer_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = restorer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = restorer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = restorer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	land_maintenance_modifier = -0.10
+	tolerance_own = -1
+	nation_designer_cost = 1
+}
+
+ancestor_restorer_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = conjurer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = conjurer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = conjurer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	shock_damage_received = -0.10
+	global_regiment_cost = 0.10
+	nation_designer_cost = 1
+}
+
+ancestor_mystic_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = enchanter_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = enchanter_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = enchanter_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	reduced_liberty_desire = 10
+	vassal_income = -0.10
+	nation_designer_cost = 1
+}
+
+ancestor_enchanter_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = mystic_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = mystic_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = mystic_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	global_tax_modifier = 0.10
+	inflation_action_cost = 1.0
+	nation_designer_cost = 1
+}
+
+ancestor_lich_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = summoner_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = summoner_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = summoner_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	global_manpower_modifier = 0.10
+	unjustified_demands = 0.10
+	nation_designer_cost = 1
+}
+
+ancestor_summoner_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = lich_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = lich_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = lich_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	production_efficiency = 0.10
+	embracement_cost = 0.1
+	nation_designer_cost = 1
+}
+
+ancestor_archmage_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = seer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = seer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = seer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	idea_cost = -0.10
+	advisor_pool = -1
+	nation_designer_cost = 1
+}
+
+ancestor_seer_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = archmage_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = archmage_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = archmage_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	movement_speed = 0.10
+	free_leader_pool = -1
+	nation_designer_cost = 1
+}
+
+ancestor_sorcerer_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = warlock_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = warlock_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = warlock_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	artillery_power = 0.10
+	artillery_bonus_vs_fort = -1
+	nation_designer_cost = 1
+}
+
+ancestor_warlock_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = sorcerer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = sorcerer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = sorcerer_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	land_morale = 0.10
+	yearly_corruption = 0.10
+	nation_designer_cost = 1
+}
+
+ancestor_hag_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = guardian_personality } }
+		chance = { modifier = { factor = 0 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = guardian_personality } }
+		chance = { modifier = { factor = 1 has_female_heir = yes } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = guardian_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	hostile_attrition = 1
+	defensiveness = -0.10
+	nation_designer_cost = 1
+}
+
+ancestor_guardian_personality = {
+	ruler_allow = {
+		allow = { NOT = { ruler_has_personality = hag_personality } }
+		chance = { modifier = { factor = 1 } } 
+	}
+	heir_allow = {
+		allow = { NOT = { heir_has_personality = hag_personality } }
+		chance = { modifier = { factor = 1 has_female_heir = no } } 
+	}
+	
+	consort_allow = {
+		allow = { NOT = { consort_has_personality = hag_personality } }
+		chance = { modifier = { factor = 0 } } 
+	}
+	
+	fort_maintenance_modifier = -0.10
+	vassal_forcelimit_bonus = -0.10
+	nation_designer_cost = 1
+}
+
+ancestor_es_drunkard_personality = {
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = degenerate_personality }
+			NOT = { ruler_has_personality = drunkard_personality }
+		}
+		chance = { modifier = { factor = 1 } } 
+	}
+
+	heir_allow = {
+		allow = { 
+			NOT = { heir_has_personality = degenerate_personality }
+			NOT = { heir_has_personality = drunkard_personality }
+		}
+		chance = { modifier = { factor = 1 } } 
+	}
+	
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = degenerate_personality }
+			NOT = { consort_has_personality = drunkard_personality }
+		}
+		chance = { modifier = { factor = 1 } } 
+	}
+
+	allow = {
+		
+	}
+	
+	chance = {
+	}
+	
+	diplomatic_reputation = -1.0
+	global_trade_goods_size_modifier = -0.10
+	nation_designer_cost = 1
+}

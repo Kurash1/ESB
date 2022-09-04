@@ -1,0 +1,305 @@
+namespace = es_assasination_sentinel_dgf
+
+# Assassination of $Country$ Ruler
+# After much planning, many burned assets, we are finally ready to make an attempt of $Country$ ruler's life.
+# "Get it over with!"
+
+country_event = {
+	id = es_assasination_sentinel_dgf.1
+	title = es_assasination_sentinel_dgf.1.t
+	desc = es_assasination_sentinel_dgf.1.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assasination_sentinel_dgf.1.a"
+		ai_chance = { factor = 100 }
+
+		hidden_effect = {
+			random_list = {
+				# Glorious Success
+				25 = {
+					ROOT = {
+						country_event = {
+							id = es_assassination_outcome_dgf.1
+							days = 10
+						}
+					}
+
+					1510 = {
+						owner = {
+							country_event = {
+								id = es_assassination_outcome_dgf.5
+								days = 10
+							}
+						}
+					}
+				}	
+				# Success, but found out
+				25 = {
+					ROOT = {
+						country_event = {
+							id = es_assassination_outcome_dgf.2
+							days = 10
+						}
+					}
+
+					1510 = {
+						owner = {
+							country_event = {
+								id = es_assassination_outcome_dgf.6
+								days = 10
+							}
+						}
+					}
+				}
+				# Failed attempt, yet undiscovered
+				25 = {
+					ROOT = {
+						country_event = {
+							id = es_assassination_outcome_dgf.3
+							days = 10
+						}
+					}
+
+					1510 = {
+						owner = {
+							country_event = {
+								id = es_assassination_outcome_dgf.7
+								days = 10
+							}
+						}
+					}
+				}
+				# Catastrophic failure
+				25 = {
+					ROOT = {
+						country_event = {
+							id = es_assassination_outcome_dgf.4
+							days = 10
+						}
+					}
+
+					1510 = {
+						owner = {
+							country_event = {
+								id = es_assassination_outcome_dgf.8
+								days = 10
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+# Glorious Success
+
+namespace = es_assassination_outcome_dgf
+
+country_event = {
+	id = es_assassination_outcome_dgf.1
+	title = es_assassination_outcome_dgf.1.t
+	desc = es_assassination_outcome_dgf.1.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assassination_outcome_dgf.1.a"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = es_prepare_invasion_dgf
+			duration = 9125
+		}
+		add_country_modifier = {
+			name = es_excellent_spies_dgf
+			duration = 9125
+		}
+	}
+}
+
+# Success
+
+country_event = {
+	id = es_assassination_outcome_dgf.2
+	title = es_assassination_outcome_dgf.2.t
+	desc = es_assassination_outcome_dgf.2.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assassination_outcome_dgf.2.a"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = es_prepare_invasion_dgf
+			duration = 9125
+		}
+		add_country_modifier = {
+			name = es_prepare_for_retaliation_dgf
+			duration = 9125
+		}
+	}
+}
+
+# Failed
+# Despite failed attempt, nothing could be traced back to us. Let us applaud our operatives for this feat!
+
+country_event = {
+	id = es_assassination_outcome_dgf.3
+	title = es_assassination_outcome_dgf.3.t
+	desc = es_assassination_outcome_dgf.3.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assassination_outcome_dgf.3.a"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = es_excellent_spies_dgf
+			duration = 9125
+		}
+	}
+}
+
+# Catastrophic Failure
+
+country_event = {
+	id = es_assassination_outcome_dgf.4
+	title = es_assassination_outcome_dgf.4.t
+	desc = es_assassination_outcome_dgf.4.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assassination_outcome_dgf.4.a"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = es_prepare_for_retaliation_dgf
+			duration = 9125
+		}
+	}
+}
+
+
+# Sentiel GS
+
+country_event = {
+	id = es_assassination_outcome_dgf.5
+	title = es_assassination_outcome_dgf.5.t
+	desc = es_assassination_outcome_dgf.5.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assassination_outcome_dgf.5.a"
+		ai_chance = { factor = 100 }
+		1510 = {
+			owner = {
+				kill_ruler = yes
+				kill_heir = {
+					allow_new_heir = no
+				}
+				kill_consort = 	yes
+				define_ruler = {
+					religion = PREV
+					culture = PREV
+					adm = 0
+					dip = 0
+					mil = 0
+					fixed = yes
+					age = 20
+					claim = 10
+				}
+			}
+		}
+	}
+}
+
+# Sentinel S
+
+country_event = {
+	id = es_assassination_outcome_dgf.6
+	title = es_assassination_outcome_dgf.6.t
+	desc = es_assassination_outcome_dgf.6.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assassination_outcome_dgf.6.a"
+		ai_chance = { factor = 100 }
+		1510 = {
+			owner = {
+				kill_ruler = yes
+				kill_heir = {
+					allow_new_heir = no
+				}
+				kill_consort = 	yes
+				define_ruler = {
+					religion = PREV
+					culture = PREV
+					adm = 0
+					dip = 0
+					mil = 0
+					fixed = yes
+					age = 20
+					claim = 10
+				}
+				add_casus_belli = {
+					type = cb_spy_discovered
+					target = BA1
+				}
+
+			}
+		}
+	}
+}
+
+# Sentinel F
+
+country_event = {
+	id = es_assassination_outcome_dgf.7
+	title = es_assassination_outcome_dgf.7.t
+	desc = es_assassination_outcome_dgf.7.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assassination_outcome_dgf.7.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Sentinel CF
+
+country_event = {
+	id = es_assassination_outcome_dgf.8
+	title = es_assassination_outcome_dgf.8.t
+	desc = es_assassination_outcome_dgf.8.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_assassination_outcome_dgf.8.a"
+		ai_chance = { factor = 100 }
+
+		1510 = {
+			owner = {
+				add_casus_belli = {
+					type = cb_spy_discovered
+					target = BA1
+				}
+			}
+		}
+	}
+}

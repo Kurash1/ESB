@@ -1,0 +1,360 @@
+namespace = es_religious_events_occult
+
+# Event Manager
+
+country_event = {
+	id = es_religious_events_occult.100
+	title = es_religious_events_occult.1.t
+	desc = es_religious_events_occult.1.d
+	picture = ES_WEALTH_OF_CLERGY_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		uses_patriarch_authority = yes
+	}
+
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = es_religious_events_occult.1 } }
+			1 = { country_event = { id = es_religious_events_occult.2 } }
+			1 = { country_event = { id = es_religious_events_occult.3 } }
+			1 = { country_event = { id = es_religious_events_occult.4 } }
+			1 = { country_event = { id = es_religious_events_occult.5 } }
+			1 = { country_event = { id = es_religious_events_occult.6 } }
+			1 = { country_event = { id = es_religious_events_occult.7 } }
+			1 = { country_event = { id = es_religious_events_occult.8 } }
+			92 = { set_country_flag = successful_occult_event }
+		}
+	}
+	
+	option = {
+		name = es_religious_events_occult.1.a
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_occult_event }
+			clr_country_flag = successful_occult_event
+		}
+		else = {
+			country_event = {
+				id = es_religious_events_occult.100
+				days = 1
+			}
+		}
+	}
+}
+
+# es_religious_events_occult.1.t:0 "Wealth and Corruption"
+# es_religious_events_occult.1.d:0 "The Church of $COUNTRY$ is a large landowner and this has brought a great deal of wealth to it. However, some people claim that the Priests are being corrupted by this great wealth. Their opponents argue that the Church needs the wealth to carry out its holy mission. The key thing is the Priests does not pay any taxes and if it was forced to give its land away it would move it into the hands of people we can tax."
+# es_religious_events_occult.1.a:0 "We will support the Church Authorities."
+# es_religious_events_occult.1.b:0 "Indeed, some possessions of the Priests may be extra." 
+
+country_event = {
+	id = es_religious_events_occult.1
+	title = es_religious_events_occult.1.t
+	desc = es_religious_events_occult.1.d
+	picture = ES_WEALTH_OF_CLERGY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_occult_event
+		}
+	}
+	
+	option = {
+		name = es_religious_events_occult.1.a
+		add_patriarch_authority = 0.05
+	}
+	option = {
+		name = es_religious_events_occult.1.b
+		add_patriarch_authority = -0.05
+		add_years_of_income = 1.0
+	}
+}
+
+# es_religious_events_occult.2.t:0 "Great Council"
+# es_religious_events_occult.2.d:0 "The Church has gathered the Great Council, which asks for certain privileges in return for helping fight different heresies that are stalking our land. Though, do we really need help of the Priests in keeping the people in their place?"
+# es_religious_events_occult.2.a:0 "Grant the Privileges!"
+# es_religious_events_occult.2.b:0 "Have they gathered only to beg us?"
+
+country_event = {
+	id = es_religious_events_occult.2
+	title = es_religious_events_occult.2.t
+	desc = es_religious_events_occult.2.d
+	picture = ES_DRAGON_PRIEST_MASK_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_occult_event
+		}
+	}
+	
+	option = {
+		name = es_religious_events_occult.2.a
+		add_patriarch_authority = 0.05
+	}
+	option = {
+		name = es_religious_events_occult.2.b
+		add_patriarch_authority = -0.05
+		add_stability_or_adm_power = yes
+	}
+}
+
+# es_religious_events_occult.3.t:0 "Religious Reforms"
+# es_religious_events_occult.3.d:0 "Our faith is wide spread and its can be found in various parts of the world. However, this results in divergense of some religious practicies. That's why one of the Dragon Priests is proposing to reform our rites to bring them in line with other branches of our faith. The idea is bold and can strengthen the Church but at the same time it might weaken our power, as we will have to oppose the unified clergy."
+# es_religious_events_occult.3.a:0 "We shall support the Reform."
+# es_religious_events_occult.3.b:0 "The Priests cannot receive any more power."
+
+country_event = {
+	id = es_religious_events_occult.3
+	title = es_religious_events_occult.3.t
+	desc = es_religious_events_occult.3.d
+	picture = ES_ANCIENT_DRAGON_WALL_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+		is_lesser_in_union = no
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_occult_event
+		}
+	}
+	
+	option = {
+		name = es_religious_events_occult.3.a
+		add_patriarch_authority = 0.05
+		add_legitimacy = -10
+		add_republican_tradition = -10
+		add_horde_unity = -10
+		add_meritocracy = -10
+		add_devotion = 10
+	}
+	option = {
+		name = es_religious_events_occult.3.b
+		add_patriarch_authority = -0.05
+		add_country_modifier = {
+			name = "es_discrepancy_in_rites"
+			duration = 3650
+		}
+	}
+}
+
+# es_religious_events_occult.4.t:0 "Independence of the Dragon Priests"
+# es_religious_events_occult.4.d:0 "The Church is a powerful institution, that consolidates in own hands both the wealth of #COUNTRY$ and the will of its people. If we continue to ignore the growing influence of the Priests we may soon witness the foundation of a theocratic reign within our own nation. However, on the other hand, the control of our citizens by Church may still be beneicial to us, as noone knows, what ideas would sneak in the head of a merchant or a wariior without the guidence of the Dragon Priests and their Inqusition."
+# es_religious_events_occult.4.a:0 "We need to protect the authority of the Church."
+# es_religious_events_occult.4.b:0 "The clergy should be the branch of our state, not the whole tree."
+
+country_event = {
+	id = es_religious_events_occult.4
+	title = es_religious_events_occult.4.t
+	desc = es_religious_events_occult.4.d
+	picture = ES_DRAGON_PRIEST_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_occult_event
+		}
+	}
+	
+	option = {
+		name = es_religious_events_occult.4.b
+		add_patriarch_authority = 0.05
+		define_advisor = {
+			skill = 3
+			type = esu_priest
+			discount = yes
+		}
+	}
+	option = {
+		name = es_religious_events_occult.4.a
+		add_patriarch_authority = -0.05
+		define_advisor = {
+			skill = 3
+			type = esu_monk
+			discount = yes
+		}
+	}
+}
+
+# es_religious_events_occult.5.t:0 "The Choice of Candidates"
+# es_religious_events_occult.5.d:0 "To promote and strengthen the Church we can appoint some Priests in our administration. Vice versa, to decrease its influence on minds of our people we can restrict some clerical positions for loyalists of $MONARCH$. But what would benefit us more these days?"
+# es_religious_events_occult.5.a:0 "The Dragon Priests can help us govern the nation."
+# es_religious_events_occult.5.b:0 "Better to keep an eye on those clerics."
+
+country_event = {
+	id = es_religious_events_occult.5
+	title = es_religious_events_occult.5.t
+	desc = es_religious_events_occult.5.d
+	picture = ES_DRAGON_ALTAR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_occult_event
+		}
+	}
+	
+	option = {
+		name = es_religious_events_occult.5.b
+		add_patriarch_authority = 0.05
+		random_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+			}
+			change_religion = ROOT
+		}
+	}
+	option = {
+		name = es_religious_events_occult.5.a
+		add_patriarch_authority = -0.05
+		add_adm_power = 100
+	}
+}
+
+# es_religious_events_occult.6.t:0 "Religious Influence"
+# es_religious_events_occult.6.d:0 "One of the Dragon Priests has stated that the newly built temple in the capital does not glorify our Great Patrons and Lords, but only worships the exorbitant arrogance of the [Root.Monarch.GetName]. Certainly these claims are groundless and outrageous, especially considering the fact that the money to build the temple, which is the subject of the debate, was allocated from the state treasury at the personal disposal of the [Root.GovernmentName]. Perhaps we should in future be more careful in selecting both the targets for our donations and candidates for such high church offices?."
+# es_religious_events_occult.6.a:0 "He must learn his place!"
+# es_religious_events_occult.6.b:0 "We will make a further donation to the church to show our humility."
+
+country_event = {
+	id = es_religious_events_occult.6
+	title = es_religious_events_occult.6.t
+	desc = es_religious_events_occult.6.d
+	picture = ES_DRAGON_TEMPLE_ATMORAN_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_occult_event
+		}
+	}
+
+	option = {
+		name = es_religious_events_occult.6.a
+		add_patriarch_authority = -0.10
+	}
+	option = {
+		name = es_religious_events_occult.6.b
+		add_prestige = -10
+		add_patriarch_authority = 0.05
+	}
+}
+
+# es_religious_events_occult.7.t:0 "Heresy in [es_heretical_province.GetAreaName]!"
+# es_religious_events_occult.7.d:0 "Our newly appointed Priest of [es_heretical_province.GetAreaName] has uncovered a horrifying local heresy. He claims that people there denounce the Dragons and instead praize some Daedric entities! The Church has asked us to help in this time of need as he will require many more resources to root out this heresy which is widespread in the area among high as well as low."
+# es_religious_events_occult.7.a:0 "Heretics must eradicated!"
+# es_religious_events_occult.7.b:0 "We cannot murder every citizen in [es_heretical_province.GetAreaName]."
+
+country_event = {
+	id = es_religious_events_occult.7
+	title = es_religious_events_occult.7.t
+	desc = es_religious_events_occult.7.d
+	picture = ES_BOETHIAH_CULTIST
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				save_event_target_as = es_heretical_province
+			}
+			set_country_flag = successful_occult_event
+		}
+	}
+
+	option = {
+		name = es_religious_events_occult.7.a
+		add_patriarch_authority = 0.05
+		event_target:es_heretical_province = {
+			area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = "es_rooting_out_heresy"
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = es_religious_events_occult.7.b
+		add_patriarch_authority = -0.15
+	}
+}
+
+# es_religious_events_occult.8.t:0 "Flourish Monastery of [es_flourish_province.GetName]"
+# es_religious_events_occult.8.d:0 "The Priest of [es_flourish_province.GetAreaName] reports that the local monastery is growing at an unprecedented speed. The clerical estate around near the city of [es_flourish_province.GetCapitalName] have in fact grown so big and are so well kept that it has become the envy of our local administrator. The governor has become entangled in a conflict with the local clergy, over where exactly the demarcation between their lands and those of the [Root.GovernmentName] goes. The time has come for central authorities to step in and settle the dispute. Helping the Priests would undoubtedly secure the gratitude of clergy, but this could also be an opportunity to get hold of more land for the state..."
+# es_religious_events_occult.8.a:0 "Clearly our governor is right!"
+# es_religious_events_occult.8.b:0 "We must listen to the Dragon Priests."
+
+country_event = {
+	id = es_religious_events_occult.8
+	title = es_religious_events_occult.8.t
+	desc = es_religious_events_occult.8.d
+	picture = CLERICAL_ESTATE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		uses_patriarch_authority = yes
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				save_event_target_as = es_flourish_province
+			}
+			set_country_flag = successful_occult_event
+		}
+	}
+
+	option = {
+		name = es_religious_events_occult.8.a
+		add_patriarch_authority = -0.05
+		event_target:es_flourish_province = {
+			add_base_production = 1
+		}
+	}
+	option = {
+		name = es_religious_events_occult.8.b
+		add_patriarch_authority = 0.05
+	}
+}

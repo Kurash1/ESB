@@ -1,0 +1,375 @@
+namespace = es_religious_events_nature
+
+# Event Manager
+
+country_event = {
+	id = es_religious_events_nature.100
+	title = es_religious_events_nature.1.t
+	desc = es_religious_events_nature.1.d
+	picture = MOLAG_BAL_RITHUAL_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			religion = all_maker_cult
+			religion = hist
+			religion = sload_faith
+			religion = old_gods_cult
+			religion = tsaesci_pantheon
+			religion = kamal_pantheon
+			religion = yokudan_pantheon
+			religion = cult_of_the_moth
+		}
+	}
+
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = es_religious_events_nature.1 } }
+			1 = { country_event = { id = es_religious_events_nature.2 } }
+			1 = { country_event = { id = es_religious_events_nature.3 } }
+			1 = { country_event = { id = es_religious_events_nature.4 } }
+			1 = { country_event = { id = es_religious_events_nature.5 } }
+			1 = { country_event = { id = es_religious_events_nature.6 } }
+			1 = { country_event = { id = es_religious_events_nature.7 } }
+			93 = { set_country_flag = successful_nature_religion_flavour_event }
+		}
+	}
+	
+	option = {
+		name = es_religious_events_nature.1.a
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_nature_religion_flavour_event }
+			clr_country_flag = successful_nature_religion_flavour_event
+		}
+		else = {
+			country_event = {
+				id = es_religious_events_nature.100
+				days = 1
+			}
+		}
+	}
+}
+
+# Atakota - hist
+# According to the ancient myth, Atakota is the entity that formed from the conflict of Atak and Kota. Atak is considered to exist within all things and personifies order, stasis, and light, while Kota personifies the concepts of chaos and change. The combination of these two opposing entities allowed the world as we know it to emerge and the balance between chaos and order is extremely important for its preservation. Despite the fact that Atakota appeared at the dawn of time, its individual parts still affect us, directing us towards light or pushing towards darkness. Sometimes it helps our people, interferes with a couple, but nevertheless we still feel the influence of the two halves of the indivisible whole.  
+# Strive for the light of Atak. - creation
+# Succumb to chaos of Kota. - destruction
+# Maintain the balance. 
+
+country_event = {
+	id = es_religious_events_nature.1
+	title = es_religious_events_nature.1.t
+	desc = es_religious_events_nature.1.d
+	picture = ES_ATAKOTA_eventPicture
+	
+	trigger = {
+		religion = hist
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_nature_religion_flavour_event
+	}
+	
+	option = {
+		name = es_religious_events_nature.1.a
+		add_country_modifier = {
+			name = "es_atak"
+			duration = 3650
+		}
+		add_karma = 10
+		add_piety = 0.10
+	}
+	option = {
+		name = es_religious_events_nature.1.b
+		add_country_modifier = {
+			name = "es_kota"
+			duration = 3650
+		}
+		add_karma = -10
+		add_piety = -0.10
+	}
+	option = {
+		name = es_religious_events_nature.1.c
+		add_prestige = 5
+		add_church_power = 25
+		add_authority = 10
+	}
+}
+
+# Tree Spirit - Root of Power
+# Holy Grove
+# Do not touch it.
+# Cut it!
+
+country_event = {
+	id = es_religious_events_nature.2
+	title = es_religious_events_nature.2.t
+	desc = es_religious_events_nature.2.d
+	picture = ES_HOLY_GROVE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_nature_religion_flavour_event
+	}
+	
+	option = {
+		name = es_religious_events_nature.2.a
+		add_country_modifier = {
+			name = "es_holy_grove"
+			duration = 3650
+		}
+		add_karma = 5
+		add_piety = 0.05
+		add_church_power = 10
+		add_authority = 5
+		es_upset_magical_estates = yes
+	}
+	option = {
+		name = es_religious_events_nature.2.b
+		add_country_modifier = {
+			name = "es_blesssed_weapons"
+			duration = 3650
+		}
+		add_karma = -5
+		add_piety = -0.05
+		add_church_power = -25
+		add_authority = -5
+		es_upset_religious_estates = yes
+	}
+}
+
+# Beast Spirit - Werebears Help
+# Warebears
+# Send forces to kill them
+# They deserve the right to live.
+
+country_event = {
+	id = es_religious_events_nature.3
+	title = es_religious_events_nature.3.t
+	desc = es_religious_events_nature.3.d
+	picture = ES_WEREBEAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_nature_religion_flavour_event
+	}
+	
+	option = {
+		name = es_religious_events_nature.3.a
+		add_country_modifier = {
+			name = "es_hunt_on_warebears"
+			duration = 3650
+		}
+		add_army_tradition = 5
+		add_karma = -5
+		add_piety = -0.05
+		add_church_power = -25
+		add_authority = -5
+		es_upset_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nature.3.b
+		add_country_modifier = {
+			name = "es_peace_with_warebears"
+			duration = 3650
+		}
+		random_owned_province = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		add_karma = 5
+		add_piety = 0.05
+		add_church_power = 10
+		add_authority = 5
+		es_upset_common_estates = yes
+	}
+}
+
+# Earth Spirit - Bones of the Earth
+# Infertile Soil
+# We shall turn in into grasslands!
+# This is perfect training grounds!
+# Let's do not touch it
+
+country_event = {
+	id = es_religious_events_nature.4
+	title = es_religious_events_nature.4.t
+	desc = es_religious_events_nature.4.d
+	picture = ES_INFERTILE_SOIL_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_nature_religion_flavour_event
+	}
+	
+	option = {
+		name = es_religious_events_nature.4.a
+		random_owned_province = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		add_karma = 5
+		add_piety = 0.05
+		add_authority = 5
+		add_church_power = 10
+		es_please_common_estates = yes
+	}
+	option = {
+		name = es_religious_events_nature.4.b
+		add_country_modifier = {
+			name = "es_army_drilling"
+			duration = 3650
+		}
+		add_karma = -5
+		add_piety = -0.05
+		add_authority = -5
+		add_church_power = -10
+		es_please_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nature.4.c
+		add_prestige = 5
+		add_karma = 10
+		add_piety = 0.10
+		add_church_power = 25
+		add_authority = 10
+	}
+}
+
+# Water Spirit - Waters of Life
+# Abandoned Temple
+# Rebuild it
+# Demolish it
+# Organise a reservation
+
+country_event = {
+	id = es_religious_events_nature.5
+	title = es_religious_events_nature.5.t
+	desc = es_religious_events_nature.5.d
+	picture = ES_ABANDONNED_TEMPLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_nature_religion_flavour_event
+		if = {
+			limit = {
+				NOT = { any_owned_province = { has_province_flag = es_religious_events_nature_5_province_flag} }
+			}
+			random_owned_province = {
+				set_province_flag = es_religious_events_nature_5_province_flag
+			}
+		}
+	}
+	
+	option = {
+		name = es_religious_events_nature.5.a
+		add_country_modifier = {
+			name = "es_new_temple"
+			duration = 3650
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = es_religious_events_nature_5_province_flag
+			}
+			clr_province_flag = es_religious_events_nature_5_province_flag
+			add_base_tax = 1
+		}
+		add_karma = 5
+		add_piety = 0.05
+		add_authority = 5
+		add_church_power = 10
+		es_please_religious_estates = yes
+	}
+	option = {
+		name = es_religious_events_nature.5.b
+		add_years_of_income = 1.5
+		add_karma = -5
+		add_piety = -0.05
+		add_authority = -5
+		add_church_power = -10
+		es_please_merchant_estates = yes
+		random_owned_province = {
+			limit = {
+				has_province_flag = es_religious_events_nature_5_province_flag
+			}
+			clr_province_flag = es_religious_events_nature_5_province_flag
+			add_base_production = 1
+		}
+	}
+	option = {
+		name = es_religious_events_nature.5.c
+		add_country_modifier = {
+			name = "es_natural_reservation"
+			duration = 3650
+		}
+		add_karma = 10
+		add_piety = 0.10
+		add_church_power = 25
+		add_authority = 10
+		es_please_magical_estates = yes
+	}
+	
+}
+
+# Wind Spirit - North Wind
+# Hard times await us
+
+country_event = {
+	id = es_religious_events_nature.6
+	title = es_religious_events_nature.6.t
+	desc = es_religious_events_nature.6.d
+	picture = ES_NORTHERN_WIND_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_nature_religion_flavour_event
+	}
+	
+	option = {
+		name = es_religious_events_nature.6.a
+		add_karma = -10
+		add_piety = -0.10
+		add_authority = -10
+		add_church_power = -25
+		es_upset_common_estates = yes
+	}
+}
+
+# Sun Spirit - Sun Flare
+# The light of hope!
+
+country_event = {
+	id = es_religious_events_nature.7
+	title = es_religious_events_nature.7.t
+	desc = es_religious_events_nature.7.d
+	picture = ES_SUMMER_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_nature_religion_flavour_event
+	}
+	
+	option = {
+		name = es_religious_events_nature.7.a
+		add_karma = 10
+		add_piety = 0.10
+		add_authority = 10
+		add_church_power = 10
+		es_please_common_estates = yes
+	}
+}

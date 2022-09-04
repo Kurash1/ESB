@@ -1,0 +1,156 @@
+namespace = es_15_scenario
+
+country_event = {
+	id = es_15_scenario.1
+	title = es_15_scenario.1.t
+	desc = es_15_scenario.1.d
+	picture = ES_ASSEMBLY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_15_scenario.1.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		every_owned_province = {
+			add_permanent_province_modifier = {
+				name = "15_glenpoint_assembly"
+				duration = 9125
+			}
+		}
+	}
+	option = {
+		name = "es_15_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		every_owned_province = {
+			add_local_autonomy = 35
+		}
+	}
+}
+
+country_event = {
+	id = es_15_scenario.2
+	title = es_15_scenario.2.t
+	desc = es_15_scenario.2.d
+	picture = ES_THRAS_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		271 = { owner = { save_event_target_as = 271_owner } }
+		335 = { owner = { save_event_target_as = 335_owner } }
+		6392 = { owner = { save_event_target_as = 6392_owner } }
+	}
+
+	option = {
+		name = "es_15_scenario.2.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		OR = {
+		region = summerset_lr
+		region = yokuda_lr
+		region = alikr_desert_lr
+		}
+		}
+		add_core = ROOT
+		}
+		
+		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:271_owner } NOT = { alliance_with = event_target:271_owner } NOT = { is_subject_of = event_target:271_owner } NOT = { overlord_of = event_target:271_owner } }
+		declare_war_with_cb = { who = event_target:271_owner casus_belli = cb_es_scenario } 
+		}
+		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:335_owner } NOT = { alliance_with = event_target:335_owner } NOT = { is_subject_of = event_target:335_owner } NOT = { overlord_of = event_target:335_owner } }
+		declare_war_with_cb = { who = event_target:335_owner casus_belli = cb_es_scenario } 
+		}
+		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:6392_owner } NOT = { alliance_with = event_target:6392_owner } NOT = { is_subject_of = event_target:6392_owner } NOT = { overlord_of = event_target:6392_owner } }
+		declare_war_with_cb = { who = event_target:6392_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_15_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		add_country_modifier = {
+			name = "15_coral_trade"
+			duration = 36500
+		}
+	}
+}
+
+country_event = {
+	id = es_15_scenario.3
+	title = es_15_scenario.3.t
+	desc = es_15_scenario.3.d
+	picture = ES_CROWD1_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_15_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		kill_heir = {  }
+		define_ruler = {
+        name = "Mansel"
+        dynasty = "Sesnit"
+        adm = 5
+        dip = 7
+        mil = 3
+        age = 18
+        claim = 100
+		#fixed = yes
+        }
+	}
+	option = {
+		name = "es_15_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_country_modifier = {
+			name = "11_succesion_war"
+			duration = 9125
+		}
+	}
+	after = {
+		country_event = { id = es_15_scenario.4 days = 9125 }
+	}
+}
+
+country_event = {
+	id = es_15_scenario.4
+	title = es_15_scenario.4.t
+	desc = es_15_scenario.4.d
+	picture = ES_ASSASIN_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_15_scenario.4.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		kill_heir = {  }
+		define_ruler = {
+        name = "Randic"
+        dynasty = "Torn"
+        adm = 2
+        dip = 2
+        mil = 3
+        age = 25
+        claim = 100
+		#fixed = yes
+        }
+		
+		every_province = {
+		limit = {
+		region = yokuda_lr
+		}
+		add_core = ROOT
+		}
+		
+	}
+	option = {
+		name = "es_15_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}

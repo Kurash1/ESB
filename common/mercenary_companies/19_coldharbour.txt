@@ -1,0 +1,516 @@
+### Vampire ###
+
+deathspine_clan_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2756
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { vampire_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = central_coldharbour_lr }
+	}
+	modifier = {
+        fire_damage_received = -0.10
+        movement_speed = 0.15
+	}
+}
+
+kyre_clan_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 2834
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { vampire_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = central_coldharbour_lr }
+	}
+	modifier = { 
+	    land_attrition = -0.15
+		infantry_power = 0.10
+	}
+}
+
+holima_clan_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 2850
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { vampire_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = central_coldharbour_lr }
+	}
+	modifier = {
+	    land_morale = 0.10
+		siege_ability = 0.07
+	}
+}
+
+lemeva_clan_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 2897
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { vampire_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = central_coldharbour_lr }
+	}
+	modifier = {
+	    prestige_from_land = 0.07
+		fire_damage = 0.15
+	}
+}
+
+hollow_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 2710
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { vampire_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = central_coldharbour_lr }
+	}
+	modifier = { 
+	    discipline = 0.10
+		shock_damage_received = -0.05
+	}
+}
+
+### Soul Shriven ###
+
+setheva_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 3157
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { soul_shriven_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = western_coldharbour_lr }
+	}
+	modifier = { 
+	    cavalry_power = 0.15
+		reinforce_speed = 0.07
+	}
+}
+
+mindilne_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 3176
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { soul_shriven_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = western_coldharbour_lr }
+	}
+	modifier = { 
+	    fire_damage = 0.10
+		prestige_from_land = 0.15
+	}
+}
+
+lelmizine_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 3168
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { soul_shriven_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = western_coldharbour_lr }
+	}
+	modifier = { 
+	    discipline = 0.10
+		infantry_power = 0.05
+	}
+}
+
+lightless_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 3188
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { soul_shriven_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = western_coldharbour_lr }
+	}
+	modifier = {
+        reinforce_speed = 0.15
+		shock_damage_received = -0.10
+	}
+}
+
+evamese_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 3147
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { soul_shriven_sprite_pack }
+    trigger = {
+		culture_group = dead_cg
+		any_owned_province = { region = western_coldharbour_lr }
+	}
+	modifier = { 
+	    movement_speed = 0.25
+		fire_damage_received = -0.05
+	}
+}
+
+### Scampian ###
+
+qetti_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2976
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_coldharbour_lr }
+	}
+	modifier = { 
+	    infantry_power = 0.10
+		movement_speed = 0.15
+	}
+}
+
+qeiti_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 2883
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_coldharbour_lr }
+	}
+	modifier = { 
+	    discipline = 0.10
+		reinforce_speed = 0.07
+	}
+}
+
+nevela_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 2987
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_coldharbour_lr }
+	}
+	modifier = { 
+	    shock_damage = 0.15
+		siege_ability = 0.07
+	}
+}
+
+qeta_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 2877
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_coldharbour_lr }
+	}
+	modifier = { 
+	    cavalry_power = 0.10
+		reinforce_speed = 0.15
+	}
+}
+
+haj_uxilth_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 2970
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_coldharbour_lr }
+	}
+	modifier = { 
+	    land_attrition = -0.25
+		land_morale = 0.05
+	}
+}
+
+### Harvester ###
+
+mehiva_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2866
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_coldharbour_lr }
+	}
+	modifier = { 
+	    fire_damage_received = -0.15
+		siege_ability = 0.07
+	}
+}
+
+duetta_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 2953
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_coldharbour_lr }
+	}
+	modifier = { 
+	    movement_speed = 0.25
+		land_attrition = -0.07
+	}
+}
+
+runu_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 2858
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_coldharbour_lr }
+	}
+	modifier = { 
+	    discipline = 0.10
+		cavalry_power = 0.05
+	}
+}
+
+zuelta_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 2903
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_coldharbour_lr }
+	}
+	modifier = { 
+	    prestige_from_land = 0.15
+		fire_damage = 0.10
+	}
+}
+
+milevi_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 2915
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_coldharbour_lr }
+	}
+	modifier = { 
+	    infantry_power = 0.10
+		shock_damage = 0.10
+	}
+}
+
+### Dremoran ###
+
+surreal_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2775
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_coldharbour_lr }
+	}
+	modifier = { 
+	    movement_speed = 0.15
+		siege_ability = 0.15
+	}
+}
+
+derni_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 2744
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_coldharbour_lr }
+	}
+	modifier = { 
+	    fire_damage = 0.10
+		land_attrition = -0.15
+	}
+}
+
+acema_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 2799
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_coldharbour_lr }
+	}
+	modifier = { 
+	    prestige_from_land = 0.07
+		land_morale = 0.10
+	}
+}
+
+moonless_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 2828
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_coldharbour_lr }
+	}
+	modifier = { 
+	    shock_damage = 0.10
+		reinforce_speed = 0.15
+	}
+}
+
+chasm_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 2727
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_coldharbour_lr }
+	}
+	modifier = { 
+	    discipline = 0.10
+		land_attrition = -0.07
+	}
+}
+
+### Free For All ###
+
+free_vampire_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2710
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { vampire_sprite_pack }
+    trigger = {
+		any_owned_province = { region = central_coldharbour_lr }
+	}
+	modifier = { 
+	    shock_damage = 0.05
+		movement_speed = 0.07
+	}
+}
+
+free_soul-shriven_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 3188
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { soul_shriven_sprite_pack }
+    trigger = {
+		any_owned_province = { region = western_coldharbour_lr }
+	}
+	modifier = { 
+	    fire_damage = 0.05
+		siege_ability = 0.07
+	}
+}
+
+free_scamp_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2970
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		any_owned_province = { region = southern_coldharbour_lr }
+	}
+	modifier = { 
+	    shock_damage_received = -0.05
+		reinforce_speed = 0.07
+	}
+}
+
+free_harvester_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2903
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		any_owned_province = { region = eastern_coldharbour_lr }
+	}
+	modifier = { 
+	    cavalry_power = 0.05
+		land_attrition = -0.07
+	}
+}
+
+free_dremoran_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2727
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		any_owned_province = { region = northern_coldharbour_lr }
+	}
+	modifier = { 
+	    prestige_from_land = 0.07
+		infantry_power = 0.05
+	}
+}

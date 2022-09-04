@@ -1,0 +1,268 @@
+namespace = esu_monument_skykiller_gallery
+
+country_event = {
+	id = esu_monument_skykiller_gallery.1
+	title = skykiller_gallery_event_title
+	desc = skykiller_gallery_event_desc
+	picture = ES_SKYKILLER_GALLERY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = skykiller_gallery_event_option_winter
+		
+		if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 1
+					}
+				}
+			}
+			
+			reach_lr = {
+				add_province_modifier = {
+					name = weatherwitch_winter_one
+					duration = 3650
+					desc = skykiller_gallery_modifier_winter
+					hidden = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 2
+					}
+				}
+			}
+			
+			reach_lr = {
+				add_province_modifier = {
+					name = weatherwitch_winter_two
+					duration = 3650
+					desc = skykiller_gallery_modifier_winter
+					hidden = no
+				}
+			}
+			
+			great_planes_lr = {
+				add_province_modifier = {
+					name = weatherwitch_winter_two
+					duration = 3650
+					desc = skykiller_gallery_modifier_winter
+					hidden = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 3
+					}
+				}
+			}
+			
+			skyrim_superregion = {
+				add_province_modifier = {
+					name = weatherwitch_winter_three
+					duration = 3650
+					desc = skykiller_gallery_modifier_winter
+					hidden = no
+				}
+			}
+		}
+		add_years_of_income = -1.0
+		adm_power_cost = 50
+		dip_power_cost = 50
+		mil_power_cost = 50
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { years_of_income = 1.0 }
+			}
+		}
+	}
+	
+	option = {
+		name = skykiller_gallery_event_option_drought
+		
+		if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 1
+					}
+				}
+			}
+			
+			reach_lr = {
+				add_province_modifier = {
+					name = weatherwitch_drought_one
+					duration = 3650
+					desc = skykiller_gallery_modifier_drought
+					hidden = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 2
+					}
+				}
+			}
+			
+			reach_lr = {
+				add_province_modifier = {
+					name = weatherwitch_drought_two
+					duration = 3650
+					desc = skykiller_gallery_modifier_drought
+					hidden = no
+				}
+			}
+			
+			great_planes_lr = {
+				add_province_modifier = {
+					name = weatherwitch_drought_two
+					duration = 3650
+					desc = skykiller_gallery_modifier_drought
+					hidden = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 3
+					}
+				}
+			}
+			
+			skyrim_superregion = {
+				add_province_modifier = {
+					name = weatherwitch_drought_three
+					duration = 3650
+					desc = skykiller_gallery_modifier_drought
+					hidden = no
+				}
+			}
+		}
+		add_years_of_income = -1.0
+		adm_power_cost = 50
+		dip_power_cost = 50
+		mil_power_cost = 50
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { years_of_income = 1.0 }
+			}
+		}
+	}
+	
+	option = {
+		name = skykiller_gallery_event_option_rain
+		
+		if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 1
+					}
+				}
+			}
+			
+			reach_lr = {
+				add_province_modifier = {
+					name = weatherwitch_rain_one
+					duration = 3650
+					desc = skykiller_gallery_modifier_rain
+					hidden = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 2
+					}
+				}
+			}
+			
+			reach_lr = {
+				add_province_modifier = {
+					name = weatherwitch_rain_two
+					duration = 3650
+					desc = skykiller_gallery_modifier_rain
+					hidden = no
+				}
+			}
+			
+			great_planes_lr = {
+				add_province_modifier = {
+					name = weatherwitch_rain_two
+					duration = 3650
+					desc = skykiller_gallery_modifier_rain
+					hidden = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 3
+					}
+				}
+			}
+			
+			skyrim_superregion = {
+				add_province_modifier = {
+					name = weatherwitch_rain_three
+					duration = 3650
+					desc = skykiller_gallery_modifier_rain
+					hidden = no
+				}
+			}
+		}
+		add_years_of_income = -1.0
+		adm_power_cost = 50
+		dip_power_cost = 50
+		mil_power_cost = 50
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { years_of_income = 1.0 }
+			}
+		}
+	}
+	
+	option = {
+		name = skykiller_gallery_event_option_no
+		
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+}

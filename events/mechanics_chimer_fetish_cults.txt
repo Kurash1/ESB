@@ -1,0 +1,197 @@
+namespace = chimer_fetish_cults
+
+country_event = {
+	id = chimer_fetish_cults.1
+	title = chimer_fetish_cults.1.t
+	desc = chimer_fetish_cults.1.d
+	picture = ES_MOLAG_BAL_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = chimer_fetish_cults_1_flag
+	}
+	option = {
+		name = "chimer_fetish_cults.1.a"
+		unlock_cult = cult_molag_bal_cult_1
+		custom_tooltip = es_molag_bal_cult_1_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.1.b"
+		unlock_cult = cult_molag_bal_cult_2
+		custom_tooltip = es_molag_bal_cult_2_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.1.c"
+		unlock_cult = cult_molag_bal_cult_3
+		custom_tooltip = es_molag_bal_cult_3_tt
+	}
+}
+
+country_event = {
+	id = chimer_fetish_cults.2
+	title = chimer_fetish_cults.2.t
+	desc = chimer_fetish_cults.2.d
+	picture = razor_of_mehrunes_eventpictures
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = chimer_fetish_cults_2_flag
+	}
+	option = {
+		name = "chimer_fetish_cults.2.a"
+		unlock_cult = cult_mehrunes_dagon_cult_1
+		custom_tooltip = es_mehrunes_dagon_cult_1_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.2.b"
+		unlock_cult = cult_mehrunes_dagon_cult_2
+		custom_tooltip = es_mehrunes_dagon_cult_2_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.2.c"
+		unlock_cult = cult_mehrunes_dagon_cult_3
+		custom_tooltip = es_mehrunes_dagon_cult_3_tt
+	}
+}
+
+country_event = {
+	id = chimer_fetish_cults.3
+	title = chimer_fetish_cults.3.t
+	desc = chimer_fetish_cults.3.d
+	picture = Malacath_s_Summoning_Day_eventpictures
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = chimer_fetish_cults_3_flag
+	}
+	option = {
+		name = "chimer_fetish_cults.3.a"
+		unlock_cult = cult_malacath_cult_1
+		custom_tooltip = es_malacath_cult_1_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.3.b"
+		unlock_cult = cult_malacath_cult_2
+		custom_tooltip = es_malacath_cult_2_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.3.c"
+		unlock_cult = cult_malacath_cult_3
+		custom_tooltip = es_malacath_cult_3_tt
+	}
+}
+
+country_event = {
+	id = chimer_fetish_cults.4
+	title = chimer_fetish_cults.4.t
+	desc = chimer_fetish_cults.4.d
+	picture = SHEOGORATH_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = chimer_fetish_cults_4_flag
+	}
+	option = {
+		name = "chimer_fetish_cults.4.a"
+		unlock_cult = cult_sheogorath_cult_1
+		custom_tooltip = es_sheogorath_cult_1_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.4.b"
+		unlock_cult = cult_sheogorath_cult_2
+		custom_tooltip = es_sheogorath_cult_2_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.4.c"
+		unlock_cult = cult_sheogorath_cult_3
+		custom_tooltip = es_sheogorath_cult_3_tt
+	}
+}
+
+country_event = {
+	id = chimer_fetish_cults.5
+	title = chimer_fetish_cults.5.t
+	desc = chimer_fetish_cults.5.d
+	picture = AZURA_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = chimer_fetish_cults_5_flag
+	}
+	option = {
+		name = "chimer_fetish_cults.5.a"
+		unlock_cult = cult_azura_cult_1
+		custom_tooltip = es_azura_cult_1_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.5.b"
+		unlock_cult = cult_azura_cult_2
+		custom_tooltip = es_azura_cult_2_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.5.c"
+		unlock_cult = cult_azura_cult_3
+		custom_tooltip = es_azura_cult_3_tt
+	}
+}
+
+country_event = {
+	id = chimer_fetish_cults.6
+	title = chimer_fetish_cults.6.t
+	desc = chimer_fetish_cults.6.d
+	picture = ES_BOETHIAH_GOOD_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = chimer_fetish_cults_6_flag
+	}
+	option = {
+		name = "chimer_fetish_cults.6.a"
+		unlock_cult = cult_boethiah_cult_1
+		custom_tooltip = es_boethiah_cult_1_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.6.b"
+		unlock_cult = cult_boethiah_cult_2
+		custom_tooltip = es_boethiah_cult_2_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.6.c"
+		unlock_cult = cult_boethiah_cult_3
+		custom_tooltip = es_boethiah_cult_3_tt
+	}
+}
+
+country_event = {
+	id = chimer_fetish_cults.7
+	title = chimer_fetish_cults.7.t
+	desc = chimer_fetish_cults.7.d
+	picture = ES_MEPHALA_RED_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = chimer_fetish_cults_7_flag
+	}
+	option = {
+		name = "chimer_fetish_cults.7.a"
+		unlock_cult = cult_mephala_cult_1
+		custom_tooltip = es_mephala_cult_1_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.7.b"
+		unlock_cult = cult_mephala_cult_2
+		custom_tooltip = es_mephala_cult_2_tt
+	}
+	option = {
+		name = "chimer_fetish_cults.7.c"
+		unlock_cult = cult_mephala_cult_3
+		custom_tooltip = es_mephala_cult_3_tt
+	}
+}

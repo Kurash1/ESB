@@ -1,0 +1,97 @@
+es_revolution = {
+	potential = {
+		NOT = { has_reform = native_basic_reform }
+		NOT = { has_reform = colonial_government }
+		NOT = { has_reform = presidential_despot_reform }
+		NOT = { has_reform = revolutionary_republic_reform }
+		NOT = { has_reform = junior_revolutionary_republic_reform }
+		NOT = { has_reform = trading_city }
+		NOT = { has_reform = free_city }
+		
+		is_lesser_in_union = no
+		is_free_or_tributary_trigger = yes
+	}
+
+	can_start = {
+	    OR = {
+			AND = { government = monarchy NOT = { legitimacy = 15 } }
+			AND = { government = republic NOT = { republican_tradition = 15 } }
+			AND = { government = theocracy has_dlc = "Common Sense" NOT = { devotion = 15 } }
+			AND = { is_nomad = yes has_dlc = "The Cossacks" NOT = { horde_unity = 15 } }
+			AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } NOT = { legitimacy = 15 } }
+			AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" NOT = { meritocracy = 15 } } 
+		}
+		is_lesser_in_union = no
+		is_free_or_tributary_trigger = yes
+	}
+	
+	can_stop = {
+	    OR = {
+			AND = { government = monarchy legitimacy = 50 }
+			AND = { government = republic republican_tradition = 50 }
+			AND = { government = theocracy has_dlc = "Common Sense" devotion = 50 }
+			AND = { is_nomad = yes has_dlc = "The Cossacks" horde_unity = 50 }
+			AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } legitimacy = 50 }
+			AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" meritocracy = 50 } 
+		}
+	}
+	
+	progress = {
+	    modifier = {
+		factor = 1
+		OR = {
+			AND = { government = monarchy NOT = { legitimacy = 75 } }
+			AND = { government = republic NOT = { republican_tradition = 75 } }
+			AND = { government = theocracy has_dlc = "Common Sense" NOT = { devotion = 75 } }
+			AND = { is_nomad = yes has_dlc = "The Cossacks" NOT = { horde_unity = 75 } }
+			AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } NOT = { legitimacy = 75 } }
+			AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" NOT = { meritocracy = 75 } } 
+		}
+		}
+		modifier = {
+			factor = 1
+			revolt_percentage = 0.10
+		}	
+		modifier = {
+			factor = 1
+			overextension_percentage = 0.10
+		}
+        modifier = {
+			factor = 1
+			is_at_war = yes
+		}		
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+        modifier = {
+			factor = 1
+			war_exhaustion = 5
+		} 	
+	}
+	
+	can_end = {
+	    OR = {
+			AND = { government = monarchy NOT = { legitimacy = 95 } }
+			AND = { government = republic NOT = { republican_tradition = 95 } }
+			AND = { government = theocracy has_dlc = "Common Sense" NOT = { devotion = 95 } }
+			AND = { is_nomad = yes has_dlc = "The Cossacks" NOT = { horde_unity = 95 } }
+			AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } NOT = { legitimacy = 95 } }
+			AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" NOT = { meritocracy = 95 } } 
+		}
+	}
+
+	modifier = {
+	    global_unrest = 5
+		harsh_treatment_cost = 1.5
+		global_autonomy = 0.10
+	}	
+	
+	on_start = ge_revolution.1
+	on_end = ge_revolution.27
+	
+	on_monthly = {
+		events = {
+		}
+	}
+}

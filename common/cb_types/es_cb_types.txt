@@ -1,0 +1,359 @@
+cb_gn_empire = {
+	valid_for_subject = no
+
+	prerequisites = {
+		NOT = { has_country_modifier = daedric_invasion }
+		NOT = { truce_with = FROM }
+		NOT = { alliance_with = FROM }
+		is_great_power = yes
+		FROM = { is_great_power = yes }
+	}
+
+	war_goal = ge_empire
+}
+
+cb_native_reservation = {
+	valid_for_subject = no
+
+	prerequisites = {
+	    NOT = { government = native }
+		NOT = { truce_with = FROM }
+		NOT = { alliance_with = FROM }
+		FROM = {
+		is_neighbor_of = ROOT
+		government = native
+		}
+	}
+
+	war_goal = ge_native_reservation
+}
+
+cb_vassal_annex = {
+	valid_for_subject = yes
+
+	prerequisites = {
+		is_neighbor_of = FROM
+		is_subject = yes
+		FROM = {
+			is_subject = yes
+		}
+		is_revolution_target = no
+	}
+	
+	attacker_disabled_po = {
+		po_release_vassals
+		po_release_annexed
+		po_return_cores
+	}
+
+	war_goal = annex_country
+}
+
+cb_es_scenario = {
+	valid_for_subject = no
+
+	prerequisites = {
+		always = no
+	}
+
+	war_goal = es_scenario
+}
+
+cb_es_ayleid_purification = {
+	valid_for_subject = no
+
+	prerequisites = {
+	    NOT = { culture_group = high_elves_cg }
+	    OR = {
+		tag = ALE
+		tag = ORD
+		}
+		FROM = {
+		is_neighbor_of = ROOT
+		primary_culture = ayleid
+		}
+	}
+
+	war_goal = es_ayleid_purification
+}
+
+cb_es_purification = {
+	valid_for_subject = no
+
+	prerequisites = {
+	    OR = {
+		culture_group = cyrodiil_cg
+		culture_group = yokudo_redguard_cg
+		culture_group = northern_cg
+		culture_group = half_blood_cg
+		culture_group = imga_cg
+		culture_group = transpandomaic_cg
+		culture_group = marsh_men_cg
+		}
+		tag = ORD
+		FROM = {
+		is_neighbor_of = ROOT
+		NOT = { culture_group = cyrodiil_cg }
+		NOT = { culture_group = yokudo_redguard_cg }
+		NOT = { culture_group = northern_cg }
+		NOT = { culture_group = half_blood_cg }
+		NOT = { culture_group = imga_cg }
+		NOT = { culture_group = transpandomaic_cg }
+		NOT = { culture_group = marsh_men_cg }
+		}
+	}
+
+	war_goal = es_purification
+}
+
+cb_es_nordic_feud = {
+	valid_for_subject = no
+
+	prerequisites = {
+	    has_country_flag = es_12_nordic_feud_flag
+		culture_group = northern_cg
+		FROM = {
+		    is_neighbor_of = ROOT
+			culture_group = northern_cg
+		}
+	}
+
+	war_goal = es_nordic_feud
+}
+
+cb_es_tribal_war = {
+	valid_for_subject = no
+
+	prerequisites = {
+		culture_group = minotaur_cg
+		FROM = {
+		    is_neighbor_of = ROOT
+			culture_group = minotaur_cg
+		}
+	}
+
+	war_goal = es_nordic_feud
+}
+
+cb_es_witch_hunting = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_country_flag = es_magic_persecution_flag
+		FROM = {
+		    has_country_flag = es_magic_nation_flag
+		}
+	}
+
+	war_goal = es_witch_hunting
+}
+
+cb_es_daedric_invasion = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_country_modifier = daedric_invasion
+		OR = {
+		FROM = { is_neighbor_of = ROOT }
+		AND = {
+			owns = 3188
+			FROM = { owns = 1206 }
+		}
+		AND = {
+			owns = 4075
+			FROM = { owns = 1199 }
+		}
+		AND = {
+			owns = 4074
+			FROM = { owns = 1376 }
+		}
+		AND = {
+			owns = 4071
+			FROM = { owns = 1106 }
+		}
+		}
+	}
+
+	war_goal = es_daedric_invasion
+}
+
+cb_es_slave_raid = {
+	valid_for_subject = no
+
+	prerequisites = {
+		capital_scope = { superregion = cyrodiil_superregion }
+		culture_group = high_elves_cg
+		FROM = { 
+			culture_group = cyrodiil_cg
+			is_neighbor_of = ROOT 
+		}
+	}
+
+	war_goal = es_slave_raid
+}
+
+cb_become_elector_of_hre = {
+	valid_for_subject = no
+
+	prerequisites = {
+		is_part_of_hre = yes
+		is_elector = no
+		FROM = {
+			is_elector = yes
+		}
+	}
+
+	war_goal = es_become_elector_of_hre
+}
+
+cb_tsaesci_hunger = {
+	valid_for_subject = yes
+
+	prerequisites = {
+		primary_culture = tsaesci
+		FROM = {
+			is_neighbor_of = ROOT
+		}
+	}
+
+	war_goal = es_tsaesci_hunger
+}
+
+cb_fight_dragon_cultists = {
+	prerequisites = {
+		has_global_flag = war_against_cult_of_dragons_global_flag
+		culture_group = northern_cg
+		NOT = { religion = dragon_cult }
+		FROM = {
+			is_neighbor_of = ROOT
+			religion = dragon_cult
+		}
+	}
+
+	war_goal = es_show_supremacy
+}
+
+cb_fight_nords = {
+	prerequisites = {
+		has_global_flag = war_against_nords_global_flag
+		primary_culture = reachmen
+		FROM = {
+			is_neighbor_of = ROOT
+			primary_culture = nord
+		}
+	}
+
+	war_goal = es_show_supremacy
+}
+
+cb_pte_lift_excommunication = {
+	valid_for_subject = no
+
+	prerequisites = {
+		ai = no
+		religion = tribunal_pantheon
+		is_excommunicated = yes
+		FROM = {
+			religion = tribunal_pantheon
+			is_papal_controller = yes
+		}
+	}
+
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_revoke_cores
+		po_release_vassals
+		po_release_annexed
+		po_change_religion
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+		po_annul_treaties
+		po_change_government
+		po_revoke_elector
+		po_trade_power
+		po_humiliate
+		po_enforce_rebel_demands
+	}
+
+	war_goal = pte_lift_excommunication_war_goal
+}
+
+cb_pte_protect_religious_bretheren = {
+	valid_for_subject = no
+
+	prerequisites = {
+		is_defender_of_faith = yes
+		religion_group = FROM
+		NOT = { religion = FROM }
+		OR = {
+			is_neighbor_of = FROM
+			NOT = {
+				border_distance = {
+					who = FROM
+					distance = 500
+				}
+			}
+		}
+		FROM = {
+			any_owned_province = {
+				has_owner_religion = no
+				religion = ROOT
+				is_city = yes
+			}
+		}
+	}
+
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+	}
+
+	war_goal = pte_protect_religious_bretheren_war_goal
+}
+
+cb_pte_liberation = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_opinion_modifier = {
+			who = FROM
+			modifier = aggressive_expansion
+			value = -35
+		}
+		FROM = {
+			is_neighbor_of = ROOT
+		}
+	}
+
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+	}
+
+	war_goal = pte_liberation_war_goal
+}
+
+cb_ruler_revenge = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+
+	prerequisites = {
+		FROM = {
+			is_neighbor_of = ROOT
+			primary_culture = nord
+		}
+	}
+	
+	attacker_disabled_po = {
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+	}
+	war_goal = ruler_revenge_war_goal
+}

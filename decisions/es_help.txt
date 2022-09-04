@@ -1,0 +1,21 @@
+country_decisions = {
+	aaa_help_main_menu = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = esu_menu_open }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			custom_tooltip = aaa_help_main_menu_desc
+			hidden_effect = {
+				country_event = {
+					id = es_help.1
+					days = 0
+				}
+			}
+		}
+	}
+}

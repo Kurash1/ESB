@@ -1,0 +1,950 @@
+namespace = es_endgame
+
+# es_endgame.1.t: "The Endgame of [Root.GetName]"
+# es_endgame.1.d: "The $MONARCHTITLE$ $MONARCH$ can now sit quietly on the throne, knowing that no one can oppose [Root.Monarch.GetHerHis] power. Various rivals have been defeated, insidious adversaries destroyed, and the power over the subjects of the [Root.GovernmentName] has never been stronger than it is now. So $MONARCH$ becomes less and less interested in routine reports about the life of [Root.Monarch.GetHerHis] people, preferring to instead look up every night at the stellar sky, being at the same time seduced by the power of the Gods, who exist somewhere, far beyoung the realm of the mortals, and devastated by the realization that [Root.Monarch.GetSheHe] could never reach their level. Well, both Aedra and Daedra are watching the bored $MONARCHTITLE$ intently, but they do not yet know how to respond to such blatant behavior. Perhaps the $MONARCH$'s next move will allow them to decide [Root.Monarch.GetHerHis] fate."
+# es_endgame.1.a: "Such thoughts of $MONARCH$ must be limited."
+# i_have_nirn_to_conquer: "The [Root.Monarch.GetName] will be allowed to live his mortal life as far as [Root.Monarch.GetSheHe] was destined."
+# es_endgame.1.b: "If $MONARCH$ wants to acquire the power of the Gods, [Root.Monarch.GetSheHe] should demand it..."
+# i_shall_challenge_the_gods: "Those who challenge beings from outside must be prepared for the consequences of their actions."
+# es_endgame.1.c: "When $MONARCHTITLE$ has already fallen into melancholy, it's best [Root.Monarch.GetSheHe] not be disturbed."
+# start_again_as_one_of_the_vassals: "Perhaps if the [Root.Monarch.GetName] finds [Root.Monarch.GetHerselfHimself] in a different skin, [Root.Monarch.GetHerHis] moping will recede into the background?"
+# es_challanger_of_the_gods: "Challenger of the Gods"
+# desc_es_challanger_of_the_gods: " "
+
+country_event = {
+	id = es_endgame.1
+	title = es_endgame.1.t
+	desc = es_endgame.1.d
+	picture = ES_STAR_SKY_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = es_removed_coldhabrbour_nations
+					NOT = { has_global_flag = es_spawned_coldhabrbour_nations }
+				}
+				es_spawn_countries_on_coldharbour = yes
+			}
+			if = {
+				limit = {
+					has_global_flag = es_removed_deadlands_nations
+					NOT = { has_global_flag = es_spawned_deadlands_nations }
+				}
+				es_spawn_countries_on_deadlands = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "es_endgame.1.a"
+		ai_chance = { factor = 100 }
+		custom_tooltip = i_have_nirn_to_conquer
+	}
+	option = {
+		name = "es_endgame.1.b"
+		ai_chance = { factor = 0 }
+		custom_tooltip = i_shall_challenge_the_gods
+		hidden_effect = {
+			random_list = {
+				50 = { 
+					add_ruler_modifier = { name = "es_challanger_of_the_gods" duration = -1 } 
+				}
+				50 = {
+					add_prestige = 5
+				}
+			}
+			country_event = { id = es_endgame.3 }
+		}
+	}
+	option = {
+		name = "es_endgame.1.c"
+		ai_chance = { factor = 0 }
+		highlight = yes
+		custom_tooltip = start_again_as_one_of_the_vassals
+		hidden_effect = {
+			es_country_collapse_disaster_effect = yes
+			country_event = { id = es_endgame.2 }
+		}
+	}
+}
+
+# es_endgame.2.t: "Another Life for $MONARCHTITLE$ $MONARCH$"
+# es_endgame.2.d: "Her voice comes from everywhere, so warm, soft and soothing. It's a shame that only $MONARCH$ can hear it, as many people would give up everything they have to talk to Mara for once in their lives. But now she speaks only to the $MONARCHTITLE$ of [Root.GetName].\n\n- Approach the voice, my child, and choose where your new life shall begin! - The Mother-Goddess speaks to the $MONARCH$.\n\nMara's voice is so full of love and power that it is impossible to resist it and the $MONARCHTITLE$ $MONARCH$ has no other choice but to choose his destiny."
+# es_endgame.1.a: "[Root.Monarch.GetName] will be the ruler of [es_endgame_1_country.GetName]."
+# es_endgame.2.b: "[Root.Monarch.GetName] will be the ruler of [es_endgame_2_country.GetName]."
+# es_endgame.2.c: "[Root.Monarch.GetName] will be the ruler of [es_endgame_3_country.GetName]."
+# es_endgame.2.e: "[Root.Monarch.GetName] will be the ruler of [es_endgame_4_country.GetName]."
+# es_endgame.2.f: "[Root.Monarch.GetName] will be the ruler of [es_endgame_5_country.GetName]."
+# es_endgame.2.g: "[Root.Monarch.GetName] will be the ruler of [es_endgame_6_country.GetName]."
+# es_endgame.2.h: "[Root.Monarch.GetName] will be the ruler of [es_endgame_7_country.GetName]."
+# es_endgame.2.i: "[Root.Monarch.GetName] will be the ruler of [es_endgame_8_country.GetName]."
+# es_endgame.2.j: "[Root.Monarch.GetName] will be the ruler of [es_endgame_9_country.GetName]."
+# es_endgame.2.k: "[Root.Monarch.GetName] will be the ruler of [es_endgame_10_country.GetName]."
+# es_endgame.2.m: "[Root.Monarch.GetName] will be the ruler of [es_endgame_11_country.GetName]."
+# es_endgame.2.n: "[Root.Monarch.GetName] will be the ruler of [es_endgame_12_country.GetName]."
+# es_endgame.2.o: "[Root.Monarch.GetName] will be the ruler of [es_endgame_13_country.GetName]."
+# es_endgame.2.p: "[Root.Monarch.GetName] will be the ruler of [es_endgame_14_country.GetName]."
+# es_endgame.2.q: "[Root.Monarch.GetName] will be the ruler of [es_endgame_15_country.GetName]."
+# es_endgame.2.r: "[Root.Monarch.GetName] will be the ruler of [es_endgame_16_country.GetName]."
+# es_endgame.2.s: "[Root.Monarch.GetName] will be the ruler of [es_endgame_17_country.GetName]."
+# es_endgame.2.u: "[Root.Monarch.GetName] will be the ruler of [es_endgame_18_country.GetName]."
+# es_endgame.2.v: "[Root.Monarch.GetName] will be the ruler of [es_endgame_19_country.GetName]."
+# es_endgame.2.w: "[Root.Monarch.GetName] will be the ruler of [es_endgame_20_country.GetName]."
+# es_endgame.2.x: "[Root.Monarch.GetName] will be the ruler of [es_endgame_21_country.GetName]."
+# es_endgame.2.y: "[Root.Monarch.GetName] will be the ruler of [es_endgame_22_country.GetName]."
+# es_endgame.2.z: "[Root.Monarch.GetName] will be the ruler of [es_endgame_23_country.GetName]."
+# es_endgame.2.ab: "Hmm?"
+
+country_event = {
+	id = es_endgame.2
+	title = es_endgame.2.t
+	desc = es_endgame.2.d
+	picture = ES_MARA_STATURE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				save_event_target_as = es_endgame_1_country
+				set_country_flag = es_endgame_1_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+				}
+				save_event_target_as = es_endgame_2_country
+				set_country_flag = es_endgame_2_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+				}
+				save_event_target_as = es_endgame_3_country
+				set_country_flag = es_endgame_3_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+				}
+				save_event_target_as = es_endgame_4_country
+				set_country_flag = es_endgame_4_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+				}
+				save_event_target_as = es_endgame_5_country
+				set_country_flag = es_endgame_5_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+				}
+				save_event_target_as = es_endgame_6_country
+				set_country_flag = es_endgame_6_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+				}
+				save_event_target_as = es_endgame_7_country
+				set_country_flag = es_endgame_7_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+				}
+				save_event_target_as = es_endgame_8_country
+				set_country_flag = es_endgame_8_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+				}
+				save_event_target_as = es_endgame_9_country
+				set_country_flag = es_endgame_9_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+				}
+				save_event_target_as = es_endgame_10_country
+				set_country_flag = es_endgame_10_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+				}
+				save_event_target_as = es_endgame_11_country
+				set_country_flag = es_endgame_11_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_11_country_flag }
+				}
+				save_event_target_as = es_endgame_12_country
+				set_country_flag = es_endgame_12_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+				}
+				save_event_target_as = es_endgame_13_country
+				set_country_flag = es_endgame_13_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+				}
+				save_event_target_as = es_endgame_14_country
+				set_country_flag = es_endgame_14_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+				}
+				save_event_target_as = es_endgame_15_country
+				set_country_flag = es_endgame_15_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+					NOT = { has_country_flag = es_endgame_15_country_flag }
+				}
+				save_event_target_as = es_endgame_16_country
+				set_country_flag = es_endgame_16_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+					NOT = { has_country_flag = es_endgame_15_country_flag }
+					NOT = { has_country_flag = es_endgame_16_country_flag }
+				}
+				save_event_target_as = es_endgame_17_country
+				set_country_flag = es_endgame_17_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+					NOT = { has_country_flag = es_endgame_15_country_flag }
+					NOT = { has_country_flag = es_endgame_16_country_flag }
+					NOT = { has_country_flag = es_endgame_17_country_flag }
+				}
+				save_event_target_as = es_endgame_18_country
+				set_country_flag = es_endgame_18_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+					NOT = { has_country_flag = es_endgame_15_country_flag }
+					NOT = { has_country_flag = es_endgame_16_country_flag }
+					NOT = { has_country_flag = es_endgame_17_country_flag }
+					NOT = { has_country_flag = es_endgame_18_country_flag }
+				}
+				save_event_target_as = es_endgame_19_country
+				set_country_flag = es_endgame_19_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+					NOT = { has_country_flag = es_endgame_15_country_flag }
+					NOT = { has_country_flag = es_endgame_16_country_flag }
+					NOT = { has_country_flag = es_endgame_17_country_flag }
+					NOT = { has_country_flag = es_endgame_18_country_flag }
+					NOT = { has_country_flag = es_endgame_19_country_flag }
+				}
+				save_event_target_as = es_endgame_20_country
+				set_country_flag = es_endgame_20_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+					NOT = { has_country_flag = es_endgame_15_country_flag }
+					NOT = { has_country_flag = es_endgame_16_country_flag }
+					NOT = { has_country_flag = es_endgame_17_country_flag }
+					NOT = { has_country_flag = es_endgame_18_country_flag }
+					NOT = { has_country_flag = es_endgame_19_country_flag }
+					NOT = { has_country_flag = es_endgame_20_country_flag }
+				}
+				save_event_target_as = es_endgame_21_country
+				set_country_flag = es_endgame_21_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+					NOT = { has_country_flag = es_endgame_15_country_flag }
+					NOT = { has_country_flag = es_endgame_16_country_flag }
+					NOT = { has_country_flag = es_endgame_17_country_flag }
+					NOT = { has_country_flag = es_endgame_18_country_flag }
+					NOT = { has_country_flag = es_endgame_19_country_flag }
+					NOT = { has_country_flag = es_endgame_20_country_flag }
+					NOT = { has_country_flag = es_endgame_21_country_flag }
+				}
+				save_event_target_as = es_endgame_22_country
+				set_country_flag = es_endgame_22_country_flag
+			}
+			random_subject_country = {
+				limit = {
+					NOT = { has_country_flag = es_endgame_1_country_flag }
+					NOT = { has_country_flag = es_endgame_2_country_flag }
+					NOT = { has_country_flag = es_endgame_3_country_flag }
+					NOT = { has_country_flag = es_endgame_4_country_flag }
+					NOT = { has_country_flag = es_endgame_5_country_flag }
+					NOT = { has_country_flag = es_endgame_6_country_flag }
+					NOT = { has_country_flag = es_endgame_7_country_flag }
+					NOT = { has_country_flag = es_endgame_8_country_flag }
+					NOT = { has_country_flag = es_endgame_9_country_flag }
+					NOT = { has_country_flag = es_endgame_10_country_flag }
+					NOT = { has_country_flag = es_endgame_12_country_flag }
+					NOT = { has_country_flag = es_endgame_13_country_flag }
+					NOT = { has_country_flag = es_endgame_14_country_flag }
+					NOT = { has_country_flag = es_endgame_15_country_flag }
+					NOT = { has_country_flag = es_endgame_16_country_flag }
+					NOT = { has_country_flag = es_endgame_17_country_flag }
+					NOT = { has_country_flag = es_endgame_18_country_flag }
+					NOT = { has_country_flag = es_endgame_19_country_flag }
+					NOT = { has_country_flag = es_endgame_20_country_flag }
+					NOT = { has_country_flag = es_endgame_21_country_flag }
+					NOT = { has_country_flag = es_endgame_22_country_flag }
+				}
+				save_event_target_as = es_endgame_23_country
+				set_country_flag = es_endgame_23_country_flag
+			}
+		}
+	}
+	
+	option = {
+		name = "es_endgame.2.ab"
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = { any_country = { is_subject_of = ROOT } }
+		}
+	}
+	
+	option = {
+		name = "es_endgame.2.a"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_1_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_1_country
+	}
+	option = {
+		name = "es_endgame.2.b"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_2_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_2_country
+	}
+	option = {
+		name = "es_endgame.2.c"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_3_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_3_country
+	}
+	option = {
+		name = "es_endgame.2.e"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_4_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_4_country
+	}
+	option = {
+		name = "es_endgame.2.f"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_5_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_5_country
+	}
+	option = {
+		name = "es_endgame.2.g"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_6_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_6_country
+	}
+	option = {
+		name = "es_endgame.2.h"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_7_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_7_country
+	}
+	option = {
+		name = "es_endgame.2.i"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_8_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_8_country
+	}
+	option = {
+		name = "es_endgame.2.j"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_9_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_9_country
+	}
+	option = {
+		name = "es_endgame.2.k"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_10_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_10_country
+	}
+	option = {
+		name = "es_endgame.2.m"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_11_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_11_country
+	}
+	option = {
+		name = "es_endgame.2.n"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_12_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_12_country
+	}
+	option = {
+		name = "es_endgame.2.o"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_13_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_13_country
+	}
+	option = {
+		name = "es_endgame.2.p"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_14_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_14_country
+	}
+	option = {
+		name = "es_endgame.2.q"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_15_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_15_country
+	}
+	option = {
+		name = "es_endgame.2.r"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_16_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_16_country
+	}
+	option = {
+		name = "es_endgame.2.s"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_17_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_17_country
+	}
+	option = {
+		name = "es_endgame.2.u"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_18_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_18_country
+	}
+	option = {
+		name = "es_endgame.2.v"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_19_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_19_country
+	}
+	option = {
+		name = "es_endgame.2.w"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_20_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_20_country
+	}
+	option = {
+		name = "es_endgame.2.x"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_21_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_21_country
+	}
+	option = {
+		name = "es_endgame.2.y"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_22_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_22_country
+	}
+	option = {
+		name = "es_endgame.2.z"
+		ai_chance = { factor = 100 }
+		trigger = {
+			any_subject_country = {
+				has_country_flag = es_endgame_23_country_flag
+			}
+		}
+		switch_tag = event_target:es_endgame_23_country
+	}
+	
+	after = {
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_1_country_flag
+			}
+			clr_country_flag = es_endgame_1_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_2_country_flag
+			}
+			clr_country_flag = es_endgame_2_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_3_country_flag
+			}
+			clr_country_flag = es_endgame_3_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_4_country_flag
+			}
+			clr_country_flag = es_endgame_4_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_5_country_flag
+			}
+			clr_country_flag = es_endgame_5_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_6_country_flag
+			}
+			clr_country_flag = es_endgame_6_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_7_country_flag
+			}
+			clr_country_flag = es_endgame_7_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_8_country_flag
+			}
+			clr_country_flag = es_endgame_8_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_9_country_flag
+			}
+			clr_country_flag = es_endgame_9_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_10_country_flag
+			}
+			clr_country_flag = es_endgame_10_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_11_country_flag
+			}
+			clr_country_flag = es_endgame_11_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_12_country_flag
+			}
+			clr_country_flag = es_endgame_12_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_13_country_flag
+			}
+			clr_country_flag = es_endgame_13_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_14_country_flag
+			}
+			clr_country_flag = es_endgame_14_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_15_country_flag
+			}
+			clr_country_flag = es_endgame_15_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_16_country_flag
+			}
+			clr_country_flag = es_endgame_16_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_17_country_flag
+			}
+			clr_country_flag = es_endgame_17_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_18_country_flag
+			}
+			clr_country_flag = es_endgame_18_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_19_country_flag
+			}
+			clr_country_flag = es_endgame_19_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_20_country_flag
+			}
+			clr_country_flag = es_endgame_20_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_21_country_flag
+			}
+			clr_country_flag = es_endgame_21_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_22_country_flag
+			}
+			clr_country_flag = es_endgame_22_country_flag
+		}
+		random_country = {
+			limit = {
+				has_country_flag = es_endgame_23_country_flag
+			}
+			clr_country_flag = es_endgame_23_country_flag
+		}
+	}
+}
+
+# es_endgame.3.t: "The Die is Cast"
+# es_endgame.3.da: "Laughter. That was the last thing the $MONARCH$ heard before the light from the air itself illuminated the throne room, temporarily blinding anyone and everyone who was there. The flash was followed by a clap of thunder that made the walls shake. Then all became quiet. The astonished courtiers watched as the figure of $MONARCHTITLE$, in a halo of light, rose from the throne room. It seemed that the Gods had decided to give $MONARCH$ some of their power and watch how [Root.Monarch.GetSheHe] will dispose of it. One can only wonder what price $MONARCHTITLE$ is going to pay for this gift."
+# es_endgame.3.db: "Laughter was the last thing the $MONARCH$ heard before the light from the air itself illuminated the throne room, temporarily blinding anyone and everyone there. The flash was followed by a clap of thunder that made the walls shake. Then all was quiet. The stunned courtiers watched as a bluish smoke rose from the throne - the only thing left of $MONARCHTITLE$. It seemed that the Gods had decided that $MONARCH$ should no longer be in the mortal world, full of endless torment and lamentation for such an ambitious figure, and had transcended [Root.Monarch.GetHerHim] to another plane of existence."
+# es_endgame.3.a: "What a surprising outcome..."
+# es_endgame.3.b: "I wonder if [Root.Monarch.GetName] will miss the routine now?"
+
+country_event = {
+	id = es_endgame.3
+	title = es_endgame.3.t
+	desc = {
+		trigger = { has_ruler_modifier = es_challanger_of_the_gods }
+		desc = es_endgame.3.da
+	}
+	desc = {
+		trigger = { NOT = { has_ruler_modifier = es_challanger_of_the_gods } }
+		desc = es_endgame.3.db
+	}
+	picture = ES_DICE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_endgame.3.a"
+		trigger = {
+			has_ruler_modifier = es_challanger_of_the_gods
+		}
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				NOT = { prestige = 0 }
+			}
+			add_ruler_modifier = { name = "es_challanger_of_the_gods" duration = -1 } 
+			set_ruler_culture = daedra
+			kill_heir = {}
+			remove_consort = yes
+		}
+		else_if = {
+			limit = {
+				has_heir = yes
+				has_consort = yes
+			}
+			add_ruler_modifier = { name = "es_challanger_of_the_gods" duration = -1 } 
+			add_stability = -1
+			kill_heir = {}
+			remove_consort = yes
+		}
+		else_if = {
+			limit = {
+				has_heir = no
+				has_consort = yes
+			}
+			add_ruler_modifier = { name = "es_challanger_of_the_gods" duration = -1 } 
+			add_stability = -2
+			remove_consort = yes
+		}
+		else_if = {
+			limit = {
+				has_heir = yes
+				has_consort = no
+			}
+			add_ruler_modifier = { name = "es_challanger_of_the_gods" duration = -1 } 
+			add_stability = -2
+			kill_heir = {}
+		}
+		else = {
+			add_ruler_modifier = { name = "es_challanger_of_the_gods" duration = -1 } 
+			add_stability = -3
+		}
+	}
+	option = {
+		name = "es_endgame.3.b"
+		trigger = {
+			NOT = { has_ruler_modifier = es_challanger_of_the_gods }
+		}
+		kill_ruler = yes
+		ai_chance = { factor = 100 }
+	}
+}

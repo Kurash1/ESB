@@ -1,0 +1,518 @@
+#All scopes are country scope
+#All parameters are optional
+chattel_slavery = {
+	icon = privilege_chattel_slavery
+	max_absolutism = -10	#Change in max absolutism while this privilege is enacted
+	loyalty = 0.25	#Change in percent loyalty caused by this privilege
+	influence = 0.25	#Change in percent influence caused by this privilege
+	#Conditions for whether it is possible for the country to have this privilege
+	is_valid = {
+		always = yes
+	}
+	#Conditions for whether the country is allowed to select the privilege
+	can_select = {
+		NOT = {
+			has_estate_privilege = assurance_of_rights
+		}
+	}
+	#Effects executed immediately upon the privilege being taken
+	on_granted = {
+		add_stability = -1
+	}
+	#Conditions for whether the country can revoke the privilege
+	can_revoke = {
+	}
+	#Effects executed upon the privilege being revoked by the country
+	on_revoked = {
+		add_prestige = -15
+		add_years_of_income = -1
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+	#Effects executed upon the privilege being removed due to invalidity
+	on_invalid = {
+	}
+	#Negative modifiers granted while the privilege is active
+	penalties = {
+		global_unrest = 3.5
+	}
+	#Positive modifiers granted while the privilege is active
+	benefits = {
+		production_efficiency = 0.1
+		global_tax_modifier = 0.1
+	}
+	# conditional_modifier = {
+	# 	#Modifier that are applied if the specified conditions are true.
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	modifier = {
+	# 		<modifiers>
+	# 	}
+	# 	is_bad = <bool>		#yes/no. Whether the modifier should be listed as positive or negative in the tooltips.
+	# }
+	modifier_by_land_ownership = {
+		build_cost = -0.33
+		build_time = -0.25
+	}
+	#Multiplies the modifier by the % of land owned by the estate.
+	# mechanics = {
+	# 	<mechanics>
+	# }	#Special mechanics the privilege enables
+	cooldown_years = 5	#Time limit before which the privilege cannot be revoked
+	on_cooldown_expires = {
+	}
+	#Effect executed once the specified cooldown_years timer has run down
+	ai_will_do = {
+		#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below 
+		factor = 1		#ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+	}
+}
+
+slave_soldiers = {
+	icon = privilege_slave_soldiers
+	max_absolutism = -10	#Change in max absolutism while this privilege is enacted
+	loyalty = 0.1	#Change in percent loyalty caused by this privilege
+	influence = 0.15	#Change in percent influence caused by this privilege
+	#Conditions for whether it is possible for the country to have this privilege
+	is_valid = {
+		always = yes
+	}
+	#Conditions for whether the country is allowed to select the privilege
+	can_select = {
+	}
+	#Effects executed immediately upon the privilege being taken
+	on_granted = {
+		define_advisor = {
+			type = esu_officer
+			skill = 1
+			discount = yes
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 1
+			}
+		}
+	}
+	#Conditions for whether the country can revoke the privilege
+	can_revoke = {
+	}
+	#Effects executed upon the privilege being revoked by the country
+	on_revoked = {
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+	#Effects executed upon the privilege being removed due to invalidity
+	on_invalid = {
+	}
+	#Negative modifiers granted while the privilege is active
+	penalties = {
+		land_morale = -0.1
+	}
+	#Positive modifiers granted while the privilege is active
+	benefits = {
+		global_manpower_modifier = 0.25
+		land_maintenance_modifier = -0.15
+	}
+	# conditional_modifier = {
+	# 	#Modifier that are applied if the specified conditions are true.
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	modifier = {
+	# 		<modifiers>
+	# 	}
+	# 	is_bad = <bool>		#yes/no. Whether the modifier should be listed as positive or negative in the tooltips.
+	# }
+	modifier_by_land_ownership = {
+		regiment_recruit_speed = -0.5
+	}
+	#Multiplies the modifier by the % of land owned by the estate.
+	# mechanics = {
+	# 	<mechanics>
+	# }	#Special mechanics the privilege enables
+	cooldown_years = 5	#Time limit before which the privilege cannot be revoked
+	on_cooldown_expires = {
+	}
+	#Effect executed once the specified cooldown_years timer has run down
+	ai_will_do = {
+		#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below 
+		factor = 1		#ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+	}
+}
+
+galley_slaves_privilege = {
+	icon = privilege_galley_slaves
+	max_absolutism = -5	#Change in max absolutism while this privilege is enacted
+	loyalty = 0.1	#Change in percent loyalty caused by this privilege
+	influence = 0.05	#Change in percent influence caused by this privilege
+	#Conditions for whether it is possible for the country to have this privilege
+	is_valid = {
+		always = yes
+	}
+	#Conditions for whether the country is allowed to select the privilege
+	can_select = {
+		num_of_ports = 1
+	}
+	#Effects executed immediately upon the privilege being taken
+	on_granted = {
+		define_advisor = {
+			type = esu_navarch
+			skill = 1
+			discount = yes
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 1
+			}
+		}
+	}
+	#Conditions for whether the country can revoke the privilege
+	can_revoke = {
+	}
+	#Effects executed upon the privilege being revoked by the country
+	on_revoked = {
+	}
+	#Effects executed upon the privilege being removed due to invalidity
+	on_invalid = {
+	}
+	#Negative modifiers granted while the privilege is active
+	penalties = {
+		naval_morale = -0.1
+	}
+	#Positive modifiers granted while the privilege is active
+	benefits = {
+		naval_maintenance_modifier = -0.15
+		global_sailors_modifier = 0.25
+	}
+	# conditional_modifier = {
+	# 	#Modifier that are applied if the specified conditions are true.
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	modifier = {
+	# 		<modifiers>
+	# 	}
+	# 	is_bad = <bool>		#yes/no. Whether the modifier should be listed as positive or negative in the tooltips.
+	# }
+	modifier_by_land_ownership = {
+		ship_recruit_speed = -0.5
+	}
+	#Multiplies the modifier by the % of land owned by the estate.
+	# mechanics = {
+	# 	<mechanics>
+	# }	#Special mechanics the privilege enables
+	cooldown_years = 5	#Time limit before which the privilege cannot be revoked
+	on_cooldown_expires = {
+	}
+	#Effect executed once the specified cooldown_years timer has run down
+	ai_will_do = {
+		#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below 
+		factor = 1		#ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+	}
+}
+
+gladiator_slaves = {
+	icon = privilege_gladiator_slaves
+	max_absolutism = 0	#Change in max absolutism while this privilege is enacted
+	loyalty = 0	#Change in percent loyalty caused by this privilege
+	influence = 0	#Change in percent influence caused by this privilege
+	#Conditions for whether it is possible for the country to have this privilege
+	is_valid = {
+		always = yes
+	}
+	#Conditions for whether the country is allowed to select the privilege
+	can_select = {
+	}
+	#Effects executed immediately upon the privilege being taken
+	on_granted = {
+		add_years_of_income = -0.25
+		define_advisor = {
+			type = esu_grand_champion
+			skill = 1
+			discount = yes
+		}
+	}
+	#Conditions for whether the country can revoke the privilege
+	can_revoke = {
+	}
+	#Effects executed upon the privilege being revoked by the country
+	on_revoked = {
+	}
+	#Effects executed upon the privilege being removed due to invalidity
+	on_invalid = {
+	}
+	#Negative modifiers granted while the privilege is active
+	penalties = {
+		global_tax_modifier = -0.1
+		global_manpower_modifier = -0.1
+	}
+	#Positive modifiers granted while the privilege is active
+	benefits = {
+		global_unrest = -1.5
+		trade_efficiency = 0.1
+	}
+	# conditional_modifier = {
+	# 	#Modifier that are applied if the specified conditions are true.
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	modifier = {
+	# 		<modifiers>
+	# 	}
+	# 	is_bad = <bool>		#yes/no. Whether the modifier should be listed as positive or negative in the tooltips.
+	# }
+	modifier_by_land_ownership = {
+		years_of_nationalism = -10
+	}
+	#Multiplies the modifier by the % of land owned by the estate.
+	# mechanics = {
+	# 	<mechanics>
+	# }	#Special mechanics the privilege enables
+	cooldown_years = 5	#Time limit before which the privilege cannot be revoked
+	on_cooldown_expires = {
+	}
+	#Effect executed once the specified cooldown_years timer has run down
+	ai_will_do = {
+		#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below 
+		factor = 1		#ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+	}
+}
+
+regulate_the_slave_trade = {
+	icon = privilege_regulate_the_slave_trade
+	max_absolutism = 5	#Change in max absolutism while this privilege is enacted
+	loyalty = -0.1	#Change in percent loyalty caused by this privilege
+	influence = -0.1	#Change in percent influence caused by this privilege
+	#Conditions for whether it is possible for the country to have this privilege
+	is_valid = {
+		always = yes
+	}
+	#Conditions for whether the country is allowed to select the privilege
+	can_select = {
+		NOT = {
+			estate_influence = {
+				estate = estate_slavers
+				influence = 60
+			}
+		}
+	}
+	#Effects executed immediately upon the privilege being taken
+	on_granted = {
+		if = {
+			limit = {
+				corruption = 50
+			}
+			add_corruption = -25
+		}
+		else_if = {
+			limit = {
+				corruption = 30
+			}
+			add_corruption = -15
+		}
+		else_if = {
+			limit = {
+				corruption = 10
+			}
+			add_corruption = -5
+		}
+		else = {
+			add_corruption = -2
+		}
+		custom_tooltip = ES_PRIVILEGE_NO_EFFECTS
+		hidden_effect = {
+			random_owned_province = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+	}
+	#Conditions for whether the country can revoke the privilege
+	can_revoke = {
+	}
+	#Effects executed upon the privilege being revoked by the country
+	on_revoked = {
+	}
+	#Effects executed upon the privilege being removed due to invalidity
+	on_invalid = {
+	}
+	#Negative modifiers granted while the privilege is active
+	penalties = {
+		production_efficiency = -0.1
+	}
+	#Positive modifiers granted while the privilege is active
+	benefits = {
+		global_tax_modifier = 0.15
+	}
+	# conditional_modifier = {
+	# 	#Modifier that are applied if the specified conditions are true.
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	modifier = {
+	# 		<modifiers>
+	# 	}
+	# 	is_bad = <bool>		#yes/no. Whether the modifier should be listed as positive or negative in the tooltips.
+	# }
+	modifier_by_land_ownership = {
+		global_trade_power = 0.15
+	}
+	#Multiplies the modifier by the % of land owned by the estate.
+	# mechanics = {
+	# 	<mechanics>
+	# }	#Special mechanics the privilege enables
+	cooldown_years = 5	#Time limit before which the privilege cannot be revoked
+	on_cooldown_expires = {
+	}
+	#Effect executed once the specified cooldown_years timer has run down
+	ai_will_do = {
+		#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below 
+		factor = 1		#ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+	}
+}
+
+assurance_of_rights = {
+	icon = privilege_assurance_of_rights
+	max_absolutism = 10	#Change in max absolutism while this privilege is enacted
+	loyalty = -0.15	#Change in percent loyalty caused by this privilege
+	influence = -0.1	#Change in percent influence caused by this privilege
+	#Conditions for whether it is possible for the country to have this privilege
+	is_valid = {
+		always = yes
+	}
+	#Conditions for whether the country is allowed to select the privilege
+	can_select = {
+		NOT = {
+			has_estate_privilege = chattel_slavery
+		}
+		NOT = {
+			estate_influence = {
+				estate = estate_slavers
+				influence = 70
+			}
+		}
+	}
+	#Effects executed immediately upon the privilege being taken
+	on_granted = {
+	}
+	#Conditions for whether the country can revoke the privilege
+	can_revoke = {
+	}
+	#Effects executed upon the privilege being revoked by the country
+	on_revoked = {
+	}
+	#Effects executed upon the privilege being removed due to invalidity
+	on_invalid = {
+	}
+	#Negative modifiers granted while the privilege is active
+	penalties = {
+	}
+	#Positive modifiers granted while the privilege is active
+	benefits = {
+		global_regiment_recruit_speed = -0.35
+	}
+	# conditional_modifier = {
+	# 	#Modifier that are applied if the specified conditions are true.
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	modifier = {
+	# 		<modifiers>
+	# 	}
+	# 	is_bad = <bool>		#yes/no. Whether the modifier should be listed as positive or negative in the tooltips.
+	# }
+	modifier_by_land_ownership = {
+		build_cost = 0.33
+		build_time = 0.25
+	}
+	#Multiplies the modifier by the % of land owned by the estate.
+	# mechanics = {
+	# 	<mechanics>
+	# }	#Special mechanics the privilege enables
+	cooldown_years = 5	#Time limit before which the privilege cannot be revoked
+	on_cooldown_expires = {
+	}
+	#Effect executed once the specified cooldown_years timer has run down
+	ai_will_do = {
+		#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below 
+		factor = 1		#ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+	}
+}
+
+purchase_freedom = {
+	icon = privilege_purchase_freedom
+	max_absolutism = 10	#Change in max absolutism while this privilege is enacted
+	loyalty = -0.15	#Change in percent loyalty caused by this privilege
+	influence = -0.1	#Change in percent influence caused by this privilege
+	#Conditions for whether it is possible for the country to have this privilege
+	is_valid = {
+		always = yes
+	}
+	#Conditions for whether the country is allowed to select the privilege
+	can_select = {
+		has_estate_privilege = assurance_of_rights
+	}
+	#Effects executed immediately upon the privilege being taken
+	on_granted = {
+		define_advisor = {
+			type = esu_negotiator
+			skill = 1
+			discount = yes
+		}
+	}
+	#Conditions for whether the country can revoke the privilege
+	can_revoke = {
+	}
+	#Effects executed upon the privilege being revoked by the country
+	on_revoked = {
+	}
+	#Effects executed upon the privilege being removed due to invalidity
+	on_invalid = {
+	}
+	#Negative modifiers granted while the privilege is active
+	penalties = {
+		global_manpower_modifier = -0.1
+	}
+	#Positive modifiers granted while the privilege is active
+	benefits = {
+		global_trade_goods_size_modifier = 0.15
+		global_unrest = -1
+	}
+	# conditional_modifier = {
+	# 	#Modifier that are applied if the specified conditions are true.
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	modifier = {
+	# 		<modifiers>
+	# 	}
+	# 	is_bad = <bool>		#yes/no. Whether the modifier should be listed as positive or negative in the tooltips.
+	# }
+	modifier_by_land_ownership = {
+	}
+	#Multiplies the modifier by the % of land owned by the estate.
+	# mechanics = {
+	# 	<mechanics>
+	# }	#Special mechanics the privilege enables
+	cooldown_years = 5	#Time limit before which the privilege cannot be revoked
+	on_cooldown_expires = {
+	}
+	#Effect executed once the specified cooldown_years timer has run down
+	ai_will_do = {
+		#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below 
+		factor = 1		#ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+	}
+}

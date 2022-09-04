@@ -1,0 +1,111 @@
+namespace = es_x_scenario
+country_event = {
+	id = es_x_scenario.1
+	title = es_x_scenario.1.t
+	desc = es_x_scenario.1.d
+	picture = ES_VELOTHI_eventPicture
+	trigger = {
+		primary_culture = ashlander_chimer
+		NOT = {
+			is_year = 535
+		}
+		NOT = {
+			has_country_flag = es_x_scenario_1_flag
+		}
+	}
+	mean_time_to_happen = {
+		months = 3000
+		modifier = {
+			factor = 0.9
+			is_year = 100
+		}
+		modifier = {
+			factor = 0.85
+			is_year = 200
+		}
+		modifier = {
+			factor = 0.75
+			is_year = 300
+		}
+		modifier = {
+			factor = 0.5
+			is_year = 400
+		}
+		modifier = {
+			factor = 0.25
+			is_year = 500
+		}
+	}
+	immediate = {
+		set_country_flag = es_x_scenario_1_flag
+	}
+	option = {
+		name = es_x_scenario.1.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				capital_scope = {
+					NOT = {
+						region = vvardenfell_lr
+					}
+				}
+			}
+		}
+		add_stability = 1
+	}
+	option = {
+		name = es_x_scenario.1.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				capital_scope = {
+					region = vvardenfell_lr
+				}
+			}
+		}
+		change_primary_culture = house_chimer
+		capital_scope = {
+			change_culture = house_chimer
+		}
+		set_country_flag = es_x_scenario_chimer_flag
+		define_advisor = {
+			type = esu_governor
+			skill = 3
+			discount = yes
+			culture = house_chimer
+		}
+	}
+}
+
+country_event = {
+	id = es_x_scenario.2
+	title = es_x_scenario.1.t
+	desc = es_x_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture
+	hidden = yes
+	trigger = {
+		any_owned_province = {
+			culture = ashlander_chimer
+		}
+		has_country_flag = es_x_scenario_chimer_flag
+	}
+	mean_time_to_happen = {
+		months = 35
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				culture = ashlander_chimer
+				any_neighbor_province = {
+					culture = house_chimer
+				}
+			}
+			change_culture = house_chimer
+		}
+	}
+	option = {
+		name = es_x_scenario.1.b
+	}
+}

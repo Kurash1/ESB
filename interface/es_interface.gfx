@@ -1,0 +1,476 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_ironman_icon1"
+		texturefile = "gfx//interface//ironman_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_holy_site_1062"
+		texturefile = "gfx//interface//holy_sites//vvardenfell.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_holy_site_3320"
+		texturefile = "gfx//interface//holy_sites//nchardak.dds"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_holy_site_4054"
+		texturefile = "gfx//interface//holy_sites//kemel_ze.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_holy_site_2949"
+		texturefile = "gfx//interface//holy_sites//raldbthar.dds"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_holy_site_7245"
+		texturefile = "gfx//interface//holy_sites//arkngthamz.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_government_rank_strip"
+		texturefile = "gfx/interface/government_rank_strip.dds"
+		noOfFrames = 10
+	}
+    spriteType = {
+		name = "GFX_government_upgrade_strip"
+		texturefile = "gfx/interface/government_upgrade_strip.dds"
+		noOfFrames = 10
+	}
+	
+	spriteType = {
+		name = "GFX_icon_alrabeg_school"
+		texturefile = "gfx/interface/alrabeg_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_storihbeg_school"
+		texturefile = "gfx/interface/storihbeg_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_uricanbeg_school"
+		texturefile = "gfx/interface/uricanbeg_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_gulibeg_school"
+		texturefile = "gfx/interface/gulibeg_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_hrokkibeg_school"
+		texturefile = "gfx/interface/hrokkibeg_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_hagraven_school"
+		texturefile = "gfx/interface/hagraven_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_dragon_school"
+		texturefile = "gfx/interface/dragon_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_lizard_school"
+		texturefile = "gfx/interface/lizard_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_tortoise_school"
+		texturefile = "gfx/interface/tortoise_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_crocodile_school"
+		texturefile = "gfx/interface/crocodile_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_viper_school"
+		texturefile = "gfx/interface/viper_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_tuatara_school"
+		texturefile = "gfx/interface/tuatara_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_lotus_school"
+		texturefile = "gfx/interface/lotus_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_magnolia_school"
+		texturefile = "gfx/interface/magnolia_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_rose_school"
+		texturefile = "gfx/interface/rose_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_orchid_school"
+		texturefile = "gfx/interface/orchid_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_tulip_school"
+		texturefile = "gfx/interface/tulip_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_carnation_school"
+		texturefile = "gfx/interface/carnation_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_esu_version_background"
+		texturefile = "gfx/interface/esu_version_background.dds"
+	}
+	
+	# Holy Orders
+	spriteType = {
+		name = "GFX_spores_of_the_hist"
+		texturefile = "gfx/interface/holy_orders/spores_of_the_hist.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_leaves_of_the_hist"
+		texturefile = "gfx/interface/holy_orders/leaves_of_the_hist.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_roots_of_the_hist"
+		texturefile = "gfx/interface/holy_orders/roots_of_the_hist.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_dragon_priests"
+		texturefile = "gfx/interface/holy_orders/dragon_priests.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_dragon_mages"
+		texturefile = "gfx/interface/holy_orders/dragon_mages.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_dragon_warriors"
+		texturefile = "gfx/interface/holy_orders/dragon_warriors.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_followers_of_the_prophet"
+		texturefile = "gfx/interface/holy_orders/followers_of_the_prophet.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_voices_of_the_silvenar"
+		texturefile = "gfx/interface/holy_orders/voices_of_the_silvenar.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_protectors_of_the_green_lady"
+		texturefile = "gfx/interface/holy_orders/protectors_of_the_green_lady.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_duolingo_order"
+		texturefile = "gfx/interface/holy_orders/duolingo_order.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_office_of_archcanon"
+		texturefile = "gfx/interface/holy_orders/office_of_archcanon.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_temple_ordinators"
+		texturefile = "gfx/interface/holy_orders/temple_ordinators.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_buyoyant_armigers"
+		texturefile = "gfx/interface/holy_orders/buyoyant_armigers.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_order_of_azura"
+		texturefile = "gfx/interface/holy_orders/order_of_azura.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_order_of_mephala"
+		texturefile = "gfx/interface/holy_orders/order_of_mephala.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_order_of_boethiah"
+		texturefile = "gfx/interface/holy_orders/order_of_boethiah.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_dremoran_order"
+		texturefile = "gfx/interface/holy_orders/dremoran_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_shardai_order"
+		texturefile = "gfx/interface/holy_orders/shardai_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_xivilai_order"
+		texturefile = "gfx/interface/holy_orders/xivilai_order.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_vampyrum_order"
+		texturefile = "gfx/interface/holy_orders/vampyrum_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_foolkillers_order"
+		texturefile = "gfx/interface/holy_orders/foolkillers_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_deathbringer_order"
+		texturefile = "gfx/interface/holy_orders/deathbringer_order.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_order_of_the_moon"
+		texturefile = "gfx/interface/holy_orders/order_of_the_moon.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_order_of_the_candle"
+		texturefile = "gfx/interface/holy_orders/order_of_the_candle.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_order_of_diagna"
+		texturefile = "gfx/interface/holy_orders/order_of_diagna.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_order_of_the_owl"
+		texturefile = "gfx/interface/holy_orders/order_of_the_owl.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_order_of_the_raven"
+		texturefile = "gfx/interface/holy_orders/order_of_the_raven.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_order_of_the_dragon"
+		texturefile = "gfx/interface/holy_orders/order_of_the_dragon.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_sapiarchs_order"
+		texturefile = "gfx/interface/holy_orders/sapiarchs_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_psijic_order"
+		texturefile = "gfx/interface/holy_orders/psijic_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_thalmor_order"
+		texturefile = "gfx/interface/holy_orders/thalmor_order.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_hagrevens_order"
+		texturefile = "gfx/interface/holy_orders/hagrevens_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_baldama_wyrd_order"
+		texturefile = "gfx/interface/holy_orders/baldama_wyrd_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_gravesingers_order"
+		texturefile = "gfx/interface/holy_orders/gravesingers_order.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_sea_dragon_order"
+		texturefile = "gfx/interface/holy_orders/sea_dragon_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_paddle_order"
+		texturefile = "gfx/interface/holy_orders/paddle_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_misty_order"
+		texturefile = "gfx/interface/holy_orders/misty_order.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_bewitcher_shaman_order"
+		texturefile = "gfx/interface/holy_orders/bewitcher_shaman_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_pathfinder_shaman_order"
+		texturefile = "gfx/interface/holy_orders/pathfinder_shaman_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_warrior_shaman_order"
+		texturefile = "gfx/interface/holy_orders/warrior_shaman_order.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_order_of_the_lamp"
+		texturefile = "gfx/interface/holy_orders/order_of_the_lamp.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_order_of_stendarr"
+		texturefile = "gfx/interface/holy_orders/order_of_stendarr.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_order_of_the_hour"
+		texturefile = "gfx/interface/holy_orders/order_of_the_hour.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_bear_order"
+		texturefile = "gfx/interface/holy_orders/bear_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_hawk_order"
+		texturefile = "gfx/interface/holy_orders/hawk_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_wolf_order"
+		texturefile = "gfx/interface/holy_orders/wolf_order.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_daedric_priests"
+		texturefile = "gfx/interface/holy_orders/daedric_priests.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_daedric_mages"
+		texturefile = "gfx/interface/holy_orders/daedric_mages.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_daedric_warriors"
+		texturefile = "gfx/interface/holy_orders/daedric_warriors.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_keepers_of_the_code"
+		texturefile = "gfx/interface/holy_orders/keepers_of_the_code.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_warriors_of_trinimac"
+		texturefile = "gfx/interface/holy_orders/warriors_of_trinimac.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_champions_of_malacath"
+		texturefile = "gfx/interface/holy_orders/champions_of_malacath.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_guardians_of_knowledge"
+		texturefile = "gfx/interface/holy_orders/guardians_of_knowledge.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_guardians_of_peace"
+		texturefile = "gfx/interface/holy_orders/guardians_of_peace.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_guardians_of_traditions"
+		texturefile = "gfx/interface/holy_orders/guardians_of_traditions.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_salamander_monks"
+		texturefile = "gfx/interface/holy_orders/salamander_monks.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_monkey_monks"
+		texturefile = "gfx/interface/holy_orders/monkey_monks.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_serpent_monks"
+		texturefile = "gfx/interface/holy_orders/serpent_monks.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_duolingo_order"
+		texturefile = "gfx/interface/holy_orders/duolingo_order.dds"
+		noOfFrames = 4
+	}
+	
+}
+
+bitmapfonts = {
+    bitmapfont = {
+		name = "tahoma_60"
+		path = "gfx/fonts/iberia"		# Regular ESU map font
+		#path = "gfx/fonts/invisible"	# Invisible map font for screenshots etc.
+		color = 0xac8c25ff
+	}
+	bitmapfont = {
+		name = "vic_18_muted"
+		path = "gfx/fonts/vic_18"
+		color = 0xffeeeeee
+				
+		textcolors = {
+			G = { 44 171 50 }
+			R = { 181 61 61 }
+			Y = { 219 203 71 }
+		}
+	}
+}

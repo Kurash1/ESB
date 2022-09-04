@@ -1,0 +1,120 @@
+# To be merged into cyr ideas
+
+# CB8 = WGT = White-Gold Tower
+
+CB8_ideas = {
+	start = {
+		liberty_desire_from_subject_development = -0.20
+		reform_progress_growth = 0.1
+	}
+	
+	bonus = {
+		diplomatic_upkeep = 1
+	}
+	
+	trigger = {
+		tag = CB8
+	}
+	
+	free = yes
+
+	# Ten Ancestors
+	# The Ten Ancestors are a set of ten Ayleid statues. They consist mostly of meteoric iron prongs, with a shard of meteoric glass in the center. The statues played an important role in Ayleid religion and were displayed in the Temple of the Ancestors, now known as the White-Gold Tower. The temple of Loriasel was also built in Black Marsh by the Barsaebic Ayleids in veneration of the Ancestors. The Ancestors themselves were believed to worship the Daedra, and Daedraphile Ayleids accordingly followed the Eleven Edicts of the Ten Ancestors.
+	cb8_ideas_1 = {
+		idea_cost = -0.125
+	}
+	# Sky Harvesting
+	# Ayleids seem to have had a firm grasp of the magical arts, as many of their ruins contain stones filled with magicka essences harvested from the sky. The ancient Ayleids believed that Nirn was composed of four basic elements -- earth, water, air, and light -- and of these four elements, they believed the most sublime form of light was star light. The stars are our links to the plane of Aetherius, the source of all magical power, and therefore, light from the stars is the most potent and exalted of all magical powers. From time to time, fragments of Aetherius fall from the heavens. The people know these fragments as 'shooting stars', and from time to time, such Aetherial fragments are found on Nirn.
+	cb8_ideas_2 = {
+		innovativeness_gain = 0.75
+	}
+	# Merid-Nunda Faithful
+	# Meridia (known as the Bright One and Rainbow of Light) was an extremely important figure for the Ayleids, as she was considered the personification of their fourth element, light. The Ayleids often depicted Meridia with wings and a cowl.	
+	cb8_ideas_3 = {
+		fire_damage = 0.075
+		tolerance_own = 1
+	}
+	# Mass Enslavement
+	# At first enslavement of the Nedic peoples was occasional, but eventually this became a systematic, widespread institution of Ayleid society. They eventually controlled the entirety of modern-day Cyrodiil, and kept the Nedic peoples there enslaved for generations. The Ayleids are also said to have enslaved beastfolk.
+	cb8_ideas_4 = {
+		production_efficiency = 0.15
+		ae_impact = 0.1
+	}
+   	# Alliance of Kingdoms
+	# Ayleidic society was an alliance of kingdoms united under one empire, which ultimately ended in 1E 243 with the death of their champion, Umaril the Unfeathered, and the fall of the White-Gold Tower.
+	cb8_ideas_5 = {
+		diplomatic_reputation = 1
+		diplomats = 1
+	}
+	# Underground Cities
+	# Their cities were amazing feats of architecture ranging from small settlements to gigantic, labyrinth-like metropolises shaped out of whitish rock. Any enemy shall fear traps and ambushes out of hidden tunnels before engaging proper force weaking the opposition.
+	cb8_ideas_6 = {
+		hostile_attrition = 1
+		prestige = 0.5
+	}
+	# Mentors of Men
+	# Alessia's rebellion coincided with a civil war within the Ayleid Empire which led to many rebel Ayleid lords joining forces with Alessia and aiding her rebellion. These allies of Alessia were largely Aedra-worshippers,[ indicating that the schism among the Ayleids was likely related to religious differences. Ayleids who remained in Cyrodiil served as mentors and tutors for the new human nobility and many Ayleid nobles remained in power in the new empire of "men" until the rise of Allesian Order.
+	cb8_ideas_7 = {
+		adm_advisor_cost = -0.15
+		advisor_pool = 1
+	}
+}
+
+#Ayleid State
+
+AYL_ideas = {
+	start = {
+		liberty_desire_from_subject_development = -0.20
+		governing_capacity_modifier = 0.15
+	}
+	
+	bonus = {
+		diplomats = 1
+	}
+	
+	trigger = {
+		tag = AYL
+	}
+	
+	free = yes
+
+	# Aedra-Daedra Schism
+	# Alessia's rebellion coincided with a civil war within the Ayleid Empire which led to many rebel Ayleid lords joining forces with Alessia and aiding her rebellion. These allies of Alessia were largely Aedra-worshippers, indicating that the schism among the Ayleids was likely related to religious differences. Even after the Daedric cults rose to power, many Ayleidic kingdoms continued to honor the Aedra.[20] Many slaves in Cyrodiil became Aedra-worshippers by adopting many of the beliefs of their masters, and it's suspected that Alessia incorporated elven Aedra into her Eight Divines pantheon in order to appease her Ayleid and Ayleid-influenced vassals. Ayleids venerated their ancestors, and Aedra is an Elven word for "ancestor".
+	ayl_ideas_1 = {
+		global_missionary_strength = 0.03
+		relation_with_heathens = -30
+	}
+	# Elven Supremacy
+	# Ayleid kingdoms proved to exhibit the worst treatment of their slaves. Various settlements became famous for their particular, elaborate method of torturing their slaves, such as "wailing wheels", "gut gardens", "flesh-sculptures", and forced ingestion of hallucinogenic drugs, as well as nighttime "tiger sport", which involved the immolation of human children.
+	ayl_ideas_2 = {
+		global_unrest = 2
+		production_efficiency = 0.20
+	}
+	# Ayleid Wells
+	# They used aetherial fragments which fell from the heavens, particularly meteoric iron, to construct receptacles which are believed to harness energy from starlight. These "Ayleid Wells" are scattered all over Cyrodiil, and can still be used by mages to replenish their energy.
+	ayl_ideas_3 = {
+		stability_cost_modifier = -0.20
+	}
+	# Stargazing
+	# Magic was an enormous part of their society. In accordance with High Elf religion, they believed Nirn was composed of four basic elements: earth, water, air, and light (as opposed to the four elements of modern natural philosophy: earth, water, air, and fire). Some of their magic tapped into the power of the weather. The most sublime form was starlight, as the stars were the link between Mundus and Aetherius, while Merid-Nunda worship was linked with veneration of light.
+	ayl_ideas_4 = {
+		naval_morale = 0.10
+		tolerance_own = 1
+	}
+   	# Barsaebic Brethen
+	# Some of our fellows escaped from Cyrodiil to avoid infighting and civil wars. Let us unite marshes of Bravil and Argonia. Let us be one empire of many kingdoms again.
+	ayl_ideas_5 = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+	}
+	# Meteoric Craftstmanship
+	# The Ayleids, known for harnessing Aetherial Fragments, used the glass to create artifacts like Welkynd Stones and Varla Stones. The crystals were also used as a source of light in Ayleid settlements, likely due to their abhorrence of fire, which they saw as an impure and primal form of light. Skyshards were believed to be shards of Aetherial magicka that carry the essence of Nirn. They are sometimes linked to Lorkhan or Anu. When properly cultivated, meteoric glass crystals are able to grow and multiply.
+	ayl_ideas_6 = {
+		fire_damage = 0.10
+	}
+	# Umaril the Unfeathered
+	# Umaril the Unfeathered was an Ayleid sorcerer-king who once ruled Tamriel and enslaved the human population. Umaril was a "half-Elf", born of an Ayleid mother and a divine father. Using magic, Umaril bound his soul directly to the realm of his mistress Meridia, allowing his spirit to escape death and his physical body to travel between realms. Thus, Umaril would "never know death". Umaril was defeated by Pelinal Whitestrake at the start of the First Era during the human uprising against the Ayleids, their "Slavemasters", and the fall of the White-Gold Tower. While Umaril escaped death, he was cast adrift in the "waters of Oblivion", and many thousands of years passed before he could return to Mundus. His return at the end of the Third Era was to seek vengeance upon the Divines who had brought about his fall. Aurorans under his command desecrated the chapel of Dibella in Anvil, and later the chapel of Mara in Bravil.
+	ayl_ideas_7 = {
+		free_leader_pool = 1
+	}
+}

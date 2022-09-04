@@ -1,0 +1,528 @@
+namespace = es_5_scenario
+
+country_event = {
+	id = es_5_scenario.100
+	title = es_5_scenario.1.t
+	desc = es_5_scenario.1.d
+	picture = ES_RISE_OF_DRAGONS_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		culture_group = dwemer_cg
+		is_year = 189
+		NOT = { is_year = 700 }
+	}
+	
+	immediate = {
+		random_list = {
+			50 = { country_event = { id = es_5_scenario.2 } }
+			50 = { set_country_flag = successful_scenario_5_event }
+		}
+	}
+
+	option = {
+		name = "es_5_scenario.1.a"
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_scenario_5_event }
+			clr_country_flag = successful_scenario_5_event
+		}
+		else = {
+			country_event = {
+				id = es_5_scenario.100
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = es_5_scenario.1
+	title = es_5_scenario.1.t
+	desc = es_5_scenario.1.d
+	picture = ES_SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = "es_5_scenario.1.a"
+		ai_chance = { factor = 50 }
+		set_country_flag = country_narfinsel_schism_flag
+		add_prestige = 25
+		add_country_modifier = {
+			name = "05_religious_war"
+			duration = 3650
+		}
+		random_owned_province = { limit = { religion_group = daedric_group } change_religion = nedic_pantheon spawn_rebels = { type = nedic_pantheon_rebels size = 3 win = yes unrest = 25 } }
+		random_owned_province = { limit = { religion_group = daedric_group } change_religion = nedic_pantheon spawn_rebels = { type = nedic_pantheon_rebels size = 3 win = yes unrest = 25 } }
+		random_owned_province = { limit = { religion_group = daedric_group } change_religion = nedic_pantheon spawn_rebels = { type = nedic_pantheon_rebels size = 3 win = yes unrest = 25 } }
+		random_owned_province = { limit = { religion_group = daedric_group } change_religion = nedic_pantheon spawn_rebels = { type = nedic_pantheon_rebels size = 3 win = yes unrest = 25 } }
+		random_owned_province = { limit = { religion_group = daedric_group } change_religion = nedic_pantheon spawn_rebels = { type = nedic_pantheon_rebels size = 3 win = yes unrest = 25 } }
+		
+		hidden_effect = {
+			country_event = { id = es_5_scenario.3 days = 5840 }
+			country_event = { id = es_5_scenario.7 days = 3650 }
+		}
+		
+		if = { limit = { owns = 1206 }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.57 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+	}
+	option = {
+		name = "es_5_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_stability = -3
+		change_religion = nedic_pantheon
+		
+		if = { limit = { owns = 1206 }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.57 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+	}
+}
+
+country_event = {
+	id = es_5_scenario.2
+	title = es_5_scenario.2.t
+	desc = es_5_scenario.2.d
+	picture = ES_MIGRATION_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			NOT = { culture = snow_elven }
+			NOT = { has_province_modifier = 05_elven_migration }
+			NOT = { region = vvardenfell_lr }
+			NOT = { region = morrowind_lr }
+			NOT = { region = deshaan_lr }
+			NOT = { region = velothi_mountains_lr }
+			NOT = { region = llothanis_peninsula_lr }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = successful_scenario_5_event
+	}
+	
+	option = {
+		name = "es_5_scenario.2.a"
+		ai_chance = { factor = 50 }
+		random_owned_province = {
+			limit = {
+				NOT = { region = vvardenfell_lr }
+				NOT = { region = morrowind_lr }
+				NOT = { region = deshaan_lr }
+				NOT = { region = velothi_mountains_lr }
+				NOT = { region = llothanis_peninsula_lr }
+			}
+			change_culture = snow_elven
+			add_permanent_province_modifier = {
+				name = "05_elven_migration"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = "es_5_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 1
+	}
+}
+
+country_event = {
+	id = es_5_scenario.3
+	title = es_5_scenario.3.t
+	desc = es_5_scenario.3.d
+	picture = BATTLE_2_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { limit = { NOT = { has_global_flag = es_5_scenario_3_global_glag } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.40 days = 31 tooltip = es_collapse.2.a.tt } }
+		set_global_flag = es_5_scenario_3_global_glag
+		}
+	}
+
+	option = {
+		name = "es_5_scenario.3.a"
+		ai_chance = { factor = 100 }
+		add_war_exhaustion = 10
+	}
+}
+
+country_event = {
+	id = es_5_scenario.4
+	title = es_5_scenario.4.t
+	desc = es_5_scenario.4.d
+	picture = ES_EIGHT_DIVINES_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_5_scenario.4.a"
+		if = { limit = { ai = yes NOT = { owns = 1206 } } change_religion = nedic_pantheon }
+		if = { limit = { owns = 1130 }
+			1130 = {
+				change_religion = nedic_pantheon
+				add_reform_center = nedic_pantheon
+				add_permanent_province_modifier = { name = "religious_zeal_at_conv" duration = 9000 }
+			}
+		}
+		if = { limit = { owns = 1120 }
+			1120 = {
+				change_religion = nedic_pantheon
+				add_reform_center = nedic_pantheon
+				add_permanent_province_modifier = { name = "religious_zeal_at_conv" duration = 9000 }
+			}
+		}
+		if = { limit = { owns = 1161 }
+			1161 = {
+				change_religion = nedic_pantheon
+				add_reform_center = nedic_pantheon
+				add_permanent_province_modifier = { name = "religious_zeal_at_conv" duration = 9000 }
+			}
+		}
+		if = { limit = { owns = 1206 }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.59 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+	}
+}
+
+### PU Skyrim over Whiterun
+
+country_event = {
+	id = es_5_scenario.5
+	title = es_5_scenario.5.t
+	desc = es_5_scenario.5.d
+    picture = ES_WHITERUN_eventPicture	
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		1275 = { owner = { save_event_target_as = 1275_owner } }
+	}
+
+	option = {
+		name = "es_5_scenario.5.a"
+		ai_chance = { factor = 50 }
+		add_stability = 3
+		add_years_of_income = 10.0
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		
+		event_target:1275_owner = { create_subject = { subject_type = personal_union subject = ROOT } }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.60 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_5_scenario.5.b"
+		ai_chance = { factor = 50 }
+		kill_ruler = yes
+		add_country_modifier = {
+		name = "11_succesion_war"
+		duration = 3650
+		}
+		
+		event_target:1275_owner = { add_casus_belli = { target = ROOT type = cb_restore_personal_union months = 120 } }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.61 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	
+}
+
+### Vassalize Solitude and Morthal
+
+country_event = {
+	id = es_5_scenario.6
+	title = es_5_scenario.6.t
+	desc = es_5_scenario.6.d
+    picture = ES_REVOLUTION_eventPicture	
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		1275 = { owner = { save_event_target_as = 1275_owner } }
+	}
+
+	option = {
+		name = "es_5_scenario.6.a"
+		ai_chance = { factor = 50 }
+		
+		event_target:1275_owner = { create_subject = { subject_type = vassal subject = ROOT } }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.62 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_5_scenario.6.b"
+		ai_chance = { factor = 50 }
+		
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_devotion = -50
+		add_horde_unity = -50
+		add_meritocracy = -50
+		
+		spawn_rebels = { type = noble_rebels size = 3 win = yes unrest = 25 }
+		
+		add_stability = -1
+		
+		event_target:1275_owner = { add_casus_belli = { target = ROOT type = cb_vassalize_mission months = 120 } }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.63 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	
+}
+
+### War between Eight Divines and Deadric states
+
+country_event = {
+	id = es_5_scenario.7
+	title = es_5_scenario.7.t
+	desc = es_5_scenario.7.d
+	picture = ES_MERIDIA_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_neighbor_country = {
+				limit = { is_at_war = no NOT = { religion_group = ROOT } OR = { culture_group = high_elves_cg culture_group = cyrodiil_cg } }
+				save_event_target_as = neighbour_heretic_country
+			}
+		}
+	}
+
+	option = {
+		name = "es_5_scenario.7.a"
+		ai_chance = { factor = 50 }
+		
+		set_country_flag = es_5_scenario.7_war_flag
+		
+		add_manpower = 50
+		add_years_of_income = 2.5
+		add_prestige = 10
+		
+		declare_war_with_cb = { who = event_target:neighbour_heretic_country casus_belli = cb_es_scenario }
+		
+		if = { limit = { owns = 1206 }
+			every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.64 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+	}
+	option = {
+		name = "es_5_scenario.7.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+		
+		add_country_modifier = {
+		name = "05_religious_war"
+		duration = 3650
+		}
+		
+		if = { limit = { owns = 1206 }
+			every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.64 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+	}
+}
+
+# Spawn of Avanchzel
+
+country_event = {
+	id = es_5_scenario.8
+	title = es_5_scenario.8.t
+	desc = es_5_scenario.8.d
+	picture = ES_AVANCHENZEL_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { exists = NF9 }
+	}
+	
+	option = {
+		name = "es_5_scenario.8.a"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = skyrim_57_la
+					area = skyrim_59_la
+				}
+			}
+			cede_province = NF9
+			add_core = NF9
+			change_culture = kagrenmer
+			change_religion = reason_and_logic_cult
+		}
+		NF9 = {
+			change_primary_culture = kagrenmer
+			change_religion = reason_and_logic_cult
+		}
+	}
+	
+	option = {
+		name = "es_5_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+		every_owned_province = {
+			limit = {
+				OR = {
+					area = skyrim_57_la
+					area = skyrim_59_la
+				}
+			}
+			add_core = NF9
+			change_culture = kagrenmer
+			change_religion = reason_and_logic_cult
+			add_province_modifier = {
+				name = "10_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+	option = {
+		name = "es_5_scenario.8.c"
+		ai_chance = { factor = 0 }
+		trigger = {
+			owns = 3129
+		}
+		
+		change_tag = NF9
+		change_government = republic
+		set_capital = 3129
+		change_religion = reason_and_logic_cult
+		change_primary_culture = kagrenmer
+	}
+}
+
+### Spawn of Bthalft
+
+country_event = {
+	id = es_5_scenario.9
+	title = es_5_scenario.9.t
+	desc = es_5_scenario.9.d
+	picture = ES_BFALFT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { exists = NF7 }
+	}
+	
+	option = {
+		name = "es_5_scenario.9.a"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+		every_owned_province = {
+			limit = {
+				area = skyrim_57_la
+			}
+			cede_province = NF7
+			add_core = NF7
+			change_culture = kagrenmer
+			change_religion = reason_and_logic_cult
+		}
+		NF7 = {
+			change_primary_culture = kagrenmer
+			change_religion = reason_and_logic_cult
+		}
+	}
+	
+	option = {
+		name = "es_5_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+		every_owned_province = {
+			limit = {
+				area = skyrim_57_la
+			}
+			add_core = NF7
+			change_culture = kagrenmer
+			change_religion = reason_and_logic_cult
+			add_province_modifier = {
+				name = "10_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+	option = {
+		name = "es_5_scenario.9.c"
+		ai_chance = { factor = 0 }
+		trigger = {
+			owns = 3110
+		}
+		
+		change_tag = NF7
+		change_government = republic
+		set_capital = 3110
+		change_religion = reason_and_logic_cult
+		change_primary_culture = kagrenmer
+	}
+}
+
+### Spawn of Bthar-zel
+
+country_event = {
+	id = es_5_scenario.10
+	title = es_5_scenario.10.t
+	desc = es_5_scenario.10.d
+	picture = ES_BTHAR_ZEL_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { exists = NG1 }
+	}
+	
+	option = {
+		name = "es_5_scenario.9.a"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+		1359 = {
+			cede_province = NG1
+			add_core = NG1
+			change_culture = rourkenid
+			change_religion = reason_and_logic_cult
+		}
+	}
+	
+	option = {
+		name = "es_5_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+		1359 = {
+			add_core = NG1
+			change_culture = rourkenid
+			change_religion = reason_and_logic_cult
+			add_province_modifier = {
+				name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+	option = {
+		name = "es_5_scenario.9.c"
+		ai_chance = { factor = 0 }
+		trigger = {
+			owns = 1359
+		}
+		
+		change_tag = NG1
+		change_government = republic
+		set_capital = 1359
+		change_religion = reason_and_logic_cult
+		change_primary_culture = rourkenid
+	}
+}

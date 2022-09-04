@@ -1,0 +1,432 @@
+country_decisions = {
+	
+	launch_the_planemeld = {
+		major = yes
+		potential = {
+			capital_scope = {
+			    OR = {
+				    region = central_coldharbour_lr
+					region = southern_coldharbour_lr
+					region = eastern_coldharbour_lr
+					region = western_coldharbour_lr
+					region = northern_coldharbour_lr
+				}
+			}
+			NOT = { has_country_flag = launch_the_planemeld_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+				province_id = 3188
+				province_id = 2970
+				province_id = 2903
+				province_id = 2710
+				province_id = 2727
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			stability = 3
+			is_at_war = no
+			OR = {
+				AND = {
+					owns = 3188
+					owns = 2970
+					owns = 2903
+					owns = 2710
+					owns = 2727
+				}
+				AND = {
+					is_year = 1600
+					owns = 3188
+					NOT = { has_global_flag = stopped_planemeld_flag }
+				}
+			}
+		}
+		effect = {
+			add_manpower = 250
+			set_country_flag = launch_the_planemeld_flag
+			save_global_event_target_as = launched_planemeld_event_target
+			set_global_flag = the_planemeld_flag
+			
+			hidden_effect = {
+				set_variable = { which = my_pl_inf value = 50 }
+				set_variable = { which = my_pl_cav value = 25 }
+				set_variable = { which = my_pl_art value = 25 }
+			}
+			
+			while = {
+				limit = {
+					check_variable = { which = my_pl_inf value = 1 }
+				}
+				subtract_variable = { which = my_pl_inf value = 1 }
+				capital_scope = { infantry = ROOT }
+			}
+			while = {
+				limit = {
+					check_variable = { which = my_pl_cav value = 1 }
+				}
+				subtract_variable = { which = my_pl_cav value = 1 }
+				capital_scope = { cavalry = ROOT }
+			}
+			while = {
+				limit = {
+					check_variable = { which = my_pl_art value = 1 }
+				}
+				subtract_variable = { which = my_pl_art value = 1 }
+				capital_scope = { artillery = ROOT }
+			}
+
+			add_country_modifier = { name = "daedric_invasion" duration = 18250 }
+			3188 = { add_permanent_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			1206 = { add_permanent_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			
+			3187 = {
+				add_canal = cold_heart_canal 
+			}
+			
+			central_cyrodiil_lr = {
+				discover_country = ROOT
+			}			
+			
+			show_ambient_object = "gate_cold"
+			show_ambient_object = "gate_heart"
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	stop_the_planemeld = {
+		major = yes
+		potential = {
+			capital_scope = { NOT = { continent = Oblivion } }
+			has_global_flag = the_planemeld_flag
+			NOT = { has_country_flag = launch_the_planemeld_flag }
+		}
+		allow = {
+			3188 = { controlled_by = ROOT }
+			3187 = { controlled_by = ROOT }
+			1206 = { controlled_by = ROOT }
+			event_target:launched_planemeld_event_target = {
+				NOT = {
+					any_owned_province = {
+						continent = Tamriel
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = stopped_planemeld_flag
+			clr_global_flag = the_planemeld_flag
+			add_prestige = 25
+			every_country = {
+				limit = { has_country_flag = launch_the_planemeld_flag }
+				clr_country_flag = launch_the_planemeld_flag 
+				remove_country_modifier = daedric_invasion
+				add_stability = -5
+				country_event = { id = es_collapse.1 }
+			}
+			
+			3188 = { remove_province_modifier = oblivion_gate }
+			1206 = { remove_province_modifier = oblivion_gate }
+			3187 = { remove_canal = cold_heart_canal }
+			
+			hide_ambient_object = "gate_cold"
+			hide_ambient_object = "gate_heart"
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	start_deadric_invasion_1 = {
+		major = yes
+		potential = {
+			ai = yes
+			has_country_modifier = daedric_invasion
+			is_at_war = no
+		}
+		allow = {
+			OR = {
+				AND = {
+					owns = 3188
+					NOT = { owns = 1206 }
+				} 
+				AND = {
+				NOT = { had_recent_war = 1 }
+				any_neighbor_country = { NOT = { is_subject_of = ROOT } }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns = 3188
+					NOT = { owns = 1206 }
+				}
+				hidden_effect = { 1206 = { owner = { save_event_target_as = invasion_target_1 } } }
+				declare_war_with_cb = { who = event_target:invasion_target_1 casus_belli = cb_es_daedric_invasion }
+			}
+			else = {
+				random_neighbor_country = {
+					limit = {
+						NOT = { is_subject_of = ROOT }
+					}
+					hidden_effect = { save_event_target_as = invasion_target_2 }
+				}
+				declare_war_with_cb = { who = event_target:invasion_target_2 casus_belli = cb_es_daedric_invasion }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	start_oblivion_crisis = {
+		major = yes
+		potential = {
+			capital_scope = {
+			    OR = {
+				    region = eastern_deadlands_lr
+					region = western_deadlands_lr
+					region = northern_deadlands_lr
+					region = southern_deadlands_lr
+				}
+			}
+			NOT = { has_country_flag = start_oblivion_crisis_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+            province_id = 4075
+			province_id = 3877
+			province_id = 3764
+			province_id = 4143
+			province_id = 4337
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			stability = 3
+			OR = {
+			AND = {
+				owns = 4075
+				owns = 3877
+				owns = 3764
+				owns = 4143
+				owns = 4337
+			}
+			AND = {
+				is_year = 1600
+				NOT = { has_global_flag = stopped_oblivion_crisis_flag }
+					OR = {
+						owns = 4071
+						owns = 4074
+						owns = 4075
+					}
+				}
+			}
+		}
+		effect = {
+			add_manpower = 250
+			set_country_flag = start_oblivion_crisis_flag
+			set_global_flag = oblivion_crisis_flag
+			hidden_effect = {
+			set_variable = { which = my_pl_inf value = 50 }
+			set_variable = { which = my_pl_cav value = 25 }
+			set_variable = { which = my_pl_art value = 25 }
+			}
+			
+			while = {
+				limit = {
+					check_variable = { which = my_pl_inf value = 1 }
+				}
+				subtract_variable = { which = my_pl_inf value = 1 }
+				capital_scope = { infantry = ROOT }
+			}
+			while = {
+				limit = {
+					check_variable = { which = my_pl_cav value = 1 }
+				}
+				subtract_variable = { which = my_pl_cav value = 1 }
+				capital_scope = { cavalry = ROOT }
+			}
+			while = {
+				limit = {
+					check_variable = { which = my_pl_art value = 1 }
+				}
+				subtract_variable = { which = my_pl_art value = 1 }
+				capital_scope = { artillery = ROOT }
+			}
+
+			add_country_modifier = { name = "daedric_invasion" duration = 18250 }
+			4071 = { add_permanent_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			4074 = { add_permanent_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			4075 = { add_permanent_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			
+			1376 = { add_permanent_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			1199 = { add_permanent_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			1106 = { add_permanent_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			
+			4074 = {
+				add_canal = dead_hig_canal
+			}
+			4075 = {
+				add_canal = dead_cyr_canal
+			}
+			4071 = {
+				add_canal = dead_arg_canal
+			}
+			
+			central_cyrodiil_lr = {
+				discover_country = ROOT
+			}	
+			high_rock_lr = {
+				discover_country = ROOT
+			}	
+			black_marsh_lr = {
+				discover_country = ROOT
+			}			
+			
+			show_ambient_object = "gate_arg"
+			show_ambient_object = "gate_cyr"
+			show_ambient_object = "gate_dead1"
+			show_ambient_object = "gate_dead2"
+			show_ambient_object = "gate_dead3"
+			show_ambient_object = "gate_hig"
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	stop_the_oblivion_crisis = {
+		major = yes
+		potential = {
+			capital_scope = { NOT = { continent = Oblivion } }
+			has_global_flag = oblivion_crisis_flag
+			NOT = { has_country_flag = start_oblivion_crisis_flag }
+		}
+		allow = {
+			is_at_war = no
+			stability = 3
+			4071 = { controlled_by = ROOT }
+			4074 = { controlled_by = ROOT }
+			4075 = { controlled_by = ROOT }
+		}
+		effect = {
+			set_global_flag = stopped_oblivion_crisis_flag
+			clr_global_flag = oblivion_crisis_flag
+			add_prestige = 25
+			
+			every_country = {
+				limit = { has_country_flag = start_oblivion_crisis_flag }
+				clr_country_flag = start_oblivion_crisis_flag 
+				remove_country_modifier = daedric_invasion
+				add_stability = -5
+				country_event = { id = es_collapse.1 }
+			}
+			
+			4071 = { remove_province_modifier = oblivion_gate }
+			4074 = { remove_province_modifier = oblivion_gate }
+			4075 = { remove_province_modifier = oblivion_gate }
+			
+			1376 = { remove_province_modifier = oblivion_gate }
+			1199 = { remove_province_modifier = oblivion_gate }
+			1106 = { remove_province_modifier = oblivion_gate }
+			
+			4071 = {
+				remove_canal = dead_hig_canal
+			}
+			4074 = {
+				remove_canal = dead_cyr_canal
+			}
+			4075 = {
+				remove_canal = dead_arg_canal
+			}
+			
+			hide_ambient_object = "gate_arg"
+			hide_ambient_object = "gate_cyr"
+			hide_ambient_object = "gate_dead1"
+			hide_ambient_object = "gate_dead2"
+			hide_ambient_object = "gate_dead3"
+			hide_ambient_object = "gate_hig"
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	start_deadric_invasion_2 = {
+		major = yes
+		potential = {
+			ai = yes
+			has_country_modifier = daedric_invasion
+			is_at_war = no
+		}
+		allow = {
+			OR = {
+				AND = {
+					owns = 4075
+					NOT = { owns = 1199 }
+				} 
+				AND = {
+					owns = 4074
+					NOT = { owns = 1376 }
+				} 
+				AND = {
+					owns = 4071
+					NOT = { owns = 1106 }
+				} 
+				AND = {
+				NOT = { had_recent_war = 1 }
+				any_neighbor_country = { NOT = { is_subject_of = ROOT } }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns = 4075
+					NOT = { owns = 1199 }
+				}
+				hidden_effect = { 1199 = { owner = { save_event_target_as = invasion_target_3 } } }
+				declare_war_with_cb = { who = event_target:invasion_target_3 casus_belli = cb_es_daedric_invasion }
+			}
+			else_if = {
+				limit = {
+					owns = 4074
+					NOT = { owns = 1376 }
+				}
+				hidden_effect = { 1376 = { owner = { save_event_target_as = invasion_target_4 } } }
+				declare_war_with_cb = { who = event_target:invasion_target_4 casus_belli = cb_es_daedric_invasion }
+			}
+			else_if = {
+				limit = {
+					owns = 4071
+					NOT = { owns = 1106 }
+				}
+				hidden_effect = { 1106 = { owner = { save_event_target_as = invasion_target_4 } } }
+				declare_war_with_cb = { who = event_target:invasion_target_4 casus_belli = cb_es_daedric_invasion }
+			}
+			else = {
+				random_neighbor_country = {
+					limit = {
+						NOT = { is_subject_of = ROOT }
+					}
+					hidden_effect = { save_event_target_as = invasion_target_5 }
+				}
+				declare_war_with_cb = { who = event_target:invasion_target_5 casus_belli = cb_es_daedric_invasion }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+}

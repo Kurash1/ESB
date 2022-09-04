@@ -1,0 +1,97 @@
+wild_hunt = {
+	potential = {
+		is_free_or_tributary_trigger = yes
+		NOT = { primary_culture = bosmer }
+		NOT = { primary_culture = imga } 
+		NOT = { primary_culture = wood_orsimer }
+		NOT = { has_country_flag = had_wild_hunt_flag }
+		any_owned_province = {
+			OR = { 
+				region = northern_valenwood_lr
+				region = southern_valenwood_lr
+			}
+		}
+	}
+	
+	can_start = {
+		NOT = { accepted_culture = bosmer } 
+		num_of_owned_provinces_with = {
+			value = 25
+			culture = bosmer	
+		}
+	}
+	
+	can_stop = { 
+		accepted_culture = bosmer
+		NOT = { 
+			num_of_owned_provinces_with = { 
+				value = 25
+				culture = bosmer
+			}
+		}
+	}
+	
+	progress = {
+		modifier = {  
+			factor = 1
+			NOT = { accepted_culture = bosmer }
+			NOT = { accepted_culture = imga }
+			NOT = { accepted_culture = wood_orsimer }
+		}
+		modifier = {
+			factor = 1
+			num_of_owned_provinces_with = {
+				value = 25
+				OR = {
+					culture = bosmer
+					culture = imga
+					culture = wood_orsimer
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			num_of_owned_provinces_with = {
+				value = 50
+				OR = {
+					culture = bosmer
+					culture = imga
+					culture = wood_orsimer
+				}
+			}
+		}
+	}
+	
+	can_end = {
+		stability = 2
+		OR = {
+			AND = {
+				NOT = { has_country_modifier = wild_hunt_flight }
+				NOT = { has_country_modifier = wild_hunt_fight }
+			}
+			accepted_culture = bosmer
+			NOT = { 
+				num_of_owned_provinces_with = { 
+					value = 1
+					culture = bosmer
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		stability_cost_modifier = 0.1
+		harsh_treatment_cost = 0.25
+		years_of_nationalism = 5 
+	}
+	on_start = wild_hunt.1
+	on_end = wild_hunt.2
+	
+	on_monthly = {
+		random_events = { 
+			2500 = 0
+			100 = wild_hunt.3
+			100 = wild_hunt.4
+		}
+	}
+}

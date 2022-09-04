@@ -1,0 +1,488 @@
+#High Rock Ideas
+
+# High Rock
+HIG_ideas = {
+	start = {
+		leader_land_fire = 1
+		ship_durability = 0.1
+	}
+	
+	bonus = {
+		interest = -1
+	}
+	
+	trigger = {
+		tag = HIG
+	}
+	
+	free = yes
+
+	# Adamantine Tower
+	# Acording to historical lore of the Dawn and Merethic Eras, the Direnni Tower was created by the Aedra as a place for discussing the creation of Mundus. The tower was then used by the Gods for discussing the punishment of Lorkhan for his trickery of conceptualizing Mundus, the decision being to cast Lorkhan's heart from the tower and into the mortal world below. When Magnus departed from the near-formed Mundus, the Gods that followed him abandoned the tower, leaving behind the secrets associated with it.
+	hig_ideas_1 = {
+		reform_progress_growth = 0.15
+	}
+	# Cutthroat Politics
+	# Ask Lysandus what happened to him.
+	hig_ideas_2 = {
+		global_spy_defence = 0.20
+		spy_offence = 0.33
+	}
+	# Crypt of Hearts
+	# You stand in the Crypt of Hearts, a world of darkness and death. The air is still, decayed with age, and the smell of sulphur pervades the air. A hot wind seems to be coming from around the corner, to the south...
+	hig_ideas_3 = {
+		 great_project_upgrade_cost = -0.15
+	}
+   	# Endless Dungeons
+	# Dungeon interiors consist of one or more blocks defined in BLOCKS.BSA and referenced (per-dungeon) in MAPS.BSA, which are glued together to create the appropriate scene. Dungeons may have up to (and including) 32 of these blocks, some of which have two passages connecting to other blocks in each of the four cardinal directions. Even the smallest dungeon is multiple times bigger than largest city of Daggerfall.
+	hig_ideas_4 = {
+		mercenary_manpower = -0.15
+		mercenary_cost = -0.15
+	}
+	# Land of Adventures
+	# After you have played the game for a while, you will start to notice patterns to the dungeons. This is a by-product of the dungeon creation process. Daggerfall dungeons are modular. The Main Quest dungeons were painstakingly constructed by hand, but the random dungeons take pieces of the Main Quest dungeons (and other pieces) and sling them together in random forms. This is why players get a strange sense of "deja vu" in the random dungeons. They really have been here before. Once you reach this point, finding quest objects becomes much easier because each module only has one or two object locations.
+	hig_ideas_5 = {
+		merc_maintenance_modifier = -0.20
+		mercenary_discipline = 0.10
+	}
+	# Breton Society
+	# Bretons are a human race of elven ancestry that inhabits High Rock. They are united in culture and language, but divided politically, for High Rock is fractious. Bretons make up the peasantry, soldiery, and magical elite of the feudal kingdoms competing for power within High Rock. Bretons are known for their intelligence and have a quick and perceptive grasp of spellcraft, enchantment, and alchemy. Even the humblest of Bretons can boast a high resistance to destructive and dominating magical energies.
+	hig_ideas_6 = {
+		fire_damage_received = -0.10
+		diplomatic_reputation = 1
+	}
+	# Warp in the West
+	# High Rock was eventually brought into the Third Empire by Tiber Septim during the Tiber Wars. Still divided, some did unite to try to stop the Camoran Usurper, yet he was not stopped until the Baron of Dwynnen united the citizens of the Iliac Bay against him. The Bretons would not remain united, and went back to fighting one another, and those outside of High Rock, until they had to unite when the Nords reclaimed their land in the War of Bend'r-Mahk, when they fought the Redguards in the War of Betony, and when the Orcs resurrected Orsinium. However they would be united in The Miracle of Peace. "The 'Miracle of Peace' is celebrated as the product of the miraculous interventions of Stendarr, Mara, and Akatosh to transform this troublesome region into peaceful, well-governed Imperial counties. This event transformed High Rock from numerous city-states into five kingdoms.
+	hig_ideas_7 = {
+		global_unrest = -3
+	}
+}
+
+# Direnni Hegenomy
+DIR_ideas = {
+	start = {
+		light_ship_cost = -0.15
+		num_accepted_cultures = 1	
+	}
+	
+	bonus = {
+		diplomatic_upkeep = 1
+	}
+	
+	trigger = {
+		tag = DIR
+	}
+	
+	free = yes
+
+	# Direnni Tower
+	# Acording to historical lore of the Dawn and Merethic Eras, the Direnni Tower was created by the Aedra as a place for discussing the creation of Mundus. The tower was then used by the Gods for discussing the punishment of Lorkhan for his trickery of conceptualizing Mundus, the decision being to cast Lorkhan's heart from the tower and into the mortal world below. When Magnus departed from the near-formed Mundus, the Gods that followed him abandoned the tower, leaving behind the secrets associated with it.
+	dir_ideas_1 = {
+		reform_progress_growth = 0.15
+	}
+	# Feudal Overlords
+	# The Direnni didn't enslave the Nedes as the Ayleids of Cyrodiil did; instead, they ruled them as a noble caste. The elves established a system of feudal vassalage over their new subjects and took Nedic concubines. They inevitably interbred with their human subjects, producing half-elven children. The children begat from these unions weren't adopted by their Direnni parents, as they were considered sub-mer. Instead, they were given privileged positions among the Nedes, which eventually lead to a recognizable mixed-blood human caste dubbed "Bretons", from the Ehlnofex "beratu", meaning "half". These Bretons were only allowed to marry humans. Over time, their elven blood thinned, and their human features became more prominent.
+	dir_ideas_2 = {
+		global_trade_goods_size_modifier = 0.1
+		tolerance_heretic = 1
+	}
+	# Isle of Balfiera
+	# According to Beredalmo the Signifier, Direnni Cygnus, was the progenitor to Clan Direnni as she discovered the Isle of Balfiera and decreed that her descendants should carry her name. In the Middle Merethic Era, Clan Direnni rediscovered and captured the Adamantine Tower. Some believe the Direnni were following their destiny to rule from Balfiera, while others believed that the clan was exiled. The Direnni's claim over the Isle of Balfiera was strengthened when it was purchased by Ryain Direnni in 1E 461.
+	dir_ideas_3 = {
+		global_trade_power = 0.10
+		merchants = 1
+	}
+   	# Direnni Clan
+	# Clan Direnni originated from the small farming village of Tyrigel which sat on the banks of the river Caomus (then called the river Diren hence the family's name) on Summerset Isle. Using his knowledge of alchemy, Asliel Direnni poisoned a barbarian tribe called the Locvar that were continuously raiding Tyrigel. With this external threat dealt with, the way was paved for the future prosperity of the Direnni farms, and generations later they would leave Summerset and travel to mainland Tamriel which would further increase their power and influence.
+	dir_ideas_4 = {
+		advisor_cost = -0.175
+	}
+	# Breton Takeover
+	# Thoroughly spent, the Direnni eventually retreated to Balfiera. Most of High Rock would be under Breton control by 1E 498, though the elves would be accepted and allowed to remain in the province for most of the Second Era. The Bretons' rise to prominence in High Rock initially started through villages being founded in tactical locations, such as Wayrest, which started as a fishing hamlet. Nordic cities such as Camlorn became Breton due to assimilation from the growing Breton population as opposed to conquest. Over time, the emerging Bretons absorbed the remaining Nordic population in High Rock, and the land would be definitively Breton by the end of the First Era.
+	dir_ideas_5 = {
+		manpower_recovery_speed = 0.20
+	}
+	# Atronach Mastery
+	# The master summoners of the Direnni were the first to discover that a conjurer could impose any desired shape on a Flame Atronach, such as that of a horse, which they used in the Battle of Glenumbria Moors. Peregrine Direnni was also the first to conjure the first ever Flame Atronach in the form of a flaming camel. Direnni were also known to utilize golems and quasigriffs.
+	dir_ideas_6 = {
+		leader_land_fire = 1
+		fire_damage_received = -0.05
+	}
+	# Ehlnofey Covenant
+	# The Ehlnofey, also known as the Earth Bones, of the Dawn Era are a group of et'Ada who, along with the Hist, decided not to abandon Mundus, and instead worked to keep it viable. They remained in the mortal realm and populated it, becoming the progenitors of the modern races.
+	dir_ideas_7 = {
+		global_unrest = -3
+	}
+}
+
+
+#Daggerfall (Zardae)
+BA1_ideas = {
+	trigger = {
+		tag = BA1
+	}
+
+	start = {
+		trade_efficiency = 0.15
+		infantry_power = 0.10
+	}
+
+	bonus = {
+		army_tradition_decay = -0.025
+	}
+
+	free = yes
+
+	# Rough Civilization
+	# Daggerfall was founded a little before 1E 246 by invading Nords from Skyrim, who brought a rough sort of civilization with them during the Skyrim Conquests.
+	BA1_ideas_1 = {
+		land_forcelimit_modifier = 0.15
+	}
+
+	# Economic Force
+	# By 1E 609, under the rule of King Thagore, Daggerfall was already the preeminent economic force in southern High Rock, and it remained so for millennia.
+	BA1_ideas_2 ={
+		global_tax_modifier = 0.125
+	}
+
+	# Daggerfall Covenant
+	# In 2E 541, Daggerfall was threatened by the Reachmen under Durcorach the Black Drake, whose army gathered in front of the city gates. However, the troops were attacked from behind by the army of Heavy Dragoons from Wayrest, who followed them aboard merchant ships. During the battle, Durcorach was slain by Emeric of Cumberland, and his banner was torn. This was a fatal blow to the Reachmen, and soon, the Knights of the Dragon under King Bergamot finished what the Dragoons had begun, scattering the remnants of Durcorach's army. Two weeks later, the kings of Daggerfall, Camlorn, Shornhelm, Wayrest, and Evermore signed the first Daggerfall Covenant.
+	BA1_ideas_3 = {
+		diplomatic_upkeep = 1
+	}
+	
+	# Daggerfall Espionage
+	# Espionage often took the place of open warfare - for example, a Breton assassin who nearly killed Queen Akorithi of Sentinel is widely thought to have been an agent of Daggerfall.
+	BA1_ideas_4 = {
+		spy_offence = 0.20
+	}
+	
+	# Banks of Daggerfall
+	# A sophisticated banking industry is well-established.
+	BA1_ideas_5 = {
+		inflation_reduction = 0.1
+	}
+
+	# Black Market
+	# Daggerfall hosts a robust black market, including skooma smuggling, which supplies destinations as far away as Morrowind, and an ambitious Thieves Guild.
+	BA1_ideas_6 = {
+		merchants = 1
+	}
+
+	# Warp in the West
+	# The Warp in the West (also known as the Miracle of Peace, or the Second Numidian Effect) was a phenomenon which took place between the 9th and 11th of Frostfall in 3E 417, when events stemming from the death of King Lysandus of Daggerfall set in motion an upheaval in Hammerfell and High Rock.
+	BA1_ideas_7 = {
+		global_unrest = -3
+	}
+}
+
+#Orsimer Nation
+ORS_ideas = {
+	trigger = {
+		tag = ORS
+	}
+
+	start = {
+		army_tradition_from_battle = 0.33
+		garrison_size = 0.25
+	}
+
+	bonus = {
+		army_tradition_decay = -0.025
+	}
+
+	free = yes
+
+	# Orc-City
+	# Orsinium (which literally translates to "Orc-Town" in Aldmeris) is the city of the Orsimer and the provincial seat of the region of Wrothgar, which came to be known as the Orsinium Area in the late Third Era. It has been sacked and rebuilt many times over the centuries, as the Orcs are often at odds with their Breton and Redguard neighbors. Orsinium was first built in High Rock, straddling the boundary between western Wrothgar and Rivenspire. In the mid-Second Era, the city was relocated to eastern Wrothgar. In 3E 399, it was relocated again to a site between Wayrest, Menevia, and the Wrothgarian Mountains. By 4E 201, Orsinium had been moved a third time, farther south to an area between Hammerfell and Skyrim.
+	ors_ideas_1 = {
+		land_forcelimit_modifier = 0.15
+	}
+
+	# Unified Nation
+	# After the transformation of the Orsimer deity known as Trinimac into the Daedric Prince Malacath, the Orcs, who transformed as well, fled to the northern wastes, near Saarthal. After hundreds of orcs, ogres, goblins, gremlins and other beastfolk were set free by the Altmer during the Camoran Dynasty, they chose to settle in an uninhabited mountain region close to Old Hroldan in High Rock, as their people were dependent on a rare, shaggy, giant centipede herd-beast that can only survive at high altitudes. In the tenth century of the First Era, chieftain Torug gro-Igron brought the Orcish people together and founded a village in the western Wrothgarian Mountains. Thanks to the cooperation of several Orcish clans, particularly Igrun, Morkul, Shatul, and Tumnosh, the village quickly grew into a great stone city. The first Orsinium drew the Orcs by its magnificence and Torug's vision of a united Orc nation.
+	ors_ideas_2 ={
+		max_absolutism = 10
+		governing_capacity_modifier = 0.1
+	}
+
+	# The Siege of Orsinium
+	# During the 30-year campaign, which became widely known as the "Siege of Orsinium", the Breton armies of Daggerfall, the Redguard soldiers of Sentinel, and the Yokudan Order of Diagna invaded the Orc homeland. The Orcs gave much resistance and proved themselves to be fearsome and brutal warriors, just as they did in the past.
+	ors_ideas_3 = {
+		defensiveness = 0.15
+	}
+	
+	# Permanent Hostilities
+	# Nobody seems to like orcs.
+	ors_ideas_4 = {
+		war_exhaustion = -0.04
+	}
+			
+	# Proud Barbarians
+	# These sophisticated barbarian beast peoples of the Wrothgarian and Dragontail Mountains are noted for their unshakeable courage in war and their unflinching endurance of hardships. Orc warriors in heavy armor are among the finest front-line troops in the Empire. Most Imperial citizens regard Orc society as rough and cruel, but there is much to admire in their fierce tribal loyalties and generous equality of rank and respect among the sexes.
+	ors_ideas_5 = {
+		general_cost = -0.10
+		infantry_power = 0.10
+	}
+
+	# Gortwog
+	# At some point later, the Orcs again lost control of Orsinium. The land was then won back by the Orc hero Gortwog gro-Nagorm in 3E 399, who was disputing claim on the land, made by the Breton noble Lord Bowyn. Gortwog won the land by defeating Lord Bowyn in a duel. Named Nova Orsinium, the city was rebuilt on a mountainside between Menevia and Wayrest, at the site of Torug's original Orsinium. As the city harbored statues of Orc heroes such as Mauloch and Torug, and was built of iron, it was likely that Nova Orsinium would provoke the same reaction from its neighboring kingdoms as the first city did. However, the land prospered, as Gortwog proved to be a diplomatic as well as a political genius. Following the events of the Miracle of Peace, Gortwog used the Numidium to conquer substantial territory of central High Rock. Its application for elevation to Provincial status, which was proposed to Tiber Septim at the founding of the Third Empire, was finally beginning to be reviewed by Emperor Uriel Septim VII.
+	ors_ideas_6 = {
+		diplomatic_reputation = 3
+	}
+
+	# Warp in the West
+	# High Rock was eventually brought into the Third Empire by Tiber Septim during the Tiber Wars. Still divided, some did unite to try to stop the Camoran Usurper, yet he was not stopped until the Baron of Dwynnen united the citizens of the Iliac Bay against him. The Bretons would not remain united, and went back to fighting one another, and those outside of High Rock, until they had to unite when the Nords reclaimed their land in the War of Bend'r-Mahk, when they fought the Redguards in the War of Betony, and when the Orcs resurrected Orsinium. However they would be united in The Miracle of Peace. "The 'Miracle of Peace' is celebrated as the product of the miraculous interventions of Stendarr, Mara, and Akatosh to transform this troublesome region into peaceful, well-governed Imperial counties. This event transformed High Rock from numerous city-states into five kingdoms.
+	ors_ideas_7 = {
+		global_unrest = -3
+	}
+}
+
+#Wrothgar Mountains
+WRO_ideas = {
+	trigger = {
+		tag = WRO
+	}
+
+	start = {
+		available_province_loot = 0.75
+		manpower_in_true_faith_provinces = 0.15
+	}
+
+	bonus = {
+		army_tradition_decay = -0.025
+	}
+
+	free = yes
+
+	# The Scattered
+	# Not content to simply destroy Orsinium this time, the Bretons also apparently seized control of the land and scattered the Orcs across northern Tamriel. Some Orcs chose to retreat to their strongholds in northern Wrothgar, while others set out to reassert ancient territorial claims in Skyrim. Chief Yashnag gro-Yazgu in particular succeeded in carving out a chiefdom in western Falkreath that persisted until 2E 467, when Yashnag and his champions were slain by Hakkvild Yashnag-Slayer, the Jarl of Falkreath, in a ritual of single-combat.
+	wro_ideas_1 = {
+		land_forcelimit_modifier = 0.20
+	}
+
+	# Mining Industry
+	# 175 mines full of any ore orc could possibly want. A deep pit almost blocks your path. Deep ruts score the ground here. Piles of dirt are everywhere.	You clamber over piles of gravel. You detour around a gaping pit. You pass a heap of rising shovels.
+	wro_ideas_2 ={
+		global_trade_goods_size_modifier = 0.125
+	}
+
+	# Battlefield of Races
+	# The region is inhabited mostly by Orcs, Bretons, Nords, Reachfolk, and the region was once inhabited by the Dwemer. Riekr, the ice goblins, make their home in the Wrothgar Mountains as well.
+	wro_ideas_3 = {
+		hostile_attrition = 1
+	}
+	
+	# Independent Kingdom
+	# The deal made between Emeric and Korug gave the Orcs control of all Wrothgar as an independent kingdom separate from High Rock. Terms such as Breton High Rock and Orcish Wrothgar were used to distinguish the two as being independent. At this time Farrun was under the control of the Orcs, and was an Orcish Stronghold going by the name Fharun. The Orcs would also reclaim all of Wrothgar from the Reachmen, who had control of the Wrothgarian Mountains during the reign of the Longhouse Emperors.
+	wro_ideas_4 = {
+		land_morale = 0.10
+	}
+			
+	# Proud Barbarians
+	# These sophisticated barbarian beast peoples of the Wrothgarian and Dragontail Mountains are noted for their unshakeable courage in war and their unflinching endurance of hardships. Orc warriors in heavy armor are among the finest front-line troops in the Empire. Most Imperial citizens regard Orc society as rough and cruel, but there is much to admire in their fierce tribal loyalties and generous equality of rank and respect among the sexes.
+	wro_ideas_5 = {
+		general_cost = -0.10
+		infantry_power = 0.10
+	}
+
+	# Volcanic Caves
+	# A hot spring bubbles nearby. A path winds off among the boulders. Everything here is covered in ash. Steam rises from cracks in the earth. Stone outcroppings dot the area. You pass several lava boulders.
+	wro_ideas_6 = {
+		leader_land_fire = 1
+	}
+
+	# Warp in the West
+	# High Rock was eventually brought into the Third Empire by Tiber Septim during the Tiber Wars. Still divided, some did unite to try to stop the Camoran Usurper, yet he was not stopped until the Baron of Dwynnen united the citizens of the Iliac Bay against him. The Bretons would not remain united, and went back to fighting one another, and those outside of High Rock, until they had to unite when the Nords reclaimed their land in the War of Bend'r-Mahk, when they fought the Redguards in the War of Betony, and when the Orcs resurrected Orsinium. However they would be united in The Miracle of Peace. "The 'Miracle of Peace' is celebrated as the product of the miraculous interventions of Stendarr, Mara, and Akatosh to transform this troublesome region into peaceful, well-governed Imperial counties. This event transformed High Rock from numerous city-states into five kingdoms.
+	wro_ideas_7 = {
+		global_unrest = -3
+	}
+}
+
+# Winterborn Clan
+WTB_ideas = {
+	trigger = {
+		tag = WTB
+	}
+
+	start = {
+		unjustified_demands = -0.2
+		global_tax_modifier = 0.15
+	}
+
+	bonus = {
+		free_leader_pool = 1
+	}
+
+	free = yes
+
+	# Malacath Worshippers
+	# The Winterborn are Reachfolk clan who have inhabited the Wrothgar region of the Western Reach, dating back to the First Era. Though they devoutly worship Malacath, they have often been at odds with the Orsimer, and fought against them during the Siege of Orsinium.
+	wtb_ideas_1 = {
+		years_of_nationalism = -7
+	}
+
+	# Winterborn Wild Hunt Wolves
+	# According to Breton "the winter's frost rimes those wolves' hearts and a blizzard's raging winds bellow from their howl". They also state only those with cold hate in their veins can endure riding these creatures. Not to be confused with wood elven Wild Hunt (although their intelligence is similar).
+	wtb_ideas_2 ={
+		shock_damage = 0.125
+	}
+
+	# Battlefield of Races
+	# The region is inhabited mostly by Orcs, Bretons, Nords, Reachfolk, and the region was once inhabited by the Dwemer. Riekr, the ice goblins, make their home in the Wrothgar Mountains as well.
+	wtb_ideas_3 = {
+		hostile_attrition = 1
+	}
+	
+	# Evandene Tusk Collector
+	# During a raid on an Orc village, she showed restraint in 'merely' decimating the populace. Her daughter Mercedene grew livid when she arrived with reinforcements, and challenged her mother on the spot. According to the tale, she said, "Harvesting a tenth of the weeds yields a harder strain of weed. Best to burn the field so its soil can take another crop." She then killed her mother, cut out her heart, and ate it. When Mercedene left the village, the Winterborn rode at her back as she usurped her mother's position and was then on called the "Beast of the Reach". All the villagers were so full of arrows that they "resembled pine cones", and Evandene's corpse decorated the altar to Malacath.
+	wtb_ideas_4 = {
+		diplomatic_reputation = -1
+		ae_impact = -0.15
+	}
+			
+	# Longhouse Emperors
+	# Years later in the Interregnum, the Winterborn Clan ruled over Wrothgar amidst the reign of the Longhouse Emperors of the Reach. When the Daggerfall Covenant had formed and the Orcs were diplomatically granted full control of the Wrothgar territory, the Winterborn fought against them as the ongoing Alliance War was raging on in 2E 582. It was splintered faction with thirteen leading warlords. Regarded as eccentric at best and utterly alien at worst by Cyrodiil's populace, the Longhouse Emperors' reign began when Durcorach the Black Drake and his warriors conquered Cyrodiil in 2E 533, a feat believed to have been made possible with the aid of sympathetic Imperial nobles and secret Daedra worshipers who struck a deal with Mehrunes Dagon.
+	wtb_ideas_5 = {
+		adm_tech_cost_modifier = -0.15
+	}
+
+	# Volcanic Caves
+	# A hot spring bubbles nearby. A path winds off among the boulders. Everything here is covered in ash. Steam rises from cracks in the earth. Stone outcroppings dot the area. You pass several lava boulders.
+	wtb_ideas_6 = {
+		leader_land_fire = 1
+	}
+
+	# Urfon Ice-Heart
+	# Urfon Ice-Heart was born during the Interregnum in Second Era as a member of the Winterborn. Little is known of his past but he eventually became a prominent figure among the Winterborn of Wrothgar, becoming known for legends surrounding his person. According to some of those stories Urfon has ice in his veins and posses the ability to freeze the blood of his foes with a mere flick of his wrist.
+	wtb_ideas_7 = {
+		global_regiment_cost = -0.15
+	}
+}
+
+#Wayrest
+WAY_ideas = {
+	trigger = {
+		OR = {
+			tag = BC8
+			tag = WAY
+		}
+	}
+
+	start = {
+		global_tax_modifier = 0.15
+		idea_cost = -0.15
+	}
+
+	bonus = {
+		global_trade_power = 0.15
+	}
+
+	free = yes
+
+	# Cutthroat Politics
+	# Ask Lysandus what happened to him.
+	way_ideas_1 = {
+		global_spy_defence = 0.20
+		spy_offence = 0.33
+	}
+
+	# Harpy Nests
+	# Harpies are a race of fierce, carnivorous, feminine humanoids with the wings of a bird. They are common nuisance around the Iliac Bay area, particularly in Lainlyn, but are found wherever there are rocky cliffs and crags suitable for their nests. They also build their nests in abandoned ruins. While their maniacal nature makes them somewhat less-than-brilliant tacticians, their sharp talons and frenzied behavior often force kingdoms to abandon lands to their use. Harpy feathers are everywhere.
+	way_ideas_2 ={
+		harsh_treatment_cost = -0.25
+	}
+
+	# Jewel of the Bay
+	# Wayrest is one of the most glorious cities of western Tamriel: sparkling in her contemporary beauty, lustrous by her past. She is prized above all cities in High Rock -- no other city has contributed, and continues to contribute so much to the culture of the Bretons. The spirits of her genius children continue to haunt the streets; you can see them in the gabled roofs, grand boulevards, aromatic marketplaces. The people of Wayrest have an instictive (sic) appreciation of their past, but are not obsessed by it, as the people of Daggerfall seem to be. One feels that one is in a modern city when one visits Wayrest, but there is a magic in the air that could only come from thirty-two centuries of civilization.
+	way_ideas_3 = {
+		development_cost = -0.15
+	}
+	
+	# City of Disasters
+	# Wayrest has survived blights, droughts, plagues, piracy, invasions, and war with good humor and practicality. In 1E 2702, the entire population of the city was forced to move into the walled estate of the Gardners as protection against the pirates, Akaviri raiders, and Thrassian plague. A less resourceful community would have withered, but the Wayresters have survived to enrich Tamriel generation after generation.
+	way_ideas_4 = {
+		global_monthly_devastation = -0.10
+	}
+			
+	# Gardner Protectors
+	# King of Wayrest in the Second Era, and the last member of the Gardner dynasty, descended from a merchant prince who was first proclaimed king. He expanded the city's walls and fortifications, allowing it to survive a 57-day siege by Durcorach's invading hordes in 2E 541. Wayrest's forces were instrumental in defeating the Reachmen, and in the aftermath, King Gardner joined with several other Breton kingdoms in signing the first Daggerfall Covenant, a pact of mutual defense. Wayrest thrived for many years afterwards, until the king was suddenly felled by the Knahaten Flu along with his entire family, ending the Gardner dynasty. He was succeeded by Emeric, of the Cumberland Dynasty, who would go on to form the second Daggerfall Covenant which vied for the Ruby Throne during the Interregnum.
+	way_ideas_5 = {
+		inflation_reduction = 0.1
+	}
+
+	# Bjoulsae River
+	# The Bjoulsae River is a major river that forms most of the border between Hammerfell and High Rock. It is the home of the River Horse Bretons, tribes of nomadic Bretons that live throughout the river and nearby Bangkorai.
+	way_ideas_6 = {
+		trade_steering = 0.2
+	}
+
+	# Warp in the West
+	# High Rock was eventually brought into the Third Empire by Tiber Septim during the Tiber Wars. Still divided, some did unite to try to stop the Camoran Usurper, yet he was not stopped until the Baron of Dwynnen united the citizens of the Iliac Bay against him. The Bretons would not remain united, and went back to fighting one another, and those outside of High Rock, until they had to unite when the Nords reclaimed their land in the War of Bend'r-Mahk, when they fought the Redguards in the War of Betony, and when the Orcs resurrected Orsinium. However they would be united in The Miracle of Peace. "The 'Miracle of Peace' is celebrated as the product of the miraculous interventions of Stendarr, Mara, and Akatosh to transform this troublesome region into peaceful, well-governed Imperial counties. This event transformed High Rock from numerous city-states into five kingdoms.
+	way_ideas_7 = {
+		global_unrest = -3
+	}
+}
+
+#Evermore (not formable yet?)
+EVE_ideas = {
+	trigger = {
+		OR = {
+			tag = BC8
+			tag = EVE
+		}
+	}
+
+	start = {
+		cavalry_cost = -0.20
+		yearly_army_professionalism = 0.015
+	}
+
+	bonus = {
+		allowed_marine_fraction = 0.15
+	}
+
+	free = yes
+
+	# Granite Palace
+	# Its impressive palace was assembled from slabs of granite quarried from nearby Markarth.
+	eve_ideas_1 = {
+		build_cost = -0.20
+	}
+
+	# Bjoulsae River
+	# The Bjoulsae River is a major river that forms most of the border between Hammerfell and High Rock. It is the home of the River Horse Bretons, tribes of nomadic Bretons that live throughout the river and nearby Bangkorai.
+	eve_ideas_2 ={
+		trade_steering = 0.2
+	}
+
+	# Pelin Veneration
+	# Saint Pelin the Martyr was a Breton priest of Stendarr that ascended to the role of sainthood following his divine act in the defense of the Bangkorai Garrison in 1E 1029, which in turn, brought the province of High Rock into the First Empire of Cyrodiil. He had become a folk hero to the Bretons of Evermore and the greater region of Bretonic-Bangkorai, memorialized by the chapel of St. Pelin in Evermore, the Order of Saint Pelin, the knightly order of the Kingdom of Evermore, and the great cemetery called Pelin Graveyard.
+	eve_ideas_3 = {
+		all_estate_loyalty_equilibrium = 0.10
+	}
+	
+	# River Horse Bretons
+	# The River Horse Bretons is the indigenous group of tribal Bretons that live in the Bjoulsae River region. While information on them is scarce, the horse-men are a nomadic, primitive folk that wear fur armor and bone necklaces, much like the Reachmen. As the name suggests, they are known for their horses. Their battle strategies and tactics are described as straight-forward, which is the "way of the horse men", in the book The Mirror.
+	eve_ideas_4 = {
+		cavalry_power = 0.33
+	}
+			
+	# Evermor
+	# We of Evermore welcome you into our walls. Many call this their home and extend their welcome. Remember this, lest you forget who you would face in the world outside...
+	eve_ideas_5 = {
+		diplomats = 1
+	}
+
+	# Bangkorai
+	# Many times throughout history, the soldiers of the Bangkorai Garrison have successfully stopped invaders from pouring through the Bangkorai Pass, protecting the lands beyond it from military conquest. In 1E 874, a horde of Orcs and goblins which had been displaced by the Redguards flowed west, but were denied passage at the Bangkorai Pass. They were forced to head northeast into the Dragontail Mountains in order to reach Orsinium. Then, in 1E 1029, when the Imperial Legion under Empress Hestra deposed King Styriche, the Vampire of Verkarth, he and his Gray Host fled west, burning and killing as they came, but were successfully stopped and routed at the Pass.
+	eve_ideas_6 = {
+		prestige = 1
+	}
+
+	# Reachmen Raids
+	# Is there any country in High Rock NOT harrased by them?
+	eve_ideas_7 = {
+		improve_relation_modifier = 0.25
+	}
+}

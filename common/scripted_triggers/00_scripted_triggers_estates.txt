@@ -1,0 +1,26 @@
+
+# Used to determine if the country is strong enough to force 
+# out the rest of the estates for actions that would have them
+# removed.
+crown_stronger_than_estate = {
+	crown_land_share = $estate$
+	estate_loyalty = {
+		estate = $estate$
+		higher_than_influence = yes
+	}
+}
+
+has_any_estates = {
+	OR = {
+		has_estate = estate_mages
+		has_estate = estate_commoners
+		has_estate = estate_merchants
+		has_estate = estate_warriors
+		has_estate = estate_priests
+		has_estate = estate_nobility
+		has_estate = estate_slavers
+		has_estate = estate_morag_tong
+		has_estate = estate_dark_brotherhood
+		has_estate = estate_assassins
+	}
+}

@@ -1,0 +1,732 @@
+es_participation_in_the_ritual = {
+	local_unrest = 10
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+}
+
+es_hunted_necromants = {
+	global_unrest = -1.5
+	global_manpower_modifier = -0.15
+	mercenary_manpower = -0.15
+}
+
+es_adm_tch_boost = {
+	adm_tech_cost_modifier = -0.05
+}
+
+es_dip_tch_boost = {
+	dip_tech_cost_modifier = -0.05
+}
+
+es_mil_tch_boost = {
+	mil_tech_cost_modifier = -0.05
+}
+
+es_peculiar_insight = {
+	idea_cost = -0.10
+}
+
+es_mad_ruler = {
+	global_unrest = 2.5
+	years_of_nationalism = -10
+	harsh_treatment_cost = -0.50
+	tolerance_heretic = 1.5
+	tolerance_heathen = 3.5
+}
+
+es_winterborn_clan = {
+	discipline = 0.10
+	tolerance_own = 1
+	improve_relation_modifier = 0.25
+	tolerance_heretic = -3
+	tolerance_heathen = -5
+}
+
+es_hircine_blessing = {
+	infantry_fire = 0.10
+	cavalry_flanking = 0.15
+	manpower_recovery_speed = 0.05
+}
+
+es_brutal_laws = {
+	global_unrest = -1.0
+	stability_cost_modifier = -0.10
+	trade_efficiency = 0.10
+}
+
+es_azura_protection = {
+	defensiveness = 0.25
+	garrison_size = 0.15
+	hostile_attrition = 1
+}
+
+es_azura_transition = {
+	global_unrest = -2.5
+	stability_cost_modifier = -0.15
+	yearly_corruption = -0.1
+}
+
+es_boethiah_approval = {
+	land_morale = 0.10
+	global_spy_defence = 0.25
+	spy_offence = 0.15
+}
+
+es_boethiah_rage = {
+	global_unrest = 1.0
+	min_autonomy_in_territories = 0.15
+	harsh_treatment_cost = 0.25
+}
+
+es_harsh_ruler = {
+	global_unrest = 2.5
+	years_of_nationalism = -5
+	discipline = 0.05
+}
+
+es_grand_fair = {
+	local_unrest = 10
+	local_tax_modifier = 1.0
+	local_production_efficiency = 1.0
+}
+
+es_fury_of_malacath = {
+	global_regiment_cost = 0.15
+	global_regiment_recruit_speed = 0.25
+	mercenary_manpower = -0.35
+}
+
+es_order_in_architecture = {
+	build_cost = -0.15
+	build_time = -0.35
+}
+
+es_order_in_court = {
+	advisor_cost = -0.10
+	expand_administration_cost = -0.10
+}
+
+es_order_in_army = {
+	global_manpower_modifier = 0.15
+	land_maintenance_modifier = -0.15
+}
+
+es_order_in_fleet = {
+	sailor_maintenance_modifer = -0.15
+	naval_maintenance_modifier = -0.15
+}
+
+es_spiders_invasion = {
+	local_production_efficiency = -0.5
+	trade_goods_size_modifier = -0.5
+	local_manpower_modifier = -0.5
+}
+
+es_daedric_famine = {
+	local_manpower_modifier = -1.0
+	local_unrest = 5
+	supply_limit_modifier = -1.0
+}
+
+es_daedric_plague = {
+	local_production_efficiency = -0.75
+	local_tax_modifier = -0.50
+	local_unrest = -10
+}
+
+es_harsh_religious_policy = {
+	global_missionary_strength = 0.015
+	missionary_maintenance_cost = 1.0
+	tolerance_own = 1
+	tolerance_heretic = -2.5
+	tolerance_heathen = -3.5
+}
+
+es_lack_of_priests = {
+	missionaries = -1
+}
+
+es_angry_mob = {
+	local_unrest = 10
+}
+
+es_rise_of_dragon_cult = {
+	land_morale = 0.25
+	discipline = 0.10
+	land_forcelimit_modifier = 0.35
+	global_manpower_modifier = 1.0
+	manpower_recovery_speed = 0.5
+}
+
+es_lack_of_clergy = {
+	global_missionary_strength = -0.025
+	missionary_maintenance_cost = 0.5
+}
+
+es_dissatisfied_people = {
+	global_unrest = 1.5
+	tolerance_own = -0.5
+}
+
+es_furious_people = {
+	stability_cost_modifier = 0.15
+}
+
+es_love_and_beuty_festival = {
+	manpower_recovery_speed = 0.25
+	sailors_recovery_speed = 0.25
+}
+
+es_art_and_music_festival = {
+	prestige = 1.5
+}
+
+es_rains = {
+	global_trade_goods_size_modifier = 0.10
+}
+
+es_storms = {
+	production_efficiency = -0.10
+}
+
+es_clear_sky = {
+	development_cost = -0.1
+}
+
+es_lack_of_sunkight = {
+	global_manpower_modifier = -0.10
+}
+
+es_mild_winter = {
+	global_own_trade_power = 0.10
+}
+
+es_severe_winter = {
+	trade_steering = -0.10
+}
+
+es_maras_dissapointment = {
+	diplomatic_reputation = -1.5
+	ae_impact = 0.10
+	war_exhaustion_cost = 0.25
+}
+
+es_maras_fury = {
+	global_unrest = 2.5
+	years_of_nationalism = 5
+	reduced_liberty_desire_on_same_continent = -10
+}
+
+es_legend_of_lorkhan = {
+	global_unrest = 1.5
+}
+
+es_legend_of_shorr = {
+	global_unrest = -1.5
+}
+
+es_zealous_values = {
+	global_missionary_strength = 0.025
+}
+
+es_graciousness_values = {
+	diplomatic_annexation_cost = -0.15
+}
+
+es_charity_values = {
+	land_morale = 0.10
+}
+
+es_decline_of_trade = {
+	global_trade_power = -0.10
+}
+
+es_praise_alduin = {
+	discipline = 0.10
+	land_morale = 0.15
+	global_unrest = 5
+}
+
+es_omens_of_world_eater = {
+	tolerance_own = -5.0
+}
+
+es_small_sacrifice_for_alduin = {
+	production_efficiency = -0.05
+}
+
+es_medium_sacrifice_for_alduin = {
+	production_efficiency = -0.10
+}
+
+es_large_sacrifice_for_alduin = {
+	production_efficiency = -0.15
+}
+
+es_concentrating_runes = {
+	build_cost = -0.25
+	idea_cost = -0.15
+	global_institution_spread = 0.10
+}
+
+es_guardian_runes = {
+	accept_vassalization_reasons = 25
+	diplomatic_annexation_cost = -0.15
+	diplomatic_reputation = 1.0
+}
+
+es_protective_runes = {
+	defensiveness = 0.25
+	merc_maintenance_modifier = -0.15
+	recover_army_morale_speed = 0.10
+}
+
+es_malacaths_appoval = {
+	prestige_from_land = 0.5
+	army_tradition_from_battle = 0.25
+	mercenary_discipline = 0.10
+}
+
+es_orceys_curse = {
+	advisor_cost = 0.15
+	leader_cost = 1.0
+	global_regiment_cost = 0.25
+}
+
+es_tsuns_protection = {
+	stability_cost_modifier = -0.25
+	global_unrest = -1.5
+	state_maintenance_modifier = -0.10
+}
+
+es_the_adversary_tormentings = {
+	harsh_treatment_cost = 0.35
+	global_unrest = 2.5
+	yearly_corruption = 0.15
+}
+
+es_need_of_stability = {
+	stability_cost_modifier = -0.25
+	global_missionary_strength = 0.015
+	global_tax_modifier = -0.10
+}
+
+es_need_of_prosperity = {
+	trade_steering = 0.25
+	global_trade_goods_size_modifier = 0.15
+	diplomatic_reputation = -1.0
+}
+
+es_need_of_prtotection = {
+	defensiveness = 0.25
+	recover_army_morale_speed = 0.15
+	army_tradition_decay = 0.01
+}
+
+#########
+
+es_atak = {
+	build_cost = -0.25
+	global_institution_spread = 0.15
+	defensiveness = -0.10
+}
+
+es_kota = {
+	years_of_nationalism = 10
+	siege_ability = 0.15
+	war_exhaustion_cost = -0.25
+}
+
+es_holy_grove = {
+	global_unrest = -2.5
+}
+
+es_blesssed_weapons = {
+	infantry_power = 0.10
+}
+
+es_hunt_on_warebears = {
+	army_tradition_decay = -0.015
+	manpower_recovery_speed = -0.10
+}
+
+es_peace_with_warebears = {
+	reduced_liberty_desire = 10
+	development_cost = 0.15
+}
+
+es_army_drilling = {
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.5
+}
+
+es_new_temple = {
+	tolerance_own = 1.5
+	global_heretic_missionary_strength = 0.25
+	harsh_treatment_cost = 0.35
+}
+
+es_natural_reservation = {
+	prestige = 0.5
+	missionary_maintenance_cost = -0.35
+	establish_order_cost = -0.25
+}
+
+### Nautical Religious Events
+
+es_challenged_by_tava = {
+	heavy_ship_power = 0.10
+	light_ship_power = 0.15
+	galley_power = 0.20
+	transport_power = 0.25
+	naval_maintenance_flagship_modifier = 0.25
+}
+
+es_awaiting_gifts = {
+	naval_morale = -0.10
+	global_ship_recruit_speed = -0.15
+	naval_maintenance_flagship_modifier = -0.25
+}
+
+es_smell_of_opportunity = {
+	privateer_efficiency = 0.25
+	capture_ship_chance = 0.15
+	naval_attrition = -0.10
+}
+
+es_threat_of_starvation = {
+	global_unrest = 5
+}
+
+es_abnormal_preach = {
+	global_unrest = 2.5
+	stability_cost_modifier = -0.10
+	global_heretic_missionary_strength = 0.01
+}
+
+es_alive_satakal = {
+	tolerance_own = 2.5
+	missionary_maintenance_cost = -0.50
+	global_missionary_strength = 0.015
+}
+
+es_blessed_blade = {
+	land_morale = 0.10
+}
+
+es_melted_blade = {
+	production_efficiency = 0.10
+}
+
+es_unique_blade = {
+	discipline = 0.10
+}
+
+es_crushed_infidels = {
+	tolerance_own = 2.5
+	tolerance_heretic = -3.5
+	tolerance_heathen = -5
+}
+
+es_war_against_mer = {
+	province_warscore_cost = -0.25
+	ae_impact = 0.10
+}
+
+es_forgotten_threats = {
+	global_unrest = -2.5
+	improve_relation_modifier = -0.25
+}
+
+es_reconcile_threats = {
+	tolerance_heretic = 3.5
+	tolerance_heathen = 3.5
+}
+
+ignored_concerns = {
+	local_unrest = 10
+}
+
+# Aedric, but not Divines Religious Events
+
+auri_el_stature = {
+	global_unrest = -2.5
+}
+
+auril_el_temple = {
+	prestige = 2.5
+	legitimacy = 1
+	republican_tradition = 1
+	horde_unity = 1
+	devotion = 1
+	meritocracy = 1
+	global_unrest = -1.5
+}
+
+aedric_events_martial_law = {
+	harsh_treatment_cost = -0.50
+	land_maintenance_modifier = -0.25
+	manpower_recovery_speed = 0.15
+}
+
+aedric_events_executed_general = {
+	free_leader_pool = -1
+}
+
+aedric_events_executed_warrior = {
+	global_manpower_modifier = -0.15
+}
+
+es_governing_guidelines = {
+	adm_tech_cost_modifier = -0.15
+}
+
+es_past_treaties = {
+	dip_tech_cost_modifier = -0.15
+}
+
+es_military_manuals = {
+	mil_tech_cost_modifier = -0.15
+}
+
+es_vault_for_books = {
+	adm_tech_cost_modifier = -0.10
+	dip_tech_cost_modifier = -0.10
+	mil_tech_cost_modifier = -0.10
+}
+
+es_fair_tariffs = {
+	trade_efficiency = 0.05
+}
+
+es_high_tariffs = {
+	trade_efficiency = 0.15
+}
+
+es_wise_investments = {
+	trade_efficiency = 0.10
+	production_efficiency = 0.10
+	global_unrest = -1
+}
+
+es_banned_book = {
+	global_unrest = 2.5
+}
+
+es_sharing_heritage = {
+	idea_cost = -0.10
+	yearly_harmony = -1
+	religion = yes
+}
+
+es_protecting_heritage = {
+	stability_cost_modifier = 0.15
+	yearly_harmony = 1
+}
+
+#######################################################################
+
+es_discrepancy_in_rites = {
+	tolerance_own = -1
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+es_rooting_out_heresy = {
+	local_unrest = 5
+	local_state_maintenance_modifier = 0.25
+	trade_goods_size_modifier = -1.0
+}
+
+#######################################################################
+
+es_colonial_enthusiasm = {
+	colonists = 1
+}
+
+es_monetary_benefits = {
+	global_tax_modifier = 0.15
+}
+
+es_colonial_enthusiasm_2 = {
+	global_colonial_growth = 25
+}
+
+rush_of_merchants = {
+	merchants = 1
+}
+
+rush_of_merchants_2 = {
+	trade_efficiency = 0.10
+}
+
+es_merchant_monetary_benefits = {
+	global_foreign_trade_power = 0.15
+}
+
+es_merchant_monetary_benefits_2 = {
+	ship_power_propagation = 0.25
+}
+
+#######################################################################
+
+es_fort_maintenance = {
+	defensiveness = 0.15
+	fort_maintenance_modifier = 0.25
+}
+
+es_old_forts = {
+	garrison_size = -0.35
+}
+
+es_modern_forts = {
+	defensiveness = 0.25
+}
+
+es_general_hospital = {
+	global_manpower_modifier = 0.25
+	manpower_recovery_speed = 0.15
+	global_tax_modifier = -0.10
+}
+
+es_devotion_increased_taxes = {
+	global_unrest = 2.5
+	tolerance_own = -1.5
+	global_tax_modifier = 0.10
+}
+
+es_corrupted_clergy = {
+	tolerance_own = -2.5
+	tolerance_heretic = 3.5
+	tolerance_heathen = 1.5
+}
+
+###
+
+es_vyrsago_tormentors = {
+	stability_cost_modifier = -0.10
+	harsh_treatment_cost = -0.15
+	global_unrest = -2.5
+}
+
+es_vyrsago_dreadguards = {
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.15
+	recover_army_morale_speed = 0.05
+}
+
+es_vyrsago_augurs = {
+	global_missionary_strength = 0.025
+	tolerance_own = 1.0
+	warscore_cost_vs_other_religion = -0.15
+}
+
+### 
+
+es_half_giants = {
+	local_culture_conversion_cost = 1.0
+	trade_goods_size_modifier = 0.50
+	local_unrest = -2.5
+}
+
+es_ogres = {
+	local_unrest = 2.5
+}
+
+es_no_more_ogres = {
+	local_unrest = -2.5
+}
+
+# Harpy Event Chain
+
+es_the_chosen_of_the_nocturnal = {
+	land_morale = 0.10
+	spy_offence = 0.15
+	global_spy_defence = 0.25
+}
+
+es_blessed_by_nocturnal = {
+	unjustified_demands = -0.10
+	global_missionary_strength = 0.015
+	rebel_support_efficiency = 0.25
+}
+
+es_nest_of_harpies = {
+	local_manpower_modifier = -0.50
+}
+
+# Last ships of atmora
+
+sundered_homeland = {
+	global_unrest = 2
+}
+
+atmoran_minority = {
+	local_manpower_modifier = 0.1
+    local_regiment_cost = -0.1
+    local_unrest = 1
+}
+
+es_grow_in_harmony_mod = {
+	development_cost = -0.10
+}
+
+es_primus_inter_pares_mod = {
+	global_tax_modifier = 0.05
+	global_unrest = 1.0
+}
+
+es_lost_respect_mod = {
+	diplomatic_reputation = -1.0
+}
+
+es_stand_the_ground_mod = {
+	discipline = 0.05
+	land_morale = 0.10
+	defensiveness = 0.15
+}
+
+#######################################################################
+
+es_opressed_merchants = {
+	global_own_trade_power = -0.10
+	global_tax_modifier = 0.10
+	harsh_treatment_cost = -0.15
+}
+
+es_merchants_leaving = {
+	trade_efficiency = -0.10
+	global_spy_defence = 0.25
+}
+
+wraith_of_ius = {
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = -1
+}
+
+es_jodes_high_hour = {
+	global_unrest = -1.5
+}
+
+es_wilderking_pleased = {
+	build_cost = -0.15
+	build_time = -0.25
+	tolerance_own = 1
+	diplomatic_reputation = -1.5
+	improve_relation_modifier = -0.10
+}
+
+es_fading_tree_is_protected = {
+	stability_cost_modifier = -0.10
+}
+
+es_local_unrest = {
+	local_unrest = 5.0
+	local_tax_modifier = -0.75
+	local_production_efficiency = -0.75
+}
+
+es_seth_temple = {
+	local_autonomy = 0.15
+}

@@ -1,0 +1,1230 @@
+namespace = esu_institutions
+#######################################
+# Smithing
+#######################################
+country_event = {
+	id = esu_institutions.1
+	title = esu_institutions.1.t
+	desc = esu_institutions.1.d
+	picture = ES_INSTITUTION_SMITHING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_smithing
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.100
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.101
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.100
+	title = esu_institutions.100.t
+	desc = esu_institutions.100.d
+	picture = ES_INSTITUTION_SMITHING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.100.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.101
+	title = esu_institutions.101.t
+	desc = esu_institutions.101.d
+	picture = ES_INSTITUTION_SMITHING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.101.o.a
+	}
+}
+
+#######################################
+# The Elder Scrolls
+#######################################
+country_event = {
+	id = esu_institutions.2
+	title = esu_institutions.2.t
+	desc = esu_institutions.2.d
+	picture = ES_INSTITUTION_THE_ELDER_SCROLLS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.2.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_the_elder_scrolls
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.200
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.201
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.200
+	title = esu_institutions.200.t
+	desc = esu_institutions.200.d
+	picture = ES_INSTITUTION_THE_ELDER_SCROLLS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.200.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.201
+	title = esu_institutions.201.t
+	desc = esu_institutions.201.d
+	picture = ES_INSTITUTION_THE_ELDER_SCROLLS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.201.o.a
+	}
+}
+
+#######################################
+# The Drake
+#######################################
+country_event = {
+	id = esu_institutions.3
+	title = esu_institutions.3.t
+	desc = esu_institutions.3.d
+	picture = ES_INSTITUTION_THE_DRAKE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.3.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_the_drake
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.300
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.301
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.300
+	title = esu_institutions.300.t
+	desc = esu_institutions.300.d
+	picture = ES_INSTITUTION_THE_DRAKE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.300.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.301
+	title = esu_institutions.301.t
+	desc = esu_institutions.301.d
+	picture = ES_INSTITUTION_THE_DRAKE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.301.o.a
+	}
+}
+
+#######################################
+# Alchemy
+#######################################
+country_event = {
+	id = esu_institutions.4
+	title = esu_institutions.4.t
+	desc = esu_institutions.4.d
+	picture = ES_INSTITUTION_ALCHEMY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.4.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_alchemy
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.400
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.401
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.400
+	title = esu_institutions.400.t
+	desc = esu_institutions.400.d
+	picture = ES_INSTITUTION_ALCHEMY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.400.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.401
+	title = esu_institutions.401.t
+	desc = esu_institutions.401.d
+	picture = ES_INSTITUTION_ALCHEMY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.401.o.a
+	}
+}
+
+#######################################
+# Organized Infrastructure
+#######################################
+country_event = {
+	id = esu_institutions.5
+	title = esu_institutions.5.t
+	desc = esu_institutions.5.d
+	picture = ES_INSTITUTION_ORGANIZED_INFRASTRUCTURE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.5.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_organized_infrastructure
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.500
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.501
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.500
+	title = esu_institutions.500.t
+	desc = esu_institutions.500.d
+	picture = ES_INSTITUTION_ORGANIZED_INFRASTRUCTURE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.500.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.501
+	title = esu_institutions.501.t
+	desc = esu_institutions.501.d
+	picture = ES_INSTITUTION_ORGANIZED_INFRASTRUCTURE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.501.o.a
+	}
+}
+
+#######################################
+# Imperialism
+#######################################
+country_event = {
+	id = esu_institutions.6
+	title = esu_institutions.6.t
+	desc = esu_institutions.6.d
+	picture = ES_INSTITUTION_IMPERIALISM_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.6.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_imperialism
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.600
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.601
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.600
+	title = esu_institutions.600.t
+	desc = esu_institutions.600.d
+	picture = ES_INSTITUTION_IMPERIALISM_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.600.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.601
+	title = esu_institutions.601.t
+	desc = esu_institutions.601.d
+	picture = ES_INSTITUTION_IMPERIALISM_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.601.o.a
+	}
+}
+
+#######################################
+# Enchanting
+#######################################
+country_event = {
+	id = esu_institutions.7
+	title = esu_institutions.7.t
+	desc = esu_institutions.7.d
+	picture = ES_INSTITUTION_ENCHANTING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.7.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_enchanting
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.700
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.701
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.700
+	title = esu_institutions.700.t
+	desc = esu_institutions.700.d
+	picture = ES_INSTITUTION_ENCHANTING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.700.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.701
+	title = esu_institutions.701.t
+	desc = esu_institutions.701.d
+	picture = ES_INSTITUTION_ENCHANTING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.701.o.a
+	}
+}
+
+#######################################
+# Astrology
+#######################################
+country_event = {
+	id = esu_institutions.8
+	title = esu_institutions.8.t
+	desc = esu_institutions.8.d
+	picture = ES_INSTITUTION_ASTROLOGY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.8.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_astrology
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.800
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.801
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.800
+	title = esu_institutions.800.t
+	desc = esu_institutions.800.d
+	picture = ES_INSTITUTION_ASTROLOGY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.800.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.801
+	title = esu_institutions.801.t
+	desc = esu_institutions.801.d
+	picture = ES_INSTITUTION_ASTROLOGY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.801.o.a
+	}
+}
+
+#######################################
+# Archaeology
+#######################################
+country_event = {
+	id = esu_institutions.9
+	title = esu_institutions.9.t
+	desc = esu_institutions.9.d
+	picture = ES_INSTITUTION_ARCHAEOLOGY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.9.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_archaeology
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.900
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.901
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.900
+	title = esu_institutions.900.t
+	desc = esu_institutions.900.d
+	picture = ES_INSTITUTION_ARCHAEOLOGY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.900.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.901
+	title = esu_institutions.901.t
+	desc = esu_institutions.901.d
+	picture = ES_INSTITUTION_ARCHAEOLOGY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.901.o.a
+	}
+}
+
+#######################################
+# Naval Guards
+#######################################
+country_event = {
+	id = esu_institutions.10
+	title = esu_institutions.10.t
+	desc = esu_institutions.10.d
+	picture = ES_INSTITUTION_NAVAL_GUARDS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.10.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_naval_guards
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.1000
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.1001
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.1000
+	title = esu_institutions.1000.t
+	desc = esu_institutions.1000.d
+	picture = ES_INSTITUTION_NAVAL_GUARDS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1000.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.1001
+	title = esu_institutions.1001.t
+	desc = esu_institutions.1001.d
+	picture = ES_INSTITUTION_NAVAL_GUARDS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1001.o.a
+	}
+}
+
+#######################################
+# Monuments
+#######################################
+country_event = {
+	id = esu_institutions.11
+	title = esu_institutions.11.t
+	desc = esu_institutions.11.d
+	picture = ES_INSTITUTION_MONUMENTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.11.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_monuments
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.1100
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.1101
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.1100
+	title = esu_institutions.1100.t
+	desc = esu_institutions.1100.d
+	picture = ES_INSTITUTION_MONUMENTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1100.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.1101
+	title = esu_institutions.1101.t
+	desc = esu_institutions.1101.d
+	picture = ES_INSTITUTION_MONUMENTS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1101.o.a
+	}
+}
+
+#######################################
+# Literacy
+#######################################
+country_event = {
+	id = esu_institutions.12
+	title = esu_institutions.12.t
+	desc = esu_institutions.12.d
+	picture = ES_INSTITUTION_LITERACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.12.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_literacy
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.1200
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.1201
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.1200
+	title = esu_institutions.1200.t
+	desc = esu_institutions.1200.d
+	picture = ES_INSTITUTION_LITERACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1200.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.1201
+	title = esu_institutions.1201.t
+	desc = esu_institutions.1201.d
+	picture = ES_INSTITUTION_LITERACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1201.o.a
+	}
+}
+
+#######################################
+# Plague Prevention
+#######################################
+country_event = {
+	id = esu_institutions.13
+	title = esu_institutions.13.t
+	desc = esu_institutions.13.d
+	picture = ES_INSTITUTION_PLAGUE_PREVENTION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.13.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_plague_prevention
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.1300
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.1301
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.1300
+	title = esu_institutions.1300.t
+	desc = esu_institutions.1300.d
+	picture = ES_INSTITUTION_PLAGUE_PREVENTION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1300.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.1301
+	title = esu_institutions.1301.t
+	desc = esu_institutions.1301.d
+	picture = ES_INSTITUTION_PLAGUE_PREVENTION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1301.o.a
+	}
+}
+
+#######################################
+# Organized Guilds
+#######################################
+country_event = {
+	id = esu_institutions.14
+	title = esu_institutions.14.t
+	desc = esu_institutions.14.d
+	picture = ES_INSTITUTION_ORGANIZED_GUILDS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.14.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_organized_guilds
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.1400
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.1401
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.1400
+	title = esu_institutions.1400.t
+	desc = esu_institutions.1400.d
+	picture = ES_INSTITUTION_ORGANIZED_GUILDS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1400.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.1401
+	title = esu_institutions.1401.t
+	desc = esu_institutions.1401.d
+	picture = ES_INSTITUTION_ORGANIZED_GUILDS_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1401.o.a
+	}
+}
+
+#######################################
+# Natural Philosophy
+#######################################
+country_event = {
+	id = esu_institutions.15
+	title = esu_institutions.15.t
+	desc = esu_institutions.15.d
+	picture = ES_INSTITUTION_NATURAL_PHILOSOPHY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.15.o.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		FROM = {
+			add_permanent_province_modifier = {
+				duration = -1
+				name = birthplace_of_natural_philosophy
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					knows_country = ROOT
+				}
+				country_event = {
+					id = esu_institutions.1500
+				}
+			}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						knows_country = ROOT
+					}
+				}
+				country_event = {
+					id = esu_institutions.1501
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esu_institutions.1500
+	title = esu_institutions.1500.t
+	desc = esu_institutions.1500.d
+	picture = ES_INSTITUTION_NATURAL_PHILOSOPHY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1500.o.a
+	}
+}
+
+country_event = {
+	id = esu_institutions.1501
+	title = esu_institutions.1501.t
+	desc = esu_institutions.1501.d
+	picture = ES_INSTITUTION_NATURAL_PHILOSOPHY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = esu_institutions.1501.o.a
+	}
+}

@@ -1,0 +1,66 @@
+es_ice_age = {
+	potential = {
+		is_year = 197
+		NOT = { is_year = 535 }
+		any_owned_province = {
+			superregion = atmora_superregion
+			NOT = { area = kamal_13_la }
+			NOT = { area = atmora_10_la }
+			NOT = { area = kamal_14_la }
+			NOT = { area = atmora_11_la }
+		}
+	}
+	
+	can_start = {
+		is_year = 272
+		any_owned_province = {
+			superregion = atmora_superregion
+			NOT = { area = kamal_13_la }
+			NOT = { area = atmora_10_la }
+			NOT = { area = kamal_14_la }
+			NOT = { area = atmora_11_la }
+		}
+	}
+	
+	can_stop = {
+		OR = {
+			NOT = {
+				any_owned_province = {
+					superregion = atmora_superregion
+				}
+			}
+			is_year = 535
+		}
+	}
+	
+	progress = {
+		modifier = {  
+			factor = 1
+			is_year = 272
+		}
+	}
+	
+	can_end = {
+		OR = {
+			NOT = {
+				any_owned_province = {
+					superregion = atmora_superregion
+				}
+			}
+			is_year = 535
+		}
+		
+	}
+	
+	modifier = {
+	}
+	on_start = es_ice_age.1
+	on_end = es_ice_age.2
+	
+	on_monthly = {
+		random_events = { 
+			100 = 0
+			5 = es_ice_age.3
+		}
+	}
+}

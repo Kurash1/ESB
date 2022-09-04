@@ -1,0 +1,2795 @@
+namespace = es_consort_events
+
+# Event Manager
+
+country_event = {
+	id = es_consort_events.100
+	title = es_consort_events.1.t
+	desc = es_consort_events.1.d
+	picture = ES_WEDDING_RINGS_2_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = es_consort_events.1 } }
+			1 = { country_event = { id = es_consort_events.3 } }
+			1 = { country_event = { id = es_consort_events.4 } }
+			1 = { country_event = { id = es_consort_events.5 } }
+			1 = { country_event = { id = es_consort_events.6 } }
+			1 = { country_event = { id = es_consort_events.7 } }
+			1 = { country_event = { id = es_consort_events.8 } }
+			1 = { country_event = { id = es_consort_events.9 } }
+			1 = { country_event = { id = es_consort_events.10 } }
+			1 = { country_event = { id = es_consort_events.11 } }
+			1 = { country_event = { id = es_consort_events.12 } }
+			1 = { country_event = { id = es_culture_religion_events.1 } }
+			1 = { country_event = { id = es_culture_religion_events.3 } }
+			1 = { country_event = { id = es_culture_religion_events.4 } }
+			1 = { country_event = { id = es_culture_religion_events.5 } }
+			1 = { country_event = { id = es_culture_religion_events.6 } }
+			1 = { country_event = { id = es_culture_religion_events.7 } }
+			83 = { set_country_flag = successful_consort_event }
+		}
+	}
+	
+	option = {
+		name = es_consort_events.1.a
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_consort_event }
+			clr_country_flag = successful_consort_event
+		}
+		else = {
+			country_event = {
+				id = es_consort_events.100
+				days = 1
+			}
+		}
+	}
+}
+
+# consort_events.1.t:0 "An Offer of Marriage"
+# consort_events.1.d:0 "To have a member of your family be the foremost consort of the [Root.Monarch.GetTitle] is a great honor and one influential familiy of [Root.GetName] in the hopes of securing their power has sent an offer, and an astronomic dowry, asking that [Root.Monarch.GetName] take their daughter's hand in marriage."
+# consort_events.1.a:0 "Accept the offer."
+# consort_events.1.b:0 "[Root.Monarch.GetName] must save [Root.Monarch.GetHerselfHimself] for a better offer."
+
+country_event = {
+	id = es_consort_events.1
+	title = es_consort_events.1.t
+	desc = es_consort_events.1.d
+	picture = ES_WEDDING_RINGS_2_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_consort = no
+		has_regency = no
+		is_female = no
+		is_lesser_in_union = no
+		government = monarchy
+		has_government_attribute = queen
+		NOT = { has_reform = elective_monarchy }
+		NOT = { has_reform = mamluk_government }
+		NOT = { has_reform = pirate_king_reform }
+		NOT = { has_ruler_flag = approached_by_leading_families_of_the_realm }
+		OR = {
+			has_heir = no
+			NOT = { heir_claim = 50 }
+		}
+		any_owned_province = {
+			is_capital = no
+			is_state = yes
+			is_in_capital_area = yes
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					is_state = yes
+					is_in_capital_area = yes 
+				}
+				save_event_target_as = origin_of_queens_family
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.1.a
+		add_years_of_income = 0.75
+		event_target:origin_of_queens_family = {
+			add_province_modifier = {
+				name = "domain_of_spouses_family"
+				duration = -1
+			}
+		}
+		define_consort = {
+			female = yes
+		}
+	}
+	option = {
+		name = es_consort_events.1.b
+		add_prestige = 10
+		if = {
+			limit = { has_estate = estate_nobility }
+			add_estate_loyalty = {
+				estate = estate_nobility
+				loyalty = -10
+			}
+		}
+	}
+}
+
+# consort_events.2.t:0 "The House of [Root.Consort.Dynasty.GetName]"
+# consort_events.2.d:0 "With the union of [Root.Monarch.GetName] and [Root.Consort.GetName] we have gained not only a spouse but also a new ally in the realm. The [Root.Consort.Dynasty.GetName] is an old and influential family and their seat in [origin_of_queens_family.GetName] is a jewel of the [Root.GovernmentName]. Of course friendship has to go both ways and [Root.Consort.GetName] will be expected to speak for [Root.Consort.GetHerHis] kin while our [Root.Monarch.GetTitle] will be expected consider such advice very carefully."
+# consort_events.2.a:0 "To everlasting friendship!"
+
+country_event = {
+	id = es_consort_events.2
+	title = es_consort_events.2.t
+	desc = es_consort_events.2.d
+	picture = {
+		trigger = { has_country_flag = es_coat_of_arms_1_flag }
+		picture = ES_COAT_OF_ARMS_1
+	}
+	picture = {
+		trigger = { has_country_flag = es_coat_of_arms_2_flag }
+		picture = ES_COAT_OF_ARMS_2
+	}
+	picture = {
+		trigger = { has_country_flag = es_coat_of_arms_3_flag }
+		picture = ES_COAT_OF_ARMS_3
+	}
+	picture = {
+		trigger = { has_country_flag = es_coat_of_arms_4_flag }
+		picture = ES_COAT_OF_ARMS_4
+	}
+	picture = {
+		trigger = { has_country_flag = es_coat_of_arms_5_flag }
+		picture = ES_COAT_OF_ARMS_5
+	}
+
+	# On Action Event!
+	trigger = {
+		has_foreign_consort = no
+		is_lesser_in_union = no
+		NOT = { has_ruler_flag = has_lowborn_consort }
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = domain_of_spouses_family
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				20 = { set_country_flag = es_coat_of_arms_1_flag }
+				20 = { set_country_flag = es_coat_of_arms_2_flag }
+				20 = { set_country_flag = es_coat_of_arms_3_flag }
+				20 = { set_country_flag = es_coat_of_arms_4_flag }
+				20 = { set_country_flag = es_coat_of_arms_5_flag }
+			}
+			random_owned_province = { 
+				limit = { is_capital = no OR = { is_state = yes is_in_capital_area = yes } }
+				save_event_target_as = origin_of_queens_family
+			}
+			random_owned_province = { 
+				limit = { is_capital = no OR = { is_state = yes is_in_capital_area = yes } development = 15 }
+				save_event_target_as = origin_of_queens_family
+			}
+			random_owned_province = { 
+				limit = { is_capital = no OR = { is_state = yes is_in_capital_area = yes } development = 20 }
+				save_event_target_as = origin_of_queens_family
+			}
+			random_owned_province = { 
+				limit = { is_capital = no OR = { is_state = yes is_in_capital_area = yes } development = 25 }
+				save_event_target_as = origin_of_queens_family
+			}
+		}
+	}
+
+	option = {
+		name = es_consort_events.2.a
+		event_target:origin_of_queens_family = {
+			add_province_modifier = {
+				name = "domain_of_spouses_family"
+				duration = -1
+			}
+		}
+	}
+	
+	after = {
+		clr_country_flag = es_coat_of_arms_1_flag
+		clr_country_flag = es_coat_of_arms_2_flag
+		clr_country_flag = es_coat_of_arms_3_flag
+		clr_country_flag = es_coat_of_arms_4_flag
+		clr_country_flag = es_coat_of_arms_5_flag
+	}
+}
+
+# consort_events.3.t:0 "Family Ties"
+# consort_events.3.d:0 "For the past couple of days we have been entertaining a guest from the royal court of [origin_country_of_consort.GetName], the once home of the [Root.Consort.GetTitle]. After a full week of hunting, feasting and gossiping with the family, [Root.Consort.GetName]'s cousin is finally preparing to return to [origin_country_of_consort.Capital.GetCapitalName]. She assures us that she has had a wonderful time and it is with a deep bow of gratitude that she says she'll make certain to inform everybody back home about how kind the great [Root.GovernmentName] of [Root.Country.GetName] has been to her, and continues to be to her beloved cousin."
+# consort_events.3.a:0 "This is what kin means."
+
+country_event = {
+	id = es_consort_events.3
+	title = es_consort_events.3.t
+	desc = es_consort_events.3.d
+	picture = ES_NOBLE_BALL_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_lesser_in_union = no
+		has_consort = yes
+		has_foreign_consort = yes
+		any_country = {
+			has_given_consort_to = ROOT
+			exists = yes
+		}
+		NOT = { has_ruler_flag = approached_by_consorts_foreign_family }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = approached_by_consorts_foreign_family
+			
+			random_known_country = {
+				limit = {
+					has_given_consort_to = ROOT
+				}
+				save_event_target_as = origin_country_of_consort
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.3.a
+		add_dip_power = 50
+
+		event_target:origin_country_of_consort = {
+			add_opinion = {
+				who = ROOT
+				modifier = we_are_kin
+			}
+		}
+	}
+}
+
+# consort_events.4.t:0 "The Royal Heretic"
+# consort_events.4.d:0 "The people of [Root.Country.GetName] were pleased when [Root.Monarch.GetTitle] [Root.Monarch.GetName] announced [Root.Monarch.GetHerHis] marriage to [Root.Consort.GetName]. At the time little was said about [Root.Consort.GetHerHis] origin or [Root.Consort.GetHerHis] upbringing in [origin_country_of_consort.Capital.GetCapitalName] - to most common folk in [Root.Country.GetName] royals are a breed of their own and they care little for such details. However, rumors bringing these issues to light have recently begun to spread... Some say that the [Root.Consort.GetTitle] has refused to let go of [Root.Consort.GetHerHis] old [origin_country_of_consort.Religion.GetName] faith - while the people may have understood the need for a marriage with foreigners they are less likely to do so when it comes to being ruled by a heretic."
+# consort_events.4.a:0 "How dare they?"
+# consort_events.4.b:0 "[Root.Consort.GetName] is more trouble than [Root.Consort.GetSheHe] is worth."
+# consort_events.4.b.tt:0 "Attempt to divorce the [Root.Consort.GetTitle]. The royal family in §Y[origin_country_of_consort.GetName]§! will learn of this."
+
+country_event = {
+	id = es_consort_events.4
+	title = es_consort_events.4.t
+	desc = es_consort_events.4.d
+	picture = ES_RELIGIOUS_ALTAR_eventPicture
+		
+	is_triggered_only = yes
+	
+	trigger = {
+		has_consort = yes
+		is_lesser_in_union = no
+		any_country = {
+			has_given_consort_to = ROOT
+			NOT = { religion = ROOT }
+			root = {
+				consort_religion = prev
+			}
+		}
+		NOT = { has_consort_flag = the_people_dislike_infidel_consort }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_consort_flag = the_people_dislike_infidel_consort
+			
+			random_known_country = {
+				limit = {
+					has_given_consort_to = ROOT
+					NOT = { religion = ROOT }
+				}
+				save_event_target_as = origin_country_of_consort
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.4.a
+
+		add_country_modifier = {
+			name = "heretic_royalty"
+			duration = 3650
+		}
+	}
+	option = {
+		name = es_consort_events.4.b
+		custom_tooltip = es_consort_events.4.b.tt
+
+		divorce_consort_effect = yes
+	}
+}
+
+# consort_events.5.t:0 "A Royal Influence"
+# consort_events.5.da:0 "With the marriage between [Root.Monarch.GetName] and [Root.Monarch.GetHerHis] [Root.Consort.GetWifeHusband] [Root.Consort.GetName] the people of [Root.GetName] are experiencing an increased fondness for all things [origin_country_of_consort.GetAdjective]. While some cultural exchange was to be expected, particularly considering the popularity of the [Root.Consort.GetTitle], it is with alarm that our administrative advisor reports that a religious shift has been taking place in one of our provinces. It would seem that the influence of our [origin_country_of_consort.GetAdjective] [Root.Consort.GetTitle] trickles down even into our subjects' way of worship, as the words of the [origin_country_of_consort.Religion.GetName] believers have converted a surprising amount of people...\n\nWhen confronted about it, [Root.Consort.GetName] shrugs, arguing that [Root.Consort.GetSheHe] has long since converted to the [Root.Religion.GetName] faith and the [Root.Monarch.GetTitle] should know that. 'I had nothing to do with this', [Root.Consort.GetSheHe] pleads."
+# consort_events.5.a:0 "[Root.Consort.GetSheHeCap] must publicly denounce [Root.Consort.GetHerHis] old faith!"
+# consort_events.5.b:0 "So be it."
+
+country_event = {
+	id = es_consort_events.5
+	title = es_consort_events.5.t
+	desc = es_consort_events.5.da
+	picture = ES_RELIGIOUS_ALTAR_2_eventPicture
+		
+	is_triggered_only = yes
+	
+	trigger = {
+		has_consort = yes
+		has_foreign_consort = yes
+		is_lesser_in_union = no
+		any_owned_province = {
+			is_capital = no
+			has_owner_religion = yes
+			is_reformation_center = no
+			NOT = { has_province_modifier = religious_zeal_at_conv }											   
+		}
+		any_country = {
+			has_given_consort_to = ROOT
+			NOT = { religion = ROOT }
+		}
+		NOT = { has_consort_flag = the_people_dislike_infidel_consort }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_consort_flag = consort_influenced_change_of_religion
+			random_known_country = {
+				limit = {
+					has_given_consort_to = ROOT
+				}
+				save_event_target_as = origin_country_of_consort
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = religious_zeal_at_conv }										 
+					NOT = { religion = event_target:origin_country_of_consort }
+				}
+				save_event_target_as = province_under_religious_influence
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.5.a
+		event_target:province_under_religious_influence = {
+			change_religion = event_target:origin_country_of_consort
+			add_province_modifier = {
+				name = angered_believers
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = es_consort_events.5.b
+		add_prestige = -10
+		event_target:province_under_religious_influence = {
+			change_religion = event_target:origin_country_of_consort
+		}
+	}
+}
+
+# consort_events.6.t:0 "The Ambitions of a [Root.Consort.GetTitle]"
+# consort_events.6.d:0 "It is no news that [Root.Consort.GetTitle] [Root.Consort.GetName] has no fond feelings for the [Root.Monarch.GetTitle]'s heir, [Root.Heir.GetName] [Root.Heir.Dynasty.GetName]. Ever since [Root.Consort.GetSheHe] arrived at court the friction between the two has been obvious and it has only gotten worse since the birth of the [Root.Consort.GetTitle]'s first child. Of course [Root.Consort.GetSheHe] would much rather see [Root.Consort.GetHerHis] own progeny on the throne. For quite some time now [Root.Consort.GetSheHe] has silently been pulling the strings to make it happen, convincing - or bribing - the right people and grooming [Root.Consort.GetHerHis] eldest at the best of [Root.Consort.GetHerHis] abilities. However, it was not until yesterday [Root.Consort.GetSheHe] confronted our [Root.Monarch.GetTitle] and demanded that it was time for a new heir to be appointed."
+# consort_events.6.a:0 "[Root.Consort.GetTitle] [Root.Consort.GetName]'s eldest is a legitimate choice, there is no doubt about it."
+# consort_events.6.b:0 "How dare [Root.Consort.GetSheHe] question [Root.Heir.GetName]'s claim to the throne?"
+
+country_event = {
+	id = es_consort_events.6
+	title = es_consort_events.6.t
+	picture = ES_CROWN_eventPicture
+	desc = es_consort_events.6.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_reform = elective_monarchy }
+		has_heir = yes
+		has_consort = yes
+		is_lesser_in_union = no
+		has_consort_regency = no
+		has_government_attribute = heir
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.6.a 
+		define_heir = {
+			age = 7
+			dynasty = ROOT
+			claim = 80
+		}
+	}
+
+	option = {
+		name = es_consort_events.6.b 
+		add_prestige = 10
+		remove_consort = yes
+	}
+}
+
+# consort_events.7.t:0 "Playing Favorites"
+# consort_events.7.d:0 "They say that a parent's love for their child is without limits, but it is obvious that for some children love is more limitless than for the other. So it is not surprising that [Root.Consort.GetTitle] is trying to get the best teachers, mentors and is even already trying to arrange a wedding for one of her children, while leaving the others to enjoy their childhood. Now [Root.Consort.GetSheHe] is trying to make [Root.Consort.GetHerHis] favorite child the new heir of [Root.GetName]."
+# consort_events.7.a:0 "It's not a bad idea. [Root.Consort.GetTitle] [Root.Consort.GetName]'s favorite is exceptionally clever."
+# consort_events.7.b:0 "Perhaps a seat on the council would be a suitable alternative?"
+# consort_events.7.c:0 "We have other plans for her favourite one."
+
+country_event = {
+	id = es_consort_events.7
+	title = es_consort_events.7.t
+	desc = es_consort_events.7.d
+	picture = ES_THRONE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_lesser_in_union = no
+		NOT = { has_reform = elective_monarchy }
+		NOT = { has_consort_flag = favorite_played }
+		has_heir = yes
+		has_consort = yes
+		has_government_attribute = heir
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_consort_flag = favorite_played
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.7.a
+		define_heir = {
+			female = no
+			age = 7
+			dynasty = ROOT
+			claim = 60
+		}		
+	}
+
+	option = {
+		name = es_consort_events.7.b 
+		random_list = {
+			33 = { define_advisor = { skill = 3 type = esu_researcher	discount = yes } }
+			33 = { define_advisor = { skill = 3 type = esu_governor discount = yes } }
+			33 = { define_advisor = { skill = 3 type = esu_grand_champion	discount = yes } }
+		}
+	}
+
+	option = {
+		name = es_consort_events.7.c 
+		add_prestige = 10
+	}
+}
+
+# consort_events.8.t:0 "A Shared Interest"
+# consort_events.8.da:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] is known for possessing a mind for organization. Making sure that people as well as the administration of [Root.GetName] adhere to the law, while also updating and adjusting the system to fit the times we live in, is of great interest to the [Root.Monarch.GetTitle]. Imagine [Root.Monarch.GetHerHis] joy, upon realizing that [Root.Monarch.GetHerHis] [Root.Consort.GetWifeHusband] share many of these ideas!\n'A conversation with you, dear [Root.Consort.GetName], is as stimulating as any council meeting!', [Root.Monarch.GetSheHe] exclaims to the [Root.Consort.GetTitle] one afternoon. [Root.Consort.GetSheHeCap] responds with a smile, also much enjoying bonding with [Root.Consort.GetHerHis] [Root.Monarch.GetWifeHusband] over these matters."
+# consort_events.8.db:0 "It's no secret that both [Root.Monarch.GetTitle] [Root.Monarch.GetName] and the [Root.Consort.GetTitle] [Root.Consort.GetName] have a way with words, and thus with people. They can both make a stranger feel perfectly at ease in their presence, and somehow always manage to be the one making the closing argument in a discussion. Although perhaps not entirely equal in charm, and using different personal strengths, they have grown to enjoy attending social events together, often seen smiling smugly at one another from a distance. What is for certain is that the [Root.GovernmentName] is better off since their union."
+# consort_events.8.dc:0 "The first time [Root.Consort.GetName] watched [Root.Monarch.GetName] sparring with [Root.Monarch.GetHerHis] soldiers in training, [Root.Consort.GetSheHe] was impressed. It's not every noble[Root.Monarch.GetWomanMan] that would enjoy the manual labor of actually learning how to wield a weapon of [Root.Monarch.GetHerHis] own. 'But [Root.Monarch.GetTitle] [Root.Monarch.GetName] is not any [Root.Monarch.GetWomanMan]', [Root.Consort.GetSheHe] thought before approaching [Root.Consort.GetHerHis] [Root.Monarch.GetWifeHusband] to compliment [Root.Monarch.GetHerHis] skills. [Root.Consort.GetSheHeCap] even mustered the courage to ask [Root.Monarch.GetHerHis] opinion on the current military situation of the [Root.GovernmentName]. Intrigued by this mutual interest in the military aspects of [Root.GetName], the [Root.Monarch.GetTitle] has gained a lot of new ideas for [Root.Monarch.GetHerHis] army."
+# consort_events.8.a:0 "Those two make a great match."
+
+country_event = {
+	id = es_consort_events.8
+	title = es_consort_events.8.t
+	desc = {
+		trigger = {	has_consort_flag = royal_couple_share_adm_interests	}
+		desc = es_consort_events.8.da
+	}
+	desc = {
+		trigger = {	has_consort_flag = royal_couple_share_dip_interests }
+		desc = es_consort_events.8.db
+	}
+	desc = {
+		trigger = {	has_consort_flag = royal_couple_share_mil_interests }
+		desc = es_consort_events.8.dc
+	}
+	picture = ES_SHARED_INTERESTS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_consort = yes
+		is_lesser_in_union = no
+		has_consort_regency = no
+		OR = {
+			AND = {
+				ruler_has_good_adm_personality = yes
+				consort_has_good_adm_personality = yes
+				NOT = { has_consort_flag = royal_couple_shared_adm_interests }
+			}
+			AND = {
+				ruler_has_good_dip_personality = yes
+				consort_has_good_dip_personality = yes
+				NOT = { has_consort_flag = royal_couple_shared_dip_interests }
+			}
+			AND = {
+				ruler_has_good_mil_personality = yes
+				consort_has_good_mil_personality = yes
+				NOT = { has_consort_flag = royal_couple_shared_mil_interests }
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			save_origin_of_consort_effect = yes
+			set_consort_flag = consort_has_affection_of_ruler
+
+			if = {
+				limit = {
+					ruler_has_good_adm_personality = yes
+					consort_has_good_adm_personality = yes
+					NOT = { has_consort_flag = royal_couple_shared_adm_interests }
+				}
+				set_consort_flag = royal_couple_share_adm_interests
+				set_consort_flag = royal_couple_shared_adm_interests
+			}
+			if = {
+				limit = {
+					ruler_has_good_dip_personality = yes
+					consort_has_good_dip_personality = yes
+					NOT = { has_consort_flag = royal_couple_shared_dip_interests }
+				}
+				set_consort_flag = royal_couple_share_dip_interests
+				set_consort_flag = royal_couple_shared_dip_interests
+			}
+			if = {
+				limit = {
+					ruler_has_good_mil_personality = yes
+					consort_has_good_mil_personality = yes
+					NOT = { has_consort_flag = royal_couple_shared_mil_interests }
+				}
+				set_consort_flag = royal_couple_share_mil_interests
+				set_consort_flag = royal_couple_shared_mil_interests
+			}
+			
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.8.a
+		
+		if = { limit = { has_consort_flag = royal_couple_share_adm_interests }
+			random_list = {
+				80 = { add_adm_power = 100 }
+				20 = { change_adm = 1 }
+			}
+		}
+		if = { limit = { has_consort_flag = royal_couple_share_dip_interests }
+			random_list = {
+				80 = { add_dip_power = 100 }
+				20 = { change_dip = 1 }
+			}
+		}
+		if = { limit = { has_consort_flag = royal_couple_share_mil_interests }
+			random_list = {
+				80 = { add_mil_power = 100 }
+				20 = { change_mil = 1 }
+			}
+		}
+
+		clr_consort_flag = home_province_lost
+		clr_consort_flag = royal_couple_share_adm_interests
+		clr_consort_flag = royal_couple_share_dip_interests
+		clr_consort_flag = royal_couple_share_mil_interests
+	}
+}
+
+# consort_events.9.t:0 "Sharing Faults"
+# consort_events.9.da:0 "Although our [Root.Monarch.GetTitle] [Root.Monarch.GetName] hasn't been the sharpest tool when it comes to managing the finances of [Root.GetName], it is with interest that people have been watching the [Root.Monarch.GetTitle] and [Root.Monarch.GetHerHis] [Root.Consort.GetWifeHusband] together - they seem to get along well, often overheard discussing frivolities and joking about how to spend the country's treasury in order to annoy people the most."
+# consort_events.9.db:0 "Some say [Root.Monarch.GetTitle] [Root.Monarch.GetName] is a crude [Root.Monarch.GetWomanMan]. While [Root.Monarch.GetSheHe] certainly has [Root.Monarch.GetHerHis] good sides as well, a way with words is not something our ruler is known for. However, observing the [Root.Monarch.GetTitle] with [Root.Monarch.GetHerHis] [Root.Consort.GetWifeHusband] in attendance, it seems that the couple has found common ground in this diplomatic shortcoming. There appears to be a mutual feeling of affection growing between the royals, born of their shared awkwardness."
+# consort_events.9.dc:0 "[Root.Monarch.GetName] never enjoyed being coaxed into physical training as a child. Still anxious whenever someone approaches [Root.Monarch.GetHerHim] with an expectation of the [Root.Monarch.GetTitle] showing any sort of combat prowess, [Root.Monarch.GetSheHe] was delighted to find that [Root.Consort.GetName] appears equally nervous around weapons and talk of bloodshed. Together they have bonded over the finer things in life, leaving the dreary conversations concerning warfare and military strategy to other more interested parties."
+# consort_events.9.a:0 "Those two go well together."
+
+country_event = {
+	id = es_consort_events.9
+	title = es_consort_events.9.t
+	desc = {
+		trigger = {	has_consort_flag = royal_couple_share_lack_in_adm_interests }
+		desc = es_consort_events.9.da
+	}
+	desc = {
+		trigger = {	has_consort_flag = royal_couple_share_lack_in_dip_interests }
+		desc = es_consort_events.9.db
+	}
+	desc = {
+		trigger = {	has_consort_flag = royal_couple_share_lack_in_mil_interests	}
+		desc = es_consort_events.9.dc
+	}
+	picture = ES_SHARING_FAULTS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_consort = yes
+		is_lesser_in_union = no
+		has_consort_regency = no
+		NOT = { has_country_modifier = affectionate_royal_couple }
+		OR = {
+			AND = {
+				ruler_has_bad_adm_personality = yes
+				consort_has_bad_adm_personality = yes
+				NOT = { has_consort_flag = royal_couple_shared_lack_in_adm_interests }
+			}
+			AND = {
+				ruler_has_bad_dip_personality = yes
+				consort_has_bad_dip_personality = yes
+				NOT = { has_consort_flag = royal_couple_shared_lack_in_dip_interests }
+			}
+			AND = {
+				ruler_has_bad_mil_personality = yes
+				consort_has_bad_mil_personality = yes
+				NOT = { has_consort_flag = royal_couple_shared_lack_in_mil_interests }
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_consort_flag = consort_has_affection_of_ruler
+
+			if = {
+				limit = {
+					ruler_has_bad_adm_personality = yes
+					consort_has_bad_adm_personality = yes
+					NOT = { has_consort_flag = royal_couple_shared_lack_in_adm_interests }
+				}
+				set_consort_flag = royal_couple_share_lack_in_adm_interests
+				set_consort_flag = royal_couple_shared_lack_in_adm_interests
+			}
+			if = {
+				limit = {
+					ruler_has_bad_dip_personality = yes
+					consort_has_bad_dip_personality = yes
+					NOT = { has_consort_flag = royal_couple_shared_lack_in_dip_interests }
+				}
+				set_consort_flag = royal_couple_share_lack_in_dip_interests
+				set_consort_flag = royal_couple_shared_lack_in_dip_interests
+			}
+			if = {
+				limit = {
+					ruler_has_bad_mil_personality = yes
+					consort_has_bad_mil_personality = yes
+					NOT = { has_consort_flag = royal_couple_shared_lack_in_mil_interests }
+				}
+				set_consort_flag = royal_couple_share_lack_in_mil_interests
+				set_consort_flag = royal_couple_shared_lack_in_mil_interests
+			}
+			
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.9.a
+		
+		if = { limit = { has_consort_flag = royal_couple_share_lack_in_adm_interests }
+			add_adm_power = -100
+		}
+		if = { limit = { has_consort_flag = royal_couple_share_lack_in_dip_interests }
+			add_dip_power = -100
+		}
+		if = { limit = { has_consort_flag = royal_couple_share_lack_in_mil_interests }
+			add_mil_power = -100
+		}
+
+		add_ruler_modifier = {
+			name = affectionate_royal_couple
+			duration = 3650
+		}
+
+		clr_consort_flag = home_province_lost
+		clr_consort_flag = royal_couple_share_lack_in_adm_interests
+		clr_consort_flag = royal_couple_share_lack_in_dip_interests
+		clr_consort_flag = royal_couple_share_lack_in_mil_interests
+	}
+}
+
+# consort_events.10.t:0 "The Success of the Succession"
+# consort_events.10.d:0 "Since the death of [Root.Consort.GetHerHis] spouse, the [Root.Consort.GetTitle] [Root.Consort.GetName] has been growing increasingly comfortable in [Root.Consort.GetHerHis] seat, as both guardian of the young heir as well as royal regent of [Root.GetName]. To the general public, it is clear that the situation is temporary and simply a political necessity while everyone awaits the crowning of little [Root.Heir.GetName] [Root.Heir.Dynasty.GetName]. Meanwhile, there are rumors of other characters, said to partake in clandestine meetings where they discuss, in their eyes, the honest potential of the young heir... 'Putting that drooling imbecile on the throne would be a threat to the entire realm', one conspirator mutters. ‘The [Root.Consort.GetTitle] is certainly a capable [Root.Consort.GetWomanMan], and a much better option', another argues.\n\nAlthough certainly aware of these cunning forces, the [Root.Consort.GetTitle] [Root.Consort.GetHerselfHimself] has yet to take a stand on this highly sensitive issue."
+# consort_events.10.a:0 "These are interesting times..."
+# consort_events.10.b:0 "How treasonous! We'll have no more of these ideas."
+
+country_event = {
+	id = es_consort_events.10
+	title = es_consort_events.10.t
+	desc = es_consort_events.10.d
+	picture = THRONE_AND_NOBLES_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_consort_regency = yes
+		is_lesser_in_union = no
+		NOT = { has_consort_flag = consort_decided_to_not_pursue_the_throne }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.10.a
+		change_consort_regent_to_ruler = yes
+		set_heir_flag = had_throne_stolen
+		add_ruler_modifier = { 
+			name = devious_ruler
+		}
+	}
+
+	option = {
+		name = es_consort_events.10.b
+		set_consort_flag = "consort_decided_to_not_pursue_the_throne"
+		add_stability = 1
+	}
+}
+
+# consort_events.11.t:0 "Desires of the Flesh"
+# consort_events.11.da:0 "While we have successfully managed to keep the truth from the rest of the court, it is only a question of time until it gets out unless we do something. The [Root.Monarch.GetTitle] [Root.Monarch.GetName] recently discovered that [Root.Monarch.GetHerHis] [Root.Consort.GetWifeHusband], [Root.Consort.GetTitle] [Root.Consort.GetName], is having an affair! Not only that, but the other guilty culprit is none other than our advisor [Root.Adm_Advisor.GetName]. The trust we put in [Root.Adm_Advisor.GetHerHim] was obviously unfounded. Even worse, this also raises questions concerning the legitimacy of the [Root.Monarch.GetTitle]'s [Root.Heir.GetDaughterSon], [Root.Heir.GetName] [Root.Heir.Dynasty.GetName]."
+# consort_events.11.db:0 "While we have successfully managed to keep the truth from the rest of the court, it is only a question of time until it gets out unless we do something. The [Root.Monarch.GetTitle] [Root.Monarch.GetName] recently discovered that [Root.Monarch.GetHerHis] [Root.Consort.GetWifeHusband], [Root.Consort.GetTitle] [Root.Consort.GetName], is having an affair! Not only that, but the other guilty culprit is none other than our advisor [Root.Adm_Advisor.GetName]. The trust we put in [Root.Adm_Advisor.GetHerHim] was obviously unfounded."
+# consort_events.11.a:0 "Now we know, at least. We can take measures to keep this quiet."
+# consort_events.11.a.tt:0 "Allow the affair between [Root.Consort.GetTitle] §Y[Root.Consort.GetName]§! and the [Root.Adm_Advisor.GetTitle] §Y[Root.Adm_Advisor.GetName]§! to continue, while doing our best to keep it from the public eye."
+# consort_events.11.b:0 "This cannot continue. Find out what [Root.Adm_Advisor.GetName] wants for [Root.Adm_Advisor.GetHerHis] silence."
+# consort_events.11.b.tt:0 "Bribe the [Root.Adm_Advisor.GetTitle] §Y[Root.Adm_Advisor.GetName]§! to leave court and never breathe a word of the affair to anyone."
+# consort_events.11.c:0 "This is high treason, and no less! We shall have [Root.Adm_Advisor.GetName]'s head for this!"
+# consort_events.11.c.tt:0 "The [Root.Adm_Advisor.GetTitle] §Y[Root.Adm_Advisor.GetName]§! is executed. Without a sufficient explanation, this act will be seen as tyrannical and create unrest in §Y[Root.Capital.GetName]§! and the surrounding area."
+# consort_events.11.d:0 "We cannot have an adulteress for a Queen. [Root.Consort.GetName] must go."
+# consort_events.11.e:0 "We cannot have an adulterer for a Prince-Consort. [Root.Consort.GetName] must go."
+
+country_event = {
+	id = es_consort_events.11
+	title = es_consort_events.11.t
+	picture = ES_DESIRES_OF_FLESH_eventPicture
+
+	desc = {
+		trigger = { can_heir_be_child_of_consort = yes }
+		desc = es_consort_events.11.da
+	}
+	desc = {
+		trigger = { can_heir_be_child_of_consort = no }
+		desc = es_consort_events.11.db
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_lesser_in_union = no
+		has_consort = yes
+		has_consort_regency = no
+		OR = {
+			AND = {
+				has_female_consort = no
+				employed_advisor = {
+					is_female = yes
+				}
+			}
+			AND = {
+				has_female_consort = yes
+				employed_advisor = {
+					is_male = yes
+				}
+			}
+		}
+		OR = {
+			employed_advisor = { type = esu_steward }
+			employed_advisor = { type = esu_bard }
+			employed_advisor = { type = esu_mage }
+			employed_advisor = { type = esu_monk }
+			employed_advisor = { type = esu_priest }
+			employed_advisor = { type = esu_researcher }
+			employed_advisor = { type = esu_inspector }
+			employed_advisor = { type = esu_curator }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.11.a
+		custom_tooltip = es_consort_events.11.a.tt
+
+		if = {
+			limit = { has_female_consort = yes }
+			random = {
+				chance = 50
+				country_event = { id = es_consort_events.12 days = 150 random = 500 }
+			}
+		}
+		else = {
+			add_prestige = -10
+		}
+	}
+
+	option = {
+		name = es_consort_events.11.b
+		custom_tooltip = es_consort_events.11.b.tt
+
+		hidden_effect = {
+			remove_advisor = esu_steward
+			remove_advisor = esu_bard
+			remove_advisor = esu_mage
+			remove_advisor = esu_monk
+			remove_advisor = esu_priest
+			remove_advisor = esu_researcher
+			remove_advisor = esu_inspector
+			remove_advisor = esu_curator
+		}
+
+		add_years_of_income = -1.0
+
+		hidden_effect = {
+			if = {
+				limit = { has_female_consort = yes }
+				random = {
+					chance = 10
+					country_event = { id = es_consort_events.12 days = 150 random = 500 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = es_consort_events.11.c
+		custom_tooltip = es_consort_events.11.c.tt
+		reduce_meritocracy_effect = yes
+		hidden_effect = {
+			kill_advisor = esu_steward
+			kill_advisor = esu_bard
+			kill_advisor = esu_mage
+			kill_advisor = esu_monk
+			kill_advisor = esu_priest
+			kill_advisor = esu_researcher
+			kill_advisor = esu_inspector
+			kill_advisor = esu_curator
+		}
+		capital_scope = {
+			area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = tyrannical_ruler
+					duration = 9125
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_female_consort = yes }
+				random = {
+					chance = 10
+					country_event = { id = es_consort_events.12 days = 150 random = 500 }
+				}
+			}
+		}
+	}
+
+	option = {
+		trigger = { has_female_consort = yes }
+		name = es_consort_events.11.d
+		divorce_consort_effect = yes
+	}
+
+	option = {
+		trigger = { has_female_consort = no }
+		name = es_consort_events.11.e
+		divorce_consort_effect = yes
+	}
+}
+
+# consort_events.12.t:0 "A Royal Bastard"
+# consort_events.12.d:0 "We tried to stop the rumors, but when we were made aware of them it was already too late. Now every other man and woman at court is gossiping behind our backs. Even the commoners in the streets have the nerves to make lewd jokes about 'the friendly [Root.Consort.GetTitle] [Root.Consort.GetName]' and 'the bastard of [Root.Capital.GetName]'. They say that the Queen is an adulteress and that [Root.Heir.GetName], the heir of [Root.GetName], is not actually the [Root.Heir.GetDaughterSon] of [Root.Monarch.GetTitle] [Root.Monarch.GetName]. All we can do at this point is keeping up appearances as best we can and hope that the rumors will die down in time."
+# consort_events.12.a:0 "These lies are preposterous!"
+
+country_event = {
+	id = es_consort_events.12
+	title = es_consort_events.12.t
+	desc = es_consort_events.12.d
+	picture = ES_KING_AND_COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_consort = yes
+		is_lesser_in_union = no
+		has_consort_regency = no
+		has_female_consort = yes
+		has_heir = yes
+		can_heir_be_child_of_consort = yes
+		NOT = { has_heir_flag = suspected_bastard }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = es_consort_events.12.a
+
+		add_prestige = -10
+
+		add_heir_claim = -35
+		set_heir_flag = suspected_bastard
+	}
+}
+
+namespace = es_culture_religion_events
+
+# es_culture_religion_events.1.t:0 "[Root.Heir.GetName] and the [Root.given_teacher_culture.GetCultureName] people."
+# es_culture_religion_events.1.d:0 "During [Root.Heir.GetHerHis] education our [Root.Heir.GetTitle], [Root.Heir.GetName], has come to be very close to our royal advisor, [Root.Adm_Advisor.GetName], forming a special bond both to [Root.Adm_Advisor.GetHerHim] and to the [Root.given_teacher_culture.GetCultureName] people of [Root.Adm_Advisor.GetHerHis] homeland. [Root.Heir.GetName]'s travels in our [Root.given_teacher_culture.GetCultureName] lands have done wonders for the popularity of our dynasty, but it has also raised more than a few eyebrows in [Root.Capital.GetName]. Our nobles, led by the demanding [Root.capital_noble.GetName], are starting to worry that [Root.Heir.GetName] will favor [Root.given_teacher_culture.GetCultureName] subjects when [Root.Heir.GetSheHe] ascends to the throne and have begun to plot against [Root.Heir.GetHerHim] and [Root.Adm_Advisor.GetName] at court. They demand that we chastize the [Root.Heir.GetTitle] and guarantee the rights of the nobility."
+# es_culture_religion_events.1.a:0 "Best let [Root.capital_noble.GetName] guide our young [Root.Heir.GetTitle] instead."
+# es_culture_religion_events.1.b:0 "[Root.Heir.GetName] has our blessing in this."
+# culture_religion_events.1.b.tt:0 "All our provinces of the §Y[Root.given_teacher_culture.GetCultureName]§! culture will get §G-3§! unrest for §Y10§! years."
+
+country_event = {
+	id = es_culture_religion_events.1
+	title = "es_culture_religion_events.1.t"
+	desc = "es_culture_religion_events.1.d"
+	picture = ES_ADVISOR_AND_HEIR_eventPicture
+	
+	trigger = {
+		has_heir = yes
+		has_regency = no
+		has_consort_regency = no
+		employed_advisor = {
+			category = ADM
+		}
+		any_owned_province = {
+			NOT = {
+				owner = {
+					employed_advisor = {
+						category = ADM
+						culture = PREV
+					}
+				}
+			}
+		}
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				variable_name = cultural_heir_culture
+				value = heir_culture
+			}
+			export_to_variable = {
+				variable_name = teacher_culture
+				value = adm_advisor_culture
+			}
+			export_to_variable = {
+				variable_name = parent_culture
+				value = ruler_culture
+			}
+			NOT = {
+				variable_arithmetic_trigger = {
+					is_variable_equal = {
+						which = cultural_heir_culture
+						which = teacher_culture
+					}
+				}
+			}
+			is_variable_equal = {
+				which = cultural_heir_culture
+				which = parent_culture
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				variable_name = given_teacher_culture
+				value = adm_advisor_culture
+			}
+			set_saved_name = {
+				key = capital_noble
+				type = advisor
+				scope = ROOT
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+
+	option = {
+		name = "es_culture_religion_events.1.a"
+		remove_advisor_by_category = ADM
+		add_adm_power = -150
+	}
+	option = {
+		name = "es_culture_religion_events.1.b"
+		set_heir_culture = variable:given_teacher_culture
+		add_heir_claim = -25
+		custom_tooltip = es_culture_religion_events.1.b.tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = variable:FROM:given_teacher_culture
+				}
+				add_province_modifier = {
+					name = "heir_is_our_heir"
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	after = {
+		clear_saved_name = capital_noble
+		hidden_effect = {
+			set_variable = {
+				which = given_teacher_culture
+				value = -1
+			}
+		}
+	}
+}
+
+# es_culture_religion_events.2.t:0 "[Root.GetRulerOrRegency] and the [Root.Culture.GetName] people"
+# es_culture_religion_events.2.da:0 "The ascension of [Root.Monarch.GetName] has been very well received by the [Root.new_ruler_culture.GetCultureName] people in our [Root.GovernmentName] but the [Root.Culture.GetName] view their new [Root.Monarch.GetTitle] with some distrust. To them [Root.Monarch.GetSheHe] is in many ways a [Root.Monarch.GetWomanMan] of strange customs and foreign mannerisms."
+# es_culture_religion_events.2.db:1 "The ascension of [Root.Monarch.GetName] has been less than well received by the [Root.Culture.GetName] people. They consider [Root.Monarch.GetHerHis] manners foreign and strange. While some distrust to a new ruler is only natural it seems that for the time being our new [Root.Monarch.GetTitle] will mostly have supporters at court, where [Root.Monarch.GetSheHe] surrounds [Root.Monarch.GetHerselfHimself] with [Root.new_ruler_culture.GetCultureName] friends from foreign lands."
+# es_culture_religion_events.2.dc:1 "The ascension of [Root.Monarch.GetName] to be the [Root.Monarch.GetTitle] of [Root.GetName] has shaken the [Root.GetAdjective] court. Our new ruler openly patronizes the [Root.new_ruler_religion.GetReligionName] faith and has taken a circle of like-minded friends with [Root.Monarch.GetHerHim] to rule the country. This has proved too much to swallow for many of our righteous [Root.Religion.GetName] subjects and some, led by the prominent preacher [Root.rebel_preacher.GetName], have come out in open protests against us."
+# es_culture_religion_events.2.dda:1 "The ascension of [Root.Monarch.GetName] to be the [Root.Monarch.GetTitle] of [Root.GetName] has shaken the [Root.GetAdjective] court. Our new ruler openly patronizes the [Root.new_ruler_religion.GetReligionName] faith and has taken a circle of like-minded friends with [Root.Monarch.GetHerHim] to rule the country. This has proved too much to swallow for many of our righteous [Root.Religion.GetName] subjects and it seems that for now our new [Root.Monarch.GetTitle] have few friends outside the gates of [Root.Capital.GetCapitalName]."
+# es_culture_religion_events.2.de:0 "The rise of [Root.Monarch.GetName] is one that many of our subjects and [Root.GetNoblesReplacementForOtherGovernments] have watched with concern and distaste. The new [Root.Monarch.GetTitle] seem foreign in every meaning of the word. [Root.Monarch.GetSheHeCap] does not speak the language of the common [Root.Culture.GetName] man or noble, nor does [Root.Monarch.GetSheHe] worship in the same way. The few years that have passed since [Root.Monarch.GetName] took up office has only allowed [Root.Monarch.GetHerHis] enemies to prepare..."
+# es_culture_religion_events.2.df:0 "Recent years have been both chaotic and full of turmoil. With power now in more stable hands however there is hope that things will return back to normal shortly."
+
+# es_culture_religion_events.2.a:0 "They will learn to love me in time."
+# es_culture_religion_events.2.a.tts1:0 "All §Y[Root.Culture.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+2§! Unrest for §Y3§! years."
+# es_culture_religion_events.2.a.tts2:0 "All §Y[Root.new_ruler_culture.GetCultureName]§! provinces in §Y[Root.GetName]§! will receive §G-2§! Unrest for §Y3§! years."
+# es_culture_religion_events.2.a.ttm1:0 "All §Y[Root.Culture.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+2§! Unrest for §Y5§! years."
+# es_culture_religion_events.2.a.ttm2:0 "All §Y[Root.new_ruler_culture.GetCultureName]§! provinces in §Y[Root.GetName]§! will receive §G-2§! Unrest for §Y5§! years."
+# es_culture_religion_events.2.a.ttl1:0 "All §Y[Root.Culture.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+2§! Unrest for §Y7§! years."
+# es_culture_religion_events.2.a.ttl2:0 "All §Y[Root.new_ruler_culture.GetCultureName]§! provinces in §Y[Root.GetName]§! will receive §G-2§! Unrest for §Y7§! years."
+
+# es_culture_religion_events.2.b:0 "They will learn to love me in time."
+# es_culture_religion_events.2.b.tts1:1 "All §Y[Root.Religion.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+5§! Unrest and §R-5%§! Missionary Strength for §Y5§! years."
+# es_culture_religion_events.2.b.tts2:1 "All §Y[Root.new_ruler_religion.GetReligionName]§! provinces in §Y[Root.GetName]§! will receive §G-5§! Unrest and §R-5%§! Missionary Strength for §Y5§! years."
+# es_culture_religion_events.2.b.ttm1:1 "All §Y[Root.Religion.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+5§! Unrest and §R-5%§! Missionary Strength for §Y7§! years."
+# es_culture_religion_events.2.b.ttm2:0 "All §Y[Root.new_ruler_religion.GetReligionName]§! provinces in §Y[Root.GetName]§! will receive §G-3§! Unrest and §R-5§! Missionary Strength for §Y7§! years."
+# es_culture_religion_events.2.b.ttl1:0 "All §Y[Root.Religion.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+5§! Unrest and §R-5§! Missionary Strength for §Y10§! years."
+# es_culture_religion_events.2.b.ttl2:0 "All §Y[Root.new_ruler_religion.GetReligionName]§! provinces in §Y[Root.GetName]§! will receive §G-5§! Unrest and §R-5§! Missionary Strength for §Y10§! years."
+
+# es_culture_religion_events.2.c:0 "They will learn to love me in time."
+# es_culture_religion_events.2.c.tts1:0 "All §Y[Root.Religion.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+3§! Unrest and §R-5§! Missionary Strength for §Y5§! years."
+# es_culture_religion_events.2.c.tts2:0 "All §Y[Root.new_ruler_religion.GetReligionName]§! provinces in §Y[Root.GetName]§! will receive §G-3§! Unrest and §R-5§! conversion resistance for §Y5§! years."
+# es_culture_religion_events.2.c.ttm1:0 "All §Y[Root.Religion.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+3§! Unrest and §R-5§! Missionary Strength for §Y7§! years."
+# es_culture_religion_events.2.c.ttm2:0 "All §Y[Root.new_ruler_religion.GetReligionName]§! provinces in §Y[Root.GetName]§! will receive §G-3§! Unrest and §R-5§! conversion resistance for §Y7§! years."
+# es_culture_religion_events.2.c.ttl1:0 "All §Y[Root.Religion.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+3§! Unrest and §R-5§! Missionary Strength for §Y10§! years."
+# es_culture_religion_events.2.c.ttl2:0 "All §Y[Root.new_ruler_religion.GetReligionName]§! provinces in §Y[Root.GetName]§! will receive §G-3§! Unrest and §R-5§! Missionary Strength for §Y10§! years."
+
+# es_culture_religion_events.2.dd:0 "They will learn to love me in time."
+# es_culture_religion_events.2.dd.tts:0 "All §Y[Root.Religion.GetName]§! and §Y[Root.Culture.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+5§! Unrest and §R-5§! Missionary Strength for up to §Y5§! years."
+# es_culture_religion_events.2.dd.ttm:0 "All §Y[Root.Religion.GetName]§! and §Y[Root.Culture.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+5§! Unrest and §R-5§! Missionary Strength for up to §Y7§! years."
+# es_culture_religion_events.2.dd.ttl:0 "All §Y[Root.Religion.GetName]§! and §Y[Root.Culture.GetName]§! provinces in §Y[Root.GetName]§! will receive §R+5§! Unrest and §R-5§! Missionary Strength for up to §Y10§! years."
+
+# es_culture_religion_events.2.e:0 "Order will be restored."
+
+country_event = {
+	id = es_culture_religion_events.2
+	title = "es_culture_religion_events.2.t"
+	picture = ES_KING_eventPicture
+	
+	desc = {
+		desc = "es_culture_religion_events.2.da" #Different Culture - But we have subjects of it
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			NOT = { ruler_culture = ROOT }
+			ruler_religion = ROOT
+			any_owned_province = {
+				culture = variable:From:new_ruler_culture
+			}
+		}
+	}
+	desc = {
+		desc = "es_culture_religion_events.2.db" #Different Culture - And we have no subjects of it
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			NOT = { ruler_culture = ROOT }
+			ruler_religion = ROOT
+			NOT = {
+				any_owned_province = {
+					culture = variable:From:new_ruler_culture
+				}
+			}
+		}
+	}
+	desc = {
+		desc = "es_culture_religion_events.2.dc" #Different Heathen Religion
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			ruler_culture = ROOT
+			NOT = { ruler_religion = ROOT }
+			NOT = { religion_group = variable:new_ruler_religion }
+		}
+	}
+	desc = {
+		desc = "es_culture_religion_events.2.dda" #Different Heretic Religion
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			ruler_culture = ROOT
+			NOT = { ruler_religion = ROOT }
+			religion_group = variable:new_ruler_religion
+		}
+	}
+	
+	desc = {
+		desc = "es_culture_religion_events.2.de" #Different Culture and Different Religion
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			NOT = { ruler_culture = ROOT }
+			NOT = { ruler_religion = ROOT }
+		}
+	}
+	
+	desc = {
+		desc = "es_culture_religion_events.2.df" #What's this then? Well the event triggers with a delay from the day of succession.It is possible for someone to usurp the throne before this event happens or for other triggers to no longer be true.
+		trigger = {
+			OR = {
+				has_regency = yes #It is also possible to enter a regency
+				OR = {
+					has_reform = mamluk_government #It is even possible to suddenly get the Mamluk Government form.
+					has_reform = pirate_king_reform
+				}
+				AND = {
+					ruler_culture = ROOT
+					ruler_religion = ROOT
+				}
+			}
+		}
+	}
+	
+	# On Action Event
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = had_culture_religion_reaction_event_flag
+			random_list = {
+				15 = { set_country_flag = strong_effect } #Harsh Reception
+				35 = { set_country_flag = medium_effect } #Average Reception
+				50 = { set_country_flag = small_effect }  #Mild Reception
+			}
+			export_to_variable = {
+				variable_name = new_ruler_culture
+				value = ruler_culture
+			}
+			export_to_variable = {
+				variable_name = new_ruler_religion
+				value = ruler_religion
+			}
+			set_saved_name = { #Not actually used as a preacher in all event versions
+				key = rebel_preacher
+				type = advisor
+				scope = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = "es_culture_religion_events.2.a" #Different Culture
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			NOT = { ruler_culture = ROOT }
+			ruler_religion = ROOT
+		}
+		if = {
+			limit = {
+				calc_true_if = {
+					all_known_country = {
+						primary_culture = variable:From:new_ruler_culture
+					}
+					amount = 8
+				}
+			}
+			custom_tooltip  = culture_opinion_tooltip
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						primary_culture = variable:From:new_ruler_culture
+					}
+					add_opinion = {
+						modifier = opinion_ruler_of_our_culture
+						who = ROOT
+					}
+				}
+			}
+		}
+		else = {
+			every_known_country = {
+				limit = {
+					primary_culture = variable:From:new_ruler_culture
+				}
+				add_opinion = {
+					modifier = opinion_ruler_of_our_culture
+					who = ROOT
+				}
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			medium_effect = {
+				custom_tooltip = es_culture_religion_events.2.a.ttm1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_culture = yes
+						}
+						add_province_modifier = {
+							name = "foreigner_on_throne"
+							duration = 1825
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							culture = variable:FROM:new_ruler_culture
+						}
+					}
+					custom_tooltip = es_culture_religion_events.2.a.ttm2
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								culture = variable:FROM:new_ruler_culture
+							}
+							add_province_modifier = {
+								name = "support_for_ruler"
+								duration = 1825
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_recruiter
+						skill = 3
+						discount = yes
+						culture = variable:new_ruler_culture
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_recruiter
+						skill = 2
+						discount = yes
+						culture = variable:new_ruler_culture
+					}
+				}
+				clr_country_flag = medium_effect
+			}
+			small_effect = {
+				custom_tooltip = es_culture_religion_events.2.a.tts1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_culture = yes
+						}
+						add_province_modifier = {
+							name = "foreigner_on_throne"
+							duration = 1095
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							culture = variable:FROM:new_ruler_culture
+						}
+					}
+					custom_tooltip = es_culture_religion_events.2.a.tts2
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								culture = variable:FROM:new_ruler_culture
+							}
+							add_province_modifier = {
+								name = "support_for_ruler"
+								duration = 1095
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_recruiter
+						skill = 2
+						discount = yes
+						culture = variable:new_ruler_culture
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_recruiter
+						skill = 1
+						discount = yes
+						culture = variable:new_ruler_culture
+					}
+				}
+				clr_country_flag = small_effect
+			}
+			strong_effect = {
+				custom_tooltip = es_culture_religion_events.2.a.ttl1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_culture = yes
+						}
+						add_province_modifier = {
+							name = "foreigner_on_throne"
+							duration = 2555
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							culture = variable:FROM:new_ruler_culture
+						}
+					}
+					custom_tooltip = es_culture_religion_events.2.a.ttl2
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								culture = variable:FROM:new_ruler_culture
+							}
+							add_province_modifier = {
+								name = "support_for_ruler"
+								duration = 2555
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_officer
+						skill = 3
+						discount = yes
+						culture = variable:new_ruler_culture
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_officer
+						skill = 2
+						discount = yes
+						culture = variable:new_ruler_culture
+					}
+				}
+				clr_country_flag = strong_effect
+			}
+		}
+	}
+	option = {
+		name = "es_culture_religion_events.2.b" #Different Heathen Religion - This is harder to get.
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			ruler_culture = ROOT
+			NOT = { ruler_religion = ROOT }
+			NOT = { religion_group = variable:new_ruler_religion }
+		}
+		if = {
+			limit = {
+				calc_true_if = {
+					all_known_country = {
+						religion = variable:From:new_ruler_religion
+					}
+					amount = 8
+				}
+			}
+			custom_tooltip  = religion_opinion_tooltip
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						religion = variable:From:new_ruler_religion
+					}
+					add_opinion = {
+						modifier = opinion_ruler_of_our_religion
+						who = ROOT
+					}
+				}
+			}
+		}
+		else = {
+			every_known_country = {
+				limit = {
+					religion = variable:From:new_ruler_religion
+				}
+				add_opinion = {
+					modifier = opinion_ruler_of_our_religion
+					who = ROOT
+				}
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			medium_effect = {
+				if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_monk
+						skill = 3
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_monk
+						skill = 2
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				custom_tooltip = es_culture_religion_events.2.b.ttm1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_religion = yes
+						}
+						add_province_modifier = {
+							name = "heathen_on_throne"
+							duration = 2555
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_religion = yes
+					}
+					spawn_rebels = {
+						type = religious_rebels
+						size = 2.5
+						leader = rebel_preacher
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							religion = variable:FROM:new_ruler_religion
+						}
+					}
+					custom_tooltip = es_culture_religion_events.2.b.ttm2
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								religion = variable:FROM:new_ruler_religion
+							}
+							add_province_modifier = {
+								name = "support_for_heathen_ruler"
+								duration = 2555
+							}
+						}
+					}
+				}
+				clr_country_flag = medium_effect
+			}
+			small_effect = {
+				if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_monk
+						skill = 3
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_monk
+						skill = 2
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_religion = yes
+					}
+					spawn_rebels = {
+						type = religious_rebels
+						size = 2.5
+						leader = rebel_preacher
+					}
+				}
+				custom_tooltip = es_culture_religion_events.2.b.tts1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_religion = yes
+						}
+						add_province_modifier = {
+							name = "heathen_on_throne"
+							duration = 1825
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							religion = variable:FROM:new_ruler_religion
+						}
+					}
+					custom_tooltip = es_culture_religion_events.2.b.tts2
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								religion = variable:FROM:new_ruler_religion
+							}
+							add_province_modifier = {
+								name = "support_for_heathen_ruler"
+								duration = 1825
+							}
+						}
+					}
+				}
+				clr_country_flag = small_effect
+			}
+			strong_effect = {
+				if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_monk
+						skill = 2
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_monk
+						skill = 1
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_religion = yes
+					}
+					spawn_rebels = {
+						type = religious_rebels
+						size = 3.5
+						leader = rebel_preacher
+					}
+				}
+				custom_tooltip = es_culture_religion_events.2.b.ttl1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_religion = yes
+						}
+						add_province_modifier = {
+							name = "heathen_on_throne"
+							duration = 3650
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							religion = variable:FROM:new_ruler_religion
+						}
+					}
+					custom_tooltip = es_culture_religion_events.2.b.ttl2
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								religion = variable:FROM:new_ruler_religion
+							}
+							add_province_modifier = {
+								name = "support_for_heathen_ruler"
+								duration = 3650
+							}
+						}
+					}
+				}
+				clr_country_flag = strong_effect
+			}
+		}
+	}
+	option = {
+		name = "es_culture_religion_events.2.c" #Different Heretic Religion - This is harder to get (but not as hard as heathen).
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			ruler_culture = ROOT
+			NOT = { ruler_religion = ROOT }
+			religion_group = variable:new_ruler_religion
+		}
+		if = {
+			limit = {
+				calc_true_if = {
+					all_known_country = {
+						religion = variable:From:new_ruler_religion
+					}
+					amount = 8
+				}
+			}
+			custom_tooltip  = religion_opinion_tooltip
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						religion = variable:From:new_ruler_religion
+					}
+					add_opinion = {
+						modifier = opinion_ruler_of_our_religion
+						who = ROOT
+					}
+				}
+			}
+		}
+		else = {
+			every_known_country = {
+				limit = {
+					religion = variable:From:new_ruler_religion
+				}
+				add_opinion = {
+					modifier = opinion_ruler_of_our_religion
+					who = ROOT
+				}
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			medium_effect = {
+				if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_monk
+						skill = 3
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_monk
+						skill = 2
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				custom_tooltip = es_culture_religion_events.2.c.ttm1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_religion = yes
+						}
+						add_province_modifier = {
+							name = "heretic_on_throne"
+							duration = 2555
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							religion = variable:FROM:new_ruler_religion
+						}
+					}
+					custom_tooltip = es_culture_religion_events.2.c.ttm2
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								religion = variable:FROM:new_ruler_religion
+							}
+							add_province_modifier = {
+								name = "support_for_heretic_ruler"
+								duration = 2555
+							}
+						}
+					}
+				}
+				clr_country_flag = medium_effect
+			}
+			small_effect = {
+				if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_monk
+						skill = 3
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_monk
+						skill = 2
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				custom_tooltip = es_culture_religion_events.2.c.tts1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_religion = yes
+						}
+						add_province_modifier = {
+							name = "heretic_on_throne"
+							duration = 1825
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							religion = variable:FROM:new_ruler_religion
+						}
+					}
+					every_owned_province = {
+						limit = {
+							religion = variable:FROM:new_ruler_religion
+						}
+						custom_tooltip = es_culture_religion_events.2.c.tts2
+						hidden_effect = {
+							add_province_modifier = {
+								name = "support_for_heretic_ruler"
+								duration = 1825
+							}
+						}
+					}
+				}
+				clr_country_flag = small_effect
+			}
+			strong_effect = {
+				if = {
+					limit = { monthly_income = 30 }
+					define_advisor = {
+						type = esu_monk
+						skill = 2
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				else = {
+					define_advisor = {
+						type = esu_monk
+						skill = 1
+						discount = yes
+						religion = variable:new_ruler_religion
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_owner_religion = yes
+					}
+					spawn_rebels = {
+						type = religious_rebels
+						size = 2.5
+						leader = rebel_preacher
+					}
+				}
+				custom_tooltip = es_culture_religion_events.2.c.ttl1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_owner_religion = yes
+						}
+						add_province_modifier = {
+							name = "heretic_on_throne"
+							duration = 4380
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							religion = variable:FROM:new_ruler_religion
+						}
+					}
+					custom_tooltip = es_culture_religion_events.2.c.ttl2
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								religion = variable:FROM:new_ruler_religion
+							}
+							add_province_modifier = {
+								name = "support_for_heretic_ruler"
+								duration = 4380
+							}
+						}
+					}
+				}
+				clr_country_flag = strong_effect
+			}
+		}
+	}
+	option = {
+		name = "es_culture_religion_events.2.dd" #Different Culture and Different Religion
+		trigger = {
+			has_regency = no
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			NOT = { ruler_culture = ROOT }
+			NOT = { ruler_religion = ROOT }
+		}
+		if = {
+			limit = {
+				calc_true_if = {
+					all_known_country = {
+						OR = {
+							religion = variable:From:new_ruler_religion
+							primary_culture = variable:From:new_ruler_culture
+						}
+					}
+					amount = 8
+				}
+			}
+			custom_tooltip  = culture_and_religion_opinion_tooltip
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						religion = variable:From:new_ruler_religion
+					}
+					add_opinion = {
+						modifier = opinion_ruler_of_our_religion
+						who = ROOT
+					}
+				}
+				every_known_country = {
+					limit = {
+						primary_culture = variable:From:new_ruler_culture
+					}
+					add_opinion = {
+						modifier = opinion_ruler_of_our_culture
+						who = ROOT
+					}
+				}
+			}
+		}
+		else = {
+			every_known_country = {
+					limit = {
+						religion = variable:From:new_ruler_religion
+					}
+					add_opinion = {
+						modifier = opinion_ruler_of_our_religion
+						who = ROOT
+					}
+				}
+			every_known_country = {
+				limit = {
+					primary_culture = variable:From:new_ruler_culture
+				}
+				add_opinion = {
+					modifier = opinion_ruler_of_our_culture
+					who = ROOT
+				}
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			medium_effect = {
+				custom_tooltip = es_culture_religion_events.2.dd.ttm
+				if = {
+					limit = {
+						any_owned_province = {
+							has_owner_religion = yes
+							has_owner_culture = yes
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								has_owner_religion = yes
+								has_owner_culture = yes
+							}
+							add_province_modifier = {
+								name = "alien_ruler"
+								duration = 2555
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							OR = {
+								AND = {
+									has_owner_religion = yes
+									has_owner_culture = no
+								}
+								AND = {
+									has_owner_religion = no
+									has_owner_culture = yes
+								}
+							}
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								OR = {
+									AND = {
+										has_owner_religion = yes
+										has_owner_culture = no
+									}
+									AND = {
+										has_owner_religion = no
+										has_owner_culture = yes
+									}
+								}
+							}
+							add_province_modifier = {
+								name = "alien_ruler"
+								duration = 1825
+							}
+						}
+					}
+				}
+				clr_country_flag = medium_effect
+			}
+			small_effect = {
+				custom_tooltip = es_culture_religion_events.2.dd.tts
+				if = {
+					limit = {
+						any_owned_province = {
+							has_owner_religion = yes
+							has_owner_culture = yes
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								has_owner_religion = yes
+								has_owner_culture = yes
+							}
+							add_province_modifier = {
+								name = "alien_ruler"
+								duration = 1825
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							OR = {
+								AND = {
+									has_owner_religion = yes
+									has_owner_culture = no
+								}
+								AND = {
+									has_owner_religion = no
+									has_owner_culture = yes
+								}
+							}
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								OR = {
+									AND = {
+										has_owner_religion = yes
+										has_owner_culture = no
+									}
+									AND = {
+										has_owner_religion = no
+										has_owner_culture = yes
+									}
+								}
+							}
+							add_province_modifier = {
+								name = "alien_ruler"
+								duration = 913
+							}
+						}
+					}
+				}
+				clr_country_flag = small_effect
+			}
+			strong_effect = {
+				custom_tooltip = es_culture_religion_events.2.dd.ttl
+				if = {
+					limit = {
+						any_owned_province = {
+							has_owner_religion = yes
+							has_owner_culture = yes
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								has_owner_religion = yes
+								has_owner_culture = yes
+							}
+							add_province_modifier = {
+								name = "alien_ruler"
+								duration = 3650
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							OR = {
+								AND = {
+									has_owner_religion = yes
+									has_owner_culture = no
+								}
+								AND = {
+									has_owner_religion = no
+									has_owner_culture = yes
+								}
+							}
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								OR = {
+									AND = {
+										has_owner_religion = yes
+										has_owner_culture = no
+									}
+									AND = {
+										has_owner_religion = no
+										has_owner_culture = yes
+									}
+								}
+							}
+							add_province_modifier = {
+								name = "alien_ruler"
+								duration = 1825
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							is_state = yes
+							OR = {
+								has_owner_culture = yes
+								has_owner_religion = yes
+							}
+						}
+					}
+					random_owned_province = {
+						limit = {
+							owner = { government = monarchy }
+							is_state = yes
+							OR = {
+								has_owner_culture = yes
+								has_owner_religion = yes
+							}
+						}
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 3.5
+							leader = rebel_preacher
+						}
+					}
+				}
+				clr_country_flag = strong_effect
+			}
+		}
+	}
+	option = {
+		name = "es_culture_religion_events.2.e"
+		trigger = {
+			OR = {
+				has_regency = yes #It is also possible to enter a regency
+				OR = {
+					has_reform = mamluk_government #It is even possible to suddenly get the Mamluk Government form.
+					has_reform = pirate_king_reform
+				}
+				AND = {
+					ruler_culture = ROOT
+					ruler_religion = ROOT
+				}
+			}
+		}
+		add_stability_or_adm_power = yes
+		
+	}
+	
+	after = {
+		hidden_effect = {
+			set_variable = {
+				which = new_ruler_religion
+				value = -1
+			}
+			set_variable = {
+				which = new_ruler_culture
+				value = -1
+			}
+			clear_saved_name = rebel_preacher
+		}
+	}
+}
+
+# es_culture_religion_events.3.t:0 "Rising support among the [Root.other_advisor_culture.GetCultureName] Population"
+# es_culture_religion_events.3.da:0 "As a leading figure of the [Root.other_advisor_culture.GetCultureName] community, [Root.Adm_Advisor.GetName] has both good insights and a strong influence far beyond the council which [Root.Adm_Advisor.GetSheHe] is part of in [Root.Capital.GetCapitalName]. A fact that [Root.Adm_Advisor.GetSheHe] has used to our advantage, strongly increasing the popular support for both our [Root.GovernmentName] and the [Root.Culture.GetName] people that rules it."
+# es_culture_religion_events.3.db:0 "As a leading figure of the [Root.other_advisor_culture.GetCultureName] community, [Root.Dip_Advisor.GetName] has both good insights and a strong influence far beyond the council which [Root.Dip_Advisor.GetSheHe] is part of in [Root.Capital.GetCapitalName]. A fact that [Root.Dip_Advisor.GetSheHe] has used to our advantage, strongly increasing the popular support for both our [Root.GovernmentName] and the [Root.Culture.GetName] people that rules it."
+# es_culture_religion_events.3.dc:0 "As a leading figure of the [Root.other_advisor_culture.GetCultureName] community, [Root.Mil_Advisor.GetName] has both good insights and a strong influence far beyond the council which [Root.Mil_Advisor.GetSheHe] is part of in [Root.Capital.GetCapitalName]. A fact that [Root.Mil_Advisor.GetSheHe] has used to our advantage, strongly increasing the popular support for both our [Root.GovernmentName] and the [Root.Culture.GetName] people that rules it."
+# es_culture_religion_events.3.a:0 "Great."
+# es_culture_religion_events.3.a.tt:1 "All §Y[Root.other_advisor_culture.GetCultureName]§! provinces will get §G-2§! Unrest and §G+10%§! Production Efficiency for §Y10§! years."
+
+country_event = {
+	id = es_culture_religion_events.3
+	title = es_culture_religion_events.3.t
+	picture = ES_CITY_PEOPLE_eventPicture
+	desc = {
+		trigger = {
+			employed_advisor = {
+				category = ADM
+			}
+			NOT = { primary_culture = new_variable:adm_advisor_culture }
+			any_owned_province = {
+				culture = new_variable:From:adm_advisor_culture
+			}
+		}
+		desc = es_culture_religion_events.3.da
+	}
+	desc = {
+		trigger = {
+			OR = {
+				NOT = {
+					employed_advisor = {
+						category = ADM
+					}
+				}
+				primary_culture = new_variable:adm_advisor_culture
+			}
+			employed_advisor = {
+				category = DIP
+			}
+			NOT = { primary_culture = new_variable:dip_advisor_culture }
+			any_owned_province = {
+				culture = new_variable:From:dip_advisor_culture
+			}
+		}
+		desc = es_culture_religion_events.3.db
+	}
+	desc = {
+		trigger = {
+			OR = {
+				NOT = {
+					employed_advisor = {
+						category = ADM
+					}
+				}
+				primary_culture = new_variable:adm_advisor_culture
+			}
+			OR = {
+				NOT = {
+					employed_advisor = {
+						category = DIP
+					}
+				}
+				primary_culture = new_variable:dip_advisor_culture
+			}
+			employed_advisor = {
+				category = MIL
+			}
+			NOT = { primary_culture = new_variable:mil_advisor_culture }
+			any_owned_province = {
+				culture = new_variable:From:mil_advisor_culture
+			}
+		}
+		desc = es_culture_religion_events.3.dc
+	}
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { #Somewhere we have an advisor that will match.
+			AND = {
+				employed_advisor = {
+					category = ADM
+				}
+				NOT = {
+					employed_advisor = {
+						category = ADM
+						culture = ROOT
+					}
+				}
+			}
+			AND = {
+				employed_advisor = {
+					category = DIP
+				}
+				NOT = {
+					employed_advisor = {
+						category = DIP
+						culture = ROOT
+					}
+				}
+			}
+			AND ={
+				employed_advisor = {
+					category = MIL
+				}
+				NOT = {
+					employed_advisor = {
+						category = MIL
+						culture = ROOT
+					}
+				}
+			}
+		}
+		if = { #ADM advisor is the one we want
+			limit = {
+				employed_advisor = { #We have an ADM Advisor
+					category = ADM
+				}
+				NOT = {
+					employed_advisor = { #His culture is not ours
+						category = ADM
+						culture = ROOT
+					}
+				}
+			}
+			any_owned_province = { #This is his home
+				culture = new_variable:From:adm_advisor_culture
+				NOT = { has_province_modifier = support_for_advisor } #event hasn't hit here before
+			}
+		}
+		if = { #DIP advisor is the one we want
+			limit = {
+				OR = {
+					NOT = {
+						employed_advisor = {
+							category = ADM
+						}
+					}
+					employed_advisor = {
+						category = ADM
+						culture = ROOT
+					}
+				}
+				employed_advisor = { #We do have a DIP advisor
+					category = DIP
+				}
+				NOT = {
+					employed_advisor = { #His culture is not ours
+						category = DIP
+						culture = ROOT
+					}
+				}
+			}
+			any_owned_province = { #This is his home
+				culture = new_variable:From:dip_advisor_culture
+				NOT = { has_province_modifier = support_for_advisor } #Event hasn't hit here before
+			}
+		}
+		if = { #MIL advisor is the one we want
+			limit = {
+				OR = { #No matching adm advisor
+					NOT = {
+						employed_advisor = {
+							category = ADM
+						}
+					}
+					employed_advisor = {
+						category = ADM
+						culture = ROOT
+					}
+				}
+				OR = { #No matching dip advisor
+					NOT = {
+						employed_advisor = {
+							category = DIP
+						}
+					}
+					employed_advisor = {
+						category = DIP
+						culture = ROOT
+					}
+				}
+				employed_advisor = { #We do have a Mil advisor
+					category = MIL
+				}
+				NOT = { 
+					employed_advisor = { #His culture is not ours
+						category = MIL
+						culture = ROOT
+					}
+				}
+			}
+			any_owned_province = { #This is his home
+				culture = new_variable:From:mil_advisor_culture
+				NOT = { has_province_modifier = support_for_advisor } #Event hasn't hit here before
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					employed_advisor = {
+						category = ADM
+					}
+					NOT = {
+						employed_advisor = {
+							category = ADM
+							culture = ROOT
+						}
+					}
+					any_owned_province = {
+						culture = new_variable:From:adm_advisor_culture
+					}
+				}
+				export_to_variable = { #Primarily for localization
+					variable_name = other_advisor_culture
+					value = adm_advisor_culture
+				}
+			}
+			else_if = {
+				limit = {
+					employed_advisor = {
+						category = DIP
+					}
+					NOT = {
+						employed_advisor = {
+							category = DIP
+							culture = ROOT
+						}
+					}
+					any_owned_province = {
+						culture = new_variable:From:dip_advisor_culture
+					}
+				}
+				export_to_variable = { #Primarily for localization
+					variable_name = other_advisor_culture
+					value = dip_advisor_culture
+				}
+			}
+			else = {
+				export_to_variable = { #Primarily for localization
+					variable_name = other_advisor_culture
+					value = mil_advisor_culture
+				}
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+	
+	option = {
+		name = es_culture_religion_events.3.a #
+		if = {
+			limit = {
+				calc_true_if = {
+					all_owned_province = {
+						culture = variable:From:other_advisor_culture
+						NOT = { has_province_modifier = support_for_advisor }
+					}
+					amount = 6
+				}
+			}
+			custom_tooltip = es_culture_religion_events.3.a.tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = variable:From:other_advisor_culture
+						NOT = { has_province_modifier = support_for_advisor }
+					}
+					add_province_modifier = {
+						name = support_for_advisor
+						duration = 3650
+					}
+				}
+			}
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					culture = variable:From:other_advisor_culture
+					NOT = { has_province_modifier = support_for_advisor }
+				}
+				add_province_modifier = {
+					name = support_for_advisor
+					duration = 3650
+				}
+			}
+		}
+	}
+	after = {
+		set_variable = {
+			which = other_advisor_culture
+			value = -1
+		}
+	}
+}
+
+# es_culture_religion_events.4.t:0 "The [Root.other_advisor_religion.GetReligionName] Minister"
+# es_culture_religion_events.4.da:0 "The [Root.other_advisor_religion.GetReligionName] faithful have watched the rise of our [Root.Adm_Advisor.GetTitle] [Root.Adm_Advisor.GetName] with both interest and enthusiasm. To many [Root.Adm_Advisor.GetSheHe] has become proof that it is possible for someone to do well within the [Root.GetAdjective] state despite not belonging to the state religion."
+# es_culture_religion_events.4.db:0 "The [Root.other_advisor_religion.GetReligionName] faithful have watched the rise of our [Root.Dip_Advisor.GetTitle] [Root.Dip_Advisor.GetName] with both interest and enthusiasm. To many [Root.Dip_Advisor.GetSheHe] has become proof that it is possible for someone to do well within the [Root.GetAdjective] state despite not belonging to the state religion."
+# es_culture_religion_events.4.dc:0 "The [Root.other_advisor_religion.GetReligionName] faithful have watched the rise of our [Root.Mil_Advisor.GetTitle] [Root.Mil_Advisor.GetName] with both interest and enthusiasm. To many [Root.Mil_Advisor.GetSheHe] has become proof that it is possible for someone to do well within the [Root.GetAdjective] state despite not belonging to the state religion."
+# es_culture_religion_events.4.a:0 "One day you might all rise to be like [Root.Adm_Advisor.GetName]."
+# es_culture_religion_events.4.b:0 "One day you might all rise to be like [Root.Dip_Advisor.GetName]."
+# es_culture_religion_events.4.c:0 "One day you might all rise to be like [Root.Mil_Advisor.GetName]."
+
+country_event = {
+	id = es_culture_religion_events.4
+	title = es_culture_religion_events.4.t
+	picture = ES_MINISTER_eventPicture
+	desc = {
+		trigger = {
+			employed_advisor = {
+				category = ADM
+				religion = heretic
+			}
+		}
+		desc = es_culture_religion_events.4.da
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				employed_advisor = {
+					category = ADM
+					religion = heretic
+				}
+			}
+			employed_advisor = {
+				category = DIP
+				religion = heretic
+			}
+		}
+		desc = es_culture_religion_events.4.db
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				employed_advisor = {
+					category = ADM
+					religion = heretic
+				}
+			}
+			NOT = {
+				employed_advisor = {
+					category = DIP
+					religion = heretic
+				}
+			}
+			employed_advisor = {
+				category = MIL
+				religion = heretic
+			}
+		}
+		desc = es_culture_religion_events.4.dc
+	}
+	
+	is_triggered_only = yes
+
+	trigger = {
+		employed_advisor = {
+			religion = heretic
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					employed_advisor = {
+						category = ADM
+						religion = heretic
+					}
+				}
+				export_to_variable = { #Primarily for localization
+					variable_name = other_advisor_religion
+					value = adm_advisor_religion
+				}
+				set_country_flag = adm_advisor_heretic
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						employed_advisor = {
+							category = ADM
+							religion = heretic
+						}
+					}
+					employed_advisor = {
+						category = DIP
+						religion = heretic
+					}
+				}
+				export_to_variable = { #Primarily for localization
+					variable_name = other_advisor_religion
+					value = dip_advisor_religion
+				}
+				set_country_flag = dip_advisor_heretic
+			}
+			else = {
+				export_to_variable = { #Primarily for localization
+					variable_name = other_advisor_religion
+					value = mil_advisor_religion
+				}
+				set_country_flag = mil_advisor_heretic
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+	
+	option = {
+		name = es_culture_religion_events.4.a #One day you might all rise to be like [Root.AdmAdvisor.GetName].
+		trigger = { has_country_flag = adm_advisor_heretic }
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = es_culture_religion_events.4.b #One day you might all rise to be like [Root.DipAdvisor.GetName].
+		trigger = { has_country_flag = dip_advisor_heretic }
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = es_culture_religion_events.4.c #One day you might all rise to be like [Root.MilAdvisor.GetName].
+		trigger = { has_country_flag = mil_advisor_heretic }
+		add_stability_or_adm_power = yes
+	}
+	after = {
+		set_variable = {
+			which = other_advisor_religion
+			value = -1
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			adm_advisor_heretic = { clr_country_flag = adm_advisor_heretic }
+			dip_advisor_heretic = { clr_country_flag = dip_advisor_heretic }
+			mil_advisor_heretic = { clr_country_flag = mil_advisor_heretic }
+		}
+	}
+}
+
+# es_culture_religion_events.5.t:0 "The Succession of [Root.Monarch.GetName]"
+# es_culture_religion_events.5.d:0 "The lack of an heir-apparent for the [Root.GetAdjective] throne is a pressing matter, not only for [Root.Monarch.GetHerselfHimself] but also for the realm at large. It has been suggested that [Root.young_heir.GetName], a young and promising scion of a distant branch of the [Root.Monarch.Dynasty.GetName] family could perhaps be introduced in the [Root.Capital.GetCapitalName] court, and in time take the place as [Root.Monarch.GetName]'s successor."
+# es_culture_religion_events.5.a:0 "A capital idea!"
+# es_culture_religion_events.5.b:0 "We will never see a [family_holdings.Culture.GetName] noble on our throne."
+
+country_event = {
+	id = es_culture_religion_events.5
+	title = es_culture_religion_events.5.t
+	desc = es_culture_religion_events.5.d
+	picture = ES_THRONE_HALL_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		government = monarchy
+		has_regency = no
+		has_heir = no
+		NOT = { has_reform = mamluk_government }
+		NOT = { has_reform = pirate_king_reform }
+		has_government_attribute = heir
+		any_owned_province = {
+			has_owner_culture = no
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_owner_culture = no
+				}
+				save_event_target_as = family_holdings
+			}
+			if = {
+				limit = {
+					any_country = {
+						primary_culture = event_target:family_holdings
+					}
+				}
+				set_saved_name = {
+					key = young_heir
+					type = advisor
+					scope = event_target:good_name_list
+				}
+			}
+			else = {
+				set_saved_name = {
+					key = young_heir
+					type = advisor
+					scope = ROOT
+				}
+			}
+			set_heir_flag = legitimacy_questioned
+			set_country_flag = successful_consort_event
+		}
+	}
+	
+	option = {
+		name = es_culture_religion_events.5.a #A capital idea!
+		define_heir = {
+			age = 20
+			name = young_heir
+			dynasty = ROOT
+			culture = event_target:family_holdings
+			claim = 75
+		}
+	}
+	option = {
+		name = es_culture_religion_events.5.b #We will never see a [family_holdings.Culture.GetName] noble on our throne.
+		add_legitimacy = 15
+		add_republican_tradition = 15
+		add_meritocracy = 15
+	}
+	after = {
+		clear_saved_name = young_heir
+	}
+}
+
+# es_culture_religion_events.6.t:0 "A Question of Faith"
+# es_culture_religion_events.6.d:0 "For a long time now the personal convictions of [Root.Monarch.GetName] have been at odds with the religious establishment of [Root.GetName]. This has caused both friction and conflict, with the clergy and leading nobles often questioning [Root.Monarch.GetHerHis] rule. There are, however, many that now support [Root.Monarch.GetHerHim] in his devotion to the [Root.new_monarch_religion.GetReligionName] faith, both in [Root.Capital.GetCapitalName] and the [Root.GetAdjective] countryside. Perhaps the time has come to make a great change to how the [Root.GovernmentName] of [Root.GetName] functions to its very core? Surely the defenders of the old would not go out willingly but if there is a will there is a way..."
+# es_culture_religion_events.6.a:0 "[Root.Capital.GetCapitalName] shall be a [Root.new_monarch_religion.GetReligionName] city."
+# es_culture_religion_events.6.b:0 "We could never take such a risk."
+
+country_event = {
+	id = es_culture_religion_events.6
+	title = es_culture_religion_events.6.t
+	desc = es_culture_religion_events.6.d
+	picture = ES_ALTAR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_ruler_flag = faith_question }
+		government = monarchy
+		NOT = { ruler_religion = ROOT }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = faith_question
+			export_to_variable = {
+				variable_name = new_monarch_religion
+				value = ruler_religion
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+	
+	option = {
+		name = es_culture_religion_events.6.a #[Root.Capital.GetCapitalName] shall be a [Root.new_monarch_religion.GetReligionName] city.
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 5
+				dominant_religion = new_variable:ruler_religion
+			}
+		}
+		change_religion = new_variable:ruler_religion
+		add_stability = -3
+		add_legitimacy = -50
+	}
+	option = {
+		name = es_culture_religion_events.6.b #We could never take such a risk.
+		ai_chance = {
+			factor = 95
+		}
+		add_prestige = 10
+	}
+	after = {
+		set_variable = {
+			which = new_monarch_religion
+			value = -1
+		}
+	}
+}
+
+# es_culture_religion_events.7.t:0 "The Court of [Root.Monarch.GetName]"
+# es_culture_religion_events.7.d:0 "Ever since the start of [Root.Monarch.GetName]'s reign it has been clear that [Root.Monarch.GetHerHis] heart lies with the [Root.new_monarch_culture.GetCultureName]. In time the palace halls of [Root.Capital.GetCapitalName] have come to echo in merry conversations entirely held in the [Root.new_monarch_culture.GetCultureName] language as even the [Root.Culture.GetName] nobles have taken to using the language of the [Root.Monarch.GetTitle]. Perhaps it is time to codify the special status of the [Root.new_monarch_culture.GetCultureName] culture?"
+# es_culture_religion_events.7.a:0 "The time has come indeed."
+# es_culture_religion_events.7.b:0 "We could never dishonor the legacy of our ancestors."
+
+country_event = {
+	id = es_culture_religion_events.7
+	title = es_culture_religion_events.7.t
+	desc = es_culture_religion_events.7.d
+	picture = ES_PALACE_HALLS_BOBLES_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		government = monarchy
+		NOT = { ruler_culture = ROOT }
+		heir_culture = new_variable:ruler_culture
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = faith_question
+			export_to_variable = {
+				variable_name = new_monarch_culture
+				value = ruler_culture
+			}
+			set_country_flag = successful_consort_event
+		}
+	}
+	
+	option = {
+		name = es_culture_religion_events.7.a #
+		if = {
+			limit = {
+				NOT = { accepted_culture = new_variable:ruler_culture }
+				NOT = { culture_group = new_variable:ruler_culture }
+			}
+			add_stability = -3
+			add_legitimacy = -50
+		}
+		else = {
+			add_stability = -1
+			add_legitimacy = -25
+		}
+		change_primary_culture = new_variable:ruler_culture
+	}
+	option = {
+		name = es_culture_religion_events.7.b #
+		ai_chance = {
+			factor = 95
+		}
+		add_prestige = 10
+	}
+	after = {
+		set_variable = {
+			which = new_monarch_culture
+			value = -1
+		}
+	}
+}

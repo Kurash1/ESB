@@ -1,0 +1,111 @@
+temple = {
+	cost = 75
+	time = 12
+	modifier = {
+		local_missionary_strength = 0.015	
+		local_unrest = -1.5
+		local_tax_modifier = 0.15
+	}
+	
+	on_built = {
+		add_development_from_building = {
+			building = temple
+			type = tax
+			value = 1
+		}
+	}
+	on_destroyed = {
+		add_development_from_building = {
+			building = temple
+			type = tax
+			value = -1
+		}
+	}
+	on_obsolete = {
+	}
+	
+	ai_will_do = {
+		factor = 1			
+		modifier = {
+			factor = 1.5
+			has_owner_religion = no			
+		}
+		modifier = {
+			factor = 2.5
+			FROM = { government = theocracy }		
+		}
+	}
+}	
+
+cathedral = {
+	make_obsolete = temple
+	
+	cost = 150			
+	time = 24			
+	modifier = {
+		local_missionary_strength = 0.025	
+		local_culture_conversion_cost = -0.25		
+		local_tax_modifier = 0.25
+	}
+	
+	on_built = {
+		add_development_from_building = {
+			building = cathedral
+			type = tax
+			value = 1
+		}
+	}
+	on_destroyed = {
+		add_development_from_building = {
+			building = cathedral
+			type = tax
+			value = -1
+		}
+	}
+	on_obsolete = {
+	}
+	
+	ai_will_do = {
+		factor = 5		
+		modifier = {
+			factor = 1.5
+			has_owner_religion = no			
+		}
+		modifier = {
+			factor = 2.5
+			FROM = { government = theocracy }		
+		}
+	}
+}
+
+#######################################################################
+
+tax_assessor = {
+	
+	cost = 225	
+	time = 48			
+	modifier = {
+		local_tax_modifier = 0.5
+	}
+	
+	on_built = {
+		add_development_from_building = {
+			building = tax_assessor
+			type = tax
+			value = 1
+		}
+	}
+	on_destroyed = {
+		add_development_from_building = {
+			building = tax_assessor
+			type = tax
+			value = -1
+		}
+	}
+	on_obsolete = {
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

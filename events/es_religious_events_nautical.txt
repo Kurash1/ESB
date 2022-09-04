@@ -1,0 +1,1000 @@
+namespace = es_religious_events_nautical
+
+# Event Manager
+
+country_event = {
+	id = es_religious_events_nautical.100
+	title = es_religious_events_nautical.1.t
+	desc = es_religious_events_nautical.1.d
+	picture = ES_SEA_AFTER_STORM_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+			religion = serpant_king
+		}
+	}
+
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = es_religious_events_nautical.1 } }
+			1 = { country_event = { id = es_religious_events_nautical.2 } }
+			1 = { country_event = { id = es_religious_events_nautical.3 } }
+			1 = { country_event = { id = es_religious_events_nautical.4 } }
+			1 = { country_event = { id = es_religious_events_nautical.5 } }
+			1 = { country_event = { id = es_religious_events_nautical.6 } }
+			1 = { country_event = { id = es_religious_events_nautical.7 } }
+			1 = { country_event = { id = es_religious_events_nautical.8 } }
+			1 = { country_event = { id = es_religious_events_nautical.9 } }
+			1 = { country_event = { id = es_religious_events_nautical.10 } }
+			1 = { country_event = { id = es_religious_events_nautical.11 } }
+			1 = { country_event = { id = es_religious_events_nautical.12 } }
+			1 = { country_event = { id = es_religious_events_nautical.13 } }
+			1 = { country_event = { id = es_religious_events_nautical.17 } }
+			1 = { country_event = { id = es_religious_events_nautical.18 } }
+			85 = { set_country_flag = successful_nautical_religion_flavour_event }
+		}
+	}
+	
+	option = {
+		name = es_religious_events_nautical.1.a
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_nautical_religion_flavour_event }
+			clr_country_flag = successful_nautical_religion_flavour_event
+		}
+		else = {
+			country_event = {
+				id = es_religious_events_nautical.100
+				days = 1
+			}
+		}
+	}
+}
+
+# Tava - yokudan_pantheon redguard_pantheon
+# Harsh Winds
+# A mighty storm passes near our coast, churning the seas and whipping at the sails of our ships. Though to some, such storms would be a reason to fear, we know of the opportunity these storms may bring. It is but a question if we shall be the ones to ride against the winds of the storm, or to rest upon the calm after the storm.
+# “We shall prove ourselves to Tava!” (Increase naval combat ability, increase naval maintenance cost)
+# “We shall await Tava’s gift.” (Decrease naval maintenance cost, decrease naval combat ability)
+# “Tava aside, this smells of opportunity!” (Enabled if Pirate Republic. Increase privateering efficiency)
+
+country_event = {
+	id = es_religious_events_nautical.1
+	title = es_religious_events_nautical.1.t
+	desc = es_religious_events_nautical.1.d
+	picture = ES_SEA_AFTER_STORM_eventPicture
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.1.a
+		add_country_modifier = {
+			name = "es_challenged_by_tava"
+			duration = 3650
+		}
+		es_please_merchant_estates = yes
+		es_upset_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.1.b
+		add_country_modifier = {
+			name = "es_awaiting_gifts"
+			duration = 3650
+		}
+		es_please_war_estates = yes
+		es_upset_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.1.c
+		trigger = {
+			OR = {
+				has_reform = pirate_republic_reform
+				has_reform = pirate_king_reform
+				has_reform = war_against_the_world_doctrine_reform
+			}
+		}
+		add_country_modifier = {
+			name = "es_smell_of_opportunity"
+			duration = 3650
+		}
+		es_please_common_estates = yes
+	}
+}
+
+# Sep - yokudan_pantheon redguard_pantheon
+# A Hungry Stomach
+# A great hunger sweeps our populace, yet there was no failure of our crops nor our catches and hunts. No, instead the people simply have been more ravenous than they have been before, and our stockpiles have begun to dwindle. If we are to avoid a large death toll, we must do something.
+# “We must pay for our greed. Import food from our neighbors.” (Lose a scaling amount of cash, gain a token amount of prestige)
+# “Ration out what food we have. We may hunger, but not starve.” (Add unrest)
+# “As was Sep, their hunger too shall be punished.” (Lose a scaling amount of manpower)
+# “Hunger? I see plenty of food...” (Enabled if Daedra/Dead Culture Group ruler. Lose a scaling amount of manpower, but gain monarch points)
+
+country_event = {
+	id = es_religious_events_nautical.2
+	title = es_religious_events_nautical.2.t
+	desc = es_religious_events_nautical.2.d
+	picture = ES_FAMINE_VILLAGE_2
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.2.a
+		add_years_of_income = -1.25
+		add_prestige = 5
+		es_please_merchant_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.2.b
+		add_country_modifier = {
+			name = "es_threat_of_starvation"
+			duration = 3650
+		}
+		es_upset_common_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.2.c
+		add_yearly_manpower = -5.0
+		es_upset_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.2.e
+		trigger = {
+			is_daedric_nation_trigger = yes
+		}
+		add_yearly_manpower = -10.0
+		add_adm_power = 350
+		add_dip_power = 350
+		add_mil_power = 350
+		es_upset_religious_estates = yes
+		es_upset_magical_estates = yes
+	}
+	
+}
+
+# Satakal - yokudan_pantheon redguard_pantheon
+# A Serpent’s Tale
+# Recently, a priest has travelled our lands, spreading this message. While this is far from abnormal, this priest carries a dead snake with its tail firmly lodged down its own throat. He claims to have found it on the steps of a temple, a sign that Satakal will soon swallow the world and begin the cycle anew. Naturally, these claims have been scaring and unsettling our people, though, doing something about it may upset those who believe in his words...
+# “It is the end. Of this priest.” (Zealot rebels rise up in a province)
+# “We shall wait and see, let him preach.” (Add unrest)
+# “The end is nigh! Satakal lives!” (Lose 1 stability)
+# “It seems this priest needs some counselling.” (Enabled if theocracy type government. Gain devotion)
+
+country_event = {
+	id = es_religious_events_nautical.3
+	title = es_religious_events_nautical.3.t
+	desc = es_religious_events_nautical.3.d
+	picture = SATAKAL_eventPicture
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+			religion = serpant_king
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.3.a
+		random_owned_province = {
+			limit = {
+				has_owner_religion = yes
+			}
+			spawn_rebels = {
+				type = religious_rebels
+				size = 5
+				leader = rebel_preacher
+			}
+		}
+		es_upset_religious_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.3.b
+		add_country_modifier = {
+			name = "es_abnormal_preach"
+			duration = 3650
+		}
+		es_please_religious_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.3.c
+		add_stability = -1
+		add_country_modifier = {
+			name = "es_alive_satakal"
+			duration = 3650
+		}
+		es_please_common_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.3.e
+		trigger = {
+			government = theocracy
+		}
+		add_devotion = 15
+		add_legitimacy = 15
+		es_upset_common_estates = yes
+	}
+	
+}
+
+# Diagna - yokudan_pantheon
+# Weapons of Order
+# Recently, we have been approached by an envoy of the Order of Diagna, an order of exceptionally skilled knights. They have heard of our ruler’s decision to elevate the worship of Diagna, and have come to ally themselves with us. In this pursuit, they offer us their services as a commander of men.
+# “You would make an unparalleled war council.” (Add a military advisor at half cost)
+# “None are better suited to lead my armies than you.” (Add a high tradition general)
+
+country_event = {
+	id = es_religious_events_nautical.4
+	title = es_religious_events_nautical.4.t
+	desc = es_religious_events_nautical.4.d
+	picture = ES_DIAGNE_ORDER_eventPicture
+	
+	trigger = {
+		religion = yokudan_pantheon
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.4.a
+		define_advisor = {
+			type = esu_officer
+			skill = 3
+			discount = yes
+		}
+		es_upset_magical_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.4.b
+		create_general = { tradition = 50 }
+		es_please_war_estates = yes
+	}
+	
+}
+ 
+# Morwha - yokudan_pantheon redguard_pantheon
+# Something in the Air
+# Maybe it’s the work of supernatural forces, or maybe it’s just a really nice night. Whatever the case, the taverns are full, the bards are singing, and even the coldest of hearts seem to be warmed for at least a time. Including your very own. Regrettably though, the one you love is not here tonight. So, who will you spend it with?
+# “I will spend it with the statue of Morwha, the goddess deserves praise.” (Gain prestige)
+# “I will spend it with the people, for I love my subjects.” (Gain legitimacy)
+# “I will spend it in the arms of a mistress.” (Only available to male rulers. Gain a new, low legitimacy heir)
+# “I will grab as many husbands as I have arms, just as Morwha.” (Only available to female rulers. Gain a new consort/husband/etc if applicable, gain a new high legitimacy heir)
+
+country_event = {
+	id = es_religious_events_nautical.5
+	title = es_religious_events_nautical.5.t
+	desc = es_religious_events_nautical.5.d
+	picture = ES_TAVERN_1_eventPicture
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.5.a
+		add_prestige = 10
+		es_please_religious_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.5.b
+		add_legitimacy = 15
+		add_republican_tradition = 15
+		add_devotion = 15
+		add_horde_unity = 15
+		add_meritocracy = 15
+		es_please_common_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.5.c
+		trigger = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_heir = no
+			is_female = no
+		}
+		define_heir = {
+			dynasty = ROOT
+			adm = 4
+			dip = 5
+			mil = 3
+			claim = 25
+			female = yes
+			no_consort_with_heir = yes
+		}
+		es_upset_common_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.5.e
+		trigger = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_heir = no
+			is_female = yes
+		}
+		define_heir = {
+			dynasty = ROOT
+			adm = 7
+			dip = 7
+			mil = 7
+			claim = 100
+			female = yes
+			no_consort_with_heir = yes
+		}
+		es_upset_religious_estates = yes
+	}
+	
+}
+
+# Onsi - yokudan_pantheon
+# A Blessed Blade
+# “As if struck by divine inspiration, our smiths have been hard at work at their forges. After what seems like days madly at work, they have produced a new, distinctly shaped blade. While not particularly special in its own right, some believe the invention not to be of mortal man, but of Onsi acting through our smiths. The question is, what will we do with these new blades?”
+# “Give them to the men. A blade with a story will raise their spirits.” (Buff army morale or morale recovery rate)
+# “Melt them down for their metal. Practicality over looks.” (Buff production efficiency)
+# “Foreigners are fascinated by curved swords.Sell them abroad.” (Give scaling cash)
+# “Not special? This blade is like nothing we have!” (Enabled if tribal government. Buff army discipline and morale)
+
+country_event = {
+	id = es_religious_events_nautical.6
+	title = es_religious_events_nautical.6.t
+	desc = es_religious_events_nautical.6.d
+	picture = ES_BLESSED_BLADE_eventPicture
+	
+	trigger = {
+		religion = yokudan_pantheon
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.6.a
+		add_country_modifier = {
+			name = "es_blessed_blade"
+			duration = 3650
+		}
+		es_please_war_estates = yes
+		es_upset_religious_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.6.b
+		add_country_modifier = {
+			name = "es_melted_blade"
+			duration = 3650
+		}
+		es_please_magical_estates = yes
+		es_upset_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.6.c
+		add_years_of_income = 1.5
+		es_please_merchant_estates = yes
+		es_upset_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.6.e
+		trigger = {
+			OR = {
+				government = native
+				government = tribal
+			}
+			has_heir = no
+			is_female = yes
+		}
+		add_country_modifier = {
+			name = "es_unique_blade"
+			duration = 3650
+		}
+		es_please_common_estates = yes
+	}
+	
+}
+
+# Ruptga - yokudan_pantheon
+# A Measure of Man
+# “Last night, I had a dream I’ll never forget. I stood before Ruptga, Tall Papa himself, the chief god of the pantheon. I attempted to speak, but no sound left my lips. Ruptga said not a word either, instead he extended his open hand to me, to shake my own. I slid my hand into his, and squeezed, I could tell he wanted to see if I was a firm leader to my people as he was to his own. I looked for his reaction and he...”
+# “Nodded.” (Only available if Absolutism is 30 or higher, +1 to a random Ruler stat)
+# “Didn’t respond.” (Only available if Absolutism is 10~29, no effect)
+# “Shook his head.” (Only available if Absolutism is 0~9, -1 to a random Ruler stat)
+
+country_event = {
+	id = es_religious_events_nautical.7
+	title = es_religious_events_nautical.7.t
+	desc = es_religious_events_nautical.7.d
+	picture = ES_RUPTGA_eventPicture
+	
+	trigger = {
+		religion = yokudan_pantheon
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.7.a
+		trigger = {
+			prestige = 35
+		}
+		random_list = {
+			33 = { change_adm = 1 }
+			33 = { change_dip = 1 }
+			33 = { change_mil = 1 }
+		}
+	}
+	option = {
+		name = es_religious_events_nautical.7.b
+		trigger = {
+			prestige = 0
+			NOT = { prestige = 35 }
+		}
+		add_prestige = 5
+	}
+	option = {
+		name = es_religious_events_nautical.7.c
+		trigger = {
+			NOT = { prestige = 0 }
+		}
+		random_list = {
+			33 = { change_adm = -1 }
+			33 = { change_dip = -1 }
+			33 = { change_mil = -1 }
+		}
+	}
+	
+}
+
+# Tu'whacca - yokudan_pantheon redguard_pantheon
+# Somebody Cares
+# “Death is but a fact of life, but one which still calls for mourning. To wish Tu’whacca’s blessing upon someone else, is equally a part of daily life. A gesture of respect and care, it is for that reason the adherents of Tu’whacca view burial grounds as equally deserving of their attention as temples themselves. As one however, the question is, which of our nation’s burial grounds will you attend?”
+# “The graves of the common folk.” (Gain legitimacy)
+# “The graves of our sailors and traders.” (Gain an amount of naval tradition)
+# “The graves of our soldiers and guards.” (Gain an amount of army tradition)
+# “Tu’whacca’s Throne. Resting place of the Yokudans who sank.” (Available if Yokuda sinking has happened. Gain stability & legitimacy)
+# “The royal tomb.” (Enabled if monarchy government form. Gain legitimacy & prestige)
+
+country_event = {
+	id = es_religious_events_nautical.8
+	title = es_religious_events_nautical.8.t
+	desc = es_religious_events_nautical.8.d
+	picture = ES_CEMETRY_eventPicture
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.8.a
+		trigger = {
+			OR = {
+				government = republic
+				government = theocracy
+			}
+		}
+		add_legitimacy = 15
+		add_republican_tradition = 15
+		add_devotion = 15
+		add_horde_unity = 15
+		add_meritocracy = 15
+		add_prestige = -10
+		es_please_common_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.8.b
+		add_navy_tradition = 15
+		add_army_tradition = -5
+		es_please_merchant_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.8.c
+		add_army_tradition = 15
+		add_navy_tradition = -5
+	}
+	option = {
+		name = es_religious_events_nautical.8.e
+		trigger = {
+			capital_scope = { NOT = { continent = Yokuda } }
+		}
+		add_army_tradition = 15
+		add_navy_tradition = -5
+		es_please_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.8.f
+		trigger = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+		}
+		add_years_of_income = -1.0
+		add_prestige = 10
+	}
+	
+}
+
+# HoonDing - yokudan_pantheon redguard_pantheon
+# Erasure
+# “There are threats everywhere. Beyond our borders, there are those who wish to take from us and subjugate us. Within our borders, those same enemies, subjugated as they may be, almost certainly dream of our downfall! It is time we band together and...”
+# “Crush the infidels.” (Increase tolerance of true faith, decrease tolerance of heathen faiths)
+# “Wage war against mer.” (Province war score cost reduction, increase aggressive expansion impact. Available if primary culture is Yokudan)
+# “Forget.” (Decrease unrest, decrease improve relations. Available if primary culture is Redguard)
+# “Reconcile.” (Enabled if Republic government form. Increase tolerance of heretics & heathens)
+
+country_event = {
+	id = es_religious_events_nautical.9
+	title = es_religious_events_nautical.9.t
+	desc = es_religious_events_nautical.9.d
+	picture = ES_THRONE_ROOM_3_eventPicture
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.9.a
+		add_country_modifier = {
+			name = "es_crushed_infidels"
+			duration = 3650
+		}
+		es_please_religious_estates = yes
+		es_upset_magical_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.9.b
+		trigger = {
+			primary_culture = yokudan
+		}
+		add_country_modifier = {
+			name = "es_war_against_mer"
+			duration = 3650
+		}
+		es_please_war_estates = yes
+		es_upset_merchant_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.9.c
+		trigger = {
+			primary_culture = redguard
+		}
+		add_country_modifier = {
+			name = "es_forgotten_threats"
+			duration = 3650
+		}
+		es_please_common_estates = yes
+		es_upset_war_estates = yes
+	}
+	option = {
+		name = es_religious_events_nautical.9.e
+		trigger = {
+			government = republic
+		}
+		add_country_modifier = {
+			name = "es_reconcile_threats"
+			duration = 3650
+		}
+		es_please_magical_estates = yes
+		es_upset_religious_estates = yes
+	}
+	
+}
+
+# Leki - yokudan_pantheon redguard_pantheon
+# Aberrant Practices
+# “A group of warriors have recently been a regular topic of conversation among our guards. Swordswomen who practice a style of fighting not seen before. Some of our more senior warriors feel they are undisciplined and disgraceful to the more refined arts of combat they have perfected. Though, as the story of the Ephemeral Feint tells us... maybe there’s something there.”
+# “Bring them here, I wish to see for myself.” (Gain a fixed amount of mil points)
+# “Let them fight as they wish.” (Gain a fixed amount of prestige)
+# “Teach them the proper way to fight!” (Gain a fixed amount of army tradition)
+# “Host a competition, as my forefathers did.” (Enabled if monarchy, gain a reduced amount of the above options combined)
+
+country_event = {
+	id = es_religious_events_nautical.10
+	title = es_religious_events_nautical.10.t
+	desc = es_religious_events_nautical.10.d
+	picture = ES_SWORD_DUEL_eventPicture
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.10.a
+		add_mil_power = 100
+	}
+	option = {
+		name = es_religious_events_nautical.10.b
+		add_prestige = 15
+	}
+	option = {
+		name = es_religious_events_nautical.10.c
+		add_army_tradition = 10
+	}
+	option = {
+		name = es_religious_events_nautical.10.e
+		trigger = {
+			government = monarchy
+		}
+		add_mil_power = 50
+		add_prestige = 5
+		add_army_tradition = 5
+	}
+	
+}
+
+# Reymon Ebonarm - yokudan_pantheon redguard_pantheon
+# Look, a Horse!
+# “Tales abound of a golden stallion running through the countryside. Some dismiss it as but a horse with a rare coat, but a superstitious few believe it to be War Master, the steed of Ebonarm himself. If this horse is real, catching it would directly relate our government to the god of war himself. Though on the other hand... if we should fail, it may draw into question our ruler’s mind.”
+# “Be rational, that horse certainly doesn’t exist.” (No effect)
+# “Send a few men, just to address the rumor.” (Lose a fixed amount of manpower. Low % chance of a large prestige gain. Otherwise, no effect.)
+# “Hire some hunters. Who knows.” (Lose a fixed amount of cash. 50/50 odds of gaining a large amount of prestige, or losing a small amount of prestige)
+# “This horse is our number one priority!” (Lose a larger sum of cash & manpower than previous options. High % chance of large prestige gain, otherwise, lose a large amount of prestige.)
+# “Real or nay, belief in Ebonarm strengthens us.” (Enabled if theocracy, gain devotion)
+
+country_event = {
+	id = es_religious_events_nautical.11
+	title = es_religious_events_nautical.11.t
+	desc = es_religious_events_nautical.11.d
+	picture = ES_STALLION_eventPicture
+	
+	trigger = {
+		OR = {
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.11.a
+		trigger = {
+			NOT = { government = theocracy }
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = es_religious_events_nautical.11.b
+		add_yearly_manpower = -0.5
+		random_list = {
+			25 = {
+				add_prestige = 25
+			}
+			75 = {
+				add_prestige = -10
+			}
+		}
+	}
+	option = {
+		name = es_religious_events_nautical.11.c
+		add_years_of_income = -1.0
+		random_list = {
+			50 = {
+				add_prestige = 25
+			}
+			50 = {
+				add_prestige = -15
+			}
+		}
+	}
+	option = {
+		name = es_religious_events_nautical.11.e
+		add_yearly_manpower = -1.0
+		add_years_of_income = -1.5
+		random_list = {
+			75 = {
+				add_prestige = 25
+			}
+			25 = {
+				add_prestige = -25
+			}
+		}
+	}
+	option = {
+		name = es_religious_events_nautical.11.f
+		trigger = {
+			government = theocracy
+		}
+		add_devotion = 10
+		add_legitimacy = 10
+	}
+	
+}
+
+# es_religious_events_nautical.12.t:0 "Bad Omens"
+# es_religious_events_nautical.12.d:0 "After intense study of the skies our priests agree that everything indicates that harsh and troubling times are ahead. As commoners and nobles alike prepare for what is to come many will attept to save themselves from bad times by propitiating the gods with their blood.  ."
+# es_religious_events_nautical.12.a:0 "Our ruler will sacrifice some of his own blood to the gods."
+# es_religious_events_nautical.12.b:0 "The end is nigh!"
+ 
+country_event = {
+	id = es_religious_events_nautical.12
+	title = es_religious_events_nautical.12.t
+	desc = es_religious_events_nautical.12.d
+	picture = ES_BAD_OMEN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = serpant_king
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.12.a
+		trigger = { has_regency = no }
+		add_doom = -10
+		add_adm_power = -100
+	}
+	option = {
+		name = es_religious_events_nautical.12.b
+		add_doom = 10
+		add_stability = -1
+	}
+}
+
+# es_religious_events_nautical.13.t:0 "Precious Daughter"
+# es_religious_events_nautical.13.d:0 "Word has reached us of of an exceptional young girl from [Root.Owner.Capital.GetCapitalName]. She was born by a commoner woman but all the priests, who met her in person, agree that the greatness is destined for the child. As is tradition, this youth will soon be brought to the noble house, where she will be introduced to those who will later handle her marital and magical education."
+# es_religious_events_nautical.13.a:0 "The child become a fine warrior."
+ 
+country_event = {
+	id = es_religious_events_nautical.13
+	title = es_religious_events_nautical.13.t
+	desc = es_religious_events_nautical.13.d
+	picture = ES_MAORMER_WARRIOR_YOUNG_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = serpant_king
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.13.a
+		add_doom = -5
+		hidden_effect = {
+			random_list = {
+				33 = { country_event = { id = es_religious_events_nautical.14 days = 1825 } }
+				33 = { country_event = { id = es_religious_events_nautical.15 days = 1825 } }
+				33 = { country_event = { id = es_religious_events_nautical.16 days = 1825 } }
+			}
+		}
+	}
+}
+
+# es_religious_events_nautical.14.t:0 "The Favourable Warrior"
+# es_religious_events_nautical.14.d:0 "Proving all the signs correct the young warrior has already exceeded all expectations. At every opportunity available she brought great glory to herself and our nation. In time she will surely attain the greatest honors a lifetime of battles can bestow."
+# es_religious_events_nautical.14.a:0 "Great!"
+ 
+country_event = {
+	id = es_religious_events_nautical.14
+	title = es_religious_events_nautical.14.t
+	desc = es_religious_events_nautical.14.d
+	picture = ES_MAORMER_WARRIOR_GLORY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_religious_events_nautical.14.a
+		define_general = {
+			shock = 4
+			fire = 5
+			manuever = 3
+			siege = 3
+			female = yes
+		}
+		add_mil_power = 100
+		add_doom = -10
+	}
+}
+
+# es_religious_events_nautical.15.t:0 "The Dead Warrior"
+# es_religious_events_nautical.15.d:0 "Despite the favorable omens the young warrior has been missing in the field of battle. She will never become a great warrior now, nor will her deeds satissfy the gods."
+# es_religious_events_nautical.15.a:0 "An unfortunate death."
+ 
+country_event = {
+	id = es_religious_events_nautical.15
+	title = es_religious_events_nautical.15.t
+	desc = es_religious_events_nautical.15.d
+	picture = ES_MAORMER_WARRIOR_DEATH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_religious_events_nautical.15.a
+		add_prestige = -10
+		add_doom = 5
+	}
+}
+
+# es_religious_events_nautical.16.t:0 "The Coward Warrior"
+# es_religious_events_nautical.16.d:0 "Despite the very favorable omens the young warrior has proved to be a disappointment. In the face of battle she has proven a coward, staying back and failing to make a single kill despite having multiple opportunities to do so. The girl will forever be known as a failed warrior."
+# es_religious_events_nautical.16.a:0 "Ok."
+
+country_event = {
+	id = es_religious_events_nautical.16
+	title = es_religious_events_nautical.16.t
+	desc = es_religious_events_nautical.16.d
+	picture = ES_MAORMER_WARRIOR_COWARD_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_religious_events_nautical.16.a 
+		add_legitimacy = -10
+		add_republican_tradition = -10
+		add_horde_unity = -10
+		add_devotion = -10
+		add_meritocracy = -10
+		add_doom = 10
+	}
+}
+
+# es_religious_events_nautical.17.t:0 "Good Omens"
+# es_religious_events_nautical.17.d:0 "After intense study of the stars and other signs known to our priests it is clear to them that good times are ahead. Probably the sacrifices we have made have been well received by the gods?"
+# es_religious_events_nautical.17.a:0 "Great!"
+
+country_event = {
+	id = es_religious_events_nautical.17
+	title = es_religious_events_nautical.17.t
+	desc = es_religious_events_nautical.17.d
+	picture = ES_GOOD_OMEN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = serpant_king
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.17.a
+		add_doom = -10
+		add_stability_or_adm_power = yes
+	}
+}
+
+# es_religious_events_nautical.18.t:0 "Earthquake"
+# es_religious_events_nautical.18.d:0 "Each and every citizen of [Root.Capital.GetCapitalName] awoke at once this morning as a powerful earthquake shook the entire city, destroying several buildings and even some of the temples. To the great relief of commoner and noble alike, however, the city and most of its inhabitants remain unharmed. We must thank the gods that have saved us today!"
+# es_religious_events_nautical.18.a:0 "We shall praise the gods of life!"
+# es_religious_events_nautical.18.b:0 "We shall praise the gods of providence!"
+# es_religious_events_nautical.18.c:0 "We shall praise the gods of war!"
+
+country_event = {
+	id = es_religious_events_nautical.18
+	title = es_religious_events_nautical.18.t
+	desc = es_religious_events_nautical.18.d
+	picture = ES_MAORMER_TEMPLE_EARTHQUAKE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = serpant_king
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_nautical_religion_flavour_event }
+	}
+	
+	option = {
+		name = es_religious_events_nautical.18.a
+		add_years_of_income = -1.5
+		add_adm_power = -100
+		add_doom = 5
+		capital_scope = {
+			add_devastation = 25
+		}
+	}
+	option = {
+		name = es_religious_events_nautical.18.b
+		add_yearly_sailors = -3.5
+		add_dip_power = -100
+		add_doom = 5
+		capital_scope = {
+			add_devastation = 25
+		}
+	}
+	option = {
+		name = es_religious_events_nautical.18.c
+		add_yearly_manpower = -2.5
+		add_mil_power = -100
+		add_doom = 5
+		capital_scope = {
+			add_devastation = 25
+		}
+	}
+}

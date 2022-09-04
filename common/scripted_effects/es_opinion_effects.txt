@@ -1,0 +1,559 @@
+es_change_opinion = {
+	### GENERIC
+	every_known_country = {
+		limit = { culture_group = PREV is_free_or_tributary_trigger = yes }
+		add_opinion = { who = PREV modifier = es_common_origin }
+		reverse_add_opinion = { who = PREV modifier = es_common_origin }
+	}
+	### CULTURES
+	if = {
+		limit = { OR = { culture_group = daedra_cg culture_group = void_cg } }
+		every_known_country = {
+			limit = { NOT = { OR = { culture_group = daedra_cg culture_group = void_cg } } }
+			add_opinion = { who = PREV modifier = es_dramatic_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_dramatic_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { OR = { culture_group = dead_cg culture_group = sload_cg } }
+		every_known_country = {
+			limit = { NOT = { OR = { culture_group = dead_cg culture_group = sload_cg } } }
+			add_opinion = { who = PREV modifier = es_dramatic_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_dramatic_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = maormer_cg }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			add_opinion = { who = PREV modifier = es_significant_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_significant_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = tsaesci_cg }
+		every_known_country = {
+			limit = { OR = { culture_group = transpandomaic_cg culture_group = po_tun_cg } }
+			add_opinion = { who = PREV modifier = es_significant_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_significant_cultural_differences }
+		}
+		every_known_country = {
+			limit = { OR = { culture_group = kamal_cg culture_group = tangmo_cg } }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = cyrodiil_cg }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = po_tun_cg }
+		every_known_country = {
+			limit = { culture_group = transpandomaic_cg }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = tangmo_cg }
+			add_opinion = { who = PREV modifier = es_common_ties }
+			reverse_add_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { culture_group = kamal_cg }
+		every_known_country = {
+			limit = { culture_group = northern_cg }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = lilmothiit_cg }
+		every_known_country = {
+			limit = { culture_group = khajiiti_cg }
+			add_opinion = { who = PREV modifier = es_common_origin }
+			reverse_add_opinion = { who = PREV modifier = es_common_origin }
+		}
+		every_known_country = {
+			limit = { culture_group = marsh_cg }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			add_opinion = { who = PREV modifier = es_common_ties }
+			reverse_add_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { culture_group = velothi_cg }
+		every_known_country = {
+			limit = { NOT = { culture_group = velothi_cg } }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = orsimer_cg }
+		every_known_country = {
+			limit = { OR = { culture_group = half_blood_cg culture_group = yokudo_redguard_cg culture_group = high_elves_cg } }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { OR = { culture_group = northern_cg culture_group = bosmer_cg} }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = goblin_cg }
+			add_opinion = { who = PREV modifier = es_common_ties }
+			reverse_add_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { culture_group = goblin_cg }
+		every_known_country = {
+			limit = { culture_group = northern_cg }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = giant_cg }
+		every_known_country = {
+			limit = { culture_group = northern_cg }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = imga_cg }
+		every_known_country = {
+			limit = { culture_group = tangmo_cg }
+			add_opinion = { who = PREV modifier = es_common_origin }
+			reverse_add_opinion = { who = PREV modifier = es_common_origin }
+		}
+		# Well, they are Imga :)
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_common_origin }
+		}
+	}
+	else_if = {
+		limit = { culture_group = minotaur_cg }
+		every_known_country = {
+			limit = { culture_group = cyrodiil_cg }
+			add_opinion = { who = PREV modifier = es_common_ties }
+			reverse_add_opinion = { who = PREV modifier = es_common_ties }
+		}
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = marsh_cg }
+		every_known_country = {
+			limit = { culture_group = marsh_men_cg }
+			add_opinion = { who = PREV modifier = es_common_ties }
+			reverse_add_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { culture_group = khajiiti_cg }
+		every_known_country = {
+			limit = { OR = { culture_group = high_elves_cg culture_group = maormer_cg } }
+			add_opinion = { who = PREV modifier = es_common_ties }
+			reverse_add_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { culture_group = bosmer_cg }
+		every_known_country = {
+			limit = { OR = { culture_group = cyrodiil_cg culture_group = imga_cg culture_group = high_elves_cg } }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = dwemer_cg }
+		every_known_country = {
+			limit = { OR = { culture_group = northern_cg culture_group = half_blood_cg culture_group = cyrodiil_cg culture_group = snow_elves_cg } }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = snow_elves_cg }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = northern_cg }
+			add_opinion = { who = PREV modifier = es_significant_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_significant_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = yokudo_redguard_cg }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = half_blood_cg }
+			add_opinion = { who = PREV modifier = es_common_ties }
+			reverse_add_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { culture_group = northern_cg }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = half_blood_cg }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = cyrodiil_cg }
+			add_opinion = { who = PREV modifier = es_common_ties }
+			reverse_add_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { culture_group = half_blood_cg }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { culture_group = high_elves_cg }
+		every_known_country = {
+			limit = { culture_group = cyrodiil_cg }
+			add_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_add_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+	}
+	### RELIGIONS
+	if = {
+		limit = { religion = dragon_cult }
+		every_known_country = {
+			limit = { religion = nordic_pantheon }
+			add_opinion = { who = PREV modifier = es_unforgiven_heretics }
+			reverse_add_opinion = { who = PREV modifier = es_unforgiven_heretics }
+		}
+	}
+	### DECISIONS / EVENTS
+	if = {
+		limit = { has_country_modifier = increased_dwemer_influence }
+		every_known_country = {
+			limit = { culture_group = dwemer_cg }
+			add_opinion = { who = PREV modifier = es_increased_dwemer_influence_opinion }
+			reverse_add_opinion = { who = PREV modifier = es_increased_dwemer_influence_opinion }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = reduced_dwemer_influence }
+		every_known_country = {
+			limit = { culture_group = dwemer_cg }
+			add_opinion = { who = PREV modifier = es_reduced_dwemer_influence_opinion }
+			reverse_add_opinion = { who = PREV modifier = es_reduced_dwemer_influence_opinion }
+		}
+	}
+	
+}
+
+# Script to remove opinion penalties ##########################################################
+
+es_clear_opinion = {
+
+	every_known_country = {
+		limit = { OR = { NOT = { culture_group = PREV } NOT = { is_free_or_tributary_trigger = yes } } }
+		remove_opinion = { who = PREV modifier = es_common_origin }
+		reverse_remove_opinion = { who = PREV modifier = es_common_origin }
+	}
+	### CULTURES
+	if = {
+		limit = { NOT = { OR = { culture_group = daedra_cg culture_group = void_cg } } }
+		every_known_country = {
+			limit = { NOT = { OR = { culture_group = daedra_cg culture_group = void_cg } } }
+			remove_opinion = { who = PREV modifier = es_dramatic_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_dramatic_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { OR = { culture_group = dead_cg culture_group = sload_cg } } }
+		every_known_country = {
+			limit = { NOT = { OR = { culture_group = dead_cg culture_group = sload_cg } } }
+			remove_opinion = { who = PREV modifier = es_dramatic_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_dramatic_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = maormer_cg } }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			remove_opinion = { who = PREV modifier = es_significant_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_significant_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = tsaesci_cg } }
+		every_known_country = {
+			limit = { OR = { culture_group = transpandomaic_cg culture_group = po_tun_cg } }
+			remove_opinion = { who = PREV modifier = es_significant_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_significant_cultural_differences }
+		}
+		every_known_country = {
+			limit = { OR = { culture_group = kamal_cg culture_group = tangmo_cg } }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = cyrodiil_cg }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = po_tun_cg } }
+		every_known_country = {
+			limit = { culture_group = transpandomaic_cg }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = tangmo_cg }
+			remove_opinion = { who = PREV modifier = es_common_ties }
+			reverse_remove_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = kamal_cg } }
+		every_known_country = {
+			limit = { culture_group = northern_cg }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = lilmothiit_cg } }
+		every_known_country = {
+			limit = { culture_group = khajiiti_cg }
+			remove_opinion = { who = PREV modifier = es_common_origin }
+			reverse_remove_opinion = { who = PREV modifier = es_common_origin }
+		}
+		every_known_country = {
+			limit = { culture_group = marsh_cg }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			remove_opinion = { who = PREV modifier = es_common_ties }
+			reverse_remove_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = velothi_cg } }
+		every_known_country = {
+			limit = { NOT = { culture_group = velothi_cg } }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = orsimer_cg } }
+		every_known_country = {
+			limit = { OR = { culture_group = half_blood_cg culture_group = yokudo_redguard_cg culture_group = high_elves_cg } }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { OR = { culture_group = northern_cg culture_group = bosmer_cg} }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = goblin_cg }
+			remove_opinion = { who = PREV modifier = es_common_ties }
+			reverse_remove_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = goblin_cg } }
+		every_known_country = {
+			limit = { culture_group = northern_cg }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = giant_cg } }
+		every_known_country = {
+			limit = { culture_group = northern_cg }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = imga_cg } }
+		every_known_country = {
+			limit = { culture_group = tangmo_cg }
+			remove_opinion = { who = PREV modifier = es_common_origin }
+			reverse_remove_opinion = { who = PREV modifier = es_common_origin }
+		}
+		# Well, they are Imga :)
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_common_origin }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = minotaur_cg } }
+		every_known_country = {
+			limit = { culture_group = cyrodiil_cg }
+			remove_opinion = { who = PREV modifier = es_common_ties }
+			reverse_remove_opinion = { who = PREV modifier = es_common_ties }
+		}
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = marsh_cg } }
+		every_known_country = {
+			limit = { culture_group = marsh_men_cg }
+			remove_opinion = { who = PREV modifier = es_common_ties }
+			reverse_remove_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = khajiiti_cg } }
+		every_known_country = {
+			limit = { OR = { culture_group = high_elves_cg culture_group = maormer_cg } }
+			remove_opinion = { who = PREV modifier = es_common_ties }
+			reverse_remove_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = bosmer_cg } }
+		every_known_country = {
+			limit = { OR = { culture_group = cyrodiil_cg culture_group = imga_cg culture_group = high_elves_cg } }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = dwemer_cg } }
+		every_known_country = {
+			limit = { OR = { culture_group = northern_cg culture_group = half_blood_cg culture_group = cyrodiil_cg culture_group = snow_elves_cg } }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = snow_elves_cg } }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = northern_cg }
+			remove_opinion = { who = PREV modifier = es_significant_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_significant_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = yokudo_redguard_cg } }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = half_blood_cg }
+			remove_opinion = { who = PREV modifier = es_common_ties }
+			reverse_remove_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = northern_cg } }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = half_blood_cg }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+		every_known_country = {
+			limit = { culture_group = cyrodiil_cg }
+			remove_opinion = { who = PREV modifier = es_common_ties }
+			reverse_remove_opinion = { who = PREV modifier = es_common_ties }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = half_blood_cg } }
+		every_known_country = {
+			limit = { culture_group = high_elves_cg }
+			remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_minor_cultural_differences }
+		}
+	}
+	else_if = {
+		limit = { NOT = { culture_group = high_elves_cg } }
+		every_known_country = {
+			limit = { culture_group = cyrodiil_cg }
+			remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+			reverse_remove_opinion = { who = PREV modifier = es_small_cultural_differences }
+		}
+	}
+	### RELIGIONS
+	if = {
+		limit = { NOT = { religion = dragon_cult } }
+		every_known_country = {
+			limit = { religion = nordic_pantheon }
+			remove_opinion = { who = PREV modifier = es_unforgiven_heretics }
+			reverse_remove_opinion = { who = PREV modifier = es_unforgiven_heretics }
+		}
+	}
+	### DECISIONS / EVENTS
+	if = {
+		limit = { NOT = { has_country_modifier = increased_dwemer_influence } }
+		every_known_country = {
+			limit = { culture_group = dwemer_cg }
+			remove_opinion = { who = PREV modifier = es_increased_dwemer_influence_opinion }
+			reverse_remove_opinion = { who = PREV modifier = es_increased_dwemer_influence_opinion }
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_country_modifier = reduced_dwemer_influence } }
+		every_known_country = {
+			limit = { culture_group = dwemer_cg }
+			remove_opinion = { who = PREV modifier = es_reduced_dwemer_influence_opinion }
+			reverse_remove_opinion = { who = PREV modifier = es_reduced_dwemer_influence_opinion }
+		}
+	}
+
+}

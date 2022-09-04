@@ -1,0 +1,140 @@
+estate_merchants = {
+	icon = 1
+	color = {
+		51
+		102
+		0
+	}
+	# If true, country will get estate
+	trigger = {
+		OR = {
+			primary_culture = altmer
+			primary_culture = sinistral
+			primary_culture = barsaebic
+			primary_culture = ayleid
+			primary_culture = snow_elven
+			primary_culture = redguard
+			primary_culture = atmoran
+			primary_culture = nord
+			primary_culture = imperial
+			primary_culture = nibenean
+			primary_culture = colovian
+			primary_culture = breton
+			culture_group = velothi_cg
+			culture_group = bosmer_cg
+			culture_group = maormer_cg
+			culture_group = tsaesci_cg
+			culture_group = kamal_cg
+			culture_group = khajiiti_cg
+			culture_group = transpandomaic_cg
+			culture_group = lilmothiit_cg
+			culture_group = dwemer_cg
+			culture_group = po_tun_cg
+		}
+	}
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		global_trade_power = 0.15
+	}
+	country_modifier_neutral = {
+		global_trade_power = 0.1
+	}
+	country_modifier_angry = {
+		global_trade_power = -0.15
+	}
+	land_ownership_modifier = {
+		
+	}
+	province_independence_weight = {
+		factor = 1
+		#modifier = {
+		#	factor = 1
+		#	#Insert conditions here
+		#}
+	}
+	# Influence modifiers
+	base_influence = 10
+	# influence_modifier = {
+	# 	desc = <key> # The new name to apply
+	# 	trigger = {
+	# 		<triggers>
+	# 	}	
+	# 	influence = <float>
+	# }
+	# Loyalty modifiers
+	# loyalty_modifier = {
+	# 	desc = <key> # The new name to apply
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	loyalty = <float>
+	# }
+
+	custom_name = {
+		desc = estate_merchants_EEC
+		trigger = { 
+			OR = {
+				primary_culture = imperial
+				tag = CYR
+				tag = TAM
+			}
+		}
+	}
+
+	privileges = {
+		organize_commercial_zones
+		recruit_admirals
+		sponsor_foreign_trade
+		grant_additional_loans
+		allow_private_trade_fleets
+		merchants_council
+		reserve_right_to_trade_ebony
+		reserve_right_to_trade_glass
+		reserve_right_to_trade_stalhrim
+		reserve_right_to_trade_dwemer_metal
+	}
+	agendas = {
+		estate_merchants_reduce_war_exhaustion
+		estate_merchants_recover_stability
+		estate_merchants_increase_stability
+		estate_merchants_reduce_overextension
+		estate_merchants_get_allies
+		estate_merchants_relations_with_X
+		estate_merchants_break_coalition
+		estate_merchants_restore_legitimacy
+		estate_merchants_hire_advisor
+		estate_merchants_fire_advisor
+		estate_merchants_increase_dip_dev
+		estate_merchants_build_dock
+		estate_merchants_build_shipyard
+		estate_merchants_build_coastal_defence
+		estate_merchants_build_canal
+		estate_merchants_build_road_network
+		estate_merchants_build_grain_depot
+		estate_merchants_build_courthouse
+		estate_merchants_build_workshop
+		estate_merchants_build_marketplace
+		estate_merchants_develop_x
+		estate_merchants_increase_autonomy_in_province_x
+		estate_merchants_three_privileges
+		estate_merchants_recover_abysmal_prestige
+		estate_merchants_improve_prestige
+		estate_merchants_befriend_rival_of_rival
+		estate_merchants_expand_trade_company
+		estate_merchants_pay_off_loans
+		estate_merchants_restore_currency
+		estate_merchants_recovery_from_hyperinflation
+		estate_merchants_increase_trade_power_in_X
+		estate_merchants_access_sea
+		estate_merchants_build_a_fleet
+		estate_merchants_bigger_fleet_than_rival
+		estate_merchants_improve_dip_rep
+		estate_merchants_get_cash
+		estate_merchants_reduce_corruption
+		estate_merchants_protect_against_piracy
+		estate_merchants_support_independence
+		estate_merchants_protect_our_culture
+
+	}
+	influence_from_dev_modifier = 1	#Determines percent influence from development
+}

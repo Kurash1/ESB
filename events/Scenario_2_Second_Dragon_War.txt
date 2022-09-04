@@ -1,0 +1,1028 @@
+namespace = es_2_scenario
+
+country_event = {
+	id = es_2_scenario.100
+	title = es_2_scenario.1.t
+	desc = es_2_scenario.1.d
+	picture = ES_RISE_OF_DRAGONS_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			15 = { country_event = { id = es_2_scenario.3 } }
+			1 = { country_event = { id = es_2_scenario.9 } }
+			5 = { country_event = { id = es_2_scenario.10 } }
+			5 = { country_event = { id = es_2_scenario.15 } }
+			74 = { set_country_flag = successful_scenario_2_event }
+		}
+	}
+
+	option = {
+		name = "es_2_scenario.1.a"
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_scenario_2_event }
+			clr_country_flag = successful_scenario_2_event
+		}
+		else = {
+			country_event = {
+				id = es_2_scenario.100
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = es_2_scenario.1
+	title = es_2_scenario.1.t
+	desc = es_2_scenario.1.d
+	picture = ES_RISE_OF_DRAGONS_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					capital_scope = { continent = Atmora }
+					NOT = { religion = dragon_cult }
+				}
+				country_event = { id = es_2_scenario.4 days = 1825 } 
+			}
+		}
+	}
+
+	option = {
+		name = "es_2_scenario.1.a"
+		ai_chance = { factor = 50 }
+		change_tag = DRA
+		change_religion = dragon_cult
+		set_capital = 1572
+		add_country_modifier = {
+			name = "es_rise_of_dragon_cult"
+			duration = 9125
+		}
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+			set_government_rank = 5
+		}
+		if = {
+			limit = { is_lesser_in_union = yes }
+			overlord = { break_union = ROOT }
+		}
+		if = {
+			limit = { is_vassal = yes }
+			overlord = { free_vassal = ROOT }
+		}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } restore_country_name = yes }
+		
+		hidden_effect = {
+			country_event = { id = es_2_scenario.2 }
+			every_country = {
+				limit = {
+					NOT = { alliance_with = DRA }
+					NOT = { is_subject_of = DRA }
+					NOT = { religion = dragon_cult }
+					culture_group = northern_cg
+					capital_scope = { NOT = { continent = Atmora } }
+				}
+				country_event = { id = es_2_scenario.5 days = 3650 }
+			}
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.15 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_2_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_stability = -3
+		every_province = {
+		    limit = {
+			    is_city = yes
+			    religion = dragon_cult
+				continent = Atmora
+			}
+			add_core = DRA
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = dragon_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = dragon_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = dragon_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.16 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+country_event = {
+	id = es_2_scenario.2
+	title = es_2_scenario.1.t
+	desc = es_2_scenario.1.d
+	picture = ES_RISE_OF_DRAGONS_eventPicture
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+		every_province = {
+			limit = { 
+				is_city = yes
+				continent = Atmora
+				NOT = { area = atmora_8_la }
+				NOT = { area = atmora_9_la }
+				owner = { NOT = { government = native } }
+				owner = { NOT = { government = tribal } }
+				owner = { ai = yes }
+				religion = dragon_cult
+			}
+			owner = { ROOT = { inherit = PREV } }
+			
+			every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.17 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+	}
+	
+	option = {
+		name = es_2_scenario.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_2_scenario.3
+	title = es_2_scenario.3.t
+	desc = es_2_scenario.3.d
+	picture = ES_DRAGON_WAR_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = no
+		NOT = { war_exhaustion = 10 }
+		manpower_percentage = 0.25
+		any_neighbor_country = { 
+		    capital_scope = { continent = Atmora }
+			NOT = { truce_with = ROOT } 
+			NOT = { alliance_with = ROOT }
+			NOT = { is_subject_of = ROOT }
+			NOT = { religion = dragon_cult }
+		}
+		religion = dragon_cult
+		owns = 1572
+	}
+	
+	immediate = {
+		set_country_flag = successful_scenario_2_event
+	}
+	
+	option = {
+		name = es_2_scenario.3.a
+		ai_chance = { factor = 50 }
+		add_manpower = 25
+		add_prestige = 10
+		random_neighbor_country = {
+			limit = { 
+		    capital_scope = { continent = Atmora }
+			NOT = { truce_with = ROOT } 
+			NOT = { alliance_with = ROOT }
+			NOT = { is_subject_of = ROOT }
+			NOT = { religion = dragon_cult }
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					who = PREV
+					casus_belli = cb_es_scenario
+				}
+			}
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.18 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = es_2_scenario.3.b
+		ai_chance = { factor = 50 }
+		random_list = {
+			25 = {
+				add_stability = -1
+			}
+			25 = {
+				add_estate_influence_modifier = {
+					estate = estate_priests
+					influence = 10
+					desc = PLEASED_RELIGIOUS_ESTATES
+					duration = 3650
+				}
+			}
+			50 = {
+				add_estate_loyalty_modifier = {
+					estate = estate_priests
+					loyalty = -10
+					desc = UPSET_RELIGIOUS_ESTATES
+					duration = 3650
+				}
+			}
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.19 days = 31 tooltip = es_collapse.2.a.tt } }
+	} 
+}
+
+country_event = {
+	id = es_2_scenario.4
+	title = es_2_scenario.4.t
+	desc = es_2_scenario.4.d
+	picture = ES_WAR_WITH_DRAGONS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.4.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "02_prepare_for_war"
+		duration = 3650
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.20 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = es_2_scenario.4.b
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		change_religion = dragon_cult
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.21 days = 31 tooltip = es_collapse.2.a.tt } }
+	} 
+}
+
+country_event = {
+	id = es_2_scenario.5
+	title = es_2_scenario.5.t
+	desc = es_2_scenario.5.d
+	picture = ES_WAR_WITH_DRAGONS_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.5.a
+		ai_chance = { factor = 33 }
+		trigger = { is_subject = no }
+		declare_war_with_cb = {
+			who = DRA
+			casus_belli = cb_es_scenario
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.20 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = es_2_scenario.5.b
+		ai_chance = { factor = 33 }
+		add_manpower = -10
+		add_treasury = -250
+		random_country = {
+		    limit = {
+		    capital_scope = { continent = Atmora }
+			NOT = { capital_scope = { area = atmora_8_la } }
+			NOT = { capital_scope = { area = atmora_9_la } }
+			NOT = { religion = dragon_cult }
+			}
+			add_manpower = 10
+		    add_treasury = 250
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.22 days = 31 tooltip = es_collapse.2.a.tt } }
+	} 
+	option = {
+		name = es_2_scenario.5.c
+		ai_chance = { factor = 33 }
+		add_prestige = -25
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.23 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+# Ayleid Flavour and Lore
+
+# Build the Wailing Wheel of Vindasel - 5541
+
+country_event = {
+	id = es_2_scenario.6
+	title = es_2_scenario.6.t
+	desc = es_2_scenario.6.d
+	picture = ES_SLAVE_FOR_WHEEL
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.6.a
+		ai_chance = { factor = 50 }
+		
+		add_years_of_income = -1.5
+		5541 = {
+			add_permanent_province_modifier = {
+				name = "02_wailing_wheel"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = es_2_scenario.6.b
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	} 
+}
+
+# Gut-Gardens of Sercen - 1201
+
+country_event = {
+	id = es_2_scenario.7
+	title = es_2_scenario.7.t
+	desc = es_2_scenario.7.d
+	picture = ES_SLAVES_FOR_GARDENS_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.7.a
+		ai_chance = { factor = 50 }
+		
+		add_adm_power = -75
+		add_dip_power = -75
+		add_mil_power = -75
+		1201 = {
+			add_permanent_province_modifier = {
+				name = "02_wailing_wheel"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = es_2_scenario.7.b
+		ai_chance = { factor = 50 }
+		random_list = {
+			50 = {
+				add_stability = -1
+			}
+			50 = {
+				add_stability = 1
+			}
+		}
+	} 
+}
+
+# Ceyatatar's Spearmen - 1140
+
+country_event = {
+	id = es_2_scenario.8
+	title = es_2_scenario.8.t
+	desc = es_2_scenario.8.d
+	picture = ES_CEYATATARS_regiments_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.8.a
+		ai_chance = { factor = 50 }
+		
+		add_years_of_income = -0.5
+		add_yearly_manpower = -5.0
+		add_mil_power = -100
+		add_country_modifier = {
+			name = "02_ceyatatars_spearmen"
+			duration = -1
+		}
+	}
+	option = {
+		name = es_2_scenario.8.b
+		ai_chance = { factor = 50 }
+		random_owned_province = { add_base_manpower = 1 }
+		random_owned_province = { add_base_manpower = 1 }
+		random_owned_province = { add_base_manpower = 1 }
+		random_owned_province = { add_base_manpower = 1 }
+		random_owned_province = { add_base_manpower = 1 }
+	} 
+}
+
+# Goblin Slave Trade
+
+country_event = {
+	id = es_2_scenario.9
+	title = es_2_scenario.9.t
+	desc = es_2_scenario.9.d
+	picture = ES_SLAVE_MINE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			primary_culture = ayleid
+			primary_culture = altmer
+		}
+		NOT = { has_country_flag = es_abolished_slavery }
+		NOT = { has_reform = abolition }
+		NOT = { full_idea_group = humanist_ideas }
+	}
+	
+	option = {
+		name = es_2_scenario.9.a
+		ai_chance = { factor = 50 }
+		
+		add_years_of_income = -1.0
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+				NOT = { culture = goblin }
+			}
+			add_base_production = 3
+			change_culture = goblin
+			add_permanent_province_modifier = {
+				name = "es_enslaved_population"
+				duration = -1
+			}
+		}
+		es_please_merchant_estates = yes
+	}
+	option = {
+		name = es_2_scenario.9.b
+		ai_chance = { factor = 50 }
+		add_prestige = 5
+		
+		es_please_common_estates = yes
+	} 
+}
+
+# Slave Raid
+
+# es_2_scenario.10.t: "Slave Raid"
+# es_2_scenario.10.d: "As long as slave labour is cheap and efficient, there will always be a demand for new slaves. Fortunately, there are many primitive races around us whose life in chains will not differ much from that of captivity. Here, at least, they will be able to serve for the benefit of [Root.GetName] instead of killing each other for the sake of archaic goals. However, this idea can sometimes be difficult to convey through conventional methods, but the language of power is understood with enviable ease by these savages. Just now we are receiving news of the new slave traders coming to [Root.Capital.GetName] for new goods. Even if the deal fails, we may well be able to replenish our coffers by plundering unprotected settlements. The only question is, are we ready to start the campaign now, or do we need time to prepare?"
+# es_2_scenario.10.a: "Order the troops to march immediately!"
+# es_2_scenario.10.b: "We have more important things to do than a few trade deals."
+
+country_event = {
+	id = es_2_scenario.10
+	title = es_2_scenario.10.t
+	desc = es_2_scenario.10.d
+	picture = ES_SLAVE_MARKET_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_free_or_tributary_trigger = yes
+		is_at_war = no
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = ayleid
+					primary_culture = barsaebic
+				}
+				any_neighbor_country = {
+					culture_group = cyrodiil_cg
+					NOT = { truce_with = ROOT } 
+					NOT = { alliance_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+					NOT = { army_size = ROOT }
+				}
+			}
+			AND = {
+				OR = {
+					primary_culture = ashlander_dunmer
+					primary_culture = house_dunmer
+				}
+				any_neighbor_country = {
+					culture_group = marsh_cg
+					NOT = { truce_with = ROOT } 
+					NOT = { alliance_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+					NOT = { army_size = ROOT }
+				}
+			}
+			AND = {
+				primary_culture = kamal
+				any_neighbor_country = {
+					culture_group = tangmo_cg
+					NOT = { truce_with = ROOT } 
+					NOT = { alliance_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+					NOT = { army_size = ROOT }
+				}
+			}
+			AND = {
+				OR = {
+					has_reform = mamluk_government
+					has_reform = pirate_republic_reform
+					has_reform = pirate_king_reform
+					has_reform = war_against_the_world_doctrine_reform
+					has_reform = killed_or_enslaved
+					has_reform = slavery
+					has_reform = raiding
+				}
+				any_neighbor_country = {
+					NOT = { culture_group = ROOT }
+					NOT = { truce_with = ROOT } 
+					NOT = { alliance_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+					NOT = { army_size = ROOT }
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = es_slave_raid_nation_event_target
+			if = {
+				limit = {
+					OR = {
+						primary_culture = ayleid
+						primary_culture = barsaebic
+					}
+				}
+				random_neighbor_country = {
+					limit = { 
+						culture_group = cyrodiil_cg
+						NOT = { truce_with = ROOT } 
+						NOT = { alliance_with = ROOT }
+						NOT = { is_subject_of = ROOT }
+					}
+					save_event_target_as = es_slave_raid_target_event_target
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						primary_culture = ashlander_dunmer
+						primary_culture = house_dunmer
+					}
+				} 
+				random_neighbor_country = {
+					limit = { 
+						culture_group = marsh_cg
+						NOT = { truce_with = ROOT } 
+						NOT = { alliance_with = ROOT }
+						NOT = { is_subject_of = ROOT }
+					}
+					save_event_target_as = es_slave_raid_target_event_target
+				}
+			}
+			else_if = {
+				limit = {
+					primary_culture = kamal
+				} 
+				random_neighbor_country = {
+					limit = { 
+						culture_group = tangmo_cg
+						NOT = { truce_with = ROOT } 
+						NOT = { alliance_with = ROOT }
+						NOT = { is_subject_of = ROOT }
+					}
+					save_event_target_as = es_slave_raid_target_event_target
+				}
+			}
+			else = {
+				random_neighbor_country = {
+					limit = { 
+						NOT = { truce_with = ROOT } 
+						NOT = { alliance_with = ROOT }
+						NOT = { is_subject_of = ROOT }
+						NOT = { army_size = ROOT }
+					}
+					save_event_target_as = es_slave_raid_target_event_target
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = es_2_scenario.10.a
+		ai_chance = { factor = 25 modifier = { factor = 0 NOT = { years_of_income = 0.35 } } }
+		
+		es_please_war_estates = yes
+		
+		add_yearly_manpower = -2.5
+		add_years_of_income = -0.35
+		
+		hidden_effect = {
+			random_list = {
+				50 = { 
+					country_event = { id = es_2_scenario.11 days = 31 random = 52 }
+				}
+				50 = { 
+					country_event = { id = es_2_scenario.12 days = 31 random = 52 }
+				}
+			}
+		}
+	}
+	option = {
+		name = es_2_scenario.10.b
+		ai_chance = { factor = 75 }
+		
+		es_upset_merchant_estates = yes
+		add_prestige = -5
+	} 
+}
+
+# es_2_scenario.11.t: "Successful Raid on [es_slave_raid_target_event_target.GetName] Cities"
+# es_2_scenario.11.d: "Our small military intervention on [es_slave_raid_target_event_target.GetName] soil was a huge success. We were able to quickly break the resistance of the troops on the frontier and pushed deep into enemy territory, where we managed to pillage several large towns and capture many slaves, which we managed to extract before the [es_slave_raid_target_event_target.Monarch.GetName]'s army was able to muster the strength to fight us back. The amount of looted gold and the number of captives is so great that some believe that the time has come for a full scale invasion and expansion of our sphere of influence in the lands of [es_slave_raid_target_event_target.GetName]."
+# es_2_scenario.11.a: "This will be a quick war!"
+# es_2_scenario.11.b: "Those savages does not worth our time."
+
+country_event = {
+	id = es_2_scenario.11
+	title = es_2_scenario.11.t
+	desc = es_2_scenario.11.d
+	picture = ES_SLAVE_RAID_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.11.a
+		ai_chance = { factor = 50 }
+		
+		es_please_merchant_estates = yes
+		add_years_of_income = 0.75
+		add_casus_belli = {
+			target = event_target:es_slave_raid_target_event_target
+			type = cb_es_slave_raid
+			months = 12
+		}
+	}
+	
+	option = {
+		name = es_2_scenario.11.b
+		ai_chance = { factor = 50 }
+		
+		es_please_merchant_estates = yes
+		add_years_of_income = 0.75
+		add_prestige = 10
+	}
+	after = {
+		event_target:es_slave_raid_target_event_target = {
+			country_event = { id = es_2_scenario.13 days = 31 }
+		}
+	}
+}
+
+# es_2_scenario.12.t: "Failed Raid on [es_slave_raid_target_event_target.GetName] Cities"
+# es_2_scenario.12.d: "The military intervention in the lands of [es_slave_raid_target_event_target.GetName] was a complete failure. Our troops took too long to cross the border because of the fierce resistance of the [es_slave_raid_target_event_target.Monarch.GetName]'s army and did not manage to reach the rich territories before the main enemy forces approached. The ensuing battle only served to end this war campaign - despite the heroism of our soldiers, they were outnumbered, which resulted in the death of our entire army."
+# es_2_scenario.12.a: "This is going to hit our economy..."
+
+country_event = {
+	id = es_2_scenario.12
+	title = es_2_scenario.12.t
+	desc = es_2_scenario.12.d
+	picture = ES_BATTLE_FIELD_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.12.a
+		ai_chance = { factor = 50 }
+		
+		es_upset_common_estates = yes
+		add_inflation = 3.5
+		add_prestige = -10
+	}
+	after = {
+		event_target:es_slave_raid_target_event_target = {
+			country_event = { id = es_2_scenario.14 days = 31 }
+		}
+	}
+}
+
+# es_2_scenario.13.t: "[es_slave_raid_nation_event_target.GetName] Raids our Cities"
+# es_2_scenario.13.d: "The military intervention of [es_slave_raid_nation_event_target.GetName] into our territory was a huge success. They were able to quickly break the resistance of our troops on the frontier and pushed deep into [Root.GetName], where the [es_slave_raid_nation_event_target.Monarch.GetName]'s army pillaged several large towns and captured many slaves. The amount of looted gold and the number of captives was so great that some of enemy generals believe that the time has come for a full scale."
+# es_2_scenario.13.a: "We should strike back!"
+
+country_event = {
+	id = es_2_scenario.13
+	title = es_2_scenario.13.t
+	desc = es_2_scenario.13.d
+	picture = ES_SLAVE_RAID_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.13.a
+		ai_chance = { factor = 50 }
+		add_opinion = {
+			who = event_target:es_slave_raid_nation_event_target
+			modifier = es_slave_raid
+		}
+		add_casus_belli = {
+			target = event_target:es_slave_raid_nation_event_target
+			type = cb_border_war
+			months = 12
+		}
+	}
+}
+
+# es_2_scenario.14.t: "[es_slave_raid_nation_event_target.GetName] Fails to Raid our Cities"
+# es_2_scenario.14.d: "The military intervention in the lands of [es_slave_raid_target_event_target.GetName] was a complete failure. The army of [es_slave_raid_nation_event_target.GetName] took too long to cross the border because of the fierce resistance of the [es_slave_raid_target_event_target.Monarch.GetName]'s army and did not manage to delve into our territories. Despite the heroism of their soldiers, they were outnumbered by brave sons and daughters of [Root.GetName], which resulted in the death of the entire enemy army."
+# es_2_scenario.14.a: "We have won this battle and we will win the future war!"
+
+country_event = {
+	id = es_2_scenario.14
+	title = es_2_scenario.14.t
+	desc = es_2_scenario.14.d
+	picture = ES_BATTLE_FIELD_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.14.a
+		ai_chance = { factor = 50 }
+		add_opinion = {
+			who = event_target:es_slave_raid_nation_event_target
+			modifier = es_slave_raid
+		}
+		reverse_add_opinion = {
+			who = event_target:es_slave_raid_nation_event_target
+			modifier = es_slave_raid
+		}
+		add_army_tradition = 5
+	}
+}
+
+# es_slave_raid: "Slave Raid"
+# es_slave_raid_desc: " "
+# es_small_caravan_target: "Minor Trade Connections"
+# es_small_caravan_target: " "
+# es_medium_caravan_target: "Significant Trade Connections"
+# es_small_caravan_target: " "
+# es_large_caravan_target: "Strong Trade Connections"
+# es_large_caravan_target: " "
+
+# es_2_scenario.15.t: "Merchant Caravan"
+# es_2_scenario.15.d: "There are tales of riches and unseen goods that are common in foreign countries. Although not all of them are true, there are still those who want to profit from foreign goods. Just now, a group of merchants has come to the Monarch with a request to sponsor their journey to a friendly country, where they hope to purchase local goods to sell here later at double the cost. Of course, such an investment may bring a lot of gold to the treasury, but we should not forget the risks - the roads are full of bandits nowadays, who are not afraid to attack even army convoys. Therefore, we should think twice before handing over state money to these merchants, so that we don't end up with nothing."
+# es_2_scenario.15.a: "Give them a sack of gold."
+# es_2_scenario.15.b: "Give them a crate of gold."
+# es_2_scenario.15.c: "Give them a chest of gold."
+# es_2_scenario.15.e: "Suggest them to just trade at [Root.Capital.GetName]'s Market."
+# bigger_caravn_bigger_reward_but_bigger_chance_of_ambush: "The more §Ymoney§! is given to the merchants - the more §Yprofit§! they can make, but also the more unwanted §Rattention#! they do attract."
+
+country_event = {
+	id = es_2_scenario.15
+	title = es_2_scenario.15.t
+	desc = es_2_scenario.15.d
+	picture = ES_SPICES_MARKET_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = no
+		any_known_country = {
+			same_continent = ROOT
+			is_at_war = no
+			has_opinion = { who = ROOT value = 0 }
+			reverse_has_opinion = { who = ROOT value = 0 }
+		}
+	}
+	
+	immediate = {
+		save_event_target_as = es_origin_of_caraven_event_target
+		hidden_effect = {
+			random_known_country = {
+				limit = {
+					same_continent = ROOT
+					is_at_war = no
+					has_opinion = { who = ROOT value = 0 }
+					reverse_has_opinion = { who = ROOT value = 0 }
+				}
+				save_event_target_as = es_target_of_caraven_event_target
+			}
+		}
+	}
+	
+	option = {
+		name = es_2_scenario.15.a
+		ai_chance = { factor = 25 modifier = { factor = 0 NOT = { years_of_income = 0.25 } } }
+		add_years_of_income = -0.25
+		set_country_flag = es_small_caravan_country_flag
+		custom_tooltip = bigger_caravn_bigger_reward_but_bigger_chance_of_ambush
+		hidden_effect = {
+			random_list = {
+				# All good!
+				70 = {
+					event_target:es_target_of_caraven_event_target = { country_event = { id = es_2_scenario.16 days = 50 random = 25 } }
+					country_event = { id = es_2_scenario.17 days = 125 random = 25 }
+				}
+				# Ambushed on way back!
+				15 = {
+					event_target:es_target_of_caraven_event_target = { country_event = { id = es_2_scenario.16 days = 50 random = 25 } }
+					country_event = { id = es_2_scenario.18 days = 125 random = 25 }
+				}
+				# Ambushed on way to the target!
+				15 = {
+					country_event = { id = es_2_scenario.18 days = 50 random = 25 }
+				}
+			}
+		}
+	}
+	option = {
+		name = es_2_scenario.15.b
+		ai_chance = { factor = 25 modifier = { factor = 0 NOT = { years_of_income = 0.5 } } }
+		add_years_of_income = -0.5
+		set_country_flag = es_medium_caravan_country_flag
+		custom_tooltip = bigger_caravn_bigger_reward_but_bigger_chance_of_ambush
+		hidden_effect = {
+			random_list = {
+				# All good!
+				50 = {
+					event_target:es_target_of_caraven_event_target = { country_event = { id = es_2_scenario.16 days = 50 random = 25 } }
+					country_event = { id = es_2_scenario.17 days = 125 random = 25 }
+				}
+				# Ambushed on way back!
+				25 = {
+					event_target:es_target_of_caraven_event_target = { country_event = { id = es_2_scenario.16 days = 50 random = 25 } }
+					country_event = { id = es_2_scenario.18 days = 125 random = 25 }
+				}
+				# Ambushed on way to the target!
+				25 = {
+					country_event = { id = es_2_scenario.18 days = 50 random = 25 }
+				}
+			}
+		}
+	}
+	option = {
+		name = es_2_scenario.15.c
+		ai_chance = { factor = 25 modifier = { factor = 0 NOT = { years_of_income = 1.0 } } }
+		add_years_of_income = -1.0
+		set_country_flag = es_large_caravan_country_flag
+		custom_tooltip = bigger_caravn_bigger_reward_but_bigger_chance_of_ambush
+		hidden_effect = {
+			random_list = {
+				# All good!
+				30 = {
+					event_target:es_target_of_caraven_event_target = { country_event = { id = es_2_scenario.16 days = 50 random = 25 } }
+					country_event = { id = es_2_scenario.17 days = 125 random = 25 }
+				}
+				# Ambushed on way back!
+				35 = {
+					event_target:es_target_of_caraven_event_target = { country_event = { id = es_2_scenario.16 days = 50 random = 25 } }
+					country_event = { id = es_2_scenario.18 days = 125 random = 25 }
+				}
+				# Ambushed on way to the target!
+				35 = {
+					country_event = { id = es_2_scenario.18 days = 50 random = 25 }
+				}
+			}
+		}
+	}
+	option = {
+		name = es_2_scenario.15.e
+		ai_chance = { factor = 25 }
+		add_years_of_income = 0.15
+		es_upset_merchant_estates = yes
+	}
+}
+
+# es_2_scenario.16.t: "Caravan from [es_origin_of_caraven_event_target.GetName]"
+# es_2_scenario.16.d: "A small merchant caravan with merchants from [es_origin_of_caraven_event_target.GetName] arrived in [Root.Capital.GetName] today. After being inspected, they were allowed into our main market, where they traded briskly all day long, and after purchasing our goods we set off on our return journey. This seems to be a good sign of increased trade between our states, which will not only boost profits but also improve relations."
+# es_2_scenario.16.a: "Let's hope they will come back to us again."
+
+country_event = {
+	id = es_2_scenario.16
+	title = es_2_scenario.16.t
+	desc = es_2_scenario.16.d
+	picture = ES_MARKET_FOOD_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.16.a
+		ai_chance = { factor = 25 }
+		add_years_of_income = 0.25
+		if = {
+			limit = {
+				event_target:es_origin_of_caraven_event_target = { has_country_flag = es_small_caravan_country_flag }
+			}
+			add_opinion = {
+				who = event_target:es_origin_of_caraven_event_target
+				modifier = es_small_caravan_target
+			}
+			reverse_add_opinion = {
+				who = event_target:es_origin_of_caraven_event_target
+				modifier = es_small_caravan_target
+			}
+		}
+		if = {
+			limit = {
+				event_target:es_origin_of_caraven_event_target = { has_country_flag = es_medium_caravan_country_flag }
+			}
+			add_opinion = {
+				who = event_target:es_origin_of_caraven_event_target
+				modifier = es_medium_caravan_target
+			}
+			reverse_add_opinion = {
+				who = event_target:es_origin_of_caraven_event_target
+				modifier = es_medium_caravan_target
+			}
+		}
+		if = {
+			limit = {
+				event_target:es_origin_of_caraven_event_target = { has_country_flag = es_large_caravan_country_flag }
+			}
+			add_opinion = {
+				who = event_target:es_origin_of_caraven_event_target
+				modifier = es_large_caravan_target
+			}
+			reverse_add_opinion = {
+				who = event_target:es_origin_of_caraven_event_target
+				modifier = es_large_caravan_target
+			}
+		}
+	}
+}
+
+# es_2_scenario.17.t: "Caravan Returns From [es_target_of_caraven_event_target.GetName]"
+# es_2_scenario.17.d: "Our merchants travelled a long way, but still managed to successfully reach [es_target_of_caraven_event_target.GetName] and return home with many foreign goods, which were instantly sold out after their arrival. Some merchants even managed to spend their profits in local taverns, but many still put some money aside and began to prepare for new journeys. We too, as one of the main investors, are entitled to a share of the profits, but perhaps the main thing is the strengthening of relations between [es_target_of_caraven_event_target.GetName] and [Root.GetName]."
+# es_2_scenario.17.a: "Let's celebrate it!"
+
+country_event = {
+	id = es_2_scenario.17
+	title = es_2_scenario.17.t
+	desc = es_2_scenario.17.d
+	picture = ES_MERCHANT_CARAVAN_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.17.a
+		ai_chance = { factor = 25 }
+		es_please_common_estates = yes
+		if = {
+			limit = {
+				has_country_flag = es_small_caravan_country_flag
+			}
+			add_years_of_income = 0.50
+		}
+		if = {
+			limit = {
+				has_country_flag = es_medium_caravan_country_flag
+			}
+			add_years_of_income = 1.0
+		}
+		if = {
+			limit = {
+				has_country_flag = es_large_caravan_country_flag
+			}
+			add_years_of_income = 2.0
+		}
+	}
+	after = {
+		clr_country_flag = es_small_caravan_country_flag
+		clr_country_flag = es_medium_caravan_country_flag
+		clr_country_flag = es_large_caravan_country_flag
+	}
+}
+
+# es_2_scenario.18.t: "Our Caravan is Ambushed"
+# es_2_scenario.18.d: "Unfortunately, the merchant caravan to which we allocated some of our money attracted too much attention on its way and was ambushed by bandits. Although the guards managed to hold back a few wagons and save the lives of most of the traders, most of the wagons were looted or destroyed. It seems that this journey will not bring us any profit, but the merchants who survived the adventure promise that they will soon prepare a new caravan for departure."
+# es_2_scenario.18.a: "Perhaps they shouldn't have shown their cargo so openly?"
+
+country_event = {
+	id = es_2_scenario.18
+	title = es_2_scenario.18.t
+	desc = es_2_scenario.18.d
+	picture = ES_CARAVAN_AMBUSH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_2_scenario.18.a
+		ai_chance = { factor = 25 }
+		es_upset_merchant_estates = yes
+		add_prestige = -5
+	}
+	after = {
+		clr_country_flag = es_small_caravan_country_flag
+		clr_country_flag = es_medium_caravan_country_flag
+		clr_country_flag = es_large_caravan_country_flag
+	}
+}

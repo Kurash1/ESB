@@ -1,0 +1,3406 @@
+####################################### 
+# Inscription 
+####################################### 
+inscription = {
+	bonus = {
+		global_tax_modifier = 0.1
+	}
+	historical_start_date = 1.1.1
+	historical_start_province = 271
+	history = {
+		OR = {
+			AND = {
+				is_year = 50
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 100
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 150
+		}
+	}
+	# no need for events, as it's there from the start. 
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					inscription = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = inscription
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = inscription
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						inscription = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = inscription
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = inscription
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant trade good 
+		modifier = {
+			factor = 3
+			trade_goods = paper
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Smithing 
+####################################### 
+smithing = {
+	bonus = {
+		global_regiment_cost = -0.1
+	}
+	historical_start_date = 100.1.1
+	historical_start_province = 1319
+	history = {
+		OR = {
+			AND = {
+				is_year = 100
+				superregion = skyrim_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 150
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 200
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 250
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			OR = {
+				trade_goods = weapons_and_armor
+				trade_goods = ebony
+				trade_goods = gold
+				trade_goods = iron
+				trade_goods = orichalcum
+				trade_goods = quicksilver
+				trade_goods = malachite
+				trade_goods = moonstone
+				trade_goods = silver
+				trade_goods = copper
+				trade_goods = corundum
+				trade_goods = stalhrim
+				trade_goods = dwemer_metal
+			}
+			AND = {
+				is_capital = yes
+				owner = {
+					advisor = esu_blacksmith
+				}
+			}
+		}
+		# General Conditions 
+		development = 25
+		is_year = 100
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = inscription
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.1
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					smithing = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = smithing
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = smithing
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						smithing = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = smithing
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = smithing
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant trade good 
+		modifier = {
+			factor = 3
+			development = 20
+			owner = {
+				any_known_country = {
+					has_institution = smithing
+				}
+			}
+			OR = {
+				trade_goods = weapons_and_armor
+				trade_goods = ebony
+				trade_goods = gold
+				trade_goods = iron
+				trade_goods = orichalcum
+				trade_goods = quicksilver
+				trade_goods = malachite
+				trade_goods = moonstone
+				trade_goods = silver
+				trade_goods = copper
+				trade_goods = corundum
+				trade_goods = stalhrim
+				trade_goods = dwemer_metal
+			}
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# The Elder Scrolls 
+####################################### 
+the_elder_scrolls = {
+	bonus = {
+		global_missionary_strength = 0.01
+	}
+	historical_start_date = 200.1.1
+	historical_start_province = 299
+	history = {
+		OR = {
+			AND = {
+				is_year = 200
+				superregion = summerset_islands_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 250
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 300
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 350
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			has_building = temple
+			owner = {
+				innovativeness = 2.5
+				legitimacy_equivalent = 90
+				temple = 15
+			}
+			AND = {
+				is_capital = yes
+				owner = {
+					OR = {
+						advisor = esu_priest
+						advisor = esu_monk
+					}
+				}
+			}
+		}
+		# General Conditions 
+		development = 25
+		is_year = 200
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = smithing
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.2
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					the_elder_scrolls = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = the_elder_scrolls
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = the_elder_scrolls
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						the_elder_scrolls = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = the_elder_scrolls
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = the_elder_scrolls
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has a relevant building 
+		modifier = {
+			factor = 3
+			owner = {
+				any_known_country = {
+					has_institution = the_elder_scrolls
+				}
+			}
+			has_building = temple
+			development = 20
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# The Drake 
+####################################### 
+the_drake = {
+	bonus = {
+		trade_efficiency = 0.1
+	}
+	historical_start_date = 300.1.1
+	historical_start_province = 1206
+	history = {
+		OR = {
+			AND = {
+				is_year = 300
+				superregion = cyrodiil_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 350
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 400
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 450
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			has_building = mint
+			AND = {
+				is_capital = yes
+				owner = {
+					OR = {
+						advisor = esu_merchant
+						advisor = esu_steward
+					}
+				}
+			}
+		}
+		# General Conditions 
+		development = 30
+		is_year = 300
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = the_elder_scrolls
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.3
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					the_drake = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = the_drake
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = the_drake
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						the_drake = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = the_drake
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = the_drake
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				trade_goods = gold
+				trade_goods = silver
+				trade_goods = copper
+			}
+		}
+		modifier = {
+			factor = 5
+			has_building = mint
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Alchemy 
+####################################### 
+alchemy = {
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	historical_start_date = 400.1.1
+	historical_start_province = 5657
+	history = {
+		OR = {
+			AND = {
+				is_year = 400
+				superregion = cyrodiil_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 450
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 500
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 550
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			OR = {
+				trade_goods = gems
+				trade_goods = potions
+				trade_goods = herbs
+			}
+			AND = {
+				is_capital = yes
+				owner = {
+					OR = {
+						advisor = esu_alchemist
+						advisor = esu_researcher
+						advisor = esu_mad_scholar
+					}
+				}
+			}
+		}
+		# General Conditions 
+		development = 30
+		is_year = 400
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = the_drake
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.4
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					alchemy = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = alchemy
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = alchemy
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						alchemy = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = alchemy
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = alchemy
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant trade good 
+		modifier = {
+			factor = 3
+			development = 20
+			owner = {
+				any_known_country = {
+					has_institution = alchemy
+				}
+			}
+			OR = {
+				trade_goods = potions
+				trade_goods = herbs
+				trade_goods = gems
+			}
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Organized Infrastructure 
+####################################### 
+organized_infrastructure = {
+	bonus = {
+		development_cost = -0.1
+	}
+	historical_start_date = 500.1.1
+	historical_start_province = 263
+	history = {
+		OR = {
+			AND = {
+				is_year = 500
+				superregion = summerset_islands_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 550
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 600
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 650
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			OR = {
+				has_building = road_network
+				has_building = canal
+			}
+			AND = {
+				is_capital = yes
+				owner = {
+					OR = {
+						full_idea_group = zentra0
+						full_idea_group = staatsverwaltung0
+					}
+				}
+			}
+		}
+		owner = {
+			if = {
+				limit = {
+					started_in = 450.1.1
+				}
+				grown_by_development = 50
+			}
+			else_if = {
+				limit = {
+					started_in = 400.1.1
+				}
+				grown_by_development = 75
+			}
+			else_if = {
+				limit = {
+					started_in = 350.1.1
+				}
+				grown_by_development = 100
+			}
+			else_if = {
+				limit = {
+					started_in = 300.1.1
+				}
+				grown_by_development = 125
+			}
+			else_if = {
+				limit = {
+					started_in = 250.1.1
+				}
+				grown_by_development = 150
+			}
+			else_if = {
+				limit = {
+					started_in = 200.1.1
+				}
+				grown_by_development = 175
+			}
+			else_if = {
+				limit = {
+					started_in = 150.1.1
+				}
+				grown_by_development = 200
+			}
+			else_if = {
+				limit = {
+					started_in = 100.1.1
+				}
+				grown_by_development = 225
+			}
+			else = {
+				grown_by_development = 250
+			}
+		}
+		# General Conditions 
+		development = 35
+		is_year = 500
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = alchemy
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.5
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					organized_infrastructure = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = organized_infrastructure
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = organized_infrastructure
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						organized_infrastructure = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = organized_infrastructure
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = organized_infrastructure
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant building 
+		modifier = {
+			factor = 3
+			owner = {
+				any_known_country = {
+					has_institution = organized_infrastructure
+				}
+			}
+			has_building = road_network
+		}
+		# Province has relevant building 
+		modifier = {
+			factor = 3
+			owner = {
+				any_known_country = {
+					has_institution = organized_infrastructure
+				}
+			}
+			has_building = canal
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Imperialism 
+####################################### 
+imperialism = {
+	bonus = {
+		unjustified_demands = -0.1
+	}
+	historical_start_date = 600.1.1
+	historical_start_province = 5777
+	history = {
+		OR = {
+			AND = {
+				is_year = 600
+				superregion = cyrodiil_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 650
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 700
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 750
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			AND = {
+				development = 35
+				has_port = yes
+				owner = {
+					capital_scope = {
+						NOT = {
+							superregion = ROOT
+						}
+					}
+				}
+			}
+			AND = {
+				is_capital = yes
+				owner = {
+					OR = {
+						advisor = esu_governor
+						advisor = esu_colonial_overseer
+						advisor = esu_officer
+						advisor = esu_thane
+						any_owned_province = {
+							NOT = {
+								superregion = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		# General Conditions 
+		is_year = 600
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = organized_infrastructure
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.6
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					imperialism = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = imperialism
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = imperialism
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						imperialism = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = imperialism
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = imperialism
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant trade good 
+		modifier = {
+			factor = 3
+			development = 20
+			owner = {
+				any_known_country = {
+					has_institution = imperialism
+				}
+			}
+			trade_goods = weapons_and_armor
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Enchanting 
+####################################### 
+enchanting = {
+	bonus = {
+		production_efficiency = 0.1
+	}
+	historical_start_date = 700.1.1
+	historical_start_province = 5389
+	history = {
+		OR = {
+			AND = {
+				is_year = 700
+				superregion = cyrodiil_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 750
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 800
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 850
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			trade_goods = gems
+			AND = {
+				is_capital = yes
+				owner = {
+					OR = {
+						advisor = esu_mage
+						advisor = esu_occultist
+						has_idea_group = enchanting_ideas
+					}
+				}
+			}
+		}
+		# General Conditions 
+		development = 35
+		is_year = 700
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = imperialism
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.7
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					enchanting = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = enchanting
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = enchanting
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						enchanting = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = enchanting
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = enchanting
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant trade good 
+		modifier = {
+			factor = 3
+			development = 20
+			owner = {
+				any_known_country = {
+					has_institution = enchanting
+				}
+			}
+			OR = {
+				trade_goods = potions
+				trade_goods = herbs
+				trade_goods = gems
+			}
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Astrology 
+####################################### 
+astrology = {
+	bonus = {
+		stability_cost_modifier = -0.1
+	}
+	historical_start_date = 800.1.1
+	historical_start_province = 1505
+	history = {
+		OR = {
+			AND = {
+				is_year = 800
+				superregion = hammerfell_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 850
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 900
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 950
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			AND = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = highlands
+					has_terrain = mountain_meadows
+				}
+				custom_trigger_tooltip = {
+					tooltip = astrology_ahead_in_tech_of_all_neighbours
+					owner = {
+						all_neighbor_country = {
+							NOT = {
+								tech_difference = 0
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				is_capital = yes
+				owner = {
+					OR = {
+						advisor = esu_researcher
+						full_idea_group = exploration_ideas
+					}
+				}
+			}
+		}
+		# General Conditions 
+		development = 25
+		is_year = 800
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = enchanting
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.8
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					astrology = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = astrology
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = astrology
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						astrology = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = astrology
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = astrology
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant terrain 
+		modifier = {
+			factor = 3
+			owner = {
+				any_known_country = {
+					has_institution = astrology
+				}
+			}
+			development = 20
+			OR = {
+				has_terrain = mountain
+				has_terrain = mountain_meadows
+			}
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Archaeology 
+####################################### 
+archaeology = {
+	bonus = {
+		idea_cost = -0.1
+	}
+	historical_start_date = 900.1.1
+	historical_start_province = 1355
+	history = {
+		OR = {
+			AND = {
+				is_year = 900
+				superregion = skyrim_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 950
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 1000
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 1050
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		if = {
+			limit = {
+				culture_group = dwemer_cg
+			}
+			has_terrain = barrow
+		}
+		else = {
+			OR = {
+				has_terrain = barrow
+				has_terrain = dwemer_stronghold
+			}
+		}
+		owner = {
+			OR = {
+				advisor = esu_adventurer
+				advisor = esu_researcher
+				advisor = esu_conquistador
+				advisor = esu_curator
+			}
+		}
+		# General Conditions 
+		is_year = 900
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = astrology
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.9
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					archaeology = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = archaeology
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = archaeology
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						archaeology = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = archaeology
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = archaeology
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant terrain 
+		modifier = {
+			factor = 3
+			owner = {
+				any_known_country = {
+					has_institution = archaeology
+				}
+			}
+			OR = {
+				has_terrain = dwemer_stronghold
+				has_terrain = barrow
+			}
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Naval Guards 
+####################################### 
+naval_guards = {
+	bonus = {
+		sailor_maintenance_modifer = -0.1
+	}
+	historical_start_date = 1000.1.1
+	historical_start_province = 337
+	history = {
+		OR = {
+			AND = {
+				is_year = 1000
+				superregion = yokuda_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 1050
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 1100
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 1150
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			has_building = dock
+			has_building = drydock
+			has_building = shipyard
+			has_building = grand_shipyard
+		}
+		owner = {
+			naval_forcelimit = 45
+		}
+		# General Conditions 
+		development = 35
+		is_year = 1000
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = archaeology
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.10
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					naval_guards = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = naval_guards
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = naval_guards
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						naval_guards = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = naval_guards
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = naval_guards
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has port 
+		modifier = {
+			factor = 1.5
+			owner = {
+				any_known_country = {
+					has_institution = naval_guards
+				}
+			}
+			development = 20
+			has_port = yes
+		}
+		# Province has relevant trade good 
+		modifier = {
+			factor = 3
+			development = 20
+			owner = {
+				any_known_country = {
+					has_institution = naval_guards
+				}
+			}
+			trade_goods = naval_supplies
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Monuments 
+####################################### 
+monuments = {
+	bonus = {
+		advisor_cost = -0.1
+	}
+	historical_start_date = 1100.1.1
+	historical_start_province = 646
+	history = {
+		OR = {
+			AND = {
+				is_year = 1100
+				superregion = po_tun_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 1150
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 1200
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 1250
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			owner = {
+				has_dlc = "Leviathan"
+				# Owns at least 5 great projects 
+				calc_true_if = {
+					custom_trigger_tooltip = {
+						tooltip = monuments_provinces_with_great_projects
+						all_owned_province = {
+							has_great_project = {
+								type = any
+							}
+						}
+					}
+					amount = 5
+				}
+			}
+			owner = {
+				NOT = { has_dlc = "Leviathan" }
+				# Owns at least 5 great cities 
+				calc_true_if = {
+					custom_trigger_tooltip = {
+						tooltip = provinces_with_great_cities
+						all_owned_province = {
+							development = 25
+						}
+					}
+					amount = 5
+				}
+			}
+		}
+		# General Conditions 
+		development = 35
+		is_year = 1100
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = naval_guards
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.11
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					monuments = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = monuments
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = monuments
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						monuments = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = monuments
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = monuments
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant building 
+		modifier = {
+			factor = 3
+			owner = {
+				any_known_country = {
+					has_institution = monuments
+				}
+			}
+			development = 20
+			has_great_project = {
+				type = any
+			}
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Literacy 
+####################################### 
+literacy = {
+	bonus = {
+		technology_cost = -0.1
+	}
+	historical_start_date = 1200.1.1
+	historical_start_province = 724
+	history = {
+		OR = {
+			AND = {
+				is_year = 1200
+				superregion = tsakara_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 1250
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 1300
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 1350
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		trade_goods = paper
+		OR = {
+			development = 35
+			is_capital = yes
+		}
+		OR = {
+			has_building = college
+			has_building = university
+		}
+		owner = {
+			OR = {
+				advisor = esu_steward
+				advisor = esu_researcher
+				advisor = esu_monk
+				advisor = esu_priest
+				advisor = esu_mad_scholar
+			}
+		}
+		# General Conditions 
+		is_year = 1200
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = monuments
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.12
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					literacy = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = literacy
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = literacy
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						literacy = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = literacy
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = literacy
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant trade good 
+		modifier = {
+			factor = 3
+			development = 20
+			owner = {
+				any_known_country = {
+					has_institution = literacy
+				}
+			}
+			trade_goods = paper
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Plague Prevention 
+####################################### 
+plague_prevention = {
+	bonus = {
+		manpower_recovery_speed = 0.1
+	}
+	historical_start_date = 1300.1.1
+	historical_start_province = 5226
+	history = {
+		OR = {
+			AND = {
+				is_year = 1300
+				superregion = elsweyr_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 1350
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 1400
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 1450
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		OR = {
+			trade_goods = potions
+			trade_goods = herbs
+			trade_goods = mushrooms
+		}
+		owner = {
+			OR = {
+				advisor = esu_researcher
+				advisor = esu_mad_scholar
+				advisor = esu_alchemist
+			}
+		}
+		# General Conditions 
+		development = 40
+		is_year = 1300
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = literacy
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.13
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					plague_prevention = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = plague_prevention
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = plague_prevention
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						plague_prevention = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = plague_prevention
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = plague_prevention
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			is_capital = yes
+		}
+		modifier = {
+			factor = 3
+			development = 20
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Organized Guilds 
+####################################### 
+organized_guilds = {
+	bonus = {
+		global_own_trade_power = 0.1
+	}
+	historical_start_date = 1400.1.1
+	historical_start_province = 1120
+	history = {
+		OR = {
+			AND = {
+				is_year = 1400
+				superregion = cyrodiil_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 1450
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 1500
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 1550
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		NOT = {
+			unrest = 0
+		}
+		owner = {
+			NOT = {
+				crown_land_share = 50
+			}
+			stability = 3
+			NOT = {
+				unrest = 0
+			}
+			is_at_war = no
+		}
+		OR = {
+			has_estate = estate_mages
+			has_estate = estate_merchants
+			has_estate = estate_warriors
+		}
+		# General Conditions 
+		development = 40
+		is_year = 1400
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = plague_prevention
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.14
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					organized_guilds = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = organized_guilds
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = organized_guilds
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						organized_guilds = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = organized_guilds
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = organized_guilds
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			custom_trigger_tooltip = {
+				tooltip = province_has_guild
+				owner = {
+					any_known_country = {
+						has_institution = organized_guilds
+					}
+				}
+				OR = {
+					has_estate = estate_mages
+					has_estate = estate_merchants
+					has_estate = estate_warriors
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+####################################### 
+# Natural Philosophy 
+####################################### 
+natural_philosophy = {
+	bonus = {
+		administrative_efficiency = 0.01
+	}
+	historical_start_date = 1500.1.1
+	historical_start_province = 1045
+	history = {
+		OR = {
+			AND = {
+				is_year = 1500
+				superregion = morrowind_superregion
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+			}
+			AND = {
+				is_year = 1550
+				owner = {
+					NOT = {
+						OR = {
+							government = tribal
+							is_primitive = yes
+						}
+					}
+				}
+				continent = Tamriel
+			}
+			AND = {
+				is_year = 1600
+				OR = {
+					continent = Tamriel
+					AND = {
+						NOT = {
+							continent = Tamriel
+						}
+						owner = {
+							NOT = {
+								OR = {
+									government = tribal
+									is_primitive = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			is_year = 1650
+		}
+	}
+	can_start = {
+		# Specific Conditions 
+		NOT = {
+			development = 10
+		}
+		OR = {
+			has_terrain = mountain_meadows
+			has_terrain = mountain
+			has_terrain = woods
+			has_terrain = jungle
+			has_terrain = marsh
+			has_terrain = fungal_forest
+		}
+		owner = {
+			if = {
+				limit = {
+					NOT = {
+						is_year = 1550
+					}
+				}
+				OR = {
+					advisor = esu_researcher
+					advisor = esu_alchemist
+					advisor = esu_hunter
+				}
+			}
+			calc_true_if = {
+				all_owned_province = {
+					NOT = {
+						development = 15
+					}
+					OR = {
+						has_terrain = mountain_meadows
+						has_terrain = mountain
+						has_terrain = woods
+						has_terrain = jungle
+						has_terrain = marsh
+						has_terrain = fungal_forest
+					}
+				}
+				amount = 50
+			}
+		}
+		# General Conditions 
+		is_year = 1500
+		is_island = no
+		is_state = yes
+		owner = {
+			has_institution = organized_guilds
+		}
+	}
+	start_chance = 5
+	on_start = esu_institutions.15
+	can_embrace = {
+		always = yes
+	}
+	embracement_speed = {
+		# Nearby friendly province has institution 
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = nearby_friendly_province_has_institution
+				any_friendly_coast_border_province = {
+					natural_philosophy = 100
+				}
+			}
+		}
+		# Owner has institution 
+		modifier = {
+			factor = 10
+			owner = {
+				has_institution = natural_philosophy
+			}
+		}
+		# Overlord has institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_vassal = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = overlord_has_institution
+				owner = {
+					overlord = {
+						has_institution = natural_philosophy
+					}
+				}
+			}
+		}
+		# Capital has institution 
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = capital_has_institution
+				owner = {
+					capital_scope = {
+						natural_philosophy = 100
+					}
+				}
+			}
+		}
+		# Province has trade access to country with this institution 
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = natural_philosophy
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = trades_with_friendly_country_with_institution
+				owner = {
+					any_active_trade_node = {
+						any_trade_node_member_country = {
+							has_institution = natural_philosophy
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					development = 20
+				}
+			}
+		}
+		# Province has relevant terrain 
+		modifier = {
+			factor = 3
+			owner = {
+				any_known_country = {
+					has_institution = natural_philosophy
+				}
+			}
+			NOT = {
+				development = 15
+			}
+			OR = {
+				has_terrain = mountain_meadows
+				has_terrain = mountain
+				has_terrain = woods
+				has_terrain = jungle
+				has_terrain = marsh
+				has_terrain = fungal_forest
+			}
+		}
+	}
+	ai_will_do = {
+		# Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...) 
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}

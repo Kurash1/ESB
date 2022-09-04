@@ -1,0 +1,136 @@
+######################################################################
+# Slaves
+######################################################################
+slaves_rebels = {
+	
+	color = { 0 0 0 }
+	
+	area = nation 					# Stays within the nation
+	government = any
+	defection = none					# Will defect to the "best" alternative.
+	independence = none				# Does not strive for independence
+	defect_delay = 120
+	gfx_type = culture_province				 
+	
+	resilient = no					# Disbands on retreat
+	reinforcing = yes				# Does not receive reinforcements
+	general = yes					# Does not use generals
+	smart = no						# Does not assault forts, tactically withdraw from battle, etc.
+	unit_transfer = no				# Units do not remain after enforcing demands.
+	will_relocate = yes				# Units will relocate if they have sieged all provinces nearby and has to move over sea.
+	disband_on_leader_death = yes
+	
+	artillery = 0.0
+	infantry = 1.0
+	cavalry = 0.0
+	morale = 1.0
+	
+	
+	# Possible handle actions
+	handle_action_negotiate = no
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes	
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1.5
+		modifier = {
+			factor = 100
+			trade_goods = slaves
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				superregion = deadlands_superregion
+				superregion = coldharbour_superregion
+			}
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				has_reform = mamluk_government
+				has_reform = killed_or_enslaved
+				has_reform = slavery
+			}
+			OR = {
+				trade_goods = crops
+				trade_goods = fruits_and_vegetables
+				trade_goods = mushrooms
+				trade_goods = moon_sugar
+				trade_goods = livestock
+				trade_goods = salt
+				trade_goods = cloth
+				trade_goods = silk
+				trade_goods = gems
+				trade_goods = gold
+				trade_goods = silver
+				trade_goods = copper
+			}
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2.5
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 7.5
+		}
+	}
+	
+ 	# Province Scope
+ 	siege_won_trigger = {
+ 		NOT = { devastation = 100 }
+ 	}
+	siege_won_effect = {
+		add_devastation = 25
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		always = no
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "slaves_rebels_demand"
+	
+	# Country scope
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		every_owned_province = {
+			limit = {
+				has_rebel_faction = REB
+			}
+			add_devastation = 25
+		}
+		add_prestige = -50
+	}
+}

@@ -1,0 +1,271 @@
+namespace = es_akaviri_random_events
+
+# Event Manager
+
+country_event = {
+	id = es_akaviri_random_events.100
+	title = es_akaviri_random_events.1.t
+	desc = es_akaviri_random_events.1.d
+	picture = ES_WHITE_ELEPHANT_eventPicture
+	
+	trigger = {
+		capital_scope = {
+			continent = Akavir
+		}
+	}
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = es_akaviri_random_events.1 } }
+			1 = { country_event = { id = es_akaviri_random_events.2 } }
+			1 = { country_event = { id = es_akaviri_random_events.3 } }
+			1 = { country_event = { id = es_akaviri_random_events.4 } }
+			1 = { country_event = { id = es_akaviri_random_events.5 } }
+			1 = { country_event = { id = es_akaviri_random_events.6 } }
+			94 = { set_country_flag = successful_akaviri_random_event }
+		}
+	}
+	
+	option = {
+		name = es_akaviri_random_events.1.a
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_akaviri_random_event }
+			clr_country_flag = successful_akaviri_random_event
+		}
+		else = {
+			country_event = {
+				id = es_akaviri_random_events.100
+				days = 1
+			}
+		}
+	}
+}
+
+#White Elephant Captured
+
+country_event = {
+	id = es_akaviri_random_events.1
+	title = es_akaviri_random_events.1.t
+	desc = es_akaviri_random_events.1.d
+	picture = ES_WHITE_ELEPHANT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_random_religion_flavour_event
+	}
+	
+	option = {
+		name = es_akaviri_random_events.1.a #Take good care of it
+		es_please_common_estates = yes
+		add_years_of_income = -0.5
+		add_prestige = 10
+		add_authority = 5
+	}
+	option = {
+		name = es_akaviri_random_events.1.b #Sell it
+		es_please_merchant_estates = yes
+		add_years_of_income = 0.5
+		add_prestige = -10
+		add_authority = -5
+	}
+	option = {
+		name = es_akaviri_random_events.1.c #It would make an excellent gift!
+		es_please_war_estates = yes
+		add_prestige = 5
+		add_authority = -10
+	}
+}
+
+#Soldiers fleeing their military service to join Monasteries
+country_event = {
+	id = es_akaviri_random_events.2
+	title = es_akaviri_random_events.2.t
+	desc = es_akaviri_random_events.2.d
+	picture = ES_AKAVIRI_MONASTERY_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_random_religion_flavour_event
+	}
+	
+	option = {
+		name = es_akaviri_random_events.2.a #We must remember to be gentle.
+		es_please_religious_estates = yes
+		add_authority = -5
+		add_war_exhaustion = -1.5
+	}
+	option = {
+		name = es_akaviri_random_events.2.b #Demand that the Monasteries release these 'Monks' to us.
+		es_upset_religious_estates = yes
+		add_authority = 5
+		add_yearly_manpower = 2.5
+	}
+}
+
+#Inheritance of a Monk
+country_event = {
+	id = es_akaviri_random_events.3
+	title = es_akaviri_random_events.3.t
+	desc = es_akaviri_random_events.3.d
+	picture = ES_AKAVIRI_MANUSCRIPTS_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_random_religion_flavour_event
+	}
+	
+	option = {
+		name = es_akaviri_random_events.3.a #Rule in favor of the disciple.
+		add_authority = 5
+		add_prestige = 10
+	}
+	option = {
+		name = es_akaviri_random_events.3.b #Rule in favor of the Monastery
+		es_please_religious_estates = yes
+		add_authority = -10
+		add_legitimacy = 10
+		add_horde_unity = 10
+		add_republican_tradition = 10
+		add_devotion = 10
+		add_meritocracy = 10
+	}
+	option = {
+		name = es_akaviri_random_events.3.c #Support the lay family of the monk.
+		es_upset_religious_estates = yes
+		add_authority = -5
+		add_years_of_income = 1.5
+		random_owned_area = {
+			limit = {
+				is_capital = no
+			}
+			add_province_modifier = {
+				name = "hostile_monastery"
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Monastic school
+country_event = {
+	id = es_akaviri_random_events.4
+	title = es_akaviri_random_events.4.t
+	desc = es_akaviri_random_events.4.d
+	picture = ES_AKAVIRI_MONASTERY_1_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_random_religion_flavour_event
+	}
+
+	option = {
+		name = es_akaviri_random_events.4.a
+		es_please_magical_estates = yes
+		add_years_of_income = -0.75
+
+		add_country_modifier = {
+			name = administration_monastery_school
+			duration = 9125
+		}
+	}
+
+	option = {
+		name = es_akaviri_random_events.4.b
+		es_please_merchant_estates = yes
+		add_years_of_income = -0.75
+
+		add_country_modifier = {
+			name = diplomacy_monastery_school
+			duration = 9125
+		}
+	}
+
+	option = {
+		name = es_akaviri_random_events.4.c
+		es_upset_common_estates = yes
+		add_years_of_income = 1.15
+	}
+}
+
+#Nobleman wants to become a monk / "In Search of the Soul"
+country_event = {
+	id = es_akaviri_random_events.5
+	title = es_akaviri_random_events.5.t
+	desc = es_akaviri_random_events.5.d
+	picture = ES_AKAVIRI_MONASTERY_2_eventPicture
+  
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_random_religion_flavour_event
+	}
+  
+	option = {
+		name = es_akaviri_random_events.5.a
+		es_upset_religious_estates = yes
+		add_ruler_modifier = {
+			name = "enthusiastic_believer"
+			duration = 9125
+		}
+	}
+
+	option = {
+		name = es_akaviri_random_events.5.b
+		es_upset_magical_estates = yes
+		define_advisor = {
+			type = esu_priest
+			skill = 3
+			discount = yes
+		}
+	}
+
+	option = {
+		name = es_akaviri_random_events.5.c
+		es_please_religious_estates = yes
+		add_prestige = 15
+	}
+}
+
+# A Sacked Monastery
+country_event = {
+	id = es_akaviri_random_events.6
+	title = es_akaviri_random_events.6.t
+	desc = es_akaviri_random_events.6.d
+	picture = ESSACKED_AKAVIRI_MONASTERY_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = successful_random_religion_flavour_event
+	}
+
+	option = {
+		name = es_akaviri_random_events.6.a
+		es_please_common_estates = yes
+		add_years_of_income = -1.0
+
+		random_owned_province = {
+			add_province_modifier = {
+				name = "monastery_repaired"
+				duration = 36500
+			}
+		}
+
+	}
+
+	option = {
+		name = es_akaviri_random_events.6.b
+		add_prestige = -10
+		es_upset_common_estates = yes
+	}
+}

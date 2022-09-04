@@ -1,0 +1,141 @@
+march_building = {
+	cost = 175			
+	time = 48
+
+	build_trigger = {
+		owner = {
+			OR = {
+				is_subject_of_type = march
+				is_subject_of_type = holy_order_1
+				is_subject_of_type = personal_union
+			}
+		}
+		OR = {
+		has_building = fort_15th
+		has_building = fort_16th
+		has_building = fort_17th
+		has_building = fort_18th
+		}
+	}
+
+	keep_trigger = {
+		owner = { is_subject = yes }
+	}
+	
+	modifier = {
+		local_defensiveness = 0.25
+		garrison_growth = 0.25
+		local_friendly_movement_speed = 0.25
+	}
+	
+	on_built = {
+		add_development_from_building = {
+			building = march_building
+			type = manpower
+			value = 1
+		}
+	}
+	on_destroyed = {
+		add_development_from_building = {
+			building = march_building
+			type = manpower
+			value = -1
+		}
+	}
+	on_obsolete = {
+	}
+	
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+#######################################################################
+
+embassy = {
+	cost = 350			
+	time = 48
+
+	build_trigger = {
+		owner = {
+			is_subject = yes
+		}
+		development = 25
+	}
+
+	keep_trigger = {
+		owner = { is_subject = yes }
+	}
+	
+	modifier = {
+		local_unrest = -2.5
+		local_culture_conversion_cost = -0.25
+		local_development_cost = -0.25
+	}
+	
+	on_built = {
+		add_development_from_building = {
+			building = march_building
+			type = tax
+			value = 1
+		}
+	}
+	on_destroyed = {
+		add_development_from_building = {
+			building = march_building
+			type = tax
+			value = -1
+		}
+	}
+	on_obsolete = {
+	}
+	
+	ai_will_do = {
+		factor = 250
+	}
+}
+
+#######################################################################
+
+spy_agency = {
+	cost = 500
+	time = 48
+
+	build_trigger = {
+		owner = {
+			is_subject = yes
+		}
+		is_capital = yes
+	}
+
+	keep_trigger = {
+		owner = { is_subject = yes }
+	}
+	
+	modifier = {
+		liberty_desire = -15
+		administrative_efficiency = 0.15
+		global_spy_defence = 0.15
+	}
+	
+	on_built = {
+		add_development_from_building = {
+			building = march_building
+			type = production
+			value = 1
+		}
+	}
+	on_destroyed = {
+		add_development_from_building = {
+			building = march_building
+			type = production
+			value = -1
+		}
+	}
+	on_obsolete = {
+	}
+	
+	ai_will_do = {
+		factor = 500
+	}
+}

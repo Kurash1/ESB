@@ -1,0 +1,212 @@
+namespace = es_na3_mission_events
+
+# Harald Ysgramor
+country_event = {
+	id = es_na3_mission_events.1
+	title = "es_na3_mission_events.1.t"
+	desc = "es_na3_mission_events.1.z"
+	picture = ES_PALACE_OF_THE_KINGS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_na3_mission.1.a"
+		ai_chance = { factor = 65 }
+
+		define_heir = {
+		    name = "Harald"
+			dynasty = "Ysgramor"
+		    age = 25
+		    adm = 4
+		    dip = 7
+		    mil = 5
+            female = no
+            claim = 100
+		}
+        add_legitimacy = 20
+    }
+
+    option = {
+        name = "es_na3_mission.1.b"
+        ai_chance = { factor = 25 }
+
+        define_general = {
+            name = "Harald Ysgramor"
+            shock = 7
+            fire = 4
+            manuever = 7
+            siege = 5
+            female = no
+        }
+        add_army_tradition = 20
+    }
+
+    option = {
+        name = "es_na3_mission.1.c"
+        ai_chance = { factor = 10 }
+
+        define_advisor = {
+            type = esu_grand_champion
+            name = "Harald Ysgramor"
+            skill = 3
+            culture = atmoran
+            discount = yes
+            female = no
+        }
+        add_prestige = 15
+    }
+
+    option = {
+        name = "es_na3_mission.1.d"
+        ai_chance = { factor = 0 }
+
+        add_stability = 1
+    }
+}
+
+# Riften and Ivarstead
+
+country_event = {
+	id = es_na3_mission_events.2
+	title = "es_na3_mission_events.2.t"
+	desc = "es_na3_mission_events.2.z"
+	picture = ES_NORDIC_FEUD
+	
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            inherit = NA1
+            inherit = NA5
+        }
+    }
+
+	option = {
+        name = "es_na3_mission.2.a"
+        ai_chance = { factor = 33 }
+    
+        trigger = {
+            owns = 1268
+            owns = 1286
+        }
+
+        hidden_effect = {
+            NA1 = {
+                change_primary_culture = nord
+                change_religion = nordic_pantheon
+            }
+                skyrim_10_la = {
+                    add_core = NA5
+                }
+                skyrim_60_la = {
+                    add_core = NA5
+                }
+                skyrim_57_la = {
+                    add_core = NA5
+                }
+            NA5 = {
+                change_primary_culture = nord
+                change_religion = nordic_pantheon
+            }
+                skyrim_59_la = {
+                    add_core = NA1
+                }
+                skyrim_4_la = {
+                    add_core = NA1
+                }
+                skyrim_2_la = {
+                    add_core = NA1
+                }
+        }
+
+        create_march = NA1
+        create_vassal = NA5
+        
+        NA1 = {
+            kill_ruler = yes
+        }
+        NA5 = {
+            kill_ruler = yes
+        }
+
+    }
+
+    option = {
+        name = "es_na3_mission.2.b"
+        ai_chance = { factor = 66 }
+
+        trigger = {
+            owns = 1268
+        }
+
+        hidden_effect = {
+            NA1 = {
+                change_primary_culture = nord
+                change_religion = nordic_pantheon
+            }
+                skyrim_59_la = {
+                    add_core = NA1
+                }
+                skyrim_4_la = {
+                    add_core = NA1
+                }
+                skyrim_5_la = {
+                    add_core = NA1
+                }
+                skyrim_2_la = {
+                    add_core = NA1
+                }
+                skyrim_60_la = {
+                    add_core = NA1
+                }
+                skyrim_57_la = {
+                    add_core = NA1
+                }
+        }
+
+        create_march = NA1
+
+		NA1 = {
+            kill_ruler = yes
+        }
+
+        add_prestige = 10
+ 
+    }
+
+    option = {
+        name = "es_na3_mission.2.c"
+        ai_chance = { factor = 0 }
+
+        add_prestige = 10
+    }
+
+}
+
+country_event = {
+    id = es_na3_mission_events.3
+    title = "es_na3_mission_events.3.t"
+    desc = "es_na3_mission_events.3.z"
+    picture = ES_SKYRIM_MAP_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = "es_na3_mission.3.a"
+        ai_chance = { factor = 100 }
+
+        change_tag = SKY 
+        add_country_modifier = {
+            name = es_sky_formation
+            duration = -1
+        }
+
+        hidden_effect = {
+            if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } restore_country_name = yes }
+	    	if = { limit = { NOT = { government_rank = 8 } } set_government_rank = 8 }
+			swap_non_generic_missions = yes
+        }
+    }
+}
+
+    

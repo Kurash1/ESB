@@ -1,0 +1,678 @@
+# Azura
+
+turn_night_into_day_aspect = {
+    cost = 500
+	modifier = {
+	    global_autonomy = -0.01
+		native_assimilation = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+bless_the_transformation_aspect = {
+    cost = 500
+	modifier = {
+	    culture_conversion_cost = -0.10
+		global_ship_repair = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+grow_roses_among_weeds_aspect = {
+	cost = 500
+	modifier = {
+	    rebel_support_efficiency = 0.15
+		global_supply_limit_modifier = 0.15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+show_mercy_to_fallen_aspect = {
+	cost = 500
+	modifier = {
+	    diplomats = 1
+		envoy_travel_time = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+seek_benevolence_aspect = {
+	cost = 500
+	modifier = {
+	    land_morale = 0.10
+		reserves_organisation = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+observe_the_night_sky_aspect = {
+    cost = 500
+	modifier = {
+	    leader_naval_manuever = 1
+		light_ship_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Boethiah
+
+patronize_conspiracy_aspect = {
+    cost = 500
+	modifier = {
+	    spy_offence = 0.1
+		fabricate_claims_cost = -0.15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+auspice_seduction_aspect = {
+    cost = 500
+	modifier = {
+	    diplomatic_annexation_cost = -0.10
+		expand_administration_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+protect_deceivers_aspect = {
+    cost = 500
+	modifier = {
+	    global_heathen_missionary_strength = 0.01
+		tolerance_heathen = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+use_traitors_aspect = {
+    cost = 500
+	modifier = {
+	    available_province_loot = 0.15
+		siege_blockade_progress = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+enjoy_suffering_aspect = {
+    cost = 500
+	modifier = {
+	    global_sailors_modifier = 0.1
+		drill_gain_modifier = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+favoring_dark_arts_aspect = {
+    cost = 500
+	modifier = {
+	    mil_advisor_cost = -0.1
+		warscore_cost_vs_other_religion = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Clavicus Vile
+
+seeking_power_aspect = {
+    cost = 500
+	modifier = {
+	    governing_capacity_modifier = 0.1
+		advisor_pool = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+beutification_of_trickery_aspect = {
+    cost = 500
+	modifier = {
+	    caravan_power = 0.1
+		interest = -1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+make_wishes_come_true_aspect = {
+    cost = 500
+	modifier = {
+	    legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25
+		horde_unity = 0.25
+		meritocracy = 0.25
+		discovered_relations_impact = -0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+maintain_serenity_aspect = {
+    cost = 500
+	modifier = {
+	    stability_cost_modifier = -0.1
+		core_decay_on_your_own = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+support_bargains_aspect = {
+    cost = 500
+	modifier = {
+	    privateer_efficiency = 0.1
+		ship_power_propagation = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+spread_of_regrets_aspect = {
+    cost = 500
+	modifier = {
+	    mercantilism_cost = -0.15
+		inflation_action_cost = -0.15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Malacath
+
+protect_spurned_ones_aspect = {
+    cost = 500
+	modifier = {
+	    infantry_power = 0.10
+		promote_culture_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+perform_bloody_curse_aspect = {
+    cost = 500
+	modifier = {
+	    enemy_core_creation = 0.10
+		harsh_treatment_cost = -0.15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+keep_sworn_oath_aspect = {
+    cost = 500
+	modifier = {
+		ae_impact = -0.10
+	    relation_with_heretics = 15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+feast_in_hero_honour_aspect = {
+    cost = 500
+	modifier = {
+	    war_exhaustion_cost = -0.10
+		manpower_in_true_faith_provinces = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+organize_expository_fights_aspect = {
+    cost = 500
+	modifier = {
+		prestige_from_land = 0.10
+		prestige_from_naval = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+curse_negligence_aspect = {
+    cost = 500
+	modifier = {
+	    embracement_cost = -0.1
+		adm_advisor_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Jyggalag
+proclaim_logical_order_aspect = {
+    cost = 500
+	modifier = {
+	    vassal_forcelimit_bonus = 0.10
+		global_spy_defence = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+develop_deduction_aspect = {
+    cost = 500
+	modifier = {
+	    global_naval_engagement_modifier = 0.1
+		admiral_cost = -0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+accept_certainty_aspect = {
+    cost = 500
+	modifier = {
+	    possible_condottieri = 0.5
+		merc_maintenance_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+seek_determinism_aspect = {
+    cost = 500
+	modifier = {
+	    missionaries = 1
+		global_religious_conversion_resistance = 0.15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+reject_individuality_aspect = {
+    cost = 500
+	modifier = {
+	    yearly_corruption = -0.1
+		development_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+create_illusions_aspect = {
+    cost = 500
+	modifier = {
+	    blockade_efficiency = 0.15
+		state_governing_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Mephala
+shed_lies_aspect = {
+    cost = 500
+	modifier = {
+	    unjustified_demands = -0.10
+		min_autonomy_in_territories = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+embrace_lust_aspect = {
+    cost = 500
+	modifier = {
+	    global_manpower_modifier = 0.10
+		rival_change_cost = -0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+forgive_murder_aspect = {
+    cost = 500
+	modifier = {
+	    fire_damage = 0.10
+		general_cost = -0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+preserve_secrets_aspect = {
+    cost = 500
+	modifier = {
+	    build_cost = -0.1
+		prestige_decay = -0.01
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+crave_to_desires_aspect = {
+    cost = 500
+	modifier = {
+	    sailor_maintenance_modifer = -0.1
+		naval_tradition_from_battle = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+succumb_to_seduce_aspect = {
+    cost = 500
+	modifier = {
+	    mercenary_manpower = 0.10
+		leader_siege = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Namira
+
+immortalize_ancient_darkness_aspect = {
+    cost = 500
+	modifier = {
+	    advisor_cost = -0.10
+		drill_decay_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+worship_shadowy_spirits_aspect = {
+    cost = 500
+	modifier = {
+	    loot_amount = 0.25
+		autonomy_change_time = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+spread_decay_aspect = {
+    cost = 500
+	modifier = {
+	    cavalry_flanking = 0.15
+		cav_to_inf_ratio = 0.15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+accede_cannibalism_aspect = {
+    cost = 500
+	modifier = {
+		land_attrition = -0.10
+	    naval_maintenance_modifier = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+sow_vermin_aspect = {
+    cost = 500
+	modifier = {
+	    global_tariffs = 0.10
+		vassal_income = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+strive_for_rebirth_aspect = {
+    cost = 500
+	modifier = {
+		diplomatic_reputation = 0.5
+	    center_of_trade_upgrade_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Peryite
+mold_pestilence_aspect = {
+    cost = 500
+	modifier = {
+	    artillery_power = 0.10
+		build_time = -0.15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+touch_filth_aspect = {
+    cost = 500
+	modifier = {
+	    leader_cost = -0.25
+		stability_cost_to_declare_war = -1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+spread_pandemic_aspect = {
+    cost = 500
+	modifier = {
+	    global_ship_trade_power = 0.10
+		native_uprising_chance = -0.15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+breed_skeevers_aspect = {
+    cost = 500
+	modifier = {
+	    navy_tradition_decay = -0.01
+		manpower_recovery_speed = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+maintain_natural_order_aspect = {
+    cost = 500
+	modifier = {
+	    trade_range_modifier = 0.15
+		global_foreign_trade_power = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+support_taskmaster_aspect = {
+    cost = 500
+	modifier = {
+	    years_of_nationalism = -5
+		innovativeness_gain = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Sanguine
+devote_to_revelry_aspect = {
+    cost = 500
+	modifier = {
+	    missionary_maintenance_cost = -0.15
+		trade_efficiency = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+sanctify_debauchery_aspect = {
+    cost = 500
+	modifier = {
+	    war_exhaustion = -0.015
+		state_maintenance_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+embold_greed_aspect = {
+    cost = 500
+	modifier = {
+	    global_tax_modifier = 0.10
+		mercenary_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+vindicate_gluttony_aspect = {
+    cost = 500
+	modifier = {
+		defensiveness = 0.10
+	    naval_attrition = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+luxuriate_lust_aspect = {
+    cost = 500
+	modifier = {
+	    diplomatic_upkeep = 1
+		global_colonial_growth = 10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+graze_sloth_aspect = {
+    cost = 500
+	modifier = {
+	    global_missionary_strength = 0.01
+		justify_trade_conflict_cost = -0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Vaermina
+send_nightmares_aspect = {
+    cost = 500
+	modifier = {
+		global_heretic_missionary_strength = 0.01
+		garrison_size = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+spread_terror_aspect = {
+    cost = 500
+	modifier = {
+		leader_naval_shock = 1
+	    inflation_reduction = 0.01
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+torment_mortals_aspect = {
+    cost = 500
+	modifier = {
+	    province_warscore_cost = -0.10
+		reduced_liberty_desire = 10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+erode_dreams_aspect = {
+    cost = 500
+	modifier = {
+	    leader_land_fire = 1
+		reinforce_cost_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+bring_omens_aspect = {
+    cost = 500
+	modifier = {
+	    dip_advisor_cost = -0.1
+		improve_relation_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+steal_memories_aspect = {
+    cost = 500
+	modifier = {
+	    prestige = 0.10
+		navy_tradition = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

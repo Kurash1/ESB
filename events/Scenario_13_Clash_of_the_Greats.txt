@@ -1,0 +1,481 @@
+namespace = es_13_scenario
+
+country_event = {
+	id = es_13_scenario.100
+	title = es_13_scenario.1.t
+	desc = es_13_scenario.1.d
+	picture = SCQ_VILLAGES_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_year = 458
+		NOT = { is_year = 548 }
+		capital_scope = {
+			OR = {
+				region = western_cyrodiil_lr
+				region = eastern_cyrodiil_lr
+				region = central_cyrodiil_lr
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			25 = { country_event = { id = es_13_scenario.1 } }
+			75 = { set_country_flag = successful_scenario_13_event }
+		}
+	}
+
+	option = {
+		name = "es_13_scenario.1.a"
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_scenario_13_event }
+			clr_country_flag = successful_scenario_13_event
+		}
+		else = {
+			country_event = {
+				id = es_13_scenario.100
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = es_13_scenario.1
+	title = es_13_scenario.1.t
+	desc = es_13_scenario.1.d
+	picture = SCQ_VILLAGES_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = successful_scenario_13_event
+	}
+
+	option = {
+		name = "es_13_scenario.1.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+			if = { 
+				limit = { base_tax = 4 }
+				add_base_tax = -3
+			}
+			if = { 
+				limit = { base_production = 4 }
+				add_base_production = -3
+			}
+			if = { 
+				limit = { base_manpower = 4 }
+				add_base_manpower = -3
+			}
+			add_permanent_province_modifier = {
+				name = "13_great_plague"
+				duration = 3650
+			}
+		}
+	}
+}
+
+country_event = {
+	id = es_13_scenario.2
+	title = es_13_scenario.2.t
+	desc = es_13_scenario.2.d
+	picture = ES_ELVEN_WARRIOR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_13_scenario.2.a"
+		ai_chance = { factor = 50 }
+		define_general = {
+		name = "Aiden"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		add_prestige = -35
+	}
+	option = {
+		name = "es_13_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		add_prestige = 10
+		add_manpower = 25
+	}
+}
+
+country_event = {
+	id = es_13_scenario.3
+	title = es_13_scenario.3.t
+	desc = es_13_scenario.3.d
+	picture = ES_ELVEN_VILLAGE2_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_13_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+			name = "13_anti-alessian_reforms"
+			duration = -1
+		}
+	}
+	option = {
+		name = "es_13_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_prestige = -35
+	}
+}
+
+country_event = {
+	id = es_13_scenario.4
+	title = es_13_scenario.4.t
+	desc = es_13_scenario.4.d
+	picture = ES_COLOVIA_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		1161 = { owner = { save_event_target_as = 1161_owner } }
+	}
+
+	option = {
+		name = "es_13_scenario.4.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		OR = {
+			region = western_cyrodiil_lr
+			region = golden_coast_lr
+		}
+		}
+		add_claim = ROOT
+		}
+		
+		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:1161_owner } NOT = { alliance_with = event_target:1161_owner } NOT = { is_subject_of = event_target:1161_owner } NOT = { overlord_of = event_target:1161_owner } }
+		declare_war_with_cb = { who = event_target:1161_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_13_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+	after = {
+		every_country = {
+			limit = {
+				OR = {
+					culture_group = high_elves_cg
+					culture_group = cyrodiil_cg	
+					culture_group = northern_cg
+				}
+			}
+			country_event = { id = es_13_scenario.5 days = 3650 }
+		}
+	}
+}
+
+country_event = {
+	id = es_13_scenario.5
+	title = es_13_scenario.5.t
+	desc = es_13_scenario.5.d
+	picture = BATTLE_4_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_13_scenario.5.a"
+		trigger = {
+		culture_group = high_elves_cg
+		}
+		ai_chance = { factor = 50 }
+		random_list = {
+		50 = {
+		add_prestige = 25
+		}
+		50 = {
+		add_war_exhaustion = 10
+		}
+		}
+	}
+	option = {
+		name = "es_13_scenario.5.b"
+		trigger = {
+		culture_group = high_elves_cg
+		}
+		ai_chance = { factor = 50 }
+		random_list = {
+		50 = {
+		add_manpower = 50
+		}
+		50 = {
+		add_prestige = -25
+		}
+		}
+	}
+	option = {
+		name = "es_13_scenario.5.a"
+		trigger = {
+		culture_group = cyrodiil_cg
+		}
+		ai_chance = { factor = 50 }
+		random_list = {
+		50 = {
+		define_general = {
+		name = "Faolchu"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		}
+		50 = {
+		add_war_exhaustion = 10
+		}
+		}
+	}
+	option = {
+		name = "es_13_scenario.5.b"
+		trigger = {
+		culture_group = cyrodiil_cg
+		}
+		ai_chance = { factor = 50 }
+		random_list = {
+		50 = {
+		add_stability = -1
+		}
+		50 = {
+		add_prestige = -25
+		}
+		}
+	}
+	option = {
+		name = "es_13_scenario.5.a"
+		trigger = {
+		culture_group = northern_cg
+		owns = 1275
+		}
+		ai_chance = { factor = 50 }
+		random_list = {
+		50 = {
+			country_event = { id = es_13_scenario.7 days = 365 }
+		}
+		50 = {
+		add_prestige = 25
+		}
+		}
+	}
+	option = {
+		name = "es_13_scenario.5.b"
+		trigger = {
+		culture_group = northern_cg
+		}
+		ai_chance = { factor = 50 }
+		random_list = {
+		50 = {
+		add_stability = 1
+		}
+		50 = {
+		add_prestige = -25
+		}
+		}
+	}
+}
+
+country_event = {
+	id = es_13_scenario.6
+	title = es_13_scenario.6.t
+	desc = es_13_scenario.6.d
+	picture = ES_BRUMA_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    1206 = { owner = { save_event_target_as = 1206_owner } }
+	}
+
+	option = {
+		name = "es_13_scenario.6.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		area = cyrodiil_16_la
+		}
+		add_claim = ROOT
+		}
+		
+		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:1206_owner } NOT = { alliance_with = event_target:1206_owner } NOT = { is_subject_of = event_target:1206_owner } NOT = { overlord_of = event_target:1206_owner } }
+		declare_war_with_cb = { who = event_target:1206_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_13_scenario.6.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = es_13_scenario.7
+	title = es_13_scenario.7.t
+	desc = es_13_scenario.7.d
+	picture = BATTLE_3_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_13_scenario.7.a"
+		ai_chance = { factor = 50 }
+		define_ruler = {
+        name = "Wulfharth"
+        dynasty = "Atmoran"
+        adm = 3
+        dip = 5
+        mil = 5
+        age = 30
+        claim = 100
+		#fixed = yes
+        }
+		add_stability = -1
+	}
+	option = {
+		name = "es_13_scenario.7.b"
+		ai_chance = { factor = 50 }
+		kill_ruler = yes
+		add_country_modifier = {
+			name = "11_succesion_war"
+			duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = es_13_scenario.8
+	title = es_13_scenario.8.t
+	desc = es_13_scenario.8.d
+	picture = ES_SKINGRAD_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    1144 = { owner = { save_event_target_as = 1144_owner } }
+	}
+
+	option = {
+		name = "es_13_scenario.8.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		area = cyrodiil_6_la
+		}
+		add_core = ROOT
+		}
+		add_prestige = -10
+		
+		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:1144_owner } NOT = { alliance_with = event_target:1144_owner } NOT = { is_subject_of = event_target:1144_owner } NOT = { overlord_of = event_target:1144_owner } }
+		declare_war_with_cb = { who = event_target:1144_owner casus_belli = cb_es_scenario } 
+		}
+		
+	}
+	option = {
+		name = "es_13_scenario.8.b"
+		ai_chance = { factor = 50 }
+		if = {
+			limit = {
+				any_owned_province = { area = cyrodiil_6_la }
+			}
+			every_province = {
+			limit = {
+			area = cyrodiil_6_la
+			}
+			cede_province = CA6
+			add_core = CA6
+			}
+		}
+		add_manpower = 50
+		add_stability = 1
+	}
+}
+
+country_event = {
+	id = es_13_scenario.9
+	title = es_13_scenario.9.t
+	desc = es_13_scenario.9.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_13_scenario.9.a"
+		ai_chance = { factor = 33 }
+		change_primary_culture = breton
+		every_owned_province = {
+		limit = {
+		region = high_rock_lr
+		culture = altmer
+		NOT = { culture = orsimer }
+		}
+		change_culture = breton
+		}
+		change_tag = HIG
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } restore_country_name = yes }
+		set_capital = 1369
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+	}
+	option = {
+		name = "es_13_scenario.9.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		limit = {
+		region = high_rock_lr
+		culture = breton
+		NOT = { culture = orsimer }
+		}
+		add_core = HIG
+		add_permanent_province_modifier = {
+			name = "12_local_unrest"
+			duration = 9125
+		}
+		}
+		add_country_modifier = {
+			name = "13_internal_instability"
+			duration = 9125
+		}
+	}
+	option = {
+		name = "es_13_scenario.9.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		limit = {
+		region = high_rock_lr
+		culture = breton
+		NOT = { culture = orsimer }
+		}
+		cede_province = HIG
+		add_core = HIG
+		}
+	}
+}
+
+country_event = {
+	id = es_13_scenario.10
+	title = es_13_scenario.10.t
+	desc = es_13_scenario.10.d
+	picture = ES_MAUSOLEUM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_13_scenario.10.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+	}
+}

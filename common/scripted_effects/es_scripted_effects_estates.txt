@@ -1,0 +1,319 @@
+### es_please_religious_estates ### es_upset_religious_estates
+### es_please_magical_estates ### es_upset_magical_estates
+### es_please_war_estates ### es_upset_war_estates
+### es_please_merchant_estates ### es_upset_merchant_estates
+### es_please_common_estates ### es_upset_common_estates
+### es_please_evil_estates ### es_upset_evil_estates
+
+es_please_estate = {
+	random_list = {
+		30 = { add_estate_loyalty_modifier = { estate = $estate$ desc = PLEASED_ESTATE loyalty = 3.5 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = 5 } }
+		25 = { add_estate_loyalty_modifier = { estate = $estate$ desc = PLEASED_ESTATE loyalty = 7.5 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = 10 } }
+		20 = { add_estate_loyalty_modifier = { estate = $estate$ desc = PLEASED_ESTATE loyalty = 10 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = 15 } }
+		15 = { add_estate_loyalty_modifier = { estate = $estate$ desc = PLEASED_ESTATE loyalty = 12.5 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = 20 } }
+		10 = { add_estate_loyalty_modifier = { estate = $estate$ desc = PLEASED_ESTATE loyalty = 15 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = 25 } }
+	}
+	random_list = {
+		30 = { add_estate_influence_modifier = { estate = $estate$ desc = PLEASED_ESTATE influence = 3.5 duration = $days$ } }
+		25 = { add_estate_influence_modifier = { estate = $estate$ desc = PLEASED_ESTATE influence = 7.5 duration = $days$ } }
+		20 = { add_estate_influence_modifier = { estate = $estate$ desc = PLEASED_ESTATE influence = 10 duration = $days$ } }
+		15 = { add_estate_influence_modifier = { estate = $estate$ desc = PLEASED_ESTATE influence = 12.5 duration = $days$ } }
+		10 = { add_estate_influence_modifier = { estate = $estate$ desc = PLEASED_ESTATE influence = 15 duration = $days$ } }
+	}
+}
+es_upset_estate = {
+	random_list = {
+		30 = { add_estate_loyalty_modifier = { estate = $estate$ desc = UPSET_ESTATE loyalty = -3.5 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = -5 } }
+		25 = { add_estate_loyalty_modifier = { estate = $estate$ desc = UPSET_ESTATE loyalty = -7.5 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = -10 } }
+		20 = { add_estate_loyalty_modifier = { estate = $estate$ desc = UPSET_ESTATE loyalty = -10 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = -15 } }
+		15 = { add_estate_loyalty_modifier = { estate = $estate$ desc = UPSET_ESTATE loyalty = -12.5 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = -20 } }
+		10 = { add_estate_loyalty_modifier = { estate = $estate$ desc = UPSET_ESTATE loyalty = -15 duration = $days$ } add_estate_loyalty = { estate = $estate$ loyalty = -25 } }
+	}
+	random_list = {
+		30 = { add_estate_influence_modifier = { estate = $estate$ desc = UPSET_ESTATE influence = -3.5 duration = $days$ } }
+		25 = { add_estate_influence_modifier = { estate = $estate$ desc = UPSET_ESTATE influence = -7.5 duration = $days$ } }
+		20 = { add_estate_influence_modifier = { estate = $estate$ desc = UPSET_ESTATE influence = -10 duration = $days$ } }
+		15 = { add_estate_influence_modifier = { estate = $estate$ desc = UPSET_ESTATE influence = -12.5 duration = $days$ } }
+		10 = { add_estate_influence_modifier = { estate = $estate$ desc = UPSET_ESTATE influence = -15 duration = $days$ } }
+	}
+}
+
+es_please_religious_estates = {
+	custom_tooltip = es_please_religious_estates_tooltip
+	hidden_effect = {
+		# Church
+		if = {
+			limit = { has_estate = estate_priests }
+			es_please_estate = {
+				estate = estate_priests
+				days = 9125
+			}
+		}
+	}
+}
+
+es_upset_religious_estates = {
+	custom_tooltip = es_upset_religious_estates_tooltip
+	hidden_effect = {
+		# Church
+		if = {
+			limit = { has_estate = estate_priests }
+			es_upset_estate = {
+				estate = estate_priests
+				days = 9125
+			}
+		}
+	}
+}
+
+es_please_magical_estates = { 
+	custom_tooltip = es_please_magical_estates_tooltip
+	hidden_effect = {
+		# Mages
+		if = {
+			limit = { has_estate = estate_mages }
+			es_please_estate = {
+				estate = estate_mages
+				days = 9125
+			}
+		}
+	}
+}
+
+es_upset_magical_estates = {
+	custom_tooltip = es_upset_magical_estates_tooltip
+	hidden_effect = {
+		# Mages
+		if = {
+			limit = { has_estate = estate_mages }
+			es_upset_estate = {
+				estate = estate_priests
+				days = 9125
+			}
+		}
+	}
+}
+
+es_please_war_estates = { 
+	custom_tooltip = es_please_war_estates_tooltip
+	hidden_effect = {
+		# Nobility
+		if = {
+			limit = { has_estate = estate_nobility }
+			es_please_estate = {
+				estate = estate_nobility
+				days = 9125
+			}
+		}
+		# Warriors
+		if = {
+			limit = { has_estate = estate_warriors }
+			es_please_estate = {
+				estate = estate_warriors
+				days = 9125
+			}
+		}
+		# Morag Tong
+		if = {
+			limit = { has_estate = estate_morag_tong }
+			es_please_estate = {
+				estate = estate_morag_tong
+				days = 9125
+			}
+		}
+		# Dark Brotherhood
+		if = {
+			limit = { has_estate = estate_dark_brotherhood }
+			es_please_estate = {
+				estate = estate_dark_brotherhood
+				days = 9125
+			}
+		}
+		# Assassins
+		if = {
+			limit = { has_estate = estate_assassins }
+			es_please_estate = {
+				estate = estate_assassins
+				days = 9125
+			}
+		}
+	}
+}
+
+es_upset_war_estates = {
+	custom_tooltip = es_upset_war_estates_tooltip
+	hidden_effect = {
+		# Nobility
+		if = {
+			limit = { has_estate = estate_nobility }
+			es_upset_estate = {
+				estate = estate_nobility
+				days = 9125
+			}
+		}
+		# Warriors
+		if = {
+			limit = { has_estate = estate_warriors }
+			es_upset_estate = {
+				estate = estate_warriors
+				days = 9125
+			}
+		}
+		# Morag Tong
+		if = {
+			limit = { has_estate = estate_morag_tong }
+			es_upset_estate = {
+				estate = estate_morag_tong
+				days = 9125
+			}
+		}
+		# Dark Brotherhood
+		if = {
+			limit = { has_estate = estate_dark_brotherhood }
+			es_upset_estate = {
+				estate = estate_dark_brotherhood
+				days = 9125
+			}
+		}
+		# Assassins
+		if = {
+			limit = { has_estate = estate_assassins }
+			es_upset_estate = {
+				estate = estate_assassins
+				days = 9125
+			}
+		}
+	}
+}
+
+es_please_merchant_estates = {
+	custom_tooltip = es_please_merchant_estates_tooltip
+	hidden_effect = {
+		# Merchants
+		if = {
+			limit = { has_estate = estate_merchants }
+			es_please_estate = {
+				estate = estate_merchants
+				days = 9125
+			}
+		}
+		# Slavers
+		if = {
+			limit = { has_estate = estate_slavers }
+			es_please_estate = {
+				estate = estate_slavers
+				days = 9125
+			}
+		}
+	}
+}
+
+es_upset_merchant_estates = {
+	custom_tooltip = es_upset_merchant_estates_tooltip
+	hidden_effect = {
+		# Merchants
+		if = {
+			limit = { has_estate = estate_merchants }
+			es_upset_estate = {
+				estate = estate_merchants
+				days = 9125
+			}
+		}
+		# Slavers
+		if = {
+			limit = { has_estate = estate_slavers }
+			es_upset_estate = {
+				estate = estate_slavers
+				days = 9125
+			}
+		}
+	}
+}
+
+es_please_common_estates = {
+	custom_tooltip = es_please_common_estates_tooltip
+	hidden_effect = {
+		# Peasants
+		if = {
+			limit = { has_estate = estate_commoners }
+			es_please_estate = {
+				estate = estate_commoners
+				days = 9125
+			}
+		}
+	}
+}
+
+es_upset_common_estates = {
+	custom_tooltip = es_upset_common_estates_tooltip
+	hidden_effect = {
+		# Peasants
+		if = {
+			limit = { has_estate = estate_commoners }
+			es_upset_estate = {
+				estate = estate_commoners
+				days = 9125
+			}
+		}
+	}
+}
+
+es_please_evil_estates = {
+	custom_tooltip = es_please_evil_estates_tooltip
+	hidden_effect = {
+		# Assassins
+		if = {
+			limit = { has_estate = estate_assassins }
+			es_please_estate = {
+				estate = estate_assassins
+				days = 9125
+			}
+		}
+		# Dark Brotherhood
+		if = {
+			limit = { has_estate = estate_dark_brotherhood }
+			es_please_estate = {
+				estate = estate_dark_brotherhood
+				days = 9125
+			}
+		}
+		# Morag Tong
+		if = {
+			limit = { has_estate = estate_morag_tong }
+			es_please_estate = {
+				estate = estate_morag_tong
+				days = 9125
+			}
+		}
+	}
+}
+
+es_upset_evil_estates = {
+	custom_tooltip = es_upset_evil_estates_tooltip
+	hidden_effect = {
+		# Assassins
+		if = {
+			limit = { has_estate = estate_assassins }
+			es_upset_estate = {
+				estate = estate_assassins
+				days = 9125
+			}
+		}
+		# Dark Brotherhood
+		if = {
+			limit = { has_estate = estate_dark_brotherhood }
+			es_upset_estate = {
+				estate = estate_dark_brotherhood
+				days = 9125
+			}
+		}
+		# Morag Tong
+		if = {
+			limit = { has_estate = estate_morag_tong }
+			es_upset_estate = {
+				estate = estate_morag_tong
+				days = 9125
+			}
+		}
+	}
+}

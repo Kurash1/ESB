@@ -1,0 +1,311 @@
+namespace = es_school_events
+
+# es_school_events.1.t:0 "Mutual Respect between the [Root.GetReligiousSchool] and [school_opinion_increase_country.GetReligiousSchool]"
+# es_school_events.1.d:0 "There have never been any theological differences worth a real conflict between the [Root.GetReligiousSchool] and [school_opinion_increase_country.GetReligiousSchool] schools and both customs often exist side by side.\nThe long-lasting cooperation between the [Root.GetAdjective] [Root.GetReligiousSchool] and the [school_opinion_increase_country.GetReligiousSchool] [school_opinion_increase_country.GetAdjective] states has, however, lead to a new era of mutual understanding and respect."
+# es_school_events.1.a:0 "Great!"
+
+country_event = {
+	id = es_school_events.1
+	title = es_school_events.1.t
+	desc = es_school_events.1.d
+	picture = RELIGIOUS_SCHOOL_GOOD_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		has_religious_school = yes
+		any_country = {
+			has_religious_school = yes
+			NOT = { has_religious_school_of = ROOT }
+			school_opinion = { who = ROOT opinion = 0 }
+			NOT = {	school_opinion = { who = ROOT opinion = 1 } }
+			trust = { who = ROOT value = 70 }
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_religious_school = yes
+					NOT = { has_religious_school_of = ROOT }
+					school_opinion = { who = ROOT opinion = 0 }
+					NOT = {	school_opinion = { who = ROOT opinion = 1 } }
+					trust = { who = ROOT value = 70 }
+				}
+				save_event_target_as = school_opinion_increase_country
+			}
+		}
+	}
+	
+	option = {
+		name = es_school_events.1.a
+		event_target:school_opinion_increase_country = {
+			set_school_opinion = {
+				who = ROOT
+				opinion = 1
+			}
+		}
+	}
+}
+
+# es_school_events.2.t:0 "Normalization of relations between the [Root.GetReligiousSchool] and the [school_opinion_increase_country.GetReligiousSchool]"
+# es_school_events.2.d:0 "For some time the relationship between the [Root.GetReligiousSchool] and the [school_opinion_increase_country.GetReligiousSchool] have been strongly colored by distrust and conflict. Some scholars have gone as far as to denounce the theologians of the other school and their followers.\nHowever, tensions have been greatly lessened in recent years and with [Root.GetAdjective] [Root.GetReligiousSchool] and [school_opinion_increase_country.GetAdjective] [school_opinion_increase_country.GetReligiousSchool] scholars leading the way towards tolerance and coexistence."
+# es_school_events.2.a:0 "Great!"
+
+country_event = {
+	id = es_school_events.2
+	title = es_school_events.2.t
+	desc = es_school_events.2.d
+	picture = RELIGIOUS_SCHOOL_NEUTRAL_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		has_religious_school = yes
+		any_known_country = {
+			has_religious_school = yes
+			NOT = { has_religious_school_of = ROOT }
+			NOT = { school_opinion = { who = ROOT opinion = 0 }	}
+			NOT = { war_with = ROOT }
+			NOT = { truce_with = ROOT }
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_known_country = {
+				limit = {
+					has_religious_school = yes
+					NOT = { has_religious_school_of = ROOT }
+					NOT = { school_opinion = { who = ROOT opinion = 0 }	}
+					NOT = { war_with = ROOT }
+					NOT = { truce_with = ROOT }
+				}
+				save_event_target_as = school_opinion_increase_country
+			}
+		}
+	}
+	
+	option = {
+		name = es_school_events.2.a
+		event_target:school_opinion_increase_country = {
+			set_school_opinion = {
+				who = ROOT
+				opinion = 0
+			}
+		}
+	}
+}
+
+# es_school_events.3.t:0 "[Root.GetAdjective] - [school_opinion_decrease_country.GetAdjective] War"
+# es_school_events.3.d:0 "The prolonged conflict between the [school_opinion_decrease_country.GetAdjective] and the [Root.GetAdjective] is starting to spill into the religious realm. Mutual respect and tolerance is on an all time low and [school_opinion_decrease_country.GetReligiousSchool] thought is being marginalized in [Root.GetAdjective] society."
+# es_school_events.3.a:0 "Outrageous."
+
+country_event = {
+	id = es_school_events.3
+	title = es_school_events.3.t
+	desc = es_school_events.3.d
+	picture = RELIGIOUS_SCHOOL_BAD_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		has_religious_school = yes
+		any_country = {
+			has_religious_school = yes
+			war_with = ROOT
+			NOT = { has_religious_school_of = ROOT }
+			school_opinion = { who = ROOT opinion = 0
+			}
+			defensive_war_with = ROOT
+			is_in_war = { defender_leader = THIS attacker_leader = ROOT	duration = 1095	}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_religious_school = yes
+					war_with = ROOT
+					NOT = { has_religious_school_of = ROOT }
+					school_opinion = { who = ROOT opinion = 0
+					}
+					defensive_war_with = ROOT
+					is_in_war = { defender_leader = THIS attacker_leader = ROOT	duration = 1095	}
+				}
+				save_event_target_as = school_opinion_decrease_country
+			}
+		}
+	}
+	
+	option = {
+		name = es_school_events.3.a 
+		if = {
+			limit = {
+				event_target:school_opinion_decrease_country = {
+					NOT = {	school_opinion = { who = ROOT opinion = 1 } }
+				}
+			}
+			event_target:school_opinion_decrease_country = {
+				set_school_opinion = { who = ROOT opinion = -1 }
+			}
+		}
+		else = {
+			event_target:school_opinion_decrease_country = {
+				set_school_opinion = { who = ROOT opinion = 0 }
+			}
+		}
+	}
+}
+
+# es_school_events.0.t: "New Religious School"
+# es_school_events.0.d: "Our new religion allows us to pick a school, which we will follow till the end of our history."
+# es_school_events.0.a: "Alrabeg School"
+# es_school_events.0.b: "Storihbeg School"
+# es_school_events.0.c: "Uricanbeg School"
+# es_school_events.0.e: "Gulibeg School"
+# es_school_events.0.f: "Hrokkibeg School"
+# es_school_events.0.g: "Hagraven School"
+ 
+# es_school_events.0.h: "Dragon School"
+# es_school_events.0.i: "Lizard School"
+# es_school_events.0.k: "Tortoise School"
+# es_school_events.0.l: "Crocodile School"
+# es_school_events.0.m: "Viper School"
+# es_school_events.0.n: "Tuatara School"
+ 
+# es_school_events.0.o: "Lotus School"
+# es_school_events.0.p: "Magnolia School"
+# es_school_events.0.r: "Rose School"
+# es_school_events.0.s: "Orchid School"
+# es_school_events.0.q: "Tulip School"
+# es_school_events.0.v: "Carnation School"
+
+country_event = {
+	id = es_school_events.0
+	title = es_school_events.0.t
+	desc = es_school_events.0.d
+	picture = RELIGIOUS_SCHOOL_NEW_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion_group = elemental_group
+		has_religious_school = no
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_school_events.0.a 
+		trigger = { religion = old_gods_cult }
+		set_religious_school = { group = elemental_group school = alrabeg_school }
+	}
+	
+	option = {
+		name = es_school_events.0.b
+		trigger = { religion = old_gods_cult }
+		set_religious_school = { group = elemental_group school = storihbeg_school }
+	}
+	
+	option = {
+		name = es_school_events.0.c
+		trigger = { religion = old_gods_cult }
+		set_religious_school = { group = elemental_group school = uricanbeg_school }
+	}
+	
+	option = {
+		name = es_school_events.0.e
+		trigger = { religion = old_gods_cult }
+		set_religious_school = { group = elemental_group school = gulibeg_school }
+	}
+	
+	option = {
+		name = es_school_events.0.f
+		trigger = { religion = old_gods_cult }
+		set_religious_school = { group = elemental_group school = hrokkibeg_school }
+	}
+	
+	option = {
+		name = es_school_events.0.g
+		trigger = { religion = old_gods_cult }
+		set_religious_school = { group = elemental_group school = hagraven_school }
+	}
+	
+	option = {
+		name = es_school_events.0.h
+		trigger = { OR = { religion = tsaesci_pantheon religion = tang_mo_pantheon religion = kamal_pantheon } }
+		set_religious_school = { group = elemental_group school = dragon_school }
+	}
+	
+	option = {
+		name = es_school_events.0.i
+		trigger = { OR = { religion = tsaesci_pantheon religion = tang_mo_pantheon religion = kamal_pantheon } }
+		set_religious_school = { group = elemental_group school = lizard_school }
+	}
+	
+	option = {
+		name = es_school_events.0.k
+		trigger = { OR = { religion = tsaesci_pantheon religion = tang_mo_pantheon religion = kamal_pantheon } }
+		set_religious_school = { group = elemental_group school = tortoise_school }
+	}
+	
+	option = {
+		name = es_school_events.0.l
+		trigger = { OR = { religion = tsaesci_pantheon religion = tang_mo_pantheon religion = kamal_pantheon } }
+		set_religious_school = { group = elemental_group school = crocodile_school }
+	}
+	
+	option = {
+		name = es_school_events.0.m
+		trigger = { OR = { religion = tsaesci_pantheon religion = tang_mo_pantheon religion = kamal_pantheon } }
+		set_religious_school = { group = elemental_group school = viper_school }
+	}
+	
+	option = {
+		name = es_school_events.0.n
+		trigger = { OR = { religion = tsaesci_pantheon religion = tang_mo_pantheon religion = kamal_pantheon } }
+		set_religious_school = { group = elemental_group school = tuatara_school }
+	}
+	
+	option = {
+		name = es_school_events.0.o
+		trigger = { OR = { religion = hist religion = sload_faith religion = cult_of_the_moth } }
+		set_religious_school = { group = elemental_group school = lotus_school }
+	}
+	
+	option = {
+		name = es_school_events.0.p
+		trigger = { OR = { religion = hist religion = sload_faith religion = cult_of_the_moth } }
+		set_religious_school = { group = elemental_group school = magnolia_school }
+	}
+	
+	option = {
+		name = es_school_events.0.r
+		trigger = { OR = { religion = hist religion = sload_faith religion = cult_of_the_moth } }
+		set_religious_school = { group = elemental_group school = rose_school }
+	}
+	
+	option = {
+		name = es_school_events.0.s
+		trigger = { OR = { religion = hist religion = sload_faith religion = cult_of_the_moth } }
+		set_religious_school = { group = elemental_group school = orchid_school }
+	}
+	
+	option = {
+		name = es_school_events.0.q
+		trigger = { OR = { religion = hist religion = sload_faith religion = cult_of_the_moth } }
+		set_religious_school = { group = elemental_group school = tulip_school }
+	}
+	
+	option = {
+		name = es_school_events.0.v
+		trigger = { OR = { religion = hist religion = sload_faith religion = cult_of_the_moth } }
+		set_religious_school = { group = elemental_group school = carnation_school }
+	}
+	
+}

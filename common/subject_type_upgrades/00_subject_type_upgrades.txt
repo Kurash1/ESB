@@ -1,0 +1,214 @@
+# ADM
+
+increase_religious_control = {
+	can_upgrade_trigger = {
+		adm_power = 50
+	}
+	
+	cost = 250
+	
+	effect = {
+		add_adm_power = -50
+	}
+	
+	modifier_overlord = {
+		missionary_maintenance_cost = -0.05
+	}
+
+	modifier_subject = {
+		global_missionary_strength = 0.01
+		liberty_desire = 5
+	}
+}
+
+increase_the_gold_tax = {
+	can_upgrade_trigger = {
+		adm_power = 50
+	}
+	
+	cost = 250
+	
+	effect = {
+		add_adm_power = -50
+	}
+
+	modifier_overlord = {
+		global_tax_modifier = 0.025
+	}
+	
+	modifier_subject = {
+		global_tax_modifier = -0.025
+		liberty_desire = 5
+	}
+}
+
+increase_integration_in_the_realm = {
+	can_upgrade_trigger = {
+		adm_power = 50
+	}
+	
+	cost = 250
+	
+	effect = {
+		add_adm_power = -50
+	}
+
+	modifier_overlord = {
+		governing_capacity = -50
+	}
+	
+	modifier_subject = {
+		liberty_desire = -5
+	}
+}
+
+allow_autonomous_taxing = {
+	can_upgrade_trigger = {
+		adm_power = 50
+	}
+	
+	cost = 250
+	
+	effect = {
+		add_adm_power = -50
+	}
+	
+	modifier_overlord = {
+		global_tax_modifier = -0.025
+	}
+	
+	modifier_subject = {
+		global_tax_modifier = 0.025
+		liberty_desire = -5
+	}
+}
+
+# DIP
+
+increase_trade_power_transfer_from_colony = {
+	can_upgrade_trigger = {
+		dip_power = 50
+	}
+	
+	cost = 250
+	
+	effect = {
+		add_dip_power = -50
+	}
+
+	modifier_overlord = {
+		global_trade_power = 0.025
+	}
+
+	modifier_subject = {
+		global_trade_power = -0.025
+		liberty_desire = 5
+	}
+}
+
+increase_naval_force_limit_from_colony = {
+	can_upgrade_trigger = {
+		dip_power = 50
+	}
+	
+	cost = 250
+	
+	effect = {
+		add_dip_power = -50
+	}
+
+	modifier_overlord = {
+		naval_forcelimit = 10
+	}
+
+	modifier_subject = {
+		naval_forcelimit = -10
+		liberty_desire = 5
+	}
+}
+
+allow_autonomous_trade = {
+	can_upgrade_trigger = {
+		dip_power = 50
+	}
+	
+	cost = 250
+
+	effect = {
+		add_dip_power = -50
+	}
+	
+	modifier_overlord = {
+		global_own_trade_power = -0.025
+	}
+	
+	modifier_subject = {
+		global_own_trade_power = 0.025
+		liberty_desire = -5
+	}
+}
+
+allow_autonomous_navy = {
+	can_upgrade_trigger = {
+		dip_power = 50
+	}
+	
+	cost = 250
+
+	effect = {
+		add_dip_power = -50
+	}
+	
+	modifier_overlord = {
+		global_sailors_modifier = -0.05
+	}
+
+	modifier_subject = {
+		global_sailors_modifier = 0.05
+		liberty_desire = -5
+	}
+}
+
+# MIL
+
+increase_force_limit_from_colony = {
+	can_upgrade_trigger = {
+		mil_power = 50
+	}
+	
+	cost = 250
+	
+	effect = {
+		add_mil_power = -50
+	}
+
+	modifier_overlord = {
+		land_forcelimit = 10
+	}
+
+	modifier_subject = {
+		land_forcelimit = -10
+		liberty_desire = 5
+	}
+}
+
+allow_autonomous_militias = {
+	can_upgrade_trigger = {
+		mil_power = 50
+	}
+	
+	cost = 250
+	
+	effect = {
+		add_mil_power = -50
+	}
+	
+	modifier_overlord = {
+		global_manpower_modifier = -0.05
+	}
+
+	modifier_subject = {
+		global_manpower_modifier = 0.05
+		liberty_desire = -5
+	}
+}

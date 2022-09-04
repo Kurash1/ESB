@@ -1,0 +1,999 @@
+# Soul Schriven Mechanics
+
+es_the_culling = {
+	local_monthly_devastation = 0.5
+	local_unrest = 5
+}
+
+es_soul_shriven_slaves = {
+	local_production_efficiency = 0.5
+	local_manpower_modifier = -0.5
+	local_missionary_strength = -0.05
+}
+
+es_liberated_slaves = {
+	religious_unity = 0.10
+	num_accepted_cultures = 1
+	stability_cost_modifier = -0.10
+}
+
+# The Birthsigns
+apprentice_birthsign_mod = {
+	mil_tech_cost_modifier = -0.25
+	adm_tech_cost_modifier = -0.15
+	drill_gain_modifier = -0.1
+}
+
+atronach_birthsign_mod = {
+	global_ship_recruit_speed = 0.25
+	mercenary_manpower = 0.15
+	global_regiment_recruit_speed = 0.1
+}
+
+lady_birthsign_mod = {
+	improve_relation_modifier = 0.25
+	global_manpower_modifier = 0.15
+	global_tax_modifier = -0.1
+}
+
+lord_birthsign_mod = {
+	cavalry_cost = -0.25
+	governing_capacity_modifier = 0.15
+	ae_impact = 0.1
+}
+
+lover_birthsign_mod = {
+	manpower_recovery_speed = 0.25
+	advisor_cost = -0.15
+	prestige_decay = 0.01
+}
+
+mage_birthsign_mod = {
+	adm_tech_cost_modifier = -0.15
+	global_institution_spread = 0.25
+	prestige_per_development_from_conversion = -0.1
+}
+
+ritual_birthsign_aspect_charm_mod = {
+	global_unrest = -2.5
+	stability_cost_modifier = -0.15
+	war_exhaustion_cost = 0.1
+}
+
+ritual_birthsign_aspect_expedition_mod = {
+	prestige_from_naval = 0.25
+	prestige_from_land = 0.15
+	merc_maintenance_modifier = 0.1
+}
+
+ritual_birthsign_aspect_cunning_mod = {
+	fabricate_claims_cost = -0.25
+	core_creation = -0.15
+	advisor_pool = -1
+}
+
+ritual_birthsign_aspect_knowledge_mod = {
+	dip_tech_cost_modifier = -0.15
+	embracement_cost = -0.25
+	global_missionary_strength = -0.01
+}
+
+serpent_birthsign_mod = {
+	land_morale = 0.25
+	idea_cost = -0.15
+	years_of_nationalism = 10
+}
+
+shadow_birthsign_mod = {
+	spy_offence = 0.25
+	global_spy_defence = 0.15
+	diplomatic_annexation_cost = 0.1
+}
+
+steed_birthsign_mod = {
+	envoy_travel_time = -0.25
+	movement_speed = 0.15
+	yearly_corruption = 0.1
+}
+
+thief_birthsign_mod = {
+	unjustified_demands = -0.25
+	vassal_income = 0.15
+	diplomatic_reputation = -1
+}
+
+tower_birthsign_mod = {
+	defensiveness = 0.25
+	build_cost = -0.15
+	build_time = 0.15
+}
+
+warrior_birthsign_mod = {
+	infantry_cost = -0.25
+	mercenary_cost = -0.15
+	diplomatic_upkeep = -1
+}
+
+# Caravans 
+
+friendly_caravan_policy = {
+	global_unrest = 1
+	global_trade_power = 0.10
+}
+
+neutral_caravan_policy = {
+	global_institution_spread = 0.05
+}
+
+hostile_caravan_policy = {
+	global_unrest = -1
+	global_trade_power = -0.05
+	global_own_trade_power = 0.1
+}
+
+sided_with_trader = {
+	global_unrest = 1.5
+	production_efficiency = -0.1
+	global_tax_modifier = -0.1
+	global_trade_power = 0.25
+}
+
+sided_with_shopkeeper = {
+	global_unrest = -2
+	production_efficiency = 0.075
+	global_tax_modifier = 0.075
+	global_trade_power = -0.2
+}
+
+followed_due_process = {
+	legitimacy = 2.5
+	republican_tradition = 2.5
+	devotion = 2.5
+	horde_unity = 2.5
+	meritocracy = 2.5
+	global_unrest = -1
+}
+
+# Institutions 
+
+birthplace_of_smithing = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_the_elder_scrolls = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_the_drake = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_alchemy = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_organized_infrastructure = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_imperialism = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_enchanting = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_astrology = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_archaeology = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_naval_guards = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_monuments = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_literacy = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_plague_prevention = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_organized_guilds = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+birthplace_of_natural_philosophy = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	province_trade_power_modifier = 0.25
+	prestige = 1
+}
+
+# HRE Incidents
+
+100_cities_1 = {
+	diplomatic_annexation_cost = 0.25
+	ae_impact = 0.15
+	years_of_nationalism = 10
+}
+
+100_cities_2 = {
+	improve_relation_modifier = 0.25
+	discovered_relations_impact = -0.15
+	diplomats = 1
+}
+
+100_cities_3 = {
+	unjustified_demands = -0.15
+}
+
+100_army_1 = {
+	land_forcelimit_modifier = -0.25
+	siege_ability = -0.15
+	free_leader_pool = -1
+}
+
+100_army_2 = {
+	defensiveness = 0.25
+	garrison_size = 0.15
+	hostile_attrition = 1
+}
+
+100_army_3 = {
+	global_manpower_modifier = 0.15
+}
+
+100_navy_1 = {
+	naval_forcelimit_modifier = -0.25
+	sailor_maintenance_modifer = 0.15
+	capture_ship_chance = -0.10
+}
+
+100_navy_2 = {
+	global_ship_cost = -0.25
+	global_ship_recruit_speed = 0.15
+	naval_attrition = -0.10
+}
+
+100_navy_3 = {
+	global_sailors_modifier = 0.15
+}
+
+5_merc_1 = {
+	merc_maintenance_modifier = 0.25
+	mercenary_manpower = -0.15
+	mercenary_cost = 0.10
+}
+
+5_merc_2 = {
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.15
+	yearly_army_professionalism = 0.01
+}
+
+5_merc_3 = {
+	possible_condottieri = 0.15
+}
+
+low_stab_1 = {
+	global_autonomy = -0.025
+	adm_advisor_cost = -0.15
+	global_spy_defence = 0.10
+}
+
+low_stab_2 = {
+	autonomy_change_time = -0.25
+	same_culture_advisor_cost = -0.15
+	war_exhaustion = -0.1
+}
+
+low_stab_3 = {
+	core_decay_on_your_own = 0.15
+}
+
+low_legit_1 = {
+	harsh_treatment_cost = -0.25
+	stability_cost_modifier = -0.15
+	global_tax_modifier = 0.10
+}
+
+low_legit_2 = {
+	war_exhaustion_cost = -0.25
+	state_maintenance_modifier = -0.15
+	yearly_corruption = -0.1
+}
+
+low_legit_3 = {
+	global_unrest = 1.5
+}
+
+high_liberty_1 = {
+	prestige = 0.25
+	enemy_core_creation = 0.15
+	governing_capacity_modifier = 0.10
+}
+
+high_liberty_2 = {
+	general_cost = -0.25
+	mil_advisor_cost = -0.15
+	reduced_liberty_desire_on_same_continent = 10
+}
+
+high_liberty_3 = {
+	liberty_desire_from_subject_development = -0.15
+}
+
+low_rel_unity_1 = {
+	religious_unity = 0.25
+	tolerance_heretic = 1.5
+	tolerance_heathen = 1
+}
+
+low_rel_unity_2 = {
+	global_missionary_strength = 0.025
+	tolerance_own = 1.5
+	missionaries = 1
+}
+
+low_rel_unity_3 = {
+	warscore_cost_vs_other_religion = -0.1
+}
+
+subject_not_in_hre_1 = {
+	development_cost = -0.25
+	build_cost = -0.15
+	diplomats = 1
+}
+
+subject_not_in_hre_2 = {
+	caravan_power = 0.25
+	trade_range_modifier = 0.15
+	global_trade_goods_size_modifier = 0.1
+}
+
+subject_not_in_hre_3 = {
+	global_tariffs = 0.25
+	global_colonial_growth = 10
+	global_foreign_trade_power = 0.1
+}
+
+new_trade_com_1 = {
+	embargo_efficiency = 0.25
+	global_ship_trade_power = 0.15
+	trade_efficiency = 0.10
+}
+
+new_trade_com_2 = {
+	production_efficiency = 0.25
+	trade_steering = 0.15
+	merchants = 1
+}
+
+new_trade_com_3 = {
+	sailors_recovery_speed = 0.25
+	ship_power_propagation = 0.15
+	interest = -1
+}
+
+tribal_border_1 = {
+	cav_to_inf_ratio = 0.25
+	land_attrition = -0.15
+	manpower_recovery_speed = 0.10
+}
+
+tribal_border_2 = {
+	leader_cost = -0.25
+	reinforce_cost_modifier = -0.15
+	global_regiment_cost = -0.1
+}
+
+tribal_border_3 = {
+	fort_maintenance_modifier = -0.25
+	global_regiment_recruit_speed = 0.15
+	min_autonomy_in_territories = -0.1
+}
+
+too_many_subjects_1 = {
+	reduced_liberty_desire = -25
+	diplomatic_reputation = -1.5
+	diplomatic_upkeep = -1
+}
+
+too_many_subjects_2 = {
+	vassal_forcelimit_bonus = -0.25
+	vassal_income = -0.15
+	liberty_desire = -10
+}
+
+too_many_subjects_3 = {
+	rival_change_cost = -0.25
+	rival_border_fort_maintenance = -0.15
+	spy_offence = 0.1
+}
+
+# Lunar lattice #######################################################
+
+moon_timer = {
+}
+
+#1
+#Lunar Lattice - New Masser & Waxing Secunda
+#Ohmes-raht: Similar in size and shape to humans, but with light fur and a tail.
+
+moon_1_event_modifier_1 = {
+	global_own_trade_power = 0.15
+}
+
+moon_1_event_modifier_2 = {
+	global_trade_goods_size_modifier = 0.15
+}
+
+moon_1_event_modifier_3 = {
+	global_tariffs = 0.15
+}
+
+#2
+#Lunar Lattice - New Masser & Full Secunda
+#Ohmes: Most common breed of Khajiit outside of Elsweyr.
+
+moon_2_event_modifier_1 = {
+	caravan_power = 0.15
+}
+
+moon_2_event_modifier_2 = {
+	global_foreign_trade_power = 0.15
+}
+
+moon_2_event_modifier_3 = {
+	global_ship_trade_power = 0.15
+}
+
+#3
+#Lunar Lattice - New Masser & Waning Secunda
+#Suthay-raht: Walk upright but are more cat-like than Ohmes-raht.
+
+moon_3_event_modifier_1 = {
+	diplomats = 1
+}
+
+moon_3_event_modifier_2 = {
+	merchants = 1
+}
+
+moon_3_event_modifier_3 = {
+	colonists = 1
+}
+
+#4
+#Lunar Lattice - New Masser & New Secunda
+#Suthay: Similar to Suthay-raht but smaller and weaker.
+
+moon_4_event_modifier_1 = {
+	ae_impact = -0.15
+}
+
+moon_4_event_modifier_2 = {
+	trade_efficiency = 0.15
+}
+
+moon_4_event_modifier_3 = {
+	global_missionary_strength = 0.015
+}
+
+#5
+#Lunar Lattice - Waxing Masser & Waxing Secunda
+#Cathay-raht: Described as looking like upright jaguars.
+
+moon_5_event_modifier_1 = {
+	discipline = 0.01
+}
+
+moon_5_event_modifier_2 = {
+	mercenary_discipline = 0.10
+}
+
+moon_5_event_modifier_3 = {
+	army_tradition_decay = -0.01
+}
+
+#6
+#Lunar Lattice - Waxing Masser & Full Secunda
+#Cathay: Larger and stronger than a Suthay-raht, but smaller than a Cathay-raht.
+
+moon_6_event_modifier_1 = {
+	global_manpower_modifier = 0.15
+}
+
+moon_6_event_modifier_2 = {
+	global_sailors_modifier = 0.15
+}
+
+moon_6_event_modifier_3 = {
+	mercenary_manpower = 0.15
+}
+
+#7
+#Lunar Lattice - Waxing Masser & Waning Secunda
+#Tojay-raht: Unknown khajiiti bipedal form.
+
+moon_7_event_modifier_1 = {
+	idea_cost = -0.15
+}
+
+moon_7_event_modifier_2 = {
+	global_institution_spread = 0.15
+}
+
+moon_7_event_modifier_3 = {
+	yearly_corruption = -0.15
+}
+
+#8
+#Lunar Lattice - Waxing Masser & New Secunda
+#Tojay: Unknown khajiiti bipedal form, smaller than the Tojay-raht.
+
+moon_8_event_modifier_1 = {
+	adm_advisor_cost = -0.15
+}
+
+moon_8_event_modifier_2 = {
+	dip_advisor_cost = -0.15
+}
+
+moon_8_event_modifier_3 = {
+	mil_advisor_cost = -0.15
+}
+
+#9
+#Lunar Lattice - Full Masser & Waxing Secunda
+#Senche-raht: At the size of a large horse, this creatures are knwon as Battlecats.
+
+moon_9_event_modifier_1 = {
+	artillery_bonus_vs_fort = 1
+}
+
+moon_9_event_modifier_2 = {
+	backrow_artillery_damage = 0.10
+}
+
+moon_9_event_modifier_3 = {
+	artillery_power = 0.1
+}
+
+#10
+#Lunar Lattice - Full Masser & Full Secunda
+#Senche: Sprinters that are often used as mounts for by other Khajiit. 
+
+moon_10_event_modifier_1 = {
+	movement_speed = 0.10
+}
+
+moon_10_event_modifier_2 = {
+	recover_army_morale_speed = 0.10
+}
+
+moon_10_event_modifier_3 = {
+	recover_navy_morale_speed = 0.10
+}
+
+#11
+#Lunar Lattice - Full Masser & Waning Secunda
+#Pahmar-raht: Like a Pahmar, but larger, more powerful.
+
+moon_11_event_modifier_1 = {
+	land_morale = 0.10
+}
+
+moon_11_event_modifier_2 = {
+	naval_morale = 0.10
+}
+
+moon_11_event_modifier_3 = {
+	sunk_ship_morale_hit_recieved = -0.1
+}
+
+#12
+#Lunar Lattice - Full Masser & New Secunda
+#Pahmar: Similar to a tiger.
+
+moon_12_event_modifier_1 = {
+	cavalry_power = 0.15
+}
+
+moon_12_event_modifier_2 = {
+	cavalry_shock = 0.15
+}
+
+moon_12_event_modifier_3 = {
+	cavalry_flanking = 0.15
+}
+
+#13
+#Lunar Lattice - Waning Masser & Waxing Secunda
+#Alfiq-raht: Probably like the Alfiq but larger.
+
+moon_13_event_modifier_1 = {
+	placed_merchant_power = 15
+}
+
+moon_13_event_modifier_2 = {
+	trade_steering = 0.15
+}
+
+moon_13_event_modifier_3 = {
+	ship_power_propagation = 0.15
+}
+
+#14
+#Lunar Lattice - Waning Masser & Full Secunda
+#Alfiq: Similar in appearence to domesticated cats.
+
+moon_14_event_modifier_1 = {
+	war_exhaustion = -0.010
+}
+
+moon_14_event_modifier_2 = {
+	years_of_nationalism = -10
+}
+
+moon_14_event_modifier_3 = {
+	reduced_liberty_desire = 10
+}
+
+#15
+#Lunar Lattice - Waning Masser & Waning Secunda
+#Dagi-raht: Naturally skilled in the use of magic.
+
+moon_15_event_modifier_1 = {
+	fire_damage = 0.15
+}
+
+moon_15_event_modifier_2 = {
+	shock_damage = 0.15
+}
+
+moon_15_event_modifier_3 = {
+	siege_ability = 0.15
+}
+
+
+#16
+#Lunar Lattice - Waning Masser & New Secunda
+#Dagi: Small and light creatures, who live in the forrest.
+
+moon_16_event_modifier_1 = {
+	spy_offence = 0.15
+}
+
+moon_16_event_modifier_2 = {
+	global_spy_defence = 0.15
+}
+
+moon_16_event_modifier_3 = {
+	core_creation = -0.15
+}
+
+#17
+#Lunar Lattice - The Third Moon
+#Mane: Unique form of Khajiit born when a 3rd moon appears in the sky.
+
+moon_17_event_modifier = {
+	all_power_cost = -0.15
+}
+
+#######################################################################
+
+# Overlord Rebellion
+
+ob_manpower = {
+	global_manpower_modifier = 0.20
+	picture = "infantry_power"
+}
+
+### Isolationism
+
+# Unknown Technologies
+es_incident_embrace_technology = {
+	technology_cost = -0.10
+	advisor_cost = 0.15
+}
+
+es_incident_scrap_technologies = {
+	embracement_cost = -0.15
+	prestige = -0.25
+}
+
+es_incident_ban_researches = {
+	global_unrest = -1.0
+	innovativeness_gain = -0.10
+}
+
+# Mages on the Battlefield
+
+es_incident_study_foreign_magic = {
+	fire_damage = 0.10
+	land_maintenance_modifier = 0.10
+}
+
+es_incident_perfect_slaves = {
+	production_efficiency = 0.10
+	build_cost = 0.10
+}
+
+es_incident_deny_foreign_magic = {
+	prestige_from_land = 0.15
+	fort_maintenance_modifier = 0.10
+}
+
+# The Dragonborn
+
+es_incident_bend_the_knees = {
+	diplomatic_reputation = 0.5
+	core_creation = 0.10
+}
+
+es_incident_multiple_dragonborns = {
+	improve_relation_modifier = 0.25
+	global_spy_defence = -0.10
+}
+
+es_incident_the_only_chosen_one = {
+	land_morale = 0.10
+	unjustified_demands = 0.10
+}
+
+# Noble Knights
+
+es_incident_hire_knights = {
+	stability_cost_modifier = -0.15
+	merc_maintenance_modifier = 0.10
+}
+
+es_incident_liberate_knights = {
+	accept_vassalization_reasons = 25
+	diplomatic_annexation_cost = 0.10
+}
+
+es_inciident_consume_knights = {
+	discipline = 0.10
+	ae_impact = 0.10
+}
+
+# Raids on Garrisons
+
+es_incident_native_autonomy = {
+	num_accepted_cultures = 1
+	min_autonomy_in_territories = 0.1
+}
+
+es_incident_negotiate_with_natives = {
+	years_of_nationalism = -5
+	war_exhaustion_cost = 0.10
+}
+
+es_incident_purge_natives = {
+	culture_conversion_cost = -0.10
+	harsh_treatment_cost = 0.15
+}
+
+# Rulers of the Sea
+
+es_incident_honour_superior_force = {
+	navy_tradition_decay = -0.01
+	prestige_from_naval = -0.15
+}
+
+es_incident_naval_negotiations = {
+	sailor_maintenance_modifer = -0.15
+	admiral_cost = 1.0
+}
+
+es_incident_prepare_for_war = {
+	naval_forcelimit_modifier = 0.15
+	naval_maintenance_modifier = 0.1
+}
+
+# Trade Empire
+
+es_incident_open_borders = {
+	trade_efficiency = 0.1
+	embargo_efficiency = -0.25
+}
+
+es_incident_introduce_tariffs = {
+	mercantilism_cost = -0.15
+	center_of_trade_upgrade_cost = 0.15
+}
+
+es_incident_ban_foreighn_merchants = {
+	global_own_trade_power = 0.1
+	global_foreign_trade_power = -0.1
+}
+
+# Ancient Rites
+
+es_incident_accept_rituals = {
+	establish_order_cost = -0.15
+	tolerance_own = -1
+}
+
+es_incident_honour_cults = {
+	religious_unity = 0.10
+	warscore_cost_vs_other_religion = 0.10
+}
+
+es_incident_purge_holy_cites = {
+	global_missionary_strength = 0.025
+	tolerance_heathen = -2.5
+}
+
+#######################################################################
+
+pte_protect_religious_bretheren_modifier = {
+	global_heretic_missionary_strength = -1
+	tolerance_heretic = 2.5
+	tolerance_heathen = 1.0
+}
+
+pte_fleet_disarmament_modifier = {
+	naval_forcelimit_modifier = -0.5
+}
+
+pte_army_disarmament_modifier = {
+	land_forcelimit_modifier = -0.33
+}
+
+# Canals
+
+tel_mora_open_1 = {
+	province_trade_power_modifier = 0.10
+	province_trade_power_value = 5
+}
+
+tel_mora_open_2 = {
+	province_trade_power_modifier = 0.15
+	province_trade_power_value = 10
+}
+
+tel_mora_open_3 = {
+	province_trade_power_modifier = 0.25
+	province_trade_power_value = 15
+}
+
+mi_kin_open_1 = {
+	province_trade_power_modifier = 0.10
+	province_trade_power_value = 5
+}
+
+mi_kin_open_2 = {
+	province_trade_power_modifier = 0.15
+	province_trade_power_value = 10
+}
+
+mi_kin_open_3 = {
+	province_trade_power_modifier = 0.25
+	province_trade_power_value = 15
+}
+
+nosh_shek_open_1 = {
+	province_trade_power_modifier = 0.10
+	province_trade_power_value = 5
+}
+
+nosh_shek_open_2 = {
+	province_trade_power_modifier = 0.15
+	province_trade_power_value = 10
+}
+
+nosh_shek_open_3 = {
+	province_trade_power_modifier = 0.25
+	province_trade_power_value = 15
+}
+
+#######################################################################
+
+es_sack_timer = { }
+
+es_walking_city_timer = { }
+
+es_religion_school_modifier_timer = { }
+
+es_orcish_timer_1 = { }
+es_orcish_timer_2 = { }
+
+#######################################################################
+
+es_endgame_timer = { }
+
+es_new_game_bonus = {
+	global_tax_modifier = 0.5
+	global_manpower_modifier = 0.5
+	global_sailors_modifier = 0.5
+	land_forcelimit_modifier = 0.25
+	naval_forcelimit_modifier = 0.25
+	manpower_recovery_speed = 0.25
+	sailors_recovery_speed = 0.25
+	land_attrition = -0.25
+	discipline = 0.15
+	global_unrest = -10
+}
+
+es_challanger_of_the_gods = {
+	prestige_decay = -0.01
+	recover_army_morale_speed = 0.05
+	recover_navy_morale_speed = 0.05
+	land_morale = 0.10
+	global_unrest = -5
+}
+
+#######################################################################
+
+dark_brotherhood_sanctuary = {
+	local_unrest = 2.5
+	local_defensiveness = 0.15
+	local_development_cost = -0.10
+}
+
+ban_of_sithis_worship = {
+	global_unrest = -2.5
+	global_missionary_strength = 0.015
+	culture_conversion_cost = -0.10
+}
+
+es_dark_brotherhood = {
+	spy_offence = 0.35
+	global_spy_defence = 0.25
+	diplomatic_reputation = -1
+}

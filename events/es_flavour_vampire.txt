@@ -1,0 +1,409 @@
+namespace = es_flavour_vampire
+
+# Event Manager
+
+country_event = {
+	id = es_flavour_vampire.999
+	title = es_flavour_vampire.999.t
+	desc = es_flavour_vampire.999.d
+	picture = BLOODY_BARREL_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			ruler_culture = vampire
+			primary_culture = vampire
+		}
+	}
+
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = es_flavour_vampire.1 } }
+			1 = { country_event = { id = es_flavour_vampire.4 } }
+			1 = { country_event = { id = es_flavour_vampire.5 } }
+			1 = { country_event = { id = es_flavour_vampire.7 } }
+			1 = { country_event = { id = es_flavour_vampire.8 } }
+			25 = { set_country_flag = successful_flavour_event }
+
+		}
+	}
+
+	after = {
+		if = {
+			limit = { has_country_flag = successful_flavour_event }
+			clr_country_flag = successful_flavour_event
+		}
+		else = {
+			country_event = {
+				id = es_flavour_vampire.999
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = hiddenoption
+	}
+}
+
+# Overdoing it
+country_event = {
+	id = es_flavour_vampire.1
+	title = es_flavour_vampire.1.t
+	desc = es_flavour_vampire.1.d
+	picture = BLOODY_BARREL_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		primary_culture = vampire
+		OR = {
+			ruler_has_personality = impaler_personality
+			ruler_has_personality = extravagant_personality
+			ruler_has_personality = hotheaded_personality
+			ruler_has_personality = reckless_leader_personality
+			ruler_has_personality = ruthless_personality
+			ruler_has_personality = immature_personality
+			ruler_has_personality = lustful_personality
+			ruler_has_personality = sadistic_personality
+			ruler_has_personality = barbaric_personality
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = sinner_personality
+			ruler_has_personality = greedy_personality
+			ruler_has_personality = cruel_personality
+			ruler_has_personality = destroyer_personality
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_country_flag = successful_flavour_event
+	}
+
+	option = {
+		name = es_flavour_vampire.1.o.a
+		add_prestige = 5
+		add_years_of_income = -0.75
+	}
+
+	
+	option = {
+		name = es_flavour_vampire.1.o.b
+		add_corruption = 5
+		add_prestige = 10
+	}
+	
+	option = {
+		name = es_flavour_vampire.1.o.c
+		add_years_of_income = -0.25
+	}
+
+}
+
+# Turn consort
+country_event = {
+	id = es_flavour_vampire.2
+	title = es_flavour_vampire.2.t
+	desc = es_flavour_vampire.2.d
+	picture = BLOODY_HALL_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		ruler_culture = vampire
+		has_consort = yes
+		NOT = { consort_culture = vampire }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			export_to_variable = {
+				which = consort_culture_var
+				value = consort_culture
+				who = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = es_flavour_vampire.2.o.a
+		custom_tooltip = es_flavour_vampire.2.o.a.tt
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			every_known_country	 = {
+				limit = {
+					NOT = {
+						primary_culture = vampire
+						religion_group = daedric_group
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = es_vampire_turned_consort
+				}
+				if = {
+					limit = {
+						ai = no
+						has_country_flag = esu_news_flag
+					}
+					country_event = {
+						id = es_flavour_vampire.3
+					}
+				}
+			}
+			set_consort_culture = vampire
+			add_prestige = 10
+		}
+	}
+	option = {
+		name = es_flavour_vampire.2.o.b
+		hidden_effect = {
+			country_event = {
+				id = es_flavour_vampire.6
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Hidden - Chooses whether non-vampire consort likes or hates vampires
+country_event = {
+	id = es_flavour_vampire.6
+	title = es_flavour_vampire.6.t
+	desc = es_flavour_vampire.6.d
+	picture = BLOODY_HALL_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = hiddenoption
+		set_consort_flag = consort_wants_to_be_vampire
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = hiddenoption
+		set_consort_flag = consort_hates_marriage_with_vampire
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = hiddenoption
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Turn Consort other country notification
+country_event = {
+	id = es_flavour_vampire.3
+	title = es_flavour_vampire.3.t
+	desc = es_flavour_vampire.3.d
+	picture = BLOODY_HALL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = es_flavour_vampire.3.o.a
+	}
+}
+
+# The Despair of the consort
+country_event = {
+	id = es_flavour_vampire.4
+	title = es_flavour_vampire.4.t
+	desc = es_flavour_vampire.4.d
+	picture = CONSORT_TREASON_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		ruler_culture = vampire
+		has_consort = yes
+		NOT = { consort_culture = vampire }
+		has_consort_flag = consort_hates_marriage_with_vampire
+	}
+
+	immediate = {
+		set_country_flag = successful_flavour_event
+	}
+
+	option = {
+		name = es_flavour_vampire.4.o.a
+		set_consort_culture = vampire
+		hidden_effect = {
+			every_known_country	 = {
+				limit = {
+					NOT = {
+						primary_culture = vampire
+						religion_group = daedric_group
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = es_vampire_turned_consort
+				}
+				if = {
+					limit = {
+						ai = no
+						has_country_flag = esu_news_flag
+					}
+					country_event = {
+						id = es_flavour_vampire.3
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = es_flavour_vampire.4.o.b
+		remove_consort = yes
+		define_consort = {
+			culture = vampire
+			religion = molag_bal_cult
+		}
+		add_prestige = 5
+	}
+
+	option = {
+		name = es_flavour_vampire.4.o.c
+		add_prestige = -5
+	}
+}
+
+# A Doomed Marriage
+country_event = {
+	id = es_flavour_vampire.5
+	title = es_flavour_vampire.5.t
+	desc = es_flavour_vampire.5.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		ruler_culture = vampire
+		has_consort = yes
+		NOT = { consort_culture = vampire }
+		has_consort_flag = consort_hates_marriage_with_vampire
+	}
+
+	immediate = {
+		set_country_flag = successful_flavour_event
+	}
+
+	option = {
+		name = es_flavour_vampire.5.o.a
+		remove_consort = yes
+		kill_ruler = yes
+	}
+
+	option = {
+		name = es_flavour_vampire.5.o.b
+		remove_consort = yes
+		add_years_of_income = -0.25
+		add_prestige = 5
+	}
+
+	option = {
+		name = es_flavour_vampire.5.o.c
+		remove_consort = yes
+	}
+}
+
+# The Consort's Wish
+country_event = {
+	id = es_flavour_vampire.7
+	title = es_flavour_vampire.7.t
+	desc = es_flavour_vampire.7.d
+	picture = ROYAL_THRONE_ROOM_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = successful_flavour_event
+	}
+
+	trigger = {
+		ruler_culture = vampire
+		has_consort = yes
+		NOT = { consort_culture = vampire }
+		has_consort_flag = consort_wants_to_be_vampire
+	}
+
+	option = {
+		name = es_flavour_vampire.7.o.a
+		set_consort_culture = vampire
+		add_prestige = 5
+		hidden_effect = {
+			every_known_country	 = {
+				limit = {
+					NOT = {
+						primary_culture = vampire
+						religion_group = daedric_group
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = es_vampire_turned_consort
+				}
+				if = {
+					limit = {
+						ai = no
+						has_country_flag = esu_news_flag
+					}
+					country_event = {
+						id = es_flavour_vampire.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = es_flavour_vampire.7.o.b
+		add_prestige = -2
+	}
+}
+
+# A Foolish Courtier
+country_event = {
+	id = es_flavour_vampire.8
+	title = es_flavour_vampire.8.t
+	desc = es_flavour_vampire.8.d
+	picture = ES_VAMPIRE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		ruler_culture = vampire
+		has_consort = yes
+		NOT = { consort_culture = vampire }
+	}
+
+	option = {
+		name = es_flavour_vampire.8.o.a
+		add_prestige = 5
+	}
+
+	option = {
+		name = es_flavour_vampire.8.o.b
+		add_prestige = -2
+		add_dip_power = 50
+	}
+
+	option = {
+		name = es_flavour_vampire.8.o.c
+		custom_tooltip = es_flavour_vampire.8.o.c.tt
+		add_corruption = 1
+		add_years_of_income = 0.5
+	}
+}

@@ -1,0 +1,265 @@
+country_decisions = {
+
+    ge_increase_support = {
+	    major = yes
+		potential = {
+          ai = no
+		  NOT = { has_dlc = "Rights of Man" }
+		}
+		allow = {
+			mil_power = 100
+			OR = {
+				AND = {
+					government = monarchy
+					NOT = { legitimacy = 91 }
+				}
+				AND = {
+					government = republic
+					NOT = { republican_tradition = 91 }
+				}
+				AND = {
+					government = theocracy
+					has_dlc = "Common Sense"
+					NOT = { devotion = 91 }
+				}
+				AND = {
+					government = theocracy
+					NOT = { has_dlc = "Common Sense" }
+					NOT = { legitimacy = 91 }
+				}
+				AND = {
+					is_nomad = yes
+					has_dlc = "The Cossacks"
+					NOT = { horde_unity = 91 }
+				}
+				AND = {
+					is_nomad = yes
+					NOT = { has_dlc = "The Cossacks" }
+					NOT = { legitimacy = 91 }
+				}
+				AND = {
+					is_emperor_of_china = yes
+					NOT = { meritocracy = 91 }
+				}
+			}
+		}
+		effect = {
+			add_mil_power = -100
+			add_legitimacy = 10
+			add_republican_tradition = 5
+			add_devotion = 10
+			add_horde_unity = 10
+			add_meritocracy = 10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	adm_points = {
+		potential = {
+		    ai = no
+		}
+		allow = {
+			dip_power = 100
+            mil_power = 100
+			NOT = { adm_power = 2325 }
+		}
+		effect = {
+			add_adm_power = 175
+            add_dip_power = -100
+            add_mil_power = -100
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    dip_points = {
+		potential = {
+		    ai = no
+		}
+		allow = {
+			adm_power = 100
+            mil_power = 100
+			NOT = { dip_power = 2325 }
+		}
+		effect = {
+			add_adm_power = -100
+            add_dip_power = 175
+            add_mil_power = -100
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    mil_points = {
+		potential = {
+		    ai = no
+		}
+		allow = {
+			adm_power = 100
+            dip_power = 100
+			NOT = { mil_power = 2325 }
+		}
+		effect = {
+			add_adm_power = -100
+            add_dip_power = -100
+            add_mil_power = 175
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	land_manpower_points = {
+		potential = {
+		    ai = no
+		}
+		allow = {
+			mil_power = 100
+		}
+		effect = {
+			add_mil_power = -100
+			add_manpower = 5
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    debasement = {
+		potential = {
+			ai = no
+		}
+		allow = {
+            ai = no
+			NOT = { inflation = 100 }
+		}
+		effect = { 
+			if = { limit = { NOT = { inflation = 5 } }		
+				add_years_of_income = 1
+			}
+			else_if = { limit = { inflation = 5 NOT = { inflation = 10 } }		
+				add_years_of_income = 0.85
+			}
+			else_if = { limit = { inflation = 15 NOT = { inflation = 25 } }		
+				add_years_of_income = 0.75
+			}
+			else_if = { limit = { inflation = 25 NOT = { inflation = 35 } }		
+				add_years_of_income = 0.50
+			}
+			else_if = { limit = { inflation = 35 NOT = { inflation = 50 } }		
+				add_years_of_income = 0.35
+			}
+			else_if = { limit = { inflation = 50 NOT = { inflation = 75 } }		
+				add_years_of_income = 0.25
+			}
+			else = {
+				add_years_of_income = 0.15
+			}
+			add_inflation = 2.5
+		}	
+		ai_will_do = {
+			factor = 0
+		}
+    }
+
+	inflation_reduction_decision = {
+		potential = {
+            ai = no
+		}
+		allow = {
+            ai = no
+			treasury = 0
+			inflation = 2.5
+		}
+		effect = {
+			add_years_of_income = -1.25
+			add_inflation = -2.5
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	es_village_development = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			years_of_income = 1.35
+			manpower_percentage = 0.5
+			NOT = { num_of_loans = 1 }
+			any_owned_province = {
+				NOT = { has_province_modifier = dev } 
+				NOT = { development = 30 }
+			}
+		}
+		effect = {
+			add_years_of_income = -1.35
+			add_yearly_manpower = -1.35
+
+			if = {
+				limit = { NOT = { num_of_cities = 25 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = dev } NOT = { development = 30 } }
+					add_permanent_province_modifier = { name = "dev" duration = 912 }
+					add_base_tax = 1 add_base_production = 1 add_base_manpower = 1
+				}
+			}
+			else_if = {
+				limit = { NOT = { num_of_cities = 50 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = dev } NOT = { development = 30 } }
+					add_permanent_province_modifier = { name = "dev" duration = 1825 }
+					add_base_tax = 1 add_base_production = 1 add_base_manpower = 1
+				}
+			}
+			else_if = {
+				limit = { NOT = { num_of_cities = 100 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = dev } NOT = { development = 30 } }
+					add_permanent_province_modifier = { name = "dev" duration = 3650 }
+					add_base_tax = 1 add_base_production = 1 add_base_manpower = 1
+				}
+			}
+			else_if = {
+				limit = { NOT = { num_of_cities = 250 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = dev } NOT = { development = 30 } }
+					add_permanent_province_modifier = { name = "dev" duration = 9125 }
+					add_base_tax = 1 add_base_production = 1 add_base_manpower = 1
+				}
+			}
+			else_if = {
+				limit = { NOT = { num_of_cities = 750 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = dev } NOT = { development = 30 } }
+					add_permanent_province_modifier = { name = "dev" duration = 27375 }
+					add_base_tax = 1 add_base_production = 1 add_base_manpower = 1
+				}
+			}
+			else_if = {
+				limit = { NOT = { num_of_cities = 1500 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = dev } NOT = { development = 30 } }
+					add_permanent_province_modifier = { name = "dev" duration = 54750 }
+					add_base_tax = 1 add_base_production = 1 add_base_manpower = 1
+				}
+			}
+			else_if = {
+				limit = { NOT = { num_of_cities = 2500 } }
+				random_owned_province = { limit = { NOT = { has_province_modifier = dev } NOT = { development = 30 } }
+					add_permanent_province_modifier = { name = "dev" duration = 91250 }
+					add_base_tax = 1 add_base_production = 1 add_base_manpower = 1
+				}
+			}
+			else = {
+				random_owned_province = { limit = { NOT = { has_province_modifier = dev } NOT = { development = 30 } }
+					add_permanent_province_modifier = { name = "dev" duration = 182500 }
+					add_base_tax = 1 add_base_production = 1 add_base_manpower = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+	

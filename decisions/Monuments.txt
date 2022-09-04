@@ -1,0 +1,81 @@
+country_decisions = {
+	esu_monument_skykiller_gallery = {
+		potential = {
+			owns_core_province = 7110
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_winter_one
+				}
+			}
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_winter_two
+				}
+			}
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_winter_three
+				}
+			}
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_drought_one
+				}
+			}
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_drought_two
+				}
+			}
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_drought_three
+				}
+			}
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_rain_one
+				}
+			}
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_rain_two
+				}
+			}
+			not = {
+				7110 = {
+					has_province_modifier = weatherwitch_rain_three
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 1
+					}
+				}
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 2
+					}
+				}
+				7110 = {
+					has_great_project = {
+						type = skykiller_gallery
+						tier = 3
+					}
+				}
+			}
+		}
+		
+		effect = {
+			country_event = { 
+				id = esu_monument_skykiller_gallery.1
+			}
+		}
+	}
+}

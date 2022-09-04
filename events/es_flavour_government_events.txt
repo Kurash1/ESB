@@ -1,0 +1,2985 @@
+namespace = es_government
+
+# Event Manager
+
+country_event = {
+	id = es_government.100
+	title = es_government.1.t
+	desc = es_government.1.d
+	picture = ES_SIGN_HERE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = es_government.2 } }
+			1 = { country_event = { id = es_government.3 } }
+			1 = { country_event = { id = es_government.4 } }
+			1 = { country_event = { id = es_government.5 } }
+			1 = { country_event = { id = es_government.6 } }
+			1 = { country_event = { id = es_government.7 } }
+			1 = { country_event = { id = es_government.8 } }
+			1 = { country_event = { id = es_government.9 } }
+			1 = { country_event = { id = es_government.10 } }
+			1 = { country_event = { id = es_government.11 } }
+			1 = { country_event = { id = es_government.12 } }
+			1 = { country_event = { id = es_government.13 } }
+			1 = { country_event = { id = es_government.16 } }
+			1 = { country_event = { id = es_government.17 } }
+			1 = { country_event = { id = es_government.18 } }
+			1 = { country_event = { id = es_extended_regency_events.1 } }
+			1 = { country_event = { id = es_extended_regency_events.2 } }
+			1 = { country_event = { id = es_extended_regency_events.3 } }
+			1 = { country_event = { id = es_extended_regency_events.4 } }
+			1 = { country_event = { id = es_extended_regency_events.5 } }
+			1 = { country_event = { id = es_devotion_events.1 } }
+			1 = { country_event = { id = es_devotion_events.2 } }
+			1 = { country_event = { id = es_devotion_events.3 } }
+			1 = { country_event = { id = es_devotion_events.4 } }
+			1 = { country_event = { id = es_devotion_events.5 } }
+			1 = { country_event = { id = es_devotion_events.6 } }
+			1 = { country_event = { id = es_devotion_events.7 } }
+			1 = { country_event = { id = es_devotion_events.8 } }
+			1 = { country_event = { id = es_devotion_events.9 } }
+			1 = { country_event = { id = es_devotion_events.10 } }
+			1 = { country_event = { id = es_republican_dictatorship.1 } }
+			1 = { country_event = { id = es_republican_dictatorship.2 } }
+			1 = { country_event = { id = es_republican_dictatorship.3 } }
+			1 = { country_event = { id = es_republican_dictatorship.4 } }
+			1 = { country_event = { id = es_republican_dictatorship.5 } }
+			1 = { country_event = { id = es_tribal_events.1 } }
+			1 = { country_event = { id = es_tribal_events.2 } }
+			1 = { country_event = { id = es_tribal_events.3 } }
+			1 = { country_event = { id = es_tribal_events.9 } }
+			1 = { country_event = { id = es_tribal_events.10 } }
+			1 = { country_event = { id = es_tribal_events.11 } }
+			1 = { country_event = { id = es_tribal_events.12 } }
+			1 = { country_event = { id = es_native_events.1 } }
+			1 = { country_event = { id = es_native_events.2 } }
+			1 = { country_event = { id = es_native_events.3 } }
+			1 = { country_event = { id = es_native_events.4 } }
+			1 = { country_event = { id = es_republics.1 } }
+			1 = { country_event = { id = es_republics.2 } }
+			1 = { country_event = { id = es_republics.3 } }
+			1 = { country_event = { id = es_republics.4 } }
+			1 = { country_event = { id = es_republics.5 } }
+			1 = { country_event = { id = es_republics.6 } }
+			1 = { country_event = { id = es_republics.7 } }
+			1 = { country_event = { id = es_republics.8 } }
+			1 = { country_event = { id = es_republics.9 } }
+			1 = { country_event = { id = es_republics.10 } }
+			1 = { country_event = { id = es_republics.11 } }
+			1 = { country_event = { id = es_republics.12 } }
+			1 = { country_event = { id = es_meritocracy.1 } }
+			1 = { country_event = { id = es_natives.1 } }
+			1 = { country_event = { id = es_natives.2 } }
+			1 = { country_event = { id = es_natives.3 } }
+			1 = { country_event = { id = es_natives.4 } }
+			38 = { set_country_flag = successful_governmental_event }
+		}
+	}
+	
+	option = {
+		name = es_government.1.a
+	}
+	
+	after = {
+		if = {
+			limit = { has_country_flag = successful_governmental_event }
+			clr_country_flag = successful_governmental_event
+		}
+		else = {
+			country_event = {
+				id = es_government.100
+				days = 1
+			}
+		}
+	}
+}
+
+# es_government.1.t: "Scheming Bureaucracy"
+# es_government.1.d: "Seizing power? Certainly not. This is simply a normal assumption of the executive office, as laid out in form 32B, on the administration of the Kingdom, whitepaper 48:53-D, on the transfer of power under certain circumstances, as modified by protective clauses 3, 8 and 12b, law 48-9 and edict 3W-4. What is there not to understand? Your majesty has signed all of them."
+# es_government.1.a: "Kill them. All."
+# es_government.1.b: "Well... yes... Yes this does seem to be all in good order."
+
+country_event = {
+    id = es_government.1
+    title = es_government.1.t
+    desc = es_government.1.d
+    picture = ES_SIGN_HERE_eventPicture
+
+   is_triggered_only = yes
+
+    option = {
+        name = es_government.1.a
+        ai_chance = { factor = 100 }
+        add_adm_power = -100
+        add_stability = -1
+    }
+    option = {
+        name = es_government.1.b
+        ai_chance = { factor = 0 }
+		if = { limit = { NOT = { government = republic } } change_government = republic }
+		add_government_reform = protectorate_parliament_reform
+        kill_ruler = yes
+        add_stability = -5
+    }
+}
+
+# es_government.2.t:0 "Sermons for Princes"
+# es_government.2.d:0 "Popular support for the House of [Root.Monarch.Dynasty.GetName] is strengthened from the pulpit of the [Root.Religion.GetName] church, where the common folk are often reminded of the great importance of a strong ruler for the state church and the tradition of hereditary rule. [Root.GetName], however, accommodates more than one faith. Those who adhere to other faiths don't always have kind words for the princes of [Root.GetName], with some using our republican ideals as an excuse to openly challenge the [Root.Monarch.GetTitle] and the state church."
+# es_government.2.a:0 "We must ensure that the faithful know who their friends and enemies are."
+# es_government.2.b:0 "Let us ease the situation by toning down our own propaganda."
+
+country_event = {
+	id = es_government.2
+	title = "es_government.2.t"
+	desc = "es_government.2.d"
+	picture = ES_CHURCH_AND_PEOPLE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = oligarchy_reform
+			has_reform = dutch_republic
+			has_reform = monastic_elections_reform
+			has_reform = magical_state
+			has_reform = reason_and_logic
+			has_reform = bureaucratic_tyranny
+			has_reform = court_of_darkness
+			has_reform = divine_right
+			has_reform = subservient_bureaucracy
+			has_reform = justified_atrocity
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_government.2.a"
+		change_statists_vs_orangists = 0.25
+		add_country_modifier = {
+			name = sermons_for_princes_monarchist
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "es_government.2.b"
+		change_statists_vs_orangists = -0.25
+		hidden_effect = { set_country_flag = supported_statists }
+		add_country_modifier = {
+			name = no_sermons_for_princes
+			duration = 3650
+		}
+	}
+}
+
+# es_government.3.t:0 "Thus always to Tyrants"
+# es_government.3.d:0 "The reign of [Root.Monarch.GetName] is all but absolute. The Princes have secured power over [Root.GetName] for a long time ahead. Everything points to the [Root.Monarch.GetTitle] ruling for [Root.Monarch.GetHerHis] entire life. The Spymaster, one of [Root.Monarch.GetHerHis] closest advisors, agrees with this assessment. This is a person fiercely loyal to their country, so loyal, in fact, that they would personally take the life of anyone who threatens the state. In a recent meeting with a few carefully selected people, the Spymaster let it be known that the [Root.Monarch.GetTitle] [Root.Monarch.GetHerHim]self is perhaps the biggest threat of all. $SPYMASTER$ can assure that the lifetime rule will be a short one."
+# es_government.3.a:0 "We must act, for the Republican cause."
+# es_government.3.b:0 "The Spymaster may has just committed high treason."
+ 
+country_event = {
+	id = es_government.3
+	title = "es_government.3.t"
+	desc = "es_government.3.d"
+	picture = ES_SPYMASTER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = oligarchy_reform
+			has_reform = dutch_republic
+			has_reform = monastic_elections_reform
+			has_reform = magical_state
+			has_reform = reason_and_logic
+			has_reform = bureaucratic_tyranny
+			has_reform = court_of_darkness
+			has_reform = divine_right
+			has_reform = subservient_bureaucracy
+			has_reform = justified_atrocity
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_government.9.a"
+		ai_chance = { factor = 20 }
+		change_statists_vs_orangists = -0.75
+		kill_ruler = yes
+		add_republican_tradition = -10
+		add_legitimacy = -15
+		add_devotion = -15
+	}
+
+	option = {
+		name = "es_government.9.b"
+		ai_chance = { factor = 80 }
+		add_republican_tradition = 10
+		add_legitimacy = 15
+		add_devotion = 15
+	}
+}
+
+# es_government.4.t:1 "Successes of the [Root.GovernmentName]"
+# es_government.4.d:0 "The Republican rule has strengthened recently, which we can only interpret as a sign that the republic is the future. The increased trade economy and qualified administration, could only have happened to a federation of provinces like ours. By giving up some of the dictatorial control the kings of old insisted on, we have achieved things that would have been impossible for them. Now is the time to show our confidence in these ideas by relinquishing some of our control in favor of freedom."
+# es_government.4.a:0 "This is a testament to [Root.GetName]'s greatness!"
+# es_government.4.b:0 "Republicanism is an idea worth our dedication."
+
+country_event = {
+	id = es_government.4
+	title = "es_government.4.t"
+	desc = "es_government.4.d"
+	picture = ES_PALACE_SQUAR_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = oligarchy_reform
+			has_reform = dutch_republic
+			has_reform = monastic_elections_reform
+			has_reform = magical_state
+			has_reform = reason_and_logic
+			has_reform = bureaucratic_tyranny
+			has_reform = court_of_darkness
+			has_reform = divine_right
+			has_reform = subservient_bureaucracy
+			has_reform = justified_atrocity
+		}
+		is_statists_in_power = yes
+		has_country_flag = supported_statists
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_government.4.a"
+		add_prestige = 15
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+		clr_country_flag = supported_statists
+	}
+
+	option = {
+		name = "es_government.4.b"
+		add_republican_tradition = 5
+		add_legitimacy = 10
+		add_devotion = 10
+		clr_country_flag = supported_statists
+	}
+}
+
+# es_government.5.t:0 "The Coup"
+# es_government.5.d:1 "[Root.Mil_Advisor.GetName] is a person of action. That is why [Root.Mil_Advisor.GetSheHe] was employed by the administration and how [Root.Mil_Advisor.GetSheHe] has continued to hold the position as [Root.GetName]'s chief military advisor despite being a well-known supporter of the Monarchist cause. Now, their actions have turned against us. Claiming that the unquestioned strength of the Statists is ruining [Root.GetName], [Root.Mil_Advisor.GetName] has rallied others who find their power threatened by the ruling faction behind [Root.Mil_Advisor.GetHerHim] and is attempting to stage a coup and take power. Now it is up to us to take action or to let this happen."
+# es_government.5.a:0 "For the Republic!"
+# es_government.5.b:0 "For the Kingdom!"
+
+country_event = {
+	id = es_government.5
+	title = "es_government.5.t"
+	desc = "es_government.5.d"
+	picture = ES_MILITARY_ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = oligarchy_reform
+			has_reform = dutch_republic
+			has_reform = monastic_elections_reform
+			has_reform = magical_state
+			has_reform = reason_and_logic
+			has_reform = bureaucratic_tyranny
+			has_reform = court_of_darkness
+			has_reform = divine_right
+			has_reform = subservient_bureaucracy
+			has_reform = justified_atrocity
+		}
+		OR = {
+			advisor = esu_blacksmith
+			advisor = esu_trainer
+			advisor = esu_hunter
+			advisor = esu_thane
+			advisor = esu_officer
+			advisor = esu_scout
+			advisor = esu_grand_champion
+			advisor = esu_recruiter
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_government.5.a"
+		ai_chance = { factor = 80 }
+		if = {
+			limit = { advisor = esu_blacksmith }
+			kill_advisor = esu_blacksmith
+		}
+		if = {
+			limit = { advisor = esu_trainer }
+			kill_advisor = esu_trainer
+		}
+		if = {
+			limit = { advisor = esu_hunter }
+			kill_advisor = esu_hunter
+		}
+		if = {
+			limit = { advisor = esu_thane }
+			kill_advisor = esu_thane
+		}
+		if = {
+			limit = { advisor = esu_officer }
+			kill_advisor = esu_officer
+		}
+		if = {
+			limit = { advisor = esu_scout }
+			kill_advisor = esu_scout
+		}
+		if = {
+			limit = { advisor = esu_grand_champion }
+			kill_advisor = esu_grand_champion
+		}
+		if = {
+			limit = { advisor = esu_recruiter }
+			kill_advisor = esu_recruiter
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 5
+			}
+		}
+		add_stability = 1
+	}
+
+	option = {
+		name = "es_government.5.b"
+		ai_chance = { factor = 20 }
+		change_statists_vs_orangists = 1.0
+		kill_ruler = yes
+		add_prestige = -10
+	}
+
+}
+
+# es_government.6.t:0 "Nobles Organise Support for War"
+# es_government.6.d:0 "We are at war, but not just any war. Our enemy is not only one of current circumstance, but a hated rival of [Root.GetName]. At times such as this, nobles are eager to lead their armies into battle. While allowing the [Root.Monarch.Dynasty.GetName] family to rally other nobles and the common people to war would strengthen combat morale, the Republicans are not fools. They know that the effects of this unity will linger beyond the war and that Monarchists will be reluctant to let go of any power they are granted, even for the best of causes."
+# es_government.6.a:0 "The House of [Root.Monarch.Dynasty.GetName] has led our nation to victory before."
+# es_government.6.b:0 "We cannot forsake the republican cause for this."
+
+country_event = {
+	id = es_government.6
+	title = "es_government.6.t"
+	desc = "es_government.6.d"
+	picture = ES_NOBLE_KNIGHTS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = oligarchy_reform
+			has_reform = dutch_republic
+			has_reform = monastic_elections_reform
+			has_reform = magical_state
+			has_reform = reason_and_logic
+			has_reform = bureaucratic_tyranny
+			has_reform = court_of_darkness
+			has_reform = divine_right
+			has_reform = subservient_bureaucracy
+			has_reform = justified_atrocity
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_government.6.a"
+		change_statists_vs_orangists = 0.25
+		add_country_modifier = {
+			name = monarchists_rally_against_rival
+			duration = 3650
+		}
+		hidden_effect = { set_country_flag = es_nobles_support_war_flag }
+	}
+
+	option = {
+		name = "es_government.6.b"
+		change_statists_vs_orangists = -0.15
+		add_prestige = 10
+	}
+}
+
+# es_government.7.t:0 "Republicans Demand Return to Status Quo"
+# es_government.7.d:0 "The war is over, greatly aided by the efforts of the Monarchists, who are still enjoying popular support from these actions and retaining much of the power granted to them. Republicans who were willing to make concessions to the family during wartime are now demanding a return to how things were before the war. Anything less, they argue, would be tantamount to giving control over the country to whoever leads it into battle, throwing away the representative institutions our nation is so proud of."
+# es_government.7.a:0 "Things must return to how they were."
+# es_government.7.b:0 "They fought our war, let them keep their power."
+
+country_event = {
+	id = es_government.7
+	title = "es_government.7.t"
+	desc = es_government.7.d
+	picture = ES_REPUBLICAN_COUNCIL_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = oligarchy_reform
+			has_reform = dutch_republic
+			has_reform = monastic_elections_reform
+			has_reform = magical_state
+			has_reform = reason_and_logic
+			has_reform = bureaucratic_tyranny
+			has_reform = court_of_darkness
+			has_reform = divine_right
+			has_reform = subservient_bureaucracy
+			has_reform = justified_atrocity
+		}
+		has_country_flag = es_nobles_support_war_flag
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_government.7.a"
+		change_statists_vs_orangists = -0.25
+		add_mil_power = -100
+		clr_country_flag = es_nobles_support_war_flag
+	}
+
+	option = {
+		name = "es_government.7.b"
+		change_statists_vs_orangists = 0.15
+		add_republican_tradition = -15
+		add_legitimacy = -25
+		add_devotion = -25
+		clr_country_flag = es_nobles_support_war_flag
+	}
+}
+
+# es_government.8.t:1 "Rebuilding the [Root.GovernmentName]"
+# es_government.8.d:0 "The war took its toll on [Root.GetName]. The people fought hard, and while some may feel pride in the scars our republic will carry from this struggle, more have been reminded of the brutality of warfare. The Republicans see a chance to seek support for their cause among those who share these sentiments, arguing that a True Republic need not go to war and has no wish to."
+# es_government.8.a:1 "Let us rebuild these ideals, for the people of [Root.GetName]."
+# es_government.8.b:0 "The Prince of [Root.GetName] could lead us to victory in the future."
+
+country_event = {
+	id = es_government.8
+	title = "es_government.8.t"
+	desc = "es_government.8.d"
+	picture = ES_DAMAGED_CITY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = oligarchy_reform
+			has_reform = dutch_republic
+			has_reform = monastic_elections_reform
+			has_reform = magical_state
+			has_reform = reason_and_logic
+			has_reform = bureaucratic_tyranny
+			has_reform = court_of_darkness
+			has_reform = divine_right
+			has_reform = subservient_bureaucracy
+			has_reform = justified_atrocity
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_government.8.a"
+		change_statists_vs_orangists = -0.25
+		add_war_exhaustion = -5
+	}
+
+	option = {
+		name = "es_government.8.b"
+		change_statists_vs_orangists = 0.1
+		add_mil_power = 100
+	}
+}
+
+# es_government.9.t:0 "Absolute Power"
+# es_government.9.d:0 "We take pride in our [Root.GovernmentName], in part precisely because it is unprecedented and stands in contrast to the oppression suffered in other nations. However, an increased number of nobles thinks that [Root.GetName] should be gothered by the one ruler with unrestricted power, who will protect the interests of both the people and the state. Of course, granting more power to the [Root.Monarch.GetTitle] can strengthen our nation, but won't this at the same time mark the end of liberty traditions in [Root.GetName]?."
+# es_government.9.a:0 "Our [Root.Monarch.GetTitle] is the state!"
+# es_government.9.b:0 "We will never voluntary deny our values!"
+ 
+country_event = {
+	id = es_government.9
+	title = "es_government.9.t"
+	desc = "es_government.9.d"
+	picture = ES_ABSOLUTE_POWER_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = oligarchy_reform
+			has_reform = dutch_republic
+			has_reform = monastic_elections_reform
+			has_reform = magical_state
+			has_reform = reason_and_logic
+			has_reform = bureaucratic_tyranny
+			has_reform = court_of_darkness
+			has_reform = divine_right
+			has_reform = subservient_bureaucracy
+			has_reform = justified_atrocity
+		}
+		any_neighbor_country = {
+			government = monarchy
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = embraced_absolutism
+				}
+			}
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = rejected_absolutism
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_government.9.a"
+		change_statists_vs_orangists = 0.25
+		every_neighbor_country = {
+			limit = {
+				government = monarchy
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = embraced_absolutism
+			}
+		}
+	}
+
+	option = {
+		name = "es_government.9.b"
+		change_statists_vs_orangists = -0.25
+		set_country_flag = supported_statists
+		every_neighbor_country = {
+			limit = {
+				government = monarchy
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = rejected_absolutism
+			}
+		}
+	}
+}
+
+# es_government.10.t:0 "Council Supports $HEIR$ $HEIR_DYNASTY$"
+# es_government.10.d:0 "The Council stood united today in their support for $HEIR$ $HEIR_DYNASTY$, who despite $HEIR_ADJ$ foreign roots is viewed as a worthy successor to the throne of $COUNTRY$. This will strengthen his chance to assume power, should our current $MONARCHTITLE$ pass away."
+# es_government.10.a:0 "$HEIR$ is truly worthy."
+ 
+country_event = {
+	id = es_government.10
+	title = es_government.10.t
+	desc = es_government.10.d
+	picture = ES_FOREIGN_HEIR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_reform = elective_monarchy
+			has_reform = austrian_archduchy_reform
+			has_reform = tribal_kingdom
+			has_reform = open
+		}
+		has_foreign_heir = yes
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_government.10.a
+		add_heir_support = 10
+	}
+}
+
+# es_government.11.t:0 "Council Opposes $HEIR$ $HEIR_DYNASTY$"
+# es_government.11.d:0 "A powerful faction within the Council has made clear their displeasure and dislike for $HEIR$ $HEIR_DYNASTY$, whom they view as a foreigner that has no understanding of the country $HEIR_S_PRONOUN$ wishes to rule. Their campaign has weakened $HEIR_ADJ$ chance to assume power, should our current $MONARCHTITLE$ pass away."
+# es_government.11.a:0 "$HEIR$ must go!"
+ 
+country_event = {
+	id = es_government.11
+	title = es_government.11.t
+	desc = es_government.11.d
+	picture = ES_FOREIGN_HEIR_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_reform = elective_monarchy
+			has_reform = austrian_archduchy_reform
+			has_reform = tribal_kingdom
+			has_reform = open
+		}
+		has_foreign_heir = yes
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_government.11.a
+		add_heir_support = -10
+	}
+}
+
+# es_government.12.t:0 "Bribing the Council"
+# es_government.12.d:0 "Winning an election is often a matter of knowing what palms to grease. A member of our dynasty is currently the leading candidate to succeed to the throne in a foreign nation, and several powerful nobles from that nation have made it clear that they are willing to further shore up his position if our nation proves to be 'as generous as it is great'."
+# es_government.12.a:0 "Reward their support generously."
+# es_government.12.b:0 "Send them home empty-handed."
+ 
+country_event = {
+	id = es_government.12
+	title = es_government.12.t
+	desc = es_government.12.d
+	picture = ES_PURSE_WITH_GOLD_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = monarchy
+		any_known_country = {
+			OR = {
+				has_reform = elective_monarchy
+				has_reform = austrian_archduchy_reform
+				has_reform = tribal_kingdom
+				has_reform = open
+			}
+			heir_nationality = ROOT
+		}
+		years_of_income = 1.0
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_government.12.a
+		add_years_of_income = -1.0
+		add_prestige = 5
+		random_known_country = {
+			limit = {
+				OR = {
+					has_reform = elective_monarchy
+					has_reform = austrian_archduchy_reform
+					has_reform = tribal_kingdom
+					has_reform = open
+				}
+				heir_nationality = ROOT
+			}
+			add_heir_support = 25
+		}		
+	}
+	option = {
+		name = es_government.12.b
+		add_prestige = -10
+		random_known_country = {
+			limit = {
+				OR = {
+					has_reform = elective_monarchy
+					has_reform = austrian_archduchy_reform
+					has_reform = tribal_kingdom
+					has_reform = open
+				}
+				heir_nationality = ROOT
+			}
+			add_heir_support = -10
+		}
+	}	
+}
+
+# es_government.13.t:0 "Plot Against $HEIR$ $HEIR_DYNASTY$"
+# es_government.13.d:0 "A certain faction within the Council have made no secret of their dislike for $HEIR$ $HEIR_DYNASTY$, and now your spymaster has uncovered that they are plotting the assassination of $HEIR_ADJ$. If they are allowed to make the attempt, there is a considerable risk that we will be blamed, but arresting them would upset their friends in the Council. How should we proceed?"
+# es_government.13.a:0 "Let the plot unfold unhindered."
+# es_government.13.b:0 "Arrest these plotters!"
+
+country_event = {
+	id = es_government.13
+	title = es_government.13.t
+	desc = es_government.13.d
+	picture = ES_COUNCIL_SPYMASTER_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_reform = elective_monarchy
+			has_reform = austrian_archduchy_reform
+			has_reform = tribal_kingdom
+			has_reform = open
+		}
+		has_foreign_heir = yes
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_government.13.a
+		ai_chance = {
+			factor = 20
+		}
+		random_list = {
+			50 = { 
+				kill_heir = {  }
+				hidden_effect = { country_event = { id = es_government.14 } }
+			}
+			50 = { 
+				random_known_country = {
+					limit = { ROOT = { heir_nationality = PREV } }
+					tooltip = { 
+						add_opinion = { who = ROOT modifier = attempted_assassination_of_heir } 
+						add_casus_belli = {
+							target = ROOT
+							type = cb_insult
+							months = 12
+						}						
+					}
+					hidden_effect = { country_event = { id = es_government.15 } }
+				}
+			}
+		}
+	}
+	option = {
+		name = es_government.13.b
+		ai_chance = {
+			factor = 80
+		}		
+		add_stability = -1
+	}
+}
+
+# es_government.14.t:0 "$FROM_ADJ$ Schemers"
+# es_government.14.d:0 "We have discovered that the government of $FROM$ has given tacit support to an assassination plot against our candidate for their throne. This is a grievous insult against our country and must be answered!"
+# es_government.14.a:0 "Fiends!"
+
+country_event = {
+	id = es_government.14
+	title = es_government.14.t
+	desc = es_government.14.d
+	picture = ES_SPY_LETTER_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = es_government.14.a
+		add_opinion = { who = FROM modifier = attempted_assassination_of_heir } 
+		add_casus_belli = {
+			target = FROM
+			type = cb_insult
+			months = 12
+		}	
+	}
+}
+
+# es_government.15.t:0 "Suspicious Accident"
+# es_government.15.d:0 "Our candidate for the throne of $FROM$ has passed away in what appears to be a hunting accident. Though we suspect the accident was in fact a cunning assassination carried out by backers of a different candidate, we have no proof and all our hard work to place our dynasty on the $FROM_ADJ$ throne is undone."
+# es_government.15.a:0 "Awful!"
+ 
+country_event = {
+	id = es_government.15
+	title = es_government.15.t
+	desc = es_government.15.d
+	picture = ES_HUNTING_ACCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_government.15.a
+	}
+}
+
+# es_government.16.t:0 "Council Forces Abdication"
+# es_government.16.d:0 "[Root.Monarch.GetName] knows that [Root.Monarch.GetHerHis] time may soon come. Wishing to secure the title for [Root.Monarch.GetHerHis] dynasty, [Root.Monarch.GetSheHe] has begun to seek support for selecting one of [Root.Monarch.GetHerHis] progeny as next in line, questioning the choice of the Council. The nobles have not taken kindly to this and are considering forcing the [Root.Monarch.GetTitle] to abdicate in favor of the heir they have already chosen for the throne."
+# es_government.16.a:0 "Absolutism must be avoided."
+# es_government.16.b:0 "Our [Root.Monarch.GetTitle] can't bow so easily to nobles!"
+ 
+country_event = {
+	id = es_government.16
+	title = es_government.16.t
+	desc = es_government.16.d
+	picture = ES_OLD_KING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_reform = elective_monarchy
+			has_reform = austrian_archduchy_reform
+			has_reform = tribal_kingdom
+			has_reform = open
+		}
+		has_foreign_heir = yes
+		ruler_is_foreigner = yes
+		ruler_age = 70
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_government.16.a
+		kill_ruler = yes
+	}
+
+	option = {
+		name = es_government.16.b
+		add_stability = -1
+		add_heir_support = -10
+	}
+}
+
+# es_government.17.t:0 "Overambitious Campaign"
+# es_government.17.d:0 "The aggressive war [Root.Monarch.GetName] has undertaken is not progressing well. This is always a cause for unrest, but particularly so when the [Root.Owner.Monarch.GetTitle] is a foreigner. Over the course of the war, people have started to claim that [Root.GetName] is a peaceful nation and that this foolhardy monarch is bringing it to ruin."
+# es_government.17.a:0 "The war has only begun! Onward!"
+# es_government.17.b:0 "We must try to end the conflict quickly."
+
+country_event = {
+	id = es_government.17
+	title = es_government.17.t
+	desc = es_government.17.d
+	picture = ES_BURNED_VILLAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_lesser_in_union = no
+		is_at_war = yes
+		NOT = { war_score = -25 }
+		any_known_country = {
+			defensive_war_with = ROOT
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_government.17.a
+		add_stability = -1
+	}
+
+	option = {
+		name = es_government.17.b
+		add_war_exhaustion = 5
+	}
+}
+
+# es_government.18.t:0 "[Root.Monarch.Dynasty.GetName] Family Gains Claim on [Root.GetAdjective] Throne"
+# es_government.18.d:0 "Recent power shifts among the foreign relatives of [Root.Monarch.GetName] and clashing inheritance laws have led to an unfortunate situation with the house of [Root.Monarch.Dynasty.GetName]. A member of the dynasty has now been suggested to be the rightful ruler of not only [Root.Monarch.GetName]'s homeland, but ours as well.\n\nWhether or not this claim will be pushed through war or is merely used to bolster the foreign monarch's status for a domestic power struggle remains to be seen. Regardless, the possibility of being forced into a union in this manner is ominous."
+# es_government.18.a:0 "We elected one of theirs as a show of good faith!"
+ 
+country_event = {
+	id = es_government.18
+	title = es_government.18.t
+	desc = es_government.18.d
+	picture = ES_CROWN_ON_PILLOW_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_reform = elective_monarchy
+			has_reform = austrian_archduchy_reform
+			has_reform = tribal_kingdom
+			has_reform = open
+		}
+		ruler_is_foreigner = yes
+		any_known_country = {
+			dynasty = ROOT
+			government = monarchy
+			is_subject = no
+			is_at_war = no
+			has_regency = no
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_government.18.a
+		random_known_country = {
+			limit = {
+				dynasty = ROOT
+				government = monarchy
+				is_subject = no
+				is_at_war = no
+				has_regency = no
+			}
+			tooltip = {
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 120
+					target = ROOT
+				}
+			}
+			hidden_effect = {
+				country_event = { id = es_government.19 }
+			}
+		}
+	}
+}
+
+# es_government.19.t:0 "[Root.Monarch.GetName] Gains Claim on [From.GetAdjective] Throne"
+# es_government.19.d:0 "Our support for [From.Monarch.GetName], our candidate for the [From.GetAdjective] throne, has yielded us many diplomatic advantages since [From.Monarch.GetSheHe] was elected. Recently, however, it has been suggested that the [Root.Monarch.Dynasty.GetName] family's claims on [From.GetName] reaches beyond this single individual and that [Root.Monarch.GetName] should in fact be considered the ruler of both [Root.GetName] and [From.GetName].\n\n[From.Monarch.GetName] considers [From.Monarch.GetHerselfHimself] sovereign, of course, but [Root.Monarch.GetName] outranks [From.Monarch.GetHerHim] in the dynasty. Surely a [From.Monarch.GetTitle]'s first loyalty must be to family, must it not?"
+# es_government.19.a:0 "An intriguing line of thought..."
+
+country_event = {
+	id = es_government.19
+	title = es_government.19.t
+	desc = es_government.19.d
+	picture = ES_CROWN_ON_PILLOW_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_government.19.a
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			months = 120
+			target = FROM
+		}
+	}
+}
+
+namespace = es_extended_regency_events
+
+# es_extended_regency_events.1.t:0 "Paranoid or Usurper?"
+# es_extended_regency_events.1.d:0 "[Root.Monarch.GetName], after surviving several attempts on his life, began to be increasingly cautious. [Root.Monarch.GetSheHeCap] began avoiding social events, state ceremonies, and even meetings of the council governing the country, preferring to issue decrees directly from his chambers. Such blatant behaviour has aroused much suspicion among the courtiers, who fear that [Root.Monarch.GetSheHe] will never leave the throne, having usurped power in the country."
+# es_extended_regency_events.1.a:0 "We need to stop [Root.Monarch.GetHerHim]."
+# es_extended_regency_events.1.b:0 "It's not that bad."
+# es_extended_regency_events.1.c:0 "We must resort to... a less prosaic approach."
+
+country_event = { 
+	id = es_extended_regency_events.1
+	title = es_extended_regency_events.1.t
+	desc = es_extended_regency_events.1.d
+	picture = ES_PALACE_CLOSED_DOORS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_regency = yes
+		government = monarchy
+		NOT = { has_ruler_flag = paranoid_regent_investigation }
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_extended_regency_events.1.a
+		random_list = {
+			50 = { add_prestige = -10 }
+			50 = {
+				extend_regency = 5
+				set_ruler_flag = paranoid_regent_investigation
+			}
+		}
+
+	}
+	
+	option = {
+		name = es_extended_regency_events.1.b
+		add_legitimacy = -10
+		add_meritocracy = -10
+		extend_regency = 5
+		set_ruler_flag = paranoid_regent_investigation
+	}
+	
+	option = {
+		name = es_extended_regency_events.1.c
+		random_list = {
+			50 = {
+				kill_ruler = yes
+				if = {
+					limit = { has_heir = no }
+					define_ruler = {
+						dynasty = ROOT
+						claim = 20
+						max_random_dip = 4
+						max_random_adm = 4
+						max_random_mil = 4
+					}
+				}
+			}
+			50 = {
+				add_stability = -1
+				extend_regency = 5
+				set_ruler_flag = paranoid_regent_investigation
+			}
+		}
+	}
+}
+
+# es_extended_regency_events.2.t:0 "Traitors Everywhere"
+# es_extended_regency_events.2.d:0 "The paranoia surrounding [Root.Monarch.GetHerHim] grows by the day and is not only causing more damage to [Root.Monarch.GetHerHis] mental health, but is beginning to affect the Regent's surroundings. Interrogations of members of the Ruling Council have already begun to take place on a regular basis. Searches in the private chambers of noblemen suspected of plotting a coup now take place without warning and without court authorisation. Anyone who dares to openly criticise the policies being pursued will, at best, face a night in solitary confinement and, at worst, a date with the executioner. Sure, the [Root.Monarch.GetName] investigations and subsequent purges have identified many spies and traitors, but how many innocent lives have been affected by [Root.Monarch.GetHerHis] actions?"
+# es_extended_regency_events.2.a:0 "We must make sure there are no traitors among the national government!"
+# es_extended_regency_events.2.b:0 "Stopping [Root.Monarch.GetHerHim] will only bring us more trouble."
+
+country_event = { 
+	id = es_extended_regency_events.2
+	title = es_extended_regency_events.2.t
+	desc = es_extended_regency_events.2.d
+	picture = ES_SURROUNDED_KING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ruler_flag = paranoid_regent_investigation
+		has_regency = yes
+		government = monarchy
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_extended_regency_events.3.a
+		add_legitimacy = -10
+		add_meritocracy = -10
+		hidden_effect = {
+			clr_ruler_flag = paranoid_regent_investigation
+		}
+	}
+	
+	option = {
+		name = es_extended_regency_events.3.b
+		add_years_of_income = -1.0
+		extend_regency = 5
+		hidden_effect = {
+			clr_ruler_flag = paranoid_regent_investigation
+		}
+	}
+}
+
+# es_extended_regency_events.3.t:0 "Greed is not a Vice?"
+# es_extended_regency_events.3.d:0 "Gold is a dangerous thing, its beguiling luster impossible to resist. It lurks in the shadows, drawing the ignorant fools with its doom-laden glow, its gilding as round as two demon's eyes. [Root.Monarch.GetName] is no stranger to this ruinous temptation, using any excuse to fill his own pockets. Meanwhile, our nation is plagued by hunger, devastation and corruption and the population is slowly falling into despair."
+# es_extended_regency_events.3.a:0 "We cannot allow [Root.Monarch.GetName] to destroy our country."
+# es_extended_regency_events.3.b:0 "We all fall into the same sins."
+
+country_event = { 
+	id = es_extended_regency_events.3
+	title = es_extended_regency_events.3.t
+	desc = es_extended_regency_events.3.d
+	picture = ES_TREASURE_CAVE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_regency = yes
+		government = monarchy
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_extended_regency_events.3.a
+		kill_ruler = yes
+	}
+	
+	option = {
+		name = es_extended_regency_events.3.b
+		extend_regency = 5
+		add_corruption = 1.5
+	}
+	
+}
+
+# es_extended_regency_events.4.t:0 "Golden Bird in the Iron Cage"
+# es_extended_regency_events.4.d:0 "The entire palace knew that [Root.Monarch.GetName] was too used to power, but few could even think that [Root.Monarch.GetSheHe] would go this far to keep it. Our rightful heir, [Root.Heir.GetName], was imprisoned after daring to disobey [Root.Monarch.GetName]'s orders. Rumours that [Root.Heir.GetName] may suffer imprisonment from some unfortunate set of circumstances have already begun to spread across the capital."
+# es_extended_regency_events.4.a:0 "No one will like this."
+
+country_event = { 
+	id = es_extended_regency_events.4
+	title = es_extended_regency_events.4.t
+	desc = es_extended_regency_events.4.d
+	picture = ES_INPRISONED_NOBLE_2_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_regency = yes
+		has_heir = yes
+		government = monarchy
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_extended_regency_events.4.a
+		remove_heir = { }
+		extend_regency = 5
+		add_legitimacy = -15
+		add_meritocracy = -15
+	}
+}
+
+# es_extended_regency_events.5.t:0 "Glory days."
+# es_extended_regency_events.5.d:0 "Sometimes hope can be found in the most unexpected places. Since the beginning of [Root.Monarch.GetHerHis] reign, [Root.Monarch.GetName] has shown himself to be an excellent ruler, always aware of the needs of our people. Some even say that our people would be more prosperous if [Root.Monarch.GetSheHe] remained ruler a little longer...."
+# es_extended_regency_events.5.a:0 "I'm sure something can be done..."
+# es_extended_regency_events.6.b:0 "[Root.Heir.GetSheHe] is a legitimate heir."
+
+country_event = { 
+	id = es_extended_regency_events.5
+	title = es_extended_regency_events.5.t
+	desc = es_extended_regency_events.5.d
+	picture = ES_KING_PEOPLE_SQUAR_PALACE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_regency = yes
+		has_heir = yes
+		government = monarchy
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_extended_regency_events.5.a
+		add_stability = 1
+		extend_regency = 5
+	}
+	
+	option = {
+		name = es_extended_regency_events.5.b
+		add_heir_claim = 10
+	}
+}
+
+namespace = es_devotion_events
+
+# es_devotion_events.1.t:0 "General Hospital"
+# es_devotion_events.1.d:0 "A suggestion has been put forward to set up a general hospital, to create a place where the needy would be welcomed and assisted. The public health is very important, and to offer a free midwifery course and some establishments to combat disease would increase the well-being of everyone."
+# es_devotion_events.1.a:0 "If this should improve the public health, then what are we waiting for? Do it!"
+# es_devotion_events.1.b:0 "Prayer will solve all their problems, do not waste money on that!"
+# es_general_hospital: "General Hospital"
+# desc_es_general_hospital: " "
+ 
+country_event = {
+	id = es_devotion_events.1
+	title = es_devotion_events.1.t
+	desc = es_devotion_events.1.d
+	picture = ES_GENERAl_HOSPITAL_eventPicture
+	
+	trigger = {
+		government = theocracy
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+		
+	option = {
+		name = es_devotion_events.1.a
+		add_country_modifier = {
+			name = es_general_hospital
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = es_devotion_events.1.b
+		add_years_of_income = 1.0
+	}
+}
+
+# es_devotion_events.2.t:0 "Fort Maintenance"
+# es_devotion_events.2.d:0 "Our forts are the most important defense we have against intruders and enemies, but they are in great need of restoration. We would need to increase our taxes in order to fund this, and that will most certainly upset those who pay taxes."
+# es_devotion_events.2.a:0 "We need this, ignore the rabble!"
+# es_devotion_events.2.b:0 "Do what is possible with the money we already have."
+# es_fort_maintenance: "Fort Maintenance"
+# desc_es_fort_maintenance: " "
+# es_old_forts: "Old Forst"
+# desc_es_old_forts: " "
+ 
+country_event = {
+	id = es_devotion_events.2
+	title = es_devotion_events.2.t
+	desc = es_devotion_events.2.d
+	picture = ES_FORT_1_eventPicture
+	
+	trigger = {
+		government = theocracy
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+		
+	option = {
+		name = es_devotion_events.2.a
+		add_country_modifier = {
+			name = es_fort_maintenance
+			duration = 3650
+		}
+		hidden_effect = {
+			set_country_flag = es_fort_maintenance_flag
+		}
+	}
+	option = {
+		name = es_devotion_events.2.b
+		add_country_modifier = {
+			name = es_old_forts
+			duration = 3650
+		}
+	}
+}
+
+# es_devotion_events.3.t:0 "Modernization of the Forts"
+# es_devotion_events.3.d:0 "The forts no longer look as if they would crumble before our eyes, they are now sturdy enough to withstand most attacks to their walls. Their defenses, although now functional and impressive despite their age, are still lacking in comparison to other nation's forts. We would need to dig deep into the pockets of our taxpayers in order to be able to fund the upgrades and the modernization our forts sorely need."
+# es_devotion_events.3.a:0 "It is for the greater good... who wants to be invaded?"
+# es_devotion_events.3.b:0 "They are good enough as they are."
+ 
+country_event = {
+	id = es_devotion_events.3
+	title = es_devotion_events.3.t
+	desc = es_devotion_events.3.d
+	picture = ES_FORT_2_eventPicture
+	
+	trigger = {
+		government = theocracy
+		has_country_flag = es_fort_maintenance_flag
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_devotion_events.3.a
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = es_modern_forts
+			duration = 3650
+		}
+	}
+	option = {
+		name = es_devotion_events.3.b
+		add_prestige = 5
+	}
+	after = {
+		clr_country_flag = es_fort_maintenance_flag
+	}
+}
+
+# es_devotion_events.4.t:0 "Too High Taxes"
+# es_devotion_events.4.d:0 "It's hard to hear the citizens rage against the raised taxes from the high, high walls and inside the thick, thick towers of our restored forts, but we do hear them threatening revolt and rebellion unless we lower the taxes."
+# es_devotion_events.4.a:0 "We hear, and we reluctantly oblige."
+# es_devotion_events.4.b:0 "Say what? WE CANNOT HEAR YOU!"
+# es_devotion_events.4.tt: "Gain §Y+15% Autonomy§! in every owned province."
+ 
+country_event = {
+	id = es_devotion_events.4
+	title = es_devotion_events.4.t
+	desc = es_devotion_events.4.d
+	picture = ES_TOO_HIGH_TAXES_SIEGE_CASTLE_eventPicture
+	
+	trigger = {
+		government = theocracy	
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+		
+	option = {
+		name = es_devotion_events.4.a
+		custom_tooltip = es_devotion_events.4.tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					NOT = { is_capital = yes }
+				}
+				add_local_autonomy = 15
+			}
+		}
+	}
+	
+	option = {
+		name = es_devotion_events.4.b
+		add_stability = -1
+	}
+}
+
+# es_devotion_events.5.t:0 "Embellishment of Temple"
+# es_devotion_events.5.d:0 "A gift of a stained-glass was placed in one of our temples, and the effect is exquisite. So exquisite, in fact, that we consider embellishing every temple we own with our sigil in stained-glass."
+# es_devotion_events.5.a:0 "Vanity is a sin, even if it is for a temple!"
+# es_devotion_events.5.b:0 "Just increase the taxes to pay for it."
+# es_devotion_increased_taxes: "Increased Taxes"
+# desc_es_devotion_increased_taxes: " "
+ 
+country_event = {
+	id = es_devotion_events.5
+	title = es_devotion_events.5.t
+	desc = es_devotion_events.5.d
+	picture = ES_STAINED_GLASS_eventPicture
+	
+	trigger = {
+		government = theocracy	
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+		
+	option = {
+		name = es_devotion_events.5.a
+		add_devotion = 10
+		add_legitimacy = 10
+	}
+	
+	option = {
+		name = es_devotion_events.5.b
+		add_years_of_income = 0.5
+		add_country_modifier = {
+			name = "es_devotion_increased_taxes"
+			duration = 3650
+		}
+	}
+}
+
+# es_devotion_events.6.t:0 "The Quest for Religious Freedom"
+# es_devotion_events.6.d:0 "A man known for his radical ideas about religious reforms is condemning the priests and the [Root.Religion.GetName] doctrines in his sermons. This has led to widespread complaints and demands for religious freedom from our not-so-loyal citizens."
+# es_devotion_events.6.a:0 "Our country is [Root.Religion.GetName] and will always be [Root.Religion.GetName]!"
+# es_devotion_events.6.b:0 "Concede full religious freedom to the city."
+ 
+country_event = {
+	id = es_devotion_events.6
+	title = es_devotion_events.6.t
+	desc = es_devotion_events.6.d
+	picture = ES_PREACHER_eventPicture
+	
+	trigger = {
+		government = theocracy
+		any_owned_province = {
+			development = 10
+			is_capital = no
+			any_neighbor_province = {
+				NOT = { religion_group = ROOT }
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					development = 10
+					is_capital = no
+					any_neighbor_province = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random_neighbor_province = {
+					limit = {
+						NOT = { religion_group = ROOT }
+					}
+					save_event_target_as = neighbour_province_event_target
+				}
+				save_event_target_as = heathen_province_event_target
+			}
+			set_country_flag = successful_governmental_event
+		}
+	}
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = es_devotion_events.6.a
+		add_prestige = 10
+
+		event_target:heathen_province_event_target = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+	}
+	option = {
+		name = es_devotion_events.6.b
+		add_devotion = -10
+		add_legitimacy = -10
+		event_target:heathen_province_event_target = {
+			add_local_autonomy = 25
+			change_religion = event_target:neighbour_province_event_target
+		}
+	}
+}
+
+# es_devotion_events.7.t:0 "Forgery of Documents"
+# es_devotion_events.7.d:0 "It was a common defense against annexation and usurpation to forge documents, have them counterfeited or backdated to corroborate one's arguments during times of struggles for expansion of land or privileges. Even now these questionable methods are used, and even we ponder if this practice should benefit us. Hopefully no one will detect the discrepancies..."
+# es_devotion_events.7.a:0 "Forge those documents."
+# es_devotion_events.7.b:0 "Keep that filth out of our archives!"
+# es_devotion_events.7.tt:0 "The forgery might be discovered..."
+ 
+country_event = {
+	id = es_devotion_events.7
+	title = es_devotion_events.7.t
+	desc = es_devotion_events.7.d
+	picture = ES_DOCUMENT_2_eventPicture
+	
+	trigger = {
+		government = theocracy
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+		
+	option = {
+		name = es_devotion_events.7.a
+		add_adm_power = 150
+		hidden_effect = {
+			set_country_flag = dev_forged_documents_flag
+		}
+		custom_tooltip = es_devotion_events.7.tt
+	}
+	
+	option = {
+		name = es_devotion_events.7.b
+		add_devotion = 10
+		add_legitimacy = 10
+	}
+}
+
+# es_devotion_events.8.t:0 "Forged Documents"
+# es_devotion_events.8.d:0 "Despite our best efforts in concealing the forgery, the counterfeit, the backdated documents, we were exposed. All we wanted to do was to protect [Root.Country.GetName] from those who would seek to annex and usurp our provinces."
+# es_devotion_events.8.a:0 "Bribe, blackmail, beat anyone who let this secret slip!"
+ 
+country_event = {
+	id = es_devotion_events.8
+	title = es_devotion_events.8.t
+	desc = es_devotion_events.8.d
+	picture = ES_DOCUMENT_1_eventPicture
+	
+	trigger = {
+		has_country_flag = dev_forged_documents_flag
+	}
+	
+	is_triggered_only = yes
+		
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = dev_forged_documents_flag
+		}
+	}
+	
+	option = {
+		name = es_devotion_events.8.a
+		add_prestige = -10
+	}
+}
+
+# es_devotion_events.9.t:0 "Rule Challenged"
+# es_devotion_events.9.d:0 "It began, as it always does, with rumors, gossip and sneaked glances filled with contempt and malice. If this challenge to [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s rule goes too far, that [Root.Monarch.GetSheHe] was not elected properly to the seat of [Root.Country.GetName], people will no longer speak but might try to depose [Root.Monarch.GetHerHim]!"
+# es_devotion_events.9.a:0 "How did this happen?"
+ 
+country_event = {
+	id = es_devotion_events.9
+	title = es_devotion_events.9.t
+	desc = es_devotion_events.9.d
+	picture = ES_RELIGIOUS_PROCESSION_1
+	
+	trigger = {
+		government = theocracy
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+		
+	option = {
+		name = es_devotion_events.9.a
+		add_devotion = -10
+		add_legitimacy = -10
+	}
+}
+
+# es_devotion_events.10.t:0 "The Unholy Deeds"
+# es_devotion_events.10.d:0 "Since we are a theocracy, we follow the order of god while choosing heirs we take the opinions of priests ... but today one of our priests suggested a young candidate... who looks suspiciously similar to one of our advisors."
+# es_devotion_events.10.a:0 "We cant allow ones who broke holy law! execute both priest and advisor!"
+# es_devotion_events.10.b:0 "Maybe the holy blood indeed runs in the veins of this child?"
+# es_corrupted_clergy: "Corrupted Clergy"
+# desc_es_corrupted_clergy: " "
+country_event = {
+	id = es_devotion_events.10
+	title = es_devotion_events.10.t
+	desc = es_devotion_events.10.d
+	picture = ES_YOUNG_HEIR_THEOCRACY_eventPicture
+	
+	trigger = {
+		government = theocracy
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+		
+	option = {
+		name = es_devotion_events.10.a
+		add_devotion = 10
+		add_legitimacy = 10
+		add_prestige = -10
+	}
+	
+	option = {
+		name = es_devotion_events.10.b
+		define_heir = {
+			age = 15
+		}
+		add_corruption = 5
+		add_country_modifier = {
+			name = "es_corrupted_clergy"
+			duration = 3650
+		}
+	}
+}
+
+namespace = es_republican_dictatorship
+
+# es_republican_dictatorship.1.t:0 "[Root.Monarch.GetTitle] Takes Control of Administration"
+# es_republican_dictatorship.1.d:0 "In [Root.Monarch.GetName]'s eyes, rapid, unquestioned decision-making is the only way to ensure [Root.GetName] makes the reforms necessary to keep up with the times. [Root.Monarch.GetHerHisCap] impatience with the political processes involved has annoyed some senior officials, who claim that previous rulers took more measured steps towards enforcing their ideas. They fear that this aggressive pursuit of ends without considering the means may have grave consequences for our nation in the long run."
+# es_republican_dictatorship.1.a:0 "[Root.GetName] is not a democracy, and they should get used to it."
+# es_republican_dictatorship.1.b:0 "We should consider their concerns."
+
+country_event = {
+	id = es_republican_dictatorship.1
+	title = es_republican_dictatorship.1.t
+	desc = es_republican_dictatorship.1.d
+	picture = ES_ESTATES_ENVOY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_reform = presidential_despot_reform
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_republican_dictatorship.1.a
+		add_adm_power = 150
+		add_republican_tradition = -15
+	}
+
+	option = {
+		name = es_republican_dictatorship.1.b
+		add_prestige = -10
+	}
+}
+
+# es_republican_dictatorship.2.t:0 "[Root.Monarch.GetTitle] Takes Control of Foreign Affairs"
+# es_republican_dictatorship.2.d:0 "[Root.GetAdjective] policies on international trade and diplomacy have been distinguished by tact and caution, but in the eyes of [Root.Monarch.GetName], not sufficient progress. With absolute rulership, there should not be any need for hesitation. In practice, however, there may be good reason to hesitate. The [Root.Monarch.GetTitle] might see a clear path ahead of us, but it is a path cut out in a world of monarchs and despots. Even with autocratic ruler at the helm today, is this truly the future we want for our nation?"
+# es_republican_dictatorship.2.a:0 "It is, and we shall reach it first!"
+# es_republican_dictatorship.2.b:0 "Let us consider our options."
+ 
+country_event = {
+	id = es_republican_dictatorship.2
+	title = es_republican_dictatorship.2.t
+	desc = es_republican_dictatorship.2.d
+	picture = ES_DIPLOMATIC_MAP_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_reform = presidential_despot_reform
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_republican_dictatorship.2.a
+		add_dip_power = 150
+		add_republican_tradition = -15
+	}
+
+	option = {
+		name = es_republican_dictatorship.2.b
+		add_prestige = -10
+	}
+}
+
+# es_republican_dictatorship.3.t:0 "[Root.Monarch.GetTitle] Takes Control of the Military"
+# es_republican_dictatorship.3.d:0 "If [Root.Monarch.GetName] is to shape the future of our [Root.GetName], [Root.Monarch.GetSheHe] must be able to wield its armies as a weapon against a hostile world. But the military, although respectful of the order of command and an ambitious ruler, also has traditions and structures that cannot be broken down without eroding the idea that the [Root.Monarch.GetTitle] is operating with popular support. Will [Root.Monarch.GetHerHis] legacy be that of just another first in a line of monarchs?"
+# es_republican_dictatorship.3.a:0 "Whatever works."
+# es_republican_dictatorship.3.b:0 "No. We will stop and listen."
+
+country_event = {
+	id = es_republican_dictatorship.3
+	title = es_republican_dictatorship.3.t
+	desc = es_republican_dictatorship.3.d
+	picture = ES_IMPERIAL_GENERAL_2_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_reform = presidential_despot_reform
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_republican_dictatorship.3.a
+		add_mil_power = 150
+		add_republican_tradition = -15
+	}
+
+	option = {
+		name = es_republican_dictatorship.3.b
+		add_prestige = -10
+	}
+}
+
+# es_republican_dictatorship.4.t:0 "Supporter for [Root.Monarch.GetName] in the Military"
+# es_republican_dictatorship.4.d:0 "While many within the military still retain some loyalty to the previous administration, the [Root.Monarch.GetTitle] does enjoy some very ardent supporters. Some army leaders value the absolute power [Root.Monarch.GetName] wields and see the need for a leader with authority in these turbulent times. Promoting even a talented individual for obvious political reasons may not be well received, but we need our generals to be both skilled and loyal. Should we seize this opportunity or nobly keep our distance?"
+# es_republican_dictatorship.4.a:0 "Nothing can be questionable about rewarding expertise."
+# es_republican_dictatorship.4.b:0 "Better leave such matters to experienced military leaders."
+
+country_event = {
+	id = es_republican_dictatorship.4
+	title = es_republican_dictatorship.4.t
+	desc = es_republican_dictatorship.4.d
+	picture = ES_IMPERIAL_GENERAL_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_reform = presidential_despot_reform
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_republican_dictatorship.4.a
+		create_general = { tradition = 100 }
+		add_republican_tradition = -10
+	}
+
+	option = {
+		name = es_republican_dictatorship.4.b
+		add_republican_tradition = 10
+	}
+}
+
+# es_republican_dictatorship.5.t:0 "The People Demand Democracy"
+# es_republican_dictatorship.5.d:0 "'We have abandoned kings! Let us abandon despots!' The people, having seen the old institutions overthrown, are beginning to view [Root.Monarch.GetName] as another absolutist monarch hiding behind the veneer of modern government. They demand real, tangible changes and representation if they are to tolerate [Root.Monarch.GetHerHis] continued reign. Perhaps they will be more inclined to accept a ruler for life if we make concessions... lest they cut that life short."
+# es_republican_dictatorship.5.a:0 "[Root.Monarch.GetName] is a [Root.Monarch.GetWomanMan] of the people!"
+# es_republican_dictatorship.5.b:0 "[Root.GetName] was never meant to be a democracy."
+
+country_event = {
+	id = es_republican_dictatorship.5
+	title = es_republican_dictatorship.5.t
+	desc = es_republican_dictatorship.5.d
+	picture = ES_VERY_ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_reform = presidential_despot_reform
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_republican_dictatorship.5.a
+		add_republican_tradition = 25
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+	}
+
+	option = {
+		name = es_republican_dictatorship.5.b
+		add_republican_tradition = -25
+	}
+}
+
+namespace = es_tribal_events
+
+# es_tribal_events.1.t:0 "Born of the Saddle"
+# es_tribal_events.1.d:0 "Out of war we come, for the war our hearts beat. We the sons of neverending struggle were not made to sit idle. Lives of peasants or traders are for those that are to be ruled, not for those who wish to rule."
+# es_tribal_events.1.a:0 "This is how our ancestors lived, and this is how we will live!"
+
+country_event = {
+	id = es_tribal_events.1
+	title = "es_tribal_events.1.t"
+	desc = "es_tribal_events.1.d"
+	picture = ES_NOMAD_RIDERS_eventPicture	
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		government = tribal
+		is_at_war = yes
+    }
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_tribal_events.1.a"
+		ai_chance = { factor = 10 }
+		add_army_tradition = 5
+		add_war_exhaustion = -2.5
+		add_prestige = 10
+	}
+}
+
+# es_tribal_events.2.t:0 "Migrating Tribes in [migration_province_event_target.GetName]"
+# es_tribal_events.2.d:0 "A huge tribe of herders has settled in one of our provinces. Friendly and willing to acknowledge our rule, these people will bring economic benefits in the long run."
+# es_tribal_events.2.a:0 "They are more than welcome!"
+ 
+country_event = {
+	id = es_tribal_events.2
+	title = "es_tribal_events.2.t"
+	desc = "es_tribal_events.2.d"
+	picture = ES_NOMAD_SETTLEMENT_eventPicture	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		government = tribal
+	}
+	
+	immediate = {
+		random_owned_province = {
+			save_event_target_as = migration_province_event_target
+		}
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_tribal_events.2.a"
+		event_target:migration_province_event_target = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# War Games Event Chain ###############################################
+
+# es_tribal_events.3.t:0 "War Games"
+# es_tribal_events.3.d:0 "A huge event in the daily life of [Root.GetAdjective] citizens is about to take place. Warriors from places both far and near will gather in our capital to participate in a display of skill. Horseback archery, strength contests and agility challenges will take place and may give birth to new champions and legends."
+# es_tribal_events.3.a:0 "Get me a front-row seat!"
+ 
+country_event = {
+	id = es_tribal_events.3
+	title = "es_tribal_events.3.t"
+	desc = "es_tribal_events.3.d"
+	picture = ES_TRIBAl_ARENA_eventPicture	
+	
+	is_triggered_only = yes	
+	
+	trigger = {
+		government = tribal
+		is_at_war = no
+    }
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_tribal_events.3.a"
+		ai_chance = { factor = 100 }
+		random_list = {
+			20 = {
+				country_event = { id = es_tribal_events.4 days = 5 random = 7 }
+			}
+			20 = {
+				country_event = { id = es_tribal_events.5 days = 5 random = 7 }
+			}
+			20 = {
+				country_event = { id = es_tribal_events.6 days = 5 random = 7 }
+			}
+			20 = {
+				country_event = { id = es_tribal_events.7 days = 5 random = 7 }
+			}
+			20 = {
+				country_event = { id = es_tribal_events.8 days = 5 random = 7 }
+			}
+		}		
+	}
+}
+
+# es_tribal_events.4.t:0 "Glorious Khan"
+# es_tribal_events.4.d:0 "Rejoice! Our glorious Khan [Root.Monarch.GetName] has won the close combat contest. How shall we remember the performance?"
+# es_tribal_events.4.a:0 "Divine Blessing!"
+# es_tribal_events.4.b:0 "Holy Warrior!"
+ 
+country_event = {
+	id = es_tribal_events.4
+	title = "es_tribal_events.4.t"
+	desc = "es_tribal_events.4.d"
+	picture = {
+		picture = ES_TRIBE_RULER_MALE_eventPicture	
+		trigger = {
+			NOT = { is_female = yes }
+		}
+	}
+	picture = {
+		picture = ES_TRIBE_RULER_FEMALE_eventPicture	
+		trigger = {
+			is_female = yes
+		}
+	}
+	
+	is_triggered_only = yes	
+
+	option = {
+		name = "es_tribal_events.4.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = 35
+		add_republican_tradition = 35
+		add_horde_unity = 35
+		add_devotion = 35
+		add_meritocracy = 35
+	}
+	option = {
+		name = "es_tribal_events.4.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+	}	
+}
+
+# es_tribal_events.5.t:0 "Successful Games"
+# es_tribal_events.5.d:0 "Our war games have been a full success: both domestic and warriors from afar have displayed their skill and knowledge of warfare. We have many new champions and legends, and all shall remember this event for generations to come."
+# es_tribal_events.5.a:0 "Excellent."
+ 
+country_event = {
+	id = es_tribal_events.5
+	title = "es_tribal_events.5.t"
+	desc = "es_tribal_events.5.d"
+	picture = ES_TRIBAL_ARENA_1_eventPicture	
+	
+	is_triggered_only = yes	
+
+	option = {
+		name = "es_tribal_events.5.a"
+		ai_chance = { factor = 100 }
+		add_stability_or_adm_power = yes		
+	}
+}
+
+# es_tribal_events.6.t:0 "Ruinous Games"
+# es_tribal_events.6.d:0 "Oh horrors! As the war games started, two members of feuding clans started a squabble that got out of control and turned into massive brawl. Before our palace guards could stop them, the arena pit was damaged, and two large pagodas set on fire, ruining the rest of this event!"
+# es_tribal_events.6.a:0 "Punish the culprits!"
+ 
+country_event = {
+	id = es_tribal_events.6
+	title = "es_tribal_events.6.t"
+	desc = "es_tribal_events.6.d"
+	picture = ES_RUINES_ARENA_eventPicture	
+	
+	is_triggered_only = yes	
+
+	option = {
+		name = "es_tribal_events.6.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1	
+	}
+}
+
+# es_tribal_events.7.t:0 "Legendary Games"
+# es_tribal_events.7.d:0 "The whole event went better than we could ever have hoped for! Every single contest turned out to be a contest of bitter rivalry with opponents of matching skill pitted against each other. So impressed were our elders, that after the event even the oldest among them could not remember a more successful games!"
+# es_tribal_events.7.a:0 "Splendid!"
+ 
+country_event = {
+	id = es_tribal_events.7
+	title = "es_tribal_events.7.t"
+	desc = "es_tribal_events.7.d"
+	picture = ES_CROWD_ON_STREET_eventPicture	
+	
+	is_triggered_only = yes	
+
+	option = {
+		name = "es_tribal_events.7.a"
+		ai_chance = { factor = 100 }
+		add_army_tradition = 10
+	}
+}
+
+# es_tribal_events.8.t:0 "Rising Star"
+# es_tribal_events.8.d:0 "One of our tribal leaders has displayed great skill at arms during our recent war games. Many clansmen suggest that he would make a superb general to lead our host. Should we announce the promotion?"
+# es_tribal_events.8.a:0 "A most excellent idea."
+# es_tribal_events.8.b:0 "We cannot risk his influence."
+ 
+country_event = {
+	id = es_tribal_events.8
+	title = "es_tribal_events.8.t"
+	desc = "es_tribal_events.8.d"
+	picture = ES_TRIBAl_HERO_eventPicture	
+	
+	is_triggered_only = yes	
+
+	option = {
+		name = "es_tribal_events.8.a"
+		ai_chance = { factor = 50 }
+		create_general = { tradition = 50 }
+		es_upset_war_estates = yes
+	}
+	option = {
+		name = "es_tribal_events.8.b"
+		ai_chance = { factor = 50 }
+		es_please_war_estates = yes
+	}
+}
+
+#######################################################################
+
+# es_tribal_events.9.t:0 "Clansmen Flock our Hosts"
+# es_tribal_events.9.d:0 "Hearing the rumors that our mighty hosts are being depleted of manpower young warriors emerge from the deepest parts of our realm, flocking into our armies. Some seek the life of nomadic warriors and mercenaries, others merely the loot."
+# es_tribal_events.9.a:0 "May the sons join their fathers."
+ 
+country_event = {
+	id = es_tribal_events.9
+	title = "es_tribal_events.9.t"
+	desc = "es_tribal_events.9.d"
+	picture = ES_TRIBAL_WARRIORS_eventPicture	
+	
+	is_triggered_only = yes	
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_tribal_events.9.a"
+		ai_chance = { factor = 100 }
+		add_yearly_manpower = 2.5
+	}
+}
+
+# es_tribal_events.10.t:0 "Restless Nomads"
+# es_tribal_events.10.d:0 "Enraged with the current state of peace and lack of raiding and looting an entire clan, comprised mostly of highly experienced warriors and huntsmen has left our horde and went on to join one of our neighbors instead."
+# es_tribal_events.10.a:0 "Traitorous scum!"
+ 
+country_event = {
+	id = es_tribal_events.10
+	title = "es_tribal_events.10.t"
+	desc = "es_tribal_events.10.d"
+	picture = ES_RAIDING_eventPicture	
+	
+	is_triggered_only = yes	
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_tribal_events.10.a"
+		ai_chance = { factor = 100 }
+		add_yearly_manpower = -2.5
+	}
+}
+
+# es_tribal_events.11.t:0 "Tribal Feud"
+# es_tribal_events.1.d:1 "During the height of the summer festivities in our capital members of two feuding tribes have decided to have a public showdown and fight it out in front of the entire political and religious leadership of our state! In the chaos of the ensuing violence, someone murdered $HEIR$, our heir!"
+# es_tribal_events.1.a:0 "Punish them all!"
+ 
+country_event = {
+	id = es_tribal_events.11
+	title = "es_tribal_events.11.t"
+	desc = "es_tribal_events.11.d"
+	picture = ES_DEAD_HEIR_eventPicture	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		government = tribal
+		has_heir = yes
+		is_lesser_in_union = no
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_tribal_events.11.a"
+		ai_chance = { factor = 100 }
+		kill_heir = { allow_new_heir = no }
+	}
+}
+
+# es_tribal_events.12.t:0 "Military Tradition Scorned"
+# es_tribal_events.12.d:0 "Our armies are so small and pathetic that our commanders are starting to wonder whether their service has any point at all."
+# es_tribal_events.12.a:0 "Oh ye of little faith."
+ 
+country_event = {
+	id = es_tribal_events.12
+	title = "es_tribal_events.12.t"
+	desc = "es_tribal_events.12.d"
+	picture = ES_NOMADS_eventPicture	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		government = tribal
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_tribal_events.12.a"
+		ai_chance = { factor = 100 }
+		add_army_tradition = -5
+	}
+}
+
+namespace = es_native_events
+
+# es_native_events.1.t:0 "War Rithuals"
+# es_native_events.1.d:0 "Bravery is a valued trait among our warriors, and this is reflected in many of our traditions. One such is a number of rithuals conducted before, after and during the battle, that recording acts of courage, which serve both to mark our greatest soldiers and to inspire new recruits. However, since we put a lot of efforts in reforming our army, they have been questioning this practice, calling for our military to focus on more practical goals and efficiency in killing our enemies."
+# es_native_events.1.a:0 "More than the spirit of courage, we need results!"
+# es_native_events.1.b:0 "We will never look like cowards!"
+country_event = {
+	id = es_native_events.1
+	title = "es_native_events.1.t"
+	desc = "es_native_events.1.d"
+	picture = ES_WAR_DRUM_eventPicture
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		government = native
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = "es_native_events.1.a"
+		add_army_tradition = 5
+	}
+
+	option = {
+		name = "es_native_events.1.b"
+		add_mil_power = 100
+	}
+}
+
+# es_native_events.2.t:0 "Appointing a War Chief"
+# es_native_events.2.d:0 "We are at war, and while [Root.Monarch.GetName] ruled our people wisely in peacetime, we may need a respected warrior to lead us to victory."
+# es_native_events.2.a:0 "Select a war chief among the proven veterans."
+# es_native_events.2.b:0 "[Root.Monarch.GetName] is a capable chief, even in war."
+country_event = {
+	id = es_native_events.2
+	title = "es_native_events.2.t"
+	desc = "es_native_events.2.d"
+	picture = ES_NATIVE_WAR_LEADER_eventPicture
+
+	is_triggered_only = yes	
+
+	trigger = {
+		government = native
+		is_at_war = yes
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_native_events.2.a"
+		define_ruler = {
+		}
+		change_mil = 3
+		set_ruler_flag = appointed_war_chief
+	}
+
+	option = {
+		name = "es_native_events.2.b"
+		add_dip_power = 150
+	}
+}
+
+# es_native_events.3.t:0 "Appointing a Peace Chief"
+# es_native_events.3.d:0 "[Root.Monarch.GetName] was chosen chief for [Root.Monarch.GetHerHis] bravery in combat, to lead our nation during the war. Now that the war is over, we need a chief who sees beyond the battlefield, to the needs of our nation in times of peace.\n\nTradition dictates that the War Chief respects this, to avoid abusing [Root.Monarch.GetHerHis] authority."
+# es_native_events.3.a:0 "[Root.Monarch.GetName] must step back. A Peace Chief will be selected."
+# es_native_events.3.b:0 "Authority will safeguard our nation. There is no such thing as peacetime!"
+
+country_event = {
+	id = es_native_events.3
+	title = "es_native_events.3.t"
+	desc = "es_native_events.3.d"
+	picture = ES_NATIVE_PEACE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		government = native
+		NOT = { is_at_war = yes }
+		has_ruler_flag = appointed_war_chief
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_native_events.3.a"
+		define_ruler = {
+		}
+		change_adm = 1
+		change_dip = 1
+	}
+
+	option = {
+		name = "es_native_events.3.b"
+		add_stability = -1
+	}
+}
+
+# es_native_events.4.t:0 "Preparing for the Sun Dance"
+# es_native_events.4.d:0 "Our people are beginning preparations for the Sun Dance, a sacred ceremony held during the warmer months of the year. Although this is an important event, it puts a lot of strain on the practitioners, many of whom are young warriors. We also need to put aside resources for the ceremony. This year, there has been some discussion about whether or not to devote ourselves completely to the Sun Dance, or to celebrate it on a smaller scale."
+# es_native_events.4.a:0 "The Sun Dance requires our full attention!"
+# es_native_events.4.a.tt:0 "The Sun Dance will be performed this year when the preparations are finished."
+# es_native_events.4.b:0 "Keep it a minor event this year."
+
+country_event = {
+	id = es_native_events.4
+	title = "es_native_events.4.t"
+	desc = "es_native_events.4.d"
+	picture = ES_FIRE_DANCE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		government = native
+		is_at_war = no
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = "es_native_events.4.a"
+		country_event = { id = es_native_events.5 days = 60 tooltip = es_native_events.4.a.tt }
+		add_yearly_manpower = -1.0
+		add_years_of_income = -0.5
+		add_prestige = 5
+	}
+
+	option = {
+		name = "es_native_events.4.b"
+		add_prestige = -10
+	}
+}
+
+# es_native_events.5.t:0 "The Sun Dance"
+# es_native_events.5.d:0 "Having spent months in preparation for the Sun Dance, we can now go through with it in full scale. Our people gather together to fast, pray and dance, which not only preserves this sacred tradition, but also aids in bringing our often scattered tribes closer to each other."
+# es_native_events.5.a:0 "All people of the [Root.GetName] are our people."
+
+country_event = {
+	id = es_native_events.5
+	title = "es_native_events.5.t"
+	desc = "es_native_events.5.d"
+	picture = ES_SUN_DANCE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "es_native_events.5.a"
+		add_stability_or_adm_power = yes
+	}
+}
+
+namespace = es_republics
+
+# es_republics.1.t:0 "Republican Traditions Debated"
+# es_republics.1.d:0 "Our young and fragile republic is experiencing severe debates, some even turning violent, between supporters of the old regime, and the sturdy defenders of liberty and freedom. How shall we react to this?"
+# es_republics.1.a:0 "We need a King!"
+# es_republics.1.b:0 "The Republic is sacred!"
+
+country_event = {
+	id = es_republics.1
+	title = es_republics.1.t
+	desc = es_republics.1.d
+	picture = ES_REPUBLIC_DEBATES_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+		NOT = { republican_tradition = 50 }
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.1.a
+		add_republican_tradition = -25
+		add_prestige = 15
+	}
+	option = {
+		name = es_republics.1.b
+		add_republican_tradition = 20
+		add_stability = -1
+	}
+}
+
+# es_republics.2.t:0 "Rise of a Despot"
+# es_republics.2.d:0 "The lack of respect for the republic has slowly eroded its foundations. To preserve the stability of the state, $MONARCHTITLE$ $MONARCH$ has proclaimed $RULER_O_PRONOUN$self dictator for life."
+# es_republics.2.a:0 "Long live $MONARCH$!"
+
+country_event = {
+	id = es_republics.2
+	title = es_republics.2.t
+	desc = es_republics.2.d
+	picture = {
+		picture = ES_REPUBLIC_DESPOT_MALE_eventPicture	
+		trigger = {
+			NOT = { is_female = yes }
+		}
+	}
+	picture = {
+		picture = ES_REPUBLIC_DESPOT_FEMALE_eventPicture	
+		trigger = {
+			is_female = yes
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+		NOT = { republican_tradition = 50 }
+		NOT = {
+			OR = {
+				is_revolutionary_republic_trigger = yes
+				has_reform = pirate_republic_reform
+				has_reform = pirate_king_reform
+				has_reform = war_against_the_world_doctrine_reform
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.2.a
+		if = {
+			limit = { NOT = { is_tribal = yes } }
+			add_government_reform = presidential_despot_reform
+		}
+		else = {
+			add_stability = -1
+		}
+	}
+}
+
+# es_republics.3.t:0 "Foreign Plots?"
+# es_republics.3.d:0 "Wild rumors are circulating about our nobility plotting with foreign powers. Hysteria grows and the mood is fearful. The people demand that we strike at the traitors, but wiser minds say that we must let the tradition of republican justice take its course."
+# es_republics.3.a:0 "Seize them and their wealth!"
+# es_republics.3.b:0 "Justice is above all."
+
+country_event = {
+	id = es_republics.3
+	title = es_republics.3.t
+	desc = es_republics.3.d
+	picture = ES_FOREIGN_NOBLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.3.a
+		add_years_of_income = 1.5
+		add_republican_tradition = -10
+	}
+
+	option = {
+		name = es_republics.3.b
+		add_stability = -1
+	}
+}
+
+# es_republics.4.t:0 "Expand the Bodyguard"
+# es_republics.4.d:0 "The office of $MONARCHTITLE$ is challenged by enemies within and without, and thus a strong personal bodyguard is essential to ensure that [Root.Monarch.GetSheHe] remains in power. The turbulent politics of our time require this, but there are those who decry it, claiming that this new trend displays aristocratic tendencies and subverts the traditions of the Republic."
+# es_republics.4.a:0 "Do it!"
+# es_republics.4.b:0 "It would violate our Republican Ideals!"
+
+country_event = {
+	id = es_republics.4
+	title = es_republics.4.t
+	desc = es_republics.4.d
+	picture = ES_ROYAL_GUARD_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.4.a
+		add_stability_or_adm_power = yes
+		add_republican_tradition = -10
+	}
+
+	option = {
+		name = es_republics.4.b
+		add_republican_tradition = 5
+	}
+}
+
+# es_republics.5.t:0 "Noble Plot"
+# es_republics.5.d:0 "With the republic looking fragile rumors have reached us that nobles are plotting to bring in hereditary succession to our great Republic."
+# es_republics.5.a:0 "This is concerning."
+
+country_event = {
+	id = es_republics.5
+	title = es_republics.5.t
+	desc = es_republics.5.d
+	picture = ES_NOBLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.5.a
+		add_stability = -1
+	}
+}
+ 
+# es_republics.6.t:0 "Ceremony Disrupted"
+# es_republics.6.d:0 "One of the core parts of a republic are the great ceremonies of state. This is a time where disagreements and disputes between the patricians are put on hold so we can display our unity of purpose and show the world our strength. At a recent ceremony disgruntled elements turned their backs on our traditions to air their disagreements with the ruling Council."
+# es_republics.6.a:0 "Far from ideal!"
+
+country_event = {
+	id = es_republics.6
+	title = es_republics.6.t
+	desc = es_republics.6.d
+	picture = ES_GOVERNMENTL_CEREMONY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.6.a
+		add_prestige = -10
+	}
+}
+
+# es_republics.7.t:0 "Trade Expansion"
+# es_republics.7.d:0 "Discussions regarding ways to expand our trade have been ongoing in the Council for some time now. We already have exclusive control over a local trade node but there are many who are enticed by the possibilities of overseas trading. Others are convinced that the risks are too great and that more money could be made at home."
+# es_republics.7.a:0 "Local trade is where our focus should be."
+# es_republics.7.b:0 "Perhaps it's time to broaden our horizons?"
+
+country_event = {
+	id = es_republics.7
+	title = es_republics.7.t
+	desc = es_republics.7.d
+	picture = ES_LOCAL_MARKET_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_republics.7.a
+		add_country_modifier = {
+			name = "local_trade_focus"
+			duration = 3650
+		}		
+	}
+	option = {
+		name = es_republics.7.b
+		add_country_modifier = {
+			name = "global_trade_focus"
+			duration = 3650
+		}		
+	}
+}
+
+# es_republics.8.t:0 "Offense or Defense"
+# es_republics.8.d:0 "The ongoing war has led to some serious conflicts in the Council. On the one side there are those arguing that there is nothing to be gained by allowing the war to drag on while others are convinced that there's no turning back. Unfortunately their inability to come to some sort of agreement does nothing to improve our current situation but rather the contrary."
+# es_republics.8.a:0 "Offense is probably the only option."
+# es_republics.8.b:0 "Defense sounds better at this stage."
+
+country_event = {
+	id = es_republics.8
+	title = es_republics.8.t
+	desc = es_republics.8.d
+	picture = ES_KNIGHTS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+		is_at_war = yes
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.8.a
+		add_war_exhaustion = 1.5
+		add_country_modifier = {
+			name = offensive_modifier
+			duration = 3650
+		}
+	}
+	option = {
+		name = es_republics.8.b
+		add_republican_tradition = -5.0
+		add_country_modifier = {
+			name = defensive_modifier
+			duration = 3650
+		}
+	}
+}
+
+# es_republics.9.t:0 "Military Spending"
+# es_republics.9.d:0 "Some members of the Council are complaining that we're spending too much money on our military. Many of them are convinced that our production and trade will suffer if we don't cut back on military expenses."
+# es_republics.9.a:0 "Well, trade and production aren't as important."
+# es_republics.9.b:0 "Cut back on military expenses!"
+country_event = {
+	id = es_republics.9
+	title = es_republics.9.t
+	desc = es_republics.9.d
+	picture = ES_CAVALRY_KNIGHTS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.9.a
+		add_country_modifier = {
+			name = "trade_and_production_cutbacks"
+			duration = 3650
+		}
+	}
+	option = {
+		name = es_republics.9.b
+		add_country_modifier = {
+			name = "military_cutbacks"
+			duration = 3650
+		}
+	}
+}
+
+# es_republics.10.t:0 "A Strong Army or Navy?"
+# es_republics.10.d:0 "Our Council is divided in regards to our military focus, some of them are advocating for a grand navy while others are more interested in a large army. Although some sort of middle way would be possible, most of them would prefer that we increased the size of our navy."
+# es_republics.10.a:0 "A large navy is the only option!"
+# es_republics.10.b:0 "A large army would be more beneficial."
+country_event = {
+	id = es_republics.10
+	title = es_republics.10.t
+	desc = es_republics.10.d
+	picture = TRADE_SHIP_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+		num_of_total_ports = 1
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.10.a
+		add_country_modifier = {
+			name = naval_modifier
+			duration = 3650
+		}
+	}
+	option = {
+		name = es_republics.10.b
+		add_country_modifier = {
+			name = land_modifier
+			duration = 3650
+		}
+	}
+}
+
+# es_republics.11.t:0 "Areas of Research"
+# es_republics.11.d:0 "Every member of our Council is requesting more money to be invested in a different area. Our army needs funding but so does our trade and production and let's not forget about our navy."
+# es_republics.11.a:0 "An even spread should do the trick."
+# es_republics.11.b:0 "There's no need for any extra investments!"
+country_event = {
+	id = es_republics.11
+	title = es_republics.11.t
+	desc = es_republics.11.d
+	picture = ES_RESEARCH_CABINET_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_republics.11.a
+		add_country_modifier = {
+			name = "even_spread_of_investments"
+			duration = 3650
+		}
+		add_republican_tradition = 5
+	}
+	option = {
+		name = es_republics.11.b
+		add_years_of_income = 0.75
+	}
+}
+
+# es_republics.12.t:0 "Possible Traitors"
+# es_republics.12.d:0 "There are some rumors floating around that certain members of our Council are actually spies sent by a rivaling nation to infiltrate our government. Apparently you can't trust anyone."
+# es_republics.12.a:0 "Confront them."
+# es_republics.12.b:0 "Send a few spies of your own."
+country_event = {
+	id = es_republics.12
+	title = es_republics.12.t
+	desc = es_republics.12.d
+	picture = ES_NOBLE_SPY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = republic
+		any_known_country = {
+			is_rival = ROOT
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+
+	option = {
+		name = es_republics.12.a
+		random_country = {
+			limit = {
+				is_rival = ROOT
+			}
+			add_opinion = { who = ROOT modifier = opinion_confront_spies }
+		}		
+	}
+	option = {
+		name = es_republics.12.d
+		add_country_modifier = {
+			name = counter_espionage
+			duration = 3650
+		}
+		add_prestige = -10
+	}
+}
+
+namespace = es_meritocracy
+
+# es_meritocracy.1.t:0 "New Senior Secretary"
+# es_meritocracy.1.d:0 "Managing an empire as big as [Root.Country.GetName] has never been an easy task. Therefore, although all power is clearly in the hands of the $MONARCHTITLE$ $MONARCH$, there is also a big role for the Senior Secretaries in the life of our country, who are responsible for finance, domestic and foreign policy, military affairs as well as trade and relations with members of the clergy. Unfortunately one of the Senior Secretaries has recently passed away due to his advanced age. However, he was able to train a successor to succeed him and taught him everything he knew. Only time will tell how he will perform in that position."
+# es_meritocracy.1.a:0 "His corruption will spread to all parts of the administration."
+# es_meritocracy.1.b:0 "His incompetence will filter down to all officials."
+# es_meritocracy.1.c:0 "His incessant plotting will hurt the country."
+# es_meritocracy.1.dd:0 "His many enemies will hamper our government."
+# es_meritocracy.1.e:0 "His efficiency will filter down to all levels."
+# es_meritocracy.1.f:0 "His ethics will spread to all parts of the administration."
+# es_meritocracy.1.g:0 "His learned scholarship is an example to us all."
+# es_meritocracy.1.h:0 "His loyalty will be an inspiration to others."
+
+country_event = {
+	id = es_meritocracy.1
+	title = "es_meritocracy.1.t"
+	desc = "es_meritocracy.1.d"
+	picture = ES_PO_TUN_ADVISOR_eventPicture
+	
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		is_emperor_of_china = yes
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_governmental_event
+			random_list = {
+				12 = { 
+					set_country_flag = corrupt_grand_secretary 
+				}
+				12 = {
+					set_country_flag = incompetent_grand_secretary
+				}
+				12 = {
+					set_country_flag = plotting_grand_secretary
+				}
+				12 = {
+					set_country_flag = impopular_grand_secretary
+				}
+				12 = {
+					set_country_flag = efficient_grand_secretary
+				}
+				12 = {
+					set_country_flag = incorruptible_grand_secretary
+				}
+				12 = {
+					set_country_flag = scholarly_grand_secretary
+				}
+				12 = {
+					set_country_flag = loyal_grand_secretary
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "es_meritocracy.1.a"
+		trigger = { has_country_flag = corrupt_grand_secretary }
+		clr_country_flag = corrupt_grand_secretary
+		add_corruption = 2.5
+	}
+	option = {
+		name = "es_meritocracy.1.b"
+		trigger = { has_country_flag = incompetent_grand_secretary }
+		clr_country_flag = incompetent_grand_secretary
+		add_meritocracy = -15
+	}
+	option = {
+		name = "es_meritocracy.1.c"
+		trigger = { has_country_flag = plotting_grand_secretary }
+		clr_country_flag = plotting_grand_secretary
+		add_dip_power = -250
+	}
+	option = {
+		name = "es_meritocracy.1.dd"
+		trigger = { has_country_flag = impopular_grand_secretary }
+		clr_country_flag = impopular_grand_secretary
+		add_mandate = -15
+	}
+	option = {
+		name = "es_meritocracy.1.e"
+		trigger = { has_country_flag = efficient_grand_secretary }
+		clr_country_flag = efficient_grand_secretary
+		add_meritocracy = 15
+	}
+	option = {
+		name = "es_meritocracy.1.f"
+		trigger = { has_country_flag = incorruptible_grand_secretary }
+		clr_country_flag = incorruptible_grand_secretary
+		add_corruption = -2.5
+	}
+	option = {
+		name = "es_meritocracy.1.g"
+		trigger = { has_country_flag = scholarly_grand_secretary }
+		clr_country_flag = scholarly_grand_secretary
+		add_adm_power = 150
+		add_mil_power = 150
+		add_dip_power = 150
+	}
+	option = {
+		name = "es_meritocracy.1.h"
+		trigger = { has_country_flag = loyal_grand_secretary }
+		clr_country_flag = loyal_grand_secretary
+		add_mandate = 15
+	}
+}
+
+namespace = es_natives
+
+# es_natives.1.t:0 "One for All, All for One"
+# es_natives.1.d:0 "Everyone knows that wolves are the best hunters because they are a pack, not solitary creatures that wander alone. We should learn from Nature and its wisdom. As long as [Root.Monarch.GetName] is in power at the head of [Root.Monarch.GetHerHis] Tribe, people will always remember that [Root.Monarch.GetSheHe] managed to unite us all."
+# es_natives.1.a:0 "Together we are stronger."
+# leadership_pays_off_mod:0 "Leadership Pays Off"
+# desc_leadership_pays_off_mod:0 " "
+
+country_event = {
+	id = es_natives.1
+	title = es_natives.1.t
+	desc = es_natives.1.d
+	picture = {
+		picture = ES_TRIBE_RULER_MALE_eventPicture	
+		trigger = {
+			NOT = { is_female = yes }
+		}
+	}
+	picture = {
+		picture = ES_TRIBE_RULER_FEMALE_eventPicture	
+		trigger = {
+			is_female = yes
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = native
+		NOT = { has_ruler_modifier = leadership_pays_off_mod }
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_natives.1.a	
+		add_ruler_modifier = { 
+			name = leadership_pays_off_mod
+			duration = -1  
+		}
+	}
+}
+
+# es_natives.2.t:0 "Stronger Together"
+# es_natives.2.d:0 "Our Tribe has been around for some years already and we have walked a long way together. Despite all the issues that have naturally arisen, we have managed to come out stronger and more united than ever. With all these struggles, we have become a whole new group mentality, and it is time to reap the benefits of it."
+# es_natives.2.a:0 "We should all benefit."
+# es_natives.2.b:0 "Leader Gets the Best Part."
+# es_grow_in_harmony_mod:0 "Growing In Harmony"
+# desc_es_grow_in_harmony_mod:0 " "
+# es_primus_inter_pares_mod:0 "Gathering the Cream of the Crop"
+# desc_es_primus_inter_pares_mod:0 " "
+
+country_event = {
+	id = es_natives.2
+	title = es_natives.2.t
+	desc = es_natives.2.d
+	picture = ES_NATIVE_VILLAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = native
+		OR = {
+			NOT = { has_country_modifier = grow_in_harmony_mod }
+			NOT = { has_ruler_modifier = primus_inter_pares_mod }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_natives.2.a	
+		add_country_modifier = { 
+			name = es_grow_in_harmony_mod
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = es_natives.2.b	
+		add_ruler_modifier = { 
+			name = es_primus_inter_pares_mod
+			duration = -1  
+		}
+	}
+}
+
+# es_natives.3.t:0 "Problems for the Tribe"
+# es_natives.3.d:0 "The leader of our Tribe has been exhibiting an odd behavior lately and some concerning gossip have spread across the people. While nobody has raised their voices, the elders of the various families and have gathered together to discuss the issue."
+# es_natives.3.a:0 "This is a problem."
+# es_lost_respect_mod:0 "Lost Respect"
+# desc_es_lost_respect_mod:0 " "
+
+country_event = {
+	id = es_natives.3
+	title = es_natives.3.t
+	desc = es_natives.3.d
+	picture = ES_BONFIRE_MEETING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = native
+		NOT = { has_ruler_modifier = lost_respect_mod }
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_natives.3.a	
+		add_ruler_modifier = { 
+			name = es_lost_respect_mod
+			duration = -1  
+		}
+	}
+}
+
+# es_natives.4.t:0 "Uniting Against The World"
+# es_natives.4.d:0 "Powerful nations are our new neighbors and the need to unite rises as the hawk in the sky. [Root.Monarch.GetName] is worried about these people, with their technological advances that will no doubt become a big edge on their side should a conflict break loose between our people and theirs. It is time to make a hard choice."
+# es_natives.4.a:0 "We Will Live or Die Together."
+# es_stand_the_ground_mod:0 "Stand the Ground"
+# desc_es_stand_the_ground_mod:0 " "
+
+country_event = {
+	id = es_natives.4
+	title = es_natives.4.t
+	desc = es_natives.4.d
+	picture = ES_NATIVES_INVADERS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = native
+		any_known_country = {
+			is_neighbor_of = ROOT
+			tech_difference = 5
+			NOT = { 
+				has_opinion = { 
+					who = ROOT 
+					value = 75 
+				} 
+			}
+		}
+		NOT = { has_country_modifier = stand_the_ground_mod }
+	}
+	
+	immediate = {
+		hidden_effect = { set_country_flag = successful_governmental_event }
+	}
+	
+	option = {
+		name = es_natives.4.a	
+		add_country_modifier = { 
+			name = es_stand_the_ground_mod
+			duration = -1  
+		}
+	}
+}

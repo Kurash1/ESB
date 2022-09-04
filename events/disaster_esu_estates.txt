@@ -1,0 +1,380 @@
+namespace = es_estate_disasters
+
+#es_estate_nobility
+country_event = {
+	id = es_estate_disasters.1
+	title = es_estate_disasters.1.t
+	desc = es_estate_disasters.1.d
+	picture = ES_NOBLE_COUNCIL_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.1.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+	}
+	option = {
+		name = "es_estate_disasters.1.b"
+		ai_chance = { factor = 40 }
+		add_prestige = -25
+		capital_scope = { spawn_rebels = { type = noble_rebels size = 5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = noble_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = noble_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = noble_rebels size = 2.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = noble_rebels size = 2.5 unrest = 10 } }
+	}
+	option = {
+		name = "es_estate_disasters.1.c"
+		ai_chance = { factor = 10 }
+		add_stability = -1
+		change_government = republic
+		add_government_reform = noble_elite_reform
+		kill_ruler = yes
+		kill_heir = {}
+		remove_consort = yes
+	}
+}
+
+#es_estate_priests_disaster
+country_event = {
+	id = es_estate_disasters.2
+	title = es_estate_disasters.2.t
+	desc = es_estate_disasters.2.d
+	picture = ES_CLERGY_COUNCIL_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.2.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+	}
+	option = {
+		name = "es_estate_disasters.2.b"
+		ai_chance = { factor = 40 }
+		add_prestige = -25
+		capital_scope = { spawn_rebels = { type = heretic_rebels size = 5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = heretic_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = heretic_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = heretic_rebels size = 2.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = heretic_rebels size = 2.5 unrest = 10 } }
+	}
+	option = {
+		name = "es_estate_disasters.2.c"
+		ai_chance = { factor = 10 }
+		add_stability = -1
+		change_government = theocracy
+		add_government_reform = leading_clergy_reform
+		kill_ruler = yes
+		kill_heir = {}
+		remove_consort = yes
+	}
+}
+
+#es_estate_mages_disaster
+country_event = {
+	id = es_estate_disasters.3
+	title = es_estate_disasters.3.t
+	desc = es_estate_disasters.3.d
+	picture = ES_MAGES_COUNCIL_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.3.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+	}
+	option = {
+		name = "es_estate_disasters.3.b"
+		ai_chance = { factor = 40 }
+		add_prestige = -25
+		capital_scope = { spawn_rebels = { type = students_of_magnus_rebels size = 5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = students_of_magnus_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = students_of_magnus_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = students_of_magnus_rebels size = 2.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = students_of_magnus_rebels size = 2.5 unrest = 10 } }
+	}
+	option = {
+		name = "es_estate_disasters.3.c"
+		ai_chance = { factor = 10 }
+		add_stability = -1
+		change_government = theocracy
+		add_government_reform = guru_advisors_reform
+		kill_ruler = yes
+		kill_heir = {}
+		remove_consort = yes
+	}
+}
+
+#es_estate_merchants_disaster
+country_event = {
+	id = es_estate_disasters.4
+	title = es_estate_disasters.4.t
+	desc = es_estate_disasters.4.d
+	picture = ES_ESTATE_MERCHANT_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.4.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+	}
+	option = {
+		name = "es_estate_disasters.4.b"
+		ai_chance = { factor = 40 }
+		add_prestige = -25
+		capital_scope = { spawn_rebels = { type = particularist_rebels size = 5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 2.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 2.5 unrest = 10 } }
+	}
+	option = {
+		name = "es_estate_disasters.3.c"
+		ai_chance = { factor = 10 }
+		add_stability = -1
+		change_government = republic
+		add_government_reform = merchants_reform
+		kill_ruler = yes
+		kill_heir = {}
+		remove_consort = yes
+	}
+}
+
+#es_estate_slavers_disaster
+country_event = {
+	id = es_estate_disasters.5
+	title = es_estate_disasters.5.t
+	desc = es_estate_disasters.5.d
+	picture = ES_ESTATE_SLAVE_OWNER_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.5.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+	}
+	option = {
+		name = "es_estate_disasters.5.b"
+		ai_chance = { factor = 40 }
+		add_prestige = -25
+		capital_scope = { spawn_rebels = { type = nationalist_rebels size = 5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 2.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 2.5 unrest = 10 } }
+	}
+	option = {
+		name = "es_estate_disasters.5.c"
+		ai_chance = { factor = 10 }
+		add_stability = -1
+		change_government = republic
+		add_government_reform = oligarchy_reform
+		kill_ruler = yes
+		kill_heir = {}
+		remove_consort = yes
+	}
+}
+
+#es_estate_warriors_disaster
+country_event = {
+	id = es_estate_disasters.6
+	title = es_estate_disasters.6.t
+	desc = es_estate_disasters.6.d
+	picture = ES_ESTATE_WARRIORS_COUP
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.6.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+	}
+	option = {
+		name = "es_estate_disasters.6.b"
+		ai_chance = { factor = 40 }
+		add_prestige = -25
+		capital_scope = { spawn_rebels = { type = pretender_rebels size = 5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 2.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 2.5 unrest = 10 } }
+	}
+	option = {
+		name = "es_estate_disasters.6.c"
+		ai_chance = { factor = 10 }
+		add_stability = -1
+		change_government = monarchy
+		add_government_reform = feudalism_reform
+		kill_ruler = yes
+		kill_heir = {}
+		remove_consort = yes
+	}
+}
+
+#es_estate_commoners_disaster
+country_event = {
+	id = es_estate_disasters.7
+	title = es_estate_disasters.7.t
+	desc = es_estate_disasters.7.d
+	picture = ES_COMMONERS_ESTATE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.7.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+	}
+	option = {
+		name = "es_estate_disasters.7.b"
+		ai_chance = { factor = 40 }
+		add_prestige = -25
+		capital_scope = { spawn_rebels = { type = anti_tax_rebels size = 5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = anti_tax_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = anti_tax_rebels size = 3.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = anti_tax_rebels size = 2.5 unrest = 10 } }
+		random_owned_province = { spawn_rebels = { type = anti_tax_rebels size = 2.5 unrest = 10 } }
+	}
+	option = {
+		name = "es_estate_disasters.7.c"
+		ai_chance = { factor = 10 }
+		add_stability = -1
+		change_government = republic
+		add_government_reform = peasants_republic
+		kill_ruler = yes
+		kill_heir = {}
+		remove_consort = yes
+	}
+}
+
+#es_estate_morag_tong_disaster
+country_event = {
+	id = es_estate_disasters.8
+	title = es_estate_disasters.8.t
+	desc = es_estate_disasters.8.d
+	picture = ES_MORAG_TONG_ESTATE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.8.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+		add_stability = -1
+		add_prestige = -25
+	}
+}
+
+#es_estate_dark_brotherhood_disaster
+country_event = {
+	id = es_estate_disasters.9
+	title = es_estate_disasters.9.t
+	desc = es_estate_disasters.9.d
+	picture = ES_DARK_BROTHERHOOD_ESTATE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.9.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+		add_stability = -1
+		add_prestige = -25
+	}
+}
+
+#es_estate_assassins_disaster
+country_event = {
+	id = es_estate_disasters.10
+	title = es_estate_disasters.10.t
+	desc = es_estate_disasters.10.d
+	picture = ES_ASSASSINS_ESTATE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.10.a"
+		ai_chance = { factor = 50 }
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_horde_unity = -50
+		add_devotion = -50
+		add_meritocracy = -50
+		add_stability = -1
+		add_prestige = -25
+	}
+}
+
+# Generic End of Estate Disaster
+country_event = {
+	id = es_estate_disasters.11
+	title = es_estate_disasters.11.t
+	desc = es_estate_disasters.11.d
+	picture = ES_THRONE_CROWN_ESTATE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.11.a"
+		ai_chance = { factor = 100 }
+		add_stability = 1
+	}
+}
+
+# Assasins End of Estate Disaster
+country_event = {
+	id = es_estate_disasters.12
+	title = es_estate_disasters.12.t
+	desc = es_estate_disasters.12.d
+	picture = ES_ESTATES_ASSASINS_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_estate_disasters.12.a"
+		ai_chance = { factor = 100 }
+		kill_ruler = yes
+	}
+}
+
