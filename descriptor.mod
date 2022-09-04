@@ -3,9 +3,6 @@ picture="thumbnail.png"
 tags={
 	"Balance"
 }
-name="ESU Balance Changes"
-dependencies={
-	"Elder Scrolls Universalis"
-}
+name="ESB"
 supported_version="1.33.3"
 remote_file_id="2836520933"
