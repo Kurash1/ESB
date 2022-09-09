@@ -252,31 +252,37 @@ esb_slavers = {
 		has_estate = estate_slavers
 	}
 	bonus = {
-		
+		land_maintenance_modifier = -0.1
 	}
 	
 	esb_slavers1 = {
-
+		slavers_loyalty_modifier = 0.2
+		slavers_influence_modifier = 0.1
 	}
 	esb_slavers2 = {
-		
+		global_unrest = 2
+		global_trade_goods_size_modifier = 0.1
 	}
 	esb_slavers3 = {
-		
+		production_efficiency = 0.1
 	}
 
 	esb_slavers4 = {
-		
+		global_manpower_modifier = 0.2
+		land_morale = -0.05
 	}
 
 	esb_slavers5 = {
-		
+		build_cost = -0.15
+		build_time = -0.1
 	}
 	esb_slavers6 = {
-		
+		reinforce_cost_modifier = -0.15
+		reinforce_speed = 0.25
 	}
 	esb_slavers7 = {
-		
+		land_forcelimit_modifier = 0.15
+		land_morale = -0.05
 	}
 	
 	ai_will_do = {
@@ -298,7 +304,8 @@ esb_treasury = {
 		interest = -1
 	}
 	esb_treasury2 = {
-		inflation_reduction = 0.05
+		inflation_reduction = -0.03
+		global_tax_modifier = 0.25
 	}
 	esb_treasury3 = {
 		advisor_cost = 0.15
