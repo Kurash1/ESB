@@ -1270,3 +1270,88 @@ has_unlocked_estate_privilege = {
 has_unlocked_merc_company = {
 	has_country_flag = unlocked_$merc_company$
 }
+
+is_same_superregion_country = {
+	OR = {
+		AND = {
+			$first$ = { capital_scope = { superregion = pyandonea_superregion } }
+			$second$ = { capital_scope = { superregion = pyandonea_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = summerset_islands_superregion } }
+			$second$ = { capital_scope = { superregion = summerset_islands_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = valenwood_superregion } }
+			$second$ = { capital_scope = { superregion = valenwood_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = elsweyr_superregion } }
+			$second$ = { capital_scope = { superregion = elsweyr_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = morrowind_superregion } }
+			$second$ = { capital_scope = { superregion = morrowind_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = black_marsh_superregion } }
+			$second$ = { capital_scope = { superregion = black_marsh_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = cyrodiil_superregion } }
+			$second$ = { capital_scope = { superregion = cyrodiil_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = hammerfell_superregion } }
+			$second$ = { capital_scope = { superregion = hammerfell_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = high_rock_superregion } }
+			$second$ = { capital_scope = { superregion = high_rock_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = skyrim_superregion } }
+			$second$ = { capital_scope = { superregion = skyrim_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = yokuda_superregion } }
+			$second$ = { capital_scope = { superregion = yokuda_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = atmora_superregion } }
+			$second$ = { capital_scope = { superregion = atmora_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = kamal_superregion } }
+			$second$ = { capital_scope = { superregion = kamal_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = thousand_superregion } }
+			$second$ = { capital_scope = { superregion = thousand_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = po_tun_superregion } }
+			$second$ = { capital_scope = { superregion = po_tun_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = tsakara_superregion } }
+			$second$ = { capital_scope = { superregion = tsakara_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = upper_akavir_superregion } }
+			$second$ = { capital_scope = { superregion = upper_akavir_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = northern_islands_superregion } }
+			$second$ = { capital_scope = { superregion = northern_islands_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = deadlands_superregion } }
+			$second$ = { capital_scope = { superregion = deadlands_superregion } }
+		}
+		AND = {
+			$first$ = { capital_scope = { superregion = coldharbour_superregion } }
+			$second$ = { capital_scope = { superregion = coldharbour_superregion } }
+		}
+	}
+}

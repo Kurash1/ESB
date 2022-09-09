@@ -121,7 +121,92 @@ declarewar = {
 					ROOT = { NOT = { capital_scope = { continent = Oblivion } } }
 					has_global_flag = oblivion_crisis_flag
 				}
-				
+			}
+			OR = {
+				ai = no
+				is_year = 150
+				OR = {
+					AND = {
+						ROOT = { capital_scope = { superregion = pyandonea_superregion } }
+						FROM = { capital_scope = { superregion = pyandonea_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = summerset_islands_superregion } }
+						FROM = { capital_scope = { superregion = summerset_islands_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = valenwood_superregion } }
+						FROM = { capital_scope = { superregion = valenwood_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = elsweyr_superregion } }
+						FROM = { capital_scope = { superregion = elsweyr_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = morrowind_superregion } }
+						FROM = { capital_scope = { superregion = morrowind_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = black_marsh_superregion } }
+						FROM = { capital_scope = { superregion = black_marsh_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = cyrodiil_superregion } }
+						FROM = { capital_scope = { superregion = cyrodiil_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = hammerfell_superregion } }
+						FROM = { capital_scope = { superregion = hammerfell_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = high_rock_superregion } }
+						FROM = { capital_scope = { superregion = high_rock_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = skyrim_superregion } }
+						FROM = { capital_scope = { superregion = skyrim_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = yokuda_superregion } }
+						FROM = { capital_scope = { superregion = yokuda_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = atmora_superregion } }
+						FROM = { capital_scope = { superregion = atmora_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = kamal_superregion } }
+						FROM = { capital_scope = { superregion = kamal_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = thousand_superregion } }
+						FROM = { capital_scope = { superregion = thousand_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = po_tun_superregion } }
+						FROM = { capital_scope = { superregion = po_tun_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = tsakara_superregion } }
+						FROM = { capital_scope = { superregion = tsakara_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = upper_akavir_superregion } }
+						FROM = { capital_scope = { superregion = upper_akavir_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = northern_islands_superregion } }
+						FROM = { capital_scope = { superregion = northern_islands_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = deadlands_superregion } }
+						FROM = { capital_scope = { superregion = deadlands_superregion } }
+					}
+					AND = {
+						ROOT = { capital_scope = { superregion = coldharbour_superregion } }
+						FROM = { capital_scope = { superregion = coldharbour_superregion } }
+					}
+				}
 			}
 		}
     }

@@ -498,8 +498,14 @@ on_war_won = {
 	if = {
 		limit = { 
 			owns = 1206
-			NOT = { culture_group = high_elves_cg } 
-			NOT = { has_global_flag = fall_of_white_tower_flag }
+			NOT = { 
+				culture_group = high_elves_cg
+				has_global_flag = fall_of_white_tower_flag 
+				OR = {
+					tag = CB8
+					tag = AYL
+				}
+			}
 		}
 		set_global_flag = fall_of_white_tower_flag
 		every_country = {

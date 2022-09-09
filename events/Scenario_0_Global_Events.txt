@@ -1,23 +1,23 @@
 namespace = es_0_scenario
 
-country_event = {
-	id = es_0_scenario.1
-	title = es_0_scenario.1.t
-	desc = es_0_scenario.1.d
-	picture = ES_01_eventPicture
-	
-	is_triggered_only = yes
-
-	option = {
-		name = "es_0_scenario.1.a"
-		ai_chance = { factor = 100 }
-		add_prestige = 5
-		add_country_modifier = {
-		name = "00_far_legend"
-		duration = 9125
-		}
-	}
-}
+#country_event = {
+#	id = es_0_scenario.1
+#	title = es_0_scenario.1.t
+#	desc = es_0_scenario.1.d
+#	picture = ES_01_eventPicture
+#	
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = "es_0_scenario.1.a"
+#		ai_chance = { factor = 100 }
+#		add_prestige = 5
+#		add_country_modifier = {
+#		name = "00_far_legend"
+#		duration = 9125
+#		}
+#	}
+#}
 
 country_event = {
 	id = es_0_scenario.2
