@@ -1,0 +1,148 @@
+maritime_ideas = {
+	category = DIP
+
+	trigger = {
+		full_idea_group = trade_ideas
+	}
+	bonus = {
+		sea_repair = yes
+		ship_durability = 0.05
+	}
+
+	sea_hawks = {
+		navy_tradition = 1
+	}
+	merchant_marine = {
+		global_sailors_modifier = 0.15
+		naval_tradition_from_trade = 0.25
+	}
+	sheltered_ports = {
+		global_ship_repair = 0.25
+	}
+	grand_navy = {
+		naval_forcelimit_modifier = 0.25
+	}
+	ships_penny = {
+		global_ship_cost = -0.15
+	}
+	excellent_shipwrights = {
+		leader_naval_manuever = 1
+		movement_speed_in_fleet_modifier = 1.5
+	}
+	naval_fighting_instruction = {
+		embargo_efficiency = 0.25
+		blockade_efficiency = 0.25
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_total_ports = 1 }
+			NOT = { is_colonial_nation = yes }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { num_of_total_ports = 10 }
+		}
+		modifier = {
+			factor = 2.5
+			NOT = { num_of_total_ports = 25 }
+		}
+		modifier = {
+			factor = 1.5
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_colonies = 1
+		}
+		modifier = {
+			factor = 0.5
+			num_of_cities = 50
+		}
+	}
+}
+
+esb_monopoly = {
+	category = DIP
+
+	trigger = {
+		full_idea_group = trade_ideas
+	}
+	bonus = {
+		global_supply_limit_modifier = 0.15
+	}
+
+	esb_monopoly1 = {
+		embargo_efficiency = 0.25
+	}
+	esb_monopoly2 = {
+		global_foreign_trade_power = -0.15
+	}
+	esb_monopoly3 = {
+		global_own_trade_power = 0.25
+	}
+	esb_monopoly4 = {
+		global_spy_defence = 0.25
+	}
+	esb_monopoly5 = {
+		mercantilism_cost = -0.2
+	}
+	esb_monopoly6 = {
+		trade_efficiency = 0.1
+	}
+	esb_monopoly7 = {
+		light_ship_power = 0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+esb_merchants = {
+	category = DIP
+
+	trigger = {
+		full_idea_group = trade_ideas
+	}
+	bonus = {
+		global_ship_trade_power = 0.15
+	}
+
+	esb_merchants1 = {
+		disengagement_chance = 0.1
+	}
+	esb_merchants2 = {
+		merchants = 1
+	}
+	esb_merchants3 = {
+		naval_tradition_from_trade = 0.15
+	}
+	esb_merchants4 = {
+		global_foreign_trade_power = 0.2
+	}
+	esb_merchants5 = {
+		trade_efficiency = 0.15
+	}
+	esb_merchants6 = {
+		naval_forcelimit_modifier = 0.1
+	}
+	esb_merchants7 = {
+		merchants_loyalty_modifier = 0.2
+		merchants_influence_modifier = 0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
