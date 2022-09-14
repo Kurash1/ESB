@@ -1,0 +1,886 @@
+monarchie0 = {
+	category = ADM
+
+	trigger = {
+		full_idea_group = staatsverwaltung0
+		government = monarchy
+	}
+	bonus = {
+		vassal_income = 0.25
+		vassal_forcelimit_bonus = 0.25
+		reduced_liberty_desire = 15
+	}
+	
+	monarchie1 = {
+		legitimacy = 1
+	}
+	monarchie2 = {
+		heir_chance = 0.5
+		monthly_heir_claim_increase = 0.05
+	}
+	monarchie3 = {
+		yearly_corruption = -0.03
+		global_spy_defence = 0.15
+		nobility_loyalty_modifier = 0.1
+		nobility_influence_modifier = 0.1
+	}
+	monarchie4 = {
+		cavalry_cost = -0.15
+		cavalry_power = 0.15
+	}
+	monarchie5 = {
+		yearly_absolutism = 0.5
+	}
+	monarchie6 = {
+		improve_relation_modifier = 0.15
+		diplomatic_reputation = 1
+	}
+	monarchie7 = {
+		global_manpower_modifier = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 1
+		
+		modifier = {
+			factor = 2.5
+			personality = ai_capitalist 
+		}
+		
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 5
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+	}
+}
+
+republik0 = {
+	category = ADM
+
+	trigger = {
+		full_idea_group = staatsverwaltung0
+		government = republic
+	}
+	bonus = {
+		reform_progress_growth = 0.1
+	}
+	
+	republik1 = {
+		diplomats = 1
+	}
+	republik2 = {
+		land_morale = 0.1
+		global_manpower_modifier = 0.1
+	}
+	republik3 = {
+		global_unrest = -2
+	}
+	republik4 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	republik5 = {
+		republican_tradition = 1.0
+	}
+	republik6 = {
+		global_manpower_modifier = 0.15
+		manpower_recovery_speed = 0.10
+	}
+	republik7 = {
+		idea_cost = -0.1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {			
+			factor = 1.5
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 50
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_capitalist 
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 5
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+	}
+}
+
+aristo0 = {
+	category = ADM
+
+	trigger = {
+		full_idea_group = staatsverwaltung0
+		government = theocracy
+	}
+	bonus = {
+		corruption_loyalty_modifier = 0.15
+	}
+
+	aristo1 = {
+		tolerance_own = 2
+	}
+	aristo2 = {
+		land_morale = 0.15
+	}
+	aristo3 = {
+		global_missionary_strength = 0.03
+	}
+	aristo4 = {
+		devotion = 1
+	}
+	aristo5 = {
+		artillery_cost = -0.25
+		artillery_power = 0.15
+	}
+	aristo6 = {
+		warscore_cost_vs_other_religion = -0.25
+	}
+	aristo7 = {
+		unjustified_demands = -0.25
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2.5
+			personality = ai_capitalist 
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 5
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+	}
+}
+
+horde0 = {
+	category = ADM
+
+	trigger = {
+		full_idea_group = staatsverwaltung0
+		is_nomad = yes
+	}
+	bonus = {
+		movement_speed = 0.15
+	}
+	
+	horde1 = {
+		raze_power_gain = 0.5
+		loot_amount = 0.5
+		available_province_loot = 0.5
+	}
+	horde2 = {
+		cavalry_cost = -0.25
+	}
+	horde3 = {
+		army_tradition_decay = -0.01
+		army_tradition_from_battle = 0.15
+		
+		prestige_decay = -0.01
+		prestige_from_land = 0.1
+	}
+	horde4 = {
+		cavalry_power = 0.25
+	}
+	horde5 = {
+		global_unrest = -2
+		horde_unity = 0.5
+	}
+	horde6 = {
+		governing_capacity_modifier = 0.15
+	}
+	horde7 = {
+		vassal_income = 0.15
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2.5
+			personality = ai_capitalist 
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 5
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+	}
+}
+
+indigenous_ideas = {
+	category = ADM
+
+	bonus = {
+		global_institution_spread = 0.25
+	}
+
+	trigger = {
+		full_idea_group = staatsverwaltung0
+		OR = {
+			is_native_tribe = yes
+			is_tribal = yes
+		}
+	}
+
+	indigenous_bountiful_land = {
+		tribal_development_growth = 0.015
+		development_cost = -0.05
+	}
+	indigenous_irregular_warfare = {
+		hostile_attrition = 1
+	}
+	indigenous_constitution = {
+		monthly_reform_progress_modifier = 0.25
+	}
+	indigenous_braves = {
+		land_morale = 0.10
+	}
+	indigenous_controlled_burns = {
+		global_manpower_modifier = 0.2
+	}
+	indigenous_trade_with_foreigners = {
+		idea_cost = -0.1
+	}
+	indigenous_treaties = {
+		province_warscore_cost = -0.2
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+aristocracy_ideas = {
+	category = ADM
+
+	trigger = {
+		OR = {
+			full_idea_group = monarchie0
+			full_idea_group = justiz0
+		}
+	}
+	bonus = {
+		prestige = 1.5
+	}
+
+	noble_knights = {
+		cavalry_cost = -0.25
+		caravan_power = 0.15
+	}
+	military_traditions = {
+		mil_tech_cost_modifier  = -0.15
+		army_tradition = 0.5
+	}
+	local_nobility = {
+		global_autonomy = -0.05
+		state_maintenance_modifier = -0.1
+	}
+	serfdom = {
+		global_unrest = 2
+		production_efficiency = 0.25
+	}
+	noble_officers = {
+		army_tradition_decay = -0.01
+		nobility_loyalty_modifier = 0.1
+	}
+	international_nobility = {
+		diplomats = 1
+		improve_relation_modifier = 0.15
+	}
+	noble_resilience = {
+		discipline = 0.05
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.75
+			government = theocracy
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				is_vassal = yes
+				is_march = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = { 
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 5.0
+			government = tribal
+		}
+	}
+}
+
+justiz0 = {
+	category = ADM
+
+	trigger = {
+	}
+	bonus = {
+		ae_impact = -0.10
+	}
+		
+	justiz1 = {
+		global_unrest = -2
+	}
+	justiz2 = {
+		yearly_corruption = -0.05
+	}
+	justiz3 = {
+		global_autonomy = -0.1
+	}
+	justiz4 = {
+		trade_efficiency = 0.25
+	}
+	justiz5 = {
+		interest = -1
+	}
+	justiz6 = {
+		state_governing_cost = -0.1
+	}
+	justiz7 = {
+		global_unrest = -2
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2.5
+			personality = ai_capitalist 
+		}
+		modifier = {
+			factor = 2.5
+			is_elector = yes 
+		}
+		modifier = {
+			factor = 5
+			is_emperor = yes 
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 5
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+	}
+}
+
+plutocracy_ideas = {
+	category = ADM
+
+	trigger = {
+		OR = { 
+			full_idea_group = republik0
+			full_idea_group = justiz0
+		}
+	}
+	bonus = {
+		global_ship_trade_power = 0.15
+	}
+
+	tradition_of_payment = {
+		merc_maintenance_modifier = -0.1
+	}
+	abolished_serfdom = {
+		land_morale = 0.15
+	}
+	bill_of_rights = {
+		global_unrest = -2
+	}
+	free_merchants = {
+		merchants = 1
+	}
+	free_subjects = {
+		reduced_liberty_desire = 10
+	}
+	free_cities = {
+		caravan_power = 0.15
+		development_cost = -0.1
+	}
+	emancipation = {
+		global_unrest = -2
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			OR = {
+				is_vassal = yes
+				is_march = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = { 
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			personality = ai_militarist
+		}
+	}
+}
+
+humanist_ideas = {
+	category = ADM
+
+	trigger = {
+		full_idea_group = republik0
+	}
+	bonus = {
+		idea_cost = -0.1
+	}
+
+	tolerance_idea = {
+		religious_unity = 0.25
+	}
+	local_traditions = {
+		global_unrest = -2
+	}
+	ecumenism = {
+		tolerance_heretic = 2
+		tolerance_of_heretics_capacity = 2
+		relation_with_heretics = 20
+	}
+	indirect_rule = {
+		years_of_nationalism = -10
+	}
+	cultural_ties = {
+		num_accepted_cultures = 2
+	}
+	benevolence = {
+		improve_relation_modifier = 0.30
+	}
+	humanist_tolerance = {
+		tolerance_heathen = 2
+		tolerance_of_heathens_capacity = 2
+		relation_with_heathens = 20
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			government = theocracy
+		}
+		modifier = {
+			factor = 0.5
+			religious_unity = 0.95
+		}
+		modifier = {
+			factor = 1.5
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 1.25
+			num_of_owned_provinces_with = {
+				OR = {
+					has_owner_accepted_culture = no
+					NOT = { culture = root }
+				}
+				value = 10
+			}
+		}
+		modifier = {
+			factor = 1.25
+			religious_unity = 0.75
+		}
+		modifier = {
+			factor = 1.5
+			religious_unity = 0.5
+		}
+	}
+}
+
+religious_ideas = {
+	category = ADM
+
+	trigger = {
+		full_idea_group = aristo0
+	}
+	bonus = {
+		prestige_per_development_from_conversion = 0.25
+		culture_conversion_cost = -0.25
+	}
+
+	missionary_schools = {
+		missionaries = 1
+	}
+	church_attendance_duty = {
+		stability_cost_modifier = -0.25
+	}
+	divine_supremacy = {
+		global_missionary_strength = 0.03
+	}
+	devoutness = {
+		tolerance_own = 2
+	}
+	religious_tradition = {
+		prestige = 1.0
+		relation_with_same_religion = 20
+	}
+	inquisition = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+	deus_vult = {
+		cb_on_religious_enemies = yes
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			religious_unity = 0.95
+		}
+		modifier = {
+			factor = 1.15
+			is_defender_of_faith = yes
+		}
+		modifier = {
+			factor = 1.15
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 1.20
+			religious_unity = 0.75
+		}
+		modifier = {
+			factor = 1.5
+			government = theocracy
+		}
+		modifier = {
+			factor = 1.75
+			religious_unity = 0.5
+		}
+		modifier = {
+			factor = 2.5
+			has_border_with_religious_enemy = yes
+		}
+	}
+}
+
+gesellschaft0 = {
+	category = DIP
+
+	trigger = {
+		full_idea_group = staatsverwaltung0
+	}
+	bonus = {
+		advisor_pool = 1
+	}
+		
+	gesellschaft1 = {
+		land_maintenance_modifier = -0.15
+	}
+	gesellschaft2 = {
+		improve_relation_modifier = 0.25
+	}
+	gesellschaft3 = {
+		global_institution_spread = 0.25
+	}
+
+	gesellschaft4 = {
+		advisor_cost = -0.25
+	}
+
+	gesellschaft5 = {
+		global_spy_defence = 0.25
+	}
+	gesellschaft6 = {
+		global_unrest = -2
+	}
+	gesellschaft7 = {
+		land_morale = 0.1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 3.5
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 0.5
+			government = monarchy
+		}
+		modifier = {
+			factor = 2.5
+			government = republic
+		}
+	}
+}
+
+propaganda0 = {
+	category = DIP
+
+	trigger = {
+		full_idea_group = staatsverwaltung0
+	}
+	bonus = {
+		global_manpower_modifier = 0.25
+	}
+		
+	propaganda1 = {
+		war_exhaustion = -0.05
+	}
+	propaganda2 = {
+		diplomats = 1
+	}
+	propaganda3 = {
+		improve_relation_modifier = 0.25
+	}
+
+	propaganda4 = {
+		diplomatic_reputation = 2
+	}
+
+	propaganda5 = {
+		reform_progress_growth = 0.15
+	}
+	propaganda6 = {
+		unjustified_demands = -0.25
+	}
+	propaganda7 = {
+		siege_ability = 0.15
+		defensiveness = 0.15
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+		modifier = {			
+			factor = 1.5
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 3.5
+			government = monarchy
+		}
+		
+		modifier = {
+			factor = 3.5
+			government = republic
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 5
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+	}
+}
+
+zentra0 = {
+	category = ADM
+
+	trigger = {
+		OR = {
+			full_idea_group = aristo0
+			full_idea_group = republik0
+		}	
+	}
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+		
+	zentra1 = {
+		build_cost = -0.15
+		build_time = -0.25
+	}
+	zentra2 = {
+		inflation_reduction = -0.1
+	}
+	zentra3 = {
+		fort_maintenance_modifier = -0.25
+		garrison_size = 0.5
+	}
+	zentra4 = {
+		global_supply_limit_modifier = 0.15
+		reinforce_speed = 0.25
+	}
+	zentra5 = {
+		global_autonomy = -0.05
+	}
+	zentra6 = {
+		yearly_absolutism = 0.15
+		max_absolutism = 10
+	}
+	zentra7 = {
+		reform_progress_growth = 0.1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2.5
+			personality = ai_capitalist 
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 5
+		}
+		modifier = {
+			factor = 3.5
+			government = monarchy
+		}
+		modifier = {
+			factor = 2.5
+			government = republic
+		}
+	}
+}
+
+esb_corruption = {
+	category = ADM
+	
+	trigger = {
+		full_idea_group = aristo0
+	}
+	bonus = {
+		yearly_corruption = -0.15
+	}
+	
+	esb_corruption1 = {
+		corruption_influence_modifier = 0.1
+	}
+	esb_corruption2 = {
+		corruption_loyalty_modifier = 0.15
+	}
+	esb_corruption3 = {
+		build_cost = -0.1
+	}
+	esb_corruption4 = {
+		great_project_upgrade_cost = -0.1
+	}
+	esb_corruption5 = {
+		land_morale = 0.1
+	}
+	esb_corruption6 = {
+		institution_spread_from_true_faith = 0.33
+	}
+	esb_corruption7 = {
+		fire_damage = 0.075
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+esb_corruption = {
+	category = ADM
+	
+	trigger = {
+		full_idea_group = republik0
+	}
+	bonus = {
+		state_maintenance_modifier = -0.25
+	}
+	
+	esb_corruption1 = {
+		yearly_corruption = 0.05
+	}
+	esb_corruption2 = {
+		spy_offence = 0.1
+		global_spy_defence = -0.15
+	}
+	esb_corruption3 = {
+		global_tax_modifier = -0.1
+		production_efficiency = 0.1
+	}
+	esb_corruption4 = {
+		global_unrest = -2
+	}
+	esb_corruption5 = {
+		build_cost = 0.15
+	}
+	esb_corruption6 = {
+		advisor_cost = -0.5
+	}
+	esb_corruption7 = {
+		prestige = -1
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

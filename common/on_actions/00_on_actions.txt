@@ -8,6 +8,17 @@ on_startup = {
 		add_core = BLA
 	}
 
+	if = {
+		limit = {
+			tag = BLA
+			NOT = { has_country_flag = campaign_start }
+		}
+		set_country_flag = campaign_start
+		every_country = {
+			add_stability = 2
+		}
+	}
+
     set_allow_female_emperor = yes
 	set_hre_religion_treaty = yes
     emperor = { save_global_event_target_as = Emperor }
@@ -161,8 +172,6 @@ on_startup = {
 	
 	emperor = { save_global_event_target_as = Emperor }
     if = { limit = { is_emperor_of_china = yes } save_global_event_target_as = EmperorOfChina }
-	
-	set_emperor_of_china = OA8
 	
 	BLA = {
 		add_country_modifier = { name = "red_mountain_eruption" duration = 3650 }
@@ -491,6 +500,8 @@ on_peace_recipient = {
 # country
 # root = winning country, from = loser country
 on_war_won = {
+	ROOT = { clr_country_flag = esb_stealprovince }
+	FROM = { clr_country_flag = esb_stealprovince }
     clr_country_flag = alliancememberinwar_flag
 	remove_country_modifier = guarfian_at_war
 	
@@ -956,121 +967,13 @@ on_siege_won_province = {
 # province
 # root = location, from = winning country
 on_siege_lost_province = {
-	
-	save_event_target_as = es_province_to_save_event_target
-	
-	# Hidden Dev Reduction Mechanics
 	if = {
-		limit = { NOT = { owned_by = FROM } }
-		random_list = {
-			50 = {
-				add_devastation = 5
-			}
-			50 = {
-				if = {
-					limit = {
-						base_tax = 2
-						base_production = 2
-						base_manpower = 2
-					}
-					random_list = {
-						33 = { add_base_tax = -1 }
-						33 = { add_base_production = -1 }
-						33 = { add_base_manpower = -1 }
-					}
-				}
-				else_if = {
-					limit = {
-						base_tax = 2
-						base_production = 2
-					}
-					random_list = {
-						50 = { add_base_tax = -1 }
-						50 = { add_base_production = -1 }
-					}
-				}
-				else_if = {
-					limit = {
-						base_tax = 2
-						base_manpower = 2
-					}
-					random_list = {
-						50 = { add_base_tax = -1 }
-						50 = { add_base_manpower = -1 }
-					}
-				}
-				else_if = {
-					limit = {
-						base_production = 2
-						base_manpower = 2
-					}
-					random_list = {
-						50 = { add_base_production = -1 }
-						50 = { add_base_manpower = -1 }
-					}
-				}
-				else_if = {
-					limit = {
-						base_tax = 1
-					}
-					add_base_tax = -1
-				}
-				else_if = {
-					limit = {
-						base_production = 1
-					}
-					add_base_tax = -1
-				}
-				else_if = {
-					limit = {
-						base_manpower = 1
-					}
-					add_base_manpower = -1
-				}
-			}
+		limit = {
+			FROM = { has_consort_flag = esb_stealprovince }
 		}
+		cede_province = FROM
+		add_core = FROM
 	}
-	
-	# Sacking Event Mechanics
-	if = { 
-		limit = { NOT = { owned_by = FROM } from = { NOT = { has_country_flag = es_set_province_sacking_flag } } }
-		if = { limit = { NOT = { development = 5 } } add_devastation = 5 }
-		else_if = { limit = { NOT = { development = 15 } } random_list = { 15 = { from = { country_event = { id = es_sack_of_province.1 } } } 85 = { add_devastation = 10 } } }
-		else_if = { limit = { NOT = { development = 20 } } random_list = { 30 = { from = { country_event = { id = es_sack_of_province.1 } } } 70 = { add_devastation = 15 } } }
-		else_if = { limit = { NOT = { development = 25 } } random_list = { 45 = { from = { country_event = { id = es_sack_of_province.1 } } } 55 = { add_devastation = 20 } } }
-		else_if = { limit = { NOT = { development = 30 } } random_list = { 60 = { from = { country_event = { id = es_sack_of_province.1 } } } 40 = { add_devastation = 25 } } }
-		else = { random_list = { 75 = { from = { country_event = { id = es_sack_of_province.1 } } } 25 = { add_devastation = 30 } } }
-	}
-	else_if = {
-		limit = { NOT = { owned_by = FROM } }
-		if = { limit = { NOT = { development = 5 } } add_devastation = 5 }
-		else_if = { limit = { NOT = { development = 15 } } random_list = { 15 = { add_devastation = 15 add_base_tax = -2 add_base_production = -2 add_base_manpower = -2 } 85 = { add_devastation = 10 } } }
-		else_if = { limit = { NOT = { development = 20 } } random_list = { 30 = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } 70 = { add_devastation = 15 } } }
-		else_if = { limit = { NOT = { development = 25 } } random_list = { 45 = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } 55 = { add_devastation = 20 } } }
-		else_if = { limit = { NOT = { development = 30 } } random_list = { 60 = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } 40 = { add_devastation = 25 } } }
-		else = { random_list = { 75 = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } 25 = { add_devastation = 30 } } }
-	}
-	
-	#if = { 
-	#	limit = { NOT = { owned_by = FROM } from = { NOT = { has_country_flag = es_set_province_sacking_flag } } }
-	#	if = { limit = { NOT = { development = 5 } } add_devastation = 5 }
-	#	else_if = { limit = { NOT = { development = 10 } } random_list = { 15 = { from = { country_event = { id = es_sack_of_province.1 } } } 85 = { add_devastation = 10 } } }
-	#	else_if = { limit = { NOT = { development = 15 } } random_list = { 30 = { from = { country_event = { id = es_sack_of_province.1 } } } 70 = { add_devastation = 15 } } }
-	#	else_if = { limit = { NOT = { development = 20 } } random_list = { 45 = { from = { country_event = { id = es_sack_of_province.1 } } } 55 = { add_devastation = 20 } } }
-	#	else_if = { limit = { NOT = { development = 25 } } random_list = { 60 = { from = { country_event = { id = es_sack_of_province.1 } } } 40 = { add_devastation = 25 } } }
-	#	else_if = { limit = { NOT = { development = 30 } } random_list = { 75 = { from = { country_event = { id = es_sack_of_province.1 } } } 25 = { add_devastation = 30 } } }
-	#	else = { from = { country_event = { id = es_sack_of_province.1 } } }
-	#}
-	#else_if = {
-	#	limit = { NOT = { owned_by = FROM } }
-	#	if = { limit = { NOT = { development = 5 } } add_devastation = 5 }
-	#	else_if = { limit = { NOT = { development = 10 } } random_list = { 15 = { add_devastation = 15 add_base_tax = -2 add_base_production = -2 add_base_manpower = -2 } 85 = { add_devastation = 10 } } }
-	#	else_if = { limit = { NOT = { development = 15 } } random_list = { 30 = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } 70 = { add_devastation = 15 } } }
-	#	else_if = { limit = { NOT = { development = 20 } } random_list = { 45 = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } 55 = { add_devastation = 20 } } }
-	#	else_if = { limit = { NOT = { development = 25 } } random_list = { 60 = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } 40 = { add_devastation = 25 } } }
-	#	else_if = { limit = { NOT = { development = 30 } } random_list = { 75 = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } 25 = { add_devastation = 30 } } }
-	#	else = { add_devastation = 15 add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 }
-	#}
 }
 
 # province
@@ -2748,6 +2651,8 @@ on_flagship_destroyed = {
 
 # this = Released country, FROM = Releasing country
 on_country_released = {
+	add_stability = 2
+
 	es_startup_discovery = yes
 	if = {
 		limit = {
