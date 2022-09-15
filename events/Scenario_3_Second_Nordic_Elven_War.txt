@@ -162,128 +162,128 @@ country_event = {
 
 ### Conquest of Valus mountains for 1206 
 
-country_event = {
-	id = es_3_scenario.5
-	title = es_3_scenario.5.t
-	desc = es_3_scenario.5.d
-	picture = ES_VALUS_MOUNTAINS_eventPicture
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		1234 = { owner = { save_event_target_as = 1234_owner } }
-	}
-
-	option = {
-		name = "es_3_scenario.5.a"
-		ai_chance = { factor = 33 }
-		
-		every_province = {
-		    limit = { region = valus_mountains_lr is_city = yes }
-			add_claim = ROOT
-		}
-		
-		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:1234_owner } NOT = { alliance_with = event_target:1234_owner } NOT = { is_subject_of = event_target:1234_owner } NOT = { overlord_of = event_target:1234_owner } }
-		declare_war_with_cb = { who = event_target:1234_owner casus_belli = cb_es_scenario } 
-		}
-		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.45 days = 31 tooltip = es_collapse.2.a.tt } }
-	}
-	option = {
-		name = "es_3_scenario.5.b"
-		ai_chance = { factor = 33 }
-		
-		add_country_modifier = {
-		    name = "19_expansion_via_trade"
-			duration = 9125
-		}
-		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.46 days = 31 tooltip = es_collapse.2.a.tt } }
-	}
-	option = {
-		name = "es_3_scenario.5.c"
-		ai_chance = { factor = 33 }
-		
-		add_prestige = 15
-		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.47 days = 31 tooltip = es_collapse.2.a.tt } }
-	}
-}
+#country_event = {
+#	id = es_3_scenario.5
+#	title = es_3_scenario.5.t
+#	desc = es_3_scenario.5.d
+#	picture = ES_VALUS_MOUNTAINS_eventPicture
+#	
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		1234 = { owner = { save_event_target_as = 1234_owner } }
+#	}
+#
+#	option = {
+#		name = "es_3_scenario.5.a"
+#		ai_chance = { factor = 33 }
+#		
+#		every_province = {
+#		    limit = { region = valus_mountains_lr is_city = yes }
+#			add_claim = ROOT
+#		}
+#		
+#		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:1234_owner } NOT = { alliance_with = event_target:1234_owner } NOT = { is_subject_of = event_target:1234_owner } NOT = { overlord_of = event_target:1234_owner } }
+#		declare_war_with_cb = { who = event_target:1234_owner casus_belli = cb_es_scenario } 
+#		}
+#		
+#		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.45 days = 31 tooltip = es_collapse.2.a.tt } }
+#	}
+#	option = {
+#		name = "es_3_scenario.5.b"
+#		ai_chance = { factor = 33 }
+#		
+#		add_country_modifier = {
+#		    name = "19_expansion_via_trade"
+#			duration = 9125
+#		}
+#		
+#		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.46 days = 31 tooltip = es_collapse.2.a.tt } }
+#	}
+#	option = {
+#		name = "es_3_scenario.5.c"
+#		ai_chance = { factor = 33 }
+#		
+#		add_prestige = 15
+#		
+#		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.47 days = 31 tooltip = es_collapse.2.a.tt } }
+#	}
+#}
 
 ### Snows Elved Vs Bleaker's Ways
 
-country_event = {
-	id = es_3_scenario.6
-	title = es_3_scenario.6.t
-	desc = es_3_scenario.6.d
-	picture = ES_WHITE_GOLD_TOWER_eventPicture
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		5854 = { owner = { save_event_target_as = 1206_owner } }
-	}
-
-	option = {
-		name = "es_3_scenario.6.a"
-		ai_chance = { factor = 50 }
-
-        5854 = { add_core = ROOT }
-		
-		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:1206_owner } NOT = { alliance_with = event_target:1206_owner } NOT = { is_subject_of = event_target:1206_owner } NOT = { overlord_of = event_target:1206_owner } }
-		declare_war_with_cb = { who = event_target:1206_owner casus_belli = cb_es_scenario } 
-		}
-		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.48 days = 31 tooltip = es_collapse.2.a.tt } }
-	}
-	option = {
-		name = "es_3_scenario.6.b"
-		ai_chance = { factor = 50 }
-		
-		add_prestige = -10
-		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.49 days = 31 tooltip = es_collapse.2.a.tt } }
-	}
-}
+#country_event = {
+#	id = es_3_scenario.6
+#	title = es_3_scenario.6.t
+#	desc = es_3_scenario.6.d
+#	picture = ES_WHITE_GOLD_TOWER_eventPicture
+#	
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		5854 = { owner = { save_event_target_as = 1206_owner } }
+#	}
+#
+#	option = {
+#		name = "es_3_scenario.6.a"
+#		ai_chance = { factor = 50 }
+#
+#        5854 = { add_core = ROOT }
+#		
+#		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = event_target:1206_owner } NOT = { alliance_with = event_target:1206_owner } NOT = { is_subject_of = event_target:1206_owner } NOT = { overlord_of = event_target:1206_owner } }
+#		declare_war_with_cb = { who = event_target:1206_owner casus_belli = cb_es_scenario } 
+#		}
+#		
+#		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.48 days = 31 tooltip = es_collapse.2.a.tt } }
+#	}
+#	option = {
+#		name = "es_3_scenario.6.b"
+#		ai_chance = { factor = 50 }
+#		
+#		add_prestige = -10
+#		
+#		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.49 days = 31 tooltip = es_collapse.2.a.tt } }
+#	}
+#}
 
 ### Alinor vs Emperor
 
-country_event = {
-	id = es_3_scenario.7
-	title = es_3_scenario.7.t
-	desc = es_3_scenario.7.d
-	picture = ES_SUMMERSET_TOWER_eventPicture
-	
-	trigger = {
-		hre_size = 1
-	}
-	
-	is_triggered_only = yes
-
-	option = {
-		name = "es_3_scenario.7.a"
-		ai_chance = { factor = 50 }
-		
-		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = emperor } NOT = { alliance_with = emperor } NOT = { is_subject_of = emperor } }
-		declare_war_with_cb = { who = emperor casus_belli = cb_es_scenario } 
-		}
-		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.50 days = 31 tooltip = es_collapse.2.a.tt } }
-	}
-	option = {
-		name = "es_3_scenario.7.b"
-		ai_chance = { factor = 50 }
-		
-		add_prestige = 25
-		
-		emperor = { add_scaled_imperial_influence = -100 }
-		
-		elector = no
-		every_owned_province = {
-		    limit = { is_part_of_hre = yes }
-			set_in_empire = no
-		}
-		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.51 days = 31 tooltip = es_collapse.2.a.tt } }
-	}
-}
+#country_event = {
+#	id = es_3_scenario.7
+#	title = es_3_scenario.7.t
+#	desc = es_3_scenario.7.d
+#	picture = ES_SUMMERSET_TOWER_eventPicture
+#	
+#	trigger = {
+#		hre_size = 1
+#	}
+#	
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = "es_3_scenario.7.a"
+#		ai_chance = { factor = 50 }
+#		
+#		if = { limit = { can_declare_scenario_war = yes NOT = { truce_with = emperor } NOT = { alliance_with = emperor } NOT = { is_subject_of = emperor } }
+#		declare_war_with_cb = { who = emperor casus_belli = cb_es_scenario } 
+#		}
+#		
+#		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.50 days = 31 tooltip = es_collapse.2.a.tt } }
+#	}
+#	option = {
+#		name = "es_3_scenario.7.b"
+#		ai_chance = { factor = 50 }
+#		
+#		add_prestige = 25
+#		
+#		emperor = { add_scaled_imperial_influence = -100 }
+#		
+#		elector = no
+#		every_owned_province = {
+#		    limit = { is_part_of_hre = yes }
+#			set_in_empire = no
+#		}
+#		
+#		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.51 days = 31 tooltip = es_collapse.2.a.tt } }
+#	}
+#}

@@ -162,100 +162,15 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			random_list = {
-				50 = {
-					every_country = {
-						if = {
-							limit = { NOT = { capital_scope = { province_distance  = { who = 1062 distance = 300 } } } }
-							every_owned_province = {
-								add_permanent_province_modifier = { name = temporary_ashland duration = 1825 }
-							}
-							add_yearly_manpower = -10 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
+			every_country = {
+				limit = {
+					capital_scope = {
+						superregion = morrowind_superregion 
 					}
 				}
-				25 = {
-					every_country = {
-						if = {
-							limit = { NOT = { capital_scope = { province_distance  = { who = 1062 distance = 300 } } } }
-							every_owned_province = {
-								add_permanent_province_modifier = { name = temporary_ashland duration = 3650 }
-							}
-							add_yearly_manpower = -25 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
-					}
-					every_country = {
-						if = {
-							limit = { capital_scope = { province_distance  = { who = 1062 distance = 300 } } NOT = { capital_scope = { province_distance  = { who = 1062 distance = 750 } } } }
-							every_owned_province = {
-								add_permanent_province_modifier = { name = thin_temporary_ashland duration = 1825 }
-							}
-							add_yearly_manpower = -10 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
-					}
-				}
-				15 = {
-					every_country = {
-						if = {
-							limit = { NOT = { capital_scope = { province_distance  = { who = 1062 distance = 300 } } } }
-							every_owned_province = {
-								add_permanent_province_modifier = { name = thick_temporary_ashland duration = 5475 }
-							}
-							add_yearly_manpower = -35 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
-					}
-					every_country = {
-						if = {
-							limit = { capital_scope = { province_distance  = { who = 1062 distance = 300 } } NOT = { capital_scope = { province_distance  = { who = 1062 distance = 750 } } } }
-							every_owned_province = {
-								add_permanent_province_modifier = { name = temporary_ashland duration = 3650 }
-							}
-							add_yearly_manpower = -25 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
-					}
-					every_country = {
-						if = {
-							limit = { capital_scope = { province_distance  = { who = 1062 distance = 750 } } NOT = { capital_scope = { province_distance  = { who = 1062 distance = 1500 } } } }
-							every_owned_province = {
-								add_permanent_province_modifier = { name = thin_temporary_ashland duration = 1825 }
-							}
-							add_yearly_manpower = -10 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
-					}
-				}
-				10 = {
-					every_country = {
-						if = {
-							limit = { NOT = { capital_scope = { province_distance  = { who = 1062 distance = 300 } } } }
-							every_owned_province = {
-								add_permanent_province_modifier = { name = thick_temporary_ashland duration = 9125 }
-							}
-							add_yearly_manpower = -50 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
-					}
-					every_country = {
-						if = {
-							limit = { capital_scope = { province_distance  = { who = 1062 distance = 300 } } NOT = { capital_scope = { province_distance  = { who = 1062 distance = 1000 } } } }
-							every_owned_province = {
-								add_permanent_province_modifier = { name = temporary_ashland duration = 5475 }
-							}
-							add_yearly_manpower = -35 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
-					}
-					every_country = {
-						if = {
-							limit = {
-								capital_scope = { province_distance  = { who = 1062 distance = 1000 } }
-								NOT = { capital_scope = { province_distance  = { who = 1062 distance = 2000 } } }
-								NOT = { capital_scope = { superregion = deadlands_superregion } }
-								NOT = { capital_scope = { superregion = coldharbour_superregion } }
-							}
-							every_owned_province = {
-								add_permanent_province_modifier = { name = thin_temporary_ashland duration = 3650 }
-							}
-							add_yearly_manpower = -25 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
-						}
-					}
+				country_event = {
+					id = es_terrain.4
+					days = 0
 				}
 			}
 		}
@@ -275,8 +190,15 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		add_yearly_manpower = -2
+	}
+	
 	option = {
 		name = "es_terrain.3.a"
 		ai_chance = { factor = 100 }
+		tooltip = {
+			add_yearly_manpower = -2
+		}
 	}
 }
