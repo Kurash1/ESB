@@ -153,6 +153,10 @@ country_event = {
 		#every_country = {
 		#limit = { culture_group = high_elves_cg owns = 271 is_emperor = no } country_event = { id = es_3_scenario.7 days = 407 random = 5375 }
 		#}
+		country_event = {
+			id = es_scenario_operator.4
+			days = 21352
+		}
 	}
 
 	option = {
@@ -171,60 +175,46 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-	    tag = BLA
-		NOT = { is_year = 204 }
-		OR = {
-		is_year = 171
-		any_country = {
-			owns_or_subject_of = 1275
-			owns_or_subject_of = 1299
-			owns_or_subject_of = 1306
-			owns_or_subject_of = 3009
-			owns_or_subject_of = 3000
-		}
-		}
    }
 
-	mean_time_to_happen = {
-		days = 3650		
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-		every_country = {
-		limit = { ai = yes culture_group = northern_cg owns = 1275 NOT = { has_country_flag = sky_ysgramor } } country_event = { id = es_4_scenario.1 days = 408 random = 3650 }
-		}
+		1275 = { owner = {
+		limit = { ai = yes culture_group = northern_cg NOT = { has_country_flag = sky_ysgramor } } country_event = { id = es_4_scenario.1 days = 408 random = 3650 }
+		} }
 		###
-		every_country = {
+		3315 = { owner = {
 		limit = { primary_culture = skaal is_core = 3315 } country_event = { id = es_4_scenario.8 days = 409 random = 3750 }
-		}
+		} }
 		###
-		every_country = {
-		limit = { culture_group = snow_elves_cg owns = 3191 } country_event = { id = es_4_scenario.2 days = 410 random = 3550 }
-		}
+		3191 = { owner = {
+		limit = { culture_group = snow_elves_cg } country_event = { id = es_4_scenario.2 days = 410 random = 3550 }
+		} }
 		###
-		every_country = {
-		limit = { owns = 3119 religion = dragon_cult } country_event = { id = es_4_scenario.3 days = 411 random = 3450 }
-		}
+		3119 = { owner = {
+		limit = { religion = dragon_cult } country_event = { id = es_4_scenario.3 days = 411 random = 3450 }
+		} }
 		###
-		every_country = {
-		limit = { culture_group = half_blood_cg owns = 7220 } country_event = { id = es_4_scenario.4 days = 412 random = 3350 }
-		}
+		7220 = { owner = {
+		limit = { culture_group = half_blood_cg } country_event = { id = es_4_scenario.4 days = 412 random = 3350 }
+		} }
 		###
-		every_country = {
-		limit = { culture_group = high_elves_cg owns = 1206 NOT = { owns = 1194 } } country_event = { id = es_4_scenario.5 days = 413 random = 3250 }
-		}
+		#every_country = {
+		#limit = { culture_group = high_elves_cg owns = 1206 NOT = { owns = 1194 } } country_event = { id = es_4_scenario.5 days = 413 random = 3250 }
+		#}
 		###
-		every_country = {
-			limit = { NOT = { tag = NF5 } owns = 3090 } country_event = { id = es_4_scenario.9 days = 414 random = 3850 }
-		}
+		3090 = { owner = {
+			limit = { NOT = { tag = NF5 } } country_event = { id = es_4_scenario.9 days = 414 random = 3850 }
+		} }
 		###
-		every_country = {
-		limit = { primary_culture = ayleid owns = 1206 NOT = { tag = AYL } } country_event = { id = es_4_scenario.6 days = 415 random = 3150 }
-		}
+		1206 = { owner = {
+		limit = { primary_culture = ayleid NOT = { tag = AYL } } country_event = { id = es_4_scenario.6 days = 415 random = 3150 }
+		} }
 		###
-		every_country = {
-		limit = { ai = yes primary_culture = nord owns = 1275 NOT = { tag = SKY } NOT = { tag = OLD } } country_event = { id = es_4_scenario.7 days = 416 random = 3050 }
-		}
+		1275 = { owner = {
+		limit = { ai = yes primary_culture = nord NOT = { tag = SKY } NOT = { tag = OLD } } country_event = { id = es_4_scenario.7 days = 416 random = 3050 }
+		} }
 	}
 
 	option = {
