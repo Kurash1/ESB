@@ -1,6 +1,7 @@
 country_decisions = {
 	esu_monument_skykiller_gallery = {
 		potential = {
+			ai = no
 			owns_core_province = 7110
 			not = {
 				7110 = {
@@ -75,6 +76,96 @@ country_decisions = {
 		effect = {
 			country_event = { 
 				id = esu_monument_skykiller_gallery.1
+			}
+		}
+	}
+	
+	esu_monument_xinchei_konu = {
+		potential = {
+			ai = no
+			owns_core_province = 1110
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_winter_one
+				}
+			}
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_winter_two
+				}
+			}
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_winter_three
+				}
+			}
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_drought_one
+				}
+			}
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_drought_two
+				}
+			}
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_drought_three
+				}
+			}
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_rain_one
+				}
+			}
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_rain_two
+				}
+			}
+			not = {
+				1110 = {
+					has_province_modifier = weatherwitch_rain_three
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				1110 = {
+					has_great_project = {
+						type = xinchei_konu
+						tier = 1
+					}
+				}
+				1110 = {
+					has_great_project = {
+						type = xinchei_konu
+						tier = 2
+					}
+				}
+				1110 = {
+					has_great_project = {
+						type = xinchei_konu
+						tier = 3
+					}
+				}
+			}
+			
+			culture_group = marsh_cg
+			
+			1110 = {
+				OR = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+		
+		effect = {
+			country_event = { 
+				id = esu_monument_xinchei_konu.1
 			}
 		}
 	}

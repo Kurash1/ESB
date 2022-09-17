@@ -363,7 +363,9 @@ country_event = {
 
 	option = {
 		name = es_parliament_events.6.a
-		back_current_issue = yes
+		event_target:es_random_yes_event_target = {
+			back_current_issue = yes
+		}
 	}
 }
 
@@ -402,7 +404,9 @@ country_event = {
 
 	option = {
 		name = es_parliament_events.7.a
-		back_current_issue = yes
+		event_target:es_random_for_ruler_yes_event_target = {
+			back_current_issue = yes
+		}
 	}
 }
 

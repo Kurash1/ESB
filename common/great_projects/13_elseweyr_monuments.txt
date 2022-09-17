@@ -1591,7 +1591,7 @@ halls_of_colossus = {
 	type = monument
 
 	build_trigger = { 
-		is_free_or_tributary_trigger = yes 
+		owner = { is_free_or_tributary_trigger = yes }
 		OR = {
 			has_owner_culture = yes
 			has_owner_accepted_culture = yes
@@ -1602,14 +1602,14 @@ halls_of_colossus = {
 	on_destroyed = { }
 
 	can_use_modifiers_trigger = {
-		is_free_or_tributary_trigger = yes 
+		owner = { is_free_or_tributary_trigger = yes }
 		OR = {
 			has_owner_culture = yes
 			has_owner_accepted_culture = yes
 		} 
 	}
 	can_upgrade_trigger = {
-		is_free_or_tributary_trigger = yes 
+		owner = { is_free_or_tributary_trigger = yes }
 		OR = {
 			has_owner_culture = yes
 			has_owner_accepted_culture = yes

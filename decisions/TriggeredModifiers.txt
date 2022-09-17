@@ -78,40 +78,24 @@ country_decisions = {
 	    major = yes
 		potential = {
 			NOT = { has_country_modifier = all_towers_united }
-			OR = {
-				1382 = { country_or_subject_holds = ROOT } 
-				1062 = { country_or_subject_holds = ROOT } 
-				4784 = { country_or_subject_holds = ROOT } 
-				1206 = { country_or_subject_holds = ROOT } 
-				340 = { country_or_subject_holds = ROOT } 
-				320 = { country_or_subject_holds = ROOT } 
-				834 = { country_or_subject_holds = ROOT } 
-				3090 = { country_or_subject_holds = ROOT } 
-				6871 = { country_or_subject_holds = ROOT } 
-				508 = { country_or_subject_holds = ROOT } 
-				724 = { country_or_subject_holds = ROOT } 
-				1572 = { country_or_subject_holds = ROOT } 
-				1062 = { country_or_subject_holds = ROOT } 
-				231 = { country_or_subject_holds = ROOT } 
-				568 = { country_or_subject_holds = ROOT } 
-			}
+			government_rank = 10
 		}
 		allow = {
-			1382 = { country_or_subject_holds = ROOT } 
-			1062 = { country_or_subject_holds = ROOT } 
-			4784 = { country_or_subject_holds = ROOT } 
-			1206 = { country_or_subject_holds = ROOT } 
-			340 = { country_or_subject_holds = ROOT } 
-			320 = { country_or_subject_holds = ROOT } 
-			834 = { country_or_subject_holds = ROOT } 
-			3090 = { country_or_subject_holds = ROOT } 
-			6871 = { country_or_subject_holds = ROOT } 
-			508 = { country_or_subject_holds = ROOT } 
-			724 = { country_or_subject_holds = ROOT } 
-			1572 = { country_or_subject_holds = ROOT } 
-			1062 = { country_or_subject_holds = ROOT } 
-			231 = { country_or_subject_holds = ROOT } 
-			568 = { country_or_subject_holds = ROOT } 
+			owns_or_non_sovereign_subject_of = 1382
+			owns_or_non_sovereign_subject_of = 1062
+			owns_or_non_sovereign_subject_of = 4784
+			owns_or_non_sovereign_subject_of = 1206
+			owns_or_non_sovereign_subject_of = 340 
+			owns_or_non_sovereign_subject_of = 320 
+			owns_or_non_sovereign_subject_of = 834 
+			owns_or_non_sovereign_subject_of = 3090
+			owns_or_non_sovereign_subject_of = 6871
+			owns_or_non_sovereign_subject_of = 508 
+			owns_or_non_sovereign_subject_of = 724 
+			owns_or_non_sovereign_subject_of = 1572
+			owns_or_non_sovereign_subject_of = 1062
+			owns_or_non_sovereign_subject_of = 231 
+			owns_or_non_sovereign_subject_of = 568 
 		}
 		effect = {
 			add_country_modifier = {

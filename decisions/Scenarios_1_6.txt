@@ -282,15 +282,12 @@ country_decisions = {
 			}
 		}
 		allow = {
-		OR = {
-			NOT = { has_reform = slavery }
-			culture_group = high_elves_cg
+			OR = {
+				NOT = { has_reform = slavery }
+				culture_group = high_elves_cg
+			}
+			treasury = 500
 		}
-		any_owned_province = {
-			has_province_modifier = 05_elven_slaves
-		}
-		treasury = 500
-        }
 		effect = {
 			add_treasury = -500
 			random_owned_province = {
