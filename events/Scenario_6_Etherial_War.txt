@@ -281,6 +281,11 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = { owns_core_province = 3315 }
+		NOT = { primary_culture = skaal }
+	}
+	
 	immediate = {
 	    3315 = { owner = { save_event_target_as = 3315_owner } }
 	}

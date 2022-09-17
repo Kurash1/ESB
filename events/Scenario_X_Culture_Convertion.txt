@@ -5,12 +5,12 @@ country_event = {
 	desc = es_x_scenario.1.d
 	picture = ES_VELOTHI_eventPicture
 	trigger = {
+		NOT = {
+			has_country_flag = es_x_scenario_1_flag
+		}
 		primary_culture = ashlander_chimer
 		NOT = {
 			is_year = 535
-		}
-		NOT = {
-			has_country_flag = es_x_scenario_1_flag
 		}
 	}
 	mean_time_to_happen = {
@@ -86,10 +86,10 @@ country_event = {
 	picture = ES_THRONEROOM_1_eventPicture
 	hidden = yes
 	trigger = {
+		has_country_flag = es_x_scenario_chimer_flag
 		any_owned_province = {
 			culture = ashlander_chimer
 		}
-		has_country_flag = es_x_scenario_chimer_flag
 	}
 	mean_time_to_happen = {
 		months = 35

@@ -889,6 +889,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = { owns_core_province = 1194 }
+	}
+	
 	immediate = {
 		1194 = { owner = { save_event_target_as = 1194_owner } }
 		set_global_flag = lberation_of_bruma_flag
