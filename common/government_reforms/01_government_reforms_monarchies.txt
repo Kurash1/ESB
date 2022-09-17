@@ -523,11 +523,10 @@ prussian_monarchy = {
     potential = {
 		is_human_nation_trigger = yes
 	}
-	trigger = { OR = { has_reform = prussian_monarchy
-	    OR = {
-		    government_rank = 10
-			owns = 1206
-		}
+	trigger = { 
+		OR = { 
+			has_reform = prussian_monarchy
+			government_rank = 10
 		}
 	}
 	valid_for_nation_designer = yes
