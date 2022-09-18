@@ -370,6 +370,7 @@ justiz0 = {
 	category = ADM
 
 	trigger = {
+		full_idea_group = staatsverwaltung0
 	}
 	bonus = {
 		ae_impact = -0.10
@@ -641,7 +642,6 @@ gesellschaft0 = {
 	gesellschaft3 = {
 		global_institution_spread = 0.25
 	}
-
 	gesellschaft4 = {
 		advisor_cost = -0.25
 	}
@@ -813,43 +813,6 @@ esb_corruption = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = aristo0
-	}
-	bonus = {
-		yearly_corruption = -0.15
-	}
-	
-	esb_corruption1 = {
-		corruption_influence_modifier = 0.1
-	}
-	esb_corruption2 = {
-		corruption_loyalty_modifier = 0.15
-	}
-	esb_corruption3 = {
-		build_cost = -0.1
-	}
-	esb_corruption4 = {
-		great_project_upgrade_cost = -0.1
-	}
-	esb_corruption5 = {
-		land_morale = 0.1
-	}
-	esb_corruption6 = {
-		institution_spread_from_true_faith = 0.33
-	}
-	esb_corruption7 = {
-		fire_damage = 0.075
-	}
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-esb_corruption = {
-	category = ADM
-	
-	trigger = {
 		full_idea_group = republik0
 	}
 	bonus = {
@@ -882,5 +845,45 @@ esb_corruption = {
 	
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+esb_hegemonic = {
+	category = ADM
+	
+	trigger = {
+		full_idea_group = staatsverwaltung0
+	}
+	bonus = {
+		prestige = 1.5
+	}
+	
+	esb_hegemonic1 = {
+		state_maintenance_modifier = -0.25
+		ae_impact = 0.1
+		global_tax_modifier = 0.25
+	}
+	esb_hegemonic2 = {
+		prestige = 1
+		corruption = 0.1
+	}
+	esb_hegemonic3 = {
+		advisor_pool = 2
+		advisor_cost = 0.1
+	}
+	esb_hegemonic4 = {
+		governing_capacity_modifier = 0.25
+		min_autonomy = 10
+	}
+	esb_hegemonic5 = {
+		global_regiment_cost = -0.15
+	}
+	esb_hegemonic6 = {
+		global_manpower_modifier = 0.25
+	}
+	esb_hegemonic7 = {
+		envoy_travel_time = -0.25
+		diplomats = 1
+		diplomatic_upkeep = 1
 	}
 }
