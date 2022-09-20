@@ -2199,10 +2199,10 @@ province_event = {
             	has_terrain = deadlands_sulfuric_desolation
             }
             no_province_in_state = {
-              OR = {
-                tradegoods = silver
-                tradegoods = gold
-              }
+				OR = {
+					tradegoods = silver
+					tradegoods = gold
+				}
             }
         }
         if = {
@@ -5506,7 +5506,7 @@ province_event = {
         }
     }
 }
-
+}
 
 province_event = {
 	id = es_esb.2

@@ -447,16 +447,16 @@ country_event = {
 	
 	trigger = {
 	    tag = BLA
-		NOT = { is_year = 308 }
+		NOT = { is_year = 208 }
 		OR = {
-		is_year = 272
-		any_country = {
-			owns_or_subject_of = 1206 # WGT
-			owns_or_subject_of = 1130 # Bravil
-			owns_or_subject_of = 5585 # Marlendra
-			owns_or_subject_of = 5947 # Cheydinhall 
-			owns_or_subject_of = 1251 # Aethelenia
-		}
+			is_year = 178
+			any_country = {
+				owns_or_subject_of = 1206 # WGT
+				owns_or_subject_of = 1130 # Bravil
+				owns_or_subject_of = 5585 # Marlendra
+				owns_or_subject_of = 5947 # Cheydinhall 
+				owns_or_subject_of = 1251 # Aethelenia
+			}
 		}
    }
 
