@@ -62,6 +62,17 @@ guiTypes = {
 				maxHeight = 32
 				format = centre
 			}			
+			instantTextBoxType = {
+				name = "unified_federation_text"
+				position = { x = 10 y = -43 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 4 y = 4}
+				text = "UNIFIED_FEDERATION_TITLE"
+				maxWidth = 212
+				maxHeight = 32
+				format = centre
+			}	
 
 			iconType = {
 				name ="advancement_icon"
@@ -78,6 +89,14 @@ guiTypes = {
 				max_slots_horizontal = 4
 				max_slots_vertical = 5
 			}	
+			iconType={
+			name = "unified_federation_icon"
+			spriteType = "GFX_natives_unified_federation"
+			position = { x= 34 y = -8 }
+			Orientation = "LEFT"
+			scale = 0.9
+			alwaystransparent = yes
+			}
 		}
 
 ###
@@ -123,6 +142,18 @@ guiTypes = {
 			}		
 			
 			instantTextBoxType = {
+				name = "unified_federation_text"
+				position = { x = 10 y = 0 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 4 y = 4}
+				text = "UNIFIED_FEDERATION_TEXT"
+				maxWidth = 160
+				maxHeight = 90
+				format = centre
+			}
+
+			instantTextBoxType = {	 
 				name = "no_federation_text"
 				position = { x = 10 y = 0 }
 				textureFile = ""
