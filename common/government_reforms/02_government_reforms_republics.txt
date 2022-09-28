@@ -25,6 +25,7 @@ oligarchy_reform = {
 	icon = "people_walking"
 	allow_normal_conversion = yes
 	potential = {
+		NOT = { has_reform = dwemer_city }
 		NOT = { is_colonial_nation = yes }
 		NOT = { has_reform = presidential_despot_reform }
 		is_revolutionary = no
@@ -1644,6 +1645,9 @@ military_dictatorship_reform = {
 		}
 		unknown_cg = {
 		    technology_cost = -0.10
+		}
+		deathland_cg = {
+			global_monthly_devastation = -0.05
 		}
 	}
 	

@@ -34,6 +34,115 @@
 #7186#kynes_aegis
 #1303#olenveld
 
+#mzulft
+
+mzulft = {
+	start = 2924
+	date = 54.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 3
+	type = monument
+	build_trigger = {
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+		culture_group = dwemer_cg
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+		culture_group = dwemer_cg
+	}
+	can_upgrade_trigger = {
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+		culture_group = dwemer_cg
+	}
+	keep_trigger = {
+		always = yes
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+}
+
 olenveld = {
 	start = 1303
 	date = 54.01.01
@@ -81,7 +190,7 @@ olenveld = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -97,7 +206,7 @@ olenveld = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -113,7 +222,7 @@ olenveld = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -132,7 +241,7 @@ kynes_aegis = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -180,10 +289,10 @@ kynes_aegis = {
 
 	tier_1 = {
 		upgrade_time = {
-			months = 24
+			months = 60 
 		}
 		cost_to_upgrade = {
-			factor = 100
+			factor = 1000 
 		}
 		province_modifiers = { }
 		area_modifier = { 
@@ -200,7 +309,7 @@ kynes_aegis = {
 			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 2500 
 		}
 		province_modifiers = { }
 		area_modifier = {
@@ -217,7 +326,7 @@ kynes_aegis = {
 			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 5000 
 		}
 		province_modifiers = { }
 		area_modifier = {
@@ -237,7 +346,7 @@ icereach = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -266,10 +375,10 @@ icereach = {
 
 	tier_1 = {
 		upgrade_time = {
-			months = 24
+			months = 60 
 		}
 		cost_to_upgrade = {
-			factor = 100
+			factor = 1000 
 		}
 		province_modifiers = { }
 		area_modifier = {
@@ -286,7 +395,7 @@ icereach = {
 			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 2500 
 		}
 		province_modifiers = { }
 		area_modifier = { 
@@ -303,7 +412,7 @@ icereach = {
 			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 5000 
 		}
 		province_modifiers = { }
 		area_modifier = {
@@ -359,7 +468,7 @@ yngol_barrow = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -375,7 +484,7 @@ yngol_barrow = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -391,7 +500,7 @@ yngol_barrow = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -410,7 +519,7 @@ vault_of_mhuvnak = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -454,10 +563,10 @@ vault_of_mhuvnak = {
 
 	tier_1 = {
 		upgrade_time = {
-			months = 24
+			months = 60 
 		}
 		cost_to_upgrade = {
-			factor = 100
+			factor = 1000 
 		}
 		province_modifiers = { 
 			fort_level = 1 
@@ -475,7 +584,7 @@ vault_of_mhuvnak = {
 			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 2500 
 		}
 		province_modifiers = {
 			fort_level = 2
@@ -493,7 +602,7 @@ vault_of_mhuvnak = {
 			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 5000 
 		}
 		province_modifiers = {
 			fort_level = 3
@@ -564,7 +673,7 @@ skuldafn = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -580,7 +689,7 @@ skuldafn = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -596,7 +705,7 @@ skuldafn = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -651,7 +760,7 @@ saarthal = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -667,7 +776,7 @@ saarthal = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -683,7 +792,7 @@ saarthal = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = { }
 		area_modifier = { }
@@ -749,7 +858,7 @@ redwater_spring = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -769,7 +878,7 @@ redwater_spring = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -789,7 +898,7 @@ redwater_spring = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -812,7 +921,7 @@ nchuand-zel = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -864,10 +973,10 @@ nchuand-zel = {
 
 	tier_1 = {
 		upgrade_time = {
-			months = 24
+			months = 60 
 		}
 		cost_to_upgrade = {
-			factor = 100
+			factor = 1000 
 		}
 		province_modifiers = {
 			local_manpower = 6
@@ -888,7 +997,7 @@ nchuand-zel = {
 			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 2500 
 		}
 		province_modifiers = {
 			local_manpower = 6
@@ -909,7 +1018,7 @@ nchuand-zel = {
 			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 5000 
 		}
 		province_modifiers = {
 			local_manpower = 6
@@ -933,7 +1042,7 @@ kilkreath_temple = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -990,8 +1099,8 @@ kilkreath_temple = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 		}
 		area_modifier = {
@@ -1005,8 +1114,8 @@ kilkreath_temple = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 		}
 		area_modifier = {
@@ -1020,8 +1129,8 @@ kilkreath_temple = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 		}
 		area_modifier = {
@@ -1041,7 +1150,7 @@ bromjunaar = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1083,8 +1192,8 @@ bromjunaar = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1100,8 +1209,8 @@ bromjunaar = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1117,8 +1226,8 @@ bromjunaar = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1140,7 +1249,7 @@ kagrenzel = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1168,8 +1277,8 @@ kagrenzel = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1186,8 +1295,8 @@ kagrenzel = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1204,8 +1313,8 @@ kagrenzel = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1228,7 +1337,7 @@ isle_of_gold = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1264,10 +1373,10 @@ isle_of_gold = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 24
+			months = 60 
 		}
 		cost_to_upgrade = {
-			factor = 100
+			factor = 1000 
 		}
 		province_modifiers = {
 			development_cost = -0.05
@@ -1286,7 +1395,7 @@ isle_of_gold = {
 			months = 48
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 2500 
 		}
 		province_modifiers = {
 			development_cost = -0.1
@@ -1305,7 +1414,7 @@ isle_of_gold = {
 			months = 72
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 5000 
 		}
 		province_modifiers = {
 			development_cost = -0.15
@@ -1375,7 +1484,7 @@ fortress_of_ice = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 			
@@ -1395,7 +1504,7 @@ fortress_of_ice = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		
@@ -1415,7 +1524,7 @@ fortress_of_ice = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -1479,7 +1588,7 @@ bthardamz = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 			
@@ -1501,7 +1610,7 @@ bthardamz = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		
@@ -1523,7 +1632,7 @@ bthardamz = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		
@@ -1590,7 +1699,7 @@ bards_college = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 			
@@ -1611,7 +1720,7 @@ bards_college = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		
@@ -1632,7 +1741,7 @@ bards_college = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		
@@ -1656,7 +1765,7 @@ arcwind_point = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1701,7 +1810,7 @@ arcwind_point = {
 			months = 12
 		}
 		cost_to_upgrade = {
-			factor = 100
+			factor = 1000 
 		}
 		province_modifiers = {
 			fort_level = 1
@@ -1718,10 +1827,10 @@ arcwind_point = {
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 24
+			months = 60 
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 2500 
 		}
 		province_modifiers = {
 			fort_level = 2
@@ -1741,7 +1850,7 @@ arcwind_point = {
 			months = 36
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 5000 
 		}
 		province_modifiers = {
 			fort_level = 3
@@ -1809,7 +1918,7 @@ twilight_sepulcher = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -1828,7 +1937,7 @@ twilight_sepulcher = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -1847,7 +1956,7 @@ twilight_sepulcher = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -1912,7 +2021,7 @@ riften_canals = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -1932,7 +2041,7 @@ riften_canals = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -1952,7 +2061,7 @@ riften_canals = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -1970,7 +2079,7 @@ riften_canals = {
 }
 
 great_lift_at_alftand = {
-	start = 2740
+	start = 2737
 	date = 54.01.01
 	time = {
 		months = 0
@@ -2025,67 +2134,54 @@ great_lift_at_alftand = {
 		}
 	}
 	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
+
 	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
+
 	tier_3 = {
-		upgrade_time = {
-			months = 360
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
 }
 
@@ -2145,67 +2241,54 @@ great_lift_at_mzinchaleft = {
 		}
 	}
 	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
+
 	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
+
 	tier_3 = {
-		upgrade_time = {
-			months = 360
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
 }
 
@@ -2265,67 +2348,54 @@ great_lift_at_raldbthar = {
 		}
 	}
 	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
+
 	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
+
 	tier_3 = {
-		upgrade_time = {
-			months = 360
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
 }
 
@@ -2385,67 +2455,54 @@ tower_mzark = {
 		}
 	}
 	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
+
 	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
+
 	tier_3 = {
-		upgrade_time = {
-			months = 360
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
-			local_manpower = 6
-			tax_income = 30
-			trade_goods_size = 3
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
 		}
 		area_modifier = {
-			local_development_cost = -0.15
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
 		}
-		country_modifiers = {
-			land_forcelimit = 5
-		}
-		on_upgraded = {
-		}
+		country_modifiers = { }
+		on_upgraded = { }
 	}
 }
 
@@ -2543,7 +2600,7 @@ silent_city = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -2562,7 +2619,7 @@ silent_city = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -2581,7 +2638,7 @@ silent_city = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -2666,7 +2723,7 @@ greymoor_caverns = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -2685,7 +2742,7 @@ greymoor_caverns = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -2704,7 +2761,7 @@ greymoor_caverns = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -2789,7 +2846,7 @@ arkthzand_cavern = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -2809,7 +2866,7 @@ arkthzand_cavern = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -2829,7 +2886,7 @@ arkthzand_cavern = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -2904,7 +2961,7 @@ windhelm_palace = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -2923,7 +2980,7 @@ windhelm_palace = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -2942,7 +2999,7 @@ windhelm_palace = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3018,7 +3075,7 @@ shimmermist_cave = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3037,7 +3094,7 @@ shimmermist_cave = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3056,7 +3113,7 @@ shimmermist_cave = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3132,7 +3189,7 @@ high_hrothgar = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3152,7 +3209,7 @@ high_hrothgar = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3172,7 +3229,7 @@ high_hrothgar = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3247,7 +3304,7 @@ skyforge = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3266,7 +3323,7 @@ skyforge = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3285,7 +3342,7 @@ skyforge = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3361,7 +3418,7 @@ college_of_winterhold = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3385,7 +3442,7 @@ college_of_winterhold = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3404,7 +3461,7 @@ college_of_winterhold = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3483,7 +3540,7 @@ etherial_forge = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3502,7 +3559,7 @@ etherial_forge = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3521,7 +3578,7 @@ etherial_forge = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3597,7 +3654,7 @@ sky_haven_temple = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3617,7 +3674,7 @@ sky_haven_temple = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3637,7 +3694,7 @@ sky_haven_temple = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3715,7 +3772,7 @@ gjukars_monument = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3733,7 +3790,7 @@ gjukars_monument = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3752,7 +3809,7 @@ gjukars_monument = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3826,7 +3883,7 @@ blue_palace = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3850,7 +3907,7 @@ blue_palace = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3874,7 +3931,7 @@ blue_palace = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -3954,7 +4011,7 @@ castle_volkihar = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -3974,7 +4031,7 @@ castle_volkihar = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -3994,7 +4051,7 @@ castle_volkihar = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -4071,7 +4128,7 @@ skykiller_gallery = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -4091,7 +4148,7 @@ skykiller_gallery = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -4111,7 +4168,7 @@ skykiller_gallery = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}
@@ -4176,7 +4233,7 @@ dunmeth_pass = {
 			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 3000 
 		}
 		province_modifiers = {
 		}
@@ -4196,7 +4253,7 @@ dunmeth_pass = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7500 
 		}
 		province_modifiers = {
 		}
@@ -4216,7 +4273,7 @@ dunmeth_pass = {
 			months = 360
 		}
 		cost_to_upgrade = {
-			factor = 5000
+			factor = 15000 
 		}
 		province_modifiers = {
 		}

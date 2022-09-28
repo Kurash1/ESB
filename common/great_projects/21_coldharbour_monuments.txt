@@ -14,7 +14,7 @@ hollow_city = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -57,8 +57,8 @@ hollow_city = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -74,8 +74,8 @@ hollow_city = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -91,8 +91,8 @@ hollow_city = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -114,7 +114,7 @@ haj_uxith = {
 	time = {
 		months = 0
 	}
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -157,8 +157,8 @@ haj_uxith = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -174,8 +174,8 @@ haj_uxith = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -191,8 +191,8 @@ haj_uxith = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -257,7 +257,7 @@ black_gold_tower = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -270,7 +270,7 @@ black_gold_tower = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -283,7 +283,7 @@ black_gold_tower = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -362,7 +362,7 @@ tower_of_lies = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -375,7 +375,7 @@ tower_of_lies = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = {
@@ -388,7 +388,7 @@ tower_of_lies = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -452,7 +452,7 @@ the_vile_laboratory = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -465,7 +465,7 @@ the_vile_laboratory = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -478,7 +478,7 @@ the_vile_laboratory = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -549,7 +549,7 @@ font_of_shcems = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -562,7 +562,7 @@ font_of_shcems = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -575,7 +575,7 @@ font_of_shcems = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -646,7 +646,7 @@ the_everfull_flagon = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -659,7 +659,7 @@ the_everfull_flagon = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -672,7 +672,7 @@ the_everfull_flagon = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -733,7 +733,7 @@ chapel_of_light = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -746,7 +746,7 @@ chapel_of_light = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -759,7 +759,7 @@ chapel_of_light = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 

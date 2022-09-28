@@ -95,14 +95,17 @@
 #greenheart
 #haven
 
-skingrad = {
-	start = 1144
+#frulthuul
+#the_sisters
+
+the_sisters = {
+	start = 2219
 	
 	date = 54.01.01
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -131,8 +134,8 @@ skingrad = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -148,8 +151,8 @@ skingrad = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -165,8 +168,182 @@ skingrad = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+}
+
+frulthuul = {
+	start = 2505
+	
+	date = 54.01.01
+	
+	time = { months = 0 }
+	
+	build_cost = 1000 
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = { 
+	}
+
+	on_built = { }
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = { always = yes }
+
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+}
+
+skingrad = {
+	start = 1144
+	
+	date = 54.01.01
+	
+	time = { months = 0 }
+	
+	build_cost = 1000 
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = { 
+	}
+
+	on_built = { }
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = { always = yes }
+
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -188,7 +365,7 @@ anvil = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -217,8 +394,8 @@ anvil = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -234,8 +411,8 @@ anvil = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -251,8 +428,8 @@ anvil = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -274,7 +451,7 @@ bravil = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -303,8 +480,8 @@ bravil = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -320,8 +497,8 @@ bravil = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -337,8 +514,8 @@ bravil = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -360,7 +537,7 @@ bruma = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -389,8 +566,8 @@ bruma = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -406,8 +583,8 @@ bruma = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -423,8 +600,8 @@ bruma = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -446,7 +623,7 @@ cheydinhal = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -475,8 +652,8 @@ cheydinhal = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -492,8 +669,8 @@ cheydinhal = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -509,8 +686,8 @@ cheydinhal = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -532,7 +709,7 @@ chorrol = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -561,8 +738,8 @@ chorrol = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -578,8 +755,8 @@ chorrol = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -595,8 +772,8 @@ chorrol = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -618,7 +795,7 @@ kvatch = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -647,8 +824,8 @@ kvatch = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -664,8 +841,8 @@ kvatch = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -681,8 +858,8 @@ kvatch = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -704,7 +881,7 @@ leyawiin = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -733,8 +910,8 @@ leyawiin = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -750,8 +927,8 @@ leyawiin = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -767,8 +944,8 @@ leyawiin = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -790,7 +967,7 @@ archon = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -819,8 +996,8 @@ archon = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -836,8 +1013,8 @@ archon = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -853,8 +1030,8 @@ archon = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -876,7 +1053,7 @@ blackrose = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -905,8 +1082,8 @@ blackrose = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -922,8 +1099,8 @@ blackrose = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -939,8 +1116,8 @@ blackrose = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -962,7 +1139,7 @@ gideon = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -991,8 +1168,8 @@ gideon = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1008,8 +1185,8 @@ gideon = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1025,8 +1202,8 @@ gideon = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1048,7 +1225,7 @@ helstrom = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1077,8 +1254,8 @@ helstrom = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1094,8 +1271,8 @@ helstrom = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1111,8 +1288,8 @@ helstrom = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1134,7 +1311,7 @@ lilmoth = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1163,8 +1340,8 @@ lilmoth = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1180,8 +1357,8 @@ lilmoth = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1197,8 +1374,8 @@ lilmoth = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1220,7 +1397,7 @@ soulrest = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1249,8 +1426,8 @@ soulrest = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1266,8 +1443,8 @@ soulrest = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1283,8 +1460,8 @@ soulrest = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1306,7 +1483,7 @@ stormhold = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1335,8 +1512,8 @@ stormhold = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1352,8 +1529,8 @@ stormhold = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1369,8 +1546,8 @@ stormhold = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1392,7 +1569,7 @@ thorn = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1421,8 +1598,8 @@ thorn = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1438,8 +1615,8 @@ thorn = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1455,8 +1632,8 @@ thorn = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1478,7 +1655,7 @@ corinthe = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1507,8 +1684,8 @@ corinthe = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1524,8 +1701,8 @@ corinthe = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1541,8 +1718,8 @@ corinthe = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1564,7 +1741,7 @@ dune = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1593,8 +1770,8 @@ dune = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1610,8 +1787,8 @@ dune = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1627,8 +1804,8 @@ dune = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1650,7 +1827,7 @@ mistral = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1679,8 +1856,8 @@ mistral = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1696,8 +1873,8 @@ mistral = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1713,8 +1890,8 @@ mistral = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1736,7 +1913,7 @@ orcrest = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1765,8 +1942,8 @@ orcrest = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1782,8 +1959,8 @@ orcrest = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1799,8 +1976,8 @@ orcrest = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1822,7 +1999,7 @@ rawl_kha = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1851,8 +2028,8 @@ rawl_kha = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1868,8 +2045,8 @@ rawl_kha = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1885,8 +2062,8 @@ rawl_kha = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1908,7 +2085,7 @@ rimmen = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -1937,8 +2114,8 @@ rimmen = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -1954,8 +2131,8 @@ rimmen = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -1971,8 +2148,8 @@ rimmen = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -1994,7 +2171,7 @@ riverhold = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2023,8 +2200,8 @@ riverhold = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2040,8 +2217,8 @@ riverhold = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2057,8 +2234,8 @@ riverhold = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2080,7 +2257,7 @@ senchal = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2109,8 +2286,8 @@ senchal = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2126,8 +2303,8 @@ senchal = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2143,8 +2320,8 @@ senchal = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2166,7 +2343,7 @@ torval = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2195,8 +2372,8 @@ torval = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2212,8 +2389,8 @@ torval = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2229,8 +2406,8 @@ torval = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2285,8 +2462,8 @@ dragonstar = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2302,8 +2479,8 @@ dragonstar = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2319,8 +2496,8 @@ dragonstar = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2342,7 +2519,7 @@ elinhir = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2371,8 +2548,8 @@ elinhir = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2388,8 +2565,8 @@ elinhir = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2405,8 +2582,8 @@ elinhir = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2428,7 +2605,7 @@ gilane = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2457,8 +2634,8 @@ gilane = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2474,8 +2651,8 @@ gilane = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2491,8 +2668,8 @@ gilane = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2514,7 +2691,7 @@ hegathe = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2543,8 +2720,8 @@ hegathe = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2560,8 +2737,8 @@ hegathe = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2577,8 +2754,8 @@ hegathe = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2600,7 +2777,7 @@ rihad = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2629,8 +2806,8 @@ rihad = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2646,8 +2823,8 @@ rihad = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2663,8 +2840,8 @@ rihad = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2686,7 +2863,7 @@ sentinel = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2715,8 +2892,8 @@ sentinel = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2732,8 +2909,8 @@ sentinel = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2749,8 +2926,8 @@ sentinel = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2772,7 +2949,7 @@ skaven = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2801,8 +2978,8 @@ skaven = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2818,8 +2995,8 @@ skaven = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2835,8 +3012,8 @@ skaven = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2858,7 +3035,7 @@ taneth = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2887,8 +3064,8 @@ taneth = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2904,8 +3081,8 @@ taneth = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -2921,8 +3098,8 @@ taneth = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -2944,7 +3121,7 @@ camlorn = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -2973,8 +3150,8 @@ camlorn = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -2990,8 +3167,8 @@ camlorn = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3007,8 +3184,8 @@ camlorn = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3030,7 +3207,7 @@ daggerfall = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3059,8 +3236,8 @@ daggerfall = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3076,8 +3253,8 @@ daggerfall = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3093,8 +3270,8 @@ daggerfall = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3116,7 +3293,7 @@ evermore = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3145,8 +3322,8 @@ evermore = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3162,8 +3339,8 @@ evermore = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3179,8 +3356,8 @@ evermore = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3202,7 +3379,7 @@ farrun = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3231,8 +3408,8 @@ farrun = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3248,8 +3425,8 @@ farrun = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3265,8 +3442,8 @@ farrun = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3288,7 +3465,7 @@ jehanna = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3317,8 +3494,8 @@ jehanna = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3334,8 +3511,8 @@ jehanna = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3351,8 +3528,8 @@ jehanna = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3374,7 +3551,7 @@ northpoint = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3403,8 +3580,8 @@ northpoint = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3420,8 +3597,8 @@ northpoint = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3437,8 +3614,8 @@ northpoint = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3460,7 +3637,7 @@ first_orsinium = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3492,8 +3669,8 @@ first_orsinium = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3509,8 +3686,8 @@ first_orsinium = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3526,8 +3703,8 @@ first_orsinium = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3549,7 +3726,7 @@ second_orsinium = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3581,8 +3758,8 @@ second_orsinium = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3598,8 +3775,8 @@ second_orsinium = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3615,8 +3792,8 @@ second_orsinium = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3638,7 +3815,7 @@ third_orsinium = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3670,8 +3847,8 @@ third_orsinium = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3687,8 +3864,8 @@ third_orsinium = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3704,8 +3881,8 @@ third_orsinium = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3727,7 +3904,7 @@ fourth_orsinium = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3759,8 +3936,8 @@ fourth_orsinium = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3776,8 +3953,8 @@ fourth_orsinium = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3793,8 +3970,8 @@ fourth_orsinium = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3816,7 +3993,7 @@ shornhelm = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3845,8 +4022,8 @@ shornhelm = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3862,8 +4039,8 @@ shornhelm = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3879,8 +4056,8 @@ shornhelm = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3902,7 +4079,7 @@ wayrest = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -3931,8 +4108,8 @@ wayrest = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -3948,8 +4125,8 @@ wayrest = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -3965,8 +4142,8 @@ wayrest = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -3988,7 +4165,7 @@ ald_ruhn = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4017,8 +4194,8 @@ ald_ruhn = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4034,8 +4211,8 @@ ald_ruhn = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4051,8 +4228,8 @@ ald_ruhn = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4074,7 +4251,7 @@ balmora = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4103,8 +4280,8 @@ balmora = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4120,8 +4297,8 @@ balmora = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4137,8 +4314,8 @@ balmora = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4160,7 +4337,7 @@ gnisis = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4189,8 +4366,8 @@ gnisis = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4206,8 +4383,8 @@ gnisis = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4223,8 +4400,8 @@ gnisis = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4246,7 +4423,7 @@ sadrith_mora = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4275,8 +4452,8 @@ sadrith_mora = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4292,8 +4469,8 @@ sadrith_mora = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4309,8 +4486,8 @@ sadrith_mora = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4332,7 +4509,7 @@ seyda_neen = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4361,8 +4538,8 @@ seyda_neen = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4378,8 +4555,8 @@ seyda_neen = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4395,8 +4572,8 @@ seyda_neen = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4418,7 +4595,7 @@ vivec_city = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4447,8 +4624,8 @@ vivec_city = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4464,8 +4641,8 @@ vivec_city = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4481,8 +4658,8 @@ vivec_city = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4504,7 +4681,7 @@ mournhold = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4533,8 +4710,8 @@ mournhold = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4550,8 +4727,8 @@ mournhold = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4567,8 +4744,8 @@ mournhold = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4590,7 +4767,7 @@ blacklight = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4619,8 +4796,8 @@ blacklight = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4636,8 +4813,8 @@ blacklight = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4653,8 +4830,8 @@ blacklight = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4676,7 +4853,7 @@ firewatch = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4705,8 +4882,8 @@ firewatch = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4722,8 +4899,8 @@ firewatch = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4739,8 +4916,8 @@ firewatch = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4762,7 +4939,7 @@ kragenmoor = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4791,8 +4968,8 @@ kragenmoor = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4808,8 +4985,8 @@ kragenmoor = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4825,8 +5002,8 @@ kragenmoor = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4848,7 +5025,7 @@ narsis = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4877,8 +5054,8 @@ narsis = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4894,8 +5071,8 @@ narsis = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4911,8 +5088,8 @@ narsis = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -4934,7 +5111,7 @@ necrom = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -4963,8 +5140,8 @@ necrom = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -4980,8 +5157,8 @@ necrom = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -4997,8 +5174,8 @@ necrom = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5020,7 +5197,7 @@ ebonheart = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5049,8 +5226,8 @@ ebonheart = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5066,8 +5243,8 @@ ebonheart = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5083,8 +5260,8 @@ ebonheart = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5106,7 +5283,7 @@ tear = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5135,8 +5312,8 @@ tear = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5152,8 +5329,8 @@ tear = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5169,8 +5346,8 @@ tear = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5192,7 +5369,7 @@ dawnstar = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5221,8 +5398,8 @@ dawnstar = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5238,8 +5415,8 @@ dawnstar = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5255,8 +5432,8 @@ dawnstar = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5278,7 +5455,7 @@ falkreath = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5307,8 +5484,8 @@ falkreath = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5324,8 +5501,8 @@ falkreath = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5341,8 +5518,8 @@ falkreath = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5364,7 +5541,7 @@ markarth = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5393,8 +5570,8 @@ markarth = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5410,8 +5587,8 @@ markarth = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5427,8 +5604,8 @@ markarth = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5450,7 +5627,7 @@ morthal = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5479,8 +5656,8 @@ morthal = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5496,8 +5673,8 @@ morthal = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5513,8 +5690,8 @@ morthal = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5536,7 +5713,7 @@ riften = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5565,8 +5742,8 @@ riften = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5582,8 +5759,8 @@ riften = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5599,8 +5776,8 @@ riften = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5622,7 +5799,7 @@ snowhawk = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5651,8 +5828,8 @@ snowhawk = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5668,8 +5845,8 @@ snowhawk = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5685,8 +5862,8 @@ snowhawk = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5708,7 +5885,7 @@ solitude = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5737,8 +5914,8 @@ solitude = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5754,8 +5931,8 @@ solitude = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5771,8 +5948,8 @@ solitude = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5794,7 +5971,7 @@ whiterun = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5823,8 +6000,8 @@ whiterun = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5840,8 +6017,8 @@ whiterun = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5857,8 +6034,8 @@ whiterun = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5880,7 +6057,7 @@ windhelm = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5909,8 +6086,8 @@ windhelm = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -5926,8 +6103,8 @@ windhelm = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -5943,8 +6120,8 @@ windhelm = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -5966,7 +6143,7 @@ winterhold = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -5995,8 +6172,8 @@ winterhold = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6012,8 +6189,8 @@ winterhold = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6029,8 +6206,8 @@ winterhold = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6052,7 +6229,7 @@ helgen = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6081,8 +6258,8 @@ helgen = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6098,8 +6275,8 @@ helgen = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6115,8 +6292,8 @@ helgen = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6138,7 +6315,7 @@ alinor = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6167,8 +6344,8 @@ alinor = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6184,8 +6361,8 @@ alinor = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6201,8 +6378,8 @@ alinor = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6224,7 +6401,7 @@ cloudrest = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6253,8 +6430,8 @@ cloudrest = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6270,8 +6447,8 @@ cloudrest = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6287,8 +6464,8 @@ cloudrest = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6310,7 +6487,7 @@ dusk = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6339,8 +6516,8 @@ dusk = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6356,8 +6533,8 @@ dusk = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6373,8 +6550,8 @@ dusk = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6396,7 +6573,7 @@ firsthold = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6425,8 +6602,8 @@ firsthold = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6442,8 +6619,8 @@ firsthold = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6459,8 +6636,8 @@ firsthold = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6482,7 +6659,7 @@ lillandril = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6511,8 +6688,8 @@ lillandril = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6528,8 +6705,8 @@ lillandril = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6545,8 +6722,8 @@ lillandril = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6568,7 +6745,7 @@ shimmerene = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6597,8 +6774,8 @@ shimmerene = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6614,8 +6791,8 @@ shimmerene = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6631,8 +6808,8 @@ shimmerene = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6654,7 +6831,7 @@ skywatch = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6683,8 +6860,8 @@ skywatch = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6700,8 +6877,8 @@ skywatch = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6717,8 +6894,8 @@ skywatch = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6740,7 +6917,7 @@ skywatch = {
 #	
 #	time = { months = 0 }
 #	
-#	build_cost = 100
+#	build_cost = 1000 
 #	can_be_moved = no
 #	move_days_per_unit_distance = 10
 #	starting_tier = 0
@@ -6769,8 +6946,8 @@ skywatch = {
 #	}
 #
 #	tier_1 = {
-#		upgrade_time = { months = 24 }
-#		cost_to_upgrade = { factor = 100 }
+#		upgrade_time = { months = 60 }
+#		cost_to_upgrade = { factor = 1000 }
 #		province_modifiers = {
 #			local_development_cost = -0.05
 #			trade_goods_size_modifier = 0.05 
@@ -6786,8 +6963,8 @@ skywatch = {
 #	}
 #
 #	tier_2 = {
-#		upgrade_time = { months = 48 }
-#		cost_to_upgrade = { factor = 250 }
+#		upgrade_time = { months = 120 }
+#		cost_to_upgrade = { factor = 2500 }
 #		province_modifiers = {
 #			local_development_cost = -0.10
 #			trade_goods_size_modifier = 0.10 
@@ -6803,8 +6980,8 @@ skywatch = {
 #	}
 #
 #	tier_3 = {
-#		upgrade_time = { months = 72 }
-#		cost_to_upgrade = { factor = 500 }
+#		upgrade_time = { months = 180 }
+#		cost_to_upgrade = { factor = 5000 }
 #		province_modifiers = {
 #			local_development_cost = -0.15
 #			trade_goods_size_modifier = 0.15 
@@ -6826,7 +7003,7 @@ vulkhel_guard = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6855,8 +7032,8 @@ vulkhel_guard = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6872,8 +7049,8 @@ vulkhel_guard = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6889,8 +7066,8 @@ vulkhel_guard = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6912,7 +7089,7 @@ marbruk = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -6941,8 +7118,8 @@ marbruk = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -6958,8 +7135,8 @@ marbruk = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -6975,8 +7152,8 @@ marbruk = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -6998,7 +7175,7 @@ silvenar = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -7027,8 +7204,8 @@ silvenar = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -7044,8 +7221,8 @@ silvenar = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -7061,8 +7238,8 @@ silvenar = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -7084,7 +7261,7 @@ southpoint = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -7113,8 +7290,8 @@ southpoint = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -7130,8 +7307,8 @@ southpoint = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -7147,8 +7324,8 @@ southpoint = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -7170,7 +7347,7 @@ whisper_grove = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -7199,8 +7376,8 @@ whisper_grove = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -7216,8 +7393,8 @@ whisper_grove = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -7233,8 +7410,8 @@ whisper_grove = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -7256,7 +7433,7 @@ woodhearth = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -7285,8 +7462,8 @@ woodhearth = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -7302,8 +7479,8 @@ woodhearth = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -7319,8 +7496,8 @@ woodhearth = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -7342,7 +7519,7 @@ woodhearth = {
 #	
 #	time = { months = 0 }
 #	
-#	build_cost = 100
+#	build_cost = 1000 
 #	can_be_moved = no
 #	move_days_per_unit_distance = 10
 #	starting_tier = 0
@@ -7371,8 +7548,8 @@ woodhearth = {
 #	}
 #
 #	tier_1 = {
-#		upgrade_time = { months = 24 }
-#		cost_to_upgrade = { factor = 100 }
+#		upgrade_time = { months = 60 }
+#		cost_to_upgrade = { factor = 1000 }
 #		province_modifiers = {
 #			local_development_cost = -0.05
 #			trade_goods_size_modifier = 0.05 
@@ -7388,8 +7565,8 @@ woodhearth = {
 #	}
 #
 #	tier_2 = {
-#		upgrade_time = { months = 48 }
-#		cost_to_upgrade = { factor = 250 }
+#		upgrade_time = { months = 120 }
+#		cost_to_upgrade = { factor = 2500 }
 #		province_modifiers = {
 #			local_development_cost = -0.10
 #			trade_goods_size_modifier = 0.10 
@@ -7405,8 +7582,8 @@ woodhearth = {
 #	}
 #
 #	tier_3 = {
-#		upgrade_time = { months = 72 }
-#		cost_to_upgrade = { factor = 500 }
+#		upgrade_time = { months = 180 }
+#		cost_to_upgrade = { factor = 5000 }
 #		province_modifiers = {
 #			local_development_cost = -0.15
 #			trade_goods_size_modifier = 0.15 
@@ -7428,7 +7605,7 @@ falinesti = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -7457,8 +7634,8 @@ falinesti = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -7474,8 +7651,8 @@ falinesti = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -7491,8 +7668,8 @@ falinesti = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -7514,7 +7691,7 @@ greenheart = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -7543,8 +7720,8 @@ greenheart = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -7560,8 +7737,8 @@ greenheart = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -7577,8 +7754,8 @@ greenheart = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -7600,7 +7777,7 @@ haven = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -7629,8 +7806,8 @@ haven = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -7646,8 +7823,8 @@ haven = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -7663,8 +7840,8 @@ haven = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
-		cost_to_upgrade = { factor = 500 }
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
 			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15 
@@ -7686,7 +7863,7 @@ port_telvannis = {
 	
 	time = { months = 0 }
 	
-	build_cost = 100
+	build_cost = 1000 
 	can_be_moved = no
 	move_days_per_unit_distance = 10
 	starting_tier = 0
@@ -7715,8 +7892,8 @@ port_telvannis = {
 	}
 
 	tier_1 = {
-		upgrade_time = { months = 24 }
-		cost_to_upgrade = { factor = 100 }
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05 
@@ -7732,8 +7909,8 @@ port_telvannis = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 48 }
-		cost_to_upgrade = { factor = 250 }
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10 
@@ -7749,7 +7926,7 @@ port_telvannis = {
 	}
 
 	tier_3 = {
-		upgrade_time = { months = 72 }
+		upgrade_time = { months = 180 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.15

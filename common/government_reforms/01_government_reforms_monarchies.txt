@@ -14,6 +14,7 @@ autocracy_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes
 	potential = {
+		NOT = { has_reform = dwemer_kingdom }
 		NOT = { is_emperor_of_china = yes }
 		NOT = { is_revolution_target = yes }
 	}

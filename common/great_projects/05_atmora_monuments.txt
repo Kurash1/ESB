@@ -3,6 +3,193 @@
 # the_frostwood
 # shivering_glacier
 
+# crane_shore
+# jarnfell_pass
+
+jarnfell_pass = {
+	start = 484
+	
+	date = 54.01.01
+	
+	time = { months = 0 }
+	
+	build_cost = 3000 
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = { 
+		fort_level = 1
+	}
+
+	on_built = { }
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+		fort_level = 1
+	}
+	can_upgrade_trigger = {
+		fort_level = 1
+	}
+	keep_trigger = { always = yes }
+
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			local_defensiveness = 0.25
+			local_hostile_movement_speed = -0.25
+		}
+		country_modifiers = { 
+			defensiveness = 0.25
+		}
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 7500 }
+		province_modifiers = { 
+			fort_level = 2
+		}
+		area_modifier = { 
+			local_defensiveness = 0.4
+			local_hostile_movement_speed = -0.4
+		}
+		country_modifiers = { 
+			defensiveness = 0.4
+		}
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 360 }
+		cost_to_upgrade = { factor = 15000 }
+		province_modifiers = { 
+			fort_level = 3
+		}
+		area_modifier = { 
+			local_defensiveness = 0.5
+			local_hostile_movement_speed = -0.5
+		}
+		country_modifiers = { 
+			defensiveness = 0.5
+		}
+		on_upgraded = { }
+	}
+}
+
+crane_shore = {
+	start = 2228
+	
+	date = 54.01.01
+	
+	time = { months = 0 }
+	
+	build_cost = 3000 
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = { 
+	}
+
+	on_built = { }
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = { always = yes }
+
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
+		}
+		country_modifiers = { 
+			global_colonial_growth = 10
+			range = 0.1
+		}
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 7500 }
+		province_modifiers = {
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
+		}
+		country_modifiers = { 
+			global_colonial_growth = 25
+			range = 0.25
+		}
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 15000 }
+		province_modifiers = {
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
+		}
+		country_modifiers = { 
+			colonists = 1
+			global_colonial_growth = 50
+			range = 0.5
+		}
+		on_upgraded = { }
+	}
+}
+
 shivering_glacier = {
 	start = 2314
 	
@@ -52,7 +239,7 @@ shivering_glacier = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = {
@@ -65,7 +252,7 @@ shivering_glacier = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -78,7 +265,7 @@ shivering_glacier = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -139,7 +326,7 @@ the_frostwood = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -152,7 +339,7 @@ the_frostwood = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -165,7 +352,7 @@ the_frostwood = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = {
@@ -246,7 +433,7 @@ dragon_sanctuary = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = {
@@ -262,7 +449,7 @@ dragon_sanctuary = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = {
@@ -278,7 +465,7 @@ dragon_sanctuary = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -376,7 +563,7 @@ jylkurfyk_shipyard = {
 
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 3000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
@@ -390,7 +577,7 @@ jylkurfyk_shipyard = {
 
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 7500 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = {
@@ -404,7 +591,7 @@ jylkurfyk_shipyard = {
 
 	tier_3 = {
 		upgrade_time = { months = 360 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 15000 }
 		province_modifiers = { }
 		area_modifier = { }
 		country_modifiers = { 
