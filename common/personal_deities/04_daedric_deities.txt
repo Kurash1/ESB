@@ -165,9 +165,9 @@ Hircine = {
 	mercenary_manpower = 0.1
 	merc_maintenance_modifier = -0.1
 	allow = {
-		AND = {
+		OR = {
 			religion = kothri_pantheon
-			# has_country_flag = deity_flag_7
+			religion = keptu_pantheon
 		}
 	}
 	sprite = 37

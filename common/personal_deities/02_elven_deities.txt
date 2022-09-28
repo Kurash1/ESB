@@ -58,22 +58,10 @@ Magnus = {
 	idea_cost = -0.1
 	allow = {
 		OR = {
-			AND = {
-				religion = altmeri_pantheon
-				# has_country_flag = deity_flag_4
-			}
-			AND = {
-				religion = twelve_divines
-				# has_country_flag = deity_flag_10
-			}
-			AND = {
-				religion = nedic_pantheon
-				# has_country_flag = deity_flag_1
-			}
-			AND = {
-				religion = ayleid_pantheon
-				# has_country_flag = deity_flag_3
-			}
+			religion = altmeri_pantheon
+			religion = twelve_divines
+			religion = keptu_pantheon
+			religion = ayleid_pantheon
 		}
 	}
 	sprite = 4
@@ -165,7 +153,7 @@ Zen = {
 				# has_country_flag = deity_flag_2
 			}
 			AND = {
-				religion = nedic_pantheon
+				religion = keptu_pantheon
 				# has_country_flag = deity_flag_2
 			}
 		}

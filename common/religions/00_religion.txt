@@ -97,6 +97,31 @@ polytheistic_group = {
 		heretic = { NEDIC_PANTHEON_HERETIC }	
 	}
 	
+	keptu_pantheon = {
+		color = { 241 121 121 }
+		icon = 22
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			development_cost = -0.1
+			technology_cost = -0.1
+		}
+		allowed_center_conversion = {
+		}
+		will_get_center = {
+        }
+		country_as_secondary = {
+			development_cost = -0.05
+			technology_cost = -0.05
+		}
+		province = {
+			local_unrest = -1
+		}
+		
+		personal_deity = yes
+		
+		heretic = { KEPTU_PANTHEON_HERETIC }
+	}
+	
 	snow_elves_pantheon = {
 		color = { 230 222 100 }
 		icon = 2
