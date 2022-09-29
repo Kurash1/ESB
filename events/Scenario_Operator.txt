@@ -939,9 +939,9 @@ country_event = {
 	
 	trigger = {
 	    tag = BLA
-		NOT = { is_year = 487 }
+		NOT = { is_year = 326 }
 		OR = {
-			is_year = 458
+			is_year = 296
 			AND = {
 				has_global_flag = alessian_rebellion_flag
 				any_country = {
@@ -994,12 +994,17 @@ country_event = {
 		every_country = { limit = { owns = 1394 } country_event = { id = es_14_scenario.2 days = 502 random = 9125 } }
 		###
 		every_country = { limit = { any_neighbor_country = { owns = 1206 } is_free_or_tributary_trigger = yes } country_event = { id = es_14_scenario.5 days = 503 random = 3750 }  }
+	
+		country_event = {
+			id = esb_scenario.1 # Will happen 1-51 years after Rise of High Rock
+			days = 365 # 1 year
+			random = 36500 # + up to 50 years
+		}
 	}
 	
 	option = {
 		name = "es_1_scenario.1.a"
 	}
-	
 }
 
 # Coral Kingdom
