@@ -98,6 +98,184 @@
 #frulthuul
 #the_sisters
 
+#naugrheim
+#broadwall
+
+broadwall = {
+    start = 357
+	
+	date = 54.01.01
+	
+	time = { months = 0 }
+	
+	build_cost = 1000 
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = { 
+	}
+
+	on_built = { }
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+	}
+	
+	can_upgrade_trigger = {
+	}
+	keep_trigger = { always = yes }
+
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+}
+
+naugrheim = {
+    start = 363
+	
+	date = 54.01.01
+	
+	time = { months = 0 }
+	
+	build_cost = 1000 
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = { 
+	}
+
+	on_built = { }
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	keep_trigger = { always = yes }
+
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.05 
+			trade_value_modifier = 0.05
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			local_defensiveness = 0.05
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_development_cost = -0.10
+			trade_goods_size_modifier = 0.10 
+			trade_value_modifier = 0.10
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.075
+			local_defensiveness = 0.10
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 180 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.15 
+			trade_value_modifier = 0.15
+			fort_level = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			local_defensiveness = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+}
+
 the_sisters = {
 	start = 2219
 	

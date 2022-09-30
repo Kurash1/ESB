@@ -402,9 +402,7 @@ eternal_palace = {
 	type = monument
 
 	build_trigger = { 
-		owner = { 
-			is_emperor_of_china = yes
-		}
+		culture = po_tun
 		OR = {
 			has_owner_culture = yes
 			has_owner_accepted_culture = yes
@@ -415,18 +413,14 @@ eternal_palace = {
 	on_destroyed = { }
 
 	can_use_modifiers_trigger = {
-		owner = { 
-			is_emperor_of_china = yes
-		}
+		culture = po_tun
 		OR = {
 			has_owner_culture = yes
 			has_owner_accepted_culture = yes
 		} 
 	}
 	can_upgrade_trigger = {
-		owner = { 
-			is_emperor_of_china = yes
-		}
+		culture = po_tun
 		OR = {
 			has_owner_culture = yes
 			has_owner_accepted_culture = yes
