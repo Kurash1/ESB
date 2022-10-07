@@ -322,3 +322,41 @@ esb_thaumavocalism = {
 		factor = 1
 	}
 }
+
+esb_dark_magic = {
+	category = ADM
+	
+	trigger = {
+		full_idea_group = mysticism_ideas
+	}
+	bonus = {
+		war_exhaustion = -0.02
+	}
+	
+	esb_dark_magic1 = {
+		diplomatic_reputation = -5
+	}
+	esb_dark_magic2 = {
+		fire_damage = 0.1
+	}
+	esb_dark_magic3 = {
+		fire_damage_received = -0.1
+	}
+	esb_dark_magic4 = {
+		defensiveness = 0.25
+	}
+	esb_dark_magic5 = {
+		ae_impact = 0.1
+	}
+	esb_dark_magic6 = {
+		recover_army_morale_speed = 0.5
+		reinforce_speed = 0.5
+	}
+	esb_dark_magic7 = {
+		shock_damage = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
