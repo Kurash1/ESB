@@ -5,8 +5,8 @@ esb_akaviri_ideas = {
             has_idea_group = akaviri_ideas
         }
         OR = {
-            #accepted_culture = akaviri
-            #accepted_culture = islander
+            accepted_culture = akaviri
+            accepted_culture = islander
         }
     }
     bonus = {
@@ -45,8 +45,8 @@ esb_altmer_ideas = {
 			has_idea_group = altmer_ideas
 		}
 		OR = {
-			#accepted_culture = altmer
-			#accepted_culture = corelanyan
+			accepted_culture = altmer
+			accepted_culture = corelanyan
 		}
 	}
 	bonus = {
@@ -82,7 +82,7 @@ esb_arachnid_ideas = {
 		NOT = { 
 			has_idea_group = arachnid_ideas
 		}
-		#accepted_culture = arachnid
+		accepted_culture = arachnid
 	}
 	bonus = {
 		cav_to_inf_ratio = 0.25
@@ -132,8 +132,8 @@ esb_ashlander_ideas = {
 			has_idea_group = ashlander_ideas
 		}
 		OR = {
-			#accepted_culture = ashlander_chimer
-			#accepted_culture = ashlander_dunmer
+			accepted_culture = ashlander_chimer
+			accepted_culture = ashlander_dunmer
 		}
 	}
 	bonus = {
@@ -170,7 +170,7 @@ esb_atmoran_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = atmoran_ideas }
-		#accepted_culture = atmoran
+		accepted_culture = atmoran
 	}
 	bonus = {
 		diplomatic_upkeep = 1
@@ -222,8 +222,8 @@ esb_ayleid_ideas = {
 			has_idea_group = ayleid_ideas
 		}
 		OR = { 
-			#accepted_culture = ayleid
-			#accepted_culture = barsaebic 
+			accepted_culture = ayleid
+			accepted_culture = barsaebic 
 		}
 	}
 	bonus = {
@@ -262,7 +262,7 @@ esb_breton_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = breton_ideas }
-		#accepted_culture = breton
+		accepted_culture = breton
 	}
 	bonus = {
 		diplomatic_upkeep = 1
@@ -302,7 +302,7 @@ esb_clannfear_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = clannfear_ideas }
-		#accepted_culture = clanfear
+		accepted_culture = clanfear
 	}
 	bonus = {
 		land_morale = 0.15
@@ -353,7 +353,7 @@ esb_colovian_ideas = {
 	category = ADM
 	trigger = {
 		NOT = { has_idea_group = colovian_ideas }
-		#accepted_culture = colovian
+		accepted_culture = colovian
 	}
 	bonus = {
 		cavalry_power = 0.10
@@ -392,7 +392,7 @@ esb_daedroth_ideas = {
 		NOT = { 
 			has_idea_group = daedroth_ideas
 		}
-		#accepted_culture = daedroth
+		accepted_culture = daedroth
 	}
 	bonus = {
 		# Beasts of Oblivion
@@ -443,8 +443,8 @@ esb_dremoran_ideas = {
 	trigger = {
 		NOT = { has_idea_group = dremoran_ideas }
 		OR = {
-			#accepted_culture = dremoran
-			#accepted_culture = al_dremoran
+			accepted_culture = dremoran
+			accepted_culture = al_dremoran
 		}
 	}
 	bonus = {
@@ -490,8 +490,8 @@ esb_great_house_ideas = {
 	trigger = {
 		NOT = { has_idea_group = great_house_ideas }
 		OR = {
-			#accepted_culture = house_chimer
-			#accepted_culture = house_dunmer
+			accepted_culture = house_chimer
+			accepted_culture = house_dunmer
 		}
 	}
 	bonus = {
@@ -533,7 +533,7 @@ esb_great_house_ideas = {
 esb_harvester_ideas = {
 	trigger = {
 		NOT = { has_idea_group = harvester_ideas }
-		#accepted_culture = harvester
+		accepted_culture = harvester
 	}
 	free = yes
 	start = {
@@ -584,7 +584,7 @@ esb_imperial_ideas = {
 	category = ADM
 	trigger = {
 		NOT = { has_idea_group = imperial_ideas }
-		#accepted_culture = imperial
+		accepted_culture = imperial
 	}
 	bonus = {
 		trade_efficiency = 0.1
@@ -624,7 +624,7 @@ esb_kamal_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = kamal_ideas }
-		#accepted_culture = kamal
+		accepted_culture = kamal
 	}
 	bonus = {
 		leader_cost = -0.25
@@ -665,7 +665,7 @@ esb_keptu_ideas = {
 		NOT = { 
 			has_idea_group = keptu_ideas
 		}
-		#accepted_culture = keptu
+		accepted_culture = keptu
 	}
 	bonus = {
 		land_morale = 0.15
@@ -712,7 +712,7 @@ esb_kothringi_ideas = {
 	category = DIP
 	trigger = {
 		NOT = { has_idea_group = kothringi_ideas }
-		#accepted_culture = kothringi
+		accepted_culture = kothringi
 	}
 	bonus = {
 		galley_power = 0.2
@@ -749,7 +749,7 @@ esb_maormer_ideas = {
 	category = DIP
 	trigger = {
 		NOT = { has_idea_group = maormer_ideas }
-		#accepted_culture = maormer
+		accepted_culture = maormer
 	}
 	bonus = {
 		global_institution_spread = 0.15
@@ -787,7 +787,7 @@ esb_minotaur_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = minotaur_ideas }
-		#accepted_culture = minotaur
+		accepted_culture = minotaur
 	}
 	bonus = {
 		num_accepted_cultures = 1
@@ -830,7 +830,7 @@ esb_nedic_ideas = {
 	category = ADM
 	trigger = {
 		NOT = { has_idea_group = nedic_ideas }
-		#accepted_culture = nedic
+		accepted_culture = nedic
 	}
 	bonus = {
 		institution_spread_from_true_faith = 0.1
@@ -868,7 +868,7 @@ esb_nibenean_ideas = {
 	category = DIP
 	trigger = {
 		NOT = { has_idea_group = nibenean_ideas }
-		#accepted_culture = nibenean
+		accepted_culture = nibenean
 	}
 	bonus = {
 		galley_power = 0.1
@@ -906,7 +906,7 @@ esb_nordic_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = nordic_ideas }
-		#accepted_culture = nord
+		accepted_culture = nord
 	}
 	bonus = {
 		infantry_cost = -0.2
@@ -943,7 +943,7 @@ esb_po_tun_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = po_tun_ideas }
-		#accepted_culture = po_tun
+		accepted_culture = po_tun
 	}
 	bonus = {
 		land_morale = 0.1
@@ -979,7 +979,7 @@ esb_reachmen_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = reachmen_ideas }
-		#accepted_culture = reachmen
+		accepted_culture = reachmen
 	}
 	bonus = {
 		movement_speed = 0.1
@@ -1014,7 +1014,7 @@ esb_redguard_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = redguard_ideas }
-		#accepted_culture = redguard
+		accepted_culture = redguard
 	}
 	bonus = {
 		caravan_power = 0.2
@@ -1054,7 +1054,7 @@ esb_riekling_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = riekling_ideas }
-		#accepted_culture = riekling
+		accepted_culture = riekling
 	}
 	bonus = {
 		build_time = -0.2
@@ -1089,7 +1089,7 @@ esb_sinistral_elves_ideas = {
 	category = DIP
 	trigger = {
 		NOT = { has_idea_group = sinistral_elves_ideas }
-		#accepted_culture = sinistral
+		accepted_culture = sinistral
 	}
 	bonus = {
 		army_tradition_decay = -0.01
@@ -1128,7 +1128,7 @@ esb_sload_ideas = {
 	category = ADM
 	trigger = {
 		NOT = { has_idea_group = sload_ideas }
-		#accepted_culture = sload
+		accepted_culture = sload
 	}
 	bonus = {
 		privateer_efficiency = 0.2
@@ -1177,7 +1177,7 @@ esb_snow_elven_ideas = {
 	category = ADM
 	trigger = {
 		NOT = { has_idea_group = snow_elven_ideas }
-		#accepted_culture = snow_elven
+		accepted_culture = snow_elven
 	}
 	bonus = {
 		culture_conversion_cost = -0.1
@@ -1213,7 +1213,7 @@ esb_soul_shriven_ideas = {
 	category = ADM
 	trigger = {
 		NOT = { has_idea_group = soul_shriven_ideas }
-		#accepted_culture = soul_shriven
+		accepted_culture = soul_shriven
 	}
 	bonus = {
 		num_accepted_cultures = 2
@@ -1250,7 +1250,7 @@ esb_tang_mo_ideas = {
 	category = DIP
 	trigger = {
 		NOT = { has_idea_group = tangmo }
-		#accepted_culture = tangmo
+		accepted_culture = tangmo
 	}
 	bonus = {
 		naval_forcelimit_modifier = 0.25
@@ -1290,7 +1290,7 @@ esb_tsaesci_ideas = {
 	category = ADM
 	trigger = {
 		NOT = { has_idea_group = tsaesci_ideas }
-		#accepted_culture = tsaesci
+		accepted_culture = tsaesci
 	}
 	bonus = {
 		naval_forcelimit_modifier = 0.25
@@ -1326,7 +1326,7 @@ esb_vampire_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = vampire_ideas }
-		#accepted_culture = vampire
+		accepted_culture = vampire
 	}
 	bonus = {
 		loot_amount = 0.5
@@ -1365,7 +1365,7 @@ esb_xivilai_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = xivilai_ideas }
-		#accepted_culture = xivilai
+		accepted_culture = xivilai
 	}
 	bonus = {
 		core_creation = -0.15
@@ -1413,7 +1413,7 @@ esb_yokudan_ideas = {
 	category = DIP
 	trigger = {
 		NOT = { has_idea_group = yokudan_ideas }
-		#accepted_culture = yokudan
+		accepted_culture = yokudan
 	}
 	bonus = {
 		land_attrition = -0.1
@@ -1455,10 +1455,10 @@ esb_argonian_ideas = {
 	trigger = {
 		NOT = { has_idea_group = argonian_ideas }
 		OR = {
-			#accepted_culture = argonian
-			#accepted_culture = archein
-			#accepted_culture = agaceph
-			#accepted_culture = naga
+			accepted_culture = argonian
+			accepted_culture = archein
+			accepted_culture = agaceph
+			accepted_culture = naga
 		}
 	}
 	bonus = {
@@ -1500,7 +1500,7 @@ esb_bosmer_ideas = {
 	category = DIP
 	trigger = {
 		NOT = { has_idea_group = bosmer_ideas }
-		#accepted_culture = bosmer
+		accepted_culture = bosmer
 	}
 	bonus = {
 		build_cost = -0.1
@@ -1536,10 +1536,10 @@ esb_dwemer_ideas = {
 	trigger = {
 		NOT = { has_idea_group = dwemer_ideas }
 		OR = {
-			#accepted_culture = dwemer
-			#accepted_culture = rourkenid
-			#accepted_culture = dumalacathi
-			#accepted_culture = kagrenmer
+			accepted_culture = dwemer
+			accepted_culture = rourkenid
+			accepted_culture = dumalacathi
+			accepted_culture = kagrenmer
 		}
 	}
 	bonus = {
@@ -1578,9 +1578,9 @@ esb_giant_ideas = {
 	trigger = {
 		NOT = { has_idea_group = giant_ideas }
 		OR = {
-			#accepted_culture = frost_giant
-			#accepted_culture = sea_giant
-			#accepted_culture = giant
+			accepted_culture = frost_giant
+			accepted_culture = sea_giant
+			accepted_culture = giant
 		}
 	}
 	bonus = {
@@ -1619,9 +1619,9 @@ esb_khajiit_ideas = {
 	trigger = {
 		NOT = { has_idea_group = khajiit_ideas }
 		OR = { 
-			#accepted_culture = khajiiti
-			#accepted_culture = anequinan
-			#accepted_culture = pellitinian
+			accepted_culture = khajiiti
+			accepted_culture = anequinan
+			accepted_culture = pellitinian
 		}
 	}
 	bonus = {
@@ -1661,9 +1661,9 @@ esb_orcish_ideas = {
 	trigger = {
 		NOT = { has_idea_group = orcish_ideas }
 		OR = {
-			#accepted_culture = orsimer
-			#accepted_culture = iron_orc
-			#accepted_culture = wood_orsimer
+			accepted_culture = orsimer
+			accepted_culture = iron_orc
+			accepted_culture = wood_orsimer
 		}
 	}
 	bonus = {
@@ -1707,7 +1707,7 @@ esb_scamp_ideas = {
 
 	trigger = {
 		NOT = { has_idea_group = scamp_ideas }
-		#accepted_culture = scamp
+		accepted_culture = scamp
 	}
 	
 	# Indispensable Minions
@@ -1765,7 +1765,7 @@ esb_imga_ideas = {
 
 	trigger = {
 		NOT = { has_idea_group = imga_ideas }
-		#accepted_culture = imga
+		accepted_culture = imga
 	}
 	
 	# The Ancient Socienty
@@ -1815,7 +1815,7 @@ esb_skaal_ideas = {
 
 	trigger = {
 		NOT = { primary_culture = skaal }
-		#accepted_culture = skaal
+		accepted_culture = skaal
 	}
 	
 	# Dragon Loyalists
@@ -1873,7 +1873,7 @@ esb_goblin_ideas = {
 
 	trigger = {
 		NOT = { has_idea_group = goblin_ideas }
-		#accepted_culture = goblin
+		accepted_culture = goblin
 	}
 	
 	# The Blue God
@@ -1922,7 +1922,7 @@ esb_falmer_ideas = {
 	category = MIL
 	trigger = {
 		NOT = { has_idea_group = falmer_ideas }
-		#accepted_culture = falmer
+		accepted_culture = falmer
 	}
 	bonus = {
 		manpower_recovery_speed = 0.25
@@ -1973,7 +1973,7 @@ esb_falmer_ideas = {
 esb_hollow_ideas = {
 	trigger = {
 		NOT = { has_idea_group = hollow_ideas }
-		#accepted_culture = hollow
+		accepted_culture = hollow
 	}
 	bonus = {
 		num_accepted_cultures = 1
