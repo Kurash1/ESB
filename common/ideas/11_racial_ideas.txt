@@ -1,0 +1,2018 @@
+esb_akaviri_ideas = {
+    category = MIL
+    trigger = {
+        NOT = { 
+            has_idea_group = akaviri_ideas
+        }
+        OR = {
+            accepted_culture = akaviri
+            accepted_culture = islander
+        }
+    }
+    bonus = {
+        discipline = 0.075
+		monthly_reform_progress_modifier = 0.05
+        state_governing_cost = -0.1
+    }
+    esb_akaviri_ideas_1 = {
+        technology_cost = -0.05
+    }
+    esb_akaviri_ideas_2 = {
+        infantry_power = 0.1
+    }
+    esb_akaviri_ideas_3 = {
+        trade_steering = 0.1
+        naval_forcelimit_modifier = 0.15
+    }
+    esb_akaviri_ideas_4 = {
+        production_efficiency = 0.1
+    }
+    esb_akaviri_ideas_5 = {
+        advisor_cost = -0.1
+    }
+    esb_akaviri_ideas_6 = {
+        defensiveness = 0.1
+    }
+    esb_akaviri_ideas_7 = {
+        global_trade_power = 0.15
+    }
+}
+
+esb_altmer_ideas = {
+	category = ADM
+	trigger = {
+		NOT = {
+			has_idea_group = altmer_ideas
+		}
+		OR = {
+			accepted_culture = altmer
+			accepted_culture = corelanyan
+		}
+	}
+	bonus = {
+		administrative_efficiency = 0.05
+		adm_tech_cost_modifier = -0.1
+	}
+	esb_altmer_ideas_1 = {
+		heavy_ship_power = 0.1
+	}
+	esb_altmer_ideas_2 = {
+		global_autonomy = -0.05
+	}
+	esb_altmer_ideas_3 = {
+		fire_damage = 0.1
+	}
+	esb_altmer_ideas_4 = {
+		discipline = 0.05
+	}
+	esb_altmer_ideas_5 = {
+		yearly_corruption = -0.1
+	}
+	esb_altmer_ideas_6 = {
+		prestige = 0.25
+	}
+	esb_altmer_ideas_7 = {
+		monarch_admin_power = 1
+	}
+}
+
+esb_arachnid_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { 
+			has_idea_group = arachnid_ideas
+		}
+		accepted_culture = arachnid
+	}
+	bonus = {
+		cav_to_inf_ratio = 0.25
+		cavalry_cost = -0.25
+		# Ornaments 2
+		global_manpower_modifier = 0.10
+		reinforce_speed = 0.1
+	}
+	esb_arachnid_ideas_1 = {
+		# Arachnid Webbing: Allows us to save on build cost and time.
+		build_cost = -0.15
+		build_time = -0.05
+	}
+	esb_arachnid_ideas_2 = {
+		# Excitable yet Unstable
+		movement_speed = 0.05
+		global_unrest = 1.0
+	}
+	esb_arachnid_ideas_3 = {
+		# Silken Words
+		improve_relation_modifier = 0.2
+	}
+	esb_arachnid_ideas_4 = {
+		# Bestial Nature
+		shock_damage = 0.15
+		technology_cost = 0.05
+	}
+	esb_arachnid_ideas_5 = {
+		# Ill Intent
+		spy_offence = 0.25
+	}
+	esb_arachnid_ideas_6 = {
+		# Tough Carapaces
+		shock_damage_received = -0.05
+		fire_damage_received = -0.05
+	}
+	esb_arachnid_ideas_7 = {
+		# Ornaments 1: Living ornaments for decoration and sustenance
+		prestige = 0.5
+	}
+}
+
+esb_ashlander_ideas = {
+	category = ADM
+	trigger = {
+		NOT = {
+			has_idea_group = ashlander_ideas
+		}
+		OR = {
+			accepted_culture = ashlander_chimer
+			accepted_culture = ashlander_dunmer
+		}
+	}
+	bonus = {
+		tolerance_own = 1
+		tolerance_heretic = -1
+		global_missionary_strength = 0.05
+	}
+	esb_ashlander_ideas_1 = {
+		spy_offence = 0.15
+	}
+	esb_ashlander_ideas_2 = {
+		land_attrition = -0.1
+	}
+	esb_ashlander_ideas_3 = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	esb_ashlander_ideas_4 = {
+		leader_land_manuever = 1
+		movement_speed = 0.1
+	}
+	esb_ashlander_ideas_5 = {
+		technology_cost = -0.05
+	}
+	esb_ashlander_ideas_6 = {
+		build_cost = -0.1
+	}
+	esb_ashlander_ideas_7 = {
+		diplomatic_upkeep = 1
+		rival_change_cost = -0.5
+	}
+}
+
+esb_atmoran_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = atmoran_ideas }
+		accepted_culture = atmoran
+	}
+	bonus = {
+		diplomatic_upkeep = 1
+		shock_damage = 0.15
+		naval_forcelimit_modifier = 0.25
+	}
+	#Origins of Men
+	#It is thought that the first pre-literate humans came to Tamriel from Atmora.
+	esb_atmoran_ideas_1 = {
+		diplomatic_reputation = 0.5
+	}
+	#Survivors of Civil War
+	#Lots of people were murdered during bloody civil war between Atmoran Warlords.
+	esb_atmoran_ideas_2 = {
+		discipline = 0.05
+	}
+	#Founders of Saarthal
+	#The legendary city of Saarthal was the first Atmoran settlement out of homelands.
+	esb_atmoran_ideas_3 = {
+		build_cost = -0.1
+	}
+	#Peace and Prosperous
+	#Despite the difficult living conditions, Atmors were able to build a stable societyю
+	esb_atmoran_ideas_4 = {
+		stability_cost_modifier = -0.1
+	}
+	#Five Hundread Companions
+	#The group of wraithful warriors, who protect Atmoran Lands.
+	esb_atmoran_ideas_5 = {
+		global_manpower_modifier = 0.1
+	}
+	#Atmoran Imigrants
+	#Deteriorating weather conditions are forcing many to leave their homes and travel to new places.
+	esb_atmoran_ideas_6 = {
+		colonists = 1
+	}
+	#A Place of Permanent Winter
+	#Little life can survive harsh climate conditions of Atmora.
+	esb_atmoran_ideas_7 = {
+		hostile_attrition = 1
+	}
+}
+
+# Ayleid Ideas
+esb_ayleid_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { 
+			has_idea_group = ayleid_ideas
+		}
+		OR = { 
+			accepted_culture = ayleid
+			accepted_culture = barsaebic 
+		}
+	}
+	bonus = {
+		discipline = 0.075
+		production_efficiency = 0.1
+		ae_impact = -0.1
+	}
+	esb_ayleid_ideas_1 = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		horde_unity = 0.5
+		devotion = 0.5
+		meritocracy = 0.5
+	}
+	esb_ayleid_ideas_2 = {
+		development_cost = -0.05
+	}
+	esb_ayleid_ideas_3 = {
+		harsh_treatment_cost = -0.5
+	}
+	esb_ayleid_ideas_4 = {
+		idea_cost = -0.05
+	}
+	esb_ayleid_ideas_5 = {
+		diplomatic_upkeep = 1
+	}
+	esb_ayleid_ideas_6 = {
+		religious_unity = 0.10
+	}
+	esb_ayleid_ideas_7 = {
+		prestige = 0.5
+	}
+}
+
+esb_breton_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = breton_ideas }
+		accepted_culture = breton
+	}
+	bonus = {
+		diplomatic_upkeep = 1
+		rival_border_fort_maintenance = -0.33
+		land_morale = 0.15
+	}
+	esb_breton_ideas_1 = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		horde_unity = 0.5
+		devotion = 0.5
+		meritocracy = 0.5
+	}
+	esb_breton_ideas_2 = {
+		rival_change_cost = -0.5
+		spy_offence = 0.25
+	}
+	esb_breton_ideas_3 = {
+		galley_power = 0.15
+		global_ship_trade_power = 0.2
+	}
+	esb_breton_ideas_4 = {
+		vassal_forcelimit_bonus = 1
+	}
+	esb_breton_ideas_5 = {
+		global_tax_modifier = 0.1
+	}
+	esb_breton_ideas_6 = {
+		defensiveness = 0.15
+	}
+	esb_breton_ideas_7 = {
+		discipline = 0.05
+	}
+}
+
+esb_clannfear_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = clannfear_ideas }
+		accepted_culture = clanfear
+	}
+	bonus = {
+		land_morale = 0.15
+		army_tradition_from_battle = 0.5
+		global_manpower_modifier = 0.10
+		reinforce_speed = 0.1
+	}
+	esb_clannfear_ideas_1 = {
+		# Simplest Ones
+		technology_cost = 0.1
+		ae_impact = -0.25
+	}
+	esb_clannfear_ideas_2 = {
+		# Defensive Frills and Boneplates
+		shock_damage_received = -0.05
+		fire_damage_received = -0.05
+	}
+	esb_clannfear_ideas_3 = {
+		# Talons for Digging and Tails for Tilling
+		development_cost = -0.15
+	}
+	esb_clannfear_ideas_4 = {
+		# Unique Frills
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		horde_unity = 0.5
+		devotion = 0.5
+		meritocracy = 0.5
+	}
+	esb_clannfear_ideas_5 = {
+		# Clannfear Charge
+		shock_damage = 0.1
+	}
+	esb_clannfear_ideas_6 = {
+		# Receptive Beasts
+		same_culture_advisor_cost = 0.25
+		advisor_cost = -0.10
+		advisor_pool = 1
+	}
+	esb_clannfear_ideas_7 = {
+		# Matriarch System
+		governing_capacity_modifier = 0.2
+	}
+}
+
+# Colovian Ideas
+esb_colovian_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { has_idea_group = colovian_ideas }
+		accepted_culture = colovian
+	}
+	bonus = {
+		cavalry_power = 0.10
+		global_manpower_modifier = 0.1
+		land_forcelimit_modifier = 0.15
+	}
+	esb_colovian_ideas_1 = {
+		production_efficiency = 0.15
+	}
+	esb_colovian_ideas_2 = {
+		leader_cost = -0.5
+		infantry_shock = 1
+	}
+	esb_colovian_ideas_3 = {
+		technology_cost = -0.05
+	}
+	esb_colovian_ideas_4 = {
+		trade_efficiency = 0.1
+	}
+	esb_colovian_ideas_5 = {
+		fort_maintenance_modifier = -0.33
+	}
+	esb_colovian_ideas_6 = {
+		trade_steering = 0.15
+		army_tradition = 0.25
+	}
+	esb_colovian_ideas_7 = {
+		global_unrest = -2
+	}
+}
+
+# Daedroth Ideas
+esb_daedroth_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { accepted_culture = daedroth_ideas }
+		accepted_culture = daedroth
+	}
+	bonus = {
+		# Beasts of Oblivion
+		land_morale = 0.15
+		loot_amount = 0.25
+		naval_tradition_from_battle = 0.1
+		global_naval_barrage_cost = -0.2
+	}
+	esb_daedroth_ideas_1 = {
+		# Treasure Hunters
+		available_province_loot = 0.5
+	}
+	esb_daedroth_ideas_2 = {
+		# Ambush Tactics
+		leader_land_manuever = 2
+		leader_land_shock = 1
+	}
+	esb_daedroth_ideas_3 = {
+		# Crocodile Tears
+		ae_impact = -0.15
+		diplomatic_reputation = -1
+	}
+	esb_daedroth_ideas_4 = {
+		# Bestial Daedra
+		shock_damage = 0.15
+		technology_cost = 0.05
+	}
+	esb_daedroth_ideas_5 = {
+		# Daedroth Brawn
+		production_efficiency = 0.15
+	}
+	esb_daedroth_ideas_6 = {
+		# Terrifying Presence
+		yearly_absolutism = 1
+		max_absolutism = 10
+		improve_relation_modifier = -0.1
+	}
+	esb_daedroth_ideas_7 = {
+		# Affinity to water
+		leader_naval_manuever = 2
+		own_coast_naval_combat_bonus = 1
+	}
+}
+
+# Dremoran Ideas
+esb_dremoran_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = dremoran_ideas }
+		OR = {
+			accepted_culture = dremoran
+			accepted_culture = al_dremoran
+		}
+	}
+	bonus = {
+		v
+		siege_ability = 0.15
+	}
+	esb_dremoran_ideas_1 = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		horde_unity = 0.5
+		devotion = 0.5
+		meritocracy = 0.5
+		administrative_efficiency = 0.025
+	}
+	esb_dremoran_ideas_2 = {
+		same_culture_advisor_cost = -0.10
+		culture_conversion_cost = -0.2
+	}
+	esb_dremoran_ideas_3 = {
+		shock_damage = 0.05
+		fire_damage = 0.05
+	}
+	esb_dremoran_ideas_4 = {
+		free_mil_policy = 1
+		army_tradition = 0.25
+	}
+	esb_dremoran_ideas_5 = {
+		diplomatic_reputation = 0.5
+		fabricate_claims_cost = -0.25
+	}
+	esb_dremoran_ideas_6 = {
+		claim_duration = 1
+	}
+	esb_dremoran_ideas_7 = {
+		diplomatic_upkeep = 1
+		establish_order_cost = -0.25
+	}
+}
+
+# Great House Ideas
+esb_great_house_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = great_house_ideas }
+		OR = {
+			accepted_culture = house_chimer
+			accepted_culture = house_dunmer
+		}
+	}
+	bonus = {
+		diplomatic_upkeep = 1
+		rival_change_cost = -0.5
+		tolerance_heretic = -3
+		tolerance_own = 3
+	}
+	esb_great_house_ideas_1 = {
+		global_trade_power = 0.1
+	}
+	esb_great_house_ideas_2 = {
+		infantry_power = 0.1
+		army_tradition_decay = -0.01
+	}
+	esb_great_house_ideas_3 = {
+		development_cost = -0.15
+		production_efficiency = 0.1
+	}
+	esb_great_house_ideas_4 = {
+		embargo_efficiency = 0.25
+		spy_offence = 0.2
+	}
+	esb_great_house_ideas_5 = {
+		shock_damage_received = -0.1
+		movement_speed = 0.05
+	}
+	esb_great_house_ideas_6 = {
+		global_autonomy = -0.075
+		religious_unity = 0.10
+	}
+	esb_great_house_ideas_7 = {
+		reform_progress_growth = 0.10
+		general_cost = -0.5
+	}
+}
+
+# Harvester Ideas
+esb_harvester_ideas = {
+	trigger = {
+		NOT = { has_idea_group = harvester_ideas }
+		accepted_culture = harvester
+	}
+	free = yes
+	start = {
+		shock_damage_received = -0.15
+		fire_damage_received = -0.15
+	}
+	bonus = {
+		fort_maintenance_modifier = -0.25
+		defensiveness = 0.15
+	}
+	esb_harvester_ideas_1 = {
+		# Focus on the Fight
+		shock_damage = 0.05
+		fire_damage = 0.05
+		technology_cost = 0.05
+	}
+	esb_harvester_ideas_2 = {
+		# Soulgem Enchantments
+		idea_cost = -0.1
+	}
+	esb_harvester_ideas_3 = {
+		# Soul Stealers
+		prestige_from_land = 0.25
+		army_tradition_from_battle = 0.50
+	}
+	esb_harvester_ideas_4 = {
+		# Ebony Atunement
+		production_efficiency = 0.15
+	}
+	esb_harvester_ideas_5 = {
+		# Spirit Soldiers
+		global_manpower_modifier = 0.10
+	}
+	esb_harvester_ideas_6 = {
+		# Solitary Serpents
+		improve_relation_modifier = -0.25
+		tolerance_heretic = 2
+		tolerance_heathen = 4
+	}
+	esb_harvester_ideas_7 = {
+		# Deathly Embrace
+		hostile_attrition = 1
+	}
+}
+
+# Imperial Ideas
+esb_imperial_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { has_idea_group = imperial_ideas }
+		accepted_culture = imperial
+	}
+	bonus = {
+		trade_efficiency = 0.1
+		diplomatic_upkeep = 1
+		core_creation = -0.15
+		ae_impact = -0.10
+	}
+	esb_imperial_ideas_1 = {
+		num_accepted_cultures = 3
+	}
+	esb_imperial_ideas_2 = {
+		global_tax_modifier = 0.10
+		tolerance_heathen = 2
+	}
+	esb_imperial_ideas_3 = {
+		diplomatic_reputation = 1
+	}
+	esb_imperial_ideas_4 = {
+		discipline = 0.05
+		development_cost = -0.1
+	}
+	esb_imperial_ideas_5 = {
+		technology_cost = -0.05
+	}
+	esb_imperial_ideas_6 = {
+		range = 0.25
+		trade_range_modifier = 0.25
+	}
+	esb_imperial_ideas_7 = {
+		global_unrest = -2
+		culture_conversion_cost = -0.15
+	}
+}
+
+# Kamal Ideas
+esb_kamal_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = kamal_ideas }
+		accepted_culture = kamal
+	}
+	bonus = {
+		leader_cost = -0.25
+		fort_maintenance_modifier = -0.15
+		harsh_treatment_cost = -0.25
+	}
+	esb_kamal_ideas_1 = {
+		ae_impact = -0.2
+	}
+	esb_kamal_ideas_2 = {
+		land_attrition = -0.1
+		hostile_attrition = 0.1
+	}
+	esb_kamal_ideas_3 = {
+		shock_damage = 0.1
+	}
+	esb_kamal_ideas_4 = {
+		siege_ability = 0.1
+	}
+	esb_kamal_ideas_5 = {
+		technology_cost = -0.025
+		build_cost = -0.25
+	}
+	esb_kamal_ideas_6 = {
+		naval_forcelimit_modifier = 0.15
+		naval_maintenance_modifier = -0.20
+	}
+	esb_kamal_ideas_7 = {
+		core_creation = -0.15
+		free_leader_pool = 2
+	}
+}
+
+# Keptu Ideas
+esb_keptu_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { accepted_culture = keptu_ideas }
+		accepted_culture = keptu
+	}
+	bonus = {
+		land_morale = 0.15
+		production_efficiency = 0.1
+		discipline = 0.05
+		recover_army_morale_speed = 0.05
+	}
+	esb_keptu_ideas_1 = {
+		# Deserts and Mountains
+		development_cost = -0.1
+	}
+	esb_keptu_ideas_2 = {
+		# Early Metalworkers
+		global_institution_spread = 0.15
+	}
+	esb_keptu_ideas_3 = {
+		# Oral Tradition
+		army_tradition = 0.25
+	}
+	esb_keptu_ideas_4 = {
+		# Linkers of the Mountains
+		num_accepted_cultures = 3
+	}
+	esb_keptu_ideas_5 = {
+		# Adaptive Culture
+		tolerance_heathen = 4
+		tolerance_heretic = 2
+		enemy_core_creation = -0.2
+		core_decay_on_your_own = 0.5
+	}
+	esb_keptu_ideas_6 = {
+		# Keptu Stonecutters
+		defensiveness = 0.15
+	}
+	esb_keptu_ideas_7 = {
+		# Triumph of Nirncrux
+		reinforce_speed = 0.1
+		manpower_recovery_speed = 0.1
+	}
+}
+
+# kothringi Ideas
+esb_kothringi_ideas = {
+	category = DIP
+	trigger = {
+		NOT = { has_idea_group = kothringi_ideas }
+		accepted_culture = kothringi
+	}
+	bonus = {
+		galley_power = 0.2
+		defensiveness = 0.1
+		culture_conversion_cost = -0.25
+	}
+	esb_kothringi_ideas_1 = {
+		land_attrition = -0.15
+	}
+	esb_kothringi_ideas_2 = {
+		naval_forcelimit_modifier = 0.15
+		ship_durability = 0.1
+	}
+	esb_kothringi_ideas_3 = {
+		diplomatic_reputation = 1
+	}
+	esb_kothringi_ideas_4 = {
+		movement_speed_onto_off_boat_modifier = 1
+		own_coast_naval_combat_bonus = 1
+	}
+	esb_kothringi_ideas_5 = {
+		same_culture_advisor_cost = -0.15
+	}
+	esb_kothringi_ideas_6 = {
+		mercenary_cost = -0.5
+	}
+	esb_kothringi_ideas_7 = {
+		global_unrest = -3
+	}
+}
+
+# Maormer Ideas
+esb_maormer_ideas = {
+	category = DIP
+	trigger = {
+		NOT = { has_idea_group = maormer_ideas }
+		accepted_culture = maormer
+	}
+	bonus = {
+		global_institution_spread = 0.15
+		land_attrition = -0.1
+		production_efficiency = 0.1
+	}
+	esb_maormer_ideas_1 = {
+		trade_range_modifier = 0.25
+		range = 0.25
+	}
+	esb_maormer_ideas_2 = {
+		movement_speed_onto_off_boat_modifier = 1
+		loot_amount = 1
+	}
+	esb_maormer_ideas_3 = {
+		trade_value_modifier = 0.15
+	}
+	esb_maormer_ideas_4 = {
+		ship_durability = 0.1
+	}
+	esb_maormer_ideas_5 = {
+		capture_ship_chance = 0.2
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	esb_maormer_ideas_6 = {
+		global_tax_modifier = 0.10
+	}
+	esb_maormer_ideas_7 = {
+		infantry_power = 0.15
+	}
+}
+
+# Minotaur Ideas
+esb_minotaur_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = minotaur_ideas }
+		accepted_culture = minotaur
+	}
+	bonus = {
+		num_accepted_cultures = 1
+		land_forcelimit_modifier = 0.15
+		global_own_trade_power = 0.25
+	}
+	esb_minotaur_ideas_1 = {
+		development_cost = -0.15
+	}
+	esb_minotaur_ideas_2 = {
+		loot_amount = 0.15
+		available_province_loot = 0.5
+	}
+	esb_minotaur_ideas_3 = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		horde_unity = 0.5
+		devotion = 0.5
+		meritocracy = 0.5
+	}
+	esb_minotaur_ideas_4 = {
+		infantry_power = 0.10
+		cavalry_power = 0.10
+	}
+	esb_minotaur_ideas_5 = {
+		global_supply_limit_modifier = 0.25
+		enemy_core_creation = 0.2
+	}
+	esb_minotaur_ideas_6 = {
+		movement_speed = 0.15
+	}
+	esb_minotaur_ideas_7 = {
+		shock_damage_received = -0.075
+		fire_damage_received = -0.15
+	}
+}
+
+# Nedic Ideas
+esb_nedic_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { has_idea_group = nedic_ideas }
+		accepted_culture = nedic
+	}
+	bonus = {
+		institution_spread_from_true_faith = 0.1
+		build_time = -0.1
+		land_morale = 0.1
+		discipline = 0.05
+	}
+	esb_nedic_ideas_1 = {
+		defensiveness = 0.1
+	}
+	esb_nedic_ideas_2 = {
+		production_efficiency = 0.15
+	}
+	esb_nedic_ideas_3 = {
+		stability_cost_modifier = -0.2
+	}
+	esb_nedic_ideas_4 = {
+		num_accepted_cultures = 2
+		promote_culture_cost = -0.5
+	}
+	esb_nedic_ideas_5 = {
+		core_creation = -0.15
+	}
+	esb_nedic_ideas_6 = {
+		naval_forcelimit_modifier = 0.15
+		global_own_trade_power = 0.1
+	}
+	esb_nedic_ideas_7 = {
+		diplomatic_reputation = 1
+	}
+}
+
+# Nibenean Ideas
+esb_nibenean_ideas = {
+	category = DIP
+	trigger = {
+		NOT = { has_idea_group = nibenean_ideas }
+		accepted_culture = nibenean
+	}
+	bonus = {
+		galley_power = 0.1
+		global_institution_spread = 0.1
+		num_accepted_cultures = 2
+	}
+	esb_nibenean_ideas_1 = {
+		production_efficiency = 0.1
+		global_trade_goods_size_modifier = 0.1
+	}
+	esb_nibenean_ideas_2 = {
+		merc_maintenance_modifier = -0.25
+	}
+	esb_nibenean_ideas_3 = {
+		build_cost = -0.1
+		development_cost = -0.15
+	}
+	esb_nibenean_ideas_4 = {
+		ship_power_propagation = 0.1
+		trade_range_modifier = 0.25
+	}
+	esb_nibenean_ideas_5 = {
+		ae_impact = -0.10
+	}
+	esb_nibenean_ideas_6 = {
+		technology_cost = -0.1
+	}
+	esb_nibenean_ideas_7 = {
+		promote_culture_cost = -0.5
+	}
+}
+
+# Nordic Ideas
+esb_nordic_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = nordic_ideas }
+		accepted_culture = nord
+	}
+	bonus = {
+		infantry_cost = -0.2
+		may_perform_slave_raid = yes
+		leader_land_fire = 1
+		leader_land_shock = 1
+	}
+	esb_nordic_ideas_1 = {
+		land_morale = 0.10
+	}
+	esb_nordic_ideas_2 = {
+		global_manpower_modifier = 0.10
+	}
+	esb_nordic_ideas_3 = {
+		land_attrition = -0.15
+		hostile_attrition = 0.25
+	}
+	esb_nordic_ideas_4 = {
+		infantry_shock = 0.15
+	}
+	esb_nordic_ideas_5 = {
+		idea_cost = -0.1
+	}
+	esb_nordic_ideas_6 = {
+		naval_morale = 0.1
+	}
+	esb_nordic_ideas_7 = {
+		global_unrest = -2
+	}
+}
+
+# Po Tun Ideas
+esb_po_tun_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = po_tun_ideas }
+		accepted_culture = po_tun
+	}
+	bonus = {
+		land_morale = 0.1
+		global_tax_modifier = 0.1
+		trade_range_modifier = 0.2
+	}
+	esb_po_tun_ideas_1 = {
+		movement_speed = 0.1
+	}
+	esb_po_tun_ideas_2 = {
+		global_supply_limit_modifier = 0.1
+	}
+	esb_po_tun_ideas_3 = {
+		diplomatic_reputation = 1
+	}
+	esb_po_tun_ideas_4 = {
+		same_culture_advisor_cost = -0.10
+	}
+	esb_po_tun_ideas_5 = {
+		fire_damage = 0.1
+	}
+	esb_po_tun_ideas_6 = {
+		imperial_mandate = 0.15
+		prestige = 0.25
+	}
+	esb_po_tun_ideas_7 = {
+		free_policy = 1
+	}
+}
+
+# Reachmen Ideas
+esb_reachmen_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = reachmen_ideas }
+		accepted_culture = reachmen
+	}
+	bonus = {
+		movement_speed = 0.1
+		infantry_fire = 0.15
+		unjustified_demands = -0.2
+	}
+	esb_reachmen_ideas_1 = {
+		defensiveness = 0.15
+	}
+	esb_reachmen_ideas_2 = {
+		war_exhaustion_cost = -0.33
+	}
+	esb_reachmen_ideas_3 = {
+		land_attrition = -0.15
+	}
+	esb_reachmen_ideas_4 = {
+		leader_cost = -0.15
+	}
+	esb_reachmen_ideas_5 = {
+		fort_maintenance_modifier = -0.5
+	}
+	esb_reachmen_ideas_6 = {
+		ae_impact = -0.10
+	}
+	esb_reachmen_ideas_7 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+}
+
+# Redguard Ideas
+esb_redguard_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = redguard_ideas }
+		accepted_culture = redguard
+	}
+	bonus = {
+		caravan_power = 0.2
+		global_regiment_recruit_speed = -0.2
+		placed_merchant_power = 3
+	}
+	esb_redguard_ideas_1 = {
+		hostile_attrition = 1
+		land_attrition = -0.1
+	}
+	esb_redguard_ideas_2 = {
+		rival_border_fort_maintenance = -0.5
+	}
+	esb_redguard_ideas_3 = {
+		ae_impact = -0.10
+		province_warscore_cost = -0.2
+	}
+	esb_redguard_ideas_4 = {
+		global_colonial_growth = 20
+		development_cost = -0.1
+	}
+	esb_redguard_ideas_5 = {
+		army_tradition = 0.25
+		reform_progress_growth = 0.1
+	}
+	esb_redguard_ideas_6 = {
+		infantry_power = 0.10
+	}
+	esb_redguard_ideas_7 = {
+		tolerance_own = 2
+		tolerance_heathen = -2
+	}
+}
+
+# Riekling Ideas
+esb_riekling_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = riekling_ideas }
+		accepted_culture = riekling
+	}
+	bonus = {
+		build_time = -0.2
+		mil_advisor_cost = -0.2
+		envoy_travel_time = -0.5
+	}
+	esb_riekling_ideas_1 = {
+		global_manpower_modifier = 0.1
+	}
+	esb_riekling_ideas_2 = {
+		spy_offence = 0.2
+	}
+	esb_riekling_ideas_3 = {
+		land_morale = 0.1
+	}
+	esb_riekling_ideas_4 = {
+		cavalry_flanking = 0.25
+	}
+	esb_riekling_ideas_5 = {
+		hostile_attrition = 1
+	}
+	esb_riekling_ideas_6 = {
+		stability_cost_modifier = -0.25
+	}
+	esb_riekling_ideas_7 = {
+		fire_damage_received = -0.15
+	}
+}
+
+# Sinistral Elves Ideas
+esb_sinistral_elves_ideas = {
+	category = DIP
+	trigger = {
+		NOT = { has_idea_group = sinistral_elves_ideas }
+		accepted_culture = sinistral
+	}
+	bonus = {
+		army_tradition_decay = -0.01
+		naval_maintenance_modifier = -0.2
+		discipline = 0.05
+	}
+	esb_sinistral_elves_ideas_1 = {
+		transport_cost = -0.5
+		galley_power = 0.15
+	}
+	esb_sinistral_elves_ideas_2 = {
+		defensiveness = 0.15
+	}
+	esb_sinistral_elves_ideas_3 = {
+		core_creation = -0.15
+		num_accepted_cultures = 1
+	}
+	esb_sinistral_elves_ideas_4 = {
+		capture_ship_chance = 0.2
+		global_sailors_modifier = 0.15
+	}
+	esb_sinistral_elves_ideas_5 = {
+		great_project_upgrade_cost = -0.15
+	}
+	esb_sinistral_elves_ideas_6 = {
+		diplomats = 1
+		prestige = 0.25
+	}
+	esb_sinistral_elves_ideas_7 = {
+		army_tradition = 0.25
+	}
+}
+
+# Sload Ideas
+esb_sload_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { has_idea_group = sload_ideas }
+		accepted_culture = sload
+	}
+	bonus = {
+		privateer_efficiency = 0.2
+		may_perform_slave_raid = yes
+		spy_offence = 0.25
+	}
+	esb_sload_ideas_1 = {
+		# Thras Endures
+		enemy_core_creation = 2.5
+		core_creation = 0.25
+	}
+	esb_sload_ideas_2 = {
+		# Advanced Intellect
+		technology_cost = -0.1
+	}
+	esb_sload_ideas_3 = {
+		# Noxious Fumes
+		fire_damage = 0.15
+	}
+	esb_sload_ideas_4 = {
+		# Skilled Actors
+		diplomatic_annexation_cost = -0.15
+		reduced_liberty_desire = 10
+		diplomatic_reputation = -1.5
+	}
+	esb_sload_ideas_5 = {
+		# Deliberate Engagements
+		shock_damage_received = -0.05
+		fire_damage_received = -0.05
+		movement_speed = -0.05
+	}
+	esb_sload_ideas_6 = {
+		# Irreligious Society
+		tolerance_heathen = 4
+		tolerance_heretic = 2
+		global_missionary_strength = -0.025
+	}
+	esb_sload_ideas_7 = {
+		# Destabilizing Influence
+		rebel_support_efficiency = 0.5
+	}
+}
+
+# Snow Elven Ideas
+esb_snow_elven_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { has_idea_group = snow_elven_ideas }
+		accepted_culture = snow_elven
+	}
+	bonus = {
+		culture_conversion_cost = -0.1
+		global_tax_modifier = 0.1
+		advisor_cost = -0.15
+	}
+	esb_snow_elven_ideas_1 = {
+		idea_cost = -0.05
+		technology_cost = -0.05
+	}
+	esb_snow_elven_ideas_2 = {
+		land_attrition = -0.15
+	}
+	esb_snow_elven_ideas_3 = {
+		all_power_cost = -0.025
+	}
+	esb_snow_elven_ideas_4 = {
+		great_project_upgrade_cost = -0.25
+	}
+	esb_snow_elven_ideas_5 = {
+		land_morale = 0.1
+	}
+	esb_snow_elven_ideas_6 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	esb_snow_elven_ideas_7 = {
+		missionaries = 1
+	}
+}
+
+# Soul Shriven Ideas
+esb_soul_shriven_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { has_idea_group = soul_shriven_ideas }
+		accepted_culture = soul_shriven
+	}
+	bonus = {
+		num_accepted_cultures = 2
+		promote_culture_cost = -0.5
+		yearly_corruption = -0.1
+	}
+	esb_soul_shriven_ideas_1 = {
+		discipline = 0.05
+	}
+	esb_soul_shriven_ideas_2 = {
+		production_efficiency = 0.15
+	}
+	esb_soul_shriven_ideas_3 = {
+		global_manpower_modifier = -0.33
+		manpower_recovery_speed = 0.33
+	}
+	esb_soul_shriven_ideas_4 = {
+		global_regiment_cost = -0.2
+		global_regiment_recruit_speed = -0.2
+	}
+	esb_soul_shriven_ideas_5 = {
+		land_attrition = -0.5
+	}
+	esb_soul_shriven_ideas_6 = {
+		land_morale = 0.15
+	}
+	esb_soul_shriven_ideas_7 = {
+		all_power_cost = -0.05
+	}
+}
+
+# Tang Mo Ideas
+esb_tang_mo_ideas = {
+	category = DIP
+	trigger = {
+		NOT = { has_idea_group = tangmo }
+		accepted_culture = tangmo
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+		global_ship_trade_power = 0.15
+		same_culture_advisor_cost = -0.25
+	}
+	esb_tang_mo_ideas_1 = {
+		galley_power = 0.1
+		global_ship_repair = 0.5
+	}
+	esb_tang_mo_ideas_2 = {
+		global_trade_goods_size_modifier = 0.2
+		trade_efficiency = 0.1
+	}
+	esb_tang_mo_ideas_3 = {
+		movement_speed = 0.10
+		movement_speed_onto_off_boat_modifier = 0.5
+	}
+	esb_tang_mo_ideas_4 = {
+		land_morale = 0.10
+		naval_morale = 0.10
+	}
+	esb_tang_mo_ideas_5 = {
+		defensiveness = 0.10
+	}
+	esb_tang_mo_ideas_6 = {
+		diplomatic_upkeep = 1
+	}
+	esb_tang_mo_ideas_7 = {
+		trade_range_modifier = 0.25
+		global_trade_power = 0.15
+	}
+}
+
+# Tsaesci Ideas
+esb_tsaesci_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { has_idea_group = tsaesci_ideas }
+		accepted_culture = tsaesci
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+		global_ship_cost = -0.2
+		core_creation = -0.2
+	}
+	esb_tsaesci_ideas_1 = {
+		spy_offence = 0.15
+	}
+	esb_tsaesci_ideas_2 = {
+		shock_damage_received = -0.1
+		production_efficiency = 0.1
+	}
+	esb_tsaesci_ideas_3 = {
+		global_institution_spread = 0.1
+	}
+	esb_tsaesci_ideas_4 = {
+		artillery_bonus_vs_fort = 1
+	}
+	esb_tsaesci_ideas_5 = {
+		mercenary_manpower = 0.25
+	}
+	esb_tsaesci_ideas_6 = {
+		ae_impact = -0.25
+	}
+	esb_tsaesci_ideas_7 = {
+		years_of_nationalism = -5
+	}
+}
+
+# Vampire Ideas
+esb_vampire_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = vampire_ideas }
+		accepted_culture = vampire
+	}
+	bonus = {
+		loot_amount = 0.5
+		movement_speed = 0.15
+		ae_impact = -0.1
+	}
+	esb_vampire_ideas_1 = {
+		prestige = 0.75
+	}
+	esb_vampire_ideas_2 = {
+		land_morale = 0.10
+		land_forcelimit_modifier = 0.10
+	}
+	esb_vampire_ideas_3 = {
+		global_manpower_modifier = -0.35
+		manpower_recovery_speed = 0.15
+	}
+	esb_vampire_ideas_4 = {
+		shock_damage = 0.1
+	}
+	esb_vampire_ideas_5 = {
+		production_efficiency = 0.15
+	}
+	esb_vampire_ideas_6 = {
+		idea_cost = -0.1
+		unjustified_demands = -0.2
+	}
+	esb_vampire_ideas_7 = {
+		state_maintenance_modifier = -0.15
+		state_governing_cost = -0.15
+	}
+}
+
+# Xivilai Ideas
+esb_xivilai_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = xivilai_ideas }
+		accepted_culture = xivilai
+	}
+	bonus = {
+		core_creation = -0.15
+		diplomatic_reputation = 1
+		vassal_forcelimit_bonus = 0.2
+		vassal_income = 0.2
+	}
+	esb_xivilai_ideas_1 = {
+		# Unbound Xivilai
+		liberty_desire = 25
+	}
+	esb_xivilai_ideas_2 = {
+		# Professional Attitude
+		drill_gain_modifier = 0.25
+		yearly_army_professionalism = 0.0025
+	}
+	esb_xivilai_ideas_3 = {
+		#Xivilai Pomp 
+		prestige = 0.5
+	}
+	esb_xivilai_ideas_4 = {
+		# Xivilai Duality
+		reserves_organisation = 0.10
+		backrow_artillery_damage = 0.15
+	}
+	esb_xivilai_ideas_5 = {
+		# Of Many Trades
+		global_trade_power = 0.05
+		production_efficiency = 0.05
+	}
+	esb_xivilai_ideas_6 = {
+		# Dedicated Knights
+		discipline = 0.05
+		infantry_power = 0.10
+		infantry_cost = 0.2
+	}
+	esb_xivilai_ideas_7 = {
+		# Dominion Over the Weak
+		reduced_liberty_desire = 25
+	}
+}
+
+# Yokudan Ideas
+esb_yokudan_ideas = {
+	category = DIP
+	trigger = {
+		NOT = { has_idea_group = yokudan_ideas }
+		accepted_culture = yokudan
+	}
+	bonus = {
+		land_attrition = -0.1
+		embracement_cost = -0.15
+		state_maintenance_modifier = -0.2
+	}
+	esb_yokudan_ideas_1 = {
+		global_ship_trade_power = 0.15
+	}
+	esb_yokudan_ideas_2 = {
+		infantry_power = 0.10
+	}
+	esb_yokudan_ideas_3 = {
+		development_cost = -0.1
+		technology_cost = -0.05
+	}
+	esb_yokudan_ideas_4 = {
+		army_tradition_from_battle = 1
+	}
+	esb_yokudan_ideas_5 = {
+		naval_forcelimit_modifier = 0.10
+		global_colonial_growth = 15
+	}
+	esb_yokudan_ideas_6 = {
+		build_cost = -0.1
+		great_project_upgrade_cost = -0.1
+	}
+	esb_yokudan_ideas_7 = {
+		discipline = 0.025
+	}
+}
+
+#############################
+###  Culture Group Ideas  ###
+#############################
+# Argonian Ideas
+esb_argonian_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = argonian_ideas }
+		OR = {
+			accepted_culture = argonian
+			accepted_culture = archein
+			accepted_culture = agaceph
+			accepted_culture = naga
+		}
+	}
+	bonus = {
+		land_morale = 0.15
+		land_attrition = -0.2
+		build_cost = -0.2
+	}
+	esb_argonian_ideas_1 = {
+		prestige = 0.5
+		state_maintenance_modifier = -0.1
+	}
+	esb_argonian_ideas_2 = {
+		privateer_efficiency = 0.2
+		hostile_attrition = 1
+	}
+	esb_argonian_ideas_3 = {
+		global_autonomy = -0.05
+		global_missionary_strength = 0.1
+	}
+	esb_argonian_ideas_4 = {
+		global_unrest = -2
+		religious_unity = 0.10
+	}
+	esb_argonian_ideas_5 = {
+		diplomatic_reputation = 0.5
+		spy_offence = 0.1
+	}
+	esb_argonian_ideas_6 = {
+		infantry_shock = 0.15
+	}
+	esb_argonian_ideas_7 = {
+		years_of_nationalism = -5
+		fabricate_claims_cost = -0.15
+	}
+}
+
+# Bosmer Ideas
+esb_bosmer_ideas = {
+	category = DIP
+	trigger = {
+		NOT = { has_idea_group = bosmer_ideas }
+		accepted_culture = bosmer
+	}
+	bonus = {
+		build_cost = -0.1
+		build_time = -0.1
+		diplomatic_reputation = 1
+	}
+	esb_bosmer_ideas_1 = {
+		core_creation = -0.1
+	}
+	esb_bosmer_ideas_2 = {
+		hostile_attrition = 1
+	}
+	esb_bosmer_ideas_3 = {
+		culture_conversion_cost = -0.15
+	}
+	esb_bosmer_ideas_4 = {
+		global_foreign_trade_power = 0.1
+	}
+	esb_bosmer_ideas_5 = {
+		manpower_recovery_speed = 0.15
+	}
+	esb_bosmer_ideas_6 = {
+		infantry_power = 0.1
+	}
+	esb_bosmer_ideas_7 = {
+		development_cost = -0.15
+	}
+}
+
+# Dwemer Ideas
+esb_dwemer_ideas = {
+	category = ADM
+	trigger = {
+		NOT = { has_idea_group = dwemer_ideas }
+		OR = {
+			accepted_culture = dwemer
+			accepted_culture = rourkenid
+			accepted_culture = dumalacathi
+			accepted_culture = kagrenmer
+		}
+	}
+	bonus = {
+		global_institution_spread = 0.15
+		embracement_cost = -0.25
+		all_power_cost = -0.05
+	}
+	esb_dwemer_ideas_1 = {
+		build_cost = -0.15
+		build_time = -0.1
+	}
+	esb_dwemer_ideas_2 = {
+		technology_cost = -0.05
+	}
+	esb_dwemer_ideas_3 = {
+		defensiveness = 0.15
+	}
+	esb_dwemer_ideas_4 = {
+		production_efficiency = 0.15
+	}
+	esb_dwemer_ideas_5 = {
+		same_culture_advisor_cost = -0.10
+	}
+	esb_dwemer_ideas_6 = {
+		land_morale = 0.1
+		movement_speed = -0.1
+	}
+	esb_dwemer_ideas_7 = {
+		global_colonial_growth = 30
+	}
+}
+
+# Giant Ideas
+esb_giant_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = giant_ideas }
+		OR = {
+			accepted_culture = frost_giant
+			accepted_culture = sea_giant
+			accepted_culture = giant
+		}
+	}
+	bonus = {
+		core_creation = -0.15
+		ae_impact = -0.15
+		development_cost = -0.2
+	}
+	esb_giant_ideas_1 = {
+		global_unrest = -3
+		global_regiment_cost = -0.2
+	}
+	esb_giant_ideas_2 = {
+		shock_damage = 0.10
+	}
+	esb_giant_ideas_3 = {
+		production_efficiency = 0.1
+		trade_value_modifier = 0.1
+	}
+	esb_giant_ideas_4 = {
+		culture_conversion_cost = -0.15
+	}
+	esb_giant_ideas_5 = {
+		global_tax_modifier = 0.1
+	}
+	esb_giant_ideas_6 = {
+		religious_unity = 0.25
+	}
+	esb_giant_ideas_7 = {
+		land_morale = 0.10
+	}
+}
+
+# Khajiit Ideas
+esb_khajiit_ideas = {
+	category = DIP
+	trigger = {
+		NOT = { has_idea_group = khajiit_ideas }
+		OR = { 
+			accepted_culture = khajiiti
+			accepted_culture = anequinan
+			accepted_culture = pellitinian
+		}
+	}
+	bonus = {
+		global_trade_power = 0.1
+		trade_steering = 0.15
+	}
+	esb_khajiit_ideas_1 = {
+		legitimacy = 0.35
+		republican_tradition = 0.35
+		horde_unity = 0.35
+		devotion = 0.35
+		meritocracy = 0.35
+	}
+	esb_khajiit_ideas_2 = {
+		cavalry_power = 0.1
+	}
+	esb_khajiit_ideas_3 = {
+		spy_offence = 0.15
+	}
+	esb_khajiit_ideas_4 = {
+		merchants = 1
+	}
+	esb_khajiit_ideas_5 = {
+		production_efficiency = 0.1
+	}
+	esb_khajiit_ideas_6 = {
+		shock_damage = 0.1
+	}
+	esb_khajiit_ideas_7 = {
+		improve_relation_modifier = 0.25
+	}
+}
+
+# Orcish Ideas
+esb_orcish_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = orcish_ideas }
+		OR = {
+			accepted_culture = orsimer
+			accepted_culture = iron_orc
+			accepted_culture = wood_orsimer
+		}
+	}
+	bonus = {
+		monarch_military_power = 2
+		infantry_cost = -0.2
+		vassal_forcelimit_bonus = 0.25
+	}
+	esb_orcish_ideas_1 = {
+		infantry_power = 0.10
+	}
+	esb_orcish_ideas_2 = {
+		shock_damage_received = -0.10
+		fire_damage_received = -0.10
+	}
+	esb_orcish_ideas_3 = {
+		prestige_from_land = 1
+	}
+	esb_orcish_ideas_4 = {
+		reform_progress_growth = 0.10
+	}
+	esb_orcish_ideas_5 = {
+		production_efficiency = 0.2
+	}
+	esb_orcish_ideas_6 = {
+		global_manpower_modifier = 0.10
+		army_tradition = 0.25
+	}
+	esb_orcish_ideas_7 = {
+		stability_cost_modifier = -0.2
+		build_cost = -0.1
+	}
+}
+
+esb_scamp_ideas = {
+	category = ADM
+	bonus = {
+		power_projection_from_insults = 0.50
+		religious_unity = 0.15
+		hostile_attrition = 1
+	}
+
+	trigger = {
+		NOT = { has_idea_group = scamp_ideas }
+		accepted_culture = scamp
+	}
+	
+	# Indispensable Minions
+	# Scamps are the extremely useful assistants, as their nimble hands can carry and manipulate objects, and they are just tricky enough to be cunning opponents in combat.
+	esb_scamp_ideas_1 = {
+		state_maintenance_modifier = -0.10
+	}
+	# Delight in Cruelty
+	# Scamps are known for their cruelty toward other races. Perhaps this is their way of reflecting on their own hardships? More likely, though, they simply enjoy the process.
+	esb_scamp_ideas_2 = {
+		harsh_treatment_cost = -0.25
+		years_of_nationalism = 10
+		recover_army_morale_speed = 0.05
+	}
+	# Soul Owners
+	# Few creatures of Oblivion can boast of a soul... that can be sold or imprisoned in stone, but Scamps can.
+	esb_scamp_ideas_3 = {
+		global_foreign_trade_power = 0.1
+	}
+	# Servants of the Many
+	# Even thought Scamps are most commonly associated with Mehrunes Dagon, they also serve Molag Bal, Sheogorath and Sanguine.
+	esb_scamp_ideas_4 = {
+		heir_chance = 0.15
+		promote_culture_cost = -0.25
+		global_trade_goods_size_modifier = 0.10
+		diplomatic_reputation = -1.5
+	}
+	# Fire Magicians
+	# Scamps are known to master their skills of fire magic and they can easily launch fireballs from their hands and rain fire from the sky.
+	esb_scamp_ideas_5 = {
+		fire_damage = 0.10
+		leader_land_fire = 1
+	}
+	# Fearless Midgets
+	# Since Scamps are small and not particularly intelligent, they don't need to worry about the inherent fear of more intelligent Daedra, such as Dremora.
+	esb_scamp_ideas_6 = {
+		stability_cost_modifier = -0.15
+		technology_cost = 0.15
+		idea_cost = -0.10
+	}
+	# Secret Language
+	# It is known, that Scamps  possess a language, ut it is too difficult for other races to comprehence.
+	esb_scamp_ideas_7 = {
+		global_spy_defence = 0.15
+	}
+}
+
+esb_imga_ideas = {
+	category = ADM
+	bonus = {
+		unjustified_demands = -0.25
+		reserves_organisation = 0.25
+		global_tax_modifier = 0.15
+	}
+
+	trigger = {
+		NOT = { has_idea_group = imga_ideas }
+		accepted_culture = imga
+	}
+	
+	# The Ancient Socienty
+	# Imga are the intelligent apes, who have flourished in Valenwood long before the Aldmer ever arrived there.
+	esb_imga_ideas_1 = {
+		prestige_decay = -0.01
+	}
+	# Self-Proclaimed Barons
+	# Each individual Imga bears some kind of title, be it Baron, Duke, Earl, or the like, which they use when addressing the members of other races.
+	esb_imga_ideas_2 = {
+		state_governing_cost = -0.1
+	}
+	# Lightness and Agility
+	# The Ape-men are naturally dexterous, and are renowned for their agility. They can easily climb trees and nimbly hide in the forest floor.
+	esb_imga_ideas_3 = {
+		movement_speed = 0.10
+	}
+	# Altmeri Superiority
+	# Imga see the Altmeri as their superiors and as a portrait of an ideal, civilized society. Imga go to desperate measures to emulate the Altmeri: they wear capes, practice with the dueling sword, and attempt to speak with perfect enunciation and courtly manners despite their gravelly, baritone voices.
+	esb_imga_ideas_4 = {
+		global_institution_spread = 0.10
+	}
+	# Kollopi Gatherers
+	# The Kollopi are arboreal rodents that live in the province of Valenwood. They feed off the tender, albeit slim branches of the oaks to be later collected by Imga and used as a simple peasant dish. Kollopi are served as delectable and savory balls of flesh marinated in spices and juices.
+	esb_imga_ideas_5  = {
+		global_manpower_modifier = 0.10
+	}
+	# Multicultural Neighbours 
+	# Imga cohabit in the forests with the Bosmer tribes and Human settlers, who come into the Valenwood to establish trading posts.
+	esb_imga_ideas_6 = {
+		num_accepted_cultures = 1
+	}
+	# Marukh People
+	# The most notable Imga was undoubtedly Marukh, a First Era prophet who rose to prominence during the Camoran Dynasty. His teachings sparked the massive cultural and spiritual movement, that resulted in formation of the Alessian Order.
+	esb_imga_ideas_7 = {
+		global_missionary_strength = 0.015
+	}
+}
+
+esb_skaal_ideas = {
+	category = DIP
+	bonus = {
+		land_morale = 0.15
+		reduced_liberty_desire = 10
+		advisor_cost = -0.15
+	}
+
+	trigger = {
+		NOT = { primary_culture = skaal }
+		accepted_culture = skaal
+	}
+	
+	# Dragon Loyalists
+	# The Skaal believe, that they descended from the Dragon Cult faction, isolated from Skyrim after the climatic battle with the Traitor, known as Miraak, who was seduced by Herma-Mora, the Skaal's name for the Daedric Prince Hermaeus Mora.
+	esb_skaal_ideas_1 = {
+		tolerance_own = 1.5
+		establish_order_cost = -0.10
+		relation_with_heathens = -35
+	}
+	# Stalhrim Forging
+	# For all the Skaals Stalhrim is considered to be a holy material. The art of forging Stalhrim into weapons and armor is also sacred and only certain members of the Skaal were charged as keepers of this ancient tradition. As such, knowledge of stalhrim smithing is very rare.
+	esb_skaal_ideas_2 = {
+		shock_damage = 0.10
+	}
+	# Good Neighbours
+	# Skaals are known as trusting and hospitable people, who welcome trangers without any suspicion.
+	esb_skaal_ideas_3 = {
+		improve_relation_modifier = 0.25
+		global_spy_defence = -0.25
+	}
+	# Keepers of the Nature
+	# All life is sacred to the Skaal, and they try to live in harmony with nature, impacting their environment as little as possible. For example, they hunt deer, bear, and horker, only to the extent necessary for survival, never for enjoyment or practice, and gather their firewood from dead trees that have already fallen.
+	esb_skaal_ideas_4 = {
+		administrative_efficiency = 0.10
+		build_cost = 0.15
+		build_time = 0.25
+	}
+	# Land of Snow Leopards
+	# Lots of Snow Leopards live in the forests of Solstheim. Those animals can be domesticated with some time and effots to later be used as mounts.
+	esb_skaal_ideas_5 = {
+		cavalry_power = 0.10
+		caravan_power = 0.10
+	}
+	# Exchange instead of Trade
+	# The Skaal are self-sufficient, with the land providing all they require. As such, they rarely accept coin in trade from travelers and prefer to barter trade goods instead of buying them.
+	esb_skaal_ideas_6 = {
+		interest = -1
+		embargo_efficiency = 0.25
+	}
+	# The Ancient Carvings
+	# The entire history of the Skaal is preserved not only in their tales, passed down by word of mouth, but it is also carved on the many stones and pillars that have been scattered throughout Solstheim since the Meretical Era. These texts can help Skaalas better understand their past in order to gain a clear vision of the future, or at the very least help them find the long-lost power used by the Dragon Priests.
+	esb_skaal_ideas_7 = {
+		idea_cost = -0.10
+		accept_vassalization_reasons = 25
+	}
+}
+
+esb_goblin_ideas = {
+	category = MIL
+	bonus = {
+		fabricate_claims_cost = -0.25
+		land_forcelimit_modifier = 0.15
+		autonomy_change_time = -0.25
+	}
+
+	trigger = {
+		NOT = { has_idea_group = goblin_ideas }
+		accepted_culture = goblin
+	}
+	
+	# The Blue God
+	# All the Goblins worship Malacath, however, they can do it in different ways. For example, some goblins paint his statures in blue colour, while others conduct various rithuals to please Muluk, one of the Malacath's aspects.  
+	esb_goblin_ideas_1 = {
+		tolerance_heretic = 1.5
+		land_morale = 0.10
+	}
+	# Subterranean Agriculture
+	# Goblins are known for their practices of underground farming of kwana, spiders and rats, which can be used as a source of food or provide the tribe with various alchemical ingredients.
+	esb_goblin_ideas_2 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	# The Durzogs
+	# Durzogs are reptilian dog-like creatures that goblins raise for war and to hunt down their victims. Goblins also heavily use durzogs for a multitude of other uses, mostly relating to the crafting of items requiring hides.
+	esb_goblin_ideas_3 = {
+		cavalry_power = 0.05
+		production_efficiency = 0.05
+	}
+	# Warlords and Shamans
+	# Goblin societies are ofthen led by the strongest and largest goblins, called warlords, or by religious leaders - shamans.
+	esb_goblin_ideas_4 = {
+		leader_land_fire = 1
+		leader_siege = 1
+		global_heretic_missionary_strength = 0.01
+	}
+	# The Founders of Orsinium
+	# Goblins from various tribes, including those who were freed from slavery by their masters or simply escaped, took part in the founding of Orsinium, thereby improving relations with Orcs and other Goblin-ken.
+	esb_goblin_ideas_5 = {
+		relation_with_same_culture_group = 25
+	}
+	# Goblin Metalworking
+	# Due to Dwemer influence many Goblin Clans now posses the knowledge of smithing art. Even though these technologies are limited by capabilities of Dwarven Metal, they still allow to create various swords, daggers, helmets and shields.
+	esb_goblin_ideas_6 = {
+		infantry_power = 0.05
+		global_regiment_cost = -0.10
+	}
+	# A Forgotten History
+	# Goblin society was not always violent and primitive. They used to create magical runes and mastered the art of inscribing handmade obelisks.
+	esb_goblin_ideas_7 = {
+		free_policy = 1
+	}
+}
+
+esb_falmer_ideas = {
+	category = MIL
+	trigger = {
+		NOT = { has_idea_group = falmer_ideas }
+		accepted_culture = falmer
+	}
+	bonus = {
+		manpower_recovery_speed = 0.25
+		envoy_travel_time = -0.35
+		global_unrest = -3.5
+	}
+	# Corrupted Elves
+	# The Falmer are blind descendants of the ancient Snow Elves that live deep beneath the surface. 
+	esb_falmer_ideas_1 = {
+		unjustified_demands = -0.15
+		prestige_decay = 0.01
+	}
+	# Chaurus Breeding
+	# Chaurus are large insects, who possess a highly poisonous spit and a powerful bite. They became an irreplacable livestock for the Falmer, who use their chitin for armour and eggs as alchemy ingredient.
+	esb_falmer_ideas_2 = {
+		production_efficiency = 0.10
+	}
+	# Protection in Ruins
+	# Underground cities of the Dwemers are a safe place in case of any invasion from the surface, even in the absence of their original owners. 
+	esb_falmer_ideas_3 = {
+		defensiveness = 0.15
+		fort_maintenance_modifier = -0.10
+	}
+	# Zero-Waste Construction
+	# The architecture of the Falmers may be primitive, but to build a tent and a couple of fences around it requires only the materials that remain after the chaurus and shellbugs are cut.
+	esb_falmer_ideas_4 = {
+		build_cost = -0.15
+		build_time = 0.25
+	}
+	# Raiders of the Underworld
+	# Using a network of underground passages and tunnels, the Falmer can make lightning raids on settlements or merchant caravans, obtaining anything they cannot manufacture themselves.
+	esb_falmer_ideas_5 = {
+		loot_amount = 0.25
+		available_province_loot = 0.25
+	}
+	# Shock Mages
+	# The only branch of magic that the Falmer's have been able to preserve is the School of Destruction, whose adepts first turn any enemy to flight with their fury and then leave him nothing but ashes. 
+	esb_falmer_ideas_6 = {
+		shock_damage = 0.10
+	}
+	# The Light of Hope
+	# Despite all the metamorphosis that happened during the thousands of years of life underground, Falmer become smarter with each generation, step by step and bit by bit acquiring again, once forgotten knowledge.
+	esb_falmer_ideas_7 = {
+		idea_cost = -0.10
+	}
+}
+
+esb_hollow_ideas = {
+	trigger = {
+		NOT = { has_idea_group = hollow_ideas }
+		accepted_culture = hollow
+	}
+	bonus = {
+		num_accepted_cultures = 1
+		land_maintenance_modifier = -0.15
+		advisor_pool = 1
+	}
+	# Ostion's Legacy
+	# Ostion was an altmer boy with the powers to shape the land, who was sent to the Valenwood to build a great city, as a test by those who sought to use his power as a means to conquer. Ostion's work turned out to be a struggle with the Valenwood itself, leading to many deaths and making the boy forget everything but his goal. However, the Valenwood had also forgotten the peoples who lived in his midst, and so he had no choice but to help Ostion create a new people, the Hollowed ones. 
+	esb_hollow_ideas_1 = {
+		development_cost = -0.15
+	}
+	# Stone Hearts & Stone Bodies
+	# The Hollow are magical stone-constructs, who act entirely by their gods.
+	esb_hollow_ideas_2 = {
+		land_morale = 0.10
+		fire_damage_received = -0.10
+	}
+	# The Ones Who Believe
+	# Outsiders doubt the existence of Wilderking, the god worshipped in the pristine jungles of Greenshade, but not the Hollow, who gain his blessings.
+	esb_hollow_ideas_3 = {
+		tolerance_own = 1.0
+	}
+	# Wilderking Rods
+	# With an almost inexhaustible supply of the Wilderking Rods, the Hollow can detect air breathed in the presence of a Daedra and ensure that the Valenwood will always remain clean of Oblivion corruption.
+	esb_hollow_ideas_4 = {
+		diplomatic_reputation = 1
+		warscore_cost_vs_other_religion = -0.15
+	}
+	# The Lurchers
+	# Lurchers are wooden golems, received as gifts from the Wilderking. They embody of the raw energy of the forest and can be used in multiple ways.
+	esb_hollow_ideas_5 = {
+		siege_ability = 0.10
+		production_efficiency = 0.05
+	}
+	# Fires of the Wilderking
+	# Little is known of the magical lights that occasionally illuminate the wild lands of Valenwood, leading those who go astray or luring travelers to their certain doom.
+	esb_hollow_ideas_6 = {
+		hostile_attrition = 1.0
+		land_attrition = -0.10
+	}
+	# The Noble Purpose
+	# THe Hollow protect the Court of the Wilderking and the forest of Valenwood from every single threat.
+	esb_hollow_ideas_7 = {
+		culture_conversion_cost = -0.15
+	}
+}
