@@ -42,6 +42,57 @@ province_event = {
 	}
 }
 
+
+province_event = {
+	id = es_esb.2
+	title = es_esb.2.t
+	desc = es_esb.2.d
+	picture = es_isolationism_2
+	
+	is_triggered_only = yes
+	
+	#Yes We Shall
+	option = {
+		name = es_esb.2.a
+		change_controller = REB
+		create_revolt = 1
+		custom_tooltip = es_esb.2.tt
+		province_event = {
+			id = es_esb.3
+			days = 100
+		}
+	}
+	
+	#Nevermind
+	option = {
+		name = es_esb.2.b
+	}
+}
+
+province_event = {
+	id = es_esb.3
+	title = es_esb.3.t
+	desc = es_esb.3.d
+	picture = es_isolationism_2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		controlled_by = owner
+	}
+	
+	hidden = yes
+	
+	option = {
+		name = es_esb.0.a
+		ai_chance = {
+			factor = 100
+		}
+		
+		decolonize = this
+	}
+}
+
 province_event = {
     id = es_esb.1
     title = es_esb.1.t
@@ -5505,60 +5556,4 @@ province_event = {
             }
         }
     }
-}
-
-province_event = {
-	id = es_esb.2
-	title = es_esb.2.t
-	desc = es_esb.2.d
-	picture = es_isolationism_2
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			remove_building = custom_interaction_building
-		}
-	}
-	
-	#Yes We Shall
-	option = {
-		name = es_esb.2.a
-		change_controller = REB
-		create_revolt = 1
-		custom_tooltip = es_esb.2.tt
-		province_event = {
-			id = es_esb.3
-			days = 100
-		}
-	}
-	
-	#Nevermind
-	option = {
-		name = es_esb.2.b
-	}
-}
-
-province_event = {
-	id = es_esb.3
-	title = es_esb.3.t
-	desc = es_esb.3.d
-	picture = es_isolationism_2
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		controlled_by = owner
-	}
-	
-	hidden = yes
-	
-	option = {
-		name = es_esb.0.a
-		ai_chance = {
-			factor = 100
-		}
-		
-		cede_province = ---
-	}
 }

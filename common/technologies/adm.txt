@@ -20,6 +20,7 @@ technology = {
 	native_great_trail = yes
 	native_ceremonial_fire_pit = yes
 	temple = yes
+	allowed_idea_groups = 1
 	administrative_efficiency = 0.15
 	expects_institution = {
 		inscription = 0.01
@@ -32,7 +33,7 @@ technology = {
 	expects_institution = {
 		inscription = 0.01
 	}
-	allowed_idea_groups = 100 # = 1
+	
 }
 technology = {
 	# Tech 2 
@@ -54,6 +55,7 @@ technology = {
 	# Tech 4 
 	year = 90
 	governing_capacity = 50
+	allowed_idea_groups = 2
 	expects_institution = {
 		inscription = 0.03
 	}
@@ -61,6 +63,7 @@ technology = {
 technology = {
 	# Tech 5 
 	year = 100
+	
 	production_efficiency = 0.025
 	expects_institution = {
 		inscription = 0.04
@@ -77,7 +80,6 @@ technology = {
 technology = {
 	# Tech 7 
 	year = 120
-	allowed_idea_groups = 100 # = 2
 	expects_institution = {
 		inscription = 0.05
 	}
@@ -85,6 +87,7 @@ technology = {
 technology = {
 	# Tech 8 
 	year = 130
+	allowed_idea_groups = 3
 	development_efficiency = 0.01
 	expects_institution = {
 		inscription = 0.05
@@ -121,6 +124,7 @@ technology = {
 technology = {
 	# Tech 12 
 	year = 170
+	allowed_idea_groups = 4
 	production_efficiency = 0.05
 	expects_institution = {
 		inscription = 0.07
@@ -139,7 +143,7 @@ technology = {
 technology = {
 	# Tech 14 
 	year = 190
-	allowed_idea_groups = 100 # = 3
+	
 	expects_institution = {
 		inscription = 0.08
 		smithing = 0.03
@@ -158,6 +162,7 @@ technology = {
 	# Tech 16 
 	year = 210
 	governing_capacity = 25
+	allowed_idea_groups = 5
 	expects_institution = {
 		inscription = 0.09
 		smithing = 0.04
@@ -196,6 +201,7 @@ technology = {
 	year = 250
 	administrative_efficiency = 0.015
 	glorious_monument = yes
+	allowed_idea_groups = 6
 	expects_institution = {
 		inscription = 0.11
 		smithing = 0.06
@@ -205,7 +211,7 @@ technology = {
 technology = {
 	# Tech 21 
 	year = 260
-	allowed_idea_groups = 100 # = 4
+	
 	expects_institution = {
 		inscription = 0.12
 		smithing = 0.07
@@ -237,6 +243,7 @@ technology = {
 	# Tech 24 
 	year = 290
 	governing_capacity = 50
+	allowed_idea_groups = 7
 	expects_institution = {
 		inscription = 0.13
 		smithing = 0.08
@@ -264,7 +271,7 @@ technology = {
 	}
 }
 technology = {
-	# Tech 23 
+	# Tech 27 
 	year = 320
 	governing_capacity = 50
 	expects_institution = {
@@ -276,8 +283,9 @@ technology = {
 technology = {
 	# Tech 28 
 	year = 330
+	allowed_idea_groups = 8
 	development_efficiency = 0.01
-	allowed_idea_groups = 100 # = 5
+	
 	expects_institution = {
 		inscription = 0.15
 		smithing = 0.10
@@ -322,6 +330,7 @@ technology = {
 	# Tech 32 
 	year = 370
 	production_efficiency = 0.05
+	allowed_idea_groups = 9
 	expects_institution = {
 		inscription = 0.17
 		smithing = 0.12
@@ -354,7 +363,7 @@ technology = {
 technology = {
 	# Tech 35 
 	year = 400
-	allowed_idea_groups = 100 # = 6
+	
 	expects_institution = {
 		inscription = 0.19
 		smithing = 0.14
@@ -366,6 +375,7 @@ technology = {
 	# Tech 36 
 	year = 410
 	governing_capacity = 25
+	allowed_idea_groups = 10
 	expects_institution = {
 		inscription = 0.20
 		smithing = 0.14
@@ -411,6 +421,7 @@ technology = {
 	# Tech 40 
 	year = 450
 	administrative_efficiency = 0.015
+	allowed_idea_groups = 11
 	state_house = yes
 	expects_institution = {
 		inscription = 0.22
@@ -437,7 +448,7 @@ technology = {
 	# Tech 42 
 	year = 470
 	production_efficiency = 0.05
-	allowed_idea_groups = 100 # = 7
+	
 	expects_institution = {
 		inscription = 0.23
 		smithing = 0.18
@@ -462,6 +473,7 @@ technology = {
 	# Tech 44 
 	year = 490
 	governing_capacity = 50
+	allowed_idea_groups = 12
 	expects_institution = {
 		inscription = 0.24
 		smithing = 0.19
@@ -510,6 +522,7 @@ technology = {
 	# Tech 48 
 	year = 530
 	development_efficiency = 0.01
+	allowed_idea_groups = 13
 	expects_institution = {
 		inscription = 0.26
 		smithing = 0.21
@@ -521,7 +534,7 @@ technology = {
 technology = {
 	# Tech 49 
 	year = 540
-	allowed_idea_groups = 100 # = 8
+	
 	expects_institution = {
 		inscription = 0.26
 		smithing = 0.21
@@ -562,6 +575,7 @@ technology = {
 	# Tech 52 
 	year = 570
 	production_efficiency = 0.05
+	allowed_idea_groups = 14
 	expects_institution = {
 		inscription = 0.28
 		smithing = 0.23
@@ -613,7 +627,7 @@ technology = {
 technology = {
 	# Tech 56 
 	year = 610
-	allowed_idea_groups = 100 # = 9
+	allowed_idea_groups = 15
 	expects_institution = {
 		inscription = 0.30
 		smithing = 0.25
@@ -668,6 +682,7 @@ technology = {
 	year = 650
 	administrative_efficiency = 0.015
 	mint = yes
+	allowed_idea_groups = 16
 	expects_institution = {
 		inscription = 0.32
 		smithing = 0.27
@@ -710,7 +725,7 @@ technology = {
 technology = {
 	# Tech 63 
 	year = 680
-	allowed_idea_groups = 100 # = 10
+	
 	expects_institution = {
 		inscription = 0.33
 		smithing = 0.28
@@ -725,6 +740,7 @@ technology = {
 	# Tech 64 
 	year = 690
 	governing_capacity = 50
+	allowed_idea_groups = 17
 	expects_institution = {
 		inscription = 0.34
 		smithing = 0.29
@@ -781,6 +797,7 @@ technology = {
 	# Tech 68 
 	year = 730
 	development_efficiency = 0.01
+	allowed_idea_groups = 18
 	expects_institution = {
 		inscription = 0.36
 		smithing = 0.31
@@ -811,7 +828,7 @@ technology = {
 	year = 750
 	administrative_efficiency = 0.01
 	constable = yes
-	allowed_idea_groups = 100 # = 11
+	
 	expects_institution = {
 		inscription = 0.37
 		smithing = 0.32
@@ -842,6 +859,7 @@ technology = {
 	# Tech 72 
 	year = 770
 	production_efficiency = 0.05
+	allowed_idea_groups = 19
 	expects_institution = {
 		inscription = 0.38
 		smithing = 0.33
@@ -902,6 +920,7 @@ technology = {
 	# Tech 76 
 	year = 810
 	governing_capacity = 25
+	allowed_idea_groups = 20
 	expects_institution = {
 		inscription = 0.40
 		smithing = 0.35
@@ -916,7 +935,7 @@ technology = {
 technology = {
 	# Tech 77 
 	year = 820
-	allowed_idea_groups = 100 # = 12
+	
 	expects_institution = {
 		inscription = 0.41
 		smithing = 0.36
@@ -964,6 +983,7 @@ technology = {
 	year = 850
 	administrative_efficiency = 0.015
 	courthouse = yes
+	allowed_idea_groups = 21
 	expects_institution = {
 		inscription = 0.42
 		smithing = 0.37
@@ -1028,7 +1048,7 @@ technology = {
 technology = {
 	# Tech 84 
 	year = 890
-	allowed_idea_groups = 100 # = 13
+	allowed_idea_groups = 22
 	expects_institution = {
 		inscription = 0.44
 		smithing = 0.39
@@ -1093,6 +1113,7 @@ technology = {
 	# Tech 88 
 	year = 930
 	development_efficiency = 0.01
+	allowed_idea_groups = 23
 	expects_institution = {
 		inscription = 0.46
 		smithing = 0.41
@@ -1143,7 +1164,7 @@ technology = {
 technology = {
 	# Tech 91 
 	year = 960
-	allowed_idea_groups = 100 # = 14
+	
 	expects_institution = {
 		inscription = 0.48
 		smithing = 0.43
@@ -1161,6 +1182,7 @@ technology = {
 	# Tech 92 
 	year = 970
 	production_efficiency = 0.05
+	allowed_idea_groups = 24
 	expects_institution = {
 		inscription = 0.48
 		smithing = 0.43
@@ -1229,6 +1251,7 @@ technology = {
 	# Tech 96 
 	year = 1010
 	governing_capacity = 25
+	allowed_idea_groups = 25
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.45
@@ -1263,7 +1286,7 @@ technology = {
 	# Tech 98 
 	year = 1030
 	development_efficiency = 0.01
-	allowed_idea_groups = 100 # = 15
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.46
@@ -1299,6 +1322,7 @@ technology = {
 	# Tech 100 
 	year = 1050
 	administrative_efficiency = 0.015
+	allowed_idea_groups = 26
 	wharf = yes
 	expects_institution = {
 		inscription = 0.50
@@ -1373,6 +1397,7 @@ technology = {
 	# Tech 104 
 	year = 1090
 	governing_capacity = 50
+	allowed_idea_groups = 27
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.49
@@ -1390,7 +1415,7 @@ technology = {
 technology = {
 	# Tech 105 
 	year = 1100
-	allowed_idea_groups = 100 # = 16
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1445,6 +1470,7 @@ technology = {
 	# Tech 108 
 	year = 1130
 	development_efficiency = 0.01
+	allowed_idea_groups = 28
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1521,7 +1547,7 @@ technology = {
 	# Tech 112 
 	year = 1170
 	production_efficiency = 0.05
-	allowed_idea_groups = 100 # = 17
+	allowed_idea_groups = 29
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1598,6 +1624,7 @@ technology = {
 	# Tech 116 
 	year = 1210
 	governing_capacity = 25
+	allowed_idea_groups = 30
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1654,7 +1681,7 @@ technology = {
 technology = {
 	# Tech 119 
 	year = 1240
-	allowed_idea_groups = 100 # = 18
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1676,6 +1703,7 @@ technology = {
 	year = 1250
 	administrative_efficiency = 0.015
 	textile = yes
+	allowed_idea_groups = 31
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1757,6 +1785,7 @@ technology = {
 	# Tech 124 
 	year = 1290
 	governing_capacity = 50
+	allowed_idea_groups = 32
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1796,7 +1825,7 @@ technology = {
 technology = {
 	# Tech 126 
 	year = 1310
-	allowed_idea_groups = 100 # = 19
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1837,6 +1866,7 @@ technology = {
 	# Tech 128 
 	year = 1330
 	development_efficiency = 0.01
+	allowed_idea_groups = 33
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1921,6 +1951,7 @@ technology = {
 	# Tech 132 
 	year = 1370
 	production_efficiency = 0.05
+	allowed_idea_groups = 34
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -1941,7 +1972,7 @@ technology = {
 technology = {
 	# Tech 133 
 	year = 1380
-	allowed_idea_groups = 100 # = 20
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2005,6 +2036,7 @@ technology = {
 	# Tech 136 
 	year = 1410
 	governing_capacity = 25
+	allowed_idea_groups = 35
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2091,7 +2123,7 @@ technology = {
 	year = 1450
 	administrative_efficiency = 0.015
 	university = yes
-	allowed_idea_groups = 100 # = 21
+	allowed_idea_groups = 36
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2181,6 +2213,7 @@ technology = {
 	# Tech 144 
 	year = 1490
 	governing_capacity = 50
+	allowed_idea_groups = 37
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2246,7 +2279,7 @@ technology = {
 technology = {
 	# Tech 147 
 	year = 1520
-	allowed_idea_groups = 100 # = 22
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2269,6 +2302,7 @@ technology = {
 	# Tech 148 
 	year = 1530
 	development_efficiency = 0.01
+	allowed_idea_groups = 38
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2361,6 +2395,7 @@ technology = {
 	# Tech 152 
 	year = 1570
 	production_efficiency = 0.05
+	allowed_idea_groups = 39
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2406,7 +2441,7 @@ technology = {
 technology = {
 	# Tech 154 
 	year = 1590
-	allowed_idea_groups = 100 # = 23
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2453,6 +2488,7 @@ technology = {
 	# Tech 156 
 	year = 1610
 	governing_capacity = 25
+	allowed_idea_groups = 40
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2546,6 +2582,7 @@ technology = {
 	year = 1650
 	administrative_efficiency = 0.015
 	treasury_office = yes
+	allowed_idea_groups = 41
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2568,7 +2605,7 @@ technology = {
 technology = {
 	# Tech 161 
 	year = 1660
-	allowed_idea_groups = 100 # = 24
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2639,6 +2676,7 @@ technology = {
 	# Tech 164 
 	year = 1690
 	governing_capacity = 50
+	allowed_idea_groups = 42
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2731,7 +2769,7 @@ technology = {
 	# Tech 168 
 	year = 1730
 	development_efficiency = 0.01
-	allowed_idea_groups = 100 # = 25
+	allowed_idea_groups = 43
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2825,6 +2863,7 @@ technology = {
 	# Tech 172 
 	year = 1770
 	production_efficiency = 0.05
+	allowed_idea_groups = 44
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2893,7 +2932,7 @@ technology = {
 technology = {
 	# Tech 175 
 	year = 1800
-	allowed_idea_groups = 100 # = 26
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -2917,6 +2956,7 @@ technology = {
 	# Tech 176 
 	year = 1810
 	governing_capacity = 25
+	allowed_idea_groups = 45
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -3009,6 +3049,7 @@ technology = {
 	# Tech 180 
 	year = 1850
 	administrative_efficiency = 0.015
+	allowed_idea_groups = 46
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -3056,7 +3097,7 @@ technology = {
 	# Tech 182 
 	year = 1870
 	production_efficiency = 0.05
-	allowed_idea_groups = 100 # = 27
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -3103,6 +3144,7 @@ technology = {
 	# Tech 184 
 	year = 1890
 	governing_capacity = 50
+	allowed_idea_groups = 47
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -3195,6 +3237,7 @@ technology = {
 	# Tech 188 
 	year = 1930
 	development_efficiency = 0.01
+	allowed_idea_groups = 48
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -3217,7 +3260,7 @@ technology = {
 technology = {
 	# Tech 189 
 	year = 1940
-	allowed_idea_groups = 100 # = 28
+	
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -3287,6 +3330,7 @@ technology = {
 	# Tech 192 
 	year = 1970
 	production_efficiency = 0.05
+	allowed_idea_groups = 49
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
@@ -3378,6 +3422,7 @@ technology = {
 technology = {
 	# Tech 196 
 	year = 2010
+	allowed_idea_groups = 50
 	expects_institution = {
 		inscription = 0.50
 		smithing = 0.50
