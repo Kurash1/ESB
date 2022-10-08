@@ -905,6 +905,23 @@ on_battle_lost_province = {
 # country
 # root = winning country, from = location
 on_siege_won_country = {
+	#Massacre Ideas
+	if = {
+		limit = {
+			has_idea = esb_massacre_ideas1
+		}
+		random_list = {
+			0 = { }
+			100 = { 
+				save_event_target_as = esb_to_genocide
+				country_event = {
+					id = es_esb.2
+				} 
+			}
+		}
+	}
+	
+	
 	if = {
 		limit = {
 			from = { is_capital = yes }

@@ -36,14 +36,17 @@ province_event = {
 				has_owner_religion = no
 			}
 		}
-		province_event = {
-			id = es_esb.2
+		save_event_target_as = esb_to_genocide
+		owner = { 
+			country_event = {
+				id = es_esb.2
+			} 
 		}
 	}
 }
 
 
-province_event = {
+country_event = {
 	id = es_esb.2
 	title = es_esb.2.t
 	desc = es_esb.2.d
@@ -54,10 +57,12 @@ province_event = {
 	#Yes We Shall
 	option = {
 		name = es_esb.2.a
-		change_controller = REB
-		create_revolt = 1
-		custom_tooltip = es_esb.2.tt
-		province_event = {
+		event_target:esb_to_genocide = {
+			change_controller = REB
+			create_revolt = 1
+			custom_tooltip = es_esb.2.tt
+		}
+		country_event = {
 			id = es_esb.3
 			days = 100
 		}
@@ -69,7 +74,7 @@ province_event = {
 	}
 }
 
-province_event = {
+country_event = {
 	id = es_esb.3
 	title = es_esb.3.t
 	desc = es_esb.3.d
@@ -78,10 +83,10 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		controlled_by = owner
+		event_target:esb_to_genocide = { controlled_by = ROOT }
 	}
 	
-	hidden = yes
+	hidden = no
 	
 	option = {
 		name = es_esb.0.a
@@ -89,7 +94,16 @@ province_event = {
 			factor = 100
 		}
 		
-		decolonize = this
+		if = {
+			limit = {
+				has_idea = esb_massacre_ideas7
+			}
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+		
+		event_target:esb_to_genocide = { decolonize = this }
 	}
 }
 
