@@ -1405,27 +1405,27 @@ esb_massacre_ideas = {
 	
 	trigger = {
 		ai = no
-		absolutism = 50
-		OR = {
-			ruler_has_personality = sinner_personality
-			ruler_has_personality = cruel_personality
-			ruler_has_personality = malevolent_personality
-			ruler_has_personality = impaler_personality
-			ruler_has_personality = pyromaniac_personality
-			ruler_has_personality = ruthless_personality
-			ruler_has_personality = sadistic_personality
-			ruler_has_personality = barbaric_personality
-			ruler_has_personality = xenophobic_personality
-			ruler_has_personality = destroyer_personality
-			ruler_has_personality = necromancer_personality
-			ruler_has_personality = lich_personality
-		}
-		calc_true_if = {
-			all_country = {
-				is_threat = ROOT
-			}
-			amount = 5
-		}
+		#absolutism = 50
+		#OR = {
+		#	ruler_has_personality = sinner_personality
+		#	ruler_has_personality = cruel_personality
+		#	ruler_has_personality = malevolent_personality
+		#	ruler_has_personality = impaler_personality
+		#	ruler_has_personality = pyromaniac_personality
+		#	ruler_has_personality = ruthless_personality
+		#	ruler_has_personality = sadistic_personality
+		#	ruler_has_personality = barbaric_personality
+		#	ruler_has_personality = xenophobic_personality
+		#	ruler_has_personality = destroyer_personality
+		#	ruler_has_personality = necromancer_personality
+		#	ruler_has_personality = lich_personality
+		#}
+		#calc_true_if = {
+		#	all_country = {
+		#		is_threat = ROOT
+		#	}
+		#	amount = 5
+		#}
 	}
 	bonus = {
 		discipline = 0.1

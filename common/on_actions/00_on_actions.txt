@@ -911,12 +911,17 @@ on_siege_won_country = {
 			has_idea = esb_massacre_ideas1
 		}
 		random_list = {
-			0 = { }
-			100 = { 
-				save_event_target_as = esb_to_genocide
-				country_event = {
-					id = es_esb.2
-				} 
+			99 = { }
+			1 = { 
+				random_list = {
+					90 = { }
+					10 = {
+						FROM = { save_event_target_as = esb_to_genocide }
+						country_event = {
+							id = es_esb.2
+						} 
+					}
+				}
 			}
 		}
 	}
