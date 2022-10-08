@@ -2,7 +2,16 @@ fire0 = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = destruction_ideas
+		OR = {
+			#Hidden
+			culture_group = bosmer_cg
+			artillery_fraction = 0.5
+			has_leader_with = {
+				fire = 6
+			}
+			#Normal
+			full_idea_group = destruction_ideas
+		}
 	}
 	bonus = {
 		fire_damage_received = -0.1
@@ -12,7 +21,7 @@ fire0 = {
 		shock_damage_received = -0.1
 	}
 	fire2 = {
-		artillery_levels_available_vs_fort = 1
+		artillery_bonus_vs_fort = 1
 	}
 	fire3 = {
 		artillery_power = 0.1
@@ -61,7 +70,17 @@ esb_bloodmagic = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = destruction_ideas
+		OR = {
+			#Hidden
+			primary_culture = vampire
+			primary_culture = tsaesci
+			has_great_project = {
+				type = bloodroot_forge
+				tier = 1
+			}
+			#Normal
+			full_idea_group = destruction_ideas
+		}
 	}
 	bonus = {
 		discipline = 0.05
@@ -103,7 +122,15 @@ esb_watermagic = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = destruction_ideas
+		OR = {
+			#Hidden
+			culture_group = marsh_cg
+			culture = ayleid
+			culture_group = maormer_cg
+			culture_group = sload_cg
+			#Normal
+			full_idea_group = destruction_ideas
+		}
 	}
 	bonus = {
 		naval_attrition = -0.15
@@ -142,7 +169,19 @@ esb_warmagic = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = destruction_ideas
+		OR = { 
+			#Hidden
+			culture = imperial
+			culture = colovian
+			culture = nibenean
+			culture = breton
+			estate_influence = {
+				estate = estate_mages
+				influence = 80
+			}
+			#Normal
+			full_idea_group = destruction_ideas
+		}
 	}
 	bonus = {
 		siege_ability = 0.25

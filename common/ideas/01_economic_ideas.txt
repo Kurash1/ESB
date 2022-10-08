@@ -2,7 +2,14 @@ soldnerheer0 = {
 	category = MIL
 		
 	trigger = {
-		full_idea_group = economic_ideas
+		OR = {
+			#Hidden Triggers
+			government = republic
+			num_of_mercenaries = 50
+			#Normal Triggers
+			full_idea_group = economic_ideas
+		}
+		#Additional Triggers
 	}
 	bonus = {
 		possible_condottieri = 1.5
@@ -66,9 +73,20 @@ soldnerheer0 = {
 
 enchanting_ideas = {
 	category = DIP
-
+	
 	trigger = {
-		full_idea_group = economic_ideas
+		OR = {
+			#Hidden
+			esu_researcher = 1
+			esu_mage = 1
+			estate_influence = {
+				estate = estate_mages
+				influence = 80
+			}
+			#Normal
+			full_idea_group = economic_ideas
+		}
+		#Additional Triggers
 	}
 	bonus = {
 		idea_cost = -0.25
@@ -130,7 +148,17 @@ alchemical_ideas = {
 	category = ADM
 
 	trigger = {
-		full_idea_group = economic_ideas
+		OR = {
+			#Hidden
+			esu_alchemist = 1
+			esu_mage = 1
+			estate_influence = {
+				estate = estate_mages
+				influence = 80
+			}
+			#Normal
+			full_idea_group = economic_ideas
+		}
 	}
 	bonus = {
 		global_trade_goods_size_modifier = 0.15
@@ -189,7 +217,16 @@ innovativeness_ideas = {
 	category = ADM
 
 	trigger = {
-		full_idea_group = economic_ideas
+		OR = { 
+			#Hidden
+			innovativeness = 25
+			culture_group = dwemer_cg
+			any_neighbor_country = {
+				tech_difference = 5
+			} 
+			#Normal
+			full_idea_group = economic_ideas
+		}
 	}
 	bonus = {
 		advisor_cost = -0.15
@@ -248,7 +285,16 @@ esb_slavers = {
 	category = ADM
 		
 	trigger = {
-		full_idea_group = economic_ideas
+		OR = { 
+			#Hidden
+			culture_group = velothi_cg
+			estate_influence = {
+				estate = estate_slavers
+				influence = 80
+			}
+			#Normal
+			full_idea_group = economic_ideas
+		}
 		has_estate = estate_slavers
 	}
 	bonus = {
@@ -294,7 +340,12 @@ esb_treasury = {
 	category = ADM
 		
 	trigger = {
-		full_idea_group = economic_ideas
+		OR = { 
+			#Hidden
+			years_of_income = 5.0
+			#Normal
+			full_idea_group = economic_ideas
+		}
 	}
 	bonus = {
 		diplomatic_reputation = 1

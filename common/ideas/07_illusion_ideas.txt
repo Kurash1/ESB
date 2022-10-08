@@ -2,7 +2,13 @@ esb_mind_magic = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = illusion_ideas
+		OR = {
+			#Hidden
+			culture_group = sload_cg
+			tag = CU5
+			#Normal
+			full_idea_group = illusion_ideas
+		}
 	}
 	bonus = {
 		ae_impact = -0.1
@@ -42,7 +48,12 @@ esb_auramancy = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = esb_mind_magic
+		OR = {
+			#Hidden
+			culture = vampire
+			#Normal
+			full_idea_group = esb_mind_magic
+		}
 	}
 	bonus = {
 		legitimacy = 1

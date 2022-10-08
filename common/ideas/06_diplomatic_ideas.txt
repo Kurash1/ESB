@@ -2,7 +2,20 @@ spy_ideas = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = diplomatic_ideas
+		OR = {
+			#Hidden
+			AND = {
+				ai = no # so it wont be too laggy
+				any_neighbor_country = {
+					has_spy_network_from = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			#Normal
+			full_idea_group = diplomatic_ideas
+		}
 	}
 	bonus = {
 		rebel_support_efficiency = 0.5
@@ -51,7 +64,12 @@ naval_ideas = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = diplomatic_ideas
+		OR = {
+			#Hidden
+			navy_size_percentage = 2
+			#Normal
+			full_idea_group = diplomatic_ideas
+		}
 	}
 	bonus = {
 		ship_durability = 0.15
@@ -117,7 +135,12 @@ flottenbasis0 = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = naval_ideas
+		OR = {
+			#Hidden
+			galley_fraction = 0.75
+			#Normal
+			full_idea_group = naval_ideas
+		}
 	}
 	bonus = {
 		build_cost = -0.15
@@ -200,7 +223,12 @@ influence_ideas = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = diplomatic_ideas
+		OR = {
+			#Hidden
+			num_of_subjects = 5
+			#Normal
+			full_idea_group = diplomatic_ideas
+		}
 	}
 	bonus = {
 		unjustified_demands = -0.5
@@ -251,7 +279,15 @@ esb_assassins = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = spy_ideas
+		OR = {
+			#Hidden
+			estate_loyalty = {
+				estate = estate_assassins
+				loyalty = 100
+			}
+			#Normal
+			full_idea_group = spy_ideas
+		}
 		has_estate = estate_assassins
 	}
 	bonus = {
@@ -290,7 +326,15 @@ esb_morag_tong = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = spy_ideas
+		OR = {
+			#Hidden
+			estate_loyalty = {
+				estate = estate_morag_tong
+				loyalty = 100
+			}
+			#Normal
+			full_idea_group = spy_ideas
+		}
 		has_estate = estate_morag_tong
 	}
 	bonus = {
@@ -329,7 +373,15 @@ esb_dark_brotherhood = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = spy_ideas
+		OR = {
+			#Hidden
+			estate_loyalty = {
+				estate = estate_dark_brotherhood
+				loyalty = 100
+			}
+			#Normal
+			full_idea_group = spy_ideas
+		}
 		has_estate = estate_dark_brotherhood
 	}
 	bonus = {
@@ -368,7 +420,12 @@ esb_prestigious = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = diplomatic_ideas
+		OR = {
+			#Hidden
+			prestige = 90
+			#Normal
+			full_idea_group = diplomatic_ideas
+		}
 	}
 	bonus = {
 		idea_cost = -0.1

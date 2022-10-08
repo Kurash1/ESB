@@ -2,7 +2,17 @@ summoning_ideas = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = conjuration_ideas
+		OR = {
+			#Hidden
+			AND = { #Direnni were apparently good at it
+				capital_scope = {
+					superregion = high_rock_superregion
+				}
+				culture = altmer
+			}
+			#Normal
+			full_idea_group = conjuration_ideas
+		}
 	}
 	bonus = {
 		global_regiment_cost = -0.15
@@ -60,7 +70,25 @@ necromacy_ideas = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = conjuration_ideas
+		OR = {
+			#Hidden
+			culture_group = sload_cg
+			culture_group = dead_cg
+			esu_lich = 1
+			culture = barseabic
+			ruler_has_personality = ambitious_personality
+			ruler_has_personality = puppet_master_personality
+			ruler_has_personality = impaler_personality
+			ruler_has_personality = ruthless_personality
+			ruler_has_personality = sadistic_personality
+			ruler_has_personality = necromancer_personality 
+			ruler_has_personality = lich_personality  
+			ruler_has_personality = warlock_personality   
+			ruler_has_personality = magic_addict_personality    
+			religion = molag_bal_cult
+			#Normal
+			full_idea_group = conjuration_ideas
+		}
 	}
 	bonus = {
 		land_maintenance_modifier = -0.15
@@ -117,7 +145,17 @@ soul_siphon_ideas = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = conjuration_ideas
+		OR = {
+			# Hidden
+			religion = molag_bal_cult
+			has_great_project = {
+				id = arkthzand_cavern
+				tier = 3
+			}
+			# Normal
+			full_idea_group = necromacy_ideas
+			full_idea_group = conjuration_ideas
+		}
 	}
 	bonus = {
 		merchants = 1

@@ -65,6 +65,14 @@ country_event = {
 						value = 75
 					}
 				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						has_idea = esb_morag_tong7
+						has_idea = esb_dark_brotherhood7
+						has_idea = esb_assassins7
+					}
+				}
 			}
 			1 = {
 				# Assassination Failed, No Effect
@@ -136,6 +144,14 @@ country_event = {
 						value = 75
 					}
 				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						has_idea = esb_morag_tong7
+						has_idea = esb_dark_brotherhood7
+						has_idea = esb_assassins7
+					}
+				}
 			}
 			1 = {
 				# Assassination Failed, No Effect
@@ -203,6 +219,14 @@ country_event = {
 					has_spy_network_in = {
 						who = event_target:enemy_country_for_assassin
 						value = 75
+					}
+				}
+				modifier = {
+					factor = 1.25
+					OR = {
+						has_idea = esb_morag_tong7
+						has_idea = esb_dark_brotherhood7
+						has_idea = esb_assassins7
 					}
 				}
 			}

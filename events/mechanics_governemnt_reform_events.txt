@@ -319,27 +319,35 @@ country_event = {
 	
 	immediate = {
 		random_list = {
-		50 = {
-		kill_ruler = yes
-		country_event = { id = event_new_diplomatic_actions.1 }
-			random_country = { 
-				limit = {
-					has_country_flag = assasinate_ruler_flag
+			50 = {
+				kill_ruler = yes
+				country_event = { id = event_new_diplomatic_actions.1 }
+				random_country = { 
+					limit = {
+						has_country_flag = assasinate_ruler_flag
+					}
+					country_event = { id = event_new_diplomatic_actions.3 }
+					clr_country_flag = assasinate_ruler_flag
 				}
-			country_event = { id = event_new_diplomatic_actions.3 }
-			clr_country_flag = assasinate_ruler_flag
-			}
-		}
-		50 = {
-			random_country = { 
-				limit = {
-					has_country_flag = assasinate_ruler_flag
+				modifier = {
+					factor = 1.25
+					OR = {
+						has_idea = esb_morag_tong7
+						has_idea = esb_dark_brotherhood7
+						has_idea = esb_assassins7
+					}
 				}
-			country_event = { id = event_new_diplomatic_actions.0 }
-			add_prestige = -10
-			clr_country_flag = assasinate_ruler_flag
 			}
-		}
+			50 = {
+				random_country = { 
+					limit = {
+						has_country_flag = assasinate_ruler_flag
+					}
+				country_event = { id = event_new_diplomatic_actions.0 }
+				add_prestige = -10
+				clr_country_flag = assasinate_ruler_flag
+				}
+			}
 		}
 		clr_country_flag = assasinate_ruler_flag@FROM
 	}
@@ -366,27 +374,35 @@ country_event = {
 	
 	immediate = {
 		random_list = {
-		50 = {
-		kill_heir = {  }
-		country_event = { id = event_new_diplomatic_actions.2 }
-			random_country = { 
-				limit = {
-					has_country_flag = assasinate_heir_flag
+			50 = {
+				kill_heir = {  }
+				country_event = { id = event_new_diplomatic_actions.2 }
+				random_country = { 
+					limit = {
+						has_country_flag = assasinate_heir_flag
+					}
+					country_event = { id = event_new_diplomatic_actions.3 }
+					clr_country_flag = assasinate_heir_flag
 				}
-			country_event = { id = event_new_diplomatic_actions.3 }
-			clr_country_flag = assasinate_heir_flag
-			}
-		}
-		50 = {
-			random_country = { 
-				limit = {
-					has_country_flag = assasinate_heir_flag
+				modifier = {
+					factor = 1.25
+					OR = {
+						has_idea = esb_morag_tong7
+						has_idea = esb_dark_brotherhood7
+						has_idea = esb_assassins7
+					}
 				}
-			country_event = { id = event_new_diplomatic_actions.0 }
-			add_prestige = -10
-			clr_country_flag = assasinate_heir_flag
 			}
-		}
+			50 = {
+				random_country = { 
+					limit = {
+						has_country_flag = assasinate_heir_flag
+					}
+					country_event = { id = event_new_diplomatic_actions.0 }
+					add_prestige = -10
+					clr_country_flag = assasinate_heir_flag
+				}
+			}
 		}
 		clr_country_flag = assasinate_heir_flag@FROM
 	}

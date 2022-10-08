@@ -297,6 +297,10 @@ aristocracy_ideas = {
 
 	trigger = {
 		OR = {
+			estate_loyalty = {
+				estate = estate_nobility
+				loyalty = 100
+			}
 			full_idea_group = monarchie0
 			full_idea_group = justiz0
 		}
@@ -370,7 +374,13 @@ justiz0 = {
 	category = ADM
 
 	trigger = {
-		full_idea_group = staatsverwaltung0
+		OR = {
+			estate_loyalty = {
+				estate = estate_commoners
+				loyalty = 100
+			}
+			full_idea_group = staatsverwaltung0
+		}
 	}
 	bonus = {
 		ae_impact = -0.10
@@ -429,6 +439,10 @@ plutocracy_ideas = {
 
 	trigger = {
 		OR = { 
+			estate_loyalty = {
+				estate = estate_merchants
+				loyalty = 100
+			}
 			full_idea_group = republik0
 			full_idea_group = justiz0
 		}
@@ -489,7 +503,17 @@ humanist_ideas = {
 	category = ADM
 
 	trigger = {
-		full_idea_group = republik0
+		OR = {
+			#Hidden
+			AND = {
+				ai = no #lag not incoming
+				all_neighbor_country = {
+					tolerance_to_this = 1
+				}
+			}
+			#Normal
+			full_idea_group = republik0
+		}
 	}
 	bonus = {
 		idea_cost = -0.1
@@ -560,7 +584,12 @@ religious_ideas = {
 	category = ADM
 
 	trigger = {
-		full_idea_group = aristo0
+		OR = { 
+			#Hidden
+			at_war_with_religious_enemy = yes
+			#Normal
+			full_idea_group = aristo0
+		}
 	}
 	bonus = {
 		prestige_per_development_from_conversion = 0.25
@@ -627,7 +656,12 @@ gesellschaft0 = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = staatsverwaltung0
+		OR = {
+			#Hidden
+			average_unrest = -5
+			#Normal
+			full_idea_group = staatsverwaltung0
+		}
 	}
 	bonus = {
 		advisor_pool = 1
@@ -681,7 +715,12 @@ propaganda0 = {
 	category = DIP
 
 	trigger = {
-		full_idea_group = staatsverwaltung0
+		OR = {
+			#Hidden
+			average_unrest = -5
+			#Normal
+			full_idea_group = staatsverwaltung0
+		}
 	}
 	bonus = {
 		global_manpower_modifier = 0.25
@@ -750,6 +789,9 @@ zentra0 = {
 
 	trigger = {
 		OR = {
+			#Hidden
+			NOT = { average_autonomy = 5 }
+			#Normal
 			full_idea_group = aristo0
 			full_idea_group = republik0
 		}	
@@ -813,7 +855,12 @@ esb_corruption = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = republik0
+		OR = { 
+			#Hidden
+			corruption = 10
+			#Normal
+			full_idea_group = republik0
+		}
 	}
 	bonus = {
 		state_maintenance_modifier = -0.25
@@ -852,7 +899,16 @@ esb_hegemonic = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = staatsverwaltung0
+		OR = {
+			#Hidden
+			is_hegemon = yes
+			AND = { 
+				is_great_power = yes
+				NOT = { great_power_rank = 4 }
+			}
+			#Normal
+			full_idea_group = staatsverwaltung0
+		}
 	}
 	bonus = {
 		prestige = 1.5
@@ -892,7 +948,12 @@ esb_dynastic = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = monarchie0
+		OR = {
+			#Hidden
+			num_of_unions = 3
+			#Normal
+			full_idea_group = monarchie0
+		}
 	}
 	bonus = {
 		monarch_lifespan = 0.1
@@ -927,7 +988,12 @@ esb_absolutism = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = monarchie0
+		OR = {
+			#Hidden
+			absolutism = 75
+			#Normal
+			full_idea_group = monarchie0
+		}
 	}
 	bonus = {
 		administrative_efficiency = 0.05

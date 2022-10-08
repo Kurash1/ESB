@@ -2,7 +2,13 @@ mysticism_ideas = {
 	category = ADM
 
 	trigger = {
-		full_idea_group = alteration_ideas
+		OR = {
+			#Hidden
+			culture = reachmen
+			religion = old_way_cult
+			#Normal
+			full_idea_group = alteration_ideas
+		}
 	}
 	bonus = {
 		enforce_religion_cost = -0.5
@@ -132,7 +138,18 @@ esb_weathermagic = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = alteration_ideas
+		OR = {
+			#Hidden
+			culture_group = marsh_cg
+			culture = ayleid
+			culture_group = dwemer_cg
+			culture = vampire
+			culture_group = maormer_cg
+			religion = old_way_cult
+			culture_group = tsaesci_cg
+			#Normal
+			full_idea_group = alteration_ideas
+		}
 	}
 	bonus = {
 		global_supply_limit_modifier = 0.25
@@ -170,7 +187,14 @@ esb_thaumaturgy = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = alteration_ideas
+		OR = {
+			#Hidden
+			capital_scope = {
+				superregion = high_rock_superregion
+			}
+			#Normal
+			full_idea_group = alteration_ideas
+		}
 	}
 	bonus = {
 		idea_cost = -0.15
@@ -207,7 +231,17 @@ esb_sight = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = esb_thaumaturgy
+		OR = {
+			#Hidden
+			culture = imga
+			culture_group = velothi_cg
+			religion = eight_divines
+			religion = nine_divines
+			religion = old_way_cult
+			culture = reachmen
+			#Normal
+			full_idea_group = esb_thaumaturgy
+		}
 	}
 	bonus = {
 		all_power_cost = -0.05
@@ -248,7 +282,13 @@ esb_timemagic = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = esb_thaumaturgy
+		OR = {
+			#Hidden
+			culture_group = dwemer_cg
+			religion = hermeus_mora_cult
+			#Normal
+			full_idea_group = esb_thaumaturgy
+		}
 	}
 	bonus = {
 		country_admin_power = 1
@@ -289,7 +329,13 @@ esb_thaumavocalism = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = alteration_ideas
+		OR = {
+			#Hidden
+			advisor = esu_bard
+			culture = breton
+			#Normal
+			full_idea_group = alteration_ideas
+		}
 	}
 	bonus = {
 		army_tradition = 1
@@ -327,7 +373,13 @@ esb_dark_magic = {
 	category = ADM
 	
 	trigger = {
-		full_idea_group = mysticism_ideas
+		OR = {
+			#Hidden
+			culture_group = daedra_cg
+			culture = reachmen
+			#Normal
+			full_idea_group = mysticism_ideas
+		}
 	}
 	bonus = {
 		war_exhaustion = -0.02

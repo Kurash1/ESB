@@ -2,7 +2,12 @@ quantity_ideas = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = stehendesheer0
+		OR = {
+			# Hidden
+			army_size_percentage = 2.0
+			# Normal
+			full_idea_group = stehendesheer0
+		}
 	}
 	bonus = {
 		land_forcelimit_modifier = 0.25
@@ -72,7 +77,12 @@ quality_ideas = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = stehendesheer0
+		OR = {
+			# Hidden
+			is_march = yes
+			# Normal
+			full_idea_group = stehendesheer0
+		}
 	}
 	bonus = {
 		discipline = 0.05
@@ -155,7 +165,13 @@ generalstab0 = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = stehendesheer0
+		OR = {
+			# Hidden
+			has_commanding_three_star = yes
+			army_tradition = 75
+			# Normal
+			full_idea_group = stehendesheer0
+		}
 	}
 	bonus = {
 		discipline = 0.05
@@ -223,7 +239,13 @@ offensive_ideas = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = generalstab0
+		OR = {
+			# Hidden
+			cavalry_fraction = 0.4
+			artillery_fraction = 0.4
+			# Normal
+			full_idea_group = generalstab0
+		}
 	}
 	bonus = {
 		leader_siege = 1
@@ -296,7 +318,20 @@ defensive_ideas = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = generalstab0
+		OR = {
+			# Hidden
+			AND = {
+				ai = no # to reduce lag
+				calc_true_if = {
+					all_owned_province = {
+						fort_level = 1
+					}
+					amount = 25
+				}
+			}
+			# Normal
+			full_idea_group = generalstab0
+		}
 	}
 	bonus = {
 		hostile_attrition = 1.5
@@ -366,7 +401,12 @@ mobility_ideas = {
 		reserves_organisation = 0.5
 	}
 	trigger = {
-		full_idea_group = offensive_ideas
+		OR = {
+			#Hidden
+			artillery_fraction = 0.5
+			#Normal
+			full_idea_group = quality_ideas
+		}
 	}
 
 	athletics = {
@@ -426,7 +466,15 @@ shock0 = {
 	category = MIL
 	
 	trigger = {
-		full_idea_group = offensive_ideas
+		OR = {
+			# Normal
+			culture_group = northern_cg
+			culture_group = yokudo_redguard_cg
+			culture_group = orsimer_cg
+			culture_group = kamal_cg
+			# Hidden
+			full_idea_group = quality_ideas
+		}
 	}
 	bonus = {
 		shock_damage_received = -0.1
@@ -486,7 +534,12 @@ esb_largearmy = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = quantity_ideas
+		OR = { 
+			# Hidden
+			army_size_percentage = 3.0
+			# Normal
+			full_idea_group = quantity_ideas
+		}
 	}
 	bonus = {
 		free_leader_pool = 1
@@ -530,7 +583,13 @@ esb_professionalism = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = quality_ideas
+		OR = {
+			#Hidden
+			culture = imperial
+			army_professionalism = 50
+			#Normal
+			full_idea_group = quality_ideas
+		}
 	}
 	bonus = {
 		yearly_army_professionalism = 0.005
@@ -568,7 +627,12 @@ esb_longwar = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = defensive_ideas
+		OR = {
+			#Hidden
+			war_exhaustion = 15
+			#Normal
+			full_idea_group = defensive_ideas
+		}
 	}
 	bonus = {
 		war_exhaustion_cost = -0.25
@@ -605,7 +669,15 @@ esb_warriors = {
 	category = MIL
 
 	trigger = {
-		full_idea_group = stehendesheer0
+		OR = {
+			#Hidden
+			estate_loyalty = {
+				estate = estate_warriors
+				loyalty = 100
+			}
+			#Normal
+			full_idea_group = stehendesheer0
+		}
 		has_estate = estate_warriors
 	}
 	bonus = {
