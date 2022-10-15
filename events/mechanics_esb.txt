@@ -50,18 +50,19 @@ province_event = {
 		if = {
 			limit = {
 				owner = {
-					treasury = 1500
+					treasury = 100
 					NOT = { has_country_flag = es_archeology }
 				}
 			}
 			hidden_effect = { 
 				province_event = {
 					id = es_archeology.1
-					days = 1
+					days = 3650
+					random = 3650
 				}
 			}
 			custom_tooltip = es_esb.0.tt.a
-			owner = { add_treasury = -1500 }
+			owner = { add_treasury = -100 }
 		}
 		else = {
 			custom_tooltip = es_esb.0.tt.b
