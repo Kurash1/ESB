@@ -1,9 +1,12 @@
+#avanchnzel
+#bthalft
+#arkngthamz
+#irkngthand
+
 irkngthand = {
 	start = 2946
 	date = 54.01.01
-	time = {
-		months = 0
-	}
+	time = { months = 0 }
 	build_cost = 1000
 	can_be_moved = no
 	move_days_per_unit_distance = 10
@@ -16,10 +19,8 @@ irkngthand = {
 		}
 		culture_group = dwemer_cg
 	}
-	on_built = {
-	}
-	on_destroyed = {
-	}
+	on_built = { }
+	on_destroyed = { }
 	can_use_modifiers_trigger = {
 		OR = {
 			has_owner_culture = yes
@@ -34,9 +35,7 @@ irkngthand = {
 		}
 		culture_group = dwemer_cg
 	}
-	keep_trigger = {
-		always = yes
-	}
+	keep_trigger = { always = yes }
 	tier_0 = {
 		upgrade_time = { months = 0 }
 		cost_to_upgrade = { factor = 0 }
@@ -45,7 +44,6 @@ irkngthand = {
 		country_modifiers = { }
 		on_upgraded = { }
 	}
-
 	tier_1 = {
 		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 1000 }
@@ -65,7 +63,6 @@ irkngthand = {
 		country_modifiers = { }
 		on_upgraded = { }
 	}
-
 	tier_2 = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 2500 }
@@ -86,7 +83,6 @@ irkngthand = {
 		country_modifiers = { }
 		on_upgraded = { }
 	}
-
 	tier_3 = {
 		upgrade_time = { months = 180 }
 		cost_to_upgrade = { factor = 5000 }
