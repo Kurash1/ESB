@@ -505,12 +505,7 @@ humanist_ideas = {
 	trigger = {
 		OR = {
 			#Hidden
-			AND = {
-				ai = no #lag not incoming
-				all_neighbor_country = {
-					tolerance_to_this = 1
-				}
-			}
+			
 			#Normal
 			full_idea_group = republik0
 		}
@@ -867,7 +862,7 @@ esb_corruption = {
 	}
 	
 	esb_corruption1 = {
-		yearly_corruption = 0.05
+		yearly_corruption = -0.05
 	}
 	esb_corruption2 = {
 		spy_offence = 0.1
