@@ -192,7 +192,11 @@ cb_es_slave_raid = {
 		capital_scope = { superregion = cyrodiil_superregion }
 		culture_group = high_elves_cg
 		FROM = { 
-			culture_group = cyrodiil_cg
+			OR = {
+				culture_group = cyrodiil_cg
+				culture_group = marsh_cg
+				culture_group = khajiiti_cg
+			}
 			is_neighbor_of = ROOT 
 		}
 	}
