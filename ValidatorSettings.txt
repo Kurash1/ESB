@@ -90,16 +90,20 @@
 ###########################################
 
 # Languages that should be ignored when doing localization checking
-(MakeEnum IgnoreLanguages) = { }
+(MakeEnum IgnoreLanguages) = { 
+	l_french 
+	l_spanish 
+	l_german 
+}
 
 # Disables check that all keys are found in the localization file. This assumes that you use keys everywhere. If not you'll get lots of false positives.
-#AddFlag = NoCheckKey
+AddFlag = NoCheckKey
 # The Validator will warn if a language does not begin with "l_". This flag will disable that check.
 #AddFlag = Localization.NoWarnOnStrangePrefix
 
 # If localization keys appear in both vanilla and in a mod, whether to report an error
 # Report duplicates even if in a "replace" mod folder
-#AddFlag = Localization.ReportReplaceDuplicatesIfInVanilla
+AddFlag = Localization.ReportReplaceDuplicatesIfInVanilla
 # Ignore duplicates not in a "replace" mod folder
 AddFlag = Localization.IgnoreNonReplaceDuplicatesIfInVanilla
 
@@ -162,9 +166,9 @@ AddFlag = Localization.IgnoreNonReplaceDuplicatesIfInVanilla
 ###########################################
 
 # Enable check for modifier descriptions
-#AddFlag = Modifiers.EnableModifierDescriptionCheck
+AddFlag = Modifiers.EnableModifierDescriptionCheck
 # Disables check for unique triggered modifier keys.
-#AddFlag = Modifiers.NoCheckUniqueKeyTrigger
+AddFlag = Modifiers.NoCheckUniqueKeyTrigger
 # Ignore duplicates with vanilla
 AddFlag = Modifiers.IgnoreDuplicateIdsIfInVanillaForEventAndStaticModifiers
 # Ignore duplicates with vanilla for opinion modifiers
@@ -184,7 +188,3 @@ AddFlag = Modifiers.IgnoreDuplicateIdsIfInVanillaForOpinionModifiers
 ###########################################
 # Allows duplicate entries in the power_projection files. Useful for modding
 #AddFlag = PowerProjection.AllowDuplicateEntries
-
-
-
-

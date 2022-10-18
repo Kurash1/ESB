@@ -85,12 +85,9 @@ country_event = { #Corelanya Clan
 		}
 		hammerfell_43_la = {
 			limit = {
-				OR = {
-					#is_city = no
-					owner = {
-						is_subject = no
-						ai = yes
-					}
+				owner = {
+					is_subject = no
+					ai = yes
 				}
 			}
 			cede_province = COE
@@ -108,7 +105,7 @@ country_event = { #Corelanya Clan
 		}
 		COE = {
 			change_religion = hermeus_mora_cult
-			change_culture = corelanyan
+			change_primary_culture = corelanyan
 			set_capital = 6367
 		}
 
@@ -220,7 +217,7 @@ country_event = { #Tavan Wave
 		}
 		HE1 = {
 			change_religion = redguard_pantheon
-			change_culture = redguard
+			change_primary_culture = redguard
 			set_capital = 1504
 		}
 	}

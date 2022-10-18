@@ -64,7 +64,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "unique_ideas_idea_title"
-			position = { x = 100 y = 128 }
+			position = { x = 85 y = 128 }
 			textureFile = ""
 			font = "vic_22"
 			borderSize = {x = 4 y = 4}	
@@ -161,8 +161,8 @@ guiTypes = {
 			name ="progress_frame_army"
 			spriteType = "GFX_ideaView_unique_progress_frame_long"
 			position = { x = 93 y = 217 }
-		}	
-	
+		}		
+		
 		listboxType = {
 			name = "ideagroups_listbox_left"
 			backGround = ""
@@ -171,10 +171,10 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 1.0
-			borderSize = {x = 0 y = 0}
 			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
 		}
-	
+		
 		listboxType = {
 			name = "ideagroups_listbox_right"
 			backGround = ""
@@ -183,9 +183,9 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 1.0
-			borderSize = {x = 0 y = 0}
 			scrollbartype = "standardlistbox_slider"
-		}
+			borderSize = {x = 0 y = 0}
+		}		
 
 		################################################################################################
 		### --- Unlock idea group window
@@ -415,7 +415,7 @@ guiTypes = {
 		{
 			name ="abandon_idea_button"
 			quadTextureSprite= "GFX_abandon_idea"
-			position = { x= 99999 y = 5 }
+			position = { x= 203 y = 5 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_ideas"
 		}

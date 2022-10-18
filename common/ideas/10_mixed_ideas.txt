@@ -1197,7 +1197,7 @@ esb_thuum = {
 	
 	trigger = {
 		OR = {
-			has_idea = esb_nordic_ideas
+			full_idea_group = esb_nordic_ideas
 			has_idea = nordic_ideas
 			primary_culture = nord
 		}
@@ -1234,8 +1234,8 @@ esb_shehai = {
 	
 	trigger = {
 		OR = {
-			has_idea = esb_yokudan_ideas
-			has_idea = esb_redguard_ideas
+			full_idea_group = esb_yokudan_ideas
+			full_idea_group = esb_redguard_ideas
 			has_idea = yokudan_ideas
 			has_idea = redguard_ideas
 			primary_culture = yokudan
@@ -1274,7 +1274,7 @@ esb_beast_tongue = {
 	
 	trigger = {
 		OR = {
-			has_idea = esb_bosmer_ideas
+			full_idea_group = esb_bosmer_ideas
 			has_idea = bosmer_ideas
 			primary_culture = bosmer
 		}
@@ -1311,7 +1311,7 @@ esb_tonal_architecture = {
 	
 	trigger = {
 		OR = {
-			has_idea = esb_dwemer_ideas
+			full_idea_group = esb_dwemer_ideas
 			has_idea = dwemer_ideas
 			primary_culture = dwemer
 			primary_culture = rourkenid
