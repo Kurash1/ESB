@@ -1,4 +1,61 @@
-﻿l_spanish:
+l_spanish:
+ lose_prestige:0 "Take Sides in High Council"
+ withdrawn_parliamentary_seat:0 "Withdrawn High Councilary Seat"
+ desc_withdrawn_parliamentary_seat:0 "The population of this province feel that they have been robbed of their rightful influence over the politics of our country."
+ integrating_minorities_parliament_tooltip:0 "A Seat of High Council will be assigned to an eligible wrong culture province."
+ mechanic_has_parliament_yes:3 "Enables High Council."
+ mechanic_has_parliament_no:1 "Disable High Council."
+ EST_VAL_SEAT_BRIBED:0 "High Councilary concessions: $VAL|Y$§Y%§!"
+ PARLIAMENT_OF_HEAVEN:0 "High Council of Heaven"
+ ADD_YEARS_OF_MANPOWER_SCALED_TO_SEATS:1 "$DIRECTION$ $MANPOWER|G0$ manpower from High Council Seats."
+ ADD_YEARS_OF_SAILORS_SCALED_TO_SEATS:1 "$DIRECTION$ $SAILORS|G0$ sailors from High Council Seats."
+ ADD_YEARS_OF_TAX_SCALED_TO_SEATS:0 "$DIRECTION$ $TAX|G$ tax from High Council Seats."
+ ADD_PRESTIGE_SCALED_TO_SEATS:0 "$DIRECTION$ $PRESTIGE|G$ prestige from High Council Seats."
+ ADD_MILITARIZATION_SCALED_TO_SEATS:0 "$DIRECTION$ $VALUE|G$ militarization from High Council Seats."
+ 
+ default_parliament_name:0 "High Council"
+ seat_in_parliament:0 "Seat in High Council"
+ no_debate_in_parliament:0 "No Debate in High Council"
+ 
+  mechanic_has_parliament_yes:3 "Enables High Council."
+ 
+ TRIG_HAS_NO_PARLIAMENT:0 "Have No High Council\n"
+ TRIG_HAS_PARLIAMENT:0 "Have a High Council\n"
+ 
+ NEWSEATINPARLIAMENT_TITLE:0 "New Seat in High Council"
+ NEWSEATINPARLIAMENT_SETUP:0 "When a province have been granted a Seat in our High Council."
+ NEWSEATINPARLIAMENT_1:0 "New Seat in High Council"
+ NEWSEATINPARLIAMENT_4:0 "have been granted a seat in our high council, serving the needs of our $GOV$."
+ NEWSEATINPARLIAMENT_LOG:0 "$PROV$ now have a seat in high council."
+ NEWSEATINPARLIAMENT_MAP:0 "Seat in High Council"
+ ISSUETHROUGHPARLIAMENT_TITLE:0 "Issue passed High Council"
+ ISSUETHROUGHPARLIAMENT_SETUP:0 "When a debate has been victorious in the High Council."
+ ISSUETHROUGHPARLIAMENT_2:0 "The high council have passed"
+ ISSUETHROUGHPARLIAMENT_LOG:0 "$ISSUE$ passed in high council."
+ ISSUEFAILED_TITLE:0 "Debate failed in High Council"
+ ISSUEFAILED_SETUP:0 "When a debate failed in the High Council."
+ ISSUEFAILED_2:0 "The high council refused to pass"
+ ISSUEFAILED_LOG:0 "$ISSUE$ defeated in high council."
+ 
+ desc_counter_espionage:0 "When you cannot trust anyone, you send your spies to spy on some of the high council members."
+ 
+ HAVE_LESS_BACKINGISSUEPERCENT_THAN:0 "Seats in High Council backing our current issue less than "
+ HAVE_MORE_BACKINGISSUEPERCENT_THAN:0 "Seats in High Council backing our current issue at least "
+ 
+ DISSOLVE_PARLIAMENT:0 "Dissolve high council"
+ REINSTATE_PARLIAMENT:0 "Reinstate high council"
+ 
+ tooltip_has_seat_in_parliament_on_institution_continent:1 "Has a seat in high council and is on the same continent as Enlightenment origin"
+ tooltip_has_seat_in_parliament:0 "Province has seat in High Council"
+ 
+ the_draft_tooltip:0 "The resolution of this Issue had the following effect:\nGained years of Manpower scaled to High Councilary Seats."
+ emergency_impressment_act_tooltip:0 "The resolution of this Issue had the following effect:\nGained years of Sailors scaled to High Councilary Seats."
+ has_parliament_with_at_least_one_seat:0 "§Y[Root.GetName]§! has a High Council with at least one seat assigned"
+ 
+ center_of_revolution.2950.A.tt:0 "§YIf no country claims the title of Revolutionary Target in the next 10 years, the Revolution will end and [Root.GetName] will revert to a High Councilary Republic.§!"
+ desc_provincial_religious_migration:0 "Due to the rights granted by our High Council to religious minorities this province has seen an increased influx of Religious immigrants."
+ 
+
  ideagroups.1.t:0 "New Traditions & Ambitions"
  ideagroups.1.d:0 "Our state is going through a range of changes that is rapidly changing our identity and ideals. Unless we actively work against it we will see the ambitions and traditions of our country change as a result of this.\n\n§RSAVE YOUR PROGRESS!§!\n\n§YNot every formable country has unique set of ideas yet, as it takes a lot of time to properly add them. Because of this you can get generic ideas, after pressing the 'Yes, please!' option. So, please, make a save game now, so you could load it back if you are not satisfied with the received idea set.§!"
  ideagroups.1.a:0 "Yes, Please!"
@@ -156,7 +213,7 @@
  
  CARDINAL_BRIBE_DESC: "If we are successful, the Priest will support us and we gain §G$GAIN$§W prestige. If we should fail, we will lose §R$LOSS$§W."
  
- CORE_PAUSED: "ESU Paused"
+ CORE_PAUSED: "ESB Paused"
  
  HRE_HRE: "The Empire"
  
@@ -1191,3 +1248,31 @@
  CREATECAWA: "Conscript Noble Warriors"
  STATE_CAWA_CREATED_REGIMENTS: "This will cost $MILAMOUNT|Y$ £mil£, and $NUM|Y$ Noble Warriors will spawn in $PROV|Y$.\nDo you want to create a Noble Warriors regiment?"
  CAWA_FROM_TT: "§YCawa Forcelimit§!\nThis is the amount of current and possible Noble Warriors our nation can have.\n\nCawa are raised from the state's full core provinces.\n\n$NAME$ provide $AMOUNT|Y$ Force Limit of Noble Warriors due to the development in:\n"
+ 
+ ARTILLERY_COST: "Mage Cost"
+ ART: "Mages"
+ 
+ ARTILLERY: "Mages"
+ WAR_OVERVIEW_ENEMY_ARTILLERY: "The enemy has $NUM|Y$ mages."
+ WAR_OVERVIEW_WE_ARTILLERY: "Our side has $NUM|Y$ mages."
+ SIEGE_ATTACKER_ARTILLERY_DESC: "The attacker has $NUM|Y$ mages."
+ SIEGE_BONUS_ARTILLERY: "Phase progress modifier from §Ybesieging Mages§!."
+ ARTILLERY_FRACTION: "Mages fraction: $VAL|+%1$"
+ SUPPORT_REBELS_TOTAL_ART_COST: "Total mages build cost: $VAL|-2$¤"
+ 
+ COMPACT_BATTLE_RESULT_LOSSES_TOOLTIP: "Infantry: $INFANTRY|Y$\nCavalry: $CAVALRY|Y$\nMages: $ARTILLERY|Y$"
+ 
+ MODIFIER_ARTILLERY_FIRE: "Mages Fire"
+ MODIFIER_ARTILLERY_SHOCK: "Mages Shock"
+ 
+ LEDGER_ARTILLERY_FIRE: "Mage Fire"
+ LEDGER_ARTILLERY_SHOCK: "Mage Shock"
+ 
+ MODIFIER_ARTILLERY_BONUS_VS_FORT: "Mage Bonus vs Fort"
+ ARTILLERY_POWER: "Mage Combat Ability"
+ ARTILLERY_POWER_NEW: "Mage Combat Ability: $VALUE$"
+ MODIFIER_BACKROW_ARTILLERY_DAMAGE: "Mage Damage from Back Row"
+ desc_bargi_giri: "We are adopting Marathi tactics that focus on high mobility, effective against armies encumbered by mages."
+ 
+ ART_FIRE_INCREASE: "Mage Fire: §G+$VALUE$§W\n"
+ ART_SHO_INCREASE: "Mage Shock: §G+$VALUE$§W\n"
