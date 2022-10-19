@@ -1480,10 +1480,8 @@ country_event = {
 	
 	trigger = {
 		NOT = { gold = 1 }
-		NOT = { ai = yes }
 		any_owned_province = {
 			NOT = { trade_goods = gold }
-			NOT = { has_fixed_trade_good = yes }
 			has_port = no
 		}
 	}
@@ -1499,7 +1497,6 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				NOT = { trade_goods = gold }
-				NOT = { has_fixed_trade_good = yes }
 				has_port = no
 			}
 			change_trade_goods = gold

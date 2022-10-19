@@ -25,7 +25,7 @@ HIG_ideas = {
 	# Cutthroat Politics
 	# Ask Lysandus what happened to him.
 	hig_ideas_2 = {
-		global_spy_defence = 0.20
+		global_spy_defence = -0.20
 		spy_offence = 0.33
 	}
 	# Crypt of Hearts
@@ -97,7 +97,7 @@ DIR_ideas = {
 	dir_ideas_4 = {
 		advisor_cost = -0.175
 	}
-	# Breton Takeover
+	# Breton Takeover	
 	# Thoroughly spent, the Direnni eventually retreated to Balfiera. Most of High Rock would be under Breton control by 1E 498, though the elves would be accepted and allowed to remain in the province for most of the Second Era. The Bretons' rise to prominence in High Rock initially started through villages being founded in tactical locations, such as Wayrest, which started as a fishing hamlet. Nordic cities such as Camlorn became Breton due to assimilation from the growing Breton population as opposed to conquest. Over time, the emerging Bretons absorbed the remaining Nordic population in High Rock, and the land would be definitively Breton by the end of the First Era.
 	dir_ideas_5 = {
 		manpower_recovery_speed = 0.20
@@ -119,7 +119,7 @@ DIR_ideas = {
 #Daggerfall (Zardae)
 BA1_ideas = {
 	trigger = {
-		tag = BA1
+		TAG = BA1
 	}
 
 	start = {
@@ -179,7 +179,7 @@ BA1_ideas = {
 #Orsimer Nation
 ORS_ideas = {
 	trigger = {
-		tag = ORS
+		TAG = ORS
 	}
 
 	start = {
@@ -241,7 +241,7 @@ ORS_ideas = {
 #Wrothgar Mountains
 WRO_ideas = {
 	trigger = {
-		tag = WRO
+		TAG = WRO
 	}
 
 	start = {
@@ -302,7 +302,7 @@ WRO_ideas = {
 # Winterborn Clan
 WTB_ideas = {
 	trigger = {
-		tag = WTB
+		TAG = WTB
 	}
 
 	start = {
@@ -363,10 +363,7 @@ WTB_ideas = {
 #Wayrest
 WAY_ideas = {
 	trigger = {
-		OR = {
-			tag = BC8
-			tag = WAY
-		}
+		TAG = WAY
 	}
 
 	start = {
@@ -383,7 +380,7 @@ WAY_ideas = {
 	# Cutthroat Politics
 	# Ask Lysandus what happened to him.
 	way_ideas_1 = {
-		global_spy_defence = 0.20
+		global_spy_defence = -0.20
 		spy_offence = 0.33
 	}
 
@@ -427,10 +424,7 @@ WAY_ideas = {
 #Evermore (not formable yet?)
 EVE_ideas = {
 	trigger = {
-		OR = {
-			tag = BC8
-			tag = EVE
-		}
+		TAG = EVE
 	}
 
 	start = {
@@ -444,7 +438,7 @@ EVE_ideas = {
 
 	free = yes
 
-	# Granite Palace
+	# Granite Palace	
 	# Its impressive palace was assembled from slabs of granite quarried from nearby Markarth.
 	eve_ideas_1 = {
 		build_cost = -0.20
