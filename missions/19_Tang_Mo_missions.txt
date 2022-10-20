@@ -931,12 +931,12 @@ flavour_missions_3_tan = {
 					}
 				}
 				random_rival_country = {
-					save_event_target_as = es_es_expand_domain_mission_event_target
+					hidden_effect = { save_event_target_as = es_es_expand_domain_mission_event_target }
 				}
 			}
 			else = {
 				random_neighbor_country = {
-					save_event_target_as = es_es_expand_domain_mission_event_target
+					hidden_effect = { save_event_target_as = es_es_expand_domain_mission_event_target }
 				}
 			}
 			if = {
@@ -1002,16 +1002,18 @@ flavour_missions_3_tan = {
 				name = "es_single_ruler_of_the_islands_modifier"
 				duration = 36500
 			}
-			751 = { owner = { save_event_target_as = es_751_owner } }
-			add_casus_belli = { target = event_target:es_751_owner type = cb_vassalize_mission months = 720 }	
-			761 = { owner = { save_event_target_as = es_761_owner } }
+			hidden_effect = {
+				751 = { owner = { save_event_target_as = es_751_owner } }
+				715 = { owner = { save_event_target_as = es_715_owner } }
+				700 = { owner = { save_event_target_as = es_700_owner } }
+				724 = { owner = { save_event_target_as = es_724_owner } }	
+				761 = { owner = { save_event_target_as = es_761_owner } }
+			}
+			add_casus_belli = { target = event_target:es_751_owner type = cb_vassalize_mission months = 720 }
 			add_casus_belli = { target = event_target:es_761_owner type = cb_vassalize_mission months = 720 }
-			715 = { owner = { save_event_target_as = es_715_owner } }
 			add_casus_belli = { target = event_target:es_715_owner type = cb_vassalize_mission months = 720 }
-			700 = { owner = { save_event_target_as = es_700_owner } }
 			add_casus_belli = { target = event_target:es_700_owner type = cb_vassalize_mission months = 720 }
-			724 = { owner = { save_event_target_as = es_724_owner } }
-			add_casus_belli = { target = event_target:es_724_owner type = cb_vassalize_mission months = 720 }	
+			add_casus_belli = { target = event_target:es_724_owner type = cb_vassalize_mission months = 720 }
 		}
 	}
 	

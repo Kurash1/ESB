@@ -3,7 +3,6 @@ NDefines.NMilitary.FLAGSHIP_COST_SAILORS = 500
 
 NDefines.NMilitary.DEVELOPMENT_FOR_BLOCKADE_COST = 0.5
 NDefines.NMilitary.ARMY_DRILL_YEARLY_DECAY = -1.0					-- Loss from not Drilling
-NDefines.NMilitary.MARINE_SHOCK_DAMAGE_TAKEN = 0.25
 NDefines.NMilitary.BANNER_STARTING_STRENGTH = 1.0					-- Starting strength of a banner regiment 1.0 being full strength
 NDefines.NMilitary.ARMY_ATTRITION_AT_COAST = 1					-- How many percent attrition units take while loaded onto ships along the coast
 NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 10						-- How many percent attrition units take while loaded onto ships traveling open sea
@@ -45,16 +44,13 @@ NDefines.NMilitary.LEADER_AGE_DEATH_FACTOR = 2.5					-- Divides age with this to
 NDefines.NMilitary.MERCENARY_COMPANY_ARMY_TRADITION = 50.0		-- At what army tradition mercenaries leaders are generated on.
 
 NDefines.NMilitary.SLACKEN_AP_DROP = 0.05
-NDefines.NMilitary.SLACKEN_MANPOWER_INCREASE = 2.0
+NDefines.NMilitary.SLACKEN_MANPOWER_INCREASE = 1.5
 NDefines.NMilitary.ARMY_DRILL_YEARLY_GAIN = 10.0					-- Gain from Drilling
 NDefines.NMilitary.ARMY_DRILL_MAX = 100.0
 NDefines.NMilitary.ARMY_DRILL_MAX_MORALE = 0.5
 NDefines.NMilitary.ARMY_DRILL_SKILL_MONTHS = 120					-- The average number of months until you get a skill increase if drilling 100% of forcelimit. Set to 0 to disable.
-NDefines.NMilitary.COSSACKS_SHOCK_DAMAGE_BONUS = 0.1
-NDefines.NMilitary.STRELTSY_FIRE_DAMAGE_BONUS = 0.1
 NDefines.NMilitary.MAX_SAILOR_LACK_ATTRITION = 1
 NDefines.NMilitary.SAILOR_MAINTAINANCE = 0.025		-- of build cost.
-NDefines.NMilitary.BANNER_DISCIPLINE_BONUS = 0.1
 NDefines.NMilitary.BANNER_AGE_MULTIPLIER = 0.50
 NDefines.NMilitary.FORT_DEVASTATION_IMPACT = -10				-- multiplied by fortlevel/max fortlevel in area per year.
 NDefines.NMilitary.REVANCHISM_DEVASTATION_IMPACT = -0.02			-- 100 revanschism is -2 a year.
@@ -76,7 +72,7 @@ NDefines.NMilitary.SIEGE_ATTRITION = 1
 NDefines.NMilitary.SIEGE_DISEASE_IMPACT = 0.05						-- Fraction of besieging soldiers lost in a disease outbraek
 NDefines.NMilitary.NATIVE_FEROCITY_IMPACT = 0.05					-- how many percentage each ferocity gives in combat bonus
 NDefines.NMilitary.GALLEY_BONUS_INLAND_SEA = 1.0
-NDefines.NMilitary.INSUFFICIENT_SUPPORT = -0.25
+NDefines.NMilitary.INSUFFICIENT_SUPPORT = -1.0
 NDefines.NMilitary.SIEGE_MEMORY = 11
 NDefines.NMilitary.SIEGE_MEMORY_SCALED = 0.5						-- per fort level
 NDefines.NMilitary.SIEGE_WIN = 20
@@ -135,7 +131,7 @@ NDefines.NMilitary.BASE_COMBAT_WIDTH = 15.0						-- _MDEF_BASE_COMBAT_WIDTH_
 NDefines.NMilitary.MAX_COMBAT_WIDTH = 40
 NDefines.NMilitary.FORCE_MARCH_FACTOR = 0.5						--
 NDefines.NMilitary.LOOT_DEVASTATION_IMPACT = 10						-- how much devastation full loot impacts
-NDefines.NMilitary.SCORCHED_DEVASTATION_IMPACT = 5 					-- how much devastation scorching impacts.
+NDefines.NMilitary.SCORCHED_DEVASTATION_IMPACT = 15 					-- how much devastation scorching impacts.
 NDefines.NMilitary.SCORCHED_DURATION = 60				-- months
 NDefines.NMilitary.LOOTED_DAYS = 730								-- Time the "Looted" static modifier lasts.
 NDefines.NMilitary.LOOTED_SCALE = 1								-- Scaling value from province development to number of ducats it contains.
@@ -177,9 +173,9 @@ NDefines.NMilitary.LEADER_MAX_PIPS = 6								-- Max general/admiral pips (per s
 NDefines.NMilitary.LEADER_MIN_PIPS = 0								-- Min general/admiral pips (total)
 NDefines.NMilitary.REBEL_LEADER_POWER = 35							-- The higher this value the more pips rebel leaders will have on average
 NDefines.NMilitary.REBEL_GARRISON_GROWTH = 2.5						-- Rebel garrison growth is multiplied by this value
-NDefines.NMilitary.RIVER_CROSSING_PENALTY = -1						-- Dice roll penalty from river crossing
-NDefines.NMilitary.STRAIT_CROSSING_PENALTY = -2						-- Dice roll penalty from strait crossing
-NDefines.NMilitary.SEA_LANDING_PENALTY = -2.5							-- Dice roll penalty from sea invasion
+NDefines.NMilitary.RIVER_CROSSING_PENALTY = 1						-- Dice roll penalty from river crossing
+NDefines.NMilitary.STRAIT_CROSSING_PENALTY = 2.5						-- Dice roll penalty from strait crossing
+NDefines.NMilitary.SEA_LANDING_PENALTY = 2.5							-- Dice roll penalty from sea invasion
 NDefines.NMilitary.MOTHBALLING_MONTHLY_DECREASE = 0.05				-- When mothballin is turned on the units strength will lose this much each month
 NDefines.NMilitary.MOTHBALLING_MINIMUM_STRENGTH = 0.25				-- The minimum strength value the fleet will reach while mothballin
 NDefines.NMilitary.MIN_RECRUIT_TIME_MODIFIER = 0.25					-- Recruit time cannot be lower than this * base
@@ -250,5 +246,25 @@ NDefines.NMilitary.SIEGE_BONUS_FOOD_SHORTAGE = 1.5
 NDefines.NMilitary.SIEGE_BONUS_WATER_SHORTAGE = 2.5
 NDefines.NMilitary.SIEGE_BONUS_DEFENDERS_DESERT = 1.75
 
-NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.5	-- Multiplier for morale damage taken by backrow
+NDefines.NMilitary.INFANTRY_BREAKTHROUGH = 0.1					-- Between 0 and 1
+NDefines.NMilitary.CAVALRY_BREAKTHROUGH = 0.5
+
+NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0	-- Multiplier for morale damage taken by backrow
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0	-- Multiplier for strength damage taken by backrow
+
+NDefines.NMilitary.CAROLEAN_STARTING_STRENGTH = 1.0
+NDefines.NMilitary.CAROLEAN_STARTING_MORALE = 0.1
+NDefines.NMilitary.CAROLEAN_BASE_COST_MODIFIER = 1.0
+NDefines.NMilitary.HUSSARS_BASE_COST_MODIFIER = 1.0
+NDefines.NMilitary.HUSSARS_MANPOWER_COST_MODIFIER = 1.0
+NDefines.NMilitary.HUSSARS_STARTING_STRENGTH = 1.0
+NDefines.NMilitary.HUSSARS_STARTING_MORALE = 0.1 
+
+NDefines.NMilitary.CREATE_HUSSARS_MIL_COST = 10
+NDefines.NMilitary.HUSSARS_USES_CONSTRUCTION = 1
+NDefines.NMilitary.CAROLEAN_USES_CONSTRUCTION = 1
+
+NDefines.NMilitary.BACK_LINE_REINFORCE_SPEED = 5
+NDefines.NMilitary.BATTLE_DAILY_MORALE_DAMAGE = 0.015
+
+NDefines.NMilitary.RESERVE_DAILY_MORALE_DAMAGE = 0

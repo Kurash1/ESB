@@ -1818,27 +1818,6 @@ army_drill_modifier = { # Used by an entire army, is the average of all subunits
 	movement_speed = 0.25
 }
 
-janissary_regiment = {
-	fire_damage_received = -0.15
-	shock_damage_received = -0.15
-	drill_gain_modifier = 1.5
-	reinforce_cost_modifier = 1.5
-	reinforce_speed = -0.50
-}
-
-cawa_regiment = {
-	shock_damage_received = -0.15
-	land_attrition = -0.25
-	reinforce_cost_modifier = 1.0
-	reinforce_speed = -0.25
-}
-
-revolutionary_guard_regiment = {
-	fire_damage_received = -0.15
-	shock_damage_received = -0.15
-	drill_gain_modifier = 1.5
-} 
-
 innovativeness = {
 	all_power_cost	= -0.25
 	army_tradition_decay = -0.025
@@ -2091,3 +2070,48 @@ carnation_school_modifier = {
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	warscore_cost_vs_other_religion = -0.1
 }
+
+# Special Units
+
+banner_regiment = {
+	discipline = 0.05
+	land_maintenance_modifier = -0.5
+	discipline = 0.10
+	land_maintenance_modifier = 0.25
+	reinforce_speed = -0.5
+	regiment_manpower_usage = -0.75
+}
+
+streltsy_regiment = {
+    fire_damage = 0.1
+}
+
+cossacks_regiment = {
+    shock_damage = 0.1
+}
+
+carolean_regiment = {
+	morale_damage = 0.1
+	drill_decay_modifier = -0.25
+}
+
+janissary_regiment = {
+	fire_damage_received = -0.15
+	shock_damage_received = -0.15
+	drill_gain_modifier = 1.5
+	reinforce_cost_modifier = 1.5
+	reinforce_speed = -0.50
+}
+
+cawa_regiment = {
+	shock_damage_received = -0.15
+	land_attrition = -0.25
+	reinforce_cost_modifier = 1.0
+	reinforce_speed = -0.25
+}
+
+revolutionary_guard_regiment = {
+	fire_damage_received = -0.15
+	shock_damage_received = -0.15
+	drill_gain_modifier = 1.5
+} 

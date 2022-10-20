@@ -93,27 +93,27 @@ country_decisions = {
 		ai_importance = 300
 	}
 	
-	es_7_new_elector = {
-	    major = yes
-		potential = {
-			tag = ALE
-			is_elector = no
-		}
-		allow = {
-			any_neighbor_country = { is_elector = yes capital_scope = { controlled_by = ROOT } }
-        }
-		effect = {
-			random_neighbor_country = { limit = { is_elector = yes capital_scope = { controlled_by = ROOT } } elector = no }
-			elector = yes
-			add_prestige = 25
-			every_owned_province = { limit = { is_part_of_hre = no } set_in_empire = yes }
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		
-		ai_importance = 300
-	}
+	#es_7_new_elector = {
+	#    major = yes
+	#	potential = {
+	#		tag = ALE
+	#		is_elector = no
+	#	}
+	#	allow = {
+	#		any_neighbor_country = { is_elector = yes capital_scope = { controlled_by = ROOT } }
+    #    }
+	#	effect = {
+	#		random_neighbor_country = { limit = { is_elector = yes capital_scope = { controlled_by = ROOT } } elector = no }
+	#		elector = yes
+	#		add_prestige = 25
+	#		every_owned_province = { limit = { is_part_of_hre = no } set_in_empire = yes }
+	#	}
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	
+	#	ai_importance = 300
+	#}
 	
 	es_8_enforce_culture_convertion = {
 		potential = {

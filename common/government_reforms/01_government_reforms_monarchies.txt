@@ -17,6 +17,13 @@ autocracy_reform = {
 		NOT = { has_reform = dwemer_kingdom }
 		NOT = { is_emperor_of_china = yes }
 		NOT = { is_revolution_target = yes }
+		OR = {
+			AND = {
+				has_country_flag = wilderking_country_flag
+				NOT = { religion = bosmer_pantheon }
+			}
+			NOT = { has_country_flag = wilderking_country_flag }
+		}
 	}
 	trigger = { OR = { has_reform = autocracy_reform
 	    NOT = { has_country_modifier = 06_the_moot }
@@ -38,6 +45,8 @@ autocracy_reform = {
 		global_autonomy = -0.025
 		global_regiment_cost = -0.10
 		free_mil_policy = 1
+		
+		can_recruit_hussars = yes
 	}
 	
 	start_territory_to_estates = 0.75
@@ -239,6 +248,11 @@ feudalism_reform = {
 			has_dlc = "Origins"
 		}
 		allow_cawa = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
 	}
 	
 	start_territory_to_estates = 0.75
@@ -507,6 +521,13 @@ english_monarchy = {
 		has_pashas = yes
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	
 	custom_attributes = {
 		blocked_call_diet = yes
 	}
@@ -602,6 +623,13 @@ ottoman_government = {
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		has_harem = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
 	}
 	
 	ai = {
@@ -829,6 +857,18 @@ mughal_government = {
 		unknown_cg = {
 		    technology_cost = -0.10
 		}
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
 	}
 	
 	ai = {

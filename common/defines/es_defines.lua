@@ -145,7 +145,7 @@ NDefines.NAI.ESTATE_PRIVILEGE_LAST_PENALTY = 3
 NDefines.NAI.ESTATE_INTERACTION_THRESHOLD = 49.9
 NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 75.0
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 33.0
-NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
+NDefines.NAI.ESTATE_MAX_PRIVILEGES = 4
 
 NDefines.NAI.CALL_ECUMENICAL_COUNCIL_BASE_AI_DESIRE = 0.0
 	
@@ -167,3 +167,54 @@ NDefines.NAI.FOREIGN_MINISTER_IGNORE_DISTANCE_BASE = 10
 NDefines.NAI.FOREIGN_MINISTER_BASE_PROVINCE_COUNT = 5
 	
 NDefines.NAI.FIRE_ADVISOR_LOAN_REQUIREMENT = 5							-- AI will not fire advisors until it has this many loans
+
+NDefines.NAI.ACCEPTABLE_BALANCE_THREAT_WEIGHT = 1.0
+NDefines.NAI.MINIMUM_STRENGTH_TO_AVOID_UNCONDITIONAL_SURRENDER = 15
+NDefines.NAI.UNCONDITIONAL_SURRENDER_HOPELESS_STRENGTH_COMPARISON = 25 -- if they have 20 times the army strength you do wave the white flag
+NDefines.NAI.UNCONDITIONAL_SURRENDER_WARSCORE_LIMIT = -95 -- AI won't surrender unless it's this bad.
+NDefines.NAI.NOMINAL_ARMY_SIZE_MULTIPLIER = 1.1 -- This will multiply with the AI's desired regiment count per unit. Does not affect total size of all armies 
+
+NDefines.NAI.HRE_DESIRE_DISMANTLED = -1000
+NDefines.NAI.HRE_DESIRE_ALREADY_MEMBER = -1000
+NDefines.NAI.HRE_DESIRE_GOVERNMENT_RANK_LOSS = -50
+NDefines.NAI.HRE_DESIRE_IN_LINE_TO_SUCCEED = 100
+NDefines.NAI.HRE_DESIRE_TOO_HOLY = -150
+NDefines.NAI.HRE_DESIRE_DOESNT_WANT_TO_SUBMIT = -300
+NDefines.NAI.HRE_DESIRE_OVERLORD_IS_EMPEROR = 100
+NDefines.NAI.HRE_DESIRE_WANTS_TO_ANTAGONISE_EMPEROR = -25
+NDefines.NAI.HRE_DESIRE_WANTS_TO_WEAKEN_EMPEROR = -50
+NDefines.NAI.HRE_DESIRE_WANTS_TO_SUBJUGATE_EMPEROR = -75
+NDefines.NAI.HRE_DESIRE_WANTS_TO_ALLY_EMPEROR = 50
+NDefines.NAI.HRE_DESIRE_WANTS_TO_BEFRIEND_EMPEROR = 25
+NDefines.NAI.HRE_DESIRE_WANTS_TO_PROTECT_EMPEROR = 25
+NDefines.NAI.HRE_DESIRE_WANTS_TO_IGNORE_EMPEROR = 0
+NDefines.NAI.HRE_DESIRE_WANTS_TO_COALITION_EMPEROR = -1000
+NDefines.NAI.HRE_DESIRE_WANTS_TO_WARN_EMPEROR = -100
+NDefines.NAI.HRE_DESIRE_THREATENED_BY_EMPEROR = 25
+NDefines.NAI.HRE_DESIRE_DIFFERENT_RELIGION = -75
+NDefines.NAI.HRE_DESIRE_GENERAL_INERTIA = -100
+NDefines.NAI.HRE_DESIRE_MIN_THREAT_LEVEL = 100
+NDefines.NAI.HRE_DESIRE_THREATENED_BY_MULTIPLIER = 1.0
+
+NDefines.NAI.AI_FORT_PER_DEV_RATIO = 100 -- How much development the AI wants per fort (approximately)
+NDefines.NAI.FORT_ON_BORDER_MULT = 0.75 -- 
+NDefines.NAI.FORT_NEXT_TO_FORT_MULT = 0.75 -- 
+	
+NDefines.NAI.FORT_CAPITAL_DESIRE = 0.5 -- How much does the AI want a fort in its capital? (adds to regular reasons)
+	
+NDefines.NAI.BUDGET_STEAL_THRESHOLD = 10.0 -- AI will move budget from one area to another if its priority is this many times as high.
+	
+NDefines.NAI.PEACE_ACCEPTANCE_NON_BELLIGERENT = 15	-- We want the AI to peace out war allies faster
+	
+NDefines.NAI.INVASION_FLEET_DISTANCE_PENALTY = 0.25					-- Lower number makes AI more likely to select ships far away for transports
+NDefines.NAI.INVASION_FLEET_MISSION_PENALTY = 1.0					-- Lower number makes AI more likely to select ships for transports that are busy with missions
+NDefines.NAI.INVASION_HOME_FLEET_PENALTY = 2.5						-- Multiplied by triangular travel distance only for home fleets
+
+NDefines.NAI.DEVELOP_IN_SUBJECTS_PREFERENCE = 1.0 -- At 1 AI likes developing subjects approximately the same as its own provinces (more or less depending on their Liberty Desire).
+
+NDefines.NGraphics.EQUATOR_COORDINATE_Y = 1206 --where the equator is on the map image
+NDefines.NGraphics.MIN_LATITUDE_FOR_MAP = -60.0 --the bottom of the map image is at THIS latitude
+NDefines.NGraphics.MAX_LATITUDE_FOR_MAP = 72.0 --the top of the map image is at THIS latitude
+NDefines.NGraphics.MIN_LONGITUDE_FOR_MAP = -180.0 --the left of the map image is at THIS longitude
+NDefines.NGraphics.MAX_LONGITUDE_FOR_MAP = 180.0 --the right of the map image is at THIS longitude
+NDefines.NGraphics.CARTESIAN_TO_HAVERSINE_DISTANCE_PROPORTION = 0.0 -- 0 = full Haversine calculation for province distances (so taking into account curvature of earth) 1.0 = full Cartesian (so as it used to be) in between interpolates between the two
