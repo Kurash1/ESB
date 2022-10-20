@@ -40,7 +40,13 @@ country_event = {
 	option = {
 		name = "es_9_scenario.1.b"
 		ai_chance = { factor = 33 }
-		change_government = republic
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+		}
 		add_country_modifier = {
 		name = "09_revolution"
 		duration = 3650
@@ -63,7 +69,13 @@ country_event = {
 	option = {
 		name = "es_9_scenario.1.c"
 		ai_chance = { factor = 33 }
-		change_government = theocracy
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+		}
 		add_country_modifier = {
 		name = "09_revolution"
 		duration = 3650

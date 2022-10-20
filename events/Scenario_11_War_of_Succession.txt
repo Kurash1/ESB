@@ -545,8 +545,15 @@ country_event = {
 		
 		add_stability = 3
 		
-		change_government = republic
-		add_government_reform = dutch_republic
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = dutch_republic
+		}
+		
 		define_ruler = {
         name = "Vulard"
         adm = 3

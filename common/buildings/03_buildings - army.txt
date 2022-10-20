@@ -1,4 +1,3 @@
-# Audax Validator "!" Ignore_1004
 barracks = {
 	cost = 75			
 	time = 12
@@ -14,10 +13,10 @@ barracks = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = barracks
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -78,10 +77,10 @@ training_fields = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = training_fields
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -143,10 +142,10 @@ regimental_camp = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = regimental_camp
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -218,10 +217,10 @@ conscription_center = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = conscription_center
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -292,10 +291,10 @@ armory = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = armory
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -342,10 +341,10 @@ arsenal = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = arsenal
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {

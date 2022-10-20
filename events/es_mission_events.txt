@@ -229,6 +229,10 @@ country_event = {
 	option = {
 		name = "es_mission_events.6.c"
 		ai_chance = { factor = 0 }
+		trigger = {
+			NOT = { is_emperor = yes }
+			NOT = { is_emperor_of_china = yes }
+		}
 		
 		change_government = theocracy
 	}

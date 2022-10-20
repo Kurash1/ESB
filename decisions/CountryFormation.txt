@@ -3159,10 +3159,15 @@ country_decisions = {
 		potential = {
 			NOT = { exists = DRA }
 			OR = {
-			primary_culture = atmoran
-			primary_culture = glacial
+				AND = {
+					OR = {
+						primary_culture = atmoran
+						primary_culture = glacial
+					}
+					religion = dragon_cult
+				}
+				primary_culture = dragon
 			}
-			religion = dragon_cult
 			NOT = { has_country_flag = formed_dra_flag }
 		}
 		provinces_to_highlight = {
@@ -3187,6 +3192,14 @@ country_decisions = {
 		effect = {
 			change_tag = DRA
 			set_country_flag = formed_dra_flag
+			#
+			if = {
+				limit = {
+					primary_culture = dragon
+					NOT = { religion = dragon_cult }
+				}
+				change_religion = dragon_cult
+			}
 			#
 			if = {
 				limit = {

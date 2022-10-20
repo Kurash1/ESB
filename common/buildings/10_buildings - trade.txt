@@ -1,4 +1,3 @@
-# Audax Validator "!" Ignore_1004
 marketplace = {
 	cost = 50	
 	time = 12
@@ -15,10 +14,10 @@ marketplace = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = wharf
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -64,10 +63,10 @@ trade_depot = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = wharf
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -113,10 +112,10 @@ stock_exchange = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = wharf
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {

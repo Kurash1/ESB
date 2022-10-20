@@ -609,6 +609,7 @@ es_perform_events_on_five_year_pulse = {
 			NOT = { has_global_flag = es_spawned_coldhabrbour_nations }
 		}
 		es_spawn_countries_on_coldharbour = yes
+		set_global_flag = es_spawned_coldhabrbour_nations
 	}
 	if = {
 		limit = {
@@ -617,5 +618,6 @@ es_perform_events_on_five_year_pulse = {
 			NOT = { has_global_flag = es_spawned_deadlands_nations }
 		}
 		es_spawn_countries_on_deadlands = yes
+		set_global_flag = es_spawned_deadlands_nations
 	}
 }

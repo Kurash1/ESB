@@ -129,7 +129,13 @@ country_event = {
 	option = {
 		name = "es_14_scenario.4.c"
 		ai_chance = { factor = 33 }
-		change_government = republic
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+		}
 		add_stability = -1
 	}
 }

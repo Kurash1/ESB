@@ -110,7 +110,13 @@ country_event = {
 		ai_chance = { factor = 50 }
 		change_tag = ORD
 		change_religion = marukhism
-		change_government = theocracy
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+		}
 		if = { limit = { is_emperor = yes } kill_ruler = yes }
 		define_ruler = {
         name = "Marukh"

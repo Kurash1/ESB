@@ -398,7 +398,13 @@ country_event = {
 		}
 		
 		change_tag = NF9
-		change_government = republic
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+		}
 		set_capital = 3129
 		change_religion = reason_and_logic_cult
 		change_primary_culture = kagrenmer
@@ -464,7 +470,13 @@ country_event = {
 		}
 		
 		change_tag = NF7
-		change_government = republic
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+		}
 		set_capital = 3110
 		change_religion = reason_and_logic_cult
 		change_primary_culture = kagrenmer
@@ -520,7 +532,13 @@ country_event = {
 		}
 		
 		change_tag = NG1
-		change_government = republic
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+		}
 		set_capital = 1359
 		change_religion = reason_and_logic_cult
 		change_primary_culture = rourkenid

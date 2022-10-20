@@ -351,7 +351,13 @@ country_event = {
 		3091 = { change_religion = nordic_pantheon change_culture = nord }
 		
 		change_tag = NF5
-		change_government = theocracy
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+		}
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } restore_country_name = yes }
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.56 days = 31 tooltip = es_collapse.2.a.tt } }

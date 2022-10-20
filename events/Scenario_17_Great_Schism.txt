@@ -1083,8 +1083,14 @@ country_event = {
 		name = "es_17_scenario.15.a"
 		ai_chance = { factor = 50 }
 		change_tag = TRI
-		change_government = theocracy
-		add_government_reform = tribunal_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+			add_government_reform = tribunal_reform
+		}
 		change_religion = tribunal_pantheon
 		add_prestige = 25
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } restore_country_name = yes }

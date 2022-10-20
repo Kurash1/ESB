@@ -28,11 +28,11 @@ country_event = {
 			1 = { country_event = { id = es_government.16 } }
 			1 = { country_event = { id = es_government.17 } }
 			1 = { country_event = { id = es_government.18 } }
-			1 = { country_event = { id = es_extended_regency_events.1 } }
-			1 = { country_event = { id = es_extended_regency_events.2 } }
-			1 = { country_event = { id = es_extended_regency_events.3 } }
-			1 = { country_event = { id = es_extended_regency_events.4 } }
-			1 = { country_event = { id = es_extended_regency_events.5 } }
+			1 = { country_event = { id = es_extended_regency_events.1 } modifier = { factor = 1.75 has_regency = yes } }
+			1 = { country_event = { id = es_extended_regency_events.2 } modifier = { factor = 1.75 has_regency = yes } }
+			1 = { country_event = { id = es_extended_regency_events.3 } modifier = { factor = 1.75 has_regency = yes } }
+			1 = { country_event = { id = es_extended_regency_events.4 } modifier = { factor = 1.75 has_regency = yes } }
+			1 = { country_event = { id = es_extended_regency_events.5 } modifier = { factor = 1.75 has_regency = yes } }
 			1 = { country_event = { id = es_devotion_events.1 } }
 			1 = { country_event = { id = es_devotion_events.2 } }
 			1 = { country_event = { id = es_devotion_events.3 } }
@@ -120,7 +120,14 @@ country_event = {
     option = {
         name = es_government.1.b
         ai_chance = { factor = 0 }
-		if = { limit = { NOT = { government = republic } } change_government = republic }
+		if = {
+			limit = { 
+				NOT = { government = republic }
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			} 
+			change_government = republic 
+		}
 		add_government_reform = protectorate_parliament_reform
         kill_ruler = yes
         add_stability = -5

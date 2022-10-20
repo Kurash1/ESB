@@ -45,8 +45,6 @@ autocracy_reform = {
 		global_autonomy = -0.025
 		global_regiment_cost = -0.10
 		free_mil_policy = 1
-		
-		can_recruit_hussars = yes
 	}
 	
 	start_territory_to_estates = 0.75
@@ -241,13 +239,6 @@ feudalism_reform = {
 		vassal_forcelimit_bonus = 0.10
 		governing_capacity = 100
 		free_dip_policy = 1
-	}
-	
-	conditional = {
-		allow = {
-			has_dlc = "Origins"
-		}
-		allow_cawa = yes
 	}
 	
 	conditional = {

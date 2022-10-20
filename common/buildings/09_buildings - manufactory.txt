@@ -1,4 +1,3 @@
-# Audax Validator "!" Ignore_1004
 manufactory = {
 	cost = 350
 	time = 36
@@ -32,10 +31,10 @@ wharf = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = wharf
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -112,10 +111,10 @@ weapons = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = weapons
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -186,10 +185,10 @@ textile = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = textile
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -265,10 +264,10 @@ plantations = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = plantations
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -349,10 +348,10 @@ tradecompany = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = tradecompany
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -429,10 +428,10 @@ farm_estate = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = farm_estate
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -509,10 +508,10 @@ mills = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = mills
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -584,10 +583,10 @@ furnace = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = furnace
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -654,10 +653,10 @@ ramparts = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = ramparts
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -685,10 +684,10 @@ soldier_households = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = soldier_households
 			type = manpower
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -723,10 +722,10 @@ impressment_offices = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = impressment_offices
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -777,7 +776,7 @@ state_house = {
 	}
 
 	modifier = {
-		 statewide_governing_cost = -0.1
+		statewide_governing_cost = -0.1
 	}
 	
 	on_built = {
@@ -788,10 +787,10 @@ state_house = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = state_house
 			type = tax
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -833,10 +832,10 @@ mint = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = state_house
 			type = tax
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {

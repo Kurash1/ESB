@@ -427,6 +427,8 @@ country_event = {
 				if = {
 					limit = {
 						NOT = { government = republic }
+						NOT = { is_emperor = yes }
+						NOT = { is_emperor_of_china = yes }
 					}
 					change_government = republic
 				}
@@ -470,6 +472,8 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { government = republic }
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
 			}
 			change_government = republic
 		}
@@ -499,6 +503,8 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { government = republic }
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
 			}
 			change_government = republic
 		}

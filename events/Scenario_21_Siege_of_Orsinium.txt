@@ -1124,8 +1124,14 @@ country_event = {
 		ai_chance = {
 			factor = 33
 		}
-		change_government = republic
-		add_government_reform = pirate_king_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = pirate_king_reform
+		}
 		define_ruler = {
 			name = "Bramman"
 			dynasty = "Red"
@@ -1231,7 +1237,6 @@ country_event = {
 			is_year = 1387
 		}
 		owns = 1171
-		government = republic
 	}
 	mean_time_to_happen = {
 		days = 9125
@@ -1244,8 +1249,14 @@ country_event = {
 		ai_chance = {
 			factor = 33
 		}
-		change_government = republic
-		add_government_reform = pirate_king_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = pirate_king_reform
+		}
 		define_ruler = {
 			name = "Velehk"
 			dynasty = "Sain"
@@ -1295,7 +1306,6 @@ country_event = {
 			is_year = 1387
 		}
 		owns = 1274
-		government = republic
 	}
 	mean_time_to_happen = {
 		days = 9125
@@ -1308,8 +1318,14 @@ country_event = {
 		ai_chance = {
 			factor = 33
 		}
-		change_government = republic
-		add_government_reform = pirate_king_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = pirate_king_reform
+		}
 		define_ruler = {
 			name = "Haknir"
 			dynasty = "Death-Brand"
@@ -1366,7 +1382,6 @@ country_event = {
 			owns = 1625
 			owns = 416
 		}
-		government = republic
 	}
 	mean_time_to_happen = {
 		days = 9125
@@ -1379,8 +1394,14 @@ country_event = {
 		ai_chance = {
 			factor = 33
 		}
-		change_government = republic
-		add_government_reform = pirate_king_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = pirate_king_reform
+		}
 		define_ruler = {
 			age = 18
 			adm = 7

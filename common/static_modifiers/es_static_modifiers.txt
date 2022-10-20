@@ -306,18 +306,24 @@ capital_city = {
 }
 
 patriarch_state = {
-	local_state_maintenance_modifier = 0.1
 	local_monthly_devastation = -0.05
+	local_amount_of_carolean = 1.0
 	local_manpower_modifier = 0.15
+	local_fort_maintenance_modifier = -0.20
+	local_state_maintenance_modifier = 0.25
 }
 
 patriarch_authority_local = {
 	local_unrest = -3.5
+	local_governing_cost = -0.25
+	local_manpower_modifier = 0.15
 }
 
 patriarch_authority_global = {
-	global_missionary_strength = 0.025
-	#priests_influence_modifier = 0.10			
+	global_missionary_strength = 0.035
+	amount_of_carolean = 0.25
+	priests_influence_modifier = 0.15
+	prestige_per_development_from_conversion = 0.10	
 }
 
 pasha_state = {
@@ -572,6 +578,7 @@ base_values = {
 	tolerance_of_heretics_capacity = 3
 	tolerance_of_heathens_capacity = 3
 	monthly_militarized_society = -0.10
+	yearly_tribal_allegiance = 1.0
 }
 
 ai_nation = {
@@ -1711,7 +1718,16 @@ native_policy_hostile = {
 ########################################
 
 high_harmony = {
-	tolerance_own = 1
+	tolerance_own = 3
+	development_cost = -0.10
+	legitimacy = 0.5
+	republican_tradition = 0.5
+	devotion = 0.5
+	horde_unity = 0.5
+	meritocracy = 1
+	stability_cost_modifier = -0.10
+	harmonization_speed = 0.25
+	yearly_corruption = -0.25
 }
 
 low_harmony = {
@@ -1722,6 +1738,9 @@ low_harmony = {
 	devotion = -1
 	horde_unity = -1
 	meritocracy = -2.5
+	stability_cost_modifier = 0.25
+	harmonization_speed = -0.50
+	yearly_corruption = 0.50
 }
 
 ########################################
@@ -2092,7 +2111,10 @@ cossacks_regiment = {
 
 carolean_regiment = {
 	morale_damage = 0.1
-	drill_decay_modifier = -0.25
+	fire_damage = 1.0
+	shock_damage = 0.50
+	reinforce_speed = -0.75
+	land_maintenance_modifier = 1.0
 }
 
 janissary_regiment = {
@@ -2104,6 +2126,7 @@ janissary_regiment = {
 }
 
 cawa_regiment = {
+	morale_damage = 0.1
 	shock_damage_received = -0.15
 	land_attrition = -0.25
 	reinforce_cost_modifier = 1.0
@@ -2115,3 +2138,9 @@ revolutionary_guard_regiment = {
 	shock_damage_received = -0.15
 	drill_gain_modifier = 1.5
 } 
+
+marine_regiment = {
+    shock_damage_received = 0.1
+	fire_damage = 0.10
+    regiment_disembark_speed = 2.5
+}

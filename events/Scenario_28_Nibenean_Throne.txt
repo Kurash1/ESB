@@ -323,7 +323,13 @@ country_event = {
 	option = {
 		name = "es_28_scenario.3.a"
 		ai_chance = { factor = 33 }
-		change_government = theocracy
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+		}
 		if = {
 		    limit = {
 			    tag = MOR
@@ -348,7 +354,13 @@ country_event = {
 	option = {
 		name = "es_28_scenario.3.b"
 		ai_chance = { factor = 33 }
-		change_government = republic
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+		}
 		add_stability = -2
 		add_prestige = -15
 	}

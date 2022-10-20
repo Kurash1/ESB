@@ -2420,6 +2420,11 @@ on_bi_yearly_pulse_4 = {
 	
 }
 
+on_bi_yearly_pulse_5 = {
+
+}
+
+
 # country random events
 on_thri_yearly_pulse = {
 	country_event = {
@@ -2966,10 +2971,10 @@ on_trade_company_investment = {
 
 on_center_of_trade_upgrade = {
     owner = {
-    change_variable = {
-		which = cot_upgraded
-		value = 1
-	}
+		change_variable = {
+			which = cot_upgraded
+			value = 1
+		}
 	}
 }
 
@@ -3032,7 +3037,13 @@ on_holy_order_established = {
 # When a minority is expelled to a colony
 # THIS = Colony, ROOT = Colony, FROM = Home province
 on_minority_expelled = {
-
+	FROM = {
+		remove_province_modifier = religious_zeal_at_conv
+		add_permanent_province_modifier = {
+			name = expelled_minority_home
+			duration = 36500
+		}
+	}
 }
 
 # THIS = Raiding country, FROM = Sea province
@@ -3241,6 +3252,13 @@ on_colonial_type_change = {
 }
 
 on_estate_led_regency = {
+	add_ruler_modifier = {
+		name = empowered_regency_modifier
+		duration = -1
+	}
+	change_adm = 1
+	change_dip = 1
+	change_mil = 1
 }
 
 on_estate_led_regency_surpassed = {

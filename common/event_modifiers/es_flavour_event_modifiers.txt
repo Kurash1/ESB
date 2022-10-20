@@ -730,3 +730,17 @@ es_local_unrest = {
 es_seth_temple = {
 	local_autonomy = 0.15
 }
+
+es_reinforced_garrison = {
+	local_defensiveness = 0.25
+	local_unrest = -1.5
+	local_tax_modifier = -0.5
+	local_production_efficiency = -0.5
+	local_manpower_modifier = -0.5
+}
+
+es_navy_expansion_against_maormers = {
+	sunk_ship_morale_hit_recieved = -0.1
+	capture_ship_chance = 0.15
+	global_foreign_trade_power = -0.25
+}

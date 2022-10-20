@@ -76,7 +76,10 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					has_seat_in_parliament = no
-					development = 25
+					OR = {
+						development = 25
+						is_capital = yes
+					}
 					is_state = yes
 				}
 				save_event_target_as = es_demand_seat_event_target
@@ -203,6 +206,7 @@ country_event = {
 				limit = {
 					has_province_modifier = rotten_borough
 					has_seat_in_parliament = yes
+					is_backing_current_issue = yes
 				}
 				save_event_target_as = es_rotten_seat_vote_event_target
 			}

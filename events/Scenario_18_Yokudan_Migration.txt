@@ -177,7 +177,13 @@ country_event = {
 	option = {
 		name = "es_18_scenario.5.a"
 		ai_chance = { factor = 50 }
-        change_government = republic
+        if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+		}
 		kill_ruler = yes
 		add_stability = -3
 	}

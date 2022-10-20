@@ -23,7 +23,9 @@ country_event = {
 			1 = { country_event = { id = es_flavour_race_events.8 } }
 			1 = { country_event = { id = es_flavour_race_events.17 } }
 			1 = { country_event = { id = es_flavour_race_events.18 } }
-			90 = { set_country_flag = successful_flavour_race_event }
+			1 = { country_event = { id = es_flavour_race_events.20 } }
+			1 = { country_event = { id = es_flavour_race_events.21 } }
+			88 = { set_country_flag = successful_flavour_race_event }
 		}
 	}
 	
@@ -357,16 +359,13 @@ country_event = {
 		NOT = { culture_group = goblin_cg }
 		num_of_cities = 5
 		any_owned_province = {
-			NOT = { trade_goods = ogres_teeth }
-			NOT = { trade_goods = aetherium }
-			NOT = { trade_goods = black_briar_mead }
-			NOT = { trade_goods = honningbrew_mead }
-			NOT = { trade_goods = surilie_brothers_wine }
-			NOT = { trade_goods = emberbrand_wine }
-			NOT = { trade_goods = firebrand_wine }
-		}
-		any_owned_province = {
+			continent = Tamriel
 			es_ogres_terrain = yes
+			NOT = { has_fixed_trade_good = yes }
+			NOT = { culture = harpy	}
+			NOT = { culture = lamian }
+			NOT = { culture = ogre }
+			NOT = { culture = dragon }
 		}
 	}
 	
@@ -377,8 +376,13 @@ country_event = {
 			set_country_flag = successful_flavour_race_event
 			random_owned_province = {
 				limit = {
+					continent = Tamriel
 					es_ogres_terrain = yes
 					NOT = { has_fixed_trade_good = yes }
+					NOT = { culture = harpy	}
+					NOT = { culture = lamian }
+					NOT = { culture = ogre }
+					NOT = { culture = dragon }
 				}
 				save_event_target_as = ogres_province_event_target
 			}
@@ -462,15 +466,14 @@ country_event = {
 	
 	trigger = {
 		NOT = { government = native }
-		NOT = {
-			any_owned_province = {
-				culture = lamian
-			}
-		}
 		any_owned_province = {
 			continent = Tamriel
 			has_port = yes
 			devastation = 50
+			NOT = { culture = harpy	}
+			NOT = { culture = lamian }
+			NOT = { culture = ogre }
+			NOT = { culture = dragon }
 		}
 	}
 	
@@ -484,6 +487,10 @@ country_event = {
 					continent = Tamriel
 					has_port = yes
 					devastation = 50
+					NOT = { culture = harpy	}
+					NOT = { culture = lamian }
+					NOT = { culture = ogre }
+					NOT = { culture = dragon }
 				}
 				save_event_target_as = lamias_province_event_target
 			}
@@ -711,8 +718,14 @@ country_event = {
 		name = es_flavour_race_events.14.a
 		set_global_flag = spawn_of_harpies_global_flag
 		change_religion = nocturnal_cult
-		change_government = theocracy
-		add_government_reform = sisterhood_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+			add_government_reform = sisterhood_reform
+		}
 		add_devotion = 100
 		define_ruler = {
 			name = "Noctyr-a"
@@ -853,20 +866,31 @@ country_event = {
 				superregion = hammerfell_superregion
 				superregion = high_rock_superregion
 			}
+			NOT = { culture = harpy	}
+			NOT = { culture = lamian }
+			NOT = { culture = ogre }
+			NOT = { culture = dragon }
 		}
 	}
 	
 	is_triggered_only = yes
 	
 	immediate = {
-		random_owned_province = {
-			limit = {
-				OR = {
-					superregion = hammerfell_superregion
-					superregion = high_rock_superregion
+		hidden_effect = {
+			set_country_flag = successful_flavour_race_event
+			random_owned_province = {
+				limit = {
+					OR = {
+						superregion = hammerfell_superregion
+						superregion = high_rock_superregion
+					}
+					NOT = { culture = harpy	}
+					NOT = { culture = lamian }
+					NOT = { culture = ogre }
+					NOT = { culture = dragon }
 				}
+				save_event_target_as = es_nest_of_harpies_event_target
 			}
-			save_event_target_as = es_nest_of_harpies_event_target
 		}
 	}
 	
@@ -907,15 +931,26 @@ country_event = {
 		has_global_flag = spawn_of_harpies_global_flag
 		any_owned_province = {
 			has_province_modifier = es_nest_of_harpies
+			NOT = { culture = harpy	}
+			NOT = { culture = lamian }
+			NOT = { culture = ogre }
+			NOT = { culture = dragon }
 		}
 	}
 	
 	immediate = {
-		random_owned_province = {
-			limit = {
-				has_province_modifier = es_nest_of_harpies
+		hidden_effect = {
+			set_country_flag = successful_flavour_race_event
+			random_owned_province = {
+				limit = {
+					has_province_modifier = es_nest_of_harpies
+					NOT = { culture = harpy	}
+					NOT = { culture = lamian }
+					NOT = { culture = ogre }
+					NOT = { culture = dragon }
+				}
+				save_event_target_as = es_harpy_province_event_target
 			}
-			save_event_target_as = es_harpy_province_event_target
 		}
 	}
 	
@@ -996,5 +1031,210 @@ country_event = {
 			siege = 5
 		}
 	}
+	
+}
+
+# es_flavour_race_events.20.t: "Dragon Seen in the Province of [es_dragon_province_event_target.GetName]"
+# es_flavour_race_events.20.d: "According to the rumors, a dragon was noticed near the city of [es_dragon_province_event_target.GetName]. It was as big as the mountain, black as night, and flew right over the barrows. Of course, at first it seams, that the people who reported the deadly creature were either drunk or insane, but what if those are not the fantasies of the crazy minds, but true reports? If so, the Dragon might kill everyone in [es_dragon_province_event_target.GetName] and in many other villages in proximity. We must do something to ensure the afety of our people."
+# es_flavour_race_events.20.a: "Hunt it Down!"
+# es_flavour_race_events.20.b: "We shall better evacuate the locals."
+# es_flavour_race_events.20.c: "We have got better things to do than listen to more of such fantasies."
+# es_flavour_race_events.20.e: "Praise our lord!"
+
+country_event = {
+	id = es_flavour_race_events.20
+	title = es_flavour_race_events.20.t
+	desc = es_flavour_race_events.20.d
+	picture = ES_BLACK_DRAGON_eventPicture
+	
+	trigger = {
+		NOT = { government = native }
+		any_owned_province = {
+			NOT = { has_port = yes }
+			NOT = { culture = harpy	}
+			NOT = { culture = lamian }
+			NOT = { culture = ogre }
+			NOT = { culture = dragon }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_flavour_race_event
+			random_owned_province = {
+				limit = {
+					NOT = { has_port = yes }
+					NOT = { culture = harpy	}
+					NOT = { culture = lamian }
+					NOT = { culture = ogre }
+					NOT = { culture = dragon }
+				}
+				save_event_target_as = es_dragon_province_event_target
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_flavour_race_events.20.a
+		trigger = {
+			NOT = { religion = dragon_cult }
+		}
+		ai_chance = { factor = 75 }
+		add_years_of_income = -0.5
+		add_yearly_manpower = -1.0
+		add_legitimacy = 10
+		add_republican_tradition = 10
+		add_devotion = 10
+		add_horde_unity = 10
+		add_meritocracy = 10
+	}
+	option = {
+		name = es_flavour_race_events.20.a
+		trigger = {
+			religion = dragon_cult
+		}
+		ai_chance = { factor = 75 }
+		add_prestige = -10
+	}
+	option = {
+		name = es_flavour_race_events.20.b
+		ai_chance = { factor = 25 }
+		event_target:es_dragon_province_event_target = {
+			change_culture = dragon
+			add_devastation = 15
+			random_list = {
+				33 = { add_base_tax = -1 }
+				33 = { add_base_production = -1 }
+				33 = { add_base_manpower = -1 }
+			}
+		}
+	}
+	option = {
+		name = es_flavour_race_events.20.c
+		ai_chance = { factor = 25 }
+		random_list = {
+			50 = {
+				add_prestige = 5
+			}
+			50 = {
+				event_target:es_dragon_province_event_target = {
+					change_culture = dragon
+					add_devastation = 35
+				}
+			}
+		}
+	}
+	option = {
+		name = es_flavour_race_events.20.e
+		ai_chance = { factor = 25 }
+		trigger = {
+			religion = dragon_cult
+		}
+		event_target:es_dragon_province_event_target = {
+			change_culture = dragon
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	
+}
+
+# es_flavour_race_events.21.t: "Maormer Ships Near [es_maormer_province_event_target.GetName]"
+# es_flavour_race_events.21.d: "Several fishing boats with half-filled fish holds arrived in the port of the city [es_maormer_province_event_target.GetName].  No one expected them to return so soon, especially since there were no storm clouds on the horizon. Nevertheless, it turned out that the reason the fishermen decided to gather their catch as soon as possible and return to safe harbor was far worse than a simple storm. Several Maormer ships from as far away as Pyandonea were spotted at sea. It is hard to say now whether the fishermen saw the fleet scouts, a few stragglers, or whether they were lucky enough to sail away just before the armada appeared, heading right now toward our shores to begin plundering the coastal settlements. Nevertheless, every minute now counts. If we are facing the threat of another raid, we should send our ships to intercept the enemy fleet as quickly as possible, but if this alarm is false, wandering ships hunting for what is not there can only harm our shipping and international trade."
+# es_flavour_race_events.21.a: "Send Ships to intercept the fleet!"
+# es_flavour_race_events.21.b: "If we reinforce garrison of [es_maormer_province_event_target.GetName], we shall be safe."
+# es_flavour_race_events.21.c: "Maormers are just bypassing, there will be no invasion."
+# es_navy_expansion_against_maormers: "Anti-Maormer Navy Expansion"
+# desc_es_navy_expansion_against_maormers: " "
+# es_reinforced_garrison: "Reinforced Local Garrisons"
+# desc_es_reinforced_garrison: " "
+
+country_event = {
+	id = es_flavour_race_events.21
+	title = es_flavour_race_events.21.t
+	desc = es_flavour_race_events.21.d
+	picture = ES_MAORMER_SHIP_eventPicture
+	
+	trigger = {
+		NOT = { culture_group = maormer_cg }
+		NOT = { owns_core_province = 209 }
+		209 = { owner = { culture_group = maormer_cg } }
+		any_owned_province = {
+			has_port = yes
+			OR = {
+				superregion = summerset_islands_superregion
+				superregion = valenwood_superregion
+				superregion = elsweyr_superregion
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = successful_flavour_race_event
+			random_owned_province = {
+				limit = {
+					has_port = yes
+				OR = {
+					superregion = summerset_islands_superregion
+					superregion = valenwood_superregion
+					superregion = elsweyr_superregion
+				}
+				}
+				save_event_target_as = es_maormer_province_event_target
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_flavour_race_events.21.a
+		trigger = { sailors = 1000 }
+		add_yearly_sailors = -1.0
+		add_navy_tradition = 5
+		add_country_modifier = {
+			name = "es_navy_expansion_against_maormers"
+			duration = 3650
+		}
+	}
+	option = {
+		name = es_flavour_race_events.21.b
+		trigger = { manpower = 10 }
+		add_yearly_manpower = -2.5
+		add_army_tradition = 5
+		event_target:es_maormer_province_event_target = {
+			add_permanent_province_modifier = {
+				name = "es_reinforced_garrison"
+				duration = 9125
+			}
+		}
+	}
+	option = {
+		name = es_flavour_race_events.21.c
+		random_list = {
+			50 = {
+				add_prestige = 10
+			}
+			40 = {
+				random_country = {
+					limit = {
+						owns_core_province = 209
+						culture_group = maormer_cg
+					}
+					add_core = event_target:es_maormer_province_event_target
+				}
+			}
+			10 = {
+				event_target:es_maormer_province_event_target = {
+					change_culture = maormer
+				}
+			}
+		}
+	}
+	
 	
 }

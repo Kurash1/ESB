@@ -1,4 +1,3 @@
-# Audax Validator "!" Ignore_1004
 workshop = {
 	cost = 75
 	time = 12
@@ -16,10 +15,10 @@ workshop = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = workshop
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -81,10 +80,10 @@ counting_house = {
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = counting_house
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -147,10 +146,10 @@ customs_house = { #Is in reality the Stock Exchange.
 		}
 	}
 	on_destroyed = {
-		add_development_from_building = {
+		remove_development_from_building = {
 			building = customs_house
 			type = production
-			value = -1
+			value = 1
 		}
 	}
 	on_obsolete = {

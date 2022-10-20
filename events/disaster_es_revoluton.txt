@@ -640,8 +640,14 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
 		
-		change_government = theocracy
-		add_government_reform = leading_clergy_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+			add_government_reform = leading_clergy_reform
+		}
 		
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -688,8 +694,14 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
 		
-		change_government = theocracy
-		add_government_reform = warrior_monks_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+			add_government_reform = warrior_monks_reform
+		}
 		
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -747,9 +759,15 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = heretic_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
-			
-		change_government = republic
-		add_government_reform = oligarchy_reform
+		
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = oligarchy_reform
+		}
 		
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -795,9 +813,15 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = heretic_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
-			
-		change_government = republic
-		add_government_reform = merchants_reform
+		
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = merchants_reform
+		}
 		
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -843,9 +867,15 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = heretic_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
-			
-		change_government = republic
-		add_government_reform = peasants_republic
+		
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = peasants_republic
+		}
 			
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -899,8 +929,14 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
 		
-		change_government = theocracy
-		add_government_reform = monastic_order_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+			add_government_reform = monastic_order_reform
+		}
 		
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -943,8 +979,14 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
 		
-		change_government = theocracy
-		add_government_reform = loyal_nobility_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+			add_government_reform = loyal_nobility_reform
+		}
 		
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -999,8 +1041,14 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
 		
-		change_government = republic
-		add_government_reform = noble_elite_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = noble_elite_reform
+		}
 			
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -1043,8 +1091,14 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
 		
-		change_government = republic
-		add_government_reform = protectorate_parliament_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = republic
+			add_government_reform = protectorate_parliament_reform
+		}
 			
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -1098,8 +1152,14 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
 		
-		change_government = theocracy
-		add_government_reform = pious_merchants_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+			add_government_reform = pious_merchants_reform
+		}
 			
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
@@ -1142,8 +1202,14 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3 win = yes unrest = 15 } }
 		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3 win = yes unrest = 15 } }
 		
-		change_government = theocracy
-		add_government_reform = guru_advisors_reform
+		if = {
+			limit = {
+				NOT = { is_emperor = yes }
+				NOT = { is_emperor_of_china = yes }
+			}
+			change_government = theocracy
+			add_government_reform = guru_advisors_reform
+		}
 			
 		remove_country_modifier = political_indefiniteness end_disaster = es_revolution
 	}
