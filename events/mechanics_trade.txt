@@ -1,450 +1,450 @@
-namespace = es_trade
-
-country_event = {
-	id = es_trade.1
-	title = es_trade.1.t
-	desc = es_trade.1.d
-	picture = ES_TRADE_GOODS_eventPicture
-
-	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			every_country = {
-				limit = { ai = no }
-				country_event = { id = es_trade.4 days = 31 tooltip = es_trade.4.a.tt }
-			}
-		}
-    }
-	
-	option = {
-		name = es_trade.1.a
-		
-		hidden_effect = {
-			es_annual_price_change = { tradegood = algae }
-			es_annual_price_change = { tradegood = ebony }
-			es_annual_price_change = { tradegood = orichalcum }
-			es_annual_price_change = { tradegood = quicksilver }
-			es_annual_price_change = { tradegood = cloth }
-			es_annual_price_change = { tradegood = coal }
-			es_annual_price_change = { tradegood = malachite }
-			es_annual_price_change = { tradegood = moonstone }
-			es_annual_price_change = { tradegood = copper }
-			es_annual_price_change = { tradegood = corals }
-			es_annual_price_change = { tradegood = silver }
-			es_annual_price_change = { tradegood = dyes }
-			es_annual_price_change = { tradegood = corundum }
-			es_annual_price_change = { tradegood = fish }
-			es_annual_price_change = { tradegood = fur }
-			es_annual_price_change = { tradegood = gems }
-			es_annual_price_change = { tradegood = glass }
-			es_annual_price_change = { tradegood = stalhrim }
-			es_annual_price_change = { tradegood = crops }
-			es_annual_price_change = { tradegood = iron }
-			es_annual_price_change = { tradegood = ivory }
-			es_annual_price_change = { tradegood = fruits_and_vegetables }
-			es_annual_price_change = { tradegood = livestock }
-			es_annual_price_change = { tradegood = mushrooms }
-			es_annual_price_change = { tradegood = moon_sugar }
-			es_annual_price_change = { tradegood = naval_supplies }
-			es_annual_price_change = { tradegood = herbs }
-			es_annual_price_change = { tradegood = paper }
-			es_annual_price_change = { tradegood = beer }
-			es_annual_price_change = { tradegood = salt }
-			es_annual_price_change = { tradegood = crabs }
-			es_annual_price_change = { tradegood = silk }
-			es_annual_price_change = { tradegood = slaves }
-			es_annual_price_change = { tradegood = leather }
-			es_annual_price_change = { tradegood = weapons_and_armor }
-			es_annual_price_change = { tradegood = potions }
-			es_annual_price_change = { tradegood = pearls }
-			es_annual_price_change = { tradegood = wood }
-			es_annual_price_change = { tradegood = wine }
-			es_annual_price_change = { tradegood = wool }
-			es_annual_price_change = { tradegood = fire_salts }
-			es_annual_price_change = { tradegood = frost_salts }
-			es_annual_price_change = { tradegood = void_salts }
-			es_annual_price_change = { tradegood = vampire_dust  }
-			es_annual_price_change = { tradegood = daedra_heart }
-			es_annual_price_change = { tradegood = bloodgrass  }
-			es_annual_price_change = { tradegood = daedra_silk }
-			es_annual_price_change = { tradegood = clannfear_claws  }
-			es_annual_price_change = { tradegood = daedra_venin  }
-			es_annual_price_change = { tradegood = harrada_root  }
-			es_annual_price_change = { tradegood = daedroth_teeth  }
-			es_annual_price_change = { tradegood = scamp_skin  }
-			es_annual_price_change = { tradegood = spiddal_stick }
-			es_annual_price_change = { tradegood = nirncrux }
-			es_annual_price_change = { tradegood = scrolls }
-			es_annual_price_change = { tradegood = magic_goods }
-			es_annual_price_change = { tradegood = soul_gems }
-			es_annual_price_change = { tradegood = honey_and_wax }
-			es_annual_price_change = { tradegood = chitin }
-			es_annual_price_change = { tradegood = sload_soap }
-			es_annual_price_change = { tradegood = eggs }
-			es_annual_price_change = { tradegood = human_flesh }
-			es_annual_price_change = { tradegood = nirnroot }
-			es_annual_price_change = { tradegood = orgnium }
-			es_annual_price_change = { tradegood = mithril }
-			es_annual_price_change = { tradegood = adamantium }
-			es_annual_price_change = { tradegood = milk_of_kynareth }
-			es_annual_price_change = { tradegood = skooma }
-			es_annual_price_change = { tradegood = tobacco }
-			es_annual_price_change = { tradegood = hist_sap }
-			es_annual_price_change = { tradegood = incense_of_mara }
-			es_annual_price_change = { tradegood = ayleid_nose_hash }
-			es_annual_price_change = { tradegood = sleeping_tree_sap }
-			es_annual_price_change = { tradegood = daril }
-			es_annual_price_change = { tradegood = hags_breath }
-			es_annual_price_change = { tradegood = amber }
-			es_annual_price_change = { tradegood = chalcopyrite }
-			es_annual_price_change = { tradegood = shale }
-			es_annual_price_change = { tradegood = sandstone }
-			es_annual_price_change = { tradegood = lapis_lazuli }
-			es_annual_price_change = { tradegood = marble }
-			es_annual_price_change = { tradegood = ironstone }
-			es_annual_price_change = { tradegood = ale }
-			es_annual_price_change = { tradegood = mazte }
-			es_annual_price_change = { tradegood = dagoth_brandy }
-			es_annual_price_change = { tradegood = colovian_brandy }
-			es_annual_price_change = { tradegood = cyrodilic_brandy }
-			es_annual_price_change = { tradegood = greef }
-			es_annual_price_change = { tradegood = mead }
-			es_annual_price_change = { tradegood = black_briar_mead }
-			es_annual_price_change = { tradegood = honningbrew_mead }
-			es_annual_price_change = { tradegood = numbskin_mead }
-			es_annual_price_change = { tradegood = sujiamma }
-			es_annual_price_change = { tradegood = flin }
-			es_annual_price_change = { tradegood = alto }
-			es_annual_price_change = { tradegood = argonian_bloodwine }
-			es_annual_price_change = { tradegood = colovian_battlecry }
-			es_annual_price_change = { tradegood = emberbrand_wine }
-			es_annual_price_change = { tradegood = firebrand_wine }
-			es_annual_price_change = { tradegood = frostdew_blanc }
-			es_annual_price_change = { tradegood = julianos_firebelly }
-			es_annual_price_change = { tradegood = shein }
-			es_annual_price_change = { tradegood = sparkling_honeydew }
-			es_annual_price_change = { tradegood = spiced_wine }
-			es_annual_price_change = { tradegood = stumblefoots_reserve }
-			es_annual_price_change = { tradegood = surilie_brothers_wine }
-			es_annual_price_change = { tradegood = west_weald_wine }
-			es_annual_price_change = { tradegood = moonshine }
-			es_annual_price_change = { tradegood = ogres_teeth }
-		}
-	}
-}
-
-country_event = {
-	id = es_trade.2
-	title = es_trade.2.t
-	desc = es_trade.2.d
-	picture = ES_TRADE_CRISIS_eventPicture
-
-	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			every_country = {
-				limit = {
-					ai = no
-				}
-				country_event = { id = es_trade.5 days = 31 tooltip = es_trade.5.a.tt }
-			}
-		}
-    }
-	
-	option = {
-		name = es_trade.2.a
-		
-		hidden_effect = {
-			es_trade_crisis = { tradegood = algae }
-			es_trade_crisis = { tradegood = ebony }
-			es_trade_crisis = { tradegood = orichalcum }
-			es_trade_crisis = { tradegood = quicksilver }
-			es_trade_crisis = { tradegood = cloth }
-			es_trade_crisis = { tradegood = coal }
-			es_trade_crisis = { tradegood = malachite }
-			es_trade_crisis = { tradegood = moonstone }
-			es_trade_crisis = { tradegood = copper }
-			es_trade_crisis = { tradegood = corals }
-			es_trade_crisis = { tradegood = silver }
-			es_trade_crisis = { tradegood = dyes }
-			es_trade_crisis = { tradegood = corundum }
-			es_trade_crisis = { tradegood = fish }
-			es_trade_crisis = { tradegood = fur }
-			es_trade_crisis = { tradegood = gems }
-			es_trade_crisis = { tradegood = glass }
-			es_trade_crisis = { tradegood = stalhrim }
-			es_trade_crisis = { tradegood = crops }
-			es_trade_crisis = { tradegood = iron }
-			es_trade_crisis = { tradegood = ivory }
-			es_trade_crisis = { tradegood = fruits_and_vegetables }
-			es_trade_crisis = { tradegood = livestock }
-			es_trade_crisis = { tradegood = mushrooms }
-			es_trade_crisis = { tradegood = moon_sugar }
-			es_trade_crisis = { tradegood = naval_supplies }
-			es_trade_crisis = { tradegood = herbs }
-			es_trade_crisis = { tradegood = paper }
-			es_trade_crisis = { tradegood = beer }
-			es_trade_crisis = { tradegood = salt }
-			es_trade_crisis = { tradegood = crabs }
-			es_trade_crisis = { tradegood = silk }
-			es_trade_crisis = { tradegood = slaves }
-			es_trade_crisis = { tradegood = leather }
-			es_trade_crisis = { tradegood = weapons_and_armor }
-			es_trade_crisis = { tradegood = potions }
-			es_trade_crisis = { tradegood = pearls }
-			es_trade_crisis = { tradegood = wood }
-			es_trade_crisis = { tradegood = wine }
-			es_trade_crisis = { tradegood = wool }
-			es_trade_crisis = { tradegood = fire_salts }
-			es_trade_crisis = { tradegood = frost_salts }
-			es_trade_crisis = { tradegood = void_salts }
-			es_trade_crisis = { tradegood = vampire_dust  }
-			es_trade_crisis = { tradegood = daedra_heart }
-			es_trade_crisis = { tradegood = bloodgrass  }
-			es_trade_crisis = { tradegood = daedra_silk }
-			es_trade_crisis = { tradegood = clannfear_claws  }
-			es_trade_crisis = { tradegood = daedra_venin  }
-			es_trade_crisis = { tradegood = harrada_root  }
-			es_trade_crisis = { tradegood = daedroth_teeth  }
-			es_trade_crisis = { tradegood = scamp_skin  }
-			es_trade_crisis = { tradegood = spiddal_stick }
-			es_trade_crisis = { tradegood = nirncrux }
-			es_trade_crisis = { tradegood = scrolls }
-			es_trade_crisis = { tradegood = magic_goods }
-			es_trade_crisis = { tradegood = soul_gems }
-			es_trade_crisis = { tradegood = honey_and_wax }
-			es_trade_crisis = { tradegood = chitin }
-			es_trade_crisis = { tradegood = sload_soap }
-			es_trade_crisis = { tradegood = eggs }
-			es_trade_crisis = { tradegood = human_flesh }
-			es_trade_crisis = { tradegood = nirnroot }
-			es_trade_crisis = { tradegood = orgnium }
-			es_trade_crisis = { tradegood = mithril }
-			es_trade_crisis = { tradegood = adamantium }
-			es_trade_crisis = { tradegood = milk_of_kynareth }
-			es_trade_crisis = { tradegood = skooma }
-			es_trade_crisis = { tradegood = tobacco }
-			es_trade_crisis = { tradegood = hist_sap }
-			es_trade_crisis = { tradegood = incense_of_mara }
-			es_trade_crisis = { tradegood = ayleid_nose_hash }
-			es_trade_crisis = { tradegood = sleeping_tree_sap }
-			es_trade_crisis = { tradegood = daril }
-			es_trade_crisis = { tradegood = hags_breath }
-			es_trade_crisis = { tradegood = amber }
-			es_trade_crisis = { tradegood = chalcopyrite }
-			es_trade_crisis = { tradegood = shale }
-			es_trade_crisis = { tradegood = sandstone }
-			es_trade_crisis = { tradegood = lapis_lazuli }
-			es_trade_crisis = { tradegood = marble }
-			es_trade_crisis = { tradegood = ironstone }
-			es_trade_crisis = { tradegood = ale }
-			es_trade_crisis = { tradegood = mazte }
-			es_trade_crisis = { tradegood = dagoth_brandy }
-			es_trade_crisis = { tradegood = colovian_brandy }
-			es_trade_crisis = { tradegood = cyrodilic_brandy }
-			es_trade_crisis = { tradegood = greef }
-			es_trade_crisis = { tradegood = mead }
-			es_trade_crisis = { tradegood = black_briar_mead }
-			es_trade_crisis = { tradegood = honningbrew_mead }
-			es_trade_crisis = { tradegood = numbskin_mead }
-			es_trade_crisis = { tradegood = sujiamma }
-			es_trade_crisis = { tradegood = flin }
-			es_trade_crisis = { tradegood = alto }
-			es_trade_crisis = { tradegood = argonian_bloodwine }
-			es_trade_crisis = { tradegood = colovian_battlecry }
-			es_trade_crisis = { tradegood = emberbrand_wine }
-			es_trade_crisis = { tradegood = firebrand_wine }
-			es_trade_crisis = { tradegood = frostdew_blanc }
-			es_trade_crisis = { tradegood = julianos_firebelly }
-			es_trade_crisis = { tradegood = shein }
-			es_trade_crisis = { tradegood = sparkling_honeydew }
-			es_trade_crisis = { tradegood = spiced_wine }
-			es_trade_crisis = { tradegood = stumblefoots_reserve }
-			es_trade_crisis = { tradegood = surilie_brothers_wine }
-			es_trade_crisis = { tradegood = west_weald_wine }
-			es_trade_crisis = { tradegood = moonshine }
-			es_trade_crisis = { tradegood = ogres_teeth }
-		}
-		
-	}
-}
-
-country_event = {
-	id = es_trade.3
-	title = es_trade.3.t
-	desc = es_trade.3.d
-	picture = ES_TRADE_RISE_eventPicture
-
-	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			every_country = {
-				limit = {
-					ai = no
-				}
-				country_event = { id = es_trade.6 days = 31 tooltip = es_trade.6.a.tt }
-			}
-		}
-	}
-	
-	option = {
-		name = es_trade.3.a
-		
-		hidden_effect = {
-			es_trade_rise = { tradegood = algae }
-			es_trade_rise = { tradegood = ebony }
-			es_trade_rise = { tradegood = orichalcum }
-			es_trade_rise = { tradegood = quicksilver }
-			es_trade_rise = { tradegood = cloth }
-			es_trade_rise = { tradegood = coal }
-			es_trade_rise = { tradegood = malachite }
-			es_trade_rise = { tradegood = moonstone }
-			es_trade_rise = { tradegood = copper }
-			es_trade_rise = { tradegood = corals }
-			es_trade_rise = { tradegood = silver }
-			es_trade_rise = { tradegood = dyes }
-			es_trade_rise = { tradegood = corundum }
-			es_trade_rise = { tradegood = fish }
-			es_trade_rise = { tradegood = fur }
-			es_trade_rise = { tradegood = gems }
-			es_trade_rise = { tradegood = glass }
-			es_trade_rise = { tradegood = stalhrim }
-			es_trade_rise = { tradegood = crops }
-			es_trade_rise = { tradegood = iron }
-			es_trade_rise = { tradegood = ivory }
-			es_trade_rise = { tradegood = fruits_and_vegetables }
-			es_trade_rise = { tradegood = livestock }
-			es_trade_rise = { tradegood = mushrooms }
-			es_trade_rise = { tradegood = moon_sugar }
-			es_trade_rise = { tradegood = naval_supplies }
-			es_trade_rise = { tradegood = herbs }
-			es_trade_rise = { tradegood = paper }
-			es_trade_rise = { tradegood = beer }
-			es_trade_rise = { tradegood = salt }
-			es_trade_rise = { tradegood = crabs }
-			es_trade_rise = { tradegood = silk }
-			es_trade_rise = { tradegood = slaves }
-			es_trade_rise = { tradegood = leather }
-			es_trade_rise = { tradegood = weapons_and_armor }
-			es_trade_rise = { tradegood = potions }
-			es_trade_rise = { tradegood = pearls }
-			es_trade_rise = { tradegood = wood }
-			es_trade_rise = { tradegood = wine }
-			es_trade_rise = { tradegood = wool }
-			es_trade_rise = { tradegood = fire_salts }
-			es_trade_rise = { tradegood = frost_salts }
-			es_trade_rise = { tradegood = void_salts }
-			es_trade_rise = { tradegood = vampire_dust  }
-			es_trade_rise = { tradegood = daedra_heart }
-			es_trade_rise = { tradegood = bloodgrass  }
-			es_trade_rise = { tradegood = daedra_silk }
-			es_trade_rise = { tradegood = clannfear_claws  }
-			es_trade_rise = { tradegood = daedra_venin  }
-			es_trade_rise = { tradegood = harrada_root  }
-			es_trade_rise = { tradegood = daedroth_teeth  }
-			es_trade_rise = { tradegood = scamp_skin  }
-			es_trade_rise = { tradegood = spiddal_stick }
-			es_trade_rise = { tradegood = nirncrux }
-			es_trade_rise = { tradegood = scrolls }
-			es_trade_rise = { tradegood = magic_goods }
-			es_trade_rise = { tradegood = soul_gems }
-			es_trade_rise = { tradegood = honey_and_wax }
-			es_trade_rise = { tradegood = chitin }
-			es_trade_rise = { tradegood = sload_soap }
-			es_trade_rise = { tradegood = eggs }
-			es_trade_rise = { tradegood = human_flesh }
-			es_trade_rise = { tradegood = nirnroot }
-			es_trade_rise = { tradegood = orgnium }
-			es_trade_rise = { tradegood = mithril }
-			es_trade_rise = { tradegood = adamantium }
-			es_trade_rise = { tradegood = milk_of_kynareth }
-			es_trade_rise = { tradegood = skooma }
-			es_trade_rise = { tradegood = tobacco }
-			es_trade_rise = { tradegood = hist_sap }
-			es_trade_rise = { tradegood = incense_of_mara }
-			es_trade_rise = { tradegood = ayleid_nose_hash }
-			es_trade_rise = { tradegood = sleeping_tree_sap }
-			es_trade_rise = { tradegood = daril }
-			es_trade_rise = { tradegood = hags_breath }
-			es_trade_rise = { tradegood = amber }
-			es_trade_rise = { tradegood = chalcopyrite }
-			es_trade_rise = { tradegood = shale }
-			es_trade_rise = { tradegood = sandstone }
-			es_trade_rise = { tradegood = lapis_lazuli }
-			es_trade_rise = { tradegood = marble }
-			es_trade_rise = { tradegood = ironstone }
-			es_trade_rise = { tradegood = ale }
-			es_trade_rise = { tradegood = mazte }
-			es_trade_rise = { tradegood = dagoth_brandy }
-			es_trade_rise = { tradegood = colovian_brandy }
-			es_trade_rise = { tradegood = cyrodilic_brandy }
-			es_trade_rise = { tradegood = greef }
-			es_trade_rise = { tradegood = mead }
-			es_trade_rise = { tradegood = black_briar_mead }
-			es_trade_rise = { tradegood = honningbrew_mead }
-			es_trade_rise = { tradegood = numbskin_mead }
-			es_trade_rise = { tradegood = sujiamma }
-			es_trade_rise = { tradegood = flin }
-			es_trade_rise = { tradegood = alto }
-			es_trade_rise = { tradegood = argonian_bloodwine }
-			es_trade_rise = { tradegood = colovian_battlecry }
-			es_trade_rise = { tradegood = emberbrand_wine }
-			es_trade_rise = { tradegood = firebrand_wine }
-			es_trade_rise = { tradegood = frostdew_blanc }
-			es_trade_rise = { tradegood = julianos_firebelly }
-			es_trade_rise = { tradegood = shein }
-			es_trade_rise = { tradegood = sparkling_honeydew }
-			es_trade_rise = { tradegood = spiced_wine }
-			es_trade_rise = { tradegood = stumblefoots_reserve }
-			es_trade_rise = { tradegood = surilie_brothers_wine }
-			es_trade_rise = { tradegood = west_weald_wine }
-			es_trade_rise = { tradegood = moonshine }
-			es_trade_rise = { tradegood = ogres_teeth }
-		}
-	}
-}
-
-country_event = {
-	id = es_trade.4
-	title = es_trade.1.t
-	desc = es_trade.1.d
-	picture = ES_TRADE_GOODS_eventPicture
-
-	is_triggered_only = yes
-	
-	option = {
-		name = es_trade.1.a
-		custom_tooltip = es_trade_annual.tt
-	}
-}
-
-country_event = {
-	id = es_trade.5
-	title = es_trade.2.t
-	desc = es_trade.2.d
-	picture = ES_TRADE_CRISIS_eventPicture
-
-	is_triggered_only = yes
-	
-	option = {
-		name = es_trade.2.a
-		custom_tooltip = es_trade_crisis.tt
-	}
-}
-
-country_event = {
-	id = es_trade.6
-	title = es_trade.3.t
-	desc = es_trade.3.d
-	picture = ES_TRADE_RISE_eventPicture
-
-	is_triggered_only = yes
-	
-	option = {
-		name = es_trade.3.a
-		custom_tooltip = es_trade_rise.tt
-	}
-}
+#namespace = es_trade
+#
+#country_event = {
+#	id = es_trade.1
+#	title = es_trade.1.t
+#	desc = es_trade.1.d
+#	picture = ES_TRADE_GOODS_eventPicture
+#
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		hidden_effect = {
+#			every_country = {
+#				limit = { ai = no }
+#				country_event = { id = es_trade.4 days = 31 tooltip = es_trade.4.a.tt }
+#			}
+#		}
+#    }
+#	
+#	option = {
+#		name = es_trade.1.a
+#		
+#		hidden_effect = {
+#			es_annual_price_change = { tradegood = algae }
+#			es_annual_price_change = { tradegood = ebony }
+#			es_annual_price_change = { tradegood = orichalcum }
+#			es_annual_price_change = { tradegood = quicksilver }
+#			es_annual_price_change = { tradegood = cloth }
+#			es_annual_price_change = { tradegood = coal }
+#			es_annual_price_change = { tradegood = malachite }
+#			es_annual_price_change = { tradegood = moonstone }
+#			es_annual_price_change = { tradegood = copper }
+#			es_annual_price_change = { tradegood = corals }
+#			es_annual_price_change = { tradegood = silver }
+#			es_annual_price_change = { tradegood = dyes }
+#			es_annual_price_change = { tradegood = corundum }
+#			es_annual_price_change = { tradegood = fish }
+#			es_annual_price_change = { tradegood = fur }
+#			es_annual_price_change = { tradegood = gems }
+#			es_annual_price_change = { tradegood = glass }
+#			es_annual_price_change = { tradegood = stalhrim }
+#			es_annual_price_change = { tradegood = crops }
+#			es_annual_price_change = { tradegood = iron }
+#			es_annual_price_change = { tradegood = ivory }
+#			es_annual_price_change = { tradegood = fruits_and_vegetables }
+#			es_annual_price_change = { tradegood = livestock }
+#			es_annual_price_change = { tradegood = mushrooms }
+#			es_annual_price_change = { tradegood = moon_sugar }
+#			es_annual_price_change = { tradegood = naval_supplies }
+#			es_annual_price_change = { tradegood = herbs }
+#			es_annual_price_change = { tradegood = paper }
+#			es_annual_price_change = { tradegood = beer }
+#			es_annual_price_change = { tradegood = salt }
+#			es_annual_price_change = { tradegood = crabs }
+#			es_annual_price_change = { tradegood = silk }
+#			es_annual_price_change = { tradegood = slaves }
+#			es_annual_price_change = { tradegood = leather }
+#			es_annual_price_change = { tradegood = weapons_and_armor }
+#			es_annual_price_change = { tradegood = potions }
+#			es_annual_price_change = { tradegood = pearls }
+#			es_annual_price_change = { tradegood = wood }
+#			es_annual_price_change = { tradegood = wine }
+#			es_annual_price_change = { tradegood = wool }
+#			es_annual_price_change = { tradegood = fire_salts }
+#			es_annual_price_change = { tradegood = frost_salts }
+#			es_annual_price_change = { tradegood = void_salts }
+#			es_annual_price_change = { tradegood = vampire_dust  }
+#			es_annual_price_change = { tradegood = daedra_heart }
+#			es_annual_price_change = { tradegood = bloodgrass  }
+#			es_annual_price_change = { tradegood = daedra_silk }
+#			es_annual_price_change = { tradegood = clannfear_claws  }
+#			es_annual_price_change = { tradegood = daedra_venin  }
+#			es_annual_price_change = { tradegood = harrada_root  }
+#			es_annual_price_change = { tradegood = daedroth_teeth  }
+#			es_annual_price_change = { tradegood = scamp_skin  }
+#			es_annual_price_change = { tradegood = spiddal_stick }
+#			es_annual_price_change = { tradegood = nirncrux }
+#			es_annual_price_change = { tradegood = scrolls }
+#			es_annual_price_change = { tradegood = magic_goods }
+#			es_annual_price_change = { tradegood = soul_gems }
+#			es_annual_price_change = { tradegood = honey_and_wax }
+#			es_annual_price_change = { tradegood = chitin }
+#			es_annual_price_change = { tradegood = sload_soap }
+#			es_annual_price_change = { tradegood = eggs }
+#			es_annual_price_change = { tradegood = human_flesh }
+#			es_annual_price_change = { tradegood = nirnroot }
+#			es_annual_price_change = { tradegood = orgnium }
+#			es_annual_price_change = { tradegood = mithril }
+#			es_annual_price_change = { tradegood = adamantium }
+#			es_annual_price_change = { tradegood = milk_of_kynareth }
+#			es_annual_price_change = { tradegood = skooma }
+#			es_annual_price_change = { tradegood = tobacco }
+#			es_annual_price_change = { tradegood = hist_sap }
+#			es_annual_price_change = { tradegood = incense_of_mara }
+#			es_annual_price_change = { tradegood = ayleid_nose_hash }
+#			es_annual_price_change = { tradegood = sleeping_tree_sap }
+#			es_annual_price_change = { tradegood = daril }
+#			es_annual_price_change = { tradegood = hags_breath }
+#			es_annual_price_change = { tradegood = amber }
+#			es_annual_price_change = { tradegood = chalcopyrite }
+#			es_annual_price_change = { tradegood = shale }
+#			es_annual_price_change = { tradegood = sandstone }
+#			es_annual_price_change = { tradegood = lapis_lazuli }
+#			es_annual_price_change = { tradegood = marble }
+#			es_annual_price_change = { tradegood = ironstone }
+#			es_annual_price_change = { tradegood = ale }
+#			es_annual_price_change = { tradegood = mazte }
+#			es_annual_price_change = { tradegood = dagoth_brandy }
+#			es_annual_price_change = { tradegood = colovian_brandy }
+#			es_annual_price_change = { tradegood = cyrodilic_brandy }
+#			es_annual_price_change = { tradegood = greef }
+#			es_annual_price_change = { tradegood = mead }
+#			es_annual_price_change = { tradegood = black_briar_mead }
+#			es_annual_price_change = { tradegood = honningbrew_mead }
+#			es_annual_price_change = { tradegood = numbskin_mead }
+#			es_annual_price_change = { tradegood = sujiamma }
+#			es_annual_price_change = { tradegood = flin }
+#			es_annual_price_change = { tradegood = alto }
+#			es_annual_price_change = { tradegood = argonian_bloodwine }
+#			es_annual_price_change = { tradegood = colovian_battlecry }
+#			es_annual_price_change = { tradegood = emberbrand_wine }
+#			es_annual_price_change = { tradegood = firebrand_wine }
+#			es_annual_price_change = { tradegood = frostdew_blanc }
+#			es_annual_price_change = { tradegood = julianos_firebelly }
+#			es_annual_price_change = { tradegood = shein }
+#			es_annual_price_change = { tradegood = sparkling_honeydew }
+#			es_annual_price_change = { tradegood = spiced_wine }
+#			es_annual_price_change = { tradegood = stumblefoots_reserve }
+#			es_annual_price_change = { tradegood = surilie_brothers_wine }
+#			es_annual_price_change = { tradegood = west_weald_wine }
+#			es_annual_price_change = { tradegood = moonshine }
+#			es_annual_price_change = { tradegood = ogres_teeth }
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = es_trade.2
+#	title = es_trade.2.t
+#	desc = es_trade.2.d
+#	picture = ES_TRADE_CRISIS_eventPicture
+#
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		hidden_effect = {
+#			every_country = {
+#				limit = {
+#					ai = no
+#				}
+#				country_event = { id = es_trade.5 days = 31 tooltip = es_trade.5.a.tt }
+#			}
+#		}
+#    }
+#	
+#	option = {
+#		name = es_trade.2.a
+#		
+#		hidden_effect = {
+#			es_trade_crisis = { tradegood = algae }
+#			es_trade_crisis = { tradegood = ebony }
+#			es_trade_crisis = { tradegood = orichalcum }
+#			es_trade_crisis = { tradegood = quicksilver }
+#			es_trade_crisis = { tradegood = cloth }
+#			es_trade_crisis = { tradegood = coal }
+#			es_trade_crisis = { tradegood = malachite }
+#			es_trade_crisis = { tradegood = moonstone }
+#			es_trade_crisis = { tradegood = copper }
+#			es_trade_crisis = { tradegood = corals }
+#			es_trade_crisis = { tradegood = silver }
+#			es_trade_crisis = { tradegood = dyes }
+#			es_trade_crisis = { tradegood = corundum }
+#			es_trade_crisis = { tradegood = fish }
+#			es_trade_crisis = { tradegood = fur }
+#			es_trade_crisis = { tradegood = gems }
+#			es_trade_crisis = { tradegood = glass }
+#			es_trade_crisis = { tradegood = stalhrim }
+#			es_trade_crisis = { tradegood = crops }
+#			es_trade_crisis = { tradegood = iron }
+#			es_trade_crisis = { tradegood = ivory }
+#			es_trade_crisis = { tradegood = fruits_and_vegetables }
+#			es_trade_crisis = { tradegood = livestock }
+#			es_trade_crisis = { tradegood = mushrooms }
+#			es_trade_crisis = { tradegood = moon_sugar }
+#			es_trade_crisis = { tradegood = naval_supplies }
+#			es_trade_crisis = { tradegood = herbs }
+#			es_trade_crisis = { tradegood = paper }
+#			es_trade_crisis = { tradegood = beer }
+#			es_trade_crisis = { tradegood = salt }
+#			es_trade_crisis = { tradegood = crabs }
+#			es_trade_crisis = { tradegood = silk }
+#			es_trade_crisis = { tradegood = slaves }
+#			es_trade_crisis = { tradegood = leather }
+#			es_trade_crisis = { tradegood = weapons_and_armor }
+#			es_trade_crisis = { tradegood = potions }
+#			es_trade_crisis = { tradegood = pearls }
+#			es_trade_crisis = { tradegood = wood }
+#			es_trade_crisis = { tradegood = wine }
+#			es_trade_crisis = { tradegood = wool }
+#			es_trade_crisis = { tradegood = fire_salts }
+#			es_trade_crisis = { tradegood = frost_salts }
+#			es_trade_crisis = { tradegood = void_salts }
+#			es_trade_crisis = { tradegood = vampire_dust  }
+#			es_trade_crisis = { tradegood = daedra_heart }
+#			es_trade_crisis = { tradegood = bloodgrass  }
+#			es_trade_crisis = { tradegood = daedra_silk }
+#			es_trade_crisis = { tradegood = clannfear_claws  }
+#			es_trade_crisis = { tradegood = daedra_venin  }
+#			es_trade_crisis = { tradegood = harrada_root  }
+#			es_trade_crisis = { tradegood = daedroth_teeth  }
+#			es_trade_crisis = { tradegood = scamp_skin  }
+#			es_trade_crisis = { tradegood = spiddal_stick }
+#			es_trade_crisis = { tradegood = nirncrux }
+#			es_trade_crisis = { tradegood = scrolls }
+#			es_trade_crisis = { tradegood = magic_goods }
+#			es_trade_crisis = { tradegood = soul_gems }
+#			es_trade_crisis = { tradegood = honey_and_wax }
+#			es_trade_crisis = { tradegood = chitin }
+#			es_trade_crisis = { tradegood = sload_soap }
+#			es_trade_crisis = { tradegood = eggs }
+#			es_trade_crisis = { tradegood = human_flesh }
+#			es_trade_crisis = { tradegood = nirnroot }
+#			es_trade_crisis = { tradegood = orgnium }
+#			es_trade_crisis = { tradegood = mithril }
+#			es_trade_crisis = { tradegood = adamantium }
+#			es_trade_crisis = { tradegood = milk_of_kynareth }
+#			es_trade_crisis = { tradegood = skooma }
+#			es_trade_crisis = { tradegood = tobacco }
+#			es_trade_crisis = { tradegood = hist_sap }
+#			es_trade_crisis = { tradegood = incense_of_mara }
+#			es_trade_crisis = { tradegood = ayleid_nose_hash }
+#			es_trade_crisis = { tradegood = sleeping_tree_sap }
+#			es_trade_crisis = { tradegood = daril }
+#			es_trade_crisis = { tradegood = hags_breath }
+#			es_trade_crisis = { tradegood = amber }
+#			es_trade_crisis = { tradegood = chalcopyrite }
+#			es_trade_crisis = { tradegood = shale }
+#			es_trade_crisis = { tradegood = sandstone }
+#			es_trade_crisis = { tradegood = lapis_lazuli }
+#			es_trade_crisis = { tradegood = marble }
+#			es_trade_crisis = { tradegood = ironstone }
+#			es_trade_crisis = { tradegood = ale }
+#			es_trade_crisis = { tradegood = mazte }
+#			es_trade_crisis = { tradegood = dagoth_brandy }
+#			es_trade_crisis = { tradegood = colovian_brandy }
+#			es_trade_crisis = { tradegood = cyrodilic_brandy }
+#			es_trade_crisis = { tradegood = greef }
+#			es_trade_crisis = { tradegood = mead }
+#			es_trade_crisis = { tradegood = black_briar_mead }
+#			es_trade_crisis = { tradegood = honningbrew_mead }
+#			es_trade_crisis = { tradegood = numbskin_mead }
+#			es_trade_crisis = { tradegood = sujiamma }
+#			es_trade_crisis = { tradegood = flin }
+#			es_trade_crisis = { tradegood = alto }
+#			es_trade_crisis = { tradegood = argonian_bloodwine }
+#			es_trade_crisis = { tradegood = colovian_battlecry }
+#			es_trade_crisis = { tradegood = emberbrand_wine }
+#			es_trade_crisis = { tradegood = firebrand_wine }
+#			es_trade_crisis = { tradegood = frostdew_blanc }
+#			es_trade_crisis = { tradegood = julianos_firebelly }
+#			es_trade_crisis = { tradegood = shein }
+#			es_trade_crisis = { tradegood = sparkling_honeydew }
+#			es_trade_crisis = { tradegood = spiced_wine }
+#			es_trade_crisis = { tradegood = stumblefoots_reserve }
+#			es_trade_crisis = { tradegood = surilie_brothers_wine }
+#			es_trade_crisis = { tradegood = west_weald_wine }
+#			es_trade_crisis = { tradegood = moonshine }
+#			es_trade_crisis = { tradegood = ogres_teeth }
+#		}
+#		
+#	}
+#}
+#
+#country_event = {
+#	id = es_trade.3
+#	title = es_trade.3.t
+#	desc = es_trade.3.d
+#	picture = ES_TRADE_RISE_eventPicture
+#
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		hidden_effect = {
+#			every_country = {
+#				limit = {
+#					ai = no
+#				}
+#				country_event = { id = es_trade.6 days = 31 tooltip = es_trade.6.a.tt }
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = es_trade.3.a
+#		
+#		hidden_effect = {
+#			es_trade_rise = { tradegood = algae }
+#			es_trade_rise = { tradegood = ebony }
+#			es_trade_rise = { tradegood = orichalcum }
+#			es_trade_rise = { tradegood = quicksilver }
+#			es_trade_rise = { tradegood = cloth }
+#			es_trade_rise = { tradegood = coal }
+#			es_trade_rise = { tradegood = malachite }
+#			es_trade_rise = { tradegood = moonstone }
+#			es_trade_rise = { tradegood = copper }
+#			es_trade_rise = { tradegood = corals }
+#			es_trade_rise = { tradegood = silver }
+#			es_trade_rise = { tradegood = dyes }
+#			es_trade_rise = { tradegood = corundum }
+#			es_trade_rise = { tradegood = fish }
+#			es_trade_rise = { tradegood = fur }
+#			es_trade_rise = { tradegood = gems }
+#			es_trade_rise = { tradegood = glass }
+#			es_trade_rise = { tradegood = stalhrim }
+#			es_trade_rise = { tradegood = crops }
+#			es_trade_rise = { tradegood = iron }
+#			es_trade_rise = { tradegood = ivory }
+#			es_trade_rise = { tradegood = fruits_and_vegetables }
+#			es_trade_rise = { tradegood = livestock }
+#			es_trade_rise = { tradegood = mushrooms }
+#			es_trade_rise = { tradegood = moon_sugar }
+#			es_trade_rise = { tradegood = naval_supplies }
+#			es_trade_rise = { tradegood = herbs }
+#			es_trade_rise = { tradegood = paper }
+#			es_trade_rise = { tradegood = beer }
+#			es_trade_rise = { tradegood = salt }
+#			es_trade_rise = { tradegood = crabs }
+#			es_trade_rise = { tradegood = silk }
+#			es_trade_rise = { tradegood = slaves }
+#			es_trade_rise = { tradegood = leather }
+#			es_trade_rise = { tradegood = weapons_and_armor }
+#			es_trade_rise = { tradegood = potions }
+#			es_trade_rise = { tradegood = pearls }
+#			es_trade_rise = { tradegood = wood }
+#			es_trade_rise = { tradegood = wine }
+#			es_trade_rise = { tradegood = wool }
+#			es_trade_rise = { tradegood = fire_salts }
+#			es_trade_rise = { tradegood = frost_salts }
+#			es_trade_rise = { tradegood = void_salts }
+#			es_trade_rise = { tradegood = vampire_dust  }
+#			es_trade_rise = { tradegood = daedra_heart }
+#			es_trade_rise = { tradegood = bloodgrass  }
+#			es_trade_rise = { tradegood = daedra_silk }
+#			es_trade_rise = { tradegood = clannfear_claws  }
+#			es_trade_rise = { tradegood = daedra_venin  }
+#			es_trade_rise = { tradegood = harrada_root  }
+#			es_trade_rise = { tradegood = daedroth_teeth  }
+#			es_trade_rise = { tradegood = scamp_skin  }
+#			es_trade_rise = { tradegood = spiddal_stick }
+#			es_trade_rise = { tradegood = nirncrux }
+#			es_trade_rise = { tradegood = scrolls }
+#			es_trade_rise = { tradegood = magic_goods }
+#			es_trade_rise = { tradegood = soul_gems }
+#			es_trade_rise = { tradegood = honey_and_wax }
+#			es_trade_rise = { tradegood = chitin }
+#			es_trade_rise = { tradegood = sload_soap }
+#			es_trade_rise = { tradegood = eggs }
+#			es_trade_rise = { tradegood = human_flesh }
+#			es_trade_rise = { tradegood = nirnroot }
+#			es_trade_rise = { tradegood = orgnium }
+#			es_trade_rise = { tradegood = mithril }
+#			es_trade_rise = { tradegood = adamantium }
+#			es_trade_rise = { tradegood = milk_of_kynareth }
+#			es_trade_rise = { tradegood = skooma }
+#			es_trade_rise = { tradegood = tobacco }
+#			es_trade_rise = { tradegood = hist_sap }
+#			es_trade_rise = { tradegood = incense_of_mara }
+#			es_trade_rise = { tradegood = ayleid_nose_hash }
+#			es_trade_rise = { tradegood = sleeping_tree_sap }
+#			es_trade_rise = { tradegood = daril }
+#			es_trade_rise = { tradegood = hags_breath }
+#			es_trade_rise = { tradegood = amber }
+#			es_trade_rise = { tradegood = chalcopyrite }
+#			es_trade_rise = { tradegood = shale }
+#			es_trade_rise = { tradegood = sandstone }
+#			es_trade_rise = { tradegood = lapis_lazuli }
+#			es_trade_rise = { tradegood = marble }
+#			es_trade_rise = { tradegood = ironstone }
+#			es_trade_rise = { tradegood = ale }
+#			es_trade_rise = { tradegood = mazte }
+#			es_trade_rise = { tradegood = dagoth_brandy }
+#			es_trade_rise = { tradegood = colovian_brandy }
+#			es_trade_rise = { tradegood = cyrodilic_brandy }
+#			es_trade_rise = { tradegood = greef }
+#			es_trade_rise = { tradegood = mead }
+#			es_trade_rise = { tradegood = black_briar_mead }
+#			es_trade_rise = { tradegood = honningbrew_mead }
+#			es_trade_rise = { tradegood = numbskin_mead }
+#			es_trade_rise = { tradegood = sujiamma }
+#			es_trade_rise = { tradegood = flin }
+#			es_trade_rise = { tradegood = alto }
+#			es_trade_rise = { tradegood = argonian_bloodwine }
+#			es_trade_rise = { tradegood = colovian_battlecry }
+#			es_trade_rise = { tradegood = emberbrand_wine }
+#			es_trade_rise = { tradegood = firebrand_wine }
+#			es_trade_rise = { tradegood = frostdew_blanc }
+#			es_trade_rise = { tradegood = julianos_firebelly }
+#			es_trade_rise = { tradegood = shein }
+#			es_trade_rise = { tradegood = sparkling_honeydew }
+#			es_trade_rise = { tradegood = spiced_wine }
+#			es_trade_rise = { tradegood = stumblefoots_reserve }
+#			es_trade_rise = { tradegood = surilie_brothers_wine }
+#			es_trade_rise = { tradegood = west_weald_wine }
+#			es_trade_rise = { tradegood = moonshine }
+#			es_trade_rise = { tradegood = ogres_teeth }
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = es_trade.4
+#	title = es_trade.1.t
+#	desc = es_trade.1.d
+#	picture = ES_TRADE_GOODS_eventPicture
+#
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = es_trade.1.a
+#		custom_tooltip = es_trade_annual.tt
+#	}
+#}
+#
+#country_event = {
+#	id = es_trade.5
+#	title = es_trade.2.t
+#	desc = es_trade.2.d
+#	picture = ES_TRADE_CRISIS_eventPicture
+#
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = es_trade.2.a
+#		custom_tooltip = es_trade_crisis.tt
+#	}
+#}
+#
+#country_event = {
+#	id = es_trade.6
+#	title = es_trade.3.t
+#	desc = es_trade.3.d
+#	picture = ES_TRADE_RISE_eventPicture
+#
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = es_trade.3.a
+#		custom_tooltip = es_trade_rise.tt
+#	}
+#}
