@@ -325,6 +325,7 @@ cb_pte_liberation = {
 	prerequisites = {
 		has_opinion_modifier = {
 			who = FROM
+			# Audax Validator "." Ignore_ALL
 			modifier = aggressive_expansion
 			value = -35
 		}
