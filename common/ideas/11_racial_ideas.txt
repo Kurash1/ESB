@@ -829,7 +829,10 @@ esb_nedic_ideas = {
 	category = ADM
 	trigger = {
 		NOT = { has_idea_group = nedic_ideas }
-		accepted_culture = nedic
+		OR = {
+			primary_culture = nedic
+			primary_culture = kreathmen
+		}
 	}
 	bonus = {
 		institution_spread_from_true_faith = 0.1

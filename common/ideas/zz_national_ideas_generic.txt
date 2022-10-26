@@ -955,7 +955,10 @@ minotaur_ideas = {
 # Nedic Ideas
 nedic_ideas = {
 	trigger = {
-		primary_culture = nedic
+		OR = {
+			primary_culture = nedic
+			primary_culture = kreathmen
+		}
 	}
 	free = yes
 	start = {
