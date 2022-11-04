@@ -1,1380 +1,1380 @@
-sin_elves_tall_missions = {
-    slot = 6
-    generic = no
-    ai = yes
-    has_country_shield = no
-    potential = { primary_culture = sinistral }
-    
-    gypsum_alabaster_mission = {
-        icon = gypsum_alabaster
-        position = 3 
-        required_missions = { orichalcum_tower_mission } 
-
-        provinces_to_highlight = {
-			area = yokuda_9_la		#A'raei
-        }
-    
-        trigger = {
-            development_in_provinces = {
-				value = 150
-				area = yokuda_9_la
-			}
-			num_of_owned_provinces_with = {
-				value = 10
-				OR = {
-					has_building = temple
-					has_building = cathedral
-				}
-			}
-			num_of_owned_provinces_with = {
-				value = 10
-				OR = {
-				    has_building = workshop
-					has_building = counting_house
-					has_building = customs_house
-				}
-			}
-			num_of_owned_provinces_with = {
-				value = 10
-				OR = {
-				    has_building = marketplace
-					has_building = trade_depot
-					has_building = stock_exchange
-				}
-			}
-			num_of_owned_provinces_with = {
-				value = 10
-				has_building = road_network
-			}
-        }
-        
-        effect = {
-            add_country_modifier = {
-				name = "sin_mi_gypsum_buildings"
-				duration = -1
-			}
-        }
-    }
-	
-	es_conquest_of_pyandonea_lr_sin = {
-		icon = pyandonea_mission
-		position = 11
-		required_missions = { }
-		trigger = {
-			owns_core_province = 224		
-			owns_core_province = 240
-			owns_core_province = 2050
-			owns_core_province = 2089
-			owns_core_province = 209
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 224		
-			province_id = 240
-			province_id = 2050
-			province_id = 2089
-			province_id = 209
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_pyandonea_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = pyandonea_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			4740 = { add_core = ROOT }
-			if = { limit = { ai = yes 4740 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			4740 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 4740 } } } } }
-		}
-	}
-	
-	es_conquest_of_summerset_lr_sin = {
-		icon = summerset_mission
-		position = 12
-		required_missions = { }
-		trigger = {
-			owns_core_province = 271		
-			owns_core_province = 4740
-			owns_core_province = 281
-			owns_core_province = 249
-			owns_core_province = 299
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 271		
-			province_id = 4740
-			province_id = 281
-			province_id = 249
-			province_id = 299
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_summerset_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = summerset_lr
-			region = auridon_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			337 = { add_core = ROOT }
-			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			337 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 337 } } } } }
-			
-			209 = { add_core = ROOT }
-			if = { limit = { ai = yes 209 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			209 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 209 } } } } }
-		}
-	}
-	
-	es_conquest_of_continental_atmora_lr_sin = {
-		icon = atmora_mission
-		position = 13
-		required_missions = { }
-		trigger = {
-			owns_core_province = 357
-			owns_core_province = 367
-			owns_core_province = 373
-			owns_core_province = 382
-			owns_core_province = 384
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 357		
-			province_id = 367
-			province_id = 373
-			province_id = 382
-			province_id = 384
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_continental_atmora_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			is_city = yes
-			OR = {
-			area = atmora_1_la
-			area = atmora_2_la
-			area = atmora_3_la
-			area = atmora_4_la
-			area = atmora_5_la
-			area = atmora_6_la
-			}
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			1299 = { add_core = ROOT }
-			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
-			
-			483 = { add_core = ROOT }
-			if = { limit = { ai = yes 483 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			483 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 483 } } } } }
-			
-			415 = { add_core = ROOT }
-			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
-		}
-	}
-	
-	es_conquest_of_islandic_atmora_lr_sin = {
-		icon = roscrea_mission
-		position = 14
-		required_missions = { }
-		trigger = {
-			owns_core_province = 393
-			owns_core_province = 483
-			owns_core_province = 2225
-			owns_core_province = 2216
-			owns_core_province = 479
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 393		
-			province_id = 483
-			province_id = 2225
-			province_id = 2216
-			province_id = 479
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_islandic_atmora_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			is_city = yes
-			OR = {
-			area = atmora_7_la
-			area = atmora_10_la
-			}
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			1299 = { add_core = ROOT }
-			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
-			
-			373 = { add_core = ROOT }
-			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
-			
-			415 = { add_core = ROOT }
-			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
-		}
-	}
-	
-	es_conquest_of_far_atmora_lr_sin = {
-		icon = atmoran_islands_mission
-		position = 15
-		required_missions = { }
-		trigger = {
-			owns_core_province = 407
-			owns_core_province = 415
-			owns_core_province = 2211
-			owns_core_province = 411
-			owns_core_province = 1535
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 407		
-			province_id = 415
-			province_id = 2211
-			province_id = 411
-			province_id = 1535
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_far_atmora_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			is_city = yes
-			OR = {
-			area = atmora_8_la
-			area = atmora_9_la
-			}
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			395 = { add_core = ROOT }
-			if = { limit = { ai = yes 395 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			395 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 395 } } } } }
-			
-			373 = { add_core = ROOT }
-			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
-			
-			795 = { add_core = ROOT }
-			if = { limit = { ai = yes 795 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			795 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 795 } } } } }
-		}
-	}
-}
-
-sin_elves_mineral_missions = {
-    slot = 7
-    generic = no
-    ai = yes
-    has_country_shield = no
-    potential = { primary_culture = sinistral }
-    
-    orichalcum_tower_mission = {
-        icon = orichalic_tower
-        position = 2
-        required_missions = { all_thats_left_mission } 
-
-        provinces_to_highlight = {
-            province_id = 2184			#A'raei
-        }
-    
-        trigger = {
-            2184 = {
-				is_capital = yes
-				development = 30
-				has_owner_religion = yes
-				if = {
-					limit = { has_dlc = "Dharma" }
-					province_has_center_of_trade_of_level = 3
-				}
-			}
-			is_at_war = no
-        }
-        
-        effect = {
-			add_country_modifier = {
-				name = "sin_mi_oric_tower"
-				duration = -1
-			}
-        }
-    }
-	
-	buoyant_steel_mission = {
-        icon = elven_ship
-        position = 3 
-        required_missions = { orichalcum_tower_mission } 
-
-        trigger = {
-            sailors_percentage = 1
-			navy_size_percentage = 1
-			num_of_heavy_ship = 30
-			advisor = esu_navarch
-			all_neighbor_country = {
-				NOT = { navy_size = ROOT }
-			}
-        }
-        
-        effect = {
-            add_country_modifier = {
-				name = "sin_mi_buoyant_steel"
-				duration = -1
-			}
-        }
-    }
-	
-	es_conquest_of_yokuda_lr_sin = {
-		icon = yokuda_mission
-		position = 11
-		required_missions = { }
-		trigger = {
-			owns_core_province = 335		
-			owns_core_province = 3443
-			owns_core_province = 355
-			owns_core_province = 333
-			owns_core_province = 3467
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 335		
-			province_id = 3443
-			province_id = 355
-			province_id = 333
-			province_id = 3467
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_yokuda_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = yokuda_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			1497 = { add_core = ROOT }
-			if = { limit = { ai = yes 1497 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			1497 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1497 } } } } }
-			
-			6118 = { add_core = ROOT }
-			if = { limit = { ai = yes 6118 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			6118 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 6118 } } } } }
-			
-			6422 = { add_core = ROOT }
-			if = { limit = { ai = yes 6422 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			6422 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 6422 } } } } }
-		}
-	}
-	
-	es_conquest_of_tsakara_lr_sin = {
-		icon = tsakara_mission
-		position = 12
-		required_missions = { }
-		trigger = {
-			owns_core_province = 724
-			owns_core_province = 702
-			owns_core_province = 730
-			owns_core_province = 685
-			owns_core_province = 700
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 724		
-			province_id = 702
-			province_id = 730
-			province_id = 685
-			province_id = 700
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_tsakara_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = tsakara_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			1206 = { add_core = ROOT }
-			if = { limit = { ai = yes 1206 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			1206 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1206 } } } } }
-		}
-	}
-	
-	es_conquest_of_kamal_lr_sin = {
-		icon = kamal_mission
-		position = 13
-		required_missions = { }
-		trigger = {
-			owns_core_province = 508
-			owns_core_province = 503
-			owns_core_province = 493
-			owns_core_province = 2600
-			owns_core_province = 2573
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 508		
-			province_id = 503
-			province_id = 493
-			province_id = 2600
-			province_id = 2573
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_northern_kamal_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = kamal_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			800 = { add_core = ROOT }
-			if = { limit = { ai = yes 800 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			800 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 800 } } } } }
-			
-			1299 = { add_core = ROOT }
-			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
-			
-			1049 = { add_core = ROOT }
-			if = { limit = { ai = yes 1049 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			1049 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1049 } } } } }
-		
-		}
-	}
-	
-	es_conquest_of_thousand_lr_sin = {
-		icon = thousand_island_mission
-		position = 14
-		required_missions = { }
-		trigger = {
-			owns_core_province = 542
-			owns_core_province = 571
-			owns_core_province = 561
-			owns_core_province = 551
-			owns_core_province = 575
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 542		
-			province_id = 571
-			province_id = 561
-			province_id = 551
-			province_id = 575
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_thousand_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = thousand_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-		}
-	}
-	
-	es_conquest_of_po_tun_lr_sin = {
-		icon = po_tun_mission
-		position = 15
-		required_missions = { }
-		trigger = {
-			owns_core_province = 611
-			owns_core_province = 646
-			owns_core_province = 651
-			owns_core_province = 666
-			owns_core_province = 623
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 611		
-			province_id = 646
-			province_id = 651
-			province_id = 666
-			province_id = 623
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_po_tun_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = po_tun_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-}
-
-sin_elves_main_missions = {
-    slot = 8
-    generic = no
-    ai = yes
-    has_country_shield = no
-    potential = { primary_culture = sinistral }
-    
-    all_thats_left_mission = {
-        icon = elven_ruins
-        position = 1 
-        required_missions = {  } 
-
-        trigger = {
-            stability = 3
-			manpower_percentage = 1
-			num_of_provinces_in_states = 10
-        }
-        
-        effect = {
-			yokuda_13_la = {		#Haearon
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = "sin_mi_all_left"
-				duration = 9125
-			}
-        }
-    }
-	
-	sinister_intentions_mission = {
-        icon = sinistral_elves
-        position = 2
-        required_missions = { all_thats_left_mission } 
-
-        provinces_to_highlight = {
-            OR = {
-				area = yokuda_9_la		#A'raei
-				area = yokuda_13_la		#Haearon
-			}
-			NOT = {owned_by = ROOT }
-        }
-    
-        trigger = {
-            yokuda_9_la = {
-				type = all
-				owned_by = ROOT
-			}
-			yokuda_13_la = {
-				type = all
-				owned_by = ROOT
-			}
-			any_subject_country = { primary_culture = yokudan }
-        }
-        
-        effect = {
-			333 = { add_permanent_claim = ROOT }		#Jalfaye
-			335 = { add_permanent_claim = ROOT }		#Yath
-			355 = { add_permanent_claim = ROOT }		#Samara
-			3467 = { add_permanent_claim = ROOT }		#Toramon
-			add_country_modifier = {
-				name = "sin_mi_sin_intent"
-				duration = 9125
-			}
-        }
-    }
-	
-	sin_nothing_right__mission = {
-        icon = yokudan_city
-        position = 3 
-        required_missions = { sinister_intentions_mission } 
-
-        provinces_to_highlight = {
-            OR = { 
-				province_id = 333			#Jalfaye
-				province_id = 335			#Yath
-				province_id = 355			#Samara
-				province_id = 3467			#Toramon
-			}
-			NOT = {owned_by = ROOT }
-        }
-    
-        trigger = {
-            NOT = { exists = YA7 }
-			NOT = { exists = YB3 }
-			owns_core_province = 335		
-			owns_core_province = 3443
-			owns_core_province = 355
-			owns_core_province = 333
-			owns_core_province = 3467
-			accepted_culture = yokudan
-        }
-        
-        effect = {
-			hammerfell_11_la = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = "sin_mi_nothing_right"
-				duration = 9125
-			}
-        }
-    }
-	
-	es_conquest_of_upper_tsakara_lr_sin = {
-		icon = transakavir_mission
-		position = 11
-		required_missions = { }
-		trigger = {
-			owns_core_province = 741
-			owns_core_province = 750
-			owns_core_province = 772
-			owns_core_province = 761
-			owns_core_province = 757
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 741		
-			province_id = 750
-			province_id = 772
-			province_id = 761
-			province_id = 757
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_upper_tsakara_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = upper_tsakara_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-		}
-	}
-	
-	es_conquest_of_islandic_tsakara_lr_sin = {
-		icon = northern_islands_mission
-		position = 12
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1541
-			owns_core_province = 800
-			owns_core_province = 806
-			owns_core_province = 795
-			owns_core_province = 799
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1541		
-			province_id = 800
-			province_id = 806
-			province_id = 795
-			province_id = 799
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_islandic_tsakara_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = northern_islands_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			493 = { add_core = ROOT }
-			if = { limit = { ai = yes 493 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			493 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 493 } } } } }
-			
-			415 = { add_core = ROOT }
-			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
-		}
-	}
-	
-	es_conquest_of_valenwood_lr_sin = {
-		icon = valenwood_mission
-		position = 13
-		required_missions = { }
-		trigger = {
-			owns_core_province = 820		
-			owns_core_province = 812
-			owns_core_province = 868
-			owns_core_province = 4941
-			owns_core_province = 844
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 820		
-			province_id = 812
-			province_id = 868
-			province_id = 4941
-			province_id = 844
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_valenwood_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = northern_valenwood_lr
-			region = southern_valenwood_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-	es_conquest_of_elsweyr_lr_sin = {
-		icon = elsweyr_mission
-		position = 14
-		required_missions = { }
-		trigger = {
-			owns_core_province = 922		
-			owns_core_province = 5117
-			owns_core_province = 5237
-			owns_core_province = 5285
-			owns_core_province = 888
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 922		
-			province_id = 5117
-			province_id = 5237
-			province_id = 5285
-			province_id = 888
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_elsweyr_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = anequina_lr
-			region = pelletine_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-	es_conquest_of_vvardenfell_lr_sin = {
-		icon = vvardenfell_mission
-		position = 15
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1043		
-			owns_core_province = 1049
-			owns_core_province = 1018
-			owns_core_province = 4098
-			owns_core_province = 1028
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1043		
-			province_id = 1049
-			province_id = 1018
-			province_id = 4098
-			province_id = 1028
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_vvardenfell_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = vvardenfell_lr
-			region = llothanis_peninsula_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-}
-
-sin_elves_alinor_missions = {
-    slot = 9
-    generic = no
-    ai = yes
-    has_country_shield = no
-    potential = { primary_culture = sinistral }
-    
-    out_on_limb_mission = {
-        icon = alinor_palace
-        position = 2 
-        required_missions = { all_thats_left_mission } 
-
-        trigger = {
-            num_of_allies = 2
-			any_ally = {
-				primary_culture = altmer
-				num_of_owned_provinces_with = {
-					value = 20
-					OR = {
-						region = summerset_lr
-						region = auridon_lr
-					}
-				}
-				has_opinion = {
-					who = ROOT
-					value = 150
-				}
-			}
-			num_of_explorers = 1
-        }
-        
-        effect = {
-            pyandonea_14_la = {
-				limit = {
-					NOT = { is_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_claim = ROOT
-			}
-			add_country_modifier = {
-				name = "sin_mi_allies_alinor"
-				duration = 9125
-			}
-        }
-    }
-	
-	pyandonean_ports_mission = {
-        icon = abbarbas
-        position = 3 
-        required_missions = { out_on_limb_mission } 
-
-        provinces_to_highlight = {
-            province_id = 2089			#Fenna
-			NOT = { owned_by = ROOT }
-        }
-    
-        trigger = {
-            owns_core_province = 2089
-			num_of_owned_provinces_with = {
-				value = 5
-				OR = {
-						region = summerset_lr
-						region = auridon_lr
-				}
-			}
-			any_ally = {
-				primary_culture = maormer
-				num_of_owned_provinces_with = {
-					value = 10
-					region = pyandonea_lr
-				}
-				has_opinion = {
-					who = ROOT
-					value = 150
-				}
-			}
-        }
-        
-        effect = {
-            add_country_modifier = {
-				name = "sin_mi_allies_pyand"
-				duration = 9125
-			}
-        }
-    }
-	
-	es_conquest_of_morrowind_lr_sin = {
-		icon = morrowind_mission
-		position = 11
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1002
-			owns_core_province = 990
-			owns_core_province = 3373
-			owns_core_province = 958
-			owns_core_province = 3904
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1002		
-			province_id = 990
-			province_id = 3373
-			province_id = 958
-			province_id = 3904
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_morrowind_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = morrowind_lr
-			region = deshaan_lr
-			region = velothi_mountains_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-	es_conquest_of_black_marsh_lr_sin = {
-		icon = black_marsh_mission
-		position = 12
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1087		
-			owns_core_province = 1098
-			owns_core_province = 1075
-			owns_core_province = 1069
-			owns_core_province = 1064
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1087		
-			province_id = 1098
-			province_id = 1075
-			province_id = 1069
-			province_id = 1064
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_black_marsh_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = black_marsh_lr
-			region = shadowfen_lr
-			region = murkmire_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-	es_conquest_of_western_cyrodiil_lr_sin = {
-		icon = colovia_mission
-		position = 13
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1161
-			owns_core_province = 1144
-			owns_core_province = 5657
-			owns_core_province = 5616
-			owns_core_province = 5695
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1161		
-			province_id = 1144
-			province_id = 5657
-			province_id = 5616
-			province_id = 5695
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_western_cyrodiil_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = western_cyrodiil_lr
-			region = golden_coast_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-	es_conquest_of_eastern_cyrodiil_lr_sin = {
-		icon = nibenay_mission
-		position = 14
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1120
-			owns_core_province = 1251
-			owns_core_province = 1238
-			owns_core_province = 6044
-			owns_core_province = 1230
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1120		
-			province_id = 1251
-			province_id = 1238
-			province_id = 6044
-			province_id = 1230
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_eastern_cyrodiil_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = eastern_cyrodiil_lr
-			region = valus_mountains_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-	es_conquest_of_central_cyrodiil_lr_sin = {
-		icon = central_cyrodiil_mission
-		position = 15
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1206
-			owns_core_province = 1130
-			owns_core_province = 1194
-			owns_core_province = 5905
-			owns_core_province = 1209
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1206		
-			province_id = 1130
-			province_id = 1194
-			province_id = 5905
-			province_id = 1209
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_central_cyrodiil_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = central_cyrodiil_lr
-			region = jerall_mountains_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-}
-
-flavour_missions_5_sin = {
-	slot = 10
-	generic = no
-	ai = yes
-    has_country_shield = no
-    potential = { primary_culture = sinistral }
-	
-	es_conquest_of_western_skyrim_lr_sin = {
-		icon = northern_skyrim
-		position = 11
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1342
-			owns_core_province = 1306
-			owns_core_province = 1355
-			owns_core_province = 1275
-			owns_core_province = 1331
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1342		
-			province_id = 1306
-			province_id = 1355
-			province_id = 1275
-			province_id = 1331
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_western_skyrim_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = reach_lr
-			region = great_planes_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			479 = { add_core = ROOT }
-			if = { limit = { ai = yes 479 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			479 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 479 } } } } }
-		}
-	}
-	
-	es_conquest_of_eastern_skyrim_lr_sin = {
-		icon = southern_skyrim_mission
-		position = 12
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1319
-			owns_core_province = 1291
-			owns_core_province = 1268
-			owns_core_province = 1286
-			owns_core_province = 2924
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1319		
-			province_id = 1291
-			province_id = 1268
-			province_id = 1286
-			province_id = 2924
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_eastern_skyrim_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = rift_lr
-			region = great_planes_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-	es_conquest_of_hgh_rock_lr_sin = {
-		icon = high_rock_mission
-		position = 13
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1369
-			owns_core_province = 1391
-			owns_core_province = 1413
-			owns_core_province = 7019
-			owns_core_province = 1379
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1369		
-			province_id = 1391
-			province_id = 1413
-			province_id = 7019
-			province_id = 1379
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_hgh_rock_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = high_rock_lr
-			region = wrothgar_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-	es_conquest_of_hammerfell_lr_sin = {
-		icon = hammerfell_mission
-		position = 14
-		required_missions = { }
-		trigger = {
-			owns_core_province = 1510		
-			owns_core_province = 1446
-			owns_core_province = 1478
-			owns_core_province = 6257
-			owns_core_province = 6178
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 1510		
-			province_id = 1446
-			province_id = 1478
-			province_id = 6257
-			province_id = 6178
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-			custom_tooltip = es_conquest_of_hammerfell_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = corten_heights_lr
-			region = dragontail_mountains_lr
-			region = alikr_desert_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-			
-			1501 = { add_core = ROOT }
-			if = { limit = { ai = yes 1501 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
-			1501 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1501 } } } } }
-		}
-	}
-	
-	es_conquest_of_coldharbour_lr_sin = {
-		icon = coldharbour_mission
-		position = 15
-		required_missions = { }
-		trigger = {
-			owns_core_province = 3188
-			owns_core_province = 2970
-			owns_core_province = 2710
-			owns_core_province = 2828
-			owns_core_province = 2915
-		}
-		provinces_to_highlight = {
-		    OR = {
-			province_id = 3188		
-			province_id = 2970
-			province_id = 2710
-			province_id = 2828
-			province_id = 2915
-			}
-			NOT = { owned_by = ROOT }
-		}
-		effect = {
-		    custom_tooltip = es_conquest_of_coldharbour_lr_tooltip
-		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			OR = {
-			region = southern_coldharbour_lr
-			region = eastern_coldharbour_lr
-			region = western_coldharbour_lr
-			region = northern_coldharbour_lr
-			}
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
-		}
-	}
-	
-}
+#sin_elves_tall_missions = {
+#    slot = 6
+#    generic = no
+#    ai = yes
+#    has_country_shield = no
+#    potential = { primary_culture = sinistral }
+#    
+#    gypsum_alabaster_mission = {
+#        icon = gypsum_alabaster
+#        position = 3 
+#        required_missions = { orichalcum_tower_mission } 
+#
+#        provinces_to_highlight = {
+#			area = yokuda_9_la		#A'raei
+#        }
+#    
+#        trigger = {
+#            development_in_provinces = {
+#				value = 150
+#				area = yokuda_9_la
+#			}
+#			num_of_owned_provinces_with = {
+#				value = 10
+#				OR = {
+#					has_building = temple
+#					has_building = cathedral
+#				}
+#			}
+#			num_of_owned_provinces_with = {
+#				value = 10
+#				OR = {
+#				    has_building = workshop
+#					has_building = counting_house
+#					has_building = customs_house
+#				}
+#			}
+#			num_of_owned_provinces_with = {
+#				value = 10
+#				OR = {
+#				    has_building = marketplace
+#					has_building = trade_depot
+#					has_building = stock_exchange
+#				}
+#			}
+#			num_of_owned_provinces_with = {
+#				value = 10
+#				has_building = road_network
+#			}
+#        }
+#        
+#        effect = {
+#            add_country_modifier = {
+#				name = "sin_mi_gypsum_buildings"
+#				duration = -1
+#			}
+#        }
+#    }
+#	
+#	es_conquest_of_pyandonea_lr_sin = {
+#		icon = pyandonea_mission
+#		position = 11
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 224		
+#			owns_core_province = 240
+#			owns_core_province = 2050
+#			owns_core_province = 2089
+#			owns_core_province = 209
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 224		
+#			province_id = 240
+#			province_id = 2050
+#			province_id = 2089
+#			province_id = 209
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_pyandonea_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			region = pyandonea_lr
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			4740 = { add_core = ROOT }
+#			if = { limit = { ai = yes 4740 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			4740 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 4740 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_summerset_lr_sin = {
+#		icon = summerset_mission
+#		position = 12
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 271		
+#			owns_core_province = 4740
+#			owns_core_province = 281
+#			owns_core_province = 249
+#			owns_core_province = 299
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 271		
+#			province_id = 4740
+#			province_id = 281
+#			province_id = 249
+#			province_id = 299
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_summerset_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = summerset_lr
+#			region = auridon_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			337 = { add_core = ROOT }
+#			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			337 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 337 } } } } }
+#			
+#			209 = { add_core = ROOT }
+#			if = { limit = { ai = yes 209 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			209 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 209 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_continental_atmora_lr_sin = {
+#		icon = atmora_mission
+#		position = 13
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 357
+#			owns_core_province = 367
+#			owns_core_province = 373
+#			owns_core_province = 382
+#			owns_core_province = 384
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 357		
+#			province_id = 367
+#			province_id = 373
+#			province_id = 382
+#			province_id = 384
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_continental_atmora_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			is_city = yes
+#			OR = {
+#			area = atmora_1_la
+#			area = atmora_2_la
+#			area = atmora_3_la
+#			area = atmora_4_la
+#			area = atmora_5_la
+#			area = atmora_6_la
+#			}
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			1299 = { add_core = ROOT }
+#			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
+#			
+#			483 = { add_core = ROOT }
+#			if = { limit = { ai = yes 483 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			483 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 483 } } } } }
+#			
+#			415 = { add_core = ROOT }
+#			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_islandic_atmora_lr_sin = {
+#		icon = roscrea_mission
+#		position = 14
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 393
+#			owns_core_province = 483
+#			owns_core_province = 2225
+#			owns_core_province = 2216
+#			owns_core_province = 479
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 393		
+#			province_id = 483
+#			province_id = 2225
+#			province_id = 2216
+#			province_id = 479
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_islandic_atmora_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			is_city = yes
+#			OR = {
+#			area = atmora_7_la
+#			area = atmora_10_la
+#			}
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			1299 = { add_core = ROOT }
+#			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
+#			
+#			373 = { add_core = ROOT }
+#			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
+#			
+#			415 = { add_core = ROOT }
+#			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_far_atmora_lr_sin = {
+#		icon = atmoran_islands_mission
+#		position = 15
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 407
+#			owns_core_province = 415
+#			owns_core_province = 2211
+#			owns_core_province = 411
+#			owns_core_province = 1535
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 407		
+#			province_id = 415
+#			province_id = 2211
+#			province_id = 411
+#			province_id = 1535
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_far_atmora_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			is_city = yes
+#			OR = {
+#			area = atmora_8_la
+#			area = atmora_9_la
+#			}
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			395 = { add_core = ROOT }
+#			if = { limit = { ai = yes 395 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			395 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 395 } } } } }
+#			
+#			373 = { add_core = ROOT }
+#			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
+#			
+#			795 = { add_core = ROOT }
+#			if = { limit = { ai = yes 795 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			795 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 795 } } } } }
+#		}
+#	}
+#}
+#
+#sin_elves_mineral_missions = {
+#    slot = 7
+#    generic = no
+#    ai = yes
+#    has_country_shield = no
+#    potential = { primary_culture = sinistral }
+#    
+#    orichalcum_tower_mission = {
+#        icon = orichalic_tower
+#        position = 2
+#        required_missions = { all_thats_left_mission } 
+#
+#        provinces_to_highlight = {
+#            province_id = 2184			#A'raei
+#        }
+#    
+#        trigger = {
+#            2184 = {
+#				is_capital = yes
+#				development = 30
+#				has_owner_religion = yes
+#				if = {
+#					limit = { has_dlc = "Dharma" }
+#					province_has_center_of_trade_of_level = 3
+#				}
+#			}
+#			is_at_war = no
+#        }
+#        
+#        effect = {
+#			add_country_modifier = {
+#				name = "sin_mi_oric_tower"
+#				duration = -1
+#			}
+#        }
+#    }
+#	
+#	buoyant_steel_mission = {
+#        icon = elven_ship
+#        position = 3 
+#        required_missions = { orichalcum_tower_mission } 
+#
+#        trigger = {
+#            sailors_percentage = 1
+#			navy_size_percentage = 1
+#			num_of_heavy_ship = 30
+#			advisor = esu_navarch
+#			all_neighbor_country = {
+#				NOT = { navy_size = ROOT }
+#			}
+#        }
+#        
+#        effect = {
+#            add_country_modifier = {
+#				name = "sin_mi_buoyant_steel"
+#				duration = -1
+#			}
+#        }
+#    }
+#	
+#	es_conquest_of_yokuda_lr_sin = {
+#		icon = yokuda_mission
+#		position = 11
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 335		
+#			owns_core_province = 3443
+#			owns_core_province = 355
+#			owns_core_province = 333
+#			owns_core_province = 3467
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 335		
+#			province_id = 3443
+#			province_id = 355
+#			province_id = 333
+#			province_id = 3467
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_yokuda_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			region = yokuda_lr
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			1497 = { add_core = ROOT }
+#			if = { limit = { ai = yes 1497 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			1497 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1497 } } } } }
+#			
+#			6118 = { add_core = ROOT }
+#			if = { limit = { ai = yes 6118 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			6118 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 6118 } } } } }
+#			
+#			6422 = { add_core = ROOT }
+#			if = { limit = { ai = yes 6422 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			6422 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 6422 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_tsakara_lr_sin = {
+#		icon = tsakara_mission
+#		position = 12
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 724
+#			owns_core_province = 702
+#			owns_core_province = 730
+#			owns_core_province = 685
+#			owns_core_province = 700
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 724		
+#			province_id = 702
+#			province_id = 730
+#			province_id = 685
+#			province_id = 700
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_tsakara_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			region = tsakara_lr
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			1206 = { add_core = ROOT }
+#			if = { limit = { ai = yes 1206 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			1206 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1206 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_kamal_lr_sin = {
+#		icon = kamal_mission
+#		position = 13
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 508
+#			owns_core_province = 503
+#			owns_core_province = 493
+#			owns_core_province = 2600
+#			owns_core_province = 2573
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 508		
+#			province_id = 503
+#			province_id = 493
+#			province_id = 2600
+#			province_id = 2573
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_northern_kamal_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			region = kamal_lr
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			800 = { add_core = ROOT }
+#			if = { limit = { ai = yes 800 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			800 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 800 } } } } }
+#			
+#			1299 = { add_core = ROOT }
+#			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
+#			
+#			1049 = { add_core = ROOT }
+#			if = { limit = { ai = yes 1049 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			1049 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1049 } } } } }
+#		
+#		}
+#	}
+#	
+#	es_conquest_of_thousand_lr_sin = {
+#		icon = thousand_island_mission
+#		position = 14
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 542
+#			owns_core_province = 571
+#			owns_core_province = 561
+#			owns_core_province = 551
+#			owns_core_province = 575
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 542		
+#			province_id = 571
+#			province_id = 561
+#			province_id = 551
+#			province_id = 575
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_thousand_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			region = thousand_lr
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#		}
+#	}
+#	
+#	es_conquest_of_po_tun_lr_sin = {
+#		icon = po_tun_mission
+#		position = 15
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 611
+#			owns_core_province = 646
+#			owns_core_province = 651
+#			owns_core_province = 666
+#			owns_core_province = 623
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 611		
+#			province_id = 646
+#			province_id = 651
+#			province_id = 666
+#			province_id = 623
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_po_tun_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			region = po_tun_lr
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#}
+#
+#sin_elves_main_missions = {
+#    slot = 8
+#    generic = no
+#    ai = yes
+#    has_country_shield = no
+#    potential = { primary_culture = sinistral }
+#    
+#    all_thats_left_mission = {
+#        icon = elven_ruins
+#        position = 1 
+#        required_missions = {  } 
+#
+#        trigger = {
+#            stability = 3
+#			manpower_percentage = 1
+#			num_of_provinces_in_states = 10
+#        }
+#        
+#        effect = {
+#			yokuda_13_la = {		#Haearon
+#				limit = {
+#					NOT = { is_permanent_claim = ROOT }
+#					NOT = { is_core = ROOT }
+#				}
+#				add_permanent_claim = ROOT
+#			}
+#			add_country_modifier = {
+#				name = "sin_mi_all_left"
+#				duration = 9125
+#			}
+#        }
+#    }
+#	
+#	sinister_intentions_mission = {
+#        icon = sinistral_elves
+#        position = 2
+#        required_missions = { all_thats_left_mission } 
+#
+#        provinces_to_highlight = {
+#            OR = {
+#				area = yokuda_9_la		#A'raei
+#				area = yokuda_13_la		#Haearon
+#			}
+#			NOT = {owned_by = ROOT }
+#        }
+#    
+#        trigger = {
+#            yokuda_9_la = {
+#				type = all
+#				owned_by = ROOT
+#			}
+#			yokuda_13_la = {
+#				type = all
+#				owned_by = ROOT
+#			}
+#			any_subject_country = { primary_culture = yokudan }
+#        }
+#        
+#        effect = {
+#			333 = { add_permanent_claim = ROOT }		#Jalfaye
+#			335 = { add_permanent_claim = ROOT }		#Yath
+#			355 = { add_permanent_claim = ROOT }		#Samara
+#			3467 = { add_permanent_claim = ROOT }		#Toramon
+#			add_country_modifier = {
+#				name = "sin_mi_sin_intent"
+#				duration = 9125
+#			}
+#        }
+#    }
+#	
+#	sin_nothing_right__mission = {
+#        icon = yokudan_city
+#        position = 3 
+#        required_missions = { sinister_intentions_mission } 
+#
+#        provinces_to_highlight = {
+#            OR = { 
+#				province_id = 333			#Jalfaye
+#				province_id = 335			#Yath
+#				province_id = 355			#Samara
+#				province_id = 3467			#Toramon
+#			}
+#			NOT = {owned_by = ROOT }
+#        }
+#    
+#        trigger = {
+#            NOT = { exists = YA7 }
+#			NOT = { exists = YB3 }
+#			owns_core_province = 335		
+#			owns_core_province = 3443
+#			owns_core_province = 355
+#			owns_core_province = 333
+#			owns_core_province = 3467
+#			accepted_culture = yokudan
+#        }
+#        
+#        effect = {
+#			hammerfell_11_la = {
+#				limit = {
+#					NOT = { is_permanent_claim = ROOT }
+#					NOT = { is_core = ROOT }
+#				}
+#				add_permanent_claim = ROOT
+#			}
+#			add_country_modifier = {
+#				name = "sin_mi_nothing_right"
+#				duration = 9125
+#			}
+#        }
+#    }
+#	
+#	es_conquest_of_upper_tsakara_lr_sin = {
+#		icon = transakavir_mission
+#		position = 11
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 741
+#			owns_core_province = 750
+#			owns_core_province = 772
+#			owns_core_province = 761
+#			owns_core_province = 757
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 741		
+#			province_id = 750
+#			province_id = 772
+#			province_id = 761
+#			province_id = 757
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_upper_tsakara_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			region = upper_tsakara_lr
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#		}
+#	}
+#	
+#	es_conquest_of_islandic_tsakara_lr_sin = {
+#		icon = northern_islands_mission
+#		position = 12
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1541
+#			owns_core_province = 800
+#			owns_core_province = 806
+#			owns_core_province = 795
+#			owns_core_province = 799
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1541		
+#			province_id = 800
+#			province_id = 806
+#			province_id = 795
+#			province_id = 799
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_islandic_tsakara_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			region = northern_islands_lr
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			493 = { add_core = ROOT }
+#			if = { limit = { ai = yes 493 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			493 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 493 } } } } }
+#			
+#			415 = { add_core = ROOT }
+#			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_valenwood_lr_sin = {
+#		icon = valenwood_mission
+#		position = 13
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 820		
+#			owns_core_province = 812
+#			owns_core_province = 868
+#			owns_core_province = 4941
+#			owns_core_province = 844
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 820		
+#			province_id = 812
+#			province_id = 868
+#			province_id = 4941
+#			province_id = 844
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_valenwood_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = northern_valenwood_lr
+#			region = southern_valenwood_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#	es_conquest_of_elsweyr_lr_sin = {
+#		icon = elsweyr_mission
+#		position = 14
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 922		
+#			owns_core_province = 5117
+#			owns_core_province = 5237
+#			owns_core_province = 5285
+#			owns_core_province = 888
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 922		
+#			province_id = 5117
+#			province_id = 5237
+#			province_id = 5285
+#			province_id = 888
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_elsweyr_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = anequina_lr
+#			region = pelletine_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#	es_conquest_of_vvardenfell_lr_sin = {
+#		icon = vvardenfell_mission
+#		position = 15
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1043		
+#			owns_core_province = 1049
+#			owns_core_province = 1018
+#			owns_core_province = 4098
+#			owns_core_province = 1028
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1043		
+#			province_id = 1049
+#			province_id = 1018
+#			province_id = 4098
+#			province_id = 1028
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_vvardenfell_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = vvardenfell_lr
+#			region = llothanis_peninsula_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#}
+#
+#sin_elves_alinor_missions = {
+#    slot = 9
+#    generic = no
+#    ai = yes
+#    has_country_shield = no
+#    potential = { primary_culture = sinistral }
+#    
+#    out_on_limb_mission = {
+#        icon = alinor_palace
+#        position = 2 
+#        required_missions = { all_thats_left_mission } 
+#
+#        trigger = {
+#            num_of_allies = 2
+#			any_ally = {
+#				primary_culture = altmer
+#				num_of_owned_provinces_with = {
+#					value = 20
+#					OR = {
+#						region = summerset_lr
+#						region = auridon_lr
+#					}
+#				}
+#				has_opinion = {
+#					who = ROOT
+#					value = 150
+#				}
+#			}
+#			num_of_explorers = 1
+#        }
+#        
+#        effect = {
+#            pyandonea_14_la = {
+#				limit = {
+#					NOT = { is_claim = ROOT }
+#					NOT = { is_core = ROOT }
+#				}
+#				add_claim = ROOT
+#			}
+#			add_country_modifier = {
+#				name = "sin_mi_allies_alinor"
+#				duration = 9125
+#			}
+#        }
+#    }
+#	
+#	pyandonean_ports_mission = {
+#        icon = abbarbas
+#        position = 3 
+#        required_missions = { out_on_limb_mission } 
+#
+#        provinces_to_highlight = {
+#            province_id = 2089			#Fenna
+#			NOT = { owned_by = ROOT }
+#        }
+#    
+#        trigger = {
+#            owns_core_province = 2089
+#			num_of_owned_provinces_with = {
+#				value = 5
+#				OR = {
+#						region = summerset_lr
+#						region = auridon_lr
+#				}
+#			}
+#			any_ally = {
+#				primary_culture = maormer
+#				num_of_owned_provinces_with = {
+#					value = 10
+#					region = pyandonea_lr
+#				}
+#				has_opinion = {
+#					who = ROOT
+#					value = 150
+#				}
+#			}
+#        }
+#        
+#        effect = {
+#            add_country_modifier = {
+#				name = "sin_mi_allies_pyand"
+#				duration = 9125
+#			}
+#        }
+#    }
+#	
+#	es_conquest_of_morrowind_lr_sin = {
+#		icon = morrowind_mission
+#		position = 11
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1002
+#			owns_core_province = 990
+#			owns_core_province = 3373
+#			owns_core_province = 958
+#			owns_core_province = 3904
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1002		
+#			province_id = 990
+#			province_id = 3373
+#			province_id = 958
+#			province_id = 3904
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_morrowind_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = morrowind_lr
+#			region = deshaan_lr
+#			region = velothi_mountains_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#	es_conquest_of_black_marsh_lr_sin = {
+#		icon = black_marsh_mission
+#		position = 12
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1087		
+#			owns_core_province = 1098
+#			owns_core_province = 1075
+#			owns_core_province = 1069
+#			owns_core_province = 1064
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1087		
+#			province_id = 1098
+#			province_id = 1075
+#			province_id = 1069
+#			province_id = 1064
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_black_marsh_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = black_marsh_lr
+#			region = shadowfen_lr
+#			region = murkmire_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#	es_conquest_of_western_cyrodiil_lr_sin = {
+#		icon = colovia_mission
+#		position = 13
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1161
+#			owns_core_province = 1144
+#			owns_core_province = 5657
+#			owns_core_province = 5616
+#			owns_core_province = 5695
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1161		
+#			province_id = 1144
+#			province_id = 5657
+#			province_id = 5616
+#			province_id = 5695
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_western_cyrodiil_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = western_cyrodiil_lr
+#			region = golden_coast_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#	es_conquest_of_eastern_cyrodiil_lr_sin = {
+#		icon = nibenay_mission
+#		position = 14
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1120
+#			owns_core_province = 1251
+#			owns_core_province = 1238
+#			owns_core_province = 6044
+#			owns_core_province = 1230
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1120		
+#			province_id = 1251
+#			province_id = 1238
+#			province_id = 6044
+#			province_id = 1230
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_eastern_cyrodiil_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = eastern_cyrodiil_lr
+#			region = valus_mountains_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#	es_conquest_of_central_cyrodiil_lr_sin = {
+#		icon = central_cyrodiil_mission
+#		position = 15
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1206
+#			owns_core_province = 1130
+#			owns_core_province = 1194
+#			owns_core_province = 5905
+#			owns_core_province = 1209
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1206		
+#			province_id = 1130
+#			province_id = 1194
+#			province_id = 5905
+#			province_id = 1209
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_central_cyrodiil_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = central_cyrodiil_lr
+#			region = jerall_mountains_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#}
+#
+#flavour_missions_5_sin = {
+#	slot = 10
+#	generic = no
+#	ai = yes
+#    has_country_shield = no
+#    potential = { primary_culture = sinistral }
+#	
+#	es_conquest_of_western_skyrim_lr_sin = {
+#		icon = northern_skyrim
+#		position = 11
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1342
+#			owns_core_province = 1306
+#			owns_core_province = 1355
+#			owns_core_province = 1275
+#			owns_core_province = 1331
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1342		
+#			province_id = 1306
+#			province_id = 1355
+#			province_id = 1275
+#			province_id = 1331
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_western_skyrim_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = reach_lr
+#			region = great_planes_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			479 = { add_core = ROOT }
+#			if = { limit = { ai = yes 479 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			479 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 479 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_eastern_skyrim_lr_sin = {
+#		icon = southern_skyrim_mission
+#		position = 12
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1319
+#			owns_core_province = 1291
+#			owns_core_province = 1268
+#			owns_core_province = 1286
+#			owns_core_province = 2924
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1319		
+#			province_id = 1291
+#			province_id = 1268
+#			province_id = 1286
+#			province_id = 2924
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_eastern_skyrim_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = rift_lr
+#			region = great_planes_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#	es_conquest_of_hgh_rock_lr_sin = {
+#		icon = high_rock_mission
+#		position = 13
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1369
+#			owns_core_province = 1391
+#			owns_core_province = 1413
+#			owns_core_province = 7019
+#			owns_core_province = 1379
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1369		
+#			province_id = 1391
+#			province_id = 1413
+#			province_id = 7019
+#			province_id = 1379
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_hgh_rock_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = high_rock_lr
+#			region = wrothgar_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#	es_conquest_of_hammerfell_lr_sin = {
+#		icon = hammerfell_mission
+#		position = 14
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 1510		
+#			owns_core_province = 1446
+#			owns_core_province = 1478
+#			owns_core_province = 6257
+#			owns_core_province = 6178
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 1510		
+#			province_id = 1446
+#			province_id = 1478
+#			province_id = 6257
+#			province_id = 6178
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#			custom_tooltip = es_conquest_of_hammerfell_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = corten_heights_lr
+#			region = dragontail_mountains_lr
+#			region = alikr_desert_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#			
+#			1501 = { add_core = ROOT }
+#			if = { limit = { ai = yes 1501 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV }  } } } }
+#			1501 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1501 } } } } }
+#		}
+#	}
+#	
+#	es_conquest_of_coldharbour_lr_sin = {
+#		icon = coldharbour_mission
+#		position = 15
+#		required_missions = { }
+#		trigger = {
+#			owns_core_province = 3188
+#			owns_core_province = 2970
+#			owns_core_province = 2710
+#			owns_core_province = 2828
+#			owns_core_province = 2915
+#		}
+#		provinces_to_highlight = {
+#		    OR = {
+#			province_id = 3188		
+#			province_id = 2970
+#			province_id = 2710
+#			province_id = 2828
+#			province_id = 2915
+#			}
+#			NOT = { owned_by = ROOT }
+#		}
+#		effect = {
+#		    custom_tooltip = es_conquest_of_coldharbour_lr_tooltip
+#		    add_prestige = 10
+#			hidden_effect = {
+#			every_province = {
+#			limit = {
+#			OR = {
+#			region = southern_coldharbour_lr
+#			region = eastern_coldharbour_lr
+#			region = western_coldharbour_lr
+#			region = northern_coldharbour_lr
+#			}
+#			is_city = yes
+#			}
+#			add_permanent_claim = ROOT
+#			}
+#			}
+#		}
+#	}
+#	
+#}
