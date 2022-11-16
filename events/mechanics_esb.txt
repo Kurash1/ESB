@@ -65,8 +65,8 @@ province_event = {
 			} 
 			province_event = { 
 				id = es_esb.6 
-				days = 1 
-				random = 1 
+				days = 3650 
+				random = 3650 
 			} 
 			custom_tooltip = es_esb.0.tt.a 
 			owner = { add_treasury = -100 } 
@@ -7785,184 +7785,185 @@ province_event = {
 	option = { 
 		name = es_esb.7.a 
 		owner = { 
-		random_owned_province = { 
-			limit = { 
-				OR = { 
-					
-						has_province_flag = auriels_bow 
-					
-						has_province_flag = auriels_shield 
-					
-						has_province_flag = azuras_star 
-					
-						has_province_flag = ebony_blade 
-					
-						has_province_flag = ebonys_mail 
-					
-						has_province_flag = hircines_ring 
-					
-						has_province_flag = chrysamere 
-					
-						has_province_flag = king_orgnums_coffer1 
-					
-						has_province_flag = king_orgnums_coffer2 
-					
-						has_province_flag = king_orgnums_coffer3 
-					
-						has_province_flag = king_orgnums_coffer4 
-					
-						has_province_flag = lords_mail 
-					
-						has_province_flag = mace_of_molag_bal 
-					
-						has_province_flag = masque_of_clavicus_vile 
-					
-						has_province_flag = mehrunes_razor 
-					
-						has_province_flag = necromancers_amulet 
-					
-						has_province_flag = ring_of_khajiit 
-					
-						has_province_flag = ring_of_namira 
-					
-						has_province_flag = ring_of_phynaster 
-					
-						has_province_flag = skeleton_key 
-					
-						has_province_flag = skull_of_corruption 
-					
-						has_province_flag = spell_breaker 
-					
-						has_province_flag = staff_of_magnus 
-					
-						has_province_flag = volendrung 
-					
-						has_province_flag = wabbajack 
-					
-						has_province_flag = warlocks_ring 
-					
-						has_province_flag = amulet_of_heartfire 
-					
-						has_province_flag = amulet_of_heartheal 
-					
-						has_province_flag = amulet_of_heartrime 
-					
-						has_province_flag = amulet_of_heartthrum 
-					
-						has_province_flag = amulet_of_usheeja 
-					
-						has_province_flag = belt_of_heartfire 
-					
-						has_province_flag = bipolarblade 
-					
-						has_province_flag = bittercup 
-					
-						has_province_flag = blood_ring 
-					
-						has_province_flag = bloodworm_helm 
-					
-						has_province_flag = boots_of_the_apostle 
-					
-						has_province_flag = bow_of_shadows 
-					
-						has_province_flag = cleaver_of_saint_felms 
-					
-						has_province_flag = crosier_of_saint_llothis 
-					
-						has_province_flag = daedric_crescent 
-					
-						has_province_flag = denstagmers_ring 
-					
-						has_province_flag = dragonbone_cuirass 
-					
-						has_province_flag = eleidons_ward 
-					
-						has_province_flag = eltonbrand 
-					
-						has_province_flag = the_seizing_of_the_erabenimsun 
-					
-						has_province_flag = fang_of_haynekhtnamet 
-					
-						has_province_flag = fists_of_randagulf 
-					
-						has_province_flag = fork_of_horripilation 
-					
-						has_province_flag = goldbrand 
-					
-						has_province_flag = heart_ring 
-					
-						has_province_flag = helm_of_oreyn_bearclaw 
-					
-						has_province_flag = helm_of_tohan 
-					
-						has_province_flag = hopesfire 
-					
-						has_province_flag = ice_blade_of_the_monarch 
-					
-						has_province_flag = keening 
-					
-						has_province_flag = mace_of_aevar_stone_singer 
-					
-						has_province_flag = mace_of_slurring 
-					
-						has_province_flag = madstone_of_the_ahemmusa 
-					
-						has_province_flag = mentors_ring 
-					
-						has_province_flag = moon_and_star 
-					
-						has_province_flag = ring_of_surroundings 
-					
-						has_province_flag = ring_of_the_wind 
-					
-						has_province_flag = robe_of_the_lich 
-					
-						has_province_flag = sanguine_rose 
-					
-						has_province_flag = saviors_hide 
-					
-						has_province_flag = scourge 
-					
-						has_province_flag = shirt_of_saint_aralor 
-					
-						has_province_flag = shoes_of_saint_rilms 
-					
-						has_province_flag = skull_crusher 
-					
-						has_province_flag = soul_ring 
-					
-						has_province_flag = spear_of_bitter_mercy 
-					
-						has_province_flag = spear_of_the_hunter 
-					
-						has_province_flag = staff_of_hasedoki 
-					
-						has_province_flag = stendarrs_hammer 
-					
-						has_province_flag = sunder 
-					
-						has_province_flag = teeth_of_the_urshilaku 
-					
-						has_province_flag = ten_pace_boots 
-					
-						has_province_flag = thong_of_zainab 
-					
-						has_province_flag = trueflame 
-					
-						has_province_flag = umbra 
-					
-						has_province_flag = vampiric_ring 
-					
-						has_province_flag = ward_of_akavir 
-					
-						has_province_flag = wings_of_the_queen_of_bats 
-					
-						has_province_flag = wraithguard 
-					
+			random_owned_province = { 
+				limit = { 
+					OR = { 
+						
+							has_province_flag = auriels_bow 
+						
+							has_province_flag = auriels_shield 
+						
+							has_province_flag = azuras_star 
+						
+							has_province_flag = ebony_blade 
+						
+							has_province_flag = ebonys_mail 
+						
+							has_province_flag = hircines_ring 
+						
+							has_province_flag = chrysamere 
+						
+							has_province_flag = king_orgnums_coffer1 
+						
+							has_province_flag = king_orgnums_coffer2 
+						
+							has_province_flag = king_orgnums_coffer3 
+						
+							has_province_flag = king_orgnums_coffer4 
+						
+							has_province_flag = lords_mail 
+						
+							has_province_flag = mace_of_molag_bal 
+						
+							has_province_flag = masque_of_clavicus_vile 
+						
+							has_province_flag = mehrunes_razor 
+						
+							has_province_flag = necromancers_amulet 
+						
+							has_province_flag = ring_of_khajiit 
+						
+							has_province_flag = ring_of_namira 
+						
+							has_province_flag = ring_of_phynaster 
+						
+							has_province_flag = skeleton_key 
+						
+							has_province_flag = skull_of_corruption 
+						
+							has_province_flag = spell_breaker 
+						
+							has_province_flag = staff_of_magnus 
+						
+							has_province_flag = volendrung 
+						
+							has_province_flag = wabbajack 
+						
+							has_province_flag = warlocks_ring 
+						
+							has_province_flag = amulet_of_heartfire 
+						
+							has_province_flag = amulet_of_heartheal 
+						
+							has_province_flag = amulet_of_heartrime 
+						
+							has_province_flag = amulet_of_heartthrum 
+						
+							has_province_flag = amulet_of_usheeja 
+						
+							has_province_flag = belt_of_heartfire 
+						
+							has_province_flag = bipolarblade 
+						
+							has_province_flag = bittercup 
+						
+							has_province_flag = blood_ring 
+						
+							has_province_flag = bloodworm_helm 
+						
+							has_province_flag = boots_of_the_apostle 
+						
+							has_province_flag = bow_of_shadows 
+						
+							has_province_flag = cleaver_of_saint_felms 
+						
+							has_province_flag = crosier_of_saint_llothis 
+						
+							has_province_flag = daedric_crescent 
+						
+							has_province_flag = denstagmers_ring 
+						
+							has_province_flag = dragonbone_cuirass 
+						
+							has_province_flag = eleidons_ward 
+						
+							has_province_flag = eltonbrand 
+						
+							has_province_flag = the_seizing_of_the_erabenimsun 
+						
+							has_province_flag = fang_of_haynekhtnamet 
+						
+							has_province_flag = fists_of_randagulf 
+						
+							has_province_flag = fork_of_horripilation 
+						
+							has_province_flag = goldbrand 
+						
+							has_province_flag = heart_ring 
+						
+							has_province_flag = helm_of_oreyn_bearclaw 
+						
+							has_province_flag = helm_of_tohan 
+						
+							has_province_flag = hopesfire 
+						
+							has_province_flag = ice_blade_of_the_monarch 
+						
+							has_province_flag = keening 
+						
+							has_province_flag = mace_of_aevar_stone_singer 
+						
+							has_province_flag = mace_of_slurring 
+						
+							has_province_flag = madstone_of_the_ahemmusa 
+						
+							has_province_flag = mentors_ring 
+						
+							has_province_flag = moon_and_star 
+						
+							has_province_flag = ring_of_surroundings 
+						
+							has_province_flag = ring_of_the_wind 
+						
+							has_province_flag = robe_of_the_lich 
+						
+							has_province_flag = sanguine_rose 
+						
+							has_province_flag = saviors_hide 
+						
+							has_province_flag = scourge 
+						
+							has_province_flag = shirt_of_saint_aralor 
+						
+							has_province_flag = shoes_of_saint_rilms 
+						
+							has_province_flag = skull_crusher 
+						
+							has_province_flag = soul_ring 
+						
+							has_province_flag = spear_of_bitter_mercy 
+						
+							has_province_flag = spear_of_the_hunter 
+						
+							has_province_flag = staff_of_hasedoki 
+						
+							has_province_flag = stendarrs_hammer 
+						
+							has_province_flag = sunder 
+						
+							has_province_flag = teeth_of_the_urshilaku 
+						
+							has_province_flag = ten_pace_boots 
+						
+							has_province_flag = thong_of_zainab 
+						
+							has_province_flag = trueflame 
+						
+							has_province_flag = umbra 
+						
+							has_province_flag = vampiric_ring 
+						
+							has_province_flag = ward_of_akavir 
+						
+							has_province_flag = wings_of_the_queen_of_bats 
+						
+							has_province_flag = wraithguard 
+						
+					} 
 				} 
-			} 
-			owner = { 
-				custom_tooltip = es_esb.7.tt 
+				owner = { 
+					custom_tooltip = es_esb.7.tt 
+				} 
 			} 
 		} 
 	} 
