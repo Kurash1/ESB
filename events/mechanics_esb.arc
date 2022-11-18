@@ -30,7 +30,7 @@ province_event = {
 		name = es_esb.0.b
 		province_event = {
 			id = es_esb.1
-			days = 1
+			days = 0
 		}
 	}
 	
@@ -84,7 +84,7 @@ defineLoc es_esb.tt1 = "You do not have the required mana availiable to choose t
 
 var costmult = 25
 
-country_event = {
+province_event = {
 	id = es_esb.1
 	title = es_esb.1.t 
 	desc = es_esb.1.d
