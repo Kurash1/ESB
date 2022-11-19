@@ -5,71 +5,69 @@ id = es_economy.0
 	title = es_economy.1.t 
 	desc = es_economy.1.d 
 	picture = SCQ_VILLAGES_eventPicture 
-hidden = yes 
-is_triggered_only = yes 
-
-option = { 
-name = es_economy.1.a 
-
-ai_chance = { 
-factor = 100 
-} 
-set_variable = { 
-which = DEV_TOTAL 
-value = 0 
-} 
-set_variable = { 
-which = CITY_COUNT 
-value = 0 
-} 
-every_country = { 
-BLA = { 
-export_to_variable = { 
-which = DEV_TOTAL_TMP 
-value = total_development 
-who = PREV 
-} 
-export_to_variable = { 
-which = CITY_COUNT_TMP 
-value = num_of_cities 
-who = PREV 
-} 
-change_variable = { 
-which = CITY_COUNT 
-which = CITY_COUNT_TMP 
-} 
-change_variable = { 
-which = DEV_TOTAL 
-which = DEV_TOTAL_TMP 
-} 
-} 
-} 
-
-BLA = { 
-divide_variable = { 
-which = DEV_TOTAL 
-which = CITY_COUNT 
-} 
-} 
-
-if = { 
-limit = { 
-check_variable = { 
-which = DEV_TOTAL 
-value = 12 
-} 
-} 
-es_reduce_development_worldwide = yes 
-} 
-else = { 
-log = "DEV_AVERAGE is less than 12" 
-} 
-
-country_event = { 
-id = es_economy.0 
-days = 9125 
-} 
-} 
+	hidden = yes 
+	is_triggered_only = yes 
+	
+	option = { 
+		name = es_economy.1.a 
+		
+		ai_chance = { 
+			factor = 100 
+		} 
+		set_variable = { 
+			which = DEV_TOTAL 
+			value = 0 
+		} 
+		set_variable = { 
+			which = CITY_COUNT 
+			value = 0 
+		} 
+		every_country = { 
+			BLA = { 
+				export_to_variable = { 
+					which = DEV_TOTAL_TMP 
+					value = total_development 
+					who = PREV 
+				} 
+				export_to_variable = { 
+					which = CITY_COUNT_TMP 
+					value = num_of_cities 
+					who = PREV 
+				} 
+				change_variable = { 
+					which = CITY_COUNT 
+					which = CITY_COUNT_TMP 
+				} 
+				change_variable = { 
+					which = DEV_TOTAL 
+					which = DEV_TOTAL_TMP 
+				} 
+			} 
+		} 
+	
+		BLA = { 
+			log = "CITY_COUNT | DEV_TOTAL = [ROOT.CITY_COUNT.GetValue] | [ROOT.DEV_TOTAL.GetValue]" 
+			divide_variable = { 
+				which = DEV_TOTAL 
+				which = CITY_COUNT 
+			} 
+			log = "DEV_AVERAGE: [ROOT.DEV_TOTAL.GetValue]" 
+		} 
+		if = { 
+			limit = { 
+				check_variable = { 
+					which = DEV_TOTAL 
+					value = 25  
+				} 
+			} 
+			every_province = { limit = { is_city = yes } if = { limit = { NOT = { development = 10 } } add_base_tax = -1 add_base_production = -1 add_base_manpower = -1 } else_if = { limit = { development = 10 NOT = { development = 20 } } add_base_tax = -2 add_base_production = -2 add_base_manpower = -2 } else_if = { limit = { development = 20 NOT = { development = 30 } } add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } else_if = { limit = { development = 30 NOT = { development = 40 } } add_base_tax = -4 add_base_production = -4 add_base_manpower = -4 } else_if = { limit = { development = 40 NOT = { development = 50 } } add_base_tax = -5 add_base_production = -5 add_base_manpower = -5 } else_if = { limit = { development = 50 NOT = { development = 60 } } add_base_tax = -6 add_base_production = -6 add_base_manpower = -6 } else_if = { limit = { development = 60 NOT = { development = 70 } } add_base_tax = -7 add_base_production = -7 add_base_manpower = -7 } else_if = { limit = { development = 70 NOT = { development = 80 } } add_base_tax = -8 add_base_production = -8 add_base_manpower = -8 } else_if = { limit = { development = 80 NOT = { development = 90 } } add_base_tax = -9 add_base_production = -9 add_base_manpower = -9 } else_if = { limit = { development = 90 NOT = { development = 100 } } add_base_tax = -10 add_base_production = -10 add_base_manpower = -10 } else_if = { limit = { development = 100 NOT = { development = 110 } } add_base_tax = -11 add_base_production = -11 add_base_manpower = -11 } }  
+		} 
+		
+		country_event = { 
+			id = es_economy.0 
+			days = 365 
+		} 
+	} 
 } 
 
 country_event = { 

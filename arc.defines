@@ -1,7 +1,34 @@
 constants = {
 	max_idea_groups = 50
+	max_dev_average = 25
 }
 functions = {
+	reduce_development_worldwide = {
+		every_province = {
+			limit = {
+				is_city = yes
+			}
+			if = {
+				limit = {
+					NOT = { development = 10 }
+				}
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+			for i = 1 to 10 = {
+				else_if = {
+					limit = {
+						development = (i*10)
+						NOT = { development = (i*10+10) }
+					}
+					add_base_tax = (-i-1)
+					add_base_production = (-i-1)
+					add_base_manpower = (-i-1)
+				}
+			}
+		}
+	}
 	set_to_global_idea_level = {
 		while = {
 			limit = {

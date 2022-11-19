@@ -27,7 +27,7 @@ on_startup = {
 		#}
 		country_event = {
 			id = es_economy.0
-			days = (25*365)
+			days = (1*365)
 		}
 		country_event = {
 			id = es_esb.4
@@ -2209,13 +2209,13 @@ on_siberian_pulse = {
 
 # country random events
 on_bi_yearly_pulse = {
-	# Development Mechanics
-	random_owned_province = {
-		limit = {
-			NOT = { has_province_modifier = dev }
-		}
-		es_change_province_developemnt = yes
-	}
+	## Development Mechanics
+	#random_owned_province = {
+	#	limit = {
+	#		NOT = { has_province_modifier = dev }
+	#	}
+	#	es_change_province_developemnt = yes
+	#}
 }
 
 on_bi_yearly_pulse_2 = {

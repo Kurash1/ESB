@@ -5,71 +5,69 @@ country_event = {
 	title = es_economy.1.t
 	desc = es_economy.1.d
 	picture = SCQ_VILLAGES_eventPicture 
-    hidden = yes
-    is_triggered_only = yes
-    
-    option = {
-        name = es_economy.1.a
-        
-        ai_chance = {
-            factor = 100
-        }
-        set_variable = {
-            which = DEV_TOTAL
-            value = 0
-        }
-        set_variable = {
-            which = CITY_COUNT
-            value = 0
-        }
-        every_country = {
-            BLA = {
-                export_to_variable = {
-                    which = DEV_TOTAL_TMP
-                    value = total_development
-                    who = PREV
-                }
-                export_to_variable = {
-                    which = CITY_COUNT_TMP
-                    value = num_of_cities
-                    who = PREV
-                }
-                change_variable = {
-                    which = CITY_COUNT
-                    which = CITY_COUNT_TMP
-                }
-                change_variable = {
-                    which = DEV_TOTAL
-                    which = DEV_TOTAL_TMP
-                }
-            }
-        }
-        
-        BLA = {
-            divide_variable = {
-                which = DEV_TOTAL
-                which = CITY_COUNT
-            }
-        }
-        
-        if = {
-            limit = {
-                check_variable = {
-                    which = DEV_TOTAL
-                    value = 12
-                }
-            }
-            es_reduce_development_worldwide = yes
-        }
-        else = {
-            log = "DEV_AVERAGE is less than 12"
-        }
-        
-        country_event = {
-            id = es_economy.0
-            days = (25*365)
-        }
-    }
+	hidden = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = es_economy.1.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		set_variable = {
+			which = DEV_TOTAL
+			value = 0
+		}
+		set_variable = {
+			which = CITY_COUNT
+			value = 0
+		}
+		every_country = {
+			BLA = {
+				export_to_variable = {
+					which = DEV_TOTAL_TMP
+					value = total_development
+					who = PREV
+				}
+				export_to_variable = {
+					which = CITY_COUNT_TMP
+					value = num_of_cities
+					who = PREV
+				}
+				change_variable = {
+					which = CITY_COUNT
+					which = CITY_COUNT_TMP
+				}
+				change_variable = {
+					which = DEV_TOTAL
+					which = DEV_TOTAL_TMP
+				}
+			}
+		}
+	
+		BLA = {
+			log = "CITY_COUNT | DEV_TOTAL = [ROOT.CITY_COUNT.GetValue] | [ROOT.DEV_TOTAL.GetValue]"
+			divide_variable = {
+				which = DEV_TOTAL
+				which = CITY_COUNT
+			}
+			log = "DEV_AVERAGE: [ROOT.DEV_TOTAL.GetValue]"
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = DEV_TOTAL
+					value = defines.constants.max_dev_average
+				}
+			}
+			defines.functions.reduce_development_worldwide
+		}
+		
+		country_event = {
+			id = es_economy.0
+			days = (1*365)
+		}
+	}
 }
 
 country_event = {
