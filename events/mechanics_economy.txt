@@ -8,12 +8,7 @@ id = es_economy.0
 	hidden = yes 
 	is_triggered_only = yes 
 	
-	option = { 
-		name = es_economy.1.a 
-		
-		ai_chance = { 
-			factor = 100 
-		} 
+	immediate = { 
 		set_variable = { 
 			which = DEV_TOTAL 
 			value = 0 
@@ -53,6 +48,20 @@ id = es_economy.0
 			} 
 			log = "DEV_AVERAGE: [ROOT.DEV_TOTAL.GetValue]" 
 		} 
+		
+		country_event = { 
+			id = es_economy.0 
+			days = 365 
+		} 
+	} 
+	
+	option = { 
+		name = es_economy.1.a 
+		
+		ai_chance = { 
+			factor = 100 
+		} 
+		
 		if = { 
 			limit = { 
 				check_variable = { 
@@ -60,13 +69,9 @@ id = es_economy.0
 					value = 25  
 				} 
 			} 
-			every_province = { limit = { is_city = yes } if = { limit = { NOT = { development = 10 } } add_base_tax = -1 add_base_production = -1 add_base_manpower = -1 } else_if = { limit = { development = 10 NOT = { development = 20 } } add_base_tax = -2 add_base_production = -2 add_base_manpower = -2 } else_if = { limit = { development = 20 NOT = { development = 30 } } add_base_tax = -3 add_base_production = -3 add_base_manpower = -3 } else_if = { limit = { development = 30 NOT = { development = 40 } } add_base_tax = -4 add_base_production = -4 add_base_manpower = -4 } else_if = { limit = { development = 40 NOT = { development = 50 } } add_base_tax = -5 add_base_production = -5 add_base_manpower = -5 } else_if = { limit = { development = 50 NOT = { development = 60 } } add_base_tax = -6 add_base_production = -6 add_base_manpower = -6 } else_if = { limit = { development = 60 NOT = { development = 70 } } add_base_tax = -7 add_base_production = -7 add_base_manpower = -7 } else_if = { limit = { development = 70 NOT = { development = 80 } } add_base_tax = -8 add_base_production = -8 add_base_manpower = -8 } else_if = { limit = { development = 80 NOT = { development = 90 } } add_base_tax = -9 add_base_production = -9 add_base_manpower = -9 } else_if = { limit = { development = 90 NOT = { development = 100 } } add_base_tax = -10 add_base_production = -10 add_base_manpower = -10 } else_if = { limit = { development = 100 NOT = { development = 110 } } add_base_tax = -11 add_base_production = -11 add_base_manpower = -11 } }  
+			every_province = { limit = { is_city = yes } if = { limit = { base_tax = 2 } add_base_tax = -1 } if = { limit = { base_tax = 5 } add_base_tax = -1 } if = { limit = { base_tax = 8 } add_base_tax = -1 } if = { limit = { base_tax = 11 } add_base_tax = -1 } if = { limit = { base_tax = 14 } add_base_tax = -1 } if = { limit = { base_tax = 17 } add_base_tax = -1 } if = { limit = { base_tax = 20 } add_base_tax = -1 } if = { limit = { base_tax = 23 } add_base_tax = -1 } if = { limit = { base_tax = 26 } add_base_tax = -1 } if = { limit = { base_tax = 29 } add_base_tax = -1 } if = { limit = { base_production = 2 } add_base_production = -1 } if = { limit = { base_production = 5 } add_base_production = -1 } if = { limit = { base_production = 8 } add_base_production = -1 } if = { limit = { base_production = 11 } add_base_production = -1 } if = { limit = { base_production = 14 } add_base_production = -1 } if = { limit = { base_production = 17 } add_base_production = -1 } if = { limit = { base_production = 20 } add_base_production = -1 } if = { limit = { base_production = 23 } add_base_production = -1 } if = { limit = { base_production = 26 } add_base_production = -1 } if = { limit = { base_production = 29 } add_base_production = -1 } if = { limit = { base_manpower = 2 } add_base_manpower = -1 } if = { limit = { base_manpower = 5 } add_base_manpower = -1 } if = { limit = { base_manpower = 8 } add_base_manpower = -1 } if = { limit = { base_manpower = 11 } add_base_manpower = -1 } if = { limit = { base_manpower = 14 } add_base_manpower = -1 } if = { limit = { base_manpower = 17 } add_base_manpower = -1 } if = { limit = { base_manpower = 20 } add_base_manpower = -1 } if = { limit = { base_manpower = 23 } add_base_manpower = -1 } if = { limit = { base_manpower = 26 } add_base_manpower = -1 } if = { limit = { base_manpower = 29 } add_base_manpower = -1 } }  
 		} 
 		
-		country_event = { 
-			id = es_economy.0 
-			days = 365 
-		} 
 	} 
 } 
 

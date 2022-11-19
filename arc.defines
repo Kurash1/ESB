@@ -8,23 +8,28 @@ functions = {
 			limit = {
 				is_city = yes
 			}
-			if = {
-				limit = {
-					NOT = { development = 10 }
+			for i = 1 to 10 = {
+				if = {
+					limit = {
+						base_tax = (i*3-1)
+					}
+					add_base_tax = -1
 				}
-				add_base_tax = -1
-				add_base_production = -1
-				add_base_manpower = -1
 			}
 			for i = 1 to 10 = {
-				else_if = {
+				if = {
 					limit = {
-						development = (i*10)
-						NOT = { development = (i*10+10) }
+						base_production = (i*3-1)
 					}
-					add_base_tax = (-i-1)
-					add_base_production = (-i-1)
-					add_base_manpower = (-i-1)
+					add_base_production = -1
+				}
+			}
+			for i = 1 to 10 = {
+				if = {
+					limit = {
+						base_manpower = (i*3-1)
+					}
+					add_base_manpower = -1
 				}
 			}
 		}

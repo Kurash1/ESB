@@ -8,12 +8,7 @@ country_event = {
 	hidden = yes
 	is_triggered_only = yes
 	
-	option = {
-		name = es_economy.1.a
-		
-		ai_chance = {
-			factor = 100
-		}
+	immediate = {
 		set_variable = {
 			which = DEV_TOTAL
 			value = 0
@@ -53,6 +48,20 @@ country_event = {
 			}
 			log = "DEV_AVERAGE: [ROOT.DEV_TOTAL.GetValue]"
 		}
+		
+		country_event = {
+			id = es_economy.0
+			days = (1*365)
+		}
+	}
+	
+	option = {
+		name = es_economy.1.a
+		
+		ai_chance = {
+			factor = 100
+		}
+		
 		if = {
 			limit = {
 				check_variable = {
@@ -63,10 +72,6 @@ country_event = {
 			defines.functions.reduce_development_worldwide
 		}
 		
-		country_event = {
-			id = es_economy.0
-			days = (1*365)
-		}
 	}
 }
 
