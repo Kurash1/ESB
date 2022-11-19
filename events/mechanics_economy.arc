@@ -69,9 +69,75 @@ country_event = {
 					value = defines.constants.max_dev_average
 				}
 			}
-			defines.functions.reduce_development_worldwide
+			every_country = {
+				country_event = {
+					id = es_economy.14
+					days = 0
+				}
+			}
 		}
 		
+	}
+}
+
+country_event = {
+	id = es_economy.14
+	title = es_economy.1.t
+	desc = es_economy.1.d
+	picture = SCQ_VILLAGES_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = es_economy.1.a
+		ai_chance = {
+			factor = 100
+		}
+		
+		for i = 1 to 9 = {
+			every_owned_province = {
+				limit = {
+					base_tax = (i*5)
+					NOT = { base_tax = (i*5+5) }
+				}
+				add_base_tax = (-i*2.5)
+			}
+		}
+		every_owned_province = {
+			limit = {
+				base_tax = 50
+			}
+			add_base_tax = -25
+		}
+		for i = 1 to 9 = {
+			every_owned_province = {
+				limit = {
+					base_production = (i*5)
+					NOT = { base_production = (i*5+5) }
+				}
+				add_base_production = (-i*2.5)
+			}
+		}
+		every_owned_province = {
+			limit = {
+				base_production = 50
+			}
+			add_base_production = -25
+		}
+		for i = 1 to 9 = {
+			every_owned_province = {
+				limit = {
+					base_manpower = (i*5)
+					NOT = { base_manpower = (i*5+5) }
+				}
+				add_base_manpower = (-i*2.5)
+			}
+		}
+		every_owned_province = {
+			limit = {
+				base_manpower = 50
+			}
+			add_base_manpower = -25
+		}
 	}
 }
 
