@@ -203,7 +203,7 @@ on_startup = {
 			add_country_modifier = { name = "crisis_time" duration = 3650 }	
 			add_country_modifier = { name = "trade_time" duration = 3650 }
 			
-			es_remove_countries_for_perfomance = yes
+			#es_remove_countries_for_perfomance = yes
 			
 			# Vvardenfell Ashlands
 			vvardenfell_lr = {
