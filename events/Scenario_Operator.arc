@@ -206,7 +206,7 @@ country_event = {
 			}
 		}
 		#Ceyatatar's Spearmen
-		p@Elenglynn
+		p@Elenglynn = {
 			owner = {
 				limit = { 
 					culture_group = high_elves_cg 
