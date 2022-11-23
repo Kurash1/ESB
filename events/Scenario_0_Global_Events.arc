@@ -22,6 +22,20 @@ country_event = {
 	}
 }
 
+defineloc es_0_scenario.2.t = "Visit from Atmora"
+defineloc es_0_scenario.2.d = "Two broken down Atmoran ships are asking to be let into the city, they are filled with half dead refugees from Atmora."
+defineloc es_0_scenario.2.a = "Is this the end of Atmora?"
+defineloc sundered_homeland = "Sundered Homenlands"
+defineloc atmoran_minority = "Atmoran minorities"
+defineloc es_0_scenario.2.b = "Let the Refugees into the city."
+defineloc es_0_scenario.2.c = "Get you swords!"
+defineloc es_0_scenario.13.t = "The Atmorans Fight back"
+defineloc es_0_scenario.13.d = "After a fierce battle on the shore your men gloriously return telling of how they killed the atmorans."
+defineloc es_0_scenario.13.a = "Great"
+defineloc es_0_scenario.14.t = "The Atmorans Flee"
+defineloc es_0_scenario.14.d = "Your scouts tell you that after seeing your professional army the Atmorans fled."
+defineloc es_0_scenario.14.a = "Great"
+defineloc es_0_scenario.2.c.tt = "The Atmorans will choose how to react."
 country_event = {
 	id = es_0_scenario.2
 	title = es_0_scenario.2.t
