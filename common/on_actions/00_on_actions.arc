@@ -22,15 +22,17 @@ on_startup = {
 			add_stability = 2
 			defines.functions.set_to_global_idea_level
 		}
-		#country_event = {
-		#	id = es_scenario_operator.1
-		#}
-		country_event = {
-			id = es_economy.0
-			days = (1*365)
-		}
-		country_event = {
+		country_event = { #Artifacts
 			id = es_esb.4
+		}
+		
+		#Bookmarks 
+		if = {
+			limit = { is_year = 57 NOT = { is_year = 58 } }
+			country_event = {
+				id = es_scenario_operator.1
+				days = 0
+			}
 		}
 	}
 
@@ -2412,6 +2414,10 @@ on_five_year_pulse_2 = {
 }
 
 on_five_year_pulse_3 = {
+	country_event = { #Global Dev Destruction
+		id = es_economy.0
+		days = 0
+	}
 }
 
 on_five_year_pulse_4 = {

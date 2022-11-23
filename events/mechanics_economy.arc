@@ -48,11 +48,6 @@ country_event = {
 			}
 			log = "DEV_AVERAGE: [ROOT.DEV_TOTAL.GetValue]"
 		}
-		
-		country_event = {
-			id = es_economy.0
-			days = (1*365)
-		}
 	}
 	
 	option = {

@@ -6,44 +6,29 @@ country_event = {
 	title = es_1_scenario.1.t
 	desc = es_1_scenario.1.d
 	picture = ES_THRONEROOM_1_eventPicture	
-	
+	is_triggered_only = yes
 	fire_only_once = yes
-	
-	trigger = {
-	    tag = BLA
-		NOT = { is_year = 102 }
-   }
-
-	mean_time_to_happen = {
-		days = 3650		
-	}
 	
 	immediate = {
 		#Sunset of Merethic Era
-		p@Alinor, p@Imperial_City, p@Sentinel, p@Alysinetta, p@Brega = { 
+		p@Alinor, p@Imperial_City, p@Sentinel, p@Alysinetta, p@Nilheim = { 
 			owner = {
-				limit = { 
-					OR = { 
-						culture_group = high_elves_cg 
-						culture_group = snow_elves_cg 
-					}
-				} 
 				country_event = { 
 					id = es_1_scenario.1 
-					days = 389 
-					random = 3125 
+					days = 0 
 				}
 			}
 		}
 		#Our Old Republic
 		p@Raven_Rock = {
-			limit = {
-				culture_group = high_elves_cg
-			}
-			country_event = {
-				id = es_1_scenario.2
-				days = 390
-				random = 3325
+			owner = {
+				limit = {
+					culture_group = high_elves_cg
+				}
+				country_event = {
+					id = es_1_scenario.2
+					days = 0
+				}
 			}
 		}
 		#Mad Ruler
@@ -54,37 +39,36 @@ country_event = {
 				} 
 				country_event = { 
 					id = es_1_scenario.3 
-					days = 391 
-					random = 3525 
+					days = 0
 				}
 			}
 		}
 		#Conquest of Weye
-		p@Imperial_City = {
-			owner = {
-				limit = { 
-					culture_group = high_elves_cg 
-				} 
-				country_event = { 
-					id = es_1_scenario.4 
-					days = 392 
-					random = 3725 
-				}
-			}
-		}
+		#p@Imperial_City = {
+		#	owner = {
+		#		limit = { 
+		#			culture_group = high_elves_cg 
+		#		} 
+		#		country_event = { 
+		#			id = es_1_scenario.4 
+		#			days = 392 
+		#			random = 3725 
+		#		}
+		#	}
+		#}
 		#Conquest of Western Colovia
-		p@Imperial_City = { 
-			owner = {
-				limit = { 
-					culture_group = high_elves_cg 
-				} 
-				country_event = { 
-					id = es_1_scenario.5 
-					days = 393 
-					random = 5475 
-				}
-			} 
-		}
+		#p@Imperial_City = { 
+		#	owner = {
+		#		limit = { 
+		#			culture_group = high_elves_cg 
+		#		} 
+		#		country_event = { 
+		#			id = es_1_scenario.5 
+		#			days = 393 
+		#			random = 5475 
+		#		}
+		#	} 
+		#}
 		#The Winterborn Clan
 		p@Jehanna = {
 			owner = {
@@ -93,8 +77,7 @@ country_event = {
 				} 
 				country_event = { 
 					id = es_1_scenario.6 
-					days = 394 
-					random = 5575 
+					days = 0
 				}
 			}
 		}
@@ -102,12 +85,12 @@ country_event = {
 		#The Isle of Artaeum
 		every_country = {
 			limit = { 
-				capital_scope = { continent = Tamriel } 
+				culture_group = half_blood_cg
 			} 
 			country_event = { 
 				id = es_0_scenario.1 
-				days = 395 
-				random = 9125 
+				days = 19years
+				random = 2years
 			}
 		}
 		#Visit from Atmora
@@ -128,8 +111,7 @@ country_event = {
 			}
 			country_event = { 
 				id = es_0_scenario.2 
-				days = 396 
-				random = 9325 
+				days = 0
 			}
 		}
 	}
