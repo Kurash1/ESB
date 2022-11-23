@@ -104,9 +104,9 @@ country_event = {
 		}
 		every_owned_province = {
 			limit = {
-				base_tax = 50
+				base_tax = (10*5)
 			}
-			add_base_tax = -25
+			add_base_tax = (-10*2.5)
 		}
 		for i = 1 to 9 = {
 			every_owned_province = {
@@ -362,39 +362,39 @@ country_event = {
 # es_economy.10.d: "Rumours coming from the northern countries do not lie. More and more snowstorms rise, blocking the sun for whole weeks. Even here we can feel the rapid temperature decrease. Snow now lays on the ground for the whole spring and begins to disappear only at the beginning of summer, turning the once fertile soil into wastelands. Animals also start to move to other areas, leaving hunters and fishermen without prey."
 # es_economy.10.a: "Looks like the new Ice Age is on the verge."
 # es_economy.10.a.tt: "§REvery our owned province will loose some development!§!"
-
-country_event = {
-	id = es_economy.10
-	title = es_economy.10.t
-	desc = es_economy.10.d
-	picture = ES_ICE_AGE_1_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "es_economy.1.a"
-		custom_tooltip = es_economy.10.a.tt
-	}
-}
-
+#
+#country_event = {
+#	id = es_economy.10
+#	title = es_economy.10.t
+#	desc = es_economy.10.d
+#	picture = ES_ICE_AGE_1_eventPicture
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = "es_economy.1.a"
+#		custom_tooltip = es_economy.10.a.tt
+#	}
+#}
+#
 # is_year = 512
 # es_economy.11.t: "A Year without Sun"
 # es_economy.11.d: "A volcanic eruption has sent tons of ash and dust into the sky, covering the surface of Nirn and obscuring the sun’s rays. The whole of the planet is becoming a colder place - snowfalls in the deserts of Elsweyr and Po Tun. Harvests are failing under layers of asphyxiating ash. Our military experts to handle food riots in the coming days, but what will happen when we can no longer feed our troops?"
 # es_economy.11.a: "Hard times waiting for us ahead."
-
-country_event = {
-	id = es_economy.11
-	title = es_economy.11.t
-	desc = es_economy.11.d
-	picture = ES_VOLCANIC_SMOKE_eventPicture
-	
-	is_triggered_only = yes
-
-	option = {
-		name = "es_economy.11.a"
-		custom_tooltip = es_economy.10.a.tt
-		add_stability = -1
-	}
-}
-
+#
+#country_event = {
+#	id = es_economy.11
+#	title = es_economy.11.t
+#	desc = es_economy.11.d
+#	picture = ES_VOLCANIC_SMOKE_eventPicture
+#	
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = "es_economy.11.a"
+#		custom_tooltip = es_economy.10.a.tt
+#		add_stability = -1
+#	}
+#}
+#
 # + Thrassian Plague is in event file Scenario_26_Thrassian_Plague
