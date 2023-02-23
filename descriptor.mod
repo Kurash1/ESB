@@ -41,5 +41,5 @@ tags={
 	"New Nations"
 }
 name="ESB"
-supported_version="1.34.4"
+supported_version="1.34.*"
 remote_file_id="2836520933"
