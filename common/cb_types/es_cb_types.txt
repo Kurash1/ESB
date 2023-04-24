@@ -1,11 +1,15 @@
 #cb_gn_empire = {
 #	valid_for_subject = no
-#
-#	prerequisites = {
+#	
+#	prerequisites_self = {
 #		NOT = { has_country_modifier = daedric_invasion }
+#		is_great_power = yes
+#	}
+#	
+#	prerequisites = {
+#		
 #		NOT = { truce_with = FROM }
 #		NOT = { alliance_with = FROM }
-#		is_great_power = yes
 #		FROM = { is_great_power = yes }
 #	}
 #
@@ -14,14 +18,17 @@
 
 cb_native_reservation = {
 	valid_for_subject = no
-
+	
+	prerequisites_self = {
+		 NOT = { government = native }
+	}
+	
 	prerequisites = {
-	    NOT = { government = native }
 		NOT = { truce_with = FROM }
 		NOT = { alliance_with = FROM }
 		FROM = {
-		is_neighbor_of = ROOT
-		government = native
+			is_neighbor_of = ROOT
+			government = native
 		}
 	}
 
@@ -30,14 +37,17 @@ cb_native_reservation = {
 
 cb_vassal_annex = {
 	valid_for_subject = yes
-
+	
+	prerequisites_self = {
+		 is_revolution_target = no
+		 is_subject = yes
+	}
+	
 	prerequisites = {
 		is_neighbor_of = FROM
-		is_subject = yes
 		FROM = {
 			is_subject = yes
 		}
-		is_revolution_target = no
 	}
 	
 	attacker_disabled_po = {
@@ -61,16 +71,19 @@ cb_es_scenario = {
 
 cb_es_ayleid_purification = {
 	valid_for_subject = no
-
-	prerequisites = {
-	    NOT = { culture_group = high_elves_cg }
-	    OR = {
-		tag = ALE
-		tag = ORD
+	
+	prerequisites_self = {
+		NOT = { culture_group = high_elves_cg }
+		OR = {
+			tag = TAE
+			tag = ORD
 		}
+	}
+	
+	prerequisites = {
 		FROM = {
-		is_neighbor_of = ROOT
-		primary_culture = ayleid
+			is_neighbor_of = ROOT
+			primary_culture = ayleid
 		}
 	}
 
@@ -79,27 +92,30 @@ cb_es_ayleid_purification = {
 
 cb_es_purification = {
 	valid_for_subject = no
-
-	prerequisites = {
-	    OR = {
-		culture_group = cyrodiil_cg
-		culture_group = yokudo_redguard_cg
-		culture_group = northern_cg
-		culture_group = half_blood_cg
-		culture_group = imga_cg
-		culture_group = transpandomaic_cg
-		culture_group = marsh_men_cg
+	
+	prerequisites_self = {
+		OR = {
+			culture_group = cyrodiil_cg
+			culture_group = yokudo_redguard_cg
+			culture_group = northern_cg
+			culture_group = half_blood_cg
+			culture_group = imga_cg
+			culture_group = transpandomaic_cg
+			culture_group = marsh_men_cg
 		}
 		tag = ORD
+	}
+
+	prerequisites = {
 		FROM = {
-		is_neighbor_of = ROOT
-		NOT = { culture_group = cyrodiil_cg }
-		NOT = { culture_group = yokudo_redguard_cg }
-		NOT = { culture_group = northern_cg }
-		NOT = { culture_group = half_blood_cg }
-		NOT = { culture_group = imga_cg }
-		NOT = { culture_group = transpandomaic_cg }
-		NOT = { culture_group = marsh_men_cg }
+			is_neighbor_of = ROOT
+			NOT = { culture_group = cyrodiil_cg }
+			NOT = { culture_group = yokudo_redguard_cg }
+			NOT = { culture_group = northern_cg }
+			NOT = { culture_group = half_blood_cg }
+			NOT = { culture_group = imga_cg }
+			NOT = { culture_group = transpandomaic_cg }
+			NOT = { culture_group = marsh_men_cg }
 		}
 	}
 
@@ -108,10 +124,13 @@ cb_es_purification = {
 
 cb_es_nordic_feud = {
 	valid_for_subject = no
+	
+	prerequisites_self = {
+		has_country_flag = es_12_nordic_feud_flag
+		culture_group = northern_cg
+	}
 
 	prerequisites = {
-	    has_country_flag = es_12_nordic_feud_flag
-		culture_group = northern_cg
 		FROM = {
 		    is_neighbor_of = ROOT
 			culture_group = northern_cg
@@ -123,9 +142,12 @@ cb_es_nordic_feud = {
 
 cb_es_tribal_war = {
 	valid_for_subject = no
+	
+	prerequisites_self = {
+		culture_group = minotaur_cg
+	}
 
 	prerequisites = {
-		culture_group = minotaur_cg
 		FROM = {
 		    is_neighbor_of = ROOT
 			culture_group = minotaur_cg
@@ -137,9 +159,12 @@ cb_es_tribal_war = {
 
 cb_es_witch_hunting = {
 	valid_for_subject = no
-
-	prerequisites = {
+	
+	prerequisites_self = {
 		has_country_flag = es_magic_persecution_flag
+	}
+	
+	prerequisites = {
 		FROM = {
 		    has_country_flag = es_magic_nation_flag
 		}
@@ -150,9 +175,12 @@ cb_es_witch_hunting = {
 
 cb_es_daedric_invasion = {
 	valid_for_subject = no
-
-	prerequisites = {
+	
+	prerequisites_self = {
 		has_country_modifier = daedric_invasion
+	}
+	
+	prerequisites = {
 		OR = {
 		FROM = { is_neighbor_of = ROOT }
 		AND = {
@@ -179,17 +207,15 @@ cb_es_daedric_invasion = {
 
 cb_es_slave_raid = {
 	valid_for_subject = no
-
-	prerequisites = {
-		ai = no
+	
+	prerequisites_self = {
 		capital_scope = { superregion = cyrodiil_superregion }
 		culture_group = high_elves_cg
+	}
+
+	prerequisites = {
 		FROM = { 
-			OR = {
-				culture_group = cyrodiil_cg
-				culture_group = marsh_cg
-				culture_group = khajiiti_cg
-			}
+			culture_group = cyrodiil_cg
 			is_neighbor_of = ROOT 
 		}
 	}
@@ -199,10 +225,13 @@ cb_es_slave_raid = {
 
 cb_become_elector_of_hre = {
 	valid_for_subject = no
-
-	prerequisites = {
+	
+	prerequisites_self = {
 		is_part_of_hre = yes
 		is_elector = no
+	}
+	
+	prerequisites = {
 		FROM = {
 			is_elector = yes
 		}
@@ -213,9 +242,12 @@ cb_become_elector_of_hre = {
 
 cb_tsaesci_hunger = {
 	valid_for_subject = yes
-
-	prerequisites = {
+	
+	prerequisites_self = {
 		primary_culture = tsaesci
+	}
+	
+	prerequisites = {
 		FROM = {
 			is_neighbor_of = ROOT
 		}
@@ -225,10 +257,14 @@ cb_tsaesci_hunger = {
 }
 
 cb_fight_dragon_cultists = {
-	prerequisites = {
-		has_global_flag = war_against_cult_of_dragons_global_flag
+	valid_for_subject = no
+	
+	prerequisites_self = {
 		culture_group = northern_cg
 		NOT = { religion = dragon_cult }
+	}
+	
+	prerequisites = {
 		FROM = {
 			is_neighbor_of = ROOT
 			religion = dragon_cult
@@ -239,9 +275,11 @@ cb_fight_dragon_cultists = {
 }
 
 cb_fight_nords = {
-	prerequisites = {
-		has_global_flag = war_against_nords_global_flag
+	prerequisites_self = {
 		primary_culture = reachmen
+	}
+
+	prerequisites = {
 		FROM = {
 			is_neighbor_of = ROOT
 			primary_culture = nord
@@ -253,11 +291,13 @@ cb_fight_nords = {
 
 cb_pte_lift_excommunication = {
 	valid_for_subject = no
-
-	prerequisites = {
-		ai = no
+	
+	prerequisites_self = {
 		religion = tribunal_pantheon
 		is_excommunicated = yes
+	}
+
+	prerequisites = {
 		FROM = {
 			religion = tribunal_pantheon
 			is_papal_controller = yes
@@ -286,9 +326,12 @@ cb_pte_lift_excommunication = {
 
 cb_pte_protect_religious_bretheren = {
 	valid_for_subject = no
-
-	prerequisites = {
+	
+	prerequisites_self = {
 		is_defender_of_faith = yes
+	}
+	
+	prerequisites = {
 		religion_group = FROM
 		NOT = { religion = FROM }
 		OR = {
@@ -325,7 +368,6 @@ cb_pte_liberation = {
 	prerequisites = {
 		has_opinion_modifier = {
 			who = FROM
-			# Audax Validator "." Ignore_ALL
 			modifier = aggressive_expansion
 			value = -35
 		}
@@ -362,4 +404,86 @@ cb_ruler_revenge = {
 		po_subjugate_vassal
 	}
 	war_goal = ruler_revenge_war_goal
+}
+
+cb_reclaim_lost_lands = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	
+	prerequisites_self = {
+		primary_culture = sload
+	}
+	
+	prerequisites = {
+		FROM = {
+			is_neighbor_of = ROOT
+			primary_culture = altmer
+			any_province = {
+				superregion = summerset_islands_superregion
+			}
+		}
+	}
+
+	attacker_disabled_po = {
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+		po_change_religion
+		po_join_empire
+		po_transfer_vassals
+	}
+	war_goal = reclaim_lost_lands_war_goal
+}
+
+cb_tribal_hegemony_valenwood = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		OR = {
+			primary_culture = bosmer
+			primary_culture = wood_orsimer
+			primary_culture = imga
+			primary_culture = centaur
+			primary_culture = hollow
+		}
+	}
+
+	prerequisites = {
+		FROM = { 
+			OR = {
+				primary_culture = bosmer
+				primary_culture = wood_orsimer
+				primary_culture = imga
+				primary_culture = centaur
+				primary_culture = hollow
+			}
+		}
+	}
+
+	war_goal = es_tribal_hegemony
+}
+
+cb_tribal_hegemony_elseweyr = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		OR = {
+			culture_group = khajiiti_cg
+			tag = HOW
+			tag = TEN
+		}
+	}
+
+	prerequisites = {
+		FROM = { 
+			OR = {
+				culture_group = khajiiti_cg
+				tag = HOW
+				tag = TEN
+			}
+		}
+	}
+
+	war_goal = es_tribal_hegemony
 }

@@ -1,7 +1,7 @@
 celestial_apprentice = {
 	technology_cost = -0.05
 	available_province_loot = 0.25
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_1
 	}
@@ -14,7 +14,7 @@ celestial_apprentice = {
 celestial_atronach = {
 	mercenary_manpower = 0.10
 	global_regiment_recruit_speed = -0.1
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_2
 	}
@@ -27,7 +27,7 @@ celestial_atronach = {
 celestial_lady = {
 	improve_relation_modifier = 0.25
 	diplomatic_reputation = 0.5
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_3
 	}
@@ -40,7 +40,7 @@ celestial_lady = {
 celestial_lord = {
 	discipline = 0.05
 	army_tradition_decay = -0.01
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_4
 	}
@@ -53,7 +53,7 @@ celestial_lord = {
 celestial_lover = {
 	global_manpower_modifier = 0.1
 	reinforce_speed = 0.1
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_5
 	}
@@ -66,7 +66,7 @@ celestial_lover = {
 celestial_mage = {
 	fire_damage = 0.10
 	shock_damage_received = -0.10
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_6
 	}
@@ -79,7 +79,7 @@ celestial_mage = {
 celestial_ritual = {
 	global_unrest = -1
 	production_efficiency = 0.10
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_7
 	}
@@ -92,7 +92,7 @@ celestial_ritual = {
 celestial_serpent = {
 	global_tax_modifier = 0.10
 	land_morale = 0.10
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_8
 		NOT = { stability = 1 }
@@ -106,7 +106,7 @@ celestial_serpent = {
 celestial_shadow = {
 	spy_offence = 0.10
 	global_spy_defence = 0.10
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_9
 	}
@@ -119,7 +119,7 @@ celestial_shadow = {
 celestial_steed = {
 	envoy_travel_time = -0.25
 	movement_speed = 0.10
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_10
 	}
@@ -132,7 +132,7 @@ celestial_steed = {
 celestial_thief = {
 	vassal_income = 0.1
 	mercenary_cost = -0.10
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_11
 	}
@@ -145,7 +145,7 @@ celestial_thief = {
 celestial_tower = {
 	defensiveness = 0.10
 	build_cost = -0.10
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_12
 	}
@@ -158,7 +158,7 @@ celestial_tower = {
 celestial_warrior = {
 	infantry_power = 0.10
 	cavalry_power = 0.10
-	allow = {
+	potential = {
 		religion = celestials
 		# has_country_flag = deity_flag_13
 	}
