@@ -1,4 +1,4 @@
-version="2.0.6"
+version="2.0.7"
 picture="thumbnail.png"
 replace_path="common/countries"
 replace_path="common/bookmarks"
@@ -41,5 +41,5 @@ tags={
 	"New Nations"
 }
 name="ESB"
-supported_version="1.34.*"
+supported_version="1.35.*"
 remote_file_id="2836520933"

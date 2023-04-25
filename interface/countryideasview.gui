@@ -64,7 +64,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "unique_ideas_idea_title"
-			position = { x = 85 y = 128 }
+			position = { x = 100 y = 128 }
 			textureFile = ""
 			font = "vic_22"
 			borderSize = {x = 4 y = 4}	
@@ -415,7 +415,7 @@ guiTypes = {
 		{
 			name ="abandon_idea_button"
 			quadTextureSprite= "GFX_abandon_idea"
-			position = { x= 203 y = 5 }
+			position = { x= 99999 y = 5 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_ideas"
 		}
@@ -650,6 +650,7 @@ guiTypes = {
 			spriteType = "GFX_idea_empty"
 			position = { x= 9 y = 11 }
 			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes			  
 		}		
 		
 		iconType =
@@ -670,6 +671,7 @@ guiTypes = {
 			maxWidth = 280
 			maxHeight = 32
 			format = centre
+			alwaystransparent = yes			  
 		}	
 
 		iconType =

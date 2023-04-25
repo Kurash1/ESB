@@ -299,7 +299,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "amount"
-			position = { x = 5 y = 22 }
+			position = { x = 60 y = 22 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -367,7 +367,7 @@ guiTypes = {
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
 			text = ""	
-			maxWidth = 36
+			maxWidth = 50
 			maxHeight = 20	
 			format = center
 			alwaystransparent = yes
@@ -614,7 +614,7 @@ guiTypes = {
 		
 		checkboxType = {
 			name = "build_grain_depot"
-			position = { x = 325 y = 32 }
+			position = { x = 321 y = 32 }
 			quadTextureSprite = "GFX_building_default" #Placeholder, real sprite is decided by game (based on button name).
 		}
 		
@@ -1646,14 +1646,6 @@ guiTypes = {
 			maxHeight = 18
 			text = "2000¤"	
 		}
-
-		checkboxType = {
-			name = "build_custom_interaction_building"
-			position = { x = 345 y = 129  }
-			quadTextureSprite = "GFX_courthouse_muslimgfx" #Placeholder, real sprite is decided by game (based on button name).
-		}
-				
-		
 
 		iconType = {
 			name = "current_building"
