@@ -1,0 +1,2249 @@
+reachman_group = {
+	flags_with_emblem_percentage = 0
+	flag_emblem_index_range = {
+		1
+		18
+	}
+	center_of_religion = 209
+	ai_will_propagate_through_trade = yes
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	religious_schools = {
+		alrabeg_school = {
+			potential_invite_scholar = {
+				religion = old_gods_cult
+				knows_of_scholar_country_capital_trigger = yes
+			}
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = {
+					who = FROM
+					value = 150
+				}
+				NOT = {
+					has_country_modifier = alrabeg_school_modifier
+				}
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+			on_invite_scholar = {
+				adm_power_cost = 100
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = {
+					name = alrabeg_school_modifier
+					duration = 7300
+				}
+			}
+			invite_scholar_modifier_display = alrabeg_school_modifier
+			picture = "GFX_icon_alrabeg_school"
+			discipline = 0.05
+		}
+		storihbeg_school = {
+			potential_invite_scholar = {
+				religion = old_gods_cult
+				knows_of_scholar_country_capital_trigger = yes
+			}
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = {
+					who = FROM
+					value = 150
+				}
+				NOT = {
+					has_country_modifier = storihbeg_school_modifier
+				}
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+			on_invite_scholar = {
+				adm_power_cost = 100
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = {
+					name = storihbeg_school_modifier
+					duration = 7300
+				}
+			}
+			invite_scholar_modifier_display = storihbeg_school_modifier
+			picture = "GFX_icon_storihbeg_school"
+			shock_damage = 0.10
+		}
+		uricanbeg_school = {
+			potential_invite_scholar = {
+				religion = old_gods_cult
+				knows_of_scholar_country_capital_trigger = yes
+			}
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = {
+					who = FROM
+					value = 150
+				}
+				NOT = {
+					has_country_modifier = uricanbeg_school_modifier
+				}
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+			on_invite_scholar = {
+				adm_power_cost = 100
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = {
+					name = uricanbeg_school_modifier
+					duration = 7300
+				}
+			}
+			invite_scholar_modifier_display = uricanbeg_school_modifier
+			picture = "GFX_icon_uricanbeg_school"
+			land_forcelimit_modifier = 0.1
+		}
+		gulibeg_school = {
+			potential_invite_scholar = {
+				religion = old_gods_cult
+				knows_of_scholar_country_capital_trigger = yes
+			}
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = {
+					who = FROM
+					value = 150
+				}
+				NOT = {
+					has_country_modifier = gulibeg_school_modifier
+				}
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+			on_invite_scholar = {
+				adm_power_cost = 100
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = {
+					name = gulibeg_school_modifier
+					duration = 7300
+				}
+			}
+			invite_scholar_modifier_display = gulibeg_school_modifier
+			picture = "GFX_icon_gulibeg_school"
+			recover_army_morale_speed = 0.05
+		}
+		hrokkibeg_school = {
+			potential_invite_scholar = {
+				religion = old_gods_cult
+				knows_of_scholar_country_capital_trigger = yes
+			}
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = {
+					who = FROM
+					value = 150
+				}
+				NOT = {
+					has_country_modifier = hrokkibeg_school_modifier
+				}
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+			on_invite_scholar = {
+				adm_power_cost = 100
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = {
+					name = hrokkibeg_school_modifier
+					duration = 7300
+				}
+			}
+			invite_scholar_modifier_display = hrokkibeg_school_modifier
+			picture = "GFX_icon_hrokkibeg_school"
+			infantry_power = 0.10
+		}
+		hagraven_school = {
+			potential_invite_scholar = {
+				religion = old_gods_cult
+				knows_of_scholar_country_capital_trigger = yes
+			}
+			can_invite_scholar = {
+				adm_power_cost = 50
+				reverse_has_opinion = {
+					who = FROM
+					value = 150
+				}
+				NOT = {
+					has_country_modifier = hagraven_school_modifier
+				}
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+			}
+			on_invite_scholar = {
+				adm_power_cost = 100
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = {
+					name = hagraven_school_modifier
+					duration = 7300
+				}
+			}
+			invite_scholar_modifier_display = hagraven_school_modifier
+			picture = "GFX_icon_hagraven_school"
+			free_leader_pool = 1
+		}
+	}
+	old_gods_cult = {
+		color = {
+			239
+			110
+			217
+		}
+		icon = 22
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			advisor_cost = -0.25
+			army_tradition = 0.5
+		}
+		country_as_secondary = {
+			advisor_cost = -0.25
+			army_tradition = 0.5
+		}
+		province = {
+			local_missionary_strength = -0.010
+		}
+		heretic = {
+			OLD_GODS_CULT_HERETIC
+		}
+		ancestors = yes
+	}
+}
+nalonga_group = {
+	flags_with_emblem_percentage = 0
+	flag_emblem_index_range = {
+		1
+		18
+	}
+	center_of_religion = 209
+	ai_will_propagate_through_trade = yes
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	ten_dread_kings = {
+		color = {
+			202
+			230
+			59
+		}
+		icon = 8
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			manpower_in_true_faith_provinces = 0.10
+			war_exhaustion = -0.03
+		}
+		country_as_secondary = {
+			manpower_in_true_faith_provinces = 0.10
+			war_exhaustion = -0.03
+		}
+		province = {
+			local_missionary_strength = -0.03
+		}
+		uses_church_power = yes
+		aspects = {
+			malice_aspect
+			violence_aspect
+			despair_aspect
+			regret_aspect
+			agony_aspect
+			madness_aspect
+			undeath_aspect
+			tyranny_aspect
+			corruption_aspect
+			doom_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			KHAJIITI_HERETIC
+		}
+	}
+}
+bosmer_group = {
+	flags_with_emblem_percentage = 0
+	flag_emblem_index_range = {
+		1
+		18
+	}
+	center_of_religion = 209
+	ai_will_propagate_through_trade = yes
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	bosmer_pantheon = {
+		color = {
+			75
+			55
+			26
+		}
+		icon = 4
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			land_attrition = -0.25
+			garrison_size = 0.25
+		}
+		country_as_secondary = {
+			land_attrition = -0.25
+			garrison_size = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		heretic = {
+			BOSMER_HERETIC
+		}
+	}
+	wilderking = {
+		color = {
+			193
+			255
+			211
+		}
+		icon = 4
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			land_attrition = -0.25
+			garrison_size = 0.25
+		}
+		country_as_secondary = {
+			land_attrition = -0.25
+			garrison_size = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		heretic = {
+			BOSMER_HERETIC
+		}
+	}
+}
+polytheistic_group = {
+	flags_with_emblem_percentage = 0
+	flag_emblem_index_range = {
+		1
+		18
+	}
+	center_of_religion = 209
+	ai_will_propagate_through_trade = yes
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	nedic_pantheon = {
+		color = {
+			241
+			121
+			121
+		}
+		icon = 92
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			production_efficiency = 0.15
+			global_unrest = -1
+		}
+		allowed_center_conversion = {
+			meridia_cult
+			mehrunes_dagon_cult
+			molag_bal_cult
+			hermeus_mora_cult
+			hircine_cult
+			sheogorath_cult
+			nocturnal_cult
+			azura_cult
+			boethiah_cult
+			clavicus_vile_cult
+			malacath_cult
+			jyggalag_cult
+			mephala_cult
+			namira_cult
+			peryite_cult
+			sanguine_cult
+			vaermina_cult
+		}
+		will_get_center = {
+			any_owned_province = {
+				OR = {
+					religion = meridia_cult
+					religion = mehrunes_dagon_cult
+					religion = molag_bal_cult
+					religion = hermeus_mora_cult
+					religion = hircine_cult
+					religion = sheogorath_cult
+					religion = nocturnal_cult
+					religion = azura_cult
+					religion = boethiah_cult
+					religion = clavicus_vile_cult
+					religion = malacath_cult
+					religion = jyggalag_cult
+					religion = mephala_cult
+					religion = namira_cult
+					religion = peryite_cult
+					religion = sanguine_cult
+					religion = vaermina_cult
+					religion = eight_divines
+				}
+				is_in_capital_area = yes
+				is_reformation_center = no
+			}
+		}
+		country_as_secondary = {
+			production_efficiency = 0.15
+			global_unrest = -1
+		}
+		province = {
+			local_governing_cost = -0.25
+		}
+		personal_deity = yes
+		heretic = {
+			NEDIC_PANTHEON_HERETIC
+		}
+	}
+	keptu_pantheon = {
+		color = {
+			170
+			50
+			50
+		}
+		icon = 22
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			development_cost = -0.1
+			technology_cost = -0.1
+		}
+		allowed_center_conversion = {
+		}
+		will_get_center = {
+		}
+		country_as_secondary = {
+			development_cost = -0.05
+			technology_cost = -0.05
+		}
+		province = {
+			local_unrest = -1
+		}
+		personal_deity = yes
+		heretic = {
+			KEPTU_PANTHEON_HERETIC
+		}
+	}
+	snow_elves_pantheon = {
+		color = {
+			230
+			222
+			100
+		}
+		icon = 2
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			religious_unity = 0.25
+			province_warscore_cost = -0.25
+		}
+		country_as_secondary = {
+			religious_unity = 0.25
+			province_warscore_cost = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		heretic = {
+			SNOW_ELVES_PANTHEON_HERETIC
+		}
+		misguided_heretic = yes
+	}
+	nordic_pantheon = {
+		color = {
+			77
+			145
+			138
+		}
+		icon = 3
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			land_forcelimit_modifier = 0.25
+			global_regiment_recruit_speed = -0.25
+		}
+		country_as_secondary = {
+			land_forcelimit_modifier = 0.25
+			global_regiment_recruit_speed = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		hre_religion = yes
+		heretic = {
+			NORDIC_PANTHEON_HERETIC
+		}
+	}
+	eight_divines = {
+		color = {
+			77
+			101
+			198
+		}
+		icon = 5
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			global_spy_defence = 0.25
+			core_creation = -0.25
+		}
+		allowed_center_conversion = {
+			meridia_cult
+			mehrunes_dagon_cult
+			molag_bal_cult
+			hermeus_mora_cult
+			hircine_cult
+			sheogorath_cult
+			nocturnal_cult
+			azura_cult
+			boethiah_cult
+			clavicus_vile_cult
+			malacath_cult
+			jyggalag_cult
+			mephala_cult
+			namira_cult
+			peryite_cult
+			sanguine_cult
+			vaermina_cult
+		}
+		will_get_center = {
+			any_owned_province = {
+				OR = {
+					religion = meridia_cult
+					religion = mehrunes_dagon_cult
+					religion = molag_bal_cult
+					religion = hermeus_mora_cult
+					religion = hircine_cult
+					religion = sheogorath_cult
+					religion = nocturnal_cult
+					religion = azura_cult
+					religion = boethiah_cult
+					religion = clavicus_vile_cult
+					religion = malacath_cult
+					religion = jyggalag_cult
+					religion = mephala_cult
+					religion = namira_cult
+					religion = peryite_cult
+					religion = sanguine_cult
+					religion = vaermina_cult
+					religion = eight_divines
+				}
+				is_in_capital_area = yes
+				is_reformation_center = no
+			}
+		}
+		country_as_secondary = {
+			global_spy_defence = 0.25
+			core_creation = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		hre_heretic_religion = yes
+		heretic = {
+			EIGHT_DIVINES_HERETIC
+		}
+	}
+	nine_divines = {
+		color = {
+			23
+			65
+			230
+		}
+		icon = 6
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			diplomatic_reputation = 1
+			prestige_decay = -0.025
+		}
+		country_as_secondary = {
+			diplomatic_reputation = 1
+			prestige_decay = -0.025
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		heretic = {
+			NINE_DIVINES_HERETIC
+		}
+	}
+	twelve_divines = {
+		color = {
+			9
+			38
+			154
+		}
+		icon = 7
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			global_unrest = -2.5
+			num_accepted_cultures = 1
+		}
+		allowed_center_conversion = {
+			altmeri_pantheon
+			nordic_pantheon
+			eight_divines
+		}
+		will_get_center = {
+			any_owned_province = {
+				OR = {
+					religion = altmeri_pantheon
+					religion = twelve_divines
+					religion = nordic_pantheon
+					religion = eight_divines
+				}
+				is_in_capital_area = yes
+				is_reformation_center = no
+			}
+		}
+		country_as_secondary = {
+			global_unrest = -2.5
+			num_accepted_cultures = 1
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		heretic = {
+			TWELVE_DIVINES_HERETIC
+		}
+		misguided_heretic = yes
+	}
+	yokudan_pantheon = {
+		color = {
+			230
+			167
+			40
+		}
+		icon = 9
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			trade_efficiency = 0.15
+			light_ship_power = 0.15
+		}
+		country_as_secondary = {
+			trade_efficiency = 0.15
+			light_ship_power = 0.15
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		heretic = {
+			YOKUDAN_PANTHEON_HERETIC
+		}
+	}
+	redguard_pantheon = {
+		color = {
+			198
+			135
+			11
+		}
+		icon = 10
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			cavalry_cost = -0.25
+			infantry_power = 0.15
+		}
+		country_as_secondary = {
+			cavalry_cost = -0.25
+			infantry_power = 0.15
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		heretic = {
+			REDGUARD_PANTHEON_HERETIC
+		}
+		misguided_heretic = yes
+	}
+	marukhism = {
+		color = {
+			243
+			212
+			12
+		}
+		icon = 19
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			culture_conversion_cost = -0.25
+			prestige_per_development_from_conversion = 0.10
+		}
+		allowed_center_conversion = {
+			eight_divines
+			nine_divines
+			snow_elves_pantheon
+			meridia_cult
+			mehrunes_dagon_cult
+			molag_bal_cult
+			hermeus_mora_cult
+			hircine_cult
+			sheogorath_cult
+			nocturnal_cult
+			azura_cult
+			boethiah_cult
+			clavicus_vile_cult
+			malacath_cult
+			jyggalag_cult
+			mephala_cult
+			namira_cult
+			peryite_cult
+			sanguine_cult
+			vaermina_cult
+		}
+		will_get_center = {
+			any_owned_province = {
+				OR = {
+					religion = eight_divines
+					religion = nine_divines
+					religion = snow_elves_pantheon
+					religion = meridia_cult
+					religion = mehrunes_dagon_cult
+					religion = molag_bal_cult
+					religion = hermeus_mora_cult
+					religion = hircine_cult
+					religion = sheogorath_cult
+					religion = nocturnal_cult
+					religion = marukhism
+					religion = azura_cult
+					religion = boethiah_cult
+					religion = clavicus_vile_cult
+					religion = malacath_cult
+					religion = jyggalag_cult
+					religion = mephala_cult
+					religion = namira_cult
+					religion = peryite_cult
+					religion = sanguine_cult
+					religion = vaermina_cult
+				}
+				is_in_capital_area = yes
+				is_reformation_center = no
+			}
+		}
+		country_as_secondary = {
+			culture_conversion_cost = -0.25
+			prestige_per_development_from_conversion = 0.10
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		heretic = {
+			MARUKHISM_HERETIC
+		}
+		fervor = yes
+	}
+	reclamations_pantheon = {
+		color = {
+			10
+			14
+			146
+		}
+		icon = 15
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			years_of_nationalism = -10
+			same_culture_advisor_cost = -0.25
+		}
+		allowed_center_conversion = {
+			
+			meridia_cult
+			mehrunes_dagon_cult
+			molag_bal_cult
+			hermeus_mora_cult
+			hircine_cult
+			sheogorath_cult
+			nocturnal_cult
+			azura_cult
+			boethiah_cult
+			clavicus_vile_cult
+			malacath_cult
+			jyggalag_cult
+			mephala_cult
+			namira_cult
+			peryite_cult
+			sanguine_cult
+			vaermina_cult
+		}
+		will_get_center = {
+			any_owned_province = {
+				OR = {
+					religion = meridia_cult
+					religion = mehrunes_dagon_cult
+					religion = molag_bal_cult
+					religion = hermeus_mora_cult
+					religion = hircine_cult
+					religion = sheogorath_cult
+					religion = nocturnal_cult
+					religion = reclamations_pantheon
+					religion = azura_cult
+					religion = boethiah_cult
+					religion = clavicus_vile_cult
+					religion = malacath_cult
+					religion = jyggalag_cult
+					religion = mephala_cult
+					religion = namira_cult
+					religion = peryite_cult
+					religion = sanguine_cult
+					religion = vaermina_cult
+				}
+				is_in_capital_area = yes
+				is_reformation_center = no
+			}
+		}
+		country_as_secondary = {
+			years_of_nationalism = -10
+			same_culture_advisor_cost = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		date = 1466.01.01
+		personal_deity = yes
+		heretic = {
+			RECLAMATIONS_HERETIC
+		}
+	}
+	ayleid_pantheon = {
+		color = {
+			255
+			206
+			117
+		}
+		icon = 91
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			global_rebel_suppression_efficiency = 0.25
+			global_prosperity_growth = 0.25
+		}
+		country_as_secondary = {
+			global_rebel_suppression_efficiency = 0.25
+			global_prosperity_growth = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		personal_deity = yes
+		heretic = {
+			AYLEID_HERETIC
+		}
+		misguided_heretic = yes
+	}
+	crusade_name = CRUSADE
+	harmonized_modifier = harmonized_polytheistic_group
+}
+occult_group = {
+	flags_with_emblem_percentage = 0
+	flag_emblem_index_range = {
+		1
+		18
+	}
+	center_of_religion = 209
+	ai_will_propagate_through_trade = yes
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	druidism = {
+		color = {
+			0
+			153
+			0
+		}
+		icon = 49
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			development_cost = -0.15
+			idea_cost = -0.15
+		}
+		country_as_secondary = {
+			development_cost = -0.1
+		}
+		province = {
+			trade_goods_size_modifier = 0.1
+		}
+		heretic = {
+			DRUIDISM_HERETIC
+		}
+		uses_karma = yes
+	}
+	chimer_pantheon = {
+		color = {
+			95
+			95
+			95
+		}
+		icon = 13
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			development_cost = -0.15
+			build_cost = -0.25
+		}
+		country_as_secondary = {
+			development_cost = -0.15
+			build_cost = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		fetishist_cult = yes
+		heretic = {
+			CHIMER_HERETIC
+		}
+	}
+	orcish_pantheon = {
+		color = {
+			24
+			122
+			14
+		}
+		icon = 11
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			army_tradition_decay = -0.025
+			defensiveness = 0.25
+		}
+		country_as_secondary = {
+			army_tradition_decay = -0.025
+			defensiveness = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		personal_deity = yes
+		heretic = {
+			MALACATH_HERETIC
+		}
+	}
+	serpant_king = {
+		color = {
+			130
+			210
+			96
+		}
+		icon = 17
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			land_morale = 0.15
+			harsh_treatment_cost = -0.50
+		}
+		country_as_secondary = {
+			land_morale = 0.15
+			harsh_treatment_cost = -0.50
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		doom = yes
+		declare_war_in_regency = yes
+		religious_reforms = yes
+		reform_tooltip = NAHUATL_REFORM_TOOLTIP
+		heretic = {
+			SERPANT_KING_HERETIC
+		}
+	}
+	dragon_cult = {
+		color = { 202 208 43 }
+		icon = 18
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			stability_cost_modifier = -0.25
+			warscore_cost_vs_other_religion = -0.25
+		}
+		allowed_center_conversion = {
+			nordic_pantheon
+		}
+		will_get_center = {
+			any_owned_province = {
+				OR = {
+					religion = nordic_pantheon
+					religion = dragon_cult
+				}
+				is_in_capital_area = yes
+				is_reformation_center = no
+			}
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.25
+			warscore_cost_vs_other_religion = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		heretic = {
+			DRAGON_CULT_HERETIC
+		}
+		holy_sites = { 
+			5539
+			5540
+			5541
+			5237
+		}
+		
+		blessings = {
+			forelhost_last_stand
+			forelhost_tyrannical_ruler
+			forelhost_cult_unity
+			shearpoint_eyes_above
+			shearpoint_sorrowful_mountain
+			shearpoint_misdirection
+			bromjunaar_labyrinthian
+			bromjunaar_capital
+			bromjunaar_warlord
+			verglas_shadow_temple
+			verglas_frozen_temple
+			verglas_sea_temple
+			volskygge_lendoran
+			volskygge_trained_for_horror
+			volskygge_whirlwind_sprint
+			ragnvald_torsten
+			ragnvald_saerek
+			ragnvald_otar
+			valthume_ancient_evil
+			valthume_venerate_brutality
+			valthume_valdar
+			vahloks_tomb_the_jailor
+			vahloks_tomb_vanquish_traitors
+			vahloks_tomb_lost_legacy
+		}
+	}
+	miraak_cult = {
+		color = {
+			255
+			208
+			43
+		}
+		icon = 48
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			land_morale = 0.25
+			administrative_efficiency = 0.05
+		}
+		allowed_center_conversion = {
+			nordic_pantheon
+		}
+		will_get_center = {
+			any_owned_province = {
+				OR = {
+					religion = nordic_pantheon
+					religion = dragon_cult
+					religion = miraak_cult
+				}
+				is_in_capital_area = yes
+				is_reformation_center = no
+			}
+		}
+		country_as_secondary = {
+			land_morale = 0.25
+			administrative_efficiency = 0.05
+		}
+		province = {
+		}
+		heretic = {
+			MIRAAK_CULT_HERETIC
+		}
+		fervor = yes
+	}
+	kothri_pantheon = {
+		color = {
+			236
+			201
+			26
+		}
+		icon = 12
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			fire_damage_received = -0.15
+			global_trade_power = 0.25
+		}
+		country_as_secondary = {
+			fire_damage_received = -0.15
+			global_trade_power = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		personal_deity = yes
+		heretic = {
+			KOTHRI_HERETIC
+		}
+	}
+	reason_and_logic_cult = {
+		color = {
+			183
+			65
+			14
+		}
+		icon = 21
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			siege_ability = 0.25
+			improve_relation_modifier = 0.5
+		}
+		country_as_secondary = {
+			siege_ability = 0.25
+			improve_relation_modifier = 0.5
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		heretic = {
+			REASON_AND_LOGIC_HERETIC
+		}
+	}
+	dremora_pantheon = {
+		color = {
+			121
+			40
+			39
+		}
+		icon = 26
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			global_regiment_cost = -0.25
+			movement_speed = 0.25
+		}
+		country_as_secondary = {
+			global_regiment_cost = -0.25
+			movement_speed = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		can_have_secondary_religion = yes
+		heretic = {
+			DREMORA_HERETIC
+		}
+	}
+	cult_of_black_worm = {
+		color = {
+			200
+			25
+			25
+		}
+		icon = 36
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			mil_tech_cost_modifier = -0.1
+			leader_cost = -0.50
+		}
+		country_as_secondary = {
+			mil_tech_cost_modifier = -0.1
+			leader_cost = -0.50
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		uses_church_power = yes
+		aspects = {
+			forbidden_rituals_aspect
+			forgotten_deities_aspect
+			ecstasy_of_suffering_aspect
+			summon_the_dead_aspect
+			curse_the_ghosts_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			CULT_OF_BLACK_WORM_HERETIC
+		}
+	}
+	all_maker_cult = {
+		color = {
+			23
+			35
+			192
+		}
+		icon = 32
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			hostile_attrition = 1
+			production_efficiency = 0.25
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			production_efficiency = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		heretic = {
+			ALL-MAKER_HERETIC
+		}
+		uses_karma = yes
+	}
+	cult_of_ancestors = {
+		color = {
+			229
+			188
+			176
+		}
+		icon = 95
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			prestige = 0.25
+			army_tradition = 0.5
+		}
+		country_as_secondary = {
+			prestige = 0.25
+			army_tradition = 0.5
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		heretic = {
+			CULT_OF_ANCESTORS_HERETIC
+		}
+		ancestors = yes
+	}
+	old_way_cult = {
+		color = {
+			101
+			195
+			221
+		}
+		icon = 94
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			development_cost = -0.25
+			free_leader_pool = 1
+		}
+		country_as_secondary = {
+			development_cost = -0.25
+			free_leader_pool = 1
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		heretic = {
+			OLD_WAY_CULT_HERETIC
+		}
+	}
+	celestials = {
+		color = {
+			149
+			0
+			235
+		}
+		icon = 93
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			technology_cost = -0.10
+			envoy_travel_time = -0.25
+		}
+		country_as_secondary = {
+			technology_cost = -0.10
+			envoy_travel_time = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		personal_deity = yes
+		heretic = {
+			CELESTIALS_HERETIC
+		}
+	}
+	students_of_magnus = {
+		color = {
+			40
+			194
+			255
+		}
+		icon = 90
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			tolerance_heathen = 2.5
+			monthly_favor_modifier = 0.25
+		}
+		country_as_secondary = {
+			tolerance_heathen = 2.5
+			monthly_favor_modifier = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		uses_judaism_power = yes
+		aspects_name = PROTESTANT_ASPECTS
+		aspects = {
+			alteration_aspect
+			mysticism_aspect
+			enchanting_aspect
+			tonal_aspect
+			shadow_aspect
+			aetherial_aspect
+			illusion_aspect
+			restoration_aspect
+			blood_aspect
+			alchemy_aspect
+			soul_aspect
+			flesh_aspect
+			conjuration_aspect
+			destruction_aspect
+			thaumaturgy_aspect
+			necromacy_aspect
+			green_aspect
+			thuum_aspect
+		}
+		celebrate = {
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 250
+			potential = {
+			}
+			allow = {
+			}
+			effect = {
+				random_list = {
+					10 = {
+						add_stability = 1
+					}
+					30 = {
+						add_years_of_income = 2.5
+					}
+					20 = {
+						add_adm_power = 150
+					}
+					20 = {
+						add_dip_power = 150
+					}
+					20 = {
+						add_mil_power = 150
+					}
+				}
+			}
+		}
+		heretic = {
+			STUDENTS_OF_MAGNUS_HERETIC
+		}
+	}
+	crusade_name = CRUSADE
+	harmonized_modifier = harmonized_occult_group
+}
+elemental_group = {
+	flags_with_emblem_percentage = 0
+	flag_emblem_index_range = {
+		1
+		18
+	}
+	center_of_religion = 209
+	ai_will_propagate_through_trade = yes
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	hist = {
+		color = {
+			255
+			255
+			255
+		}
+		icon = 20
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			development_cost = -0.25
+			tolerance_heathen = 2.5
+		}
+		country_as_secondary = {
+			development_cost = -0.25
+			tolerance_heathen = 2.5
+		}
+		province = {
+			local_missionary_strength = -0.010
+		}
+		heretic = {
+			HIST_HERETIC
+		}
+		can_have_secondary_religion = yes
+	}
+	sload_faith = {
+		color = {
+			42
+			174
+			208
+		}
+		icon = 16
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			advisor_pool = 1
+			sunk_ship_morale_hit_recieved = -0.25
+		}
+		country_as_secondary = {
+			advisor_pool = 1
+			sunk_ship_morale_hit_recieved = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.010
+		}
+		uses_anglican_power = yes
+		aspects = {
+			es_mary_first_lady
+			es_divorce_first_lady
+			es_accept_ritual_donation
+			es_grant_exclusive_trade_rights
+			es_proclaim_the_age_of_stability
+		}
+		aspects_name = ANGLICAN_ASPECTS
+		heretic = {
+			SLOAD_HERETIC
+		}
+	}
+	tsaesci_pantheon = {
+		color = {
+			138
+			44
+			85
+		}
+		icon = 23
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			naval_forcelimit_modifier = 0.25
+			vassal_income = 0.25
+		}
+		country_as_secondary = {
+			naval_forcelimit_modifier = 0.25
+			vassal_income = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.010
+		}
+		heretic = {
+			TSAESCI_HERETIC
+		}
+		uses_isolationism = yes
+	}
+	tang_mo_pantheon = {
+		color = {
+			22
+			232
+			127
+		}
+		icon = 24
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			reinforce_speed = 0.25
+			ship_durability = 0.25
+		}
+		country_as_secondary = {
+			reinforce_speed = 0.25
+			ship_durability = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.010
+		}
+		religious_reforms = yes
+		reform_tooltip = MESOAMERICAN_REFORM_TOOLTIP
+		heretic = {
+			TANG_MO_HERETIC
+		}
+	}
+	kamal_pantheon = {
+		color = {
+			233
+			172
+			30
+		}
+		icon = 25
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			global_autonomy = -0.05
+			institution_spread_from_true_faith = 0.25
+		}
+		country_as_secondary = {
+			global_autonomy = -0.05
+			institution_spread_from_true_faith = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.010
+		}
+		authority = yes
+		religious_reforms = yes
+		reform_tooltip = INTI_REFORM_TOOLTIP
+		heretic = {
+			KAMAL_HERETIC
+		}
+	}
+	cult_of_the_moth = {
+		color = {
+			185
+			250
+			250
+		}
+		icon = 37
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			idea_cost = -0.25
+			build_time = -0.25
+		}
+		country_as_secondary = {
+			idea_cost = -0.25
+			build_time = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.010
+		}
+		uses_karma = yes
+		heretic = {
+			CULT_OF_THE_MOTH_HERETIC
+		}
+	}
+	crusade_name = CRUSADE
+	harmonized_modifier = harmonized_elemental_group
+}
+daedric_group = {
+	flags_with_emblem_percentage = 0
+	flag_emblem_index_range = {
+		1
+		18
+	}
+	center_of_religion = 209
+	ai_will_propagate_through_trade = yes
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	molag_bal_cult = {
+		color = {
+			0
+			0
+			100
+		}
+		icon = 27
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			free_leader_pool = 1
+			mercenary_manpower = 0.5
+		}
+		country_as_secondary = {
+			free_leader_pool = 1
+			mercenary_manpower = 0.5
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			blood_rituals_aspect
+			enslaement_of_mortals_aspect
+			eternal_domination_aspect
+			harvest_of_souls_aspect
+			encouragement_of_strife_aspect
+			abetment_to_lust_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			molag_bal_HERETIC
+		}
+	}
+	meridia_cult = {
+		color = {
+			146
+			248
+			238
+		}
+		icon = 28
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			global_manpower_modifier = 0.25
+			state_maintenance_modifier = -0.25
+		}
+		country_as_secondary = {
+			global_manpower_modifier = 0.25
+			state_maintenance_modifier = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			infinite_energies_aspect
+			purification_of_land_aspect
+			purge_of_undead_aspect
+			inspiration_of_life_aspect
+			light_preservation_aspect
+			worship_of_dawn_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			MERIDIA_HERETIC
+		}
+	}
+	mehrunes_dagon_cult = {
+		color = {
+			255
+			18
+			0
+		}
+		icon = 29
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			fire_damage = 0.15
+			loot_amount = 0.50
+		}
+		country_as_secondary = {
+			fire_damage = 0.15
+			loot_amount = 0.50
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			spread_destruction_aspect
+			inception_of_revolution_aspect
+			energy_patronage_aspect
+			change_approachment_aspect
+			aspiration_to_ambitions_aspect
+			deification_of_filth_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			MEHRUNES_DAGON_HERETIC
+		}
+	}
+	hermeus_mora_cult = {
+		color = {
+			238
+			248
+			146
+		}
+		icon = 30
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			technology_cost = -0.10
+			global_institution_spread = 0.25
+		}
+		country_as_secondary = {
+			technology_cost = -0.10
+			global_institution_spread = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			protection_of_knowledge_aspect
+			memory_strengthening_aspect
+			gratification_of_fate_aspect
+			perpetuation_of_past_aspect
+			future_provision_aspect
+			vindication_of_stars_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			HERMEUS_MORA_HERETIC
+		}
+	}
+	sheogorath_cult = {
+		color = {
+			250
+			250
+			0
+		}
+		icon = 33
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			unjustified_demands = -0.25
+			shock_damage = 0.15
+		}
+		country_as_secondary = {
+			unjustified_demands = -0.25
+			shock_damage = 0.15
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			falling_into_madness_aspect
+			adoration_of_horripilation_aspect
+			frantic_scrolls_aspect
+			submission_to_deliration_aspect
+			life_in_lunacy_aspect
+			acquiration_of_dementia_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			SHEOGORATH_HERETIC
+		}
+	}
+	hircine_cult = {
+		color = {
+			126
+			172
+			193
+		}
+		icon = 34
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			cavalry_power = 0.15
+			manpower_recovery_speed = 0.25
+		}
+		country_as_secondary = {
+			cavalry_power = 0.15
+			manpower_recovery_speed = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			eternal_hunt_aspect
+			greatest_games_aspect
+			the_chase_aspect
+			bloodmoon_rituals_aspect
+			bless_of_savior_aspect
+			merciful_spears_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			HIRCINE_HERETIC
+		}
+	}
+	nocturnal_cult = {
+		color = {
+			193
+			193
+			149
+		}
+		icon = 35
+		allow_female_defenders_of_the_faith = yes
+		allowed_center_conversion = {
+			meridia_cult
+			mehrunes_dagon_cult
+			molag_bal_cult
+			hermeus_mora_cult
+			hircine_cult
+			sheogorath_cult
+			nedic_pantheon
+			azura_cult
+			boethiah_cult
+			clavicus_vile_cult
+			malacath_cult
+			jyggalag_cult
+			mephala_cult
+			namira_cult
+			peryite_cult
+			sanguine_cult
+			vaermina_cult
+			twelve_divines
+			celestials
+		}
+		will_get_center = {
+			any_owned_province = {
+				OR = {
+					religion = meridia_cult
+					religion = mehrunes_dagon_cult
+					religion = molag_bal_cult
+					religion = hermeus_mora_cult
+					religion = hircine_cult
+					religion = sheogorath_cult
+					religion = nedic_pantheon
+					religion = azura_cult
+					religion = boethiah_cult
+					religion = clavicus_vile_cult
+					religion = malacath_cult
+					religion = jyggalag_cult
+					religion = mephala_cult
+					religion = namira_cult
+					religion = peryite_cult
+					religion = sanguine_cult
+					religion = vaermina_cult
+					religion = eight_divines
+					religion = twelve_divines
+					religion = celestials
+				}
+				is_in_capital_area = yes
+				is_reformation_center = no
+			}
+		}
+		country = {
+			spy_offence = 0.25
+			shock_damage_received = -0.15
+		}
+		country_as_secondary = {
+			spy_offence = 0.25
+			shock_damage_received = -0.15
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			night_benison_aspect
+			custody_of_shadows_aspect
+			care_of_night_aspect
+			raven_inclination_aspect
+			gray_cowls_aspect
+			appeal_to_luck_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			NOCTURNAL_HERETIC
+		}
+	}
+	azura_cult = {
+		color = {
+			0
+			250
+			250
+		}
+		icon = 38
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			diplomatic_reputation = 1.0
+			reinforce_cost_modifier = -0.25
+		}
+		country_as_secondary = {
+			diplomatic_reputation = 1.0
+			reinforce_cost_modifier = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			turn_night_into_day_aspect
+			bless_the_transformation_aspect
+			grow_roses_among_weeds_aspect
+			show_mercy_to_fallen_aspect
+			seek_benevolence_aspect
+			observe_the_night_sky_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			AZURA_HERETIC
+		}
+	}
+	boethiah_cult = {
+		color = {
+			250
+			100
+			0
+		}
+		icon = 39
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			rebel_support_efficiency = 0.5
+			leader_land_shock = 1
+		}
+		country_as_secondary = {
+			rebel_support_efficiency = 0.5
+			leader_land_shock = 1
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			patronize_conspiracy_aspect
+			auspice_seduction_aspect
+			protect_deceivers_aspect
+			use_traitors_aspect
+			enjoy_suffering_aspect
+			favoring_dark_arts_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			BOETHIAH_HERETIC
+		}
+	}
+	clavicus_vile_cult = {
+		color = {
+			248
+			248
+			70
+		}
+		icon = 40
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			trade_steering = 0.25
+			diplomatic_upkeep = 1
+		}
+		country_as_secondary = {
+			trade_steering = 0.25
+			diplomatic_upkeep = 1
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			seeking_power_aspect
+			beutification_of_trickery_aspect
+			make_wishes_come_true_aspect
+			maintain_serenity_aspect
+			support_bargains_aspect
+			spread_of_regrets_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			CLAVICUS_VILE_HERETIC
+		}
+	}
+	malacath_cult = {
+		color = {
+			0
+			100
+			0
+		}
+		icon = 41
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			infantry_cost = -0.25
+			fire_damage_received = -0.15
+		}
+		country_as_secondary = {
+			infantry_cost = -0.25
+			fire_damage_received = -0.15
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			protect_spurned_ones_aspect
+			perform_bloody_curse_aspect
+			keep_sworn_oath_aspect
+			feast_in_hero_honour_aspect
+			organize_expository_fights_aspect
+			curse_negligence_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			DAEDRIC_MALACATH_HERETIC
+		}
+	}
+	jyggalag_cult = {
+		color = {
+			68
+			192
+			247
+		}
+		icon = 42
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			religious_unity = 0.25
+			idea_cost = -0.25
+		}
+		country_as_secondary = {
+			religious_unity = 0.25
+			idea_cost = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			proclaim_logical_order_aspect
+			develop_deduction_aspect
+			accept_certainty_aspect
+			seek_determinism_aspect
+			reject_individuality_aspect
+			create_illusions_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			JYGGALAG_HERETIC
+		}
+	}
+	mephala_cult = {
+		color = {
+			0
+			0
+			0
+		}
+		icon = 43
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			build_cost = -0.25
+			province_warscore_cost = -0.25
+		}
+		country_as_secondary = {
+			build_cost = -0.25
+			province_warscore_cost = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			shed_lies_aspect
+			embrace_lust_aspect
+			forgive_murder_aspect
+			preserve_secrets_aspect
+			crave_to_desires_aspect
+			succumb_to_seduce_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			MEPHALA_HERETIC
+		}
+	}
+	namira_cult = {
+		color = {
+			186
+			239
+			163
+		}
+		icon = 44
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			num_accepted_cultures = 1
+			global_spy_defence = 0.25
+		}
+		country_as_secondary = {
+			num_accepted_cultures = 1
+			global_spy_defence = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			immortalize_ancient_darkness_aspect
+			worship_shadowy_spirits_aspect
+			spread_decay_aspect
+			accede_cannibalism_aspect
+			sow_vermin_aspect
+			strive_for_rebirth_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			NAMIRA_HERETIC
+		}
+	}
+	peryite_cult = {
+		color = {
+			248
+			146
+			177
+		}
+		icon = 45
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			siege_ability = 0.25
+			global_missionary_strength = 0.025
+		}
+		country_as_secondary = {
+			siege_ability = 0.25
+			global_missionary_strength = 0.025
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			mold_pestilence_aspect
+			touch_filth_aspect
+			spread_pandemic_aspect
+			breed_skeevers_aspect
+			maintain_natural_order_aspect
+			support_taskmaster_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			PERYITE_HERETIC
+		}
+	}
+	sanguine_cult = {
+		color = {
+			163
+			10
+			62
+		}
+		icon = 46
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			merc_maintenance_modifier = -0.25
+			improve_relation_modifier = 0.5
+		}
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.25
+			improve_relation_modifier = 0.5
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			devote_to_revelry_aspect
+			sanctify_debauchery_aspect
+			embold_greed_aspect
+			vindicate_gluttony_aspect
+			luxuriate_lust_aspect
+			graze_sloth_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			SANGUINE_HERETIC
+		}
+	}
+	vaermina_cult = {
+		color = {
+			103
+			46
+			160
+		}
+		icon = 47
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			harsh_treatment_cost = -0.50
+			vassal_income = 0.25
+		}
+		country_as_secondary = {
+			harsh_treatment_cost = -0.50
+			vassal_income = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		uses_church_power = yes
+		aspects = {
+			send_nightmares_aspect
+			spread_terror_aspect
+			torment_mortals_aspect
+			erode_dreams_aspect
+			bring_omens_aspect
+			steal_memories_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		heretic = {
+			VAERMINA_HERETIC
+		}
+	}
+	crusade_name = CRUSADE
+	harmonized_modifier = harmonized_daedric_group
+}
+harmony_group = {
+	flags_with_emblem_percentage = 0
+	flag_emblem_index_range = {
+		1
+		18
+	}
+	ai_will_propagate_through_trade = yes
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	po_tun_pantheon = {
+		color = {
+			236
+			240
+			123
+		}
+		icon = 31
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			adm_tech_cost_modifier = -0.10
+			mercenary_discipline = 0.10
+		}
+		country_as_secondary = {
+			adm_tech_cost_modifier = -0.10
+			mercenary_discipline = 0.10
+		}
+		province = {
+			local_missionary_strength = -0.005
+		}
+		heretic = {
+			PO_TUN_HERETIC
+		}
+		uses_harmony = yes
+		harmonized_modifier = harmonized_po_tun_pantheon
+	}
+	unknown_pantheon = {
+		color = {
+			128
+			128
+			128
+		}
+		icon = 98
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			yearly_harmony = 1.0
+			harmonization_speed = 0.1
+		}
+		country_as_secondary = {
+			yearly_harmony = 1.0
+			harmonization_speed = 0.1
+		}
+		province = {
+			local_missionary_strength = -0.005
+		}
+		heretic = {
+			UNKNOWN_HERETIC
+		}
+		uses_harmony = yes
+	}
+	cult_of_lorelia = {
+		color = {
+			0
+			255
+			255
+		}
+		icon = 97
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			ae_impact = -0.25
+			diplomatic_upkeep = 1
+		}
+		country_as_secondary = {
+			ae_impact = -0.25
+			diplomatic_upkeep = 1
+		}
+		province = {
+			local_missionary_strength = -0.005
+		}
+		uses_harmony = yes
+		heretic = {
+			CULT_OF_LORELIA_HERETIC
+		}
+		harmonized_modifier = harmonized_cult_of_lorelia
+	}
+	thirty_divines = {
+		color = {
+			255
+			177
+			89
+		}
+		icon = 96
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			global_regiment_recruit_speed = -0.25
+			state_maintenance_modifier = -0.25
+		}
+		country_as_secondary = {
+			global_regiment_recruit_speed = -0.25
+			state_maintenance_modifier = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.005
+		}
+		uses_harmony = yes
+		heretic = {
+			THIRTY_DIVINES_HERETIC
+		}
+		harmonized_modifier = harmonized_thirty_divines
+	}
+	crusade_name = CRUSADE
+}

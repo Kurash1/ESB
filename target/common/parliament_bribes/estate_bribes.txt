@@ -1,0 +1,215 @@
+estate_bribe_1 = {
+	trigger = {
+		crown_land_share = 10
+		NOT = { crown_land_share = 100 }
+	}
+	
+	effect = {
+		change_estate_land_share = {
+			estate = all
+			share = 2
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_bribe_2 = {
+	trigger = {
+		NOT = { has_estate_influence_modifier = { estate = estate_priests modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_priests
+			territory = 15
+		}
+	}
+	
+	effect = {
+		add_estate_influence_modifier = {
+            estate = estate_priests
+            desc = EST_VAL_SEAT_BRIBED
+            influence = 10
+            duration = 9125
+            add = yes
+        }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_priests influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_priests influence = 85 }
+		}
+	}
+}
+
+estate_bribe_3 = {
+	trigger = {
+		NOT = { has_estate_influence_modifier = { estate = estate_nobility modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_nobility
+			territory = 15
+		}
+	}
+	
+	effect = {
+		add_estate_influence_modifier = {
+            estate = estate_nobility
+            desc = EST_VAL_SEAT_BRIBED
+            influence = 10
+            duration = 9125
+            add = yes
+        }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_nobility influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_nobility influence = 85 }
+		}
+	}
+}
+
+estate_bribe_6 = {
+	trigger = {
+		NOT = { has_estate_influence_modifier = { estate = estate_mages modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_mages
+			territory = 15
+		}
+	}
+	
+	effect = {
+		add_estate_influence_modifier = {
+            estate = estate_mages
+            desc = EST_VAL_SEAT_BRIBED
+            influence = 10
+            duration = 9125
+            add = yes
+        }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_mages influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_mages influence = 85 }
+		}
+	}
+}
+
+estate_bribe_8 = {
+	trigger = {
+		NOT = { has_estate_influence_modifier = { estate = estate_merchants modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_merchants
+			territory = 15
+		}
+	}
+	
+	effect = {
+		add_estate_influence_modifier = {
+            estate = estate_merchants
+            desc = EST_VAL_SEAT_BRIBED
+            influence = 10
+            duration = 9125
+            add = yes
+        }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_merchants influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_merchants influence = 85 }
+		}
+	}
+}
+
+estate_bribe_10 = {
+	trigger = {
+		NOT = { has_estate_influence_modifier = { estate = estate_commoners modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_commoners
+			territory = 15
+		}
+	}
+	
+	effect = {
+		add_estate_influence_modifier = {
+            estate = estate_commoners
+            desc = EST_VAL_SEAT_BRIBED
+            influence = 10
+            duration = 9125
+            add = yes
+        }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_commoners influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_commoners influence = 85 }
+		}
+	}
+}
+
+estate_bribe_11 = {
+	trigger = {
+		NOT = { has_estate_influence_modifier = { estate = estate_warriors modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_warriors
+			territory = 15
+		}
+	}
+	
+	effect = {
+		add_estate_influence_modifier = {
+            estate = estate_warriors
+            desc = EST_VAL_SEAT_BRIBED
+            influence = 10
+            duration = 9125
+            add = yes
+        }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_warriors influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_warriors influence = 85 }
+		}
+	}
+}

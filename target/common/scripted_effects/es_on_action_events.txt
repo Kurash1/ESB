@@ -1,0 +1,187 @@
+# Audax Validator "!" Ignore_1006
+es_perform_events_on_three_year_pulse = {
+	if = {
+		limit = {
+			has_reform = ottoman_government
+			ruler_age = 35
+			has_heir = no
+		}
+		country_event = { id = es_harem_events.1 days = 31 }
+	}
+}
+
+es_perform_events_on_five_year_pulse = {
+	if = {
+		limit = {
+			tag = BLA
+		}
+		# FIX of abandoned native colonies with 1000 settlers
+		every_province = {
+			limit = { 
+				is_empty = yes
+				colonysize = 1
+			}
+			add_colonysize = -1000
+		}
+		
+		# Lunar Lattice ###################################################
+		if = {
+			limit = {
+				NOT = { has_country_modifier = moon_timer }
+			}
+			country_event = { id = moon_events.100 }
+		}
+		
+		# Weather and Terrain Disasters ###################################
+		if = {
+			limit = {
+				NOT = { has_country_modifier = sand_storm_1 }
+			}
+			country_event = { id = es_terrain.101 days = 704 random = 3681 }
+			add_country_modifier = {
+				name = sand_storm_1
+				duration = 12775
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_modifier = tropical_storm_1 }
+			}
+			country_event = { id = es_terrain.102 days = 703 random = 3682 }
+			add_country_modifier = {
+				name = tropical_storm_1
+				duration = 12775
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_modifier = floods_1 }
+			}
+			country_event = { id = es_terrain.103 days = 702 random = 3683 }
+			add_country_modifier = {
+				name = floods_1
+				duration = 12775
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_modifier = ice_age_1 }
+			}
+			country_event = { id = es_terrain.104 days = 701 random = 3684 }
+			add_country_modifier = {
+				name = ice_age_1
+				duration = 12775
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_modifier = red_mountain_eruption }
+			}
+			country_event = { id = es_terrain.105 days = 700 random = 3685 }
+			add_country_modifier = {
+				name = "red_mountain_eruption"
+				duration = 21900
+			}
+		}
+	}
+	
+	# Chimer Fetish Cults #############################################
+	if = {
+		limit = {
+			religion = chimer_pantheon
+			NOT = {
+				has_country_flag = chimer_fetish_cults_1_flag
+			}
+			any_owned_province = {
+				religion = molag_bal_cult
+			}
+		}
+		country_event = { id = chimer_fetish_cults.1 }
+	}
+	if = {
+		limit = {
+			religion = chimer_pantheon
+			NOT = {
+				has_country_flag = chimer_fetish_cults_2_flag
+			}
+			any_owned_province = {
+				religion = mehrunes_dagon_cult
+			}
+		}
+		country_event = { id = chimer_fetish_cults.2 }
+	}
+	if = {
+		limit = {
+			religion = chimer_pantheon
+			NOT = {
+				has_country_flag = chimer_fetish_cults_3_flag
+			}
+			any_owned_province = {
+				religion = malacath_cult
+			}
+		}
+		country_event = { id = chimer_fetish_cults.3 }
+	}
+	if = {
+		limit = {
+			religion = chimer_pantheon
+			NOT = {
+				has_country_flag = chimer_fetish_cults_4_flag
+			}
+			any_owned_province = {
+				religion = sheogorath_cult
+			}
+		}
+		country_event = { id = chimer_fetish_cults.4 }
+	}
+	if = {
+		limit = {
+			religion = chimer_pantheon
+			NOT = {
+				has_country_flag = chimer_fetish_cults_5_flag
+			}
+			OR = {
+				num_of_allies = 3
+				any_owned_province = {
+					religion = azura_cult
+				}
+			}
+		}
+		country_event = { id = chimer_fetish_cults.5 }
+	}
+	if = {
+		limit = {
+			religion = chimer_pantheon
+			NOT = {
+				has_country_flag = chimer_fetish_cults_6_flag
+			}
+			OR = {
+				is_at_war = yes
+				any_owned_province = {
+					religion = boethiah_cult
+				}
+			}
+		}
+		country_event = { id = chimer_fetish_cults.6 }
+	}
+	if = {
+		limit = {
+			religion = chimer_pantheon
+			NOT = {
+				has_country_flag = chimer_fetish_cults_7_flag
+			}
+			OR = {
+				any_known_country = {
+					has_spy_network_in = {
+						who = ROOT
+						value = 30
+					}
+				}
+				any_owned_province = {
+					religion = mephala_cult
+				}
+			}
+		}
+		country_event = { id = chimer_fetish_cults.7 }
+	}
+}

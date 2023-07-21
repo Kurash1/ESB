@@ -1,0 +1,5520 @@
+# Audax Validator "!" Ignore_1006
+es_country_collapse_effect = {
+	random_list = {
+		65 = {
+			if = {
+				limit = {
+					NOT = { exists = $who$ }
+					NOT = { capital_scope = { province_group = collapse_area_$who$ } }
+				}
+				every_owned_province = {
+					limit = {
+						province_group = collapse_area_$who$
+					}
+					add_core = $who$
+					cede_province = $who$
+				}
+				create_subject = {
+					subject_type = vassal
+					subject = $who$
+				}
+				if = {
+					limit = {
+						government = tribal
+					}
+					$who$ = {
+						change_government = tribal
+					}
+				}
+				else = {
+					$who$ = { random_list = { 33 = { change_government = monarchy } 33 = { change_government = republic } 33 = { change_government = theocracy } } }
+				}
+				$who$ = { change_government_reform_progress = -99999 change_religion = ROOT country_event = { id = temporarytitle.1 } }
+			}
+			else_if = {
+				limit = {
+					NOT = { capital_scope = { province_group = collapse_area_$who$ } }
+				}
+				every_owned_province = {
+					limit = {
+						province_group = collapse_area_$who$
+					}
+					add_core = $who$
+					cede_province = $who$
+				}
+			}
+			else = {
+				every_owned_province = {
+					limit = {
+						province_group = collapse_area_$who$
+					}
+					add_core = $who$
+				}
+				random_owned_province = {
+					limit = {
+						province_group = collapse_area_$who$
+					}
+					spawn_rebels = {
+						type = nationalist_rebels size = 3.5 win = yes unrest = 25
+					}
+				}
+				random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 75 }
+				random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 75 }
+				random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 75 }
+			}
+		}
+		20 = {
+			every_owned_province = {
+				limit = {
+					province_group = collapse_area_$who$
+				}
+				add_core = $who$
+			}
+			random_owned_province = {
+				limit = {
+					province_group = collapse_area_$who$
+				}
+				spawn_rebels = {
+					type = nationalist_rebels size = 3.5 win = yes unrest = 25
+				}
+			}
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 25 }
+		}
+		15 = {
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 50 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 50 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 50 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 50 }
+			random_owned_province = { limit = { province_group = collapse_area_$who$ } add_devastation = 50 }
+		}
+	}
+}
+
+es_country_collapse_colonial_effect = {
+	every_owned_province = {
+		limit = {
+			province_group = collapse_area_XXX
+		}
+		random_list = {
+			25 = {
+				random_owned_province = {
+					limit = {
+						province_group = collapse_area_XXX
+					}
+					spawn_rebels = {
+						type = nationalist_rebels size = 3.5 win = yes unrest = 25
+					}
+				}
+			}
+			15 = {
+				add_devastation = 35
+			}
+			35 = {
+				add_devastation = 15
+			}
+			25 = {
+			}
+		}
+	}
+}
+
+es_country_collapse_disaster_effect = {
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_XXX
+			}
+		}
+
+		es_country_collapse_colonial_effect = yes
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SED
+			}
+		}
+		es_country_collapse_effect = {
+			who = SED
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SOT
+			}
+		}
+		es_country_collapse_effect = {
+			who = SOT
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MK0
+			}
+		}
+		es_country_collapse_effect = {
+			who = MK0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TON
+			}
+		}
+		es_country_collapse_effect = {
+			who = TON
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = AA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SIY
+			}
+		}
+		es_country_collapse_effect = {
+			who = SIY
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = AA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = AB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AD4
+			}
+		}
+		es_country_collapse_effect = {
+			who = AD4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_GOR
+			}
+		}
+		es_country_collapse_effect = {
+			who = GOR
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = AA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = AA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = AA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = AA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AD6
+			}
+		}
+		es_country_collapse_effect = {
+			who = AD6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = AA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = CA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CD3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CD3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CB8
+			}
+		}
+		es_country_collapse_effect = {
+			who = CB8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CD9
+			}
+		}
+		es_country_collapse_effect = {
+			who = CD9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = CB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CE3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CE3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = CA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = CA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = CB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CF3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CF3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ABE
+			}
+		}
+		es_country_collapse_effect = {
+			who = ABE
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CF5
+			}
+		}
+		es_country_collapse_effect = {
+			who = CF5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CG6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CG6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CB6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CB6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CH0
+			}
+		}
+		es_country_collapse_effect = {
+			who = CH0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = CB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = CC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CC1
+			}
+		}
+		es_country_collapse_effect = {
+			who = CC1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CC3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CC3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CC2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CC2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CC4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CC4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CI8
+			}
+		}
+		es_country_collapse_effect = {
+			who = CI8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = CC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CC6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CC6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = CC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CI6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CI6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = NA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = NA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = NA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = NA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = NA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ND0
+			}
+		}
+		es_country_collapse_effect = {
+			who = ND0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NF2
+			}
+		}
+		es_country_collapse_effect = {
+			who = NF2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = NA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = NA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = NB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_STA
+			}
+		}
+		es_country_collapse_effect = {
+			who = STA
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = NA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = NB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = NB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = NB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = NB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = NB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NB6
+			}
+		}
+		es_country_collapse_effect = {
+			who = NB6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VOL
+			}
+		}
+		es_country_collapse_effect = {
+			who = VOL
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = NC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NCH
+			}
+		}
+		es_country_collapse_effect = {
+			who = NCH
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = NC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NG1
+			}
+		}
+		es_country_collapse_effect = {
+			who = NG1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BB6
+			}
+		}
+		es_country_collapse_effect = {
+			who = BB6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = BA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = BA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = BA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = BA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = BB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = BA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = BA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BC6
+			}
+		}
+		es_country_collapse_effect = {
+			who = BC6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = BB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = BB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = BB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = HB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = HC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = HA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = HB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = HB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_RES
+			}
+		}
+		es_country_collapse_effect = {
+			who = RES
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = HB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = IB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = IB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = IB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = IB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = IA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = PA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = PA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = PA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = PA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DC2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DC2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = JA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = JA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = JA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = JA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = JA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = JA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = JB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = JB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = TB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ELZ
+			}
+		}
+		es_country_collapse_effect = {
+			who = ELZ
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = TB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = TB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = TA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = TB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = TB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_OA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = OA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_RAL
+			}
+		}
+		es_country_collapse_effect = {
+			who = RAL
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_OA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = OA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_OA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = OA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_OA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = OA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_OA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = OA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = JA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = JB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = UA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = UA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = UA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = UA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = UA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KHE
+			}
+		}
+		es_country_collapse_effect = {
+			who = KHE
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = IA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = IA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = PA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = PA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = PA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = PB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = PB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = PB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = PB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_PA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = PA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_THR
+			}
+		}
+		es_country_collapse_effect = {
+			who = THR
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = DB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = DB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = DB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DB7
+			}
+		}
+		es_country_collapse_effect = {
+			who = DB7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = DB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = DC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DC3
+			}
+		}
+		es_country_collapse_effect = {
+			who = DC3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DC4
+			}
+		}
+		es_country_collapse_effect = {
+			who = DC4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = DC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DC6
+			}
+		}
+		es_country_collapse_effect = {
+			who = DC6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = DC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = DC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DD0
+			}
+		}
+		es_country_collapse_effect = {
+			who = DD0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = DA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DE2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DE2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DD3
+			}
+		}
+		es_country_collapse_effect = {
+			who = DD3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = SA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DE3
+			}
+		}
+		es_country_collapse_effect = {
+			who = DE3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DE4
+			}
+		}
+		es_country_collapse_effect = {
+			who = DE4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = SA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KB7
+			}
+		}
+		es_country_collapse_effect = {
+			who = KB7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = KB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC1
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KB8
+			}
+		}
+		es_country_collapse_effect = {
+			who = KB8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC2
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC3
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = SA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC4
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC6
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = KC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = SA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BLA
+			}
+		}
+		es_country_collapse_effect = {
+			who = BLA
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = SB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = IB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = SA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = IB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = SA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ND5
+			}
+		}
+		es_country_collapse_effect = {
+			who = ND5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ND8
+			}
+		}
+		es_country_collapse_effect = {
+			who = ND8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SB7
+			}
+		}
+		es_country_collapse_effect = {
+			who = SB7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CQ3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CQ3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CQ7
+			}
+		}
+		es_country_collapse_effect = {
+			who = CQ7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CS1
+			}
+		}
+		es_country_collapse_effect = {
+			who = CS1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CQ1
+			}
+		}
+		es_country_collapse_effect = {
+			who = CQ1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CQ6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CQ6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ND9
+			}
+		}
+		es_country_collapse_effect = {
+			who = ND9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CR1
+			}
+		}
+		es_country_collapse_effect = {
+			who = CR1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CQ9
+			}
+		}
+		es_country_collapse_effect = {
+			who = CQ9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NE2
+			}
+		}
+		es_country_collapse_effect = {
+			who = NE2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = SA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CR4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CR4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CR5
+			}
+		}
+		es_country_collapse_effect = {
+			who = CR5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CS2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CS2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CS3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CS3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CS4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CS4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CS5
+			}
+		}
+		es_country_collapse_effect = {
+			who = CS5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = SA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CS6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CS6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CS7
+			}
+		}
+		es_country_collapse_effect = {
+			who = CS7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CS8
+			}
+		}
+		es_country_collapse_effect = {
+			who = CS8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NE3
+			}
+		}
+		es_country_collapse_effect = {
+			who = NE3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = SB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NE5
+			}
+		}
+		es_country_collapse_effect = {
+			who = NE5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CT2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CT2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CT3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CT3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CT5
+			}
+		}
+		es_country_collapse_effect = {
+			who = CT5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CT4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CT4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = SB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CU1
+			}
+		}
+		es_country_collapse_effect = {
+			who = CU1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NE6
+			}
+		}
+		es_country_collapse_effect = {
+			who = NE6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NE8
+			}
+		}
+		es_country_collapse_effect = {
+			who = NE8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SC9
+			}
+		}
+		es_country_collapse_effect = {
+			who = SC9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NE9
+			}
+		}
+		es_country_collapse_effect = {
+			who = NE9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = SB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NF1
+			}
+		}
+		es_country_collapse_effect = {
+			who = NF1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NF0
+			}
+		}
+		es_country_collapse_effect = {
+			who = NF0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ND1
+			}
+		}
+		es_country_collapse_effect = {
+			who = ND1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NF3
+			}
+		}
+		es_country_collapse_effect = {
+			who = NF3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NF6
+			}
+		}
+		es_country_collapse_effect = {
+			who = NF6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NG0
+			}
+		}
+		es_country_collapse_effect = {
+			who = NG0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_FOR
+			}
+		}
+		es_country_collapse_effect = {
+			who = FOR
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CU5
+			}
+		}
+		es_country_collapse_effect = {
+			who = CU5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CU2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CU2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CU3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CU3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CU4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CU4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_RIE
+			}
+		}
+		es_country_collapse_effect = {
+			who = RIE
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD0
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF0
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_RAA
+			}
+		}
+		es_country_collapse_effect = {
+			who = RAA
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME8
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = MB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME4
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI3
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SKA
+			}
+		}
+		es_country_collapse_effect = {
+			who = SKA
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ0
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD3
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = IA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = IA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KAA
+			}
+		}
+		es_country_collapse_effect = {
+			who = KAA
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_IA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = IA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = UA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = UA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = UB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = UB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = UB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = UB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = UB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DS1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DS1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DZ5
+			}
+		}
+		es_country_collapse_effect = {
+			who = DZ5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MK1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MK1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME1
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MD9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MD9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME0
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME2
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME3
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MOA
+			}
+		}
+		es_country_collapse_effect = {
+			who = MOA
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DT1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DT1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DT2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DT2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DT3
+			}
+		}
+		es_country_collapse_effect = {
+			who = DT3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DT4
+			}
+		}
+		es_country_collapse_effect = {
+			who = DT4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME5
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME6
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME7
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ME9
+			}
+		}
+		es_country_collapse_effect = {
+			who = ME9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF3
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MF5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MF5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG0
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DW1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DW1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DW2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DW2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG1
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH0
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG3
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ6
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DW9
+			}
+		}
+		es_country_collapse_effect = {
+			who = DW9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DX0
+			}
+		}
+		es_country_collapse_effect = {
+			who = DX0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DX1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DX1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DX2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DX2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DD1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DD1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DX3
+			}
+		}
+		es_country_collapse_effect = {
+			who = DX3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DX4
+			}
+		}
+		es_country_collapse_effect = {
+			who = DX4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MG9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MG9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ3
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DD2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DD2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH3
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI8
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MI9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MI9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH4
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ5
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SAL
+			}
+		}
+		es_country_collapse_effect = {
+			who = SAL
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DX5
+			}
+		}
+		es_country_collapse_effect = {
+			who = DX5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DY9
+			}
+		}
+		es_country_collapse_effect = {
+			who = DY9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MC2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MC2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH2
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MJ7
+			}
+		}
+		es_country_collapse_effect = {
+			who = MJ7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DZ1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DZ1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DZ2
+			}
+		}
+		es_country_collapse_effect = {
+			who = DZ2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DZ3
+			}
+		}
+		es_country_collapse_effect = {
+			who = DZ3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DZ4
+			}
+		}
+		es_country_collapse_effect = {
+			who = DZ4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DD5
+			}
+		}
+		es_country_collapse_effect = {
+			who = DD5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DD6
+			}
+		}
+		es_country_collapse_effect = {
+			who = DD6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DD8
+			}
+		}
+		es_country_collapse_effect = {
+			who = DD8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DD9
+			}
+		}
+		es_country_collapse_effect = {
+			who = DD9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SC1
+			}
+		}
+		es_country_collapse_effect = {
+			who = SC1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DE0
+			}
+		}
+		es_country_collapse_effect = {
+			who = DE0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_DE1
+			}
+		}
+		es_country_collapse_effect = {
+			who = DE1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = SB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = SC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SC6
+			}
+		}
+		es_country_collapse_effect = {
+			who = SC6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = SC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_SD0
+			}
+		}
+		es_country_collapse_effect = {
+			who = SD0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = VA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = VA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = VA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VA4
+			}
+		}
+		es_country_collapse_effect = {
+			who = VA4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = VA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = VA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = VA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VA9
+			}
+		}
+		es_country_collapse_effect = {
+			who = VA9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = VB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VB6
+			}
+		}
+		es_country_collapse_effect = {
+			who = VB6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = VB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VC6
+			}
+		}
+		es_country_collapse_effect = {
+			who = VC6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = VB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KB6
+			}
+		}
+		es_country_collapse_effect = {
+			who = KB6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VB7
+			}
+		}
+		es_country_collapse_effect = {
+			who = VB7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VB8
+			}
+		}
+		es_country_collapse_effect = {
+			who = VB8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = VC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = VC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = VC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = VC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_VC9
+			}
+		}
+		es_country_collapse_effect = {
+			who = VC9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EA1
+			}
+		}
+		es_country_collapse_effect = {
+			who = EA1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = EB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EA2
+			}
+		}
+		es_country_collapse_effect = {
+			who = EA2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = EC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = EA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EC4
+			}
+		}
+		es_country_collapse_effect = {
+			who = EC4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EA6
+			}
+		}
+		es_country_collapse_effect = {
+			who = EA6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EA8
+			}
+		}
+		es_country_collapse_effect = {
+			who = EA8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = EB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = EB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = EB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = EC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EC3
+			}
+		}
+		es_country_collapse_effect = {
+			who = EC3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EB6
+			}
+		}
+		es_country_collapse_effect = {
+			who = EB6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = EB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = EC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = EC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EC9
+			}
+		}
+		es_country_collapse_effect = {
+			who = EC9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CF4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CF4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CF6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CF6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_TPL
+			}
+		}
+		es_country_collapse_effect = {
+			who = TPL
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CD4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CD4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CD6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CD6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CD8
+			}
+		}
+		es_country_collapse_effect = {
+			who = CD8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CE1
+			}
+		}
+		es_country_collapse_effect = {
+			who = CE1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CE2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CE2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CE6
+			}
+		}
+		es_country_collapse_effect = {
+			who = CE6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CE7
+			}
+		}
+		es_country_collapse_effect = {
+			who = CE7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CE8
+			}
+		}
+		es_country_collapse_effect = {
+			who = CE8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CF0
+			}
+		}
+		es_country_collapse_effect = {
+			who = CF0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CE9
+			}
+		}
+		es_country_collapse_effect = {
+			who = CE9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CF2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CF2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CF9
+			}
+		}
+		es_country_collapse_effect = {
+			who = CF9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CG0
+			}
+		}
+		es_country_collapse_effect = {
+			who = CG0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CG3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CG3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CG4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CG4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CG9
+			}
+		}
+		es_country_collapse_effect = {
+			who = CG9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JB1
+			}
+		}
+		es_country_collapse_effect = {
+			who = JB1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CH4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CH4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CH3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CH3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CH9
+			}
+		}
+		es_country_collapse_effect = {
+			who = CH9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CI0
+			}
+		}
+		es_country_collapse_effect = {
+			who = CI0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CH7
+			}
+		}
+		es_country_collapse_effect = {
+			who = CH7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_JB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = JB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CH8
+			}
+		}
+		es_country_collapse_effect = {
+			who = CH8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CI2
+			}
+		}
+		es_country_collapse_effect = {
+			who = CI2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CI5
+			}
+		}
+		es_country_collapse_effect = {
+			who = CI5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CI3
+			}
+		}
+		es_country_collapse_effect = {
+			who = CI3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CI4
+			}
+		}
+		es_country_collapse_effect = {
+			who = CI4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CI7
+			}
+		}
+		es_country_collapse_effect = {
+			who = CI7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_CJ0
+			}
+		}
+		es_country_collapse_effect = {
+			who = CJ0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = HC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HC0
+			}
+		}
+		es_country_collapse_effect = {
+			who = HC0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HC1
+			}
+		}
+		es_country_collapse_effect = {
+			who = HC1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HC2
+			}
+		}
+		es_country_collapse_effect = {
+			who = HC2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HC4
+			}
+		}
+		es_country_collapse_effect = {
+			who = HC4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HC3
+			}
+		}
+		es_country_collapse_effect = {
+			who = HC3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HE6
+			}
+		}
+		es_country_collapse_effect = {
+			who = HE6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = BC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HD0
+			}
+		}
+		es_country_collapse_effect = {
+			who = HD0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BC2
+			}
+		}
+		es_country_collapse_effect = {
+			who = BC2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HD2
+			}
+		}
+		es_country_collapse_effect = {
+			who = HD2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HD3
+			}
+		}
+		es_country_collapse_effect = {
+			who = HD3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HD4
+			}
+		}
+		es_country_collapse_effect = {
+			who = HD4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HD5
+			}
+		}
+		es_country_collapse_effect = {
+			who = HD5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HD7
+			}
+		}
+		es_country_collapse_effect = {
+			who = HD7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HD8
+			}
+		}
+		es_country_collapse_effect = {
+			who = HD8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HE1
+			}
+		}
+		es_country_collapse_effect = {
+			who = HE1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HD9
+			}
+		}
+		es_country_collapse_effect = {
+			who = HD9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HE2
+			}
+		}
+		es_country_collapse_effect = {
+			who = HE2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HE3
+			}
+		}
+		es_country_collapse_effect = {
+			who = HE3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_HE5
+			}
+		}
+		es_country_collapse_effect = {
+			who = HE5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AE1
+			}
+		}
+		es_country_collapse_effect = {
+			who = AE1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_KME
+			}
+		}
+		es_country_collapse_effect = {
+			who = KME
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AB2
+			}
+		}
+		es_country_collapse_effect = {
+			who = AB2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = AB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = AB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = AB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_OB0
+			}
+		}
+		es_country_collapse_effect = {
+			who = OB0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AB6
+			}
+		}
+		es_country_collapse_effect = {
+			who = AB6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AB8
+			}
+		}
+		es_country_collapse_effect = {
+			who = AB8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AB9
+			}
+		}
+		es_country_collapse_effect = {
+			who = AB9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC2
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC1
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC3
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC4
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC6
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC6
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AC9
+			}
+		}
+		es_country_collapse_effect = {
+			who = AC9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AD0
+			}
+		}
+		es_country_collapse_effect = {
+			who = AD0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AD8
+			}
+		}
+		es_country_collapse_effect = {
+			who = AD8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AD2
+			}
+		}
+		es_country_collapse_effect = {
+			who = AD2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AD7
+			}
+		}
+		es_country_collapse_effect = {
+			who = AD7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AD9
+			}
+		}
+		es_country_collapse_effect = {
+			who = AD9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_AE4
+			}
+		}
+		es_country_collapse_effect = {
+			who = AE4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BC5
+			}
+		}
+		es_country_collapse_effect = {
+			who = BC5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BB4
+			}
+		}
+		es_country_collapse_effect = {
+			who = BB4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BB5
+			}
+		}
+		es_country_collapse_effect = {
+			who = BB5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BB7
+			}
+		}
+		es_country_collapse_effect = {
+			who = BB7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BC1
+			}
+		}
+		es_country_collapse_effect = {
+			who = BC1
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_BD0
+			}
+		}
+		es_country_collapse_effect = {
+			who = BD0
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NC8
+			}
+		}
+		es_country_collapse_effect = {
+			who = NC8
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NC2
+			}
+		}
+		es_country_collapse_effect = {
+			who = NC2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NC3
+			}
+		}
+		es_country_collapse_effect = {
+			who = NC3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NC4
+			}
+		}
+		es_country_collapse_effect = {
+			who = NC4
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_NC7
+			}
+		}
+		es_country_collapse_effect = {
+			who = NC7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ND2
+			}
+		}
+		es_country_collapse_effect = {
+			who = ND2
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_ND3
+			}
+		}
+		es_country_collapse_effect = {
+			who = ND3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_UA5
+			}
+		}
+		es_country_collapse_effect = {
+			who = UA5
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = EA3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EA7
+			}
+		}
+		es_country_collapse_effect = {
+			who = EA7
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_EB3
+			}
+		}
+		es_country_collapse_effect = {
+			who = EB3
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MH9
+			}
+		}
+		es_country_collapse_effect = {
+			who = MH9
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_group = collapse_area_MA3
+			}
+		}
+		es_country_collapse_effect = {
+			who = MA3
+		}
+	}
+}

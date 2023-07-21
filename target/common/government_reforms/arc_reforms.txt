@@ -1,0 +1,220 @@
+test_reform = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = test_reform
+	}
+	trigger = {
+		has_reform = test_reform
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = no
+	nation_designer_cost = 0
+	nation_designer_trigger = {
+		always = no
+	}
+	modifiers = {
+		build_cost = -0.1
+	}
+	government_abilities = {
+		chief_authority_mechanic
+		fury_mechanic
+		elitism_mechanic
+		mane_vs_king_mechanic
+		tourism_mechanic
+	}
+	ai = {
+		factor = 5
+	}
+}
+orc_clan_reform = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = orc_clan_reform
+	}
+	trigger = {
+		has_reform = orc_clan_reform
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = no
+	nation_designer_cost = 0
+	heir = no
+	has_harem = yes
+	nation_designer_trigger = {
+		always = no
+	}
+	modifiers = {
+		loot_amount = 0.25
+		available_province_loot = 0.25
+		shock_damage = 0.05
+	}
+	government_abilities = {
+		fury_mechanic
+	}
+	custom_attributes = {
+		force_general_leader = yes
+	}
+	ai = {
+		factor = 5
+	}
+}
+warrior_house_reform = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = warrior_house_reform
+	}
+	trigger = {
+		has_reform = warrior_house_reform
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = no
+	nation_designer_cost = 0
+	heir = no
+	nation_designer_trigger = {
+		always = no
+	}
+	modifiers = {
+		possible_condottieri = 2.5
+		development_cost_modifier = -0.25
+		governing_capacity_modifier = -0.8
+	}
+	government_abilities = {
+		elitism_mechanic
+	}
+	lock_level_when_selected = yes
+	custom_attributes = {
+		locked_government_type = yes
+		force_general_leader = yes
+	}
+	ai = {
+		factor = 5
+	}
+}
+torval_reform = {
+	icon = "papacy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = TOR
+	}
+	trigger = {
+		religion = khajiiti_pantheon
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = no
+	nation_designer_cost = 0
+	can_form_trade_league = no
+	nation_designer_trigger = {
+		always = no
+	}
+	modifiers = {
+		diplomatic_reputation = 3
+		missionaries = 2
+	}
+	government_abilities = {
+		mane_vs_king_mechanic
+	}
+	papacy = yes
+	allow_convert = no
+	lock_level_when_selected = yes
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	ai = {
+		factor = 5
+	}
+}
+pirate_kingdom_reform = {
+	icon = "pirate_republic"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Golden Century"
+	}
+	trigger = {
+		has_reform = pirate_kingdom_reform
+	}
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	can_form_trade_league = no
+	nation_designer_trigger = {
+		has_dlc = "Golden Century"
+	}
+	raze_province = yes
+	factions_frame = 9
+	factions = {
+		pr_buccaneers
+		pr_smugglers
+		pr_captains
+	}
+	modifiers = {
+		naval_morale = 0.1
+		raze_power_gain = 0.1
+		loot_amount = 0.1
+		privateer_efficiency = 0.25
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		force_admiral_leader = yes
+		allow_draft_transport_ships = yes
+	}
+	ai = {
+		factor = 5
+	}
+}
+nord_clan = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = northern_cg
+	}
+	trigger = {
+		always = yes
+	}
+	maintain_dynasty = yes
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	can_form_trade_league = no
+	nation_designer_trigger = {
+		culture_group = northern_cg
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.25
+		land_morale = 0.1
+	}
+	government_abilities = {
+		chief_authority_mechanic
+	}
+	ai = {
+		factor = 5
+	}
+}
+nord_clan_council = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = northern_cg
+	}
+	trigger = {
+		always = yes
+	}
+	heir = no
+	maintain_dynasty = yes
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	can_form_trade_league = no
+	nation_designer_trigger = {
+		culture_group = northern_cg
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.25
+		land_morale = 0.1
+	}
+	ai = {
+		factor = 5
+	}
+}

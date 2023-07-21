@@ -1,0 +1,502 @@
+# AI War Declaration
+
+can_declare_scenario_war = {
+	custom_trigger_tooltip = {
+        tooltip = can_declare_scenario_war_tooltip
+		OR = {
+			ai = no
+			AND = {
+				is_at_war = no
+				stability = 0
+				has_any_disaster = no
+				NOT = { war_exhaustion = 10 }
+				manpower_percentage = 0.25
+			}
+		}
+	}
+}
+
+# No female rulers
+
+do_not_have_female_rulers = {
+	custom_trigger_tooltip = {
+        tooltip = do_not_have_female_rulers_tooltip
+		OR = {
+			primary_culture = ashlander_dunmer
+			ruler_culture = ashlander_chimer
+		}
+	}
+}
+
+# ES Gov Reforms
+
+is_elven_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_elven_nation_trigger_tooltip
+		OR = {
+		    culture_group = maormer_cg
+			culture_group = high_elves_cg
+			culture_group = snow_elves_cg
+			culture_group = dwemer_cg
+			culture_group = bosmer_cg
+			culture_group = velothi_cg
+		}
+	}
+}
+
+is_human_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_human_nation_trigger_tooltip
+		OR = {
+		    culture_group = yokudo_redguard_cg
+			culture_group = northern_cg
+			culture_group = half_blood_cg
+			culture_group = cyrodiil_cg
+			culture_group = marsh_men_cg
+			culture_group = deathland_cg
+		}
+	}
+}
+
+is_beast_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_beast_nation_trigger_tooltip
+		OR = {
+		    culture_group = sload_cg
+			culture_group = orsimer_cg
+			culture_group = khajiiti_cg
+			culture_group = senche_cg
+			culture_group = imga_cg
+			culture_group = marsh_cg
+			culture_group = minotaur_cg
+			culture_group = lilmothiit_cg
+			culture_group = goblin_cg
+			culture_group = giant_cg
+			culture_group = fowl_cg
+			culture_group = centaur_cg
+			culture_group = lamian_cg
+			culture_group = dragon_cg
+			culture_group = nalonga_cg
+		}
+	}
+}
+
+is_akaviri_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_akaviri_nation_trigger_tooltip
+		OR = {
+		    culture_group = po_tun_cg
+			culture_group = tsaesci_cg
+			culture_group = transpandomaic_cg
+			culture_group = kamal_cg
+			culture_group = tangmo_cg
+			culture_group = rat_men_cg
+			culture_group = canis_men_cg
+		}
+	}
+}
+
+is_daedric_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_daedric_nation_trigger_tooltip
+		OR = {
+		    culture_group = dead_cg
+			culture_group = daedra_cg
+			culture_group = void_cg
+			culture_group = unknown_cg
+		}
+	}
+}
+
+### ES Health
+
+### Rulers ############################################################
+
+is_human_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = yokudan
+			ruler_culture = redguard
+			ruler_culture = atmoran
+			ruler_culture = glacial
+			ruler_culture = nord
+			ruler_culture = skaal
+			ruler_culture = nedic
+			ruler_culture = imperial
+			ruler_culture = nibenean
+			ruler_culture = colovian
+			ruler_culture = akaviri
+			ruler_culture = islander
+			ruler_culture = keptu
+			ruler_culture = horwalli
+			ruler_culture = yespest
+			ruler_culture = orma
+		}
+	}
+}
+
+is_half_blood_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = breton
+			ruler_culture = reachmen
+			ruler_culture = orsimer
+			ruler_culture = wood_orsimer
+			ruler_culture = khajiiti
+			ruler_culture = anequinan
+			ruler_culture = pellitinian
+			ruler_culture = po_tun
+			ruler_culture = imga
+			ruler_culture = argonian
+			ruler_culture = archein
+			ruler_culture = naga
+			ruler_culture = tsaesci
+			ruler_culture = kamal
+			ruler_culture = goblin
+			ruler_culture = riekling
+			ruler_culture = frost_giant
+			ruler_culture = sea_giant
+			ruler_culture = giant
+			ruler_culture = kothringi
+			ruler_culture = arachnid
+			ruler_culture = minotaur
+			ruler_culture = lilmothiit
+			ruler_culture = tangmo
+			ruler_culture = canis_men
+			ruler_culture = rat_men
+			ruler_culture = centaur
+			ruler_culture = bird_men
+			ruler_culture = harpy
+			ruler_culture = riekr
+			ruler_culture = ogre
+			ruler_culture = lamian
+		}
+	}
+}
+
+is_elven_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = maormer
+			ruler_culture = altmer
+			ruler_culture = ayleid
+			ruler_culture = barsaebic
+			ruler_culture = corelanyan
+			ruler_culture = sinistral
+			ruler_culture = snow_elven
+			ruler_culture = falmer
+			ruler_culture = dwemer ruler_culture = rourkenid ruler_culture = dumalacathi ruler_culture = kagrenmer
+			ruler_culture = bosmer
+			ruler_culture = cantemiric
+			ruler_culture = ashlander_dunmer
+			ruler_culture = house_dunmer
+			ruler_culture = house_chimer ruler_culture = ashlander_chimer
+		}
+	}
+}
+
+is_unknown_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = sload
+			ruler_culture = al_dremoran
+			ruler_culture = dremoran
+			ruler_culture = xivilai
+			ruler_culture = clanfear
+			ruler_culture = daedroth
+			ruler_culture = unknown
+			ruler_culture = harvester
+			ruler_culture = scamp
+			ruler_culture = hollow
+		}
+	}
+}
+
+is_immortal_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = vampire
+			ruler_culture = soul_shriven
+			ruler_culture = daedra
+			ruler_has_personality = immortal_personality
+			ruler_culture = dragon
+		}
+	}
+}
+
+### Consort ###########################################################
+
+is_human_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = yokudan
+			consort_culture = redguard
+			consort_culture = atmoran
+			consort_culture = glacial
+			consort_culture = nord
+			consort_culture = skaal
+			consort_culture = nedic
+			consort_culture = imperial
+			consort_culture = nibenean
+			consort_culture = colovian
+			consort_culture = akaviri
+			consort_culture = islander
+			consort_culture = keptu
+			consort_culture = horwalli
+			consort_culture = yespest
+			consort_culture = orma
+		}
+	}
+}
+
+is_half_blood_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = breton
+			consort_culture = reachmen
+			consort_culture = orsimer
+			consort_culture = wood_orsimer
+			consort_culture = khajiiti
+			consort_culture = anequinan
+			consort_culture = pellitinian
+			consort_culture = po_tun
+			consort_culture = imga
+			consort_culture = argonian
+			consort_culture = archein
+			consort_culture = naga
+			consort_culture = tsaesci
+			consort_culture = kamal
+			consort_culture = goblin
+			consort_culture = riekling
+			consort_culture = frost_giant
+			consort_culture = sea_giant
+			consort_culture = giant
+			consort_culture = kothringi
+			consort_culture = arachnid
+			consort_culture = minotaur
+			consort_culture = lilmothiit
+			consort_culture = tangmo
+			consort_culture = canis_men
+			consort_culture = rat_men
+			consort_culture = centaur
+			consort_culture = bird_men
+			consort_culture = harpy
+			consort_culture = riekr
+			consort_culture = ogre
+			consort_culture = lamian
+		}
+	}
+}
+
+is_elven_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = maormer
+			consort_culture = altmer
+			consort_culture = barsaebic
+			consort_culture = ayleid
+			consort_culture = corelanyan
+			consort_culture = sinistral
+			consort_culture = snow_elven
+			consort_culture = falmer
+			consort_culture = dwemer consort_culture = rourkenid consort_culture = dumalacathi consort_culture = kagrenmer
+			consort_culture = bosmer
+			consort_culture = cantemiric
+			consort_culture = ashlander_dunmer
+			consort_culture = house_dunmer
+			consort_culture = house_chimer consort_culture = ashlander_chimer
+		}
+	}
+}
+
+is_unknown_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = sload
+			consort_culture = al_dremoran
+			consort_culture = dremoran
+			consort_culture = xivilai
+			consort_culture = clanfear
+			consort_culture = daedroth
+			consort_culture = unknown
+			consort_culture = harvester
+			consort_culture = scamp
+			consort_culture = hollow
+		}
+	}
+}
+
+is_immortal_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = vampire
+			consort_culture = soul_shriven
+			consort_culture = daedra
+			consort_has_personality = immortal_personality
+			consort_culture = dragon
+		}
+	}
+}
+
+### Heir ##############################################################
+
+is_human_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = yokudan
+			heir_culture = redguard
+			heir_culture = atmoran
+			heir_culture = glacial
+			heir_culture = nord
+			heir_culture = skaal
+			heir_culture = nedic
+			heir_culture = imperial
+			heir_culture = nibenean
+			heir_culture = colovian
+			heir_culture = akaviri
+			heir_culture = islander
+			heir_culture = keptu
+			heir_culture = horwalli
+			heir_culture = yespest
+			heir_culture = orma
+		}
+	}
+}
+
+is_half_blood_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = breton
+			heir_culture = reachmen
+			heir_culture = orsimer
+			heir_culture = wood_orsimer
+			heir_culture = khajiiti
+			heir_culture = anequinan
+			heir_culture = pellitinian
+			heir_culture = po_tun
+			heir_culture = imga
+			heir_culture = argonian
+			heir_culture = archein
+			heir_culture = naga
+			heir_culture = tsaesci
+			heir_culture = kamal
+			heir_culture = goblin
+			heir_culture = riekling
+			heir_culture = frost_giant
+			heir_culture = sea_giant
+			heir_culture = giant
+			heir_culture = kothringi
+			heir_culture = arachnid
+			heir_culture = minotaur
+			heir_culture = lilmothiit
+			heir_culture = tangmo
+			heir_culture = canis_men
+			heir_culture = rat_men
+			heir_culture = centaur
+			heir_culture = bird_men
+			heir_culture = harpy
+			heir_culture = riekr
+			heir_culture = ogre
+			heir_culture = lamian
+		}
+	}
+}
+
+is_elven_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = maormer
+			heir_culture = altmer
+			heir_culture = ayleid
+			heir_culture = barsaebic
+			heir_culture = corelanyan
+			heir_culture = sinistral
+			heir_culture = snow_elven
+			heir_culture = falmer
+			heir_culture = dwemer heir_culture = rourkenid heir_culture = dumalacathi heir_culture = kagrenmer
+			heir_culture = bosmer
+			heir_culture = cantemiric
+			heir_culture = ashlander_dunmer
+			heir_culture = house_dunmer
+			heir_culture = house_chimer heir_culture = ashlander_chimer
+		}
+	}
+}
+
+is_unknown_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = sload
+			heir_culture = al_dremoran
+			heir_culture = dremoran
+			heir_culture = xivilai
+			heir_culture = clanfear
+			heir_culture = daedroth
+			heir_culture = unknown
+			heir_culture = harvester
+			heir_culture = scamp
+			heir_culture = hollow
+		}
+	}
+}
+
+is_immortal_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = vampire
+			heir_culture = soul_shriven
+			heir_culture = daedra
+			heir_has_personality = immortal_personality
+			heir_culture = dragon
+		}
+	}
+}
+
+#######################################################################
+
+has_birthsign_trigger = {
+	OR = {
+		has_ruler_flag = birthsign_ritual
+		has_ruler_flag = birthsign_lover
+		has_ruler_flag = birthsign_lord
+		has_ruler_flag = birthsign_mage
+		has_ruler_flag = birthsign_shadow
+		has_ruler_flag = birthsign_steed
+		has_ruler_flag = birthsign_apprentice
+		has_ruler_flag = birthsign_warrior
+		has_ruler_flag = birthsign_lady
+		has_ruler_flag = birthsign_tower
+		has_ruler_flag = birthsign_atronach
+		has_ruler_flag = birthsign_thief
+		has_ruler_flag = birthsign_serpent
+	}
+}
+
+#######################################################################
+
+has_fixed_trade_good = {
+	OR = {
+		trade_goods = black_briar_mead
+		trade_goods = honningbrew_mead
+		trade_goods = emberbrand_wine
+		trade_goods = firebrand_wine
+		trade_goods = surilie_brothers_wine
+		trade_goods = ogres_teeth
+		trade_goods = aetherium
+	}
+}

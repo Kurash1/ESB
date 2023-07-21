@@ -1,0 +1,211 @@
+fire0 = {
+	category = MIL
+	
+	trigger = {
+		OR = {
+			#Hidden
+			tag = YOL
+			culture_group = bosmer_cg
+			artillery_fraction = 0.5
+			has_leader_with = {
+				fire = 6
+			}
+			#Normal
+			full_idea_group = destruction_ideas
+		}
+	}
+	bonus = {
+		fire_damage_received = -0.1
+	}
+		
+	fire1 = {
+		shock_damage_received = -0.1
+	}
+	fire2 = {
+		artillery_levels_available_vs_fort = 1
+	}
+	fire3 = {
+		artillery_power = 0.1
+	}
+
+	fire4 = {
+		fire_damage = 0.1
+	}
+
+	fire5 = {
+		defensiveness = 0.25
+	}
+	fire6 = {
+		backrow_artillery_damage = 0.25
+	}
+	fire7 = {
+		leader_land_fire = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 30
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 1.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 2.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 3.5
+			total_development = 1000
+		}
+	}
+}
+
+esb_bloodmagic = {
+	category = MIL
+	
+	trigger = {
+		OR = {
+			#Hidden
+			primary_culture = vampire
+			primary_culture = tsaesci
+			#Normal
+			full_idea_group = destruction_ideas
+		}
+	}
+	bonus = {
+		discipline = 0.05
+	}
+		
+	esb_bloodmagic1 = {
+		improve_relation_modifier = -0.2
+		prestige = 1
+	}
+	esb_bloodmagic2 = {
+		loot_amount = 0.5
+		available_province_loot = 0.25
+	}
+	esb_bloodmagic3 = {
+		global_manpower_modifier = 0.15
+	}
+
+	esb_bloodmagic4 = {
+		backrow_artillery_damage = 0.1
+	}
+
+	esb_bloodmagic5 = {
+		shock_damage = 0.05
+	}
+	esb_bloodmagic6 = {
+		shock_damage_received = -0.025
+		fire_damage_received = -0.025
+	}
+	esb_bloodmagic7 = {
+		hostile_attrition = 1.5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+esb_watermagic = {
+	category = MIL
+	
+	trigger = {
+		OR = {
+			#Hidden
+			culture_group = marsh_cg
+			primary_culture = ayleid
+			culture_group = maormer_cg
+			culture_group = sload_cg
+			#Normal
+			full_idea_group = destruction_ideas
+		}
+	}
+	bonus = {
+		naval_attrition = -0.15
+	}
+		
+	esb_watermagic1 = {
+		naval_morale = 0.15
+	}
+	esb_watermagic2 = {
+		global_spy_defence = 0.15
+	}
+	esb_watermagic3 = {
+		technology_cost = -0.1
+	}
+
+	esb_watermagic4 = {
+		development_cost = -0.1
+	}
+
+	esb_watermagic5 = {
+		army_tradition_decay = -0.01
+	}
+	esb_watermagic6 = {
+		own_coast_naval_combat_bonus = 1.0
+	}
+	esb_watermagic7 = {
+		fire_damage = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+esb_warmagic = {
+	category = MIL
+	
+	trigger = {
+		OR = { 
+			#Hidden
+			primary_culture = imperial
+			primary_culture = colovian
+			primary_culture = nibenean
+			primary_culture = breton
+			estate_influence = {
+				estate = estate_mages
+				influence = 80
+			}
+			#Normal
+			full_idea_group = destruction_ideas
+		}
+	}
+	bonus = {
+		siege_ability = 0.25
+	}
+		
+	esb_warmagic1 = {
+		fire_damage = 0.05
+	}
+	esb_warmagic2 = {
+		leader_land_fire = 1
+		leader_naval_fire = 1
+	}
+	esb_warmagic3 = {
+		spy_offence = 0.2
+	}
+
+	esb_warmagic4 = {
+		movement_speed = 0.1
+	}
+
+	esb_warmagic5 = {
+		prestige_from_land = 0.5
+	}
+	esb_warmagic6 = {
+		army_tradition = 1.5
+	}
+	esb_warmagic7 = {
+		land_forcelimit_modifier = 0.15
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

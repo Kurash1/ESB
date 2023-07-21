@@ -1,0 +1,164 @@
+default = {
+	trigger = { 
+		always = yes 
+	}
+}
+akaviri = {
+	trigger = { culture_group = transpandomaic_cg }
+}
+argonian = {
+	trigger = { culture_group = marsh_cg }
+}
+bosmer = {
+	trigger = { culture_group = bosmer_cg }
+}
+breton = {
+	base_cannons = 0.1
+	trigger = { primary_culture = breton }
+}
+chimer = {
+	trigger = { 
+		OR = { 
+			primary_culture = house_chimer 
+			primary_culture = house_dunmer 
+		} 
+	}
+}
+colovian = {
+	trigger = { primary_culture = colovian }
+}
+daedric = {
+	trigger = { culture_group = daedra_cg }
+}
+dwemer = {
+	trigger = { culture_group = dwemer_cg }
+}
+elven = {
+	sail_speed = 0.1
+	trigger = { 
+		OR = { 
+			culture_group = high_elves_cg 
+			culture_group = snow_elves_cg 
+		} 
+	}
+}
+giant = {
+	trigger = { culture_group = giant_cg }
+}
+goblin = {
+	trigger = { culture_group = goblin_cg }
+}
+imga = {
+	trigger = { culture_group = imga_cg }
+}
+imperial = {
+	hull_size = 0.1
+	trigger = { primary_culture = imperial }
+}
+kamalian = {
+	trigger = { culture_group = kamal_cg }
+}
+keptu = {
+	trigger = { primary_culture = keptu }
+}
+khajiit = {
+	trigger = { culture_group = khajiiti_cg }
+}
+kothringi = {
+	trigger = { culture_group = marsh_men_cg }
+}
+lilmothiit = {
+	trigger = { culture_group = lilmothiit_cg }
+}
+maormer = {
+	sail_speed = 0.1
+	base_cannons = 0.1
+	trigger = { culture_group = maormer_cg }
+}
+minotaur = {
+	trigger = { culture_group = minotaur_cg }
+}
+nedic = {
+	trigger = { primary_culture = nedic }
+}
+nibenean = {
+	trigger = { primary_culture = nibenean }
+}
+nord = {
+	sailors = -0.1
+	trigger = { 
+		OR = { 
+			primary_culture = nord 
+			primary_culture = atmoran 
+		}			
+	}
+}
+northern = {
+	trigger = { 
+		culture_group = northern_cg 
+		NOT = { primary_culture = nord } 
+		NOT = { primary_culture = atmoran } 
+	}
+}
+orc = {
+	trigger = { culture_group = orsimer_cg }
+}
+po_tun = {
+	trigger = { culture_group = po_tun_cg }
+}
+reachmen = {
+	trigger = { primary_culture = reachmen }
+}
+redguard = {
+	sail_speed = 0.1
+	trigger = { primary_culture = redguard }
+}
+sload = {
+	trigger = { culture_group = sload_cg }
+}
+soul_shriven = {
+	trigger = { primary_culture = soul_shriven }
+}
+tangmo = {
+	trigger = { culture_group = tangmo_cg }
+}
+tsaesci = {
+	trigger = { culture_group = tsaesci_cg }
+}
+vampire = {
+	trigger = { primary_culture = vampire }
+}
+velothi = {
+	trigger = { 
+		OR = { 
+			primary_culture = ashlander_chimer 
+			primary_culture = ashlander_dunmer 
+		} 
+	}
+}
+void = {
+	trigger = { culture_group = void_cg }
+}
+yokudan = {
+	sail_speed = 0.1
+	base_cannons = 0.1
+	trigger = { culture_group = yokudo_redguard_cg }
+}
+#fowl = {
+#	trigger = { culture_group = fowl_cg }
+#}
+#centaur = {
+#	trigger = { culture_group = centaur_cg }
+#}
+#rat_men = {
+#	trigger = { culture_group = rat_men_cg }
+#}
+#canis_men = {
+#	trigger = { culture_group = canis_men_cg }
+#}
+#lamian = {
+#	trigger = { culture_group = lamian_cg }
+#}
+#dragon = {
+#	trigger = { culture_group = dragon_cg }
+#}

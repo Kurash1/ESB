@@ -1,0 +1,187 @@
+cb_native_reservation = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		 NOT = { government = native }
+	}
+	
+	prerequisites = {
+		NOT = { truce_with = FROM }
+		NOT = { alliance_with = FROM }
+		FROM = {
+			is_neighbor_of = ROOT
+			government = native
+		}
+	}
+
+	war_goal = ge_native_reservation
+}
+cb_es_scenario = {
+	valid_for_subject = no
+
+	prerequisites = {
+		always = no
+	}
+
+	war_goal = es_scenario
+}
+
+cb_es_nordic_feud = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		has_country_flag = es_12_nordic_feud_flag
+		culture_group = northern_cg
+	}
+
+	prerequisites = {
+		FROM = {
+		    is_neighbor_of = ROOT
+			culture_group = northern_cg
+		}
+	}
+
+	war_goal = es_nordic_feud
+}
+
+cb_es_tribal_war = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		culture_group = minotaur_cg
+	}
+
+	prerequisites = {
+		FROM = {
+		    is_neighbor_of = ROOT
+			culture_group = minotaur_cg
+		}
+	}
+
+	war_goal = es_nordic_feud
+}
+
+cb_es_witch_hunting = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		has_country_flag = es_magic_persecution_flag
+	}
+	
+	prerequisites = {
+		FROM = {
+		    has_country_flag = es_magic_nation_flag
+		}
+	}
+
+	war_goal = es_witch_hunting
+}
+cb_become_elector_of_hre = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		is_part_of_hre = yes
+		is_elector = no
+	}
+	
+	prerequisites = {
+		FROM = {
+			is_elector = yes
+		}
+	}
+
+	war_goal = es_become_elector_of_hre
+}
+
+cb_tsaesci_hunger = {
+	valid_for_subject = yes
+	
+	prerequisites_self = {
+		primary_culture = tsaesci
+	}
+	
+	prerequisites = {
+		FROM = {
+			is_neighbor_of = ROOT
+		}
+	}
+
+	war_goal = es_tsaesci_hunger
+}
+
+cb_fight_dragon_cultists = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		culture_group = northern_cg
+		NOT = { religion = dragon_cult }
+	}
+	
+	prerequisites = {
+		FROM = {
+			is_neighbor_of = ROOT
+			religion = dragon_cult
+		}
+	}
+
+	war_goal = es_show_supremacy
+}
+
+cb_fight_nords = {
+	prerequisites_self = {
+		primary_culture = reachmen
+	}
+
+	prerequisites = {
+		FROM = {
+			is_neighbor_of = ROOT
+			primary_culture = nord
+		}
+	}
+
+	war_goal = es_show_supremacy
+}
+
+cb_pte_liberation = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_opinion_modifier = {
+			who = FROM
+			modifier = aggressive_expansion
+			value = -35
+		}
+		FROM = {
+			is_neighbor_of = ROOT
+		}
+	}
+
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+	}
+
+	war_goal = pte_liberation_war_goal
+}
+
+cb_ruler_revenge = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+
+	prerequisites = {
+		FROM = {
+			is_neighbor_of = ROOT
+			primary_culture = nord
+		}
+	}
+	
+	attacker_disabled_po = {
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+	}
+	war_goal = ruler_revenge_war_goal
+}

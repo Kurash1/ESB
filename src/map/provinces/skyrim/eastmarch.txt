@@ -1,0 +1,2391 @@
+new area bleakrock_isle = {
+	name = "Bleakrock Isle"
+	region = eastmarch
+}
+new province bleakrock_isle = {
+    position = {
+        2020.000 2035.000 2020.000 2035.000 2020.000 2035.000 2020.000 2035.000 2020.000 2035.000 2020.000 2035.000 2020.000 2035.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Bleakrock Isle"
+	color = { 162 219 169 }
+	area = bleakrock_isle
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+		owner = HLY
+		controller = HLY
+		add_core = HLY
+		57.1.1 = {
+			is_city = yes
+		}
+	}
+	
+	expedition = {
+		length = 10 #How many cycles does the expedition take
+		difficulty = -0.5 #Difficulty Modifier
+		reward = 5 #Cycle reward multiplier
+		artifacts = {
+			auriels_bow = {
+				name = "Auriel's Bow"
+				desc = "Auriel's Bow is an artifact used by the elven god Auriel. Although it takes the form of a modest elven moonstone bow, it is one of the most powerful weapons on Tamriel.\nThe bow draws its power from Aetherius itself, channeling it through the sun. It has the ability to turn any arrow into a 'missile of death', although its enchantment effects vary: it has been known to cause magical fire or shock damage, drain an opponent's stamina and magicka reserves, or harness the power of the sun. It can also make the wielder immune to lesser attacks, and is especially devastating when used against the undead. Occasionally it can be seemingly unenchanted. Without Auriel's power behind it, however, the bow uses its own store of energy for its power. Once exhausted of this energy, the bow will vanish, abandoning its owner to reappear elsewhere."
+				modifier = {
+					fire_damage = 0.1
+				}
+			}
+		}
+		on_complete = { }
+	}
+}
+new area brandy-mug = {
+	name = "Brandy-Mug"
+	region = eastmarch
+}
+new province 2812 = {
+    position = {
+        1938.000 1956.000 1938.000 1956.000 1938.000 1956.000 1938.000 1956.000 1938.000 1956.000 1938.000 1956.000 1938.000 1956.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Yngol Barrow"
+	color = { 207 123 200 }
+	area = brandy-mug
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new province starkad = {
+    position = {
+        1940.000 1967.000 1940.000 1967.000 1940.000 1967.000 1940.000 1967.000 1940.000 1967.000 1940.000 1967.000 1940.000 1967.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Starkad"
+	color = { 104 252 176 }
+	area = brandy-mug
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new province teklina = {
+    position = {
+        1956.000 1976.000 1956.000 1976.000 1956.000 1976.000 1956.000 1976.000 1956.000 1976.000 1956.000 1976.000 1956.000 1976.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Teklina"
+	color = { 232 133 160 }
+	area = brandy-mug
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new area holly-frost = {
+	name = "Holly-Frost"
+	region = eastmarch
+}
+new province holly-frost = {
+    position = {
+        1983.000 1985.000 1983.000 1985.000 1983.000 1985.000 1983.000 1985.000 1983.000 1985.000 1983.000 1985.000 1983.000 1985.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Holly-Frost"
+	color = { 164 152 238 }
+	area = holly-frost
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HLY
+		controller = HLY
+		add_core = HLY
+	}
+}
+new province yngol_barrow = {
+    position = {
+        1981.000 2001.000 1981.000 2001.000 1981.000 2001.000 1981.000 2001.000 1981.000 2001.000 1981.000 2001.000 1981.000 2001.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Yngol Barrow"
+	color = { 233 133 200 }
+	area = holly-frost
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HLY
+		controller = HLY
+		add_core = HLY
+	}
+}
+new province frostbloom = {
+    position = {
+        1968.000 1988.000 1968.000 1988.000 1968.000 1988.000 1968.000 1988.000 1968.000 1988.000 1968.000 1988.000 1968.000 1988.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Frostbloom"
+	color = { 158 206 210 }
+	area = holly-frost
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HLY
+		controller = HLY
+		add_core = HLY
+	}
+}
+new area dunmeth_pass = {
+	name = "Dunmeth Pass"
+	region = eastmarch
+}
+new province snowdrift = {
+    position = {
+        2007.000 2009.000 2007.000 2009.000 2007.000 2009.000 2007.000 2009.000 2007.000 2009.000 2007.000 2009.000 2007.000 2009.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Snowdrift"
+	color = { 134 154 254 }
+	area = dunmeth_pass
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HLY
+		controller = HLY
+		add_core = HLY
+	}
+}
+new province chillwind = {
+    position = {
+        1998.000 1998.000 1998.000 1998.000 1998.000 1998.000 1998.000 1998.000 1998.000 1998.000 1998.000 1998.000 1998.000 1998.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Chillwind"
+	color = { 147 119 105 }
+	area = dunmeth_pass
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HLY
+		controller = HLY
+		add_core = HLY
+	}
+}
+new province dunmeth_pass = {
+    position = {
+        2003.000 1984.000 2003.000 1984.000 2003.000 1984.000 2003.000 1984.000 2003.000 1984.000 2003.000 1984.000 2003.000 1984.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Dunmeth Pass"
+	color = { 148 128 182 }
+	area = dunmeth_pass
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HLY
+		controller = HLY
+		add_core = HLY
+	}
+}
+new area narzulbur = {
+	name = "Narzulbur"
+	region = eastmarch
+}
+new province grerria = {
+    position = {
+        1965.000 1936.000 1965.000 1936.000 1965.000 1936.000 1965.000 1936.000 1965.000 1936.000 1965.000 1936.000 1965.000 1936.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Grerria"
+	color = { 215 184 217 }
+	area = narzulbur
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = KYN
+		controller = KYN
+		add_core = KYN
+	}
+}
+new province sorldur = {
+    position = {
+        1958.000 1947.000 1958.000 1947.000 1958.000 1947.000 1958.000 1947.000 1958.000 1947.000 1958.000 1947.000 1958.000 1947.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Sorldur"
+	color = { 162 155 254 }
+	area = narzulbur
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = KYN
+		controller = KYN
+		add_core = KYN
+	}
+}
+new province agatror = {
+    position = {
+        1968.000 1946.000 1968.000 1946.000 1968.000 1946.000 1968.000 1946.000 1968.000 1946.000 1968.000 1946.000 1968.000 1946.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Agatror"
+	color = { 205 176 110 }
+	area = narzulbur
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		add_claim = WND
+		owner = KYN
+		controller = KYN
+		add_core = KYN
+	}
+}
+new area mzulft = {
+	name = "Mzulft"
+	region = eastmarch
+}
+new province mzulft = {
+    position = {
+        1981.000 1917.000 1981.000 1917.000 1981.000 1917.000 1981.000 1917.000 1981.000 1917.000 1981.000 1917.000 1981.000 1917.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Mzulft"
+	color = { 212 176 241 }
+	area = mzulft
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRW
+		controller = CRW
+		add_core = CRW
+		add_claim = WND
+		272.1.1 = {
+			trade_goods = unknown
+		}
+	}
+}
+new province steamcrag = {
+    position = {
+        1970.000 1927.000 1970.000 1927.000 1970.000 1927.000 1970.000 1927.000 1970.000 1927.000 1970.000 1927.000 1970.000 1927.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Steamcrag"
+	color = { 124 191 163 }
+	area = mzulft
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRW
+		controller = CRW
+		add_core = CRW
+		add_claim = WND
+	}
+}
+new area brokenlimb = {
+	name = "Brokenlimb"
+	region = eastmarch
+}
+new province evema = {
+    position = {
+        1904.000 1919.000 1904.000 1919.000 1904.000 1919.000 1904.000 1919.000 1904.000 1919.000 1904.000 1919.000 1904.000 1919.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Evema"
+	color = { 241 133 154 }
+	area = brokenlimb
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+		owner = CRV
+		controller = CRV
+		add_core = CRV
+		add_claim = WND
+	}
+}
+new province brashe = {
+    position = {
+        1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Brashe"
+	color = { 215 239 117 }
+	area = brokenlimb
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = DAR
+		controller = DAR
+		add_core = DAR
+		add_claim = WND
+		272.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+new area bonestrew = {
+	name = "Bonestrew"
+	region = eastmarch
+}
+new province lydny = {
+    position = {
+        1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Lydny"
+	color = { 118 126 166 }
+	area = bonestrew
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new province cronvangr = {
+    position = {
+        1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Cronvangr"
+	color = { 185 104 132 }
+	area = bonestrew
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new province hjoie = {
+    position = {
+        1920.000 1918.000 1920.000 1918.000 1920.000 1918.000 1920.000 1918.000 1920.000 1918.000 1920.000 1918.000 1920.000 1918.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Hjoie"
+	color = { 129 157 244 }
+	area = bonestrew
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new area akawatch = {
+	name = "Akawatch"
+	region = eastmarch
+}
+new province rukdis = {
+    position = {
+        1946.000 1909.000 1946.000 1909.000 1946.000 1909.000 1946.000 1909.000 1946.000 1909.000 1946.000 1909.000 1946.000 1909.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Rukdis"
+	color = { 116 121 231 }
+	area = akawatch
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+	}
+}
+new province fanella = {
+    position = {
+        1961.000 1906.000 1961.000 1906.000 1961.000 1906.000 1961.000 1906.000 1961.000 1906.000 1961.000 1906.000 1961.000 1906.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Fanella"
+	color = { 101 131 142 }
+	area = akawatch
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new province aleading = {
+    position = {
+        1946.000 1898.000 1946.000 1898.000 1946.000 1898.000 1946.000 1898.000 1946.000 1898.000 1946.000 1898.000 1946.000 1898.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Aleading"
+	color = { 100 130 223 }
+	area = akawatch
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+	}
+}
+new area steamcrag = {
+	name = "Steamcrag"
+	region = eastmarch
+}
+new province heddalla = {
+    position = {
+        1946.000 1923.000 1946.000 1923.000 1946.000 1923.000 1946.000 1923.000 1946.000 1923.000 1946.000 1923.000 1946.000 1923.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Heddalla"
+	color = { 106 115 192 }
+	area = steamcrag
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new province narzulbur = {
+    position = {
+        1957.000 1920.000 1957.000 1920.000 1957.000 1920.000 1957.000 1920.000 1957.000 1920.000 1957.000 1920.000 1957.000 1920.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Narzulbur"
+	color = { 147 191 230 }
+	area = steamcrag
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRW
+		controller = CRW
+		add_core = CRW
+		add_claim = WND
+		272.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+new province margyf = {
+    position = {
+        1969.000 1913.000 1969.000 1913.000 1969.000 1913.000 1969.000 1913.000 1969.000 1913.000 1969.000 1913.000 1969.000 1913.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Margyf"
+	color = { 241 165 215 }
+	area = steamcrag
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRW
+		controller = CRW
+		add_core = CRW
+		add_claim = WND
+	}
+}
+new area cronvangr = {
+	name = "Cronvangr"
+	region = eastmarch
+}
+new province unamir = {
+    position = {
+        1918.000 1932.000 1918.000 1932.000 1918.000 1932.000 1918.000 1932.000 1918.000 1932.000 1918.000 1932.000 1918.000 1932.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Unamir"
+	color = { 136 153 195 }
+	area = cronvangr
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		owner = CRV
+		controller = CRV
+		add_core = CRV
+		add_claim = WND
+		capital = ""
+		is_city = yes
+	}
+}
+new province berasta = {
+    position = {
+        1932.000 1942.000 1932.000 1942.000 1932.000 1942.000 1932.000 1942.000 1932.000 1942.000 1932.000 1942.000 1932.000 1942.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Berasta"
+	color = { 131 243 107 }
+	area = cronvangr
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRV
+		controller = CRV
+		add_core = CRV
+		add_claim = WND
+	}
+}
+new province hroalara = {
+    position = {
+        1924.000 1947.000 1924.000 1947.000 1924.000 1947.000 1924.000 1947.000 1924.000 1947.000 1924.000 1947.000 1924.000 1947.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Hroalara"
+	color = { 180 139 187 }
+	area = cronvangr
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRV
+		controller = CRV
+		add_core = CRV
+		add_claim = WND
+	}
+}
+new area kynesgrove = {
+	name = "Kynesgrove"
+	region = eastmarch
+}
+new province kynesgrove = {
+    position = {
+        1947.000 1948.000 1947.000 1948.000 1947.000 1948.000 1947.000 1948.000 1947.000 1948.000 1947.000 1948.000 1947.000 1948.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Kynesgrove"
+	color = { 214 222 253 }
+	area = kynesgrove
+	history = {
+		owner = KYN
+		controller = KYN
+		add_core = KYN
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new province erimor = {
+    position = {
+        1954.000 1935.000 1954.000 1935.000 1954.000 1935.000 1954.000 1935.000 1954.000 1935.000 1954.000 1935.000 1954.000 1935.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Erimor"
+	color = { 197 158 106 }
+	area = kynesgrove
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+		owner = KYN
+		controller = KYN
+		add_core = KYN
+	}
+}
+new province anguki = {
+    position = {
+        1943.000 1937.000 1943.000 1937.000 1943.000 1937.000 1943.000 1937.000 1943.000 1937.000 1943.000 1937.000 1943.000 1937.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Anguki"
+	color = { 255 200 113 }
+	area = kynesgrove
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = KYN
+		controller = KYN
+		add_core = KYN
+	}
+}
+new area ansilvund = {
+	name = "Ansilvund"
+	region = eastmarch
+}
+new province 2922 = {
+    position = {
+        1986.000 1893.000 1986.000 1893.000 1986.000 1893.000 1986.000 1893.000 1986.000 1893.000 1986.000 1893.000 1986.000 1893.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "2922"
+	color = { 144 114 102 }
+	area = ansilvund
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = NOW
+		controller = NOW
+		add_core = NOW
+		add_claim = WND
+	}
+}
+new province 2923 = {
+    position = {
+        1989.000 1906.000 1989.000 1906.000 1989.000 1906.000 1989.000 1906.000 1989.000 1906.000 1989.000 1906.000 1989.000 1906.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "2923"
+	color = { 215 213 222 }
+	area = ansilvund
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = NOW
+		controller = NOW
+		add_core = NOW
+		add_claim = WND
+	}
+}
+new province 2820 = {
+    position = {
+        1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "2820"
+	color = { 120 245 223 }
+	area = ansilvund
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = NOW
+		controller = NOW
+		add_core = NOW
+		add_claim = WND
+	}
+}
+new area northwind = {
+	name = "Northwind"
+	region = eastmarch
+}
+new province 7094 = {
+    position = {
+        1961.000 1879.000 1961.000 1879.000 1961.000 1879.000 1961.000 1879.000 1961.000 1879.000 1961.000 1879.000 1961.000 1879.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "7094"
+	color = { 212 141 251 }
+	area = northwind
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = NOW
+		controller = NOW
+		add_core = NOW
+		add_claim = WND
+	}
+}
+new province 1273 = {
+    position = {
+        1976.000 1886.000 1976.000 1886.000 1976.000 1886.000 1976.000 1886.000 1976.000 1886.000 1976.000 1886.000 1976.000 1886.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "1273"
+	color = { 141 139 174 }
+	area = northwind
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = NOW
+		controller = NOW
+		add_core = NOW
+		add_claim = WND
+	}
+}
+new province 2935 = {
+    position = {
+        1970.000 1893.000 1970.000 1893.000 1970.000 1893.000 1970.000 1893.000 1970.000 1893.000 1970.000 1893.000 1970.000 1893.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "2935"
+	color = { 193 130 192 }
+	area = northwind
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = NOW
+		controller = NOW
+		add_core = NOW
+		add_claim = WND
+	}
+}
+new area darkwater_crossing = {
+	name = "Darkwater Crossing"
+	region = eastmarch
+}
+new province darkwater_crossing = {
+    position = {
+        1911.000 1897.000 1911.000 1897.000 1911.000 1897.000 1911.000 1897.000 1911.000 1897.000 1911.000 1897.000 1911.000 1897.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Darkwater Crossing"
+	color = { 212 207 160 }
+	area = darkwater_crossing
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = DAR
+		controller = DAR
+		add_core = DAR
+		add_claim = WND
+	}
+}
+new province 8001 = {
+    position = {
+        1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "8001"
+	color = { 139 190 132 }
+	area = darkwater_crossing
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = DAR
+		controller = DAR
+		add_core = DAR
+	}
+}
+new province valeski = {
+    position = {
+        1920.000 1905.000 1920.000 1905.000 1920.000 1905.000 1920.000 1905.000 1920.000 1905.000 1920.000 1905.000 1920.000 1905.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Valeski"
+	color = { 198 237 124 }
+	area = darkwater_crossing
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = DAR
+		controller = DAR
+		add_core = DAR
+		add_claim = WND
+	}
+}
+new area mistwatch = {
+	name = "Mistwatch"
+	region = eastmarch
+}
+new province vorgeth = {
+    position = {
+        1936.000 1889.000 1936.000 1889.000 1936.000 1889.000 1936.000 1889.000 1936.000 1889.000 1936.000 1889.000 1936.000 1889.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Vorgeth"
+	color = { 140 107 216 }
+	area = mistwatch
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+		owner = MIS
+		controller = MIS
+		add_core = MIS
+	}
+}
+new province 7079 = {
+    position = {
+        1927.000 1880.000 1927.000 1880.000 1927.000 1880.000 1927.000 1880.000 1927.000 1880.000 1927.000 1880.000 1927.000 1880.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "7079"
+	color = { 252 196 154 }
+	area = mistwatch
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = MIS
+		controller = MIS
+		add_core = MIS
+		add_claim = WND
+		272.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+new province 7095 = {
+    position = {
+        1952.000 1888.000 1952.000 1888.000 1952.000 1888.000 1952.000 1888.000 1952.000 1888.000 1952.000 1888.000 1952.000 1888.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "7095"
+	color = { 236 120 164 }
+	area = mistwatch
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+		owner = NOW
+		controller = NOW
+		add_core = NOW
+		add_claim = WND
+	}
+}
+new area darkwater = {
+	name = "Darkwater"
+	region = eastmarch
+}
+new province 3001 = {
+    position = {
+        1909.000 1885.000 1909.000 1885.000 1909.000 1885.000 1909.000 1885.000 1909.000 1885.000 1909.000 1885.000 1909.000 1885.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "3001"
+	color = { 242 220 200 }
+	area = darkwater
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = DAR
+		controller = DAR
+		add_core = DAR
+		add_claim = WND
+		272.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+new province 3192 = {
+    position = {
+        1898.000 1891.000 1898.000 1891.000 1898.000 1891.000 1898.000 1891.000 1898.000 1891.000 1898.000 1891.000 1898.000 1891.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "3192"
+	color = { 214 202 107 }
+	area = darkwater
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		owner = DAR
+		controller = DAR
+		add_core = DAR
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+		add_claim = WND
+		272.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+new province 2998 = {
+    position = {
+        1892.000 1883.000 1892.000 1883.000 1892.000 1883.000 1892.000 1883.000 1892.000 1883.000 1892.000 1883.000 1892.000 1883.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "2998"
+	color = { 221 189 108 }
+	is_sea = yes
+	area = null_sea_area
+	area = darkwater
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = DAR
+		controller = DAR
+		add_core = DAR
+		add_claim = WND
+		272.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+new province 5866 = {
+    position = {
+        1886.000 1874.000 1886.000 1874.000 1886.000 1874.000 1886.000 1874.000 1886.000 1874.000 1886.000 1874.000 1886.000 1874.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "5866"
+	color = { 103 186 108 }
+	area = darkwater
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		owner = DAR
+		controller = DAR
+		add_core = DAR
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new area lost_knife = {
+	name = "Lost Knife"
+	region = eastmarch
+}
+new province 3003 = {
+    position = {
+        1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "3003"
+	color = { 230 206 192 }
+	area = lost_knife
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HID
+		controller = HID
+		add_core = HID
+	}
+}
+new province 7123 = {
+    position = {
+        1872.000 1882.000 1872.000 1882.000 1872.000 1882.000 1872.000 1882.000 1872.000 1882.000 1872.000 1882.000 1872.000 1882.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "7123"
+	color = { 196 115 203 }
+	area = lost_knife
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		owner = HID
+		controller = HID
+		add_core = HID
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new province 3005 = {
+    position = {
+        1860.000 1881.000 1860.000 1881.000 1860.000 1881.000 1860.000 1881.000 1860.000 1881.000 1860.000 1881.000 1860.000 1881.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "3005"
+	color = { 210 226 181 }
+	area = lost_knife
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		owner = HID
+		controller = HID
+		add_core = HID
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+	}
+}
+new area amol = {
+	name = "Amol"
+	region = eastmarch
+}
+new province unaird = {
+    position = {
+        1880.000 1911.000 1880.000 1911.000 1880.000 1911.000 1880.000 1911.000 1880.000 1911.000 1880.000 1911.000 1880.000 1911.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Unaird"
+	color = { 219 190 146 }
+	area = amol
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		owner = HID
+		controller = HID
+		add_core = HID
+		add_claim = WND
+	}
+}
+new province hjosta = {
+    position = {
+        1873.000 1902.000 1873.000 1902.000 1873.000 1902.000 1873.000 1902.000 1873.000 1902.000 1873.000 1902.000 1873.000 1902.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Hjosta"
+	color = { 110 128 156 }
+	area = amol
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HID
+		controller = HID
+		add_core = HID
+		add_claim = WND
+	}
+}
+new province morvunskar = {
+    position = {
+        1888.000 1904.000 1888.000 1904.000 1888.000 1904.000 1888.000 1904.000 1888.000 1904.000 1888.000 1904.000 1888.000 1904.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Morvunskar"
+	color = { 148 220 121 }
+	area = amol
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HID
+		controller = HID
+		add_core = HID
+		add_claim = WND
+		272.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+new area gallows_rock = {
+	name = "Gallow's Rock"
+	region = eastmarch
+}
+new province evetke = {
+    position = {
+        1889.000 1941.000 1889.000 1941.000 1889.000 1941.000 1889.000 1941.000 1889.000 1941.000 1889.000 1941.000 1889.000 1941.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Evetke"
+	color = { 106 210 229 }
+	area = gallows_rock
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRA
+		controller = CRA
+		add_core = CRA
+		add_claim = WND
+	}
+}
+new province irkngthand = {
+    position = {
+        1901.000 1941.000 1901.000 1941.000 1901.000 1941.000 1901.000 1941.000 1901.000 1941.000 1901.000 1941.000 1901.000 1941.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Irkngthand"
+	color = { 173 225 132 }
+	area = gallows_rock
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new province nirgu = {
+    position = {
+        1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Nirgu"
+	color = { 204 106 209 }
+	area = gallows_rock
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		owner = CRA
+		controller = CRA
+		add_core = CRA
+		hre = yes
+		trade_goods = unknown
+		add_claim = WND
+	}
+}
+new area mixwater = {
+	name = "Mixwater"
+	region = eastmarch
+}
+new province hrefun = {
+    position = {
+        1901.000 1932.000 1901.000 1932.000 1901.000 1932.000 1901.000 1932.000 1901.000 1932.000 1901.000 1932.000 1901.000 1932.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Hrefun"
+	color = { 246 187 123 }
+	area = mixwater
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new province imsisa = {
+    position = {
+        1913.000 1949.000 1913.000 1949.000 1913.000 1949.000 1913.000 1949.000 1913.000 1949.000 1913.000 1949.000 1913.000 1949.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Imsisa"
+	color = { 143 236 169 }
+	area = mixwater
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new province danrine = {
+    position = {
+        1912.000 1962.000 1912.000 1962.000 1912.000 1962.000 1912.000 1962.000 1912.000 1962.000 1912.000 1962.000 1912.000 1962.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Danrine"
+	color = { 165 162 185 }
+	area = mixwater
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new area cradlecrush = {
+	name = "Cradlecrush"
+	region = eastmarch
+}
+new province jorlka = {
+    position = {
+        1876.000 1926.000 1876.000 1926.000 1876.000 1926.000 1876.000 1926.000 1876.000 1926.000 1876.000 1926.000 1876.000 1926.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Jorlka"
+	color = { 231 214 178 }
+	area = cradlecrush
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRA
+		controller = CRA
+		add_core = CRA
+		add_claim = WND
+	}
+}
+new province hukiith = {
+    position = {
+        1884.000 1922.000 1884.000 1922.000 1884.000 1922.000 1884.000 1922.000 1884.000 1922.000 1884.000 1922.000 1884.000 1922.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Hukiith"
+	color = { 115 175 162 }
+	area = cradlecrush
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = CRA
+		controller = CRA
+		add_core = CRA
+		add_claim = WND
+	}
+}
+new area hillgrund = {
+	name = "Hillgrund"
+	region = eastmarch
+}
+new province 3099 = {
+    position = {
+        1865.000 1924.000 1865.000 1924.000 1865.000 1924.000 1865.000 1924.000 1865.000 1924.000 1865.000 1924.000 1865.000 1924.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "3099"
+	color = { 195 207 111 }
+	area = hillgrund
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HID
+		controller = HID
+		add_core = HID
+		add_claim = WND
+	}
+}
+new province 3004 = {
+    position = {
+        1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "3004"
+	color = { 102 163 113 }
+	area = hillgrund
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = HID
+		controller = HID
+		add_core = HID
+		add_claim = WND
+		272.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+new area angas_mill = {
+	name = "Anga's Mill"
+	region = eastmarch
+}
+new province angas_mill = {
+    position = {
+        1922.000 1965.000 1922.000 1965.000 1922.000 1965.000 1922.000 1965.000 1922.000 1965.000 1922.000 1965.000 1922.000 1965.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Anga's Mill"
+	color = { 169 148 148 }
+	area = angas_mill
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new province reydlaith = {
+    position = {
+        1898.000 1967.000 1898.000 1967.000 1898.000 1967.000 1898.000 1967.000 1898.000 1967.000 1898.000 1967.000 1898.000 1967.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Reydlaith"
+	color = { 128 232 166 }
+	area = angas_mill
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = YOR
+		controller = YOR
+		add_core = YOR
+	}
+}
+new province ronageth = {
+    position = {
+        1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Ronageth"
+	color = { 247 125 247 }
+	area = angas_mill
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = YOR
+		controller = YOR
+		add_core = YOR
+	}
+}
+new area windhelm = {
+	name = "Windhelm"
+	region = eastmarch
+}
+new province evetsta = {
+    position = {
+        1948.000 1990.000 1948.000 1990.000 1948.000 1990.000 1948.000 1990.000 1948.000 1990.000 1948.000 1990.000 1948.000 1990.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Evetsta"
+	color = { 234 158 242 }
+	area = windhelm
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new province windhelm = {
+    position = {
+        1936.000 1985.000 1936.000 1985.000 1936.000 1985.000 1936.000 1985.000 1936.000 1985.000 1936.000 1985.000 1936.000 1985.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Windhelm"
+	color = { 228 146 220 }
+	area = windhelm
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new province freanna = {
+    position = {
+        1925.000 1979.000 1925.000 1979.000 1925.000 1979.000 1925.000 1979.000 1925.000 1979.000 1925.000 1979.000 1925.000 1979.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Freanna"
+	color = { 131 106 195 }
+	area = windhelm
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = WND
+		controller = WND
+		add_core = WND
+	}
+}
+new area eastfield = {
+	name = "Eastfield"
+	region = eastmarch
+}
+new province driena = {
+    position = {
+        1965.000 2013.000 1965.000 2013.000 1965.000 2013.000 1965.000 2013.000 1965.000 2013.000 1965.000 2013.000 1965.000 2013.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Driena"
+	color = { 212 209 225 }
+	area = eastfield
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = SNV
+		controller = SNV
+		add_core = SNV
+	}
+}
+new province oriekke = {
+    position = {
+        1953.000 2003.000 1953.000 2003.000 1953.000 2003.000 1953.000 2003.000 1953.000 2003.000 1953.000 2003.000 1953.000 2003.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Oriekke"
+	color = { 130 173 233 }
+	area = eastfield
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = SNV
+		controller = SNV
+		add_core = SNV
+	}
+}
+new province haeleke = {
+    position = {
+        1953.000 2015.000 1953.000 2015.000 1953.000 2015.000 1953.000 2015.000 1953.000 2015.000 1953.000 2015.000 1953.000 2015.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	name = "Haeleke"
+	color = { 177 163 148 }
+	area = eastfield
+	discovered_by = {
+		northern_tg
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = SNV
+		controller = SNV
+		add_core = SNV
+		57.1.1 = {
+			religion = nordic_pantheon
+			culture = nord
+		}
+	}
+}
+
+new adjacency windhelm_bridge = {
+	from = starkad
+	to = windhelm
+	through = 61
+	type = sea
+}
+new adjacency white_bridge = {
+	from = starkad
+	to = angas_mill
+	through = 61
+	type = sea
+}
+new adjacency yorgrim_bridge = {
+	from = angas_mill
+	to = ronageth
+	through = 61
+	type = sea
+}

@@ -1,0 +1,204 @@
+# Order here is the priority for taking them, if trigger is true.
+
+# White-Gold Tower
+CB8 = {
+	NOT = { 
+		exists = AYL 
+		exists = ALE 
+		exists = ORD 
+		exists = CYR 
+	}
+}
+
+AYL = {
+	NOT = { 
+		exists = ALE 
+		exists = ORD 
+		exists = CYR 
+	}
+}
+
+#Chorrol
+CF0 = {
+	NOT = {
+		exists = ALE
+		exists = ORD
+		exists = CYR
+	}
+}
+
+ALE = {
+	NOT = { 
+		exists = ORD 
+		exists = CYR 
+	}
+}
+
+ORD = {
+	NOT = { 
+		exists = CYR 
+	}
+}
+
+CYR = {
+}
+
+# Torval owner 
+EA8 = {
+	NOT = { 
+		exists = ELS 
+		exists = PEL 
+	}
+}
+
+ELS = {
+	NOT = { 
+		exists = EA8 
+		exists = PEL 
+	}
+}
+
+PEL = {
+	NOT = { 
+		exists = EA8 
+		exists = ELS 
+	}
+}
+
+# Falinesti Owner
+VA3 = {
+	NOT = { 
+		exists = VAL 
+	}
+}
+
+VAL = {
+	NOT = { 
+		exists = VA3 
+	}
+}
+
+# Alinor Owner
+SA6 = {
+	NOT = { 
+		exists = SMR 
+		exists = DOM 
+	}
+}
+
+SMR = {
+	NOT = { 
+		exists = SA6 
+		exists = DOM 
+	}
+}
+
+DOM = {
+	NOT = { 
+		exists = SA6 
+		exists = SMR 
+	}
+}
+
+# Sentinel Owner
+HB3 = {
+	NOT = { 
+		exists = HAM 
+	}
+}
+
+HAM = {
+	NOT = { 
+		exists = HB3 
+	}
+}
+
+# Alysinetta owner
+BA3 = {
+	NOT = { 
+		exists = DIR 
+	}
+}
+
+DIR = {
+	NOT = { 
+		exists = BA3 
+	}
+}
+
+# Daggerfall owner
+BA1 = {
+	NOT = { 
+		exists = HIG 
+	}
+}
+
+HIG = {
+	NOT = { 
+		exists = BA1 
+	}
+}
+
+NB6 = {
+	NOT = {
+		exists = SKY
+		exists = OLD
+	}
+}
+
+# Windhelm owner
+NA3 = {
+	NOT = { 
+		exists = SKY 
+		exists = OLD 
+	}
+}
+
+SKY = {
+	NOT = { 
+		exists = NA3 
+		exists = OLD 
+	}
+}
+
+OLD = {
+	NOT = { 
+		exists = SKY 
+		exists = NA3 
+	}
+}
+
+# Helstrom owner
+AB0 = {
+	NOT = { 
+		exists = ARG 
+	}
+}
+
+ARG = {
+	NOT = { 
+		exists = AB0 
+	}
+}
+
+# Mournhold owner
+MB1 = {
+	NOT = { 
+		exists = MOR 
+		exists = TRI 
+	}
+}
+
+MOR = {
+	NOT = { 
+		exists = MB1 
+		exists = TRI 
+	}
+}
+
+TRI = {
+	NOT = { 
+		exists = MOR 
+		exists = MB1 
+	}
+}

@@ -1,0 +1,130 @@
+estate_commoners = {
+	icon = 11
+	color = {
+		153
+		102
+		51
+	}
+	# If true, country will get estate
+	trigger = {
+		OR = {
+			has_country_flag = estate_commoners
+			primary_culture = reachmen
+			primary_culture = corelanyan
+			primary_culture = falmer
+			primary_culture = yokudan
+			primary_culture = nord
+			primary_culture = glacial
+			primary_culture = skaal
+			primary_culture = keptu
+			primary_culture = nedic
+			primary_culture = islander
+			culture_group = kamal_cg
+			culture_group = khajiiti_cg
+			culture_group = lilmothiit_cg
+			culture_group = daedra_cg
+			culture_group = dwemer_cg
+			culture_group = tangmo_cg
+			culture_group = po_tun_cg
+			culture_group = void_cg
+			culture_group = dead_cg
+			culture_group = marsh_men_cg
+			culture_group = goblin_cg
+			culture_group = giant_cg
+			culture_group = marsh_cg
+			culture_group = imga_cg
+			culture_group = minotaur_cg
+			culture_group = sload_cg
+			culture_group = orsimer_cg
+		}
+	}
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		global_manpower_modifier = 0.15
+	}
+	country_modifier_neutral = {
+		global_manpower_modifier = 0.075
+	}
+	country_modifier_angry = {
+		global_manpower_modifier = -0.15
+	}
+	land_ownership_modifier = {
+		
+	}
+	province_independence_weight = {
+		factor = 1
+		#modifier = {
+		#	factor = 1
+		#	#Insert conditions here
+		#}
+	}
+	# Influence modifiers
+	base_influence = 10
+	# influence_modifier = {
+	# 	desc = <key> # The new name to apply
+	# 	trigger = {
+	# 		<triggers>
+	# 	}	
+	# 	influence = <float>
+	# }
+	# Loyalty modifiers
+	# loyalty_modifier = {
+	# 	desc = <key> # The new name to apply
+	# 	trigger = {
+	# 		<triggers>
+	# 	}
+	# 	loyalty = <float>
+	# }
+	custom_name = {
+		desc = estate_commoners_tribal # The new name to apply
+		trigger = {
+			government = tribal
+		}
+	}
+	privileges = {
+		mandatory_service
+		indentured_servitude
+		corvee_labour
+		privilege_press_gangs
+		bread
+		circuses
+		integrate_aldermen
+		recruit_brigands
+	}
+	agendas = {
+		estate_commoners_reduce_war_exhaustion
+		estate_commoners_recover_stability
+		estate_commoners_increase_stability
+		estate_commoners_reduce_overextension
+		estate_commoners_get_allies
+		estate_commoners_relations_with_X
+		estate_commoners_break_coalition
+		estate_commoners_restore_legitimacy
+		estate_commoners_hire_advisor
+		estate_commoners_fire_advisor
+		estate_commoners_build_canal
+		estate_commoners_build_road_network
+		estate_commoners_build_grain_depot
+		estate_commoners_build_courthouse
+		estate_commoners_build_workshop
+		estate_commoners_build_marketplace
+		estate_commoners_develop_x
+		estate_commoners_increase_autonomy_in_province_x
+		estate_commoners_three_privileges
+		estate_commoners_recover_abysmal_prestige
+		estate_commoners_improve_prestige
+		estate_commoners_pay_off_loans
+		estate_commoners_restore_currency
+		estate_commoners_recovery_from_hyperinflation
+		estate_commoners_increase_trade_power_in_X
+		estate_commoners_improve_dip_rep
+		estate_commoners_get_cash
+		estate_commoners_reduce_corruption
+		estate_commoners_protect_against_piracy
+		estate_commoners_retake_core
+		estate_commoners_regain_liberty
+		estate_commoners_protect_our_culture
+		estate_commoners_increase_dip_dev
+	}
+	influence_from_dev_modifier = 1	#Determines percent influence from development
+}

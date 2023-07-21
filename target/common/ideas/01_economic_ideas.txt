@@ -1,0 +1,366 @@
+soldnerheer0 = {
+	category = MIL
+		
+	trigger = {
+		OR = {
+			#Hidden Triggers
+			government = republic
+			num_of_mercenaries = 50
+			#Normal Triggers
+			full_idea_group = economic_ideas
+		}
+		#Additional Triggers
+	}
+	bonus = {
+		possible_condottieri = 1.5
+	}
+	
+	soldnerheer1 = {
+		loot_amount = 0.75
+	}
+	soldnerheer2 = {
+		mercenary_cost = -0.4
+	}
+	soldnerheer3 = {
+		war_exhaustion = -0.05
+	}
+
+	soldnerheer4 = {
+		merc_maintenance_modifier = -0.3
+	}
+
+	soldnerheer5 = {
+		free_leader_pool = 1
+	}
+	soldnerheer6 = {
+		mercenary_discipline = 0.05
+	}
+	soldnerheer7 = {
+		mercenary_manpower = 0.5
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
+		}
+		modifier = {			
+			factor = 5
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 2.5
+			government = republic
+		}
+	}
+}
+
+enchanting_ideas = {
+	category = DIP
+	
+	trigger = {
+		OR = {
+			#Hidden
+			estate_influence = {
+				estate = estate_mages
+				influence = 80
+			}
+			#Normal
+			full_idea_group = economic_ideas
+		}
+		#Additional Triggers
+	}
+	bonus = {
+		#idea_cost = -0.25
+		development_cost = -0.1
+	}
+
+	royal_artifacts = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+	}
+	enchanted_infrastructure = {
+		development_cost = -0.15
+	}
+	animated_services = {
+		state_maintenance_modifier = -0.15
+	}
+	enchanted_tools = {
+		idea_cost = -0.1
+	}
+	enchanted_weaponary = {
+		fire_damage = 0.05
+	}
+	grand_artifacts = {
+		prestige = 0.5
+	}
+	trading_enchanted_items = {
+		global_trade_power = 0.25
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {			
+			factor = 2.5
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.25
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 1.15
+			government = theocracy
+		}
+		modifier = {
+			factor = 1.25
+			total_development = 300
+		}
+	}
+}
+
+alchemical_ideas = {
+	category = ADM
+
+	trigger = {
+		OR = {
+			#Hidden
+			estate_influence = {
+				estate = estate_mages
+				influence = 80
+			}
+			#Normal
+			full_idea_group = economic_ideas
+		}
+	}
+	bonus = {
+		global_trade_goods_size_modifier = 0.15
+	}
+		
+	physician = {
+		reinforce_cost_modifier = -0.5
+		reinforce_speed = 0.5
+	}
+	posioners = {
+		hostile_attrition = 1.5
+		siege_ability = 0.15
+	}
+	benefactor = {
+		stability_cost_modifier = -0.25
+		war_exhaustion = -0.03
+	}
+	experimenter = {
+		innovativeness_gain = 0.5
+	}
+	green_thumb = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	snakeblood = {
+		land_attrition = -0.15
+		global_spy_defence = 0.15
+	}
+	purity = {
+		tolerance_own = 1
+		culture_conversion_cost = -0.15
+		yearly_corruption = -0.05
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.15
+			production_income_percentage = 0.5
+		}
+		modifier = {
+			factor = 1.25
+			num_of_cities = 50
+		}
+		modifier = {
+			factor = 1.5
+			inflation = 5
+		}
+		modifier = {
+			factor = 2.5
+			is_great_power = yes
+		}
+	}
+}
+
+innovativeness_ideas = {
+	category = ADM
+
+	trigger = {
+		OR = { 
+			#Hidden
+			innovativeness = 25
+			culture_group = dwemer_cg
+			any_neighbor_country = {
+				tech_difference = 5
+			} 
+			#Normal
+			full_idea_group = economic_ideas
+		}
+	}
+	bonus = {
+		advisor_cost = -0.15
+	}
+
+	patron_of_art  = {
+		prestige_decay = -0.01
+	}
+	empiricism = {
+		innovativeness_gain = 0.5
+	}
+	scientific_revolution = {
+		technology_cost = -0.1
+		embracement_cost = -0.1
+	}
+	dynamic_court = {
+		advisor_pool = 1
+	}
+	print_culture = {
+		global_institution_spread = 0.25
+	}
+	optimism = {
+		war_exhaustion = -0.05
+	}
+	formalized_officer_corps = {
+		free_leader_pool = 1
+		leader_cost = -0.15
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 1.25
+			total_development = 350
+		}
+		modifier = {
+			factor = 1.25
+			total_development = 750
+		}
+		modifier = {
+			factor = 2.5
+			num_of_cities = 50
+		}
+		modifier = {
+			factor = 500.0
+			is_emperor_of_china = yes
+		}
+	}
+}
+
+esb_slavers = {
+	category = ADM
+		
+	trigger = {
+		OR = { 
+			#Hidden
+			culture_group = velothi_cg
+			estate_influence = {
+				estate = estate_slavers
+				influence = 80
+			}
+			#Normal
+			full_idea_group = economic_ideas
+		}
+		has_estate = estate_slavers
+	}
+	bonus = {
+		land_maintenance_modifier = -0.1
+	}
+	
+	esb_slavers1 = {
+		slavers_loyalty_modifier = 0.2
+		slavers_influence_modifier = 0.1
+	}
+	esb_slavers2 = {
+		global_unrest = 2
+		global_trade_goods_size_modifier = 0.1
+	}
+	esb_slavers3 = {
+		production_efficiency = 0.1
+	}
+
+	esb_slavers4 = {
+		global_manpower_modifier = 0.2
+		land_morale = -0.05
+	}
+
+	esb_slavers5 = {
+		build_cost = -0.15
+		build_time = -0.1
+	}
+	esb_slavers6 = {
+		reinforce_cost_modifier = -0.15
+		reinforce_speed = 0.25
+	}
+	esb_slavers7 = {
+		land_forcelimit_modifier = 0.15
+		land_morale = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+esb_treasury = {
+	category = ADM
+		
+	trigger = {
+		OR = { 
+			#Hidden
+			years_of_income = 5.0
+			#Normal
+			full_idea_group = economic_ideas
+		}
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	
+	esb_treasury1 = {
+		interest = -1
+	}
+	esb_treasury2 = {
+		inflation_reduction = -0.03
+		global_tax_modifier = 0.25
+	}
+	esb_treasury3 = {
+		advisor_cost = 0.15
+	}
+
+	esb_treasury4 = {
+		global_tax_modifier = 0.1
+	}
+
+	esb_treasury5 = {
+		inflation_action_cost = -0.15
+	}
+	esb_treasury6 = {
+		prestige = 0.5
+	}
+	esb_treasury7 = {
+		improve_relation_modifier = 0.15
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

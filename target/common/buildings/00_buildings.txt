@@ -1,0 +1,220 @@
+fort_15th = {
+	cost = 100			
+	time = 30
+	modifier = {
+		fort_level = 1			
+		local_unrest = -1.0			
+		local_defensiveness = 0.1			
+	}
+	
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	on_obsolete = {
+	}
+	
+	onmap = yes
+	influencing_fort = yes
+	
+	ai_will_do = {
+		factor = 1 
+		modifier = {
+			factor = 2.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_march = yes }
+		}
+		modifier = {
+			factor = 0.50
+			NOT = { FROM = { army_tradition = 15 } }			
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 35 } }			
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { army_tradition = 50 }			
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 75 }
+		}
+	}
+}
+
+fort_16th = {
+	cost = 225			
+	time = 36			
+
+	make_obsolete = fort_15th
+
+	modifier = {
+		fort_level = 2		
+		local_unrest = -1.5		
+		local_defensiveness = 0.15	
+	}
+	
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	on_obsolete = {
+	}
+
+	onmap = yes
+	
+	influencing_fort = yes
+	
+	ai_will_do = {
+		factor = 1 
+		modifier = {
+			factor = 2.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_march = yes }
+		}
+		modifier = {
+			factor = 0.50
+			NOT = { FROM = { army_tradition = 15 } }			
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 35 } }			
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { army_tradition = 50 }			
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 75 }
+		}
+	}
+}
+
+fort_17th = {
+	cost = 350			
+	time = 48
+	
+	make_obsolete = fort_16th
+	
+	modifier = {
+		fort_level = 3			
+		local_unrest = -2.0			
+		local_defensiveness = 0.20			
+	}
+	
+	on_built = {
+		
+	}
+	on_destroyed = {
+		
+	}
+	on_obsolete = {
+	}
+
+	onmap = yes
+	
+	influencing_fort = yes
+	
+	ai_will_do = {
+		factor = 1 
+		modifier = {
+			factor = 2.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_march = yes }
+		}
+		modifier = {
+			factor = 0.50
+			NOT = { FROM = { army_tradition = 15 } }			
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 35 } }			
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { army_tradition = 50 }			
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 75 }
+		}
+	}
+}
+
+fort_18th = {
+	cost = 500			
+	time = 72
+	
+	
+	make_obsolete = fort_17th
+	
+	modifier = {
+		fort_level = 4	
+		local_unrest = -2.5			
+		local_defensiveness = 0.25		
+	}
+	
+	on_built = {
+		add_development_from_building = {
+			building = fort_18th
+			type = manpower
+			value = 1
+		}
+	}
+	on_destroyed = {
+		remove_development_from_building = {
+			building = fort_18th
+			type = manpower
+			value = 1
+		}
+	}
+	on_obsolete = {
+	}
+
+	onmap = yes
+	
+	influencing_fort = yes
+	
+	ai_will_do = {
+		factor = 1 
+		modifier = {
+			factor = 2.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_march = yes }
+		}
+		modifier = {
+			factor = 0.50
+			NOT = { FROM = { army_tradition = 15 } }			
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 35 } }			
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { army_tradition = 50 }			
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 75 }
+		}
+	}
+}

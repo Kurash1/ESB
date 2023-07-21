@@ -1,0 +1,229 @@
+republic_mechanic = {
+	basic_reform = yes
+	republican_name = yes
+	royal_marriage = no
+	republic = yes
+	duration = 4
+	has_term_election = yes
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	government_abilities = {
+		tourism_mechanic
+	}
+	modifiers = {
+		max_absolutism = -50
+		max_revolutionary_zeal = 75
+		merchants_influence_modifier = 0.15
+	}
+	valid_for_nation_designer = no
+}
+samara_reform = {
+	icon = "people_walking"
+	allow_normal_conversion = yes
+	duration = 4
+	legacy_equivalent = oligarchic_republic
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	potential = {
+		tag = SAM
+	}
+	modifiers = {
+		global_tax_modifier = 0.15
+		global_unrest = -1.0
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+revolutionary_republic_reform = {
+	icon = "revolutionary_republic"
+	allow_normal_conversion = no
+	potential = {
+		is_revolutionary = yes
+	}
+	legacy_equivalent = oligarchic_republic
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	republican_name = yes
+	royal_marriage = no
+	uses_revolutionary_zeal = yes
+	revolutionary = yes
+	factions = {
+		es_governors
+		es_traders
+		es_generals
+	}
+	modifiers = {
+		yearly_revolutionary_zeal = 1
+		discipline = 0.10
+		global_autonomy = -0.025
+		governing_capacity = 100
+		free_mil_policy = 1
+	}
+	duration = 4
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_china_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_china_flag
+				restore_country_name = yes
+				override_country_name = CHINA_STRING
+				set_country_flag = is_china_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_turkey_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_turkey_flag
+				restore_country_name = yes
+				override_country_name = TURKEY_STRING
+				set_country_flag = is_turkey_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_gurkani_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_gurkani_flag
+				restore_country_name = yes
+				override_country_name = GURKANI_EMPIRE_STRING
+				set_country_flag = is_gurkani_flag
+			}
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+junior_revolutionary_republic_reform = {
+	icon = "revolutionary_republic"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = junior_revolutionary_republic_reform
+		is_revolutionary = yes
+	}
+	legacy_equivalent = oligarchic_republic
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	republican_name = yes
+	royal_marriage = no
+	uses_revolutionary_zeal = yes
+	revolutionary = yes
+	revolutionary_client_state = yes
+	factions = {
+		es_governors
+		es_traders
+		es_generals
+	}
+	modifiers = {
+		global_manpower_modifier = 0.25
+		unjustified_demands = -0.15
+		global_autonomy = -0.05
+		governing_capacity = 100
+		free_dip_policy = 1
+	}
+	duration = 4
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		locked_government_type = yes
+	}
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_china_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_china_flag
+				restore_country_name = yes
+				override_country_name = CHINA_STRING
+				set_country_flag = is_china_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_turkey_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_turkey_flag
+				restore_country_name = yes
+				override_country_name = TURKEY_STRING
+				set_country_flag = is_turkey_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_gurkani_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_gurkani_flag
+				restore_country_name = yes
+				override_country_name = GURKANI_EMPIRE_STRING
+				set_country_flag = is_gurkani_flag
+			}
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1000
+	}
+}
+free_city = {
+	icon = "free_city"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = free_city
+	}
+	legacy_equivalent = oligarchic_republic
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	factions = {
+		es_bureaucrats
+		es_guilds
+		es_militarists
+	}
+	modifiers = {
+		production_efficiency = 0.15
+		diplomatic_reputation = 1
+		trade_efficiency = 0.10
+		development_cost = -0.25
+		free_dip_policy = 1
+	}
+	duration = 4
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+}
