@@ -14,6 +14,8 @@ new inheritable snow_elven_country = {
 new country geir = {
 	inherit = snow_elven_country
 
+	government_rank = 2
+
 	tag = GEI
 	name = "Geir"
 	adj = "Geirian"
@@ -53,6 +55,8 @@ new country faldar = {
 }
 new country honrich = {
 	inherit = snow_elven_country
+	
+	government_rank = 2
 
 	tag = HON
 	name = "Honrich"
