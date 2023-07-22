@@ -750,46 +750,46 @@ armour_quality_ideas = {
 	}
 }
 
-esb_nobles = {
-	category = ADM
-	
-	trigger = {
-		OR = { 
-			estate_loyalty = {
-				estate = estate_nobility
-				loyalty = 100
-			}
-			full_idea_group = esb_feudal
-			full_idea_group = aristocracy_ideas
-		}
-		has_estate = estate_nobility
-	}
-	bonus = {
-		expand_administration_cost = -0.25
-	}
-	
-	esb_nobles1 = {
-		nobles_influence_modifier = 0.1
-	}
-	esb_nobles2 = {
-		nobles_loyalty_modifier = 0.2
-	}
-	esb_nobles3 = {
-		administrative_efficiency = 0.1
-	}
-	esb_nobles4 = {
-		stability_cost_modifier = -0.25
-	}
-	esb_nobles5 = {
-		global_regiment_cost = -0.1
-	}
-	esb_nobles6 = {
-		build_time = -0.1
-	}
-	esb_nobles7 = {
-		vassal_forcelimit_bonus = 0.25
-	}
-}
+#esb_nobles = {
+#	category = ADM
+#	
+#	trigger = {
+#		OR = { 
+#			estate_loyalty = {
+#				estate = estate_nobility
+#				loyalty = 100
+#			}
+#			full_idea_group = esb_feudal
+#			full_idea_group = aristocracy_ideas
+#		}
+#		has_estate = estate_nobility
+#	}
+#	bonus = {
+#		expand_administration_cost = -0.25
+#	}
+#	
+#	esb_nobles1 = {
+#		nobles_influence_modifier = 0.1
+#	}
+#	esb_nobles2 = {
+#		nobles_loyalty_modifier = 0.2
+#	}
+#	esb_nobles3 = {
+#		administrative_efficiency = 0.1
+#	}
+#	esb_nobles4 = {
+#		stability_cost_modifier = -0.25
+#	}
+#	esb_nobles5 = {
+#		global_regiment_cost = -0.1
+#	}
+#	esb_nobles6 = {
+#		build_time = -0.1
+#	}
+#	esb_nobles7 = {
+#		vassal_forcelimit_bonus = 0.25
+#	}
+#}
 
 esb_feudal = {
 	category = ADM

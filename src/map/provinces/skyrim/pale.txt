@@ -1,6 +1,165 @@
-new area pale_area = {
-	name = "Pale"
+new area north_isles = {
+	name = "North Isles"
 	region = pale
+}
+new area nightcaller = {
+	name = "Nightcaller"
+	region = pale
+}
+new area high_gate = {
+	name = "High gate"
+	region = pale
+}
+new area pale_coast = {
+	name = "Pale Coast"
+	region = pale
+}
+new area dawnstar = {
+	name = "Dawnstar"
+	region = pale
+}
+new area red_road = {
+	name = "Red Road"
+	region = pale
+}
+new area dawn_sanctuary = {
+	name = "Dawn Sanctuary"
+	region = pale
+}
+new area dunstad = {
+	name = "Dunstad"
+	region = pale
+}
+new area irkngthand = {
+	name = "Irkngthand"
+	region = pale
+}
+new area yorgrim_overlook = {
+	name = "Yorgrim Overlook"
+	region = pale
+}
+new area nightgate = {
+	name = "Nightgate"
+	region = pale
+}
+new area shearpoint = {
+	name = "Shearpoint"
+	region = pale
+}
+new area fellglow = {
+	name = "Fellglow"
+	region = pale
+}
+new area long_road = {
+	name = "Long road"
+	region = pale
+}
+new area korvanjund = {
+	name = "Korvanjund"
+	region = pale
+}
+new area old_yorgrim = {
+	name = "Old Yorgrim"
+	region = pale
+}
+new area loreius = {
+	name = "Loreius"
+	region = pale
+}
+new area volunruud = {
+	name = "Volunruud"
+	region = pale
+}
+new area lord_hill = {
+	name = "Lord Hill"
+	region = pale
+}
+new province njadhilde = {
+    position = {
+        1794.000 2049.000 1794.000 2049.000 1794.000 2049.000 1794.000 2049.000 1794.000 2049.000 1794.000 2049.000 1794.000 2049.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	area = nightcaller
+	name = "Njadhilde"
+	color = { 253 195 202 }
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+		owner = FRF
+		controller = FRF
+		add_core = FRF
+	}
+}
+new province hjolski = {
+    position = {
+        1802.000 2061.000 1802.000 2061.000 1802.000 2061.000 1802.000 2061.000 1802.000 2061.000 1802.000 2061.000 1802.000 2061.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	area = nightcaller
+	name = "Hjolski"
+	color = { 101 145 205 }
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = no
+		owner = FRF
+		controller = FRF
+		add_core = FRF
+	}
+}
+new province dawnstar = {
+    position = {
+        1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+
+	area = nightcaller
+	name = "Dawnstar"
+	color = { 231 116 186 }
+	history = {
+		religion = nordic_pantheon
+		culture = nord
+		hre = yes
+		
+		
+		trade_goods = unknown
+		
+		capital = ""
+		is_city = yes
+		owner = FRF
+		controller = FRF
+		add_core = FRF
+	}
 }
 
 new province softta = {
@@ -14,7 +173,7 @@ new province softta = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = dawnstar
 	name = "Softta"
 	color = { 215 205 153 }
 	history = {
@@ -47,7 +206,7 @@ new province ingesi = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = high_gate
 	name = "Ingesi"
 	color = { 102 164 223 }
 	history = {
@@ -76,7 +235,7 @@ new province adisena = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = high_gate
 	name = "Adisena"
 	color = { 214 209 188 }
 	history = {
@@ -105,7 +264,7 @@ new province halted_stream = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = north_isles
 	name = "Halted Stream"
 	color = { 103 103 126 }
 	history = {
@@ -134,7 +293,7 @@ new province widows_watch = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = pale_coast	
 	name = "Widow's Watch"
 	color = { 216 237 115 }
 	history = {
@@ -163,7 +322,7 @@ new province olavnir = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = pale_coast
 	name = "Olavnir"
 	color = { 244 134 242 }
 	history = {
@@ -192,7 +351,7 @@ new province holmif = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = dawnstar
 	name = "Holmif"
 	color = { 136 112 123 }
 	history = {
@@ -221,7 +380,7 @@ new province saarthal = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = dawn_sanctuary
 	name = "Saarthal"
 	color = { 225 136 185 }
 	history = {
@@ -250,7 +409,7 @@ new province mavetlogi = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = dawn_sanctuary
 	name = "Mavetlogi"
 	color = { 136 243 144 }
 	history = {
@@ -279,7 +438,7 @@ new province jentta = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = dawnstar
 	name = "Jentta"
 	color = { 134 114 250 }
 	history = {
@@ -309,7 +468,7 @@ new province ilfbbi = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = pale_coast
 	name = "Ilfbbi"
 	color = { 162 105 249 }
 	history = {
@@ -339,7 +498,7 @@ new province ignagja = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = red_road
 	name = "Ignagja"
 	color = { 102 191 194 }
 	history = {
@@ -369,7 +528,7 @@ new province valy = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = red_road
 	name = "Valy"
 	color = { 221 169 104 }
 	history = {
@@ -398,7 +557,7 @@ new province hefdreid = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = red_road
 	name = "Hefdreid"
 	color = { 123 196 255 }
 	history = {
@@ -428,7 +587,7 @@ new province virna = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = dunstad
 	name = "Virna"
 	color = { 242 205 122 }
 	history = {
@@ -452,7 +611,7 @@ new province reyhi = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = dunstad
 	name = "Reyhi"
 	color = { 233 244 226 }
 	history = {
@@ -481,7 +640,7 @@ new province oddth = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = dunstad
 	name = "Oddth"
 	color = { 159 114 238 }
 	history = {
@@ -510,7 +669,7 @@ new province emfrljot = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = old_yorgrim
 	name = "Emfrljot"
 	color = { 145 244 127 }
 	history = {
@@ -539,7 +698,7 @@ new province hamvirs_rest = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = old_yorgrim
 	name = "Hamvir's Rest"
 	color = { 147 145 124 }
 	history = {
@@ -568,7 +727,7 @@ new province freaold = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = old_yorgrim
 	name = "Freaold"
 	color = { 146 249 229 }
 	history = {
@@ -597,7 +756,7 @@ new province fort_greymoor = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = old_yorgrim
 	name = "Fort Greymoor"
 	color = { 200 132 226 }
 	history = {
@@ -626,7 +785,7 @@ new province rigla = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = korvanjund
 	name = "Rigla"
 	color = { 249 227 251 }
 	history = {
@@ -655,7 +814,7 @@ new province the_dreaded_refuge = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = korvanjund
 	name = "The Dreaded Refuge"
 	color = { 218 152 209 }
 	history = {
@@ -679,7 +838,7 @@ new province ronaior = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = nightgate
 	name = "Ronaior"
 	color = { 179 239 253 }
 	history = {
@@ -708,7 +867,7 @@ new province skjtte = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = nightgate
 	name = "Skjtte"
 	color = { 199 116 131 }
 	history = {
@@ -737,7 +896,7 @@ new province yorgrim_overlook = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = yorgrim_overlook
 	name = "Yorgrim Overlook"
 	color = { 147 190 175 }
 	history = {
@@ -766,7 +925,7 @@ new province olavdolyn = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = yorgrim_overlook
 	name = "Olavdolyn"
 	color = { 101 124 120 }
 	history = {
@@ -795,7 +954,7 @@ new province jalaeigr = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = yorgrim_overlook
 	name = "Jalaeigr"
 	color = { 170 254 198 }
 	history = {
@@ -824,7 +983,7 @@ new province fjoltla = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = yorgrim_overlook
 	name = "Fjoltla"
 	color = { 250 128 184 }
 	history = {
@@ -853,7 +1012,7 @@ new province hatru = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = irkngthand
 	name = "Hatru"
 	color = { 176 244 108 }
 	history = {
@@ -877,7 +1036,7 @@ new province thrlda = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = irkngthand
 	name = "Thrlda"
 	color = { 105 228 132 }
 	history = {
@@ -906,7 +1065,7 @@ new province raldbthar = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = korvanjund
 	name = "Raldbthar"
 	color = { 199 112 152 }
 	history = {
@@ -938,7 +1097,7 @@ new province alerdis = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = shearpoint
 	name = "Alerdis"
 	color = { 255 119 106 }
 	history = {
@@ -971,7 +1130,7 @@ new province huksi = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = shearpoint
 	name = "Huksi"
 	color = { 156 166 137 }
 	history = {
@@ -1004,7 +1163,7 @@ new province adicena = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = fellglow
 	name = "Adicena"
 	color = { 130 100 204 }
 	history = {
@@ -1033,7 +1192,7 @@ new province ysolerd = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = fellglow
 	name = "Ysolerd"
 	color = { 138 230 231 }
 	history = {
@@ -1062,7 +1221,7 @@ new province reysel = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = fellglow
 	name = "Reysel"
 	color = { 194 221 146 }
 	history = {
@@ -1095,7 +1254,7 @@ new province friki = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = irkngthand
 	name = "Friki"
 	color = { 130 226 153 }
 	history = {
@@ -1125,7 +1284,7 @@ new province aleaie = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = long_road
 	name = "Aleaie"
 	color = { 156 164 153 }
 	history = {
@@ -1154,7 +1313,7 @@ new province bleak_falls_barrow = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = long_road
 	name = "Bleak Falls Barrow"
 	color = { 186 242 180 }
 	history = {
@@ -1183,7 +1342,7 @@ new province havocrels_tower = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = long_road
 	name = "Havocrel's Tower"
 	color = { 154 108 248 }
 	history = {
@@ -1207,7 +1366,7 @@ new province orieteir = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = loreius
 	name = "Orieteir"
 	color = { 157 250 128 }
 	history = {
@@ -1236,7 +1395,7 @@ new province elydark = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = volunruud
 	name = "Elydark"
 	color = { 163 158 252 }
 	history = {
@@ -1260,7 +1419,7 @@ new province cranelis = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = volunruud
 	name = "Cranelis"
 	color = { 204 119 187 }
 	history = {
@@ -1284,7 +1443,7 @@ new province syllartha = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = volunruud
 	name = "Syllartha"
 	color = { 161 238 238 }
 	history = {
@@ -1308,7 +1467,7 @@ new province yllamys = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = volunruud
 	name = "Yllamys"
 	color = { 200 242 239 }
 	history = {
@@ -1332,7 +1491,7 @@ new province oladithas = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = lord_hill
 	name = "Oladithas"
 	color = { 131 137 196 }
 	history = {
@@ -1356,7 +1515,7 @@ new province evelsia = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = lord_hill
 	name = "Evelsia"
 	color = { 252 224 223 }
 	history = {
@@ -1380,7 +1539,7 @@ new province hegehala = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = loreius
 	name = "Hegehala"
 	color = { 128 140 205 }
 	history = {
@@ -1404,7 +1563,7 @@ new province isellarue = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = lord_hill
 	name = "Isellarue"
 	color = { 125 201 117 }
 	history = {
@@ -1428,7 +1587,7 @@ new province loraaerys = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = lord_hill
 	name = "Loraaerys"
 	color = { 245 204 218 }
 	history = {
@@ -1452,7 +1611,7 @@ new province edinmund = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = pale_area
+	area = north_isles
 	name = "Edinmund"
 	color = { 174 254 101 }
 	history = {

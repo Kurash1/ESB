@@ -99,8 +99,8 @@ new terrain hills = {
 	defence = 1
 	local_defensiveness = 0.15
 	
+	movement_cost = 1.35
 	modifier = {
-		movement_cost = 1.35
 		local_development_cost = 0.10
 		supply_limit = 25
 		local_build_cost = 0.10

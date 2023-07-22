@@ -115,7 +115,7 @@ sload_faith_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = RED
+				always = no
 				is_capital = yes
 			}
 		}
@@ -174,7 +174,7 @@ sload_faith_rebels = {
 		}
 		if = {
 			limit = {
-				tag = RED
+				always = no
 			}
 			add_stability = -1
 		}
@@ -327,7 +327,7 @@ hist_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = RED
+				always = no
 				is_capital = yes
 			}
 		}
@@ -386,7 +386,7 @@ hist_rebels = {
 		}
 		if = {
 			limit = {
-				tag = RED
+				always = no
 			}
 			add_stability = -1
 		}
@@ -539,7 +539,7 @@ old_gods_cult_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = RED
+				always = no
 				is_capital = yes
 			}
 		}
@@ -598,7 +598,7 @@ old_gods_cult_rebels = {
 		}
 		if = {
 			limit = {
-				tag = RED
+				always = no
 			}
 			add_stability = -1
 		}
@@ -751,7 +751,7 @@ tsaesci_pantheon_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = RED
+				always = no
 				is_capital = yes
 			}
 		}
@@ -810,7 +810,7 @@ tsaesci_pantheon_rebels = {
 		}
 		if = {
 			limit = {
-				tag = RED
+				always = no
 			}
 			add_stability = -1
 		}
@@ -963,7 +963,7 @@ tang_mo_pantheon_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = RED
+				always = no
 				is_capital = yes
 			}
 		}
@@ -1022,7 +1022,7 @@ tang_mo_pantheon_rebels = {
 		}
 		if = {
 			limit = {
-				tag = RED
+				always = no
 			}
 			add_stability = -1
 		}
@@ -1175,7 +1175,7 @@ kamal_pantheon_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = RED
+				always = no
 				is_capital = yes
 			}
 		}
@@ -1234,7 +1234,7 @@ kamal_pantheon_rebels = {
 		}
 		if = {
 			limit = {
-				tag = RED
+				always = no
 			}
 			add_stability = -1
 		}
@@ -1387,7 +1387,7 @@ cult_of_the_moth_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = RED
+				always = no
 				is_capital = yes
 			}
 		}
@@ -1446,7 +1446,7 @@ cult_of_the_moth_rebels = {
 		}
 		if = {
 			limit = {
-				tag = RED
+				always = no
 			}
 			add_stability = -1
 		}

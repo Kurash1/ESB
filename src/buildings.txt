@@ -1,3 +1,96 @@
+new building fort_1 = {
+	name = "Fort"
+	desc = ""
+	cost = 200
+	time = 12
+	modifier = {
+		fort_level = 2
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+new building fort_2 = {
+	name = "Castle"
+	desc = ""
+	cost = 400
+	time = 12
+	modifier = {
+		fort_level = 4
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+new building fortup_1 = {
+	name = "Additional Garrisons"
+	desc = ""
+	cost = 50
+	time = 12
+	build_trigger = {
+		fort_level = 1
+	}
+	modifier = {
+		local_garrison_size = 0.5
+		
+		local_fort_maintenance_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+new building fortup_2 = {
+	name = "Traps"
+	desc = ""
+	cost = 50
+	time = 12
+	build_trigger = {
+		fort_level = 1
+	}
+	modifier = {
+		local_hostile_attrition = 1
+		
+		local_fort_maintenance_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+new building fortup_3 = {
+	name = "Secret Passages"
+	desc = ""
+	cost = 50
+	time = 12
+	build_trigger = {
+		fort_level = 1
+	}
+	modifier = {
+		local_defensiveness = 0.25
+		
+		local_fort_maintenance_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+new building fortup_4 = {
+	name = "Battleworks"
+	desc = ""
+	cost = 200
+	time = 12
+	build_trigger = {
+		fort_level = 1
+	}
+	modifier = {
+		local_defender_dice_roll_bonus = 1
+		
+		local_fort_maintenance_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 new building tax_1 = {
 	name = "Shrine"
 	desc = ""

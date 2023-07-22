@@ -1105,7 +1105,6 @@ strong_nobles = {
 	allow_normal_conversion = yes
 	modifiers = {
 		global_manpower_modifier = 0.10
-		nobles_influence_modifier = 0.10
 		cavalry_power = 0.05
 	}
 }
@@ -1116,7 +1115,6 @@ curtailed_nobles = {
 	allow_normal_conversion = yes
 	modifiers = {
 		global_tax_modifier = 0.10
-		nobles_influence_modifier = -0.10
 		cavalry_cost = -0.10
 	}
 }
@@ -1128,7 +1126,6 @@ estate_empowerment = {
 	modifiers = {
 		production_efficiency = 0.10
 		global_tax_modifier = -0.10
-		nobles_loyalty_modifier = 0.10
 	}
 }
 #Warrior Elite (Yellow)
@@ -1183,8 +1180,6 @@ noble_supremacy = {
 	allow_normal_conversion = yes
 	modifiers = {
 		free_leader_pool = 1
-		nobles_loyalty_modifier = 0.10
-		nobles_influence_modifier = 0.10
 	}
 }
 #Bandit Alliance (Red)

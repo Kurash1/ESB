@@ -101,12 +101,12 @@ heretic_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		NOT = { tag = RED }
+		NOT = { always = no }
 	}
 	
 	# Country scope
 	can_enforce_trigger = {
-		NOT = { tag = RED }
+		NOT = { always = no }
 	}
 
 	# Localisation for their demands

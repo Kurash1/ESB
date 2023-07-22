@@ -1,16 +1,14 @@
-new superregion null_sea_superregion = {
-	name = ""
+new superregion black_mountain = {
+	name = "Black Mountain"
 }
-new region null_sea_region = {
-	name = ""
-	superregion = null_sea_superregion
+new region black_mountain = {
+	name = "Black Mountain"
+	superregion = black_mountain
 }
-new area null_sea_area = {
-	name = ""
-	region = null_sea_region
+new area black_mountain = {
+	name = "Black Mountain"
+	region = black_mountain
 }
-
-
 new province black_mountain = {
     position = {
         3753.000 1749.000 3753.000 1749.000 3753.000 1749.000 3753.000 1749.000 3753.000 1749.000 3753.000 1749.000 3753.000 1749.000
@@ -21,7 +19,7 @@ new province black_mountain = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	area = black_mountain
 	name = "Black Mountain"
 	color = { 128 170 190 }
 	history = {
