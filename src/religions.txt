@@ -24,6 +24,25 @@ new religion nordic_pantheon = {
 	religious_group = nordic_group
 }
 
+new personal_deity shor = {
+	name = "Shor"
+	desc = ""
+	sprite = 19
+	
+	modifiers = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25
+		horde_unity = 0.25
+		meritocracy = 0.25
+		stability_cost_modifier = -0.1
+	}
+	
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+
 new religion the_old_ways = {
 	name = "The Old Ways"
 	desc = ""
