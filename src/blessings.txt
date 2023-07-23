@@ -89,7 +89,7 @@ new blessing shearpoint_eyes_above = {
 	name = "Shearpoint: Eyes Above"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@shearpoint = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -112,7 +112,7 @@ new blessing shearpoint_sorrowful_mountain = {
 	name = "Shearpoint: Sorrowful Mountain"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@shearpoint = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -135,7 +135,7 @@ new blessing shearpoint_misdirection = {
 	name = "Shearpoint: Misdirection"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@shearpoint = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -157,7 +157,7 @@ new blessing bromjunaar_labyrinthian = {
 	name = "Bromjunaar: The Labyrinthian"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@bromjunaar = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -179,7 +179,7 @@ new blessing bromjunaar_capital = {
 	name = "Bromjunaar: The Capital"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@bromjunaar = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -201,7 +201,7 @@ new blessing bromjunaar_warlord = {
 	name = "Bromjunaar: Warlords Rest"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@bromjunaar = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -225,7 +225,7 @@ new blessing verglas_shadow_temple = {
 	name = "Verglas: Shadow Temple"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@verglas = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -248,7 +248,7 @@ new blessing verglas_frozen_temple = {
 	name = "Verglas: Frozen Temple"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@verglas = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -271,7 +271,7 @@ new blessing verglas_sea_temple = {
 	name = "Verglas: Sea Temple"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@verglas = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -293,7 +293,7 @@ new blessing volskygge_lendoran = {
 	name = "Volskygge: City of Lendoran"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@volskygge = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -315,7 +315,7 @@ new blessing volskygge_trained_for_horror = {
 	name = "Volskygge: Trained for Horror"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@volskygge = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -337,7 +337,7 @@ new blessing volskygge_whirlwind_sprint = {
 	name = "Volskygge: Whirlwind Sprint"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@volskygge = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -359,7 +359,7 @@ new blessing ragnvald_torsten = {
 	name = "Ragnvald: Torsten"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@ragnvald = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -381,7 +381,7 @@ new blessing ragnvald_saerek = {
 	name = "Ragnvald: Saerek"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@ragnvald = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -403,7 +403,7 @@ new blessing ragnvald_otar = {
 	name = "Ragnvald: Otar"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@ragnvald = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -425,7 +425,7 @@ new blessing valthume_ancient_evil = {
 	name = "Valthume: Ancient Evil"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@valthume = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -447,7 +447,7 @@ new blessing valthume_venerate_brutality = {
 	name = "Valthume: Venerate Brutality"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@valthume = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -469,7 +469,7 @@ new blessing valthume_valdar = {
 	name = "Valthume: Valdar"
 	desc = ""
 	potential = {
-		p@windhelm = {
+		p@valthume = {
 		 	has_owner_religion = yes
 			owner = {
 				religion = dragon_cult
@@ -487,69 +487,69 @@ new blessing valthume_valdar = {
 		factor = 1
 	}
 }
-new blessing vahloks_tomb_the_jailor = {
-	name = "Vahlok's tomb: The Jailor"
-	desc = ""
-	potential = {
-		p@windhelm = {
-		 	has_owner_religion = yes
-			owner = {
-				religion = dragon_cult
-			}
-		}
-		NOT = { has_country_flag = vahloks_tomb_blessing }
-	}
-	modifier = {
-		harsh_treatment_cost = -0.25
-	}
-	effect = {
-		set_country_flag = vahloks_tomb_blessing
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new blessing vahloks_tomb_vanquish_traitors = {
-	name = "Vahlok's tomb: Vanquish Traitors"
-	desc = ""
-	potential = {
-		p@windhelm = {
-		 	has_owner_religion = yes
-			owner = {
-				religion = dragon_cult
-			}
-		}
-		NOT = { has_country_flag = vahloks_tomb_blessing }
-	}
-	modifier = {
-		warscore_from_battles_modifier = 0.2
-	}
-	effect = {
-		set_country_flag = vahloks_tomb_blessing
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new blessing vahloks_tomb_lost_legacy = {
-	name = "Vahlok's tomb: Lost Legacy"
-	desc = ""
-	potential = {
-		p@windhelm = {
-		 	has_owner_religion = yes
-			owner = {
-				religion = dragon_cult
-			}
-		}
-		NOT = { has_country_flag = vahloks_tomb_blessing }
-	}
-	modifier = {
-		prestige_decay = -0.01
-	}
-	effect = {
-		set_country_flag = vahloks_tomb_blessing
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
+#new blessing vahloks_tomb_the_jailor = {
+#	name = "Vahlok's tomb: The Jailor"
+#	desc = ""
+#	potential = {
+#		p@windhelm = {
+#		 	has_owner_religion = yes
+#			owner = {
+#				religion = dragon_cult
+#			}
+#		}
+#		NOT = { has_country_flag = vahloks_tomb_blessing }
+#	}
+#	modifier = {
+#		harsh_treatment_cost = -0.25
+#	}
+#	effect = {
+#		set_country_flag = vahloks_tomb_blessing
+#	}
+#	ai_will_do = {
+#		factor = 1
+#	}
+#}
+#new blessing vahloks_tomb_vanquish_traitors = {
+#	name = "Vahlok's tomb: Vanquish Traitors"
+#	desc = ""
+#	potential = {
+#		p@windhelm = {
+#		 	has_owner_religion = yes
+#			owner = {
+#				religion = dragon_cult
+#			}
+#		}
+#		NOT = { has_country_flag = vahloks_tomb_blessing }
+#	}
+#	modifier = {
+#		warscore_from_battles_modifier = 0.2
+#	}
+#	effect = {
+#		set_country_flag = vahloks_tomb_blessing
+#	}
+#	ai_will_do = {
+#		factor = 1
+#	}
+#}
+#new blessing vahloks_tomb_lost_legacy = {
+#	name = "Vahlok's tomb: Lost Legacy"
+#	desc = ""
+#	potential = {
+#		p@windhelm = {
+#		 	has_owner_religion = yes
+#			owner = {
+#				religion = dragon_cult
+#			}
+#		}
+#		NOT = { has_country_flag = vahloks_tomb_blessing }
+#	}
+#	modifier = {
+#		prestige_decay = -0.01
+#	}
+#	effect = {
+#		set_country_flag = vahloks_tomb_blessing
+#	}
+#	ai_will_do = {
+#		factor = 1
+#	}
+#}
