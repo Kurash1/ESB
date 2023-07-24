@@ -52,7 +52,7 @@ new country solitude = {
 	adj = "Solitudean"
 	color = { 255 11 3 }
 	
-	capital = windhelm
+	capital = solitude
 }
 new country pine_frost = { 
 	inherit = nordic_country
@@ -62,7 +62,7 @@ new country pine_frost = {
 	adj = "Pine-Frost"
 	color = { 158 255 194 }
 	
-	capital = windhelm
+	capital = pinefrost
 }
 new country holly-frost = { 
 	inherit = nordic_country
@@ -82,7 +82,7 @@ new country dragon_bridge = {
 	adj = "Dragon Bridgean"
 	color = { 156 84 84 }
 	
-	capital = windhelm
+	capital = dragon_bridge
 }
 new country blue-axe = { 
 	inherit = nordic_country
@@ -102,7 +102,7 @@ new country pine-hill = {
 	adj = "Pine-Hill"
 	color = { 158 255 102 }
 	
-	capital = windhelm
+	capital = clearpine_pond
 }
 new country rime-rock = { 
 	inherit = nordic_country
@@ -112,7 +112,7 @@ new country rime-rock = {
 	adj = "Rime-Rock"
 	color = { 133 175 175 }
 	
-	capital = windhelm
+	capital = northwatch
 }
 new country raven-scar = { 
 	inherit = nordic_country
@@ -122,7 +122,7 @@ new country raven-scar = {
 	adj = "Raven-Scar"
 	color = { 122 122 122 }
 	
-	capital = windhelm
+	capital = ravenscar
 }
 new country iron-back = { 
 	inherit = nordic_country
@@ -132,7 +132,7 @@ new country iron-back = {
 	adj = "Iron-Back"
 	color = { 196 121 84 }
 	
-	capital = windhelm
+	capital = ironback_hideout
 }
 new country wolf-skull = { 
 	inherit = nordic_country
@@ -142,7 +142,7 @@ new country wolf-skull = {
 	adj = "Wolf-Skull"
 	color = { 196 62 165 }
 	
-	capital = windhelm
+	capital = hraggstad
 }
 new country chill-wind = { 
 	inherit = nordic_country
@@ -302,7 +302,7 @@ new country jorrvaskr = {
 	adj = "Jorrvaskr"
 	color = { 206 98 16 }
 	
-	capital = windhelm
+	capital = whiterun
 }
 new country windhelm = { 
 	inherit = nordic_country
@@ -632,5 +632,5 @@ new country shadow-green = {
 	adj = "Shadow-Green"
 	color = { 0 50 0 }
 	
-	capital = windhelm
+	capital = shadowgreen
 }
