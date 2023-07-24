@@ -1,6 +1,6 @@
 new inheritable snow_elven_country = {
 	technology_group = elven_tg
-	religion = snow_elves_pantheon
+	religion = auriels_true_way
 	primary_culture = snow_elven
 	graphical_culture = greekgfx
 	
