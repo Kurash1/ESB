@@ -1,3 +1,11 @@
+new church_aspect t = {
+	name = "T aspect"
+	desc = ""
+	modifier = {
+		prestige = 1
+	}
+}
+
 new religion auriels_true_way = {
 	name = "Auriels True Way"
 	desc = ""
@@ -10,6 +18,12 @@ new religion auriels_true_way = {
 		tolerance_heretic = 3
 	}
 	province = { }
+	
+	aspects = {
+		t
+	}
+	
+	uses_church_power = yes
 	
 	religious_group = snow_elven_group
 }
