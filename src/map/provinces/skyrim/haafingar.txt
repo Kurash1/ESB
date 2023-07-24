@@ -6,7 +6,7 @@ new area solitude_proper_area = {
 	name = "Solitude Proper"
 	region = haafingar
 }
-new province narene = {
+new province lone_isle = {
     position = {
         1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000
     }
@@ -17,7 +17,7 @@ new province narene = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "Narene"
+	name = "Lone Isle"
 	color = { 184 109 117 }
 	history = {
 		owner = SHD
@@ -45,7 +45,7 @@ new province solitude = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = solitude_proper_area
 	name = "Solitude"
 	color = { 241 196 104 }
 	history = {
@@ -74,8 +74,8 @@ new province solitude_port = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
-	name = "Solitude's port"
+	area = solitude_proper_area
+	name = "Solitude Port"
 	color = { 160 235 188 }
 	history = {
 		religion = nordic_pantheon
@@ -93,7 +93,7 @@ new province solitude_port = {
 	}
 }
 
-new province solitude_farms = {
+new province solitude_entrance = {
     position = {
         1633.000 2063.000 1633.000 2063.000 1633.000 2063.000 1633.000 2063.000 1633.000 2063.000 1633.000 2063.000 1633.000 2063.000
     }
@@ -103,8 +103,8 @@ new province solitude_farms = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
-	name = "Solitude's farms"
+	area = solitude_proper_area
+	name = "Solitude Entrance"
 	color = { 190 186 158 }
 	history = {
 		owner = SOL
@@ -125,7 +125,7 @@ new province solitude_farms = {
 		}
 	}
 }
-new province 1308 = {
+new province solitude_farms = {
     position = {
         1630.000 2053.000 1630.000 2053.000 1630.000 2053.000 1630.000 2053.000 1630.000 2053.000 1630.000 2053.000 1630.000 2053.000
     }
@@ -136,7 +136,7 @@ new province 1308 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1308"
+	name = "Solitude Farms"
 	color = { 144 103 168 }
 	history = {
 		owner = SOL
@@ -154,7 +154,7 @@ new province 1308 = {
 	}
 }
 
-new province 7193 = {
+new province solitude_military_camp = {
     position = {
         1621.000 2059.000 1621.000 2059.000 1621.000 2059.000 1621.000 2059.000 1621.000 2059.000 1621.000 2059.000 1621.000 2059.000
     }
@@ -165,7 +165,7 @@ new province 7193 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7193"
+	name = "Solitude Military Camp"
 	color = { 239 147 210 }
 	history = {
 		owner = SOL
@@ -183,7 +183,7 @@ new province 7193 = {
 	}
 }
 
-new province 7318 = {
+new province solitude_fork = {
     position = {
         1613.000 2050.000 1613.000 2050.000 1613.000 2050.000 1613.000 2050.000 1613.000 2050.000 1613.000 2050.000 1613.000 2050.000
     }
@@ -194,7 +194,7 @@ new province 7318 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7318"
+	name = "Solitude Fork"
 	color = { 158 127 179 }
 	history = {
 		owner = SOL
@@ -216,7 +216,7 @@ new province 7318 = {
 	}
 }
 
-new province 7300 = {
+new province meridias_crossroad = {
     position = {
         1604.000 2056.000 1604.000 2056.000 1604.000 2056.000 1604.000 2056.000 1604.000 2056.000 1604.000 2056.000 1604.000 2056.000
     }
@@ -227,7 +227,7 @@ new province 7300 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7300"
+	name = "Meridia's Crossroad"
 	color = { 174 195 199 }
 	history = {
 		owner = SOL
@@ -245,7 +245,7 @@ new province 7300 = {
 	}
 }
 
-new province 1340 = {
+new province dragon_bridge = {
     position = {
         1597.000 2045.000 1597.000 2045.000 1597.000 2045.000 1597.000 2045.000 1597.000 2045.000 1597.000 2045.000 1597.000 2045.000
     }
@@ -256,7 +256,7 @@ new province 1340 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1340"
+	name = "Dragon Bridge"
 	color = { 201 202 125 }
 	history = {
 		owner = DRB
@@ -274,7 +274,7 @@ new province 1340 = {
 	}
 }
 
-new province 1352 = {
+new province castle_volkihar = {
     position = {
         1521.000 2118.000 1521.000 2118.000 1521.000 2118.000 1521.000 2118.000 1521.000 2118.000 1521.000 2118.000 1521.000 2118.000
     }
@@ -285,7 +285,7 @@ new province 1352 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1352"
+	name = "Castle Volkihar"
 	color = { 128 212 180 }
 	history = {
 		culture = nord
@@ -300,7 +300,7 @@ new province 1352 = {
 	}
 }
 
-new province 7221 = {
+new province big_sister = {
     position = {
         1538.000 2157.000 1538.000 2157.000 1538.000 2157.000 1538.000 2157.000 1538.000 2157.000 1538.000 2157.000 1538.000 2157.000
     }
@@ -311,7 +311,7 @@ new province 7221 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7221"
+	name = "Big Sister"
 	color = { 251 134 139 }
 	history = {
 		culture = nord
@@ -326,7 +326,7 @@ new province 7221 = {
 	}
 }
 
-new province 7224 = {
+new province small_sister = {
     position = {
         1555.000 2167.000 1555.000 2167.000 1555.000 2167.000 1555.000 2167.000 1555.000 2167.000 1555.000 2167.000 1555.000 2167.000
     }
@@ -337,7 +337,7 @@ new province 7224 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7224"
+	name = "Small Sister"
 	color = { 210 247 170 }
 	history = {
 		culture = nord
@@ -352,7 +352,7 @@ new province 7224 = {
 	}
 }
 
-new province 7222 = {
+new province rugged_island = {
     position = {
         1559.000 2128.000 1559.000 2128.000 1559.000 2128.000 1559.000 2128.000 1559.000 2128.000 1559.000 2128.000 1559.000 2128.000
     }
@@ -363,7 +363,7 @@ new province 7222 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7222"
+	name = "Rugged Island"
 	color = { 202 251 218 }
 	history = {
 		culture = nord
@@ -377,7 +377,7 @@ new province 7222 = {
 		is_city = no
 	}
 }
-new province 1344 = {
+new province solitude_lighthouse = {
     position = {
         1665.000 2097.000 1665.000 2097.000 1665.000 2097.000 1665.000 2097.000 1665.000 2097.000 1665.000 2097.000 1665.000 2097.000
     }
@@ -388,7 +388,7 @@ new province 1344 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1344"
+	name = "Solitude Lighthouse"
 	color = { 167 222 241 }
 	history = {
 		owner = SOL
@@ -406,7 +406,7 @@ new province 1344 = {
 	}
 }
 
-new province 7312 = {
+new province clay_coast = {
     position = {
         1668.000 2083.000 1668.000 2083.000 1668.000 2083.000 1668.000 2083.000 1668.000 2083.000 1668.000 2083.000 1668.000 2083.000
     }
@@ -417,7 +417,7 @@ new province 7312 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7312"
+	name = "Clay Coast"
 	color = { 204 250 102 }
 	history = {
 		religion = nordic_pantheon
@@ -435,7 +435,7 @@ new province 7312 = {
 	}
 }
 
-new province 1300 = {
+new province northern_cliffs = {
     position = {
         1659.000 2110.000 1659.000 2110.000 1659.000 2110.000 1659.000 2110.000 1659.000 2110.000 1659.000 2110.000 1659.000 2110.000
     }
@@ -446,7 +446,7 @@ new province 1300 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1300"
+	name = "Northern Cliffs"
 	color = { 236 248 151 }
 	history = {
 		owner = SHD
@@ -464,7 +464,7 @@ new province 1300 = {
 	}
 }
 
-new province 7303 = {
+new province snowy_trees = {
     position = {
         1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000
     }
@@ -475,7 +475,7 @@ new province 7303 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7303"
+	name = "Snowy Trees"
 	color = { 254 159 141 }
 	history = {
 		owner = SHD
@@ -493,7 +493,7 @@ new province 7303 = {
 	}
 }
 
-new province 7317 = {
+new province brokenoar = {
     position = {
         1641.000 2113.000 1641.000 2113.000 1641.000 2113.000 1641.000 2113.000 1641.000 2113.000 1641.000 2113.000 1641.000 2113.000
     }
@@ -504,7 +504,7 @@ new province 7317 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7317"
+	name = "Broken Oar"
 	color = { 227 114 140 }
 	history = {
 		owner = SHD
@@ -522,7 +522,7 @@ new province 7317 = {
 	}
 }
 
-new province 1316 = {
+new province shadowgreen = {
     position = {
         1634.000 2099.000 1634.000 2099.000 1634.000 2099.000 1634.000 2099.000 1634.000 2099.000 1634.000 2099.000 1634.000 2099.000
     }
@@ -533,7 +533,7 @@ new province 1316 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1316"
+	name = "Shadowgreen"
 	color = { 219 228 107 }
 	history = {
 		owner = SHD
@@ -551,7 +551,7 @@ new province 1316 = {
 	}
 }
 
-new province 7214 = {
+new province gold_isle = {
     position = {
         1618.000 2118.000 1618.000 2118.000 1618.000 2118.000 1618.000 2118.000 1618.000 2118.000 1618.000 2118.000 1618.000 2118.000
     }
@@ -562,7 +562,7 @@ new province 7214 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7214"
+	name = "Gold Isle"
 	color = { 162 240 177 }
 	history = {
 		culture = nord
@@ -583,7 +583,7 @@ new province 7214 = {
 	}
 }
 
-new province 1305 = {
+new province northern_road = {
     position = {
         1618.000 2100.000 1618.000 2100.000 1618.000 2100.000 1618.000 2100.000 1618.000 2100.000 1618.000 2100.000 1618.000 2100.000
     }
@@ -594,7 +594,7 @@ new province 1305 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1305"
+	name = "Northern Road"
 	color = { 200 207 188 }
 	history = {
 		owner = RAV
@@ -612,7 +612,7 @@ new province 1305 = {
 	}
 }
 
-new province 7191 = {
+new province ravenscar = {
     position = {
         1604.000 2096.000 1604.000 2096.000 1604.000 2096.000 1604.000 2096.000 1604.000 2096.000 1604.000 2096.000 1604.000 2096.000
     }
@@ -623,7 +623,7 @@ new province 7191 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7191"
+	name = "Ravenscar"
 	color = { 150 176 238 }
 	history = {
 		owner = RAV
@@ -641,7 +641,7 @@ new province 7191 = {
 	}
 }
 
-new province 7311 = {
+new province widows_watch = {
     position = {
         1587.000 2097.000 1587.000 2097.000 1587.000 2097.000 1587.000 2097.000 1587.000 2097.000 1587.000 2097.000 1587.000 2097.000
     }
@@ -652,7 +652,7 @@ new province 7311 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7311"
+	name = "Widow's Watch"
 	color = { 211 184 165 }
 	history = {
 		religion = nordic_pantheon
@@ -670,7 +670,7 @@ new province 7311 = {
 	}
 }
 
-new province 7320 = {
+new province northern_mine = {
     position = {
         1570.000 2091.000 1570.000 2091.000 1570.000 2091.000 1570.000 2091.000 1570.000 2091.000 1570.000 2091.000 1570.000 2091.000
     }
@@ -681,7 +681,7 @@ new province 7320 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7320"
+	name = "Northern Mine"
 	color = { 107 167 115 }
 	history = {
 		owner = RIR
@@ -698,7 +698,7 @@ new province 7320 = {
 		is_city = yes
 	}
 }
-new province 7120 = {
+new province steepfall_burrow = {
     position = {
         1561.000 2079.000 1561.000 2079.000 1561.000 2079.000 1561.000 2079.000 1561.000 2079.000 1561.000 2079.000 1561.000 2079.000
     }
@@ -709,7 +709,7 @@ new province 7120 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7120"
+	name = "Steepfall Burrow"
 	color = { 220 153 179 }
 	history = {
 		owner = RIR
@@ -727,7 +727,7 @@ new province 7120 = {
 	}
 }
 
-new province 7192 = {
+new province lower_steepfall_burrow = {
     position = {
         1548.000 2089.000 1548.000 2089.000 1548.000 2089.000 1548.000 2089.000 1548.000 2089.000 1548.000 2089.000 1548.000 2089.000
     }
@@ -738,7 +738,7 @@ new province 7192 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7192"
+	name = "Lower Steepfall Burrow"
 	color = { 126 243 238 }
 	history = {
 		owner = RIR
@@ -756,7 +756,7 @@ new province 7192 = {
 	}
 }
 
-new province 7302 = {
+new province northwatch = {
     position = {
         1534.000 2086.000 1534.000 2086.000 1534.000 2086.000 1534.000 2086.000 1534.000 2086.000 1534.000 2086.000 1534.000 2086.000
     }
@@ -767,7 +767,7 @@ new province 7302 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7302"
+	name = "Northwatch"
 	color = { 108 135 188 }
 	history = {
 		owner = RIR
@@ -785,7 +785,7 @@ new province 7302 = {
 	}
 }
 
-new province 7304 = {
+new province horned_coast = {
     position = {
         1520.000 2070.000 1520.000 2070.000 1520.000 2070.000 1520.000 2070.000 1520.000 2070.000 1520.000 2070.000 1520.000 2070.000
     }
@@ -796,7 +796,7 @@ new province 7304 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7304"
+	name = "Horned Coast"
 	color = { 189 251 233 }
 	history = {
 		owner = PIF
@@ -814,7 +814,7 @@ new province 7304 = {
 	}
 }
 
-new province 7310 = {
+new province low_grove = {
     position = {
         1506.000 2069.000 1506.000 2069.000 1506.000 2069.000 1506.000 2069.000 1506.000 2069.000 1506.000 2069.000 1506.000 2069.000
     }
@@ -825,7 +825,7 @@ new province 7310 = {
         0.3765 0.3765 0.3765 0.3765 0.3765 0.3765 0.3765
     }
 	area = haafingar_area
-	name = "7310"
+	name = "Low Grove"
 	color = { 242 169 162 }
 	history = {
 		religion = nordic_pantheon
@@ -843,7 +843,7 @@ new province 7310 = {
 	}
 }
 
-new province 4145 = {
+new province pinefrost = {
     position = {
         1535.000 2064.000 1535.000 2064.000 1535.000 2064.000 1535.000 2064.000 1535.000 2064.000 1535.000 2064.000 1535.000 2064.000
     }
@@ -854,7 +854,7 @@ new province 4145 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "4145"
+	name = "Pinefrost"
 	color = { 151 162 116 }
 	history = {
 		religion = nordic_pantheon
@@ -891,7 +891,7 @@ new province volskygge = {
 	}
 }
 
-new province 7150 = {
+new province deepwood_redoubt = {
     position = {
         1557.000 2044.000 1557.000 2044.000 1557.000 2044.000 1557.000 2044.000 1557.000 2044.000 1557.000 2044.000 1557.000 2044.000
     }
@@ -902,7 +902,7 @@ new province 7150 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7150"
+	name = "Deepwood Redoubt"
 	color = { 187 232 173 }
 	history = {
 		religion = nordic_pantheon
@@ -920,7 +920,7 @@ new province 7150 = {
 	}
 }
 
-new province 4142 = {
+new province pinemoon_cave = {
     position = {
         1569.000 2056.000 1569.000 2056.000 1569.000 2056.000 1569.000 2056.000 1569.000 2056.000 1569.000 2056.000 1569.000 2056.000
     }
@@ -931,7 +931,7 @@ new province 4142 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "4142"
+	name = "Pinemoon Cave"
 	color = { 166 213 143 }
 	history = {
 		religion = nordic_pantheon
@@ -944,7 +944,7 @@ new province 4142 = {
 	}
 }
 
-new province 7315 = {
+new province snowpeaks = {
     position = {
         1576.000 2045.000 1576.000 2045.000 1576.000 2045.000 1576.000 2045.000 1576.000 2045.000 1576.000 2045.000 1576.000 2045.000
     }
@@ -955,7 +955,7 @@ new province 7315 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7315"
+	name = "Snowpeaks"
 	color = { 161 254 127 }
 	history = {
 		owner = PIN
@@ -973,7 +973,7 @@ new province 7315 = {
 	}
 }
 
-new province 7195 = {
+new province clearpine_pond = {
     position = {
         1585.000 2057.000 1585.000 2057.000 1585.000 2057.000 1585.000 2057.000 1585.000 2057.000 1585.000 2057.000 1585.000 2057.000
     }
@@ -984,7 +984,7 @@ new province 7195 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7195"
+	name = "Clearpine Pond"
 	color = { 163 173 175 }
 	history = {
 		religion = nordic_pantheon
@@ -1002,7 +1002,7 @@ new province 7195 = {
 	}
 }
 
-new province 4141 = {
+new province lost_echo_cave = {
     position = {
         1567.000 2066.000 1567.000 2066.000 1567.000 2066.000 1567.000 2066.000 1567.000 2066.000 1567.000 2066.000 1567.000 2066.000
     }
@@ -1013,7 +1013,7 @@ new province 4141 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "4141"
+	name = "Lost Echo Cave"
 	color = { 124 176 123 }
 	history = {
 		religion = nordic_pantheon
@@ -1026,7 +1026,7 @@ new province 4141 = {
 	}
 }
 
-new province 1336 = {
+new province wolfskull_cave = {
     position = {
         1594.000 2066.000 1594.000 2066.000 1594.000 2066.000 1594.000 2066.000 1594.000 2066.000 1594.000 2066.000 1594.000 2066.000
     }
@@ -1037,7 +1037,7 @@ new province 1336 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1336"
+	name = "Wolfskull Cave"
 	color = { 104 241 247 }
 	history = {
 		owner = WOL
@@ -1055,7 +1055,7 @@ new province 1336 = {
 	}
 }
 
-new province 7148 = {
+new province hraggstad = {
     position = {
         1588.000 2078.000 1588.000 2078.000 1588.000 2078.000 1588.000 2078.000 1588.000 2078.000 1588.000 2078.000 1588.000 2078.000
     }
@@ -1066,7 +1066,7 @@ new province 7148 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7148"
+	name = "Hraggstad"
 	color = { 239 168 125 }
 	history = {
 		owner = WOL
@@ -1084,7 +1084,7 @@ new province 7148 = {
 	}
 }
 
-new province 7149 = {
+new province kilkreath_trail = {
     position = {
         1580.000 2068.000 1580.000 2068.000 1580.000 2068.000 1580.000 2068.000 1580.000 2068.000 1580.000 2068.000 1580.000 2068.000
     }
@@ -1095,7 +1095,7 @@ new province 7149 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7149"
+	name = "Kilkreath Trail"
 	color = { 120 142 214 }
 	history = {
 		owner = WOL
@@ -1112,7 +1112,7 @@ new province 7149 = {
 		is_city = yes
 	}
 }
-new province 1307 = {
+new province kilkreath_temple = {
     position = {
         1607.000 2066.000 1607.000 2066.000 1607.000 2066.000 1607.000 2066.000 1607.000 2066.000 1607.000 2066.000 1607.000 2066.000
     }
@@ -1123,7 +1123,7 @@ new province 1307 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "1307"
+	name = "Kilkreath Temple"
 	color = { 215 127 153 }
 	history = {
 		owner = IRO
@@ -1141,7 +1141,7 @@ new province 1307 = {
 	}
 }
 
-new province 7308 = {
+new province ironback_hideout = {
     position = {
         1616.000 2080.000 1616.000 2080.000 1616.000 2080.000 1616.000 2080.000 1616.000 2080.000 1616.000 2080.000 1616.000 2080.000
     }
@@ -1152,7 +1152,7 @@ new province 7308 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7308"
+	name = "Ironback Hidehout"
 	color = { 130 155 255 }
 	history = {
 		owner = IRO
@@ -1170,7 +1170,7 @@ new province 7308 = {
 	}
 }
 
-new province 7305 = {
+new province kilkreath_peak = {
     position = {
         1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000
     }
@@ -1181,7 +1181,7 @@ new province 7305 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = haafingar_area
-	name = "7305"
+	name = "Kilkreath Peak"
 	color = { 164 221 189 }
 	history = {
 		owner = IRO
