@@ -108,6 +108,7 @@ new building tax_1 = {
 	}
 	modifier = {
 		local_tax_modifier = 0.4
+		local_autonomy = -0.05
 	}
 	ai_will_do = {
 		factor = 1
@@ -131,6 +132,7 @@ new building tax_2 = {
 	}
 	modifier = {
 		local_tax_modifier = 0.7
+		local_autonomy = -0.10
 	}
 	ai_will_do = {
 		factor = 1
@@ -154,6 +156,7 @@ new building tax_3 = {
 	}
 	modifier = {
 		local_tax_modifier = 1.0
+		local_autonomy = -0.15
 	}
 	ai_will_do = {
 		factor = 1
@@ -563,7 +566,7 @@ new building road_3 = {
 	}
 }
 new building gover_1 = {
-	name = "Gover 1"
+	name = "Goods 1"
 	desc = ""
 	cost = 100
 	time = 12
@@ -571,24 +574,19 @@ new building gover_1 = {
 		FROM = {
 			calc_true_if = {
 				amount = 1
-				full_idea_group = staatsverwaltung0
-				full_idea_group = administrative_ideas
-				full_idea_group = zentra0
 			}
 		}
 	}
 	modifier = {
-		local_development_cost = -0.05
-		local_autonomy = -0.05
-		
-		allowed_num_of_buildings = 1
+		trade_goods_size_modifier = 0.15
+		local_development_cost = -0.15
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
 new building gover_2 = {
-	name = "Gover 2"
+	name = "Goods 2"
 	desc = ""
 	cost = 200
 	time = 12
@@ -597,48 +595,64 @@ new building gover_2 = {
 		FROM = {
 			calc_true_if = {
 				amount = 2
-				full_idea_group = staatsverwaltung0
-				full_idea_group = administrative_ideas
-				full_idea_group = zentra0
 			}
 		}
 	}
 	modifier = {
-		local_development_cost = -0.1
-		local_autonomy = -0.1
-		
-		allowed_num_of_buildings = 1
+		trade_goods_size_modifier = 0.3
+		local_development_cost = -0.3
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building gover_3 = {
-	name = "Gover 3"
+new building manufactory = {
+	name = "Manufactory"
 	desc = ""
-	cost = 300
-	time = 12
-	make_obsolete = gover_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 3
-				full_idea_group = staatsverwaltung0
-				full_idea_group = administrative_ideas
-				full_idea_group = zentra0
-			}
-		}
-	}
+	cost = 500
+	time = 60
 	modifier = {
-		local_development_cost = -0.15
-		local_autonomy = -0.15
-		
-		allowed_num_of_buildings = 1
-	}
-	ai_will_do = {
-		factor = 1
+		trade_goods_size = 1.0
 	}
 }
+new building def_manufactory = {
+	name = "Manufactory"
+	desc = ""
+	cost = 500
+	time = 60
+	modifier = {
+		trade_goods_size = 1.0
+	}
+	manufactory = {
+		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems gold silver ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
+	}
+}
+#new building gover_3 = {
+#	name = "Gover 3"
+#	desc = ""
+#	cost = 300
+#	time = 12
+#	make_obsolete = gover_2
+#	build_trigger = {
+#		FROM = {
+#			calc_true_if = {
+#				amount = 3
+#				full_idea_group = staatsverwaltung0
+#				full_idea_group = administrative_ideas
+#				full_idea_group = zentra0
+#			}
+#		}
+#	}
+#	modifier = {
+#		local_development_cost = -0.15
+#		local_autonomy = -0.15
+#		
+#		allowed_num_of_buildings = 1
+#	}
+#	ai_will_do = {
+#		factor = 1
+#	}
+#}
 new building state_1 = {
 	name = "state 1"
 	desc = ""
@@ -671,7 +685,8 @@ new building state_1 = {
 	}
 	modifier = {
 		local_state_maintenance_modifier = -0.2
-		statewide_governing_cost = -0.2
+		statewide_governing_cost = -0.05
+		local_prosperity_growth = 0.05
 		
 		allowed_num_of_buildings = 1
 	}
@@ -712,7 +727,8 @@ new building state_2 = {
 	}
 	modifier = {
 		local_state_maintenance_modifier = -0.4
-		statewide_governing_cost = -0.4
+		statewide_governing_cost = -0.10
+		local_prosperity_growth = 0.10
 		
 		allowed_num_of_buildings = 1
 	}
@@ -753,7 +769,8 @@ new building state_3 = {
 	}
 	modifier = {
 		local_state_maintenance_modifier = -0.6
-		statewide_governing_cost = -0.6
+		statewide_governing_cost = -0.15
+		local_prosperity_growth = 0.15
 		
 		allowed_num_of_buildings = 1
 	}

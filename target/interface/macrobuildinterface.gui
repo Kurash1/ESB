@@ -989,20 +989,14 @@ guiTypes = {
 			text = "20000¤"	
 		}
 		
-		iconType = {
-			name = "gover_2_3_arrow"
-			position = { x = 308 y = 144 }
-			spriteType = "GFX_building_upgrade_icon"
-		}
-		
 		checkboxType = {
-			name = "build_gover_3"
+			name = "build_manufactory"
 			position = { x = 320 y = 134 }
 			quadTextureSprite = "GFX_building_default" #Placeholder, real sprite is decided by game (based on button name).
 		}
 
 		instantTextBoxType={
-			name = "gover_3_cost"
+			name = "manufactory_cost"
 			position = { x = 320 y = 184 }
 			font = "vic_18"
 			borderSize = { x = 0 y = 0 }	
