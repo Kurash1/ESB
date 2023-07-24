@@ -1,0 +1,39 @@
+new religion nordic_pantheon = {
+	name = "Nordic Pantheon"
+	desc = ""
+	
+	icon = 3
+	color = { 77 145 138 }
+	heretic = { NORDIC_PANTHEON_HERETIC }
+	
+	country = {
+		land_forcelimit_modifier = 0.25
+			global_regiment_recruit_speed = -0.25
+	}
+	province = {
+		local_missionary_strength = -0.015
+	}
+	
+	personal_deity = yes
+	hre_religion = yes
+	religious_group = nordic_group
+}
+
+new personal_deity shor = {
+	name = "Shor"
+	desc = ""
+	sprite = 19
+	
+	modifiers = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25
+		horde_unity = 0.25
+		meritocracy = 0.25
+		stability_cost_modifier = -0.1
+	}
+	
+	potential = {
+		religion = nordic_pantheon
+	}
+}
