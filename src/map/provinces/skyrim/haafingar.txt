@@ -6,6 +6,58 @@ new area solitude_proper_area = {
 	name = "Solitude Proper"
 	region = haafingar
 }
+new area dragon_bridge_area = {
+	name = "Dragon Bridge"
+	region = haafingar
+}
+new area solitude_countryside_area = {
+	name = "Solitude Countryside"
+	region = haafingar
+}
+new area solitude_coast_area = {
+	name = "Solitude Coast"
+	region = haafingar
+}
+new area kilkreath_area = {
+	name = "Kilkreath"
+	region = haafingar
+}
+new area shadowgreen_area = {
+	name = "Shadowgreen"
+	region = haafingar
+}
+new area ravenscar_area = {
+	name = "Ravenscar"
+	region = haafingar
+} 
+new area northwatch_area = {
+	name = "Northwatch"
+	region = haafingar
+} 
+new area volskygge_area = {
+	name = "Volskygge"
+	region = haafingar
+} 
+new area snowpeaks_area = {
+	name = "Snowpeaks"
+	region = haafingar
+} 
+new area hraggstad_area = {
+	name = "Hraggstad"
+	region = haafingar
+}
+new area widows_watch_area = {
+	name = "Widow's Watch"
+	region = haafingar
+}
+new area outer_archipelago_area = {
+	name = "Outer Archipelago"
+	region = haafingar
+} 
+new area castle_volkihar_area = {
+	name = "Castle Volkihar"
+	region = haafingar
+}    
 new province lone_isle = {
     position = {
         1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000
@@ -16,7 +68,7 @@ new province lone_isle = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = outer_archipelago_area
 	name = "Lone Isle"
 	color = { 184 109 117 }
 	history = {
@@ -135,7 +187,7 @@ new province solitude_farms = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = solitude_countryside_area
 	name = "Solitude Farms"
 	color = { 144 103 168 }
 	history = {
@@ -164,7 +216,7 @@ new province solitude_military_camp = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = solitude_countryside_area
 	name = "Solitude Military Camp"
 	color = { 239 147 210 }
 	history = {
@@ -193,7 +245,7 @@ new province solitude_fork = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = solitude_countryside_area
 	name = "Solitude Fork"
 	color = { 158 127 179 }
 	history = {
@@ -226,7 +278,7 @@ new province meridias_crossroad = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = dragon_bridge_area
 	name = "Meridia's Crossroad"
 	color = { 174 195 199 }
 	history = {
@@ -255,7 +307,7 @@ new province dragon_bridge = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = dragon_bridge_area
 	name = "Dragon Bridge"
 	color = { 201 202 125 }
 	history = {
@@ -284,7 +336,7 @@ new province castle_volkihar = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = castle_volkihar_area
 	name = "Castle Volkihar"
 	color = { 128 212 180 }
 	history = {
@@ -310,7 +362,7 @@ new province big_sister = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = outer_archipelago_area
 	name = "Big Sister"
 	color = { 251 134 139 }
 	history = {
@@ -336,7 +388,7 @@ new province small_sister = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = outer_archipelago_area
 	name = "Small Sister"
 	color = { 210 247 170 }
 	history = {
@@ -362,7 +414,7 @@ new province rugged_island = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = outer_archipelago_area
 	name = "Rugged Island"
 	color = { 202 251 218 }
 	history = {
@@ -387,7 +439,7 @@ new province solitude_lighthouse = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = solitude_coast_area
 	name = "Solitude Lighthouse"
 	color = { 167 222 241 }
 	history = {
@@ -416,7 +468,7 @@ new province clay_coast = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = solitude_coast_area
 	name = "Clay Coast"
 	color = { 204 250 102 }
 	history = {
@@ -445,7 +497,7 @@ new province northern_cliffs = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = solitude_coast_area
 	name = "Northern Cliffs"
 	color = { 236 248 151 }
 	history = {
@@ -474,7 +526,7 @@ new province snowy_trees = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = shadowgreen_area
 	name = "Snowy Trees"
 	color = { 254 159 141 }
 	history = {
@@ -503,7 +555,7 @@ new province brokenoar = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = shadowgreen_area
 	name = "Broken Oar"
 	color = { 227 114 140 }
 	history = {
@@ -532,7 +584,7 @@ new province shadowgreen = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = shadowgreen_area
 	name = "Shadowgreen"
 	color = { 219 228 107 }
 	history = {
@@ -561,7 +613,7 @@ new province gold_isle = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = ravenscar_area
 	name = "Gold Isle"
 	color = { 162 240 177 }
 	history = {
@@ -593,7 +645,7 @@ new province northern_road = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = ravenscar_area
 	name = "Northern Road"
 	color = { 200 207 188 }
 	history = {
@@ -622,7 +674,7 @@ new province ravenscar = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = ravenscar_area
 	name = "Ravenscar"
 	color = { 150 176 238 }
 	history = {
@@ -651,7 +703,7 @@ new province widows_watch = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = widows_watch_area
 	name = "Widow's Watch"
 	color = { 211 184 165 }
 	history = {
@@ -680,7 +732,7 @@ new province northern_mine = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = widows_watch_area
 	name = "Northern Mine"
 	color = { 107 167 115 }
 	history = {
@@ -708,7 +760,7 @@ new province steepfall_burrow = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = widows_watch_area
 	name = "Steepfall Burrow"
 	color = { 220 153 179 }
 	history = {
@@ -737,7 +789,7 @@ new province lower_steepfall_burrow = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = widows_watch_area
 	name = "Lower Steepfall Burrow"
 	color = { 126 243 238 }
 	history = {
@@ -766,7 +818,7 @@ new province northwatch = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = northwatch_area
 	name = "Northwatch"
 	color = { 108 135 188 }
 	history = {
@@ -795,7 +847,7 @@ new province horned_coast = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = northwatch_area
 	name = "Horned Coast"
 	color = { 189 251 233 }
 	history = {
@@ -824,7 +876,7 @@ new province low_grove = {
     height = {
         0.3765 0.3765 0.3765 0.3765 0.3765 0.3765 0.3765
     }
-	area = haafingar_area
+	area = northwatch_area
 	name = "Low Grove"
 	color = { 242 169 162 }
 	history = {
@@ -853,7 +905,7 @@ new province pinefrost = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = volskygge_area
 	name = "Pinefrost"
 	color = { 151 162 116 }
 	history = {
@@ -877,7 +929,7 @@ new province volskygge = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = volskygge_area
 	name = "Volskygge"
 	color = { 250 231 207 }
 	history = {
@@ -901,7 +953,7 @@ new province deepwood_redoubt = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = volskygge_area
 	name = "Deepwood Redoubt"
 	color = { 187 232 173 }
 	history = {
@@ -930,7 +982,7 @@ new province pinemoon_cave = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = volskygge_area
 	name = "Pinemoon Cave"
 	color = { 166 213 143 }
 	history = {
@@ -954,7 +1006,7 @@ new province snowpeaks = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = snowpeaks_area
 	name = "Snowpeaks"
 	color = { 161 254 127 }
 	history = {
@@ -983,7 +1035,7 @@ new province clearpine_pond = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = snowpeaks_area
 	name = "Clearpine Pond"
 	color = { 163 173 175 }
 	history = {
@@ -1012,7 +1064,7 @@ new province lost_echo_cave = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = hraggstad_area
 	name = "Lost Echo Cave"
 	color = { 124 176 123 }
 	history = {
@@ -1036,7 +1088,7 @@ new province wolfskull_cave = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = hraggstad_area
 	name = "Wolfskull Cave"
 	color = { 104 241 247 }
 	history = {
@@ -1065,7 +1117,7 @@ new province hraggstad = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = hraggstad_area
 	name = "Hraggstad"
 	color = { 239 168 125 }
 	history = {
@@ -1094,7 +1146,7 @@ new province kilkreath_trail = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = hraggstad_area
 	name = "Kilkreath Trail"
 	color = { 120 142 214 }
 	history = {
@@ -1122,7 +1174,7 @@ new province kilkreath_temple = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = kilkreath_area
 	name = "Kilkreath Temple"
 	color = { 215 127 153 }
 	history = {
@@ -1151,7 +1203,7 @@ new province ironback_hideout = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = kilkreath_area
 	name = "Ironback Hidehout"
 	color = { 130 155 255 }
 	history = {
@@ -1180,7 +1232,7 @@ new province kilkreath_peak = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = haafingar_area
+	area = kilkreath_area
 	name = "Kilkreath Peak"
 	color = { 164 221 189 }
 	history = {
