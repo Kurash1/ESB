@@ -1,26 +1,10 @@
 esb_change_opinion = {
-	every_country = {
-		limit = {
-			NOT = { 
-				OR = {
-					tag = REB
-					tag = PREV 
-				}
-			}
-		}
-		if = {
-			limit = {
-				culture_group = PREV
-			}
-			add_opinion = { who = PREV modifier = esb_same_race }
-			reverse_add_opinion = { who = PREV modifier = esb_same_race }
-		}
+	every_known_country = {
 		if = {
 			limit = {
 				NOT = { culture_group = PREV }
 			}
 			add_opinion = { who = PREV modifier = esb_different_race }
-			reverse_add_opinion = { who = PREV modifier = esb_different_race }
 		}
 		if = {
 			limit = {
@@ -36,7 +20,6 @@ esb_change_opinion = {
 				}
 			}
 			add_opinion = { who = PREV modifier = esb_elf_men_hate }
-			reverse_add_opinion = { who = PREV modifier = esb_elf_men_hate }
 		}
 		if = {
 			limit = {
@@ -52,23 +35,12 @@ esb_change_opinion = {
 				}
 			}
 			add_opinion = { who = PREV modifier = esb_night_of_tears }
-			reverse_add_opinion = { who = PREV modifier = esb_night_of_tears }
 		}
 	}
 }
 
 esb_clear_opinion = {
-	every_country = {
-		if = { 
-			limit = {
-				has_opinion_modifier = {
-					who = PREV
-					modifier = esb_same_race
-				}
-			}
-			remove_opinion = { who = PREV modifier = esb_same_race }
-			reverse_remove_opinion = { who = PREV modifier = esb_same_race }
-		}
+	every_known_country = {
 		if = { 
 			limit = {
 				has_opinion_modifier = {

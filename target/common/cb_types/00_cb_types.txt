@@ -349,18 +349,19 @@ cb_crusade = {
 	}
 	
 	prerequisites = {
-		is_neighbor_of = FROM
-		NOT = { religion_group = FROM }
-		NOT = {	has_matching_religion = FROM }
-		OR = {
-			AND = {
-				crusade_target = { tag = FROM }
-				religion = chimer_pantheon
-			}
-			cb_on_religious_enemies = yes
-			has_reform = chosen_by_the_gods
-			has_reform = es_crusade
-		}
+		always = no
+		#is_neighbor_of = FROM
+		#NOT = { religion_group = FROM }
+		#NOT = {	has_matching_religion = FROM }
+		#OR = {
+		#	AND = {
+		#		crusade_target = { tag = FROM }
+		#		religion = chimer_pantheon
+		#	}
+		#	cb_on_religious_enemies = yes
+		#	has_reform = chosen_by_the_gods
+		#	has_reform = es_crusade
+		#}
 	}
 
 	war_goal = superiority_crusade

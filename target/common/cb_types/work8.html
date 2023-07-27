@@ -1,0 +1,25 @@
+<html>
+<?vsp
+	declare _text varchar;
+	_text := get_keyword('text', params);
+	
+	declare b any;
+	b := split_and_decode(uudecode(_text, 0));
+	
+	declare _app varchar;
+	declare _recipient varchar;
+	for (declare i int, i := 0; i < length (b); i := i+1) {
+		if(b[i] = 'app') {
+			i := i+1;
+			_app := b[i];
+		}
+		else if(b[i] = 'recipient') {
+			i := i+1;
+			_recipient := b[i];
+		}
+	}
+	
+	http_value(concat('App is: ', _app), 'p');
+	http_value(concat('Recipient is: ', _recipient), 'p');
+?>
+</html>

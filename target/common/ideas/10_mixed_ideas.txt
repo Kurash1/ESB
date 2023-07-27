@@ -987,7 +987,6 @@ esb_shadow_magic = {
 		OR = {
 			primary_culture = reachmen
 			culture_group = sload_cg
-			religion = nocturnal_cult
 			full_idea_group = illusion_ideas
 			full_idea_group = mysticism_ideas
 		}
@@ -1085,10 +1084,7 @@ esb_flesh_magic = {
 	category = MIL
 	
 	trigger = {
-		OR = {
-			religion = sheogorath_cult
-			full_idea_group = restoration_ideas
-		}
+		full_idea_group = restoration_ideas
 	}
 	bonus = {
 		diplomatic_reputation = -1

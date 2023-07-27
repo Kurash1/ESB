@@ -359,14 +359,6 @@ state_religion = {
 	}
 	ai = {
 		factor = 1
-		modifier = {
-			factor = 0
-			OR = {
-				religion = po_tun_pantheon
-				religion = unknown_pantheon
-				religion = cult_of_lorelia
-			}
-		}
 	}
 }
 #Secularism (Green)
@@ -390,14 +382,6 @@ theological_dominance = {
 	}
 	ai = {
 		factor = 1
-		modifier = {
-			factor = 0
-			OR = {
-				religion = po_tun_pantheon
-				religion = unknown_pantheon
-				religion = cult_of_lorelia
-			}
-		}
 	}
 }
 #Fanaticism (Yellow)
@@ -1163,14 +1147,6 @@ empowered_clergy = {
 	}
 	ai = {
 		factor = 1
-		modifier = {
-			factor = 0
-			OR = {
-				religion = po_tun_pantheon
-				religion = unknown_pantheon
-				religion = cult_of_lorelia
-			}
-		}
 	}
 }
 #Noble Superiority (Green)
@@ -2461,20 +2437,6 @@ tolerant_society = {
 	}
 	ai = {
 		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { religion = po_tun_pantheon }
-			NOT = { religion = unknown_pantheon }
-			NOT = { religion = cult_of_lorelia }
-		}
-		modifier = {
-			factor = 1000
-			OR = {
-				religion = po_tun_pantheon
-				religion = unknown_pantheon
-				religion = cult_of_lorelia
-			}
-		}
 	}
 }
 #Crusade (Red)
@@ -2683,20 +2645,6 @@ rituals = {
 	}
 	ai = {
 		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { religion = po_tun_pantheon }
-			NOT = { religion = unknown_pantheon }
-			NOT = { religion = cult_of_lorelia }
-		}
-		modifier = {
-			factor = 1000
-			OR = {
-				religion = po_tun_pantheon
-				religion = unknown_pantheon
-				religion = cult_of_lorelia
-			}
-		}
 	}
 }
 #Formal Faith (Green)

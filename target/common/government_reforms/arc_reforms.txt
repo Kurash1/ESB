@@ -92,39 +92,39 @@ warrior_house_reform = {
 		factor = 5
 	}
 }
-torval_reform = {
-	icon = "papacy"
-	allow_normal_conversion = yes
-	potential = {
-		tag = TOR
-	}
-	trigger = {
-		religion = khajiiti_pantheon
-	}
-	legacy_equivalent = despotic_monarchy
-	valid_for_nation_designer = no
-	nation_designer_cost = 0
-	can_form_trade_league = no
-	nation_designer_trigger = {
-		always = no
-	}
-	modifiers = {
-		diplomatic_reputation = 3
-		missionaries = 2
-	}
-	government_abilities = {
-		mane_vs_king_mechanic
-	}
-	papacy = yes
-	allow_convert = no
-	lock_level_when_selected = yes
-	custom_attributes = {
-		locked_government_type = yes
-	}
-	ai = {
-		factor = 5
-	}
-}
+#torval_reform = {
+#	icon = "papacy"
+#	allow_normal_conversion = yes
+#	potential = {
+#		tag = TOR
+#	}
+#	trigger = {
+#		religion = khajiiti_pantheon
+#	}
+#	legacy_equivalent = despotic_monarchy
+#	valid_for_nation_designer = no
+#	nation_designer_cost = 0
+#	can_form_trade_league = no
+#	nation_designer_trigger = {
+#		always = no
+#	}
+#	modifiers = {
+#		diplomatic_reputation = 3
+#		missionaries = 2
+#	}
+#	government_abilities = {
+#		mane_vs_king_mechanic
+#	}
+#	papacy = yes
+#	allow_convert = no
+#	lock_level_when_selected = yes
+#	custom_attributes = {
+#		locked_government_type = yes
+#	}
+#	ai = {
+#		factor = 5
+#	}
+#}
 pirate_kingdom_reform = {
 	icon = "pirate_republic"
 	allow_normal_conversion = yes

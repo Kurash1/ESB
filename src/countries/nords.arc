@@ -11,6 +11,17 @@ new inheritable nordic_country = {
 	}
 }
 
+new country valtheim = {
+	inherit = nordic_country
+	
+	tag = VLT
+	name = "Valtheim"
+	adj = "Valtheimen"
+	color = { 63 75 82 }
+	
+	capital = windhelm
+}
+
 new country eldergleam = {
 	inherit = nordic_country
 	
@@ -53,6 +64,12 @@ new country solitude = {
 	color = { 255 11 3 }
 	
 	capital = solitude
+	history = {
+		Tamriel = {
+			discover_country = ROOT
+		}
+		elector = yes
+	}
 }
 new country pine_frost = { 
 	inherit = nordic_country
@@ -193,6 +210,12 @@ new country dawn-star = {
 	color = { 167 255 255 }
 	
 	capital = windhelm
+	history = {
+		Tamriel = {
+			discover_country = ROOT
+		}
+		elector = yes
+	}
 }
 new country stone-hill = { 
 	inherit = nordic_country
@@ -293,6 +316,12 @@ new country skjoralmor = {
 	color = { 20 63 11 }
 	
 	capital = windhelm
+	history = {
+		Tamriel = {
+			discover_country = ROOT
+		}
+		elector = yes
+	}
 }
 new country jorrvaskr = { 
 	inherit = nordic_country
@@ -303,6 +332,13 @@ new country jorrvaskr = {
 	color = { 206 98 16 }
 	
 	capital = whiterun
+	history = {
+		historical_friend = WND
+		Tamriel = {
+			discover_country = ROOT
+		}
+		elector = yes
+	}
 }
 new country windhelm = { 
 	inherit = nordic_country
@@ -313,6 +349,24 @@ new country windhelm = {
 	color = { 45 53 206 }
 	
 	capital = windhelm
+	history = {
+		historical_friend = JRR
+		Tamriel = {
+			discover_country = ROOT
+		}
+		elector = yes
+		
+		2500.1.1 = {
+			monarch = {
+				name = "Torolf"
+				dynasty = "of Ysgramoor"
+				adm = 4
+				dip = 3
+				mil = 6
+				birth_date = 2480.1.1
+			}
+		}
+	}
 }
 new country hill-hammer = { 
 	inherit = nordic_country

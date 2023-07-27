@@ -351,8 +351,9 @@ new province grerria = {
 		
 		capital = ""
 		is_city = yes
-		owner = KYN
-		controller = KYN
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = KYN
 	}
 }
@@ -380,8 +381,9 @@ new province sorldur = {
 		
 		capital = ""
 		is_city = yes
-		owner = KYN
-		controller = KYN
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = KYN
 	}
 }
@@ -409,9 +411,9 @@ new province agatror = {
 		
 		capital = ""
 		is_city = yes
-		add_claim = WND
-		owner = KYN
-		controller = KYN
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = KYN
 	}
 }
@@ -510,10 +512,10 @@ new province evema = {
 		
 		capital = ""
 		is_city = no
-		owner = CRV
-		controller = CRV
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = CRV
-		add_claim = WND
 	}
 }
 new province brashe = {
@@ -833,10 +835,10 @@ new province unamir = {
 		
 		
 		trade_goods = unknown
-		owner = CRV
-		controller = CRV
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = CRV
-		add_claim = WND
 		capital = ""
 		is_city = yes
 	}
@@ -865,10 +867,10 @@ new province berasta = {
 		
 		capital = ""
 		is_city = yes
-		owner = CRV
-		controller = CRV
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = CRV
-		add_claim = WND
 	}
 }
 new province hroalara = {
@@ -895,10 +897,10 @@ new province hroalara = {
 		
 		capital = ""
 		is_city = yes
-		owner = CRV
-		controller = CRV
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = CRV
-		add_claim = WND
 	}
 }
 new area kynesgrove = {
@@ -920,8 +922,9 @@ new province kynesgrove = {
 	color = { 214 222 253 }
 	area = kynesgrove
 	history = {
-		owner = KYN
-		controller = KYN
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = KYN
 		religion = nordic_pantheon
 		culture = nord
@@ -958,8 +961,9 @@ new province erimor = {
 		
 		capital = ""
 		is_city = no
-		owner = KYN
-		controller = KYN
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = KYN
 	}
 }
@@ -987,8 +991,9 @@ new province anguki = {
 		
 		capital = ""
 		is_city = yes
-		owner = KYN
-		controller = KYN
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = KYN
 	}
 }
@@ -1756,10 +1761,10 @@ new province evetke = {
 		
 		capital = ""
 		is_city = yes
-		owner = CRA
-		controller = CRA
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = CRA
-		add_claim = WND
 	}
 }
 new province irkngthand = {
@@ -1814,12 +1819,12 @@ new province nirgu = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		owner = CRA
-		controller = CRA
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = CRA
 		hre = yes
 		trade_goods = unknown
-		add_claim = WND
 	}
 }
 new area mixwater = {
@@ -1953,8 +1958,9 @@ new province jorlka = {
 		
 		capital = ""
 		is_city = yes
-		owner = CRA
-		controller = CRA
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = CRA
 		add_claim = WND
 	}
@@ -1986,10 +1992,10 @@ new province hukiith = {
 		
 		capital = ""
 		is_city = yes
-		owner = CRA
-		controller = CRA
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = CRA
-		add_claim = WND
 	}
 }
 new area hillgrund = {
@@ -2129,8 +2135,9 @@ new province reydlaith = {
 		
 		capital = ""
 		is_city = yes
-		owner = YOR
-		controller = YOR
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = YOR
 	}
 }
@@ -2161,8 +2168,9 @@ new province ronageth = {
 		
 		capital = ""
 		is_city = yes
-		owner = YOR
-		controller = YOR
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = YOR
 	}
 }
@@ -2297,9 +2305,9 @@ new province driena = {
 		
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		owner = WND
+		controller = WND
+		add_core = WND
 	}
 }
 new province oriekke = {
@@ -2329,9 +2337,9 @@ new province oriekke = {
 		
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		owner = WND
+		controller = WND
+		add_core = WND
 	}
 }
 new province haeleke = {
@@ -2361,13 +2369,9 @@ new province haeleke = {
 		
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
-		57.1.1 = {
-			religion = nordic_pantheon
-			culture = nord
-		}
+		owner = WND
+		controller = WND
+		add_core = WND
 	}
 }
 

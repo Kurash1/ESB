@@ -5,6 +5,13 @@ on_actions:on_startup += {
 			NOT = { has_global_flag = on_action_set_up_global_flag }
 		}
 		every_country = {
+			limit = {
+				NOT = {
+					OR = {
+						tag = REB
+					}
+				}
+			}
 			esb_change_opinion = yes
 		}
 		set_global_flag = on_action_set_up_global_flag
@@ -148,23 +155,8 @@ on_actions:on_grant_estate_land += {
 	}
 }
 
-on_actions:on_province_religion_converted += {
-    owner = {
-		add_government_power = {
-				mechanic_type = mane_vs_king_mechanic
-				power_type = mane_vs_king_power
-				value = 1
-		}
-	}
-}
-
 on_actions:on_general_recruited += {
 	add_army_professionalism = 0.01
-	add_government_power = {
-		mechanic_type = mane_vs_king_mechanic
-		power_type = mane_vs_king_power
-		value = -1
-	}
 }
 
 on_actions:on_mercenary_recruited += {

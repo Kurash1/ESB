@@ -236,10 +236,6 @@ pretender_rebels = {
 			change_statists_vs_orangists = 1
 		}
 		if = {
-			limit = { religion = kamal_pantheon }
-			remove_religious_reforms = 2
-		}
-		if = {
 			limit = { has_disaster = civil_war }
 			add_prestige = -200
 			add_legitimacy = 25

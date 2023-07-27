@@ -1,7 +1,7 @@
 new inheritable kreath_orc_country = {
-	government = native
+	government = tribal
 	technology_group = orsimer_tg
-	religion = orcish_pantheon
+	religion = code_of_malacath
 	primary_culture = orsimer
 	graphical_culture = easterngfx
 	

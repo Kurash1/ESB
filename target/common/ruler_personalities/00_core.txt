@@ -1826,10 +1826,7 @@ navigator_personality = {
 		OR = {
 			AND = {
 				has_game_started = no
-				is_playing_custom_nation = yes
-				NOT = { religion = serpant_king }
-				NOT = { religion = tang_mo_pantheon }
-				NOT = { religion = kamal_pantheon }							   
+				is_playing_custom_nation = yes					   
 			}
 			AND = {
 				num_of_total_ports = 1

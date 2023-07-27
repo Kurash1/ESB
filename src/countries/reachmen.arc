@@ -1,7 +1,7 @@
 new inheritable reachman_country = {
 	government = native
 	technology_group = northern_tg
-	religion = old_gods_cult
+	religion = reachman_faith
 	primary_culture = reachmen
 	graphical_culture = easterngfx
 	
