@@ -1,4 +1,4 @@
-new building fort_1 = {
+new building fort_15th = {
 	name = "Fort"
 	desc = ""
 	cost = 200
@@ -6,11 +6,12 @@ new building fort_1 = {
 	modifier = {
 		fort_level = 2
 	}
+	influencing_fort = yes
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building fort_2 = {
+new building fort_16th = {
 	name = "Castle"
 	desc = ""
 	cost = 400
@@ -18,6 +19,7 @@ new building fort_2 = {
 	modifier = {
 		fort_level = 4
 	}
+	influencing_fort = yes
 	ai_will_do = {
 		factor = 1
 	}
@@ -36,7 +38,7 @@ new building fortup_1 = {
 		local_fort_maintenance_modifier = 0.25
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 new building fortup_2 = {
@@ -53,7 +55,7 @@ new building fortup_2 = {
 		local_fort_maintenance_modifier = 0.25
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 new building fortup_3 = {
@@ -70,7 +72,7 @@ new building fortup_3 = {
 		local_fort_maintenance_modifier = 0.25
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 new building fortup_4 = {
@@ -87,7 +89,7 @@ new building fortup_4 = {
 		local_fort_maintenance_modifier = 0.25
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -96,16 +98,6 @@ new building tax_1 = {
 	desc = ""
 	cost = 100
 	time = 12
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = economic_ideas
-				full_idea_group = esb_treasury
-				full_idea_group = religious_ideas
-			}
-		}
-	}
 	modifier = {
 		local_tax_modifier = 0.4
 		local_autonomy = -0.05
@@ -123,7 +115,7 @@ new building tax_2 = {
 	build_trigger = {
 		FROM = {
 			calc_true_if = {
-				amount = 2
+				amount = 1
 				full_idea_group = economic_ideas
 				full_idea_group = esb_treasury
 				full_idea_group = religious_ideas
@@ -147,7 +139,7 @@ new building tax_3 = {
 	build_trigger = {
 		FROM = {
 			calc_true_if = {
-				amount = 3
+				amount = 2
 				full_idea_group = economic_ideas
 				full_idea_group = esb_treasury
 				full_idea_group = religious_ideas
