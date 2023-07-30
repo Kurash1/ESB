@@ -51,6 +51,15 @@ can_increase_stability = {
 
 # ROOT = province, FROM = country
 can_add_province_to_hre = {
+	condition = {
+		tooltip = "CAN_RELEASE_CN_WE_ARE_AT_WAR"
+		potential = {
+			always = no
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_remove_province_from_hre = {

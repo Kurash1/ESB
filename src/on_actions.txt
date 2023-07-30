@@ -1,5 +1,8 @@
 on_actions:on_startup += {
 	set_allow_female_emperor = yes
+	emperor = {
+		save_global_event_target_as = Emperor
+	}
 	if = {
 		limit = {
 			NOT = { has_global_flag = on_action_set_up_global_flag }
