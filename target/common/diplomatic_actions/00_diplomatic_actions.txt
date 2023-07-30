@@ -85,217 +85,33 @@
 # ask_for_tributary_state_action
 # knowledge_sharing
 
-declarewar = {
-    condition = {
-		tooltip = CAN_DECLARE_WAR
-        potential = {
-            always = yes
-        }
-		allow = {
-			always = yes
-		}
-    }
-	effect = {
-		if = { 
-			limit = {
-				FROM = { 
-					capital_scope = { 
-						NOT = { superregion = ROOT } 
-					} 
-				}
-			}
-			FROM = { set_country_flag = war_with_invader_flag }
-		}
-	}
-}
 
-demand_unlawful_territory_action = {
-	condition = {
-		tooltip = CAN_DEMAND_UNLAWFUL_TERRITORY
-		potential = {
-			is_emperor = yes
-		}
-		allow = {
-			FROM = {
-				any_owned_province = {
-					is_part_of_hre = yes
-					NOT = { is_core = FROM }
-					is_colony = no
-				}
-			}
-		}
-	}
-}
+#Cut because the Grand Crusade war doesn't really have any place in the current content, but it could be very useful for the future.
+#Also modders should have the chance to just uncomment it all so they can experience the great 30 Years War like Crusade.
+declarewar = { }
 
-royal_marriage = {
-	condition = {
-		tooltip = MARWAR
-		potential = {}
-		allow = {
-			NOT = { war_with = FROM }
-		}
-	}
-}
+allianceaction = { }
 
-annexationaction = {
-	condition = {
-		tooltip = ANNEX_TOO_LOW
-		potential = {
-			FROM = {
-				vassal_of = ROOT
-			}
-		}
-		allow = {
-			FROM = {
-				has_opinion = {
-					who = ROOT
-					value = 190
-				}
-			}
-		}
-	}
-}
+enforce_peace = { }
 
-integrationaction = {
-	condition = {
-		tooltip = INTEGRATETOOLOWDESC
-		potential = {
-			senior_union_with = FROM
-		}
-		allow = {
-			FROM = {
-				has_opinion = {
-					who = ROOT
-					value = 190
-				}
-			}
-		}
-	}
-}
+royal_marriage = { }
 
-vassalaction = {
-	condition = {
-		tooltip = VASSALINVALID
-		potential = {}
-		allow = {
-			alliance_with = FROM
-			FROM = {
-				has_opinion = {
-					who = ROOT
-					value = 190
-				}
-			}
-			FROM = { is_at_war = no }
-		}
-	}
-}
+annexationaction = { }
 
-abandon_union_action = {
-	condition = {
-		tooltip = CAN_ABANDON_UNION
-		potential = {}
-		allow = {
-			ROOT = {
-				senior_union_with = FROM
-				is_at_war = no
-			}
-		}
-	}
-}
+integrationaction = { }
 
-form_coalition = {
-	condition = {
-		tooltip = MINAGGRESSIVEEXPANSION
-		potential = {}
-		allow = {
-			has_opinion_modifier = {
-				modifier = aggressive_expansion
-				who = FROM
-			}		
-			NOT = {
-				has_opinion_modifier = {
-					modifier = aggressive_expansion
-					who = FROM
-					value = -50
-				}
-			}
-		}
-	}
-}
+vassalaction = { }
 
-request_to_join_trade_league = {
-	condition = {
-		tooltip = NOT_RELEVANT_TRADE_REGION_FROM
-		potential = {}
-		allow = {
-			home_trade_node = {
-				trade_share = {
-					country = from
-					share = 1
-				}
-			}
-		}
-	}
-}
+abandon_union = { }
 
-invite_to_trade_league = {
-	condition = {
-		tooltip = NOT_RELEVANT_TRADE_REGION
-		potential = {}
-		allow = {
-			from = {
-				home_trade_node = {
-					trade_share = {
-						country = root
-						share = 1
-					}
-				}
-			}
-		}
-	}
-}
+form_coalition = { }
 
-milaccess = {
-	condition = {
-		tooltip = CAN_MILACCESS
-		potential = {}
-		allow = {}
-	}
-}
+request_to_join_trade_league = { }
 
-fleet_access = {
-	condition = {
-		tooltip = CAN_FLEET_ACCESS
-		potential = {}
-		allow = {}
-	}
-}
+invite_to_trade_league = { }
 
-offer_fleet_access = {
-	condition = {
-		tooltip = CAN_OFFER_FLEET_ACCESS
-		potential = {}
-		allow = {}
-	}
-}
+tributary_state_action = { }
 
-offermilaccess = {
-	condition = {
-		tooltip = CAN_OFFER_MILACCESS
-		potential = {}
-		allow = {}
-	}
-}
+ask_for_tributary_state_action = { }
 
-sow_discontent = {
-	condition = {
-		tooltip = CAN_SOW_DISCONTENT
-		potential = {}
-		allow = {
-			OR = {
-				has_idea_group = gesellschaft0
-				has_idea_group = propaganda0
-			}
-		}
-	}
-}
+break_alliance = { }

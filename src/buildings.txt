@@ -8,7 +8,7 @@ new building fort_15th = {
 	}
 	influencing_fort = yes
 	ai_will_do = {
-		factor = 1
+		factor = 4
 	}
 }
 new building fort_16th = {
@@ -16,6 +16,7 @@ new building fort_16th = {
 	desc = ""
 	cost = 400
 	time = 12
+	make_obsolete = fort_15th
 	modifier = {
 		fort_level = 4
 	}
