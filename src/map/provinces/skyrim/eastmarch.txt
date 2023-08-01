@@ -54,7 +54,7 @@ new area brandy-mug = {
 	name = "Brandy-Mug"
 	region = eastmarch
 }
-new province 2812 = {
+new province giants_exit = {
     position = {
         1938.000 1956.000 1938.000 1956.000 1938.000 1956.000 1938.000 1956.000 1938.000 1956.000 1938.000 1956.000 1938.000 1956.000
     }
@@ -65,7 +65,7 @@ new province 2812 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Yngol Barrow"
+	name = "Giants Exit"
 	color = { 207 123 200 }
 	area = brandy-mug
 	history = {
@@ -83,7 +83,7 @@ new province 2812 = {
 		add_core = WND
 	}
 }
-new province starkad = {
+new province brandy-mug = {
     position = {
         1940.000 1967.000 1940.000 1967.000 1940.000 1967.000 1940.000 1967.000 1940.000 1967.000 1940.000 1967.000 1940.000 1967.000
     }
@@ -94,7 +94,7 @@ new province starkad = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Starkad"
+	name = "Brandy-Mug"
 	color = { 104 252 176 }
 	area = brandy-mug
 	history = {
@@ -112,7 +112,7 @@ new province starkad = {
 		add_core = WND
 	}
 }
-new province teklina = {
+new province stoneside = {
     position = {
         1956.000 1976.000 1956.000 1976.000 1956.000 1976.000 1956.000 1976.000 1956.000 1976.000 1956.000 1976.000 1956.000 1976.000
     }
@@ -123,7 +123,7 @@ new province teklina = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Teklina"
+	name = "Stonside"
 	color = { 232 133 160 }
 	area = brandy-mug
 	history = {
@@ -327,7 +327,7 @@ new area narzulbur = {
 	name = "Narzulbur"
 	region = eastmarch
 }
-new province grerria = {
+new province crag_forest = {
     position = {
         1965.000 1936.000 1965.000 1936.000 1965.000 1936.000 1965.000 1936.000 1965.000 1936.000 1965.000 1936.000 1965.000 1936.000
     }
@@ -338,7 +338,7 @@ new province grerria = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Grerria"
+	name = "Crag forest"
 	color = { 215 184 217 }
 	area = narzulbur
 	history = {
@@ -357,7 +357,7 @@ new province grerria = {
 		add_core = KYN
 	}
 }
-new province sorldur = {
+new province greenstep = {
     position = {
         1958.000 1947.000 1958.000 1947.000 1958.000 1947.000 1958.000 1947.000 1958.000 1947.000 1958.000 1947.000 1958.000 1947.000
     }
@@ -368,7 +368,7 @@ new province sorldur = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Sorldur"
+	name = "Greenstep"
 	color = { 162 155 254 }
 	area = narzulbur
 	history = {
@@ -387,7 +387,7 @@ new province sorldur = {
 		add_core = KYN
 	}
 }
-new province agatror = {
+new province narzulbur = {
     position = {
         1968.000 1946.000 1968.000 1946.000 1968.000 1946.000 1968.000 1946.000 1968.000 1946.000 1968.000 1946.000 1968.000 1946.000
     }
@@ -398,7 +398,7 @@ new province agatror = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Agatror"
+	name = "Narzulbur"
 	color = { 205 176 110 }
 	area = narzulbur
 	history = {
@@ -454,7 +454,7 @@ new province mzulft = {
 		}
 	}
 }
-new province steamcrag = {
+new province cragwallow = {
     position = {
         1970.000 1927.000 1970.000 1927.000 1970.000 1927.000 1970.000 1927.000 1970.000 1927.000 1970.000 1927.000 1970.000 1927.000
     }
@@ -465,7 +465,7 @@ new province steamcrag = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Steamcrag"
+	name = "8011"
 	color = { 124 191 163 }
 	area = mzulft
 	history = {
@@ -484,11 +484,11 @@ new province steamcrag = {
 		add_claim = WND
 	}
 }
-new area brokenlimb = {
-	name = "Brokenlimb"
+new area broken_limb = {
+	name = "Broken Limb"
 	region = eastmarch
 }
-new province evema = {
+new province broken_limb = {
     position = {
         1904.000 1919.000 1904.000 1919.000 1904.000 1919.000 1904.000 1919.000 1904.000 1919.000 1904.000 1919.000 1904.000 1919.000
     }
@@ -499,9 +499,9 @@ new province evema = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Evema"
+	name = "Broken Limb"
 	color = { 241 133 154 }
-	area = brokenlimb
+	area = broken_limb
 	history = {
 		religion = nordic_pantheon
 		culture = nord
@@ -518,7 +518,7 @@ new province evema = {
 		add_core = CRV
 	}
 }
-new province brashe = {
+new province cherim_pond = {
     position = {
         1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000
     }
@@ -529,9 +529,9 @@ new province brashe = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Brashe"
+	name = "Cherim Pond"
 	color = { 215 239 117 }
-	area = brokenlimb
+	area = broken_limb
 	history = {
 		religion = nordic_pantheon
 		culture = nord
@@ -556,7 +556,7 @@ new area bonestrew = {
 	name = "Bonestrew"
 	region = eastmarch
 }
-new province lydny = {
+new province witchmist = {
     position = {
         1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000
     }
@@ -567,7 +567,7 @@ new province lydny = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Lydny"
+	name = "Witchmist"
 	color = { 118 126 166 }
 	area = bonestrew
 	history = {
@@ -582,7 +582,7 @@ new province lydny = {
 		is_city = yes
 	}
 }
-new province cronvangr = {
+new province bonestrew = {
     position = {
         1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000
     }
@@ -593,7 +593,7 @@ new province cronvangr = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Cronvangr"
+	name = "Bonestrew"
 	color = { 185 104 132 }
 	area = bonestrew
 	history = {
@@ -638,7 +638,7 @@ new area akawatch = {
 	name = "Akawatch"
 	region = eastmarch
 }
-new province rukdis = {
+new province akawatch = {
     position = {
         1946.000 1909.000 1946.000 1909.000 1946.000 1909.000 1946.000 1909.000 1946.000 1909.000 1946.000 1909.000 1946.000 1909.000
     }
@@ -649,7 +649,7 @@ new province rukdis = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Rukdis"
+	name = "Akawatch"
 	color = { 116 121 231 }
 	area = akawatch
 	history = {
@@ -720,7 +720,7 @@ new area steamcrag = {
 	name = "Steamcrag"
 	region = eastmarch
 }
-new province heddalla = {
+new province steamcrag = {
     position = {
         1946.000 1923.000 1946.000 1923.000 1946.000 1923.000 1946.000 1923.000 1946.000 1923.000 1946.000 1923.000 1946.000 1923.000
     }
@@ -731,7 +731,7 @@ new province heddalla = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Heddalla"
+	name = "Steamcrag"
 	color = { 106 115 192 }
 	area = steamcrag
 	history = {
@@ -746,7 +746,7 @@ new province heddalla = {
 		is_city = yes
 	}
 }
-new province narzulbur = {
+new province bloody_road = {
     position = {
         1957.000 1920.000 1957.000 1920.000 1957.000 1920.000 1957.000 1920.000 1957.000 1920.000 1957.000 1920.000 1957.000 1920.000
     }
@@ -757,7 +757,7 @@ new province narzulbur = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Narzulbur"
+	name = "Bloody Road"
 	color = { 147 191 230 }
 	area = steamcrag
 	history = {
@@ -814,7 +814,7 @@ new area cronvangr = {
 	name = "Cronvangr"
 	region = eastmarch
 }
-new province unamir = {
+new province cronvangr = {
     position = {
         1918.000 1932.000 1918.000 1932.000 1918.000 1932.000 1918.000 1932.000 1918.000 1932.000 1918.000 1932.000 1918.000 1932.000
     }
@@ -825,7 +825,7 @@ new province unamir = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Unamir"
+	name = "Cronvangr"
 	color = { 136 153 195 }
 	area = cronvangr
 	history = {
@@ -873,7 +873,7 @@ new province berasta = {
 		add_core = CRV
 	}
 }
-new province hroalara = {
+new province riverside_shack = {
     position = {
         1924.000 1947.000 1924.000 1947.000 1924.000 1947.000 1924.000 1947.000 1924.000 1947.000 1924.000 1947.000 1924.000 1947.000
     }
@@ -884,7 +884,7 @@ new province hroalara = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Hroalara"
+	name = "Riverside Shack"
 	color = { 180 139 187 }
 	area = cronvangr
 	history = {
@@ -1001,7 +1001,7 @@ new area ansilvund = {
 	name = "Ansilvund"
 	region = eastmarch
 }
-new province 2922 = {
+new province ansilvund = {
     position = {
         1986.000 1893.000 1986.000 1893.000 1986.000 1893.000 1986.000 1893.000 1986.000 1893.000 1986.000 1893.000 1986.000 1893.000
     }
@@ -1012,7 +1012,7 @@ new province 2922 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "2922"
+	name = "Ansilvund"
 	color = { 144 114 102 }
 	area = ansilvund
 	history = {
@@ -1031,7 +1031,7 @@ new province 2922 = {
 		add_claim = WND
 	}
 }
-new province 2923 = {
+new province stony_creek = {
     position = {
         1989.000 1906.000 1989.000 1906.000 1989.000 1906.000 1989.000 1906.000 1989.000 1906.000 1989.000 1906.000 1989.000 1906.000
     }
@@ -1042,7 +1042,7 @@ new province 2923 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "2923"
+	name = "Stony Creek"
 	color = { 215 213 222 }
 	area = ansilvund
 	history = {
@@ -1061,7 +1061,7 @@ new province 2923 = {
 		add_claim = WND
 	}
 }
-new province 2820 = {
+new province dwarf_road = {
     position = {
         1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000 1978.000 1902.000
     }
@@ -1072,7 +1072,7 @@ new province 2820 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "2820"
+	name = "Dwarf Road"
 	color = { 120 245 223 }
 	area = ansilvund
 	history = {
@@ -1095,7 +1095,7 @@ new area northwind = {
 	name = "Northwind"
 	region = eastmarch
 }
-new province 7094 = {
+new province northwind = {
     position = {
         1961.000 1879.000 1961.000 1879.000 1961.000 1879.000 1961.000 1879.000 1961.000 1879.000 1961.000 1879.000 1961.000 1879.000
     }
@@ -1106,7 +1106,7 @@ new province 7094 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "7094"
+	name = "Northwind"
 	color = { 212 141 251 }
 	area = northwind
 	history = {
@@ -1125,7 +1125,7 @@ new province 7094 = {
 		add_claim = WND
 	}
 }
-new province 1273 = {
+new province upper_shor_way = {
     position = {
         1976.000 1886.000 1976.000 1886.000 1976.000 1886.000 1976.000 1886.000 1976.000 1886.000 1976.000 1886.000 1976.000 1886.000
     }
@@ -1136,7 +1136,7 @@ new province 1273 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "1273"
+	name = "Upper Shor Way"
 	color = { 141 139 174 }
 	area = northwind
 	history = {
@@ -1155,7 +1155,7 @@ new province 1273 = {
 		add_claim = WND
 	}
 }
-new province 2935 = {
+new province lower_shor_way = {
     position = {
         1970.000 1893.000 1970.000 1893.000 1970.000 1893.000 1970.000 1893.000 1970.000 1893.000 1970.000 1893.000 1970.000 1893.000
     }
@@ -1166,7 +1166,7 @@ new province 2935 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "2935"
+	name = "Lower Shor Way"
 	color = { 193 130 192 }
 	area = northwind
 	history = {
@@ -1219,7 +1219,7 @@ new province darkwater_crossing = {
 		add_claim = WND
 	}
 }
-new province 8001 = {
+new province goldenrock = {
     position = {
         1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000
     }
@@ -1230,7 +1230,7 @@ new province 8001 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "8001"
+	name = "Goldenrock"
 	color = { 139 190 132 }
 	area = darkwater_crossing
 	history = {
@@ -1248,7 +1248,7 @@ new province 8001 = {
 		add_core = DAR
 	}
 }
-new province valeski = {
+new province eldergleam = {
     position = {
         1920.000 1905.000 1920.000 1905.000 1920.000 1905.000 1920.000 1905.000 1920.000 1905.000 1920.000 1905.000 1920.000 1905.000
     }
@@ -1259,7 +1259,7 @@ new province valeski = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Valeski"
+	name = "Eldergleam"
 	color = { 198 237 124 }
 	area = darkwater_crossing
 	history = {
@@ -1282,7 +1282,7 @@ new area mistwatch = {
 	name = "Mistwatch"
 	region = eastmarch
 }
-new province vorgeth = {
+new province mistwatch = {
     position = {
         1936.000 1889.000 1936.000 1889.000 1936.000 1889.000 1936.000 1889.000 1936.000 1889.000 1936.000 1889.000 1936.000 1889.000
     }
@@ -1293,7 +1293,7 @@ new province vorgeth = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Vorgeth"
+	name = "Mistwatch"
 	color = { 140 107 216 }
 	area = mistwatch
 	history = {
@@ -1311,7 +1311,7 @@ new province vorgeth = {
 		add_core = MIS
 	}
 }
-new province 7079 = {
+new province mist_road = {
     position = {
         1927.000 1880.000 1927.000 1880.000 1927.000 1880.000 1927.000 1880.000 1927.000 1880.000 1927.000 1880.000 1927.000 1880.000
     }
@@ -1322,7 +1322,7 @@ new province 7079 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "7079"
+	name = "Mist Road"
 	color = { 252 196 154 }
 	area = mistwatch
 	history = {
@@ -1345,7 +1345,7 @@ new province 7079 = {
 		}
 	}
 }
-new province 7095 = {
+new province ysgramoors_road = {
     position = {
         1952.000 1888.000 1952.000 1888.000 1952.000 1888.000 1952.000 1888.000 1952.000 1888.000 1952.000 1888.000 1952.000 1888.000
     }
@@ -1356,7 +1356,7 @@ new province 7095 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "7095"
+	name = "Ysgramoor's Road"
 	color = { 236 120 164 }
 	area = mistwatch
 	history = {
@@ -1379,7 +1379,7 @@ new area darkwater = {
 	name = "Darkwater"
 	region = eastmarch
 }
-new province 3001 = {
+new province darkwater_watch = {
     position = {
         1909.000 1885.000 1909.000 1885.000 1909.000 1885.000 1909.000 1885.000 1909.000 1885.000 1909.000 1885.000 1909.000 1885.000
     }
@@ -1390,7 +1390,7 @@ new province 3001 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "3001"
+	name = "Darkwater Watch"
 	color = { 242 220 200 }
 	area = darkwater
 	discovered_by = {
@@ -1416,7 +1416,7 @@ new province 3001 = {
 		}
 	}
 }
-new province 3192 = {
+new province clay_point = {
     position = {
         1898.000 1891.000 1898.000 1891.000 1898.000 1891.000 1898.000 1891.000 1898.000 1891.000 1898.000 1891.000 1898.000 1891.000
     }
@@ -1427,7 +1427,7 @@ new province 3192 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "3192"
+	name = "Clay Point"
 	color = { 214 202 107 }
 	area = darkwater
 	discovered_by = {
@@ -1453,7 +1453,7 @@ new province 3192 = {
 		}
 	}
 }
-new province 2998 = {
+new province darkwater_pass = {
     position = {
         1892.000 1883.000 1892.000 1883.000 1892.000 1883.000 1892.000 1883.000 1892.000 1883.000 1892.000 1883.000 1892.000 1883.000
     }
@@ -1464,7 +1464,7 @@ new province 2998 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "2998"
+	name = "Darkwater Pass"
 	color = { 221 189 108 }
 	is_sea = yes
 	area = null_sea_area
@@ -1492,7 +1492,7 @@ new province 2998 = {
 		}
 	}
 }
-new province 5866 = {
+new province aevar_hill = {
     position = {
         1886.000 1874.000 1886.000 1874.000 1886.000 1874.000 1886.000 1874.000 1886.000 1874.000 1886.000 1874.000 1886.000 1874.000
     }
@@ -1503,7 +1503,7 @@ new province 5866 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "5866"
+	name = "Aevar Hill"
 	color = { 103 186 108 }
 	area = darkwater
 	discovered_by = {
@@ -1528,7 +1528,7 @@ new area lost_knife = {
 	name = "Lost Knife"
 	region = eastmarch
 }
-new province 3003 = {
+new province rough_road = {
     position = {
         1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000
     }
@@ -1539,7 +1539,7 @@ new province 3003 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "3003"
+	name = "Rough Road"
 	color = { 230 206 192 }
 	area = lost_knife
 	discovered_by = {
@@ -1560,7 +1560,7 @@ new province 3003 = {
 		add_core = HID
 	}
 }
-new province 7123 = {
+new province gold_glade = {
     position = {
         1872.000 1882.000 1872.000 1882.000 1872.000 1882.000 1872.000 1882.000 1872.000 1882.000 1872.000 1882.000 1872.000 1882.000
     }
@@ -1571,7 +1571,7 @@ new province 7123 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "7123"
+	name = "Gold Glade"
 	color = { 196 115 203 }
 	area = lost_knife
 	discovered_by = {
@@ -1592,7 +1592,7 @@ new province 7123 = {
 		is_city = yes
 	}
 }
-new province 3005 = {
+new province top_point = {
     position = {
         1860.000 1881.000 1860.000 1881.000 1860.000 1881.000 1860.000 1881.000 1860.000 1881.000 1860.000 1881.000 1860.000 1881.000
     }
@@ -1603,7 +1603,7 @@ new province 3005 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "3005"
+	name = "Top Point"
 	color = { 210 226 181 }
 	area = lost_knife
 	discovered_by = {
@@ -1628,7 +1628,7 @@ new area amol = {
 	name = "Amol"
 	region = eastmarch
 }
-new province unaird = {
+new province dibellas_coast = {
     position = {
         1880.000 1911.000 1880.000 1911.000 1880.000 1911.000 1880.000 1911.000 1880.000 1911.000 1880.000 1911.000 1880.000 1911.000
     }
@@ -1639,7 +1639,7 @@ new province unaird = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Unaird"
+	name = "Dibella's Coast"
 	color = { 219 190 146 }
 	area = amol
 	discovered_by = {
@@ -1660,7 +1660,7 @@ new province unaird = {
 		add_claim = WND
 	}
 }
-new province hjosta = {
+new province tree_hill = {
     position = {
         1873.000 1902.000 1873.000 1902.000 1873.000 1902.000 1873.000 1902.000 1873.000 1902.000 1873.000 1902.000 1873.000 1902.000
     }
@@ -1671,7 +1671,7 @@ new province hjosta = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Hjosta"
+	name = "Tree Hill"
 	color = { 110 128 156 }
 	area = amol
 	discovered_by = {
@@ -1693,7 +1693,7 @@ new province hjosta = {
 		add_claim = WND
 	}
 }
-new province morvunskar = {
+new province amol = {
     position = {
         1888.000 1904.000 1888.000 1904.000 1888.000 1904.000 1888.000 1904.000 1888.000 1904.000 1888.000 1904.000 1888.000 1904.000
     }
@@ -1704,7 +1704,7 @@ new province morvunskar = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Morvunskar"
+	name = "Amol"
 	color = { 148 220 121 }
 	area = amol
 	discovered_by = {
@@ -1734,7 +1734,7 @@ new area gallows_rock = {
 	name = "Gallow's Rock"
 	region = eastmarch
 }
-new province evetke = {
+new province gallows_rock = {
     position = {
         1889.000 1941.000 1889.000 1941.000 1889.000 1941.000 1889.000 1941.000 1889.000 1941.000 1889.000 1941.000 1889.000 1941.000
     }
@@ -1745,7 +1745,7 @@ new province evetke = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Evetke"
+	name = "Gallows Rock"
 	color = { 106 210 229 }
 	area = gallows_rock
 	discovered_by = {
@@ -1767,7 +1767,7 @@ new province evetke = {
 		add_core = CRA
 	}
 }
-new province irkngthand = {
+new province maras_rise = {
     position = {
         1901.000 1941.000 1901.000 1941.000 1901.000 1941.000 1901.000 1941.000 1901.000 1941.000 1901.000 1941.000 1901.000 1941.000
     }
@@ -1778,7 +1778,7 @@ new province irkngthand = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Irkngthand"
+	name = "Mara's Rise"
 	color = { 173 225 132 }
 	area = gallows_rock
 	discovered_by = {
@@ -1799,7 +1799,7 @@ new province irkngthand = {
 		add_core = WND
 	}
 }
-new province nirgu = {
+new province uttering_hills = {
     position = {
         1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000
     }
@@ -1810,7 +1810,7 @@ new province nirgu = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Nirgu"
+	name = "Uttering Hills"
 	color = { 204 106 209 }
 	area = gallows_rock
 	discovered_by = {
@@ -1831,7 +1831,7 @@ new area mixwater = {
 	name = "Mixwater"
 	region = eastmarch
 }
-new province hrefun = {
+new province mixwater = {
     position = {
         1901.000 1932.000 1901.000 1932.000 1901.000 1932.000 1901.000 1932.000 1901.000 1932.000 1901.000 1932.000 1901.000 1932.000
     }
@@ -1842,7 +1842,7 @@ new province hrefun = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Hrefun"
+	name = "Mixwater"
 	color = { 246 187 123 }
 	area = mixwater
 	discovered_by = {
@@ -1863,7 +1863,7 @@ new province hrefun = {
 		add_core = WND
 	}
 }
-new province imsisa = {
+new province whiterock = {
     position = {
         1913.000 1949.000 1913.000 1949.000 1913.000 1949.000 1913.000 1949.000 1913.000 1949.000 1913.000 1949.000 1913.000 1949.000
     }
@@ -1874,7 +1874,7 @@ new province imsisa = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Imsisa"
+	name = "Whiterock"
 	color = { 143 236 169 }
 	area = mixwater
 	discovered_by = {
@@ -1895,7 +1895,7 @@ new province imsisa = {
 		add_core = WND
 	}
 }
-new province danrine = {
+new province morvunskar = {
     position = {
         1912.000 1962.000 1912.000 1962.000 1912.000 1962.000 1912.000 1962.000 1912.000 1962.000 1912.000 1962.000 1912.000 1962.000
     }
@@ -1906,7 +1906,7 @@ new province danrine = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Danrine"
+	name = "Morvunskar"
 	color = { 165 162 185 }
 	area = mixwater
 	discovered_by = {
@@ -1931,7 +1931,7 @@ new area cradlecrush = {
 	name = "Cradlecrush"
 	region = eastmarch
 }
-new province jorlka = {
+new province cradlecrush = {
     position = {
         1876.000 1926.000 1876.000 1926.000 1876.000 1926.000 1876.000 1926.000 1876.000 1926.000 1876.000 1926.000 1876.000 1926.000
     }
@@ -1942,7 +1942,7 @@ new province jorlka = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Jorlka"
+	name = "Cradlecrush"
 	color = { 231 214 178 }
 	area = cradlecrush
 	discovered_by = {
@@ -1965,7 +1965,7 @@ new province jorlka = {
 		add_claim = WND
 	}
 }
-new province hukiith = {
+new province amol_point = {
     position = {
         1884.000 1922.000 1884.000 1922.000 1884.000 1922.000 1884.000 1922.000 1884.000 1922.000 1884.000 1922.000 1884.000 1922.000
     }
@@ -1976,7 +1976,7 @@ new province hukiith = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Hukiith"
+	name = "Amol Point"
 	color = { 115 175 162 }
 	area = cradlecrush
 	discovered_by = {
@@ -2002,7 +2002,7 @@ new area hillgrund = {
 	name = "Hillgrund"
 	region = eastmarch
 }
-new province 3099 = {
+new province darkshade = {
     position = {
         1865.000 1924.000 1865.000 1924.000 1865.000 1924.000 1865.000 1924.000 1865.000 1924.000 1865.000 1924.000 1865.000 1924.000
     }
@@ -2013,7 +2013,7 @@ new province 3099 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "3099"
+	name = "Darkshade"
 	color = { 195 207 111 }
 	area = hillgrund
 	discovered_by = {
@@ -2035,7 +2035,7 @@ new province 3099 = {
 		add_claim = WND
 	}
 }
-new province 3004 = {
+new province hillgrunds_steading = {
     position = {
         1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000
     }
@@ -2046,7 +2046,7 @@ new province 3004 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "3004"
+	name = "Hillgrund's Steading"
 	color = { 102 163 113 }
 	area = hillgrund
 	discovered_by = {
@@ -2376,13 +2376,13 @@ new province haeleke = {
 }
 
 new adjacency windhelm_bridge = {
-	from = starkad
+	from = brandy-mug
 	to = windhelm
 	through = 61
 	type = sea
 }
 new adjacency white_bridge = {
-	from = starkad
+	from = brandy-mug
 	to = angas_mill
 	through = 61
 	type = sea
