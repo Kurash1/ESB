@@ -14,6 +14,7 @@
 #	
 #	modifier = block?
 #}
+# add a rough coastline terrain
 new terrain ocean = {
 	name = "Ocean"
 
