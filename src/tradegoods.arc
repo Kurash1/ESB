@@ -444,7 +444,7 @@ new tradegood naval_supplies = {
 	}
 }
 new tradegood arms = {
-	name = "arms"
+	name = "Weapons and Arms"
 	desc = "Weaponry and armor of many kinds, usuall works"
 	color = { 154 172 175 }
 	modifier = {

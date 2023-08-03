@@ -359,14 +359,14 @@ new terrain hot_springs = {
 	sound_type = sea
 	movement_cost = 1.10
 	modifier = {
-		local_development_cost = -0.25
+		local_development_cost = 0.25
 		supply_limit = 20
 		local_build_cost = 0.25
 		local_build_time = 0.25
 		regiment_recruit_speed = 0.25
 		ship_recruit_speed = 0.25
 		local_institution_spread = -0.25
-		trade_goods_size_modifier = 0.10
+		trade_goods_size_modifier = -0.10
 	}
 }
 new terrain salt_plains = {

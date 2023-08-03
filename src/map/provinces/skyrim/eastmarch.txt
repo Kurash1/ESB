@@ -15,6 +15,7 @@ new province bleakrock_isle = {
 
 	name = "Bleakrock Isle"
 	color = { 162 219 169 }
+	terrain = hills
 	area = bleakrock_isle
 	history = {
 		religion = nordic_pantheon
@@ -67,6 +68,7 @@ new province giants_exit = {
 
 	name = "Giants Exit"
 	color = { 207 123 200 }
+	terrain = hills
 	area = brandy-mug
 	history = {
 		religion = nordic_pantheon
@@ -96,6 +98,7 @@ new province brandy-mug = {
 
 	name = "Brandy-Mug"
 	color = { 104 252 176 }
+	terrain = coastline
 	area = brandy-mug
 	history = {
 		religion = nordic_pantheon
@@ -125,6 +128,7 @@ new province stoneside = {
 
 	name = "Stonside"
 	color = { 232 133 160 }
+	terrain = coastline
 	area = brandy-mug
 	history = {
 		religion = nordic_pantheon
@@ -158,6 +162,7 @@ new province holly-frost = {
 
 	name = "Holly-Frost"
 	color = { 164 152 238 }
+	terrain = hills
 	area = holly-frost
 	history = {
 		religion = nordic_pantheon
@@ -187,6 +192,7 @@ new province yngol_barrow = {
 
 	name = "Yngol Barrow"
 	color = { 233 133 200 }
+	terrain = coastline
 	area = holly-frost
 	history = {
 		religion = nordic_pantheon
@@ -216,6 +222,7 @@ new province frostbloom = {
 
 	name = "Frostbloom"
 	color = { 158 206 210 }
+	terrain = coastline
 	area = holly-frost
 	history = {
 		religion = nordic_pantheon
@@ -249,6 +256,7 @@ new province snowdrift = {
 
 	name = "Snowdrift"
 	color = { 134 154 254 }
+	terrain = hills
 	area = dunmeth_pass
 	history = {
 		religion = nordic_pantheon
@@ -278,6 +286,7 @@ new province chillwind = {
 
 	name = "Chillwind"
 	color = { 147 119 105 }
+	terrain = hills
 	area = dunmeth_pass
 	history = {
 		religion = nordic_pantheon
@@ -307,6 +316,7 @@ new province dunmeth_pass = {
 
 	name = "Dunmeth Pass"
 	color = { 148 128 182 }
+	terrain = mountain
 	area = dunmeth_pass
 	history = {
 		religion = nordic_pantheon
@@ -340,6 +350,7 @@ new province crag_forest = {
 
 	name = "Crag forest"
 	color = { 215 184 217 }
+	terrain = forest
 	area = narzulbur
 	history = {
 		religion = nordic_pantheon
@@ -369,6 +380,7 @@ new province greenstep = {
     }
 
 	name = "Greenstep"
+	terrain = forest
 	color = { 162 155 254 }
 	area = narzulbur
 	history = {
@@ -400,6 +412,7 @@ new province narzulbur = {
 
 	name = "Narzulbur"
 	color = { 205 176 110 }
+	terrain = mountain
 	area = narzulbur
 	history = {
 		religion = nordic_pantheon
@@ -434,6 +447,7 @@ new province mzulft = {
 
 	name = "Mzulft"
 	color = { 212 176 241 }
+	terrain = mountain
 	area = mzulft
 	history = {
 		religion = nordic_pantheon
@@ -465,7 +479,8 @@ new province cragwallow = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "8011"
+	name = "Cragwallow"
+	terrain = forest
 	color = { 124 191 163 }
 	area = mzulft
 	history = {
@@ -501,6 +516,7 @@ new province broken_limb = {
 
 	name = "Broken Limb"
 	color = { 241 133 154 }
+	terrain = hot_springs
 	area = broken_limb
 	history = {
 		religion = nordic_pantheon
@@ -531,6 +547,7 @@ new province cherim_pond = {
 
 	name = "Cherim Pond"
 	color = { 215 239 117 }
+	terrain = hot_springs
 	area = broken_limb
 	history = {
 		religion = nordic_pantheon
@@ -569,6 +586,7 @@ new province witchmist = {
 
 	name = "Witchmist"
 	color = { 118 126 166 }
+	terrain = hot_springs
 	area = bonestrew
 	history = {
 		religion = nordic_pantheon
@@ -595,6 +613,7 @@ new province bonestrew = {
 
 	name = "Bonestrew"
 	color = { 185 104 132 }
+	terrain = hot_springs
 	area = bonestrew
 	history = {
 		religion = nordic_pantheon
@@ -621,6 +640,7 @@ new province hjoie = {
 
 	name = "Hjoie"
 	color = { 129 157 244 }
+	terrain = hot_springs
 	area = bonestrew
 	history = {
 		religion = nordic_pantheon
@@ -651,6 +671,7 @@ new province akawatch = {
 
 	name = "Akawatch"
 	color = { 116 121 231 }
+	terrain = hot_springs
 	area = akawatch
 	history = {
 		religion = nordic_pantheon
@@ -677,6 +698,7 @@ new province fanella = {
 
 	name = "Fanella"
 	color = { 101 131 142 }
+	terrain = hot_springs
 	area = akawatch
 	history = {
 		religion = nordic_pantheon
@@ -703,6 +725,7 @@ new province aleading = {
 
 	name = "Aleading"
 	color = { 100 130 223 }
+	terrain = hot_springs
 	area = akawatch
 	history = {
 		religion = nordic_pantheon
@@ -733,6 +756,7 @@ new province steamcrag = {
 
 	name = "Steamcrag"
 	color = { 106 115 192 }
+	terrain = hot_springs
 	area = steamcrag
 	history = {
 		religion = nordic_pantheon
@@ -759,6 +783,7 @@ new province bloody_road = {
 
 	name = "Bloody Road"
 	color = { 147 191 230 }
+	terrain = hot_springs
 	area = steamcrag
 	history = {
 		religion = nordic_pantheon
@@ -793,6 +818,7 @@ new province margyf = {
 
 	name = "Margyf"
 	color = { 241 165 215 }
+	terrain = hot_springs
 	area = steamcrag
 	history = {
 		religion = nordic_pantheon
@@ -827,6 +853,7 @@ new province cronvangr = {
 
 	name = "Cronvangr"
 	color = { 136 153 195 }
+	terrain = hot_springs
 	area = cronvangr
 	history = {
 		religion = nordic_pantheon
@@ -856,6 +883,7 @@ new province berasta = {
 
 	name = "Berasta"
 	color = { 131 243 107 }
+	terrain = hot_springs
 	area = cronvangr
 	history = {
 		religion = nordic_pantheon
@@ -886,6 +914,7 @@ new province riverside_shack = {
 
 	name = "Riverside Shack"
 	color = { 180 139 187 }
+	terrain = hot_springs
 	area = cronvangr
 	history = {
 		religion = nordic_pantheon
@@ -920,6 +949,7 @@ new province kynesgrove = {
 
 	name = "Kynesgrove"
 	color = { 214 222 253 }
+	terrain = hot_springs
 	area = kynesgrove
 	history = {
 		owner = WND
@@ -950,6 +980,7 @@ new province erimor = {
 
 	name = "Erimor"
 	color = { 197 158 106 }
+	terrain = hot_springs
 	area = kynesgrove
 	history = {
 		religion = nordic_pantheon
@@ -980,6 +1011,7 @@ new province anguki = {
 
 	name = "Anguki"
 	color = { 255 200 113 }
+	terrain = hot_springs
 	area = kynesgrove
 	history = {
 		religion = nordic_pantheon
@@ -1014,6 +1046,7 @@ new province ansilvund = {
 
 	name = "Ansilvund"
 	color = { 144 114 102 }
+	terrain = forest
 	area = ansilvund
 	history = {
 		religion = nordic_pantheon
@@ -1044,6 +1077,7 @@ new province stony_creek = {
 
 	name = "Stony Creek"
 	color = { 215 213 222 }
+	terrain = mountain
 	area = ansilvund
 	history = {
 		religion = nordic_pantheon
@@ -1074,6 +1108,7 @@ new province dwarf_road = {
 
 	name = "Dwarf Road"
 	color = { 120 245 223 }
+	terrain = forest
 	area = ansilvund
 	history = {
 		religion = nordic_pantheon
@@ -1108,6 +1143,7 @@ new province northwind = {
 
 	name = "Northwind"
 	color = { 212 141 251 }
+	terrain = mountain
 	area = northwind
 	history = {
 		religion = nordic_pantheon
@@ -1138,6 +1174,7 @@ new province upper_shor_way = {
 
 	name = "Upper Shor Way"
 	color = { 141 139 174 }
+	terrain = forest
 	area = northwind
 	history = {
 		religion = nordic_pantheon
@@ -1168,6 +1205,7 @@ new province lower_shor_way = {
 
 	name = "Lower Shor Way"
 	color = { 193 130 192 }
+	terrain = forest
 	area = northwind
 	history = {
 		religion = nordic_pantheon
@@ -1201,6 +1239,7 @@ new province darkwater_crossing = {
     }
 
 	name = "Darkwater Crossing"
+	terrain = forest
 	color = { 212 207 160 }
 	area = darkwater_crossing
 	history = {
@@ -1209,7 +1248,7 @@ new province darkwater_crossing = {
 		hre = yes
 		
 		
-		trade_goods = unknown
+		trade_goods = r_metals
 		
 		capital = ""
 		is_city = yes
@@ -1217,9 +1256,18 @@ new province darkwater_crossing = {
 		controller = DAR
 		add_core = DAR
 		add_claim = WND
+		
+		2500.1.1 = {
+			quick_province_modifier = {
+				name = "Goldenrock Mine"
+				modifier = {
+					trade_goods_size = 0.5
+				}
+			}
+		}
 	}
 }
-new province goldenrock = {
+new province atronach = {
     position = {
         1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000 1927.000 1895.000
     }
@@ -1230,7 +1278,8 @@ new province goldenrock = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Goldenrock"
+	name = "Atronach"
+	terrain = hot_springs
 	color = { 139 190 132 }
 	area = darkwater_crossing
 	history = {
@@ -1243,9 +1292,6 @@ new province goldenrock = {
 		
 		capital = ""
 		is_city = yes
-		owner = DAR
-		controller = DAR
-		add_core = DAR
 	}
 }
 new province eldergleam = {
@@ -1260,6 +1306,7 @@ new province eldergleam = {
     }
 
 	name = "Eldergleam"
+	terrain = hot_springs
 	color = { 198 237 124 }
 	area = darkwater_crossing
 	history = {
@@ -1272,10 +1319,6 @@ new province eldergleam = {
 		
 		capital = ""
 		is_city = yes
-		owner = DAR
-		controller = DAR
-		add_core = DAR
-		add_claim = WND
 	}
 }
 new area mistwatch = {
@@ -1294,6 +1337,7 @@ new province mistwatch = {
     }
 
 	name = "Mistwatch"
+	terrain = highlands
 	color = { 140 107 216 }
 	area = mistwatch
 	history = {
@@ -1324,6 +1368,7 @@ new province mist_road = {
 
 	name = "Mist Road"
 	color = { 252 196 154 }
+	terrain = highlands
 	area = mistwatch
 	history = {
 		religion = nordic_pantheon
@@ -1358,6 +1403,7 @@ new province ysgramoors_road = {
 
 	name = "Ysgramoor's Road"
 	color = { 236 120 164 }
+	terrain = highlands
 	area = mistwatch
 	history = {
 		religion = nordic_pantheon
@@ -1392,6 +1438,7 @@ new province darkwater_watch = {
 
 	name = "Darkwater Watch"
 	color = { 242 220 200 }
+	terrain = forest
 	area = darkwater
 	discovered_by = {
 		northern_tg
@@ -1429,6 +1476,7 @@ new province clay_point = {
 
 	name = "Clay Point"
 	color = { 214 202 107 }
+	terrain = forest
 	area = darkwater
 	discovered_by = {
 		northern_tg
@@ -1466,8 +1514,7 @@ new province darkwater_pass = {
 
 	name = "Darkwater Pass"
 	color = { 221 189 108 }
-	is_sea = yes
-	area = null_sea_area
+	terrain = highlands
 	area = darkwater
 	discovered_by = {
 		northern_tg
@@ -1505,6 +1552,7 @@ new province aevar_hill = {
 
 	name = "Aevar Hill"
 	color = { 103 186 108 }
+	terrain = highlands
 	area = darkwater
 	discovered_by = {
 		northern_tg
@@ -1541,6 +1589,7 @@ new province rough_road = {
 
 	name = "Rough Road"
 	color = { 230 206 192 }
+	terrain = highlands
 	area = lost_knife
 	discovered_by = {
 		northern_tg
@@ -1573,6 +1622,7 @@ new province gold_glade = {
 
 	name = "Gold Glade"
 	color = { 196 115 203 }
+	terrain = forest
 	area = lost_knife
 	discovered_by = {
 		northern_tg
@@ -1605,6 +1655,7 @@ new province top_point = {
 
 	name = "Top Point"
 	color = { 210 226 181 }
+	terrain = highlands
 	area = lost_knife
 	discovered_by = {
 		northern_tg
@@ -1641,6 +1692,7 @@ new province dibellas_coast = {
 
 	name = "Dibella's Coast"
 	color = { 219 190 146 }
+	terrain = forest
 	area = amol
 	discovered_by = {
 		northern_tg
@@ -1673,6 +1725,7 @@ new province tree_hill = {
 
 	name = "Tree Hill"
 	color = { 110 128 156 }
+	terrain = forest
 	area = amol
 	discovered_by = {
 		northern_tg
@@ -1706,6 +1759,7 @@ new province amol = {
 
 	name = "Amol"
 	color = { 148 220 121 }
+	terrain = coastline
 	area = amol
 	discovered_by = {
 		northern_tg
@@ -1747,6 +1801,7 @@ new province gallows_rock = {
 
 	name = "Gallows Rock"
 	color = { 106 210 229 }
+	terrain = highlands
 	area = gallows_rock
 	discovered_by = {
 		northern_tg
@@ -1780,6 +1835,7 @@ new province maras_rise = {
 
 	name = "Mara's Rise"
 	color = { 173 225 132 }
+	terrain = hills
 	area = gallows_rock
 	discovered_by = {
 		northern_tg
@@ -1812,6 +1868,7 @@ new province uttering_hills = {
 
 	name = "Uttering Hills"
 	color = { 204 106 209 }
+	terrain = hills
 	area = gallows_rock
 	discovered_by = {
 		northern_tg
@@ -1844,6 +1901,7 @@ new province mixwater = {
 
 	name = "Mixwater"
 	color = { 246 187 123 }
+	terrain = coastline
 	area = mixwater
 	discovered_by = {
 		northern_tg
@@ -1876,6 +1934,7 @@ new province whiterock = {
 
 	name = "Whiterock"
 	color = { 143 236 169 }
+	terrain = coastline
 	area = mixwater
 	discovered_by = {
 		northern_tg
@@ -1908,6 +1967,7 @@ new province morvunskar = {
 
 	name = "Morvunskar"
 	color = { 165 162 185 }
+	terrain = mountain
 	area = mixwater
 	discovered_by = {
 		northern_tg
@@ -1918,13 +1978,24 @@ new province morvunskar = {
 		hre = yes
 		
 		
-		trade_goods = unknown
+		trade_goods = arms
 		
 		capital = ""
 		is_city = yes
 		owner = WND
 		controller = WND
 		add_core = WND
+		
+		fort_16th = yes
+		2500.1.1 = {
+			quick_province_modifier = {
+				name = "The Morvunskar"
+				desc = "The Morvunskar overlooking the white-river, armies always die, however a truly great fort will be rebuilt. In its first form it was built by the companions as small camp to scout for elven settlements."
+				modifier = {
+					local_fort_maintenance_modifier = -0.5
+				}
+			}
+		}
 	}
 }
 new area cradlecrush = {
@@ -1945,6 +2016,7 @@ new province cradlecrush = {
 	name = "Cradlecrush"
 	color = { 231 214 178 }
 	area = cradlecrush
+	terrain = forest
 	discovered_by = {
 		northern_tg
 	}
@@ -1952,7 +2024,6 @@ new province cradlecrush = {
 		religion = nordic_pantheon
 		culture = nord
 		hre = yes
-		
 		
 		trade_goods = unknown
 		
@@ -1979,6 +2050,7 @@ new province amol_point = {
 	name = "Amol Point"
 	color = { 115 175 162 }
 	area = cradlecrush
+	terrain = forest
 	discovered_by = {
 		northern_tg
 	}
@@ -2016,6 +2088,7 @@ new province darkshade = {
 	name = "Darkshade"
 	color = { 195 207 111 }
 	area = hillgrund
+	terrain = forest
 	discovered_by = {
 		northern_tg
 	}
@@ -2049,6 +2122,7 @@ new province hillgrunds_steading = {
 	name = "Hillgrund's Steading"
 	color = { 102 163 113 }
 	area = hillgrund
+	terrain = forest
 	discovered_by = {
 		northern_tg
 	}
@@ -2090,6 +2164,7 @@ new province angas_mill = {
 	name = "Anga's Mill"
 	color = { 169 148 148 }
 	area = angas_mill
+	terrain = coastline
 	discovered_by = {
 		northern_tg
 	}
@@ -2118,7 +2193,7 @@ new province reydlaith = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	name = "Reydlaith"
 	color = { 128 232 166 }
 	area = angas_mill
@@ -2151,7 +2226,7 @@ new province ronageth = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = coastline
 	name = "Ronageth"
 	color = { 247 125 247 }
 	area = angas_mill
@@ -2188,7 +2263,7 @@ new province evetsta = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = coastline
 	name = "Evetsta"
 	color = { 234 158 242 }
 	area = windhelm
@@ -2224,6 +2299,7 @@ new province windhelm = {
 	name = "Windhelm"
 	color = { 228 146 220 }
 	area = windhelm
+	terrain = hills
 	discovered_by = {
 		northern_tg
 	}
@@ -2252,7 +2328,7 @@ new province freanna = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = coastline
 	name = "Freanna"
 	color = { 131 106 195 }
 	area = windhelm
@@ -2291,6 +2367,7 @@ new province driena = {
 
 	name = "Driena"
 	color = { 212 209 225 }
+	terrain = coastline
 	area = eastfield
 	discovered_by = {
 		northern_tg
@@ -2320,7 +2397,7 @@ new province oriekke = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = coastline
 	name = "Oriekke"
 	color = { 130 173 233 }
 	area = eastfield
@@ -2352,7 +2429,7 @@ new province haeleke = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	name = "Haeleke"
 	color = { 177 163 148 }
 	area = eastfield
@@ -2391,5 +2468,35 @@ new adjacency yorgrim_bridge = {
 	from = angas_mill
 	to = ronageth
 	through = 61
+	type = sea
+}
+new adjacency mist_bridge = {
+	from = darkwater_watch
+	to = mist_road
+	through = lake_darkwater
+	type = sea
+}
+new adjacency darkwater_bridge = {
+	from = darkwater_watch
+	to = darkwater_crossing
+	through = lake_darkwater
+	type = sea
+}
+new adjacency amol_bridge = {
+	from = amol
+	to = clay_point
+	through = lake_darkwater
+	type = sea
+}
+new adjacency hillgrund_bridge = {
+	from = hillgrunds_steading
+	to = dibellas_coast
+	through = 2796
+	type = sea
+}
+new adjacency prisoner_bridge = {
+	from = amol_point
+	to = dibellas_coast
+	through = 2796
 	type = sea
 }
