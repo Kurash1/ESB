@@ -85,52 +85,91 @@
 # ask_for_tributary_state_action
 # knowledge_sharing
 
-declarewar = {
-    condition = {
-		tooltip = CAN_DECLARE_WAR
-        potential = {
-            always = yes
-        }
-		allow = {
-			always = yes
+imperial_relations_action = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
 		}
-    }
-	effect = {
-		if = { 
-			limit = {
-				FROM = { 
-					capital_scope = { 
-						NOT = { superregion = ROOT } 
-					} 
-				}
-			}
-			FROM = { set_country_flag = war_with_invader_flag }
+		allow = {
+			always = no
+		}
+	}
+}
+imperial_realm_war_action = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+religious_unity_action = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+grant_electorate = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+remove_electorate = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+grant_freecity = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+remove_freecity = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			always = no
 		}
 	}
 }
 
-demand_unlawful_territory_action = {
-	condition = {
-		tooltip = CAN_DEMAND_UNLAWFUL_TERRITORY
-		potential = {
-			is_emperor = yes
-		}
-		allow = {
-			FROM = {
-				any_owned_province = {
-					is_part_of_hre = yes
-					NOT = { is_core = FROM }
-					is_colony = no
-				}
-			}
-		}
-	}
-}
+
+#Cut because the Grand Crusade war doesn't really have any place in the current content, but it could be very useful for the future.
+#Also modders should have the chance to just uncomment it all so they can experience the great 30 Years War like Crusade.
+declarewar = { }
+
+allianceaction = { }
+
+enforce_peace = { }
 
 royal_marriage = {
 	condition = {
 		tooltip = MARWAR
-		potential = {}
+		potential = {
+		}
 		allow = {
 			NOT = { war_with = FROM }
 		}
@@ -142,7 +181,11 @@ annexationaction = {
 		tooltip = ANNEX_TOO_LOW
 		potential = {
 			FROM = {
-				vassal_of = ROOT
+				OR = {
+					is_subject_of_type = core_eyalet
+					is_subject_of_type = appanage
+					vassal_of = ROOT
+				}
 			}
 		}
 		allow = {
@@ -156,7 +199,7 @@ annexationaction = {
 	}
 }
 
-integrationaction = {
+integrationaction = { 
 	condition = {
 		tooltip = INTEGRATETOOLOWDESC
 		potential = {
@@ -173,10 +216,11 @@ integrationaction = {
 	}
 }
 
-vassalaction = {
+vassalaction = { 
 	condition = {
 		tooltip = VASSALINVALID
-		potential = {}
+		potential = {
+		}
 		allow = {
 			alliance_with = FROM
 			FROM = {
@@ -190,10 +234,10 @@ vassalaction = {
 	}
 }
 
-abandon_union_action = {
+abandon_union = { 
 	condition = {
-		tooltip = CAN_ABANDON_UNION
-		potential = {}
+		potential = {
+		}
 		allow = {
 			ROOT = {
 				senior_union_with = FROM
@@ -203,10 +247,11 @@ abandon_union_action = {
 	}
 }
 
-form_coalition = {
+form_coalition = { 
 	condition = {
 		tooltip = MINAGGRESSIVEEXPANSION
-		potential = {}
+		potential = {	
+		}
 		allow = {
 			has_opinion_modifier = {
 				modifier = aggressive_expansion
@@ -216,7 +261,7 @@ form_coalition = {
 				has_opinion_modifier = {
 					modifier = aggressive_expansion
 					who = FROM
-					value = -50
+					value = -49
 				}
 			}
 		}
@@ -226,7 +271,8 @@ form_coalition = {
 request_to_join_trade_league = {
 	condition = {
 		tooltip = NOT_RELEVANT_TRADE_REGION_FROM
-		potential = {}
+		potential = {
+		}
 		allow = {
 			home_trade_node = {
 				trade_share = {
@@ -241,7 +287,8 @@ request_to_join_trade_league = {
 invite_to_trade_league = {
 	condition = {
 		tooltip = NOT_RELEVANT_TRADE_REGION
-		potential = {}
+		potential = {
+		}
 		allow = {
 			from = {
 				home_trade_node = {
@@ -255,47 +302,12 @@ invite_to_trade_league = {
 	}
 }
 
-milaccess = {
-	condition = {
-		tooltip = CAN_MILACCESS
-		potential = {}
-		allow = {}
-	}
-}
+tributary_state_action = { }
 
-fleet_access = {
-	condition = {
-		tooltip = CAN_FLEET_ACCESS
-		potential = {}
-		allow = {}
-	}
-}
+ask_for_tributary_state_action = { }
 
-offer_fleet_access = {
-	condition = {
-		tooltip = CAN_OFFER_FLEET_ACCESS
-		potential = {}
-		allow = {}
-	}
-}
-
-offermilaccess = {
-	condition = {
-		tooltip = CAN_OFFER_MILACCESS
-		potential = {}
-		allow = {}
-	}
-}
-
-sow_discontent = {
-	condition = {
-		tooltip = CAN_SOW_DISCONTENT
-		potential = {}
-		allow = {
-			OR = {
-				has_idea_group = gesellschaft0
-				has_idea_group = propaganda0
-			}
-		}
+break_alliance = {
+	effect = {
+		on_alliance_broken_effect = yes
 	}
 }

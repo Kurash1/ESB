@@ -1,5 +1,6 @@
 version="2.0.7"
 picture="thumbnail.png"
+replace_path="common/advisortypes"
 replace_path="common/buildings"
 replace_path="common/triggered_modifiers"
 replace_path="common/holy_orders"
