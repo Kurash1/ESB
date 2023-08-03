@@ -1,12 +1,79 @@
-new area hjaalmarch_area = {
-	name = "Hjaalmarch"
-	region = hjaalmarch
-}
-new area ustengrav = {
+new area ustengrav_area = {
 	name = "Ustengrav"
 	region = hjaalmarch
     
 }
+new area greenspring_hollow_area = {
+	name = "Greenspring Hollow"
+	region = hjaalmarch
+    
+}
+new area bromjunaar_area = {
+	name = "Bromjunaar"
+	region = hjaalmarch
+    
+}
+new area rannveigs_fast_area = {
+	name = "Rannveig's Fast"
+	region = hjaalmarch
+    
+}
+new area myrwatch_area = {
+	name = "Myrwatch"
+	region = hjaalmarch
+    
+}
+new area southern_morthal_area = {
+	name = "Southern Morthal"
+	region = hjaalmarch
+    
+}
+new area northern_morthal_area = {
+	name = "Northern Morthal"
+	region = hjaalmarch
+    
+}
+new area kjenstag_area = {
+	name = "Kjenstag"
+	region = hjaalmarch
+    
+}
+new area stonehills_area = {
+	name = "Stonehills"
+	region = hjaalmarch
+    
+}
+new area drajkmyr_marsh_area = {
+	name = "Drajkmyr Marsh"
+	region = hjaalmarch
+    
+}
+new area snowhawk_area = {
+	name = "Snowhawk"
+	region = hjaalmarch
+    
+}
+new area twin_bridges_area = {
+	name = "Twin Bridges"
+	region = hjaalmarch
+    
+}
+new area rivers_horn_area = {
+	name = "Rivers' Horn"
+	region = hjaalmarch
+    
+}
+new area hjaal_river_passage_area = {
+	name = "Hjaal River Passage"
+	region = hjaalmarch
+    
+}
+new area hjaals_teeth_area = {
+	name = "Hjaal's Teeth"
+	region = hjaalmarch
+    
+}
+
 new province odmiar = {
     position = {
         1691.000 2043.000 1691.000 2043.000 1691.000 2043.000 1691.000 2043.000 1691.000 2043.000 1691.000 2043.000 1691.000 2043.000
@@ -17,7 +84,7 @@ new province odmiar = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-	area = hjaalmarch_area
+	area = drajkmyr_marsh_area
 	name = "Odmiar"
 	color = { 195 191 133 }
 	history = {
@@ -48,7 +115,7 @@ new province morthal = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = northern_morthal_area
 	name = "Morthal"
 	color = { 220 248 102 }
 	history = {
@@ -66,7 +133,7 @@ new province morthal = {
 		is_city = yes
 	}
 }
-new province aldy = {
+new province morthal_mines = {
     position = {
         1686.000 2003.000 1686.000 2003.000 1686.000 2003.000 1686.000 2003.000 1686.000 2003.000 1686.000 2003.000 1686.000 2003.000
     }
@@ -77,8 +144,8 @@ new province aldy = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "Aldi"
+	area = southern_morthal_area
+	name = "Morthal Mines"
 	color = { 197 212 137 }
 	history = {
 		religion = nordic_pantheon
@@ -110,7 +177,7 @@ new province greenspring_hollow = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = greenspring_hollow_area
 	name = "Greenspring Hollow"
 	color = { 108 233 231 }
 	history = {
@@ -128,7 +195,7 @@ new province greenspring_hollow = {
 		add_core = RAN
 	}
 }
-new province haemred = {
+new province lone_hill = {
     position = {
         1685.000 1957.000 1685.000 1957.000 1685.000 1957.000 1685.000 1957.000 1685.000 1957.000 1685.000 1957.000 1685.000 1957.000
     }
@@ -139,8 +206,8 @@ new province haemred = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "Haemred"
+	area = greenspring_hollow_area
+	name = "Lone Hill"
 	color = { 242 188 180 }
 	history = {
 		religion = nordic_pantheon
@@ -172,7 +239,7 @@ new province rannveigs_fast = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = rannveigs_fast_area
 	name = "Rannveig's Fast"
 	color = { 137 237 200 }
 	history = {
@@ -201,7 +268,7 @@ new province orotheim = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = hjaals_teeth_area
 	name = "Orotheim"
 	color = { 209 223 228 }
 	history = {
@@ -230,7 +297,7 @@ new province rostild = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = hjaals_teeth_area
 	name = "Rostild"
 	color = { 115 133 158 }
 	history = {
@@ -259,7 +326,7 @@ new province rosie = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = hjaals_teeth_area
 	name = "Rosie"
 	color = { 126 102 232 }
 	history = {
@@ -288,7 +355,7 @@ new province risial = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = hjaals_teeth_area
 	name = "Risial"
 	color = { 144 165 242 }
 	history = {
@@ -306,7 +373,7 @@ new province risial = {
 		is_city = yes
 	}
 }
-new province gergi = {
+new province robbers_gorge = {
     position = {
         1619.000 2003.000 1619.000 2003.000 1619.000 2003.000 1619.000 2003.000 1619.000 2003.000 1619.000 2003.000 1619.000 2003.000
     }
@@ -317,8 +384,8 @@ new province gergi = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "Gergi"
+	area = hjaal_river_passage_area
+	name = "Robber's Gorge"
 	color = { 221 201 114 }
 	history = {
 		owner = HJA
@@ -346,7 +413,7 @@ new province herga = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = hjaal_river_passage_area
 	name = "Herga"
 	color = { 219 249 244 }
 	history = {
@@ -375,7 +442,7 @@ new province matleke = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = twin_bridges_area
 	name = "Matleke"
 	color = { 239 203 149 }
 	history = {
@@ -404,7 +471,7 @@ new province chillwind_depths = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = rivers_horn_area
 	name = "Chillwind Depths"
 	color = { 229 121 187 }
 	history = {
@@ -433,7 +500,7 @@ new province threela = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = rivers_horn_area
 	name = "Threela"
 	color = { 105 131 203 }
 	history = {
@@ -462,7 +529,7 @@ new province holmth = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = rivers_horn_area
 	name = "Holmth"
 	color = { 166 132 146 }
 	history = {
@@ -480,7 +547,7 @@ new province holmth = {
 		is_city = yes
 	}
 }
-new province nettki = {
+new province forebears_holdout = {
     position = {
         1620.000 2028.000 1620.000 2028.000 1620.000 2028.000 1620.000 2028.000 1620.000 2028.000 1620.000 2028.000 1620.000 2028.000
     }
@@ -491,8 +558,8 @@ new province nettki = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "Nettki"
+	area = twin_bridges_area
+	name = "Forebears' Holdout"
 	color = { 175 237 161 }
 	history = {
 		owner = CHW
@@ -520,7 +587,7 @@ new province 9003 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = twin_bridges_area
 	name = "9003"
 	color = { 229 122 192 }
 	history = {
@@ -549,7 +616,7 @@ new province editret = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = snowhawk_area
 	name = "Editret"
 	color = { 247 156 225 }
 	history = {
@@ -578,7 +645,7 @@ new province birndur = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = drajkmyr_marsh_area
 	name = "Birndur"
 	color = { 251 219 179 }
 	history = {
@@ -607,7 +674,7 @@ new province ondien = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = hjaal_river_passage_area
 	name = "Ondien"
 	color = { 121 250 110 }
 	history = {
@@ -636,7 +703,7 @@ new province dead_mens_respite = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = snowhawk_area
 	name = "Dead Men's Respite"
 	color = { 106 129 184 }
 	history = {
@@ -665,8 +732,8 @@ new province snowhawk = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "SnowHawk"
+	area = snowhawk_area
+	name = "Snowhawk"
 	color = { 243 126 232 }
 	history = {
 		culture = nord
@@ -694,7 +761,7 @@ new province minedvild = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = southern_morthal_area
 	name = "Minedvild"
 	color = { 192 143 123 }
 	history = {
@@ -712,7 +779,7 @@ new province minedvild = {
 		is_city = yes
 	}
 }
-new province shryne_of_kyne = {
+new province shrine_of_kyne = {
     position = {
         1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000
     }
@@ -723,8 +790,8 @@ new province shryne_of_kyne = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "Shryne of Kyne"
+	area = southern_morthal_area
+	name = "Shrine of Kyne"
 	color = { 233 130 248 }
 	history = {
 		religion = nordic_pantheon
@@ -755,7 +822,7 @@ new province darkfall = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = drajkmyr_marsh_area
 	name = "Darkfall"
 	color = { 251 214 146 }
 	history = {
@@ -784,7 +851,7 @@ new province folgunthur = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = drajkmyr_marsh_area
 	name = "Folgunthur"
 	color = { 115 237 244 }
 	history = {
@@ -813,7 +880,7 @@ new province northwatch_keep = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = drajkmyr_marsh_area
 	name = "Northwatch Keep"
 	color = { 195 100 206 }
 	history = {
@@ -831,7 +898,7 @@ new province northwatch_keep = {
 		is_city = yes
 	}
 }
-new province eyjanhvir = {
+new province windstad = {
     position = {
         1708.000 2060.000 1708.000 2060.000 1708.000 2060.000 1708.000 2060.000 1708.000 2060.000 1708.000 2060.000 1708.000 2060.000
     }
@@ -842,8 +909,8 @@ new province eyjanhvir = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = ustengrav
-	name = "Eyjanhvir"
+	area = ustengrav_area
+	name = "Windstad"
 	color = { 169 127 249 }
 	history = {
 		owner = HGA
@@ -871,7 +938,7 @@ new province ondidreid = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = ustengrav
+	area = ustengrav_area
 	name = "Ondidreid"
 	color = { 230 225 135 }
 	history = {
@@ -900,7 +967,7 @@ new province ustengrav = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = ustengrav
+	area = ustengrav_area
 	name = "Ustengrav"
 	color = { 145 201 179 }
 	history = {
@@ -929,7 +996,7 @@ new province bthar-zel = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = ustengrav_area
 	name = "Bthar-Zel"
 	color = { 113 186 199 }
 	history = {
@@ -958,7 +1025,7 @@ new province astny = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = stonehills_area
 	name = "Astny"
 	color = { 160 247 185 }
 	history = {
@@ -987,7 +1054,7 @@ new province karal = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = stonehills_area
 	name = "Karal"
 	color = { 118 151 202 }
 	history = {
@@ -1016,7 +1083,7 @@ new province stonehills = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = stonehills_area
 	name = "StoneHills"
 	color = { 251 168 205 }
 	history = {
@@ -1045,7 +1112,7 @@ new province skyborn_altar = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = bromjunaar_area
 	name = "Skyborn Altar"
 	color = { 127 159 110 }
 	history = {
@@ -1058,7 +1125,7 @@ new province skyborn_altar = {
 		trade_goods = unknown
 	}
 }
-new province destructions_solace_armory = {
+new province skyborn_passage = {
     position = {
         1731.000 1972.000 1731.000 1972.000 1731.000 1972.000 1731.000 1972.000 1731.000 1972.000 1731.000 1972.000 1731.000 1972.000
     }
@@ -1069,8 +1136,8 @@ new province destructions_solace_armory = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "Destruction's Solace Armory"
+	area = bromjunaar_area
+	name = "Skyborn Passage"
 	color = { 132 217 230 }
 	history = {
 		religion = nordic_pantheon
@@ -1093,7 +1160,7 @@ new province bromjunaar = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = bromjunaar_area
 	name = "Bromjunaar"
 	color = { 178 182 185 }
 	history = {
@@ -1111,7 +1178,7 @@ new province bromjunaar = {
 		add_core = SKB
 	}
 }
-new province 8002 = {
+new province bromjunaar_approach = {
     position = {
         1713.000 2001.000 1713.000 2001.000 1713.000 2001.000 1713.000 2001.000 1713.000 2001.000 1713.000 2001.000 1713.000 2001.000
     }
@@ -1122,8 +1189,8 @@ new province 8002 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "8002"
+	area = myrwatch_area
+	name = "Bromjunaar Approach"
 	color = { 148 219 213 }
 	history = {
 		culture = nord
@@ -1140,7 +1207,7 @@ new province 8002 = {
 		add_core = MIR
 	}
 }
-new province rhuzrin = {
+new province snowy_pines = {
     position = {
         1700.000 1993.000 1700.000 1993.000 1700.000 1993.000 1700.000 1993.000 1700.000 1993.000 1700.000 1993.000 1700.000 1993.000
     }
@@ -1151,8 +1218,8 @@ new province rhuzrin = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "Rhuzrin"
+	area = myrwatch_area
+	name = "Snowy Pines"
 	color = { 151 229 253 }
 	history = {
 		religion = nordic_pantheon
@@ -1164,7 +1231,7 @@ new province rhuzrin = {
 		trade_goods = unknown
 	}
 }
-new province gislara = {
+new province abundant_mines = {
     position = {
         1693.000 1972.000 1693.000 1972.000 1693.000 1972.000 1693.000 1972.000 1693.000 1972.000 1693.000 1972.000 1693.000 1972.000
     }
@@ -1175,8 +1242,8 @@ new province gislara = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
-	name = "Gislara"
+	area = greenspring_hollow_area
+	name = "Abudant Mines"
 	color = { 134 143 148 }
 	history = {
 		religion = nordic_pantheon
@@ -1204,7 +1271,7 @@ new province eldersblood_peak = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = rannveigs_fast_area
 	name = "Eldersblood Peak"
 	color = { 157 144 149 }
 	history = {
@@ -1228,7 +1295,7 @@ new province cold_rock_pass = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = rannveigs_fast_area
 	name = "Cold Rock Pass"
 	color = { 210 242 158 }
 	history = {
@@ -1257,7 +1324,7 @@ new province myrwatch = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = myrwatch_area
 	name = "Myrwatch"
 	color = { 140 212 206 }
 	history = {
@@ -1286,7 +1353,7 @@ new province ondjaarn = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = kjenstag_area
 	name = "Ondjaarn"
 	color = { 198 145 155 }
 	history = {
@@ -1315,7 +1382,7 @@ new province 8000 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = kjenstag_area
 	name = "8000"
 	color = { 217 228 123 }
 	history = {
@@ -1348,7 +1415,7 @@ new province kjenstag = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = kjenstag_area
 	name = "Kjenstag"
 	color = { 252 167 203 }
 	history = {
@@ -1381,7 +1448,7 @@ new province unate = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = northern_morthal_area
 	name = "Unate"
 	color = { 249 189 239 }
 	history = {
@@ -1414,7 +1481,7 @@ new province tilmica = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	area = hjaalmarch_area
+	area = northern_morthal_area
 	name = "Tilmica"
 	color = { 219 196 224 }
 	history = {
