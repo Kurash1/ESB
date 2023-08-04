@@ -27,8 +27,9 @@ new province bleakrock_isle = {
 		
 		capital = ""
 		is_city = no
-		owner = HLY
-		controller = HLY
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = HLY
 		57.1.1 = {
 			is_city = yes
@@ -174,8 +175,9 @@ new province holly-frost = {
 		
 		capital = ""
 		is_city = yes
-		owner = HLY
-		controller = HLY
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = HLY
 	}
 }
@@ -204,8 +206,9 @@ new province yngol_barrow = {
 		
 		capital = ""
 		is_city = yes
-		owner = HLY
-		controller = HLY
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = HLY
 	}
 }
@@ -234,8 +237,9 @@ new province frostbloom = {
 		
 		capital = ""
 		is_city = yes
-		owner = HLY
-		controller = HLY
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = HLY
 	}
 }
@@ -268,8 +272,9 @@ new province snowdrift = {
 		
 		capital = ""
 		is_city = yes
-		owner = HLY
-		controller = HLY
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = HLY
 	}
 }
@@ -298,8 +303,9 @@ new province chillwind = {
 		
 		capital = ""
 		is_city = yes
-		owner = HLY
-		controller = HLY
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = HLY
 	}
 }
@@ -328,8 +334,9 @@ new province dunmeth_pass = {
 		
 		capital = ""
 		is_city = yes
-		owner = HLY
-		controller = HLY
+		owner = WND
+		controller = WND
+		add_core = WND
 		add_core = HLY
 	}
 }
@@ -462,7 +469,7 @@ new province mzulft = {
 		owner = CRW
 		controller = CRW
 		add_core = CRW
-		add_claim = WND
+		
 		272.1.1 = {
 			trade_goods = unknown
 		}
@@ -496,7 +503,7 @@ new province cragwallow = {
 		owner = CRW
 		controller = CRW
 		add_core = CRW
-		add_claim = WND
+		
 	}
 }
 new area broken_limb = {
@@ -521,17 +528,13 @@ new province broken_limb = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
 		
 		capital = ""
 		is_city = no
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = CRV
 	}
 }
 new province cherim_pond = {
@@ -552,17 +555,13 @@ new province cherim_pond = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
 		
 		capital = ""
 		is_city = yes
-		owner = DAR
-		controller = DAR
-		add_core = DAR
-		add_claim = WND
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = nord
@@ -591,7 +590,7 @@ new province witchmist = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
@@ -618,7 +617,7 @@ new province bonestrew = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
@@ -645,7 +644,7 @@ new province hjoie = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
@@ -676,7 +675,7 @@ new province akawatch = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
@@ -703,7 +702,7 @@ new province fanella = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
@@ -730,7 +729,7 @@ new province aleading = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
@@ -761,7 +760,6 @@ new province steamcrag = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
 		
 		
 		trade_goods = unknown
@@ -798,7 +796,7 @@ new province bloody_road = {
 		owner = CRW
 		controller = CRW
 		add_core = CRW
-		add_claim = WND
+		
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = nord
@@ -833,7 +831,7 @@ new province margyf = {
 		owner = CRW
 		controller = CRW
 		add_core = CRW
-		add_claim = WND
+		
 	}
 }
 new area cronvangr = {
@@ -858,14 +856,10 @@ new province cronvangr = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = CRV
 		capital = ""
 		is_city = yes
 	}
@@ -888,17 +882,13 @@ new province berasta = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
 		
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = CRV
 	}
 }
 new province riverside_shack = {
@@ -919,17 +909,13 @@ new province riverside_shack = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
 		
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = CRV
 	}
 }
 new area kynesgrove = {
@@ -949,7 +935,7 @@ new province kynesgrove = {
 
 	name = "Kynesgrove"
 	color = { 214 222 253 }
-	terrain = hot_springs
+	terrain = forest
 	area = kynesgrove
 	history = {
 		owner = WND
@@ -1061,7 +1047,7 @@ new province ansilvund = {
 		owner = NOW
 		controller = NOW
 		add_core = NOW
-		add_claim = WND
+		
 	}
 }
 new province stony_creek = {
@@ -1092,7 +1078,7 @@ new province stony_creek = {
 		owner = NOW
 		controller = NOW
 		add_core = NOW
-		add_claim = WND
+		
 	}
 }
 new province dwarf_road = {
@@ -1123,7 +1109,7 @@ new province dwarf_road = {
 		owner = NOW
 		controller = NOW
 		add_core = NOW
-		add_claim = WND
+		
 	}
 }
 new area northwind = {
@@ -1158,7 +1144,7 @@ new province northwind = {
 		owner = NOW
 		controller = NOW
 		add_core = NOW
-		add_claim = WND
+		
 	}
 }
 new province upper_shor_way = {
@@ -1189,7 +1175,7 @@ new province upper_shor_way = {
 		owner = NOW
 		controller = NOW
 		add_core = NOW
-		add_claim = WND
+		
 	}
 }
 new province lower_shor_way = {
@@ -1220,7 +1206,7 @@ new province lower_shor_way = {
 		owner = NOW
 		controller = NOW
 		add_core = NOW
-		add_claim = WND
+		
 	}
 }
 new area darkwater_crossing = {
@@ -1255,7 +1241,7 @@ new province darkwater_crossing = {
 		owner = DAR
 		controller = DAR
 		add_core = DAR
-		add_claim = WND
+		
 		
 		2500.1.1 = {
 			quick_province_modifier = {
@@ -1285,7 +1271,7 @@ new province atronach = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
@@ -1312,7 +1298,7 @@ new province eldergleam = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		hre = yes
+		
 		
 		
 		trade_goods = unknown
@@ -1383,7 +1369,7 @@ new province mist_road = {
 		owner = MIS
 		controller = MIS
 		add_core = MIS
-		add_claim = WND
+		
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = nord
@@ -1418,7 +1404,7 @@ new province ysgramoors_road = {
 		owner = NOW
 		controller = NOW
 		add_core = NOW
-		add_claim = WND
+		
 	}
 }
 new area darkwater = {
@@ -1456,7 +1442,7 @@ new province darkwater_watch = {
 		owner = DAR
 		controller = DAR
 		add_core = DAR
-		add_claim = WND
+		
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = nord
@@ -1494,7 +1480,7 @@ new province clay_point = {
 		
 		capital = ""
 		is_city = no
-		add_claim = WND
+		
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = nord
@@ -1532,7 +1518,7 @@ new province darkwater_pass = {
 		owner = DAR
 		controller = DAR
 		add_core = DAR
-		add_claim = WND
+		
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = nord
@@ -1709,7 +1695,7 @@ new province dibellas_coast = {
 		owner = HID
 		controller = HID
 		add_core = HID
-		add_claim = WND
+		
 	}
 }
 new province tree_hill = {
@@ -1743,7 +1729,7 @@ new province tree_hill = {
 		owner = HID
 		controller = HID
 		add_core = HID
-		add_claim = WND
+		
 	}
 }
 new province amol = {
@@ -1777,7 +1763,7 @@ new province amol = {
 		owner = HID
 		controller = HID
 		add_core = HID
-		add_claim = WND
+		
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = nord
@@ -2033,7 +2019,7 @@ new province cradlecrush = {
 		controller = WND
 		add_core = WND
 		add_core = CRA
-		add_claim = WND
+		
 	}
 }
 new province amol_point = {
@@ -2105,7 +2091,7 @@ new province darkshade = {
 		owner = HID
 		controller = HID
 		add_core = HID
-		add_claim = WND
+		
 	}
 }
 new province hillgrunds_steading = {
@@ -2139,7 +2125,7 @@ new province hillgrunds_steading = {
 		owner = HID
 		controller = HID
 		add_core = HID
-		add_claim = WND
+		
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = nord
