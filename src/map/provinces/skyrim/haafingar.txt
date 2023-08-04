@@ -70,6 +70,7 @@ new province lone_isle = {
     }
 	area = outer_archipelago_area
 	name = "Lone Isle"
+	terrain = coastline
 	color = { 184 109 117 }
 	history = {
 		owner = SHD
@@ -99,6 +100,7 @@ new province solitude = {
     }
 	area = solitude_proper_area
 	name = "Solitude"
+	terrain = mountain
 	color = { 241 196 104 }
 	history = {
 		owner = SOL
@@ -128,6 +130,7 @@ new province solitude_port = {
     }
 	area = solitude_proper_area
 	name = "Solitude Port"
+	terrain = coastline
 	color = { 160 235 188 }
 	history = {
 		religion = nordic_pantheon
@@ -157,6 +160,7 @@ new province solitude_entrance = {
     }
 	area = solitude_proper_area
 	name = "Solitude Entrance"
+	terrain = hills
 	color = { 190 186 158 }
 	history = {
 		owner = SOL
@@ -189,6 +193,7 @@ new province solitude_farms = {
     }
 	area = solitude_countryside_area
 	name = "Solitude Farms"
+	terrain = coastline
 	color = { 144 103 168 }
 	history = {
 		owner = SOL
@@ -218,6 +223,7 @@ new province solitude_military_camp = {
     }
 	area = solitude_countryside_area
 	name = "Solitude Military Camp"
+	terrain = hills
 	color = { 239 147 210 }
 	history = {
 		owner = SOL
@@ -247,6 +253,7 @@ new province solitude_fork = {
     }
 	area = solitude_countryside_area
 	name = "Solitude Fork"
+	terrain = coastline
 	color = { 158 127 179 }
 	history = {
 		owner = SOL
@@ -280,6 +287,7 @@ new province meridias_crossroad = {
     }
 	area = dragon_bridge_area
 	name = "Meridia's Crossroad"
+	terrain = hills
 	color = { 174 195 199 }
 	history = {
 		owner = SOL
@@ -506,6 +514,7 @@ new province northern_cliffs = {
     }
 	area = solitude_coast_area
 	name = "Northern Cliffs"
+	terrain = coastline
 	color = { 236 248 151 }
 	history = {
 		owner = SHD
@@ -565,6 +574,7 @@ new province brokenoar = {
     }
 	area = shadowgreen_area
 	name = "Broken Oar"
+	terrain = coastline
 	color = { 227 114 140 }
 	history = {
 		owner = SHD
@@ -594,6 +604,7 @@ new province shadowgreen = {
     }
 	area = shadowgreen_area
 	name = "Shadowgreen"
+	terrain = coastline
 	color = { 219 228 107 }
 	history = {
 		owner = SHD
@@ -656,6 +667,7 @@ new province northern_road = {
     }
 	area = ravenscar_area
 	name = "Northern Road"
+	terrain = coastline
 	color = { 200 207 188 }
 	history = {
 		owner = RAV
@@ -685,6 +697,7 @@ new province ravenscar = {
     }
 	area = ravenscar_area
 	name = "Ravenscar"
+	terrain = coastline
 	color = { 150 176 238 }
 	history = {
 		owner = RAV
@@ -714,6 +727,7 @@ new province widows_watch = {
     }
 	area = widows_watch_area
 	name = "Widow's Watch"
+	terrain = coastline
 	color = { 211 184 165 }
 	history = {
 		religion = nordic_pantheon
@@ -743,6 +757,7 @@ new province northern_mine = {
     }
 	area = widows_watch_area
 	name = "Northern Mine"
+	terrain = coastline
 	color = { 107 167 115 }
 	history = {
 		owner = RIR
@@ -770,6 +785,7 @@ new province steepfall_burrow = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = widows_watch_area
+	terrain = highlands
 	name = "Steepfall Burrow"
 	color = { 220 153 179 }
 	history = {
@@ -800,6 +816,7 @@ new province lower_steepfall_burrow = {
     }
 	area = widows_watch_area
 	name = "Lower Steepfall Burrow"
+	terrain = coastline
 	color = { 126 243 238 }
 	history = {
 		owner = RIR
@@ -829,6 +846,7 @@ new province northwatch = {
     }
 	area = northwatch_area
 	name = "Northwatch"
+	terrain = coastline
 	color = { 108 135 188 }
 	history = {
 		owner = RIR
@@ -858,6 +876,7 @@ new province horned_coast = {
     }
 	area = northwatch_area
 	name = "Horned Coast"
+	terrain = highlands
 	color = { 189 251 233 }
 	history = {
 		owner = PIF
@@ -887,6 +906,7 @@ new province low_grove = {
     }
 	area = northwatch_area
 	name = "Low Grove"
+	terrain = coastline
 	color = { 242 169 162 }
 	history = {
 		religion = nordic_pantheon
@@ -916,6 +936,7 @@ new province pinefrost = {
     }
 	area = volskygge_area
 	name = "Pinefrost"
+	terrain = highlands
 	color = { 151 162 116 }
 	history = {
 		religion = nordic_pantheon
@@ -940,6 +961,7 @@ new province volskygge = {
     }
 	area = volskygge_area
 	name = "Volskygge"
+	terrain = forest
 	color = { 250 231 207 }
 	history = {
 		religion = nordic_pantheon
@@ -964,6 +986,7 @@ new province deepwood_redoubt = {
     }
 	area = volskygge_area
 	name = "Deepwood Redoubt"
+	terrain = forest
 	color = { 187 232 173 }
 	history = {
 		religion = nordic_pantheon
@@ -993,6 +1016,7 @@ new province pinemoon_cave = {
     }
 	area = volskygge_area
 	name = "Pinemoon Cave"
+	terrain = forest
 	color = { 166 213 143 }
 	history = {
 		religion = nordic_pantheon
@@ -1017,6 +1041,7 @@ new province snowpeaks = {
     }
 	area = snowpeaks_area
 	name = "Snowpeaks"
+	terrain = forest
 	color = { 161 254 127 }
 	history = {
 		owner = PIN
@@ -1045,6 +1070,7 @@ new province clearpine_pond = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	area = snowpeaks_area
+	terrain = forest
 	name = "Clearpine Pond"
 	color = { 163 173 175 }
 	history = {
@@ -1075,6 +1101,7 @@ new province lost_echo_cave = {
     }
 	area = hraggstad_area
 	name = "Lost Echo Cave"
+	terrain = hills
 	color = { 124 176 123 }
 	history = {
 		religion = nordic_pantheon
@@ -1099,6 +1126,7 @@ new province wolfskull_cave = {
     }
 	area = hraggstad_area
 	name = "Wolfskull Cave"
+	terrain = hills
 	color = { 104 241 247 }
 	history = {
 		owner = WOL
@@ -1128,6 +1156,7 @@ new province hraggstad = {
     }
 	area = hraggstad_area
 	name = "Hraggstad"
+	terrain = highlands
 	color = { 239 168 125 }
 	history = {
 		owner = WOL
@@ -1157,6 +1186,7 @@ new province kilkreath_trail = {
     }
 	area = hraggstad_area
 	name = "Kilkreath Trail"
+	terrain = hills
 	color = { 120 142 214 }
 	history = {
 		owner = WOL
@@ -1185,6 +1215,7 @@ new province kilkreath_temple = {
     }
 	area = kilkreath_area
 	name = "Kilkreath Temple"
+	terrain = hills
 	color = { 215 127 153 }
 	history = {
 		owner = IRO
@@ -1214,6 +1245,7 @@ new province ironback_hideout = {
     }
 	area = kilkreath_area
 	name = "Ironback Hidehout"
+	terrain = highlands
 	color = { 130 155 255 }
 	history = {
 		owner = IRO
@@ -1243,6 +1275,7 @@ new province kilkreath_peak = {
     }
 	area = kilkreath_area
 	name = "Kilkreath Peak"
+	terrain = mountain
 	color = { 164 221 189 }
 	history = {
 		owner = IRO

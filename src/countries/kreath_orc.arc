@@ -68,7 +68,7 @@ new country peak_shade = {
 	tag = PEA
 	name = "Peak Shade"
 	adj = "Peak"
-	color = { 0 43 0 }
+	color = { 0 20 0 }
 	
 	capital = peak_shade
 }
