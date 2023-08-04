@@ -84,6 +84,7 @@ new province isle_of_sorrow = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
+	terrain = marsh
 	area = drajkmyr_marsh
 	name = "Isle of Sorrow"
 	color = { 195 191 133 }
@@ -114,7 +115,7 @@ new province morthal = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = northern_morthal
 	name = "Morthal"
 	color = { 220 248 102 }
@@ -143,7 +144,7 @@ new province morthal_mines = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = southern_morthal
 	name = "Morthal Mines"
 	color = { 197 212 137 }
@@ -176,7 +177,7 @@ new province greenspring_hollow = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	area = greenspring_hollow
 	name = "Greenspring Hollow"
 	color = { 108 233 231 }
@@ -205,7 +206,7 @@ new province lone_hill = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	area = greenspring_hollow
 	name = "Lone Hill"
 	color = { 242 188 180 }
@@ -238,7 +239,7 @@ new province rannveigs_fast = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	area = rannveigs_fast
 	name = "Rannveig's Fast"
 	color = { 137 237 200 }
@@ -267,7 +268,7 @@ new province orotheim = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = steppe
 	area = hjaals_teeth
 	name = "Orotheim"
 	color = { 209 223 228 }
@@ -296,7 +297,7 @@ new province hjaals_tooth = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = steppe
 	area = hjaals_teeth
 	name = "Hjaal's Tooth"
 	color = { 115 133 158 }
@@ -325,7 +326,7 @@ new province bumpy_road = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = steppe
 	area = hjaals_teeth
 	name = "Bumpy Road"
 	color = { 126 102 232 }
@@ -354,7 +355,7 @@ new province rugged_coast = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = steppe
 	area = hjaals_teeth
 	name = "Rugged Coast"
 	color = { 144 165 242 }
@@ -383,7 +384,7 @@ new province robbers_gorge = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = steppe
 	area = hjaal_river_passage
 	name = "Robber's Gorge"
 	color = { 221 201 114 }
@@ -412,7 +413,7 @@ new province fishermans_hangout = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = steppe
 	area = hjaal_river_passage
 	name = "Fisherman's Hangout"
 	color = { 219 249 244 }
@@ -441,7 +442,7 @@ new province barren_road = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = steppe
 	area = twin_bridges
 	name = "Barren Road"
 	color = { 239 203 149 }
@@ -470,7 +471,7 @@ new province chillwind_depths = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	area = rivers_horn
 	name = "Chillwind Depths"
 	color = { 229 121 187 }
@@ -499,7 +500,7 @@ new province rivers_road = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = grasslands
 	area = rivers_horn
 	name = "River's Road"
 	color = { 105 131 203 }
@@ -518,7 +519,7 @@ new province rivers_road = {
 		is_city = yes
 	}
 }
-new province spearpoint = {
+new province cliff_point = {
     position = {
         1610.000 2038.000 1610.000 2038.000 1610.000 2038.000 1610.000 2038.000 1610.000 2038.000 1610.000 2038.000 1610.000 2038.000
     }
@@ -528,9 +529,9 @@ new province spearpoint = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = grasslands
 	area = rivers_horn
-	name = "Spearpoint"
+	name = "Cliff Point"
 	color = { 166 132 146 }
 	history = {
 		owner = CHW
@@ -557,7 +558,7 @@ new province forebears_holdout = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = grasslands
 	area = twin_bridges
 	name = "Forebears' Holdout"
 	color = { 175 237 161 }
@@ -586,7 +587,7 @@ new province tranquile_woods = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = twin_bridges
 	name = "Tranquile Woods"
 	color = { 229 122 192 }
@@ -615,7 +616,7 @@ new province snowhawk_forest = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = snowhawk
 	name = "Snowhawk Forest"
 	color = { 247 156 225 }
@@ -644,7 +645,7 @@ new province traitorous_swamps = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = drajkmyr_marsh
 	name = "Traitorous Swamps"
 	color = { 251 219 179 }
@@ -673,7 +674,7 @@ new province bandits_rest = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = highlands
 	area = hjaal_river_passage
 	name = "Bandit's Rest"
 	color = { 121 250 110 }
@@ -702,7 +703,7 @@ new province dead_mens_respite = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	area = snowhawk
 	name = "Dead Men's Respite"
 	color = { 106 129 184 }
@@ -731,7 +732,7 @@ new province snowhawk = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	area = snowhawk
 	name = "Snowhawk"
 	color = { 243 126 232 }
@@ -760,7 +761,7 @@ new province minedvild = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = southern_morthal
 	name = "Minedvild"
 	color = { 192 143 123 }
@@ -789,7 +790,7 @@ new province shrine_of_kyne = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = coastline
 	area = southern_morthal
 	name = "Shrine of Kyne"
 	color = { 233 130 248 }
@@ -821,7 +822,7 @@ new province drajkmyr_toll = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = drajkmyr_marsh
 	name = "Drajkmyr Toll"
 	color = { 251 214 146 }
@@ -850,7 +851,7 @@ new province folgunthur = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = drajkmyr_marsh
 	name = "Folgunthur"
 	color = { 115 237 244 }
@@ -879,7 +880,7 @@ new province cold_swamp = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = drajkmyr_marsh
 	name = "Cold Swamp"
 	color = { 195 100 206 }
@@ -908,7 +909,7 @@ new province windstad = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = ustengrav
 	name = "Windstad"
 	color = { 169 127 249 }
@@ -937,7 +938,7 @@ new province ondidreid = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = ustengrav
 	name = "Ondidreid"
 	color = { 230 225 135 }
@@ -966,7 +967,7 @@ new province ustengrav = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = ustengrav
 	name = "Ustengrav"
 	color = { 145 201 179 }
@@ -995,7 +996,7 @@ new province fistrock = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = ustengrav
 	name = "Fistrock"
 	color = { 113 186 199 }
@@ -1024,7 +1025,7 @@ new province frozen_outpost = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = stonehills
 	name = "Frozen Outpost"
 	color = { 160 247 185 }
@@ -1053,7 +1054,7 @@ new province snow_trail = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = stonehills
 	name = "Snow Trail"
 	color = { 118 151 202 }
@@ -1082,9 +1083,9 @@ new province stonehills = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = stonehills
-	name = "StoneHills"
+	name = "Stonehills"
 	color = { 251 168 205 }
 	history = {
 		owner = STO
@@ -1111,7 +1112,7 @@ new province skyborn_altar = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = mountain
 	area = bromjunaar
 	name = "Skyborn Altar"
 	color = { 127 159 110 }
@@ -1135,7 +1136,7 @@ new province skyborn_passage = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = mountain
 	area = bromjunaar
 	name = "Skyborn Passage"
 	color = { 132 217 230 }
@@ -1159,7 +1160,7 @@ new province bromjunaar = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = mountain
 	area = bromjunaar
 	name = "Bromjunaar"
 	color = { 178 182 185 }
@@ -1188,7 +1189,7 @@ new province bromjunaar_approach = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = myrwatch
 	name = "Bromjunaar Approach"
 	color = { 148 219 213 }
@@ -1217,7 +1218,7 @@ new province snowy_pines = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = hills
 	area = myrwatch
 	name = "Snowy Pines"
 	color = { 151 229 253 }
@@ -1241,7 +1242,7 @@ new province abundant_mines = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = highlands
 	area = greenspring_hollow
 	name = "Abundant Mines"
 	color = { 134 143 148 }
@@ -1270,7 +1271,7 @@ new province eldersblood_peak = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = mountain
 	area = rannveigs_fast
 	name = "Eldersblood Peak"
 	color = { 157 144 149 }
@@ -1294,7 +1295,7 @@ new province cold_rock_pass = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = mountain
 	area = rannveigs_fast
 	name = "Cold Rock Pass"
 	color = { 210 242 158 }
@@ -1323,7 +1324,7 @@ new province myrwatch = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = myrwatch
 	name = "Myrwatch"
 	color = { 140 212 206 }
@@ -1352,7 +1353,7 @@ new province bjorn_ambush = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = forest
 	area = kjenstag
 	name = "Bjorn Ambush"
 	color = { 198 145 155 }
@@ -1381,7 +1382,7 @@ new province folks_gathering = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = kjenstag
 	name = "Folk's Gathering"
 	color = { 217 228 123 }
@@ -1414,7 +1415,7 @@ new province kjenstag = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = kjenstag
 	name = "Kjenstag"
 	color = { 252 167 203 }
@@ -1447,7 +1448,7 @@ new province rotten_trees = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = northern_morthal
 	name = "Rotten Trees"
 	color = { 249 189 239 }
@@ -1480,7 +1481,7 @@ new province morthal_colony = {
     height = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
-
+	terrain = marsh
 	area = northern_morthal
 	name = "Morthal Colony"
 	color = { 219 196 224 }
