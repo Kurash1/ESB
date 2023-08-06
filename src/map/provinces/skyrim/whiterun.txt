@@ -450,9 +450,9 @@ new province liesekke = {
 	terrain = steppe
 	color = { 208 193 184 }
 	history = {
-		owner = BRK
-		controller = BRK
-		add_core = BRK
+		owner = BCM
+		controller = BCM
+		add_core = BCM
 		religion = nordic_pantheon
 		culture = nord
 		hre = yes
@@ -488,9 +488,9 @@ new province tovajard = {
 		
 		capital = ""
 		is_city = no
-		owner = BRK
-		controller = BRK
-		add_core = BRK
+		owner = BCM
+		controller = BCM
+		add_core = BCM
 	}
 }
 new province hefydis = {
@@ -517,12 +517,9 @@ new province hefydis = {
 		
 		capital = ""
 		is_city = no
-		owner = SHS
-		controller = SHS
-		add_core = SHS
-		57.1.1 = {
-			is_city = no
-		}
+		owner = BCM
+		controller = BCM
+		add_core = BCM
 	}
 }
 new area granitehill = {
@@ -617,9 +614,9 @@ new province harmugstahl = {
 		
 		capital = ""
 		is_city = no
-		owner = SHS
-		controller = SHS
-		add_core = SHS
+		owner = BCM
+		controller = BCM
+		add_core = BCM
 		57.1.1 = {
 			is_city = no
 		}
@@ -685,9 +682,6 @@ new province lydvild = {
 		owner = BCM
 		controller = BCM
 		add_core = BCM
-		57.1.1 = {
-			is_city = yes
-		}
 	}
 }
 new province annihilarchs_summit = {
@@ -1241,6 +1235,7 @@ new province whiterun = {
 	name = "Whiterun"
 	terrain = hills
 	color = { 255 109 254 }
+	base_development = 18
 	history = {
 		owner = JRR
 		controller = JRR

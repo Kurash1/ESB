@@ -57,7 +57,7 @@ new advisor_type inquisitor = {
 	desc = "Having gained experience in rooting out those who do not follow proper orthodoxy in the faith, the inquisitor can use his talents to spot those who are behaving strangely in government."
 	
 	monarch_power = ADM
-	allow_only_owner_religion = yes
+	#allow_only_owner_religion = yes #Audax Complains?
 	modifier = {
 		global_missionary_strength = 0.02
 	}

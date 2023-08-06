@@ -16,6 +16,7 @@ cb_native_reservation = {
 
 	war_goal = ge_native_reservation
 }
+
 cb_es_scenario = {
 	valid_for_subject = no
 
@@ -24,122 +25,6 @@ cb_es_scenario = {
 	}
 
 	war_goal = es_scenario
-}
-
-cb_es_nordic_feud = {
-	valid_for_subject = no
-	
-	prerequisites_self = {
-		has_country_flag = es_12_nordic_feud_flag
-		culture_group = northern_cg
-	}
-
-	prerequisites = {
-		FROM = {
-		    is_neighbor_of = ROOT
-			culture_group = northern_cg
-		}
-	}
-
-	war_goal = es_nordic_feud
-}
-
-cb_es_tribal_war = {
-	valid_for_subject = no
-	
-	prerequisites_self = {
-		culture_group = minotaur_cg
-	}
-
-	prerequisites = {
-		FROM = {
-		    is_neighbor_of = ROOT
-			culture_group = minotaur_cg
-		}
-	}
-
-	war_goal = es_nordic_feud
-}
-
-cb_es_witch_hunting = {
-	valid_for_subject = no
-	
-	prerequisites_self = {
-		has_country_flag = es_magic_persecution_flag
-	}
-	
-	prerequisites = {
-		FROM = {
-		    has_country_flag = es_magic_nation_flag
-		}
-	}
-
-	war_goal = es_witch_hunting
-}
-cb_become_elector_of_hre = {
-	valid_for_subject = no
-	
-	prerequisites_self = {
-		is_part_of_hre = yes
-		is_elector = no
-	}
-	
-	prerequisites = {
-		FROM = {
-			is_elector = yes
-		}
-	}
-
-	war_goal = es_become_elector_of_hre
-}
-
-cb_tsaesci_hunger = {
-	valid_for_subject = yes
-	
-	prerequisites_self = {
-		primary_culture = tsaesci
-	}
-	
-	prerequisites = {
-		FROM = {
-			is_neighbor_of = ROOT
-		}
-	}
-
-	war_goal = es_tsaesci_hunger
-}
-
-#cb_fight_dragon_cultists = {
-#	valid_for_subject = no
-#	
-#	prerequisites_self = {
-#		culture_group = northern_cg
-#		NOT = { religion = dragon_cult }
-#	}
-#	
-#	prerequisites = {
-#		FROM = {
-#			is_neighbor_of = ROOT
-#			religion = dragon_cult
-#		}
-#	}
-#
-#	war_goal = es_show_supremacy
-#}
-
-cb_fight_nords = {
-	prerequisites_self = {
-		primary_culture = reachmen
-	}
-
-	prerequisites = {
-		FROM = {
-			is_neighbor_of = ROOT
-			primary_culture = nord
-		}
-	}
-
-	war_goal = es_show_supremacy
 }
 
 cb_pte_liberation = {

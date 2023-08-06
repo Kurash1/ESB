@@ -1,4 +1,0 @@
-opinion_invited_to_party = {
-	opinion = 25
-	yearly_decay = 5
-}
