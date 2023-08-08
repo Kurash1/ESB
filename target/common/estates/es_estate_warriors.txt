@@ -7,31 +7,7 @@ estate_warriors = {
 	}
 	# If true, country will get estate
 	trigger = {
-		OR = {
-			always = yes
-			has_country_flag = estate_warriors
-			primary_culture = ashlander_dunmer
-			primary_culture = ashlander_chimer
-			primary_culture = reachmen
-			primary_culture = corelanyan
-			primary_culture = falmer
-			primary_culture = nedic
-			primary_culture = islander
-			culture_group = bosmer_cg
-			culture_group = kamal_cg
-			culture_group = khajiiti_cg
-			culture_group = lilmothiit_cg
-			culture_group = tangmo_cg
-			culture_group = void_cg
-			culture_group = marsh_men_cg
-			culture_group = goblin_cg
-			culture_group = giant_cg
-			culture_group = marsh_cg
-			culture_group = imga_cg
-			culture_group = minotaur_cg
-			culture_group = orsimer_cg
-			culture_group = northern_cg
-		}
+		always = no
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -69,24 +45,7 @@ estate_warriors = {
 	# 	}
 	# 	loyalty = <float>
 	# }
-	custom_name = {
-		desc = warriors_companions
-		trigger = {
-			primary_culture = nord
-		}
-	}
-	custom_name = {
-		desc = warriors_fighters_guild
-		trigger = {
-			culture_group = cyrodiil_cg
-		}
-	}
-	custom_name = {
-		desc = warriors_sword_singers
-		trigger = {
-			primary_culture = yokudan
-		}
-	}
+
 	privileges = {
 		elite_entourage
 		give_gifts

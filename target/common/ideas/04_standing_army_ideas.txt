@@ -445,15 +445,15 @@ shock0 = {
 	category = MIL
 	
 	trigger = {
-		OR = {
+		#OR = {
 			# Normal
-			culture_group = northern_cg
-			culture_group = yokudo_redguard_cg
-			culture_group = orsimer_cg
-			culture_group = kamal_cg
+			#culture_group = northern_cg
+			#culture_group = yokudo_redguard_cg
+			#culture_group = orsimer_cg
+			#culture_group = kamal_cg
 			# Hidden
 			full_idea_group = quality_ideas
-		}
+		#}
 	}
 	bonus = {
 		shock_damage_received = -0.1
@@ -560,7 +560,7 @@ esb_professionalism = {
 	trigger = {
 		OR = {
 			#Hidden
-			primary_culture = imperial
+			#primary_culture = imperial
 			army_professionalism = 50
 			#Normal
 			full_idea_group = quality_ideas

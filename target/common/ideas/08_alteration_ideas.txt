@@ -137,17 +137,17 @@ esb_weathermagic = {
 	category = MIL
 	
 	trigger = {
-		OR = {
+		#OR = {
 			#Hidden
-			culture_group = marsh_cg
-			primary_culture = ayleid
-			culture_group = dwemer_cg
-			primary_culture = vampire
-			culture_group = maormer_cg
-			culture_group = tsaesci_cg
+			#culture_group = marsh_cg
+			#primary_culture = ayleid
+			#culture_group = dwemer_cg
+			#primary_culture = vampire
+			#culture_group = maormer_cg
+			#culture_group = tsaesci_cg
 			#Normal
 			full_idea_group = alteration_ideas
-		}
+		#}
 	}
 	bonus = {
 		global_supply_limit_modifier = 0.25
@@ -223,14 +223,14 @@ esb_sight = {
 	category = ADM
 	
 	trigger = {
-		OR = {
+		#OR = {
 			#Hidden
-			primary_culture = imga
-			culture_group = velothi_cg
-			primary_culture = reachmen
+			#primary_culture = imga
+			#culture_group = velothi_cg
+			#primary_culture = reachmen
 			#Normal
 			full_idea_group = esb_thaumaturgy
-		}
+		#}
 	}
 	bonus = {
 		all_power_cost = -0.05
@@ -271,12 +271,12 @@ esb_timemagic = {
 	category = ADM
 	
 	trigger = {
-		OR = {
+		#OR = {
 			#Hidden
-			culture_group = dwemer_cg
+			#culture_group = dwemer_cg
 			#Normal
 			full_idea_group = esb_thaumaturgy
-		}
+		#}
 	}
 	bonus = {
 		country_admin_power = 1
@@ -360,13 +360,13 @@ esb_dark_magic = {
 	category = ADM
 	
 	trigger = {
-		OR = {
+		#OR = {
 			#Hidden
-			culture_group = daedra_cg
-			primary_culture = reachmen
+			#culture_group = daedra_cg
+			#primary_culture = reachmen
 			#Normal
 			full_idea_group = mysticism_ideas
-		}
+		#}
 	}
 	bonus = {
 		war_exhaustion = -0.02

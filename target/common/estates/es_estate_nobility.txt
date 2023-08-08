@@ -7,32 +7,7 @@ estate_nobility = {
 	}
 	# If true, country will get estate
 	trigger = {
-		OR = {
-			has_country_flag = estate_nobility
-			primary_culture = house_dunmer
-			primary_culture = house_chimer
-			primary_culture = altmer
-			primary_culture = sinistral
-			primary_culture = barsaebic
-			primary_culture = ayleid
-			primary_culture = snow_elven
-			primary_culture = nord
-			primary_culture = imperial
-			primary_culture = nibenean
-			primary_culture = colovian
-			primary_culture = akaviri
-			primary_culture = breton
-			culture_group = bosmer_cg
-			culture_group = maormer_cg
-			culture_group = tsaesci_cg
-			culture_group = khajiiti_cg
-			culture_group = lilmothiit_cg
-			culture_group = daedra_cg
-			culture_group = dwemer_cg
-			culture_group = po_tun_cg
-			culture_group = dead_cg
-			culture_group = sload_cg
-		}
+		always = no
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -71,12 +46,6 @@ estate_nobility = {
 	# 	}
 	# 	loyalty = <float>
 	# }
-	custom_name = {
-		desc = estate_nobility_tribal # The new name to apply
-		trigger = {
-			government = tribal
-		}
-	}
 	privileges = {
 		encourage_patronage
 		recruit_officers

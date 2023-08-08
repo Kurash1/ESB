@@ -204,10 +204,10 @@ innovativeness_ideas = {
 		OR = { 
 			#Hidden
 			innovativeness = 25
-			culture_group = dwemer_cg
-			any_neighbor_country = {
-				tech_difference = 5
-			} 
+			#culture_group = dwemer_cg
+			#any_neighbor_country = {
+			#	tech_difference = 5
+			#} 
 			#Normal
 			full_idea_group = economic_ideas
 		}
@@ -271,7 +271,7 @@ esb_slavers = {
 	trigger = {
 		OR = { 
 			#Hidden
-			culture_group = velothi_cg
+			#culture_group = velothi_cg
 			estate_influence = {
 				estate = estate_slavers
 				influence = 80

@@ -119,15 +119,7 @@ royal_marriage = {
 annexationaction = {
 	condition = {
 		tooltip = ANNEX_TOO_LOW
-		potential = {
-			FROM = {
-				OR = {
-					is_subject_of_type = core_eyalet
-					is_subject_of_type = appanage
-					vassal_of = ROOT
-				}
-			}
-		}
+		potential = { }
 		allow = {
 			FROM = {
 				has_opinion = {
@@ -176,6 +168,7 @@ vassalaction = {
 
 abandon_union = { 
 	condition = {
+		tooltip = ABANDON_UNION_AT_WAR
 		potential = {
 		}
 		allow = {
@@ -246,8 +239,4 @@ tributary_state_action = { }
 
 ask_for_tributary_state_action = { }
 
-break_alliance = {
-	effect = {
-		on_alliance_broken_effect = yes
-	}
-}
+break_alliance = { }

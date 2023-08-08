@@ -5,7 +5,7 @@ fire0 = {
 		OR = {
 			#Hidden
 			#tag = YOL
-			culture_group = bosmer_cg
+			#culture_group = bosmer_cg
 			artillery_fraction = 0.5
 			has_leader_with = {
 				fire = 6
@@ -67,13 +67,13 @@ esb_bloodmagic = {
 	category = MIL
 	
 	trigger = {
-		OR = {
+		#OR = {
 			#Hidden
-			primary_culture = vampire
-			primary_culture = tsaesci
+			#primary_culture = vampire
+			#primary_culture = tsaesci
 			#Normal
 			full_idea_group = destruction_ideas
-		}
+		#}
 	}
 	bonus = {
 		discipline = 0.05
@@ -115,15 +115,15 @@ esb_watermagic = {
 	category = MIL
 	
 	trigger = {
-		OR = {
+		#OR = {
 			#Hidden
-			culture_group = marsh_cg
-			primary_culture = ayleid
-			culture_group = maormer_cg
-			culture_group = sload_cg
+			#culture_group = marsh_cg
+			#primary_culture = ayleid
+			#culture_group = maormer_cg
+			#culture_group = sload_cg
 			#Normal
 			full_idea_group = destruction_ideas
-		}
+		#}
 	}
 	bonus = {
 		naval_attrition = -0.15
@@ -164,10 +164,10 @@ esb_warmagic = {
 	trigger = {
 		OR = { 
 			#Hidden
-			primary_culture = imperial
-			primary_culture = colovian
-			primary_culture = nibenean
-			primary_culture = breton
+			#primary_culture = imperial
+			#primary_culture = colovian
+			#primary_culture = nibenean
+			#primary_culture = breton
 			estate_influence = {
 				estate = estate_mages
 				influence = 80

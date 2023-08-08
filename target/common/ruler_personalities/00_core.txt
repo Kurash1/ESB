@@ -3102,17 +3102,7 @@ malevolent_personality = {
 # Immortal, for games converted from CKII, but also available in Nation Designer.
 immortal_personality = {
 	
-	allow = {	
-	    NOT = { ruler_culture = vampire }
-		NOT = { ruler_culture = soul_shriven }
-		NOT = { ruler_culture = daedra }
-		NOT = { consort_culture = vampire }
-		NOT = { consort_culture = soul_shriven }
-		NOT = { consort_culture = daedra }
-		NOT = { heir_culture = vampire }
-		NOT = { heir_culture = soul_shriven }
-		NOT = { heir_culture = daedra }
-	}
+	allow = { }
 	
 	chance = {
 		modifier = {

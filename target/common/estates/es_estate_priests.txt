@@ -7,33 +7,7 @@ estate_priests = {
 	}
 	# If true, country will get estate
 	trigger = {
-		OR = {
-			has_country_flag = estate_priests
-			primary_culture = altmer
-			primary_culture = sinistral
-			primary_culture = barsaebic
-			culture_group = snow_elves_cg
-			culture_group = khajiiti_cg
-			culture_group = northern_cg
-			culture_group = velothi_cg
-			culture_group = bosmer_cg
-			culture_group = maormer_cg
-			culture_group = half_blood_cg
-			culture_group = cyrodiil_cg
-			culture_group = transpandomaic_cg
-			culture_group = lilmothiit_cg
-			culture_group = daedra_cg
-			culture_group = tangmo_cg
-			culture_group = void_cg
-			culture_group = dead_cg
-			culture_group = marsh_men_cg
-			culture_group = goblin_cg
-			culture_group = giant_cg
-			culture_group = marsh_cg
-			culture_group = imga_cg
-			culture_group = minotaur_cg
-			culture_group = orsimer_cg
-		}
+		always = no
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -76,18 +50,7 @@ estate_priests = {
 	######################################################
 	# Also add custom names in customizable localization #
 	######################################################
-	custom_name = {
-		desc = estate_priests_nisswo
-		trigger = { 
-			culture_group = marsh_cg
-		}
-	}
-	custom_name = {
-		desc = estate_priests_vateshrans
-		trigger = {
-			primary_culture = reachmen
-		}
-	}
+
 
 	privileges = {
 		claim_right_of_investiture

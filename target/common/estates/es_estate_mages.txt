@@ -7,27 +7,7 @@ estate_mages = {
 	}
 	# If true, country will get estate
 	trigger = {
-		OR = {
-			has_country_flag = estate_mages
-			primary_culture = house_dunmer
-			primary_culture = house_chimer
-			primary_culture = snow_elven
-			primary_culture = nedic
-			primary_culture = imperial
-			primary_culture = nibenean
-			primary_culture = colovian
-			primary_culture = akaviri
-			culture_group = bosmer_cg
-			culture_group = half_blood_cg
-			culture_group = maormer_cg
-			culture_group = high_elves_cg
-			culture_group = tsaesci_cg
-			culture_group = kamal_cg
-			culture_group = dwemer_cg
-			culture_group = tangmo_cg
-			culture_group = po_tun_cg
-			culture_group = sload_cg
-		}
+		always = no
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -66,21 +46,6 @@ estate_mages = {
 	# 	}
 	# 	loyalty = <float>
 	# }
-	custom_name = {
-		desc = estate_mages_tribal # The new name to apply
-		trigger = {
-			OR = {
-				primary_culture = reachmen
-				culture_group = orsimer_cg
-				culture_group = bosmer_cg
-				culture_group = khajiiti_cg
-				AND = {
-					culture_group = northern_cg
-					NOT = { primary_culture = nord }
-				}
-			}
-		}
-	}
 	privileges = {
 		court_wizards
 		battle_mages
