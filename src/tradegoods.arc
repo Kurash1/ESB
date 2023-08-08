@@ -1,5 +1,5 @@
 new tradegood wood = {
-	name = "wood"
+	name = "Wood"
 	desc = "Chopped down tree"
 	color = { 90 77 28 }
 	modifier = {
@@ -15,7 +15,7 @@ new tradegood wood = {
 	}
 }
 new tradegood iron = {
-	name = "iron"
+	name = "Iron"
 	desc = ""
 	color = { 52 52 52 }
 	modifier = {
@@ -31,7 +31,7 @@ new tradegood iron = {
 	}
 }
 new tradegood steel = {
-	name = "steel"
+	name = "Steel"
 	desc = "Iron smelted with corundum"
 	color = { 130 130 130 }
 	modifier = {
@@ -48,7 +48,7 @@ new tradegood steel = {
 	}
 }
 new tradegood fish = {
-	name = "fish"
+	name = "Fish"
 	desc = "Some fishy business"
 	color = { 141 169 197 }
 	modifier = {
@@ -96,7 +96,7 @@ new tradegood ale = {
 	}
 }
 new tradegood wine = {
-	name = "wine"
+	name = "Wine"
 	desc = "In vino veritas"
 	color = { 70 16 124 }
 	modifier = {
@@ -112,7 +112,7 @@ new tradegood wine = {
 	}
 }
 new tradegood paper = {
-	name = "paper"
+	name = "Paper"
 	desc = "Great for writing on, just don't cut yourself with it"
 	color = { 240 255 172 }
 	modifier = {
@@ -128,7 +128,7 @@ new tradegood paper = {
 	}
 }
 new tradegood alchemical_ingredients = {
-	name = "alchemical ingredients"
+	name = "Alchemical Ingredients"
 	desc = "A bunch of herbs and disgusting things, that when boiled become magical"
 	color = { 62 149 81 }
 	modifier = {
@@ -144,7 +144,7 @@ new tradegood alchemical_ingredients = {
 	}
 }
 new tradegood r_alchemical_ingredients = {
-	name = "rare alchemical ingredients"
+	name = "Rare Alchemical Ingredients"
 	desc = "Rare disgusting stuff, this time seriously magical without even boiling"
 	color = { 14 137 27 }
 	modifier = {
@@ -160,7 +160,7 @@ new tradegood r_alchemical_ingredients = {
 	}
 }
 new tradegood potions = {
-	name = "potions"
+	name = "Potions"
 	desc = "Magical liquid in a fancy bottle isn't it?"
 	color = { 253 65 71 }
 	modifier = {
@@ -176,7 +176,7 @@ new tradegood potions = {
 	}
 }
 new tradegood stone = {
-	name = "stone"
+	name = "Stone"
 	desc = "Usually gray - the thing you get after smacking a mountain with a pickaxe for long enough"
 	color = { 185 185 185 }
 	modifier = {
@@ -192,7 +192,7 @@ new tradegood stone = {
 	}
 }
 new tradegood gems = {
-	name = "gems"
+	name = "Gems"
 	desc = "Some fancy rocks found deep in Nirn"
 	color = { 78 15 203 }
 	modifier = {
@@ -208,7 +208,7 @@ new tradegood gems = {
 	}
 }
 new tradegood gold = {
-	name = "gold"
+	name = "Gold"
 	desc = "We're rich!"
 	color = { 196 215 26 }
 	modifier = {
@@ -222,8 +222,8 @@ new tradegood gold = {
 	}
 }
 new tradegood silver = {
-	name = "silver"
-	desc = "Good for killing undead (if they are even alive)"
+	name = "Silver"
+	desc = "Good for killing undead and also werewolves "
 	color = { 205 205 205 }
 	modifier = {
 	}

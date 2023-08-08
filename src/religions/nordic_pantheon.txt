@@ -81,10 +81,13 @@ new personal_deity jhunal = {
 
 new personal_deity shor = {
 	name = "Shor"
-	desc = ""
+	desc = "He tricked the gods into creating the Universe .He was executed for his sins ,as it should be."
 	sprite = 6
 	
-	modifiers = { }
+	modifiers = {
+		country_military_power = 1
+		legitimacy = 1
+	}
 	
 	potential = {
 		religion = nordic_pantheon
