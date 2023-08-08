@@ -604,7 +604,7 @@ new country yngvild = {
 	tag = YNG
 	name = "Yngvild"
 	adj = "Yngvild"
-	color = { 50 0 50 }
+	color = { 100 0 50 }
 	
 	capital = windhelm
 }
@@ -624,7 +624,7 @@ new country anthor = {
 	tag = ANT
 	name = "Anthor"
 	adj = "Anthor"
-	color = { 230 242 255 }
+	color = { 183 100 75 }
 	
 	capital = windhelm
 }
@@ -644,7 +644,7 @@ new country snow-veil = {
 	tag = SNV
 	name = "Snow-Veil"
 	adj = "Snow-Veil"
-	color = { 230 230 255 }
+	color = { 0 100 150 }
 	
 	capital = windhelm
 }
