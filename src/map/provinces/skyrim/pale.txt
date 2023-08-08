@@ -104,7 +104,7 @@ new province njadhilde = {
 		add_core = FRF
 	}
 }
-new province hjolski = {
+new province nightcaller = {
     position = {
         1802.000 2061.000 1802.000 2061.000 1802.000 2061.000 1802.000 2061.000 1802.000 2061.000 1802.000 2061.000 1802.000 2061.000
     }
@@ -116,7 +116,7 @@ new province hjolski = {
     }
 
 	area = nightcaller
-	name = "Hjolski"
+	name = "Nightcaller"
 	terrain = highlands	
 	color = { 101 145 205 }
 	history = {
@@ -134,7 +134,7 @@ new province hjolski = {
 		add_core = FRF
 	}
 }
-new province dawnstar = {
+new province lower_nightcaller = {
     position = {
         1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000
     }
@@ -146,7 +146,7 @@ new province dawnstar = {
     }
 
 	area = nightcaller
-	name = "Dawnstar"
+	name = "Lower Nightcaller"
 	terrain = mountain
 	color = { 231 116 186 }
 	history = {
@@ -164,7 +164,6 @@ new province dawnstar = {
 		add_core = FRF
 	}
 }
-
 new province softta = {
     position = {
         1769.000 2069.000 1769.000 2069.000 1769.000 2069.000 1769.000 2069.000 1769.000 2069.000 1769.000 2069.000 1769.000 2069.000
@@ -259,7 +258,7 @@ new province verglas = {
 		is_city = yes
 	}
 }
-new province 6003 = {
+new province ice_isle = {
     position = {
         1710.000 2120.000 1710.000 2120.000 1710.000 2120.000 1710.000 2120.000 1710.000 2120.000 1710.000 2120.000 1710.000 2120.000
     }
@@ -271,7 +270,7 @@ new province 6003 = {
     }
 
 	area = north_isles
-	name = "6003"
+	name = "Ice Isle"
 	terrain = glacier
 	color = { 103 103 126 }
 	history = {
@@ -289,7 +288,7 @@ new province 6003 = {
 		add_core = DAW
 	}
 }
-new province 9002 = {
+new province pale_camp = {
     position = {
         1741.000 2064.000 1741.000 2064.000 1741.000 2064.000 1741.000 2064.000 1741.000 2064.000 1741.000 2064.000 1741.000 2064.000
     }
@@ -301,7 +300,7 @@ new province 9002 = {
     }
 
 	area = pale_coast	
-	name = "9002"
+	name = "Pale Camp"
 	terrain = coastline
 	color = { 216 237 115 }
 	history = {
@@ -349,7 +348,7 @@ new province olavnir = {
 		add_core = DAW
 	}
 }
-new province holmif = {
+new province dawnstar = {
     position = {
         1784.000 2067.000 1784.000 2067.000 1784.000 2067.000 1784.000 2067.000 1784.000 2067.000 1784.000 2067.000 1784.000 2067.000
     }
@@ -361,7 +360,7 @@ new province holmif = {
     }
 
 	area = dawnstar
-	name = "Holmif"
+	name = "Dawnstar"
 	terrain = coastline
 	color = { 136 112 123 }
 	history = {
@@ -379,7 +378,7 @@ new province holmif = {
 		is_city = yes
 	}
 }
-new province saarthal = {
+new province dawn_sanctuary = {
     position = {
         1792.000 2077.000 1792.000 2077.000 1792.000 2077.000 1792.000 2077.000 1792.000 2077.000 1792.000 2077.000 1792.000 2077.000
     }
@@ -391,7 +390,7 @@ new province saarthal = {
     }
 
 	area = dawn_sanctuary
-	name = "Saarthal"
+	name = "Dawn Sanctuary"
 	terrain = coastline
 	color = { 225 136 185 }
 	history = {
@@ -439,7 +438,7 @@ new province mavetlogi = {
 		is_city = yes
 	}
 }
-new province jentta = {
+new province windward = {
     position = {
         1777.000 2055.000 1777.000 2055.000 1777.000 2055.000 1777.000 2055.000 1777.000 2055.000 1777.000 2055.000 1777.000 2055.000
     }
@@ -451,7 +450,7 @@ new province jentta = {
     }
 
 	area = dawnstar
-	name = "Jentta"
+	name = "Windward"
 	terrain = forest
 	color = { 134 114 250 }
 	history = {
@@ -469,7 +468,6 @@ new province jentta = {
 		add_core = WIN
 	}
 }
-
 new province ilfbbi = {
     position = {
         1758.000 2054.000 1758.000 2054.000 1758.000 2054.000 1758.000 2054.000 1758.000 2054.000 1758.000 2054.000 1758.000 2054.000
@@ -500,8 +498,7 @@ new province ilfbbi = {
 		is_city = yes
 	}
 }
-
-new province ignagja = {
+new province frostmere = {
     position = {
         1759.000 2033.000 1759.000 2033.000 1759.000 2033.000 1759.000 2033.000 1759.000 2033.000 1759.000 2033.000 1759.000 2033.000
     }
@@ -513,7 +510,7 @@ new province ignagja = {
     }
 
 	area = red_road
-	name = "Ignagja"
+	name = "Frostmere"
 	terrain = forest
 	color = { 102 191 194 }
 	history = {
@@ -531,8 +528,7 @@ new province ignagja = {
 		is_city = yes
 	}
 }
-
-new province valy = {
+new province mzinchaleft = {
     position = {
         1760.000 2043.000 1760.000 2043.000 1760.000 2043.000 1760.000 2043.000 1760.000 2043.000 1760.000 2043.000 1760.000 2043.000
     }
@@ -544,7 +540,7 @@ new province valy = {
     }
 
 	area = red_road
-	name = "Valy"
+	name = "Mzinchaleft"
 	terrain = hills
 	color = { 221 169 104 }
 	history = {
@@ -562,7 +558,7 @@ new province valy = {
 		is_city = yes
 	}
 }
-new province hefdreid = {
+new province red_road_pass = {
     position = {
         1776.000 2039.000 1776.000 2039.000 1776.000 2039.000 1776.000 2039.000 1776.000 2039.000 1776.000 2039.000 1776.000 2039.000
     }
@@ -574,7 +570,7 @@ new province hefdreid = {
     }
 
 	area = red_road
-	name = "Hefdreid"
+	name = "Red Road Pass"
 	terrain = forest
 	color = { 123 196 255 }
 	history = {
@@ -592,8 +588,7 @@ new province hefdreid = {
 		is_city = yes
 	}
 }
-
-new province virna = {
+new province hall_of_the_vigilant = {
     position = {
         1769.000 2023.000 1769.000 2023.000 1769.000 2023.000 1769.000 2023.000 1769.000 2023.000 1769.000 2023.000 1769.000 2023.000
     }
@@ -605,7 +600,7 @@ new province virna = {
     }
 
 	area = dunstad
-	name = "Virna"
+	name = "Hall of the Vigilant"
 	terrain = hills
 	color = { 242 205 122 }
 	history = {
@@ -648,7 +643,7 @@ new province reyhi = {
 		add_core = WIN
 	}
 }
-new province oddth = {
+new province dunstad = {
     position = {
         1781.000 2015.000 1781.000 2015.000 1781.000 2015.000 1781.000 2015.000 1781.000 2015.000 1781.000 2015.000 1781.000 2015.000
     }
@@ -660,7 +655,7 @@ new province oddth = {
     }
 
 	area = dunstad
-	name = "Oddth"
+	name = "Dunstad"
 	terrain = forest
 	color = { 159 114 238 }
 	history = {
@@ -708,7 +703,7 @@ new province emfrljot = {
 		add_core = DNS
 	}
 }
-new province 6002 = {
+new province giants_gap = {
     position = {
         1795.000 1996.000 1795.000 1996.000 1795.000 1996.000 1795.000 1996.000 1795.000 1996.000 1795.000 1996.000 1795.000 1996.000
     }
@@ -720,7 +715,7 @@ new province 6002 = {
     }
 
 	area = old_yorgrim
-	name = "6002"
+	name = "Giant's Gap"
 	terrain = forest
 	color = { 147 145 124 }
 	history = {
@@ -768,7 +763,7 @@ new province freaold = {
 		add_core = SID
 	}
 }
-new province fort_greymoor = {
+new province blizzard_rest = {
     position = {
         1801.000 1985.000 1801.000 1985.000 1801.000 1985.000 1801.000 1985.000 1801.000 1985.000 1801.000 1985.000 1801.000 1985.000
     }
@@ -780,7 +775,7 @@ new province fort_greymoor = {
     }
 
 	area = old_yorgrim
-	name = "Fort Greymoor"
+	name = "Blizzard Rest"
 	terrain = forest
 	color = { 200 132 226 }
 	history = {
@@ -798,7 +793,7 @@ new province fort_greymoor = {
 		add_core = SID
 	}
 }
-new province rigla = {
+new province three_point = {
     position = {
         1817.000 1983.000 1817.000 1983.000 1817.000 1983.000 1817.000 1983.000 1817.000 1983.000 1817.000 1983.000 1817.000 1983.000
     }
@@ -810,7 +805,7 @@ new province rigla = {
     }
 
 	area = korvanjund
-	name = "Rigla"
+	name = "Three Point"
 	terrain = forest
 	color = { 249 227 251 }
 	history = {
@@ -828,7 +823,7 @@ new province rigla = {
 		add_core = SID
 	}
 }
-new province the_dreaded_refuge = {
+new province silverdrift = {
     position = {
         1831.000 1996.000 1831.000 1996.000 1831.000 1996.000 1831.000 1996.000 1831.000 1996.000 1831.000 1996.000 1831.000 1996.000
     }
@@ -840,7 +835,7 @@ new province the_dreaded_refuge = {
     }
 
 	area = korvanjund
-	name = "The Dreaded Refuge"
+	name = "Silverdrift"
 	terrain = forest
 	color = { 218 152 209 }
 	history = {
@@ -853,7 +848,7 @@ new province the_dreaded_refuge = {
 		trade_goods = unknown
 	}
 }
-new province ronaior = {
+new province nightgate = {
     position = {
         1850.000 1992.000 1850.000 1992.000 1850.000 1992.000 1850.000 1992.000 1850.000 1992.000 1850.000 1992.000 1850.000 1992.000
     }
@@ -865,7 +860,7 @@ new province ronaior = {
     }
 
 	area = nightgate
-	name = "Ronaior"
+	name = "Nightgate"
 	terrain = hills
 	color = { 179 239 253 }
 	history = {
@@ -883,7 +878,7 @@ new province ronaior = {
 		is_city = yes
 	}
 }
-new province skjtte = {
+new province ironbind_barrow = {
     position = {
         1853.000 2006.000 1853.000 2006.000 1853.000 2006.000 1853.000 2006.000 1853.000 2006.000 1853.000 2006.000 1853.000 2006.000
     }
@@ -895,7 +890,7 @@ new province skjtte = {
     }
 
 	area = nightgate
-	name = "Skjtte"
+	name = "Ironbind Barrow"
 	terrain = highlands
 	color = { 199 116 131 }
 	history = {
@@ -913,7 +908,7 @@ new province skjtte = {
 		is_city = yes
 	}
 }
-new province yorgrim_overlook = {
+new province olavdolyn = {
     position = {
         1871.000 1993.000 1871.000 1993.000 1871.000 1993.000 1871.000 1993.000 1871.000 1993.000 1871.000 1993.000 1871.000 1993.000
     }
@@ -926,7 +921,7 @@ new province yorgrim_overlook = {
 
 	area = yorgrim_overlook
 	terrain = forest
-	name = "Yorgrim Overlook"
+	name = "Olavdolyn"
 	color = { 147 190 175 }
 	history = {
 		religion = nordic_pantheon
@@ -943,7 +938,7 @@ new province yorgrim_overlook = {
 		add_core = NIG
 	}
 }
-new province olavdolyn = {
+new province yorgrim_overlook = {
     position = {
         1880.000 2005.000 1880.000 2005.000 1880.000 2005.000 1880.000 2005.000 1880.000 2005.000 1880.000 2005.000 1880.000 2005.000
     }
@@ -955,7 +950,7 @@ new province olavdolyn = {
     }
 
 	area = yorgrim_overlook
-	name = "Olavdolyn"
+	name = "Yorgrim Overlook"
 	terrain = mountain
 	color = { 101 124 120 }
 	history = {
@@ -1003,7 +998,7 @@ new province jalaeigr = {
 		add_core = NIG
 	}
 }
-new province fjoltla = {
+new province yorgrim_ressurection = {
     position = {
         1891.000 1985.000 1891.000 1985.000 1891.000 1985.000 1891.000 1985.000 1891.000 1985.000 1891.000 1985.000 1891.000 1985.000
     }
@@ -1015,7 +1010,7 @@ new province fjoltla = {
     }
 
 	area = yorgrim_overlook
-	name = "Fjoltla"
+	name = "Yorgrim Ressurection"
 	terrain = hills
 	color = { 250 128 184 }
 	history = {
@@ -1033,7 +1028,7 @@ new province fjoltla = {
 		add_core = NIG
 	}
 }
-new province hatru = {
+new province lower_raldbthar = {
     position = {
         1876.000 1976.000 1876.000 1976.000 1876.000 1976.000 1876.000 1976.000 1876.000 1976.000 1876.000 1976.000 1876.000 1976.000
     }
@@ -1045,7 +1040,7 @@ new province hatru = {
     }
 
 	area = irkngthand
-	name = "Hatru"
+	name = "Lower Raldbthar"
 	terrain = forest
 	color = { 176 244 108 }
 	history = {
@@ -1058,7 +1053,7 @@ new province hatru = {
 		trade_goods = unknown
 	}
 }
-new province thrlda = {
+new province tumble_arch_pass = {
     position = {
         1854.000 1979.000 1854.000 1979.000 1854.000 1979.000 1854.000 1979.000 1854.000 1979.000 1854.000 1979.000 1854.000 1979.000
     }
@@ -1070,7 +1065,7 @@ new province thrlda = {
     }
 
 	area = irkngthand
-	name = "Thrlda"
+	name = "Tumble Arch Pass"
 	terrain = forest
 	color = { 105 228 132 }
 	history = {
@@ -1088,7 +1083,7 @@ new province thrlda = {
 		add_core = NIG
 	}
 }
-new province raldbthar = {
+new province shrouded_grove = {
     position = {
         1834.000 1981.000 1834.000 1981.000 1834.000 1981.000 1834.000 1981.000 1834.000 1981.000 1834.000 1981.000 1834.000 1981.000
     }
@@ -1100,7 +1095,7 @@ new province raldbthar = {
     }
 
 	area = korvanjund
-	name = "Raldbthar"
+	name = "Shrouded Grove"
 	terrain = forest
 	color = { 199 112 152 }
 	history = {
@@ -1121,7 +1116,7 @@ new province raldbthar = {
 		}
 	}
 }
-new province alerdis = {
+new province gold_drop = {
     position = {
         1832.000 1962.000 1832.000 1962.000 1832.000 1962.000 1832.000 1962.000 1832.000 1962.000 1832.000 1962.000 1832.000 1962.000
     }
@@ -1133,7 +1128,7 @@ new province alerdis = {
     }
 
 	area = shearpoint
-	name = "Alerdis"
+	name = "Gold Drop"
 	terrain = highlands
 	color = { 255 119 106 }
 	history = {
@@ -1189,7 +1184,7 @@ new province shearpoint = {
 		}
 	}
 }
-new province adicena = {
+new province fellglow = {
     position = {
         1835.000 1945.000 1835.000 1945.000 1835.000 1945.000 1835.000 1945.000 1835.000 1945.000 1835.000 1945.000 1835.000 1945.000
     }
@@ -1201,7 +1196,7 @@ new province adicena = {
     }
 
 	area = fellglow
-	name = "Adicena"
+	name = "Fellglow"
 	terrain = highlands
 	color = { 130 100 204 }
 	history = {
@@ -1219,7 +1214,7 @@ new province adicena = {
 		add_core = SHR
 	}
 }
-new province ysolerd = {
+new province upper_valtheim = {
     position = {
         1849.000 1943.000 1849.000 1943.000 1849.000 1943.000 1849.000 1943.000 1849.000 1943.000 1849.000 1943.000 1849.000 1943.000
     }
@@ -1231,7 +1226,7 @@ new province ysolerd = {
     }
 
 	area = fellglow
-	name = "Ysolerd"
+	name = "Upper Valtheim"
 	terrain = highlands
 	color = { 138 230 231 }
 	history = {
@@ -1249,7 +1244,7 @@ new province ysolerd = {
 		add_core = SHR
 	}
 }
-new province reysel = {
+new province ysmir_hill = {
     position = {
         1824.000 1951.000 1824.000 1951.000 1824.000 1951.000 1824.000 1951.000 1824.000 1951.000 1824.000 1951.000 1824.000 1951.000
     }
@@ -1261,7 +1256,7 @@ new province reysel = {
     }
 
 	area = fellglow
-	name = "Reysel"
+	name = "Ysmir Hill"
 	terrain = hills
 	color = { 194 221 146 }
 	history = {
@@ -1283,7 +1278,7 @@ new province reysel = {
 		}
 	}
 }
-new province friki = {
+new province irkngthand = {
     position = {
         1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000
     }
@@ -1295,7 +1290,7 @@ new province friki = {
     }
 
 	area = irkngthand
-	name = "Friki"
+	name = "Irkngthand"
 	terrain = mountain
 	color = { 130 226 153 }
 	history = {
@@ -1314,7 +1309,7 @@ new province friki = {
 		}
 	}
 }
-new province aleaie = {
+new province korvanjund = {
     position = {
         1818.000 1969.000 1818.000 1969.000 1818.000 1969.000 1818.000 1969.000 1818.000 1969.000 1818.000 1969.000 1818.000 1969.000
     }
@@ -1326,9 +1321,9 @@ new province aleaie = {
     }
 
 	area = long_road
-	name = "Aleaie"
+	name = "Korvanjund"
 	color = { 156 164 153 }
-	terrain = steppe
+	terrain = forest
 	history = {
 		religion = nordic_pantheon
 		culture = nord
@@ -1344,7 +1339,7 @@ new province aleaie = {
 		add_core = WHW
 	}
 }
-new province bleak_falls_barrow = {
+new province shimmermist = {
     position = {
         1808.000 1955.000 1808.000 1955.000 1808.000 1955.000 1808.000 1955.000 1808.000 1955.000 1808.000 1955.000 1808.000 1955.000
     }
@@ -1356,7 +1351,7 @@ new province bleak_falls_barrow = {
     }
 
 	area = long_road
-	name = "Bleak Falls Barrow"
+	name = "Shimmermist"
 	terrain = steppe
 	color = { 186 242 180 }
 	history = {
@@ -1374,7 +1369,7 @@ new province bleak_falls_barrow = {
 		add_core = WHW
 	}
 }
-new province havocrels_tower = {
+new province long_road = {
     position = {
         1799.000 1968.000 1799.000 1968.000 1799.000 1968.000 1799.000 1968.000 1799.000 1968.000 1799.000 1968.000 1799.000 1968.000
     }
@@ -1386,7 +1381,7 @@ new province havocrels_tower = {
     }
 
 	area = long_road
-	name = "Havocrel's Tower"
+	name = "Long Road"
 	terrain = steppe
 	color = { 154 108 248 }
 	history = {
@@ -1399,7 +1394,7 @@ new province havocrels_tower = {
 		trade_goods = unknown
 	}
 }
-new province orieteir = {
+new province loreius_farm = {
     position = {
         1782.000 1965.000 1782.000 1965.000 1782.000 1965.000 1782.000 1965.000 1782.000 1965.000 1782.000 1965.000 1782.000 1965.000
     }
@@ -1411,7 +1406,7 @@ new province orieteir = {
     }
 
 	area = loreius
-	name = "Orieteir"
+	name = "Loreius Farm"
 	terrain = hills
 	color = { 157 250 128 }
 	history = {
@@ -1504,7 +1499,7 @@ new province syllartha = {
 		trade_goods = unknown
 	}
 }
-new province yllamys = {
+new province volunruud = {
     position = {
         1758.000 1983.000 1758.000 1983.000 1758.000 1983.000 1758.000 1983.000 1758.000 1983.000 1758.000 1983.000 1758.000 1983.000
     }
@@ -1516,7 +1511,7 @@ new province yllamys = {
     }
 
 	area = volunruud
-	name = "Yllamys"
+	name = "Volunruud"
 	terrain = highlands
 	color = { 200 242 239 }
 	history = {
@@ -1554,7 +1549,7 @@ new province oladithas = {
 		trade_goods = unknown
 	}
 }
-new province evelsia = {
+new province stonehill_bluff = {
     position = {
         1772.000 1990.000 1772.000 1990.000 1772.000 1990.000 1772.000 1990.000 1772.000 1990.000 1772.000 1990.000 1772.000 1990.000
     }
@@ -1566,7 +1561,7 @@ new province evelsia = {
     }
 
 	area = lord_hill
-	name = "Evelsia"
+	name = "Stonehill Bluff"
 	terrain = highlands
 	color = { 252 224 223 }
 	history = {
@@ -1579,7 +1574,7 @@ new province evelsia = {
 		trade_goods = unknown
 	}
 }
-new province hegehala = {
+new province heljarchen = {
     position = {
         1785.000 1981.000 1785.000 1981.000 1785.000 1981.000 1785.000 1981.000 1785.000 1981.000 1785.000 1981.000 1785.000 1981.000
     }
@@ -1591,7 +1586,7 @@ new province hegehala = {
     }
 
 	area = loreius
-	name = "Hegehala"
+	name = "Heljarchen"
 	terrain = hills
 	color = { 128 140 205 }
 	history = {
@@ -1629,7 +1624,7 @@ new province isellarue = {
 		trade_goods = unknown
 	}
 }
-new province loraaerys = {
+new province lord_hill = {
     position = {
         1751.000 2008.000 1751.000 2008.000 1751.000 2008.000 1751.000 2008.000 1751.000 2008.000 1751.000 2008.000 1751.000 2008.000
     }
@@ -1641,7 +1636,7 @@ new province loraaerys = {
     }
 
 	area = lord_hill
-	name = "Loraaerys"
+	name = "Lord Hill"
 	terrain = mountain
 	color = { 245 204 218 }
 	history = {
