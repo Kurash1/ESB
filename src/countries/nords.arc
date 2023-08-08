@@ -1,5 +1,5 @@
 new inheritable nordic_country = {
-	technology_group = northern_tg
+	technology_group = nord_tg
 	religion = nordic_pantheon
 	primary_culture = nord
 	graphical_culture = greekgfx
@@ -51,6 +51,7 @@ new country forelhost = {
 	name = "Forelhost"
 	adj = "Forelhostian"
 	color = { 238 234 133 }
+	technology_group = dragon_cult_tg
 	religion = dragon_cult
 	capital = forelhost
 }

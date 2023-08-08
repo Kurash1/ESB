@@ -531,7 +531,6 @@ new province 7002 = {
 	color = { 84 92 62 }
 	history = { }
 	lake = yes
-	area = karth_river
 }
 
 new province 2850 = {

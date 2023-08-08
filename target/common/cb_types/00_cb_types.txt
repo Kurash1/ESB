@@ -718,25 +718,3 @@ cb_imperial_realm_war = {
 
 	war_goal = superiority_reichskrieg
 }
-
-# CB for enforcing becoming an elector
-cb_enforce_electorate_right = {
-	valid_for_subject = no
-	
-	prerequisites_self = {
-		is_part_of_hre = yes
-		is_elector = no
-		is_emperor = no
-		any_subject_country = {
-			is_elector = yes
-		}
-	}
-
-	prerequisites = {
-		FROM = {
-			is_emperor = yes
-		}
-	}
-
-	war_goal = war_goal_usurp_electorate
-}

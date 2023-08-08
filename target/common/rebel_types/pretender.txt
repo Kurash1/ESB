@@ -58,12 +58,6 @@ pretender_rebels = {
 				aristocracy_ideas = 1
 			}
 		}
-		modifier = {
-			factor = 20
-			owner = {
-				has_disaster = civil_war
-			}
-		}
 		modifier = {	  
 			factor = 5.0
 			owner = {
@@ -236,11 +230,6 @@ pretender_rebels = {
 			change_statists_vs_orangists = 1
 		}
 		if = {
-			limit = { has_disaster = civil_war }
-			add_prestige = -200
-			add_legitimacy = 25
-		}
-		if = {
 			limit = {
 				NOT = {
 					OR = {
@@ -262,15 +251,6 @@ pretender_rebels = {
 		if = {
 			limit = { has_heir = yes }
 			kill_heir = {  }
-		}
-		if = {
-			limit = { has_disaster = civil_war }
-			end_disaster = civil_war
-		}
-		if = {
-			limit = { has_disaster = internal_conflicts }
-			country_event = { id = internal_conflicts.8 }
-			end_disaster = internal_conflicts
 		}
 		if = {
 			limit = { is_revolution_target = yes }

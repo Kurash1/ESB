@@ -58,16 +58,9 @@ anti_tax_rebels = {
 			}
 		}
 		modifier = {
-			factor = 100.0
-			owner = {
-				has_disaster = peasant_war
-			}
-		}
-		modifier = {
 			factor = 0.5
 			owner = {
 				NOT = { primary_culture = ROOT } # We want other types instead
-				NOT = { has_disaster = peasant_war }
 			}
 		}
 	}
@@ -133,21 +126,6 @@ anti_tax_rebels = {
 				is_overseas = no
 			}
 			add_local_autonomy = 20
-		}
-		if = {
-			limit = { has_disaster = peasant_war }
-			end_disaster = peasant_war
-			clr_country_flag = peasant_protests
-			clr_country_flag = obsolete_forces
-			
-			remove_country_modifier = enforce_serfdom	
-			remove_country_modifier = restrict_serfdom
-			remove_country_modifier = religious_intolerance
-			remove_country_modifier = religious_tolerance
-			remove_country_modifier = support_troops
-			remove_country_modifier = obsolete_forces
-			remove_country_modifier = isolate_rebels
-			add_prestige = -50
 		}
 		add_prestige = -50
 	}

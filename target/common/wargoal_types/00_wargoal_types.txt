@@ -294,56 +294,6 @@ superiority_annex_revolution = {
 	war_name = ANNEX_REVOLUTION_WAR
 }
 
-take_capital_revolution = {
-	type = take_capital
-	
-	attacker = {
-		badboy_factor = 0.5
-		prestige_factor = 1.5
-		peace_cost_factor = 0.5		
-		
-		required_treaty_to_take_provinces = {
-			po_dismantle_revolution
-			po_extinguish_the_revolution		
-		}
-
-		peace_options = {
-			po_become_vassal
-			po_demand_provinces
-			po_revoke_cores
-			po_release_vassals
-			po_release_annexed
-			po_gold
-			po_concede_defeat
-			po_annul_treaties
-			po_dismantle_revolution
-			po_extinguish_the_revolution	
-		}
-	}
-	
-	defender = {
-		badboy_factor = 0.5
-		prestige_factor = 1.5
-		peace_cost_factor = 0.5		
-	
-		required_treaty_to_take_provinces = {
-			po_spread_revolution
-		}
-
-		peace_options = {
-			po_become_vassal
-			po_demand_provinces
-			po_revoke_cores
-			po_release_vassals
-			po_release_annexed
-			po_gold
-			po_concede_defeat
-			po_annul_treaties
-			po_spread_revolution		   
-		}
-	}
-}
-
 take_capital_disloyal = {
 	type = take_capital
 	
@@ -2555,49 +2505,4 @@ blockade_ports_mutual = {
 	}
 
 	war_name = TRADE_CONFLICT_TRIGGERED_WAR_NAME
-}
-
-war_goal_usurp_electorate = {
-	type = take_capital
-	
-	attacker = {
-		badboy_factor = 1
-		prestige_factor = 1
-		peace_cost_factor = 1.0	
-		
-		allowed_provinces = {
-			always = no
-		}
-		
-		allowed_provinces_are_eligible = yes
-		
-		peace_options = {
-			po_claim_elector_role
-			po_revoke_cores
-			po_release_vassals
-			po_release_annexed
-			po_return_cores
-			po_gold
-			po_annul_treaties
-			po_trade_power
-			po_steer_trade
-			po_humiliate
-		}
-		
-		deny_annex = yes
-		country_desc = ALL_COUNTRIES
-		prov_desc = NO_PROVS
-	}
-	
-	defender = {
-		badboy_factor = 1
-		prestige_factor = 1
-		peace_cost_factor = 1
-
-		peace_options = {
-			po_demand_provinces
-		}
-	}
-
-	war_name = USURPT_ELECTORATE_WAR_NAME
 }
