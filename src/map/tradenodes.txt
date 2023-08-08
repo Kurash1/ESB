@@ -1,15 +1,28 @@
+new tradenode black_mountain = {
+	name = "Black Mountain"
+	location = black_mountain
+	areas = {
+		black_mountain
+	}
+}
+
+new tradenode geir = {
+	name = "Geir"
+	location = ivarstead
+	areas = {
+		ivarstead nilheim geirmund honeystrand trevas_mouth sarethi angarvunde trevas_watch redwater
+	}
+}
 new tradenode honrich = {
 	name = "Honrich"
 	location = riften
 	areas = {
 		forelhost rift_pass fallowstone riften merryfair faldar isle_of_gold snow_shod heartwood
 	}
-}
-new tradenode geir = {
-	name = "Geir"
-	location = ivarstead
-	areas = {
-		ivarstead nilheim geirmund honeystrand trevas_mouth sarethi angarvunde trevas_watch redwater
+	outgoings = {
+		{
+			node = geir
+		}
 	}
 }
 new tradenode ysgramoors_teeth = {
@@ -136,5 +149,54 @@ new tradenode dawnstar = {
 	location = dawnstar
 	areas = {
 		red_road dawnstar dawn_sanctuary pale_coast high_gate north_isles
+	}
+}
+new tradenode stonehills = {
+	name = "Stonehills"
+	location = stonehills
+	areas = {
+		ustengrav stonehills kjenstag myrwatch southern_morthal northern_morthal
+	}
+}
+new tradenode solitude = {
+	name = "Solitude"
+	location = solitude
+	areas = {
+		solitude_proper solitude_countryside dragon_bridge rivers_horn twin_bridges drajkmyr_marsh snowhawk
+	}
+}
+new tradenode northwatch = {
+	name = "Northwatch"
+	location = northwatch
+	areas = {
+		solitude_coast shadowgreen ravenscar widows_watch northwatch outer_archipelago castle_volkihar volskygge snowpeaks hraggstad kilkreath
+	}
+}
+new tradenode karthwasten = {
+	name = "Karthwasten"
+	location = karthwasten
+	areas = {
+		silverway mor_khazgur bruca bthar_zel harmugstahl dragon_bridge_overlook broken_tower karthwasten dragontooth bthardamz reach_camp karthald
+	}
+}
+new tradenode markarth = {
+	name = "Markarth"
+	location = markarth
+	areas = {
+		ragnvald kolskeggr markarth reachwater reachcliff karthspire sundered_towers
+	}
+}
+new tradenode druadach = {
+	name = "Druadach"
+	location = valthume
+	areas = {
+		hag_rock dushnikh_yal arkngthamz valthume lost_valley
+	}
+}
+new tradenode the_moldering = {
+	name = "The Moldering"
+	location = moldering
+	areas = {
+		lower_sungard sungard old_hroldan serpents_bluff moldering highpoint
 	}
 }
