@@ -16,10 +16,10 @@ new tradegood wood = {
 }
 new tradegood iron = {
 	name = "iron"
-	desc = "Smelted iron ore I guess"
+	desc = ""
 	color = { 52 52 52 }
 	modifier = {
-		regiment_cost = -0.1
+		global_regiment_cost = -0.1
 	}
 	province = {
 		regiment_recruit_speed = -0.33
@@ -32,7 +32,7 @@ new tradegood iron = {
 }
 new tradegood steel = {
 	name = "steel"
-	desc = "Iron smelted with corundum, not a rocket science"
+	desc = "Iron smelted with corundum"
 	color = { 130 130 130 }
 	modifier = {
 		shock_damage_received = -0.025
@@ -183,7 +183,7 @@ new tradegood stone = {
 		defensiveness = 0.2
 	}
 	province = {
-		local_fort_maintenace_modifer = -0.25
+		local_fort_maintenance_modifier = -0.25
 	}
 	base_price = 2.5
 	is_gold = no
@@ -275,7 +275,7 @@ new tradegood r_metals = {
 		yearly_army_professionalism = 0.005
 	}
 	province = {
-		local_prosperiy_growth = 0.05
+		local_prosperity_growth = 0.05
 	}
 	base_price = 5
 	is_gold = no
@@ -368,7 +368,7 @@ new tradegood mag_goods = {
 	desc = "Things that can do some hippity-hoppity with magic"
 	color = { 51 204 255 }
 	modifier = {
-		all_power_cost = -005
+		all_power_cost = -0.05
 	}
 	province = {
 		institution_growth = 1
@@ -400,7 +400,7 @@ new tradegood fruits = {
 	desc = "Sweet things, that grow on trees (unlike money)"
 	color = { 253 255 6 }
 	modifier = {
-		sailor_maintenance_modifier = -0.2
+		sailor_maintenance_modifer = -0.2
 	}
 	province = {
 		supply_limit = 5
@@ -412,11 +412,11 @@ new tradegood fruits = {
 	}
 }
 new tradegood liquor = {
-	name = "liquor"
+	name = "Liquor"
 	desc = "Strong alcohol for strong folks"
 	color = { 184 188 73 }
 	modifier = {
-		land_focelimit_modifier = 0.1
+		land_forcelimit_modifier = 0.1
 	}
 	province = {
 		local_manpower_modifier = 0.25
