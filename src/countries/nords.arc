@@ -326,7 +326,7 @@ new country jorrvaskr = {
 	tag = JRR
 	name = "Jorrvaskr"
 	adj = "Jorrvaskr"
-	color = { 206 98 16 }
+	color = { 150 50 0 }
 	
 	capital = whiterun
 	history = {
@@ -481,7 +481,7 @@ new country shearpoint = {
 	tag = SHR
 	name = "Shearpoint"
 	adj = "Shearpointish"
-	color = { 255 255 255 }
+	color = { 100 255 255 }
 	
 	capital = shearpoint
 }

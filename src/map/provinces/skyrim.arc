@@ -15,7 +15,7 @@ new area coast_of_winterhold = {
 	name = "Coast of Winterhold"
 	region = skyrim_sea
 }
-new province 62 = {
+new province coast_of_bleakrock = {
     position = {
         2006.000 2030.000 2006.000 2030.000 2006.000 2030.000 2006.000 2030.000 2006.000 2030.000 2006.000 2030.000 2006.000 2030.000
     }
@@ -26,13 +26,13 @@ new province 62 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "62"
+	name = "Coast of Bleakrock"
 	color = { 36 64 74 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 63 = {
+new province far_japhet_sea = {
     position = {
         2012.000 2077.000 2012.000 2077.000 2012.000 2077.000 2012.000 2077.000 2012.000 2077.000 2012.000 2077.000 2012.000 2077.000
     }
@@ -43,13 +43,13 @@ new province 63 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "63"
+	name = "Far Japhet Sea"
 	color = { 77 72 98 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 64 = {
+new province tale_sea = {
     position = {
         1859.000 2163.000 1859.000 2163.000 1859.000 2163.000 1859.000 2163.000 1859.000 2163.000 1859.000 2163.000 1859.000 2163.000
     }
@@ -60,13 +60,13 @@ new province 64 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "64"
+	name = "Tale Sea"
 	color = { 48 62 79 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 65 = {
+new province ysgramoors_landing = {
     position = {
         1884.000 2125.000 1884.000 2125.000 1884.000 2125.000 1884.000 2125.000 1884.000 2125.000 1884.000 2125.000 1884.000 2125.000
     }
@@ -77,13 +77,13 @@ new province 65 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "65"
+	name = "Ysgramoor's Landing"
 	color = { 37 84 94 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 66 = {
+new province west_chill_coast = {
     position = {
         1913.000 2153.000 1913.000 2153.000 1913.000 2153.000 1913.000 2153.000 1913.000 2153.000 1913.000 2153.000 1913.000 2153.000
     }
@@ -94,13 +94,13 @@ new province 66 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "66"
+	name = "West Chill Coast"
 	color = { 33 54 44 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 67 = {
+new province east_chill_coast = {
     position = {
         1956.000 2163.000 1956.000 2163.000 1956.000 2163.000 1956.000 2163.000 1956.000 2163.000 1956.000 2163.000 1956.000 2163.000
     }
@@ -111,13 +111,13 @@ new province 67 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "67"
+	name = "East Chill Coast"
 	color = { 44 60 90 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 68 = {
+new province ghost_sea = {
     position = {
         2002.000 2130.000 2002.000 2130.000 2002.000 2130.000 2002.000 2130.000 2002.000 2130.000 2002.000 2130.000 2002.000 2130.000
     }
@@ -128,13 +128,13 @@ new province 68 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "68"
+	name = "Ghost Sea"
 	color = { 31 92 81 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 69 = {
+new province coast_of_winterhold = {
     position = {
         1951.000 2114.000 1951.000 2114.000 1951.000 2114.000 1951.000 2114.000 1951.000 2114.000 1951.000 2114.000 1951.000 2114.000
     }
@@ -145,13 +145,13 @@ new province 69 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "69"
+	name = "Coast of Winterhold"
 	color = { 36 81 50 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 70 = {
+new province bleak_coast = {
     position = {
         1975.000 2076.000 1975.000 2076.000 1975.000 2076.000 1975.000 2076.000 1975.000 2076.000 1975.000 2076.000 1975.000 2076.000
     }
@@ -162,13 +162,13 @@ new province 70 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "70"
+	name = "Bleak Coast"
 	color = { 34 84 53 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 1861 = {
+new province viking_sea = {
     position = {
         1819.000 2135.000 1819.000 2135.000 1819.000 2135.000 1819.000 2135.000 1819.000 2135.000 1819.000 2135.000 1819.000 2135.000
     }
@@ -179,13 +179,13 @@ new province 1861 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "1861"
+	name = "Viking Sea"
 	color = { 68 52 61 }
 	history = { }
 	sea = yes
 	area = coast_of_winterhold
 }
-new province 1863 = {
+new province yngvild_coast = {
     position = {
         1833.000 2095.000 1833.000 2095.000 1833.000 2095.000 1833.000 2095.000 1833.000 2095.000 1833.000 2095.000 1833.000 2095.000
     }
@@ -196,7 +196,7 @@ new province 1863 = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "1863"
+	name = "Yngvild Coast"
 	color = { 56 84 98 }
 	history = { }
 	sea = yes

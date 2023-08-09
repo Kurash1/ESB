@@ -887,6 +887,8 @@ new province western_watchtower = {
 		add_core = JRR
 		hre = yes
 		`trade_goods` = unknown
+		
+		fort_15th = yes
 	}
 }
 new province alviella = {
@@ -992,9 +994,9 @@ new province eisilief = {
 	history = {
 		religion = nordic_pantheon
 		culture = nord
-		owner = JRR
-		controller = JRR
-		add_core = JRR
+		owner = SLM
+		controller = SLM
+		add_core = SLM
 		hre = yes
 		`trade_goods` = unknown
 	}
@@ -1147,12 +1149,13 @@ new province white_watch = {
 		
 		
 		`trade_goods` = unknown
+		fort_15th = yes
 		
 		capital = ""
 		is_city = yes
-		owner = JRR
-		controller = JRR
-		add_core = JRR
+		owner = WHW
+		controller = WHW
+		add_core = WHW
 	}
 }
 new province battle_born = {
@@ -1244,7 +1247,7 @@ new province whiterun = {
 		culture = nord
 		hre = yes
 		
-		
+		fort_15th = yes
 		`trade_goods` = unknown
 		
 		capital = ""
@@ -1842,11 +1845,13 @@ new province valtheim = {
 		
 		
 		`trade_goods` = unknown
+		fort_15th = yes
 		
 		capital = ""
 		is_city = yes
-		owner = VLT
-		controller = VLT
+		owner = JRR
+		controller = JRR
+		add_core = JRR
 		add_core = VLT
 	}
 }
@@ -1875,6 +1880,7 @@ new province guldun_rock = {
 		owner = JRR
 		controller = JRR
 		add_core = JRR
+		add_core = VLT
 		religion = nordic_pantheon
 		culture = nord
 	}
@@ -1906,6 +1912,7 @@ new province prafall = {
 		owner = JRR
 		controller = JRR
 		add_core = JRR
+		add_core = VLT
 	}
 }
 
