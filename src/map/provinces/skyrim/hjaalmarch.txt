@@ -103,8 +103,6 @@ new province isle_of_sorrow = {
 		add_core = HGA
 	}
 }
-
-
 new province morthal = {
     position = {
         1688.000 2015.000 1688.000 2015.000 1688.000 2015.000 1688.000 2015.000 1688.000 2015.000 1688.000 2015.000 1688.000 2015.000
@@ -1499,4 +1497,48 @@ new province morthal_colony = {
 		capital = ""
 		is_city = yes
 	}
+}
+
+new adjacency ustengrav_bridge = {
+	from = ustengrav
+	to = folks_gathering
+	through = 1870
+	type = sea
+}
+new adjacency morthal_bridge = {
+	from = morthal
+	to = morthal_colony
+	through = 1870
+	type = sea
+}
+new adjacency snowhawk_bridge = {
+	from = snowhawk
+	to = minedvild
+	through = 1870
+	type = sea
+}
+new adjacency first_bridge = {
+	from = barren_road
+	to = rivers_road
+	through = 2848
+	type = sea
+}
+new adjacency second_bridge = {
+	from = forebears_holdout
+	to = cliff_point
+	through = 2848
+	type = sea
+}
+new adjacency hjaal_bridge = {
+	from = bumpy_road
+	to = robbers_gorge
+	through = 2848
+	type = sea
+}
+
+new adjacency dragon_bridge = {
+	from = dragon_bridge
+	to = rivers_road
+	through = 1870
+	type = sea
 }

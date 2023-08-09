@@ -2505,3 +2505,70 @@ new province mor_khazgur = {
 		is_city = yes
 	}
 }
+
+new adjacency harmugstahl_bridge = {
+	from = harmugstahl
+	to = brucas_leap_redoubt
+	through = 2850
+	type = sea
+}
+new adjacency karth_bridge = {
+	from = beigi
+	to = karthwatch
+	through = 2850
+	type = sea
+}
+new adjacency kolskeggr_bridge = {
+	from = kolskeggr
+	to = reachwater_hill
+	through = 2849
+	type = sea
+}
+new adjacency salvius_bridge = {
+	from = salvius_farm
+	to = lislgeth
+	through = 2849
+	type = sea
+}
+new adjacency left_hand_mine_bridge = {
+	from = salvius_farm
+	to = left_hand_mine
+	through = 2849
+	type = sea
+}
+new adjacency hag_rock_bridge = {
+	from = hag_rock_redoubt
+	to = purewater_ruin
+	through = 7001
+	type = sea
+}
+new adjacency reachwind_eyrie_bridge = {
+	from = reachwind_eyrie
+	to = thaeba
+	through = 7001
+	type = sea
+}
+new adjacency reachwater_rock_bridge = {
+	from = reachwater_rock
+	to = reachcliff
+	through = 7001
+	type = sea
+}
+new adjacency west_karthspire_bridge = {
+	from = west_karthspire
+	to = reachcliff
+	through = 7001
+	type = sea
+}
+new adjacency karthspire_bridge = {
+	from = west_karthspire
+	to = east_karthspire
+	through = 7001
+	type = sea
+}
+new adjacency old_hroldan_bridge = {
+	from = igrra
+	to = hillia
+	through = 7001
+	type = sea
+}

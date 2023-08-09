@@ -1898,3 +1898,16 @@ new province prafall = {
 		add_core = JRR
 	}
 }
+
+new adjacency white_river_bridge = {
+	from = white_river_watch
+	to = honningbrew_meadery
+	through = 2797
+	type = sea
+}
+new adjacency riverwood_bridge = {
+	from = riverwood
+	to = green_hill_road
+	through = 2797
+	type = sea
+}
