@@ -922,6 +922,13 @@ new province green_coast = {
 		culture = orsimer
 		hre = no
 		
+		quick_province_modifier = {
+			name = "Lady Stone"
+			modifier = {
+				global_monthly_devastation = -0.05
+			}
+		}
+		
 		owner = HAM
 		controller = HAM
 		add_core = HAM

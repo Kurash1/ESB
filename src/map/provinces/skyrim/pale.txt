@@ -1647,6 +1647,13 @@ new province lord_hill = {
 		add_core = VLR
 		hre = yes
 		`trade_goods` = unknown
+		
+		quick_province_modifier = {
+			name = "Lord Stone"
+			modifier = {
+				administrative_efficiency = 2.5%
+			}
+		}
 	}
 }
 new province edinmund = {

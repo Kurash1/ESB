@@ -2578,12 +2578,6 @@ new province forelhost = {
 		fort_16th = yes
 	}
 }
-#localisation skyrim_shadow_stone = "Da Shadow Stone"
-#event_modifier skyrim_shadow_stone = {
-#	local_hostile_movement_speed = -0.5
-#	local_friendly_movement_speed = -0.5
-#	spy_offence = 0.1
-#}
 new province shadow_stone = {
     position = {
         1987.000 1784.000 1987.000 1784.000 1987.000 1784.000 1987.000 1784.000 1987.000 1784.000 1987.000 1784.000 1987.000 1784.000
@@ -2615,10 +2609,15 @@ new province shadow_stone = {
 		owner = FOR
 		controller = FOR
 		add_core = FOR
-		add_permanent_province_modifier = { 
-			name = skyrim_shadow_stone
-			duration = -1
-		} 
+		
+		quick_province_modifier = {
+			name = "Shadow Stone"
+			modifier = {
+				local_hostile_movement_speed = -0.5
+			    local_friendly_movement_speed = -0.5
+			    spy_offence = 0.1
+			}
+		}
 		fort_15th = yes
 	}
 }

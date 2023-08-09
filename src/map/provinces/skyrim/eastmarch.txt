@@ -1243,12 +1243,10 @@ new province darkwater_crossing = {
 		add_core = DAR
 		
 		
-		2500.1.1 = {
-			quick_province_modifier = {
-				name = "Goldenrock Mine"
-				modifier = {
-					trade_goods_size = 0.5
-				}
+		quick_province_modifier = {
+			name = "Goldenrock Mine"
+			modifier = {
+				trade_goods_size = 0.5
 			}
 		}
 	}
@@ -1272,7 +1270,12 @@ new province atronach = {
 		religion = nordic_pantheon
 		culture = nord
 		
-		
+		quick_province_modifier = {
+			name = "Atronach Stone"
+			modifier = {
+				fire_damage_received = -5%
+			}
+		}
 		
 		`trade_goods` = unknown
 		

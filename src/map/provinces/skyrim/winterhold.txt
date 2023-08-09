@@ -319,6 +319,12 @@ new province serpent_stone = {
 		religion = nordic_pantheon
 		hre = yes
 		
+		quick_province_modifier = {
+			name = "Serpent Stone"
+			modifier = {
+				shock_damage = 5%
+			}
+		}
 		
 		`trade_goods` = unknown
 		
@@ -748,6 +754,12 @@ new province tower_stone = {
 		culture = nord
 		hre = yes
 		
+		quick_province_modifier = {
+			name = "Tower Stone"
+			modifier = {
+				siege_ability = 10%
+			}
+		}
 		
 		`trade_goods` = unknown
 		

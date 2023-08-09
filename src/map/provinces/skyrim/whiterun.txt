@@ -1702,6 +1702,14 @@ new province embershard_mine = {
 		culture = nord
 		hre = yes
 		
+		quick_province_modifier = {
+			name = "Guardian Stones"
+			modifier = {
+				land_morale = 5%
+				trade_efficiency = 5%
+				monthly_magicka = 0.1
+			}
+		}
 		
 		`trade_goods` = unknown
 		
@@ -1710,10 +1718,6 @@ new province embershard_mine = {
 		owner = SKJ
 		controller = SKJ
 		add_core = SKJ
-		272.1.1 = {
-			religion = nordic_pantheon
-			culture = nord
-		}
 	}
 }
 new area white_river_watch = {
@@ -1742,6 +1746,12 @@ new province ritual_stone = {
 		culture = nord
 		hre = yes
 		
+		quick_province_modifier = {
+			name = "Ritual Stone"
+			modifier = {
+				global_manpower_modifier = 10%
+			}
+		}
 		
 		`trade_goods` = unknown
 		
@@ -1902,12 +1912,12 @@ new province prafall = {
 new adjacency white_river_bridge = {
 	from = white_river_watch
 	to = honningbrew_meadery
-	through = 2797
+	through = white_river
 	type = sea
 }
 new adjacency riverwood_bridge = {
 	from = riverwood
 	to = green_hill_road
-	through = 2797
+	through = river_ember
 	type = sea
 }
