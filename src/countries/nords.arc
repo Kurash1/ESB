@@ -302,6 +302,23 @@ new country broken-fang = {
 	adj = "Broken-Fang"
 	color = { 75 75 75 }
 	
+	history = {
+		Tamriel = {
+			discover_country = ROOT
+		}
+		
+		2500.1.1 = {
+			monarch = {
+				name = "Wulf"
+				dynasty = "Broken-Fang"
+				adm = 4
+				dip = 3
+				mil = 3
+				birth_date = 2454.1.1
+			}
+		}
+	}
+	
 	capital = gjukar
 }
 new country skjoralmor = { 
@@ -335,6 +352,16 @@ new country jorrvaskr = {
 			discover_country = ROOT
 		}
 		elector = yes
+		
+		2500.1.1 = {
+			monarch = {
+				name = "Ulrick"
+				adm = 5
+				dip = 5
+				mil = 6
+				birth_date = 2482.1.1
+			}
+		}
 	}
 }
 new country windhelm = { 
@@ -367,10 +394,22 @@ new country windhelm = {
 }
 
 new relation alliance = {
-    first = JRR       # The overlord, if the relation is a overlord-subject relation
-    second = WND      # The subject, if the relation is a overlord-subject relation
-    start_date = 2500.1.1 # When to start applying the relationship
-    end_date = 9999.1.1   # When to stop applying the relationship
+    first = JRR
+    second = WND
+    start_date = 2500.1.1
+    end_date = 9999.1.1
+}
+new relation alliance = {
+    first = JRR
+    second = BCM
+    start_date = 2500.1.1
+    end_date = 9999.1.1
+}
+new relation royal_marriage = {
+    first = JRR
+    second = BCM
+    start_date = 2500.1.1
+    end_date = 9999.1.1
 }
 
 new country hill-hammer = { 
@@ -441,6 +480,26 @@ new country black-moor = {
 	adj = "Black-Moor"
 	color = { 10 10 10 }
 	
+	history = {
+		Tamriel = {
+			discover_country = ROOT
+		}
+		
+		add_government_reform = autocracy_reform
+		
+		2500.1.1 = {
+			monarch = {
+				name = "Olf"
+				dynasty = "Black-Moor"
+				adm = 2
+				dip = 2
+				mil = 1
+				birth_date = 2414.1.1
+			}
+			add_ruler_personality = infertile_personality
+		}
+	}
+	
 	capital = greymoor
 }
 new country shield-shade = { 
@@ -450,6 +509,23 @@ new country shield-shade = {
 	name = "Shield-Shade"
 	adj = "Shield-Shade"
 	color = { 50 150 50 }
+	
+	history = {
+		Tamriel = {
+			discover_country = ROOT
+		}
+		
+		2500.1.1 = {
+			monarch = {
+				name = "Olaf"
+				dynasty = "Shield-Shade"
+				adm = 2
+				dip = 5
+				mil = 2
+				birth_date = 2441.1.1
+			}
+		}
+	}
 	
 	capital = granitehill
 }
