@@ -4,6 +4,12 @@ on_actions:on_startup += {
 		limit = {
 			NOT = { has_global_flag = on_action_set_up_global_flag }
 		}
+		c@black_mountain = {
+			country_event = {
+				id = idea_march
+				days = 18250
+			}
+		}
 		every_country = {
 			limit = {
 				NOT = {

@@ -248,3 +248,32 @@ country_event = {
 		}
 	}
 }
+
+#Idea March
+country_event = {
+	id = idea_march
+	title = "EVTNAME700"
+	picture = REPUBLICAN_DEBATES_eventPicture
+	desc = EVTDESC700
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		country_event = {
+			id = idea_march
+			days = 18250
+		}
+		every_country = {
+			add_adm_tech = 3
+		}
+	}
+
+	option = {
+		name = "EVTOPTD700"	
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}

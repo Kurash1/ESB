@@ -65,3 +65,16 @@ NDefines.NFrontend.FRONTEND_LOOK_Y = -400.0
 NDefines.NFrontend.FRONTEND_LOOK_Z = 2225.0
 NDefines.NFrontend.CAMERA_MIN_HEIGHT = 75
 NDefines.NFrontend.CAMERA_MAX_HEIGHT = 2211
+
+NDefines.NCountry.MIGRATION_DEPLETION_TIME = 1825				-- How many days a province needs to recover from migrants
+NDefines.NCountry.TRIBE_STARTING_DEV = 3							-- Starting dev of a tribe
+NDefines.NCountry.MIGRATORY_TRIBE_DEVASTATION_BURN = 1.0			-- How much devastation is burnt per year, multiplied with development. 
+NDefines.NCountry.MIGRATORY_TRIBE_DEVASTATION_ALERT_THRESHOLD = 50
+NDefines.NCountry.MIGRATORY_TRIBE_DEVELOPMENT_PROGRESS = 0.05 	-- How much progress on development for each monthly tick
+NDefines.NCountry.MIGRATORY_TRIBE_DEVELOPMENT_OTHER_BONUS = 0.08	-- Bonus progress gained on development from burning someone else province.
+NDefines.NCountry.TRIBE_MIGRATION_ADM_COST = 10
+NDefines.NCountry.TRIBE_MIGRATION_DIP_COST = 10
+NDefines.NCountry.TRIBE_MIGRATION_MIL_COST = 10
+NDefines.NCountry.SIBERIAN_TRIBE_MIGRATION_BONUS = 50
+NDefines.NCountry.SIBERIAN_TRIBE_MIGRATION_COOLDOWN_YEARS = 5
+NDefines.NCountry.TRIBE_MIGRATION_NON_TRIBAL_LAND_COOLDOWN_YEARS = 2

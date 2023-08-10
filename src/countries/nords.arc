@@ -365,6 +365,14 @@ new country windhelm = {
 		}
 	}
 }
+
+new relation alliance = {
+    first = JRR       # The overlord, if the relation is a overlord-subject relation
+    second = WND      # The subject, if the relation is a overlord-subject relation
+    start_date = 2500.1.1 # When to start applying the relationship
+    end_date = 9999.1.1   # When to stop applying the relationship
+}
+
 new country hill-hammer = { 
 	inherit = nordic_country
 	
