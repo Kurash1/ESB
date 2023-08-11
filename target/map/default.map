@@ -1,22 +1,54 @@
-
 width = 4096
 height = 2816
-
-max_provinces = 701
-sea_starts = { 
-	101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 131 132 133 134 135 136 137 138 139 140 141 
+max_provinces = 697
+sea_starts = {
+	98
+	99
+	100
+	101
+	102
+	103
+	104
+	105
+	106
+	107
+	108
+	109
+	110
+	111
+	112
+	113
+	114
+	115
+	116
+	117
+	118
+	119
+	120
+	121
+	122
+	123
+	124
+	125
+	127
+	128
+	129
+	130
+	131
+	132
+	133
+	134
+	135
+	136
+	137
 }
-
 only_used_for_random = {
 }
-
 lakes = {
-	130 
+	126
 }
-
 force_coastal = {
 }
-
 definitions = "definition.csv"
 provinces = "provinces.bmp"
 positions = "positions.txt"
@@ -35,6 +67,10 @@ provincegroup = "provincegroup.txt"
 ambient_object = "ambient_object.txt"
 seasons = "seasons.txt"
 trade_winds = "trade_winds.txt"
-
-# Define which indices in trees.bmp palette which should count as trees for automatic terrain assignment
-tree = { 3 4 7 10 }
+# Define which indices in trees.bmp palette which should count as trees for automatic terrain assignment
+tree = {
+	3
+	4
+	7
+	10
+}
