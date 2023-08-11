@@ -98,15 +98,15 @@ new advisor_type spymaster = {
 		spy_offence = 0.25
 	}
 }
-new advisor_type colonial_governor = {
-	name = "Colonial Governor"
-	desc = "Our government's representative overseas, responsible for the administration of our colonies."
-	
-	monarch_power = DIP
-	modifier = {
-		global_tariffs = 0.10
-	}
-}
+#new advisor_type colonial_governor = {
+#	name = "Colonial Governor"
+#	desc = "Our government's representative overseas, responsible for the administration of our colonies."
+#	
+#	monarch_power = DIP
+#	modifier = {
+#		global_tariffs = 0.10
+#	}
+#}
 new advisor_type diplomat = {
 	name = "Diplomat"
 	desc = "Our government's representative in foreign countries."
@@ -116,15 +116,15 @@ new advisor_type diplomat = {
 		improve_relation_modifier = 0.2
 	}
 }
-new advisor_type navigator = {
-	name = "Navigator"
-	desc = "A sailor who had experienced many a long voyage, the navigator knows what is needed for a ship to spend long months at sea."
-	
-	monarch_power = DIP
-	modifier = {
-		range = 0.20
-	}
-}
+#new advisor_type navigator = {
+#	name = "Navigator"
+#	desc = "A sailor who had experienced many a long voyage, the navigator knows what is needed for a ship to spend long months at sea."
+#	
+#	monarch_power = DIP
+#	modifier = {
+#		range = 0.20
+#	}
+#}
 new advisor_type army_reformer = {
 	name = "Army Reformer"
 	desc = "A highly ranked military veteran continuously investigating new inventions and tactics to improve and expand our existing army."

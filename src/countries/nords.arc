@@ -399,18 +399,6 @@ new relation alliance = {
     start_date = 2500.1.1
     end_date = 9999.1.1
 }
-new relation alliance = {
-    first = JRR
-    second = BCM
-    start_date = 2500.1.1
-    end_date = 9999.1.1
-}
-new relation royal_marriage = {
-    first = JRR
-    second = BCM
-    start_date = 2500.1.1
-    end_date = 9999.1.1
-}
 
 new country hill-hammer = { 
 	inherit = nordic_country
@@ -484,8 +472,6 @@ new country black-moor = {
 		Tamriel = {
 			discover_country = ROOT
 		}
-		
-		add_government_reform = autocracy_reform
 		
 		2500.1.1 = {
 			monarch = {

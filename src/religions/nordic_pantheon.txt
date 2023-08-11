@@ -25,8 +25,8 @@ new personal_deity kyne = {
 	sprite = 1
 	
 	modifiers = {
-		shock_damage = 0.10
-		army_tradition = 0.5
+		shock_damage = 5%
+		movement_speed = 10%
 	}
 	
 	potential = {
@@ -40,8 +40,8 @@ new personal_deity dibella = {
 	sprite = 2
 	
 	modifiers = {
-		diplomatic_reputation = 1.5
-		ae_impact = -0.1
+		diplomatic_reputation = 1
+		ae_impact = -10%
 	}
 	
 	potential = {
@@ -55,8 +55,8 @@ new personal_deity tsun = {
 	sprite = 3
 	
 	modifiers = {
-		land_attrition = -0.10
-		shock_damage_received = -0.15
+		shock_damage_received = -2.5%
+		land_morale = 5%
 	}
 	
 	potential = {
@@ -70,8 +70,8 @@ new personal_deity mara = {
 	sprite = 4
 	
 	modifiers = {
-		manpower_recovery_speed = 0.10
-		global_trade_goods_size_modifier = 0.05
+		manpower_recovery_speed = 25%
+		global_monthly_devastation = -0.1
 	}
 	
 	potential = {
@@ -85,8 +85,8 @@ new personal_deity jhunal = {
 	sprite = 5
 	
 	modifiers = {
-		idea_cost = -0.05
-		technology_cost = -0.05
+		idea_cost = -5%
+		build_cost = -10%
 	}
 	
 	potential = {
@@ -115,9 +115,8 @@ new personal_deity stuhn = {
 	sprite = 7
 	
 	modifiers = { 
-		global_unrest = -2
-		stability_cost_modifier = -0.1
-		
+		privateer_efficiency = 50%
+		monthly_reform_progress_modifier = 10%
 	}
 	
 	potential = {

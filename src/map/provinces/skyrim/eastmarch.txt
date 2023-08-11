@@ -1844,7 +1844,7 @@ new province maras_rise = {
 		add_core = WND
 	}
 }
-new province uttering_hills = {
+new province gallows_hall = {
     position = {
         1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000 1897.000 1955.000
     }
@@ -1855,7 +1855,7 @@ new province uttering_hills = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Uttering Hills"
+	name = "Gallows Hall"
 	color = { 204 106 209 }
 	terrain = hills
 	area = gallows_rock
@@ -2139,7 +2139,7 @@ new area angas_mill = {
 	name = "Anga's Mill"
 	region = eastmarch
 }
-new province ronageth = {
+new province ysmir_overlook = {
     position = {
         1922.000 1965.000 1922.000 1965.000 1922.000 1965.000 1922.000 1965.000 1922.000 1965.000 1922.000 1965.000 1922.000 1965.000
     }
@@ -2150,7 +2150,7 @@ new province ronageth = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 
-	name = "Ronageth"
+	name = "Ysmir Overlook"
 	color = { 169 148 148 }
 	area = angas_mill
 	terrain = coastline
@@ -2172,7 +2172,7 @@ new province ronageth = {
 		add_core = WND
 	}
 }
-new province reydlaith = {
+new province uttering_hills = {
     position = {
         1898.000 1967.000 1898.000 1967.000 1898.000 1967.000 1898.000 1967.000 1898.000 1967.000 1898.000 1967.000 1898.000 1967.000
     }
@@ -2183,7 +2183,7 @@ new province reydlaith = {
         0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
     }
 	terrain = hills
-	name = "Reydlaith"
+	name = "Uttering Hills"
 	color = { 128 232 166 }
 	area = angas_mill
 	discovered_by = {
@@ -2450,13 +2450,13 @@ new adjacency windhelm_bridge = {
 }
 new adjacency white_bridge = {
 	from = brandy-mug
-	to = ronageth
+	to = ysmir_overlook
 	through = 61
 	type = sea
 }
 new adjacency yorgrim_bridge = {
 	from = angas_mill
-	to = ronageth
+	to = ysmir_overlook
 	through = 61
 	type = sea
 }
