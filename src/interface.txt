@@ -50,7 +50,6 @@ windowType = {
 	}
 }
 `
-
 interface:countryreligionview := `
 guiTypes = {
 
@@ -325,7 +324,7 @@ guiTypes = {
 		
 	windowType = {
 		name = "countryreligionview"
-		#position = { x=0 y=140 }	
+		
 		position = { x=-600 y=140 }	
 		show_position = { x=0 y =140 }
 		hide_position = { x=-600 y =140 }	
@@ -337,8 +336,8 @@ guiTypes = {
 
 		iconType =
 		{
-			# This background will be hidden beneath religionpanel_bg_bottom
-			# in the smallest resolution in most cases (but not harmonization view for example)
+			
+			
 			name ="religionpanel_bg_top"
 			spriteType = "GFX_country_religion_view_bg"
 			position = { x= -7 y = -10 }
@@ -388,7 +387,7 @@ guiTypes = {
 			format = centre
 		}
 		
-		###Current religion
+		
 		instantTextBoxType = {
 			name = "current_religion_name"
 			position = { x = 64 y =126 }
@@ -530,7 +529,7 @@ guiTypes = {
 			hint_tag = "hint_changereligion"
 		}	
 		
-		###Tolerance
+		
 		instantTextBoxType = {
 			name = "label_tolerance"
 			position = { x = 218 y = 192 }
@@ -601,7 +600,7 @@ guiTypes = {
 			format = centre
 		}
 		
-############## ORTHODOX PATRIARCH AUTHORITY	###### 
+
 
 		windowType = {
 			name = "orthodox_specific_window"
@@ -708,7 +707,7 @@ guiTypes = {
 			
 		}
 
-		############## SHINTO ISOLATIONISM ###### 
+		
 
 		windowType = {
 			name = "shinto_specific_window"
@@ -822,7 +821,7 @@ guiTypes = {
 			}
 		}
 	
-		############## CONFUCIANISM HARMONY ##############
+		
 		windowType = {
 			name = "confucianism_specific_window"
 			backGround =""
@@ -984,7 +983,7 @@ guiTypes = {
 			}
 		}
 
-############## COPTIC HOLY SITES	###### 
+
 
 		windowType = {
 			name = "coptic_specific_window"
@@ -1200,7 +1199,7 @@ guiTypes = {
 		}
 		
 		
-################# MUSLIM PIETY		
+
 		windowType = {
 			name = "muslim_specific_window"
 			backGround =""
@@ -1295,7 +1294,7 @@ guiTypes = {
 
 
 		}
-################# BUDDHIST KARMA		
+
 		windowType = {
 			name = "buddhist_specific_window"
 			backGround =""
@@ -1385,7 +1384,7 @@ guiTypes = {
 			}
 		}
 		
-		################# personal deity		
+		
 		windowType = {
 			name = "personal_deity"
 			backGround =""
@@ -1452,7 +1451,7 @@ guiTypes = {
 			}
 		}
 
-		################# Fetishist cults	
+		
 		windowType = {
 			name = "fetishist_cult"
 			backGround =""
@@ -1519,7 +1518,7 @@ guiTypes = {
 			}
 		}
 		
-		################# Sikh Gurus	
+		
 		windowType = {
 			name = "sikh_guru_window"
 			backGround =""
@@ -1627,7 +1626,7 @@ guiTypes = {
 			}
 		}
 
-		############## TOTEMISM ANCESTORS ##############
+		
 		windowType = {
 			name = "totemism_ancestor_window"
 			backGround =""
@@ -1683,7 +1682,7 @@ guiTypes = {
 		
 		
 	
-		###Religion specific datafield
+		
 		windowType = {
 			name = "catholic_specific_window"
 			backGround =""
@@ -1815,7 +1814,7 @@ guiTypes = {
 			}			
 		}
 		
-		###Religion specific datafield
+		
 		windowType = {
 			name = "protestant_specific_window"
 			backGround =""
@@ -1953,7 +1952,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 		}
-		windowType = { # Used when religion can't unlock aspects, only one-time fire them
+		windowType = { 
 			name = "anglican_specific_window"
 			backGround =""
 			position = { x=32 y=300 }	
@@ -1975,12 +1974,12 @@ guiTypes = {
 				format = left
 			}
 			
-		#	iconType =
-		#	{
-		#		name ="protestant_aspects_frame_bg"
-		#		spriteType = "GFX_country_religion_view_protestant_bg"
-		#		position = { x= 3 y = -44 }
-		#	}
+		
+		
+		
+		
+		
+		
 			
 			instantTextBoxType = {
 				name = "church_power_label"
@@ -2011,13 +2010,13 @@ guiTypes = {
 			horizontalBorder = ""
 			Orientation = "UPPER_LEFT"
 		
-			# iconType =
-			# {
-			# 	name = "fervor_bg"
-			# 	spriteType = "GFX_country_religion_view_fervor_bg"
-			# 	position = { x = 6 y = -63 }
-			# 	Orientation = "UPPER_LEFT"
-			# }
+			
+			
+			
+			
+			
+			
+			
 
 			iconType =
 			{
@@ -2103,7 +2102,7 @@ guiTypes = {
 		
 		
 		
-		###Religious unity
+		
 
 		iconType =	{
 			name ="religious_unity_icon_with_frame"
@@ -2128,7 +2127,7 @@ guiTypes = {
 
 		
 		
-		###Missionary Strength
+		
 		iconType =	{
 			name ="missionary_strength_icon"
 			spriteType = "GFX_icon_missionary"
@@ -2204,13 +2203,13 @@ guiTypes = {
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
-#			buttonText = "TIME"
-#			buttonFont = "vic_18"
+
+
 			quadTextureSprite ="GFX_sort_time"	
 			Orientation = "UPPER_LEFT"
 		}
 
-# Needs location linking and button linking		
+
 		guiButtonType = {
 			name = "sort_mission"
 			position = { x = 430 y =374 }
@@ -2323,7 +2322,7 @@ guiTypes = {
 		}
 		
 		
-		###Defender of the Faith
+		
 
         iconType = {
 			name ="defender_of_the_faith_tier"
@@ -2377,7 +2376,7 @@ guiTypes = {
 			delayedTooltipText = ""
 			buttonFont = "vic_18"
 			Orientation = "UPPER_LEFT"
-	#		scale = 0.75
+	
 		}
 		guiButtonType = 
 		{
@@ -2389,10 +2388,10 @@ guiTypes = {
 			delayedTooltipText = ""
 			buttonFont = "vic_18"
 			Orientation = "UPPER_LEFT"
-	#		scale = 0.75
+	
 		}
 
-# Needs txt linking	
+
 		instantTextBoxType = {
 				name = "defender_title"
 				position = { x = 350 y = 235 }
@@ -2476,7 +2475,7 @@ guiTypes = {
 				clicksound = back_click
 			}			
 		}
-		################# deity SELECTION		
+		
 		windowType = {
 			name = "deity_selection_screen"
 			backGround =""
@@ -2492,7 +2491,7 @@ guiTypes = {
 				name ="religion_overlay_hindu_bg"
 				spriteType = "GFX_hindu_deities_overlay_bg"
 				position = { x= -27 y = -72 }
-				#position = { x= -39 y = -310 }
+				
 			}
 			
 			listboxType = 
@@ -2517,7 +2516,7 @@ guiTypes = {
 			}
 		}
 
-		################# icon SELECTION		
+		
 		windowType = {
 			name = "icon_selection_screen"
 			backGround =""
@@ -2533,7 +2532,7 @@ guiTypes = {
 				name ="religion_overlay_bg"
 				spriteType = "GFX_icon_selection_overlay_bg"
 				position = { x= -27 y = -72 }
-				#position = { x= -39 y = -310 }
+				
 			}
 			
 			listboxType = 
@@ -2558,7 +2557,7 @@ guiTypes = {
 			}
 		}
 
-		################# scholar SELECTION		
+		
 		windowType = {
 			name =  "invite_scholar_selection_screen"
 			backGround =""
@@ -2574,7 +2573,7 @@ guiTypes = {
 				name ="religion_overlay_bg"
 				spriteType = "GFX_icon_selection_overlay_bg"
 				position = { x= -27 y = -72 }
-				#position = { x= -39 y = -310 }
+				
 			}
 
 			listboxType = 
@@ -2599,7 +2598,7 @@ guiTypes = {
 			}
 		}
 
-		################# Cult SELECTION		
+		
 		windowType = {
 			name = "cult_selection_screen"
 			backGround =""
@@ -2639,7 +2638,7 @@ guiTypes = {
 			}
 		}
 		
-		################# Church aspect SELECTION for Protestant
+		
 		windowType = {
 			name = "aspect_selection_screen"
 			backGround =""
@@ -2694,7 +2693,7 @@ guiTypes = {
 		}
 	}
 	
-	################# personal deity		
+	
 	windowType = {
 		name = "personal_deity_item"
 		backGround =""
@@ -2747,7 +2746,7 @@ guiTypes = {
 	}
 
 
-	################# icon orthodoxy
+	
 	windowType = {
 		name = "orthodox_icon_item"
 		backGround =""
@@ -2799,7 +2798,7 @@ guiTypes = {
 		}
 	}
 
-	################# religious school
+	
 	windowType = {
 		name = "religious_school_item"
 		backGround =""
@@ -2817,7 +2816,7 @@ guiTypes = {
 			position = { x= -48 y = -7 }
 		}
 
-		# Delete school_relation Please
+		
 		instantTextBoxType = {
 			name = "school_relation"
 			position = { x= -4600 y = 28 }
@@ -2871,7 +2870,7 @@ guiTypes = {
 		}
 	}
 
-	################# Cult item
+	
 	windowType = {
 		name = "fetishist_cult_item"
 		backGround =""
@@ -2936,8 +2935,8 @@ guiTypes = {
 		}
 	}
 	
-	################################################################################################
-	### --- Unlocked church aspect item
+	
+	
 	
 	windowType = {
 		name = "countryreligionview_unlockedaspectitem"
@@ -2958,11 +2957,11 @@ guiTypes = {
 		}		
 	}
 	
-	################################################################################################
-	################# Church aspect item (for selection) For Protestants
+	
+	
 	$church_aspects$
-	################################################################################################
-	################# Church aspect item (for selection) For Protestants
+	
+	
 	windowType = {
 		name = "countryreligionview_aspectitem_hussite"
 		backGround =""
@@ -3014,8 +3013,8 @@ guiTypes = {
 		}
 	}
 
-################################################################################################
-	################# Church aspect item (for selection) For Jewish
+
+	
 	windowType = {
 		name = "countryreligionview_aspectitem_students_of_magnus"
 		backGround =""
@@ -3066,8 +3065,8 @@ guiTypes = {
 		}
 	}
 
-	################################################################################################
-	################# Church aspect item (for selection) For Anglican
+	
+	
 	windowType = {
 		name = "countryreligionview_aspectitem_sload_faith"
 		backGround =""
@@ -3119,8 +3118,8 @@ guiTypes = {
 		}
 	}
 	
-	################################################################################################
-	################# Church aspect item (for selection) For Hussite
+	
+	
 	windowType = {
 		name = "countryreligionview_aspectitem_cult_of_black_worm"
 		backGround =""
@@ -3172,8 +3171,8 @@ guiTypes = {
 		}
 	}
 	
-	################################################################################################
-	### --- Cardinal item
+	
+	
 	
 	windowType = {
 		name = "countryreligionview_cardinalitem"
@@ -3194,8 +3193,8 @@ guiTypes = {
 		}
 	}
 	
-	################################################################################################
-	### --- Blessing item
+	
+	
 	
 	windowType = {
 		name = "countryreligionview_blessingitem"
@@ -3235,7 +3234,7 @@ guiTypes = {
 		}
 	}
 	
-	############## CONFUCIANISM RELIGION SELECT ##############
+	
 	windowType = {
 		name = "religion_select_item"
 		backGround =""
@@ -3267,14 +3266,14 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "button"
-			position = { x=418 y = -9} #{ x = 115 y = 5 }
+			position = { x=418 y = -9} 
 			quadTextureSprite ="GFX_button_straight_87_32_notext"
 			buttonText = "SELECT"
 			buttonFont = "vic_18"
 			Orientation = "LEFT"
 		}
 	}
-	############## CONFUCIANISM HARMONIZED RELIGIONS ##############
+	
 	windowType = {
 		name = "harmonized_listbox_item"
 		backGround =""
@@ -3290,12 +3289,12 @@ guiTypes = {
 			spriteType = "GFX_icon_religion_small"
 			position = { x= 0 y = 0 }
 			Orientation = "LEFT"
-			#alwaystransparent = yes
-			#scale = 0.5
+			
+			
 		}
   }
 
-	############## SIKHISM GURU TEACHINGS ##############
+	
 	windowType = {
 		name = "guru_teaching_entry"
 		position = { x = -6 y = 2 }
@@ -3410,7 +3409,7 @@ guiTypes = {
 		}
 	}
 
-	############## TOTEMISM ANCESTORS ##############
+	
 	windowType = {
 		name = "ancestor_entry"
 		position = { x = -14 y = -3 }
