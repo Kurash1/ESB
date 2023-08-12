@@ -4,7 +4,7 @@ new mission_series nordic_eastmarch_colonisation = {
 	ai = yes
 	
 	potential = {
-		primary_culture = cultures:nord
+		culture_group = culture_groups:nord
 	}
 	
 	missions = {
@@ -15,11 +15,13 @@ new mission_series nordic_eastmarch_colonisation = {
 			
 			trigger = {
 				total_development = 250
+				owns = p@kynesgrove
 				p@kynesgrove = {
 					development = 20
 				}
 			}
 			effect = {
+				add_treasury = -50
 				p@riverside_shack, p@berasta, p@cronvangr, p@witchmist, p@steamcrag = {
 					add_siberian_construction = 50
 				}
@@ -32,12 +34,14 @@ new mission_series nordic_eastmarch_colonisation = {
 			
 			trigger = {
 				total_development = 250
+				owns = p@darkwater_crossing
 				p@darkwater_crossing = {
 					development = 20
 				}
 			}
 			
 			effect = {
+				add_treasury = -50
 				p@atronach, p@broken_limb, p@hjoie, p@cherim_pond, p@eldergleam = {
 					add_siberian_construction = 50
 				}
@@ -50,11 +54,13 @@ new mission_series nordic_eastmarch_colonisation = {
 			
 			trigger = {
 				total_development = 250
+				owns = p@mistwatch
 				p@mistwatch = {
 					development = 20
 				}
 			}
 			effect = {
+				add_treasury = -50
 				p@bonestrew, p@akawatch, p@aleading, p@fanella = {
 					add_siberian_construction = 50
 				}

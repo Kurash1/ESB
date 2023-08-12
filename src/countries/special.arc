@@ -50,6 +50,6 @@ new country black_mountain = {
 	government = monarchy
 	technology_group = nord_tg
 	religion = nordic_pantheon
-	primary_culture = nord
+	primary_culture = hjaalmarcher
 	capital = black_mountain
 }

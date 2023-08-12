@@ -1,7 +1,6 @@
 new inheritable nordic_country = {
 	technology_group = nord_tg
 	religion = nordic_pantheon
-	primary_culture = nord
 	graphical_culture = greekgfx
 	
 	history = {
@@ -14,6 +13,7 @@ new inheritable nordic_country = {
 new country valtheim = {
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = VLT
 	name = "Valtheim"
 	adj = "Valtheimen"
@@ -24,6 +24,7 @@ new country valtheim = {
 new country eldergleam = {
 	inherit = nordic_country
 	
+	primary_culture = fallowfirean
 	tag = ELD
 	name = "Eldergleam"
 	adj = "Elder"
@@ -34,6 +35,7 @@ new country eldergleam = {
 new country fallowfire = {
 	inherit = nordic_country
 	
+	primary_culture = fallowfirean
 	tag = FLW
 	name = "Fallowfire"
 	adj = "Fallowfire"
@@ -44,6 +46,7 @@ new country fallowfire = {
 new country forelhost = {
 	inherit = nordic_country
 
+	primary_culture = forelhostian
 	tag = FOR
 	name = "Forelhost"
 	adj = "Forelhostian"
@@ -55,6 +58,7 @@ new country forelhost = {
 new country solitude = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = SOL
 	name = "Solitude"
 	adj = "Solitudean"
@@ -71,6 +75,7 @@ new country solitude = {
 new country pine_frost = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = PIF
 	name = "Pine-Frost"
 	adj = "Pine-Frost"
@@ -81,6 +86,7 @@ new country pine_frost = {
 new country holly-frost = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = HLY
 	name = "Holly-Frost"
 	adj = "Holly-Frost"
@@ -91,6 +97,7 @@ new country holly-frost = {
 new country dragon_bridge = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = DRB
 	name = "Dragon Bridge"
 	adj = "Dragon Bridgean"
@@ -101,6 +108,7 @@ new country dragon_bridge = {
 new country blue-axe = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = BLU
 	name = "Blue-Axe"
 	adj = "Blue-Axe"
@@ -111,6 +119,7 @@ new country blue-axe = {
 new country pine-hill = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = PIN
 	name = "Pine-Hill"
 	adj = "Pine-Hill"
@@ -121,6 +130,7 @@ new country pine-hill = {
 new country rime-rock = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = RIR
 	name = "Rime-Rock"
 	adj = "Rime-Rock"
@@ -131,6 +141,7 @@ new country rime-rock = {
 new country raven-scar = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = RAV
 	name = "Raven-Scar"
 	adj = "Raven-Scar"
@@ -141,6 +152,7 @@ new country raven-scar = {
 new country iron-back = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = IRO
 	name = "Iron-Back"
 	adj = "Iron-Back"
@@ -151,6 +163,7 @@ new country iron-back = {
 new country wolf-skull = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = WOL
 	name = "Wolf-Skull"
 	adj = "Wolf-Skull"
@@ -161,6 +174,7 @@ new country wolf-skull = {
 new country chill-wind = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = CHW
 	name = "Chill-Wind"
 	adj = "Chill-Wind"
@@ -171,6 +185,7 @@ new country chill-wind = {
 new country snow-hawk = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = SNO
 	name = "Snow-Hawk"
 	adj = "Snow-Hawk"
@@ -181,6 +196,7 @@ new country snow-hawk = {
 new country mort-hall = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = MOH
 	name = "Mort-Hall"
 	adj = "Mort-Hall"
@@ -191,6 +207,7 @@ new country mort-hall = {
 new country high-gate = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = HGA
 	name = "High-Gate"
 	adj = "High-Gate"
@@ -201,6 +218,7 @@ new country high-gate = {
 new country dawn-star = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = DAW
 	name = "Dawn-Star"
 	adj = "Dawn-Star"
@@ -217,6 +235,7 @@ new country dawn-star = {
 new country stone-hill = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = STO
 	name = "Stone-Hill"
 	adj = "Stone-Hill"
@@ -227,6 +246,7 @@ new country stone-hill = {
 new country mire-watch = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = MIR
 	name = "Mire-Watch"
 	adj = "Mire-Watch"
@@ -237,6 +257,7 @@ new country mire-watch = {
 new country wind-ward = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = WIN
 	name = "Wind-Ward"
 	adj = "Wind-Ward"
@@ -247,6 +268,7 @@ new country wind-ward = {
 new country dunstad = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = DNS
 	name = "Dunstad"
 	adj = "Dunstandish"
@@ -257,6 +279,7 @@ new country dunstad = {
 new country wind-caller = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = WNC
 	name = "Wind-Caller"
 	adj = "Wind-Caller"
@@ -267,6 +290,7 @@ new country wind-caller = {
 new country hjaal = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = HJA
 	name = "Hjaal"
 	adj = "Hjaalish"
@@ -277,6 +301,7 @@ new country hjaal = {
 new country rorikstead = { 
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = ROR
 	name = "Rorikstead"
 	adj = "Roriksteadean"
@@ -287,6 +312,7 @@ new country rorikstead = {
 new country river-runner = { 
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = RVR
 	name = "River-Runner"
 	adj = "River-Runner"
@@ -297,6 +323,7 @@ new country river-runner = {
 new country broken-fang = { 
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = BRK
 	name = "Broken-Fang"
 	adj = "Broken-Fang"
@@ -324,6 +351,7 @@ new country broken-fang = {
 new country skjoralmor = { 
 	inherit = nordic_country
 	
+	primary_culture = falkrentish
 	tag = SKJ
 	name = "Skjoralmor"
 	adj = "Skjoralmorian"
@@ -340,6 +368,7 @@ new country skjoralmor = {
 new country jorrvaskr = { 
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = JRR
 	name = "Jorrvaskr"
 	adj = "Jorrvaskr"
@@ -367,6 +396,7 @@ new country jorrvaskr = {
 new country windhelm = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = WND
 	name = "Windhelm"
 	adj = "Windhelm"
@@ -403,6 +433,7 @@ new relation alliance = {
 new country hill-hammer = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = HIL
 	name = "Hill-Hammer"
 	adj = "Hill-Hammer"
@@ -413,6 +444,7 @@ new country hill-hammer = {
 new country frost-flow = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = FRF
 	name = "Frost-Flow"
 	adj = "Frost-Flow"
@@ -423,6 +455,7 @@ new country frost-flow = {
 new country silver-drift = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = SID
 	name = "Silver-Drift"
 	adj = "Silver-Drift"
@@ -433,6 +466,7 @@ new country silver-drift = {
 new country nightgate = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = NIG
 	name = "Nightgate"
 	adj = "Nightgate"
@@ -443,6 +477,7 @@ new country nightgate = {
 new country white-watch = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = WHW
 	name = "White-Watch"
 	adj = "White-Watch"
@@ -453,6 +488,7 @@ new country white-watch = {
 new country silent-moon = { 
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = SLM
 	name = "Silent-Moon"
 	adj = "Silent-Moon"
@@ -463,6 +499,7 @@ new country silent-moon = {
 new country black-moor = { 
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = BCM
 	name = "Black-Moor"
 	adj = "Black-Moor"
@@ -491,6 +528,7 @@ new country black-moor = {
 new country shield-shade = { 
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = SHS
 	name = "Shield-Shade"
 	adj = "Shield-Shade"
@@ -518,6 +556,7 @@ new country shield-shade = {
 new country bleak-wind = { 
 	inherit = nordic_country
 	
+	primary_culture = whiterunish
 	tag = BLW
 	name = "Bleak-Wind"
 	adj = "Bleak-Wind"
@@ -528,6 +567,7 @@ new country bleak-wind = {
 new country volunruud = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = VLR
 	name = "Volunruud"
 	adj = "Volunruud"
@@ -538,6 +578,7 @@ new country volunruud = {
 new country rannveig = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = RAN
 	name = "Rannveig"
 	adj = "Rannveig's"
@@ -548,6 +589,7 @@ new country rannveig = {
 new country shearpoint = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = SHR
 	name = "Shearpoint"
 	adj = "Shearpointish"
@@ -558,6 +600,7 @@ new country shearpoint = {
 new country skyborn = { 
 	inherit = nordic_country
 	
+	primary_culture = hjaalmarcher
 	tag = SKB
 	name = "Skyborn"
 	adj = "Skyborn"
@@ -568,6 +611,7 @@ new country skyborn = {
 new country yorgrim = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = YOR
 	name = "Yorgrim"
 	adj = "Yorgrim"
@@ -578,6 +622,7 @@ new country yorgrim = {
 new country fell-glow = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = FEL
 	name = "Fell-Glow"
 	adj = "Fell-Glow"
@@ -588,6 +633,7 @@ new country fell-glow = {
 new country hillgrund = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = HID
 	name = "Hillgrund"
 	adj = "Hillgrund"
@@ -598,6 +644,7 @@ new country hillgrund = {
 new country cradlecrush = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = CRA
 	name = "Cradlecrush"
 	adj = "Cradlecrush"
@@ -608,6 +655,7 @@ new country cradlecrush = {
 new country dark-water = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = DAR
 	name = "Dark-Water"
 	adj = "Dark-Water"
@@ -618,6 +666,7 @@ new country dark-water = {
 new country mist-watch = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = MIS
 	name = "Mist-Watch"
 	adj = "Mist-Watch"
@@ -628,6 +677,7 @@ new country mist-watch = {
 new country north-wind = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = NOW
 	name = "North-Wind"
 	adj = "North-Wind"
@@ -638,6 +688,7 @@ new country north-wind = {
 new country cronvangr = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = CRV
 	name = "Cronvangr"
 	adj = "Cronvangr"
@@ -648,6 +699,7 @@ new country cronvangr = {
 new country kynesgrove = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = KYN
 	name = "Kynesgrove"
 	adj = "Kynesgrove"
@@ -658,6 +710,7 @@ new country kynesgrove = {
 new country iron-bind = { 
 	inherit = nordic_country
 	
+	primary_culture = palean
 	tag = IRB
 	name = "Iron-Bind"
 	adj = "Iron-Bind"
@@ -668,6 +721,7 @@ new country iron-bind = {
 new country yngvild = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = YNG
 	name = "Yngvild"
 	adj = "Yngvild"
@@ -678,6 +732,7 @@ new country yngvild = {
 new country cragwallow = { 
 	inherit = nordic_country
 	
+	primary_culture = eastmarcher
 	tag = CRW
 	name = "Cragwallow"
 	adj = "Cragwallow"
@@ -688,6 +743,7 @@ new country cragwallow = {
 new country anthor = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = ANT
 	name = "Anthor"
 	adj = "Anthor"
@@ -698,6 +754,7 @@ new country anthor = {
 new country saarthal = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = SAA
 	name = "Saarthal"
 	adj = "Saarthal"
@@ -708,6 +765,7 @@ new country saarthal = {
 new country snow-veil = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = SNV
 	name = "Snow-Veil"
 	adj = "Snow-Veil"
@@ -718,6 +776,7 @@ new country snow-veil = {
 new country bleak-coast = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = BLK
 	name = "Bleak-Coast"
 	adj = "Bleak-Coast"
@@ -728,6 +787,7 @@ new country bleak-coast = {
 new country sky-temple = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = SKT
 	name = "Sky-Temple"
 	adj = "Sky-Temple"
@@ -738,6 +798,7 @@ new country sky-temple = {
 new country winterhold = { 
 	inherit = nordic_country
 	
+	primary_culture = winterholdian
 	tag = WIH
 	name = "Winterhold"
 	adj = "Winterhold"
@@ -748,6 +809,7 @@ new country winterhold = {
 new country shadow-green = { 
 	inherit = nordic_country
 	
+	primary_culture = haafingarian
 	tag = SHD
 	name = "Shadow-Green"
 	adj = "Shadow-Green"
