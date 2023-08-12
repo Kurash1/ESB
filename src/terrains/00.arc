@@ -1,4 +1,3 @@
-`trade_goods`
 #terrain id = {
 #	name = string
 #	desc = string?

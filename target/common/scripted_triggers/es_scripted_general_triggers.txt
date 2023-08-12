@@ -34,8 +34,8 @@ is_elven_nation_trigger = {
     custom_trigger_tooltip = {
         tooltip = is_elven_nation_trigger_tooltip
 		OR = {
-			culture_group = orsimer_cg
-			culture_group = snow_elves_cg
+			culture_group = orc_culture_group
+			culture_group = snow_elven_culture_group
 		}
 	}
 }
@@ -44,8 +44,8 @@ is_human_nation_trigger = {
     custom_trigger_tooltip = {
         tooltip = is_human_nation_trigger_tooltip
 		OR = {
-			culture_group = northern_cg
-			culture_group = half_blood_cg
+			culture_group = nord_culture_group
+			culture_group = reachmen_culture_group
 		}
 	}
 }

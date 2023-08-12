@@ -25,12 +25,12 @@ esb_change_opinion = {
 			limit = {
 				OR = {
 					AND = {
-						culture_group = northern_cg
-						PREV = { culture_group = snow_elves_cg }
+						culture_group = nord_culture_group
+						PREV = { culture_group = snow_elven_culture_group }
 					}
 					AND = {
-						culture_group = snow_elves_cg
-						PREV = { culture_group = northern_cg }
+						culture_group = snow_elven_culture_group
+						PREV = { culture_group = nord_culture_group }
 					}
 				}
 			}

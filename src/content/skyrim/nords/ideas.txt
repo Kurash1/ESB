@@ -1,3 +1,68 @@
+new mission_series nordic_eastmarch_colonisation = {
+	slot = 10
+	generic = yes
+	ai = yes
+	
+	potential = {
+		primary_culture = cultures:nord
+	}
+	
+	missions = {
+		nordic_eastmarch_colonisation_cronvangr = {
+			name = "Cronvangr Expedition"
+			desc = ""
+			icon = mission_unknown_mission
+			
+			trigger = {
+				total_development = 250
+				p@kynesgrove = {
+					development = 20
+				}
+			}
+			effect = {
+				p@riverside_shack, p@berasta, p@cronvangr, p@witchmist, p@steamcrag = {
+					add_siberian_construction = 50
+				}
+			}
+		}
+		nordic_eastmarch_colonisation_darkwater = {
+			name = "Darkwater Expedition"
+			desc = ""
+			icon = mission_unknown_mission
+			
+			trigger = {
+				total_development = 250
+				p@darkwater_crossing = {
+					development = 20
+				}
+			}
+			
+			effect = {
+				p@atronach, p@broken_limb, p@hjoie, p@cherim_pond, p@eldergleam = {
+					add_siberian_construction = 50
+				}
+			}
+		}
+		nordic_eastmarch_colonisation_akawatch = {
+			name = "Akawatch Expedition"
+			desc = ""
+			icon = mission_unknown_mission
+			
+			trigger = {
+				total_development = 250
+				p@mistwatch = {
+					development = 20
+				}
+			}
+			effect = {
+				p@bonestrew, p@akawatch, p@aleading, p@fanella = {
+					add_siberian_construction = 50
+				}
+			}
+		}
+	}
+}
+
 new idea_group nordic_ideas = {
 	name = "Nordic"
 	
@@ -11,7 +76,7 @@ new idea_group nordic_ideas = {
 	}
 	
 	trigger = {
-		primary_culture = nord
+		primary_culture = cultures:nord
 	}
 	
 	ideas = {

@@ -50,23 +50,3 @@ cb_pte_liberation = {
 
 	war_goal = pte_liberation_war_goal
 }
-
-cb_ruler_revenge = {
-	valid_for_subject = no
-
-	is_triggered_only = yes
-
-	prerequisites = {
-		FROM = {
-			is_neighbor_of = ROOT
-			primary_culture = nord
-		}
-	}
-	
-	attacker_disabled_po = {
-		po_form_personal_union
-		po_become_vassal
-		po_subjugate_vassal
-	}
-	war_goal = ruler_revenge_war_goal
-}

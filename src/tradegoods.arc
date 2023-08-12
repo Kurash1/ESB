@@ -103,7 +103,7 @@ new tradegood wine = {
 		stability_cost_modifier = -0.1
 	}
 	province = {
-		local_center_of_trade_upgrade_cost = -0.4
+		local_unrest = -1
 	}
 	base_price = 3
 	is_gold = no

@@ -3185,7 +3185,7 @@ new idea_group mysticism_ideas = {
 	category = ADM
 	trigger = {
 		OR = {
-			primary_culture = reachmen
+			primary_culture = cultures:reachmen
 			full_idea_group = alteration_ideas
 		}
 	}
@@ -3590,10 +3590,7 @@ new idea_group esb_thaumavocalism = {
 
 	category = ADM
 	trigger = {
-		OR = {
-			primary_culture = breton
-			full_idea_group = alteration_ideas
-		}
+		full_idea_group = alteration_ideas
 	}
 
 	ideas = {
@@ -4285,10 +4282,7 @@ new idea_group humanist_ideas = {
 
 	category = ADM
 	trigger = {
-		OR = {
-			has_country_modifier = tolerant_society
-			full_idea_group = republik0
-		}
+		full_idea_group = republik0
 	}
 
 	ideas = {
@@ -4357,7 +4351,6 @@ new idea_group religious_ideas = {
 	category = ADM
 	trigger = {
 		OR = {
-			has_country_modifier = intolerant_society
 			at_war_with_religious_enemy = yes
 			full_idea_group = aristo0
 		}
