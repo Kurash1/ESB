@@ -15,7 +15,7 @@ new tradegood wood = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -37,7 +37,7 @@ new tradegood iron = {
 	base_price = 3
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -60,7 +60,7 @@ new tradegood steel = {
 	base_price = 4
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -82,7 +82,7 @@ new tradegood fish = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -104,7 +104,7 @@ new tradegood wheat = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -126,7 +126,7 @@ new tradegood ale = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -148,7 +148,7 @@ new tradegood wine = {
 	base_price = 3
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -170,7 +170,7 @@ new tradegood paper = {
 	base_price = 4
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -192,7 +192,7 @@ new tradegood alchemical_ingredients = {
 	base_price = 3.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -214,7 +214,7 @@ new tradegood r_alchemical_ingredients = {
 	base_price = 6
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -236,7 +236,7 @@ new tradegood potions = {
 	base_price = 6.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -258,7 +258,7 @@ new tradegood stone = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -280,7 +280,7 @@ new tradegood gems = {
 	base_price = 6
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -342,7 +342,7 @@ new tradegood ebony = {
 	base_price = 8
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 0
 		
 	}
 	
@@ -364,7 +364,7 @@ new tradegood c_metals = {
 	base_price = 3.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -386,7 +386,7 @@ new tradegood r_metals = {
 	base_price = 5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 5
 		
 	}
 	
@@ -408,7 +408,7 @@ new tradegood jewelry = {
 	base_price = 7.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -430,7 +430,7 @@ new tradegood fur = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -452,7 +452,7 @@ new tradegood livestock = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -474,7 +474,7 @@ new tradegood skooma = {
 	base_price = 6
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 2
 		
 	}
 	
@@ -496,7 +496,7 @@ new tradegood slaves = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 0
 		
 	}
 	
@@ -518,7 +518,7 @@ new tradegood mag_goods = {
 	base_price = 6
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 2
 		
 	}
 	
@@ -540,7 +540,7 @@ new tradegood cloth = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -562,7 +562,7 @@ new tradegood fruits = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -584,7 +584,7 @@ new tradegood liquor = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -606,7 +606,7 @@ new tradegood naval_supplies = {
 	base_price = 3.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -629,7 +629,7 @@ new tradegood arms = {
 	base_price = 5.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 5
 		
 	}
 	
@@ -651,7 +651,7 @@ new tradegood glass = {
 	base_price = 4.5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -673,7 +673,7 @@ new tradegood drugs = {
 	base_price = 5
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	
@@ -696,7 +696,7 @@ new tradegood rel_goods = {
 	base_price = 3
 	is_gold = no
 	chance = {
-		factor = 1
+		factor = 10
 		
 	}
 	

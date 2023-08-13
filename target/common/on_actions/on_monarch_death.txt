@@ -1,1 +1,1 @@
-on_monarch_death = { } 
+on_monarch_death = { if = { limit = { culture_group = nord_culture_group } random_owned_province = { limit = { NOT = { has_construction = barrow_hill has_building = barrow_hill } } add_building_construction = { building = barrow_hill speed = 1 cost = 1 } } } } 

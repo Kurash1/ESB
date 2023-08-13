@@ -1,4 +1,4 @@
-new province north_velothi_mountains = {
+new province 1_velothi_mountains = {
 	position = {
 		2002.000 1909.000 2002.000 1909.000 2002.000 1909.000 2002.000 1909.000 2002.000 1909.000 2002.000 1909.000 2002.000 1909.000 
 	}
@@ -8,7 +8,7 @@ new province north_velothi_mountains = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
 	}
-	name = "North Velothi Mountains"
+	name = ""
 	color = {
 		14 8 28 
 	}
@@ -158,6 +158,27 @@ new province lost_knife_hills = {
 	impassible = yes
 	
 }
+new province 2_velothi_mountains = {
+	position = {
+		1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
+	}
+	name = ""
+	color = {
+		13 1 20
+	}
+	history = {
+		
+	}
+	impassible = yes
+	
+}
+
 new area bleakrock_isle = {
 	name = "Bleakrock Isle"
 	region = eastmarch
@@ -1721,6 +1742,39 @@ new province rough_road = {
 		230 206 192 
 	}
 	terrain = highlands
+	area = lost_knife
+	discovered_by = {
+		northern_tg 
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:eastmarcher
+		hre = yes
+		`trade_goods` = unknown
+		capital = ""
+		is_city = yes
+		owner = HID
+		controller = HID
+		add_core = HID
+		
+	}
+	
+}
+new province east_hrothgar_pass = {
+	position = {
+		1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 1864.000 1899.000 1862.000 1892.000 1862.000 1892.000 1862.000 1892.000 
+	}
+	rotation = {
+		0.000 0.000 0.000 4.102 0.000 0.000 0.000 
+	}
+	height = {
+		0.365 0.365 0.365 0.750 0.365 0.365 0.365 
+	}
+	name = "East Hrothgar Pass"
+	color = {
+		230 150 192 
+	}
+	terrain = mountain
 	area = lost_knife
 	discovered_by = {
 		northern_tg 
