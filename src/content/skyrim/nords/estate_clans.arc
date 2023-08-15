@@ -9,12 +9,12 @@ new estate clans = {
 		culture_group = culture_groups:nord
 	}
 	country_modifier_happy = {
-		global_unrest = -2
+		global_unrest = -3
 	}
 	country_modifier_neutral = {
 	}
 	country_modifier_angry = {
-		global_unrest = 2
+		global_unrest = 3
 	}
 	land_ownership_modifier = {
 		state_maintenance_modifier = -0.5

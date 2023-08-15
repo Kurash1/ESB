@@ -9,12 +9,12 @@ new estate warriors = {
 		culture_group = culture_groups:nord
 	}
 	country_modifier_happy = {
-		land_morale = 0.10
+		land_morale = 0.20
 	}
 	country_modifier_neutral = {
 	}
 	country_modifier_angry = {
-		land_morale = -0.10
+		land_morale = -0.20
 	}
 	land_ownership_modifier = {
 		global_manpower_modifier = 0.5

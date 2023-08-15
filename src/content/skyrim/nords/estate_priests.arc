@@ -9,12 +9,12 @@ new estate priests = {
 		culture_group = culture_groups:nord
 	}
 	country_modifier_happy = {
-		global_missionary_strength = 0.015
+		global_missionary_strength = 0.03
 	}
 	country_modifier_neutral = {
 	}
 	country_modifier_angry = {
-		global_missionary_strength = -0.015
+		global_missionary_strength = -0.03
 	}
 	land_ownership_modifier = {
 		tolerance_own = 5
