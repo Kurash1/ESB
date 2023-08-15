@@ -6,11 +6,8 @@ new inheritable snow_elven_country = {
 	history = {
 		Tamriel = {
 			discover_country = ROOT
-			
 		}
-		
 	}
-	
 }
 new country geir = {
 	inherit = snow_elven_country
@@ -19,10 +16,9 @@ new country geir = {
 	name = "Geir"
 	adj = "Geirian"
 	color = {
-		255 205 112 
+		255 205 112
 	}
 	capital = ivarstead
-	
 }
 new country arcwind = {
 	inherit = snow_elven_country
@@ -30,10 +26,9 @@ new country arcwind = {
 	name = "Arcwind"
 	adj = "Arcwind"
 	color = {
-		200 200 255 
+		200 200 255
 	}
 	capital = arcwind
-	
 }
 new country treva = {
 	inherit = snow_elven_country
@@ -41,10 +36,9 @@ new country treva = {
 	name = "Treva"
 	adj = "Treva's"
 	color = {
-		50 0 0 
+		50 0 0
 	}
 	capital = trevas_watch
-	
 }
 new country faldar = {
 	inherit = snow_elven_country
@@ -52,10 +46,9 @@ new country faldar = {
 	name = "Faldar"
 	adj = "Faldar's"
 	color = {
-		150 0 50 
+		150 0 50
 	}
 	capital = faldar
-	
 }
 new country honrich = {
 	inherit = snow_elven_country
@@ -64,8 +57,7 @@ new country honrich = {
 	name = "Honrich"
 	adj = "Honrichian"
 	color = {
-		0 50 200 
+		0 50 200
 	}
 	capital = riften
-	
 }

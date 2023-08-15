@@ -1,0 +1,115 @@
+new religion the_old_ways = {
+	name = "The Old Ways"
+	desc = ""
+	icon = 1
+	color = {
+		50 120 110 
+	}
+	heretic = {
+		NORDIC_PANTHEON_HERETIC 
+	}
+	country = {
+		land_morale = 0.1
+		idea_cost = -0.05
+		
+	}
+	province = {
+		local_missionary_strength = -0.015
+		
+	}
+	personal_deity = yes
+	hre_heretic_religion = yes
+	religious_group = nordic_group
+	
+}
+new personal_deity hawk = {
+	name = "Hawk"
+	desc = ""
+	sprite = 8
+	modifiers = {
+		
+	}
+	potential = {
+		religion = the_old_ways
+		
+	}
+	
+}
+new personal_deity moth = {
+	name = "Moth"
+	desc = ""
+	sprite = 9
+	modifiers = {
+		
+	}
+	potential = {
+		religion = the_old_ways
+		
+	}
+	
+}
+new personal_deity bear = {
+	name = "Bear"
+	desc = ""
+	sprite = 10
+	modifiers = {
+		
+	}
+	potential = {
+		religion = the_old_ways
+		
+	}
+	
+}
+new personal_deity wolf = {
+	name = "Wolf"
+	desc = ""
+	sprite = 11
+	modifiers = {
+		
+	}
+	potential = {
+		religion = the_old_ways
+		
+	}
+	
+}
+new personal_deity owl = {
+	name = "Owl"
+	desc = ""
+	sprite = 12
+	modifiers = {
+		
+	}
+	potential = {
+		religion = the_old_ways
+		
+	}
+	
+}
+new personal_deity fox = {
+	name = "Fox"
+	desc = ""
+	sprite = 13
+	modifiers = {
+		
+	}
+	potential = {
+		religion = the_old_ways
+		
+	}
+	
+}
+new personal_deity whale = {
+	name = "Whale"
+	desc = ""
+	sprite = 14
+	modifiers = {
+		
+	}
+	potential = {
+		religion = the_old_ways
+		
+	}
+	
+}

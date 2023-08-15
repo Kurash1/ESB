@@ -7,11 +7,8 @@ new inheritable kreath_orc_country = {
 	history = {
 		Tamriel = {
 			discover_country = ROOT
-			
 		}
-		
 	}
-	
 }
 new country bilegulch = {
 	inherit = kreath_orc_country
@@ -19,10 +16,9 @@ new country bilegulch = {
 	name = "Bilegulch"
 	adj = "Bilegulch"
 	color = {
-		38 127 93 
+		38 127 93
 	}
 	capital = bilegulch
-	
 }
 new country knifepoint = {
 	inherit = kreath_orc_country
@@ -30,10 +26,9 @@ new country knifepoint = {
 	name = "Knifepoint"
 	adj = "Stabbed"
 	color = {
-		127 51 0 
+		127 51 0
 	}
 	capital = knifepoint
-	
 }
 new country half_moon = {
 	inherit = kreath_orc_country
@@ -41,10 +36,9 @@ new country half_moon = {
 	name = "Half-Moon"
 	adj = "Lunar"
 	color = {
-		128 128 128 
+		128 128 128
 	}
 	capital = half_moon
-	
 }
 new country cracked_tusk = {
 	inherit = kreath_orc_country
@@ -52,10 +46,9 @@ new country cracked_tusk = {
 	name = "Cracked Tusk"
 	adj = "Cracked"
 	color = {
-		255 178 127 
+		255 178 127
 	}
 	capital = cracked_tusk
-	
 }
 new country halldir = {
 	inherit = kreath_orc_country
@@ -63,10 +56,9 @@ new country halldir = {
 	name = "Halldir"
 	adj = "Halldirian"
 	color = {
-		0 255 255 
+		0 255 255
 	}
 	capital = halldir
-	
 }
 new country peak_shade = {
 	inherit = kreath_orc_country
@@ -74,10 +66,9 @@ new country peak_shade = {
 	name = "Peak Shade"
 	adj = "Peak"
 	color = {
-		0 20 0 
+		0 20 0
 	}
 	capital = peak_shade
-	
 }
 new country bloodlet = {
 	inherit = kreath_orc_country
@@ -85,10 +76,9 @@ new country bloodlet = {
 	name = "Bloodlet"
 	adj = "Bloodletian"
 	color = {
-		127 0 0 
+		127 0 0
 	}
 	capital = bloodlet
-	
 }
 new country bonechill = {
 	inherit = kreath_orc_country
@@ -96,10 +86,9 @@ new country bonechill = {
 	name = "Bonechill"
 	adj = "Cold"
 	color = {
-		255 255 182 
+		255 255 182
 	}
 	capital = bonechill
-	
 }
 new country orphan_rock = {
 	inherit = kreath_orc_country
@@ -107,10 +96,9 @@ new country orphan_rock = {
 	name = "Orphan Rock"
 	adj = "Orphan"
 	color = {
-		72 0 255 
+		72 0 255
 	}
 	capital = orphan_rock
-	
 }
 new country southfringe = {
 	inherit = kreath_orc_country
@@ -118,8 +106,7 @@ new country southfringe = {
 	name = "Southfringe"
 	adj = "Fringe"
 	color = {
-		127 0 110 
+		127 0 110
 	}
 	capital = southfringe
-	
 }

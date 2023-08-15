@@ -4,9 +4,7 @@ new advisor_type philosopher = {
 	monarch_power = ADM
 	modifier = {
 		prestige = 1
-		
 	}
-	
 }
 new advisor_type natural_scientist = {
 	name = "Natural Scientist"
@@ -14,9 +12,7 @@ new advisor_type natural_scientist = {
 	monarch_power = ADM
 	modifier = {
 		production_efficiency = 0.10
-		
 	}
-	
 }
 new advisor_type artist = {
 	name = "Artist"
@@ -24,9 +20,7 @@ new advisor_type artist = {
 	monarch_power = ADM
 	modifier = {
 		stability_cost_modifier = -0.10
-		
 	}
-	
 }
 new advisor_type treasurer = {
 	name = "Treasurer"
@@ -34,9 +28,7 @@ new advisor_type treasurer = {
 	monarch_power = ADM
 	modifier = {
 		global_tax_modifier = 0.1
-		
 	}
-	
 }
 new advisor_type theologian = {
 	name = "Treasurer"
@@ -44,9 +36,7 @@ new advisor_type theologian = {
 	monarch_power = ADM
 	modifier = {
 		global_unrest = -2
-		
 	}
-	
 }
 new advisor_type master_of_mint = {
 	name = "Master of the Mint"
@@ -54,9 +44,7 @@ new advisor_type master_of_mint = {
 	monarch_power = ADM
 	modifier = {
 		inflation_reduction = 0.10
-		
 	}
-	
 }
 new advisor_type inquisitor = {
 	name = "Inquisitor"
@@ -64,9 +52,7 @@ new advisor_type inquisitor = {
 	monarch_power = ADM
 	modifier = {
 		global_missionary_strength = 0.02
-		
 	}
-	
 }
 new advisor_type statesman = {
 	name = "Statesman"
@@ -74,9 +60,7 @@ new advisor_type statesman = {
 	monarch_power = DIP
 	modifier = {
 		diplomatic_reputation = 1
-		
 	}
-	
 }
 new advisor_type naval_reformer = {
 	name = "Naval Reformer"
@@ -84,9 +68,7 @@ new advisor_type naval_reformer = {
 	monarch_power = DIP
 	modifier = {
 		naval_morale = 0.1
-		
 	}
-	
 }
 new advisor_type trader = {
 	name = "Trader"
@@ -94,9 +76,7 @@ new advisor_type trader = {
 	monarch_power = DIP
 	modifier = {
 		trade_efficiency = 0.10
-		
 	}
-	
 }
 new advisor_type spymaster = {
 	name = "Spymaster"
@@ -104,9 +84,7 @@ new advisor_type spymaster = {
 	monarch_power = DIP
 	modifier = {
 		spy_offence = 0.25
-		
 	}
-	
 }
 new advisor_type diplomat = {
 	name = "Diplomat"
@@ -114,9 +92,7 @@ new advisor_type diplomat = {
 	monarch_power = DIP
 	modifier = {
 		improve_relation_modifier = 0.2
-		
 	}
-	
 }
 new advisor_type army_reformer = {
 	name = "Army Reformer"
@@ -124,9 +100,7 @@ new advisor_type army_reformer = {
 	monarch_power = MIL
 	modifier = {
 		land_morale = 0.10
-		
 	}
-	
 }
 new advisor_type army_organiser = {
 	name = "Army Organiser"
@@ -134,9 +108,7 @@ new advisor_type army_organiser = {
 	monarch_power = MIL
 	modifier = {
 		land_forcelimit_modifier = 0.10
-		
 	}
-	
 }
 new advisor_type commandant = {
 	name = "Commandant"
@@ -144,9 +116,7 @@ new advisor_type commandant = {
 	monarch_power = MIL
 	modifier = {
 		discipline = 0.05
-		
 	}
-	
 }
 new advisor_type quartermaster = {
 	name = "Quartermaster"
@@ -154,9 +124,7 @@ new advisor_type quartermaster = {
 	monarch_power = MIL
 	modifier = {
 		reinforce_speed = 0.33
-		
 	}
-	
 }
 new advisor_type recruitmaster = {
 	name = "Recruit Master"
@@ -164,9 +132,7 @@ new advisor_type recruitmaster = {
 	monarch_power = MIL
 	modifier = {
 		global_manpower_modifier = 0.10
-		
 	}
-	
 }
 new advisor_type fortification_expert = {
 	name = "Fortification Expert"
@@ -174,9 +140,7 @@ new advisor_type fortification_expert = {
 	monarch_power = MIL
 	modifier = {
 		defensiveness = 0.2
-		
 	}
-	
 }
 new advisor_type grand_captain = {
 	name = "Grand Captain"
@@ -184,7 +148,5 @@ new advisor_type grand_captain = {
 	monarch_power = MIL
 	modifier = {
 		land_maintenance_modifier = -0.10
-		
 	}
-	
 }

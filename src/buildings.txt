@@ -5,14 +5,11 @@ new building fort_15th = {
 	time = 12
 	modifier = {
 		fort_level = 2
-		
 	}
 	influencing_fort = yes
 	ai_will_do = {
 		factor = 4
-		
 	}
-	
 }
 new building fort_16th = {
 	name = "Castle"
@@ -22,14 +19,11 @@ new building fort_16th = {
 	make_obsolete = fort_15th
 	modifier = {
 		fort_level = 4
-		
 	}
 	influencing_fort = yes
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building fortup_1 = {
 	name = "Additional Garrisons"
@@ -38,18 +32,14 @@ new building fortup_1 = {
 	time = 12
 	build_trigger = {
 		fort_level = 1
-		
 	}
 	modifier = {
 		local_garrison_size = 0.5
 		local_fort_maintenance_modifier = 0.25
-		
 	}
 	ai_will_do = {
 		factor = 0
-		
 	}
-	
 }
 new building fortup_2 = {
 	name = "Traps"
@@ -58,18 +48,14 @@ new building fortup_2 = {
 	time = 12
 	build_trigger = {
 		fort_level = 1
-		
 	}
 	modifier = {
 		local_hostile_attrition = 1
 		local_fort_maintenance_modifier = 0.25
-		
 	}
 	ai_will_do = {
 		factor = 0
-		
 	}
-	
 }
 new building fortup_3 = {
 	name = "Secret Passages"
@@ -78,18 +64,14 @@ new building fortup_3 = {
 	time = 12
 	build_trigger = {
 		fort_level = 1
-		
 	}
 	modifier = {
 		local_defensiveness = 0.25
 		local_fort_maintenance_modifier = 0.25
-		
 	}
 	ai_will_do = {
 		factor = 0
-		
 	}
-	
 }
 new building fortup_4 = {
 	name = "Battleworks"
@@ -98,18 +80,14 @@ new building fortup_4 = {
 	time = 12
 	build_trigger = {
 		fort_level = 1
-		
 	}
 	modifier = {
 		local_defender_dice_roll_bonus = 1
 		local_fort_maintenance_modifier = 0.25
-		
 	}
 	ai_will_do = {
 		factor = 0
-		
 	}
-	
 }
 new building tax_1 = {
 	name = "Shrine"
@@ -119,13 +97,10 @@ new building tax_1 = {
 	modifier = {
 		local_tax_modifier = 0.4
 		local_autonomy = -0.05
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building tax_2 = {
 	name = "Temple"
@@ -140,22 +115,16 @@ new building tax_2 = {
 				full_idea_group = economic_ideas
 				full_idea_group = esb_treasury
 				full_idea_group = religious_ideas
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_tax_modifier = 0.7
 		local_autonomy = -0.10
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building tax_3 = {
 	name = "Cathedral"
@@ -170,22 +139,16 @@ new building tax_3 = {
 				full_idea_group = economic_ideas
 				full_idea_group = esb_treasury
 				full_idea_group = religious_ideas
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_tax_modifier = 1.0
 		local_autonomy = -0.15
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building prod_1 = {
 	name = "Smithy"
@@ -202,21 +165,15 @@ new building prod_1 = {
 				full_idea_group = smithing_ideas
 				full_idea_group = waffenqualitat0
 				full_idea_group = armour_quality_ideas
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_production_efficiency = 0.4
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building prod_2 = {
 	name = "Workshop"
@@ -234,21 +191,15 @@ new building prod_2 = {
 				full_idea_group = smithing_ideas
 				full_idea_group = waffenqualitat0
 				full_idea_group = armour_quality_ideas
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_production_efficiency = 0.7
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building prod_3 = {
 	name = "Craftsmens Guild"
@@ -266,21 +217,15 @@ new building prod_3 = {
 				full_idea_group = smithing_ideas
 				full_idea_group = waffenqualitat0
 				full_idea_group = armour_quality_ideas
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_production_efficiency = 1.0
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building trade_1 = {
 	name = "Market"
@@ -294,21 +239,15 @@ new building trade_1 = {
 				full_idea_group = economic_ideas
 				full_idea_group = trade_ideas
 				full_idea_group = esb_monopoly
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		province_trade_power_modifier = 0.4
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building trade_2 = {
 	name = "Market Street"
@@ -323,21 +262,15 @@ new building trade_2 = {
 				full_idea_group = economic_ideas
 				full_idea_group = trade_ideas
 				full_idea_group = esb_monopoly
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		province_trade_power_modifier = 0.7
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building trade_3 = {
 	name = "Market District"
@@ -352,21 +285,15 @@ new building trade_3 = {
 				full_idea_group = economic_ideas
 				full_idea_group = trade_ideas
 				full_idea_group = esb_monopoly
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		province_trade_power_modifier = 1.0
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building army_1 = {
 	name = "Garrison"
@@ -387,22 +314,16 @@ new building army_1 = {
 				full_idea_group = esb_largearmy
 				full_idea_group = esb_professionalism
 				full_idea_group = esb_longwar
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_manpower_modifier = 0.4
 		land_forcelimit = 1
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building army_2 = {
 	name = "Barracks"
@@ -424,21 +345,15 @@ new building army_2 = {
 				full_idea_group = esb_largearmy
 				full_idea_group = esb_professionalism
 				full_idea_group = esb_longwar
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_manpower_modifier = 0.7
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building army_3 = {
 	name = "Training Fields"
@@ -460,22 +375,16 @@ new building army_3 = {
 				full_idea_group = esb_largearmy
 				full_idea_group = esb_professionalism
 				full_idea_group = esb_longwar
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_manpower_modifier = 1.0
 		land_forcelimit = 2
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building navy_1 = {
 	name = "Pier"
@@ -492,24 +401,18 @@ new building navy_1 = {
 				full_idea_group = galle0
 				full_idea_group = handel0
 				full_idea_group = gross0
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		ship_recruit_speed = -0.2
 		local_ship_repair = 0.2
 		naval_forcelimit = 1
 		local_sailors_modifier = 0.4
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building navy_2 = {
 	name = "Docks"
@@ -527,24 +430,18 @@ new building navy_2 = {
 				full_idea_group = galle0
 				full_idea_group = handel0
 				full_idea_group = gross0
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		ship_recruit_speed = -0.4
 		local_ship_repair = 0.4
 		naval_forcelimit = 2
 		local_sailors_modifier = 0.7
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building navy_3 = {
 	name = "Shipyard"
@@ -562,24 +459,18 @@ new building navy_3 = {
 				full_idea_group = galle0
 				full_idea_group = handel0
 				full_idea_group = gross0
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		ship_recruit_speed = -0.6
 		local_ship_repair = 0.6
 		naval_forcelimit = 4
 		local_sailors_modifier = 1.0
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building road_1 = {
 	name = "Paths"
@@ -594,24 +485,18 @@ new building road_1 = {
 				full_idea_group = offensive_ideas
 				full_idea_group = mobility_ideas
 				full_idea_group = imperialismus0
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_friendly_movement_speed = 0.3
 		local_hostile_movement_speed = 0.3
 		supply_limit_modifier = 0.2
 		local_institution_spread = 0.2
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building road_2 = {
 	name = "Roads"
@@ -627,24 +512,18 @@ new building road_2 = {
 				full_idea_group = offensive_ideas
 				full_idea_group = mobility_ideas
 				full_idea_group = imperialismus0
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_friendly_movement_speed = 0.7
 		local_hostile_movement_speed = 0.7
 		supply_limit_modifier = 0.4
 		local_institution_spread = 0.4
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building road_3 = {
 	name = "Highway"
@@ -660,24 +539,18 @@ new building road_3 = {
 				full_idea_group = offensive_ideas
 				full_idea_group = mobility_ideas
 				full_idea_group = imperialismus0
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_friendly_movement_speed = 1.0
 		local_hostile_movement_speed = 1.0
 		supply_limit_modifier = 0.6
 		local_institution_spread = 0.6
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building gover_1 = {
 	name = "Goods 1"
@@ -688,22 +561,16 @@ new building gover_1 = {
 		FROM = {
 			calc_true_if = {
 				amount = 1
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		trade_goods_size_modifier = 0.15
 		local_development_cost = -0.15
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building gover_2 = {
 	name = "Goods 2"
@@ -715,22 +582,16 @@ new building gover_2 = {
 		FROM = {
 			calc_true_if = {
 				amount = 2
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		trade_goods_size_modifier = 0.3
 		local_development_cost = -0.3
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building manufactory = {
 	name = "Manufactory"
@@ -739,9 +600,7 @@ new building manufactory = {
 	time = 60
 	modifier = {
 		trade_goods_size = 1.0
-		
 	}
-	
 }
 new building def_manufactory = {
 	name = "Manufactory"
@@ -750,12 +609,10 @@ new building def_manufactory = {
 	time = 60
 	modifier = {
 		trade_goods_size = 1.0
-		
 	}
 	manufactory = {
-		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems gold silver ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
+		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems gold silver ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods
 	}
-	
 }
 new building state_1 = {
 	name = "state 1"
@@ -769,15 +626,12 @@ new building state_1 = {
 				full_idea_group = staatsverwaltung0
 				full_idea_group = administrative_ideas
 				full_idea_group = dezentra0
-				
 			}
-			
 		}
 		NOT = {
 			area_for_scope_province = {
 				owner = {
 					tag = ROOT
-					
 				}
 				OR = {
 					has_building = state_1
@@ -786,26 +640,19 @@ new building state_1 = {
 					has_construction = state_1
 					has_construction = state_2
 					has_construction = state_3
-					
 				}
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_state_maintenance_modifier = -0.2
 		statewide_governing_cost = -0.05
 		local_prosperity_growth = 0.05
 		allowed_num_of_buildings = 1
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building state_2 = {
 	name = "state 2"
@@ -820,15 +667,12 @@ new building state_2 = {
 				full_idea_group = staatsverwaltung0
 				full_idea_group = administrative_ideas
 				full_idea_group = dezentra0
-				
 			}
-			
 		}
 		NOT = {
 			area_for_scope_province = {
 				owner = {
 					tag = ROOT
-					
 				}
 				OR = {
 					has_building = state_1
@@ -837,26 +681,19 @@ new building state_2 = {
 					has_construction = state_1
 					has_construction = state_2
 					has_construction = state_3
-					
 				}
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_state_maintenance_modifier = -0.4
 		statewide_governing_cost = -0.10
 		local_prosperity_growth = 0.10
 		allowed_num_of_buildings = 1
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }
 new building state_3 = {
 	name = "state 3"
@@ -871,15 +708,12 @@ new building state_3 = {
 				full_idea_group = staatsverwaltung0
 				full_idea_group = administrative_ideas
 				full_idea_group = dezentra0
-				
 			}
-			
 		}
 		NOT = {
 			area_for_scope_province = {
 				owner = {
 					tag = ROOT
-					
 				}
 				OR = {
 					has_building = state_1
@@ -888,24 +722,17 @@ new building state_3 = {
 					has_construction = state_1
 					has_construction = state_2
 					has_construction = state_3
-					
 				}
-				
 			}
-			
 		}
-		
 	}
 	modifier = {
 		local_state_maintenance_modifier = -0.6
 		statewide_governing_cost = -0.15
 		local_prosperity_growth = 0.15
 		allowed_num_of_buildings = 1
-		
 	}
 	ai_will_do = {
 		factor = 1
-		
 	}
-	
 }

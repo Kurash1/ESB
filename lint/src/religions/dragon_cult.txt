@@ -1,0 +1,707 @@
+new blessing forelhost_last_stand = {
+	name = "Forelhost: Last Stand"
+	desc = ""
+	potential = {
+		provinces:forelhost = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = forelhost_blessing
+			
+		}
+		
+	}
+	modifier = {
+		global_defender_dice_roll_bonus = 1
+		
+	}
+	effect = {
+		set_country_flag = forelhost_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing forelhost_tyrannical_ruler = {
+	name = "Forelhost: Tyrannical Ruler"
+	desc = ""
+	potential = {
+		provinces:forelhost = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = forelhost_blessing
+			
+		}
+		
+	}
+	modifier = {
+		administrative_efficiency = 0.05
+		
+	}
+	effect = {
+		set_country_flag = forelhost_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing forelhost_cult_unity = {
+	name = "Forelhost: Cult Unity"
+	desc = ""
+	potential = {
+		provinces:forelhost = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = forelhost_blessing
+			
+		}
+		
+	}
+	modifier = {
+		tolerance_own = 3
+		manpower_in_true_faith_provinces = 0.10
+		
+	}
+	effect = {
+		set_country_flag = forelhost_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing shearpoint_eyes_above = {
+	name = "Shearpoint: Eyes Above"
+	desc = ""
+	potential = {
+		provinces:shearpoint = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = shearpoint_blessing
+			
+		}
+		
+	}
+	modifier = {
+		global_rebel_suppression_efficiency = 0.25
+		global_autonomy = -0.05
+		
+	}
+	effect = {
+		set_country_flag = shearpoint_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing shearpoint_sorrowful_mountain = {
+	name = "Shearpoint: Sorrowful Mountain"
+	desc = ""
+	potential = {
+		provinces:shearpoint = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = shearpoint_blessing
+			
+		}
+		
+	}
+	modifier = {
+		land_morale = -0.10
+		morale_damage = 0.1
+		
+	}
+	effect = {
+		set_country_flag = shearpoint_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing shearpoint_misdirection = {
+	name = "Shearpoint: Misdirection"
+	desc = ""
+	potential = {
+		provinces:shearpoint = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = shearpoint_blessing
+			
+		}
+		
+	}
+	modifier = {
+		global_spy_defence = 0.25
+		
+	}
+	effect = {
+		set_country_flag = shearpoint_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing bromjunaar_labyrinthian = {
+	name = "Bromjunaar: The Labyrinthian"
+	desc = ""
+	potential = {
+		provinces:bromjunaar = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = bromjunaar_blessing
+			
+		}
+		
+	}
+	modifier = {
+		all_power_cost = -0.05
+		
+	}
+	effect = {
+		set_country_flag = bromjunaar_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing bromjunaar_capital = {
+	name = "Bromjunaar: The Capital"
+	desc = ""
+	potential = {
+		provinces:bromjunaar = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = bromjunaar_blessing
+			
+		}
+		
+	}
+	modifier = {
+		governing_capacity_modifier = 0.2
+		
+	}
+	effect = {
+		set_country_flag = bromjunaar_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing bromjunaar_warlord = {
+	name = "Bromjunaar: Warlords Rest"
+	desc = ""
+	potential = {
+		provinces:bromjunaar = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = bromjunaar_blessing
+			
+		}
+		
+	}
+	modifier = {
+		leader_land_fire = 1
+		leader_land_shock = 1
+		leader_siege = 1
+		
+	}
+	effect = {
+		set_country_flag = bromjunaar_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing verglas_shadow_temple = {
+	name = "Verglas: Shadow Temple"
+	desc = ""
+	potential = {
+		provinces:verglas = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = verglas_blessing
+			
+		}
+		
+	}
+	modifier = {
+		spy_offence = 0.25
+		discovered_relations_impact = -0.25
+		
+	}
+	effect = {
+		set_country_flag = verglas_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing verglas_frozen_temple = {
+	name = "Verglas: Frozen Temple"
+	desc = ""
+	potential = {
+		provinces:verglas = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = verglas_blessing
+			
+		}
+		
+	}
+	modifier = {
+		hostile_attrition = 1
+		land_attrition = -0.10
+		
+	}
+	effect = {
+		set_country_flag = verglas_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing verglas_sea_temple = {
+	name = "Verglas: Sea Temple"
+	desc = ""
+	potential = {
+		provinces:verglas = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = verglas_blessing
+			
+		}
+		
+	}
+	modifier = {
+		naval_forcelimit_modifier = 0.1
+		
+	}
+	effect = {
+		set_country_flag = verglas_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing volskygge_lendoran = {
+	name = "Volskygge: City of Lendoran"
+	desc = ""
+	potential = {
+		provinces:volskygge = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = volskygge_blessing
+			
+		}
+		
+	}
+	modifier = {
+		development_cost_modifier = -0.05
+		
+	}
+	effect = {
+		set_country_flag = volskygge_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing volskygge_trained_for_horror = {
+	name = "Volskygge: Trained for Horror"
+	desc = ""
+	potential = {
+		provinces:volskygge = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = volskygge_blessing
+			
+		}
+		
+	}
+	modifier = {
+		morale_damage_received = -0.025
+		
+	}
+	effect = {
+		set_country_flag = volskygge_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing volskygge_whirlwind_sprint = {
+	name = "Volskygge: Whirlwind Sprint"
+	desc = ""
+	potential = {
+		provinces:volskygge = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = volskygge_blessing
+			
+		}
+		
+	}
+	modifier = {
+		movement_speed = 0.10
+		
+	}
+	effect = {
+		set_country_flag = volskygge_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing ragnvald_torsten = {
+	name = "Ragnvald: Torsten"
+	desc = ""
+	potential = {
+		provinces:ragnvald = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = ragnvald_blessing
+			
+		}
+		
+	}
+	modifier = {
+		shock_damage = 0.05
+		
+	}
+	effect = {
+		set_country_flag = ragnvald_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing ragnvald_saerek = {
+	name = "Ragnvald: Saerek"
+	desc = ""
+	potential = {
+		provinces:ragnvald = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = ragnvald_blessing
+			
+		}
+		
+	}
+	modifier = {
+		shock_damage_received = -0.025
+		
+	}
+	effect = {
+		set_country_flag = ragnvald_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing ragnvald_otar = {
+	name = "Ragnvald: Otar"
+	desc = ""
+	potential = {
+		provinces:ragnvald = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = ragnvald_blessing
+			
+		}
+		
+	}
+	modifier = {
+		fire_damage = 0.05
+		
+	}
+	effect = {
+		set_country_flag = ragnvald_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing valthume_ancient_evil = {
+	name = "Valthume: Ancient Evil"
+	desc = ""
+	potential = {
+		provinces:valthume = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = valthume_blessing
+			
+		}
+		
+	}
+	modifier = {
+		idea_cost = -0.05
+		
+	}
+	effect = {
+		set_country_flag = valthume_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing valthume_venerate_brutality = {
+	name = "Valthume: Venerate Brutality"
+	desc = ""
+	potential = {
+		provinces:valthume = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = valthume_blessing
+			
+		}
+		
+	}
+	modifier = {
+		war_exhaustion = -0.03
+		
+	}
+	effect = {
+		set_country_flag = valthume_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new blessing valthume_valdar = {
+	name = "Valthume: Valdar"
+	desc = ""
+	potential = {
+		provinces:valthume = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+				
+			}
+			
+		}
+		NOT = {
+			has_country_flag = valthume_blessing
+			
+		}
+		
+	}
+	modifier = {
+		global_unrest = -2
+		
+	}
+	effect = {
+		set_country_flag = valthume_blessing
+		
+	}
+	ai_will_do = {
+		factor = 1
+		
+	}
+	
+}
+new religion dragon_cult = {
+	name = "Dragon Cult"
+	desc = "Those who believe in the superiority of dragons."
+	icon = 18
+	color = {
+		202 208 43 
+	}
+	heretic = {
+		DRAGON_CULT_HERETIC 
+	}
+	country = {
+		stability_cost_modifier = -0.25
+		warscore_cost_vs_other_religion = -0.25
+		
+	}
+	province = {
+		local_missionary_strength = -0.025
+		
+	}
+	holy_sites = {
+		forelhost shearpoint bromjunaar verglas volskygge ragnvald valthume 
+	}
+	blessings = {
+		forelhost_last_stand forelhost_tyrannical_ruler forelhost_cult_unity shearpoint_eyes_above shearpoint_sorrowful_mountain shearpoint_misdirection bromjunaar_labyrinthian bromjunaar_capital bromjunaar_warlord verglas_shadow_temple verglas_frozen_temple verglas_sea_temple volskygge_lendoran volskygge_trained_for_horror volskygge_whirlwind_sprint ragnvald_torsten ragnvald_saerek ragnvald_otar valthume_ancient_evil valthume_venerate_brutality valthume_valdar 
+	}
+	religious_group = nordic_group
+	
+}

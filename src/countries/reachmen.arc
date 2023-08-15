@@ -7,11 +7,8 @@ new inheritable reachman_country = {
 	history = {
 		Tamriel = {
 			discover_country = ROOT
-			
 		}
-		
 	}
-	
 }
 new country ghostsong_clan = {
 	inherit = reachman_country
@@ -19,10 +16,9 @@ new country ghostsong_clan = {
 	name = "Ghostsong Clan"
 	adj = "Ghostsong"
 	color = {
-		84 72 65 
+		84 72 65
 	}
 	capital = valthume_pass
-	
 }
 new country dreadhorn_clan = {
 	inherit = reachman_country
@@ -30,10 +26,9 @@ new country dreadhorn_clan = {
 	name = "Dreadhorn Clan"
 	adj = "Dreadhorn"
 	color = {
-		118 91 52 
+		118 91 52
 	}
 	capital = algerd
-	
 }
 new country blackdrake_clan = {
 	inherit = reachman_country
@@ -41,10 +36,9 @@ new country blackdrake_clan = {
 	name = "Blackdrake Clan"
 	adj = "Blackdrake"
 	color = {
-		37 54 54 
+		37 54 54
 	}
 	capital = salvius_farm
-	
 }
 new country shadowbloom_clan = {
 	inherit = reachman_country
@@ -52,10 +46,9 @@ new country shadowbloom_clan = {
 	name = "Shadowbloom Clan"
 	adj = "Shadowbloom"
 	color = {
-		92 76 77 
+		92 76 77
 	}
 	capital = moldering
-	
 }
 new country cinder-heart_clan = {
 	inherit = reachman_country
@@ -63,10 +56,9 @@ new country cinder-heart_clan = {
 	name = "Cinder-Heart Clan"
 	adj = "Cinder-Heart"
 	color = {
-		39 69 24 
+		39 69 24
 	}
 	capital = soljunds_sinkhole
-	
 }
 new country thornroot_clan = {
 	inherit = reachman_country
@@ -74,10 +66,9 @@ new country thornroot_clan = {
 	name = "Thornroot Clan"
 	adj = "Thornroot"
 	color = {
-		134 89 26 
+		134 89 26
 	}
 	capital = purewater_ruin
-	
 }
 new country wildspear_clan = {
 	inherit = reachman_country
@@ -85,10 +76,9 @@ new country wildspear_clan = {
 	name = "Wildspear Clan"
 	adj = "Wildspear"
 	color = {
-		125 125 25 
+		125 125 25
 	}
 	capital = malie
-	
 }
 new country black-moon_clan = {
 	inherit = reachman_country
@@ -96,10 +86,9 @@ new country black-moon_clan = {
 	name = "Black-Moon Clan"
 	adj = "Black-Moon"
 	color = {
-		75 75 75 
+		75 75 75
 	}
 	capital = thalif
-	
 }
 new country shadefeather_clan = {
 	inherit = reachman_country
@@ -107,10 +96,9 @@ new country shadefeather_clan = {
 	name = "Shadefeather Clan"
 	adj = "Shadefeather"
 	color = {
-		75 125 50 
+		75 125 50
 	}
 	capital = broken_tower_redoubt
-	
 }
 new country crow-eye_clan = {
 	inherit = reachman_country
@@ -118,8 +106,7 @@ new country crow-eye_clan = {
 	name = "Crow-Eye Clan"
 	adj = "Crow-Eye"
 	color = {
-		100 100 100 
+		100 100 100
 	}
 	capital = rock_dragon_coast
-	
 }
