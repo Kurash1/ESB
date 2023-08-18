@@ -62,12 +62,48 @@ new area hjaals_teeth = {
 	name = "Hjaal's Teeth"
 	region = hjaalmarch
 }
-new province isle_of_sorrow = {
+new province east_snowhawk_peak = {
 	position = {
-		1691.000 2043.000 1691.000 2043.000 1691.000 2043.000 1691.000 2043.000 1691.000 2043.000 1691.000 2043.000 1691.000 2043.000
+		1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = "East Snowhawk Peak"
+	color = {
+		9 23 41
+	}
+	history = {
+	}
+	impassible = yes
+}
+new province west_snowhawk_peak = {
+	position = {
+		1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = "West Snowhawk Peak"
+	color = {
+		9 23 1
+	}
+	history = {
+	}
+	impassible = yes
+}
+new province isle_of_sorrow = {
+	position = {
+		1691.000 2043.000 1696.000 2041.000 1691.000 2043.000 1693.000 2041.000 1691.000 2043.000 1692.000 2042.000 1691.000 2043.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.785 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
@@ -364,9 +400,9 @@ new province robbers_gorge = {
 		221 201 114
 	}
 	history = {
-		owner = HJA
-		controller = HJA
-		add_core = HJA
+		owner = SNO
+		controller = SNO
+		add_core = SNO
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -392,9 +428,9 @@ new province fishermans_hangout = {
 		219 249 244
 	}
 	history = {
-		owner = HJA
-		controller = HJA
-		add_core = HJA
+		owner = SNO
+		controller = SNO
+		add_core = SNO
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -420,9 +456,9 @@ new province barren_road = {
 		239 203 149
 	}
 	history = {
-		owner = CHW
-		controller = CHW
-		add_core = CHW
+		owner = SNO
+		controller = SNO
+		add_core = SNO
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -532,9 +568,9 @@ new province forebears_holdout = {
 		175 237 161
 	}
 	history = {
-		owner = CHW
-		controller = CHW
-		add_core = CHW
+		owner = SNO
+		controller = SNO
+		add_core = SNO
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -601,10 +637,10 @@ new province snowhawk_forest = {
 }
 new province traitorous_swamps = {
 	position = {
-		1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000
+		1640.000 2033.000 1640.000 2032.000 1644.000 2035.000 1640.000 2038.000 1644.000 2035.000 1642.000 2034.000 1644.000 2035.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 3.927 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
@@ -629,7 +665,7 @@ new province traitorous_swamps = {
 }
 new province apprentice_stone = {
 	position = {
-		1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000
+		1657.000 2048.000 1657.000 2047.000 1644.000 2035.000 1652.500 2047.500 1644.000 2035.000 1658.000 2045.000 1644.000 2035.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -675,9 +711,9 @@ new province bandits_rest = {
 		121 250 110
 	}
 	history = {
-		owner = HJA
-		controller = HJA
-		add_core = HJA
+		owner = SNO
+		controller = SNO
+		add_core = SNO
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -716,7 +752,7 @@ new province dead_mens_respite = {
 }
 new province snowhawk = {
 	position = {
-		1659.000 2022.000 1659.000 2022.000 1659.000 2022.000 1659.000 2022.000 1659.000 2022.000 1659.000 2022.000 1659.000 2022.000
+		1659.000 2021.000 1659.000 2022.000 1659.000 2022.000 1659.000 2022.000 1659.000 2022.000 1659.000 2022.000 1659.000 2022.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -759,9 +795,9 @@ new province minedvild = {
 		192 143 123
 	}
 	history = {
-		owner = MOH
-		controller = MOH
-		add_core = MOH
+		owner = SNO
+		controller = SNO
+		add_core = SNO
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -770,7 +806,7 @@ new province minedvild = {
 		is_city = yes
 	}
 }
-new province shrine_of_kyne = {
+new province brood_cavern = {
 	position = {
 		1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000
 	}
@@ -782,7 +818,7 @@ new province shrine_of_kyne = {
 	}
 	terrain = coastline
 	area = southern_morthal
-	name = "Shrine of Kyne"
+	name = "Brood Cavern"
 	color = {
 		233 130 248
 	}
@@ -793,20 +829,17 @@ new province shrine_of_kyne = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = no
-		owner = MOH
-		controller = MOH
-		add_core = MOH
-		57.1.1 = {
-			is_city = no
-		}
+		owner = SNO
+		controller = SNO
+		add_core = SNO
 	}
 }
 new province drajkmyr_toll = {
 	position = {
-		1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000
+		1668.000 2028.000 1668.000 2027.000 1672.000 2035.000 1671.000 2026.000 1672.000 2035.000 1668.000 2028.000 1672.000 2035.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 4.712 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
@@ -828,7 +861,7 @@ new province drajkmyr_toll = {
 }
 new province central_drajkmyr = {
 	position = {
-		1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000
+		1675.000 2039.000 1675.000 2039.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1675.000 2041.000 1672.000 2035.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -853,10 +886,10 @@ new province central_drajkmyr = {
 }
 new province folgunthur = {
 	position = {
-		1665.000 2050.000 1665.000 2050.000 1665.000 2050.000 1665.000 2050.000 1665.000 2050.000 1665.000 2050.000 1665.000 2050.000
+		1670.000 2050.000 1671.000 2051.000 1665.000 2050.000 1665.000 2050.000 1665.000 2050.000 1671.000 2051.000 1665.000 2050.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 0.785 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
@@ -878,10 +911,10 @@ new province folgunthur = {
 }
 new province cold_swamp = {
 	position = {
-		1680.000 2060.000 1680.000 2060.000 1680.000 2060.000 1680.000 2060.000 1680.000 2060.000 1680.000 2060.000 1680.000 2060.000
+		1680.000 2060.000 1679.000 2063.000 1680.000 2060.000 1682.500 2060.500 1680.000 2060.000 1682.000 2059.000 1680.000 2060.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 3.927 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
@@ -1523,5 +1556,11 @@ new adjacency dragon_bridge = {
 	from = dragon_bridge
 	to = rivers_road
 	through = 1870
+	type = sea
+}
+new adjacency orotheim_bridge = {
+	from = orotheim
+	to = hjaals_tooth
+	through = 2848
 	type = sea
 }
