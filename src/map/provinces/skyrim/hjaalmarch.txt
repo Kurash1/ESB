@@ -42,6 +42,10 @@ new area snowhawk = {
 	name = "Snowhawk"
 	region = hjaalmarch
 }
+new area snowhawk_forest = {
+	name = "Snowhawk Forest"
+	region = hjaalmarch
+}
 new area twin_bridges = {
 	name = "Twin Bridges"
 	region = hjaalmarch
@@ -81,9 +85,6 @@ new province isle_of_sorrow = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
-		owner = HGA
-		controller = HGA
-		add_core = HGA
 	}
 }
 new province morthal = {
@@ -553,7 +554,7 @@ new province tranquile_woods = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = twin_bridges
+	area = snowhawk_forest
 	name = "Tranquile Woods"
 	color = {
 		229 122 192
@@ -581,7 +582,7 @@ new province snowhawk_forest = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = snowhawk
+	area = snowhawk_forest
 	name = "Snowhawk Forest"
 	color = {
 		247 156 225
@@ -609,7 +610,7 @@ new province traitorous_swamps = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = drajkmyr_marsh
+	area = snowhawk_forest
 	name = "Traitorous Swamps"
 	color = {
 		251 219 179
@@ -618,6 +619,31 @@ new province traitorous_swamps = {
 		owner = SNO
 		controller = SNO
 		add_core = SNO
+		religion = nordic_pantheon
+		culture = cultures:hjaalmarcher
+		hre = yes
+		`trade_goods` = unknown
+		capital = ""
+		is_city = yes
+	}
+}
+new province apprentice_stone = {
+	position = {
+		1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000 1644.000 2035.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	terrain = marsh
+	area = drajkmyr_marsh
+	name = "Apprentice Stone"
+	color = {
+		251 249 179
+	}
+	history = {
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -786,7 +812,7 @@ new province drajkmyr_toll = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = drajkmyr_marsh
+	area = snowhawk
 	name = "Drajkmyr Toll"
 	color = {
 		251 214 146
@@ -798,9 +824,31 @@ new province drajkmyr_toll = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
-		owner = SNO
-		controller = SNO
-		add_core = SNO
+	}
+}
+new province central_drajkmyr = {
+	position = {
+		1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000 1672.000 2035.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	terrain = marsh
+	area = drajkmyr_marsh
+	name = "Central Drajkmyr"
+	color = {
+		251 244 146
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:hjaalmarcher
+		hre = yes
+		`trade_goods` = unknown
+		capital = ""
+		is_city = yes
 	}
 }
 new province folgunthur = {
@@ -820,9 +868,6 @@ new province folgunthur = {
 		115 237 244
 	}
 	history = {
-		owner = SNO
-		controller = SNO
-		add_core = SNO
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -848,9 +893,6 @@ new province cold_swamp = {
 		195 100 206
 	}
 	history = {
-		owner = HGA
-		controller = HGA
-		add_core = HGA
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -1408,19 +1450,12 @@ new province rotten_trees = {
 		249 189 239
 	}
 	history = {
-		owner = MOH
-		controller = MOH
-		add_core = MOH
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
-		272.1.1 = {
-			religion = nordic_pantheon
-			culture = cultures:hjaalmarcher
-		}
 	}
 }
 new province morthal_colony = {
@@ -1440,9 +1475,6 @@ new province morthal_colony = {
 		219 196 224
 	}
 	history = {
-		owner = MOH
-		controller = MOH
-		add_core = MOH
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes

@@ -164,34 +164,6 @@ pirate_kingdom_reform = {
 		factor = 5
 	}
 }
-nord_clan = {
-	icon = "crown"
-	allow_normal_conversion = yes
-	potential = {
-		culture_group = nord_culture_group
-	}
-	trigger = {
-		always = yes
-	}
-	maintain_dynasty = yes
-	legacy_equivalent = despotic_monarchy
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	can_form_trade_league = no
-	nation_designer_trigger = {
-		culture_group = nord_culture_group
-	}
-	modifiers = {
-		state_maintenance_modifier = -0.25
-		land_morale = 0.1
-	}
-	government_abilities = {
-		chief_authority_mechanic
-	}
-	ai = {
-		factor = 5
-	}
-}
 nord_clan_council = {
 	icon = "crown"
 	allow_normal_conversion = yes
