@@ -53,7 +53,6 @@ new country forelhost = {
 	color = {
 		238 234 133
 	}
-	technology_group = dragon_cult_tg
 	religion = dragon_cult
 	capital = forelhost
 }
@@ -268,6 +267,18 @@ new country wind-ward = {
 	}
 	capital = windward
 }
+new country frostmere = {
+	inherit = nordic_country
+	primary_culture = palean
+	tag = FRO
+	name = "Frostmere"
+	adj = "Frostmere"
+	color = {
+		0 200 200
+	}
+	capital = frostmere
+}
+
 new country dunstad = {
 	inherit = nordic_country
 	primary_culture = palean
@@ -396,6 +407,14 @@ new country jorrvaskr = {
 		}
 	}
 }
+new event_modifier atmoran_holdings = {
+	name = "Atmoran Holdings"
+	modifier = {
+		global_tax_income = 60
+		land_forcelimit = 5
+		global_manpower = 10
+	}
+}
 new country windhelm = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
@@ -422,9 +441,19 @@ new country windhelm = {
 				mil = 6
 				birth_date = 2480.1.1
 			}
+			add_country_modifier = {
+				name = atmoran_holdings
+				duration = -1
+			}
 		}
 	}
 }
+#new relation vassal = {
+#	first = WND
+#	second = HID
+#	start_date = 2500.1.1
+#	end_date = 9999.1.1
+#}
 new relation alliance = {
 	first = JRR
 	second = WND
@@ -478,15 +507,27 @@ new country nightgate = {
 }
 new country white-watch = {
 	inherit = nordic_country
-	primary_culture = palean
+	primary_culture = whiterunish
 	tag = WHW
 	name = "White-Watch"
 	adj = "White-Watch"
 	color = {
 		255 255 255
 	}
-	capital = korvanjund
+	capital = white_watch
 }
+new country heljarchen = {
+	inherit = nordic_country
+	primary_culture = palean
+	tag = HEL
+	name = "Heljarchen"
+	adj = "Heljarchen"
+	color = {
+		255 158 48
+	}
+	capital = heljarchen
+}
+
 new country silent-moon = {
 	inherit = nordic_country
 	primary_culture = whiterunish

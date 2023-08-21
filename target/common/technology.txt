@@ -15,20 +15,7 @@ groups = {
 		}
 		nation_designer_cost = {
 		    trigger = {
-			always = yes
-			}
-			value = 0
-		}
-	}
-	dragon_cult_tg = {
-		start_level = 3
-		start_cost_modifier = 0
-		nation_designer_trigger = {
-			always = yes
-		}
-		nation_designer_cost = {
-		    trigger = {
-			always = yes
+				always = yes
 			}
 			value = 0
 		}
@@ -41,7 +28,7 @@ groups = {
 		}
 		nation_designer_cost = {
 		    trigger = {
-			always = yes
+				always = yes
 			}
 			value = 0
 		}
@@ -54,7 +41,7 @@ groups = {
 		}
 		nation_designer_cost = {
 		    trigger = {
-			always = yes
+				always = yes
 			}
 			value = 0
 		}
@@ -67,273 +54,11 @@ groups = {
 		}
 		nation_designer_cost = {
 		    trigger = {
-			always = yes
+				always = yes
 			}
 			value = 0
 		}
 	}
-	
-	
-	
-	#tamriel_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#		always = no
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#			always = no
-	#		}
-	#		value = 0
-	#	}
-	#}
-	### Tamriel
-	#elven_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#	    OR = {
-	#			culture_group = high_elves_cg
-	#			culture_group = snow_elves_cg
-	#			culture_group = imga_cg
-	#			culture_group = bosmer_cg
-	#			culture_group = unknown_cg
-	#		}
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#exiled_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#	    OR = {
-	#			culture_group = dwemer_cg
-	#			culture_group = velothi_cg
-	#		}
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#dwemer_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#	    culture_group = dwemer_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#northern_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#	    OR = {
-	#			culture_group = northern_cg
-	#			culture_group = half_blood_cg
-	#		}
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#cyrodiil_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#	    OR = {
-	#			culture_group = cyrodiil_cg
-	#			culture_group = minotaur_cg
-	#		}
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#elsweyr_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#		culture_group = khajiiti_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#orsimer_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#		culture_group = orsimer_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#marshan_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#	    OR = {
-	#			culture_group = marsh_cg
-	#			culture_group = marsh_men_cg
-	#			culture_group = lilmothiit_cg
-	#		}
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#### Atmora 
-	#atmora_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#	    culture_group = northern_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#### Yokuda 
-	#yokudan_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#		culture_group = yokudo_redguard_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#### Sload
-	#oceanic_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	is_primitive = yes
-	#	nation_designer_trigger = {
-	#		culture_group = sload_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#### Pyandonea 
-	#pyandonea_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	is_primitive = yes
-	#	nation_designer_trigger = {
-	#		culture_group = maormer_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#### Akavir 
-	#akavir_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	nation_designer_trigger = {
-	#		OR = {
-	#			culture_group = transpandomaic_cg
-	#			culture_group = tsaesci_cg
-	#			culture_group = po_tun_cg
-	#		}
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#kamal_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	is_primitive = yes
-	#	nation_designer_trigger = {
-	#		culture_group = kamal_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#thousand_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	is_primitive = yes
-	#	nation_designer_trigger = {
-	#		culture_group = tangmo_cg
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
-	#### Oblivion
-	#daedric_tg = {
-	#	start_level = 3
-	#	start_cost_modifier = 0
-	#	is_primitive = yes
-	#	nation_designer_trigger = {
-	#	    OR = {
-	#		culture_group = daedra_cg
-	#		culture_group = void_cg
-	#		}
-	#	}
-	#	nation_designer_cost = {
-	#	    trigger = {
-	#		always = yes
-	#		}
-	#		value = 0
-	#	}
-	#}
 }
 
 tables = {

@@ -130,7 +130,7 @@ new province nightcaller = {
 		add_core = FRF
 	}
 }
-new province lower_nightcaller = {
+new province goldvild = {
 	position = {
 		1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000 1811.000 2059.000
 	}
@@ -140,9 +140,9 @@ new province lower_nightcaller = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = nightcaller
-	name = "Lower Nightcaller"
-	terrain = mountain
+	area = dawn_sanctuary
+	name = "Goldvild"
+	terrain = coastline
 	color = {
 		231 116 186
 	}
@@ -150,12 +150,12 @@ new province lower_nightcaller = {
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
-		`trade_goods` = unknown
+		`trade_goods` = gold
 		capital = ""
 		is_city = yes
-		owner = FRF
-		controller = FRF
-		add_core = FRF
+		owner = DAW
+		controller = DAW
+		add_core = DAW
 	}
 }
 new province softta = {
@@ -437,8 +437,9 @@ new province windward = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
-		owner = WIN
-		controller = WIN
+		owner = DAW
+		controller = DAW
+		add_core = DAW
 		add_core = WIN
 	}
 }
@@ -459,9 +460,9 @@ new province ilfbbi = {
 		162 105 249
 	}
 	history = {
-		owner = WIN
-		controller = WIN
-		add_core = WIN
+		owner = DAW
+		controller = DAW
+		add_core = DAW
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -487,9 +488,9 @@ new province frostmere = {
 		102 191 194
 	}
 	history = {
-		owner = WIN
-		controller = WIN
-		add_core = WIN
+		owner = FRO
+		controller = FRO
+		add_core = FRO
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -515,9 +516,9 @@ new province mzinchaleft = {
 		221 169 104
 	}
 	history = {
-		owner = WIN
-		controller = WIN
-		add_core = WIN
+		owner = FRO
+		controller = FRO
+		add_core = FRO
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -543,9 +544,9 @@ new province red_road_pass = {
 		123 196 255
 	}
 	history = {
-		owner = WIN
-		controller = WIN
-		add_core = WIN
+		owner = FRO
+		controller = FRO
+		add_core = FRO
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -603,9 +604,9 @@ new province reyhi = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = no
-		owner = WIN
-		controller = WIN
-		add_core = WIN
+		owner = DNS
+		controller = DNS
+		add_core = DNS
 	}
 }
 new province dunstad = {
@@ -743,9 +744,9 @@ new province blizzard_rest = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
-		owner = SID
-		controller = SID
-		add_core = SID
+		owner = HEL
+		controller = HEL
+		add_core = HEL
 	}
 }
 new province three_point = {
@@ -771,9 +772,9 @@ new province three_point = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
-		owner = SID
-		controller = SID
-		add_core = SID
+		owner = HEL
+		controller = HEL
+		add_core = HEL
 	}
 }
 new province silverdrift = {
@@ -1207,35 +1208,35 @@ new province ysmir_hill = {
 		}
 	}
 }
-new province irkngthand = {
-	position = {
-		1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = irkngthand
-	name = "Irkngthand"
-	terrain = mountain
-	color = {
-		130 226 153
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = cultures:palean
-		hre = no
-		`trade_goods` = unknown
-		capital = ""
-		is_city = yes
-		272.1.1 = {
-			religion = nordic_pantheon
-			culture = cultures:palean
-		}
-	}
-}
+#new province irkngthand = {
+#	position = {
+#		1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000 1852.000 1970.000
+#	}
+#	rotation = {
+#		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+#	}
+#	height = {
+#		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+#	}
+#	area = irkngthand
+#	name = "Irkngthand"
+#	terrain = mountain
+#	color = {
+#		130 226 153
+#	}
+#	history = {
+#		religion = nordic_pantheon
+#		culture = cultures:palean
+#		hre = no
+#		`trade_goods` = unknown
+#		capital = ""
+#		is_city = yes
+#		272.1.1 = {
+#			religion = nordic_pantheon
+#			culture = cultures:palean
+#		}
+#	}
+#}
 new province korvanjund = {
 	position = {
 		1818.000 1969.000 1818.000 1969.000 1818.000 1969.000 1818.000 1969.000 1818.000 1969.000 1818.000 1969.000 1818.000 1969.000
@@ -1259,9 +1260,9 @@ new province korvanjund = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = no
-		owner = WHW
-		controller = WHW
-		add_core = WHW
+		owner = HEL
+		controller = HEL
+		add_core = HEL
 	}
 }
 new province shimmermist = {
@@ -1287,9 +1288,9 @@ new province shimmermist = {
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
-		owner = WHW
-		controller = WHW
-		add_core = WHW
+		owner = HEL
+		controller = HEL
+		add_core = HEL
 	}
 }
 new province long_road = {
@@ -1311,9 +1312,9 @@ new province long_road = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = WHW
-		controller = WHW
-		add_core = WHW
+		owner = HEL
+		controller = HEL
+		add_core = HEL
 		hre = yes
 		`trade_goods` = unknown
 	}
@@ -1337,9 +1338,9 @@ new province loreius_farm = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = WHW
-		controller = WHW
-		add_core = WHW
+		owner = HEL
+		controller = HEL
+		add_core = HEL
 		hre = yes
 		`trade_goods` = unknown
 		capital = ""
@@ -1437,6 +1438,7 @@ new province volunruud = {
 	area = volunruud
 	name = "Volunruud"
 	terrain = highlands
+	base_development = 15
 	color = {
 		200 242 239
 	}
@@ -1521,9 +1523,9 @@ new province heljarchen = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		owner = HEL
+		controller = HEL
+		add_core = HEL
 		hre = yes
 		`trade_goods` = unknown
 	}

@@ -1,3 +1,27 @@
+new mission_series eastmarch_2 = {
+	slot = 2
+	ai = yes
+	potential = {
+		tag = WND
+	}
+	missions = {
+		eastmarch_build_army = {
+			name = "Build Army"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			trigger = {
+				always = no
+				is_year = 2590
+				army_size = 50
+			}
+			effect = {
+				set_imperial_incident = formation_of_eastmarch
+			}
+		}
+	}
+}
+
 new mission_series nordic_eastmarch_colonisation = {
 	slot = 10
 	generic = yes
@@ -42,8 +66,8 @@ new mission_series nordic_eastmarch_colonisation = {
 				}
 			}
 		}
-		nordic_eastmarch_colonisation_akawatch = {
-			name = "Akawatch Expedition"
+		nordic_eastmarch_colonisation_mistwatch = {
+			name = "Mistwatch Expedition"
 			desc = ""
 			icon = mission_unknown_mission
 			trigger = {

@@ -21,7 +21,7 @@ new government_reform jarldom = {
 	icon = "crown"
 	allow_normal_conversion = yes
 	potential = {
-		has_reform = hold
+		has_reform = jarldom
 	}
 	modifiers = {
 		governing_capacity = 50
@@ -37,7 +37,7 @@ new government_reform thanedom = {
 	allow_normal_conversion = yes
 	force_general_leader = yes
 	potential = {
-		has_reform = hold
+		has_reform = thanedom
 	}
 	modifiers = {
 	}

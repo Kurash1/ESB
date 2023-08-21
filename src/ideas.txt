@@ -57,6 +57,9 @@ new idea_group economic_ideas = {
 	bonus = {
 		development_cost = -10%
 	}
+	ai_chance = {
+		factor = 5
+	}
 }
 new idea_group destruction_ideas = {
 	name = "Destruction"
@@ -245,6 +248,9 @@ new idea_group standing_army_ideas = {
 	bonus = {
 		drill_decay_modifier = -25%
 	}
+	ai_chance = {
+		factor = 5
+	}
 }
 new idea_group trade_ideas = {
 	name = "Trade"
@@ -304,6 +310,9 @@ new idea_group trade_ideas = {
 	}
 	bonus = {
 		global_own_trade_power = 10%
+	}
+	ai_chance = {
+		factor = 5
 	}
 }
 new idea_group diplomatic_ideas = {
@@ -2479,6 +2488,9 @@ new idea_group naval_ideas = {
 	}
 	bonus = {
 		ship_durability = 0.15
+	}
+	ai_chance = {
+		factor = 5
 	}
 }
 new idea_group flottenbasis0 = {
