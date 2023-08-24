@@ -1,33 +1,12 @@
-new mission_series eastmarch_2 = {
-	slot = 2
-	ai = yes
-	potential = {
-		tag = WND
-	}
-	missions = {
-		eastmarch_build_army = {
-			name = "Build Army"
-			desc = ""
-			position = 1
-			icon = mission_unknown_mission
-			trigger = {
-				always = no
-				is_year = 2590
-				army_size = 50
-			}
-			effect = {
-				set_imperial_incident = formation_of_eastmarch
-			}
-		}
-	}
-}
-
 new mission_series nordic_eastmarch_colonisation = {
 	slot = 10
 	generic = yes
 	ai = yes
 	potential = {
 		culture_group = culture_groups:nord
+		NOT = {
+			tag = WND
+		}
 	}
 	missions = {
 		nordic_eastmarch_colonisation_cronvangr = {
@@ -37,8 +16,16 @@ new mission_series nordic_eastmarch_colonisation = {
 			trigger = {
 				total_development = 250
 				owns = provinces:kynesgrove
-				provinces:kynesgrove = {
-					development = 20
+				if = {
+					limit = {
+						ai = yes
+					}
+					is_year = 2550
+				}
+				else = {
+					provinces:kynesgrove = {
+						development = 20
+					}
 				}
 			}
 			effect = {
@@ -55,8 +42,16 @@ new mission_series nordic_eastmarch_colonisation = {
 			trigger = {
 				total_development = 250
 				owns = provinces:darkwater_crossing
-				provinces:darkwater_crossing = {
-					development = 20
+				if = {
+					limit = {
+						ai = yes
+					}
+					is_year = 2550
+				}
+				else = {
+					provinces:darkwater_crossing = {
+						development = 20
+					}
 				}
 			}
 			effect = {
@@ -73,8 +68,16 @@ new mission_series nordic_eastmarch_colonisation = {
 			trigger = {
 				total_development = 250
 				owns = provinces:mistwatch
-				provinces:mistwatch = {
-					development = 20
+				if = {
+					limit = {
+						ai = yes
+					}
+					is_year = 2550
+				}
+				else = {
+					provinces:mistwatch = {
+						development = 20
+					}
 				}
 			}
 			effect = {

@@ -1,6 +1,7 @@
 new idea_group nordic_ideas = {
 	name = "Nordic"
 	category = national
+	priority = 10
 	start = {
 		infantry_cost = -20%
 		leader_land_shock = 2

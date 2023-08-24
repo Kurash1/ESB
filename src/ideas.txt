@@ -2491,6 +2491,10 @@ new idea_group naval_ideas = {
 	}
 	ai_chance = {
 		factor = 5
+		modifier = {
+			factor = 1000
+			tag = WND
+		}
 	}
 }
 new idea_group flottenbasis0 = {

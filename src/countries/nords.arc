@@ -2,11 +2,7 @@ new inheritable nordic_country = {
 	technology_group = nord_tg
 	religion = nordic_pantheon
 	graphical_culture = greekgfx
-	history = {
-		Tamriel = {
-			discover_country = ROOT
-		}
-	}
+	history = { }
 	starting_reform = nord_clan
 }
 new country valtheim = {
@@ -67,9 +63,6 @@ new country solitude = {
 	}
 	capital = solitude
 	history = {
-		Tamriel = {
-			discover_country = ROOT
-		}
 		elector = yes
 	}
 }
@@ -228,9 +221,6 @@ new country dawn-star = {
 	}
 	capital = dawnstar
 	history = {
-		Tamriel = {
-			discover_country = ROOT
-		}
 		elector = yes
 	}
 }
@@ -278,7 +268,6 @@ new country frostmere = {
 	}
 	capital = frostmere
 }
-
 new country dunstad = {
 	inherit = nordic_country
 	primary_culture = palean
@@ -346,9 +335,6 @@ new country broken-fang = {
 		75 75 75
 	}
 	history = {
-		Tamriel = {
-			discover_country = ROOT
-		}
 		2500.1.1 = {
 			monarch = {
 				name = "Wulf"
@@ -373,9 +359,6 @@ new country skjoralmor = {
 	}
 	capital = lakeview
 	history = {
-		Tamriel = {
-			discover_country = ROOT
-		}
 		elector = yes
 	}
 }
@@ -392,9 +375,6 @@ new country jorrvaskr = {
 	capital = whiterun
 	history = {
 		historical_friend = WND
-		Tamriel = {
-			discover_country = ROOT
-		}
 		elector = yes
 		2500.1.1 = {
 			monarch = {
@@ -413,6 +393,8 @@ new event_modifier atmoran_holdings = {
 		global_tax_income = 60
 		land_forcelimit = 5
 		global_manpower = 10
+		naval_forcelimit = 10
+		stability_cost_to_declare_war = 1
 	}
 }
 new country windhelm = {
@@ -428,9 +410,6 @@ new country windhelm = {
 	capital = windhelm
 	history = {
 		historical_friend = JRR
-		Tamriel = {
-			discover_country = ROOT
-		}
 		elector = yes
 		2500.1.1 = {
 			monarch = {
@@ -441,19 +420,32 @@ new country windhelm = {
 				mil = 6
 				birth_date = 2480.1.1
 			}
+			add_ruler_personality = martial_educator_personality
+			add_ruler_personality = navigator_personality
+			add_ruler_personality = conqueror_personality
 			add_country_modifier = {
 				name = atmoran_holdings
+				duration = -1
+			}
+			add_country_modifier = {
+				name = aegisbane
 				duration = -1
 			}
 		}
 	}
 }
-#new relation vassal = {
-#	first = WND
-#	second = HID
-#	start_date = 2500.1.1
-#	end_date = 9999.1.1
-#}
+new country eastmarch = {
+	inherit = nordic_country
+	primary_culture = eastmarcher
+	tag = EAS
+	name = "Eastmarch"
+	adj = "Eastmarch"
+	color = {
+		45 53 206
+	}
+	starting_reform = jarldom
+	capital = windhelm
+}
 new relation alliance = {
 	first = JRR
 	second = WND
@@ -527,7 +519,6 @@ new country heljarchen = {
 	}
 	capital = heljarchen
 }
-
 new country silent-moon = {
 	inherit = nordic_country
 	primary_culture = whiterunish
@@ -549,9 +540,6 @@ new country black-moor = {
 		10 10 10
 	}
 	history = {
-		Tamriel = {
-			discover_country = ROOT
-		}
 		2500.1.1 = {
 			monarch = {
 				name = "Olf"
@@ -576,9 +564,6 @@ new country shield-shade = {
 		50 150 50
 	}
 	history = {
-		Tamriel = {
-			discover_country = ROOT
-		}
 		2500.1.1 = {
 			monarch = {
 				name = "Olaf"

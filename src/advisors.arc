@@ -1,32 +1,3 @@
-new great_project palace_of_the_kings = {
-	name = "Palace of the Kings"
-	start = windhelm
-	trigger = {
-		
-	}
-	tier_1 = {
-		country_modifier = {
-			yearly_corruption = -0.05
-			administrative_efficiency = 0.02
-			governing_capacity_modifier = 0.05
-		}
-	}
-	tier_2 = {
-		country_modifier = {
-			yearly_corruption = -0.10
-			administrative_efficiency = 0.04
-			governing_capacity_modifier = 0.10
-		}
-	}
-	tier_3 = {
-		country_modifier = {
-			yearly_corruption = -0.15
-			administrative_efficiency = 0.05
-			governing_capacity_modifier = 0.15
-		}
-	}
-}
-
 new advisor_type philosopher = {
 	name = "Philosopher"
 	desc = "An advisor dedicated to the study of the fundamental nature of knowledge, reality and existence."

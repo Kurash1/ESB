@@ -13,7 +13,13 @@ new tradegood wood = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				has_terrain = marsh
+			}
+		}
 	}
 }
 new tradegood iron = {
@@ -31,7 +37,18 @@ new tradegood iron = {
 	base_price = 3
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 7
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {				
+					has_terrain = hot_springs
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
 	}
 }
 new tradegood steel = {
@@ -50,7 +67,7 @@ new tradegood steel = {
 	base_price = 4
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood fish = {
@@ -69,6 +86,12 @@ new tradegood fish = {
 	is_gold = no
 	chance = {
 		factor = 10
+		modifier = {
+			factor = 0
+			NOT = {
+				has_port = yes
+			}
+		}
 	}
 }
 new tradegood wheat = {
@@ -86,7 +109,7 @@ new tradegood wheat = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood ale = {
@@ -104,7 +127,7 @@ new tradegood ale = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood wine = {
@@ -122,7 +145,7 @@ new tradegood wine = {
 	base_price = 3
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood paper = {
@@ -140,7 +163,7 @@ new tradegood paper = {
 	base_price = 4
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood alchemical_ingredients = {
@@ -159,6 +182,15 @@ new tradegood alchemical_ingredients = {
 	is_gold = no
 	chance = {
 		factor = 10
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = marsh
+					has_terrain = hot_springs
+				}
+			}
+		}
 	}
 }
 new tradegood r_alchemical_ingredients = {
@@ -176,7 +208,16 @@ new tradegood r_alchemical_ingredients = {
 	base_price = 6
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = marsh
+					has_terrain = hot_springs
+				}
+			}
+		}
 	}
 }
 new tradegood potions = {
@@ -194,7 +235,7 @@ new tradegood potions = {
 	base_price = 6.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood stone = {
@@ -213,6 +254,17 @@ new tradegood stone = {
 	is_gold = no
 	chance = {
 		factor = 10
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {				
+					has_terrain = hot_springs
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
 	}
 }
 new tradegood gems = {
@@ -230,7 +282,17 @@ new tradegood gems = {
 	base_price = 6
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {				
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
 	}
 }
 new tradegood gold = {
@@ -247,6 +309,16 @@ new tradegood gold = {
 	is_gold = yes
 	chance = {
 		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {				
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
 	}
 }
 new tradegood silver = {
@@ -263,6 +335,16 @@ new tradegood silver = {
 	is_gold = yes
 	chance = {
 		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {				
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
 	}
 }
 new tradegood ebony = {
@@ -298,7 +380,17 @@ new tradegood c_metals = {
 	base_price = 3.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {				
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
 	}
 }
 new tradegood r_metals = {
@@ -316,7 +408,17 @@ new tradegood r_metals = {
 	base_price = 5
 	is_gold = no
 	chance = {
-		factor = 5
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {				
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
 	}
 }
 new tradegood jewelry = {
@@ -334,7 +436,7 @@ new tradegood jewelry = {
 	base_price = 7.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood fur = {
@@ -352,7 +454,7 @@ new tradegood fur = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood livestock = {
@@ -370,7 +472,7 @@ new tradegood livestock = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood skooma = {
@@ -388,7 +490,7 @@ new tradegood skooma = {
 	base_price = 6
 	is_gold = no
 	chance = {
-		factor = 2
+		factor = 0
 	}
 }
 new tradegood slaves = {
@@ -424,7 +526,7 @@ new tradegood mag_goods = {
 	base_price = 6
 	is_gold = no
 	chance = {
-		factor = 2
+		factor = 0
 	}
 }
 new tradegood cloth = {
@@ -442,7 +544,7 @@ new tradegood cloth = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood fruits = {
@@ -460,7 +562,7 @@ new tradegood fruits = {
 	base_price = 2
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood liquor = {
@@ -478,7 +580,7 @@ new tradegood liquor = {
 	base_price = 2.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood naval_supplies = {
@@ -496,7 +598,13 @@ new tradegood naval_supplies = {
 	base_price = 3.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				has_port = yes
+			}
+		}
 	}
 }
 new tradegood arms = {
@@ -515,7 +623,7 @@ new tradegood arms = {
 	base_price = 5.5
 	is_gold = no
 	chance = {
-		factor = 5
+		factor = 0
 	}
 }
 new tradegood glass = {
@@ -533,7 +641,7 @@ new tradegood glass = {
 	base_price = 4.5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood drugs = {
@@ -551,7 +659,7 @@ new tradegood drugs = {
 	base_price = 5
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }
 new tradegood rel_goods = {
@@ -570,6 +678,6 @@ new tradegood rel_goods = {
 	base_price = 3
 	is_gold = no
 	chance = {
-		factor = 10
+		factor = 0
 	}
 }

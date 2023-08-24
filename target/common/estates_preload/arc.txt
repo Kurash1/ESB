@@ -1,1 +1,105 @@
-estate_special = { modifier_definition = { type = privileges key = max_terms trigger = { has_government_attribute = has_limited_terms } } } estate_clans = { modifier_definition = { type = loyalty key = clans_loyalty_modifier trigger = { has_estate = estate_clans } } modifier_definition = { type = influence key = clans_influence_modifier trigger = { has_estate = estate_clans } } } estate_priests = { modifier_definition = { type = loyalty key = priests_loyalty_modifier trigger = { has_estate = estate_priests } } modifier_definition = { type = influence key = priests_influence_modifier trigger = { has_estate = estate_priests } } } estate_warriors = { modifier_definition = { type = loyalty key = warriors_loyalty_modifier trigger = { has_estate = estate_warriors } } modifier_definition = { type = influence key = warriors_influence_modifier trigger = { has_estate = estate_warriors } } }
+estate_special = {
+	modifier_definition = {
+		type = privileges
+		key = max_terms
+		trigger = {
+			has_government_attribute = has_limited_terms
+		}
+	}
+}
+estate_clans = {
+	modifier_definition = {
+		type = loyalty
+		key = clans_loyalty_modifier
+		trigger = {
+			has_estate = estate_clans
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = clans_influence_modifier
+		trigger = {
+			has_estate = estate_clans
+		}
+	}
+}
+estate_giants = {
+	modifier_definition = {
+		type = loyalty
+		key = giants_loyalty_modifier
+		trigger = {
+			has_estate = estate_giants
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = giants_influence_modifier
+		trigger = {
+			has_estate = estate_giants
+		}
+	}
+}
+estate_orcs = {
+	modifier_definition = {
+		type = loyalty
+		key = orcs_loyalty_modifier
+		trigger = {
+			has_estate = estate_orcs
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = orcs_influence_modifier
+		trigger = {
+			has_estate = estate_orcs
+		}
+	}
+}
+estate_priests = {
+	modifier_definition = {
+		type = loyalty
+		key = priests_loyalty_modifier
+		trigger = {
+			has_estate = estate_priests
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = priests_influence_modifier
+		trigger = {
+			has_estate = estate_priests
+		}
+	}
+}
+estate_tongues = {
+	modifier_definition = {
+		type = loyalty
+		key = tongues_loyalty_modifier
+		trigger = {
+			has_estate = estate_tongues
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = tongues_influence_modifier
+		trigger = {
+			has_estate = estate_tongues
+		}
+	}
+}
+estate_warriors = {
+	modifier_definition = {
+		type = loyalty
+		key = warriors_loyalty_modifier
+		trigger = {
+			has_estate = estate_warriors
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = warriors_influence_modifier
+		trigger = {
+			has_estate = estate_warriors
+		}
+	}
+}

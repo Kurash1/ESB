@@ -1,0 +1,92 @@
+new government_reform nord_clan = {
+	name = "Nord Clan"
+	desc = ""
+	icon = "crown"
+	allow_normal_conversion = yes
+	maintain_dynasty = yes
+	potential = {
+		has_reform = nord_clan
+	}
+	modifiers = {
+		governing_capacity = -100
+		global_autonomy = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform jarldom = {
+	name = "Jarldom"
+	desc = ""
+	icon = "crown"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = jarldom
+	}
+	modifiers = {
+		governing_capacity = 50
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform thanedom = {
+	name = "Thanedom"
+	desc = ""
+	icon = "crown"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	potential = {
+		has_reform = thanedom
+	}
+	modifiers = {
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform warrior_hold = {
+	name = "Warrior Hold"
+	desc = ""
+	icon = "crown"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	potential = {
+		has_reform = warrior_hold
+	}
+	modifiers = {
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform warrior_house = {
+	name = "Warrior House"
+	desc = ""
+	icon = "crown"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	potential = {
+		has_reform = warrior_house
+	}
+	modifiers = {
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform companion_remnant = {
+	name = "Companion Remnant"
+	desc = ""
+	icon = "crown"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	potential = {
+		has_reform = companion_remnant
+	}
+	modifiers = {
+	}
+	ai = {
+		factor = 1
+	}
+}

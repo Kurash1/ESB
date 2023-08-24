@@ -1,231 +1,3 @@
-new unit nord_infantry = {
-	name = "Huscarl"
-	desc = ""
-	
-	type = infantry
-	unit_type = nord_tg
-
-	maneuver = 1
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 0
-	defensive_fire = 2
-	offensive_shock = 3
-	defensive_shock = 2
-}
-new unit nord_artillery = {
-	name = "Nordic Onager"
-	desc = ""
-	
-	type = artillery
-	unit_type = nord_tg
-
-	maneuver = 1
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 4
-	defensive_fire = 2
-	offensive_shock = 0
-	defensive_shock = 1
-}
-
-new unit reachmen_infantry = {
-	name = "Hunters"
-	desc = ""
-	
-	type = infantry
-	unit_type = reachman_tg
-
-	maneuver = 1
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 3
-	defensive_fire = 2
-	offensive_shock = 0
-	defensive_shock = 2
-}
-new unit reachmen_cavalry = {
-	name = "Bear rider"
-	desc = ""
-	
-	type = cavalry
-	unit_type = reachman_tg
-
-	maneuver = 2
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 0
-	defensive_fire = 2
-	offensive_shock = 4
-	defensive_shock = 4
-}
-new unit reachmen_artillery = {
-	name = "Battering Ram"
-	desc = ""
-	
-	type = artillery
-	unit_type = orc_tg
-
-	maneuver = 1
-	offensive_morale = 0
-	defensive_morale = 0
-	offensive_fire = 0
-	defensive_fire = 0
-	offensive_shock = 0
-	defensive_shock = 0
-}
-
-new unit orc_infantry = {
-	name = "Berserker"
-	desc = ""
-	
-	type = infantry
-	unit_type = orc_tg
-
-	maneuver = 1
-	offensive_morale = 4
-	defensive_morale = 2
-	offensive_fire = 0
-	defensive_fire = 0
-	offensive_shock = 4
-	defensive_shock = 2
-}
-new unit orc_artillery = {
-	name = "Battering Ram"
-	desc = ""
-	
-	type = artillery
-	unit_type = orc_tg
-
-	maneuver = 1
-	offensive_morale = 1
-	defensive_morale = 1
-	offensive_fire = 0
-	defensive_fire = 1
-	offensive_shock = 2
-	defensive_shock = 1
-}
-
-new unit snow_elven_infantry = {
-	name = "Ranger"
-	desc = ""
-	
-	type = infantry
-	unit_type = snow_elven_tg
-
-	maneuver = 1
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 4
-	defensive_fire = 2
-	offensive_shock = 0
-	defensive_shock = 2
-}
-new unit snow_elven_artillery = {
-	name = "Flameslinger"
-	desc = ""
-	
-	type = artillery
-	unit_type = snow_elven_tg
-
-	maneuver = 1
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 6
-	defensive_fire = 0
-	offensive_shock = 0
-	defensive_shock = 0
-}
-
-new incident formation_of_eastmarch = {
-	name = "Formation of Eastmarch"
-    event = incidents.1
-	default_option = 1
-	
-	can_stop = {
-		NOT = {
-			exists = WND
-		}
-	}
-
-	0 = {
-		factor = 1
-	}
-	
-	1 = {
-		factor = 5
-	}
-	
-	2 = {
-		factor = 1
-	}
-}
-new country_event incidents.1 = {
-	title = "Formation of Eastmarct"
-	desc = ""
-	picture = DEATH_OF_HEIR_eventPicture
-	
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	options = {
-		{
-			name = "Full"
-			effect = {
-				regions:eastmarch = {
-					limit = {
-						is_city = yes
-					}
-					cede_province = WND
-				}
-			}
-			ai_chance = { 
-				factor = 5
-			}
-		}
-		{
-			name = "Vassal"
-			effect = {
-				every_country = {
-					limit = {
-						capital_scope = {
-							region = regions:eastmarch
-						}
-					}
-					WND = {
-						vassalize = PREV
-					}
-				}
-			}
-			ai_chance = { 
-				factor = 10
-			}
-		}
-		{
-			name = "Conquest"
-			effect = {
-				regions:eastmarch = {
-					limit = {
-						is_city = yes
-					}
-					add_claim = WND
-				}
-				every_country = {
-					limit = {
-						capital_scope = {
-							region = regions:eastmarch
-						}
-					}
-					set_in_empire = no
-				}
-			}
-			ai_chance = {
-				factor = 5
-			}
-		}
-	}
-}
-
 new building fort_15th = {
 	name = "Fort"
 	desc = ""
@@ -378,7 +150,7 @@ new building tax_3 = {
 		factor = 1
 	}
 }
-new building prod_1 = {
+new building production_1 = {
 	name = "Smithy"
 	desc = ""
 	cost = 100
@@ -403,12 +175,12 @@ new building prod_1 = {
 		factor = 1
 	}
 }
-new building prod_2 = {
+new building production_2 = {
 	name = "Workshop"
 	desc = ""
 	cost = 200
 	time = 12
-	make_obsolete = prod_1
+	make_obsolete = production_1
 	build_trigger = {
 		FROM = {
 			calc_true_if = {
@@ -429,12 +201,12 @@ new building prod_2 = {
 		factor = 1
 	}
 }
-new building prod_3 = {
+new building production_3 = {
 	name = "Craftsmens Guild"
 	desc = ""
 	cost = 300
 	time = 12
-	make_obsolete = prod_2
+	make_obsolete = production_2
 	build_trigger = {
 		FROM = {
 			calc_true_if = {

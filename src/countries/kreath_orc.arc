@@ -4,11 +4,7 @@ new inheritable kreath_orc_country = {
 	religion = code_of_malacath
 	primary_culture = kreath_orc
 	graphical_culture = easterngfx
-	history = {
-		Tamriel = {
-			discover_country = ROOT
-		}
-	}
+	history = { }
 }
 new country bilegulch = {
 	inherit = kreath_orc_country
