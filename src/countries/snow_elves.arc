@@ -3,7 +3,8 @@ new inheritable snow_elven_country = {
 	religion = auriels_true_way
 	primary_culture = snow_elven
 	graphical_culture = greekgfx
-	history = { }
+	history = {
+	}
 }
 new country geir = {
 	inherit = snow_elven_country

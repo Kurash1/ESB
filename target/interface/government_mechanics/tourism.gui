@@ -61,4 +61,19 @@ guiTypes = {
 			clicksound = back_click
 		}
 	}
+	
+	windowType = {
+		name = "peasant_army_button"
+		size = { x = 300 y = 85 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_tourism_increase_button"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	
 }

@@ -4,7 +4,8 @@ new inheritable kreath_orc_country = {
 	religion = code_of_malacath
 	primary_culture = kreath_orc
 	graphical_culture = easterngfx
-	history = { }
+	history = {
+	}
 }
 new country bilegulch = {
 	inherit = kreath_orc_country

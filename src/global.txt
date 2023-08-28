@@ -8,3 +8,10 @@ new bookmark old_kingdom = {
 	center = whiterun
 	default = yes
 }
+
+new inheritable random_event = {
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+}

@@ -256,6 +256,10 @@ country_event = {
 	picture = REPUBLICAN_DEBATES_eventPicture
 	desc = EVTDESC700
 	
+	trigger = {
+		tag = BLA
+	}
+	
 	is_triggered_only = yes
 	
 	immediate = {
@@ -268,6 +272,7 @@ country_event = {
 			add_dip_tech = 3
 			add_mil_tech = 3
 		}
+		log = "Idea March"
 	}
 
 	option = {

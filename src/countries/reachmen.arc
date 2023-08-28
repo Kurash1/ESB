@@ -4,7 +4,8 @@ new inheritable reachman_country = {
 	religion = reachman_faith
 	primary_culture = reachmen
 	graphical_culture = easterngfx
-	history = { }
+	history = {
+	}
 }
 new country ghostsong_clan = {
 	inherit = reachman_country

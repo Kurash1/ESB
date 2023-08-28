@@ -75,14 +75,13 @@ new estate orcs = {
 				has_estate_privilege = estate_orcs_stronghold_rights_privelege
 			}
 			on_granted = {
-				defineloc redeemed_mauloch = "Adds Mauloch to the Deity Choices if you are of Nordic Pantheon or Old Ways religion"
+				defineloc redeemed_mauloch = "Adds Mauloch to the Deity Choices if you are of §YNordic Pantheon§! or §YOld Ways§! religion"
 				custom_tooltip = redeemed_mauloch
 			}
 		}
 	}
 	base_influence = 0
 }
-
 new personal_deity mauloch = {
 	name = "Mauloch"
 	desc = ""
@@ -92,7 +91,7 @@ new personal_deity mauloch = {
 		global_unrest = 2
 	}
 	potential = {
-		OR = {		
+		OR = {
 			religion = nordic_pantheon
 			religion = the_old_ways
 		}

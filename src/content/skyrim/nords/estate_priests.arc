@@ -6,6 +6,7 @@ new estate priests = {
 		0 255 255
 	}
 	trigger = {
+		always = no
 		culture_group = culture_groups:nord
 	}
 	country_modifier_happy = {
@@ -54,7 +55,7 @@ new estate priests = {
 				stability_cost_modifier = 0.1
 			}
 			benefits = {
-				adm_advisor_cost = -0.15
+				adm_advisor_cost = -0.25
 			}
 		}
 	}

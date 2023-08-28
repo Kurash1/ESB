@@ -1,7 +1,7 @@
 new estate clans = {
 	name = "Clans"
 	desc = ""
-	icon = 4
+	icon = 3
 	color = {
 		255 100 0
 	}
@@ -40,7 +40,7 @@ new estate clans = {
 			max_absolutism = -5
 			loyalty = -0.05
 			benefits = {
-				country_diplomatic_power = 1
+				country_admin_power = 1
 			}
 		}
 		new hire_advisors = {
@@ -54,7 +54,7 @@ new estate clans = {
 				stability_cost_modifier = 0.1
 			}
 			benefits = {
-				dip_advisor_cost = -0.15
+				adm_advisor_cost = -0.25
 			}
 		}
 	}

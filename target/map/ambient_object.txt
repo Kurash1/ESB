@@ -18,16 +18,6 @@ type={
 	type="volcano_ash_emmiter"
 	use_animation=no
 	always_visible=yes
-	object={
-		name="red_mountain_ash"
-		hidden_on_start=no
-		position={
-			2262.000 30.000 1927.000 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
 }
 type={
 	type="volcano_lava"
@@ -42,6 +32,22 @@ type={
 	always_visible=yes
 	object={
 		name="solitude_arch"
+		hidden_on_start=no
+		position={
+			1661.000 22.500 2069.000 
+		}
+		rotation={
+			0.000 -45.000 0.000 
+		}
+	}
+}
+type={
+	type="high_hrothgar"
+	use_animation=no
+	scale=5.00000
+	always_visible=yes
+	object={
+		name="high_hrothgar"
 		hidden_on_start=no
 		position={
 			1661.000 22.500 2069.000 

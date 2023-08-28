@@ -2,7 +2,8 @@ new inheritable nordic_country = {
 	technology_group = nord_tg
 	religion = nordic_pantheon
 	graphical_culture = greekgfx
-	history = { }
+	history = {
+	}
 	starting_reform = nord_clan
 }
 new country valtheim = {
@@ -31,6 +32,7 @@ new country clearspring = {
 new country fallowfire = {
 	inherit = nordic_country
 	primary_culture = fallowfirean
+	government = remnant
 	starting_reform = companion_remnant
 	tag = FLW
 	name = "Fallowfire"
@@ -325,6 +327,17 @@ new country river-runner = {
 	}
 	capital = bee_coast
 }
+new country hrothgar = {
+	inherit = nordic_country
+	primary_culture = whiterunish
+	tag = HRO
+	name = "Hrothgar"
+	adj = "Hrothgar"
+	color = {
+		127 0 0
+	}
+	capital = hrothgar_camp
+}
 new country broken-fang = {
 	inherit = nordic_country
 	primary_culture = whiterunish
@@ -371,6 +384,7 @@ new country jorrvaskr = {
 	color = {
 		150 50 0
 	}
+	government = remnant
 	starting_reform = companion_remnant
 	capital = whiterun
 	history = {

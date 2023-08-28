@@ -1,3 +1,97 @@
+remnant = {
+	reform_levels = {
+		government_policy = {
+			reforms = {
+				companion_remnant
+			}
+		}
+		military = { 
+			reforms = { 
+				tier_2_conscription 
+				tier_2_mercenaries 
+				tier_2_warriors 
+				tier_2_professional_army 
+				tier_2_elitism
+				tier_2_peasant_army
+				tier_2_crusader_army
+				tier_2_undead_legion
+				tier_2_battlemages
+				tier_2_tongues
+				tier_2_viking_army
+			} 
+		}
+		navy = {
+			reforms = {
+				support_fleet 
+				inland_dominance 
+				open_seas_doctrine 
+				merchant_fleet 
+			}
+		}
+		magic = {
+			reforms = {
+				regulation
+				persecution 
+				magical_society 
+			}
+		}
+		economy = {
+			reforms = {
+				extensive_taxation 
+				trade_benefits 
+				production_benefits 
+				war_economy 
+			}
+		}
+		state_administration = {
+			reforms = {
+				united_states 
+				regionalism 
+				confederation 
+				united_cities
+			}
+		}
+		cultural_values = {
+			reforms = {
+				tavern_life 
+				tournaments 
+				art_and_science 
+				raiding 
+			}
+		}
+		religious_policy = {
+			reforms = {
+				state_religion 
+				secularism 
+				theological_dominance 
+				fanaticism 
+			}
+		}
+		diplomacy = {
+			reforms = {
+				diplomatic_core 
+				expansion 
+				supremacy 
+				guardian
+			}
+		}
+		reform = {
+			reforms = {
+				remnant_become_thanedom
+			}
+		}
+	}
+
+	basic_reform = monarchy_mechanic
+
+	legacy_government = {
+		despotic_monarchy
+	}
+
+	color = { 50 0 0 }
+}
+
+
 monarchy = { 
 	#missing tiers = {
 	#		slavery
@@ -33,9 +127,40 @@ monarchy = {
 				warrior_house
 				jarldom
 				thanedom
-				companion_remnant
 				test_reform
 			}
+		}
+		military = { 
+			reforms = { 
+				tier_2_conscription 
+				tier_2_mercenaries 
+				tier_2_warriors 
+				tier_2_professional_army 
+				tier_2_elitism
+				tier_2_peasant_army
+				tier_2_crusader_army
+				tier_2_undead_legion
+				tier_2_battlemages
+				tier_2_tongues
+				tier_2_viking_army
+			} 
+		}
+		navy = { 
+			reforms = { 
+				support_fleet 
+				inland_dominance 
+				open_seas_doctrine 
+				merchant_fleet 
+				the_ylgermet
+			} 
+		}
+		magic = { 
+			reforms = { 
+				regulation 
+				#reason_and_logic #limit to just dwemer
+				persecution 
+				magical_society 
+			} 
 		}
 		law_and_order = { 
 			reforms = { 
@@ -43,24 +168,6 @@ monarchy = {
 				national_council 
 				trial_and_jury 
 				community_militia 
-			} 
-		}
-		military = { 
-			reforms = { 
-				es_conscription 
-				mercenary_camps 
-				professionalism 
-				elitism 
-				peasant_army
-			} 
-		}
-		naval_doctrine = { 
-			reforms = { 
-				support_fleet 
-				inland_dominance 
-				open_seas_doctrine 
-				merchant_fleet 
-				the_ylgermet
 			} 
 		}
 		labour = { 
@@ -71,6 +178,31 @@ monarchy = {
 				slavery 
 			} 
 		}
+		ruler_responibilities = { 
+			reforms = { 
+				head_of_the_state 
+				champion_of_the_people 
+				servant_of_the_realm 
+				purveyor_of_decadence 
+				#sorcerer_king
+			} 
+		}
+		religious_policy = { 
+			reforms = { 
+				state_religion 
+				secularism 
+				theological_dominance 
+				fanaticism 
+			} 
+		}
+		trade = { 
+			reforms = { 
+				internal_market 
+				free_trade 
+				protectionism 
+				corporatism 
+			} 
+		}
 		power_of_nobility = { 
 			reforms = { 
 				strong_nobles 
@@ -79,15 +211,6 @@ monarchy = {
 				warrior_estate 
 				#mage_nobility
 				#merchant_nobility
-			} 
-		}
-		ruler_responibilities = { 
-			reforms = { 
-				head_of_the_state 
-				champion_of_the_people 
-				servant_of_the_realm 
-				purveyor_of_decadence 
-				#sorcerer_king
 			} 
 		}
 		#state_administration = { 
@@ -106,14 +229,6 @@ monarchy = {
 				free_necromancy
 				necromancer_rule
 			}
-		}
-		magic = { 
-			reforms = { 
-				regulation 
-				reason_and_logic #limit to just dwemer
-				persecution 
-				magical_society 
-			} 
 		}
 		holy_orders = { 
 			reforms = { 
@@ -163,14 +278,6 @@ monarchy = {
 				war_times_reign 
 			} 
 		}
-		trade = { 
-			reforms = { 
-				internal_market 
-				free_trade 
-				protectionism 
-				corporatism 
-			} 
-		}
 		succession = { 
 			reforms = { 
 				primogeniture 
@@ -188,14 +295,6 @@ monarchy = {
 				promotion_of_mercantelism 
 				provision_of_protectionism 
 				criminal_legalisation 
-			} 
-		}
-		religious_policy = { 
-			reforms = { 
-				state_religion 
-				secularism 
-				theological_dominance 
-				fanaticism 
 			} 
 		}
 		magical_regulation = { 

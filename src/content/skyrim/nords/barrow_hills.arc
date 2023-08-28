@@ -9,7 +9,8 @@ new building barrow_hill = {
 	}
 }
 on_actions:on_monarch_death += {
-	if = {
+	if
+	{
 		limit = {
 			culture_group = culture_groups:nord
 		}
@@ -29,7 +30,8 @@ on_actions:on_monarch_death += {
 	}
 }
 on_actions:on_heir_death += {
-	if = {
+	if
+	{
 		limit = {
 			culture_group = culture_groups:nord
 		}

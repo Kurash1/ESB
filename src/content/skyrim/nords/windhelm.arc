@@ -1,112 +1,42 @@
-#new idea_group windhelm_ideas = {
-#	name = "Windhelm"
-#	category = national
-#	start = {
-#	
-#	}
-#	bonus = {
-#	
-#	}
-#	trigger = {
-#		tag = WND
-#	}
-#	ideas = {
-#		{
-#			name = "Ysgramor's City"
-#			desc = "Windhelm was founded by the legendary Ysgramor and the crew of his ship, the Ylgermet, following the Battle of the Moesring in the late Merethic Era. According to Nordic tradition, after the Five Hundred Companions disbanded, the Ylgermet's crew stumbled upon the barrow of Yngol, Ysgramor's son. When Ysgramor looked south and saw where the White River flowed into the Sea of Ghosts, he decreed that a great city should be built there to serve as a monument to the glories of mankind, a place from where he could gaze upon the hill of Yngol's barrow, and a gateway to guard Skyrim's interior against incursion via the river."
-#			modifier = {
-#				
-#			}
-#		}
-#		{
-#			name = ""
-#			desc = ""
-#			modifier = {
-#				
-#			}
-#		}
-#		{
-#			name = ""
-#			desc = ""
-#			modifier = {
-#				
-#			}
-#		}
-#		{
-#			name = ""
-#			desc = ""
-#			modifier = {
-#				
-#			}
-#		}
-#		{
-#			name = ""
-#			desc = ""
-#			modifier = {
-#				
-#			}
-#		}
-#		{
-#			name = ""
-#			desc = ""
-#			modifier = {
-#				
-#			}
-#		}
-#		{
-#			name = ""
-#			desc = ""
-#			modifier = {
-#				
-#			}
-#		}
-#	}
-#}
-
 new great_project dunmeth_pass = {
 	name = "Dunmeth Pass"
 	start = black_mountain
 }
-
+new great_project lunar_forge = {
+	name = "Lunar Forge"
+	start = silent_moons
+}
 new great_project palace_of_the_kings = {
 	name = "Palace of the Kings"
 	start = windhelm
 }
-
 new great_project windhelm_port = {
 	name = "Windhelm Port"
 	start = black_mountain
 }
-
 new mercenary_company cradlecrush_giants = {
 	name = "Cradlecrush Giants"
 	regiments_per_development = 0
-    cost_modifier = 0.5
-
-    home_province = cradlecrush
-	
-    cavalry_weight = 0
-    artillery_weight = 0
-
-    trigger = {                             
-       has_country_flag = unlocks_cradlecrush_giants
-    }
-
-    modifier = {
+	cost_modifier = 0.5
+	home_province = cradlecrush
+	cavalry_weight = 0
+	artillery_weight = 0
+	trigger = {
+		has_country_flag = unlocks_cradlecrush_giants
+	}
+	modifier = {
 		shock_damage = 30%
-    }
+	}
 }
-
-new advisor = {
+new advisor jalmar_old_song = {
 	name = "Jalmar Old-Song"
-	location = windhelm 
+	location = windhelm
 	discount = yes
 	skill = 2
 	type = naval_reformer
 	date = 2500.1.1
 	death_date = 2551.6.4
 }
-
 new mission_series eastmarch_1 = {
 	slot = 1
 	ai = yes
@@ -114,33 +44,8 @@ new mission_series eastmarch_1 = {
 		tag = WND
 	}
 	missions = {
-		eastmarch_fallowfire = {
-			name = "Fallowfire Companions"
-			desc = ""
-			position = 2
-			icon = mission_unknown_mission
-			required = {
-				eastmarch_the_second_companions
-			}
-			trigger = { 
-				c@fallowfire = {
-					has_opinion = {
-						who = ROOT
-						value = 150
-					}
-				}
-			}
-			effect = { 
-				add_casus_belli = {
-					target = c@fallowfire
-					type = cb_vassalize_mission
-					months = 120
-				}
-			}
-		}
 	}
 }
-
 new mission_series eastmarch_2 = {
 	slot = 2
 	ai = yes
@@ -153,10 +58,10 @@ new mission_series eastmarch_2 = {
 			desc = ""
 			position = 1
 			icon = mission_unknown_mission
-			trigger = { 
+			trigger = {
 				army_size_percentage = 1.0
 			}
-			effect = { 
+			effect = {
 				define_general = {
 					shock = 4
 					fire = 4
@@ -168,7 +73,6 @@ new mission_series eastmarch_2 = {
 		}
 	}
 }
-
 new mission_series eastmarch_3 = {
 	slot = 3
 	ai = yes
@@ -184,13 +88,13 @@ new mission_series eastmarch_3 = {
 			required = {
 				eastmarch_the_second_companions
 			}
-			trigger = { 
-				p@morvunskar = {
+			trigger = {
+				provinces:morvunskar = {
 					base_manpower = 5
 				}
 			}
-			effect = { 
-				p@morvunskar = {
+			effect = {
+				provinces:morvunskar = {
 					add_base_manpower = 5
 				}
 			}
@@ -203,12 +107,12 @@ new mission_series eastmarch_3 = {
 			required = {
 				eastmarch_morvunskar
 			}
-			trigger = { 
+			trigger = {
 				manpower_percentage = 0.75
 			}
-			effect = { 
+			effect = {
 				add_yearly_manpower = -2
-				p@uttering_hills = {
+				provinces:uttering_hills = {
 					add_base_manpower = 3
 					quick_province_modifier = {
 						name = "Uttering Hills Training"
@@ -228,21 +132,20 @@ new mission_series eastmarch_3 = {
 			required = {
 				eastmarch_fortify_west
 			}
-			trigger = { 
-				owns_or_non_sovereign_subject_of = p@mixwater
-				p@mixwater = {
+			trigger = {
+				owns_or_non_sovereign_subject_of = provinces:mixwater
+				provinces:mixwater = {
 					development = 15
 				}
 			}
-			effect = { 
-				p@mixwater = {
+			effect = {
+				provinces:mixwater = {
 					add_center_of_trade_level = 1
-					
 					add_scaled_local_adm_power = 25
 					add_scaled_local_dip_power = 25
 					add_scaled_local_mil_power = 25
 				}
-				a@amol = {
+				areas:amol = {
 					add_claim = ROOT
 				}
 			}
@@ -255,21 +158,20 @@ new mission_series eastmarch_3 = {
 			required = {
 				eastmarch_mixwater
 			}
-			trigger = { 
-				a@amol = {
+			trigger = {
+				areas:amol = {
 					type = all
 					owned_by = ROOT
 				}
 			}
-			effect = { 
-				a@hillgrund, a@lost_knife, a@darkwater = {
+			effect = {
+				areas:hillgrund, areas:lost_knife, areas:darkwater = {
 					add_claim = ROOT
 				}
 			}
 		}
 	}
 }
-
 new mission_series eastmarch_4 = {
 	slot = 4
 	ai = yes
@@ -285,13 +187,13 @@ new mission_series eastmarch_4 = {
 			required = {
 				eastmarch_high_king eastmarch_morvunskar
 			}
-			trigger = { 
-				p@gallows_rock = {
+			trigger = {
+				provinces:gallows_rock = {
 					fort_level = 1
 				}
 			}
-			effect = { 
-				a@cradlecrush, a@gallows_rock, a@mixwater = {
+			effect = {
+				areas:cradlecrush, areas:gallows_rock, areas:mixwater = {
 					quick_province_modifier = {
 						name = "Fortify the West"
 						duration = 9125
@@ -310,16 +212,15 @@ new mission_series eastmarch_4 = {
 			required = {
 				eastmarch_fortify_west
 			}
-			trigger = { 
-				owns_or_non_sovereign_subject_of = p@angas_mill
-				p@angas_mill = {
+			trigger = {
+				owns_or_non_sovereign_subject_of = provinces:angas_mill
+				provinces:angas_mill = {
 					development = 15
 				}
 			}
-			effect = { 
-				p@angas_mill = {
+			effect = {
+				provinces:angas_mill = {
 					add_center_of_trade_level = 1
-					
 					add_scaled_local_adm_power = 25
 					add_scaled_local_dip_power = 25
 					add_scaled_local_mil_power = 25
@@ -335,7 +236,7 @@ new mission_series eastmarch_4 = {
 				eastmarch_angas_mill
 			}
 			trigger = {
-				p@nightgate = {
+				provinces:nightgate = {
 					owner = {
 						OR = {
 							tag = ROOT
@@ -345,7 +246,7 @@ new mission_series eastmarch_4 = {
 				}
 			}
 			effect = {
-				p@nightgate = {	
+				provinces:nightgate = {
 					add_trade_modifier = {
 						who = ROOT
 						duration = 9125
@@ -363,13 +264,13 @@ new mission_series eastmarch_4 = {
 			required = {
 				eastmarch_amol
 			}
-			trigger = { 
-				a@darkwater = {
+			trigger = {
+				areas:darkwater = {
 					owned_by = ROOT
 				}
 			}
-			effect = { 
-				p@darkwater_crossing = {
+			effect = {
+				provinces:darkwater_crossing = {
 					add_claim = ROOT
 				}
 			}
@@ -382,40 +283,35 @@ new mission_series eastmarch_4 = {
 			required = {
 				eastmarch_darkwater
 			}
-			trigger = { 
-				owns_or_non_sovereign_subject_of = p@darkwater_crossing
-				p@darkwater_crossing = {
+			trigger = {
+				owns_or_non_sovereign_subject_of = provinces:darkwater_crossing
+				provinces:darkwater_crossing = {
 					development = 15
 				}
 			}
-			effect = { 
-				p@atronach, p@broken_limb, p@hjoie, p@cherim_pond, p@eldergleam, p@bonestrew = {
+			effect = {
+				provinces:atronach, provinces:broken_limb, provinces:hjoie, provinces:cherim_pond, provinces:eldergleam, provinces:bonestrew = {
 					add_siberian_construction = 50
 				}
 			}
 		}
 	}
 }
-
 new incident road_mistwatch = {
 	name = "Road Mistwatch"
-    event = incidents.1
+	event = incidents.1
 	default_option = 1
-
 	can_stop = {
 		NOT = {
 			exists = WND
 		}
 	}
-
 	0 = {
 		factor = 1
 	}
-
 	1 = {
 		factor = 1
 	}
-
 	2 = {
 		factor = 1
 	}
@@ -424,51 +320,49 @@ new country_event incidents.1 = {
 	title = "Road Mistwatch"
 	desc = ""
 	picture = DEATH_OF_HEIR_eventPicture
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	options = {
 		{
 			name = "Full"
 			effect = {
-				a@mistwatch = {
+				areas:mistwatch = {
 					cede_province = ROOT
 					add_core = ROOT
 				}
-				p@aleading, p@fanella, p@akawatch = {
+				provinces:aleading, provinces:fanella, provinces:akawatch = {
 					add_siberian_construction = 50
 				}
 			}
-			ai_chance = { 
+			ai_chance = {
 				factor = 5
 			}
 		}
 		{
 			name = "Necessary"
 			effect = {
-				p@mistwatch = {
+				provinces:mistwatch = {
 					cede_province = ROOT
 					add_core = ROOT
 				}
-				a@mistwatch = {
+				areas:mistwatch = {
 					add_claim = ROOT
 				}
-				p@aleading, p@fanella, p@akawatch = {
+				provinces:aleading, provinces:fanella, provinces:akawatch = {
 					add_siberian_construction = 50
 				}
 			}
-			ai_chance = { 
+			ai_chance = {
 				factor = 10
 			}
 		}
 		{
 			name = "None"
 			effect = {
-				a@mistwatch = {
+				areas:mistwatch = {
 					add_claim = ROOT
 				}
-				p@aleading, p@fanella, p@akawatch = {
+				provinces:aleading, provinces:fanella, provinces:akawatch = {
 					add_siberian_construction = 50
 				}
 			}
@@ -478,7 +372,6 @@ new country_event incidents.1 = {
 		}
 	}
 }
-
 new mission_series eastmarch_5 = {
 	slot = 5
 	ai = yes
@@ -491,32 +384,40 @@ new mission_series eastmarch_5 = {
 			desc = ""
 			position = 1
 			icon = mission_unknown_mission
-			trigger = { 
-				if [ai = yes] {
+			trigger = {
+				owns = provinces:windhelm
+				if [ai = yes]
+				{
 					ags = 20
 				}
-				else_if [has_dlc = "Leviathan"] {
-					p@windhelm = {
+				else_if [has_dlc = "Leviathan"]
+				{
+					provinces:windhelm = {
 						has_great_project = {
 							type = palace_of_the_kings
 							tier = 1
 						}
 					}
 				}
-				else {
-					development = 30
+				else
+				{
+					provinces:windhelm = {
+						development = 30
+					}
 				}
 			}
-			effect = { 
-				if [has_dlc = "Leviathan"] {
-					p@windhelm = {
+			effect = {
+				if [has_dlc = "Leviathan"]
+				{
+					provinces:windhelm = {
 						add_great_project_tier = {
 							type = palace_of_the_kings
 							tier = 1
 						}
 					}
 				}
-				else {
+				else
+				{
 					add_base_tax = 3
 					add_base_production = 3
 					add_base_manpower = 3
@@ -531,15 +432,16 @@ new mission_series eastmarch_5 = {
 			required = {
 				eastmarch_the_ylgermet eastmarch_palace_of_the_kings eastmarch_the_second_companions
 			}
-			trigger = { 
+			trigger = {
 				is_emperor = yes
 			}
-			effect = { 
+			effect = {
 				change_adm = 1
 				change_dip = 1
 				change_mil = 1
-				if [ai = yes] {
-					p@gallows_rock, p@kynesgrove = {
+				if [ai = yes]
+				{
+					provinces:gallows_rock, provinces:kynesgrove = {
 						add_building_construction = {
 							building = fort_15th
 							speed = 5
@@ -554,14 +456,14 @@ new mission_series eastmarch_5 = {
 			desc = ""
 			position = 3
 			icon = mission_unknown_mission
-			trigger = { 
+			trigger = {
 				estate_loyalty = {
 					estate = estate_giants
 					loyalty = 60
 				}
 			}
-			effect = { 
-				p@cradlecrush = {
+			effect = {
+				provinces:cradlecrush = {
 					add_base_tax = 3
 					add_base_production = 3
 					add_base_manpower = 3
@@ -576,10 +478,10 @@ new mission_series eastmarch_5 = {
 			required = {
 				eastmarch_deal_with_giants eastmarch_fortify_west
 			}
-			trigger = { 
+			trigger = {
 				accepted_culture = cultures:march_giant
 			}
-			effect = { 
+			effect = {
 				defineloc unlocks_cradlecrush_giants = "Unlocks '§YCradlecrush Giant§!' Mercenary Company"
 				custom_tooltip = unlocks_cradlecrush_giants
 				set_country_flag = unlocks_cradlecrush_giants
@@ -593,8 +495,8 @@ new mission_series eastmarch_5 = {
 			required = {
 				eastmarch_kynesgrove
 			}
-			trigger = { 
-				a@steamcrag, a@mzulft = {
+			trigger = {
+				areas:steamcrag, areas:mzulft = {
 					type = all
 					OR = {
 						is_city = no
@@ -602,8 +504,8 @@ new mission_series eastmarch_5 = {
 					}
 				}
 			}
-			effect = { 
-				a@ansilvund = {
+			effect = {
+				areas:ansilvund = {
 					add_claim = ROOT
 				}
 			}
@@ -616,11 +518,13 @@ new mission_series eastmarch_5 = {
 			required = {
 				eastmarch_cragwallow eastmarch_darkwater
 			}
-			trigger = { 
+			trigger = {
 				imperial_authority = 40
-				NOT = { active_imperial_incident = any }
+				NOT = {
+					active_imperial_incident = any
+				}
 			}
-			effect = { 
+			effect = {
 				set_imperial_incident = road_mistwatch
 			}
 		}
@@ -632,14 +536,14 @@ new mission_series eastmarch_5 = {
 			required = {
 				eastmarch_eldergleam eastmarch_road_mistwatch eastmarch_northwind_mine
 			}
-			trigger = { 
+			trigger = {
 				defineloc eastmarch_has_harald = "§YHarald Hand-Free§! is the Ruler"
 				custom_trigger_tooltip = {
 					tooltip = eastmarch_has_harald
 					has_ruler_flag = eastmarch_has_harald
 				}
 			}
-			effect = { 
+			effect = {
 				remove_country_modifier = atmoran_holdings
 			}
 		}
@@ -651,39 +555,33 @@ new mission_series eastmarch_5 = {
 			required = {
 				eastmarch_abandon_atmoran_holdings
 			}
-			trigger = { 
-				r@eastmarch = { 
+			trigger = {
+				regions:eastmarch = {
 					type = all
 					owned_by = ROOT
 				}
 			}
-			effect = { 
+			effect = {
 				change_tag = EAS
 			}
 		}
 	}
 }
-
 new mercenary_company narzulbur_company = {
 	name = "Narzulbur Company"
 	regiments_per_development = 0.04
-    cost_modifier = 1.0
-
-    home_province = greenstep
-	
-    cavalry_weight = 0.1
-    artillery_weight = 0.1
-
-    trigger = {                             
-       has_country_flag = unlocks_narzulbur_company
-    }
-
-    modifier = {
+	cost_modifier = 1.0
+	home_province = greenstep
+	cavalry_weight = 0.1
+	artillery_weight = 0.1
+	trigger = {
+		has_country_flag = unlocks_narzulbur_company
+	}
+	modifier = {
 		discipline = 5%
 		morale_damage = 10%
-    }
+	}
 }
-
 new mission_series eastmarch_6 = {
 	slot = 6
 	ai = yes
@@ -700,12 +598,13 @@ new mission_series eastmarch_6 = {
 				eastmarch_high_king
 			}
 			trigger = {
-				p@kynesgrove = {
+				provinces:kynesgrove = {
 					fort_level = 1
 				}
 			}
 			effect = {
-				a@kynesgrove, a@narzulbur [is_city = yes] {
+				areas:kynesgrove, areas:narzulbur [is_city = yes]
+				{
 					quick_province_modifier = {
 						name = "Fortify the South"
 						duration = 9125
@@ -724,21 +623,21 @@ new mission_series eastmarch_6 = {
 			required = {
 				eastmarch_fortify_south
 			}
-			trigger = { 
-				owns_or_non_sovereign_subject_of = p@kynesgrove
-				p@kynesgrove = {
+			trigger = {
+				owns_or_non_sovereign_subject_of = provinces:kynesgrove
+				provinces:kynesgrove = {
 					development = 15
 				}
 			}
-			effect = { 
-				p@kynesgrove = {
+			effect = {
+				provinces:kynesgrove = {
 					add_center_of_trade_level = 1
-					
 					add_scaled_local_adm_power = 25
 					add_scaled_local_dip_power = 25
 					add_scaled_local_mil_power = 25
 				}
-				a@steamcrag, a@mzulft [is_city = yes] {
+				areas:steamcrag, areas:mzulft [is_city = yes]
+				{
 					add_claim = ROOT
 				}
 			}
@@ -751,14 +650,14 @@ new mission_series eastmarch_6 = {
 			required = {
 				eastmarch_kynesgrove
 			}
-			trigger = { 
-				p@kynesgrove = {
+			trigger = {
+				provinces:kynesgrove = {
 					owned_by = ROOT
 					development = 20
 				}
 			}
-			effect = { 
-				p@riverside_shack, p@cronvangr, p@berasta, p@witchmist, p@anguki, p@steamcrag = {
+			effect = {
+				provinces:riverside_shack, provinces:cronvangr, provinces:berasta, provinces:witchmist, provinces:anguki, provinces:steamcrag = {
 					add_siberian_construction = 50
 				}
 			}
@@ -771,14 +670,14 @@ new mission_series eastmarch_6 = {
 			required = {
 				eastmarch_cragwallow
 			}
-			trigger = { 
-				a@ansilvund = {
+			trigger = {
+				areas:ansilvund = {
 					type = all
 					owned_by = ROOT
 				}
 			}
-			effect = { 
-				a@northwind = {
+			effect = {
+				areas:northwind = {
 					add_claim = ROOT
 				}
 			}
@@ -791,14 +690,14 @@ new mission_series eastmarch_6 = {
 			required = {
 				eastmarch_ansilvund_way
 			}
-			trigger = { 
-				p@northwind = {
+			trigger = {
+				provinces:northwind = {
 					owned_by = ROOT
 					base_production = 5
 				}
 			}
 			effect = {
-				p@northwind = {
+				provinces:northwind = {
 					quick_province_modifier = {
 						name = "Northwind Mine"
 						modifier = {
@@ -812,7 +711,6 @@ new mission_series eastmarch_6 = {
 		}
 	}
 }
-
 new mission_series eastmarch_7 = {
 	slot = 7
 	ai = yes
@@ -828,12 +726,12 @@ new mission_series eastmarch_7 = {
 			required = {
 				eastmarch_fortify_south
 			}
-			trigger = { 
+			trigger = {
 				has_estate_privilege = estate_orcs_trade_with_strongholds_privelege
-				owns = p@greenstep
+				owns = provinces:greenstep
 			}
-			effect = { 
-				p@greenstep = {
+			effect = {
+				provinces:greenstep = {
 					change_trade_goods = ebony
 					add_local_autonomy = 50
 				}
@@ -847,13 +745,13 @@ new mission_series eastmarch_7 = {
 			required = {
 				eastmarch_narzulbur
 			}
-			trigger = { 
+			trigger = {
 				estate_loyalty = {
 					estate = estate_orcs
 					loyalty = 60
 				}
 			}
-			effect = { 
+			effect = {
 				defineloc unlocks_narzulbur_company = "Unlocks '§YNarzulbur Company§!' Mercenary Company"
 				custom_tooltip = unlocks_narzulbur_company
 				set_country_flag = unlocks_narzulbur_company
@@ -880,7 +778,6 @@ new mission_series eastmarch_7 = {
 		}
 	}
 }
-
 new government_reform the_ylgermet = {
 	name = "Honor The Ylgermet"
 	desc = ""
@@ -897,8 +794,6 @@ new government_reform the_ylgermet = {
 		factor = 1000
 	}
 }
-
-
 new mission_series eastmarch_8 = {
 	slot = 8
 	ai = yes
@@ -914,24 +809,23 @@ new mission_series eastmarch_8 = {
 			trigger = {
 				advisor = naval_reformer
 			}
-			effect = { 
+			effect = {
 				add_navy_tradition = 25
-				
 				defineloc unlocks_ylgermet = "Unlocks '§YHonor The Ylgermet§!' Reform"
 				custom_tooltip = unlocks_ylgermet
 				set_country_flag = unlocks_ylgermet
-				
 				quick_country_modifier = {
 					name = "The Second Ylgermet"
 					modifier = {
 						max_flagships = 1
 					}
 				}
-				
-				p@windhelm = {
-					create_flagship = {
-						name = "The Second Ylgermet"
-						type = galley
+				create_flagship = {
+					where = windhelm
+					name = "The Second Ylgermet"
+					type = galley
+					traits = {
+						spare_jolly_roger the_second_ylgermet captains_log
 					}
 				}
 			}
@@ -945,7 +839,7 @@ new mission_series eastmarch_8 = {
 				eastmarch_the_ylgermet
 			}
 			trigger = {
-				c@skjoralmor = {
+				countries:skjoralmor = {
 					has_opinion = {
 						who = ROOT
 						value = 150
@@ -953,7 +847,7 @@ new mission_series eastmarch_8 = {
 				}
 			}
 			effect = {
-				p@lakeview = {
+				provinces:lakeview = {
 					add_trade_modifier = {
 						who = ROOT
 						duration = 9125
@@ -961,9 +855,10 @@ new mission_series eastmarch_8 = {
 						key = skjoralmor_deal
 					}
 				}
-				hidden_effect = {				
-					c@skjoralmor = {
-						every_owned_province [`trade_goods` = wood] {
+				hidden_effect = {
+					countries:skjoralmor = {
+						every_owned_province [`trade_goods` = wood]
+						{
 							quick_province_modifier = {
 								name = "The Skjoralmor Deal"
 								duration = 9125
@@ -985,22 +880,23 @@ new mission_series eastmarch_8 = {
 				eastmarch_high_king
 			}
 			trigger = {
-				p@dunmeth_pass = {
+				provinces:dunmeth_pass = {
 					fort_level = 1
 				}
 			}
-			effect = { 
-				if [has_dlc = "Leviathan"] {
-					p@black_mountain = {
+			effect = {
+				if [has_dlc = "Leviathan"]
+				{
+					provinces:black_mountain = {
 						move_great_project = {
 							type = dunmeth_pass
-							province = p@dunmeth_pass
+							province = provinces:dunmeth_pass
 							instant = yes
 						}
-					}					
+					}
 				}
 				else = {
-					a@dunmeth_pass = {
+					areas:dunmeth_pass = {
 						add_base_manpower = 2
 					}
 				}
@@ -1015,14 +911,13 @@ new mission_series eastmarch_8 = {
 				eastmarch_fortify_east
 			}
 			trigger = {
-				p@bleakrock_isle = {
+				provinces:bleakrock_isle = {
 					development = 15
 				}
 			}
-			effect = { 
-				p@bleakrock_isle = {
+			effect = {
+				provinces:bleakrock_isle = {
 					center_of_trade = 1
-					
 					add_base_tax = 3
 					add_base_production = 3
 					add_base_manpower = 3
@@ -1067,14 +962,12 @@ new mission_series eastmarch_8 = {
 		}
 	}
 }
-
 new event_modifier aegisbane = {
 	name = "Aegisbane"
 	modifier = {
 		siege_ability = 5%
 	}
 }
-
 new mission_series eastmarch_9 = {
 	slot = 9
 	ai = yes
@@ -1095,8 +988,7 @@ new mission_series eastmarch_9 = {
 			}
 			effect = {
 				remove_country_modifier = aegisbane
-				
-				p@windhelm = {
+				provinces:windhelm = {
 					quick_province_modifier = {
 						name = "Clan Shatter-Shield"
 						modifier = {
@@ -1125,11 +1017,12 @@ new mission_series eastmarch_9 = {
 						max_flagships = 1
 					}
 				}
-				
-				p@windhelm = {
-					create_flagship = {
-						name = "The North Wind"
-						type = transport
+				create_flagship = {
+					where = windhelm
+					name = "The North Wind"
+					type = transport
+					traits = {
+						trade_route_map improved_crows_nest the_north_wind
 					}
 				}
 			}
@@ -1208,7 +1101,6 @@ new mission_series eastmarch_9 = {
 		}
 	}
 }
-
 new mission_series eastmarch_10 = {
 	slot = 10
 	ai = yes
@@ -1222,7 +1114,7 @@ new mission_series eastmarch_10 = {
 			position = 1
 			icon = mission_unknown_mission
 			trigger = {
-				p@windhelm = {
+				provinces:windhelm = {
 					OR = {
 						has_building = navy_1
 						has_building = navy_2
@@ -1231,10 +1123,10 @@ new mission_series eastmarch_10 = {
 				}
 			}
 			effect = {
-				p@black_mountain = {
+				provinces:black_mountain = {
 					move_great_project = {
 						type = windhelm_port
-						province = p@windhelm
+						province = provinces:windhelm
 						instant = yes
 					}
 				}
@@ -1249,7 +1141,7 @@ new mission_series eastmarch_10 = {
 				eastmarch_clan_shatter_shield
 			}
 			trigger = {
-				c@blue-axe = {
+				countries:blue-axe = {
 					has_opinion = {
 						who = ROOT
 						value = 150
@@ -1257,8 +1149,8 @@ new mission_series eastmarch_10 = {
 				}
 			}
 			effect = {
-				create_admiral = { 
-					tradition = 100 
+				create_admiral = {
+					tradition = 100
 				}
 			}
 		}
@@ -1271,9 +1163,9 @@ new mission_series eastmarch_10 = {
 				eastmarch_blue_axe_sea_thane eastmarch_the_north_wind
 			}
 			trigger = {
-				OR = {				
+				OR = {
 					full_idea_group = naval_ideas
-					alliance_with = c@blue-axe
+					alliance_with = countries:blue-axe
 				}
 			}
 			effect = {
@@ -1283,11 +1175,12 @@ new mission_series eastmarch_10 = {
 						max_flagships = 1
 					}
 				}
-				
-				p@windhelm = {
-					create_flagship = {
-						name = "The Winter War"
-						type = heavy_ship
+				create_flagship = {
+					where = windhelm
+					name = "The Winter War"
+					type = heavy_ship
+					traits = {
+						the_winter_war hull_sheating mass_load_cannons
 					}
 				}
 			}

@@ -16,13 +16,12 @@ new mission_series nordic_eastmarch_colonisation = {
 			trigger = {
 				total_development = 250
 				owns = provinces:kynesgrove
-				if = {
-					limit = {
-						ai = yes
-					}
+				if [ai = yes]
+				{
 					is_year = 2550
 				}
-				else = {
+				else
+				{
 					provinces:kynesgrove = {
 						development = 20
 					}
@@ -42,13 +41,12 @@ new mission_series nordic_eastmarch_colonisation = {
 			trigger = {
 				total_development = 250
 				owns = provinces:darkwater_crossing
-				if = {
-					limit = {
-						ai = yes
-					}
+				if [ai = yes]
+				{
 					is_year = 2550
 				}
-				else = {
+				else
+				{
 					provinces:darkwater_crossing = {
 						development = 20
 					}
@@ -68,13 +66,12 @@ new mission_series nordic_eastmarch_colonisation = {
 			trigger = {
 				total_development = 250
 				owns = provinces:mistwatch
-				if = {
-					limit = {
-						ai = yes
-					}
+				if [ai = yes]
+				{
 					is_year = 2550
 				}
-				else = {
+				else
+				{
 					provinces:mistwatch = {
 						development = 20
 					}

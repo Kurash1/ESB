@@ -173,13 +173,6 @@ regulation = {
 	modifiers = {
 	    advisor_pool = 1
 	}
-	effect = {
-		custom_tooltip = get_acess_to_new_ruler_personalities
-	    set_country_flag = es_magic_regulation_flag
-	}
-	removed_effect = {
-	    clr_country_flag = es_magic_regulation_flag
-	}
 }
 #Reason and Logic (Red)
 #● The nation has abandoned every notion of superstition in favor of pure logic and reason, rejecting all forms of spirituality to better themselves and study the natural world.
@@ -227,13 +220,6 @@ persecution = {
 		global_missionary_strength = 0.025
 		embracement_cost = 1.0
 	}
-	effect = {
-		custom_tooltip = get_acess_to_new_casus_belli
-	    set_country_flag = es_magic_persecution_flag
-	}
-	removed_effect = {
-	    clr_country_flag = es_magic_persecution_flag
-	}
 }
 #Magical Society (Red)
 #● The society of this nation is ruled over by all powerful magi who control every aspect of society, where those with magic are more valued than those who do not.
@@ -245,20 +231,8 @@ magical_society = {
 		all_power_cost = -0.10
 		global_institution_spread = 0.10
 	}
-	effect = {
-		custom_tooltip = get_acess_to_new_decisions
-		custom_tooltip = get_acess_to_new_ruler_personalities
-	    set_country_flag = es_magic_nation_flag
-	}
-	removed_effect = {
-	    clr_country_flag = es_magic_nation_flag
-		remove_country_modifier = national_mage_college_modifier
-		remove_country_modifier = ban_necromacy_modifer
-		remove_country_modifier = allow_necromacy_modifier
-		remove_country_modifier = hedge_mage_roundup_modifier
-	}
 	ai = {
-		factor = 0.5
+		factor = 0
 	}
 }
 
@@ -549,9 +523,6 @@ guardian = {
 		diplomatic_upkeep = 1
 		unjustified_demands = 0.5
 		prestige = 0.5
-	}
-	effect = {
-		custom_tooltip = you_will_become_a_protector_of_countries
 	}
 }
 

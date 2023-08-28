@@ -1,55 +1,31 @@
 on_actions:on_startup += {
 	set_allow_female_emperor = yes
-	if = {
-		limit = {
-			NOT = {
-				has_global_flag = on_action_set_up_global_flag
-			}
-		}
+	if [NOT = { has_global_flag = on_action_set_up_global_flag }]
+	{
 		countries:black_mountain = {
 			country_event = {
 				id = idea_march
 				days = 18250
 			}
 		}
-		every_country = {
-			limit = {
-				NOT = {
-					tag = REB
-				}
-			}
+		every_country [NOT = { tag = REB }]
+		{
 			esb_change_opinion = yes
-			add_years_of_income = 1.0
 		}
 		set_global_flag = on_action_set_up_global_flag
 	}
-	if = {
-		limit = {
-			tag = BLA
-		}
-	}
-	superregions:sea_of_ghosts = {
-		discover_country = ROOT
-	}
 }
 on_actions:on_religion_change += {
-	if = {
-		limit = {
-			has_heir = yes
-		}
+	if [has_heir = yes]
+	{
 		set_heir_religion = ROOT
 	}
-	if = {
-		limit = {
-			has_regency = no
-		}
+	if [has_regency = no]
+	{
 		set_ruler_religion = ROOT
 	}
-	if = {
-		limit = {
-			has_dlc = "Rights of Man"
-			has_consort = yes
-		}
+	if [has_dlc = "Rights of Man" has_consort = yes]
+	{
 		set_consort_religion = ROOT
 	}
 	add_country_modifier = {
@@ -61,49 +37,43 @@ on_actions:on_religion_change += {
 on_actions:on_war_won += {
 }
 on_actions:on_new_monarch += {
-	if = {
-		limit = {
-			has_consort_regency = no
-			any_owned_province = {
-				has_province_modifier = domain_of_spouses_family
-			}
+	if [
+		has_consort_regency = no
+		any_owned_province = {
+			has_province_modifier = domain_of_spouses_family
 		}
-		random_owned_province = {
-			limit = {
-				has_province_modifier = domain_of_spouses_family
-			}
+	]
+	{
+		random_owned_province [has_province_modifier = domain_of_spouses_family]
+		{
 			remove_province_modifier = domain_of_spouses_family
 		}
 	}
-	if = {
-		limit = {
-			has_consort_regency = no
-			any_owned_province = {
-				has_province_modifier = home_of_consort
-			}
+	if [
+		has_consort_regency = no
+		any_owned_province = {
+			has_province_modifier = home_of_consort
 		}
-		random_owned_province = {
-			limit = {
-				has_province_modifier = home_of_consort
-			}
+	]
+	{
+		random_owned_province [has_province_modifier = home_of_consort]
+		{
 			remove_province_modifier = home_of_consort
 		}
 	}
-	if = {
-		limit = {
-			is_lesser_in_union = yes
-			NOT = {
-				government = monarchy
-			}
+	if [
+		is_lesser_in_union = yes
+		NOT = {
+			government = monarchy
 		}
+	]
+	{
 		change_government = monarchy
 	}
 }
 on_actions:on_regent += {
-	if = {
-		limit = {
-			is_emperor = yes
-		}
+	if [is_emperor = yes]
+	{
 		define_ruler = {
 			religion = root
 			culture = root
@@ -152,10 +122,8 @@ on_actions:on_revoke_estate_land_post += {
 	add_local_autonomy = 25
 }
 on_actions:on_grant_estate_land += {
-	if = {
-		limit = {
-			has_province_modifier = revoked_estate_modifier
-		}
+	if [has_province_modifier = revoked_estate_modifier]
+	{
 		remove_province_modifier = revoked_estate_modifier
 	}
 }
@@ -173,52 +141,52 @@ on_actions:on_primary_culture_changed += {
 }
 on_actions:on_colonist_boosting_colony += {
 	hidden_effect = {
-		if = {
-			limit = {
-				OR = {
-					religion = noreligion
-					variable_arithmetic_trigger = {
-						custom_tooltip = colonysize_is_larger_than_nativesize_tt
-						export_to_variable = {
-							which = vab_colonysize
-							value = trigger_value:colonysize
-						}
-						export_to_variable = {
-							which = vab_nativesize
-							value = trigger_value:native_size
-						}
-						check_variable = {
-							which = vab_colonysize
-							which = vab_nativesize
-						}
+		if [
+			OR = {
+				religion = noreligion
+				variable_arithmetic_trigger = {
+					custom_tooltip = colonysize_is_larger_than_nativesize_tt
+					export_to_variable = {
+						which = vab_colonysize
+						value = trigger_value:colonysize
 					}
-					is_in_capital_area = yes
+					export_to_variable = {
+						which = vab_nativesize
+						value = trigger_value:native_size
+					}
+					check_variable = {
+						which = vab_colonysize
+						which = vab_nativesize
+					}
 				}
+				is_in_capital_area = yes
 			}
+		]
+		{
 			change_religion = FROM
 		}
-		if = {
-			limit = {
-				OR = {
-					culture = noculture
-					variable_arithmetic_trigger = {
-						custom_tooltip = colonysize_is_larger_than_nativesize_tt
-						export_to_variable = {
-							which = vab_colonysize
-							value = trigger_value:colonysize
-						}
-						export_to_variable = {
-							which = vab_nativesize
-							value = trigger_value:native_size
-						}
-						check_variable = {
-							which = vab_colonysize
-							which = vab_nativesize
-						}
+		if [
+			OR = {
+				culture = noculture
+				variable_arithmetic_trigger = {
+					custom_tooltip = colonysize_is_larger_than_nativesize_tt
+					export_to_variable = {
+						which = vab_colonysize
+						value = trigger_value:colonysize
 					}
-					is_in_capital_area = yes
+					export_to_variable = {
+						which = vab_nativesize
+						value = trigger_value:native_size
+					}
+					check_variable = {
+						which = vab_colonysize
+						which = vab_nativesize
+					}
 				}
+				is_in_capital_area = yes
 			}
+		]
+		{
 			change_culture = FROM
 			change_original_culture = FROM
 		}

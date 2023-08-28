@@ -8,6 +8,12 @@ base_flagship_modification = {
 }
 
 mass_load_cannons = {
+	trigger = {
+		OR = {
+			has_country_flag = mass_load_cannons
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
 	modifier = {
         number_of_cannons_flagship_modifier = 1.0
         naval_maintenance_flagship_modifier = 0.5
@@ -21,6 +27,12 @@ mass_load_cannons = {
 }
 
 trade_route_map = {
+	trigger = {
+		OR = {
+			has_country_flag = trade_route_map
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
 	modifier = {
         trade_power_in_fleet_modifier = 1.0
         naval_maintenance_flagship_modifier = 0.25
@@ -34,6 +46,12 @@ trade_route_map = {
 }
 
 command_aftercastle = {
+	trigger = {
+		OR = {
+			has_country_flag = command_aftercastle
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
 	modifier = {
         morale_in_fleet_modifier = 0.10
         naval_maintenance_flagship_modifier = 0.5
@@ -47,6 +65,12 @@ command_aftercastle = {
 }
 
 improved_crows_nest = {
+	trigger = {
+		OR = {
+			has_country_flag = improved_crows_nest
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
 	modifier = {
         flagship_naval_engagement_modifier = 5
         naval_maintenance_flagship_modifier = 0.5
@@ -60,6 +84,12 @@ improved_crows_nest = {
 }
 
 mortars = {
+	trigger = {
+		OR = {
+			has_country_flag = mortars
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
 	modifier = {
         blockade_impact_on_siege_in_fleet_modifier = 1
         naval_maintenance_flagship_modifier = 1
@@ -73,6 +103,12 @@ mortars = {
 }
 
 standardized_signal_book = {
+	trigger = {
+		OR = {
+			has_country_flag = standardized_signal_book
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
 	modifier = {
         movement_speed_in_fleet_modifier = 1
         naval_maintenance_flagship_modifier = 0.5
@@ -86,6 +122,12 @@ standardized_signal_book = {
 }
 
 hull_sheating = {
+	trigger = {
+		OR = {
+			has_country_flag = hull_sheating
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
 	modifier = {
         flagship_durability = 1.0
         naval_maintenance_flagship_modifier = 0.5
@@ -99,6 +141,12 @@ hull_sheating = {
 }
 
 integrated_marines = {
+	trigger = {
+		OR = {
+			has_country_flag = integrated_marines
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
     modifier = {
         movement_speed_onto_off_boat_modifier = 0.5
         naval_maintenance_flagship_modifier = 0.5
@@ -112,6 +160,12 @@ integrated_marines = {
 }
 
 flag_officers = {
+	trigger = {
+		OR = {
+			has_country_flag = flag_officers
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
     modifier = {
         admiral_skill_gain_modifier = 0.025
         naval_maintenance_flagship_modifier = 0.5
@@ -125,6 +179,12 @@ flag_officers = {
 }
 
 spare_jolly_roger = {
+	trigger = {
+		OR = {
+			has_country_flag = spare_jolly_roger
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
     modifier = {
         privateering_efficiency_in_fleet_modifier = 0.5
         naval_maintenance_flagship_modifier = 0.5
@@ -139,7 +199,11 @@ spare_jolly_roger = {
 
 captains_log = {
     trigger = {
-    }
+		OR = {
+			has_country_flag = captains_log
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
     modifier = {
         naval_tradition_in_fleet_modifier = 1
         prestige_from_battles_in_fleet_modifier = 1
@@ -152,3 +216,62 @@ captains_log = {
         factor = 1
     }
 }
+
+the_second_ylgermet = {
+    trigger = {
+		OR = {
+			has_country_flag = the_second_ylgermet
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
+    modifier = {
+		naval_attrition_in_fleet_modifier = -0.5
+		morale_in_fleet_modifier = 0.2
+    }
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+the_winter_war = {
+    trigger = {
+		OR = {
+			has_country_flag = the_winter_war
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
+    modifier = {
+		barrage_cost_in_fleet_modifier = -0.5
+		blockade_impact_on_siege_in_fleet_modifier = 1
+		naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+the_north_wind = {
+    trigger = {
+		OR = {
+			has_country_flag = the_north_wind
+			NOT = { has_country_flag = forced_trait }
+		}
+	}
+    modifier = {
+		naval_attrition_in_fleet_modifier = -0.25
+		naval_maintenance_flagship_modifier = -0.75
+    }
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
