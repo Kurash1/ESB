@@ -1,32 +1,30 @@
 bi_yearly_events += {
-	100 = trade.1 
-	100 = trade.2 
-	100 = trade.3 
-	100 = trade.4 
-	100 = trade.5 
-	100 = trade.6 
-	100 = trade.7 
-	100 = trade.8 
-	100 = trade.10 
-	100 = trade.11 
+	100 = trade.1
+	100 = trade.2
+	100 = trade.3
+	100 = trade.4
+	100 = trade.5
+	100 = trade.6
+	100 = trade.7
+	100 = trade.8
+	100 = trade.10
+	100 = trade.11
 }
-
 new country_event trade.1 = {
 	inherit = random_event
 	title = "Respect our flag"
 	desc = "We have let all know that our navy is the Lord of the Seas, however, news has reached us that a certain country failed to promptly show the right amount of respect and skirmish has resulted. The country is clamoring for war."
 	picture = ES_EXPEDITION_SHIP_eventPicture
-	
 	trigger = {
 		num_of_merchants = 3
 		capital_scope = {
 			has_trader = root
-			NOT = { is_strongest_trade_power = root }
+			NOT = {
+				is_strongest_trade_power = root
+			}
 		}
-		
 		has_idea_group = maritime_ideas
 	}
-	
 	options = {
 		{
 			name = "We must get ready"
@@ -39,7 +37,7 @@ new country_event trade.1 = {
 							is_capital = yes
 						}
 					}
-					strongest_trade_power = { 
+					strongest_trade_power = {
 						reverse_add_casus_belli = {
 							target = ROOT
 							type = cb_trade_war_triggered
@@ -57,21 +55,21 @@ new country_event trade.1 = {
 		}
 	}
 }
-
 new country_event trade.2 = {
 	inherit = random_event
 	title = "This cannot stand"
 	desc = "Pirates have struck some of our shipping. They tortured and then brutally murdered the male passengers and as for the female passengers the tales told shock all civilized men. One of the female passengers was the daughter of an important noble and he is crying out for vengeance. There are heavy implications that these pirates are under someone's protection."
 	picture = ES_SEA_FLEET_eventPicture
-	
 	trigger = {
 		num_of_merchants = 3
 		num_of_light_ship = 1
 		capital_scope = {
 			has_trader = root
 			has_port = yes
-			NOT = { is_strongest_trade_power = root }
-			NOT = { 
+			NOT = {
+				is_strongest_trade_power = root
+			}
+			NOT = {
 				has_trade_modifier = {
 					who = ROOT
 					name = pirate_hunting
@@ -79,7 +77,6 @@ new country_event trade.2 = {
 			}
 		}
 	}
-	
 	options = {
 		{
 			name = "Hunt them down!"
@@ -103,24 +100,23 @@ new country_event trade.2 = {
 		}
 	}
 }
-
 new country_event trade.3 = {
 	inherit = random_event
 	title = "Expulsion of Merchants"
 	desc = "Our merchants have been too successful in trade, and the owners of a local trade node are upholding their mercantilist ideals and are now attempting to expel our merchants from it."
 	picture = SEA_DOCKS_eventPicture
-	
 	trigger = {
 		num_of_merchants = 3
 		any_active_trade_node = {
 			has_merchant = PREV
 			most_province_trade_power = {
-				NOT = { tag = ROOT }
+				NOT = {
+					tag = ROOT
+				}
 				exists = yes
 			}
 		}
 	}
-	
 	options = {
 		{
 			name = "They stay!"
@@ -128,7 +124,11 @@ new country_event trade.3 = {
 				random_active_trade_node = {
 					limit = {
 						has_merchant = PREV
-						NOT = { most_province_trade_power = { tag = ROOT } }
+						NOT = {
+							most_province_trade_power = {
+								tag = ROOT
+							}
+						}
 					}
 					most_province_trade_power = {
 						add_opinion = {
@@ -144,8 +144,8 @@ new country_event trade.3 = {
 					}
 				}
 			}
-			ai_chance = { 
-				factor = 100 
+			ai_chance = {
+				factor = 100
 			}
 		}
 		{
@@ -153,7 +153,11 @@ new country_event trade.3 = {
 			effect = {
 				random_active_trade_node = {
 					limit = {
-						NOT = { most_province_trade_power = { tag = ROOT } }
+						NOT = {
+							most_province_trade_power = {
+								tag = ROOT
+							}
+						}
 						has_merchant = PREV
 					}
 					most_province_trade_power = {
@@ -173,7 +177,6 @@ new country_event trade.3 = {
 		}
 	}
 }
-
 new event_modifier severe_trade_crisis = {
 	name = "Severe Trade Crisis"
 	modifier = {
@@ -186,22 +189,25 @@ new event_modifier minor_trade_crisis = {
 		trade_efficiency = -0.25
 	}
 }
-
 new country_event trade.4 = {
 	inherit = random_event
 	title = "Trade Crisis"
 	desc = "Our merchants report that they are facing stiffening resistance to trying to peddle their wares. They are talking like it is the end of the world, and fear they will never earn a copper again in life."
 	picture = ES_TRADE_CRISIS_eventPicture
-	
 	trigger = {
 		num_of_merchants = 3
 		trade_income_percentage = 0.33
 		dip_power = 20
-		NOT = { luck = yes }
-		NOT = { has_country_modifier = minor_trade_crisis }
-		NOT = { has_country_modifier = severe_trade_crisis }
+		NOT = {
+			luck = yes
+		}
+		NOT = {
+			has_country_modifier = minor_trade_crisis
+		}
+		NOT = {
+			has_country_modifier = severe_trade_crisis
+		}
 	}
-	
 	options = {
 		{
 			name = "It is just merchants"
@@ -224,47 +230,54 @@ new country_event trade.4 = {
 		}
 	}
 }
-
 new country_event trade.5 = {
 	inherit = random_event
 	title = "Merchant Bankrupt!"
 	desc = "One of our merchants abroad has returned home as a pauper after losing every single ducat. He has gone bankrupt, and we will not receive benefits of his trade anymore."
 	picture = GE_GOLD_COINS_eventPicture
-	
 	trigger = {
 		num_of_merchants = 3
-		NOT = { luck = yes }
+		NOT = {
+			luck = yes
+		}
 		any_active_trade_node = {
-			NOT = { strongest_trade_power = { tag = ROOT } }
-			NOT = { 
+			NOT = {
+				strongest_trade_power = {
+					tag = ROOT
+				}
+			}
+			NOT = {
 				has_trade_modifier = {
 					who = ROOT
 					name = merchant_recalled
 				}
-			}			
+			}
 		}
 	}
-	
 	options = {
 		{
 			name = "He just could not make it..."
 			effect = {
 				random_active_trade_node = {
 					limit = {
-						NOT = { strongest_trade_power = { tag = ROOT } }
-						NOT = { 
+						NOT = {
+							strongest_trade_power = {
+								tag = ROOT
+							}
+						}
+						NOT = {
 							has_trade_modifier = {
 								who = ROOT
 								name = merchant_recalled
 							}
-						}				
+						}
 					}
 					add_trade_modifier = {
 						who = root
 						duration = 3650
 						power = -10
 						key = merchant_recalled
-					}	
+					}
 				}
 			}
 		}
@@ -274,7 +287,11 @@ new country_event trade.5 = {
 				add_dip_power = -10
 				random_active_trade_node = {
 					limit = {
-						NOT = { strongest_trade_power = { tag = ROOT } }
+						NOT = {
+							strongest_trade_power = {
+								tag = ROOT
+							}
+						}
 					}
 					add_trade_node_income = -5
 				}
@@ -282,22 +299,21 @@ new country_event trade.5 = {
 		}
 	}
 }
-
 new country_event trade.6 = {
 	inherit = random_event
 	title = "Merchant Shipwrecked!"
 	desc = "A merchant has been lost at sea while trading in a coastal trade node, taking all his goods with him to the bottom of the sea."
 	picture = ES_SEA_AFTER_STORM_eventPicture
-	
 	trigger = {
 		num_of_merchants = 3
-		NOT = { luck = yes }
+		NOT = {
+			luck = yes
+		}
 		any_active_trade_node = {
 			has_merchant = PREV
 			is_sea = yes
 		}
 	}
-	
 	options = {
 		{
 			name = "That's too bad"
@@ -313,26 +329,25 @@ new country_event trade.6 = {
 		}
 	}
 }
-
 new country_event trade.7 = {
 	inherit = random_event
 	title = "Merchants suffering"
 	desc = "Our focus on mercantilism is making life hard for our merchants who trade in foreign places."
 	picture = ARISTOCRATIC_OFFER_eventPicture
-	
 	trigger = {
 		any_active_trade_node = {
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 			has_merchant = PREV
-			NOT = { 
+			NOT = {
 				has_trade_modifier = {
 					who = ROOT
 					name = merchant_recalled
 				}
-			}			
+			}
 		}
 	}
-	
 	options = {
 		{
 			name = "They should have stayed at home"
@@ -345,40 +360,39 @@ new country_event trade.7 = {
 			effect = {
 				random_active_trade_node = {
 					limit = {
-						NOT = { owned_by = ROOT }
+						NOT = {
+							owned_by = ROOT
+						}
 						has_merchant = PREV
-						NOT = { 
+						NOT = {
 							has_trade_modifier = {
 								who = ROOT
 								name = merchant_recalled
 							}
-						}				
+						}
 					}
 					add_trade_modifier = {
 						who = root
 						duration = 3650
 						power = -10
 						key = merchant_recalled
-					}	
+					}
 				}
 			}
 		}
 	}
 }
-
 new country_event trade.8 = {
 	inherit = random_event
 	title = "No one wants to work"
 	desc = "With the generous liberties we have granted our merchants, we have ended up with a situation where people simply don't want to do honest work anymore."
 	picture = ES_MILITARY_CAMP_1_eventPicture
-	
 	trigger = {
 		any_active_trade_node = {
 			has_most_province_trade_power = root
 			has_merchant = PREV
 		}
 	}
-	
 	options = {
 		{
 			name = "This was not quite the plan"
@@ -394,30 +408,25 @@ new country_event trade.8 = {
 		}
 	}
 }
-
 new country_event trade.9 = {
 	comment = {
 		This Event is disabled, cus I couldn't figure out the scripted effect, kekw.
 	}
-
 	inherit = random_event
 	title = "Taking advantage of our trade"
 	desc = "Our mercantilist policies have engendered a breed of administrator that is good at getting our merchants to pay their dues. One such man has recently come to our attention as being particularly outstanding."
 	picture = MARKET_eventPicture
-	
 	trigger = {
 		mercantilism = 55
 		num_of_merchants = 3
 	}
-	
 	immediate = {
-		check_if_non_state_advisor_effect = { #Hidden, must be followed by erase_advisor_flags_effect
-			chance_of_primary = 75 #Not percentages!
+		check_if_non_state_advisor_effect = {
+			chance_of_primary = 75
 			chance_of_tertiary = 10
 			chance_of_secondary = 35
 		}
 	}
-	
 	options = {
 		{
 			name = "He may go on to do great things"
@@ -432,32 +441,30 @@ new country_event trade.9 = {
 			}
 		}
 	}
-	
 	after = {
 		erase_advisor_flags_effect = yes
 	}
 }
-
 new country_event trade.10 = {
 	inherit = random_event
 	title = "Lack of protection"
 	desc = "Our determination to embrace free trade has led to domestic merchants losing out to the rivals from other countries."
 	picture = PIRATE_SHIP_BEACH_eventPicture
-	
 	trigger = {
 		num_of_merchants = 3
 		any_active_trade_node = {
-			not = { has_most_province_trade_power = root }
+			not = {
+				has_most_province_trade_power = root
+			}
 			has_merchant = PREV
-			NOT = { 
+			NOT = {
 				has_trade_modifier = {
 					who = ROOT
 					name = merchant_recalled
 				}
-			}			
+			}
 		}
 	}
-	
 	options = {
 		{
 			name = "They need to adapt"
@@ -470,45 +477,45 @@ new country_event trade.10 = {
 			effect = {
 				random_active_trade_node = {
 					limit = {
-						not = { has_most_province_trade_power = root }
+						not = {
+							has_most_province_trade_power = root
+						}
 						has_merchant = PREV
-						NOT = { 
+						NOT = {
 							has_trade_modifier = {
 								who = ROOT
 								name = merchant_recalled
 							}
-						}				
+						}
 					}
 					add_trade_modifier = {
 						who = root
 						duration = 3650
 						power = -10
 						key = merchant_recalled
-					}	
+					}
 				}
 			}
 		}
 	}
 }
-
 new event_modifier bad_free_trade_merchants = {
 	name = "No restrictions on foreign merchants"
 	modifier = {
 		global_own_trade_power = -0.33
 	}
 }
-
 new country_event trade.11 = {
 	inherit = random_event
 	title = "Merchants leaving"
 	desc = "With the relaxation of restrictions on foreign merchants, some of our own traders feel that they are not getting enough state support, and have decided to switch careers."
 	picture = TRADE_SHIP_eventPicture
-	
 	trigger = {
-		NOT = { mercantilism = 40 }
+		NOT = {
+			mercantilism = 40
+		}
 		num_of_merchants = 3
 	}
-	
 	options = {
 		{
 			name = "I couldn't care less"
@@ -521,25 +528,21 @@ new country_event trade.11 = {
 		}
 	}
 }
-
 new country_event trade.12 = {
 	comment = {
 		This Event is disabled, cus I couldn't figure out the scripted effect, kekw.
 	}
-
 	inherit = random_event
 	title = "Promising Trader"
 	desc = "Our free trade policies are forcing our merchants to become more innovative. One in particular looks like he could become a great man."
 	picture = ES_YOUNG_PIRATE_eventPicture
-	
 	immediate = {
-		check_if_non_state_advisor_effect = { #Hidden, must be followed by erase_advisor_flags_effect
-			chance_of_primary = 75 #Not percentages!
+		check_if_non_state_advisor_effect = {
+			chance_of_primary = 75
 			chance_of_tertiary = 10
 			chance_of_secondary = 25
 		}
 	}
-	
 	options = {
 		{
 			name = "We may need to find a job for him"
@@ -554,9 +557,7 @@ new country_event trade.12 = {
 			}
 		}
 	}
-	
 	after = {
 		erase_advisor_flags_effect = yes
 	}
 }
-

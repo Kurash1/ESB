@@ -575,40 +575,38 @@ kill_advisor_by_category_effect = {
 	[[ADM]
 		trigger_switch = {
 			on_trigger = advisor
-			esu_steward = { kill_advisor = esu_steward }
-			esu_bard = { kill_advisor = esu_bard }
-			esu_mage = { kill_advisor = esu_mage }
-			esu_monk = { kill_advisor = esu_monk }
-			esu_priest = { kill_advisor = esu_priest }
-			esu_researcher = { kill_advisor = esu_researcher }
-			esu_inspector = { kill_advisor = esu_inspector }
-			esu_curator = { kill_advisor = esu_curator }
+			court_mage = { kill_advisor = court_mage }
+			philosopher = { kill_advisor = philosopher }
+			natural_scientist = { kill_advisor = natural_scientist }
+			artist = { kill_advisor = artist }
+			treasurer = { kill_advisor = treasurer }
+			theologian = { kill_advisor = theologian }
+			master_of_mint = { kill_advisor = master_of_mint }
+			inquisitor = { kill_advisor = inquisitor }
 		}
 	]
 	[[DIP]
 		trigger_switch = {
 			on_trigger = advisor
-			esu_merchant = { kill_advisor = esu_merchant }
-			esu_alchemist = { kill_advisor = esu_alchemist }
-			esu_governor = { kill_advisor = esu_governor }
-			esu_negotiator = { kill_advisor = esu_negotiator }
-			esu_spy = { kill_advisor = esu_spy }
-			esu_colonial_overseer = { kill_advisor = esu_colonial_overseer }
-			esu_adventurer = { kill_advisor = esu_adventurer }
-			esu_navarch = { kill_advisor = esu_navarch }
+			statesman = { kill_advisor = statesman }
+			naval_reformer = { kill_advisor = naval_reformer }
+			trader = { kill_advisor = trader }
+			spymaster = { kill_advisor = spymaster }
+			colonial_governor = { kill_advisor = colonial_governor }
+			diplomat = { kill_advisor = diplomat }
+			navigator = { kill_advisor = navigator }
 		}
 	]
 	[[MIL]
 		trigger_switch = {
 			on_trigger = advisor
-			esu_blacksmith = { kill_advisor = esu_blacksmith }
-			esu_trainer = { kill_advisor = esu_trainer }
-			esu_hunter = { kill_advisor = esu_hunter }
-			esu_thane = { kill_advisor = esu_thane }
-			esu_officer = { kill_advisor = esu_officer }
-			esu_scout = { kill_advisor = esu_scout }
-			esu_grand_champion = { kill_advisor = esu_grand_champion }
-			esu_recruiter = { kill_advisor = esu_recruiter }
+			army_reformer = { kill_advisor = army_reformer }
+			army_organiser = { kill_advisor = army_organiser }
+			commandant = { kill_advisor = commandant }
+			quartermaster = { kill_advisor = quartermaster }
+			recruitmaster = { kill_advisor = recruitmaster }
+			fortification_expert = { kill_advisor = fortification_expert }
+			grand_captain = { kill_advisor = grand_captain }
 		}
 	]
 }

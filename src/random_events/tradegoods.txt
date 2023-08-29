@@ -1,0 +1,121 @@
+bi_yearly_events += {
+	100 = tradegoods.1
+	100 = tradegoods.2
+	100 = tradegoods.3
+	100 = tradegoods.4
+	100 = tradegoods.5
+}
+new event_modifier poor_iron = {
+	name = "Poor Quality Iron"
+	modifier = {
+		infantry_cost = 0.1
+		cavalry_cost = 0.1
+	}
+}
+new country_event tradegoods.1 = {
+	inherit = random_event
+	title = "Poor Quality Iron"
+	desc = ""
+	picture = ES_SWORDS_ON_TABLE_eventPicture
+	trigger = {
+		iron = 1
+	}
+	options = {
+		{
+			name = "I'm sure we have enough men anyway."
+			effect = {
+				add_country_modifier = {
+					name = poor_iron
+					duration = 730
+				}
+			}
+		}
+	}
+}
+new event_modifier poor_steel = {
+	name = "Poor Quality Steel"
+	modifier = {
+		infantry_cost = 0.15
+		cavalry_cost = 0.15
+	}
+}
+new country_event tradegoods.2 = {
+	inherit = random_event
+	title = "Poor Quality Steel"
+	desc = ""
+	picture = ES_STEEL_INGOTS_eventPicture
+	trigger = {
+		steel = 1
+	}
+	options = {
+		{
+			name = "I'm sure we have enough men anyway."
+			effect = {
+				add_country_modifier = {
+					name = poor_steel
+					duration = 730
+				}
+			}
+		}
+	}
+}
+new country_event tradegoods.3 = {
+	inherit = random_event
+	title = "Hardy Seamen"
+	desc = ""
+	picture = ES_PORT_eventPicture
+	trigger = {
+		any_owned_province = {
+			`trade_goods` = fish
+			has_port = yes
+		}
+	}
+	options = {
+		{
+			name = "Good To See."
+			effect = {
+				add_years_of_owned_provinces_sailors = {
+					years = 0.2
+					trigger = {
+						`trade_goods` = fish
+					}
+					custom_tooltip = "from provinces producing fish"
+				}
+			}
+		}
+	}
+}
+new country_event tradegoods.4 = {
+	inherit = random_event
+	title = "Excellent Year"
+	desc = ""
+	picture = ES_HARVEST_eventPicture
+	trigger = {
+		wheat = 1
+	}
+	options = {
+		{
+			name = "Great!"
+			effect = {
+				add_years_of_income = 0.2
+			}
+		}
+	}
+}
+new country_event tradegoods.5 = {
+	inherit = random_event
+	title = "Bad Harvest"
+	desc = ""
+	picture = ES_INFERTILE_SOIL_eventPicture
+	trigger = {
+		wheat = 1
+	}
+	options = {
+		{
+			name = "That is Unfortunate."
+			effect = {
+				add_years_of_income = -0.2
+			}
+		}
+	}
+}

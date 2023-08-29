@@ -60,7 +60,6 @@ new estate warriors = {
 	}
 	base_influence = 25
 }
-
 new estate sailors = {
 	name = "Sailors"
 	desc = ""
@@ -72,15 +71,12 @@ new estate sailors = {
 		culture_group = culture_groups:nord
 	}
 	country_modifier_happy = {
-	
 	}
 	country_modifier_neutral = {
 	}
 	country_modifier_angry = {
-	
 	}
 	land_ownership_modifier = {
-	
 	}
 	privileges = {
 		new land_rights = {

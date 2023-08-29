@@ -1,0 +1,156 @@
+bi_yearly_events += {
+	100 = sailor_event.1
+	100 = sailor_event.2
+	100 = sailor_event.3
+	100 = sailor_event.4
+	100 = sailor_event.5
+}
+new country_event sailor_event.1 = {
+	inherit = random_event
+	title = "The Vast and Endless Sea"
+	desc = "Unlike the calling to the battlefields of land, a matter of duty and search for glory, the sea calls to many free spirits who care little for such things. Stories of sailing the oceans of the world and the past expeditions of the [Root.GetAdjective] fleet are retold by old sailors as adventures, many of the great sights remembered, many of the great sacrifices forgotten.
+
+Is it any wonder, with such a legacy, that the youths of [Root.GetName] yearn for the vastness of the sea? Many more have come to join our navy over the past year. Some may end their lives at the bottom of the ocean, but those who return are sure to keep the stories alive."
+	picture = ES_EXPEDITION_SHIP_eventPicture
+	trigger = {
+		NOT = {
+			sailors_percentage = 0.9
+		}
+		num_of_ports = 1
+		navy_tradition = 10
+		navy_size = 1
+	}
+	options = {
+		{
+			name = "We write the legacy that inspires future generations."
+			effect = {
+				add_yearly_sailors = 1.5
+			}
+		}
+	}
+}
+new country_event sailor_event.2 = {
+	inherit = random_event
+	title = "Harsh Life on the Ocean"
+	desc = "Many join the ranks of our navy expecting a more exciting life awaiting them with this opportunity to leave their home behind and see sea and land beyond the [Root.GetAdjective] borders. Not all of these are prepared for an often harsh and even more often dull and boring life at sea. Stuck with endlessly repetitive tasks, food and company on longer journeys, many young sailors quickly regret their decision.
+
+Dismissed as daydreaming landlubbers by their more seasoned crewmates, they quickly become more trouble than they're worth. Some might eventually grow used to the reality of the job and become useful, but others do more good returning home."
+	picture = ES_SEA_FLEET_eventPicture
+	trigger = {
+		sailors_percentage = 0.75
+		num_of_ports = 1
+		max_sailors = 200
+		navy_size = 1
+	}
+	options = {
+		{
+			name = "Recruitment propaganda has its downsides."
+			effect = {
+				add_yearly_sailors = -1.5
+			}
+		}
+	}
+}
+new country_event sailor_event.3 = {
+	inherit = random_event
+	title = "Sailors Rally to Aid Army"
+	desc = "Our army has endured severe casualties over the past years, with thousands of lives lost in battle. Meanwhile, those who serve [Root.GetName] at sea have not suffered the same fate. Despite the sacrifices they've made to protect our nation, the ranks of our navy do not lack for hands on deck.
+
+As a result, the navy has begun to encourage those willing to risk their life at sea to aid our ailing land troops instead. After all, if there's no one to protect our ports, even our best ships and crews will have nowhere to dock."
+	picture = ES_WAR_IS_NEAR_eventPicture
+	trigger = {
+		is_at_war = no
+		has_truce = yes
+		num_of_ports = 1
+		NOT = {
+			manpower_percentage = 0.5
+		}
+		sailors_percentage = 0.9
+		sailors = 4000
+		navy_size = 1
+	}
+	options = {
+		{
+			name = "New recruits must go where they are needed."
+			effect = {
+				add_sailors = -2000
+				add_manpower = 2
+			}
+		}
+	}
+}
+new country_event sailor_event.4 = {
+	inherit = random_event
+	title = "Soldiers Rally to Aid Navy"
+	desc = "In recent conflicts, many lives have been lost at sea. While our army has recovered well, captains find it difficult to recruit crews for [Root.GetAdjective] ships, and many bitter tales have been told all the way up to the court of [Root.Monarch.GetName] about the sacrifices our navy made.
+
+Increasingly, army leaders have paid heed to this, encouraging those who could have served within their ranks to travel to the coast and man our ships instead. Although they may have much yet to learn, their help will be needed for the navy to recover."
+	picture = PIRATE_DEAL_eventPicture
+	trigger = {
+		is_at_war = no
+		has_truce = yes
+		num_of_ports = 1
+		NOT = {
+			sailors_percentage = 0.5
+		}
+		manpower_percentage = 0.9
+		manpower = 2
+		navy_size = 1
+	}
+	options = {
+		{
+			name = "New recruits must go where they are needed."
+			effect = {
+				add_sailors = 2000
+				add_manpower = -2
+			}
+		}
+	}
+}
+new country_event sailor_event.5 = {
+	inherit = random_event
+	title = "A Path to the Sea"
+	desc = "Although [Root.GetName] does not have the seafaring culture of many coastal nations, we nevertheless take pride in the short strip of land that provides us with access to the sea. The [Root.GetAdjective] coast provides many opportunities and draws many hopeful young visitors looking for a new life.
+	
+	Although our naval capacity is limited, having more young people with experience in boatmanship would bolster the crews of our ships. Perhaps we could help these sailor hopefuls to settle in their new home?"
+	picture = SEA_DOCKS_eventPicture
+	trigger = {
+		num_of_cities = 3
+		num_of_ports = 1
+		NOT = {
+			num_of_ports = 2
+		}
+		any_owned_province = {
+			has_port = no
+			base_manpower = 2
+		}
+		navy_size = 1
+	}
+	options = {
+		{
+			name = "Their ambitions should be encouraged."
+			effect = {
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					add_base_manpower = 2
+				}
+				random_owned_province = {
+					limit = {
+						has_port = no
+						base_manpower = 2
+					}
+					add_base_manpower = -1
+				}
+				add_years_of_income = -0.2
+			}
+		}
+		{
+			name = "They'll grow tired with the sea soon enough."
+			effect = {
+				add_dip_power = 10
+			}
+		}
+	}
+}

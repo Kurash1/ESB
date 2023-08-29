@@ -1,3 +1,11 @@
+new advisor_type court_mage = {
+	name = "Court Mage"
+	desc = ""
+	monarch_power = ADM
+	modifier = {
+		monthly_magicka = 0.5
+	}
+}
 new advisor_type philosopher = {
 	name = "Philosopher"
 	desc = "An advisor dedicated to the study of the fundamental nature of knowledge, reality and existence."

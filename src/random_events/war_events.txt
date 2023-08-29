@@ -1,0 +1,43 @@
+bi_yearly_events += {
+	100 = war_events.1
+}
+new event_modifier talented_garrison_commander = {
+	name = "Talented Garrison Commander"
+	modifier = {
+		local_defensiveness = 0.5
+	}
+}
+new country_event war_events.1 = {
+	inherit = random_event
+	title = "Talented Garrison Commander"
+	desc = ""
+	picture = castle_general_eventPicture
+	trigger = {
+		is_at_war = yes
+		any_owned_province = {
+			OR = {
+				has_building = fort_15th
+				has_building = fort_16th
+			}
+		}
+	}
+	options = {
+		{
+			name = "Great!"
+			effect = {
+				random_owned_province [
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+					}
+				]
+				{
+					add_province_modifier = {
+						name = talented_garrison_commander
+						duration = 730
+					}
+				}
+			}
+		}
+	}
+}
