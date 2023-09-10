@@ -1,0 +1,208 @@
+new localisation ESTATES_SUMMON_THE_DIET_DESC = "Will summon the Diet to set an §YAgenda§!
+
+Agendas will be implemented in a future update"
+new bookmark old_kingdom = {
+	name = "Old Kingdom"
+	desc = ""
+	date = 2500.1.1
+	countries = {
+		honrich forelhost fallowfire skjoralmor solitude volunruud windhelm jorrvaskr
+	}
+	center = whiterun
+	default = yes
+}
+new age first_century = {
+	name = "First Century"
+	desc = ""
+	start = 2500
+	can_start = {
+		is_year = 2490
+	}
+	objectives = {
+		obj_court_mage = {
+			name = "Court Mage"
+			desc = "Have a Court Mage"
+			trigger = {
+				advisor = court_mage
+			}
+		}
+		obj_gov_rank = {
+			name = "Be a Kingdom"
+			desc = "Be a Kingdom Rank"
+			trigger = {
+				government_rank = 4
+			}
+		}
+		obj_have_development = {
+			name = "Developed Nation"
+			desc = "Reach a total of at least 250 development in your nation."
+			trigger = {
+				total_development = 250
+			}
+		}
+		obj_vikings = {
+			name = "Vikings"
+			desc = "Have at least 25% of a trade node be your privateers"
+			trigger = {
+				any_trade_node = {
+					has_privateer_share_in_trade_node = {
+						who = ROOT
+						share = 0.25
+					}
+				}
+			}
+		}
+		obj_great_ruler = {
+			name = "Great Ruler"
+			desc = "Have all ruler skills of at least 4"
+			trigger = {
+				adm = 4
+				dip = 4
+				mil = 4
+			}
+		}
+		obj_large_army = {
+			name = "Large Army"
+			desc = "Have an army of at least 50 regiments."
+			trigger = {
+				army_size = 50
+			}
+		}
+		obj_reformed_remnant = {
+			name = "Reformed Remnant"
+			desc = "Have reformed as a Remnant Country"
+			trigger = {
+				has_country_flag = reformed_remnant
+			}
+		}
+	}
+	abilities = {
+		ab_counter_atmoran_invasions = {
+			name = "Counter Atmoran Invasions"
+			modifier = {
+				own_coast_naval_combat_bonus = 1.0
+			}
+		}
+		ab_magic_organization = {
+			name = "Magic Organization"
+			modifier = {
+				idea_cost = -0.05
+			}
+		}
+		ab_founding_of_a_nation = {
+			name = "Founding of a Nation"
+			modifier = {
+				ae_impact = -0.1
+			}
+		}
+		ab_development_of_the_nation = {
+			name = "Development of the Nation"
+			modifier = {
+				development_cost = -0.1
+			}
+		}
+		ab_building_of_skyrim = {
+			name = "Building of Skyrim"
+			modifier = {
+				build_cost = -0.1
+			}
+		}
+		ab_old_glory = {
+			name = "Old Glory"
+			modifier = {
+				prestige = 0.5
+			}
+		}
+		ab_terrain_knowledge = {
+			name = "Terrain Knowledge"
+			modifier = {
+				attack_bonus_in_capital_terrain = 1
+			}
+		}
+		ab_focus_on_longships = {
+			name = "Focus on Longships"
+			allow = {
+				culture_group = culture_groups:nord
+			}
+			modifier = {
+				allowed_galleass_fraction = 0.2
+			}
+		}
+		ab_skjoralmor_conquests = {
+			name = "Skjoralmor Conquests"
+			allow = {
+				tag = skjoralmor
+			}
+			modifier = {
+				culture_conversion_cost = -0.5
+				culture_conversion_time = -0.5
+			}
+		}
+		ab_formation_of_eastmarch = {
+			name = "Formation of Eastmarch"
+			allow = {
+				tag = windhelm
+			}
+			modifier = {
+				accept_vassalization_reasons = 25
+			}
+		}
+		ab_volunruud_warriors = {
+			name = "Volunruud Warriors"
+			allow = {
+				tag = volunruud
+			}
+			modifier = {
+				discipline = 0.10
+			}
+		}
+	}
+}
+new age second_century = {
+	name = "Second Century"
+	desc = ""
+	start = 2600
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = future_update
+			always = no
+		}
+		is_year = 2590
+	}
+}
+new age third_century = {
+	name = "Third Century"
+	desc = ""
+	start = 2700
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = future_update
+			always = no
+		}
+		is_year = 2690
+	}
+}
+new age fourth_century = {
+	name = "Fourth Century"
+	desc = ""
+	start = 2800
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = future_update
+			always = no
+		}
+		is_year = 2790
+	}
+}
+new age fifth_century = {
+	name = "Fifth Century"
+	desc = ""
+	start = 2900
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = future_update
+			always = no
+		}
+		is_year = 2890
+	}
+}

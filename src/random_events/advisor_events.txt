@@ -1,0 +1,138 @@
+bi_yearly_events += {
+	100 = advisor_events.1
+	100 = advisor_events.2
+	100 = advisor_events.3
+}
+new country_event advisor_events.1 = {
+	inherit = random_event
+	title = "Court Mages Insight"
+	desc = ""
+	picture = court_mage_eventPicture
+	trigger = {
+		court_mage = 1
+	}
+	options = {
+		{
+			name = "A Trustworthy Fellow indeed."
+			effect = {
+				add_adm_power = 25
+				add_dip_power = 25
+				add_mil_power = 25
+			}
+		}
+	}
+}
+new country_event advisor_events.2 = {
+	inherit = random_event
+	title = "Obnoxious Advisor"
+	desc = ""
+	picture = drinking_at_dinner_eventPicture
+	trigger = {
+		has_advisor = yes
+	}
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				1 = {
+					trigger = {
+						employed_advisor = {
+							category = ADM
+						}
+					}
+					set_country_flag = advisor_events_adm
+				}
+				1 = {
+					trigger = {
+						employed_advisor = {
+							category = DIP
+						}
+					}
+					set_country_flag = advisor_events_dip
+				}
+				1 = {
+					trigger = {
+						employed_advisor = {
+							category = MIL
+						}
+					}
+					set_country_flag = advisor_events_mil
+				}
+			}
+		}
+	}
+	options = {
+		{
+			name = "Fire them"
+			effect = {
+				trigger_switch = {
+					on_trigger = has_country_flag
+					advisor_events_adm = {
+						remove_advisor_by_category = ADM
+					}
+					advisor_events_dip = {
+						remove_advisor_by_category = DIP
+					}
+					advisor_events_mil = {
+						remove_advisor_by_category = MIL
+					}
+				}
+			}
+		}
+		{
+			name = "Reprimand them"
+			effect = {
+				trigger_switch = {
+					on_trigger = has_country_flag
+					advisor_events_adm = {
+						add_adm_power = -50
+					}
+					advisor_events_dip = {
+						add_dip_power = -50
+					}
+					advisor_events_mil = {
+						add_mil_power = -50
+					}
+				}
+			}
+		}
+		{
+			name = "Ignore it"
+			effect = {
+				add_prestige = -20
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			trigger_switch = {
+				on_trigger = has_country_flag
+				advisor_events_adm = {
+					clr_country_flag = advisor_events_adm
+				}
+				advisor_events_dip = {
+					clr_country_flag = advisor_events_dip
+				}
+				advisor_events_mil = {
+					clr_country_flag = advisor_events_mil
+				}
+			}
+		}
+	}
+}
+new country_event advisor_events.3 = {
+	inherit = random_event
+	title = "New Advisor"
+	desc = ""
+	picture = librarian_eventPicture
+	options = {
+		{
+			name = "We'll think about it."
+			effect = {
+				define_advisor = {
+					type = statesman
+					discount = yes
+				}
+			}
+		}
+	}
+}

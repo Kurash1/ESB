@@ -1,0 +1,100 @@
+bi_yearly_events += {
+	100 = court.1
+	100 = court.2
+	100 = court.3
+	100 = court.4
+	100 = court.5
+}
+new country_event court.1 = {
+	inherit = random_event
+	title = "Sparring Culture"
+	desc = ""
+	picture = sparring_eventPicture
+	options = {
+		{
+			name = "I do love a good Spar."
+			effect = {
+				add_army_tradition = 10
+			}
+		}
+	}
+}
+new country_event court.2 = {
+	inherit = random_event
+	title = "Great Court"
+	desc = ""
+	picture = great_court_eventPicture
+	options = {
+		{
+			name = "Marvelous"
+			effect = {
+				add_prestige = 10
+			}
+		}
+	}
+}
+new country_event court.3 = {
+	inherit = random_event
+	title = "Successful Party"
+	desc = ""
+	picture = successful_party_eventPicture
+	options = {
+		{
+			name = "It was fun"
+			effect = {
+				add_prestige = 10
+			}
+		}
+	}
+}
+new country_event court.4 = {
+	inherit = random_event
+	title = "Mighty Hunt"
+	desc = ""
+	picture = mighty_hunt_eventPicture
+	options = {
+		{
+			name = "It was all me."
+			effect = {
+				add_prestige = 10
+			}
+		}
+	}
+}
+new country_event court.5 = {
+	inherit = random_event
+	title = "A Private Castle"
+	desc = ""
+	picture = private_castle_eventPicture
+	trigger = {
+		any_owned_province = {
+			NOT = {
+				fort_level = 1
+			}
+		}
+	}
+	options = {
+		{
+			name = "Huh? I didn't allow this!"
+			effect = {
+				random_owned_province [NOT = { fort_level = 1 }]
+				{
+					add_building = fort_15th
+					add_unrest = 5
+				}
+			}
+		}
+		{
+			name = "A great initiative"
+			effect = {
+				random_owned_province [NOT = { fort_level = 1 }]
+				{
+					add_building = fort_15th
+					every_province_in_state = {
+						add_local_autonomy = 10
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+# AI War Declaration
+
+can_declare_scenario_war = {
+	custom_trigger_tooltip = {
+        tooltip = can_declare_scenario_war_tooltip
+		OR = {
+			ai = no
+			AND = {
+				is_at_war = no
+				stability = 0
+				has_any_disaster = no
+				NOT = { war_exhaustion = 10 }
+				manpower_percentage = 0.25
+			}
+		}
+	}
+}
+
+# No female rulers
+
+do_not_have_female_rulers = {
+	custom_trigger_tooltip = {
+        tooltip = do_not_have_female_rulers_tooltip
+		OR = {
+			primary_culture = ashlander_dunmer
+			ruler_culture = ashlander_chimer
+		}
+	}
+}
+
+# ES Gov Reforms
+
+is_elven_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_elven_nation_trigger_tooltip
+		OR = {
+			culture_group = orc_culture_group
+			culture_group = snow_elven_culture_group
+		}
+	}
+}
+
+is_human_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_human_nation_trigger_tooltip
+		OR = {
+			culture_group = nord_culture_group
+			culture_group = reachmen_culture_group
+		}
+	}
+}
+
+is_beast_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_beast_nation_trigger_tooltip
+		always = no
+	}
+}
+
+is_akaviri_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_akaviri_nation_trigger_tooltip
+		always = no
+	}
+}
+
+is_daedric_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = is_daedric_nation_trigger_tooltip
+		always = no
+	}
+}
+
+#######################################################################
+
+has_birthsign_trigger = {
+	OR = {
+		has_ruler_flag = birthsign_ritual
+		has_ruler_flag = birthsign_lover
+		has_ruler_flag = birthsign_lord
+		has_ruler_flag = birthsign_mage
+		has_ruler_flag = birthsign_shadow
+		has_ruler_flag = birthsign_steed
+		has_ruler_flag = birthsign_apprentice
+		has_ruler_flag = birthsign_warrior
+		has_ruler_flag = birthsign_lady
+		has_ruler_flag = birthsign_tower
+		has_ruler_flag = birthsign_atronach
+		has_ruler_flag = birthsign_thief
+		has_ruler_flag = birthsign_serpent
+	}
+}

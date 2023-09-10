@@ -1,0 +1,1240 @@
+new area solitude_proper = {
+	name = "Solitude Proper"
+	region = haafingar
+}
+new area dragon_bridge = {
+	name = "Dragon Bridge"
+	region = haafingar
+}
+new area solitude_countryside = {
+	name = "Solitude Countryside"
+	region = haafingar
+}
+new area solitude_coast = {
+	name = "Solitude Coast"
+	region = haafingar
+}
+new area kilkreath = {
+	name = "Kilkreath"
+	region = haafingar
+}
+new area shadowgreen = {
+	name = "Shadowgreen"
+	region = haafingar
+}
+new area ravenscar = {
+	name = "Ravenscar"
+	region = haafingar
+}
+new area northwatch = {
+	name = "Northwatch"
+	region = haafingar
+}
+new area volskygge = {
+	name = "Volskygge"
+	region = haafingar
+}
+new area snowpeaks = {
+	name = "Snowpeaks"
+	region = haafingar
+}
+new area hraggstad = {
+	name = "Hraggstad"
+	region = haafingar
+}
+new area widows_watch = {
+	name = "Widow's Watch"
+	region = haafingar
+}
+new area outer_archipelago = {
+	name = "Outer Archipelago"
+	region = haafingar
+}
+new area castle_volkihar = {
+	name = "Castle Volkihar"
+	region = haafingar
+}
+new province lone_isle = {
+	position = {
+		1678.000 2175.000 1678.000 2175.000 1678.000 2175.000 1678.500 2174.000 1678.000 2175.000 1678.000 2175.000 1678.000 2175.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.698 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = outer_archipelago
+	name = "Lone Isle"
+	terrain = coastline
+	color = {
+		184 109 117
+	}
+	history = {
+		owner = SHD
+		controller = SHD
+		add_core = SHD
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = fish
+		capital = ""
+		is_city = no
+	}
+}
+new province solitude = {
+	position = {
+		1653.000 2072.000 1653.000 2072.000 1653.000 2072.000 1653.000 2072.000 1653.000 2072.000 1653.000 2072.000 1653.000 2072.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_proper
+	base_development = 20
+	name = "Solitude"
+	terrain = mountain
+	color = {
+		241 196 104
+	}
+	history = {
+		center_of_trade = 1
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = arms
+		capital = "Yrsten"
+		is_city = yes
+	}
+}
+new province solitude_port = {
+	position = {
+		1646.000 2062.000 1646.000 2062.000 1646.000 2062.000 1646.000 2057.000 1646.000 2062.000 1646.000 2062.000 1646.000 2062.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.785 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_proper
+	name = "Solitude Port"
+	terrain = coastline
+	color = {
+		160 235 188
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = naval_supplies
+		capital = ""
+		is_city = no
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+	}
+}
+new province solitude_entrance = {
+	position = {
+		1633.000 2063.000 1633.000 2063.000 1633.000 2063.000 1633.000 2063.000 1633.000 2063.000 1633.000 2063.000 1633.000 2063.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_proper
+	name = "Solitude Entrance"
+	terrain = hills
+	color = {
+		190 186 158
+	}
+	history = {
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province solitude_farms = {
+	position = {
+		1630.000 2053.000 1630.000 2053.000 1630.000 2053.000 1631.000 2049.000 1630.000 2053.000 1630.000 2053.000 1630.000 2053.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.785 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_countryside
+	name = "Solitude Farms"
+	terrain = coastline
+	color = {
+		144 103 168
+	}
+	history = {
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wheat
+		capital = ""
+		is_city = yes
+	}
+}
+new province solitude_military_camp = {
+	position = {
+		1621.000 2059.000 1621.000 2059.000 1621.000 2059.000 1621.000 2059.000 1621.000 2059.000 1621.000 2059.000 1621.000 2059.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_countryside
+	name = "Solitude Military Camp"
+	terrain = hills
+	color = {
+		239 147 210
+	}
+	history = {
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = "Iddljot"
+		is_city = yes
+	}
+}
+new province solitude_fork = {
+	position = {
+		1613.000 2050.000 1613.000 2050.000 1613.000 2050.000 1612.000 2045.000 1613.000 2050.000 1613.000 2050.000 1613.000 2050.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.349 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_countryside
+	name = "Solitude Fork"
+	terrain = coastline
+	color = {
+		158 127 179
+	}
+	history = {
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province meridias_crossroad = {
+	position = {
+		1604.000 2056.000 1604.000 2056.000 1604.000 2056.000 1604.000 2056.000 1604.000 2056.000 1604.000 2056.000 1604.000 2056.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = dragon_bridge
+	name = "Meridia's Crossroad"
+	terrain = hills
+	color = {
+		174 195 199
+	}
+	history = {
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province dragon_bridge = {
+	position = {
+		1597.000 2045.000 1597.000 2045.000 1597.000 2045.000 1599.000 2038.000 1597.000 2045.000 1597.000 2045.000 1597.000 2045.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.785 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = dragon_bridge
+	name = "Dragon Bridge"
+	color = {
+		201 202 125
+	}
+	terrain = hills
+	history = {
+		center_of_trade = 1
+		owner = DRB
+		controller = DRB
+		add_core = DRB
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = arms
+		capital = ""
+		is_city = yes
+	}
+}
+new province castle_volkihar = {
+	position = {
+		1521.000 2118.000 1521.000 2118.000 1521.000 2118.000 1524.000 2108.000 1521.000 2118.000 1521.000 2118.000 1521.000 2118.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -1.658 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = castle_volkihar
+	name = "Castle Volkihar"
+	color = {
+		128 212 180
+	}
+	terrain = coastline
+	history = {
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+		culture = cultures:haafingarian
+		religion = nordic_pantheon
+		hre = yes
+		`trade_goods` = unknown
+		capital = ""
+		is_city = no
+	}
+}
+new province big_sister = {
+	position = {
+		1538.000 2157.000 1538.000 2157.000 1538.000 2157.000 1543.000 2153.000 1538.000 2157.000 1538.000 2157.000 1538.000 2157.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.785 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = outer_archipelago
+	name = "Big Sister"
+	color = {
+		251 134 139
+	}
+	terrain = coastline
+	history = {
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+		culture = cultures:haafingarian
+		religion = nordic_pantheon
+		hre = yes
+		`trade_goods` = unknown
+		capital = ""
+		is_city = no
+	}
+}
+new province small_sister = {
+	position = {
+		1555.000 2167.000 1555.000 2167.000 1555.000 2167.000 1559.000 2164.000 1555.000 2167.000 1555.000 2167.000 1555.000 2167.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.873 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = outer_archipelago
+	name = "Small Sister"
+	color = {
+		210 247 170
+	}
+	terrain = coastline
+	history = {
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+		culture = cultures:haafingarian
+		religion = nordic_pantheon
+		hre = yes
+		`trade_goods` = unknown
+		capital = ""
+		is_city = no
+	}
+}
+new province rugged_island = {
+	position = {
+		1559.000 2128.000 1559.000 2128.000 1559.000 2128.000 1562.000 2125.000 1559.000 2128.000 1559.000 2128.000 1559.000 2128.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.436 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = outer_archipelago
+	name = "Rugged Island"
+	color = {
+		202 251 218
+	}
+	terrain = coastline
+	history = {
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+		culture = cultures:haafingarian
+		religion = nordic_pantheon
+		hre = yes
+		`trade_goods` = unknown
+		capital = ""
+		is_city = no
+	}
+}
+new province solitude_lighthouse = {
+	position = {
+		1665.000 2097.000 1665.000 2097.000 1665.000 2097.000 1671.000 2095.000 1665.000 2097.000 1665.000 2097.000 1665.000 2097.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.785 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_coast
+	name = "Solitude Lighthouse"
+	color = {
+		167 222 241
+	}
+	terrain = coastline
+	history = {
+		center_of_trade = 1
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = fish
+		capital = ""
+		is_city = yes
+	}
+}
+new province clay_coast = {
+	position = {
+		1668.000 2083.000 1668.000 2083.000 1668.000 2083.000 1666.000 2078.000 1668.000 2083.000 1668.000 2083.000 1668.000 2083.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -1.571 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_coast
+	name = "Clay Coast"
+	color = {
+		204 250 102
+	}
+	terrain = coastline
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = fish
+		capital = ""
+		is_city = no
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+	}
+}
+new province northern_cliffs = {
+	position = {
+		1659.000 2110.000 1659.000 2110.000 1659.000 2110.000 1657.000 2109.500 1659.000 2110.000 1659.000 2110.000 1659.000 2110.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_coast
+	name = "Northern Cliffs"
+	terrain = coastline
+	color = {
+		236 248 151
+	}
+	history = {
+		owner = SHD
+		controller = SHD
+		add_core = SHD
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = stone
+		capital = ""
+		is_city = yes
+	}
+}
+new province snowy_trees = {
+	position = {
+		1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = shadowgreen
+	name = "Snowy Trees"
+	color = {
+		254 159 141
+	}
+	terrain = forest
+	history = {
+		owner = SHD
+		controller = SHD
+		add_core = SHD
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province brokenoar = {
+	position = {
+		1641.000 2113.000 1641.000 2113.000 1641.000 2113.000 1641.000 2116.000 1641.000 2113.000 1641.000 2113.000 1641.000 2113.000
+	}
+	rotation = {
+		0.000 0.000 0.000 2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = shadowgreen
+	name = "Broken Oar"
+	terrain = coastline
+	color = {
+		227 114 140
+	}
+	history = {
+		owner = SHD
+		controller = SHD
+		add_core = SHD
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		`trade_goods` = fish
+		capital = ""
+		is_city = yes
+		hre = yes
+	}
+}
+new province shadowgreen = {
+	position = {
+		1634.000 2099.000 1634.000 2099.000 1634.000 2099.000 1631.500 2104.000 1634.000 2099.000 1634.000 2099.000 1634.000 2099.000
+	}
+	rotation = {
+		0.000 0.000 0.000 2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = shadowgreen
+	name = "Shadowgreen"
+	terrain = coastline
+	color = {
+		219 228 107
+	}
+	history = {
+		owner = SHD
+		controller = SHD
+		add_core = SHD
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province gold_isle = {
+	position = {
+		1618.000 2118.000 1618.000 2118.000 1618.000 2118.000 1623.000 2118.000 1618.000 2118.000 1618.000 2118.000 1618.000 2118.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = ravenscar
+	name = "Gold Isle"
+	color = {
+		162 240 177
+	}
+	terrain = coastline
+	history = {
+		culture = cultures:haafingarian
+		religion = nordic_pantheon
+		hre = yes
+		`trade_goods` = gold
+		capital = ""
+		is_city = no
+		owner = RAV
+		controller = RAV
+		add_core = RAV
+		57.1.1 = {
+			is_city = no
+		}
+	}
+}
+new province northern_road = {
+	position = {
+		1618.000 2100.000 1618.000 2100.000 1618.000 2100.000 1618.000 2103.000 1618.000 2100.000 1618.000 2100.000 1618.000 2100.000
+	}
+	rotation = {
+		0.000 0.000 0.000 2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = ravenscar
+	name = "Northern Road"
+	terrain = coastline
+	color = {
+		200 207 188
+	}
+	history = {
+		owner = RAV
+		controller = RAV
+		add_core = RAV
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = no
+	}
+}
+new province ravenscar = {
+	position = {
+		1604.000 2096.000 1604.000 2096.000 1604.000 2096.000 1603.000 2101.500 1604.000 2096.000 1604.000 2096.000 1604.000 2096.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = ravenscar
+	name = "Ravenscar"
+	terrain = coastline
+	color = {
+		150 176 238
+	}
+	history = {
+		owner = RAV
+		controller = RAV
+		add_core = RAV
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province widows_watch = {
+	position = {
+		1587.000 2097.000 1587.000 2097.000 1587.000 2097.000 1586.000 2100.000 1587.000 2097.000 1587.000 2097.000 1587.000 2097.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -3.229 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = widows_watch
+	name = "Widow's Watch"
+	terrain = coastline
+	color = {
+		211 184 165
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+	}
+}
+new province northern_mine = {
+	position = {
+		1570.000 2091.000 1570.000 2091.000 1570.000 2091.000 1570.500 2098.000 1570.000 2091.000 1570.000 2091.000 1570.000 2091.000
+	}
+	rotation = {
+		0.000 0.000 0.000 2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = widows_watch
+	name = "Northern Mine"
+	terrain = coastline
+	color = {
+		107 167 115
+	}
+	history = {
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province steepfall_burrow = {
+	position = {
+		1561.000 2079.000 1561.000 2079.000 1561.000 2079.000 1561.000 2079.000 1561.000 2079.000 1561.000 2079.000 1561.000 2079.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = widows_watch
+	terrain = highlands
+	name = "Steepfall Burrow"
+	color = {
+		220 153 179
+	}
+	history = {
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = stone
+		capital = ""
+		is_city = yes
+	}
+}
+new province lower_steepfall_burrow = {
+	position = {
+		1546.000 2086.000 1546.000 2086.000 1547.000 2085.000 1549.000 2088.500 1548.000 2089.000 1548.000 2089.000 1548.000 2089.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.531 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = widows_watch
+	name = "Lower Steepfall Burrow"
+	terrain = coastline
+	color = {
+		126 243 238
+	}
+	history = {
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = fish
+		capital = ""
+		is_city = yes
+	}
+}
+new province northwatch = {
+	position = {
+		1534.000 2086.000 1534.000 2086.000 1534.000 2086.000 1532.000 2092.000 1534.000 2086.000 1534.000 2086.000 1534.000 2086.000
+	}
+	rotation = {
+		0.000 0.000 0.000 1.222 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = northwatch
+	name = "Northwatch"
+	terrain = coastline
+	color = {
+		108 135 188
+	}
+	history = {
+		center_of_trade = 1
+		owner = RIR
+		controller = RIR
+		add_core = RIR
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = arms
+		capital = ""
+		is_city = yes
+	}
+}
+new province horned_coast = {
+	position = {
+		1520.000 2070.000 1520.000 2070.000 1520.000 2070.000 1518.000 2071.000 1520.000 2070.000 1520.000 2070.000 1520.000 2070.000
+	}
+	rotation = {
+		0.000 0.000 0.000 2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = northwatch
+	name = "Horned Coast"
+	terrain = highlands
+	color = {
+		189 251 233
+	}
+	history = {
+		owner = PIF
+		controller = PIF
+		add_core = PIF
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = stone
+		capital = ""
+		is_city = yes
+	}
+}
+new province low_grove = {
+	position = {
+		1506.000 2069.000 1506.000 2069.000 1506.000 2069.000 1501.000 2071.000 1506.000 2069.000 1506.000 2069.000 1506.000 2069.000
+	}
+	rotation = {
+		0.000 0.000 0.000 1.134 0.000 0.000 0.000
+	}
+	height = {
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377
+	}
+	area = northwatch
+	name = "Low Grove"
+	terrain = forest
+	color = {
+		242 169 162
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = stone
+		capital = ""
+		is_city = yes
+		owner = PIF
+		controller = PIF
+		add_core = PIF
+	}
+}
+new province pinefrost = {
+	position = {
+		1535.000 2064.000 1535.000 2064.000 1535.000 2064.000 1535.000 2064.000 1535.000 2064.000 1535.000 2064.000 1535.000 2064.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = volskygge
+	name = "Pinefrost"
+	terrain = highlands
+	color = {
+		151 162 116
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		owner = PIF
+		controller = PIF
+		add_core = PIF
+		hre = yes
+		`trade_goods` = stone
+	}
+}
+new province volskygge = {
+	position = {
+		1555.000 2055.000 1555.000 2055.000 1555.000 2055.000 1555.000 2055.000 1555.000 2055.000 1555.000 2055.000 1555.000 2055.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = volskygge
+	name = "Volskygge"
+	terrain = forest
+	color = {
+		250 231 207
+	}
+	history = {
+		center_of_trade = 1
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		owner = PIF
+		controller = PIF
+		add_core = PIF
+		hre = yes
+		`trade_goods` = r_metals
+	}
+}
+new province deepwood_redoubt = {
+	position = {
+		1557.000 2044.000 1557.000 2044.000 1557.000 2044.000 1557.000 2044.000 1557.000 2044.000 1557.000 2044.000 1557.000 2044.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = volskygge
+	name = "Deepwood Redoubt"
+	terrain = forest
+	color = {
+		187 232 173
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		owner = PIN
+		controller = PIN
+		add_core = PIN
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province pinemoon_cave = {
+	position = {
+		1569.000 2056.000 1569.000 2056.000 1569.000 2056.000 1569.000 2056.000 1569.000 2056.000 1569.000 2056.000 1569.000 2056.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = volskygge
+	name = "Pinemoon Cave"
+	terrain = forest
+	color = {
+		166 213 143
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		owner = PIN
+		controller = PIN
+		add_core = PIN
+		hre = yes
+		`trade_goods` = wood
+	}
+}
+new province snowpeaks = {
+	position = {
+		1576.000 2045.000 1576.000 2045.000 1576.000 2045.000 1576.000 2045.000 1576.000 2045.000 1576.000 2045.000 1576.000 2045.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = snowpeaks
+	name = "Snowpeaks"
+	terrain = forest
+	color = {
+		161 254 127
+	}
+	history = {
+		owner = PIN
+		controller = PIN
+		add_core = PIN
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = "Oldarior"
+		is_city = yes
+	}
+}
+new province clearpine_pond = {
+	position = {
+		1585.000 2057.000 1585.000 2057.000 1585.000 2057.000 1585.000 2057.000 1585.000 2057.000 1585.000 2057.000 1585.000 2057.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = snowpeaks
+	terrain = forest
+	name = "Clearpine Pond"
+	color = {
+		163 173 175
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = no
+		owner = PIN
+		controller = PIN
+		add_core = PIN
+	}
+}
+new province lost_echo_cave = {
+	position = {
+		1567.000 2066.000 1567.000 2066.000 1567.000 2066.000 1567.000 2066.000 1567.000 2066.000 1567.000 2066.000 1567.000 2066.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = hraggstad
+	name = "Lost Echo Cave"
+	terrain = hills
+	color = {
+		124 176 123
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		owner = WOL
+		controller = WOL
+		add_core = WOL
+		hre = yes
+		`trade_goods` = wood
+	}
+}
+new province wolfskull_cave = {
+	position = {
+		1594.000 2066.000 1594.000 2066.000 1594.000 2066.000 1594.000 2066.000 1594.000 2066.000 1594.000 2066.000 1594.000 2066.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = hraggstad
+	name = "Wolfskull Cave"
+	terrain = hills
+	color = {
+		104 241 247
+	}
+	history = {
+		owner = WOL
+		controller = WOL
+		add_core = WOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province hraggstad = {
+	position = {
+		1588.000 2078.000 1588.000 2078.000 1588.000 2078.000 1588.000 2078.000 1588.000 2078.000 1588.000 2078.000 1588.000 2078.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = hraggstad
+	name = "Hraggstad"
+	terrain = highlands
+	color = {
+		239 168 125
+	}
+	history = {
+		center_of_trade = 1
+		owner = WOL
+		controller = WOL
+		add_core = WOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		quick_province_modifier = {
+			name = "Steed Stone"
+			modifier = {
+				movement_speed = 5%
+			}
+		}
+		`trade_goods` = arms
+		capital = ""
+		is_city = yes
+	}
+}
+new province kilkreath_trail = {
+	position = {
+		1580.000 2068.000 1580.000 2068.000 1580.000 2068.000 1580.000 2068.000 1580.000 2068.000 1580.000 2068.000 1580.000 2068.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = hraggstad
+	name = "Kilkreath Trail"
+	terrain = hills
+	color = {
+		120 142 214
+	}
+	history = {
+		owner = WOL
+		controller = WOL
+		add_core = WOL
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = stone
+		capital = ""
+		is_city = yes
+	}
+}
+new province kilkreath_temple = {
+	position = {
+		1607.000 2066.000 1607.000 2066.000 1607.000 2066.000 1607.000 2066.000 1607.000 2066.000 1607.000 2066.000 1607.000 2066.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = kilkreath
+	name = "Kilkreath Temple"
+	terrain = hills
+	color = {
+		215 127 153
+	}
+	history = {
+		owner = IRO
+		controller = IRO
+		add_core = IRO
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}
+new province ironback_hideout = {
+	position = {
+		1616.000 2080.000 1616.000 2080.000 1616.000 2080.000 1616.000 2080.000 1616.000 2080.000 1616.000 2080.000 1616.000 2080.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = kilkreath
+	name = "Ironback Hidehout"
+	terrain = highlands
+	color = {
+		130 155 255
+	}
+	history = {
+		owner = IRO
+		controller = IRO
+		add_core = IRO
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = r_metals
+		capital = "Narly"
+		is_city = yes
+	}
+}
+new province kilkreath_peak = {
+	position = {
+		1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = kilkreath
+	name = "Kilkreath Peak"
+	terrain = mountain
+	color = {
+		164 221 189
+	}
+	history = {
+		owner = IRO
+		controller = IRO
+		add_core = IRO
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+	}
+}

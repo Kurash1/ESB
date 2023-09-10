@@ -1,0 +1,210 @@
+# Audax Validator "!" Ignore_1006
+namespace = es_theocracy
+
+# theocracy.1.t:0 "Heir needed in $COUNTRY$"
+# theocracy.1.desc:0 "As we currently have no designated heir for $MONARCHTITLE$ $MONARCH$, we have several options to pick from."
+# theocracy.1.a:0 "A Local Noble"
+# theocracy.1.b:0 "A Foreign Noble"
+# theocracy.1.c:0 "A Merchant's Son"
+# theocracy.1.d:0 "A Papal Protege"
+# theocracy.1.e:0 "A Talented Theologian"
+# theocracy.1.f:0 "A Local Preacher"
+# theocracy.1.g:0 "A Local Priest"
+# theocracy.1.h:0 "An Influential Priest"
+# es_theocracy.1.b.tooltip: "An Advisor of §Yrandom§! type with the skill level of §Y3§! and discount will appear at $COUNTRY_ADJ$ court."
+
+country_event = {
+	id = es_theocracy.1
+	title = es_theocracy.1.t
+	desc = es_theocracy.1.desc
+	picture = ES_THEOCRACY_HEIR_ELECTIONS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_reform = papacy_reform }
+		NOT = { has_country_flag = in_theocracy_heir_selection }
+		has_government_attribute = heir
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_theocracy_heir_selection
+			
+			random_owned_province = {
+				save_event_target_as = es_theocracy_province
+			}
+			
+			random_neighbor_country = { 
+				limit = {
+					government = monarchy
+					has_regency = no
+					religion = ROOT
+				}
+				save_event_target_as = es_neighbor_country_for_theocracy
+			}
+		}
+	}
+
+	option = {
+		name = es_theocracy.1.a # theocracy.1.a:0 "A Local Noble"
+		
+		
+		define_heir = {
+			age = 35
+			hidden = yes
+			culture = event_target:es_theocracy_province
+		}
+			
+		add_prestige = 10
+		add_mil_power = 50
+		add_devotion = -10
+		add_legitimacy = -10
+	}
+
+	option = {
+		name = es_theocracy.1.b # theocracy.1.b:0 "A Foreign Noble"
+		
+		trigger = {
+			any_neighbor_country = {
+				government = monarchy
+				has_regency = no
+				religion = ROOT
+			}
+		}
+		
+		
+		random_neighbor_country = { 
+			limit = {
+				government = monarchy
+				has_regency = no
+				religion = ROOT
+			}
+			ROOT = { 
+				define_heir = { 
+					dynasty = PREV 
+					age = 35
+					culture = PREV
+					hidden = yes
+				} 
+			}
+			add_opinion = { who = ROOT modifier = opinion_theocracy_noble }
+		}
+		
+		add_corruption = -1.5
+		hidden_effect = {
+			define_random_theocratic_advisor = yes
+		}
+		custom_tooltip = es_theocracy.1.b.tooltip
+		add_devotion = -15
+		add_legitimacy = -15
+	}
+
+	option = {
+		name = es_theocracy.1.c # theocracy.1.c:0 "A Merchant's Son"
+		
+		
+		define_heir = {
+			age = 35
+			hidden = yes
+			culture = event_target:es_theocracy_province
+		}
+		
+		add_years_of_income = 1.0
+		add_mercantilism = 1
+		add_devotion = -10
+		add_legitimacy = -10
+	}
+	option = {
+		name = es_theocracy.1.e # theocracy.1.e:0 "A Talented Theologian"
+		
+		if = { limit = { has_estate = estate_priests } add_estate_loyalty_modifier = { estate = estate_priests desc = HEIR_ELECTIONS loyalty = 15 duration = 9125 } }
+		
+		define_heir = {
+			age = 35
+			hidden = yes
+			culture = event_target:es_theocracy_province
+		}
+		
+		add_devotion = 10
+		add_legitimacy = 10
+		random_owned_province = {
+			limit = {
+				NOT = { religion = ROOT }
+			}
+			change_religion = ROOT
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = es_theocracy.1.f # theocracy.1.f:0 "A Local Preacher"
+		
+		
+		define_heir = {
+			age = 35
+			hidden = yes
+			culture = event_target:es_theocracy_province
+		}
+		
+		add_devotion = 15
+		add_legitimacy = 15
+		random_owned_province = {
+			limit = {
+				NOT = { culture = ROOT }
+			}
+			change_culture = ROOT
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = theocracy.1.g # theocracy.1.g:0 "A Local Priest"
+
+		trigger = {
+			uses_piety = yes
+		}
+		
+			
+		define_heir = {
+			age = 35
+			hidden = yes
+			culture = event_target:es_theocracy_province
+		}
+		
+		add_devotion = -10
+		add_legitimacy = -10
+		add_prestige = 10
+		add_piety = 0.10
+	}
+	option = {
+		name = theocracy.1.h # theocracy.1.h:0 "An Influential Priest"
+		
+		trigger = {
+			OR = {
+				uses_church_aspects = yes
+				uses_fervor = yes
+			}
+		}
+		
+		
+		define_heir = {
+			age = 35
+			hidden = yes
+			culture = event_target:es_theocracy_province
+		}
+		
+		add_devotion = 5
+		add_legitimacy = 5
+		if = { 
+			limit = { uses_fervor = yes }
+			add_fervor = 25
+		}
+		if = { 
+			limit = { uses_church_aspects = yes }
+			add_church_power = 25
+		}
+		add_prestige = -10
+	}
+	after = {
+		clr_country_flag = in_theocracy_heir_selection
+	}
+}

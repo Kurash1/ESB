@@ -1,0 +1,65 @@
+new idea_group reachmen_ideas = {
+	name = "Reachmen"
+	trigger = {
+		culture_group = culture_groups:reachmen
+	}
+	category = national
+	start = {
+		movement_speed = 0.1
+		infantry_fire = 0.15
+	}
+	bonus = {
+		unjustified_demands = -0.2
+	}
+	ideas = {
+		{
+			name = "The Reach"
+			desc = "Even the neighbouring Bretons, Nords, and Orcs - themselves no stranger to tough terrain - consider the Reach a wild and inhospitable place to call home. Jagged cliffs, narrow canyons, raging rapids, and plunging waterfalls make up some of its rugged terrains, leaving precious-little room for agriculture and husbandry. As such, the Reachmen are forced to eke out a living by working what little land is available, as well as by herding, hunting, gathering, and trading."
+			modifier = {
+				defensiveness = 0.15
+			}
+		}
+		{
+			name = "A Proud People"
+			desc = "Reachmen society is based around a system of clans and kinship, and above all, a fierce desire to live free and independent of outside rule."
+			modifier = {
+				war_exhaustion_cost = -0.33
+			}
+		}
+		{
+			name = "The Hunt-Father"
+			desc = "The Hunt-Father, more commonly known as Hircine to outsiders, is the foremost spirit in Reachmen society. His veneration is critical to ensuring the success of their hunts - one of the few sources of food available in the Reach."
+			modifier = {
+				land_attrition = -0.15
+			}
+		}
+		{
+			name = "Great Chieftains"
+			desc = "Reachmen society greatly values warriors brave of heart, and strong in the arm. In difficult times, such a hero sometimes emerges to lead the Reachmen through their tribulations, and re-assert their place in the Reach."
+			modifier = {
+				leader_cost = -0.15
+			}
+		}
+		{
+			name = "Redoubts"
+			desc = "The nature of the terrain of the Reach means that certain areas require very little additional fortification to achieve a high degree of defensibility."
+			modifier = {
+				fort_maintenance_modifier = -0.5
+			}
+		}
+		{
+			name = "The Longhouse Emperors"
+			desc = "The Longhouse Emperors were a dynasty of Reachmen of managed to capture and rule the Empire for a period of time during the interregnum."
+			modifier = {
+				ae_impact = -0.10
+			}
+		}
+		{
+			name = "Silver Deposits"
+			desc = "The Reach is blessed with many rich deposits of Silver - among other natural resources."
+			modifier = {
+				global_trade_goods_size_modifier = 0.15
+			}
+		}
+	}
+}

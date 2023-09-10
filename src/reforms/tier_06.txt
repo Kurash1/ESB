@@ -1,0 +1,18 @@
+new government_reform tier_6_strong_reign = {
+	name = "Strong Reign"
+	desc = ""
+	icon = "commander_king_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+		max_absolutism = 10
+	}
+}
+new government_reform tier_6_curtailed_reign = {
+	name = "Curtailed Reign"
+	desc = ""
+	icon = "generic_people"
+	allow_normal_conversion = yes
+	modifiers = {
+		no_stability_loss_on_monarch_death = yes
+	}
+}

@@ -1,0 +1,695 @@
+remnant = {
+	reform_levels = {
+		government_policy = {
+			reforms = {
+				companion_remnant
+			}
+		}
+		reform_military = { 
+			reforms = { 
+				tier_2_conscription 
+				tier_2_mercenaries 
+				tier_2_warriors 
+				tier_2_professional_army 
+				tier_2_peasant_army
+				tier_2_battlemages
+				tier_2_lunar_smithing
+			} 
+		}
+		reform_economy = {
+			reforms = {
+				extensive_taxation 
+				trade_benefits 
+				production_benefits 
+				war_economy 
+			}
+		}
+		reform_administration = {
+			reforms = {
+				united_states 
+				regionalism 
+				confederation 
+				united_cities
+			}
+		}
+		reform = {
+			reforms = {
+				remnant_become_thanedom
+			}
+		}
+	}
+
+	basic_reform = monarchy_mechanic
+
+	legacy_government = {
+		despotic_monarchy
+	}
+
+	color = { 50 0 0 }
+}
+
+monarchy = { 
+	reform_levels = {
+		government_policy = {
+			reforms = {
+				tier_1_thanedom
+				tier_1_hold
+				tier_1_warrior_house
+				tier_1_warrior_hold
+				tier_1_nord_clan
+			}
+		}
+		backbone_of_the_army = { 
+			reforms = { 
+				tier_2_conscription 
+				tier_2_mercenaries 
+				tier_2_warriors 
+				tier_2_professional_army 
+				tier_2_peasant_army
+				tier_2_battlemages
+				tier_2_lunar_smithing
+			} 
+		}
+		backbone_of_the_navy = {
+			reforms = {
+				tier_3_conscription
+				tier_3_ship_building
+				tier_3_fishermen
+				tier_3_vikings
+				tier_3_the_flagship
+			}
+		}
+		position_of_magic = {
+			reforms = {
+				tier_4_free_magic
+				tier_4_regulations
+				tier_4_magical_society
+			}
+		}
+		state_and_religion = {
+			reforms = {
+				tier_5_secularism
+				tier_5_state_religion
+				tier_5_fanaticism
+			}
+		}
+		rulers_powers = {
+			reforms = {
+				tier_6_strong_reign
+				tier_6_curtailed_reign
+			}
+		}
+		bureaucracy = {
+			reforms = {
+				tier_7_centralized_bureaucracy
+				tier_7_decentralized_bureaucracy
+			}
+		}
+		diplomacy = {
+			reforms = {
+				tier_8_alliance_focus
+				tier_8_subject_focus
+				tier_8_expansion_focus
+				tier_8_supremacy
+			}
+		}
+		espionage = {
+			reforms = {
+				tier_9_honest_country
+				tier_9_espionage
+				tier_9_defense_focus
+				tier_9_the_grand_game
+			}
+		}
+		campaign_doctrine = {
+			reforms = {
+				tier_10_climactic_victory
+				tier_10_guerilla_warfare
+				tier_10_long_campaign
+			}
+		}
+		advisors = {
+			reforms = {
+				tier_11_royal_court
+				tier_11_expanded_powers
+				tier_11_martial_court
+			}
+		}
+		trade_policy = {
+			reforms = {
+				tier_12_internal_markets
+				tier_12_free_trade
+			}
+		}
+	}
+
+	basic_reform = monarchy_mechanic
+
+	legacy_government = {
+		despotic_monarchy
+	}
+
+	color = { 179 25 25 }
+}
+
+republic = {
+	basic_reform = republic_mechanic
+
+	color = { 65 155 220 }
+	legacy_government = {
+		oligarchic_republic
+	}
+	reform_levels = {
+		government_policy = {
+			reforms = {
+			    oligarchy_reform
+			    merchants_reform
+			    colonial_government
+			    presidential_despot_reform
+			    revolutionary_republic_reform 
+			    junior_revolutionary_republic_reform
+			    trading_city
+			    free_city
+			    pirate_republic_reform
+			    noble_elite_reform
+			    peasants_republic
+			    protectorate_parliament_reform
+			    veche_republic 
+			    ambrosian_republic
+			    dutch_republic
+			    venice_merchants_reform
+			    federal_republic
+			    cossacks_reform 
+			    american_republic
+			    prussian_republic_reform
+			    signoria_reform
+			    military_dictatorship_reform
+				pirate_king_reform
+				war_against_the_world_doctrine_reform
+				dwemer_city
+				samara_reform
+			}
+		}
+		backbone_of_the_army = { 
+			reforms = { 
+				tier_2_conscription 
+				tier_2_mercenaries 
+				tier_2_warriors 
+				tier_2_professional_army 
+				tier_2_peasant_army
+				tier_2_battlemages
+				tier_2_lunar_smithing
+			} 
+		}
+		backbone_of_the_navy = {
+			reforms = {
+				tier_3_conscription
+				tier_3_ship_building
+				tier_3_fishermen
+				tier_3_vikings
+				tier_3_the_flagship
+			}
+		}
+		position_of_magic = {
+			reforms = {
+				tier_4_free_magic
+				tier_4_regulations
+				tier_4_magical_society
+			}
+		}
+		state_and_religion = {
+			reforms = {
+				tier_5_secularism
+				tier_5_state_religion
+				tier_5_fanaticism
+			}
+		}
+		rulers_powers = {
+			reforms = {
+				tier_6_strong_reign
+				tier_6_curtailed_reign
+			}
+		}
+		bureaucracy = {
+			reforms = {
+				tier_7_centralized_bureaucracy
+				tier_7_decentralized_bureaucracy
+			}
+		}
+		diplomacy = {
+			reforms = {
+				tier_8_alliance_focus
+				tier_8_subject_focus
+				tier_8_expansion_focus
+				tier_8_supremacy
+			}
+		}
+		espionage = {
+			reforms = {
+				tier_9_honest_country
+				tier_9_espionage
+				tier_9_defense_focus
+				tier_9_the_grand_game
+			}
+		}
+		campaign_doctrine = {
+			reforms = {
+				tier_10_climactic_victory
+				tier_10_guerilla_warfare
+				tier_10_long_campaign
+			}
+		}
+		advisors = {
+			reforms = {
+				tier_11_royal_court
+				tier_11_expanded_powers
+				tier_11_martial_court
+			}
+		}
+		trade_policy = {
+			reforms = {
+				tier_12_internal_markets
+				tier_12_free_trade
+			}
+		}
+	}
+}
+
+tribal = {
+	color = { 220 165 95 }
+	basic_reform = tribe_mechanic
+	reform_levels = {
+	    government_policy = {
+			reforms = {
+				siberian_tribe
+				steppe_horde
+				tribal_federation
+				tribal_despotism
+				tribal_kingdom 
+				great_mongol_state_reform 
+				martial_society_reform
+				civil_society_reform
+				religious_societies_reform
+				retain_tribal_hierarchy_reform 
+				orc_clan_reform
+			}
+		}
+		backbone_of_the_army = { 
+			reforms = { 
+				tier_2_conscription 
+				tier_2_mercenaries 
+				tier_2_warriors 
+				tier_2_professional_army 
+				tier_2_peasant_army
+				tier_2_battlemages
+				tier_2_lunar_smithing
+			} 
+		}
+		backbone_of_the_navy = {
+			reforms = {
+				tier_3_conscription
+				tier_3_ship_building
+				tier_3_fishermen
+				tier_3_vikings
+				tier_3_the_flagship
+			}
+		}
+		position_of_magic = {
+			reforms = {
+				tier_4_free_magic
+				tier_4_regulations
+				tier_4_magical_society
+			}
+		}
+		state_and_religion = {
+			reforms = {
+				tier_5_secularism
+				tier_5_state_religion
+				tier_5_fanaticism
+			}
+		}
+		rulers_powers = {
+			reforms = {
+				tier_6_strong_reign
+				tier_6_curtailed_reign
+			}
+		}
+		bureaucracy = {
+			reforms = {
+				tier_7_centralized_bureaucracy
+				tier_7_decentralized_bureaucracy
+			}
+		}
+		diplomacy = {
+			reforms = {
+				tier_8_alliance_focus
+				tier_8_subject_focus
+				tier_8_expansion_focus
+				tier_8_supremacy
+			}
+		}
+		espionage = {
+			reforms = {
+				tier_9_honest_country
+				tier_9_espionage
+				tier_9_defense_focus
+				tier_9_the_grand_game
+			}
+		}
+		campaign_doctrine = {
+			reforms = {
+				tier_10_climactic_victory
+				tier_10_guerilla_warfare
+				tier_10_long_campaign
+			}
+		}
+		advisors = {
+			reforms = {
+				tier_11_royal_court
+				tier_11_expanded_powers
+				tier_11_martial_court
+			}
+		}
+		trade_policy = {
+			reforms = {
+				tier_12_internal_markets
+				tier_12_free_trade
+			}
+		}
+    }
+	legacy_government = {
+		steppe_horde_legacy
+	}
+
+}
+
+native = {
+	basic_reform = native_basic_reform
+
+	legacy_government = {
+		native_council_legacy
+	}
+	color = { 194 127 209 }
+	
+	reform_levels = {
+		tribe_organization = {
+			reforms = {
+				native_chiefdom_reform
+				native_federation_reform
+				native_clan_council_reform
+				native_hereditary_reform
+			}
+		}
+		warriors = {
+			reforms = {
+				battlefield_tactics
+				raiding_and_pillaging
+				ambushes
+				magic_specialization
+			}
+		}
+		paganism = {
+			reforms = {
+				rituals_and_festivals
+				sacrifices
+				respect_to_the_faith
+				mercenaries_of_faith
+			}
+		}
+		tribal_magic = {
+			reforms = {
+				fetishes
+				tomb_magic
+				totems_and_sacred_places
+				magical_guardians
+			}
+		}
+		prisoners = {
+			reforms = {
+				ransoming_captives
+				enslaving_captives
+				killing_captives
+				conscripting_captives
+			}
+		}
+		tribal_structure = {
+			reforms = {
+				hierarchal
+				clans_and_hordes
+				religiois_supremacy
+				loose_confederation
+			}
+		}
+		chieftans = {
+			reforms = {
+				strongman
+				tyrant
+				tribal_voice
+				tribal_succession
+			}
+		}
+		outsiders = {
+			reforms = {
+				distructed
+				tolerated
+				killed_or_enslaved
+				embraced
+			}
+		}
+		civilizing = {
+			reforms = {
+				choose_the_path_of_monarchy
+				choose_the_path_of_republic
+				choose_the_path_of_theocracy
+				choose_the_path_of_tribe
+			}
+		}
+		national_identity = {
+			reforms = {
+				native_becomes_horde_reform
+				native_becomes_monarchy_reform
+				native_becomes_republic_reform
+				native_becomes_theocracy_reform
+			}
+		}
+	}
+}
+
+
+theocracy = {
+	color = { 75 170 75 }
+	basic_reform = theocracy_mechanic
+
+	legacy_government = {
+		theocratic_government
+	}
+	reform_levels = {
+		government_policy = {
+			reforms = {
+				
+			}
+		}
+		backbone_of_the_army = { 
+			reforms = { 
+				tier_2_conscription 
+				tier_2_mercenaries 
+				tier_2_warriors 
+				tier_2_professional_army 
+				tier_2_peasant_army
+				tier_2_battlemages
+				tier_2_lunar_smithing
+			} 
+		}
+		backbone_of_the_navy = {
+			reforms = {
+				tier_3_conscription
+				tier_3_ship_building
+				tier_3_fishermen
+				tier_3_vikings
+				tier_3_the_flagship
+			}
+		}
+		position_of_magic = {
+			reforms = {
+				tier_4_free_magic
+				tier_4_regulations
+				tier_4_magical_society
+			}
+		}
+		state_and_religion = {
+			reforms = {
+				tier_5_secularism
+				tier_5_state_religion
+				tier_5_fanaticism
+			}
+		}
+		rulers_powers = {
+			reforms = {
+				tier_6_strong_reign
+				tier_6_curtailed_reign
+			}
+		}
+		bureaucracy = {
+			reforms = {
+				tier_7_centralized_bureaucracy
+				tier_7_decentralized_bureaucracy
+			}
+		}
+		diplomacy = {
+			reforms = {
+				tier_8_alliance_focus
+				tier_8_subject_focus
+				tier_8_expansion_focus
+				tier_8_supremacy
+			}
+		}
+		espionage = {
+			reforms = {
+				tier_9_honest_country
+				tier_9_espionage
+				tier_9_defense_focus
+				tier_9_the_grand_game
+			}
+		}
+		campaign_doctrine = {
+			reforms = {
+				tier_10_climactic_victory
+				tier_10_guerilla_warfare
+				tier_10_long_campaign
+			}
+		}
+		advisors = {
+			reforms = {
+				tier_11_royal_court
+				tier_11_expanded_powers
+				tier_11_martial_court
+			}
+		}
+		trade_policy = {
+			reforms = {
+				tier_12_internal_markets
+				tier_12_free_trade
+			}
+		}
+	}
+}
+
+pre_dharma_mapping = {
+	autocracy_reform = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	celestial_empire = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	english_monarchy = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	elective_monarchy = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	mamluk_government = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	pirate_king_reform = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	ottoman_government = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	shogunate = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	mughal_government = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	
+	dutch_republic = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	oligarchy_reform = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	merchants_reform = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	pirate_republic_reform = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	noble_elite_reform = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	presidential_despot_reform = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	peasants_republic = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	free_city = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	trading_city = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	colonial_government = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	
+	leading_clergy_reform = {
+		government = theocracy
+		legacy_government = theocratic_government
+	}
+	monastic_order_reform = {
+		government = theocracy
+		legacy_government = theocratic_government
+	}
+	papacy_reform = {
+		government = theocracy
+		legacy_government = theocratic_government
+	}
+	
+	steppe_horde = {
+		government = tribal
+		legacy_government = steppe_horde_legacy
+	}
+	tribal_federation = {
+		government = tribal
+		legacy_government = steppe_horde_legacy
+	}
+	tribal_kingdom = {
+		government = tribal
+		legacy_government = steppe_horde_legacy
+	}
+	tribal_despotism = {
+		government = tribal
+		legacy_government = steppe_horde_legacy
+	}
+	
+	native_basic_reform = {
+		government = native
+		legacy_government = native_council_legacy
+	}
+	
+	all_mechanics = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+}

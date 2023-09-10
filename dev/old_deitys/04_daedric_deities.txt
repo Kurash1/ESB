@@ -1,0 +1,198 @@
+Maloch = {
+	infantry_power = 0.1
+	mercenary_discipline = 0.05
+	potential = {
+		religion = nordic_pantheon
+	}
+	sprite = 17
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mora = {
+	technology_cost = -0.05
+	global_institution_spread = 0.1
+	potential = {
+		OR = {
+			religion = nordic_pantheon
+			religion = bosmer_pantheon
+			religion = ayleid_pantheon
+		}
+	}
+	sprite = 14
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Clavicus_Vile = {
+	trade_efficiency = 0.1
+	improve_relation_modifier = 0.25
+	potential = {
+		religion = kothri_pantheon
+	}
+	sprite = 58
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Bal = {
+	free_leader_pool = 1
+	heir_chance = 0.25
+	potential = {
+		OR = {
+			religion = kothri_pantheon
+			religion = ayleid_pantheon
+		}
+	}
+	sprite = 63
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Boethiah = {
+	global_spy_defence = 0.1
+	ae_impact = -0.1
+	potential = {
+		religion = kothri_pantheon
+	}
+	sprite = 62
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Malacath = {
+	infantry_power = 0.1
+	mercenary_discipline = 0.05
+	potential = {
+		OR = {
+			religion = orcish_pantheon
+			religion = kothri_pantheon
+		}
+	}
+	sprite = 17
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mauloch = {
+	land_morale = 0.1
+	discipline = 0.05
+	potential = {
+		religion = orcish_pantheon
+	}
+	sprite = 57
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mehrunes = {
+	fire_damage = 0.1
+	mercenary_cost = -0.10
+	potential = {
+		OR = {
+			religion = ayleid_pantheon
+			religion = orcish_pantheon
+		}
+	}
+	sprite = 40
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Namiira = {
+	advisor_cost = -0.1
+	claim_duration = 0.25
+	potential = {
+		religion = orcish_pantheon
+	}
+	sprite = 42
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mephala = {
+	spy_offence = 0.1
+	rebel_support_efficiency = 0.25
+	potential = {
+		religion = orcish_pantheon
+	}
+	sprite = 41
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Hircine = {
+	mercenary_manpower = 0.1
+	merc_maintenance_modifier = -0.1
+	potential = {
+		OR = {
+			religion = kothri_pantheon
+			religion = keptu_pantheon
+		}
+	}
+	sprite = 37
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Sangiine = {
+	global_unrest = -1
+	culture_conversion_cost = -0.1
+	potential = {
+		religion = kothri_pantheon
+	}
+	sprite = 45
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Sheogorath = {
+	unjustified_demands = -0.1
+	province_warscore_cost = -0.1
+	potential = {
+		religion = kothri_pantheon
+	}
+	sprite = 46
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Azura = {
+	tolerance_own = 1
+	war_exhaustion_cost = -0.1
+	potential = {
+		OR = {
+			religion = reclamations_pantheon
+			religion = kothri_pantheon
+		}
+	}
+	sprite = 36
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Meridia = {
+	available_province_loot = 0.25
+	administrative_efficiency = 0.05
+	potential = {
+		religion = ayleid_pantheon
+	}
+	sprite = 78
+	ai_will_do = {
+		factor = 1
+	}
+}

@@ -1,0 +1,62 @@
+# Audax Validator "!" Ignore_ALL
+elitism_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	powers = {
+		elitism = {
+			max = 100
+			base_monthly_growth = 0
+			monarch_power = mil
+			scaled_modifier = {
+				modifier = {
+					mercenary_cost = -0.5
+					merc_maintenance_modifier = -0.5
+					mercenary_manpower = 0.5
+					mercenary_discipline = 0.15
+					monthly_elitism = -0.5
+				}
+			}
+		}
+	}
+	interactions = {
+		boost_militarization = {
+			gui = elitism_gov_mech
+			cost_type = elitism
+			center = no
+			trigger = {
+				mil_power_cost = 50
+				not = {
+					has_government_power = {
+						mechanic_type = elitism_mechanic
+						power_type = elitism
+						value = 100
+					}
+				}
+			}
+			effect = {
+				mil_power_cost = 50
+				add_government_power = {
+					mechanic_type = elitism_mechanic
+					power_type = elitism
+					value = 10
+				}
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 10
+					not = {
+						has_government_power = {
+							mechanic_type = elitism_mechanic
+							power_type = elitism
+							value = 90
+						}
+					}
+					mil_power_cost = 500
+					is_at_war = yes
+				}
+			}
+		}
+	}
+}

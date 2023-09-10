@@ -1,0 +1,39 @@
+new government_reform tier_9_honest_country = {
+	name = "Honest Country"
+	desc = ""
+	icon = "man_and_children"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 1
+		spy_offence = -0.25
+	}
+}
+new government_reform tier_9_espionage = {
+	name = "Honest Country"
+	desc = ""
+	icon = "spyglass"
+	allow_normal_conversion = yes
+	modifiers = {
+		spy_offence = 0.25
+	}
+}
+new government_reform tier_9_defense_focus = {
+	name = "Defense Focus"
+	desc = ""
+	icon = "intervene"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_spy_defence = 0.25
+	}
+}
+new government_reform tier_9_the_grand_game = {
+	name = "The Grand Game"
+	desc = ""
+	icon = "wow_council"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = -2.5
+		spy_offence = 0.5
+		spy_action_cost_modifier = -0.2
+	}
+}

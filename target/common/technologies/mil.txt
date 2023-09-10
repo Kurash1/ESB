@@ -1,0 +1,93 @@
+# Regex for adding new units to tech 
+# This one is the "search" value, where "xxx" is the existing unit type you want to place the new unit after (e.g. giant, nord, yokudan) 
+# xxx_([ACITGLH]\d\d) 
+# This is the "replace" value, where "xxx" is the same as the unit type from the search value, and "yyy" is the new unit type. 
+# xxx_$1\n\tenable = yyy_$1 
+monarch_power = MIL
+ahead_of_time = { }
+technology = {
+	# Tech 0 
+	year = 1
+	sprite_level = 1
+	infantry_fire = 0.35
+	infantry_shock = 0.50
+	cavalry_fire = 0.00
+	cavalry_shock = 1.0
+	artillery_fire = 1
+	artillery_shock = 0.1
+	land_morale = 3.00
+	
+	#Regular
+	enable = nord_infantry
+	enable = nord_artillery
+	enable = reachmen_infantry
+	enable = reachmen_cavalry
+	enable = reachmen_artillery
+	enable = orc_infantry
+	enable = orc_artillery
+	enable = snow_elven_infantry
+	enable = snow_elven_artillery
+	
+	may_drill = yes
+	#fort_15th = yes
+}
+technology = {
+	# Tech 1 
+	year = 9999
+	military_tactics = 0.5
+	combat_width = 5
+}
+technology = {
+	year = 9999
+}
+technology = {
+	year = 9999
+}
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }
+technology = { year = 9999 }

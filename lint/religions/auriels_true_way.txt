@@ -1,0 +1,24 @@
+new church_aspect t = {
+	name = "T aspect"
+	desc = ""
+	modifier = {
+		prestige = 1
+	}
+}
+new religion auriels_true_way = {
+	name = "Auriel's True Way"
+	desc = ""
+	icon = 2
+	color = {
+		230 222 100
+	}
+	heretic = {
+		SNOW_ELVES_PANTHEON_HERETIC
+	}
+	country = {
+	}
+	province = {
+	}
+	uses_piety = yes
+	religious_group = snow_elven_group
+}

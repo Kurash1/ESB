@@ -1,0 +1,114 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_fanaticism_frame"
+		texturefile = "gfx/interface/government_mechanics/fanaticism/frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_fanaticism_progressbar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/fanaticism/progressbar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/fanaticism/progressbar_frame.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_mane_vs_king_frame"
+		texturefile = "gfx/interface/government_mechanics/mane_vs_king/mane_vs_king_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_mane_vs_king_progressbar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/mane_vs_king/mane_vs_king_progressbar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/mane_vs_king/mane_vs_king_progressbar_frame.dds"
+		size = { x = 232 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_tourism_frame"
+		texturefile = "gfx/interface/government_mechanics/tourism/tourism_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	progressbartype = {
+		name = "GFX_tourism_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/tourism/hessian_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/tourism/hessian_progress_bar_empty.dds"
+		size = { x = 260 y = 66 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType =
+	{
+		name = "GFX_tourism_increase_button"
+		texturefile = "gfx/interface/government_mechanics/tourism/tourism_increase_button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tourism_mil"
+		texturefile = "gfx/interface/government_mechanics/tourism/tourism_mil_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_fury_frame"
+		texturefile = "gfx/interface/government_mechanics/fury/tourism_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	progressbartype = {
+		name = "GFX_fury_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/fury/hessian_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/fury/hessian_progress_bar_empty.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType =
+	{
+		name = "GFX_fury_increase_button"
+		texturefile = "gfx/interface/government_mechanics/fury/tourism_increase_button.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_magicka_frame"
+		texturefile = "gfx/interface/government_mechanics/magicka/magicka_bar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_magicka_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/magicka/magicka_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/magicka/magicka_progress_bar_empty.dds"
+		size = { x = 267 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_elitism_frame"
+		texturefile = "gfx/interface/government_mechanics/elitism/elitism_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

@@ -1,0 +1,52 @@
+cb_native_reservation = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		 NOT = { government = native }
+	}
+	
+	prerequisites = {
+		NOT = { truce_with = FROM }
+		NOT = { alliance_with = FROM }
+		FROM = {
+			is_neighbor_of = ROOT
+			government = native
+		}
+	}
+
+	war_goal = ge_native_reservation
+}
+
+cb_es_scenario = {
+	valid_for_subject = no
+
+	prerequisites = {
+		always = no
+	}
+
+	war_goal = es_scenario
+}
+
+cb_pte_liberation = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_opinion_modifier = {
+			who = FROM
+			modifier = aggressive_expansion
+			value = -35
+		}
+		FROM = {
+			is_neighbor_of = ROOT
+		}
+	}
+
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+	}
+
+	war_goal = pte_liberation_war_goal
+}

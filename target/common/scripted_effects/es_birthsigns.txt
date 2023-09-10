@@ -1,0 +1,132 @@
+# Audax Validator "!" Ignore_1006
+es_add_birthsign_by_month = {
+	if = {
+		limit = { is_month = 0 NOT = { is_month = 1 } }
+		set_ruler_flag = birthsign_ritual
+		country_event = {
+			# Choose Ritual Aspect
+			id = es_birthsigns.4
+			days = 0
+		}
+	}
+	if = {
+		limit = { is_month = 1 NOT = { is_month = 2 } }
+		set_ruler_flag = birthsign_lover
+		add_ruler_modifier = { 
+			name = lover_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 2 NOT = { is_month = 3 } }
+		set_ruler_flag = birthsign_lord
+		add_ruler_modifier = { 
+			name = lord_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 3 NOT = { is_month = 4 } }
+		set_ruler_flag = birthsign_mage
+		add_ruler_modifier = { 
+			name = mage_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 4 NOT = { is_month = 5 } }
+		set_ruler_flag = birthsign_shadow
+		add_ruler_modifier = { 
+			name = shadow_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 5 NOT = { is_month = 6 } }
+		set_ruler_flag = birthsign_steed
+		add_ruler_modifier = { 
+			name = steed_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 6 NOT = { is_month = 7 } }
+		set_ruler_flag = birthsign_apprentice
+		add_ruler_modifier = { 
+			name = apprentice_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 7 NOT = { is_month = 8 } }
+		set_ruler_flag = birthsign_warrior
+		add_ruler_modifier = { 
+			name = warrior_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 8 NOT = { is_month = 9 } }
+		set_ruler_flag = birthsign_lady
+		add_ruler_modifier = { 
+			name = lady_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 9 NOT = { is_month = 10 } }
+		set_ruler_flag = birthsign_tower
+		add_ruler_modifier = { 
+			name = tower_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 10 NOT = { is_month = 11 } }
+		set_ruler_flag = birthsign_atronach
+		add_ruler_modifier = { 
+			name = atronach_birthsign_mod
+			duration = -1				
+		}
+	}
+	if = {
+		limit = { is_month = 11 }
+		set_ruler_flag = birthsign_thief
+		add_ruler_modifier = { 
+			name = thief_birthsign_mod
+			duration = -1				
+		}
+	}
+}
+
+clear_birthsigns_effect = {
+	clr_ruler_flag = birthsign_ritual
+	remove_country_modifier = ritual_birthsign_aspect_charm_mod
+	remove_country_modifier = ritual_birthsign_aspect_expedition_mod
+	remove_country_modifier = ritual_birthsign_aspect_cunning_mod
+	remove_country_modifier = ritual_birthsign_aspect_knowledge_mod
+	clr_ruler_flag = birthsign_lover
+	remove_country_modifier = lover_birthsign_mod
+	clr_ruler_flag = birthsign_lord
+	remove_country_modifier = lord_birthsign_mod
+	clr_ruler_flag = birthsign_mage
+	remove_country_modifier = mage_birthsign_mod
+	clr_ruler_flag = birthsign_shadow
+	remove_country_modifier = shadow_birthsign_mod
+	clr_ruler_flag = birthsign_steed
+	remove_country_modifier = steed_birthsign_mod
+	clr_ruler_flag = birthsign_apprentice
+	remove_country_modifier = apprentice_birthsign_mod
+	clr_ruler_flag = birthsign_warrior
+	remove_country_modifier = warrior_birthsign_mod
+	clr_ruler_flag = birthsign_lady
+	remove_country_modifier = lady_birthsign_mod
+	clr_ruler_flag = birthsign_tower
+	remove_country_modifier = tower_birthsign_mod
+	clr_ruler_flag = birthsign_atronach
+	remove_country_modifier = atronach_birthsign_mod
+	clr_ruler_flag = birthsign_thief
+	remove_country_modifier = thief_birthsign_mod
+	clr_ruler_flag = birthsign_serpent
+	remove_country_modifier = serpent_birthsign_mod
+}

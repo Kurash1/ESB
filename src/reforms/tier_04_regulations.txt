@@ -1,0 +1,123 @@
+new government_reform tier_4_regulations = {
+	name = "Regulations"
+	desc = ""
+	icon = "mage_tower"
+	allow_normal_conversion = yes
+	effect = {
+		defineloc tier_4_regulations_tt = "Reduces the amount of Magical Mishap Events."
+		custom_tooltip = tier_4_regulations_tt
+	}
+	modifiers = {
+		stability_cost_modifier = -0.1
+	}
+}
+bi_yearly_events += {
+	100 = magical_mishap.1
+	100 = magical_mishap.2
+	100 = magical_mishap.3
+	100 = magical_mishap.4
+	100 = magical_mishap.5
+}
+new country_event magical_mishap.1 = {
+	inherit = random_event
+	title = "Magical Mishap: Falling Wizards"
+	desc = ""
+	picture = wizard_falling_from_the_sky_eventPicture
+	trigger = {
+		NOT = {
+			has_reform = tier_4_regulations
+		}
+	}
+	options = {
+		{
+			name = "Oh no!"
+			effect = {
+				add_stability = -1
+			}
+		}
+	}
+}
+new country_event magical_mishap.2 = {
+	inherit = random_event
+	title = "Magical Mishap: Fire Storm"
+	desc = ""
+	picture = fire_storm_eventPicture
+	trigger = {
+		NOT = {
+			has_reform = tier_4_regulations
+		}
+	}
+	options = {
+		{
+			name = "Oh no!"
+			effect = {
+				random_owned_province = {
+					add_devastation = 50
+				}
+			}
+		}
+	}
+}
+new country_event magical_mishap.3 = {
+	inherit = random_event
+	title = "Magical Mishap: Ice Storm"
+	desc = ""
+	picture = ice_storm_eventPicture
+	trigger = {
+		NOT = {
+			has_reform = tier_4_regulations
+		}
+	}
+	options = {
+		{
+			name = "Oh no!"
+			effect = {
+				random_owned_province = {
+					add_base_production = -2
+				}
+			}
+		}
+	}
+}
+new country_event magical_mishap.4 = {
+	inherit = random_event
+	title = "Magical Mishap: Necromantic Ritual"
+	desc = ""
+	picture = altar_of_despair_eventPicture
+	trigger = {
+		NOT = {
+			has_reform = tier_4_regulations
+		}
+	}
+	options = {
+		{
+			name = "Oh no!"
+			effect = {
+				random_owned_province = {
+					add_base_tax = -2
+				}
+			}
+		}
+	}
+}
+new country_event magical_mishap.5 = {
+	inherit = random_event
+	title = "Magical Mishap: Rogue Summons"
+	desc = ""
+	picture = rogue_summons_eventPicture
+	trigger = {
+		NOT = {
+			has_reform = tier_4_regulations
+		}
+	}
+	options = {
+		{
+			name = "Oh no!"
+			effect = {
+				random_owned_province = {
+					add_base_manpower = -2
+				}
+			}
+		}
+	}
+}

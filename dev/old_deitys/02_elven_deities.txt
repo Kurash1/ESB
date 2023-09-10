@@ -1,0 +1,229 @@
+Phynaster = {
+	discipline = 0.05
+	global_manpower_modifier = 0.1
+	potential = {
+		OR = {
+			religion = altmeri_pantheon
+			religion = snow_elves_pantheon
+			religion = twelve_divines
+			religion = ayleid_pantheon
+		}
+	}
+	sprite = 6
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Trinimac = {
+	fire_damage = 0.1
+	shock_damage = 0.1
+	potential = {
+		OR = {
+			religion = altmeri_pantheon
+			religion = barsaebic_pantheon
+			religion = snow_elves_pantheon
+			religion = ayleid_pantheon
+			religion = orcish_pantheon
+		}
+	}
+	sprite = 9
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Magnus = {
+	global_institution_spread = 0.1
+	idea_cost = -0.1
+	potential = {
+		OR = {
+			religion = altmeri_pantheon
+			religion = barsaebic_pantheon
+			religion = twelve_divines
+			religion = keptu_pantheon
+			religion = ayleid_pantheon
+		}
+	}
+	sprite = 4
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Jephre = {
+	culture_conversion_cost = -0.1
+	global_trade_goods_size_modifier = 0.1
+	potential = {
+		religion = snow_elves_pantheon
+	}
+	sprite = 2
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Syrabane = {
+	land_attrition = -0.1
+	recover_army_morale_speed = 0.1
+	potential = {
+		OR = {
+			religion = altmeri_pantheon
+			religion = ayleid_pantheon
+		}
+	}
+	sprite = 8
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Yffre = {
+	culture_conversion_cost = -0.1
+	global_trade_goods_size_modifier = 0.1
+	potential = {
+		OR = {
+			religion = barsaebic_pantheon
+			religion = bosmer_pantheon
+			religion = twelve_divines
+			religion = ayleid_pantheon
+		}
+	}
+	sprite = 2
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Zen = {
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
+	potential = {
+		OR = {
+			religion = bosmer_pantheon
+			religion = twelve_divines
+			religion = snow_elves_pantheon
+			religion = kothri_pantheon
+			religion = keptu_pantheon
+		}
+	}
+	sprite = 27
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Xen = {
+	reduced_liberty_desire = 10
+	harsh_treatment_cost = -0.1
+	potential = {
+		OR = {
+			religion = altmeri_pantheon
+			religion = snow_elves_pantheon
+		}
+	}
+	sprite = 11
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Ius = {
+	cavalry_power = 0.1
+	cavalry_cost = -0.1
+	potential = {
+		OR = {
+			religion = bosmer_pantheon
+			religion = khajiiti_pantheon
+			religion = yokudan_pantheon
+			religion = redguard_pantheon
+		}
+	}
+	sprite = 24
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Auri-El = {
+	land_morale = 0.1
+	global_unrest = -1
+	potential = {
+		OR = {
+			religion = snow_elves_pantheon
+			religion = altmeri_pantheon
+			religion = barsaebic_pantheon
+			religion = nedic_pantheon
+			religion = bosmer_pantheon
+			religion = ayleid_pantheon
+		}
+	}
+	sprite = 1
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Lorkhan = {
+	legitimacy = 0.25
+	republican_tradition = 0.25
+	devotion = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.25
+	stability_cost_modifier = -0.1
+	potential = {
+		OR = {
+			religion = bosmer_pantheon
+			religion = altmeri_pantheon
+			religion = ayleid_pantheon
+			religion = reclamations_pantheon
+		}
+	}
+	sprite = 3
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Jode = {
+	core_creation = -0.1
+	unjustified_demands = -0.1
+	potential = {
+		religion = bosmer_pantheon
+	}
+	sprite = 25
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Jone = {
+	advisor_pool = 1
+	advisor_cost = -0.1
+	potential = {
+		religion = bosmer_pantheon
+	}
+	sprite = 26
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Xarxes = {
+	spy_offence = 0.1
+	global_spy_defence = 0.1
+	potential = {
+		OR = {
+			religion = barsaebic_pantheon
+			religion = bosmer_pantheon
+			religion = altmeri_pantheon
+			religion = snow_elves_pantheon
+			religion = nedic_pantheon
+			religion = ayleid_pantheon
+		}
+	}
+	sprite = 10
+	ai_will_do = {
+		factor = 1
+	}
+}

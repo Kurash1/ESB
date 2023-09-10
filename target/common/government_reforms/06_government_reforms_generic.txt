@@ -1,0 +1,691 @@
+extensive_taxation = {
+	icon = "trading_post"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.10
+	}
+}
+trade_benefits = {
+	icon = "storehouse"
+	allow_normal_conversion = yes
+	modifiers = {
+		merchants = 1
+		trade_efficiency = 0.1
+	}
+}
+production_benefits = {
+	icon = "crate_1"
+	allow_normal_conversion = yes
+	modifiers = {
+		production_efficiency = 0.10
+	}
+}
+war_economy = {
+	icon = "treasure_chest"
+	allow_normal_conversion = yes
+	modifiers = {
+		available_province_loot = 1.5
+		loot_amount = 1.0
+		prestige_from_land = -0.15
+	}
+}
+free_trade_protection = {
+	icon = "spoils_of_pandaria"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_upkeep = 1
+		trade_efficiency = 0.05
+	}
+}
+promotion_of_mercantelism = {
+	icon = "crimson_vial"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_ship_trade_power = 0.15
+		center_of_trade_upgrade_cost = -0.10
+		mercantilism_cost = -0.25
+	}
+}
+provision_of_protectionism = {
+	icon = "intervene"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+criminal_legalisation = {
+	icon = "sap"
+	allow_normal_conversion = yes
+	modifiers = {
+		spy_offence = 0.2
+		privateer_efficiency = 0.25
+	}
+}
+heavy_ships = {
+	icon = "heavy_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		heavy_ship_power = 0.10
+		naval_morale = 0.05
+	}
+}
+light_ships = {
+	icon = "light_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		light_ship_cost = 0.50
+		ship_power_propagation = 0.15
+	}
+}
+galleys = {
+	icon = "galley_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		galley_power = 0.10
+		naval_attrition = -0.25
+	}
+}
+transport_ships = {
+	icon = "transport_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		transport_power = 0.35
+		global_sailors_modifier = 0.10
+	}
+}
+free_magic = {
+	icon = "arcane_barrage"
+	allow_normal_conversion = yes
+	modifiers = {
+		fire_damage = 0.05
+		harsh_treatment_cost = 0.35
+	}
+}
+controlled_magic = {
+	icon = "mage_tower"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.15
+		establish_order_cost = -0.25
+	}
+}
+magic_laws = {
+	icon = "ancient_text"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1.5
+		stability_cost_modifier = -0.15
+	}
+}
+magical_state = {
+	icon = "ancestral_guardian"
+	allow_normal_conversion = yes
+	trigger = {
+		NOT = {
+			has_reform = reason_and_logic
+		}
+		NOT = {
+			has_reform = bureaucratic_tyranny
+		}
+		NOT = {
+			has_reform = court_of_darkness
+		}
+		NOT = {
+			has_reform = divine_right
+		}
+		NOT = {
+			has_reform = subservient_bureaucracy
+		}
+		NOT = {
+			has_reform = justified_atrocity
+		}
+	}
+	modifiers = {
+		defensiveness = 0.25
+		fire_damage = 0.05
+		global_trade_goods_size_modifier = 0.10
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		states_general_mechanic = {
+			daedric = {
+				tolerance_own = 1.5
+				culture_conversion_cost = -0.15
+				unjustified_demands = 0.15
+			}
+			aedric = {
+				development_cost = -0.15
+				global_missionary_strength = 0.015
+				province_warscore_cost = 0.15
+			}
+		}
+	}
+}
+lip_service = {
+	icon = "tome_2"
+	allow_normal_conversion = yes
+	modifiers = {
+		religious_unity = 0.10
+		tolerance_heathen = 1
+		tolerance_heretic = 1
+		tolerance_own = -2
+	}
+}
+one_religion = {
+	icon = "ascension"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_own = 1
+		global_missionary_strength = 0.01
+	}
+}
+diversity_and_tolerance = {
+	icon = "overgrowth"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_heathen = 3
+		tolerance_heretic = 3
+		tolerance_of_heathens_capacity = 2
+		tolerance_of_heretics_capacity = 2
+		global_missionary_strength = -0.1
+		religious_unity = 0.25
+		missionaries = -1
+	}
+}
+embraced_zeal = {
+	icon = "blessed_hands"
+	allow_normal_conversion = yes
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.10
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_decisions
+	}
+}
+bureaucracy = {
+	icon = "human_sailor"
+	allow_normal_conversion = yes
+	modifiers = {
+		expand_administration_cost = -0.35
+	}
+}
+towns_and_cities = {
+	icon = "blueprint"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_cost = -0.25
+	}
+}
+feudalism = {
+	icon = "control_is_king"
+	allow_normal_conversion = yes
+	modifiers = {
+		min_autonomy = 10
+		stability_cost_modifier = 0.2
+		governing_capacity_modifier = 0.25
+		governing_cost = -0.15
+		global_unrest = 1.5
+	}
+}
+states = {
+	icon = "three_flags"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity = 150
+	}
+}
+condified_law = {
+	icon = "tome_1"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1.0
+		stability_cost_modifier = -0.1
+	}
+}
+county_law = {
+	icon = "treasure_map"
+	allow_normal_conversion = yes
+	modifiers = {
+		harsh_treatment_cost = -0.15
+		state_governing_cost = -0.15
+	}
+}
+local_militias = {
+	icon = "improved_tracking"
+	allow_normal_conversion = yes
+	modifiers = {
+		reinforce_cost_modifier = -0.15
+		reinforce_speed = 0.15
+		stability_cost_modifier = 0.1
+		global_unrest = -2
+	}
+}
+state_guard = {
+	icon = "defend"
+	allow_normal_conversion = yes
+	modifiers = {
+		fort_maintenance_modifier = -0.30
+		garrison_size = 0.1
+	}
+}
+peaceful_existence = {
+	icon = "reputation"
+	allow_normal_conversion = yes
+	modifiers = {
+		development_cost = -0.1
+		culture_conversion_cost = 5
+		promote_culture_cost = -0.35
+		num_accepted_cultures = 1
+	}
+}
+war_and_honour = {
+	icon = "hero"
+	allow_normal_conversion = yes
+	modifiers = {
+		war_exhaustion_cost = -0.10
+		war_exhaustion = -0.03
+	}
+}
+taverns_and_inns = {
+	icon = "drunken_haze"
+	allow_normal_conversion = yes
+	modifiers = {
+		caravan_power = 0.05
+		global_unrest = -1.5
+	}
+}
+arts_and_craft = {
+	icon = "angelic_feather"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige = 0.5
+		prestige_decay = -0.01
+		production_efficiency = 0.05
+	}
+}
+glory = {
+	icon = "crown_of_glory"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige_from_land = 0.75
+		prestige_from_naval = 0.75
+		prestige_decay = -0.01
+	}
+}
+honour = {
+	icon = "bladestorm"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 2
+		improve_relation_modifier = 0.1
+	}
+}
+victory = {
+	icon = "champion"
+	allow_normal_conversion = yes
+	modifiers = {
+		unjustified_demands = -0.15
+		province_warscore_cost = -0.15
+		spy_offence = 0.2
+		rebel_support_efficiency = 0.25
+		diplomatic_reputation = -1
+		improve_relation_modifier = -0.2
+	}
+}
+unity = {
+	icon = "profession_scroll"
+	allow_normal_conversion = yes
+	modifiers = {
+		ae_impact = -0.10
+		culture_conversion_cost = -0.25
+		global_missionary_strength = 0.01
+	}
+}
+expansion_and_supremacy = {
+	icon = "dual_wield"
+	allow_normal_conversion = yes
+	modifiers = {
+		liberty_desire_from_subject_development = -0.33
+		reduced_liberty_desire = 20
+		land_morale = 0.1
+		diplomatic_reputation = -2
+		ae_impact = 0.1
+	}
+}
+ambassadorships = {
+	icon = "mail"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_upkeep = 1
+		improve_relation_modifier = 0.1
+		diplomats = 1
+	}
+}
+disinterest = {
+	icon = "soothe"
+	allow_normal_conversion = yes
+	modifiers = {
+		ae_impact = -0.1
+		global_unrest = -3
+		stability_cost_modifier = -0.2
+		diplomatic_reputation = -2
+		improve_relation_modifier = -0.2
+	}
+}
+intervention = {
+	icon = "blood_frenzy"
+	allow_normal_conversion = yes
+	modifiers = {
+		possible_condottieri = 2
+		diplomatic_reputation = 2
+	}
+}
+heroic_guilds = {
+	icon = "return_to_camp"
+	allow_normal_conversion = yes
+	modifiers = {
+		mercenary_discipline = 0.1
+		mercenary_manpower = 0.1
+	}
+}
+trade_factionism = {
+	icon = "cash_flow"
+	allow_normal_conversion = yes
+	modifiers = {
+		caravan_power = 0.10
+		trade_efficiency = 0.1
+	}
+}
+political_factionism = {
+	icon = "brush_it_off"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity_modifier = 0.15
+		all_estate_loyalty_equilibrium = 0.1
+		global_unrest = -1
+		all_power_cost = 0.05
+		stability_cost_modifier = 0.1
+	}
+}
+shadow_guilds = {
+	icon = "disguise"
+	allow_normal_conversion = yes
+	modifiers = {
+		spy_offence = 0.5
+		privateer_efficiency = 0.25
+		global_unrest = -2
+		yearly_corruption = 0.09
+		stability_cost_modifier = 0.2
+	}
+}
+exploitation = {
+	icon = "roll_the_bones"
+	allow_normal_conversion = yes
+	modifiers = {
+		min_autonomy_in_territories = -0.1
+		global_tax_modifier = 0.1
+		global_manpower_modifier = 0.1
+		global_unrest = 2
+		num_accepted_cultures = -1
+		promote_culture_cost = 0.25
+	}
+}
+equal_in_name = {
+	icon = "note_1"
+	allow_normal_conversion = yes
+	modifiers = {
+		core_creation = -0.10
+		global_unrest = -1.5
+	}
+}
+efficient_adminsitration = {
+	icon = "stonks"
+	allow_normal_conversion = yes
+	modifiers = {
+		development_cost = -0.05
+		administrative_efficiency = 0.025
+		stability_cost_modifier = 0.15
+	}
+}
+future_statehood = {
+	icon = "make_camp"
+	allow_normal_conversion = yes
+	modifiers = {
+		state_governing_cost = -0.1
+		core_creation = -0.1
+	}
+}
+a_better_world = {
+	icon = "double_rainbow"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige_decay = -0.01
+		diplomatic_reputation = 2
+		num_accepted_cultures = 3
+	}
+}
+unification = {
+	icon = "crown_of_legends"
+	allow_normal_conversion = yes
+	modifiers = {
+		years_of_nationalism = -5
+		culture_conversion_cost = -0.25
+		global_missionary_strength = 0.02
+		land_morale = 0.2
+		tolerance_heathen = -3
+		tolerance_heretic = -3
+	}
+}
+one_faith = {
+	icon = "focused_will"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_missionary_strength = 0.05
+		tolerance_own = 2
+		missionaries = 1
+		land_morale = 0.15
+		missionary_maintenance_cost = -0.5
+		tolerance_heathen = -20
+		tolerance_heretic = -20
+		tolerance_of_heathens_capacity = -20
+		tolerance_of_heretics_capacity = -20
+		years_of_nationalism = 15
+	}
+}
+greatness = {
+	icon = "beacon_of_light"
+	allow_normal_conversion = yes
+	modifiers = {
+		land_forcelimit_modifier = 0.10
+		governing_capacity_modifier = 0.25
+		land_morale = 0.1
+	}
+}
+extensive_road_network = {
+	icon = "road_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		movement_speed = 0.1
+		trade_efficiency = 0.1
+		caravan_power = 0.1
+	}
+}
+innovative_supremacy = {
+	icon = "book_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		idea_cost = -0.025
+	}
+}
+extensive_army = {
+	icon = "land_army_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_regiment_cost = -0.10
+		land_morale = 0.1
+		land_forcelimit_modifier = 0.1
+	}
+}
+legendary_leaders = {
+	icon = "leader_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 1
+		army_tradition = 0.5
+		army_tradition_decay = -0.01
+	}
+}
+head_of_the_state = {
+	icon = "greater_invisibility"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity = 100
+	}
+}
+champion_of_the_people = {
+	icon = "crown_of_heaven"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_leader_pool = 1
+	}
+}
+servant_of_the_realm = {
+	icon = "scroll_1"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1.0
+	}
+}
+purveyor_of_decadence = {
+	icon = "mage_pie"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige_decay = -0.01
+		diplomatic_reputation = -1.0
+	}
+}
+strong_reign = {
+	icon = "clarity_of_purpose"
+	allow_normal_conversion = yes
+	modifiers = {
+		legitimacy = 0.25
+		republican_tradition = 0.10
+		devotion = 0.25
+		horde_unity = 0.25
+		meritocracy = 0.25
+	}
+}
+curtailed_reign = {
+	icon = "clemency"
+	allow_normal_conversion = yes
+	modifiers = {
+		state_governing_cost = -0.10
+	}
+}
+ceremonial_reign = {
+	icon = "lunar_guidance"
+	allow_normal_conversion = yes
+	modifiers = {
+		advisor_cost = -0.1
+	}
+}
+war_times_reign = {
+	icon = "combat_readiness"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_regiment_cost = -0.1
+	}
+}
+administrative_edicts = {
+	icon = "note_2"
+	allow_normal_conversion = yes
+	modifiers = {
+		monarch_admin_power = 1
+		adm_advisor_cost = 0.15
+	}
+}
+chief_diplomats = {
+	icon = "human_male"
+	allow_normal_conversion = yes
+	modifiers = {
+		monarch_diplomatic_power = 1
+		dip_advisor_cost = 0.15
+	}
+}
+heads_of_the_army = {
+	icon = "revenge"
+	allow_normal_conversion = yes
+	modifiers = {
+		monarch_military_power = 1
+		mil_advisor_cost = 0.15
+	}
+}
+governers = {
+	icon = "balance_of_power"
+	allow_normal_conversion = yes
+	modifiers = {
+		state_governing_cost = -0.15
+	}
+}
+estates_and_workshops = {
+	icon = "craftsman"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_adm_policy = 1
+		build_time = -0.15
+	}
+}
+party_and_art = {
+	icon = "profession_scroll_2"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_dip_policy = 1
+		prestige = 0.15
+	}
+}
+military_and_shipyards = {
+	icon = "engineering"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_mil_policy = 1
+		global_ship_recruit_speed = -0.15
+	}
+}
+exploration_and_excavation = {
+	icon = "spyglass"
+	allow_normal_conversion = yes
+	modifiers = {
+		range = 0.25
+		global_colonial_growth = 25
+	}
+}
+abbeys = {
+	icon = "abbey_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		production_efficiency = 0.05
+	}
+}
+missionary_order = {
+	icon = "missionary_order_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige_per_development_from_conversion = 0.05
+	}
+}
+crusading_orders = {
+	icon = "crusading_orders_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_manpower_modifier = 0.05
+	}
+}
+tierd_clergy = {
+	icon = "tierd_clergy_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_missionary_strength = 0.005
+	}
+}

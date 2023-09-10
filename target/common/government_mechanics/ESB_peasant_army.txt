@@ -1,0 +1,33 @@
+peasant_army_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	interactions = {
+		peasant_army_button = {
+			gui = peasant_army_button
+			trigger = {
+				is_in_war = {
+					defender_leader = ROOT
+				}
+				any_owned_province = {
+					NOT = { 
+						controlled_by = ROOT 
+					}
+				}
+			}
+			effect = {
+				random_owned_province = {
+					limit = {
+						NOT = {
+							controlled_by = ROOT
+						}
+					}
+					spawn_rebels = {
+						type = anti_tax_rebels
+						size = 10
+					}
+				}
+			}
+			cooldown_years = 25
+		}
+	}
+}

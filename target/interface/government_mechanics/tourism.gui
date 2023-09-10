@@ -1,0 +1,79 @@
+guiTypes = {
+	windowType = {
+		name = "tourism_power"
+		size = { x = 300 y = 120 }
+		moveable = 0
+
+		# background / the eagle
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_tourism_power_bar"
+			position = { x = 16 y = 0 }
+		}	
+
+		# Frame
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_tourism_frame"
+			position = { x = 0 y = -4 }
+			alwaystransparent = yes
+		}
+	}
+	
+	windowType = {
+		name = "tourism_adm_button"
+		size = { x = 100 y = 85 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_tourism_increase_button"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	
+	windowType = {
+		name = "tourism_dip_button"
+		size = { x = 100 y = 85 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_tourism_increase_button"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	
+	windowType = {
+		name = "tourism_mil_button"
+		size = { x = 100 y = 85 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_tourism_mil"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	
+	windowType = {
+		name = "peasant_army_button"
+		size = { x = 300 y = 85 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_tourism_increase_button"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	
+}

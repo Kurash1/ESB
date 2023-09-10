@@ -1,0 +1,18 @@
+new religion cult_of_jephre = {
+	name = "Cult of Jephre"
+	desc = ""
+	icon = 2
+	color = {
+		37 124 47
+	}
+	heretic = {
+		SNOW_ELVES_PANTHEON_HERETIC
+	}
+	country = {
+		global_trade_goods_size_modifier = 0.1
+		development_cost = -0.1
+	}
+	province = {
+	}
+	religious_group = snow_elven_group
+}

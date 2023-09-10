@@ -1,0 +1,108 @@
+
+tourism_festival = {
+	global_unrest = -1
+}
+moon-emperor = {
+	can_not_declare_war = yes
+	diplomatic_reputation = 3
+	legitimacy = 1
+	prestige = 1
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}
+khajiit_holy_adm = {
+	country_admin_power = 1
+	global_tax_modifier = -0.25
+}
+khajiit_holy_dip = {
+	country_diplomatic_power = 1
+	production_efficiency = -0.25
+}
+khajiit_holy_mil = {
+	country_military_power = 1
+	land_maintenance_modifier = 0.25
+}
+khajiit_wares_if_coin_mod = {
+	global_tax_income = 60
+}
+khajiit_loyal_court_mod = {
+	all_estate_loyalty_equilibrium = 0.1
+	allow_free_estate_privilege_revocation = yes
+	global_spy_defence = 0.25
+}
+khajiit_wisom_old_mod = {
+	idea_cost = -0.025
+	development_cost = -0.05
+}
+khajiit_convert_mod = {
+	curia_powers_cost = 0.5
+	curia_treasury_contribution = 5
+	papal_influence = 1
+	global_missionary_strength = 0.05
+	missionaries = 1
+	missionary_maintenance_cost = 1
+	papal_influence_from_cardinals = 0.333
+	prestige_per_development_from_conversion = -1.1
+	tolerance_own = -0.5
+	tolerance_heretic = -2.5
+	tolerance_heathen = -2.5
+}
+khajiit_youngsters_mod = {
+	monarch_lifespan = -0.25
+	monthly_heir_claim_increase = 0.25
+	no_stability_loss_on_monarch_death = yes
+	reform_progress_growth = 0.1
+}
+esb_scenario_0-150far_legend = {
+	range = 0.5
+	may_explore = yes
+}
+esb_scenario_0-150_end_of_atmora = {
+	global_unrest = 1
+	global_monthly_devastation = 0.01
+}
+esb_scenario_0-150_atmoran_minority = {
+	local_manpower_modifier = 0.1
+	local_regiment_cost = -0.1
+	local_unrest = 2
+}
+esb_yok_yul_loser_mod = {
+	global_unrest = -15
+	land_morale = -0.20
+	prestige = -2.5
+}
+esb_yok_yul_center_of_commercemod = {
+	trade_efficiency = 0.2
+	trade_steering = 0.2
+	trade_range_modifier = 0.5
+}
+esb_yok_yul_hasek_mod = {
+	land_morale = 0.1
+}
+esb_yok_yul_rebuild_countrymod = {
+	build_cost = -0.25
+	build_time = -0.25
+}
+esb_yok_yul_rebuild_provmod = {
+	local_great_project_upgrade_cost = -0.5
+}
+esb_yok_yul_trademod = {
+	merchants = 1
+}
+esb_yok_yul_helem_mod = {
+	discipline = 0.05
+}
+esb_yok_yul_samara = {
+	global_unrest = -1
+	spy_offence = 0.1
+}
+great_college = {
+	idea_cost = -0.1
+}
+esb_yok_yul_fire = {
+	fire_damage = 0.1
+}
+esb_yok_yul_college_provmod = {
+	local_great_project_upgrade_cost = -0.5
+}

@@ -1,0 +1,76 @@
+esb_change_opinion = {
+	every_known_country = {
+		if = {
+			limit = {
+				NOT = { culture_group = PREV }
+			}
+			add_opinion = { who = PREV modifier = esb_different_race }
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						is_human_nation_trigger = yes
+						PREV = { is_elven_nation_trigger = yes }
+					}
+					AND = {
+						is_elven_nation_trigger = yes
+						PREV = { is_human_nation_trigger = yes }
+					}
+				}
+			}
+			add_opinion = { who = PREV modifier = esb_elf_men_hate }
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						culture_group = nord_culture_group
+						PREV = { culture_group = snow_elven_culture_group }
+					}
+					AND = {
+						culture_group = snow_elven_culture_group
+						PREV = { culture_group = nord_culture_group }
+					}
+				}
+			}
+			add_opinion = { who = PREV modifier = esb_night_of_tears }
+		}
+	}
+}
+
+esb_clear_opinion = {
+	every_known_country = {
+		if = { 
+			limit = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = esb_different_race
+				}
+			}
+			remove_opinion = { who = PREV modifier = esb_different_race }
+			reverse_remove_opinion = { who = PREV modifier = esb_different_race }
+		}
+		if = { 
+			limit = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = esb_elf_men_hate
+				}
+			}
+			remove_opinion = { who = PREV modifier = esb_elf_men_hate }
+			reverse_remove_opinion = { who = PREV modifier = esb_elf_men_hate }
+		}
+		if = { 
+			limit = {
+				has_opinion_modifier = {
+					who = PREV
+					modifier = esb_night_of_tears
+				}
+			}
+			remove_opinion = { who = PREV modifier = esb_night_of_tears }
+			reverse_remove_opinion = { who = PREV modifier = esb_night_of_tears }
+		}
+		
+	}
+}

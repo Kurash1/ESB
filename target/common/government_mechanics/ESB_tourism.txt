@@ -1,0 +1,102 @@
+# Audax Validator "!" Ignore_ALL
+tourism_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	powers = {
+		tourism_attraction = {
+			gui = tourism_power
+			show_before_interactions = no
+			max = 100
+			base_monthly_growth = -0.5
+			monarch_power = dip
+			scaled_modifier = {
+				modifier = {
+					global_tax_income = 600
+					monthly_tourism_attraction = -0.5
+				}
+			}
+		}
+	}
+	interactions = {
+		tourism_adm_button = {
+			gui = tourism_adm_button
+			trigger = {
+				adm_power_cost = 50
+				NOT = {
+					has_government_power = {
+						mechanic_type = tourism_mechanic
+						power_type = tourism_attraction
+						value = 100
+					}
+				}
+			}
+			effect = {
+				adm_power_cost = 50
+				add_government_power = {
+					mechanic_type = tourism_mechanic
+					power_type = tourism_attraction
+					value = 5
+				}
+				add_country_modifier = {
+					name = tourism_festival
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+		}
+		tourism_dip_button = {
+			gui = tourism_dip_button
+			trigger = {
+				dip_power_cost = 50
+				NOT = {
+					has_government_power = {
+						mechanic_type = tourism_mechanic
+						power_type = tourism_attraction
+						value = 100
+					}
+				}
+			}
+			effect = {
+				dip_power_cost = 50
+				add_government_power = {
+					mechanic_type = tourism_mechanic
+					power_type = tourism_attraction
+					value = 5
+				}
+				custom_tooltip = tourism_mil_button_tt
+				hidden_effect = {
+					every_ally = {
+						add_opinion = {
+							who = ROOT
+							modifier = opinion_invited_to_party
+						}
+					}
+				}
+			}
+			cooldown_years = 5
+		}
+		tourism_mil_button = {
+			gui = tourism_mil_button
+			trigger = {
+				mil_power = 50
+				NOT = {
+					has_government_power = {
+						mechanic_type = tourism_mechanic
+						power_type = tourism_attraction
+						value = 100
+					}
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = tourism_mechanic
+					power_type = tourism_attraction
+					value = 5
+				}
+				add_mil_power = -50
+				add_army_tradition = 5
+			}
+			cooldown_years = 5
+		}
+	}
+}

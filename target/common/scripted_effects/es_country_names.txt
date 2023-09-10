@@ -1,0 +1,125 @@
+# Audax Validator "!" Ignore_1006
+es_change_country_names = {
+	### High Rock Orcs
+	if = { 
+		limit = { tag = BB2 NOT = { culture_group = orsimer_cg } }
+		override_country_name = UMOUR_NAME
+	}
+	if = { 
+		limit = { tag = BB2 culture_group = orsimer_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = BA5 NOT = { culture_group = orsimer_cg } }
+		override_country_name = LAGAUR_NAME
+	}
+	if = { 
+		limit = { tag = BA5 culture_group = orsimer_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = BB1 NOT = { culture_group = orsimer_cg } }
+		override_country_name = EVANARA_NAME
+	}
+	if = { 
+		limit = { tag = BB1 culture_group = orsimer_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = BB0 NOT = { culture_group = orsimer_cg } }
+		override_country_name = FARRUN_NAME
+	}
+	if = { 
+		limit = { tag = BB0 culture_group = orsimer_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = BA7 NOT = { culture_group = orsimer_cg } }
+		override_country_name = NORMARIA_NAME
+	}
+	if = { 
+		limit = { tag = BA7 culture_group = orsimer_cg }
+		restore_country_name = yes
+	}
+	### Reachman Clans
+	if = { 
+		limit = { tag = NC5 NOT = { culture_group = half_blood_cg } }
+		override_country_name = KARTHWASTEN_NAME
+	}
+	if = { 
+		limit = { tag = NC5 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = NC4 NOT = { culture_group = half_blood_cg } }
+		override_country_name = HARMUGSTAHL_NAME
+	}
+	if = { 
+		limit = { tag = NC4 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = NC7 NOT = { culture_group = half_blood_cg } }
+		override_country_name = UTHMOR_NAME
+	}
+	if = { 
+		limit = { tag = NC7 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = NC3 NOT = { culture_group = half_blood_cg } }
+		override_country_name = GRETAN_NAME
+	}
+	if = { 
+		limit = { tag = NC3 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = ND2 NOT = { culture_group = half_blood_cg } }
+		override_country_name = ADISING_NAME
+	}
+	if = { 
+		limit = { tag = ND2 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = NA7 NOT = { culture_group = half_blood_cg } }
+		override_country_name = GLENMORIA_NAME
+	}
+	if = { 
+		limit = { tag = NA7 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = BD0 NOT = { culture_group = half_blood_cg } }
+		override_country_name = JEHANNA_NAME
+	}
+	if = { 
+		limit = { tag = BD0 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = ND1 NOT = { culture_group = half_blood_cg } }
+		override_country_name = SUNGARD_NAME
+	}
+	if = { 
+		limit = { tag = ND1 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = ND0 NOT = { culture_group = half_blood_cg } }
+		override_country_name = CRACKED_TUSK_NAME
+	}
+	if = { 
+		limit = { tag = ND0 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+	if = { 
+		limit = { tag = NB4 NOT = { culture_group = half_blood_cg } }
+		override_country_name = RORIKSTEAD_NAME
+	}
+	if = { 
+		limit = { tag = NB4 culture_group = half_blood_cg }
+		restore_country_name = yes
+	}
+}

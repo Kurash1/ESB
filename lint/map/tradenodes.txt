@@ -1,0 +1,264 @@
+new tradenode black_mountain = {
+	name = "Black Mountain"
+	location = black_mountain
+	areas = {
+		black_mountain
+	}
+}
+new tradenode windhelm = {
+	name = "Windhelm"
+	location = windhelm
+	areas = {
+		cronvangr mixwater gallows_rock angas_mill brandy-mug windhelm
+	}
+}
+new tradenode amol = {
+	name = "Amol"
+	location = amol
+	areas = {
+		darkwater_crossing darkwater lost_knife amol hillgrund cradlecrush broken_limb
+	}
+	outgoings = {
+		{
+			node = windhelm
+		}
+	}
+}
+new tradenode geir = {
+	name = "Geir"
+	location = ivarstead
+	areas = {
+		ivarstead nilheim geirmund honeystrand trevas_mouth sarethi angarvunde trevas_watch redwater
+	}
+	outgoings = {
+		{
+			node = amol
+		}
+	}
+}
+new tradenode honrich = {
+	name = "Honrich"
+	location = riften
+	areas = {
+		forelhost rift_pass fallowstone riften merryfair faldar isle_of_gold snow_shod heartwood
+	}
+	outgoings = {
+		{
+			node = geir
+			path = {
+				riften lake_honrich treva_river lake_geir ivarstead
+			}
+			control = {
+				1980.000000 1809.000000 1968.000000 1800.000000 1943.000000 1808.000000 1937.000000 1815.000000 1936.000000 1822.000000 1926.000000 1827.000000 1915.000000 1827.000000 1901.000000 1825.000000 1894.000000 1838.000000 1883.000000 1844.000000 1876.000000 1848.000000 1863.000000 1851.000000
+			}
+		}
+	}
+}
+new tradenode kynesgrove = {
+	name = "Kynesgrove"
+	location = kynesgrove
+	areas = {
+		kynesgrove narzulbur mzulft steamcrag akawatch bonestrew
+	}
+	outgoings = {
+		{
+			node = windhelm
+		}
+	}
+}
+new tradenode ysgramoors_teeth = {
+	name = "Ysgramoors Teeth"
+	location = shors_stone
+	areas = {
+		greenwall ruunvald shors_stone autumnshade clearspring snapleg mistwatch northwind ansilvund
+	}
+	outgoings = {
+		{
+			node = honrich
+		}
+		{
+			node = geir
+		}
+		{
+			node = kynesgrove
+		}
+		{
+			node = amol
+		}
+	}
+}
+new tradenode white_river = {
+	name = "White River"
+	location = whiterun
+	areas = {
+		honningbrew whiterun white_watch long_road shearpoint fellglow white_river_watch valtheim
+	}
+	outgoings = {
+		{
+			node = amol
+		}
+	}
+}
+new tradenode illinalta = {
+	name = "Lake Illinalta"
+	location = lake_illinalta
+	areas = {
+		half_moon lakeview helgen_step riverwood anise bleak_falls
+	}
+	outgoings = {
+		{
+			node = white_river
+		}
+	}
+}
+new tradenode kreath_forest = {
+	name = "Kreath Forest"
+	location = falkreath
+	areas = {
+		falkreath halldir cracked_tusk bilegulch helgen bloodlet
+	}
+	outgoings = {
+		{
+			node = illinalta
+		}
+	}
+}
+new tradenode jerall = {
+	name = "Jerall"
+	location = orphan_rock
+	areas = {
+		arcwind autumnwatch east_haemar orphan_rock neugrad
+	}
+	outgoings = {
+		{
+			node = kreath_forest
+		}
+		{
+			node = geir
+		}
+	}
+}
+new tradenode lake_yorgrim = {
+	name = "Lake Yorgrim"
+	location = nightgate
+	areas = {
+		kastav yorgrim_overlook irkngthand nightgate korvanjund
+	}
+	outgoings = {
+		{
+			node = windhelm
+		}
+	}
+}
+new tradenode bleakrock = {
+	name = "Bleackrock"
+	location = bleakrock_isle
+	areas = {
+		holly-frost dunmeth_pass eastfield snow_veil bleakrock_isle
+	}
+}
+new tradenode skyborn = {
+	name = "Skyborn"
+	location = bromjunaar
+	areas = {
+		bromjunaar silent_moons halted_stream volunruud loreius lord_hill
+	}
+}
+new tradenode greymoor = {
+	name = "Greymoor"
+	location = lydvild
+	areas = {
+		bleakwind greymoor granitehill sleeping_tree gjukar rorikstead
+	}
+}
+new tradenode hjaal = {
+	name = "Hjaal"
+	location = hjaals_tooth
+	areas = {
+		hamvirs_rest greenspring_hollow rannveigs_fast swindler talking_stone hjaals_teeth hjaal_river_passage
+	}
+}
+new tradenode winterhold = {
+	name = "Winterhold"
+	location = winterhold
+	areas = {
+		stillborn_cave bleak_coast whistling_mine winterhold japhets_folly skytemple the_chill
+	}
+}
+new tradenode saarthal = {
+	name = "Saarthal"
+	location = saarthal
+	areas = {
+		alftand saarthal ysgramoors_tomb pilgrims_coast yngvild iron_coast
+	}
+}
+new tradenode anthor = {
+	name = "Anthor"
+	location = anthor_peak
+	areas = {
+		anthor sightless_hills north_wayward
+	}
+}
+new tradenode giants_gap = {
+	name = "Giant's Gap"
+	location = dunstad
+	areas = {
+		old_yorgrim dunstad fellhammer nightcaller driftshade
+	}
+}
+new tradenode dawnstar = {
+	name = "Dawnstar"
+	location = dawnstar
+	areas = {
+		red_road dawnstar dawn_sanctuary pale_coast high_gate north_isles
+	}
+}
+new tradenode stonehills = {
+	name = "Stonehills"
+	location = stonehills
+	areas = {
+		ustengrav stonehills kjenstag myrwatch southern_morthal northern_morthal
+	}
+}
+new tradenode solitude = {
+	name = "Solitude"
+	location = solitude
+	areas = {
+		solitude_proper solitude_countryside dragon_bridge rivers_horn twin_bridges drajkmyr_marsh snowhawk snowhawk_forest
+	}
+}
+new tradenode northwatch = {
+	name = "Northwatch"
+	location = northwatch
+	areas = {
+		solitude_coast shadowgreen ravenscar widows_watch northwatch outer_archipelago castle_volkihar volskygge snowpeaks hraggstad kilkreath
+	}
+}
+new tradenode karthwasten = {
+	name = "Karthwasten"
+	location = karthwasten
+	areas = {
+		silverway mor_khazgur bruca bthar_zel harmugstahl dragon_bridge_overlook broken_tower karthwasten dragontooth bthardamz reach_camp karthald
+	}
+}
+new tradenode markarth = {
+	name = "Markarth"
+	location = markarth
+	areas = {
+		ragnvald kolskeggr markarth reachwater reachcliff karthspire sundered_towers
+	}
+}
+new tradenode druadach = {
+	name = "Druadach"
+	location = valthume
+	areas = {
+		hag_rock dushnikh_yal arkngthamz valthume lost_valley
+	}
+}
+new tradenode the_moldering = {
+	name = "The Moldering"
+	location = moldering
+	areas = {
+		lower_sungard sungard old_hroldan serpents_bluff moldering highpoint
+	}
+}

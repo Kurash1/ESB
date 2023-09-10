@@ -1,0 +1,30 @@
+bi_yearly_events += {
+	100 = nord_events.1
+}
+new event_modifier snow_whale_spotted = {
+	name = "Snow Whale Spotted"
+	modifier = {
+		global_unrest = -2
+	}
+}
+new country_event nord_events.1 = {
+	inherit = random_event
+	title = "Snow Whale Spotted"
+	desc = ""
+	picture = SNOW_WHALE_eventPicture
+	trigger = {
+		culture_group = culture_groups:nord
+	}
+	options = {
+		{
+			name = "What is this Powder?"
+			effect = {
+				add_prestige = -10
+				add_country_modifier = {
+					name = snow_whale_spotted
+					duration = 730
+				}
+			}
+		}
+	}
+}

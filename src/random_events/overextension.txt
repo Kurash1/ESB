@@ -1,0 +1,273 @@
+on_actions:on_overextension_pulse += {
+	random_events = {
+		100 = overextension.1
+		100 = overextension.2
+		100 = overextension.3
+		100 = overextension.4
+		100 = overextension.5
+		100 = overextension.6
+		100 = overextension.7
+		100 = overextension.8
+		100 = overextension.9
+		100 = overextension.10
+	}
+}
+new country_event overextension.1 = {
+	inherit = random_event
+	title = "Troops Deserting"
+	desc = "Our infamy is causing widespread resent of our war effort. A lot of men are basically running to the forest instead of reporting for duty."
+	picture = ES_MILITARY_CAMP_1_eventPicture
+	options = {
+		{
+			name = "They would have been cowards anyway."
+			effect = {
+				add_war_exhaustion = 1
+				add_yearly_manpower = -0.5
+			}
+		}
+	}
+}
+new country_event overextension.2 = {
+	inherit = random_event
+	title = "Widespread Opposition"
+	desc = "Our nation is extremely infamous, and there are a lot of people in $COUNTRY$ that have taken exception to this."
+	picture = STREET_RIOT_eventPicture
+	trigger = {
+		stability = -2
+	}
+	options = {
+		{
+			name = "We need better whips..."
+			effect = {
+				add_stability = -1
+			}
+		}
+	}
+}
+new country_event overextension.3 = {
+	inherit = random_event
+	title = "Bad Reputation!"
+	desc = "Our recent strategy to carve new provinces out of whoever happens to be in the way surprisingly seems to have had a somewhat negative effect on our standing among our fellow nations."
+	picture = ES_DIPLOMATIC_MAP_eventPicture
+	trigger = {
+		prestige = 0
+	}
+	options = {
+		{
+			name = "They are overreacting as always!"
+			effect = {
+				add_prestige = -25
+			}
+		}
+	}
+}
+new country_event overextension.4 = {
+	inherit = random_event
+	title = "Inflation"
+	desc = "The state of constant war has eroded our economy and now inflation is spiraling out of control!"
+	picture = ES_COINS_eventPicture
+	trigger = {
+		NOT = {
+			inflation = 50
+		}
+	}
+	options = {
+		{
+			name = "Try minting more coins!"
+			effect = {
+				add_inflation = 1
+			}
+		}
+	}
+}
+new country_event overextension.5 = {
+	inherit = random_event
+	title = "Officers Deserting"
+	desc = "Disillusioned by the repeated and seemingly aimless wars of $MONARCH$, many officers in the army have deserted to seek better assignments elsewhere."
+	picture = ES_SWORDS_ON_TABLE_eventPicture
+	trigger = {
+		army_tradition = 10
+	}
+	options = {
+		{
+			name = "Bah, I'll lead the army myself!"
+			effect = {
+				add_army_tradition = -10
+			}
+		}
+	}
+}
+new country_event overextension.6 = {
+	inherit = random_event
+	title = "Merchants Resented"
+	desc = "Some countries are apparently so appalled by our foreign policy that they've decided to retaliate by assassinating our merchants in an attempt to strike at our finances!\n\nWhat makes it even more shocking is that it happens even in our own Trade Nodes..."
+	picture = ES_CHOICE_OF_BRIBE_eventPicture
+	trigger = {
+		num_of_merchants = 1
+		any_active_trade_node = {
+			has_merchant = PREV
+			NOT = {
+				has_trade_modifier = {
+					who = ROOT
+					name = merchant_recalled
+				}
+			}
+		}
+	}
+	options = {
+		{
+			name = "Then I'll conquer them too!"
+			effect = {
+				random_active_trade_node = {
+					limit = {
+						NOT = {
+							has_trade_modifier = {
+								who = ROOT
+								name = merchant_recalled
+							}
+						}
+						has_merchant = PREV
+					}
+					if = {
+						limit = {
+							trade_share = {
+								country = ROOT
+								share = 5
+							}
+						}
+						add_trade_node_income = -10
+					}
+					add_trade_modifier = {
+						who = root
+						duration = 3650
+						power = -10
+						key = merchant_recalled
+					}
+				}
+			}
+		}
+	}
+}
+new country_event overextension.7 = {
+	inherit = random_event
+	title = "Merchants Assassinated!"
+	desc = "Some countries are apparently so appalled by our foreign policy that they've decided to retaliate by assassinating our merchants in an attempt to strike at our finances!\n\nWhat makes it even more shocking is that it happens even in our own Trade Nodes..."
+	picture = ES_DEAD_HEIR_eventPicture
+	trigger = {
+		num_of_merchants = 1
+		any_active_trade_node = {
+			has_merchant = PREV
+			NOT = {
+				has_trade_modifier = {
+					who = ROOT
+					name = merchant_recalled
+				}
+			}
+		}
+	}
+	options = {
+		{
+			name = "Heads will roll! Hopefully not mine..."
+			effect = {
+				random_active_trade_node = {
+					limit = {
+						has_merchant = PREV
+						NOT = {
+							has_trade_modifier = {
+								who = ROOT
+								name = merchant_recalled
+							}
+						}
+					}
+					add_trade_modifier = {
+						who = root
+						duration = 3650
+						power = -10
+						key = merchant_recalled
+					}
+				}
+			}
+		}
+	}
+}
+new country_event overextension.8 = {
+	inherit = random_event
+	title = "Legitimacy Questioned"
+	desc = "The bloodthirst shown by $MONARCH$ has ruined the reputation of $COUNTRY$ in the eyes of the world, and now our own subjects are starting to question the legitimacy of such a ruthless ruler."
+	picture = ES_HEIR_CROWN_DEATH_eventPicture
+	trigger = {
+		legitimacy = 15
+		government = monarchy
+		is_lesser_in_union = no
+	}
+	options = {
+		{
+			name = "Tell my heir to start worrying..."
+			effect = {
+				add_legitimacy = -15
+			}
+		}
+	}
+}
+new country_event overextension.9 = {
+	inherit = random_event
+	title = "Magistrates Resigns"
+	desc = "Magistrates are the very sinews of a country, and unfortunately all ours are resigning!\n\n They claim this to be a protest to the burden of never-ending wars that has been laid upon them."
+	picture = EMPTY_TABLE_1_eventPicture
+	trigger = {
+		dip_power = 10
+	}
+	options = {
+		{
+			name = "I can do whatever they did myself!"
+			effect = {
+				add_dip_power = -50
+			}
+		}
+	}
+}
+new country_event overextension.10 = {
+	inherit = random_event
+	title = "Advisor Resigns"
+	desc = "Horrified by our conquest-bent foreign policy, a leading court adviser has resigned and left the country!"
+	picture = EMPTY_TABLE_2_eventPicture
+	trigger = {
+		OR = {
+			advisor = philosopher
+			advisor = natural_scientist
+			advisor = artist
+			advisor = statesman
+		}
+	}
+	options = {
+		{
+			name = "Typical naysayer... Good riddance!"
+			effect = {
+				if = {
+					limit = {
+						advisor = philosopher
+					}
+					remove_advisor = philosopher
+				}
+				if = {
+					limit = {
+						advisor = natural_scientist
+					}
+					remove_advisor = natural_scientist
+				}
+				if = {
+					limit = {
+						advisor = artist
+					}
+					remove_advisor = artist
+				}
+				if = {
+					limit = {
+						advisor = statesman
+					}
+					remove_advisor = statesman
+				}
+			}
+		}
+	}
+}

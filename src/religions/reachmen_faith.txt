@@ -1,0 +1,18 @@
+new religion reachman_faith = {
+	name = "Reachman Faith"
+	desc = ""
+	icon = 22
+	color = {
+		239 110 217
+	}
+	heretic = {
+		OLD_GODS_CULT_HERETIC
+	}
+	country = {
+		advisor_cost = -0.25
+		army_tradition = 0.5
+	}
+	province = {
+	}
+	religious_group = reachman_group
+}

@@ -1,0 +1,105 @@
+new religion nordic_pantheon = {
+	name = "Nordic Pantheon"
+	desc = ""
+	icon = 3
+	color = {
+		77 145 138
+	}
+	heretic = {
+		NORDIC_PANTHEON_HERETIC
+	}
+	country = {
+		land_forcelimit_modifier = 0.10
+		province_warscore_cost = -0.15
+	}
+	province = {
+		local_missionary_strength = -0.015
+	}
+	personal_deity = yes
+	hre_religion = yes
+	religious_group = nordic_group
+}
+new personal_deity kyne = {
+	name = "Kyne"
+	desc = "Kyne, or Kaan in the dragon language, is the Nordic goddess of the Storm, widow of Shor, the Blessed Warrior-Wife, and a favored god of warriors. She is one of the Hearth Gods, and is considered the chief deity of the Nordic pantheon.As the goddess of the Storm, she is strongly associated with wind and rain, and is thought to control both forces, even when they bring misery.The ancient Nords associated her with the hawk."
+	sprite = 1
+	modifiers = {
+		shock_damage = 5%
+		movement_speed = 10%
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity dibella = {
+	name = "Dibella"
+	desc = "Dibella is the Goddess of Beauty  and teaches mortals to seek truth through beauty and worship. Those who follow the teachings of Dibella, and propagate beauty and promote harmony, are granted charm and grace.She is considered one of the Hearth Gods that watch over the present world . Her worship is varied as individual cults venerate different facets of her spheres of influence. In some stories, she is acclaimed as the Bed-Wife of Shor.She is represented by a moth."
+	sprite = 2
+	modifiers = {
+		diplomatic_reputation = 1
+		ae_impact = -10%
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity tsun = {
+	name = "Tsun"
+	desc = "Tsun is the Nordic god of trials against adversity. He died defending Shor from foreign gods, with his death remembered as bringing about the current world.Tsun and his brother Stuhn were both Shield-thanes of Shor.He currently guards the Whalebone Bridge to the Hall of Valor of Sovngarde.At Shor's bidding, he has taken on the role of the master of trials, asking new arrivals to the utopia to prove their strength in combat against him before they can enter the Hall, where he fights using his axe.Tsun held great respect for magic, which he called the Clever Craft, and wielded the power of the Voice.He's represented by a bear."
+	sprite = 3
+	modifiers = {
+		shock_damage_received = -2.5%
+		land_morale = 5%
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity mara = {
+	name = "Mara"
+	desc = "Mara is the goddess of mainly fertility but also agriculture and love.As Goddess of Love, Mara teaches that love provides nourishment and life to all mortals.She's the handmaiden of Kyne and concubine of Shor and is associated with the image of a wolf. "
+	sprite = 4
+	modifiers = {
+		manpower_recovery_speed = 25%
+		global_monthly_devastation = -0.1
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity jhunal = {
+	name = "Jhunal"
+	desc = "Jhunal is the Nordic god of hermetic orders, knowledge and wisdom, represented by an owl, and is one of the Hearth Gods."
+	sprite = 5
+	modifiers = {
+		idea_cost = -5%
+		monthly_magicka = 0.1
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity shor = {
+	name = "Shor"
+	desc = "The former chief of the Nordic pantheon of Skyrim, He was the king of the gods and a champion of men in their struggles against the Elves, until being treacherously slain by elven devils, and consigned to serve as god of the underworld.Shor is also associated with the Fox, one of the ancient Atmoran animal totems"
+	sprite = 6
+	modifiers = {
+		country_military_power = 1
+		legitimacy = 1
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity stuhn = {
+	name = "Stuhn"
+	desc = "Stuhn is the Nordic God of Ransom, Fraternity, and Justice, and is represented by a whale. He is the brother of Tsun and the shield-thane of Shor and is one of the Hearth Gods.Stuhn fought against the Aldmeri pantheon and showed Men how to take, and the benefits of taking, prisoners of war."
+	sprite = 7
+	modifiers = {
+		privateer_efficiency = 50%
+		loot_amount = 50%
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}

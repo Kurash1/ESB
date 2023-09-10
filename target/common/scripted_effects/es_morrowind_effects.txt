@@ -1,0 +1,63 @@
+# Audax Validator "!" Ignore_1006
+es_remove_culture_group = {
+	# Destroy provinces with culture
+	every_province = {
+		limit = {
+			culture = nord
+		}
+		cede_province = ---
+	}
+	every_country = {
+		# Kill Ruler
+		if = {
+			limit = {
+				ruler_culture = nord
+			}
+			kill_ruler = yes
+		}
+		# Kill Consort
+		if = {
+			limit = {
+				consort_culture = nord
+			}
+			kill_consort = yes
+		}
+		# Kill Heir
+		if = {
+			limit = {
+				heir_culture = nord
+			}
+			kill_heir = yes
+		}
+		# Kill ADM Advisor
+		if = {
+			limit = {
+				employed_advisor = {
+					category = ADM
+					culture = nord	
+				}
+			}
+			remove_advisor_by_category = ADM
+		}
+		# Kill DIP Advisor
+		if = {
+			limit = {
+				employed_advisor = {
+					category = DIP
+					culture = nord	
+				}
+			}
+			remove_advisor_by_category = DIP
+		}
+		# Kill MIL Advisor
+		if = {
+			limit = {
+				employed_advisor = {
+					category = MIL
+					culture = nord	
+				}
+			}
+			remove_advisor_by_category = MIL
+		}
+	}
+}

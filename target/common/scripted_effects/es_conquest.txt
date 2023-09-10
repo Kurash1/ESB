@@ -1,0 +1,508 @@
+# Audax Validator "!" Ignore_1006
+# Atmora
+# Yokuda
+# Summerset
+# Pyandonea
+# Highrock
+# Skyrim
+# Morrowind (not Vvardenfell)
+# Vvardenfell
+# Hammerfell
+# Cyrodiil
+# Valenwood
+# Elsweyr
+# Black Marsh
+# Northern Islands
+# Kamal
+# Thousand Islands
+# Po Tun
+# Upper Akavir/Tsakara
+# Coldharbour
+# Deadlands
+es_conquest_notifications_setup = {
+	every_country = {
+		limit = {
+			ai = no
+		}
+		set_country_flag = es_conquest_notifications_enabled
+	}
+	every_province = {
+		if = {
+			limit = {
+				superregion = atmora_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_atmora
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = yokuda_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_yokuda
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = summerset_islands_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_summerset_islands
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = pyandonea_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_pyandonea
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = high_rock_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_high_rock
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = skyrim_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_skyrim
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = morrowind_superregion			
+			}
+			owner = {
+				set_country_flag = es_old_conquest_morrowind
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = hammerfell_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_hammerfell
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = cyrodiil_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_cyrodiil
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = valenwood_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_valenwood
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = elsweyr_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_elsweyr
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = black_marsh_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_black_marsh
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = northern_islands_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_northern_islands
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = kamal_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_kamal
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = thousand_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_thousand
+			}
+		}
+		else_if = {
+			limit = {
+				superregion = po_tun_superregion
+			}
+			owner = {
+				set_country_flag = es_old_conquest_po_tun
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					superregion = upper_akavir_superregion
+					superregion = tsakara_superregion
+				}
+			}
+			owner = {
+				set_country_flag = es_old_conquest_akavir
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = eastern_coldharbour_lr
+					region = western_coldharbour_lr
+					region = northern_coldharbour_lr
+					region = southern_coldharbour_lr
+					region = central_coldharbour_lr
+				}
+			}
+			owner = {
+				set_country_flag = es_old_conquest_coldharbour
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					region = eastern_deadlands_lr
+					region = western_deadlands_lr
+					region = northern_deadlands_lr
+					region = southern_deadlands_lr
+				}
+			}
+			owner = {
+				set_country_flag = es_old_conquest_deadlands
+			}
+		}
+		else = {
+			#log = "Uncaught conquest location"
+			#log = debug_getname
+		}
+	}
+}
+
+es_new_conquests_effect = {
+	#log = "Running conquest effect"
+	if = {
+		limit = {
+			superregion = atmora_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_atmora }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_atmora }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_atmora
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = yokuda_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_yokuda }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_yokuda }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_yokuda
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = summerset_islands_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_summerset_islands }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_summerset_islands }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_summerset_islands
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = pyandonea_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_pyandonea }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_pyandonea }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_pyandonea
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = high_rock_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_high_rock }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_high_rock }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_high_rock
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = skyrim_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_skyrim }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_skyrim }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_skyrim
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = morrowind_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_morrowind }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_morrowind }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_morrowind
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = hammerfell_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_hammerfell }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_hammerfell }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_hammerfell
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = cyrodiil_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_cyrodiil }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_cyrodiil }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_cyrodiil
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = valenwood_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_valenwood }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_valenwood }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_valenwood
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = elsweyr_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_elsweyr }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_elsweyr }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_elsweyr
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = black_marsh_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_black_marsh }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_black_marsh }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_black_marsh
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = northern_islands_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_northern_islands }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_northern_islands }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_northern_islands
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = kamal_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_kamal }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_kamal }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_kamal
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = thousand_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_thousand }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_thousand }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_thousand
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			superregion = po_tun_superregion
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_po_tun }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_po_tun }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_po_tun
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				superregion = upper_akavir_superregion
+				superregion = tsakara_superregion
+			}
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_akavir }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_akavir }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_akavir
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				region = eastern_coldharbour_lr
+				region = western_coldharbour_lr
+				region = northern_coldharbour_lr
+				region = southern_coldharbour_lr
+				region = central_coldharbour_lr
+			}
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_coldharbour }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_coldharbour }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_coldharbour
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				region = eastern_deadlands_lr
+				region = western_deadlands_lr
+				region = northern_deadlands_lr
+				region = southern_deadlands_lr
+			}
+			NOT = {
+				owner = { has_country_flag = es_new_conquest_deadlands }
+			}
+			NOT = {
+				owner = { has_country_flag = es_old_conquest_deadlands }
+			}
+		}
+		owner = {
+			set_country_flag = es_new_conquest_deadlands
+			set_country_flag = es_has_new_conquest
+		}
+	}
+	else = {
+		#log = "Uncaught conquest location"
+		#log = debug_getname
+	}
+}

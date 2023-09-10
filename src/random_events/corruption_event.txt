@@ -1,0 +1,757 @@
+bi_yearly_events += {
+	100 = corruption_event.1
+	100 = corruption_event.2
+	100 = corruption_event.3
+	100 = corruption_event.4
+	100 = corruption_event.5
+	100 = corruption_event.6
+	100 = corruption_event.7
+	100 = corruption_event.8
+	100 = corruption_event.9
+	100 = corruption_event.10
+	100 = corruption_event.11
+	100 = corruption_event.12
+	100 = corruption_event.13
+	100 = corruption_event.14
+	100 = corruption_event.15
+	100 = corruption_event.16
+	100 = corruption_event.17
+	100 = corruption_event.18
+	100 = corruption_event.19
+	100 = corruption_event.20
+	100 = corruption_event.21
+}
+new event_modifier trusted_merchants = {
+	name = "Trusted Merchants"
+	modifier = {
+		global_trade_power = 0.10
+	}
+}
+new country_event corruption_event.1 = {
+	inherit = random_event
+	title = "The Honest Merchants of [Root.GetName]"
+	desc = "While many traders are known for cheating countrymen and foreigners alike, lying about the quality of goods and making fraudulent promises, [Root.GetAdjective] merchants are well known to be trustworthy, if competitive. Although they may sometimes cut deals that benefit themselves and not their trade partners, they rarely lie or take bribes. This has made us the first choice of traders around the world."
+	picture = ES_DOCKS_MERCHANT_eventPicture
+	trigger = {
+		NOT = {
+			corruption = 1
+		}
+		NOT = {
+			yearly_corruption_increase = 0.001
+		}
+		NOT = {
+			has_country_modifier = trusted_merchants
+		}
+		stability = 3
+	}
+	options = {
+		{
+			name = "Why would we lie when we have the best offers?"
+			effect = {
+				add_country_modifier = {
+					name = trusted_merchants
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+new event_modifier honest_administrators = {
+	name = "Honest Administrators"
+	modifier = {
+		state_maintenance_modifier = -0.1
+	}
+}
+new country_event corruption_event.2 = {
+	inherit = random_event
+	title = "Trust Your Neighbor"
+	desc = "Although citizens are encouraged to show trust and good faith in their exchanges, the reality in many nations is that it's a risk people cannot afford to take. This, however, is not the case in [Root.GetName]. We have successfully stamped out corruption on so many levels in society, people not only trust officials to do their jobs without the extra help of a bribe but they also trust each other more in general exchanges. This general belief in the honesty of others is the very thread from which the fabric of society is woven, and our country is a shining example of it."
+	picture = ES_INCIDENT_10
+	trigger = {
+		NOT = {
+			corruption = 1
+		}
+		NOT = {
+			yearly_corruption_increase = 0.001
+		}
+		NOT = {
+			has_country_modifier = honest_administrators
+		}
+		stability = 3
+	}
+	options = {
+		{
+			name = "As stipulated in [Root.Religion.GetName] teachings."
+			effect = {
+				add_country_modifier = {
+					name = honest_administrators
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.3 = {
+	inherit = random_event
+	title = "Rigorous Researchers"
+	desc = "Academic institutions are not immune to corruption, and the profits that can be made by abusing positions of great influence can stand in the way of creating a good environment for research. However, [Root.GetAdjective] scientists are largely above this, focusing on genuine intellectual achievements above titles and financial contributions. The lack of corruption in society allows us to explore and invent without being impeded by selfish interests."
+	picture = ES_SCRIBE_2_eventPicture
+	trigger = {
+		stability = 3
+		NOT = {
+			corruption = 1
+		}
+		NOT = {
+			yearly_corruption_increase = 0.001
+		}
+	}
+	options = {
+		{
+			name = "The search for knowledge must be valued in itself."
+			effect = {
+				add_adm_power = 40
+				add_dip_power = 40
+				add_mil_power = 40
+			}
+		}
+	}
+}
+new country_event corruption_event.4 = {
+	inherit = random_event
+	title = "An Honorable People"
+	desc = "Few are the countries in the world who do not claim to value honor and justice, but even fewer are the countries who actually live up to these ideals. However, the lack of large-scale and everyday corruption in [Root.GetName] has made it one of these rare places where principles matter over personal gain. Even abroad, [Root.GetAdjective] expatriates are sought-after for positions of trust, as our people are known for adherence to duty and rejecting attempted bribes. Who else can claim to live up to these ideals?"
+	picture = ES_SHARED_INTERESTS_eventPicture
+	trigger = {
+		NOT = {
+			corruption = 1
+		}
+		NOT = {
+			yearly_corruption_increase = 0.001
+		}
+		stability = 3
+	}
+	options = {
+		{
+			name = "Few indeed."
+			effect = {
+				add_prestige_or_monarch_power = {
+					amount = 20
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.5 = {
+	inherit = random_event
+	title = "Incorruptible"
+	desc = "Not everyone who aids the enemy knows the true nature of their transgression. Spies may be loyal to a foreign power, but many of their information sources are people who are simply paid well for telling secrets they shouldn't, without understanding who makes use of them. However, in [Root.GetName], corruption has been all but extinguished. Spies who recently tried to compromise our administration through bribery and extortion have found themselves reported instead of aided by our officials, and are now at our mercy."
+	picture = ES_SECRET_SOCIETY_eventPicture
+	trigger = {
+		NOT = {
+			corruption = 1
+		}
+		NOT = {
+			yearly_corruption_increase = 0.001
+		}
+		stability = 3
+		any_known_country = {
+			has_spy_network_in = {
+				who = ROOT
+				value = 25
+			}
+		}
+	}
+	options = {
+		{
+			name = "Death to spies!"
+			effect = {
+				random_known_country [
+					has_spy_network_in = {
+						who = ROOT
+						value = 25
+					}
+				] {
+					add_spy_network_in = {
+						who = ROOT
+						value = -25
+					}
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.6 = {
+	inherit = random_event
+	title = "Corrupt Taxmen"
+	desc = "Those who handle large sums of money have always been tempted to claim more than their share of it, and tax collectors are no exception. However, while money getting lost along the way may be a price we can afford to pay, affluent citizens have now found that they can avoid some taxes altogether by paying large bribes to taxmen instead. Currently this seems to be a scheme supported by some of the older collectors trying to retire comfortably. While it is costly, we might be able to avoid spending time and effort on a detailed investigation and just wait it out."
+	picture = ES_PARLIAMENT_BRIBES_eventPicture
+	trigger = {
+		corruption = 2
+		NOT = {
+			corruption = 10
+		}
+	}
+	options = {
+		{
+			name = "Investigate and replace them immediately."
+			effect = {
+				add_adm_power = -40
+			}
+		}
+		{
+			name = "Let them retire, they've served us well in the past."
+			effect = {
+				add_years_of_income = -0.25
+			}
+		}
+	}
+}
+new country_event corruption_event.7 = {
+	inherit = random_event
+	title = "Corrupt Advisor"
+	desc = "[Root.GetName] may be plagued by corruption, but we try to ensure that those closest to the [Root.Monarch.GetTitle] can be trusted, at the very least. Try and fail, it seems, since one of [Root.Monarch.GetName]'s advisors, [Root.GetEventAdvisorName], was recently caught taking large bribes from people already wielding great influence in our country to provide the government with advice slanted to advance their interests. How shall we respond to this betrayal?"
+	picture = ES_SPYMASTER_eventPicture
+	trigger = {
+		corruption = 2
+		NOT = {
+			corruption = 10
+		}
+		has_advisor = yes
+	}
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				1 = {
+					trigger = {
+						employed_advisor = {
+							category = ADM
+						}
+					}
+					set_country_flag = advisor_events_adm
+				}
+				1 = {
+					trigger = {
+						employed_advisor = {
+							category = DIP
+						}
+					}
+					set_country_flag = advisor_events_dip
+				}
+				1 = {
+					trigger = {
+						employed_advisor = {
+							category = MIL
+						}
+					}
+					set_country_flag = advisor_events_mil
+				}
+			}
+		}
+	}
+	options = {
+		{
+			name = "Publicly expose these lies and prepare an execution."
+			effect = {
+				reduce_meritocracy_effect = yes
+				trigger_switch = {
+					on_trigger = has_country_flag
+					advisor_events_adm = {
+						kill_advisor_by_category_effect = {
+							ADM = yes
+						}
+					}
+					advisor_events_dip = {
+						kill_advisor_by_category_effect = {
+							DIP = yes
+						}
+					}
+					advisor_events_mil = {
+						kill_advisor_by_category_effect = {
+							MIL = yes
+						}
+					}
+				}
+				add_prestige = -10
+			}
+		}
+		{
+			name = "Arrange for a quiet retirement in house arrest."
+			effect = {
+				reduce_meritocracy_effect = yes
+				trigger_switch = {
+					on_trigger = has_country_flag
+					advisor_events_adm = {
+						remove_advisor_by_category = ADM
+						add_adm_power = -50
+					}
+					advisor_events_dip = {
+						remove_advisor_by_category = DIP
+						add_dip_power = -50
+					}
+					advisor_events_mil = {
+						remove_advisor_by_category = MIL
+						add_mil_power = -50
+					}
+				}
+			}
+		}
+		{
+			name = "A reprimand. Biased advice is still advice."
+			effect = {
+				reduce_meritocracy_effect = yes
+				trigger_switch = {
+					on_trigger = has_country_flag
+					advisor_events_adm = {
+						add_adm_power = -100
+					}
+					advisor_events_dip = {
+						add_dip_power = -100
+					}
+					advisor_events_mil = {
+						add_mil_power = -100
+					}
+				}
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			trigger_switch = {
+				on_trigger = has_country_flag
+				advisor_events_adm = {
+					clr_country_flag = advisor_events_adm
+				}
+				advisor_events_dip = {
+					clr_country_flag = advisor_events_dip
+				}
+				advisor_events_mil = {
+					clr_country_flag = advisor_events_mil
+				}
+			}
+		}
+	}
+}
+new event_modifier recruited_smugglers = {
+	name = "Recruited Smugglers"
+	modifier = {
+		spy_offence = 0.25
+	}
+}
+new event_modifier smugglers_dominating = {
+	name = "Smugglers Dominating"
+	modifier = {
+		global_tax_modifier = -0.1
+		trade_efficiency = -0.1
+	}
+}
+new country_event corruption_event.8 = {
+	inherit = random_event
+	title = "Wily Smugglers"
+	desc = "Smuggling is an activity even the most simple-minded can decide to pursue - the only difference is that they get caught. More worrying are those with genuine talent in knowing who to bribe and what lies to tell to elude capture, and as smuggling becomes more profitable, these tend to grow in numbers.\n\nWe have been on the trail of a particularly clever band of smugglers recently, and the network of deceit they have managed to create to continue their operations continues to surprise us. How should we go about resolving this?"
+	picture = ES_ESTATE_MERCHANT_eventPicture
+	trigger = {
+		corruption = 2
+		NOT = {
+			corruption = 10
+		}
+		NOT = {
+			has_country_modifier = recruited_smugglers
+		}
+		NOT = {
+			has_country_modifier = smugglers_dominating
+		}
+	}
+	options = {
+		{
+			name = "Send our best men to track down their collaborators."
+			effect = {
+				add_dip_power = -30
+				add_years_of_income = -0.1
+			}
+		}
+		{
+			name = "Send an agent to recruit them as spies."
+			effect = {
+				add_country_modifier = {
+					name = recruited_smugglers
+					duration = 3650
+				}
+				add_prestige = -10
+				add_years_of_income = -0.1
+			}
+		}
+		{
+			name = "Ignore them for the time being."
+			effect = {
+				add_country_modifier = {
+					name = smugglers_dominating
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.9 = {
+	inherit = random_event
+	title = "[culture_province.Culture.GetName] Community Distrusts Us"
+	desc = "[Root.GetName] may not house the most egregious liars and traitors in the world, but compared to some other countries, our people do tend to be a bit more easily bribed into abusing their authority. Most of the [Root.Owner.GetAdjective] population accepts the difficulties and, to the dishonest, occasional benefits this brings.\n\nThe [culture_province.Culture.GetName] people in [culture_province.GetName] see things differently. They lament this state of things as a consequence of letting the easily corrupted [Root.Culture.GetName] people rule the nation, claiming that the country ruled by their own people doesn't suffer the same fate. Some of them are suggesting that they would be better off seceding."
+	picture = ES_FAMINE_VILLAGE
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_owner_culture = no
+				}
+				save_event_target_as = culture_province
+			}
+		}
+	}
+	trigger = {
+		corruption = 10
+		any_known_country = {
+			primary_culture = ROOT
+			NOT = {
+				corruption = 0.25
+			}
+		}
+		any_owned_province = {
+			has_owner_culture = no
+		}
+	}
+	options = {
+		{
+			name = "Apologize for our failure and promise to improve."
+			effect = {
+				add_prestige = -10
+				event_target:culture_province = {
+					add_local_autonomy = 10
+				}
+			}
+		}
+		{
+			name = "Reject this as uneducated prejudice."
+			effect = {
+				event_target:culture_province = {
+					add_unrest = 4
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.10 = {
+	inherit = random_event
+	title = "Corrupt Ambassador"
+	desc = "Our representatives to other countries should represent our very best people, but unfortunately, this is not always the case. Sometimes people are given posts as ambassadors because the administration wants them far away, and at worst, there is good reason for this.\n\nAs it turns out, one such ambassador has spent his well-paid exile further enriching himself with bribes. While this is not exactly improving our reputation with the locals, he has maintained important connections here at home and will not be dismissed without causing some trouble."
+	picture = ES_FOREIGN_GUILD_MEMBER_eventPicture
+	trigger = {
+		corruption = 2
+		NOT = {
+			corruption = 10
+		}
+		num_of_allies = 1
+	}
+	options = {
+		{
+			name = "He has caused more trouble where he is. Get rid of him."
+			effect = {
+				add_dip_power = -30
+			}
+		}
+		{
+			name = "They'll have to get used to it."
+			effect = {
+				random_ally = {
+					add_opinion = {
+						who = ROOT
+						modifier = corrupt_ambassador
+					}
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.11 = {
+	inherit = random_event
+	title = "[trade_goods_province.GetTradeGoodsName] 'Disappearing'"
+	desc = "With corruption ever on the rise in [Root.GetName], an increasing amount of [trade_goods_province.GetTradeGoodsName] has been disappearing from our legitimate trade networks onto the black market. While some blame too restrictive regulations and tariffs, part of the problem is clearly that these crimes are simply too easy to get away with. When silence is easily bought, secrets are easy to keep, and those secrets are growing more and more costly for [Root.GetName]."
+	picture = ES_TABLE_MONEY_eventPicture
+	trigger = {
+		corruption = 10
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						`trade_goods` = unknown
+					}
+				}
+				save_event_target_as = trade_goods_province
+			}
+		}
+	}
+	options = {
+		{
+			name = "We must regain control of the [trade_goods_province.GetTradeGoodsName] market."
+			effect = {
+				every_owned_province [`trade_goods` = event_target:trade_goods_province]
+				{
+					add_province_modifier = {
+						name = "embezzled_goods"
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.12 = {
+	inherit = random_event
+	title = "Corrupt Generals"
+	desc = "Military experience and expertise should be the main, if not only, factors influencing who rises through the ranks of the [Root.GetAdjective] army. As our society grew more and more corrupt, practices drew further and further away from this ideal. The reality today is that a position as general carries a lot of prestige, and those with money or connections are more than willing to use them to secure such a position. With the existing leadership being easily influenced with these tools, they can.\n\nFrom time to time, someone may rise through the ranks who have actually earned their title, but many of the finest minds in strategic matters will never have a chance to lend their skills to us."
+	picture = ES_MILITARY_ADVISOR_eventPicture
+	trigger = {
+		corruption = 10
+	}
+	options = {
+		{
+			name = "Such an unjust world."
+			effect = {
+				add_army_tradition = -10
+			}
+		}
+	}
+}
+new country_event corruption_event.13 = {
+	inherit = random_event
+	title = "Corrupt Admirals"
+	desc = "Those who command our ships in battle or are sent to explore lands to be claimed by the [Root.Monarch.GetTitle] should be chosen from the bravest and wisest in our navy. This is not the case today. From their very first day on a ship, sailors see money illicitly changing hands and protocol being broken as a matter of course, and quickly learn that both the letter and the spirit of the law carry little weight in [Root.GetName] when silver is put on the other pan of the scales.\n\nThose who do not learn quickly make enemies. To advance through the ranks of the [Root.GetAdjective] navy, you need to learn to play this system, and those who rise to the top are rarely those we wished would be there."
+	picture = ES_PIRATE_CAPTAIN_1_eventPicture
+	trigger = {
+		corruption = 10
+		any_owned_province = {
+			has_port = yes
+		}
+		navy_size = 1
+	}
+	options = {
+		{
+			name = "No wonder we have mutinies."
+			effect = {
+				add_navy_tradition = -10
+			}
+		}
+	}
+}
+new event_modifier distrusted_merchants = {
+	name = "Distrusted Merchants"
+	modifier = {
+		global_trade_power = -0.10
+	}
+}
+new country_event corruption_event.14 = {
+	inherit = random_event
+	title = "Foreign Merchants Distrust Us"
+	desc = "Every trader tries to cut a deal that will be to their benefit, and many are willing to bend the truth a little to succeed. While this is expected, merchants from [Root.GetName] have a reputation abroad that goes beyond this into outright lies and fraud. The corruption which has become a part of how we do business can be shocking to outsiders, which has led to traders worldwide choosing to avoid us when possible.\n\nIt's too late to do anything about our present image, as the damage is already done, but perhaps we can stop this from reoccurring if we stamp out the casual corruption in our society."
+	picture = PIRATE_DEAL_eventPicture
+	trigger = {
+		corruption = 10
+		NOT = {
+			has_country_modifier = distrusted_merchants
+		}
+	}
+	options = {
+		{
+			name = "We're not dishonest, just pragmatic!"
+			effect = {
+				add_country_modifier = {
+					name = distrusted_merchants
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.15 = {
+	inherit = random_event
+	title = "Governmental Functions Breaking Down"
+	desc = "A corrupt administration operates less to sustain itself and more to sustain its members. Consequently, as it begins to fall apart, the immediate reaction of most officials is not to save what they all stand to lose, but to grab what they can while it lasts.\n\n[Root.GetName] may not be on its way to a complete collapse, but the severe corruption reaching all the way from the lowest clerk to those closest to the [Root.Monarch.GetTitle] has corroded several crucial governmental functions, leading to a widespread destabilization of the country. This has been a long time coming and we all pay the price."
+	picture = ES_NOBLE_COUNCIL_eventPicture
+	trigger = {
+		corruption = 10
+	}
+	options = {
+		{
+			name = "This cannot be allowed to continue."
+			effect = {
+				add_stability = -1
+			}
+		}
+	}
+}
+new country_event corruption_event.16 = {
+	inherit = random_event
+	title = "Mercenaries Extorting Locals"
+	desc = "During wartime, soldiers of fortune often find ways to make it home with a bit more than they are paid by raiding the land where they are sent to fight. Normally, this is not a problem for us when they are sent abroad to terrorize our enemies, but sometimes this habit is hard to break, even during peacetime. Some farmers and travelers in [hired_mercs_victim_area.GetAreaName] have complained that the [hired_merc_band.GetName], a mercenary band in our employ stationed there, have been robbing and extorting them, despite - or perhaps because of - the fact that there isn't even a war ongoing.\n\nMeddling in the ranks of mercenaries, even ones that we hired, is always a difficult matter. Their accusers are unlikely to take the matter further if we let it slide, but the question remains as to how our society will change if we allow such extortion to continue."
+	picture = ES_DESERT_RIDERS_eventPicture
+	trigger = {
+		any_hired_mercenary_company = {
+			has_company_manpower = 0.2
+			location = {
+				owned_by = root
+				is_state_core = root
+			}
+		}
+		is_at_war = no
+	}
+	immediate = {
+		hidden_effect = {
+			random_hired_mercenary_company = {
+				limit = {
+					has_company_manpower = 0.2
+					location = {
+						owned_by = root
+						is_state_core = root
+					}
+				}
+				save_event_target_as = hired_merc_band
+				location = {
+					save_event_target_as = hired_mercs_victim_area
+				}
+			}
+		}
+	}
+	options = {
+		{
+			name = "Purge the mercenary ranks of such thugs."
+			effect = {
+				add_mil_power = -50
+				event_target:hired_merc_band = {
+					add_company_manpower = -0.2
+				}
+			}
+		}
+		{
+			name = "It's part of the price our country pays for their service."
+			effect = {
+				add_corruption = 1
+				event_target:hired_mercs_victim_area = {
+					area = {
+						limit = {
+							owned_by = root
+						}
+						add_devastation = 15
+					}
+				}
+			}
+		}
+	}
+}
+new country_event corruption_event.17 = {
+	inherit = random_event
+	title = "Incompetent Administrator"
+	desc = "Matters of governmental organization have never been [Root.Monarch.GetName]'s strong suit. What a good leader does to compensate for such a known weakness is to delegate and this is exactly what our [Root.Monarch.GetTitle] has done, but the people who have handled administration in [Root.Monarch.GetHerHis] stead have proven to be more competent than honest. The government runs well enough, but tends to slowly shift its priorities towards matters which the benefactors of these irreplaceable officials find to be of importance.\n\nWith [Root.Monarch.GetName] [Root.Monarch.GetHerselfHimself] unable to fully grasp the intricacies of the matters in question, the guilty parties cannot easily be seen or removed from office. For now, we'll simply have to suffer the consequences."
+	picture = ARISTOCRATIC_OFFER_eventPicture
+	trigger = {
+		NOT = {
+			adm = 2
+		}
+	}
+	options = {
+		{
+			name = "Unfortunate that skill and honor do not always go hand in hand."
+			effect = {
+				add_corruption = 0.5
+			}
+		}
+	}
+}
+new country_event corruption_event.18 = {
+	inherit = random_event
+	title = "Overextension Exploited"
+	desc = "The rapid expansion of the [Root.GetAdjective] borders is most fortunate, but brings with it new administrative challenges. As every person familiar with the optimistic language knows, 'challenges' is the sweeter-tasting word for 'problems'. Our country has not fully adjusted to its new extent yet, and people who have noticed the confusion and poorly enforced law in these new acquisitions are reaping the benefits.\n\nThis lawlessness may eventually pass, but the temporary administrations appear to have built an unstable foundation for the future. It will take time and money to rid our society of the distrust forming in the present situation."
+	picture = ES_KING_AND_COURT_eventPicture
+	trigger = {
+		overextension_percentage = 0.75
+	}
+	options = {
+		{
+			name = "We'll have to adapt as best we can."
+			effect = {
+				add_corruption = 1
+			}
+		}
+	}
+}
+new country_event corruption_event.19 = {
+	inherit = random_event
+	title = "$TRADER$ Has Corrupt Connections"
+	desc = "We try to keep our administration free of dishonest individuals, but we cannot always account for the friends and contacts which got them to where they are. $TRADER$ has unfortunately turned out to be a good example of the problems that follow from this, being skilled and personable but somewhat gullible in $TRADER_POSS_PRONOUN$ choice of associates.\n\nRecent investigations have revealed that much of our well-built trade network relies on bribes, smuggling, and other dubious activities to reach its current level of efficiency. $TRADER$ claims to have known nothing of this, which is likely true. Nevertheless, if we decide to expose and end this, the responsibility will be $TRADER_POSS_PRONOUN$ to take."
+	picture = ES_LETTER_eventPicture
+	trigger = {
+		overextension_percentage = 0.75
+	}
+	options = {
+		{
+			name = "Failure to see through lies is also a failure."
+			effect = {
+				remove_advisor = trader
+				reduce_meritocracy_effect = yes
+				add_country_modifier = {
+					name = minor_trade_crisis
+					duration = 3650
+				}
+			}
+		}
+		{
+			name = "If it works, it works."
+			effect = {
+				add_corruption = 0.5
+				reduce_meritocracy_effect = yes
+			}
+		}
+	}
+}
+new country_event corruption_event.20 = {
+	inherit = random_event
+	title = "Bribes Growing More Accepted"
+	desc = "'What is the difference between an honest man and a fool? The fool doesn't know he is being swindled.'\n\nSo goes an increasingly common saying in [Root.GetName], the spirit of which is proven through a more sinister change in the social fabric. Bribes are beginning to be seen as a natural consequence of the market, where any action carries a price. Those who refuse to take bribes are viewed as precisely what the saying suggests: fools. Worse than fools, since they are deliberately refusing money that could be theirs. The consequence of this cynicism is that any form of power truly corrupts, and no one who believes it is immune. Not even the [Root.Monarch.GetTitle]."
+	picture = ES_PURSE_WITH_GOLD_eventPicture
+	options = {
+		{
+			name = "It's still just a saying."
+			effect = {
+				add_corruption = 0.5
+			}
+		}
+	}
+}
+new event_modifier master_thief_in_country = {
+	name = "Master Thief in Country"
+	modifier = {
+		yearly_corruption = 0.1
+		global_tax_modifier = -0.1
+	}
+}
+new country_event corruption_event.21 = {
+	inherit = random_event
+	title = "A Master Thief Appears"
+	desc = ""
+	picture = master_thief_eventPicture
+	trigger = {
+		NOT = {
+			has_country_modifier = master_thief_in_country
+		}
+	}
+	options = {
+		{
+			name = "It's still just a saying."
+			effect = {
+				add_country_modifier = {
+					name = master_thief_in_country
+					duration = 7300
+				}
+			}
+		}
+	}
+}
