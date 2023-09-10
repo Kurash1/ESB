@@ -1,4 +1,4 @@
-version="2.0.7"
+version="2.1.0"
 picture="thumbnail.png"
 replace_path="common/advisortypes"
 replace_path="common/ages"
@@ -119,6 +119,6 @@ tags={
 	"National Ideas"
 	"New Nations"
 }
-name="ESB ARC5"
+name="ESB Pre-Release"
 supported_version="1.35.*"
-remote_file_id="2836520933"
+remote_file_id="3033843064"
