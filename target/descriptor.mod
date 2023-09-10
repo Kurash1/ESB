@@ -95,7 +95,6 @@ replace_path="common/triggered_modifiers"
 replace_path="common/units"
 replace_path="common/units_display"
 replace_path="common/wargoal_types"
-
 replace_path="customizable_localization"
 replace_path="decisions"
 replace_path="events"
