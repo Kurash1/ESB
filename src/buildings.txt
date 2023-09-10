@@ -314,12 +314,12 @@ new building army_1 = {
 				full_idea_group = esb_largearmy
 				full_idea_group = esb_professionalism
 				full_idea_group = esb_longwar
+				has_reform = tier_2_conscription
 			}
 		}
 	}
 	modifier = {
 		local_manpower_modifier = 0.4
-		land_forcelimit = 1
 	}
 	ai_will_do = {
 		factor = 1
@@ -345,11 +345,13 @@ new building army_2 = {
 				full_idea_group = esb_largearmy
 				full_idea_group = esb_professionalism
 				full_idea_group = esb_longwar
+				has_reform = tier_2_conscription
 			}
 		}
 	}
 	modifier = {
 		local_manpower_modifier = 0.7
+		land_forcelimit = 1
 	}
 	ai_will_do = {
 		factor = 1
@@ -375,6 +377,7 @@ new building army_3 = {
 				full_idea_group = esb_largearmy
 				full_idea_group = esb_professionalism
 				full_idea_group = esb_longwar
+				has_reform = tier_2_conscription
 			}
 		}
 	}
@@ -401,6 +404,7 @@ new building navy_1 = {
 				full_idea_group = galle0
 				full_idea_group = handel0
 				full_idea_group = gross0
+				has_reform = tier_3_conscription
 			}
 		}
 	}
@@ -430,6 +434,7 @@ new building navy_2 = {
 				full_idea_group = galle0
 				full_idea_group = handel0
 				full_idea_group = gross0
+				has_reform = tier_3_conscription
 			}
 		}
 	}
@@ -459,6 +464,7 @@ new building navy_3 = {
 				full_idea_group = galle0
 				full_idea_group = handel0
 				full_idea_group = gross0
+				has_reform = tier_3_conscription
 			}
 		}
 	}
@@ -475,24 +481,11 @@ new building navy_3 = {
 new building road_1 = {
 	name = "Paths"
 	desc = ""
-	cost = 100
-	time = 12
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = trade_ideas
-				full_idea_group = offensive_ideas
-				full_idea_group = mobility_ideas
-				full_idea_group = imperialismus0
-			}
-		}
-	}
+	cost = 25
+	time = 3
 	modifier = {
-		local_friendly_movement_speed = 0.3
-		local_hostile_movement_speed = 0.3
-		supply_limit_modifier = 0.2
-		local_institution_spread = 0.2
+		local_friendly_movement_speed = 0.5
+		allowed_num_of_buildings = 1
 	}
 	ai_will_do = {
 		factor = 1
@@ -501,40 +494,13 @@ new building road_1 = {
 new building road_2 = {
 	name = "Roads"
 	desc = ""
-	cost = 200
-	time = 12
+	cost = 50
+	time = 3
 	make_obsolete = road_1
 	build_trigger = {
 		FROM = {
 			calc_true_if = {
-				amount = 2
-				full_idea_group = trade_ideas
-				full_idea_group = offensive_ideas
-				full_idea_group = mobility_ideas
-				full_idea_group = imperialismus0
-			}
-		}
-	}
-	modifier = {
-		local_friendly_movement_speed = 0.7
-		local_hostile_movement_speed = 0.7
-		supply_limit_modifier = 0.4
-		local_institution_spread = 0.4
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building road_3 = {
-	name = "Highway"
-	desc = ""
-	cost = 300
-	time = 12
-	make_obsolete = road_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 3
+				amount = 1
 				full_idea_group = trade_ideas
 				full_idea_group = offensive_ideas
 				full_idea_group = mobility_ideas
@@ -544,15 +510,38 @@ new building road_3 = {
 	}
 	modifier = {
 		local_friendly_movement_speed = 1.0
-		local_hostile_movement_speed = 1.0
-		supply_limit_modifier = 0.6
-		local_institution_spread = 0.6
+		allowed_num_of_buildings = 1
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building gover_1 = {
+new building road_3 = {
+	name = "Highway"
+	desc = ""
+	cost = 75
+	time = 3
+	make_obsolete = road_2
+	build_trigger = {
+		FROM = {
+			calc_true_if = {
+				amount = 2
+				full_idea_group = trade_ideas
+				full_idea_group = offensive_ideas
+				full_idea_group = mobility_ideas
+				full_idea_group = imperialismus0
+			}
+		}
+	}
+	modifier = {
+		local_friendly_movement_speed = 1.5
+		allowed_num_of_buildings = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+new building goods_1 = {
 	name = "Goods 1"
 	desc = ""
 	cost = 100
@@ -561,32 +550,40 @@ new building gover_1 = {
 		FROM = {
 			calc_true_if = {
 				amount = 1
+				full_idea_group = alteration_ideas
+				full_idea_group = enchanting_ideas
+				full_idea_group = alchemical_ideas
+				full_idea_group = esb_treasury
 			}
 		}
 	}
 	modifier = {
-		trade_goods_size_modifier = 0.15
+		trade_goods_size_modifier = 0.1
 		local_development_cost = -0.15
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building gover_2 = {
+new building goods_2 = {
 	name = "Goods 2"
 	desc = ""
 	cost = 200
 	time = 12
-	make_obsolete = gover_1
+	make_obsolete = goods_1
 	build_trigger = {
 		FROM = {
 			calc_true_if = {
 				amount = 2
+				full_idea_group = alteration_ideas
+				full_idea_group = enchanting_ideas
+				full_idea_group = alchemical_ideas
+				full_idea_group = esb_treasury
 			}
 		}
 	}
 	modifier = {
-		trade_goods_size_modifier = 0.3
+		trade_goods_size_modifier = 0.2
 		local_development_cost = -0.3
 	}
 	ai_will_do = {

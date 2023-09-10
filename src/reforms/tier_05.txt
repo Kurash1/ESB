@@ -1,0 +1,44 @@
+new government_reform tier_5_secularism = {
+	name = "Secularism"
+	desc = ""
+	icon = "man_in_writing"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+}
+new government_reform tier_5_state_religion = {
+	name = "State Religion"
+	desc = ""
+	icon = "pope"
+	allow_normal_conversion = yes
+	modifiers = {
+		missionaries = 1
+	}
+}
+on_actions:on_province_religion_converted += {
+	owner = {
+		if [has_government_mechanic = fanaticism_mechanic]
+		{
+			add_government_power = {
+				mechanic_type = fanaticism_mechanic
+				power_type = fanaticism_power
+				value = 5
+			}
+		}
+	}
+}
+new government_reform tier_5_fanaticism = {
+	name = "Fanaticism"
+	desc = ""
+	icon = "religious_permanent_revolution_reform"
+	allow_normal_conversion = yes
+	government_abilities = {
+		defineloc ability_fanaticism_mechanic = "Fanaticism"
+		defineloc fanaticism_power = "Fanaticism"
+		defineloc fanaticism_power_desc = ""
+		defineloc monthly_fanaticism_power = "Monthly Fanaticism"
+		fanaticism_mechanic
+	}
+}

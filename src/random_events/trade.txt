@@ -121,15 +121,14 @@ new country_event trade.3 = {
 		{
 			name = "They stay!"
 			effect = {
-				random_active_trade_node = {
-					limit = {
+				random_active_trade_node [
 						has_merchant = PREV
 						NOT = {
 							most_province_trade_power = {
 								tag = ROOT
 							}
 						}
-					}
+				] {
 					most_province_trade_power = {
 						add_opinion = {
 							who = root
@@ -151,15 +150,14 @@ new country_event trade.3 = {
 		{
 			name = "The merchants will keep a lower profile"
 			effect = {
-				random_active_trade_node = {
-					limit = {
+				random_active_trade_node [
 						NOT = {
 							most_province_trade_power = {
 								tag = ROOT
 							}
 						}
 						has_merchant = PREV
-					}
+				] {
 					most_province_trade_power = {
 						add_opinion = {
 							who = root
@@ -186,7 +184,7 @@ new event_modifier severe_trade_crisis = {
 new event_modifier minor_trade_crisis = {
 	name = "Minor Trade Crisis"
 	modifier = {
-		trade_efficiency = -0.25
+		trade_efficiency = -0.1
 	}
 }
 new country_event trade.4 = {
@@ -258,8 +256,7 @@ new country_event trade.5 = {
 		{
 			name = "He just could not make it..."
 			effect = {
-				random_active_trade_node = {
-					limit = {
+				random_active_trade_node [
 						NOT = {
 							strongest_trade_power = {
 								tag = ROOT
@@ -271,7 +268,7 @@ new country_event trade.5 = {
 								name = merchant_recalled
 							}
 						}
-					}
+				] {
 					add_trade_modifier = {
 						who = root
 						duration = 3650
@@ -285,14 +282,13 @@ new country_event trade.5 = {
 			name = "Save him"
 			effect = {
 				add_dip_power = -10
-				random_active_trade_node = {
-					limit = {
+				random_active_trade_node [
 						NOT = {
 							strongest_trade_power = {
 								tag = ROOT
 							}
 						}
-					}
+				] {
 					add_trade_node_income = -5
 				}
 			}
@@ -397,11 +393,10 @@ new country_event trade.8 = {
 		{
 			name = "This was not quite the plan"
 			effect = {
-				random_active_trade_node = {
-					limit = {
+				random_active_trade_node [
 						has_most_province_trade_power = root
 						has_merchant = PREV
-					}
+				] {
 					add_trade_node_income = -5
 				}
 			}
@@ -475,19 +470,18 @@ new country_event trade.10 = {
 		{
 			name = "That's too bad"
 			effect = {
-				random_active_trade_node = {
-					limit = {
-						not = {
-							has_most_province_trade_power = root
-						}
-						has_merchant = PREV
-						NOT = {
-							has_trade_modifier = {
-								who = ROOT
-								name = merchant_recalled
-							}
+				random_active_trade_node [
+					NOT = {
+						has_most_province_trade_power = root
+					}
+					has_merchant = PREV
+					NOT = {
+						has_trade_modifier = {
+							who = ROOT
+							name = merchant_recalled
 						}
 					}
+				] {
 					add_trade_modifier = {
 						who = root
 						duration = 3650

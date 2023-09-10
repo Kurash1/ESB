@@ -1,0 +1,19 @@
+new government_reform tier_7_centralized_bureaucracy = {
+	name = "Centralized Bureaucracy"
+	desc = ""
+	icon = "tax_collectors"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_autonomy = -0.1
+	}
+}
+new government_reform tier_7_decentralized_bureaucracy = {
+	name = "Decentralized Bureaucracy"
+	desc = ""
+	icon = "economy_trade"
+	allow_normal_conversion = yes
+	modifiers = {
+		num_accepted_cultures = 1
+		promote_culture_cost = -0.25
+	}
+}

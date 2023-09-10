@@ -235,6 +235,7 @@ new province verglas = {
 		214 209 188
 	}
 	history = {
+		center_of_trade = 1
 		owner = HGA
 		controller = HGA
 		add_core = HGA
@@ -347,6 +348,7 @@ new province dawnstar = {
 		136 112 123
 	}
 	history = {
+		center_of_trade = 1
 		owner = DAW
 		controller = DAW
 		add_core = DAW
@@ -544,6 +546,7 @@ new province red_road_pass = {
 		123 196 255
 	}
 	history = {
+		center_of_trade = 1
 		owner = FRO
 		controller = FRO
 		add_core = FRO
@@ -626,6 +629,7 @@ new province dunstad = {
 		159 114 238
 	}
 	history = {
+		center_of_trade = 1
 		owner = DNS
 		controller = DNS
 		add_core = DNS
@@ -820,6 +824,7 @@ new province nightgate = {
 		179 239 253
 	}
 	history = {
+		center_of_trade = 1
 		owner = NIG
 		controller = NIG
 		add_core = NIG
@@ -1053,34 +1058,6 @@ new province shrouded_grove = {
 		is_city = yes
 	}
 }
-new province gold_drop = {
-	position = {
-		1832.000 1962.000 1832.000 1962.000 1832.000 1962.000 1832.000 1962.000 1832.000 1962.000 1832.000 1962.000 1832.000 1962.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = shearpoint
-	name = "Gold Drop"
-	terrain = highlands
-	color = {
-		255 119 106
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = cultures:palean
-		hre = yes
-		`trade_goods` = wood
-		capital = ""
-		is_city = no
-		owner = SHR
-		controller = SHR
-		add_core = SHR
-	}
-}
 new province shearpoint = {
 	position = {
 		1848.000 1955.000 1848.000 1955.000 1848.000 1955.000 1848.000 1955.000 1848.000 1955.000 1848.000 1955.000 1848.000 1955.000
@@ -1137,34 +1114,6 @@ new province fellglow = {
 		add_core = SHR
 	}
 }
-new province upper_valtheim = {
-	position = {
-		1849.000 1943.000 1849.000 1943.000 1849.000 1943.000 1849.000 1943.000 1849.000 1943.000 1849.000 1943.000 1849.000 1943.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = fellglow
-	name = "Upper Valtheim"
-	terrain = highlands
-	color = {
-		138 230 231
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = cultures:palean
-		hre = yes
-		`trade_goods` = stone
-		capital = ""
-		is_city = yes
-		owner = SHR
-		controller = SHR
-		add_core = SHR
-	}
-}
 new province ysmir_hill = {
 	position = {
 		1824.000 1951.000 1824.000 1951.000 1824.000 1951.000 1824.000 1951.000 1824.000 1951.000 1824.000 1951.000 1824.000 1951.000
@@ -1210,6 +1159,7 @@ new province korvanjund = {
 	}
 	terrain = forest
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -1399,6 +1349,7 @@ new province volunruud = {
 		200 242 239
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:palean
 		owner = VLR

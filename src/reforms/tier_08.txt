@@ -1,0 +1,37 @@
+new government_reform tier_8_alliance_focus = {
+	name = "Alliance Focus"
+	desc = ""
+	icon = "reputation"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 1
+		monthly_favor_modifier = 0.5
+	}
+}
+new government_reform tier_8_subject_focus = {
+	name = "Subject Focus"
+	desc = ""
+	icon = "diverse_estates"
+	allow_normal_conversion = yes
+	modifiers = {
+		reduced_liberty_desire = 20
+	}
+}
+new government_reform tier_8_expansion_focus = {
+	name = "Expansion Focus"
+	desc = ""
+	icon = "feuillant_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+		ae_impact = -0.10
+	}
+}
+new government_reform tier_8_supremacy = {
+	name = "Supremacy"
+	desc = ""
+	icon = "greater_invisibility"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity_modifier = 0.20
+	}
+}

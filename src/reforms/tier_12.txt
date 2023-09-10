@@ -1,0 +1,18 @@
+new government_reform tier_12_internal_markets = {
+	name = "Internal Markets"
+	desc = ""
+	icon = "tax_collectors"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_own_trade_power = 0.25
+	}
+}
+new government_reform tier_12_free_trade = {
+	name = "Free Trade"
+	desc = ""
+	icon = "trading_post"
+	allow_normal_conversion = yes
+	modifiers = {
+		trade_efficiency = 0.1
+	}
+}

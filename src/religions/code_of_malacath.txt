@@ -1,3 +1,60 @@
+new church_aspect respect_the_forge = {
+	name = "Respect the Forge"
+	desc = ""
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+new church_aspect codified_hierarchy = {
+	name = "Codified Hierarchy"
+	desc = ""
+	modifier = {
+		global_autonomy = -0.10
+	}
+}
+new church_aspect challenge_succession = {
+	name = "Challenge Succession"
+	desc = ""
+	modifier = {
+		monarch_military_power = 1
+	}
+}
+new church_aspect honor_the_blood_price = {
+	name = "Honor the Blood Price"
+	desc = ""
+	modifier = {
+		global_unrest = -2
+	}
+}
+new church_aspect avenge_insults = {
+	name = "Avenge Insults"
+	desc = ""
+	modifier = {
+		morale_damage = 0.05
+	}
+}
+new church_aspect honorable_death = {
+	name = "Honorable Death"
+	desc = ""
+	modifier = {
+		morale_damage_received = -0.05
+	}
+}
+new church_aspect wise_woman = {
+	name = "Wise Woman"
+	desc = ""
+	modifier = {
+		idea_cost = -0.05
+	}
+}
+new church_aspect blood_kins = {
+	name = "Blood-Kins"
+	desc = ""
+	modifier = {
+		num_accepted_cultures = 1
+		promote_culture_cost = -0.5
+	}
+}
 new religion code_of_malacath = {
 	name = "Code of Malacath"
 	desc = ""
@@ -9,8 +66,14 @@ new religion code_of_malacath = {
 		MALACATH_HERETIC
 	}
 	country = {
+		discipline = 0.05
+		land_morale = 0.10
 	}
 	province = {
 	}
+	aspects = {
+		respect_the_forge codified_hierarchy challenge_succession honor_the_blood_price avenge_insults honorable_death wise_woman blood_kins
+	}
+	uses_church_power = yes
 	religious_group = orcish_group
 }

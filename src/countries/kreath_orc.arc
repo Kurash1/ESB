@@ -7,6 +7,16 @@ new inheritable kreath_orc_country = {
 	history = {
 	}
 }
+new country silvercliff = {
+	inherit = kreath_orc_country
+	tag = SLC
+	name = "Silvercliff"
+	adj = "Silver"
+	color = {
+		0 127 127
+	}
+	capital = silvercliff
+}
 new country bilegulch = {
 	inherit = kreath_orc_country
 	tag = BIL

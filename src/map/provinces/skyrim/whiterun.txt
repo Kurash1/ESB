@@ -224,6 +224,7 @@ new province rorikstead = {
 		119 102 105
 	}
 	history = {
+		center_of_trade = 1
 		owner = ROR
 		controller = ROR
 		add_core = ROR
@@ -238,34 +239,6 @@ new province rorikstead = {
 new area swindler = {
 	name = "Swindler"
 	region = whiterun
-}
-new province bee_coast = {
-	position = {
-		1667.000 1950.000 1667.000 1950.000 1667.000 1950.000 1670.000 1954.000 1667.000 1950.000 1667.000 1950.000 1667.000 1950.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.865 0.365 0.365 0.365
-	}
-	area = swindler
-	name = "Bee Coast"
-	terrain = coastline
-	color = {
-		128 198 106
-	}
-	history = {
-		owner = RVR
-		controller = RVR
-		add_core = RVR
-		religion = nordic_pantheon
-		culture = cultures:whiterunish
-		hre = yes
-		`trade_goods` = fish
-		capital = ""
-		is_city = yes
-	}
 }
 new province swindlers_den = {
 	position = {
@@ -284,6 +257,7 @@ new province swindlers_den = {
 		120 193 211
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:whiterunish
 		hre = yes
@@ -372,6 +346,7 @@ new province gjukar = {
 		190 214 116
 	}
 	history = {
+		center_of_trade = 1
 		culture = cultures:whiterunish
 		religion = nordic_pantheon
 		hre = yes
@@ -526,6 +501,7 @@ new province granitehill = {
 		155 174 188
 	}
 	history = {
+		center_of_trade = 1
 		culture = cultures:whiterunish
 		religion = nordic_pantheon
 		hre = yes
@@ -676,6 +652,7 @@ new province greymoor = {
 		119 113 121
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:whiterunish
 		owner = BCM
@@ -937,6 +914,7 @@ new province silent_moons = {
 		253 155 247
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:whiterunish
 		owner = SLM
@@ -1049,6 +1027,7 @@ new province halted_stream = {
 		189 177 177
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:whiterunish
 		hre = yes
@@ -1227,6 +1206,7 @@ new province whiterun = {
 	}
 	base_development = 18
 	history = {
+		center_of_trade = 1
 		owner = JRR
 		controller = JRR
 		add_core = JRR
@@ -1334,7 +1314,7 @@ new province pelagia_farm = {
 		}
 	}
 }
-new province honningbrew_meadery = {
+new province honningbrew = {
 	position = {
 		1785.000 1910.000 1785.000 1910.000 1785.000 1910.000 1789.500 1904.500 1785.000 1910.000 1785.000 1910.000 1785.000 1910.000
 	}
@@ -1345,7 +1325,7 @@ new province honningbrew_meadery = {
 		0.365 0.365 0.365 4.750 0.365 0.365 0.365
 	}
 	area = honningbrew
-	name = "Honningbrew Meadery"
+	name = "Honningbrew"
 	terrain = coastline
 	color = {
 		117 253 116
@@ -1404,7 +1384,7 @@ new province green_hill_road = {
 	height = {
 		0.365 0.365 0.365 6.750 0.365 0.365 0.365
 	}
-	area = bleak_falls
+	area = honningbrew
 	name = "Green Hill Road"
 	terrain = hills
 	color = {
@@ -1412,7 +1392,7 @@ new province green_hill_road = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		`trade_goods` = stone
 		capital = ""
@@ -1439,8 +1419,9 @@ new province bleak_falls_temple = {
 		127 204 223
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		`trade_goods` = iron
 		capital = ""
@@ -1468,7 +1449,7 @@ new province bandit_way = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		fort_15th = yes
 		`trade_goods` = stone
@@ -1497,7 +1478,7 @@ new province iron_slope = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		`trade_goods` = iron
 		capital = ""
@@ -1529,7 +1510,7 @@ new province south_brittleshin = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		fort_15th = yes
 		`trade_goods` = wood
@@ -1538,10 +1519,6 @@ new province south_brittleshin = {
 		owner = SKJ
 		controller = SKJ
 		add_core = SKJ
-		272.1.1 = {
-			religion = nordic_pantheon
-			culture = cultures:whiterunish
-		}
 	}
 }
 new province anises_cabin = {
@@ -1562,7 +1539,7 @@ new province anises_cabin = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		`trade_goods` = wood
 		capital = ""
@@ -1590,7 +1567,7 @@ new province treasure_coast = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		`trade_goods` = wood
 		capital = ""
@@ -1621,8 +1598,9 @@ new province riverwood = {
 		148 143 170
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		`trade_goods` = wood
 		fort_15th = yes
@@ -1631,10 +1609,6 @@ new province riverwood = {
 		owner = SKJ
 		controller = SKJ
 		add_core = SKJ
-		272.1.1 = {
-			religion = nordic_pantheon
-			culture = cultures:whiterunish
-		}
 	}
 }
 new province embershard_mine = {
@@ -1655,7 +1629,7 @@ new province embershard_mine = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:whiterunish
+		culture = cultures:falkrentish
 		hre = yes
 		quick_province_modifier = {
 			name = "Guardian Stones"
@@ -1816,6 +1790,7 @@ new province valtheim = {
 		245 179 206
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:whiterunish
 		hre = yes
@@ -1827,35 +1802,6 @@ new province valtheim = {
 		controller = HRO
 		add_core = HRO
 		add_core = VLT
-	}
-}
-new province guldun_rock = {
-	position = {
-		1844.000 1923.000 1844.000 1923.000 1844.000 1923.000 1844.000 1923.000 1844.000 1923.000 1844.000 1923.000 1844.000 1923.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = valtheim
-	name = "Guldun Rock"
-	terrain = hills
-	color = {
-		243 197 164
-	}
-	history = {
-		hre = yes
-		`trade_goods` = stone
-		capital = ""
-		is_city = yes
-		owner = HRO
-		controller = HRO
-		add_core = HRO
-		add_core = VLT
-		religion = nordic_pantheon
-		culture = cultures:march_giant
 	}
 }
 new province prafall = {
@@ -1889,7 +1835,7 @@ new province prafall = {
 }
 new adjacency white_river_bridge = {
 	from = white_river_watch
-	to = honningbrew_meadery
+	to = honningbrew
 	through = white_river
 	type = sea
 }

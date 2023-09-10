@@ -18,3 +18,28 @@ chief_authority_mechanic = {
 		}
 	}
 }
+fanaticism_mechanic = {
+	powers = {
+		fanaticism_power = {
+			gui = fanaticism_mech
+			max = 100
+			min = 0
+			base_monthly_growth = 2
+			scaled_modifier = {
+				modifier = {
+					monthly_fanaticism_power = -2
+					global_missionary_strength = 0.03
+					land_morale = 0.10
+					manpower_recovery_speed = 0.20
+				}
+			}
+			range_modifier = {
+				start_value = 50
+				end_value = 100
+				modifier = {
+					extra_manpower_at_religious_war = yes
+				}
+			}
+		}
+	}
+}

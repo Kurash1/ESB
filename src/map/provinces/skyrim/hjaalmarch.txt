@@ -62,7 +62,7 @@ new area hjaals_teeth = {
 	name = "Hjaal's Teeth"
 	region = hjaalmarch
 }
-new province east_snowhawk_peak = {
+new province snowhawk_peak = {
 	position = {
 		1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000
 	}
@@ -72,25 +72,7 @@ new province east_snowhawk_peak = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "East Snowhawk Peak"
-	color = {
-		9 23 41
-	}
-	history = {
-	}
-	impassible = yes
-}
-new province west_snowhawk_peak = {
-	position = {
-		1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000 1961.000 1827.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	name = "West Snowhawk Peak"
+	name = "Snowhawk Peak"
 	color = {
 		9 23 1
 	}
@@ -117,7 +99,7 @@ new province isle_of_sorrow = {
 	history = {
 		culture = cultures:hjaalmarcher
 		religion = nordic_pantheon
-		hre = yes
+		hre = no
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
@@ -140,6 +122,7 @@ new province morthal = {
 		220 248 102
 	}
 	history = {
+		center_of_trade = 1
 		owner = MOH
 		controller = MOH
 		add_core = MOH
@@ -260,6 +243,7 @@ new province rannveigs_fast = {
 		137 237 200
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -269,34 +253,6 @@ new province rannveigs_fast = {
 		owner = RAN
 		controller = RAN
 		add_core = RAN
-	}
-}
-new province orotheim = {
-	position = {
-		1646.000 1985.000 1646.000 1985.000 1646.000 1985.000 1640.000 1984.500 1646.000 1985.000 1646.000 1985.000 1646.000 1985.000
-	}
-	rotation = {
-		0.000 0.000 0.000 1.571 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.850 0.365 0.365 0.365
-	}
-	terrain = steppe
-	area = hjaals_teeth
-	name = "Orotheim"
-	color = {
-		209 223 228
-	}
-	history = {
-		owner = HJA
-		controller = HJA
-		add_core = HJA
-		religion = nordic_pantheon
-		culture = cultures:hjaalmarcher
-		hre = yes
-		`trade_goods` = fish
-		capital = ""
-		is_city = yes
 	}
 }
 new province hjaals_tooth = {
@@ -316,6 +272,7 @@ new province hjaals_tooth = {
 		115 133 158
 	}
 	history = {
+		center_of_trade = 1
 		owner = HJA
 		controller = HJA
 		add_core = HJA
@@ -682,7 +639,7 @@ new province apprentice_stone = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
-		hre = yes
+		hre = no
 		`trade_goods` = unknown
 		quick_province_modifier = {
 			name = "Apprentice Stone"
@@ -767,6 +724,7 @@ new province snowhawk = {
 		243 126 232
 	}
 	history = {
+		center_of_trade = 1
 		culture = cultures:hjaalmarcher
 		religion = nordic_pantheon
 		hre = yes
@@ -806,34 +764,6 @@ new province minedvild = {
 		is_city = yes
 	}
 }
-new province brood_cavern = {
-	position = {
-		1661.000 1996.000 1661.000 1996.000 1661.000 1996.000 1655.000 1993.500 1661.000 1996.000 1661.000 1996.000 1661.000 1996.000
-	}
-	rotation = {
-		0.000 0.000 0.000 2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	terrain = coastline
-	area = southern_morthal
-	name = "Brood Cavern"
-	color = {
-		233 130 248
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = cultures:hjaalmarcher
-		hre = yes
-		`trade_goods` = fish
-		capital = ""
-		is_city = no
-		owner = SNO
-		controller = SNO
-		add_core = SNO
-	}
-}
 new province drajkmyr_toll = {
 	position = {
 		1668.000 2028.000 1668.000 2027.000 1672.000 2035.000 1671.000 2026.000 1672.000 2035.000 1668.000 2028.000 1672.000 2035.000
@@ -853,7 +783,7 @@ new province drajkmyr_toll = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
-		hre = yes
+		hre = no
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
@@ -878,7 +808,7 @@ new province central_drajkmyr = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
-		hre = yes
+		hre = no
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
@@ -903,7 +833,7 @@ new province folgunthur = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
-		hre = yes
+		hre = no
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
@@ -928,7 +858,7 @@ new province cold_swamp = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
-		hre = yes
+		hre = no
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
@@ -1007,6 +937,7 @@ new province ustengrav = {
 		145 201 179
 	}
 	history = {
+		center_of_trade = 1
 		owner = WNC
 		controller = WNC
 		add_core = WNC
@@ -1119,6 +1050,7 @@ new province stonehills = {
 		251 168 205
 	}
 	history = {
+		center_of_trade = 1
 		owner = STO
 		controller = STO
 		add_core = STO
@@ -1199,6 +1131,7 @@ new province bromjunaar = {
 		178 182 185
 	}
 	history = {
+		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
 		hre = yes
@@ -1290,32 +1223,6 @@ new province abundant_mines = {
 		owner = RAN
 		controller = RAN
 		add_core = RAN
-	}
-}
-new province eldersblood_peak = {
-	position = {
-		1683.000 1985.000 1683.000 1985.000 1683.000 1985.000 1683.000 1985.000 1683.000 1985.000 1683.000 1985.000 1683.000 1985.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	terrain = mountain
-	area = rannveigs_fast
-	name = "Eldersblood Peak"
-	color = {
-		157 144 149
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = cultures:hjaalmarcher
-		owner = RAN
-		controller = RAN
-		add_core = RAN
-		hre = yes
-		`trade_goods` = r_metals
 	}
 }
 new province cold_rock_pass = {
@@ -1477,7 +1384,7 @@ new province rotten_trees = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
-		hre = yes
+		hre = no
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
@@ -1502,57 +1409,45 @@ new province morthal_colony = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:hjaalmarcher
-		hre = yes
+		hre = no
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
 	}
 }
-new adjacency ustengrav_bridge = {
-	from = ustengrav
-	to = folks_gathering
-	through = 1870
-	type = sea
-}
 new adjacency morthal_bridge = {
 	from = morthal
 	to = morthal_colony
-	through = 1870
+	through = coast_of_solitude
 	type = sea
 }
 new adjacency snowhawk_bridge = {
 	from = snowhawk
 	to = minedvild
-	through = 1870
+	through = coast_of_solitude
 	type = sea
 }
 new adjacency first_bridge = {
 	from = barren_road
 	to = rivers_road
-	through = 2848
+	through = coast_of_morthal
 	type = sea
 }
 new adjacency second_bridge = {
 	from = forebears_holdout
 	to = cliff_point
-	through = 2848
+	through = coast_of_morthal
 	type = sea
 }
 new adjacency hjaal_bridge = {
 	from = bumpy_road
 	to = robbers_gorge
-	through = 2848
+	through = coast_of_morthal
 	type = sea
 }
 new adjacency dragon_bridge = {
 	from = dragon_bridge
 	to = rivers_road
-	through = 1870
-	type = sea
-}
-new adjacency orotheim_bridge = {
-	from = orotheim
-	to = hjaals_tooth
-	through = 2848
+	through = coast_of_solitude
 	type = sea
 }

@@ -542,6 +542,7 @@ new province greenstep = {
 		controller = WND
 		add_core = WND
 		add_core = KYN
+		set_province_flag = orc_stronghold
 	}
 }
 new area mzulft = {
@@ -629,7 +630,7 @@ new province broken_limb = {
 	area = broken_limb
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:march_giant
+		culture = cultures:eastmarcher
 		`trade_goods` = unknown
 		capital = ""
 		is_city = no
@@ -833,7 +834,7 @@ new province steamcrag = {
 	area = steamcrag
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:march_giant
+		culture = cultures:eastmarcher
 		`trade_goods` = unknown
 		capital = ""
 		is_city = yes
@@ -2013,7 +2014,7 @@ new province cradlecrush = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:march_giant
+		culture = cultures:eastmarcher
 		hre = yes
 		`trade_goods` = wood
 		capital = ""
@@ -2096,10 +2097,10 @@ new province hillgrunds_steading = {
 		1863.000 1910.000 1863.000 1910.000 1863.000 1910.000 1868.000 1910.000 1863.000 1910.000 1863.000 1910.000 1863.000 1910.000
 	}
 	rotation = {
-		0.000 0.000 0.000 -0.960 0.000 0.000 0.000
+		0.000 0.000 0.000 -2.531 0.000 0.000 0.000
 	}
 	height = {
-		0.365 0.365 0.365 0.750 0.365 0.365 0.365
+		0.365 0.365 0.365 0.900 0.365 0.365 0.365
 	}
 	name = "Hillgrund's Steading"
 	color = {
@@ -2425,48 +2426,48 @@ new province haeleke = {
 new adjacency windhelm_bridge = {
 	from = brandy-mug
 	to = windhelm
-	through = 61
+	through = coast_of_windhelm
 	type = sea
 }
 new adjacency white_bridge = {
 	from = brandy-mug
 	to = ysmir_overlook
-	through = 61
+	through = coast_of_windhelm
 	type = sea
 }
 new adjacency yorgrim_bridge = {
 	from = angas_mill
 	to = ysmir_overlook
-	through = 61
+	through = coast_of_windhelm
 	type = sea
 }
 new adjacency mist_bridge = {
 	from = darkwater_watch
 	to = mist_road
-	through = lake_darkwater
+	through = lower_darkwater
 	type = sea
 }
 new adjacency darkwater_bridge = {
 	from = darkwater_watch
 	to = darkwater_crossing
-	through = lake_darkwater
+	through = lower_darkwater
 	type = sea
 }
 new adjacency amol_bridge = {
 	from = amol
 	to = clay_point
-	through = lake_darkwater
+	through = lower_darkwater
 	type = sea
 }
 new adjacency hillgrund_bridge = {
 	from = hillgrunds_steading
 	to = dibellas_coast
-	through = 2796
+	through = grund_river
 	type = sea
 }
 new adjacency prisoner_bridge = {
 	from = amol_point
 	to = dibellas_coast
-	through = 2796
+	through = grund_river
 	type = sea
 }

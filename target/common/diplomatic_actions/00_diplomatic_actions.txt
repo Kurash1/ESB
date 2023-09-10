@@ -235,8 +235,13 @@ invite_to_trade_league = {
 	}
 }
 
-tributary_state_action = { }
-
-ask_for_tributary_state_action = { }
-
-break_alliance = { }
+sow_discontent = {
+	condition = {
+		tooltip = CAN_SOW_DISCONTENT
+		potential = {
+		}
+		allow = {
+			full_idea_group = spy_ideas
+		}
+	}
+}

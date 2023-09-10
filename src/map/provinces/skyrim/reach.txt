@@ -19,11 +19,13 @@ new province lost_valley_redoubt = {
 		116 179 104
 	}
 	history = {
+		owner = GHO
+		controller = GHO
+		add_core = GHO
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = no
@@ -47,11 +49,13 @@ new province cradle_stone = {
 		159 175 148
 	}
 	history = {
+		owner = GHO
+		controller = GHO
+		add_core = GHO
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -79,11 +83,13 @@ new province gloomreach = {
 		119 103 195
 	}
 	history = {
+		owner = GHO
+		controller = GHO
+		add_core = GHO
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -107,11 +113,13 @@ new province gretmor = {
 		212 202 227
 	}
 	history = {
+		owner = GHO
+		controller = GHO
+		add_core = GHO
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -135,12 +143,12 @@ new province valthume = {
 		193 103 176
 	}
 	history = {
+		center_of_trade = 1
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		owner = GHO
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -172,7 +180,6 @@ new province valthume_pass = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = "Ilinalta's Deep"
 		is_city = yes
 	}
 }
@@ -193,11 +200,13 @@ new province arkngthamz = {
 		141 244 242
 	}
 	history = {
+		owner = GHO
+		controller = GHO
+		add_core = GHO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -221,11 +230,13 @@ new province bleeding_hill = {
 		123 226 217
 	}
 	history = {
+		owner = GHO
+		controller = GHO
+		add_core = GHO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -250,12 +261,16 @@ new province dushnikh_yal = {
 		216 138 174
 	}
 	history = {
+		center_of_trade = 1
+		owner = THO
+		controller = THO
+		add_core = THO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new province reachwind_eyrie = {
@@ -275,11 +290,13 @@ new province reachwind_eyrie = {
 		245 146 241
 	}
 	history = {
+		owner = THO
+		controller = THO
+		add_core = THO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -300,11 +317,13 @@ new province editia = {
 		177 169 215
 	}
 	history = {
+		owner = THO
+		controller = THO
+		add_core = THO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = "Editia"
 		is_city = yes
 	}
 }
@@ -329,11 +348,13 @@ new province hillia = {
 		251 243 118
 	}
 	history = {
+		owner = CIN
+		controller = CIN
+		add_core = CIN
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -357,11 +378,13 @@ new province reachcliff = {
 		230 182 214
 	}
 	history = {
+		owner = CIN
+		controller = CIN
+		add_core = CIN
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -393,7 +416,6 @@ new province purewater_ruin = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		owner = THO
 		controller = THO
@@ -417,11 +439,13 @@ new province hag_rock_redoubt = {
 		131 196 244
 	}
 	history = {
+		owner = THO
+		controller = THO
+		add_core = THO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -445,11 +469,13 @@ new province dread_crone_rock = {
 		168 254 155
 	}
 	history = {
+		owner = THO
+		controller = THO
+		add_core = THO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -477,11 +503,13 @@ new province lislgeth = {
 		104 156 242
 	}
 	history = {
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -502,11 +530,13 @@ new province reachwater_hill = {
 		239 130 188
 	}
 	history = {
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -530,11 +560,13 @@ new province reachwater_rock = {
 		241 158 164
 	}
 	history = {
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -555,11 +587,13 @@ new province thaeba = {
 		167 179 252
 	}
 	history = {
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -587,11 +621,14 @@ new province markarth = {
 		114 125 229
 	}
 	history = {
+		center_of_trade = 1
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -612,11 +649,13 @@ new province left_hand_mine = {
 		102 201 127
 	}
 	history = {
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -644,7 +683,6 @@ new province salvius_farm = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = "Lamierica"
 		is_city = yes
 	}
 }
@@ -669,6 +707,9 @@ new province groilief = {
 		221 239 181
 	}
 	history = {
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
@@ -679,7 +720,6 @@ new province groilief = {
 			}
 		}
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -700,11 +740,14 @@ new province kolskeggr = {
 		175 195 185
 	}
 	history = {
+		center_of_trade = 1
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -732,11 +775,10 @@ new province blind_cliff = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = yes
-		}
+		owner = WIL
+		controller = WIL
+		add_core = WIL
 	}
 }
 new area ragnvald = {
@@ -760,11 +802,13 @@ new province karerica = {
 		208 157 191
 	}
 	history = {
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -785,11 +829,13 @@ new province aldiid = {
 		150 109 167
 	}
 	history = {
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = yes
@@ -813,11 +859,14 @@ new province ragnvald = {
 		172 204 157
 	}
 	history = {
+		center_of_trade = 1
+		owner = BLD
+		controller = BLD
+		add_core = BLD
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -846,11 +895,10 @@ new province elselod = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = no
-		}
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new province aelagela = {
@@ -874,11 +922,10 @@ new province aelagela = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = no
-		}
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new province olavete = {
@@ -902,11 +949,10 @@ new province olavete = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = no
-		}
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new province thalif = {
@@ -930,7 +976,6 @@ new province thalif = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		owner = BLM
 		controller = BLM
@@ -962,11 +1007,10 @@ new province riknhild = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = yes
-		}
+		owner = WIL
+		controller = WIL
+		add_core = WIL
 	}
 }
 new province malie = {
@@ -990,7 +1034,6 @@ new province malie = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		owner = WIL
 		controller = WIL
@@ -1014,15 +1057,15 @@ new province karthwasten = {
 		164 218 236
 	}
 	history = {
+		center_of_trade = 1
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = yes
-		}
+		owner = WIL
+		controller = WIL
+		add_core = WIL
 	}
 }
 new area dragontooth = {
@@ -1050,10 +1093,9 @@ new province reydlgeth = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = "Reydlgeth"
-		57.1.1 = {
-			is_city = yes
-		}
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new province dragontooth = {
@@ -1077,11 +1119,10 @@ new province dragontooth = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = no
-		}
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new area bthardamz = {
@@ -1109,8 +1150,10 @@ new province riglaith = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new province bthardamz = {
@@ -1134,11 +1177,10 @@ new province bthardamz = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = yes
-		}
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new province sirgarte = {
@@ -1162,11 +1204,10 @@ new province sirgarte = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = no
-		}
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new area bthar_zel = {
@@ -1190,11 +1231,13 @@ new province druadach_redoubt = {
 		235 188 165
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -1215,15 +1258,15 @@ new province bthar_zel = {
 		141 176 166
 	}
 	history = {
+		center_of_trade = 1
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = no
-		}
+		owner = BLM
+		controller = BLM
+		add_core = BLM
 	}
 }
 new area harmugstahl = {
@@ -1251,11 +1294,10 @@ new province rocky_coast = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = yes
-		}
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 	}
 }
 new province harmugstahl = {
@@ -1269,21 +1311,21 @@ new province harmugstahl = {
 		0.365 0.365 0.365 1.865 0.365 0.365 0.365
 	}
 	area = harmugstahl
-	terrain = coastline
+	terrain = hills
 	name = "Harmugstahl"
 	color = {
 		160 235 180
 	}
 	history = {
+		center_of_trade = 1
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = yes
-		}
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 	}
 }
 new province silver_hill = {
@@ -1307,87 +1349,10 @@ new province silver_hill = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
-		57.1.1 = {
-			is_city = yes
-		}
-	}
-}
-new area sundered_towers = {
-	name = "Sundered Towers"
-	region = reach
-}
-new province sundered_towers = {
-	position = {
-		1568.000 1964.000 1568.000 1964.000 1568.000 1964.000 1568.000 1964.000 1568.000 1964.000 1568.000 1964.000 1568.000 1964.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = sundered_towers
-	name = "Sundered Towers"
-	terrain = mountain
-	color = {
-		173 220 183
-	}
-	history = {
-		religion = reachman_faith
-		culture = cultures:reachmen
-		hre = no
-		`trade_goods` = unknown
-		capital = " "
-		is_city = no
-	}
-}
-new province four_skull_lookout = {
-	position = {
-		1554.000 1965.000 1554.000 1965.000 1554.000 1965.000 1554.000 1965.000 1554.000 1965.000 1554.000 1965.000 1554.000 1965.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = sundered_towers
-	name = "Four Skull Lookout"
-	terrain = highlands
-	color = {
-		251 155 109
-	}
-	history = {
-		religion = reachman_faith
-		culture = cultures:reachmen
-		`trade_goods` = unknown
-	}
-}
-new province red_eagle_redoubt = {
-	position = {
-		1552.000 1956.000 1552.000 1956.000 1552.000 1956.000 1550.000 1949.500 1552.000 1956.000 1552.000 1956.000 1552.000 1956.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.785 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.915 0.365 0.365 0.365
-	}
-	area = sundered_towers
-	name = "Red Eagle Redoubt"
-	terrain = hills
-	color = {
-		121 201 142
-	}
-	history = {
-		religion = reachman_faith
-		culture = cultures:reachmen
-		hre = no
-		`trade_goods` = unknown
-		capital = " "
-		is_city = yes
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 	}
 }
 new area karthspire = {
@@ -1411,11 +1376,13 @@ new province east_karthspire = {
 		254 131 243
 	}
 	history = {
+		owner = CIN
+		controller = CIN
+		add_core = CIN
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -1436,11 +1403,14 @@ new province west_karthspire = {
 		118 255 236
 	}
 	history = {
+		center_of_trade = 1
+		owner = CIN
+		controller = CIN
+		add_core = CIN
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -1469,7 +1439,6 @@ new province soljunds_sinkhole = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		owner = CIN
 		controller = CIN
@@ -1493,11 +1462,14 @@ new province old_hroldan = {
 		233 226 245
 	}
 	history = {
+		center_of_trade = 1
+		owner = CIN
+		controller = CIN
+		add_core = CIN
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -1518,11 +1490,13 @@ new province igrra = {
 		135 220 130
 	}
 	history = {
+		owner = CIN
+		controller = CIN
+		add_core = CIN
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -1543,11 +1517,13 @@ new province lower_moldering = {
 		249 253 122
 	}
 	history = {
+		owner = CIN
+		controller = CIN
+		add_core = CIN
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -1576,7 +1552,6 @@ new province algerd = {
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		owner = DRH
 		controller = DRH
@@ -1604,8 +1579,10 @@ new province orieund = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
+		owner = DRH
+		controller = DRH
+		add_core = DRH
 	}
 }
 new province horsorg = {
@@ -1629,8 +1606,10 @@ new province horsorg = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
+		owner = DRH
+		controller = DRH
+		add_core = DRH
 	}
 }
 new area sungard = {
@@ -1654,11 +1633,14 @@ new province sungard = {
 		224 212 147
 	}
 	history = {
+		center_of_trade = 1
+		owner = DRH
+		controller = DRH
+		add_core = DRH
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 		272.1.1 = {
 			religion = reachman_faith
@@ -1683,11 +1665,13 @@ new province reyba = {
 		168 253 129
 	}
 	history = {
+		owner = DRH
+		controller = DRH
+		add_core = DRH
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = no
@@ -1715,11 +1699,13 @@ new province moonstone_hill = {
 		251 134 225
 	}
 	history = {
+		owner = DRH
+		controller = DRH
+		add_core = DRH
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -1740,11 +1726,13 @@ new province vigde = {
 		182 192 234
 	}
 	history = {
+		owner = SHB
+		controller = SHB
+		add_core = SHB
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -1765,11 +1753,13 @@ new province serpents_bluff_redoubt = {
 		211 132 200
 	}
 	history = {
+		owner = SHB
+		controller = SHB
+		add_core = SHB
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -1794,6 +1784,7 @@ new province moldering = {
 		162 100 226
 	}
 	history = {
+		center_of_trade = 1
 		owner = SHB
 		controller = SHB
 		add_core = SHB
@@ -1801,7 +1792,6 @@ new province moldering = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = "Kirgeira"
 		is_city = yes
 	}
 }
@@ -1822,11 +1812,13 @@ new province sigli = {
 		157 205 249
 	}
 	history = {
+		owner = SHB
+		controller = SHB
+		add_core = SHB
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -1847,11 +1839,13 @@ new province bleakwind_bluff = {
 		217 124 188
 	}
 	history = {
+		owner = SHB
+		controller = SHB
+		add_core = SHB
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -1876,11 +1870,13 @@ new province rebels_cairn = {
 		171 149 174
 	}
 	history = {
+		owner = SHB
+		controller = SHB
+		add_core = SHB
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -1901,11 +1897,13 @@ new province ysolnhvir = {
 		230 131 201
 	}
 	history = {
+		owner = SHB
+		controller = SHB
+		add_core = SHB
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = no
@@ -1929,11 +1927,13 @@ new province ranarte = {
 		160 239 111
 	}
 	history = {
+		owner = SHB
+		controller = SHB
+		add_core = SHB
 		culture = cultures:reachmen
 		religion = reachman_faith
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		57.1.1 = {
 			is_city = no
@@ -1961,6 +1961,9 @@ new province reach_road_turn = {
 		205 205 152
 	}
 	history = {
+		owner = SHF
+		controller = SHF
+		add_core = SHF
 		religion = reachman_faith
 		culture = cultures:reachmen
 		`trade_goods` = unknown
@@ -1983,11 +1986,13 @@ new province vorigja = {
 		210 170 112
 	}
 	history = {
+		owner = SHF
+		controller = SHF
+		add_core = SHF
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -2012,7 +2017,6 @@ new province broken_tower_redoubt = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 		owner = SHF
 		controller = SHF
@@ -2040,11 +2044,14 @@ new province karthwatch = {
 		108 157 253
 	}
 	history = {
+		center_of_trade = 1
+		owner = SHF
+		controller = SHF
+		add_core = SHF
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -2065,11 +2072,13 @@ new province eydljot = {
 		201 101 225
 	}
 	history = {
+		owner = SHF
+		controller = SHF
+		add_core = SHF
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -2094,8 +2103,10 @@ new province beigi = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
+		owner = WIL
+		controller = WIL
+		add_core = WIL
 	}
 }
 new area dragon_bridge_overlook = {
@@ -2119,11 +2130,13 @@ new province cliffside_retreat = {
 		126 238 232
 	}
 	history = {
+		owner = SHF
+		controller = SHF
+		add_core = SHF
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = no
 	}
 }
@@ -2144,11 +2157,13 @@ new province dragon_bridge_overlook = {
 		248 206 233
 	}
 	history = {
+		owner = SHF
+		controller = SHF
+		add_core = SHF
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -2169,11 +2184,13 @@ new province freyke = {
 		172 118 194
 	}
 	history = {
+		owner = SHF
+		controller = SHF
+		add_core = SHF
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -2198,6 +2215,9 @@ new province adelreene = {
 		102 165 186
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		`trade_goods` = unknown
@@ -2220,11 +2240,13 @@ new province betri = {
 		136 231 184
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -2245,6 +2267,9 @@ new province bixisys = {
 		134 163 135
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		`trade_goods` = unknown
@@ -2271,11 +2296,13 @@ new province itary = {
 		196 135 156
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -2296,11 +2323,13 @@ new province brucas_leap_redoubt = {
 		254 115 254
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -2328,7 +2357,6 @@ new province rock_dragon_coast = {
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = "Fort Kastav"
 		is_city = yes
 	}
 }
@@ -2349,11 +2377,13 @@ new province khazgur_coast = {
 		210 158 107
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -2378,12 +2408,15 @@ new province darkfall_cave = {
 		216 184 180
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new province agnese = {
@@ -2403,11 +2436,13 @@ new province agnese = {
 		208 194 224
 	}
 	history = {
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
@@ -2428,35 +2463,38 @@ new province mor_khazgur = {
 		161 138 228
 	}
 	history = {
+		center_of_trade = 1
+		owner = CRO
+		controller = CRO
+		add_core = CRO
 		religion = reachman_faith
 		culture = cultures:reachmen
 		hre = no
 		`trade_goods` = unknown
-		capital = " "
 		is_city = yes
 	}
 }
 new adjacency karth_bridge = {
 	from = beigi
 	to = karthwatch
-	through = 2850
+	through = karth_lake
 	type = sea
 }
 new adjacency west_karthspire_bridge = {
 	from = west_karthspire
 	to = reachcliff
-	through = 7001
+	through = hroldan_river
 	type = sea
 }
 new adjacency karthspire_bridge = {
 	from = west_karthspire
 	to = east_karthspire
-	through = 7001
+	through = hroldan_river
 	type = sea
 }
 new adjacency old_hroldan_bridge = {
 	from = igrra
 	to = hillia
-	through = 7001
+	through = hroldan_river
 	type = sea
 }

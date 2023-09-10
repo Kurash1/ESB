@@ -49,26 +49,6 @@ new country_event court.3 = {
 }
 new country_event court.4 = {
 	inherit = random_event
-	title = "Wizard falling from the sky"
-	desc = ""
-	picture = wizard_falling_from_the_sky_eventPicture
-	options = {
-		{
-			name = "Oh no!"
-			effect = {
-				add_stability = -1
-			}
-		}
-		{
-			name = "We should ban Levitation magic."
-			effect = {
-				add_stability = -1
-			}
-		}
-	}
-}
-new country_event court.5 = {
-	inherit = random_event
 	title = "Mighty Hunt"
 	desc = ""
 	picture = mighty_hunt_eventPicture
@@ -77,6 +57,43 @@ new country_event court.5 = {
 			name = "It was all me."
 			effect = {
 				add_prestige = 10
+			}
+		}
+	}
+}
+new country_event court.5 = {
+	inherit = random_event
+	title = "A Private Castle"
+	desc = ""
+	picture = private_castle_eventPicture
+	trigger = {
+		any_owned_province = {
+			NOT = {
+				fort_level = 1
+			}
+		}
+	}
+	options = {
+		{
+			name = "Huh? I didn't allow this!"
+			effect = {
+				random_owned_province [NOT = { fort_level = 1 }]
+				{
+					add_building = fort_15th
+					add_unrest = 5
+				}
+			}
+		}
+		{
+			name = "A great initiative"
+			effect = {
+				random_owned_province [NOT = { fort_level = 1 }]
+				{
+					add_building = fort_15th
+					every_province_in_state = {
+						add_local_autonomy = 10
+					}
+				}
 			}
 		}
 	}

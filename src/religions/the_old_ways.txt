@@ -13,7 +13,6 @@ new religion the_old_ways = {
 		idea_cost = -0.05
 	}
 	province = {
-		local_missionary_strength = -0.015
 	}
 	personal_deity = yes
 	hre_heretic_religion = yes
@@ -24,6 +23,8 @@ new personal_deity hawk = {
 	desc = ""
 	sprite = 8
 	modifiers = {
+		shock_damage = 5%
+		movement_speed = 10%
 	}
 	potential = {
 		religion = the_old_ways
@@ -34,6 +35,8 @@ new personal_deity moth = {
 	desc = ""
 	sprite = 9
 	modifiers = {
+		diplomatic_reputation = 1
+		ae_impact = -10%
 	}
 	potential = {
 		religion = the_old_ways
@@ -44,6 +47,8 @@ new personal_deity bear = {
 	desc = ""
 	sprite = 10
 	modifiers = {
+		shock_damage_received = -2.5%
+		land_morale = 5%
 	}
 	potential = {
 		religion = the_old_ways
@@ -54,6 +59,8 @@ new personal_deity wolf = {
 	desc = ""
 	sprite = 11
 	modifiers = {
+		manpower_recovery_speed = 25%
+		global_monthly_devastation = -0.1
 	}
 	potential = {
 		religion = the_old_ways
@@ -64,6 +71,8 @@ new personal_deity owl = {
 	desc = ""
 	sprite = 12
 	modifiers = {
+		idea_cost = -5%
+		monthly_magicka = 0.1
 	}
 	potential = {
 		religion = the_old_ways
@@ -74,6 +83,8 @@ new personal_deity fox = {
 	desc = ""
 	sprite = 13
 	modifiers = {
+		country_military_power = 1
+		legitimacy = 1
 	}
 	potential = {
 		religion = the_old_ways
@@ -84,6 +95,8 @@ new personal_deity whale = {
 	desc = ""
 	sprite = 14
 	modifiers = {
+		privateer_efficiency = 50%
+		loot_amount = 50%
 	}
 	potential = {
 		religion = the_old_ways

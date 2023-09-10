@@ -165,13 +165,12 @@ new country_event corruption_event.5 = {
 		{
 			name = "Death to spies!"
 			effect = {
-				random_known_country = {
-					limit = {
-						has_spy_network_in = {
-							who = ROOT
-							value = 25
-						}
+				random_known_country [
+					has_spy_network_in = {
+						who = ROOT
+						value = 25
 					}
+				] {
 					add_spy_network_in = {
 						who = ROOT
 						value = -25
@@ -741,7 +740,7 @@ new country_event corruption_event.21 = {
 	picture = master_thief_eventPicture
 	trigger = {
 		NOT = {
-			has_country_modifier = master_thief
+			has_country_modifier = master_thief_in_country
 		}
 	}
 	options = {
@@ -749,7 +748,7 @@ new country_event corruption_event.21 = {
 			name = "It's still just a saying."
 			effect = {
 				add_country_modifier = {
-					name = master_thief
+					name = master_thief_in_country
 					duration = 7300
 				}
 			}

@@ -1,5 +1,5 @@
 new inheritable reachman_country = {
-	government = native
+	government = tribal
 	technology_group = reachman_tg
 	religion = reachman_faith
 	primary_culture = reachmen
@@ -33,7 +33,7 @@ new country blackdrake_clan = {
 	name = "Blackdrake Clan"
 	adj = "Blackdrake"
 	color = {
-		37 54 54
+		100 54 54
 	}
 	capital = salvius_farm
 }
@@ -43,7 +43,7 @@ new country shadowbloom_clan = {
 	name = "Shadowbloom Clan"
 	adj = "Shadowbloom"
 	color = {
-		92 76 77
+		80 0 120
 	}
 	capital = moldering
 }
@@ -83,7 +83,7 @@ new country black-moon_clan = {
 	name = "Black-Moon Clan"
 	adj = "Black-Moon"
 	color = {
-		75 75 75
+		25 25 25
 	}
 	capital = thalif
 }
@@ -103,7 +103,7 @@ new country crow-eye_clan = {
 	name = "Crow-Eye Clan"
 	adj = "Crow-Eye"
 	color = {
-		100 100 100
+		0 100 100
 	}
 	capital = rock_dragon_coast
 }

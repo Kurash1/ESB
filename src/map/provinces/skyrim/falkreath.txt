@@ -19,16 +19,15 @@ new province north_shriekwind = {
 		143 253 106
 	}
 	history = {
-		culture = cultures:falkrentish
-		religion = nordic_pantheon
-		hre = yes
+		religion = code_of_malacath
+		culture = cultures:kreath_orc
+		hre = no
+		owner = CTU
+		controller = CTU
+		add_core = CTU
 		`trade_goods` = wood
-		fort_15th = yes
 		capital = ""
-		is_city = no
-		owner = SKJ
-		controller = SKJ
-		add_core = SKJ
+		is_city = yes
 	}
 }
 new province silvercliff = {
@@ -48,15 +47,15 @@ new province silvercliff = {
 		101 130 143
 	}
 	history = {
-		religion = nordic_pantheon
-		culture = cultures:falkrentish
-		hre = yes
+		religion = code_of_malacath
+		culture = cultures:kreath_orc
+		hre = no
+		owner = SLC
+		controller = SLC
+		add_core = SLC
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = SKJ
-		controller = SKJ
-		add_core = SKJ
 	}
 }
 new province lakeview = {
@@ -76,16 +75,15 @@ new province lakeview = {
 		220 120 230
 	}
 	history = {
-		religion = nordic_pantheon
-		culture = cultures:falkrentish
-		hre = yes
+		religion = code_of_malacath
+		culture = cultures:kreath_orc
+		hre = no
+		owner = SLC
+		controller = SLC
+		add_core = SLC
 		`trade_goods` = wood
-		fort_15th = yes
 		capital = ""
-		is_city = no
-		owner = SKJ
-		controller = SKJ
-		add_core = SKJ
+		is_city = yes
 	}
 }
 new area helgen_step = {
@@ -109,15 +107,15 @@ new province copper_forest = {
 		201 124 251
 	}
 	history = {
-		religion = nordic_pantheon
-		culture = cultures:falkrentish
-		hre = yes
+		religion = code_of_malacath
+		culture = cultures:kreath_orc
+		hre = no
+		owner = BON
+		controller = BON
+		add_core = BON
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = SKJ
-		controller = SKJ
-		add_core = SKJ
 	}
 }
 new province helgen_road = {
@@ -137,15 +135,15 @@ new province helgen_road = {
 		248 155 135
 	}
 	history = {
-		religion = nordic_pantheon
-		culture = cultures:falkrentish
-		hre = yes
+		religion = code_of_malacath
+		culture = cultures:kreath_orc
+		hre = no
+		owner = BON
+		controller = BON
+		add_core = BON
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = SKJ
-		controller = SKJ
-		add_core = SKJ
 	}
 }
 new province sky_forest = {
@@ -197,6 +195,7 @@ new province neugrad = {
 		187 194 217
 	}
 	history = {
+		center_of_trade = 1
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
@@ -347,9 +346,9 @@ new province neugrad_crossing = {
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
-		owner = ORP
-		controller = ORP
-		add_core = ORP
+		owner = BON
+		controller = BON
+		add_core = BON
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
@@ -379,9 +378,9 @@ new province pinewatch = {
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
-		owner = BON
-		controller = BON
-		add_core = BON
+		owner = PEA
+		controller = PEA
+		add_core = PEA
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
@@ -460,6 +459,7 @@ new province helgen = {
 		101 186 134
 	}
 	history = {
+		center_of_trade = 1
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
@@ -495,9 +495,9 @@ new province ancestor_glade = {
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
-		owner = BLE
-		controller = BLE
-		add_core = BLE
+		owner = PEA
+		controller = PEA
+		add_core = PEA
 		`trade_goods` = alchemical_ingredients
 		capital = ""
 		is_city = no
@@ -583,9 +583,9 @@ new province overfalk = {
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
-		owner = HAL
-		controller = HAL
-		add_core = HAL
+		owner = PEA
+		controller = PEA
+		add_core = PEA
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
@@ -643,9 +643,9 @@ new province roadside = {
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
-		owner = PEA
-		controller = PEA
-		add_core = PEA
+		owner = CTU
+		controller = CTU
+		add_core = CTU
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
@@ -668,6 +668,7 @@ new province falkreath = {
 		247 121 125
 	}
 	history = {
+		center_of_trade = 1
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
@@ -815,6 +816,7 @@ new province cracked_tusk = {
 	area = cracked_tusk
 	terrain = forest
 	history = {
+		center_of_trade = 1
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
@@ -875,6 +877,7 @@ new province half_moon = {
 	area = half_moon
 	terrain = forest
 	history = {
+		center_of_trade = 1
 		religion = code_of_malacath
 		culture = cultures:kreath_orc
 		hre = no
@@ -912,9 +915,9 @@ new province green_coast = {
 				global_monthly_devastation = -0.05
 			}
 		}
-		owner = HAM
-		controller = HAM
-		add_core = HAM
+		owner = CTU
+		controller = CTU
+		add_core = CTU
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes

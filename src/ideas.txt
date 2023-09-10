@@ -647,7 +647,7 @@ new idea_group enchanting_ideas = {
 			name = "Enchanted Infrastructure"
 			desc = "By enchanting crucial parts of our infrastructure we can make grandiose cities much faster. "
 			modifier = {
-				development_cost = -0.15
+				build_time = -0.1
 			}
 		}
 		{
@@ -661,19 +661,19 @@ new idea_group enchanting_ideas = {
 			name = "Enchanted Tools"
 			desc = "Well crafted tools have a very high impact on manufacturing items, well crafted and enchanted tools give us an unparalleled edge in technological advance. "
 			modifier = {
-				idea_cost = -0.1
+				global_trade_goods_size_modifier = 0.1
 			}
 		}
 		{
 			name = "Enchanted Weaponry"
 			desc = "The weapons of our soldiers all carry basic enchantments to make them more effective in combat. "
 			modifier = {
-				fire_damage = 0.05
+				shock_damage = 0.05
 			}
 		}
 		{
 			name = "Grand Artifacts"
-			desc = "The artefacts our people can produce are famed and known through all of Nirn. "
+			desc = "The artifacts our people can produce are famed and known through all of Nirn. "
 			modifier = {
 				prestige = 0.5
 			}
@@ -761,10 +761,7 @@ new idea_group innovativeness_ideas = {
 	name = "Innovative"
 	category = ADM
 	trigger = {
-		OR = {
-			innovativeness = 25
-			full_idea_group = economic_ideas
-		}
+		full_idea_group = economic_ideas
 	}
 	ideas = {
 		{
@@ -823,88 +820,11 @@ new idea_group innovativeness_ideas = {
 		advisor_cost = -0.15
 	}
 }
-new idea_group esb_slavers = {
-	name = "Slavery"
-	category = ADM
-	trigger = {
-		OR = {
-			estate_influence = {
-				estate = estate_slavers
-				influence = 80
-			}
-			full_idea_group = economic_ideas
-		}
-		has_estate = estate_slavers
-	}
-	ideas = {
-		{
-			name = "The Slavers and State"
-			desc = "Integrating notable Slave owners into the government through having the hold office allows us to bind them to us."
-			modifier = {
-				slavers_loyalty_modifier = 0.2
-				slavers_influence_modifier = 0.1
-			}
-		}
-		{
-			name = "Loosening of Slave Rights"
-			desc = "By loosening the rights of slave the slavers are able to increase their total output"
-			modifier = {
-				global_unrest = 2
-				global_trade_goods_size_modifier = 0.1
-			}
-		}
-		{
-			name = "Study of the Chain"
-			desc = "Building on academic sources on what makes slaves more efficient allows our slavers to increase their productivity"
-			modifier = {
-				production_efficiency = 0.1
-			}
-		}
-		{
-			name = "Slave Soldiers"
-			desc = "Including some slave soldiers into our armies would allow us to have many more men in the army."
-			modifier = {
-				global_manpower_modifier = 0.2
-				land_morale = -0.05
-			}
-		}
-		{
-			name = "Slave Construction Companies"
-			desc = "Encouraging Slavers to move away from their land owning farming style slavery to a building style slavery would allow us to build cities for much cheaper"
-			modifier = {
-				build_cost = -0.15
-				build_time = -0.1
-			}
-		}
-		{
-			name = "Standardized Government Slave Trade"
-			desc = "Standardizing the process which slave owners sell their slaves to the government would allow us to send out slaves to the front lines faster."
-			modifier = {
-				reinforce_cost_modifier = -0.15
-				reinforce_speed = 0.25
-			}
-		}
-		{
-			name = "Slave Armies"
-			desc = "Including full on slave armies into our ranks would allow us to massively increase the size of our armies"
-			modifier = {
-				land_forcelimit_modifier = 0.15
-				land_morale = -0.05
-			}
-		}
-	}
-	bonus = {
-		land_maintenance_modifier = -0.05
-	}
-}
 new idea_group esb_treasury = {
 	name = "Treasury"
 	category = ADM
 	trigger = {
-		OR = {
-			years_of_income = 5.0
-			full_idea_group = economic_ideas
-		}
+		full_idea_group = economic_ideas
 	}
 	ideas = {
 		{
@@ -926,7 +846,7 @@ new idea_group esb_treasury = {
 			name = "Careful Selection"
 			desc = "Loyal servants will be rewarded. Corrupters will be mining iron."
 			modifier = {
-				advisor_cost = 0.15
+				advisor_cost = -0.10
 			}
 		}
 		{
@@ -954,7 +874,7 @@ new idea_group esb_treasury = {
 			name = "Septim Diplomacy"
 			desc = "We can part with some of it to create friendly buffer zone. And harm our rivals by supporting their enemies."
 			modifier = {
-				improve_relation_modifier = 0.15
+				improve_relation_modifier = 0.25
 			}
 		}
 	}
@@ -966,13 +886,7 @@ new idea_group fire0 = {
 	name = "Fire"
 	category = MIL
 	trigger = {
-		OR = {
-			artillery_fraction = 0.5
-			has_leader_with = {
-				fire = 6
-			}
-			full_idea_group = destruction_ideas
-		}
+		full_idea_group = destruction_ideas
 	}
 	ideas = {
 		{
@@ -1281,18 +1195,7 @@ new idea_group necromacy_ideas = {
 	name = "Necromancy"
 	category = MIL
 	trigger = {
-		OR = {
-			ruler_has_personality = ambitious_personality
-			ruler_has_personality = puppet_master_personality
-			ruler_has_personality = impaler_personality
-			ruler_has_personality = ruthless_personality
-			ruler_has_personality = sadistic_personality
-			ruler_has_personality = necromancer_personality
-			ruler_has_personality = lich_personality
-			ruler_has_personality = warlock_personality
-			ruler_has_personality = magic_addict_personality
-			full_idea_group = conjuration_ideas
-		}
+		full_idea_group = conjuration_ideas
 	}
 	ideas = {
 		{
@@ -1417,10 +1320,7 @@ new idea_group quantity_ideas = {
 	name = "Quantity"
 	category = MIL
 	trigger = {
-		OR = {
-			army_size_percentage = 2.0
-			full_idea_group = standing_army_ideas
-		}
+		full_idea_group = standing_army_ideas
 	}
 	ideas = {
 		{
@@ -1481,10 +1381,7 @@ new idea_group quality_ideas = {
 	name = "Quality"
 	category = MIL
 	trigger = {
-		OR = {
-			is_march = yes
-			full_idea_group = standing_army_ideas
-		}
+		full_idea_group = standing_army_ideas
 	}
 	ideas = {
 		{
@@ -1545,11 +1442,7 @@ new idea_group generalstab0 = {
 	name = "General Staff"
 	category = MIL
 	trigger = {
-		OR = {
-			has_commanding_three_star = yes
-			army_tradition = 75
-			full_idea_group = standing_army_ideas
-		}
+		full_idea_group = standing_army_ideas
 	}
 	ideas = {
 		{
@@ -1616,11 +1509,7 @@ new idea_group offensive_ideas = {
 	name = "Offensive"
 	category = MIL
 	trigger = {
-		OR = {
-			cavalry_fraction = 0.4
-			artillery_fraction = 0.4
-			full_idea_group = generalstab0
-		}
+		full_idea_group = generalstab0
 	}
 	ideas = {
 		{
@@ -1683,18 +1572,7 @@ new idea_group defensive_ideas = {
 	name = "Defensive"
 	category = MIL
 	trigger = {
-		OR = {
-			AND = {
-				ai = no
-				calc_true_if = {
-					all_owned_province = {
-						fort_level = 1
-					}
-					amount = 25
-				}
-			}
-			full_idea_group = generalstab0
-		}
+		full_idea_group = generalstab0
 	}
 	ideas = {
 		{
@@ -1757,10 +1635,7 @@ new idea_group mobility_ideas = {
 	name = "Mobility"
 	category = MIL
 	trigger = {
-		OR = {
-			cavalry_fraction = 0.5
-			full_idea_group = offensive_ideas
-		}
+		full_idea_group = offensive_ideas
 	}
 	ideas = {
 		{
@@ -1887,10 +1762,7 @@ new idea_group esb_largearmy = {
 	name = "Large Army"
 	category = MIL
 	trigger = {
-		OR = {
-			army_size_percentage = 3.0
-			full_idea_group = quantity_ideas
-		}
+		full_idea_group = quantity_ideas
 	}
 	ideas = {
 		{
@@ -1956,10 +1828,7 @@ new idea_group esb_professionalism = {
 	name = "Professionalism"
 	category = MIL
 	trigger = {
-		OR = {
-			army_professionalism = 50
-			full_idea_group = quality_ideas
-		}
+		full_idea_group = quality_ideas
 	}
 	ideas = {
 		{
@@ -2021,10 +1890,7 @@ new idea_group esb_longwar = {
 	name = "Extended Campaign"
 	category = MIL
 	trigger = {
-		OR = {
-			war_exhaustion = 15
-			full_idea_group = defensive_ideas
-		}
+		full_idea_group = defensive_ideas
 	}
 	ideas = {
 		{
@@ -2081,86 +1947,11 @@ new idea_group esb_longwar = {
 		war_exhaustion_cost = -0.25
 	}
 }
-new idea_group esb_warriors = {
-	name = "Warriors"
-	category = MIL
-	trigger = {
-		OR = {
-			estate_loyalty = {
-				estate = estate_warriors
-				loyalty = 100
-			}
-			full_idea_group = standing_army_ideas
-		}
-		has_estate = estate_warriors
-	}
-	ideas = {
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				warriors_loyalty_modifier = 0.2
-				warriors_influence_modifier = 0.1
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				land_morale = 0.1
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				general_cost = -0.25
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				recover_army_morale_speed = 0.4
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				shock_damage = 0.05
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				global_manpower_modifier = 0.15
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				movement_speed = 0.1
-			}
-		}
-	}
-	bonus = {
-		siege_ability = 0.1
-	}
-}
 new idea_group maritime_ideas = {
 	name = "Maritime"
 	category = DIP
 	trigger = {
-		OR = {
-			AND = {
-				trade_income_percentage = 0.5
-				light_ship_fraction = 0.75
-			}
-			full_idea_group = trade_ideas
-		}
+		full_idea_group = trade_ideas
 	}
 	ideas = {
 		{
@@ -2225,12 +2016,7 @@ new idea_group esb_monopoly = {
 	name = "Monopoly"
 	category = DIP
 	trigger = {
-		OR = {
-			production_leader = {
-				`trade_goods` = unknown
-			}
-			full_idea_group = trade_ideas
-		}
+		full_idea_group = trade_ideas
 	}
 	ideas = {
 		{
@@ -2287,91 +2073,11 @@ new idea_group esb_monopoly = {
 		global_supply_limit_modifier = 0.15
 	}
 }
-new idea_group esb_merchants = {
-	name = "Merchants"
-	category = DIP
-	trigger = {
-		OR = {
-			estate_loyalty = {
-				estate = estate_merchants
-				loyalty = 100
-			}
-			full_idea_group = trade_ideas
-		}
-		has_estate = estate_merchants
-	}
-	ideas = {
-		{
-			name = "Convoy Protection"
-			desc = "Pirates arent the only danger lurking in the seas. Proper naval and magical support will get our ships safely wherever they have to go."
-			modifier = {
-				disengagement_chance = 0.1
-			}
-		}
-		{
-			name = "Talent recruirement"
-			desc = "You dont have to be born high to become rich. Join us and tell everyone home about the world!"
-			modifier = {
-				merchants = 1
-			}
-		}
-		{
-			name = "Joint Service"
-			desc = "Recruiting former naval officers and sailors who seek less danger will make our crews more hardy and experienced."
-			modifier = {
-				naval_tradition_from_trade = 0.15
-			}
-		}
-		{
-			name = "Exotic Markets"
-			desc = "Trading with distant empires will make both seeking exotic goods from each other and benefit our trade."
-			modifier = {
-				global_foreign_trade_power = 0.2
-			}
-		}
-		{
-			name = "Exclusive Treaties"
-			desc = "Safeguard our trade relationships with mutually profitable treaties to avoid trade wars and big tariffs."
-			modifier = {
-				trade_efficiency = 0.15
-			}
-		}
-		{
-			name = "Second Navy"
-			desc = "Trade policies and general trade situation allowed merchants to field enough ships to rival even national fleets"
-			modifier = {
-				naval_forcelimit_modifier = 0.1
-			}
-		}
-		{
-			name = "Merchant Loyalty"
-			desc = "They say we are only loyal to money, but if we get enough by being loyal to merchant-friendly rule isn't it fine?"
-			modifier = {
-				merchants_loyalty_modifier = 0.2
-				merchants_influence_modifier = 0.1
-			}
-		}
-	}
-	bonus = {
-		global_ship_trade_power = 0.15
-	}
-}
 new idea_group spy_ideas = {
 	name = "Espionage"
 	category = DIP
 	trigger = {
-		OR = {
-			AND = {
-				ai = no
-				any_neighbor_country = {
-					has_spy_network_from = {
-						who = ROOT
-						value = 100
-					}
-				}
-			}
-			full_idea_group = diplomatic_ideas
-		}
+		full_idea_group = diplomatic_ideas
 	}
 	ideas = {
 		{
@@ -2493,7 +2199,7 @@ new idea_group naval_ideas = {
 		factor = 5
 		modifier = {
 			factor = 1000
-			tag = WND
+			tag = windhelm
 		}
 	}
 }
@@ -2501,10 +2207,7 @@ new idea_group flottenbasis0 = {
 	name = "Fleet Base"
 	category = DIP
 	trigger = {
-		OR = {
-			galley_fraction = 0.75
-			full_idea_group = naval_ideas
-		}
+		full_idea_group = naval_ideas
 	}
 	ideas = {
 		{
@@ -2568,10 +2271,7 @@ new idea_group influence_ideas = {
 	name = "Influence"
 	category = DIP
 	trigger = {
-		OR = {
-			num_of_subjects = 5
-			full_idea_group = diplomatic_ideas
-		}
+		full_idea_group = diplomatic_ideas
 	}
 	ideas = {
 		{
@@ -2628,221 +2328,11 @@ new idea_group influence_ideas = {
 		unjustified_demands = -0.5
 	}
 }
-new idea_group esb_assassins = {
-	name = "Assassination"
-	category = DIP
-	trigger = {
-		OR = {
-			estate_loyalty = {
-				estate = estate_assassins
-				loyalty = 100
-			}
-			full_idea_group = spy_ideas
-		}
-		has_estate = estate_assassins
-	}
-	ideas = {
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				assassins_loyalty_modifier = 0.2
-				assassins_influence_modifier = 0.1
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				discovered_relations_impact = -0.5
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				spy_offence = 0.2
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				reduced_liberty_desire = 10
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				harsh_treatment_cost = -0.25
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				yearly_corruption = -0.02
-			}
-		}
-		{
-			name = ""
-			desc = "Assassination Chance: §G+25%§!"
-			modifier = {
-				improve_relation_modifier = -0.1
-			}
-		}
-	}
-	bonus = {
-		accept_vassalization_reasons = 10
-	}
-}
-new idea_group esb_morag_tong = {
-	name = "Morag Tong"
-	category = DIP
-	trigger = {
-		OR = {
-			estate_loyalty = {
-				estate = estate_morag_tong
-				loyalty = 100
-			}
-			full_idea_group = spy_ideas
-		}
-		has_estate = estate_morag_tong
-	}
-	ideas = {
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				morag_tong_loyalty_modifier = 0.2
-				morag_tong_influence_modifier = 0.1
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				global_missionary_strength = 0.02
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				spy_offence = 0.2
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				reduced_liberty_desire = 10
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				harsh_treatment_cost = -0.25
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				relation_with_same_culture = 10
-			}
-		}
-		{
-			name = ""
-			desc = "Assassination Chance: §G+25%§!"
-			modifier = {
-				improve_relation_modifier = -0.1
-			}
-		}
-	}
-	bonus = {
-		accept_vassalization_reasons = 10
-	}
-}
-new idea_group esb_dark_brotherhood = {
-	name = "Dark Brotherhood"
-	category = DIP
-	trigger = {
-		OR = {
-			estate_loyalty = {
-				estate = estate_dark_brotherhood
-				loyalty = 100
-			}
-			full_idea_group = spy_ideas
-		}
-		has_estate = estate_dark_brotherhood
-	}
-	ideas = {
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				dark_brotherhood_loyalty_modifier = 0.2
-				dark_brotherhood_influence_modifier = 0.1
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				global_missionary_strength = 0.02
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				spy_offence = 0.2
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				reduced_liberty_desire = 10
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				harsh_treatment_cost = -0.25
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				yearly_corruption = -0.02
-			}
-		}
-		{
-			name = ""
-			desc = "Assassination Chance: §G+25%§!"
-			modifier = {
-				improve_relation_modifier = -0.1
-			}
-		}
-	}
-	bonus = {
-		accept_vassalization_reasons = 10
-	}
-}
 new idea_group esb_prestigious = {
 	name = "Prestigious"
 	category = DIP
 	trigger = {
-		OR = {
-			prestige = 90
-			full_idea_group = diplomatic_ideas
-		}
+		full_idea_group = diplomatic_ideas
 	}
 	ideas = {
 		{
@@ -3034,10 +2524,7 @@ new idea_group mysticism_ideas = {
 	name = "Mysticism"
 	category = ADM
 	trigger = {
-		OR = {
-			primary_culture = cultures:reachmen
-			full_idea_group = alteration_ideas
-		}
+		full_idea_group = alteration_ideas
 	}
 	ideas = {
 		{
@@ -3734,7 +3221,7 @@ new idea_group aristo0 = {
 		}
 	}
 	bonus = {
-		priests_loyalty_modifier = 0.15
+		monthly_fanaticism_power = 1.0
 	}
 }
 new idea_group horde0 = {
@@ -3876,10 +3363,6 @@ new idea_group aristocracy_ideas = {
 	category = ADM
 	trigger = {
 		OR = {
-			estate_loyalty = {
-				estate = estate_nobility
-				loyalty = 100
-			}
 			full_idea_group = monarchie0
 			full_idea_group = justiz0
 		}
@@ -3949,10 +3432,6 @@ new idea_group justiz0 = {
 	category = ADM
 	trigger = {
 		OR = {
-			estate_loyalty = {
-				estate = estate_commoners
-				loyalty = 100
-			}
 			full_idea_group = staatsverwaltung0
 		}
 	}
@@ -4016,10 +3495,6 @@ new idea_group plutocracy_ideas = {
 	category = ADM
 	trigger = {
 		OR = {
-			estate_loyalty = {
-				estate = estate_merchants
-				loyalty = 100
-			}
 			full_idea_group = republik0
 			full_idea_group = justiz0
 		}
@@ -4150,8 +3625,8 @@ new idea_group religious_ideas = {
 	category = ADM
 	trigger = {
 		OR = {
-			at_war_with_religious_enemy = yes
 			full_idea_group = aristo0
+			full_idea_group = administrative_ideas
 		}
 	}
 	ideas = {
@@ -4203,6 +3678,7 @@ new idea_group religious_ideas = {
 			desc = "Join the battle cry and crush the infidels."
 			modifier = {
 				cb_on_religious_enemies = yes
+				monthly_fanaticism_power = 1.0
 			}
 		}
 	}
@@ -4276,10 +3752,7 @@ new idea_group propaganda0 = {
 	name = "Propaganda"
 	category = DIP
 	trigger = {
-		OR = {
-			average_unrest = 5
-			full_idea_group = staatsverwaltung0
-		}
+		full_idea_group = staatsverwaltung0
 	}
 	ideas = {
 		{
@@ -4409,10 +3882,7 @@ new idea_group esb_corruption = {
 	name = "Corruption"
 	category = ADM
 	trigger = {
-		OR = {
-			corruption = 10
-			full_idea_group = republik0
-		}
+		full_idea_group = republik0
 	}
 	ideas = {
 		{
@@ -4475,7 +3945,7 @@ new idea_group esb_hegemonic = {
 	name = "Hegemonic"
 	category = ADM
 	trigger = {
-		is_hegemon = yes
+		full_idea_group = staatsverwaltung0
 	}
 	ideas = {
 		{
@@ -4543,10 +4013,7 @@ new idea_group esb_dynastic = {
 	name = "Dynastic"
 	category = ADM
 	trigger = {
-		OR = {
-			num_of_unions = 3
-			full_idea_group = monarchie0
-		}
+		full_idea_group = monarchie0
 	}
 	ideas = {
 		{
@@ -4609,10 +4076,7 @@ new idea_group esb_absolutism = {
 	name = "Absolutistic"
 	category = ADM
 	trigger = {
-		OR = {
-			absolutism = 75
-			full_idea_group = monarchie0
-		}
+		full_idea_group = monarchie0
 	}
 	ideas = {
 		{
@@ -4869,17 +4333,7 @@ new idea_group expansion_ideas = {
 	name = "Expansion"
 	category = ADM
 	trigger = {
-		OR = {
-			AND = {
-				ai = no
-				any_owned_province = {
-					any_empty_neighbor_province = {
-						is_city = no
-					}
-				}
-			}
-			has_idea_group = administrative_ideas
-		}
+		full_idea_group = administrative_ideas
 	}
 	ideas = {
 		{
@@ -4945,19 +4399,7 @@ new idea_group exploration_ideas = {
 	name = "Exploration"
 	category = DIP
 	trigger = {
-		OR = {
-			AND = {
-				ai = no
-				any_owned_province = {
-					any_neighbor_province = {
-						NOT = {
-							has_discovered = ROOT
-						}
-					}
-				}
-			}
-			has_idea_group = expansion_ideas
-		}
+		full_idea_group = expansion_ideas
 	}
 	ideas = {
 		{
@@ -5020,10 +4462,7 @@ new idea_group kolonialimperium0 = {
 	name = "Colonial Empire"
 	category = DIP
 	trigger = {
-		OR = {
-			num_of_strong_trade_companies = 1
-			has_idea_group = expansion_ideas
-		}
+		full_idea_group = expansion_ideas
 	}
 	ideas = {
 		{
@@ -5081,81 +4520,11 @@ new idea_group kolonialimperium0 = {
 		diplomatic_upkeep = 1
 	}
 }
-new idea_group esb_commoners = {
-	name = "Commoner"
-	category = ADM
-	trigger = {
-		OR = {
-			estate_loyalty = {
-				estate = estate_commoners
-				loyalty = 100
-			}
-			full_idea_group = administrative_ideas
-		}
-		has_estate = estate_commoners
-	}
-	ideas = {
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				commoners_loyalty_modifier = 0.2
-				commoners_influence_modifier = 0.1
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				global_unrest = -2
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				build_cost = -0.15
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				global_manpower_modifier = 0.15
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				global_tax_modifier = 0.15
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				development_cost = -0.1
-			}
-		}
-		{
-			name = ""
-			desc = ""
-			modifier = {
-				governing_capacity_modifier = 0.1
-			}
-		}
-	}
-	bonus = {
-		state_maintenance_modifier = -0.15
-	}
-}
 new idea_group galle0 = {
 	name = "Galley Focus"
 	category = DIP
 	trigger = {
 		OR = {
-			galley_fraction = 0.8
 			full_idea_group = flottenbasis0
 			full_idea_group = maritime_ideas
 		}
@@ -5221,7 +4590,6 @@ new idea_group handel0 = {
 	category = DIP
 	trigger = {
 		OR = {
-			light_ship_fraction = 0.8
 			full_idea_group = flottenbasis0
 			full_idea_group = maritime_ideas
 		}
@@ -5289,7 +4657,6 @@ new idea_group gross0 = {
 	category = DIP
 	trigger = {
 		OR = {
-			heavy_ship_fraction = 0.8
 			full_idea_group = flottenbasis0
 			full_idea_group = maritime_ideas
 		}
@@ -5543,7 +4910,6 @@ new idea_group esb_feudal = {
 	category = ADM
 	trigger = {
 		OR = {
-			num_of_subjects = 5
 			full_idea_group = influence_ideas
 			full_idea_group = monarchie0
 		}
@@ -5609,10 +4975,7 @@ new idea_group dezentra0 = {
 	name = "Decentralization"
 	category = ADM
 	trigger = {
-		OR = {
-			average_autonomy = 25
-			full_idea_group = esb_feudal
-		}
+		full_idea_group = esb_feudal
 	}
 	ideas = {
 		{
@@ -5727,75 +5090,6 @@ new idea_group arcane_ideas = {
 	}
 	bonus = {
 		diplomatic_reputation = 2
-	}
-}
-new idea_group esb_mages = {
-	name = "Mages"
-	category = ADM
-	trigger = {
-		OR = {
-			estate_loyalty = {
-				estate = estate_mages
-				loyalty = 100
-			}
-			full_idea_group = arcane_ideas
-		}
-		has_estate = estate_mages
-	}
-	ideas = {
-		{
-			name = "Mages Loyalty"
-			desc = "By fostering loyalty among the mages, we can ensure their support and cooperation. This will allow us to better utilize their talents and resources."
-			modifier = {
-				mages_loyalty_modifier = 0.2
-				mages_influence_modifier = 0.1
-			}
-		}
-		{
-			name = "Arcane Research"
-			desc = "By investing in arcane research, we can unlock new and powerful technologies that will give us a strategic advantage over our rivals."
-			modifier = {
-				technology_cost = -0.1
-			}
-		}
-		{
-			name = "Arcane Warfare"
-			desc = "The mages' mastery of the arcane arts can be harnessed to devastating effect on the battlefield. By investing in arcane warfare, we can make our military more formidable and effective."
-			modifier = {
-				fire_damage = 0.025
-			}
-		}
-		{
-			name = "Arcane Insight"
-			desc = "The mages' knowledge and insight can be a valuable resource for our nation. By investing in arcane insight, we can gain access to their wisdom and guidance."
-			modifier = {
-				idea_cost = -0.025
-			}
-		}
-		{
-			name = "Arcane Influence"
-			desc = "The mages' influence extends beyond the realm of magic. By cultivating their influence, we can enhance our reputation and standing in the world."
-			modifier = {
-				global_institution_spread = 0.25
-			}
-		}
-		{
-			name = "Arcane Advisors"
-			desc = "Mages make excellent advisors, with their knowledge and expertise in a wide range of fields. By investing in arcane advisors, we can improve the quality of our decision-making and better serve the needs of our subjects."
-			modifier = {
-				advisor_cost = -0.15
-			}
-		}
-		{
-			name = "Arcane Academy"
-			desc = "By establishing an arcane academy, we can train and educate new generations of mages and ensure a steady supply of magical talent for our nation."
-			modifier = {
-				advisor_pool = 1
-			}
-		}
-	}
-	bonus = {
-		monthly_splendor = 1
 	}
 }
 new idea_group esb_shadow_magic = {
@@ -5985,219 +5279,5 @@ new idea_group esb_flesh_magic = {
 	}
 	bonus = {
 		diplomatic_reputation = -1
-	}
-}
-new idea_group esb_crusader_ideas = {
-	name = "Crusader"
-	category = MIL
-	trigger = {
-		OR = {
-			has_reform = monastic_order_reform
-			ruler_has_personality = crusader_personality
-		}
-	}
-	ideas = {
-		{
-			name = "Crusading Spirit"
-			desc = "Our armies are imbued with a crusading spirit, willing to sacrifice everything for their faith and cause."
-			modifier = {
-				land_forcelimit_modifier = -0.15
-			}
-		}
-		{
-			name = "Discipline and Piety"
-			desc = "We place a strong emphasis on discipline and piety in our military, creating a formidable fighting force."
-			modifier = {
-				discipline = 0.05
-			}
-		}
-		{
-			name = "Holy War"
-			desc = "We declare a holy war against our enemies, inspiring our troops with a righteous fervor."
-			modifier = {
-				land_morale = 0.1
-			}
-		}
-		{
-			name = "Vassal Crusaders"
-			desc = "We encourage our vassals to join us in our crusades, strengthening our military might."
-			modifier = {
-				vassal_forcelimit_bonus = 0.5
-			}
-		}
-		{
-			name = "Divine Right"
-			desc = "We believe that our rule is divinely ordained, inspiring loyalty and devotion in our subjects."
-			modifier = {
-				legitimacy = 0.75
-				devotion = 0.75
-			}
-		}
-		{
-			name = "Spread the Word"
-			desc = "We spread the word of our religion across the world, using missionaries to convert others to our faith."
-			modifier = {
-				global_missionary_strength = 0.02
-			}
-		}
-		{
-			name = "Free Military Policy"
-			desc = "We adopt a free military policy, allowing our subjects to freely join the military and serve in our crusades."
-			modifier = {
-				free_mil_policy = 1
-			}
-		}
-	}
-	bonus = {
-		tolerance_own = 1
-	}
-}
-new idea_group esb_acceptance_ideas = {
-	name = "Acceptance"
-	category = MIL
-	trigger = {
-		num_accepted_cultures = 3
-	}
-	ideas = {
-		{
-			name = "Embrace Diversity"
-			desc = "We embrace the diversity of cultures within our borders, allowing for greater integration and understanding."
-			modifier = {
-				num_accepted_cultures = 2
-			}
-		}
-		{
-			name = "Tolerance and Understanding"
-			desc = "By promoting tolerance and understanding, we are able to quell unrest and maintain a sense of harmony within our nation."
-			modifier = {
-				global_unrest = -2
-			}
-		}
-		{
-			name = "Religious Unity"
-			desc = "By promoting religious unity, we are able to bring different faith groups together under a common banner."
-			modifier = {
-				religious_unity = 0.25
-				global_missionary_strength = -0.03
-			}
-		}
-		{
-			name = "Equal Treatment"
-			desc = "We believe in treating all individuals equally, regardless of their culture or beliefs."
-			modifier = {
-				tolerance_own = 2
-				tolerance_heretic = 2
-				tolerance_heathen = 2
-			}
-		}
-		{
-			name = "Inclusive Policies"
-			desc = "Our policies are designed to be inclusive and welcoming, allowing for the integration of diverse groups."
-			modifier = {
-				advisor_cost = -0.15
-			}
-		}
-		{
-			name = "A United People"
-			desc = "By fostering a sense of unity and belonging, we are able to boost morale and encourage loyalty."
-			modifier = {
-				land_morale = 0.15
-			}
-		}
-		{
-			name = "Stronger Together"
-			desc = "We believe that by working together, we are stronger and more able to defend our nation."
-			modifier = {
-				reinforce_cost_modifier = -0.15
-			}
-		}
-	}
-	bonus = {
-		governing_capacity_modifier = 0.1
-	}
-}
-new idea_group esb_massacre_ideas = {
-	name = "Massacre"
-	category = MIL
-	trigger = {
-		ai = no
-		absolutism = 50
-		OR = {
-			ruler_has_personality = sinner_personality
-			ruler_has_personality = cruel_personality
-			ruler_has_personality = malevolent_personality
-			ruler_has_personality = impaler_personality
-			ruler_has_personality = pyromaniac_personality
-			ruler_has_personality = ruthless_personality
-			ruler_has_personality = sadistic_personality
-			ruler_has_personality = barbaric_personality
-			ruler_has_personality = xenophobic_personality
-			ruler_has_personality = destroyer_personality
-			ruler_has_personality = necromancer_personality
-			ruler_has_personality = lich_personality
-		}
-		calc_true_if = {
-			all_country = {
-				is_threat = ROOT
-			}
-			amount = 5
-		}
-	}
-	ideas = {
-		{
-			name = "Genocidal Instincts"
-			desc = "Our armies are trained to show no mercy, and will stop at nothing to wipe out our enemies.\nSiege Genocide Chance: §G+0.1%§!"
-			modifier = {
-				siege_ability = 0.1
-			}
-		}
-		{
-			name = "Tyrannical Rule"
-			desc = "Our rulers rule with an iron fist, crushing any dissent and showing no mercy to those who defy them."
-			modifier = {
-				max_absolutism = 50
-			}
-		}
-		{
-			name = "Lord of Fear"
-			desc = "Our nation strikes fear into the hearts of our enemies, making it easier to convert their cultures and use harsh methods to maintain control."
-			modifier = {
-				culture_conversion_cost = -0.25
-				harsh_treatment_cost = -0.5
-				years_of_nationalism = -5
-			}
-		}
-		{
-			name = "An Iron Fist"
-			desc = "Our rulers maintain control through the use of force and intimidation, crushing any opposition."
-			modifier = {
-				global_autonomy = -0.05
-				stability_cost_modifier = -0.25
-			}
-		}
-		{
-			name = "One Voice"
-			desc = "Under our rule, there is only one voice that matters - ours."
-			modifier = {
-				administrative_efficiency = 0.05
-			}
-		}
-		{
-			name = "Ruthless Tactics"
-			desc = "In battle, we use any means necessary to crush our enemies."
-			modifier = {
-				shock_damage = 0.1
-			}
-		}
-		{
-			name = "The Great Cleansing"
-			desc = "We will stop at nothing to purify our nation, including the extermination of those who stand in our way.\nMana gain on Genocide: §G+25§!"
-			modifier = {
-				culture_conversion_cost = -0.25
-			}
-		}
-	}
-	bonus = {
-		discipline = 0.1
 	}
 }

@@ -1,0 +1,141 @@
+new government_reform tier_2_conscription = {
+	name = "Conscription"
+	desc = "
+
+Unlocks the next tier of §OArmy§! Buildings"
+	icon = "barracks"
+	allow_normal_conversion = yes
+	modifiers = {
+		land_forcelimit_modifier = 0.10
+		manpower_recovery_speed = 0.05
+	}
+}
+new mercenary_company tier_2_mercenaries_company = {
+	name = "Sponsored Company"
+	regiments_per_development = 0.07
+	cavalry_weight = 0.1
+	artillery_weight = 0.1
+	cavalry_cap = 2
+	cost_modifier = 0.3
+	trigger = {
+		has_reform = tier_2_mercenaries
+	}
+}
+new government_reform tier_2_mercenaries = {
+	name = "Mercenaries"
+	desc = ""
+	icon = "tour_of_duty"
+	allow_normal_conversion = yes
+	effect = {
+		defineloc tier_2_mercenaries_tt = "Gain Access to a new §OMercenary Company§!"
+		custom_tooltip = tier_2_mercenaries_tt
+	}
+	modifiers = {
+		merc_maintenance_modifier = -0.10
+	}
+}
+new government_reform tier_2_warriors = {
+	name = "Warriors Estate"
+	desc = ""
+	icon = "champion"
+	allow_normal_conversion = yes
+	potential = {
+		has_estate = estate_warriors
+	}
+	modifiers = {
+		warriors_loyalty_modifier = 0.1
+		warriors_privilege_slots = 1
+	}
+}
+new government_reform tier_2_professional_army = {
+	name = "Professional Army"
+	desc = ""
+	icon = "challenge"
+	allow_normal_conversion = yes
+	modifiers = {
+		drill_gain_modifier = 0.35
+		drill_decay_modifier = -0.25
+		yearly_army_professionalism = 0.0025
+	}
+}
+new government_reform tier_2_peasant_army = {
+	name = "Peasant Army"
+	desc = ""
+	icon = "fist_in_air"
+	allow_normal_conversion = yes
+	modifiers = {
+		defineloc ability_peasant_army_mechanic = "Raise Peasant Army"
+		defineloc peasant_army_button = "Raise Peasant Army"
+		defineloc peasant_army_button_desc = ""
+		global_manpower_modifier = 0.25
+	}
+	government_abilities = {
+		peasant_army_mechanic
+	}
+}
+special_units:musketeer:name := "Battlemage"
+special_units:musketeer:modifier := {
+}
+special_units:musketeer:regiment := {
+	fire_damage = 0.10
+	assault_fort_ability = 0.5
+}
+special_units:musketeer:uses_construction := 1
+special_units:musketeer:base_cost_modifier := 1.0
+special_units:musketeer:manpower_cost_modifier := 1.0
+special_units:musketeer:prestige_cost := 0
+special_units:musketeer:absolutism_cost := 0
+special_units:musketeer:starting_strength := 1.0
+special_units:musketeer:starting_morale := 0.1
+on_actions:on_musketeer_raised := {
+}
+special_units:musketeer:localisation := {
+	MUSKETEER_NAME = "$HOME$'s $NUM$$ORDER$ Battlemage Regiment"
+	MODIFIER_ALLOWED_MUSKETEER_FRACTION = "Battlemage Force Limit"
+	MODIFIER_LOCAL_HAS_MUSKETEER = "Province Allows Battlemage Infantry"
+	MUSKETEER_FORCELIMIT = "We can recruit up to $LIMIT|Y$ §GBattlemages§! owing to:\n$FLAMOUNT|Y$ from $PERC|%Y$ of our force-limit of $FL$:\n"
+	MUSKETEER_LIMIT_CULTURE = "$PROVINCE$ is a $CULTURE$ province, so can not recruit Battlemages here."
+	ADD_MUSKETEER_SUB_UNIT_EFFECT = "Get '§GBattlemage§!' $UNIT$ in $WHERE|Y$."
+	MUSKETEER_DESC = ""
+	REGCAT_musketeer = "Battlemage"
+	MUSKETEER_REGIMENT = "Battlemage Regiment\n$EFFECT$"
+	HAVE_LESS_MUSKETEER_THAN = "Have less Battlemages than §Y$VALUE$§!.\n"
+	HAVE_AT_LEAST_MUSKETEER_THAN = "Have at least §Y$VALUE$§! Battlemages.\n"
+	MODIFIER_AMOUNT_OF_MUSKETEER = "Battlemage Force Limit"
+	musketeers_modifier = "Battlemages Hired"
+	ONLY_MUSKETEER_MODIFIER = "§YAffects only Battlemage Regiments§!"
+	MODIFIER_HAS_MUSKETEER = "Country Allows Battlemages"
+}
+new government_reform tier_2_battlemages = {
+	name = "Battlemages"
+	desc = ""
+	icon = "arcane_barrage"
+	allow_normal_conversion = yes
+	trigger = {
+		full_idea_group = esb_warmagic
+	}
+	modifiers = {
+		has_musketeer = yes
+		allowed_musketeer_fraction = 0.10
+	}
+}
+new government_reform tier_2_lunar_smithing = {
+	name = "Lunar Smithing"
+	desc = ""
+	icon = "lunar_smithing"
+	allow_normal_conversion = yes
+	potential = {
+		owns = provinces:silent_moons
+	}
+	trigger = {
+		provinces:silent_moons = {
+			has_great_project = {
+				type = lunar_forge
+				tier = 3
+			}
+		}
+	}
+	modifiers = {
+		infantry_shock = 0.5
+	}
+}

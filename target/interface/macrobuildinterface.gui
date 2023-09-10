@@ -478,32 +478,6 @@ guiTypes = {
 		#	position = { x = 504 y = 0 }
 		#	spriteType = "GFX_banner_mid_10"
 		#}
-
-		instantTextBoxType={
-			name = "custom_province_interaction"
-			position = {x = 514 y = 0 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}
-			maxWidth = 500
-			maxHeight = 18
-			text = "building_custom_interaction_building"
-		}
-		
-		checkboxType = {
-			name = "build_artifact_search"
-			position = { x = 510 y = 0 }
-			quadTextureSprite = "GFX_building_default" #Placeholder, real sprite is decided by game (based on button name).
-		}
-
-		instantTextBoxType={
-			name = "artifact_search_cost"
-			position = { x = 510 y = 0 }
-			font = "vic_18"
-			borderSize = { x = 0 y = 0 }	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"	
-		}
 		
 		iconType = {
 			name = "road_network_a_b_arrow"
@@ -936,13 +910,13 @@ guiTypes = {
 		}
 		
 		iconType = {
-			name = "gover_banner"
+			name = "goods_banner"
 			position = { x = 200 y = 100 }
 			spriteType = "GFX_banner_left_3"
 		}
 		
 		instantTextBoxType={
-			name = "gover_banner_text"
+			name = "goods_banner_text"
 			position = {x = 215 y = 106 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -952,13 +926,13 @@ guiTypes = {
 		}
 		
 		checkboxType = {
-			name = "build_gover_1"
+			name = "build_goods_1"
 			position = { x = 200 y = 134 }
 			quadTextureSprite = "GFX_building_default" #Placeholder, real sprite is decided by game (based on button name).
 		}
 
 		instantTextBoxType={
-			name = "gover_1_cost"
+			name = "goods_1_cost"
 			position = { x = 200 y = 184 }
 			font = "vic_18"
 			borderSize = { x = 0 y = 0 }	
@@ -968,19 +942,19 @@ guiTypes = {
 		}
 		
 		iconType = {
-			name = "gover_1_2_arrow"
+			name = "goods_1_2_arrow"
 			position = { x = 248 y = 144 }
 			spriteType = "GFX_building_upgrade_icon"
 		}
 		
 		checkboxType = {
-			name = "build_gover_2"
+			name = "build_goods_2"
 			position = { x = 260 y = 134 }
 			quadTextureSprite = "GFX_building_default" #Placeholder, real sprite is decided by game (based on button name).
 		}
 
 		instantTextBoxType={
-			name = "gover_2_cost"
+			name = "goods_2_cost"
 			position = { x = 260 y = 184 }
 			font = "vic_18"
 			borderSize = { x = 0 y = 0 }	

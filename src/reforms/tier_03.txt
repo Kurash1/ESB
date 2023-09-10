@@ -1,0 +1,52 @@
+new government_reform tier_3_conscription = {
+	name = "Conscription"
+	desc = "
+
+Unlocks the next tier of §ONavy§! Buildings"
+	icon = "human_sailor"
+	allow_normal_conversion = yes
+	modifiers = {
+		naval_forcelimit_modifier = 0.10
+		sailors_recovery_speed = 0.05
+	}
+}
+new government_reform tier_3_ship_building = {
+	name = "Ship Building"
+	desc = ""
+	icon = "craftsman"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_ship_cost = -0.1
+		global_ship_recruit_speed = -0.1
+	}
+}
+new government_reform tier_3_fishermen = {
+	name = "Fishermen"
+	desc = ""
+	icon = "casa_de_contraction"
+	allow_normal_conversion = yes
+	modifiers = {
+		sailors_recovery_speed = 0.1
+		production_efficiency = 0.1
+	}
+}
+new government_reform tier_3_vikings = {
+	name = "Vikings"
+	desc = ""
+	icon = "war_against_the_world"
+	allow_normal_conversion = yes
+	modifiers = {
+		naval_forcelimit_modifier = 0.05
+		privateer_efficiency = 0.5
+	}
+}
+new government_reform tier_3_the_flagship = {
+	name = "The Flagship"
+	desc = ""
+	icon = "voc_ship"
+	allow_normal_conversion = yes
+	modifiers = {
+		flagship_cost = -0.25
+		max_flagships = 1
+	}
+}

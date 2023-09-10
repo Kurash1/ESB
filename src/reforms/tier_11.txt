@@ -1,0 +1,31 @@
+new government_reform tier_11_royal_court = {
+	name = "Royal Court"
+	desc = ""
+	icon = "french_court"
+	allow_normal_conversion = yes
+	modifiers = {
+		advisor_pool = 1
+		legitimacy = 1
+	}
+}
+new government_reform tier_11_expanded_powers = {
+	name = "Expanded Powers"
+	desc = ""
+	icon = "regents"
+	allow_normal_conversion = yes
+	modifiers = {
+		advisor_cost = -0.25
+		yearly_corruption = 0.05
+	}
+}
+new government_reform tier_11_martial_court = {
+	name = "Martial Court"
+	desc = ""
+	icon = "land_army_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		mil_advisor_cost = -0.5
+		general_cost = -0.10
+		free_land_leader_pool = 1
+	}
+}

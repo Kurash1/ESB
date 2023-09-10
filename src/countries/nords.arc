@@ -4,7 +4,7 @@ new inheritable nordic_country = {
 	graphical_culture = greekgfx
 	history = {
 	}
-	starting_reform = nord_clan
+	starting_reform = tier_1_nord_clan
 }
 new country valtheim = {
 	inherit = nordic_country
@@ -21,7 +21,7 @@ new country clearspring = {
 	inherit = nordic_country
 	primary_culture = fallowfirean
 	tag = CLR
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Clearspring"
 	adj = "Clear"
 	color = {
@@ -94,7 +94,7 @@ new country dragon_bridge = {
 	inherit = nordic_country
 	primary_culture = haafingarian
 	tag = DRB
-	starting_reform = warrior_house
+	starting_reform = tier_1_warrior_house
 	name = "Dragon Bridge"
 	adj = "Dragon Bridgean"
 	color = {
@@ -186,7 +186,7 @@ new country snow-hawk = {
 	name = "Snow-Hawk"
 	adj = "Snow-Hawk"
 	color = {
-		255 255 255
+		200 255 200
 	}
 	capital = snowhawk
 }
@@ -274,7 +274,7 @@ new country dunstad = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = DNS
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Dunstad"
 	adj = "Dunstandish"
 	color = {
@@ -297,7 +297,7 @@ new country hjaal = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = HJA
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Hjaal"
 	adj = "Hjaalish"
 	color = {
@@ -325,7 +325,7 @@ new country river-runner = {
 	color = {
 		0 203 255
 	}
-	capital = bee_coast
+	capital = swindlers_den
 }
 new country hrothgar = {
 	inherit = nordic_country
@@ -370,7 +370,7 @@ new country skjoralmor = {
 	color = {
 		20 63 11
 	}
-	capital = lakeview
+	capital = riverwood
 	history = {
 		elector = yes
 	}
@@ -420,7 +420,7 @@ new country windhelm = {
 	color = {
 		45 53 206
 	}
-	starting_reform = jarldom
+	starting_reform = tier_1_hold
 	capital = windhelm
 	history = {
 		historical_friend = JRR
@@ -447,18 +447,6 @@ new country windhelm = {
 			}
 		}
 	}
-}
-new country eastmarch = {
-	inherit = nordic_country
-	primary_culture = eastmarcher
-	tag = EAS
-	name = "Eastmarch"
-	adj = "Eastmarch"
-	color = {
-		45 53 206
-	}
-	starting_reform = jarldom
-	capital = windhelm
 }
 new relation alliance = {
 	first = JRR
@@ -503,7 +491,7 @@ new country nightgate = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = NIG
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Nightgate"
 	adj = "Nightgate"
 	color = {
@@ -605,7 +593,7 @@ new country bleak-wind = {
 new country volunruud = {
 	inherit = nordic_country
 	primary_culture = palean
-	starting_reform = warrior_hold
+	starting_reform = tier_1_warrior_hold
 	tag = VLR
 	name = "Volunruud"
 	adj = "Volunruud"
@@ -618,7 +606,7 @@ new country rannveig = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = RAN
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Rannveig"
 	adj = "Rannveig's"
 	color = {
@@ -630,7 +618,7 @@ new country shearpoint = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = SHR
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Shearpoint"
 	adj = "Shearpointish"
 	color = {
@@ -763,7 +751,7 @@ new country yngvild = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = YNG
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Yngvild"
 	adj = "Yngvild"
 	color = {
@@ -774,7 +762,7 @@ new country yngvild = {
 new country cragwallow = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	tag = CRW
 	name = "Cragwallow"
 	adj = "Cragwallow"
@@ -787,7 +775,7 @@ new country anthor = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = ANT
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Anthor"
 	adj = "Anthor"
 	color = {
@@ -799,7 +787,7 @@ new country saarthal = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = SAA
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Saarthal"
 	adj = "Saarthal"
 	color = {
@@ -844,7 +832,7 @@ new country winterhold = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = WIH
-	starting_reform = thanedom
+	starting_reform = tier_1_thanedom
 	name = "Winterhold"
 	adj = "Winterhold"
 	color = {
