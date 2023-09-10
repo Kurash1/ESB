@@ -119,6 +119,6 @@ tags={
 	"National Ideas"
 	"New Nations"
 }
-name="ESB ARC5"
+name="ESB Pre-Release"
 supported_version="1.35.*"
 remote_file_id="3033843064"
