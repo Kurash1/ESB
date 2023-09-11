@@ -1767,7 +1767,7 @@ new idea_group esb_largearmy = {
 	ideas = {
 		{
 			name = "Conscript Every Man Mer and Beast"
-			desc = ""
+			desc = "A policy of conscripting every able-bodied individual and even beasts into military service."
 			modifier = {
 				global_manpower_modifier = 0.25
 				production_efficiency = -0.2
@@ -1775,7 +1775,7 @@ new idea_group esb_largearmy = {
 		}
 		{
 			name = "Heavy Conscription"
-			desc = ""
+			desc = "Implementing heavy conscription measures to rapidly raise armies, but at the cost of burdening our economy."
 			modifier = {
 				war_taxes_cost_modifier = 1.0
 				global_monthly_devastation = 0.05
@@ -1783,21 +1783,21 @@ new idea_group esb_largearmy = {
 		}
 		{
 			name = "Manpower Tactics"
-			desc = ""
+			desc = "Training our military forces with a focus on maximizing manpower, allowing us to field larger armies."
 			modifier = {
 				land_forcelimit_modifier = 0.25
 			}
 		}
 		{
 			name = "Military Complex"
-			desc = ""
+			desc = "Investing in the development of military infrastructure and logistics to reduce the maintenance costs of our armed forces."
 			modifier = {
-				land_maintenance_modifier = 0.05
+				land_maintenance_modifier = -0.05
 			}
 		}
 		{
 			name = "Forced Conscriptions"
-			desc = ""
+			desc = "Implementing forced conscription policies, which may negatively impact the morale of our soldiers but increase our overall manpower pool."
 			modifier = {
 				land_morale = -0.1
 				global_manpower_modifier = 0.1
@@ -1805,7 +1805,7 @@ new idea_group esb_largearmy = {
 		}
 		{
 			name = "Castle Conscription"
-			desc = ""
+			desc = "Utilizing castles and fortifications for conscription efforts."
 			modifier = {
 				fort_maintenance_modifier = 1.0
 				defensiveness = 0.25
@@ -1814,7 +1814,7 @@ new idea_group esb_largearmy = {
 		}
 		{
 			name = "Large Army Expertise"
-			desc = ""
+			desc = "Developing expertise in managing large armies, allowing us to better organize and mobilize reserves during battles."
 			modifier = {
 				reserves_organisation = 0.5
 			}

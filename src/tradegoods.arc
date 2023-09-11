@@ -8,7 +8,7 @@ new tradegood wood = {
 		build_cost = -0.15
 	}
 	province = {
-		local_development_cost = -0.05
+		local_build_cost = -0.25
 	}
 	base_price = 2
 	is_gold = no
@@ -158,7 +158,7 @@ new tradegood paper = {
 		state_governing_cost = -0.1
 	}
 	province = {
-		local_institution_spread = 0.5
+		local_governing_cost = -0.25
 	}
 	base_price = 4
 	is_gold = no
@@ -330,6 +330,7 @@ new tradegood silver = {
 	modifier = {
 	}
 	province = {
+		trade_goods_size_modifier = -0.5
 	}
 	base_price = 0
 	is_gold = yes
@@ -357,7 +358,7 @@ new tradegood ebony = {
 		discipline = 0.05
 	}
 	province = {
-		infantry_power = 0.005
+		infantry_power = 0.025
 	}
 	base_price = 8
 	is_gold = no
