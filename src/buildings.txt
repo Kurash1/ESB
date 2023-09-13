@@ -89,502 +89,346 @@ new building fortup_4 = {
 		factor = 0
 	}
 }
-new building tax_1 = {
-	name = "Shrine"
+new building_line tax = {
+	name = "Tax"
 	desc = ""
-	cost = 100
 	time = 12
-	modifier = {
-		local_tax_modifier = 0.4
-		local_autonomy = -0.05
+	idea_group_unlocks = {
+		economic_ideas
+		esb_treasury
+		religious_ideas
 	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building tax_2 = {
-	name = "Temple"
-	desc = ""
-	cost = 200
-	time = 12
-	make_obsolete = tax_1
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = economic_ideas
-				full_idea_group = esb_treasury
-				full_idea_group = religious_ideas
-			}
+	1 = {
+		cost = 100
+		name = "Tax 1"
+		modifier = {
+			local_tax_modifier = 0.4
+			local_autonomy = -0.05
 		}
 	}
-	modifier = {
-		local_tax_modifier = 0.7
-		local_autonomy = -0.10
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building tax_3 = {
-	name = "Cathedral"
-	desc = ""
-	cost = 300
-	time = 12
-	make_obsolete = tax_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 2
-				full_idea_group = economic_ideas
-				full_idea_group = esb_treasury
-				full_idea_group = religious_ideas
-			}
+	2 = {
+		cost = 200
+		name = "Tax 2"
+		make_obsolete = tax_1
+		modifier = {
+			local_tax_modifier = 0.7
+			local_autonomy = -0.10
 		}
 	}
-	modifier = {
-		local_tax_modifier = 1.0
-		local_autonomy = -0.15
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building production_1 = {
-	name = "Smithy"
-	desc = ""
-	cost = 100
-	time = 12
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = economic_ideas
-				full_idea_group = enchanting_ideas
-				full_idea_group = alchemical_ideas
-				full_idea_group = smithing_ideas
-				full_idea_group = waffenqualitat0
-				full_idea_group = armour_quality_ideas
-			}
+	3 = {
+		cost = 300
+		name = "Tax 3"
+		make_obsolete = tax_2
+		modifier = {
+			local_tax_modifier = 1.0
+			local_autonomy = -0.15
 		}
 	}
-	modifier = {
-		local_production_efficiency = 0.4
-	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building production_2 = {
-	name = "Workshop"
+new building_line production = {
+	name = "Production"
 	desc = ""
-	cost = 200
 	time = 12
-	make_obsolete = production_1
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 2
-				full_idea_group = economic_ideas
-				full_idea_group = enchanting_ideas
-				full_idea_group = alchemical_ideas
-				full_idea_group = smithing_ideas
-				full_idea_group = waffenqualitat0
-				full_idea_group = armour_quality_ideas
-			}
+	idea_group_unlocks = {
+		economic_ideas
+		enchanting_ideas
+		alchemical_ideas
+		smithing_ideas
+		waffenqualitat0
+		armour_quality_ideas
+	}
+	1 = {
+		cost = 100
+		name = "Production 1"
+		modifier = {
+			local_production_efficiency = 0.4
 		}
 	}
-	modifier = {
-		local_production_efficiency = 0.7
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building production_3 = {
-	name = "Craftsmens Guild"
-	desc = ""
-	cost = 300
-	time = 12
-	make_obsolete = production_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 3
-				full_idea_group = economic_ideas
-				full_idea_group = enchanting_ideas
-				full_idea_group = alchemical_ideas
-				full_idea_group = smithing_ideas
-				full_idea_group = waffenqualitat0
-				full_idea_group = armour_quality_ideas
-			}
+	2 = {
+		cost = 200
+		name = "Production 2"
+		make_obsolete = production_1
+		modifier = {
+			local_production_efficiency = 0.7
 		}
 	}
-	modifier = {
-		local_production_efficiency = 1.0
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building trade_1 = {
-	name = "Market"
-	desc = ""
-	cost = 100
-	time = 12
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = economic_ideas
-				full_idea_group = trade_ideas
-				full_idea_group = esb_monopoly
-			}
+	3 = {
+		cost = 300
+		name = "Production 3"
+		make_obsolete = production_2
+		modifier = {
+			local_production_efficiency = 1.0
 		}
 	}
-	modifier = {
-		province_trade_power_modifier = 0.4
-	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building trade_2 = {
-	name = "Market Street"
+new building_line trade = {
+	name = "Trade"
 	desc = ""
-	cost = 200
 	time = 12
-	make_obsolete = trade_1
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 2
-				full_idea_group = economic_ideas
-				full_idea_group = trade_ideas
-				full_idea_group = esb_monopoly
-			}
+	idea_group_unlocks = {
+		economic_ideas
+		trade_ideas
+		esb_monopoly
+	}
+	1 = {
+		cost = 100
+		name = "Trade 1"
+		modifier = {
+			province_trade_power_modifier = 0.4
 		}
 	}
-	modifier = {
-		province_trade_power_modifier = 0.7
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building trade_3 = {
-	name = "Market District"
-	desc = ""
-	cost = 300
-	time = 12
-	make_obsolete = trade_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 3
-				full_idea_group = economic_ideas
-				full_idea_group = trade_ideas
-				full_idea_group = esb_monopoly
-			}
+	2 = {
+		cost = 200
+		name = "Trade 2"
+		make_obsolete = trade_1
+		modifier = {
+			province_trade_power_modifier = 0.7
 		}
 	}
-	modifier = {
-		province_trade_power_modifier = 1.0
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building army_1 = {
-	name = "Garrison"
-	desc = ""
-	cost = 100
-	time = 12
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = standing_army_ideas
-				full_idea_group = quantity_ideas
-				full_idea_group = quality_ideas
-				full_idea_group = generalstab0
-				full_idea_group = offensive_ideas
-				full_idea_group = defensive_ideas
-				full_idea_group = mobility_ideas
-				full_idea_group = esb_largearmy
-				full_idea_group = esb_professionalism
-				full_idea_group = esb_longwar
-				has_reform = tier_2_conscription
-			}
+	3 = {
+		cost = 300
+		name = "Trade 3"
+		make_obsolete = trade_2
+		modifier = {
+			province_trade_power_modifier = 1.0
 		}
 	}
-	modifier = {
-		local_manpower_modifier = 0.4
-	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building army_2 = {
-	name = "Barracks"
+new building_line army = {
+	name = "Army"
 	desc = ""
-	cost = 200
 	time = 12
-	make_obsolete = army_1
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 2
-				full_idea_group = standing_army_ideas
-				full_idea_group = quantity_ideas
-				full_idea_group = quality_ideas
-				full_idea_group = generalstab0
-				full_idea_group = offensive_ideas
-				full_idea_group = defensive_ideas
-				full_idea_group = mobility_ideas
-				full_idea_group = esb_largearmy
-				full_idea_group = esb_professionalism
-				full_idea_group = esb_longwar
-				has_reform = tier_2_conscription
-			}
+	idea_group_unlocks = {
+		standing_army_ideas
+		quantity_ideas
+		quality_ideas
+		generalstab0
+		offensive_ideas
+		defensive_ideas
+		mobility_ideas
+		esb_largearmy
+		esb_professionalism
+		esb_longwar
+	}
+	reform_unlocks = {
+		tier_2_conscription
+	}
+	1 = {
+		cost = 100
+		name = "Army 1"
+		modifier = {
+			local_manpower_modifier = 0.5
 		}
 	}
-	modifier = {
-		local_manpower_modifier = 0.7
-		land_forcelimit = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building army_3 = {
-	name = "Training Fields"
-	desc = ""
-	cost = 300
-	time = 12
-	make_obsolete = army_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 3
-				full_idea_group = standing_army_ideas
-				full_idea_group = quantity_ideas
-				full_idea_group = quality_ideas
-				full_idea_group = generalstab0
-				full_idea_group = offensive_ideas
-				full_idea_group = defensive_ideas
-				full_idea_group = mobility_ideas
-				full_idea_group = esb_largearmy
-				full_idea_group = esb_professionalism
-				full_idea_group = esb_longwar
-				has_reform = tier_2_conscription
-			}
+	2 = {
+		cost = 200
+		name = "Army 2"
+		make_obsolete = army_1
+		modifier = {
+			local_manpower_modifier = 0.75
+			land_forcelimit = 1
 		}
 	}
-	modifier = {
-		local_manpower_modifier = 1.0
-		land_forcelimit = 2
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building navy_1 = {
-	name = "Pier"
-	desc = ""
-	cost = 100
-	time = 12
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = maritime_ideas
-				full_idea_group = naval_ideas
-				full_idea_group = flottenbasis0
-				full_idea_group = galle0
-				full_idea_group = handel0
-				full_idea_group = gross0
-				has_reform = tier_3_conscription
-			}
+	3 = {
+		cost = 300
+		name = "Army 3"
+		make_obsolete = army_2
+		modifier = {
+			local_manpower_modifier = 1.0
+			land_forcelimit = 2
 		}
 	}
-	modifier = {
-		ship_recruit_speed = -0.2
-		local_ship_repair = 0.2
-		naval_forcelimit = 1
-		local_sailors_modifier = 0.4
-	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building navy_2 = {
-	name = "Docks"
+new building_line navy = {
+	name = "Navy"
 	desc = ""
-	cost = 200
 	time = 12
-	make_obsolete = navy_1
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 2
-				full_idea_group = maritime_ideas
-				full_idea_group = naval_ideas
-				full_idea_group = flottenbasis0
-				full_idea_group = galle0
-				full_idea_group = handel0
-				full_idea_group = gross0
-				has_reform = tier_3_conscription
-			}
+	idea_group_unlocks = {
+		maritime_ideas
+		naval_ideas
+		flottenbasis0
+		galle0
+		handel0
+		gross0
+	}
+	reform_unlocks = {
+		tier_3_conscription
+	}
+	1 = {
+		cost = 100
+		name = "Navy 1"
+		modifier = {
+			ship_recruit_speed = -0.2
+			local_ship_repair = 0.2
+			local_sailors_modifier = 0.4
 		}
 	}
-	modifier = {
-		ship_recruit_speed = -0.4
-		local_ship_repair = 0.4
-		naval_forcelimit = 2
-		local_sailors_modifier = 0.7
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building navy_3 = {
-	name = "Shipyard"
-	desc = ""
-	cost = 300
-	time = 12
-	make_obsolete = navy_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 3
-				full_idea_group = maritime_ideas
-				full_idea_group = naval_ideas
-				full_idea_group = flottenbasis0
-				full_idea_group = galle0
-				full_idea_group = handel0
-				full_idea_group = gross0
-				has_reform = tier_3_conscription
-			}
+	2 = {
+		cost = 200
+		name = "Navy 2"
+		make_obsolete = navy_1
+		modifier = {
+			ship_recruit_speed = -0.4
+			local_ship_repair = 0.4
+			naval_forcelimit = 2
+			local_sailors_modifier = 0.7
 		}
 	}
-	modifier = {
-		ship_recruit_speed = -0.6
-		local_ship_repair = 0.6
-		naval_forcelimit = 4
-		local_sailors_modifier = 1.0
+	3 = {
+		cost = 300
+		name = "Navy 3"
+		make_obsolete = navy_2
+		modifier = {
+			ship_recruit_speed = -0.6
+			local_ship_repair = 0.6
+			naval_forcelimit = 4
+			local_sailors_modifier = 1.0
+		}
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building road_1 = {
-	name = "Paths"
+new building_line road = {
+	name = "Road"
 	desc = ""
-	cost = 25
 	time = 3
-	modifier = {
-		local_friendly_movement_speed = 0.5
-		allowed_num_of_buildings = 1
+	idea_group_unlocks = {
+		trade_ideas
+		offensive_ideas
+		mobility_ideas
+		imperialismus0
 	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building road_2 = {
-	name = "Roads"
-	desc = ""
-	cost = 50
-	time = 3
-	make_obsolete = road_1
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = trade_ideas
-				full_idea_group = offensive_ideas
-				full_idea_group = mobility_ideas
-				full_idea_group = imperialismus0
-			}
+	1 = {
+		cost = 25
+		name = "Road 1"
+		modifier = {
+			local_friendly_movement_speed = 0.5
+			allowed_num_of_buildings = 1
 		}
 	}
-	modifier = {
-		local_friendly_movement_speed = 1.0
-		allowed_num_of_buildings = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building road_3 = {
-	name = "Highway"
-	desc = ""
-	cost = 75
-	time = 3
-	make_obsolete = road_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 2
-				full_idea_group = trade_ideas
-				full_idea_group = offensive_ideas
-				full_idea_group = mobility_ideas
-				full_idea_group = imperialismus0
-			}
+	2 = {
+		cost = 50
+		name = "Road 2"
+		make_obsolete = road_1
+		modifier = {
+			local_friendly_movement_speed = 1.0
+			allowed_num_of_buildings = 1
 		}
 	}
-	modifier = {
-		local_friendly_movement_speed = 1.5
-		allowed_num_of_buildings = 1
+	3 = {
+		cost = 75
+		name = "Road 2"
+		make_obsolete = road_2
+		modifier = {
+			local_friendly_movement_speed = 1.5
+			allowed_num_of_buildings = 1
+		}
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building goods_1 = {
-	name = "Goods 1"
+new building_line goods = {
+	name = "Goods"
 	desc = ""
-	cost = 100
 	time = 12
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = alteration_ideas
-				full_idea_group = enchanting_ideas
-				full_idea_group = alchemical_ideas
-				full_idea_group = esb_treasury
-			}
+	idea_group_unlocks = {
+		alteration_ideas
+		enchanting_ideas
+		alchemical_ideas
+		esb_treasury
+	}
+	1 = {
+		cost = 100
+		name = "Goods 1"
+		modifier = {
+			trade_goods_size_modifier = 0.1
+			local_development_cost = -0.15
 		}
 	}
-	modifier = {
-		trade_goods_size_modifier = 0.1
-		local_development_cost = -0.15
+	2 = {
+		cost = 200
+		name = "Goods 2"
+		make_obsolete = goods_1
+		modifier = {
+			trade_goods_size_modifier = 0.2
+			local_development_cost = -0.3
+		}
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-new building goods_2 = {
-	name = "Goods 2"
+new building_line state = {
+	name = "State"
 	desc = ""
-	cost = 200
 	time = 12
-	make_obsolete = goods_1
+	idea_group_unlocks = {
+		staatsverwaltung0
+		administrative_ideas
+		dezentra0
+	}
 	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 2
-				full_idea_group = alteration_ideas
-				full_idea_group = enchanting_ideas
-				full_idea_group = alchemical_ideas
-				full_idea_group = esb_treasury
+		NOT = {
+			area_for_scope_province = {
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = state_1
+					has_building = state_2
+					has_building = state_3
+					has_construction = state_1
+					has_construction = state_2
+					has_construction = state_3
+				}
 			}
 		}
 	}
-	modifier = {
-		trade_goods_size_modifier = 0.2
-		local_development_cost = -0.3
+	1 = {
+		cost = 100
+		name = "State 1"
+		modifier = {
+			local_state_maintenance_modifier = -0.2
+			statewide_governing_cost = -0.05
+			local_prosperity_growth = 0.05
+			allowed_num_of_buildings = 1
+		}
+	}
+	2 = {
+		cost = 200
+		name = "State 2"
+		make_obsolete = state_1
+		modifier = {
+			local_state_maintenance_modifier = -0.4
+			statewide_governing_cost = -0.10
+			local_prosperity_growth = 0.10
+			allowed_num_of_buildings = 1
+		}
+	}
+	3 = {
+		cost = 300
+		name = "State 3"
+		make_obsolete = state_2
+		modifier = {
+			local_state_maintenance_modifier = -0.6
+			statewide_governing_cost = -0.15
+			local_prosperity_growth = 0.15
+			allowed_num_of_buildings = 1
+		}
 	}
 	ai_will_do = {
 		factor = 1
@@ -606,127 +450,5 @@ new building def_manufactory = {
 	time = 60
 	manufactory = {
 		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems gold silver ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
-	}
-}
-new building state_1 = {
-	name = "state 1"
-	desc = ""
-	cost = 100
-	time = 12
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 1
-				full_idea_group = staatsverwaltung0
-				full_idea_group = administrative_ideas
-				full_idea_group = dezentra0
-			}
-		}
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = state_1
-					has_building = state_2
-					has_building = state_3
-					has_construction = state_1
-					has_construction = state_2
-					has_construction = state_3
-				}
-			}
-		}
-	}
-	modifier = {
-		local_state_maintenance_modifier = -0.2
-		statewide_governing_cost = -0.05
-		local_prosperity_growth = 0.05
-		allowed_num_of_buildings = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building state_2 = {
-	name = "state 2"
-	desc = ""
-	cost = 200
-	time = 12
-	make_obsolete = state_1
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 2
-				full_idea_group = staatsverwaltung0
-				full_idea_group = administrative_ideas
-				full_idea_group = dezentra0
-			}
-		}
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = state_1
-					has_building = state_2
-					has_building = state_3
-					has_construction = state_1
-					has_construction = state_2
-					has_construction = state_3
-				}
-			}
-		}
-	}
-	modifier = {
-		local_state_maintenance_modifier = -0.4
-		statewide_governing_cost = -0.10
-		local_prosperity_growth = 0.10
-		allowed_num_of_buildings = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building state_3 = {
-	name = "state 3"
-	desc = ""
-	cost = 300
-	time = 12
-	make_obsolete = state_2
-	build_trigger = {
-		FROM = {
-			calc_true_if = {
-				amount = 3
-				full_idea_group = staatsverwaltung0
-				full_idea_group = administrative_ideas
-				full_idea_group = dezentra0
-			}
-		}
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = state_1
-					has_building = state_2
-					has_building = state_3
-					has_construction = state_1
-					has_construction = state_2
-					has_construction = state_3
-				}
-			}
-		}
-	}
-	modifier = {
-		local_state_maintenance_modifier = -0.6
-		statewide_governing_cost = -0.15
-		local_prosperity_growth = 0.15
-		allowed_num_of_buildings = 1
-	}
-	ai_will_do = {
-		factor = 1
 	}
 }
