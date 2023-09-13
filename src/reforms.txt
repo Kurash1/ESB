@@ -56,34 +56,3 @@ new government_reform necromancer_rule = {
 		manpower_from_defeating_armies = yes
 	}
 }
-new government_reform companion_remnant = {
-	name = "Companion Remnant"
-	desc = ""
-	icon = "crown"
-	allow_normal_conversion = yes
-	force_general_leader = yes
-	potential = {
-		has_reform = companion_remnant
-	}
-	modifiers = {
-		shock_damage = 25%
-		min_autonomy = 20
-		governing_capacity = -150
-		monthly_reform_progress = 1.0
-	}
-	ai = {
-		factor = 1
-	}
-}
-new government_reform remnant_become_thanedom = {
-	name = "Reform into a Thanedom"
-	desc = ""
-	icon = "king_highlighted"
-	allow_normal_conversion = yes
-	effect = {
-		change_government = monarchy
-		add_government_reform = tier_1_thanedom
-		defineloc reformed_remnant = "Reformed Remnant"
-		set_country_flag = reformed_remnant
-	}
-}
