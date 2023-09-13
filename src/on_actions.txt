@@ -15,6 +15,15 @@ on_actions:on_startup += {
 		set_global_flag = on_action_set_up_global_flag
 	}
 }
+on_actions:on_slacken_start += {
+	add_country_modifier = {
+		name = slackening_modifier
+		duration = -1
+	}
+}
+on_actions:on_slacken_stop += {
+	remove_country_modifier = slackening_modifier
+}
 on_actions:on_religion_change += {
 	if [has_heir = yes]
 	{
