@@ -54,7 +54,7 @@ new decision form_winterhold = {
 		}
 	}
 	effect = {
-		change_tag = winterhold
+		change_tag = WIH
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
