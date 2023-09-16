@@ -1,0 +1,68 @@
+bi_yearly_events += {
+	100 = giant_estate_events.1 # Angry Giant
+	#100 = giant_estate_events.2 # Giant Attack
+	#100 = giant_estate_events.3 # Defensive Giant
+	#100 = giant_estate_events.4 # Wandering Giant
+	#100 = giant_estate_events.5 # Lives of Giants
+}
+new country_event giant_estate_events.1 = {
+	inherit = random_event
+	title = "Angry Giant"
+	desc = ""
+	picture = angry_giant_eventPicture
+	trigger = {
+		has_estate = estate_giants
+	}
+	options = {
+		{
+			name = "Ask a Giant Camp for help"
+			effect = {
+				add_adm_power = -25
+				add_estate_influence_modifier = {
+					estate = estate_giants
+					desc = EST_VAL_FURTHERED_SPOUSES_FAMILY_NOBLES
+					influence = 10
+					duration = 730
+				}
+			}
+		}
+		{
+			name = "Negotiate with the Giant"
+			effect = {
+				add_dip_power = -25
+				random_list = {
+					1 = {
+						add_estate_loyalty = {
+							estate = estate_giants
+							loyalty = 5
+						}
+					}
+					1 = {
+						random_owned_province = {
+							limit = {
+								culture_group = culture_groups:nord
+							}
+							add_base_manpower = -2
+						}
+					}
+				}
+			}
+		}
+		{
+			name = "Send a hunting Party"
+			effect = {
+				add_mil_power = -25
+				add_estate_loyalty = {
+					estate = estate_giants
+					loyalty = -5
+				}
+				add_estate_influence_modifier = {
+					estate = estate_giants
+					desc = EST_VAL_FURTHERED_SPOUSES_FAMILY_NOBLES
+					influence = -5
+					duration = 730
+				}
+			}
+		}
+	}
+}
