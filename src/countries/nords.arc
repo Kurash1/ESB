@@ -430,7 +430,7 @@ new country windhelm = {
 				name = "Torolf"
 				dynasty = "of Ysgramoor"
 				adm = 4
-				dip = 3
+				dip = 4
 				mil = 6
 				birth_date = 2480.1.1
 			}
