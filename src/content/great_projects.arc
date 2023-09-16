@@ -98,6 +98,9 @@ new great_project palace_of_the_kings = {
 			governing_capacity_modifier = 0.05
 			max_absolutism = 5
 		}
+		on_upgraded = {
+			add_splendor = 400
+		}
 	}
 	tier_2 = {
 		country_modifier = {

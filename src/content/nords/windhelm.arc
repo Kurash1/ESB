@@ -372,7 +372,15 @@ new mission_series eastmarch_5 = {
 				owns = provinces:windhelm
 				if [ai = yes]
 				{
-					ags = 20
+					OR = {
+						ags = 20
+						provinces:windhelm = {
+							has_great_project = {
+								type = palace_of_the_kings
+								tier = 1
+							}
+						}
+					}
 				}
 				else_if [has_dlc = "Leviathan"]
 				{
