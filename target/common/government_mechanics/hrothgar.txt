@@ -1,0 +1,15 @@
+hrothgar_mechanic = {
+	powers = {
+		hrothgar_power = {
+			gui = fanaticism_mech
+			max = 100
+			min = 0
+			monarch_power = mil
+			default = 100
+			base_monthly_growth = -0.5
+			on_min_reached = {
+				set_imperial_incident = collapse_of_hrothgar
+			}
+		}
+	}
+}
