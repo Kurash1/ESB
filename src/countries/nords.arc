@@ -346,7 +346,7 @@ new country hrothgar = {
 				dynasty = "Tall-Tree"
 				adm = 2
 				dip = 1
-				mil = 5
+				mil = 3
 				birth_date = 2460.1.1
 			}
 		}
