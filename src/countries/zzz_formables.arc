@@ -14,16 +14,26 @@ new decision form_eastmarch = {
 	name = "Form Eastmarch"
 	major = yes
 	potential = {
-		primary_culture = cultures:eastmarcher
+		capital_scope = {
+			region = regions:eastmarch
+		}
 		NOT = {
 			has_reform = tier_1_hold
 			exists = WND
 		}
 	}
+	provinces_to_highlight = {
+		region = regions:eastmarch
+		NOT = { owned_by = ROOT }
+	}
 	allow = {
-		regions:eastmarch = {
-			type = all
-			owned_by = ROOT
+		calc_true_if = {
+			amount = 60
+			regions:eastmarch = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 	}
 	effect = {
@@ -36,7 +46,9 @@ new decision form_winterhold = {
 	name = "Form Winterhold"
 	major = yes
 	potential = {
-		primary_culture = cultures:winterholdian
+		capital_scope = {
+			region = regions:winterhold
+		}
 		NOT = {
 			has_reform = tier_1_hold
 		}
@@ -47,10 +59,18 @@ new decision form_winterhold = {
 			tag = winterhold
 		}
 	}
+	provinces_to_highlight = {
+		region = regions:winterhold
+		NOT = { owned_by = ROOT }
+	}
 	allow = {
-		regions:winterhold = {
-			type = all
-			owned_by = ROOT
+		calc_true_if = {
+			amount = 50
+			regions:winterhold = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 	}
 	effect = {
@@ -75,16 +95,26 @@ new decision form_pale = {
 	name = "Form Pale"
 	major = yes
 	potential = {
-		primary_culture = cultures:palean
+		capital_scope = {
+			region = regions:pale
+		}
 		NOT = {
 			exists = PAL
 			has_reform = tier_1_hold
 		}
 	}
+	provinces_to_highlight = {
+		region = regions:pale
+		NOT = { owned_by = ROOT }
+	}
 	allow = {
-		regions:pale = {
-			type = all
-			owned_by = ROOT
+		calc_true_if = {
+			amount = 40
+			regions:pale = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 	}
 	effect = {
@@ -109,16 +139,26 @@ new decision form_whiterun = {
 	name = "Form Whiterun"
 	major = yes
 	potential = {
-		primary_culture = cultures:whiterunish
+		capital_scope = {
+			region = regions:whiterun
+		}
 		NOT = {
 			exists = WHT
 			has_reform = tier_1_hold
 		}
 	}
+	provinces_to_highlight = {
+		region = regions:whiterun
+		NOT = { owned_by = ROOT }
+	}
 	allow = {
-		regions:whiterun = {
-			type = all
-			owned_by = ROOT
+		calc_true_if = {
+			amount = 50
+			regions:whiterun = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 	}
 	effect = {
@@ -143,16 +183,26 @@ new decision form_hjaalmarch = {
 	name = "Form Hjaalmarch"
 	major = yes
 	potential = {
-		primary_culture = cultures:hjaalmarcher
+		capital_scope = {
+			region = regions:hjaalmarch
+		}
 		NOT = {
 			exists = HJM
 			has_reform = tier_1_hold
 		}
 	}
+	provinces_to_highlight = {
+		region = regions:hjaalmarch
+		NOT = { owned_by = ROOT }
+	}
 	allow = {
-		regions:hjaalmarch = {
-			type = all
-			owned_by = ROOT
+		calc_true_if = {
+			amount = 40
+			regions:hjaalmarch = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 	}
 	effect = {
@@ -177,16 +227,26 @@ new decision form_haafingar = {
 	name = "Form Haafingar"
 	major = yes
 	potential = {
-		primary_culture = cultures:haafingarian
+		capital_scope = {
+			region = regions:haafingar
+		}
 		NOT = {
 			exists = HAA
 			has_reform = tier_1_hold
 		}
 	}
+	provinces_to_highlight = {
+		region = regions:haafingar
+		NOT = { owned_by = ROOT }
+	}
 	allow = {
-		regions:haafingar = {
-			type = all
-			owned_by = ROOT
+		calc_true_if = {
+			amount = 30
+			regions:haafingar = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 	}
 	effect = {
