@@ -337,6 +337,20 @@ new country hrothgar = {
 		127 0 0
 	}
 	capital = hrothgar_camp
+	government = remnant
+	starting_reform = tier_1_hrothgar_territories
+	history = {
+		2500.1.1 = {
+			monarch = {
+				name = "Kor"
+				dynasty = "Tall-Tree"
+				adm = 2
+				dip = 1
+				mil = 3
+				birth_date = 2460.1.1
+			}
+		}
+	}
 }
 new country broken-fang = {
 	inherit = nordic_country
