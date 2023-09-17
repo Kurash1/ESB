@@ -46,16 +46,12 @@ new area shearpoint = {
 	name = "Shearpoint"
 	region = pale
 }
-new area fellglow = {
-	name = "Fellglow"
-	region = pale
-}
 new area long_road = {
 	name = "Long road"
 	region = pale
 }
-new area korvanjund = {
-	name = "Korvanjund"
+new area silverdrift = {
+	name = "Silverdrift"
 	region = pale
 }
 new area old_yorgrim = {
@@ -73,6 +69,34 @@ new area volunruud = {
 new area lord_hill = {
 	name = "Lord Hill"
 	region = pale
+}
+new province frozen_outpost = {
+	position = {
+		1742.000 2050.000 1742.000 2050.000 1742.000 2050.000 1742.000 2050.000 1742.000 2050.000 1742.000 2050.000 1742.000 2050.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	terrain = forest
+	area = pale_coast
+	name = "Frozen Outpost"
+	color = {
+		160 247 185
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:hjaalmarcher
+		hre = yes
+		`trade_goods` = wood
+		capital = ""
+		is_city = yes
+		owner = WNC
+		controller = WNC
+		add_core = WNC
+	}
 }
 new province njadhilde = {
 	position = {
@@ -763,7 +787,7 @@ new province three_point = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = korvanjund
+	area = silverdrift
 	name = "Three Point"
 	terrain = forest
 	color = {
@@ -791,7 +815,7 @@ new province silverdrift = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = korvanjund
+	area = silverdrift
 	name = "Silverdrift"
 	terrain = forest
 	color = {
@@ -1040,7 +1064,7 @@ new province shrouded_grove = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = korvanjund
+	area = silverdrift
 	name = "Shrouded Grove"
 	terrain = forest
 	color = {
@@ -1096,7 +1120,7 @@ new province fellglow = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = fellglow
+	area = shearpoint
 	name = "Fellglow"
 	terrain = highlands
 	color = {
@@ -1124,7 +1148,7 @@ new province ysmir_hill = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = fellglow
+	area = shearpoint
 	name = "Ysmir Hill"
 	terrain = hills
 	color = {
