@@ -90,7 +90,7 @@ new government_reform tier_1_skjoralmor_clan = {
 	icon = "fort"
 	allow_normal_conversion = yes
 	maintain_dynasty = yes
-	trigger = {
+	potential = {
 		has_reform = tier_1_skjoralmor_clan
 	}
 	modifiers = {
@@ -98,6 +98,25 @@ new government_reform tier_1_skjoralmor_clan = {
 		global_autonomy = -0.10
 		development_cost = -0.1
 		fort_maintenance_modifier = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_hrothgar_territories = {
+	name = "Hrothgar Territories"
+	desc = ""
+	icon = "fort"
+	allow_normal_conversion = yes
+	maintain_dynasty = yes
+	potential = {
+		has_reform = tier_1_hrothgar_territories
+	}
+	modifiers = {
+		governing_capacity = -150
+		min_autonomy = 50
+		land_forcelimit_modifier = 1.0
+		land_maintenance_modifier = -0.5
 	}
 	ai = {
 		factor = 1

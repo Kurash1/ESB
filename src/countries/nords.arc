@@ -337,6 +337,8 @@ new country hrothgar = {
 		127 0 0
 	}
 	capital = hrothgar_camp
+	government = remnant
+	starting_reform = tier_1_hrothgar_territories
 }
 new country broken-fang = {
 	inherit = nordic_country
