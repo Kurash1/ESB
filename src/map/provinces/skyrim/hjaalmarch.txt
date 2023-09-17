@@ -26,10 +26,6 @@ new area northern_morthal = {
 	name = "Northern Morthal"
 	region = hjaalmarch
 }
-new area kjenstag = {
-	name = "Kjenstag"
-	region = hjaalmarch
-}
 new area stonehills = {
 	name = "Stonehills"
 	region = hjaalmarch
@@ -977,34 +973,6 @@ new province fistrock = {
 		add_core = WNC
 	}
 }
-new province frozen_outpost = {
-	position = {
-		1742.000 2050.000 1742.000 2050.000 1742.000 2050.000 1742.000 2050.000 1742.000 2050.000 1742.000 2050.000 1742.000 2050.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	terrain = forest
-	area = stonehills
-	name = "Frozen Outpost"
-	color = {
-		160 247 185
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = cultures:hjaalmarcher
-		hre = yes
-		`trade_goods` = wood
-		capital = ""
-		is_city = yes
-		owner = WNC
-		controller = WNC
-		add_core = WNC
-	}
-}
 new province snow_trail = {
 	position = {
 		1744.000 2032.000 1744.000 2032.000 1744.000 2032.000 1744.000 2032.000 1744.000 2032.000 1744.000 2032.000 1744.000 2032.000
@@ -1292,7 +1260,7 @@ new province bjorn_ambush = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = kjenstag
+	area = stonehills
 	name = "Bjorn Ambush"
 	color = {
 		198 145 155
@@ -1320,7 +1288,7 @@ new province folks_gathering = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = kjenstag
+	area = stonehills
 	name = "Folk's Gathering"
 	color = {
 		217 228 123
@@ -1348,7 +1316,7 @@ new province kjenstag = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = kjenstag
+	area = stonehills
 	name = "Kjenstag"
 	color = {
 		252 167 203
