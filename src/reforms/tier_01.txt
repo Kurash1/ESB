@@ -84,3 +84,21 @@ new government_reform tier_1_nord_clan = {
 		factor = 1
 	}
 }
+new government_reform tier_1_skjoralmor_clan = {
+	name = "Skjormalmor Clan"
+	desc = ""
+	icon = "generic_people"
+	allow_normal_conversion = yes
+	maintain_dynasty = yes
+	trigger = {
+		has_reform = tier_1_skjoralmor_clan
+	}
+	modifiers = {
+		governing_capacity = -100
+		global_autonomy = -0.10
+		fort_maintenance_modifier = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}

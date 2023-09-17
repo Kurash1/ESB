@@ -374,6 +374,7 @@ new country skjoralmor = {
 	history = {
 		elector = yes
 	}
+	starting_reform = tier_1_skjoralmor_clan
 }
 new country jorrvaskr = {
 	inherit = nordic_country
