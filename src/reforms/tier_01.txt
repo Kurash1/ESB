@@ -1,3 +1,4 @@
+
 new government_reform tier_1_thanedom = {
 	name = "Thanedom"
 	desc = ""
@@ -98,6 +99,25 @@ new government_reform tier_1_skjoralmor_clan = {
 		global_autonomy = -0.10
 		development_cost = -0.1
 		fort_maintenance_modifier = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_falmer_kingdom = {
+	name = "Falmer Kingdom"
+	desc = ""
+	icon = "wow_cult"
+	allow_normal_conversion = yes
+	
+	trigger = {
+		has_reform = tier_1_falmer_kingdom
+	}
+	modifiers = {
+		land_morale = 0.10
+		prestige_decay = 0.01
+		governing_capacity = 100
+		global_autonomy = -0.10
 	}
 	ai = {
 		factor = 1
