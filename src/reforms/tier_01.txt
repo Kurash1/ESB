@@ -102,4 +102,64 @@ new government_reform tier_1_skjoralmor_clan = {
 	ai = {
 		factor = 1
 	}
+<<<<<<< Updated upstream
+=======
+}
+new government_reform tier_1_falmer_kingdom = {
+	name = "Falmer Kingdom"
+	desc = ""
+	icon = "wow_cult"
+	allow_normal_conversion = yes
+	
+	trigger = {
+		has_reform = tier_1_falmer_kingdom
+	}
+	modifiers = {
+		land_morale = 0.10
+		prestige_decay = 0.01
+		governing_capacity = 100
+		global_autonomy = -0.10
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_orc_stronghold = {
+	name = "Orc Stronghold"
+	desc = ""
+	icon = "crusading_orders_icon"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	trigger = {
+		has_reform = tier_1_orc_stronghold
+	}
+	modifiers = {
+		leader_land_shock = 1
+		shock_damage = 0.10
+		min_autonomy = 35
+		land_maintenance_modifier = -0.20
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_reachmen_clan = {
+	name = "Reachmen Clan"
+	desc = ""
+	icon = "hero"
+	allow_normal_conversion = yes
+	
+	trigger = {
+		has_reform = tier_1_reachmen_clan
+	}
+	modifiers = {
+		global_defender_dice_roll_bonus = 1 
+		local_defensiveness = 0.15
+		movement_speed = 0.10
+	    improve_relation_modifier = -0.15
+	}
+	ai = {
+		factor = 1
+	}
+>>>>>>> Stashed changes
 }
