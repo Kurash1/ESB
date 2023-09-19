@@ -1,5 +1,7 @@
 new inheritable snow_elven_country = {
 	technology_group = snow_elven_tg
+	government = remnant
+	starting_reform = falmer_remnant
 	religion = auriels_true_way
 	primary_culture = snow_elven
 	graphical_culture = greekgfx
