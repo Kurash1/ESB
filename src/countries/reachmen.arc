@@ -1,7 +1,6 @@
 new inheritable reachman_country = {
 	government = tribal
 	technology_group = reachman_tg
-	government = native
 	starting_reform = tier_1_reachmen_clan
 	religion = reachman_faith
 	primary_culture = reachmen

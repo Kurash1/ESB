@@ -1,7 +1,6 @@
 new inheritable kreath_orc_country = {
 	government = tribal
 	technology_group = orc_tg
-	government = native
 	starting_reform = tier_1_orc_stronghold
 	religion = code_of_malacath
 	primary_culture = kreath_orc
