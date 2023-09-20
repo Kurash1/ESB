@@ -8,101 +8,101 @@ new inheritable kreath_orc_country = {
 	history = {
 	}
 }
-new country silvercliff = {
+new country nor_lorak = {
 	inherit = kreath_orc_country
 	tag = SLC
-	name = "Silvercliff"
-	adj = "Silver"
+	name = "Nor Lorak"
+	adj = "Nor Lorak"
 	color = {
 		0 127 127
 	}
 	capital = silvercliff
 }
-new country bilegulch = {
+new country crun_beshkar = {
 	inherit = kreath_orc_country
 	tag = BIL
-	name = "Bilegulch"
-	adj = "Bilegulch"
+	name = "Crun Beshkar"
+	adj = "Crun Beshkar"
 	color = {
 		38 127 93
 	}
 	capital = bilegulch
 }
-new country knifepoint = {
+new country aht_beshkar = {
 	inherit = kreath_orc_country
 	tag = KNP
-	name = "Knifepoint"
-	adj = "Stabbed"
+	name = "Aht Beshkar"
+	adj = "Aht Beshkar"
 	color = {
 		127 51 0
 	}
 	capital = knifepoint
 }
-new country half_moon = {
+new country vorkhim_uhz = {
 	inherit = kreath_orc_country
 	tag = HAM
-	name = "Half-Moon"
-	adj = "Lunar"
+	name = "Vorkhim Uhz"
+	adj = "Vorkhim Uhz"
 	color = {
 		128 128 128
 	}
 	capital = half_moon
 }
-new country cracked_tusk = {
+new country vosh_urgalick = {
 	inherit = kreath_orc_country
 	tag = CTU
-	name = "Cracked Tusk"
-	adj = "Cracked"
+	name = "Vosh Urgalick"
+	adj = "Vosh Urgalick"
 	color = {
 		255 178 127
 	}
 	capital = cracked_tusk
 }
-new country halldir = {
+new country zugra_krazak = {
 	inherit = kreath_orc_country
 	tag = HAL
-	name = "Halldir"
-	adj = "Halldirian"
+	name = "Zugra Krazak"
+	adj = "Zugra Krazak"
 	color = {
 		0 255 255
 	}
 	capital = halldir
 }
-new country peak_shade = {
+new country rakh_ubeshka = {
 	inherit = kreath_orc_country
 	tag = PEA
-	name = "Peak Shade"
-	adj = "Peak"
+	name = "Rakh Ubeshka"
+	adj = "Rakh Ubeshka"
 	color = {
 		0 20 0
 	}
 	capital = peak_shade
 }
-new country bloodlet = {
+new country dulg_krazak = {
 	inherit = kreath_orc_country
 	tag = BLE
-	name = "Bloodlet"
-	adj = "Bloodletian"
+	name = "Dulg Krazak"
+	adj = "Dulg Krazak"
 	color = {
 		127 0 0
 	}
 	capital = bloodlet
 }
-new country bonechill = {
+new country or_murimush = {
 	inherit = kreath_orc_country
 	tag = BON
-	name = "Bonechill"
-	adj = "Cold"
+	name = "Or Murimush"
+	adj = "Or Murimush"
 	color = {
 		255 255 182
 	}
 	capital = bonechill
 }
-new country orphan_rock = {
+new country agra_granosh = {
 	inherit = kreath_orc_country
 	tag = ORP
-	name = "Orphan Rock"
-	adj = "Orphan"
+	name = "Agra Granosh "
+	adj = "Agra Granosh"
 	color = {
 		72 0 255
 	}
@@ -111,8 +111,8 @@ new country orphan_rock = {
 new country southfringe = {
 	inherit = kreath_orc_country
 	tag = SOU
-	name = "Southfringe"
-	adj = "Fringe"
+	name = "Jur Tarask"
+	adj = "Jur Tarask"
 	color = {
 		127 0 110
 	}
