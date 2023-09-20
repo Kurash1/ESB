@@ -255,3 +255,51 @@ new decision form_haafingar = {
 		add_government_reform = tier_1_hold
 	}
 }
+
+new country orkreath = {
+	inherit = kreath_orc_country
+	primary_culture = kreath_orc
+	tag = ORK
+	name = "Orkreath"
+	adj = "Orkreathian"
+	color = {
+		36 141 67
+	}
+	starting_reform = tier_1_orc_federation
+	capital = falkreath
+}
+new decision form_orkreath = {
+	name = " Form an Orc Homeland "
+	major = yes
+	potential = {
+		primary_culture = cultures:kreath_orc
+		NOT = {
+			exists = ORK
+			has_reform = tier_1_orc_federation
+		}  
+	}
+	allow = {
+		calc_true_if = {
+			amount = 25
+			regions:kreath = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+	}
+	provinces_to_highlight = {
+		region = regions:kreath
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		change_tag = ORK
+		add_government_reform = tier_1_orc_federation
+		kreath_region = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+
+
