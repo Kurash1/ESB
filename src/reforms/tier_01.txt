@@ -127,7 +127,7 @@ new government_reform tier_1_falmer_kingdom = {
 new government_reform tier_1_orc_stronghold = {
 	name = "Orc Stronghold"
 	desc = ""
-	icon = "crusading_orders_icon"
+	icon = "orc_stronghold"
 	allow_normal_conversion = yes
 	force_general_leader = yes
 	trigger = {
@@ -158,6 +158,28 @@ new government_reform tier_1_reachmen_clan = {
 		defensiveness = 0.15
 		movement_speed = 0.10
 	    improve_relation_modifier = -0.15
+	}
+	ai = {
+		factor = 1
+	}
+
+}
+new government_reform tier_1_orc_federation = {
+	name = "Orc Federation"
+	desc = ""
+	icon = "all_under_tengri_reform"
+	allow_normal_conversion = yes
+	
+	trigger = {
+		has_reform = tier_1_orc_federation
+	}
+	modifiers = {
+		leader_land_shock = 2
+		shock_damage = 0.10
+		army_tradition_decay = -0.01
+		land_maintenance_modifier = -0.10
+		land_forcelimit_modifier = 10%
+		production_efficiency = 0.15
 	}
 	ai = {
 		factor = 1
