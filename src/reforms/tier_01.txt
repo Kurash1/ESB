@@ -138,6 +138,7 @@ new government_reform tier_1_orc_stronghold = {
 		shock_damage = 0.10
 		min_autonomy = 35
 		land_maintenance_modifier = -0.20
+		land_forcelimit_modifier = 15%
 	}
 	ai = {
 		factor = 1
@@ -154,7 +155,7 @@ new government_reform tier_1_reachmen_clan = {
 	}
 	modifiers = {
 		global_defender_dice_roll_bonus = 1 
-		local_defensiveness = 0.15
+		defensiveness = 0.15
 		movement_speed = 0.10
 	    improve_relation_modifier = -0.15
 	}

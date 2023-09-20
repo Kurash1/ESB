@@ -4,6 +4,7 @@ new inheritable reach_orc_country = {
 	religion = code_of_malacath
 	primary_culture = stronghold_orc
 	graphical_culture = easterngfx
+	starting_reform = tier_1_orc_stronghold
 	history = {
 	}
 }
