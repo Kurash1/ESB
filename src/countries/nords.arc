@@ -446,7 +446,7 @@ new country windhelm = {
 				dynasty = "of Ysgramoor"
 				adm = 4
 				dip = 4
-				mil = 6
+				mil = 5
 				birth_date = 2480.1.1
 			}
 			add_ruler_personality = martial_educator_personality
