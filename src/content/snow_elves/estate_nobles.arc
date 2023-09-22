@@ -1,5 +1,5 @@
-new estate nobles = {
-	name = "Nobles"
+new estate nobility = {
+	name = "Nobility"
 	desc = ""
 	icon = 3
 	color = {
