@@ -130,17 +130,13 @@ new country_event sailor_event.5 = {
 		{
 			name = "Their ambitions should be encouraged."
 			effect = {
-				random_owned_province = {
-					limit = {
-						has_port = yes
-					}
+				random_owned_province [has_port = yes] {
 					add_base_manpower = 2
 				}
-				random_owned_province = {
-					limit = {
-						has_port = no
-						base_manpower = 2
-					}
+				random_owned_province [
+					has_port = no
+					base_manpower = 2
+				] {
 					add_base_manpower = -1
 				}
 				add_years_of_income = -0.2

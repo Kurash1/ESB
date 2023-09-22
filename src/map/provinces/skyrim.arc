@@ -295,7 +295,6 @@ new province ustlake = {
 	history = {
 	}
 	lake = yes
-	area = coast_of_haafingar
 }
 new province drajkmyr_marsh = {
 	position = {

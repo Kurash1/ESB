@@ -30,13 +30,12 @@ new country_event trade.1 = {
 			name = "We must get ready"
 			effect = {
 				add_prestige = -30
-				random_active_trade_node = {
-					limit = {
-						any_trade_node_member_province = {
-							owned_by = ROOT
-							is_capital = yes
-						}
+				random_active_trade_node [
+					any_trade_node_member_province = {
+						owned_by = ROOT
+						is_capital = yes
 					}
+				] {
 					strongest_trade_power = {
 						reverse_add_casus_belli = {
 							target = ROOT
@@ -314,11 +313,10 @@ new country_event trade.6 = {
 		{
 			name = "That's too bad"
 			effect = {
-				random_active_trade_node = {
-					limit = {
-						is_sea = yes
-						has_merchant = PREV
-					}
+				random_active_trade_node [
+					is_sea = yes
+					has_merchant = PREV
+				] {
 					add_trade_node_income = -10
 				}
 			}
@@ -354,19 +352,18 @@ new country_event trade.7 = {
 		{
 			name = "Give them support"
 			effect = {
-				random_active_trade_node = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-						}
-						has_merchant = PREV
-						NOT = {
-							has_trade_modifier = {
-								who = ROOT
-								name = merchant_recalled
-							}
+				random_active_trade_node [
+					NOT = {
+						owned_by = ROOT
+					}
+					has_merchant = PREV
+					NOT = {
+						has_trade_modifier = {
+							who = ROOT
+							name = merchant_recalled
 						}
 					}
+				] {
 					add_trade_modifier = {
 						who = root
 						duration = 3650

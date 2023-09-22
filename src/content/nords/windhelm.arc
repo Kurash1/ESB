@@ -410,9 +410,11 @@ new mission_series eastmarch_5 = {
 				}
 				else
 				{
-					add_base_tax = 3
-					add_base_production = 3
-					add_base_manpower = 3
+					provinces:windhelm = {
+						add_base_tax = 3
+						add_base_production = 3
+						add_base_manpower = 3
+					}
 				}
 			}
 		}
@@ -888,7 +890,7 @@ new mission_series eastmarch_8 = {
 						}
 					}
 				}
-				else = {
+				else {
 					areas:dunmeth_pass = {
 						add_base_manpower = 2
 					}

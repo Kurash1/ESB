@@ -99,7 +99,9 @@ new great_project palace_of_the_kings = {
 			max_absolutism = 5
 		}
 		on_upgraded = {
-			add_splendor = 400
+			owner = {
+				add_splendor = 400
+			}
 		}
 	}
 	tier_2 = {
@@ -375,7 +377,9 @@ new great_project fallowstone_hall = {
 	name = "Fallowstone Hall"
 	start = shors_stone
 	trigger = {
-		tag = fallowfire
+		owner = {
+			tag = fallowfire
+		}
 	}
 	tier_1 = {
 		country_modifier = {
