@@ -356,6 +356,33 @@ new country_event incidents.1 = {
 		}
 	}
 }
+new country_event eastmarch.1 = {
+	title = "Harald Hand-Free"
+	desc = ""
+	picture = harald_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "This is the beginning of a new age"
+			effect = {
+				define_ruler = {
+					name = "Harald Hand-Free"
+					dynasty = "Of Ysgramoor"
+					age = 30 
+					claim = 100
+					adm = 6
+					dip = 6
+					mil = 6
+					male = yes
+				}
+				set_country_flag = eastmarch_had_harald
+				regions:rift = {
+					add_claim = ROOT
+				}
+			}
+		}
+	}
+}
 new mission_series eastmarch_5 = {
 	slot = 5
 	ai = yes
@@ -532,10 +559,10 @@ new mission_series eastmarch_5 = {
 				eastmarch_eldergleam eastmarch_road_mistwatch eastmarch_northwind_mine
 			}
 			trigger = {
-				defineloc eastmarch_has_harald = "§YHarald Hand-Free§! is the Ruler"
+				defineloc eastmarch_has_harald = "Has had §YHarald Hand-Free§! as your ruler"
 				custom_trigger_tooltip = {
 					tooltip = eastmarch_has_harald
-					has_ruler_flag = eastmarch_has_harald
+					has_country_flag = eastmarch_had_harald
 				}
 			}
 			effect = {
