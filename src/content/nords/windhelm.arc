@@ -888,7 +888,7 @@ new mission_series eastmarch_8 = {
 						}
 					}
 				}
-				else = {
+				else {
 					areas:dunmeth_pass = {
 						add_base_manpower = 2
 					}

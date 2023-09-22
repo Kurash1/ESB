@@ -118,23 +118,21 @@ new country_event overextension.6 = {
 		{
 			name = "Then I'll conquer them too!"
 			effect = {
-				random_active_trade_node = {
-					limit = {
-						NOT = {
-							has_trade_modifier = {
-								who = ROOT
-								name = merchant_recalled
-							}
+				random_active_trade_node [
+					NOT = {
+						has_trade_modifier = {
+							who = ROOT
+							name = merchant_recalled
 						}
-						has_merchant = PREV
 					}
-					if = {
-						limit = {
-							trade_share = {
-								country = ROOT
-								share = 5
-							}
+					has_merchant = PREV
+				] {
+					if [
+						trade_share = {
+							country = ROOT
+							share = 5
 						}
+					] {
 						add_trade_node_income = -10
 					}
 					add_trade_modifier = {
@@ -169,16 +167,15 @@ new country_event overextension.7 = {
 		{
 			name = "Heads will roll! Hopefully not mine..."
 			effect = {
-				random_active_trade_node = {
-					limit = {
-						has_merchant = PREV
-						NOT = {
-							has_trade_modifier = {
-								who = ROOT
-								name = merchant_recalled
-							}
+				random_active_trade_node [
+					has_merchant = PREV
+					NOT = {
+						has_trade_modifier = {
+							who = ROOT
+							name = merchant_recalled
 						}
 					}
+				] {
 					add_trade_modifier = {
 						who = root
 						duration = 3650
@@ -243,28 +240,16 @@ new country_event overextension.10 = {
 		{
 			name = "Typical naysayer... Good riddance!"
 			effect = {
-				if = {
-					limit = {
-						advisor = philosopher
-					}
+				if [advisor = philosopher] {
 					remove_advisor = philosopher
 				}
-				if = {
-					limit = {
-						advisor = natural_scientist
-					}
+				if [advisor = natural_scientist] {
 					remove_advisor = natural_scientist
 				}
-				if = {
-					limit = {
-						advisor = artist
-					}
+				if [advisor = artist] {
 					remove_advisor = artist
 				}
-				if = {
-					limit = {
-						advisor = statesman
-					}
+				if [advisor = statesman] {
 					remove_advisor = statesman
 				}
 			}
