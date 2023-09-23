@@ -1,0 +1,69 @@
+new idea_group eastmarch_ideas = {
+	name = "Eastmarch"
+	category = national
+	start = {
+		land_morale = 15%
+		idea_cost = -5%
+	}
+	bonus = {
+		may_perform_slave_raid = yes
+	}
+	trigger = {
+		OR = {
+			tag = windhelm
+			tag = eastmarch
+		}
+	}
+	ideas = {
+		{
+			name = "City of Kings"
+			desc = "Windhelm, the City of Kings is a city in northeastern Skyrim, close to the border with Morrowind, and is the only substantial city in the Hold of Eastmarch. It is not only the oldest extant city in Skyrim, but it does hold the tile of being the oldest continuously inhabited human settlement in Tamriel. Windhelm was once the capital of the First Empire of the Nords and the old palace of the Ysgramor dynasty, the Palace of the Kings, still stands in the center of the city."
+			modifier = {
+				governing_capacity_modifier = 25%
+			}
+		}
+		{
+			name = "Oldest Hold"
+			desc = "Eastmarch is the eastern hold of Skyrim, and one of the four known collectively as the Old Holds. As its name suggests, it lies against the province's eastern border, close to the Dunmeth Pass, the only passage to and from Morrowind in the area due to the high and rugged Velothi Mountains."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Home of the High King"
+			desc = "Ysgramor's descendants would rule the burgeoning territory of the Nords from Windhelm. When Harald assumed the mantle of High King in 1E 143, he relinquished his holdings in Atmora and established Skyrim as an independent kingdom with Windhelm as its capital."
+			modifier = {
+				imperial_authority = 10%
+			}
+		}
+		{
+			name = "Ysgramoors Legacy"
+			desc = "Windhelm was founded by the legendary Ysgramor and the crew of his ship, the Ylgermet, following the Battle of the Moesring in the late Merethic Era. According to Nordic tradition, after the Five Hundred Companions disbanded, the Ylgermet's crew stumbled upon the barrow of Yngol, Ysgramor's son. When Ysgramor looked south and saw where the White River flowed into the Sea of Ghosts, he decreed that a great city should be built there to serve as a monument to the glories of mankind, a place from where he could gaze upon the hill of Yngol's barrow, and a gateway to guard Skyrim's interior against incursion via the river."
+			modifier = {
+				leader_land_shock = 2
+				army_tradition_decay = -1%
+			}
+		}
+		{
+			name = "Wuunding"
+			desc = "According to legend, the hot springs of Eastmarch were created when the hero Wuunding fought a mighty Daedra and defeated it with a flaming hammer. The hammer's blows melted the Daedra, leaving behind the numerous hot springs."
+			modifier = {
+				shock_damage = 10%
+			}
+		}
+		{
+			name = "White River Exit"
+			desc = "The city's great bridge was designed to allow a vigilant watch on the White River for elven attacks, and Ysgramor's palace, the Palace of the Kings, towered over the city to show man's dominion over the very winds that had caused Yngol's death on the voyage from Atmora."
+			modifier = {
+				trade_efficiency = 15%
+			}
+		}
+		{
+			name = "Yngol Barrow"
+			desc = "During a trip across the Sea of Ghosts, Ysgramor and the Five Hundred Companions were caught in a terrible storm which caused the loss of both Yngol and the crew of the Harakh. When Ysgramor claimed his son's body he had it buried in the Atmoran barrow-hill tradition near where the White River met the Sea of Ghosts. After the disbanding of the Five Hundred Companions, Ysgramor would reencounter Yngol Barrow and decreed that a great city should be built near by in order that he have a view of the barrow from his seat of power."
+			modifier = {
+				morale_damage_received = -10%
+			}
+		}
+	}
+}
