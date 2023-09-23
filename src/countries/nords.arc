@@ -462,7 +462,7 @@ new country windhelm = {
 			}
 			country_event = {
 				id = eastmarch.1
-				days = 52195
+				days = (143*365)
 			}
 		}
 	}
