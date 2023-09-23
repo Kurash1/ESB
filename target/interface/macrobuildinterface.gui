@@ -604,13 +604,13 @@ guiTypes = {
 		}
 		iconType = {
 			name = "special_banner"
-			position = { x = 420 y = 212 }
+			position = { x = 410 y = 0 }
 			spriteType = "GFX_banner_left_3"
 		}
 		
 		instantTextBoxType={
 			name = "special_banner_text"
-			position = {x = 435 y = 218 }
+			position = {x = 435 y = 6 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 500
@@ -619,13 +619,13 @@ guiTypes = {
 		}
 		checkboxType = {
 			name = "build_cleansing"
-			position = { x = 420 y = 250 }
-			quadTextureSprite = "GFX_cleansing" #Placeholder, real sprite is decided by game (based on button name).
+			position = { x = 410 y = 34 }
+			quadTextureSprite = "GFX_building_default" #Placeholder, real sprite is decided by game (based on button name).
 		}
 		
 		instantTextBoxType={
 			name = "cleansing_cost"
-			position = { x = 380 y = 300 }
+			position = { x =  y = 84 }
 			font = "vic_18"
 			borderSize = { x = 0 y = 0 }	
 			maxWidth = 128

@@ -2,9 +2,12 @@ new building cleansing = {
 	name = "Cleansing"
 	desc = "Let's clean this land from the tainting presence of other races"
 	cost = 50
-	time = 36
+	time = 48
 	build_trigger = {
-		
+		OR = {
+			culture_group = nord
+			culture_group = snow_elven
+		}
 	}
 	modifier = {
 		local_tax_modifier = 0.4
