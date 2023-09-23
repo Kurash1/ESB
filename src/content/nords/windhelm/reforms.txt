@@ -1,0 +1,16 @@
+new government_reform the_ylgermet = {
+	name = "Honor The Ylgermet"
+	desc = ""
+	icon = "galley_icon"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = unlocks_ylgermet
+	}
+	modifiers = {
+		galley_power = 10%
+		coast_raid_range = 1
+	}
+	ai = {
+		factor = 1000
+	}
+}

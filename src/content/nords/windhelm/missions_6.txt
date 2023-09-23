@@ -1,0 +1,67 @@
+new mission_series eastmarch_7 = {
+	slot = 7
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_narzulbur = {
+			name = "Narzulbur Trade"
+			desc = ""
+			position = 4
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_fortify_south
+			}
+			trigger = {
+				has_estate_privilege = estates:orcs:privileges:trade_with_strongholds
+				owns = provinces:greenstep
+			}
+			effect = {
+				provinces:greenstep = {
+					change_trade_goods = ebony
+					add_local_autonomy = 50
+				}
+			}
+		}
+		eastmarch_orc_company = {
+			name = "Orc Company"
+			desc = ""
+			position = 5
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_narzulbur
+			}
+			trigger = {
+				estate_loyalty = {
+					estate = estate_orcs
+					loyalty = 60
+				}
+			}
+			effect = {
+				defineloc unlocks_narzulbur_company = "Unlocks '§YNarzulbur Company§!' Mercenary Company"
+				custom_tooltip = unlocks_narzulbur_company
+				set_country_flag = unlocks_narzulbur_company
+			}
+		}
+		eastmarch_brodir_grove = {
+			name = "Brodir Grove"
+			desc = ""
+			position = 7
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_bloodskal_ally
+			}
+			trigger = {
+				defineloc future_update = "Will be implemented in a future update"
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+	}
+}
