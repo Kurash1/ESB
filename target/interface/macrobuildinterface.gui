@@ -602,9 +602,37 @@ guiTypes = {
 			maxHeight = 18
 			text = "20000¤"	
 		}
+		iconType = {
+			name = "special_banner"
+			position = { x = 420 y = 212 }
+			spriteType = "GFX_banner_left_3"
+		}
 		
+		instantTextBoxType={
+			name = "special_banner_text"
+			position = {x = 435 y = 218 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 500
+			maxHeight = 18
+			text = "special_banner_text"
+		}
+		checkboxType = {
+			name = "build_cleansing"
+			position = { x = 420 y = 250 }
+			quadTextureSprite = "GFX_cleansing" #Placeholder, real sprite is decided by game (based on button name).
+		}
 		
-		
+		instantTextBoxType={
+			name = "cleansing_cost"
+			position = { x = 380 y = 300 }
+			font = "vic_18"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 128
+			maxHeight = 18
+			text = "20000¤"	
+		}
+        
 		iconType = {
 			name = "tax_banner"
 			position = { x = 20 y = 100 }
