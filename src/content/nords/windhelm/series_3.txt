@@ -1,0 +1,99 @@
+new mission_series eastmarch_3 = {
+	slot = 3
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_morvunskar = {
+			name = "The Morvunskar"
+			desc = ""
+			position = 2
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_the_second_companions
+			}
+			trigger = {
+				provinces:morvunskar = {
+					base_manpower = 5
+				}
+			}
+			effect = {
+				provinces:morvunskar = {
+					add_base_manpower = 5
+				}
+			}
+		}
+		eastmarch_uttering_hills = {
+			name = "Uttering Hills Training"
+			desc = ""
+			position = 3
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_morvunskar
+			}
+			trigger = {
+				manpower_percentage = 0.75
+			}
+			effect = {
+				add_yearly_manpower = -2
+				provinces:uttering_hills = {
+					add_base_manpower = 3
+					quick_province_modifier = {
+						name = "Uttering Hills Training"
+						permanent = no
+						modifier = {
+							army_tradition = 0.5
+						}
+					}
+				}
+			}
+		}
+		eastmarch_mixwater = {
+			name = "Mixwater Development"
+			desc = ""
+			position = 4
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_fortify_west
+			}
+			trigger = {
+				owns_or_non_sovereign_subject_of = provinces:mixwater
+				provinces:mixwater = {
+					development = 15
+				}
+			}
+			effect = {
+				provinces:mixwater = {
+					add_center_of_trade_level = 1
+					add_scaled_local_adm_power = 25
+					add_scaled_local_dip_power = 25
+					add_scaled_local_mil_power = 25
+				}
+				areas:amol = {
+					add_claim = ROOT
+				}
+			}
+		}
+		eastmarch_amol = {
+			name = "Amol Annexation"
+			desc = ""
+			position = 5
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_mixwater
+			}
+			trigger = {
+				areas:amol = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+			effect = {
+				areas:hillgrund, areas:lost_knife, areas:darkwater = {
+					add_claim = ROOT
+				}
+			}
+		}
+	}
+}

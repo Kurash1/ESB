@@ -1,0 +1,168 @@
+new mission_series eastmarch_8 = {
+	slot = 8
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_the_ylgermet = {
+			name = "Honor The Ylgermet"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			trigger = {
+				advisor = naval_reformer
+			}
+			effect = {
+				add_navy_tradition = 25
+				defineloc unlocks_ylgermet = "Unlocks '§YHonor The Ylgermet§!' Reform"
+				custom_tooltip = unlocks_ylgermet
+				set_country_flag = unlocks_ylgermet
+				quick_country_modifier = {
+					name = "The Second Ylgermet"
+					modifier = {
+						max_flagships = 1
+					}
+				}
+				create_flagship = {
+					where = windhelm
+					name = "The Second Ylgermet"
+					type = galley
+					traits = {
+						spare_jolly_roger the_second_ylgermet captains_log
+					}
+				}
+			}
+		}
+		eastmarch_skjoralmor_deal = {
+			name = "Skjoralmor Deal"
+			desc = ""
+			position = 2
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_the_ylgermet
+			}
+			trigger = {
+				countries:skjoralmor = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			effect = {
+				provinces:lakeview = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = 9125
+						power = 30
+						key = skjoralmor_deal
+					}
+				}
+				hidden_effect = {
+					countries:skjoralmor = {
+						every_owned_province [`trade_goods` = wood]
+						{
+							quick_province_modifier = {
+								name = "The Skjoralmor Deal"
+								duration = 9125
+								modifier = {
+									trade_value_modifier = 0.1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		eastmarch_fortify_east = {
+			name = "Fortify East"
+			desc = ""
+			position = 3
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_high_king
+			}
+			trigger = {
+				provinces:dunmeth_pass = {
+					fort_level = 1
+				}
+			}
+			effect = {
+				if [has_dlc = "Leviathan"]
+				{
+					provinces:black_mountain = {
+						move_great_project = {
+							type = dunmeth_pass
+							province = provinces:dunmeth_pass
+							instant = yes
+						}
+					}
+				}
+				else {
+					areas:dunmeth_pass = {
+						add_base_manpower = 2
+					}
+				}
+			}
+		}
+		eastmarch_develop_bleakrock = {
+			name = "Develop Bleakrock"
+			desc = ""
+			position = 4
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_fortify_east
+			}
+			trigger = {
+				provinces:bleakrock_isle = {
+					development = 15
+				}
+			}
+			effect = {
+				provinces:bleakrock_isle = {
+					center_of_trade = 1
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+		}
+		eastmarch_bloodskal_ally = {
+			name = "Bloodskal Ally"
+			desc = ""
+			position = 6
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_ally_in_solstheim
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+		eastmarch_raven_rock_mine = {
+			name = "Raven Rock Mine"
+			desc = ""
+			position = 8
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_thane_of_solstheim
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+	}
+}

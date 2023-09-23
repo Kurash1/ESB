@@ -1,0 +1,125 @@
+new mission_series eastmarch_4 = {
+	slot = 4
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_fortify_west = {
+			name = "Fortify the West"
+			desc = ""
+			position = 3
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_high_king eastmarch_morvunskar
+			}
+			trigger = {
+				provinces:gallows_rock = {
+					fort_level = 1
+				}
+			}
+			effect = {
+				areas:cradlecrush, areas:gallows_rock, areas:mixwater = {
+					quick_province_modifier = {
+						name = "Fortify the West"
+						duration = 9125
+						modifier = {
+							local_defensiveness = 50%
+						}
+					}
+				}
+			}
+		}
+		eastmarch_angas_mill = {
+			name = "Anga's Mill Development"
+			desc = ""
+			position = 4
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_fortify_west
+			}
+			trigger = {
+				owns_or_non_sovereign_subject_of = provinces:angas_mill
+				provinces:angas_mill = {
+					development = 15
+				}
+			}
+			effect = {
+				provinces:angas_mill = {
+					add_center_of_trade_level = 1
+					add_scaled_local_adm_power = 25
+					add_scaled_local_dip_power = 25
+					add_scaled_local_mil_power = 25
+				}
+			}
+		}
+		eastmarch_yorgrim_trade = {
+			name = "Yorgrim Trade"
+			desc = ""
+			position = 5
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_angas_mill
+			}
+			trigger = {
+				provinces:nightgate = {
+					owner = {
+						OR = {
+							tag = ROOT
+							alliance_with = ROOT
+						}
+					}
+				}
+			}
+			effect = {
+				provinces:nightgate = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = 9125
+						power = 30
+						key = STRONG_MERCHANTS
+					}
+				}
+			}
+		}
+		eastmarch_darkwater = {
+			name = "Darkwater Annexation"
+			desc = ""
+			position = 6
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_amol
+			}
+			trigger = {
+				areas:darkwater = {
+					owned_by = ROOT
+				}
+			}
+			effect = {
+				provinces:darkwater_crossing = {
+					add_claim = ROOT
+				}
+			}
+		}
+		eastmarch_eldergleam = {
+			name = "Eldergleam Expedition"
+			desc = ""
+			position = 7
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_darkwater
+			}
+			trigger = {
+				owns_or_non_sovereign_subject_of = provinces:darkwater_crossing
+				provinces:darkwater_crossing = {
+					development = 15
+				}
+			}
+			effect = {
+				provinces:atronach, provinces:broken_limb, provinces:hjoie, provinces:cherim_pond, provinces:eldergleam, provinces:bonestrew = {
+					add_siberian_construction = 50
+				}
+			}
+		}
+	}
+}

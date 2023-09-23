@@ -1,0 +1,27 @@
+new mission_series eastmarch_2 = {
+	slot = 2
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_the_second_companions = {
+			name = "The Second Companions"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			trigger = {
+				army_size_percentage = 1.0
+			}
+			effect = {
+				define_general = {
+					shock = 4
+					fire = 4
+					manuever = 4
+					siege = 4
+					trait = tongue_personality
+				}
+			}
+		}
+	}
+}
