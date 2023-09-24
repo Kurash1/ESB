@@ -15,18 +15,13 @@ Lose §R25§! Military Power."
 		change_religion = FROM
 		change_culture = FROM
 		remove_building = cleansing
-		owner = {
+		add_devastation = 100 
+		set_local_autonomy = 100
+		add_nationalism = -100
+		FROM = {
 			add_adm_power = -10 
 			add_mil_power = -25
 		}
-		defineloc barren_wasteland_desc = "This land has been devoided of any life, It will take time for it to recover"
-		add_province_modifier = {
-			name = barren_wasteland
-			duration = 10950
-			desc = barren_wasteland_desc
-		}
-		
-		#  i want to know modify picture for prov modifier
 		if [development = 25 ] {
 			add_base_tax = -3
 			add_base_production  = -3
@@ -44,23 +39,7 @@ Lose §R25§! Military Power."
 		}
 		
 	}
-}
-	new event_modifier barren_wasteland = {
-		
-		name = "Barren Wasteland"
-		modifier = {
-			local_tax_modifier = -1.5
-			local_manpower = -1.5
-			local_unrest = -10
-			local_production_efficiency = -1.5
-			supply_limit_modifier = -1.25
-			province_trade_power_modifier = -1.5
-			trade_goods_size_modifier = -1.5
-			development_cost = 0.15
-			local_defensiveness = -0.15
-			years_of_nationalism = -10
-		}
-	}
+}	
 	
 new building fort_15th = {
 	name = "Fort"
