@@ -7,7 +7,9 @@ Lose §R25§! Military Power."
 	cost = 25
 	time = 36
 	build_trigger = { 
-		NOT = { culture_group = FROM }
+		NOT = { 
+			culture_group = FROM 
+		}
 		has_owner_accepted_culture = no
     }
 	on_built = {
