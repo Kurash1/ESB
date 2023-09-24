@@ -2,73 +2,54 @@ new building cleansing = {
 	name = "Cleansing"
 	desc = "Let's clean our land from the tainting presence of other races"
 	cost = 25
+	
 	time = 36
-	potential = {
-		OR = {
-			culture_group = culture_groups:nord
-			culture_group = culture_groups:snow_elven
+	
+	# want to add mana spending adm_power = 10 mil_power = 25
+		
 			
-		}
-	}
-	# want to add mana spending 
-	build_trigger = {
+			
+	build_trigger = { 
+		
+		
 		NOT = {
 			culture_group = FROM
+			accepted_culture = FROM
 		}
 	}
-	while = {
-		limit = {
-			has_construction = THIS
-		}
-		add_province_modifier = { 
-			name = hunted_down
-		}
-	}
-	
 	on_built = {
 		change_religion = FROM
 		change_culture = FROM
 		remove_building = cleansing
+		defineloc barren_wasteland_desc = "This land has been devoided of any life, It will take time for it to recover"
 		add_province_modifier = {
 			name = barren_wasteland
-			duration = 10950			
-			desc = "This land has been devoided of any life, It will take time for it to recover"
-		}
-		#want to delete development base on dev
-		# desc doesn't work , i want to know where picture for prov modifier,
-		#want to create prov mod ,while building cleansing
-		if = {
-			limit = {
-				development = 25
-			}
-			add_base_tax = -3
-			add_base_production = -3
-			add_base_manpower = -3
+			duration = 10950
+			desc = barren_wasteland_desc
 		}
 		
-		else_if = {
-			limit = {
-				development = 15  
-			}	
+		#  i want to know where picture for prov modifier,higher_development_than = 20
+		if [development = 25 ] {
+			add_base_tax = -3
+			add_base_production  = -3
+			add_base_manpower = -3
+		}
+		else_if [development = 15 ] {
 			add_base_tax = -2
 			add_base_production = -2
 			add_base_manpower = -2
 		}
-		
-		else = {
-			add_base_tax = -1
-			add_base_production = -1
-			add_base_manpower = -1
-			}
-		
+		else {
+		add_base_tax = -1
+		add_base_production = -1
+		add_base_manpower = -1
+		}
 		
 	}
 }
 	new event_modifier barren_wasteland = {
 		
 		name = "Barren Wasteland"
-		desc = "This land has been devoided of any life, It will take time for it to recover"
-		picture = "uricanbeg_school"
 		modifier = {
 			local_tax_modifier = -1.5
 			local_manpower = -1.5
@@ -82,16 +63,7 @@ new building cleansing = {
 			years_of_nationalism = -10
 		}
 	}
-	new event_modifier hunted_down = {
-		name = "Hunted Down"
-		desc = ""
-		modifier = {
-			local_tax_modifier = -0.5
-			local_manpower = -0.5
-			local_production_efficiency = -0.5
-			local_unrest = 5
-			}
-	}
+	
 new building fort_15th = {
 	name = "Fort"
 	desc = ""
