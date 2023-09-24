@@ -1,3 +1,39 @@
+new government_mechanic hrothgar_mechanic = {
+	name = "Cohesion"
+	powers = {
+		hrothgar_power = {
+			name = "Cohesion"
+			desc = ""
+			gui = {
+				size = { x = 300 y = 25 }
+				moveable = 0
+				
+				# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+				iconType = { 
+					name = "government_power_bar"
+					spriteType = "GFX_fanaticism_progressbar"
+					position = { x = 16 y = 0 }
+				}	
+
+				# Frame
+				iconType = {
+					name = "government_power_bar_frame"
+					spriteType = "GFX_fanaticism_frame"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			max = 100
+			min = 0
+			monarch_power = mil
+			default = 100
+			base_monthly_growth = -0.5
+			on_min_reached = {
+				set_imperial_incident = collapse_of_hrothgar
+			}
+		}
+	}
+}
 new government_reform tier_1_hrothgar_territories = {
 	name = "Hrothgar Territories"
 	desc = ""
@@ -15,10 +51,6 @@ new government_reform tier_1_hrothgar_territories = {
 		land_maintenance_modifier = -0.5
 	}
 	government_abilities = {
-		defineloc ability_hrothgar_mechanic = "Cohesion"
-		defineloc hrothgar_power = "Cohesion"
-		defineloc hrothgar_power_desc = ""
-		defineloc monthly_hrothgar_power = "Monthly Cohesion"
 		hrothgar_mechanic
 	}
 	ai = {
