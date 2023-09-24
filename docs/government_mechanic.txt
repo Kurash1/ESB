@@ -1,0 +1,66 @@
+new government_mechanic <government_mechanic_name> = {
+	name = <string>
+	alert_icon_gfx = <sprite_type_name>
+	alert_icon_index = <integer>
+	available = <trigger>
+	powers = {
+		<government_power_name> = {
+			name = <string>
+			desc = <string>
+			gui = {
+				<nameless_interface_window>
+			}
+			min = <integer>
+			max = <integer>
+			default = <integer> 
+			reset_on_new_ruler = <bool> 
+			base_monthly_growth = <float> 
+			development_scaled_monthly_growth = <float> 
+			monarch_power = <power_type> 
+			show_before_interactions = <bool>
+			scaled_modifier = {
+				start_value = <float> 
+				end_value = <float> 
+				extend_beyond_value = <bool> 
+				trigger = <trigger>
+				modifier = <modifier>
+			}
+			reverse_scaled_modifier = {
+				start_value = <float> 
+				end_value = <float> 
+				extend_beyond_value = <bool> 
+				trigger = <trigger>
+				modifier = <modifier>
+			}
+			range_modifier = {
+				start_value = <float> 
+				end_value = <float> 
+				trigger = <trigger>
+				modifier = <modifier>
+			}
+			on_max_reached = <effect>
+			on_min_reached = <effect>
+			is_good = <bool> 
+		}
+	}
+	interactions = {
+		<government_mechanic_interaction_name> = {
+			name = <string>
+			desc = <string>
+			gui = {
+				<nameless_interface_window>
+			}
+			center = <bool> 
+			icon = <sprite_type_name> 
+			cost_type = <government_power_name> 
+			cost = <integer> 
+			potential = <trigger>
+			trigger = <trigger>
+			effect = <effect>
+			cooldown_years = <integer> 
+			cooldown_token = <string> 
+			cooldown_desc = <string> 
+			ai_chance = <chance_block>
+        }
+	}
+}
