@@ -36,21 +36,21 @@ new government_mechanic fanaticism_mechanic = {
 			name = "Fanaticism"
 			desc = ""
 			gui = {
-				size = { x = 300 y = 25 }
+				size = { x = 345 y = 25 }
 				moveable = 0
 				
 				# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
 				iconType = { 
 					name = "government_power_bar"
 					spriteType = "GFX_fanaticism_progressbar"
-					position = { x = 16 y = 0 }
+					position = { x = 43 y = 0 }
 				}	
 
 				# Frame
 				iconType = {
 					name = "government_power_bar_frame"
 					spriteType = "GFX_fanaticism_frame"
-					position = { x = 0 y = 0 }
+					position = { x = 27 y = 0 }
 					alwaystransparent = yes
 				}
 			}

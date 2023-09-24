@@ -5,7 +5,7 @@ new government_mechanic hrothgar_mechanic = {
 			name = "Cohesion"
 			desc = ""
 			gui = {
-				size = { x = 300 y = 25 }
+				size = { x = 345 y = 25 }
 				moveable = 0
 				
 				# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
