@@ -1,6 +1,38 @@
 new localisation ESTATES_SUMMON_THE_DIET_DESC = "Will summon the Diet to set an §YAgenda§!
 
 Agendas will be implemented in a future update"
+new government_mechanic magicka_mechanic = {
+	name = "Magicka"
+	powers = {
+		magicka = {
+			name = "Magicka"
+			desc = ""
+			gui = {
+				size = { x = 300 y = 50 }
+				moveable = 0
+				
+				# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+				iconType = { 
+					name = "government_power_bar"
+					spriteType = "GFX_magicka_power_bar"
+					position = { x = 7 y = 3 }
+				}	
+
+				# Frame
+				iconType = {
+					name = "government_power_bar_frame"
+					spriteType = "GFX_magicka_frame"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			max = 100
+			base_monthly_growth = 0.5
+			development_scaled_monthly_growth = 0
+			is_good = yes
+		}
+	}
+}
 new bookmark old_kingdom = {
 	name = "Old Kingdom"
 	desc = ""
