@@ -1,0 +1,171 @@
+new event_modifier illusion_focus_inspire = {
+	name = "Illusion: Inspiration"
+	modifier = {
+		land_morale = 0.1
+	}
+}
+new event_modifier illusion_focus_spy = {
+	name = "Illusion: Espionage"
+	modifier = {
+		spy_offence = 0.25
+	}
+}
+new event_modifier illusion_focus_charm = {
+	name = "Illusion: Charm"
+	modifier = {
+		reduced_liberty_desire = 15
+		global_unrest = -2
+	}
+}
+new government_mechanic illusion_focus_mechanic = {
+	name = "Illusion Focus"
+	interactions = {
+		illusion_spy_button = {
+			name = "Cast Espionage Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_illusion_spy_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay_center"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = illusion_focus_spy
+				}
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 25
+				}
+			}
+			effect = {
+				add_country_modifier = {
+					name = illusion_focus_spy
+					duration = (365*10)
+				}
+				
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -25
+				}
+			}
+		}
+		illusion_charm_button = {
+			name = "Cast Charm Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_illusion_charm_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay_center"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = illusion_focus_charm
+				}
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 50
+				}
+			}
+			effect = {
+				add_country_modifier = {
+					name = illusion_focus_charm
+					duration = (365*10)
+				}
+				
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -50
+				}
+			}
+		}
+		illusion_inspire_button = {
+			name = "Cast Inspiration Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+				
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_illusion_inspire_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay_center"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = illusion_focus_inspire
+				}
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 75
+				}
+			}
+			effect = {
+				add_country_modifier = {
+					name = illusion_focus_inspire
+					duration = (365*10)
+				}
+				
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -75
+				}
+			}
+		}
+	}
+}
+new government_reform tier_4_illusion_focus = {
+	name = "Illusion Focus"
+	desc = ""
+	icon = "profession_scroll"
+	allow_normal_conversion = yes
+	modifiers = {
+		spy_offence = 0.2
+	}
+	government_abilities = {
+		illusion_focus_mechanic
+	}
+}
