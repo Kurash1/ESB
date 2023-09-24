@@ -6,11 +6,10 @@ Lose §R10§! Administrative Power.
 Lose §R25§! Military Power."
 	cost = 25
 	time = 36
-		build_trigger = { 
-			NOT = { culture_group = FROM }
-			has_owner_accepted_culture = no
-		
-	}
+	build_trigger = { 
+		NOT = { culture_group = FROM }
+		has_owner_accepted_culture = no
+    }
 	on_built = {
 		change_religion = FROM
 		change_culture = FROM
@@ -33,11 +32,10 @@ Lose §R25§! Military Power."
 			add_base_manpower = -2
 		}
 		else {
-		add_base_tax = -1
-		add_base_production = -1
-		add_base_manpower = -1
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
 		}
-		
 	}
 }	
 	
