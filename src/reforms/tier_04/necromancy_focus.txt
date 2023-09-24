@@ -1,0 +1,60 @@
+on_actions:on_battle_won_country += {
+	if = {
+		limit = {
+			ROOT = { has_government_attribute = manpower_from_defeating_armies }
+		}
+		ROOT = {
+			set_variable = {
+				which = land_units_killed_var
+				which = land_units_killed
+			}
+			multiply_variable = {
+				which = land_units_killed_var
+				value = 0.1
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_killed_var
+						value = 1000
+					}
+				}
+				subtract_variable = {
+					which = land_units_killed_var
+					value = 1000
+				}
+				add_manpower = 1
+			}
+			multiply_variable = {
+				which = land_units_killed_var
+				value = 1000
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_killed_var
+						value = 1000
+					}
+				}
+				subtract_variable = {
+					which = land_units_killed_var
+					value = 1000
+				}
+				add_manpower = 0.001
+			}
+		}
+	}
+}
+new localisation mechanic_manpower_from_defeating_armies_yes = "Winning battles gives us §G10%§! manpower of the enemy troops which fell in battle"
+new government_reform tier_4_necromancy_focus = {
+	name = "Necromancy Focus"
+	desc = ""
+	icon = "undead_army"
+	allow_normal_conversion = yes
+	modifiers = {
+		manpower_recovery_speed = 0.2
+	}
+	custom_attributes = {
+		manpower_from_defeating_armies = yes
+	}
+}

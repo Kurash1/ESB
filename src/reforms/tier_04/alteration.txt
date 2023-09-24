@@ -1,0 +1,113 @@
+new event_modifier alteration_focus_shield = {
+	name = "Alteration: Shields"
+	modifier = {
+		fire_damage_received = -0.10
+		shock_damage_received = -0.10
+		monthly_magicka = -0.8
+	}
+}
+new event_modifier alteration_focus_build = {
+	name = "Alteration: Construction"
+	modifier = {
+		build_cost = -0.25
+		build_time = -0.25
+		monthly_magicka = -0.25
+	}
+}
+new event_modifier alteration_focus_feather = {
+	name = "Alteration: Feather"
+	modifier = {
+		movement_speed = 0.25
+		monthly_magicka = -0.25
+	}
+}
+new government_mechanic alteration_focus_mechanic = {
+	name = "Alteration Focus"
+	interactions = {
+		alteration_shield_button = {
+			name = "Toggle Shield Spells"
+			desc = ""
+			gui = {
+				size = { x = 100 y = 85 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_tourism_increase_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+			}
+			effect = {
+				
+			}
+		}
+		alteration_build_button = {
+			name = "Toggle Construction Spells"
+			desc = ""
+			gui = {
+				size = { x = 100 y = 85 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_tourism_increase_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+			}
+			effect = {
+				if [has_country_modifier = alteration_focus_build] {
+					remove_country_modifier alteration_focus_build
+				}
+				else {
+					add_country_modifier = {
+						name = alteration_focus_build
+						duration = 3650
+					}
+				}
+			}
+		}
+		alteration_feather_button = {
+			name = "Toggle Feather Spells"
+			desc = ""
+			gui = {
+				size = { x = 100 y = 85 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_tourism_increase_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+			}
+			effect = {
+				if [has_country_modifier = alteration_focus_feather] {
+					remove_country_modifier alteration_focus_feather
+				}
+				else {
+					add_country_modifier = {
+						name = alteration_focus_feather
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+}
+new government_reform tier_4_alteration_focus = {
+	name = "Alteration Focus"
+	desc = ""
+	icon = "tome_1"
+	allow_normal_conversion = yes
+	modifiers = {
+		
+	}
+	government_abilities = {
+		alteration_focus_mechanic
+	}
+}
