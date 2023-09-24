@@ -1,26 +1,24 @@
 new building cleansing = {
 	name = "Cleansing"
-	desc = "Let's clean our land from the tainting presence of other races"
+	desc = "Let's clean our land from the tainting presence of other races
+	
+Lose §R10§! Administrative Power.
+Lose §R25§! Military Power."
 	cost = 25
-	
 	time = 36
-	
-	# want to add mana spending adm_power = 10 mil_power = 25
+		build_trigger = { 
+			NOT = { culture_group = FROM }
+			has_owner_accepted_culture = no
 		
-			
-			
-	build_trigger = { 
-		
-		
-		NOT = {
-			culture_group = FROM
-			accepted_culture = FROM
-		}
 	}
 	on_built = {
 		change_religion = FROM
 		change_culture = FROM
 		remove_building = cleansing
+		owner = {
+			add_adm_power = -10 
+			add_mil_power = -25
+		}
 		defineloc barren_wasteland_desc = "This land has been devoided of any life, It will take time for it to recover"
 		add_province_modifier = {
 			name = barren_wasteland
@@ -28,7 +26,7 @@ new building cleansing = {
 			desc = barren_wasteland_desc
 		}
 		
-		#  i want to know where picture for prov modifier,higher_development_than = 20
+		#  i want to know modify picture for prov modifier
 		if [development = 25 ] {
 			add_base_tax = -3
 			add_base_production  = -3
