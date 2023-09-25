@@ -33,8 +33,7 @@ You Lose §R15.00§! Magicka"
 			which = espionage_magic_var
 			value = 15
 		}
-		log = "[Root.espionage_magic_var.GetValue]"
-	
+		
 		while [
 			check_variable = {
 				which = espionage_magic_var
@@ -225,13 +224,11 @@ new government_reform tier_4_illusion_focus = {
 	desc = ""
 	icon = "profession_scroll"
 	allow_normal_conversion = yes
-	potential = {
-		idea_groups:illusion_ideas:trigger
-	}
 	trigger = {
 		full_idea_group = illusion_ideas
 	}
 	custom_attributes = {
+		defineloc mechanic_has_espionage_magic_yes = "Unlocks the §YCast Espionage Magic§! Diplomatic Action"
 		has_espionage_magic = yes
 	}
 	modifiers = {

@@ -211,9 +211,6 @@ new government_reform tier_4_destruction_focus = {
 	desc = ""
 	icon = "arcane_barrage"
 	allow_normal_conversion = yes
-	potential = {
-		idea_groups:destruction_ideas:trigger
-	}
 	trigger = {
 		full_idea_group = destruction_ideas
 	}
@@ -221,6 +218,7 @@ new government_reform tier_4_destruction_focus = {
 		fire_damage = 10%
 	}
 	custom_attributes = {
+		defineloc mechanic_has_siege_magic_yes = "Unlocks the §YCast Siege Magic§! Diplomatic Action"
 		has_siege_magic = yes
 	}
 	government_abilities = {
