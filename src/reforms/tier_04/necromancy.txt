@@ -1,0 +1,245 @@
+new event_modifier lich = {
+	name = "Lich"
+	modifier = {
+		monthly_magicka = 0.5
+		heir_chance = -1
+	}
+}
+new country_event lichdom.1 = {
+	title = "The Path of Transcendence"
+	desc = ""
+	picture = altar_of_despair_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		add_ruler_personality = immortal_personality
+		add_ruler_modifier = {
+			name = lich
+			duration = -1
+		}
+	}
+	options = {
+		{
+			name = ""
+			effect = {
+			
+			}
+			ai_chance = {
+				factor = 1
+			}
+		}
+	}
+}
+new government_mechanic necromancy_focus_mechanic = {
+	name = "Necromancy Focus"
+	interactions = {
+		necromancy_1_button = {
+			name = "Raise the Dead"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_necromancy_1"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 25
+				}
+			}
+			effect = {
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -25
+				}
+				
+				add_yearly_manpower = 2
+			}
+		}
+		necromancy_2_button = {
+			name = "Sell Black Soul Gems"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_necromancy_2"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 25
+				}
+			}
+			effect = {
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -25
+				}
+				
+				add_years_of_income = 0.5
+			}
+		}
+		necromancy_3_button = {
+			name = "The Path of Transcendence"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_necromancy_3"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 75
+				}
+				NOT = {
+					has_ruler_modifier = lich
+				}
+			}
+			effect = {
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -75
+				}
+				
+				if [has_ruler_flag = necromancy_lich_4] {
+					country_event = {
+						id = lichdom.1
+						days = 0
+					}
+				}
+				else_if [has_ruler_flag = necromancy_lich_3] {
+					defineloc necromancy_lich_4 = "Increase progress to Lichdom to §G80%§!"
+					custom_tooltip = necromancy_lich_4
+					set_ruler_flag = necromancy_lich_4
+				}
+				else_if [has_ruler_flag = necromancy_lich_2] {
+					defineloc necromancy_lich_3 = "Increase progress to Lichdom to §G60%§!"
+					custom_tooltip = necromancy_lich_3
+					set_ruler_flag = necromancy_lich_3
+				}
+				else_if [has_ruler_flag = necromancy_lich_1] {
+					defineloc necromancy_lich_2 = "Increase progress to Lichdom to §G40%§!"
+					custom_tooltip = necromancy_lich_2
+					set_ruler_flag = necromancy_lich_2
+				}
+				else {
+					defineloc necromancy_lich_1 = "Increase progress to Lichdom to §G20%§!"
+					custom_tooltip = necromancy_lich_1
+					set_ruler_flag = necromancy_lich_1
+				}
+			}
+		}
+	}
+}
+on_actions:on_battle_won_country += {
+	if [ROOT = { has_government_attribute = manpower_from_defeating_armies }] {
+		ROOT = {
+			set_variable = {
+				which = land_units_killed_var
+				which = land_units_killed
+			}
+			multiply_variable = {
+				which = land_units_killed_var
+				value = 0.1
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_killed_var
+						value = 1000
+					}
+				}
+				subtract_variable = {
+					which = land_units_killed_var
+					value = 1000
+				}
+				add_manpower = 1
+			}
+			multiply_variable = {
+				which = land_units_killed_var
+				value = 1000
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_killed_var
+						value = 1000
+					}
+				}
+				subtract_variable = {
+					which = land_units_killed_var
+					value = 1000
+				}
+				add_manpower = 0.001
+			}
+		}
+	}
+}
+new localisation mechanic_manpower_from_defeating_armies_yes = "Winning battles gives us §G10%§! manpower of the enemy troops which fell in battle"
+new government_reform tier_4_necromancy_focus = {
+	name = "Necromancy Focus"
+	desc = ""
+	icon = "undead_army"
+	allow_normal_conversion = yes
+	trigger = {
+		full_idea_group = necromacy_ideas
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.2
+	}
+	government_abilities = {
+		necromancy_focus_mechanic
+	}
+	custom_attributes = {
+		manpower_from_defeating_armies = yes
+	}
+}
