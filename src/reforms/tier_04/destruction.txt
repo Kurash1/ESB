@@ -1,34 +1,26 @@
-new event_modifier alteration_focus_shield = {
-	name = "Alteration: Shields"
+new event_modifier destruction_rune_traps = {
+	name = "Destruction: Rune Traps"
 	modifier = {
-		fire_damage_received = -0.10
-		shock_damage_received = -0.10
+		hostile_attrition = 1
 	}
 }
-new event_modifier alteration_focus_build = {
-	name = "Alteration: Construction"
+new event_modifier destruction_encourage_battlemages = {
+	name = "Destruction: Encourage Battlemages"
 	modifier = {
-		build_cost = -0.25
-		build_time = -0.25
+		infantry_fire = 1
 	}
 }
-new event_modifier alteration_focus_feather = {
-	name = "Alteration: Feather"
-	modifier = {
-		movement_speed = 0.25
-	}
-}
-new government_mechanic alteration_focus_mechanic = {
-	name = "Alteration Focus"
+new government_mechanic destruction_focus_mechanic = {
+	name = "Destruction Focus"
 	available = {
 		OR = {
-			has_reform = tier_4_alteration_focus
-			has_country_flag = alteration_focus_mechanic
+			has_reform = tier_4_destruction_focus
+			has_country_flag = destruction_focus_mechanic
 		}
 	}
 	interactions = {
-		alteration_feather_button = {
-			name = "Cast Feather Spells"
+		destruction_1_button = {
+			name = "Cast Rune Traps"
 			desc = ""
 			gui = {
 				size = { x = 115 y = 115 }
@@ -37,7 +29,7 @@ new government_mechanic alteration_focus_mechanic = {
 				# Interaction button, graphics replaced from the interaction icon specification
 				guiButtonType = {
 					name = "government_interaction_button"
-					quadTextureSprite = "GFX_alteration_feather_button"
+					quadTextureSprite = "GFX_destruction_1"
 					buttonFont = "vic_18"
 					clicksound = back_click
 				}
@@ -50,30 +42,30 @@ new government_mechanic alteration_focus_mechanic = {
 				}
 			}
 			trigger = {
-				NOT = {
-					has_country_modifier = alteration_focus_feather
-				}
 				has_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
 					value = 25
 				}
+				NOT = {
+					has_country_modifier = destruction_rune_traps
+				}
 			}
 			effect = {
-				add_country_modifier = {
-					name = alteration_focus_feather
-					duration = (365*10)
-				}
-				
 				add_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
 					value = -25
 				}
+				
+				add_country_modifier = {
+					name = destruction_rune_traps
+					duration = (365*10)
+				}
 			}
 		}
-		alteration_build_button = {
-			name = "Cast Construction Spells"
+		destruction_2_button = {
+			name = "Torture Dissidents"
 			desc = ""
 			gui = {
 				size = { x = 115 y = 115 }
@@ -82,7 +74,7 @@ new government_mechanic alteration_focus_mechanic = {
 				# Interaction button, graphics replaced from the interaction icon specification
 				guiButtonType = {
 					name = "government_interaction_button"
-					quadTextureSprite = "GFX_alteration_build_button"
+					quadTextureSprite = "GFX_destruction_2"
 					buttonFont = "vic_18"
 					clicksound = back_click
 				}
@@ -95,39 +87,36 @@ new government_mechanic alteration_focus_mechanic = {
 				}
 			}
 			trigger = {
-				NOT = {
-					has_country_modifier = alteration_focus_build
-				}
 				has_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
-					value = 50
+					value = 25
 				}
+				rebel_progress_at_least = { value = 20 }
 			}
 			effect = {
-				add_country_modifier = {
-					name = alteration_focus_build
-					duration = (365*10)
-				}
-				
 				add_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
+					value = -25
+				}
+				
+				add_rebel_progress = {
 					value = -50
 				}
 			}
 		}
-		alteration_shield_button = {
-			name = "Cast Shield Spells"
+		destruction_3_button = {
+			name = "Encourage Battlemages"
 			desc = ""
 			gui = {
 				size = { x = 115 y = 115 }
 				moveable = 0
-				
+
 				# Interaction button, graphics replaced from the interaction icon specification
 				guiButtonType = {
 					name = "government_interaction_button"
-					quadTextureSprite = "GFX_alteration_shield_button"
+					quadTextureSprite = "GFX_destruction_3"
 					buttonFont = "vic_18"
 					clicksound = back_click
 				}
@@ -140,39 +129,40 @@ new government_mechanic alteration_focus_mechanic = {
 				}
 			}
 			trigger = {
-				NOT = {
-					has_country_modifier = alteration_focus_shield
-				}
 				has_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
 					value = 75
 				}
+				
+				NOT = {
+					has_country_modifier = destruction_encourage_battlemages
+				}
 			}
 			effect = {
-				add_country_modifier = {
-					name = alteration_focus_shield
-					duration = (365*10)
-				}
-				
 				add_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
 					value = -75
 				}
+				
+				add_country_modifier = {
+					name = destruction_encourage_battlemages
+					duration = (365*10)
+				}
 			}
 		}
 	}
 }
-new government_reform tier_4_alteration_focus = {
-	name = "Alteration Focus"
+new government_reform tier_4_destruction_focus = {
+	name = "Destruction Focus"
 	desc = ""
-	icon = "tome_alteration"
+	icon = "arcane_barrage"
 	allow_normal_conversion = yes
 	modifiers = {
-		development_cost = -0.1
+		fire_damage = 10%
 	}
 	government_abilities = {
-		alteration_focus_mechanic
+		destruction_focus_mechanic
 	}
 }

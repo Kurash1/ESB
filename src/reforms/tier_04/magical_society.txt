@@ -29,7 +29,45 @@ new government_mechanic magical_society_mechanic = {
 	interactions = {
 		society_mana_button = { inherit = society_btn }
 		society_destruction_button = { inherit = society_btn }
-		society_restoration_button = { inherit = society_btn }
+		society_restoration_button = { 
+			name = "Cast Healing Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_restoration_1"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 50
+				}
+			}
+			effect = {
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -50
+				}
+			
+				add_yearly_manpower = 2
+			}
+		}
 		society_conjuration_button = { 
 			name = "Consult with the Daedra"
 			desc = ""

@@ -68,13 +68,12 @@ guiTypes = {
 			format = centre
 		}
 
-		iconType =
-		{
+		iconType = {
 			name ="government_mechanics_bg"
 			spriteType = "GFX_government_mechanics_bg"
 			position = { x= 546 y = 14 } #top is 14 #bottom is 764
 		}
-
+		
 		### ------- Government -------
 
 		iconType =
@@ -346,6 +345,12 @@ guiTypes = {
 			position = { x = 32 y = 228 } #do not set position here, set it above in specific_governments_list_position
 			size = { x = 345 y = 840 }
 			scrollbartype = "standardlistbox_slider"
+		}
+
+		iconType = {
+			name ="government_mechanics_bg_overlay"
+			spriteType = "GFX_government_mechanics_bg_overlay"
+			position = { x= 546 y = 14 } #top is 14 #bottom is 764
 		}
 
 		### -----------

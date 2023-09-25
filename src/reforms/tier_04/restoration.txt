@@ -1,34 +1,29 @@
-new event_modifier alteration_focus_shield = {
-	name = "Alteration: Shields"
+new event_modifier fortify_ruler = {
+	name = "Fortified Ruler"
 	modifier = {
-		fire_damage_received = -0.10
-		shock_damage_received = -0.10
+		monthly_magicka = -0.2
 	}
 }
-new event_modifier alteration_focus_build = {
-	name = "Alteration: Construction"
+new event_modifier restoration_blessing = {
+	name = "Restoration: Blessing"
 	modifier = {
-		build_cost = -0.25
-		build_time = -0.25
+		local_development_cost = -0.15
+		local_monthly_devastation = -0.1
+		local_tax_modifier = 0.1
+		trade_goods_size_modifier = 0.1
 	}
 }
-new event_modifier alteration_focus_feather = {
-	name = "Alteration: Feather"
-	modifier = {
-		movement_speed = 0.25
-	}
-}
-new government_mechanic alteration_focus_mechanic = {
-	name = "Alteration Focus"
+new government_mechanic restoration_focus_mechanic = {
+	name = "Restoration Focus"
 	available = {
 		OR = {
-			has_reform = tier_4_alteration_focus
-			has_country_flag = alteration_focus_mechanic
+			has_reform = tier_4_restoration_focus
+			has_country_flag = restoration_focus_mechanic
 		}
 	}
 	interactions = {
-		alteration_feather_button = {
-			name = "Cast Feather Spells"
+		restoration_2_button = {
+			name = "Cast Blessings"
 			desc = ""
 			gui = {
 				size = { x = 115 y = 115 }
@@ -37,7 +32,7 @@ new government_mechanic alteration_focus_mechanic = {
 				# Interaction button, graphics replaced from the interaction icon specification
 				guiButtonType = {
 					name = "government_interaction_button"
-					quadTextureSprite = "GFX_alteration_feather_button"
+					quadTextureSprite = "GFX_restoration_2"
 					buttonFont = "vic_18"
 					clicksound = back_click
 				}
@@ -50,30 +45,32 @@ new government_mechanic alteration_focus_mechanic = {
 				}
 			}
 			trigger = {
-				NOT = {
-					has_country_modifier = alteration_focus_feather
-				}
 				has_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
-					value = 25
+					value = 10
+				}
+				any_owned_province = {
+					NOT = { has_province_modifier = restoration_blessing }
 				}
 			}
 			effect = {
-				add_country_modifier = {
-					name = alteration_focus_feather
-					duration = (365*10)
-				}
-				
 				add_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
-					value = -25
+					value = -10
+				}
+			
+				random_owned_province [NOT = { has_province_modifier = restoration_blessing }] {
+					add_province_modifier = { 
+						name = restoration_blessing
+						duration = (365*25)
+					}
 				}
 			}
 		}
-		alteration_build_button = {
-			name = "Cast Construction Spells"
+		restoration_1_button = {
+			name = "Cast Healing Spells"
 			desc = ""
 			gui = {
 				size = { x = 115 y = 115 }
@@ -82,7 +79,7 @@ new government_mechanic alteration_focus_mechanic = {
 				# Interaction button, graphics replaced from the interaction icon specification
 				guiButtonType = {
 					name = "government_interaction_button"
-					quadTextureSprite = "GFX_alteration_build_button"
+					quadTextureSprite = "GFX_restoration_1"
 					buttonFont = "vic_18"
 					clicksound = back_click
 				}
@@ -95,9 +92,6 @@ new government_mechanic alteration_focus_mechanic = {
 				}
 			}
 			trigger = {
-				NOT = {
-					has_country_modifier = alteration_focus_build
-				}
 				has_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
@@ -105,20 +99,17 @@ new government_mechanic alteration_focus_mechanic = {
 				}
 			}
 			effect = {
-				add_country_modifier = {
-					name = alteration_focus_build
-					duration = (365*10)
-				}
-				
 				add_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
 					value = -50
 				}
+			
+				add_yearly_manpower = 2
 			}
 		}
-		alteration_shield_button = {
-			name = "Cast Shield Spells"
+		restoration_3_button = {
+			name = "Fortify Ruler"
 			desc = ""
 			gui = {
 				size = { x = 115 y = 115 }
@@ -127,7 +118,7 @@ new government_mechanic alteration_focus_mechanic = {
 				# Interaction button, graphics replaced from the interaction icon specification
 				guiButtonType = {
 					name = "government_interaction_button"
-					quadTextureSprite = "GFX_alteration_shield_button"
+					quadTextureSprite = "GFX_restoration_3"
 					buttonFont = "vic_18"
 					clicksound = back_click
 				}
@@ -141,38 +132,50 @@ new government_mechanic alteration_focus_mechanic = {
 			}
 			trigger = {
 				NOT = {
-					has_country_modifier = alteration_focus_shield
+					has_ruler_modifier = fortify_ruler
 				}
 				has_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
-					value = 75
+					value = 100
 				}
 			}
 			effect = {
-				add_country_modifier = {
-					name = alteration_focus_shield
-					duration = (365*10)
-				}
-				
 				add_government_power = { 
 					mechanic_type = magicka_mechanic
 					power_type = magicka
-					value = -75
+					value = -100
 				}
+				
+				random_list = {
+					2 = {					
+						add_ruler_modifier = { 
+							name = fortify_ruler
+							duration = -1
+						}
+						change_adm = 1
+						change_dip = 1
+						change_mil = 1
+					}
+					1 = {
+						kill_ruler = yes
+					}
+				}
+				
 			}
 		}
 	}
 }
-new government_reform tier_4_alteration_focus = {
-	name = "Alteration Focus"
+new government_reform tier_4_restoration_focus = {
+	name = "Restoration Focus"
 	desc = ""
-	icon = "tome_alteration"
+	icon = "blessed_hands"
 	allow_normal_conversion = yes
 	modifiers = {
-		development_cost = -0.1
+		global_monthly_devastation = -0.1
+		global_prosperity_growth = 0.1
 	}
 	government_abilities = {
-		alteration_focus_mechanic
+		restoration_focus_mechanic
 	}
 }
