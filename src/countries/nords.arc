@@ -6,6 +6,19 @@ new inheritable nordic_country = {
 	}
 	starting_reform = tier_1_nord_clan
 }
+new country lone_band = {
+	inherit = nordic_country
+	government = republic
+	starting_reform = tier_1_pirate_republic
+	primary_culture = haafingarian
+	tag = LBA
+	name = "Lone Band"
+	adj = "Lone"
+	color = {
+		0 0 100
+	}
+	capital = lone_isle
+}
 new country valtheim = {
 	inherit = nordic_country
 	primary_culture = whiterunish

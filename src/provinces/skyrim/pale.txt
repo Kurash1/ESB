@@ -1550,3 +1550,40 @@ new province edinmund = {
 		}
 	}
 }
+new province mundall = {
+	position = {
+		1767.000 2118.000 
+		1768.000 2119.000 
+		1768.000 2119.000 
+		1767.000 2116.000 
+		1768.000 2118.000 
+		1768.000 2119.000 
+		1768.000 2119.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = north_isles
+	name = "Mundall"
+	terrain = glacier
+	color = {
+		174 254 200
+	}
+	history = {
+		culture = cultures:palean
+		religion = nordic_pantheon
+		hre = yes
+		`trade_goods` = fish
+		capital = ""
+		is_city = no
+		owner = DAW
+		controller = DAW
+		add_core = DAW
+		57.1.1 = {
+			is_city = no
+		}
+	}
+}

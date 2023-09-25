@@ -1,4 +1,33 @@
-
+new government_reform tier_1_pirate_republic = {
+	name = "Pirate Republic"
+	desc = ""
+	icon = "pirate_republic"
+	allow_normal_conversion = no
+	legacy_equivalent = pirate_republic
+	lock_level_when_selected = yes
+	modifiers = {
+		republican_tradition = -0.5
+		naval_forcelimit_modifier = 0.5
+		allowed_galleass_fraction = 0.8
+		capture_ship_chance = 0.33
+		privateer_efficiency = 0.5
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	
+	trigger = {
+		has_reform = tier_1_pirate_republic
+	}
+	
+	duration = 4
+	
+	custom_attributes = {
+		locked_government_type = yes
+		force_admiral_leader = yes
+		is_pirate_republic_reform = yes
+		elections_increase_factions_influence = yes
+		cannot_become_dictatorship = yes
+	}
+}
 new government_reform tier_1_thanedom = {
 	name = "Thanedom"
 	desc = ""
