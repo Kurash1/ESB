@@ -1,0 +1,166 @@
+new event_modifier mysticism_envoys = {
+	name = "Mysticism: Envoys"
+	modifier = {
+		envoy_travel_time = -1
+	}
+}
+new event_modifier mysticism_study_arcane = {
+	name = "Mysticism: Study Arcane"
+	modifier = {
+		idea_cost = -5%
+	}
+}
+new government_mechanic mysticism_focus_mechanic = {
+	name = "Mysticism Focus"
+	available = {
+		OR = {
+			has_reform = tier_4_mysticism_focus
+			has_country_flag = mysticism_focus_mechanic
+		}
+	}
+	interactions = {
+		mysticism_1_button = {
+			name = "Teleport Envoys"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_mysticism_1"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_Country_modifier = mysticism_envoys
+				}
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 25
+				}
+			}
+			effect = {
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -25
+				}
+				
+				add_country_modifier = {
+					name = mysticism_envoys
+					duration = (365*10)
+				}
+			}
+		}
+		mysticism_3_button = {
+			name = "Magical Insight"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_mana_magic"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 25
+				}
+			}
+			effect = {
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -25
+				}
+				
+				add_adm_power = 25
+				add_dip_power = 25
+				add_mil_power = 25
+			}
+		}
+		mysticism_2_button = {
+			name = "Study the Arcane"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_mysticism_2"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_Country_modifier = mysticism_study_arcane
+				}
+				has_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = 75
+				}
+			}
+			effect = {
+				add_government_power = { 
+					mechanic_type = magicka_mechanic
+					power_type = magicka
+					value = -75
+				}
+				
+				add_country_modifier = {
+					name = mysticism_study_arcane
+					duration = (365*10)
+				}
+			}
+		}
+	}
+}
+new government_reform tier_4_mysticism_focus = {
+	name = "Mysticism Focus"
+	desc = ""
+	icon = "tome_1"
+	allow_normal_conversion = yes
+	modifiers = {
+		
+	}
+	government_abilities = {
+		mysticism_focus_mechanic
+	}
+}
