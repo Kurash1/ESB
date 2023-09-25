@@ -1,29 +1,3 @@
-new inheritable society_btn = {
-	name = ""
-	desc = ""
-	gui = {
-		size = { x = 115 y = 115 }
-		moveable = 0
-
-		# Interaction button, graphics replaced from the interaction icon specification
-		guiButtonType = {
-			name = "government_interaction_button"
-			quadTextureSprite = "GFX_magic_focus_interaction_overlay"
-			buttonFont = "vic_18"
-			clicksound = back_click
-		}
-		
-		iconType = {
-			name = "overlay"
-			spriteType = "GFX_magic_focus_interaction_overlay"
-			position = { x = 0 y = 0 }
-			alwaystransparent = yes
-		}
-	}
-	effect = {
-		
-	}
-}
 new government_mechanic magical_society_mechanic = {
 	name = "Magical Society"
 	interactions = {
