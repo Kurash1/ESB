@@ -1,7 +1,7 @@
 new estate harem = {
 	name = "Harem"
 	desc = ""
-	icon = 14
+	icon = 4
 	color = {
 		0 51 0
 	}
@@ -26,7 +26,7 @@ new estate harem = {
 		new curtail_the_harem_influence = {
 			name = "Curtail the Harem's Influence"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_centralized
 			influence = -0.15
 			loyalty = -0.20
 			can_select = { 
@@ -38,7 +38,7 @@ new estate harem = {
 		new favor_the_harem_influence = {
 			name = "Favor the Harem's Influence"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_unifying
 			influence = 0.15
 			loyalty = 0.20
 			can_select = { 
@@ -50,7 +50,7 @@ new estate harem = {
 		new breeding_is_essential = {
 			name = "Breeding is essential"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_multiple_professions
 			influence = 0.10
 			loyalty = -0.05
 			max_absolutism = 5
@@ -67,7 +67,7 @@ new estate harem = {
 		new grant_more_autonomy = {
 			name = "Grant more autonomy"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_allow_personal_fortune
 			influence = 0.15
 			loyalty = 0.10
 			max_absolutism = -15
@@ -81,7 +81,7 @@ new estate harem = {
 		new ask_the_wise_women_for_a_sign = {
 			name = "Ask the wise women for a sign"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_build_jain_temple
 			influence = 0.10
 			loyalty = 0
 			max_absolutism = -5
@@ -94,7 +94,7 @@ new estate harem = {
 		new marry_off_your_daughters = {
 			name = "Marry off your daughters"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_royal_marriage
 			benefits = {
 			diplomatic_reputation = 1
 			}
@@ -102,6 +102,8 @@ new estate harem = {
 			on_granted = {
 			
 		    }
-	}	
+		}
+	}
+		
 	base_influence = 25
 }

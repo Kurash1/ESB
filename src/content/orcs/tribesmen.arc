@@ -1,7 +1,7 @@
 new estate tribesmen = {
 	name = "Tribesmen"
 	desc = ""
-	icon = 14
+	icon = 6
 	color = {
 		204 0 0
 	}
@@ -24,7 +24,7 @@ new estate tribesmen = {
 		new curtail_the_tribesmen_influence = {
 			name = "Curtail the Tribesmen Influence"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_allow_personal_fortune
 			influence = -0.15
 			loyalty = -0.20
 			can_select = { 
@@ -36,7 +36,7 @@ new estate tribesmen = {
 		new favor_the_tribesmen_influence = {
 			name = "Favor the Tribesmen Influence"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_unifying
 			influence = 0.15
 			loyalty = 0.20
 			can_select = { 
@@ -48,7 +48,7 @@ new estate tribesmen = {
 		new every_orc_on_the_frontline = {
 			name = "Every Orc on the Frontline"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_land_force_limit
 			influence = 0.05
 			loyalty = -0.05
 			max_absolutism = -5

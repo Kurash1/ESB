@@ -1,7 +1,7 @@
 new estate sons = {
 	name = "Sons"
 	desc = ""
-	icon = 14
+	icon = 5
 	color = {
 		0 153 0
 	}
@@ -20,11 +20,12 @@ new estate sons = {
 	}
 	land_ownership_modifier = {
 	}
+	# why isn't it possible to create our privileges icons? It just isn't .Why not you stupid bastard!
 	privileges = {
 		new curtail_the_sons_influence = {
 			name = "Curtail the Sons' Influence"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = claim_right_of_investiture
 			influence = -0.15
 			loyalty = -0.20
 			can_select = { 
@@ -36,7 +37,7 @@ new estate sons = {
 		new favor_the_sons_influence = {
 			name = "Favor the Sons' Influence"
 			desc = ""
-			icon = privilege_grant_autonomy
+			icon = privilege_unifying
 			influence = 0.15
 			loyalty = 0.20
 			can_select = { 
