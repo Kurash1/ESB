@@ -145,6 +145,9 @@ new government_mechanic necromancy_focus_mechanic = {
 					power_type = magicka
 					value = 75
 				}
+				NOT = {
+					has_ruler_modifier = lich
+				}
 			}
 			effect = {
 				add_government_power = { 
