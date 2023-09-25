@@ -163,6 +163,12 @@ new government_reform tier_4_alteration_focus = {
 	desc = ""
 	icon = "tome_alteration"
 	allow_normal_conversion = yes
+	potential = {
+		idea_groups:alteration_ideas:trigger
+	}
+	trigger = {
+		full_idea_group = alteration_ideas
+	}
 	modifiers = {
 		development_cost = -0.1
 	}

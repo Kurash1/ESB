@@ -162,6 +162,12 @@ new government_reform tier_4_illusion_focus = {
 	desc = ""
 	icon = "profession_scroll"
 	allow_normal_conversion = yes
+	potential = {
+		idea_groups:illusion_ideas:trigger
+	}
+	trigger = {
+		full_idea_group = illusion_ideas
+	}
 	modifiers = {
 		spy_offence = 0.2
 	}

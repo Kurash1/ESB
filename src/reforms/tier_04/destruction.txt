@@ -1,3 +1,51 @@
+new diplomatic_action siege_magic = {
+	name = "Cast Siege Magic"
+	title = "Cast Siege Magic"
+	desc = "A Random siege in §Y[From.GetName]§! where §Y[Root.GetName]§! is the Attacker
+	§G+10§! Siege Status
+	
+You Lose §R10.00§! Magicka
+
+§gNote that the Siege% takes 1 day to update§!"
+	tooltip = ""
+	category = relation
+	require_acceptance = no
+
+	potential = {
+		has_government_attribute = has_siege_magic
+	}
+	trigger = {
+		war_with = FROM
+		FROM = {
+			any_owned_province = {
+				sieged_by = ROOT
+				fort_level = 1
+			}
+		}
+	}
+	
+	on_accept = {
+		FROM = {
+			random_owned_province [
+				sieged_by = ROOT
+				fort_level = 1
+			] {
+				change_siege = 10
+			}
+		}
+		ROOT = {
+			add_government_power = { 
+				mechanic_type = magicka_mechanic
+				power_type = magicka
+				value = -10
+			}
+		}
+	}
+	
+	ai_will_do = {
+		always = yes
+	}
+}
 new event_modifier destruction_rune_traps = {
 	name = "Destruction: Rune Traps"
 	modifier = {
@@ -159,8 +207,17 @@ new government_reform tier_4_destruction_focus = {
 	desc = ""
 	icon = "arcane_barrage"
 	allow_normal_conversion = yes
+	potential = {
+		idea_groups:destruction_ideas:trigger
+	}
+	trigger = {
+		full_idea_group = destruction_ideas
+	}
 	modifiers = {
 		fire_damage = 10%
+	}
+	custom_attributes = {
+		has_siege_magic = yes
 	}
 	government_abilities = {
 		destruction_focus_mechanic

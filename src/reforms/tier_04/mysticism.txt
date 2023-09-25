@@ -157,6 +157,12 @@ new government_reform tier_4_mysticism_focus = {
 	desc = ""
 	icon = "tome_1"
 	allow_normal_conversion = yes
+	potential = {
+		idea_groups:mysticism_ideas:trigger
+	}
+	trigger = {
+		full_idea_group = mysticism_ideas
+	}
 	modifiers = {
 		advisor_cost = -0.25
 	}
