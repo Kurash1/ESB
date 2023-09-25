@@ -1,3 +1,66 @@
+new diplomatic_action espionage_magic = {
+	name = "Cast Espionage Magic"
+	title = "Cast Espionage Magic"
+	desc = "Add §G15§! to the Spy Network in [From.GetName]
+	This is Modified by §GSpy Network Construction§!
+You Lose §R15.00§! Magicka"
+	tooltip = ""
+	category = covert
+	require_acceptance = no
+
+	potential = {
+		has_government_attribute = has_espionage_magic
+	}
+	trigger = {
+		has_government_power = { 
+			mechanic_type = magicka_mechanic
+			power_type = magicka
+			value = 15
+		}
+	}
+	
+	on_accept = {
+		export_to_variable = {
+			variable_name = espionage_magic_var
+			value = `modifier:spy_offence`
+		}
+		change_variable = {
+			which = espionage_magic_var
+			value = 1
+		}
+	
+		multiply_variable = {
+			which = espionage_magic_var
+			value = 15
+		}
+		log = "[Root.espionage_magic_var.GetValue]"
+	
+		while [
+			check_variable = {
+				which = espionage_magic_var
+				value = 1
+			}
+		] {
+			subtract_variable = {
+				which = espionage_magic_var
+				value = 1
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = 1
+			}
+		}
+		add_government_power = { 
+			mechanic_type = magicka_mechanic
+			power_type = magicka
+			value = -15
+		}
+	}
+	
+	ai_will_do = {
+		always = yes
+	}
+}
 new event_modifier illusion_focus_inspire = {
 	name = "Illusion: Inspiration"
 	modifier = {
@@ -167,6 +230,9 @@ new government_reform tier_4_illusion_focus = {
 	}
 	trigger = {
 		full_idea_group = illusion_ideas
+	}
+	custom_attributes = {
+		has_espionage_magic = yes
 	}
 	modifiers = {
 		spy_offence = 0.2

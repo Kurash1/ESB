@@ -3,7 +3,6 @@ new diplomatic_action siege_magic = {
 	title = "Cast Siege Magic"
 	desc = "A Random siege in §Y[From.GetName]§! where §Y[Root.GetName]§! is the Attacker
 	§G+10§! Siege Status
-	
 You Lose §R10.00§! Magicka
 
 §gNote that the Siege% takes 1 day to update§!"
@@ -15,6 +14,11 @@ You Lose §R10.00§! Magicka
 		has_government_attribute = has_siege_magic
 	}
 	trigger = {
+		has_government_power = { 
+			mechanic_type = magicka_mechanic
+			power_type = magicka
+			value = 10
+		}
 		war_with = FROM
 		FROM = {
 			any_owned_province = {
