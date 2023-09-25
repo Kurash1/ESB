@@ -1,8 +1,5 @@
 on_actions:on_battle_won_country += {
-	if = {
-		limit = {
-			ROOT = { has_government_attribute = manpower_from_defeating_armies }
-		}
+	if [ROOT = { has_government_attribute = manpower_from_defeating_armies }] {
 		ROOT = {
 			set_variable = {
 				which = land_units_killed_var

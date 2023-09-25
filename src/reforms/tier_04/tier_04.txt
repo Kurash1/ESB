@@ -8,16 +8,6 @@ new government_reform tier_4_free_magic = {
 		monthly_magicka = 0.1
 	}
 }
-new government_reform tier_4_magical_society = {
-	name = "Magical Society"
-	desc = ""
-	icon = "wow_cult"
-	allow_normal_conversion = yes
-	modifiers = {
-		all_power_cost = -0.05
-		global_unrest = 5
-	}
-}
 new government_reform tier_4_destruction_focus = {
 	name = "Destruction Focus"
 	desc = ""
@@ -31,15 +21,6 @@ new government_reform tier_4_restoration_focus = {
 	name = "Restoration Focus"
 	desc = ""
 	icon = "blessed_hands"
-	allow_normal_conversion = yes
-	modifiers = {
-		
-	}
-}
-new government_reform tier_4_conjuration_focus = {
-	name = "Conjuration Focus"
-	desc = ""
-	icon = "conjuration"
 	allow_normal_conversion = yes
 	modifiers = {
 		
