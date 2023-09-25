@@ -32,12 +32,6 @@ new country_event lichdom.1 = {
 }
 new government_mechanic necromancy_focus_mechanic = {
 	name = "Necromancy Focus"
-	available = {
-		OR = {
-			has_reform = tier_4_necromancy_focus
-			has_country_flag = necromancy_focus_mechanic
-		}
-	}
 	interactions = {
 		necromancy_1_button = {
 			name = "Raise the Dead"

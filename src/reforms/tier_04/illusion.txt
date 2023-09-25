@@ -19,12 +19,6 @@ new event_modifier illusion_focus_charm = {
 }
 new government_mechanic illusion_focus_mechanic = {
 	name = "Illusion Focus"
-	available = {
-		OR = {
-			has_reform = tier_4_illusion_focus
-			has_country_flag = illusion_focus_mechanic
-		}
-	}
 	interactions = {
 		illusion_spy_button = {
 			name = "Cast Espionage Spells"

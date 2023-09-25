@@ -15,12 +15,6 @@ new event_modifier restoration_blessing = {
 }
 new government_mechanic restoration_focus_mechanic = {
 	name = "Restoration Focus"
-	available = {
-		OR = {
-			has_reform = tier_4_restoration_focus
-			has_country_flag = restoration_focus_mechanic
-		}
-	}
 	interactions = {
 		restoration_2_button = {
 			name = "Cast Blessings"

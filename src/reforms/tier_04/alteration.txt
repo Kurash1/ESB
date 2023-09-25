@@ -20,12 +20,6 @@ new event_modifier alteration_focus_feather = {
 }
 new government_mechanic alteration_focus_mechanic = {
 	name = "Alteration Focus"
-	available = {
-		OR = {
-			has_reform = tier_4_alteration_focus
-			has_country_flag = alteration_focus_mechanic
-		}
-	}
 	interactions = {
 		alteration_feather_button = {
 			name = "Cast Feather Spells"

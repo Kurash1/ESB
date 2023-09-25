@@ -12,12 +12,6 @@ new event_modifier conjuration_focus_secret = {
 }
 new government_mechanic conjuration_focus_mechanic = {
 	name = "Conjuration Focus"
-	available = {
-		OR = {
-			has_reform = tier_4_conjuration_focus
-			has_country_flag = conjuration_focus_mechanic
-		}
-	}
 	interactions = {
 		conjuration_summon_button = {
 			name = "Summon Reinforcements"
