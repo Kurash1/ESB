@@ -1,21 +1,26 @@
-src/inheritables.txt
-src/magicka.txt
-src/terrains.txt
-src/cultures.txt
-src/provinces/*
-src/reforms.txt
-src/reforms/*
-src/countries/
-src/global.txt
-src/ideas.txt
-src/buildings.txt
-src/on_actions.txt
-src/religious_groups.txt
-src/interface.txt
-src/tradegoods.txt
-src/religions/
-src/advisors.txt
-src/tradenodes.txt
-src/content/*
-src/units.txt
-src/random_events/
+transpile_target = target
+gfx_folder = src/gfx
+load_order = {
+	src/inheritables.txt
+	src/magicka.txt
+	src/terrains.txt
+	src/cultures.txt
+	src/provinces/*
+	src/reforms.txt
+	src/reforms/*
+	src/countries/
+	src/global.txt
+	src/ideas.txt
+	src/buildings.txt
+	src/on_actions.txt
+	src/religious_groups.txt
+	src/interface.txt
+	src/tradegoods.txt
+	src/religions/
+	src/advisors.txt
+	src/tradenodes.txt
+	src/content/*
+	src/units.txt
+	src/random_events/
+	src/ai_personalities.txt
+}

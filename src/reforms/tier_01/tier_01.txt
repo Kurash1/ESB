@@ -1,0 +1,187 @@
+new government_reform tier_1_thanedom = {
+	name = "Thanedom"
+	desc = ""
+	icon = "hero"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	trigger = {
+		has_reform = tier_1_thanedom
+	}
+	modifiers = {
+		monarch_military_power = 1
+		land_forcelimit_modifier = 0.10
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_hold = {
+	name = "Hold"
+	desc = ""
+	icon = "commander_king_reform"
+	allow_normal_conversion = yes
+	trigger = {
+		has_reform = tier_1_hold
+	}
+	modifiers = {
+		governing_capacity = 50
+		num_accepted_cultures = 1
+		global_unrest = -2
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_warrior_house = {
+	name = "Warrior House"
+	desc = ""
+	icon = "crusading_orders_icon"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	trigger = {
+		has_reform = tier_1_warrior_house
+	}
+	modifiers = {
+		monarch_military_power = 1
+		shock_damage = 0.15
+		governing_capacity = -100
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_warrior_hold = {
+	name = "Warrior Hold"
+	desc = ""
+	icon = "crown_of_heaven"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	trigger = {
+		has_reform = tier_1_warrior_hold
+	}
+	modifiers = {
+		monarch_military_power = 1
+		shock_damage = 0.10
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_nord_clan = {
+	name = "Nord Clan"
+	desc = ""
+	icon = "generic_people"
+	allow_normal_conversion = yes
+	maintain_dynasty = yes
+	trigger = {
+		has_reform = tier_1_nord_clan
+	}
+	modifiers = {
+		governing_capacity = -100
+		global_autonomy = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_skjoralmor_clan = {
+	name = "Skjormalmor Clan"
+	desc = ""
+	icon = "fort"
+	allow_normal_conversion = yes
+	maintain_dynasty = yes
+	potential = {
+		has_reform = tier_1_skjoralmor_clan
+	}
+	modifiers = {
+		governing_capacity = -50
+		global_autonomy = -0.10
+		development_cost = -0.1
+		fort_maintenance_modifier = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_falmer_kingdom = {
+	name = "Falmer Kingdom"
+	desc = ""
+	icon = "wow_cult"
+	allow_normal_conversion = yes
+	
+	trigger = {
+		has_reform = tier_1_falmer_kingdom
+	}
+	modifiers = {
+		land_morale = 0.10
+		prestige_decay = 0.01
+		governing_capacity = 100
+		global_autonomy = -0.10
+	}
+	ai = {
+		factor = 1
+	}
+
+}
+new government_reform tier_1_orc_stronghold = {
+	name = "Orc Stronghold"
+	desc = ""
+	icon = "orc_stronghold"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	trigger = {
+		has_reform = tier_1_orc_stronghold
+	}
+	modifiers = {
+		leader_land_shock = 1
+		shock_damage = 0.10
+		min_autonomy = 35
+		land_maintenance_modifier = -0.20
+		land_forcelimit_modifier = 15%
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform tier_1_reachmen_clan = {
+	name = "Reachmen Clan"
+	desc = ""
+	icon = "hero"
+	allow_normal_conversion = yes
+	
+	trigger = {
+		has_reform = tier_1_reachmen_clan
+	}
+	modifiers = {
+		global_defender_dice_roll_bonus = 1 
+		defensiveness = 0.15
+		movement_speed = 0.10
+	    improve_relation_modifier = -0.15
+	}
+	ai = {
+		factor = 1
+	}
+
+}
+new government_reform tier_1_orc_federation = {
+	name = "Orc Federation"
+	desc = ""
+	icon = "all_under_tengri_reform"
+	allow_normal_conversion = yes
+	
+	trigger = {
+		has_reform = tier_1_orc_federation
+	}
+	modifiers = {
+		leader_land_shock = 2
+		shock_damage = 0.10
+		army_tradition_decay = -0.01
+		land_maintenance_modifier = -0.10
+		land_forcelimit_modifier = 10%
+		production_efficiency = 0.15
+	}
+	ai = {
+		factor = 1
+	}
+
+}

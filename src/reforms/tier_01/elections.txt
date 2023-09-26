@@ -1,0 +1,147 @@
+on_actions:on_new_term_election += {
+	events = {
+		elections.1
+	}
+}
+on_actions:on_death_election += {
+	events = {
+		elections.2
+	}
+}
+new country_event elections.1 = {
+	title = "Election!"
+	desc = "The term is up for $MONARCH$. With enough support [Root.Monarch.GetSheHe] can stay in office, but then [Root.Monarch.GetSheHe] must defeat [Root.Monarch.GetHerHis] three primary competitors..."
+	picture = REPUBLICAN_DEBATES_eventPicture
+	
+	is_triggered_only = yes
+	
+	options = {
+		{
+			name = "Keep $MONARCH$"
+			effect = {
+				custom_tooltip = remains_ruler
+				if [adm = 6] { add_adm_power = 50 }
+				else { change_adm = 1 }
+				if [dip = 6] { add_dip_power = 50 }
+				else { change_dip = 1 }
+				if [mil = 6] { add_mil_power = 50 }
+				else { change_mil = 1 }
+				
+				random_list = {
+					10 = {
+						add_adm_power = 50
+					}
+					10 = {
+						add_dip_power = 50
+					}
+					10 = {
+						add_mil_power = 50
+					}
+				}
+				
+				add_scaled_republican_tradition = -7.5
+			}
+			ai_chance = { 
+				factor = 60
+				modifier = {
+					factor = 0
+					NOT = { republican_tradition = 25 }
+				}	
+				modifier = {
+					factor = 0.5
+					NOT = { republican_tradition = 50 }
+				}				
+				modifier = {
+					factor = 0.5
+					NOT = { republican_tradition = 75 }
+				}	
+				modifier = {
+					factor = 2.0
+					republican_tradition = 90
+				}		
+			}
+		}
+		{
+			name = "Bureaucrat Candidate"
+			effect = {
+				define_ruler = {
+					adm = 3
+					dip = 2
+					mil = 2
+					random_gender = yes # Allows random gender for republics
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "Diplomat Candidate"
+			effect = {
+				define_ruler = {
+					adm = 2
+					dip = 3
+					mil = 2
+					random_gender = yes # Allows random gender for republics
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "Military Candidate"
+			effect = {
+				define_ruler = {
+					adm = 2
+					dip = 2
+					mil = 3
+					random_gender = yes # Allows random gender for republics
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+	}
+}
+new country_event elections.2 = {
+	title = "Election!"
+	desc = "The unfortunate passing of $MONARCH$ forces us to hold a premature election. Three primary candidates have been nominated..."
+	picture = REPUBLICAN_DEBATES_eventPicture
+	
+	is_triggered_only = yes
+	
+	options = {
+		{
+			name = "Bureaucrat Candidate"
+			effect = {
+				define_ruler = {
+					adm = 3
+					dip = 2
+					mil = 2
+					random_gender = yes # Allows random gender for republics
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "Diplomat Candidate"
+			effect = {
+				define_ruler = {
+					adm = 2
+					dip = 3
+					mil = 2
+					random_gender = yes # Allows random gender for republics
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "Military Candidate"
+			effect = {
+				define_ruler = {
+					adm = 2
+					dip = 2
+					mil = 3
+					random_gender = yes # Allows random gender for republics
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+	}
+}
