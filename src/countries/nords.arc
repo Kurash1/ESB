@@ -66,6 +66,8 @@ new country forelhost = {
 	}
 	religion = dragon_cult
 	capital = forelhost
+	government = theocracy
+	starting_reform = tier_1_dragon_priestdom
 }
 new country solitude = {
 	inherit = nordic_country
