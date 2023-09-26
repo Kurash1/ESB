@@ -1,7 +1,4 @@
-# New personalities cannot be added to this file
-# Do not change existing personality names!
-
-human = {
+ai_personalities:human := {
 	chance = {
 		factor = 0
 	}
@@ -9,7 +6,7 @@ human = {
 	icon = 1
 }
 
-ai_capitalist = {
+ai_personalities:ai_capitalist := {
 	chance = {
 		factor = 100
 		modifier = {
@@ -60,7 +57,7 @@ ai_capitalist = {
 	icon = 2
 }
 
-ai_diplomat = {
+ai_personalities:ai_diplomat := {
 	chance = {
 		factor = 100
 		modifier = {
@@ -121,7 +118,7 @@ ai_diplomat = {
 	icon = 3
 }
 
-ai_militarist = {
+ai_personalities:ai_militarist := {
 	chance = {
 		factor = 100
 		modifier = {
@@ -222,7 +219,7 @@ ai_militarist = {
 	icon = 4
 }
 
-ai_colonialist = {
+ai_personalities:ai_colonialist := {
 	chance = {
 		factor = 100	
 		modifier = {
@@ -277,7 +274,7 @@ ai_colonialist = {
 	icon = 5
 }
 
-ai_balanced = {
+ai_personalities:ai_balanced := {
 	chance = {
 		factor = 100
 		modifier = {
