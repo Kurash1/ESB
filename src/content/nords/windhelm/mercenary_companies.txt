@@ -1,0 +1,29 @@
+new mercenary_company cradlecrush_giants = {
+	name = "Cradlecrush Giants"
+	regiments_per_development = 0
+	cost_modifier = 0.5
+	home_province = cradlecrush
+	cavalry_weight = 0
+	artillery_weight = 0
+	trigger = {
+		has_country_flag = unlocks_cradlecrush_giants
+	}
+	modifier = {
+		shock_damage = 30%
+	}
+}
+new mercenary_company narzulbur_company = {
+	name = "Narzulbur Company"
+	regiments_per_development = 0.04
+	cost_modifier = 1.0
+	home_province = greenstep
+	cavalry_weight = 0.1
+	artillery_weight = 0.1
+	trigger = {
+		has_country_flag = unlocks_narzulbur_company
+	}
+	modifier = {
+		discipline = 5%
+		morale_damage = 10%
+	}
+}

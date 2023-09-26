@@ -460,6 +460,10 @@ new country windhelm = {
 				name = aegisbane
 				duration = -1
 			}
+			country_event = {
+				id = eastmarch.1
+				days = (143*365)
+			}
 		}
 	}
 }

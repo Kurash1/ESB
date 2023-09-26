@@ -1,0 +1,129 @@
+new mission_series eastmarch_6 = {
+	slot = 6
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_fortify_south = {
+			name = "Fortify the South"
+			desc = ""
+			position = 3
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_high_king
+			}
+			trigger = {
+				provinces:kynesgrove = {
+					fort_level = 1
+				}
+			}
+			effect = {
+				areas:kynesgrove, areas:narzulbur [is_city = yes]
+				{
+					quick_province_modifier = {
+						name = "Fortify the South"
+						duration = 9125
+						modifier = {
+							local_defensiveness = 50%
+						}
+					}
+				}
+			}
+		}
+		eastmarch_kynesgrove = {
+			name = "Develop Kynesgrove"
+			desc = ""
+			position = 4
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_fortify_south
+			}
+			trigger = {
+				owns_or_non_sovereign_subject_of = provinces:kynesgrove
+				provinces:kynesgrove = {
+					development = 15
+				}
+			}
+			effect = {
+				provinces:kynesgrove = {
+					add_center_of_trade_level = 1
+					add_scaled_local_adm_power = 25
+					add_scaled_local_dip_power = 25
+					add_scaled_local_mil_power = 25
+				}
+				areas:steamcrag, areas:mzulft [is_city = yes]
+				{
+					add_claim = ROOT
+				}
+			}
+		}
+		eastmarch_witchmist_expedition = {
+			name = "Witchmist Expedition"
+			desc = ""
+			position = 5
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_kynesgrove
+			}
+			trigger = {
+				provinces:kynesgrove = {
+					owned_by = ROOT
+					development = 20
+				}
+			}
+			effect = {
+				provinces:riverside_shack, provinces:cronvangr, provinces:berasta, provinces:witchmist, provinces:anguki, provinces:steamcrag = {
+					add_siberian_construction = 50
+				}
+			}
+		}
+		eastmarch_ansilvund_way = {
+			name = "Ansilvund Way"
+			desc = ""
+			position = 6
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_cragwallow
+			}
+			trigger = {
+				areas:ansilvund = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+			effect = {
+				areas:northwind = {
+					add_claim = ROOT
+				}
+			}
+		}
+		eastmarch_northwind_mine = {
+			name = "Northwind Mine"
+			desc = ""
+			position = 7
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_ansilvund_way
+			}
+			trigger = {
+				provinces:northwind = {
+					owned_by = ROOT
+					base_production = 5
+				}
+			}
+			effect = {
+				provinces:northwind = {
+					quick_province_modifier = {
+						name = "Northwind Mine"
+						modifier = {
+							trade_goods_size = 0.5
+							trade_value = 1
+						}
+					}
+					add_base_production = -3
+				}
+			}
+		}
+	}
+}

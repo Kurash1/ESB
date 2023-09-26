@@ -1,0 +1,133 @@
+new mission_series eastmarch_9 = {
+	slot = 9
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_clan_shatter_shield = {
+			name = "Clan Shatter-Shield"
+			desc = ""
+			position = 2
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_the_ylgermet eastmarch_windhelm_port
+			}
+			trigger = {
+				has_country_modifier = aegisbane
+			}
+			effect = {
+				remove_country_modifier = aegisbane
+				provinces:windhelm = {
+					quick_province_modifier = {
+						name = "Clan Shatter-Shield"
+						modifier = {
+							ship_recruit_speed = -25%
+							local_sailors_modifier = 50%
+						}
+					}
+				}
+			}
+		}
+		eastmarch_the_north_wind = {
+			name = "The North Wind"
+			desc = ""
+			position = 3
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_skjoralmor_deal eastmarch_clan_shatter_shield
+			}
+			trigger = {
+				navy_size = 50
+			}
+			effect = {
+				quick_country_modifier = {
+					name = "The North Wind"
+					modifier = {
+						max_flagships = 1
+					}
+				}
+				create_flagship = {
+					where = windhelm
+					name = "The North Wind"
+					type = transport
+					traits = {
+						trade_route_map improved_crows_nest the_north_wind
+					}
+				}
+			}
+		}
+		eastmarch_ally_in_solstheim = {
+			name = "Ally in Solstheim"
+			desc = ""
+			position = 5
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_develop_bleakrock eastmarch_the_north_wind eastmarch_the_winter_war
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+		eastmarch_himmelhost_ally = {
+			name = "Himmelhost Ally"
+			desc = ""
+			position = 6
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_ally_in_solstheim
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+		eastmarch_thane_of_solstheim = {
+			name = "Thane of Solstheim"
+			desc = ""
+			position = 7
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_bloodskal_ally eastmarch_himmelhost_ally eastmarch_skygge_ally
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+		eastmarch_fort_frostmoth = {
+			name = "Fort Frostmoth"
+			desc = ""
+			position = 8
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_thane_of_solstheim
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+new country_event eastmarch.1 = {
+	title = "Harald Hand-Free"
+	desc = ""
+	picture = harald_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "This is the beginning of a new age"
+			effect = {
+				define_ruler = {
+					name = "Harald Hand-Free"
+					dynasty = "Of Ysgramoor"
+					age = 30 
+					claim = 100
+					adm = 6
+					dip = 6
+					mil = 6
+					male = yes
+				}
+				set_country_flag = eastmarch_had_harald
+				regions:rift = {
+					add_claim = ROOT
+				}
+			}
+		}
+	}
+}

@@ -253,21 +253,6 @@ cb_annex = {
 	war_goal = annex_country
 }
 
-cb_change_government = {
-	valid_for_subject = no
-	
-	prerequisites_self = {
-		has_reform = war_against_secularization
-	}
-	
-	prerequisites = {
-		is_neighbor_of = FROM
-		FROM = { NOT = { government = theocracy } }
-	}
-
-	war_goal = war_goal_change_government
-}
-
 # AUTOMATIC - Constantly in effect while 'prerequisites' is true
 # --------------------------------------------------------------
 

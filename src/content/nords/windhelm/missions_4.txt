@@ -1,0 +1,206 @@
+new mission_series eastmarch_5 = {
+	slot = 5
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_palace_of_the_kings = {
+			name = "Palace of the Kings"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			trigger = {
+				owns = provinces:windhelm
+				if [ai = yes]
+				{
+					OR = {
+						ags = 20
+						provinces:windhelm = {
+							has_great_project = {
+								type = palace_of_the_kings
+								tier = 1
+							}
+						}
+					}
+				}
+				else_if [has_dlc = "Leviathan"]
+				{
+					provinces:windhelm = {
+						has_great_project = {
+							type = palace_of_the_kings
+							tier = 1
+						}
+					}
+				}
+				else
+				{
+					provinces:windhelm = {
+						development = 30
+					}
+				}
+			}
+			effect = {
+				if [has_dlc = "Leviathan"]
+				{
+					provinces:windhelm = {
+						add_great_project_tier = {
+							type = palace_of_the_kings
+							tier = 1
+						}
+					}
+				}
+				else
+				{
+					provinces:windhelm = {
+						add_base_tax = 3
+						add_base_production = 3
+						add_base_manpower = 3
+					}
+				}
+			}
+		}
+		eastmarch_high_king = {
+			name = "High King"
+			desc = ""
+			position = 2
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_the_ylgermet eastmarch_palace_of_the_kings eastmarch_the_second_companions
+			}
+			trigger = {
+				is_emperor = yes
+			}
+			effect = {
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+				if [ai = yes]
+				{
+					provinces:gallows_rock, provinces:kynesgrove = {
+						add_building_construction = {
+							building = fort_15th
+							speed = 5
+							cost = 0
+						}
+					}
+				}
+			}
+		}
+		eastmarch_deal_with_giants = {
+			name = "Deal With Giants"
+			desc = ""
+			position = 3
+			icon = mission_unknown_mission
+			trigger = {
+				provinces:cradlecrush = {
+					development = 10
+				}
+			}
+			effect = {
+				provinces:cradlecrush = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+		}
+		eastmarch_cradlecrush_giants = {
+			name = "Cradlecrush Giants"
+			desc = ""
+			position = 4
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_deal_with_giants eastmarch_fortify_west
+			}
+			trigger = {
+				provinces:cradlecrush = {
+					development = 20
+				}
+			}
+			effect = {
+				defineloc unlocks_cradlecrush_giants = "Unlocks '§YCradlecrush Giant§!' Mercenary Company"
+				custom_tooltip = unlocks_cradlecrush_giants
+				set_country_flag = unlocks_cradlecrush_giants
+			}
+		}
+		eastmarch_cragwallow = {
+			name = "Cragwallow Annexation"
+			desc = ""
+			position = 5
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_kynesgrove
+			}
+			trigger = {
+				areas:steamcrag, areas:mzulft = {
+					type = all
+					OR = {
+						is_city = no
+						owned_by = ROOT
+					}
+				}
+			}
+			effect = {
+				areas:ansilvund = {
+					add_claim = ROOT
+				}
+			}
+		}
+		eastmarch_road_mistwatch = {
+			name = "Road Mistwatch"
+			desc = ""
+			position = 7
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_cragwallow eastmarch_darkwater
+			}
+			trigger = {
+				imperial_authority = 40
+				NOT = {
+					active_imperial_incident = any
+				}
+			}
+			effect = {
+				set_imperial_incident = road_mistwatch
+			}
+		}
+		eastmarch_abandon_atmoran_holdings = {
+			name = "Abandon Old Holdings"
+			desc = ""
+			position = 8
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_eldergleam eastmarch_road_mistwatch eastmarch_northwind_mine
+			}
+			trigger = {
+				defineloc eastmarch_has_harald = "Has had §YHarald Hand-Free§! as your ruler"
+				custom_trigger_tooltip = {
+					tooltip = eastmarch_has_harald
+					has_country_flag = eastmarch_had_harald
+				}
+			}
+			effect = {
+				remove_country_modifier = atmoran_holdings
+			}
+		}
+		eastmarch_form_eastmarch = {
+			name = "Form Eastmarch"
+			desc = ""
+			position = 9
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_abandon_atmoran_holdings
+			}
+			trigger = {
+				regions:eastmarch = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+			effect = {
+				change_tag = EAS
+			}
+		}
+	}
+}

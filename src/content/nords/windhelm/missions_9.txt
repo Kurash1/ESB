@@ -1,0 +1,118 @@
+new mission_series eastmarch_10 = {
+	slot = 10
+	ai = yes
+	potential = {
+		tag = windhelm
+	}
+	missions = {
+		eastmarch_windhelm_port = {
+			name = "Windhelm Port"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			trigger = {
+				provinces:windhelm = {
+					base_production = 10
+				}
+			}
+			effect = {
+				provinces:black_mountain = {
+					move_great_project = {
+						type = windhelm_docks
+						province = provinces:windhelm
+						instant = yes
+					}
+				}
+			}
+		}
+		eastmarch_blue_axe_sea_thane = {
+			name = "Blue-Axe Sea-Thane"
+			desc = ""
+			position = 3
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_clan_shatter_shield
+			}
+			trigger = {
+				countries:blue-axe = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			effect = {
+				create_admiral = {
+					tradition = 100
+				}
+			}
+		}
+		eastmarch_the_winter_war = {
+			name = "The Winter War"
+			desc = ""
+			position = 4
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_blue_axe_sea_thane eastmarch_the_north_wind
+			}
+			trigger = {
+				OR = {
+					full_idea_group = naval_ideas
+					alliance_with = countries:blue-axe
+				}
+			}
+			effect = {
+				quick_country_modifier = {
+					name = "The Winter War"
+					modifier = {
+						max_flagships = 1
+					}
+				}
+				create_flagship = {
+					where = windhelm
+					name = "The Winter War"
+					type = heavy_ship
+					traits = {
+						the_winter_war hull_sheating mass_load_cannons
+					}
+				}
+			}
+		}
+		eastmarch_skygge_ally = {
+			name = "Skygge Ally"
+			desc = ""
+			position = 6
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_ally_in_solstheim
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+		eastmarch_deal_with_thirsk = {
+			name = "Deal With Thirsk"
+			desc = ""
+			position = 8
+			icon = mission_unknown_mission
+			required = {
+				eastmarch_thane_of_solstheim
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = future_update
+					always = no
+				}
+			}
+			effect = {
+				custom_tooltip = future_update
+			}
+		}
+	}
+}

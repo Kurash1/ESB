@@ -32,6 +32,7 @@ remnant = {
 			reforms = {
 				remnant_become_thanedom
 				remnant_become_falmer_kingdom
+				remnant_become_hrothgar_kingdom
 			}
 		}
 	}
@@ -56,6 +57,7 @@ monarchy = {
 				tier_1_nord_clan
 				tier_1_skjoralmor_clan
 				tier_1_falmer_kingdom
+				tier_1_hrothgar_kingdom
 			}
 		}
 		backbone_of_the_army = { 
@@ -161,32 +163,7 @@ republic = {
 	reform_levels = {
 		government_policy = {
 			reforms = {
-			    oligarchy_reform
-			    merchants_reform
-			    colonial_government
-			    presidential_despot_reform
-			    revolutionary_republic_reform 
-			    junior_revolutionary_republic_reform
-			    trading_city
-			    free_city
-			    pirate_republic_reform
-			    noble_elite_reform
-			    peasants_republic
-			    protectorate_parliament_reform
-			    veche_republic 
-			    ambrosian_republic
-			    dutch_republic
-			    venice_merchants_reform
-			    federal_republic
-			    cossacks_reform 
-			    american_republic
-			    prussian_republic_reform
-			    signoria_reform
-			    military_dictatorship_reform
-				pirate_king_reform
-				war_against_the_world_doctrine_reform
-				dwemer_city
-				samara_reform
+				
 			}
 		}
 		backbone_of_the_army = { 
@@ -280,17 +257,6 @@ tribal = {
 	reform_levels = {
 	    government_policy = {
 			reforms = {
-				siberian_tribe
-				steppe_horde
-				tribal_federation
-				tribal_despotism
-				tribal_kingdom 
-				great_mongol_state_reform 
-				martial_society_reform
-				civil_society_reform
-				religious_societies_reform
-				retain_tribal_hierarchy_reform 
-				orc_clan_reform
 				tier_1_orc_stronghold
 				tier_1_reachmen_clan
 				tier_1_orc_federation
@@ -396,10 +362,6 @@ native = {
 	reform_levels = {
 		tribe_organization = {
 			reforms = {
-				native_chiefdom_reform
-				native_federation_reform
-				native_clan_council_reform
-				native_hereditary_reform
 				
 			}
 		}
@@ -477,7 +439,6 @@ native = {
 		}
 	}
 }
-
 
 theocracy = {
 	color = { 75 170 75 }

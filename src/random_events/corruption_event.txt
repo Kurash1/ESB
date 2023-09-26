@@ -398,10 +398,7 @@ new country_event corruption_event.9 = {
 	picture = ES_FAMINE_VILLAGE
 	immediate = {
 		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					has_owner_culture = no
-				}
+			random_owned_province [has_owner_culture = no] {
 				save_event_target_as = culture_province
 			}
 		}
@@ -480,12 +477,11 @@ new country_event corruption_event.11 = {
 	}
 	immediate = {
 		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					NOT = {
-						`trade_goods` = unknown
-					}
+			random_owned_province [
+				NOT = {
+					`trade_goods` = unknown
 				}
+			] {
 				save_event_target_as = trade_goods_province
 			}
 		}
@@ -606,14 +602,13 @@ new country_event corruption_event.16 = {
 	}
 	immediate = {
 		hidden_effect = {
-			random_hired_mercenary_company = {
-				limit = {
-					has_company_manpower = 0.2
-					location = {
-						owned_by = root
-						is_state_core = root
-					}
+			random_hired_mercenary_company [
+				has_company_manpower = 0.2
+				location = {
+					owned_by = root
+					is_state_core = root
 				}
+			] {
 				save_event_target_as = hired_merc_band
 				location = {
 					save_event_target_as = hired_mercs_victim_area
@@ -636,10 +631,7 @@ new country_event corruption_event.16 = {
 			effect = {
 				add_corruption = 1
 				event_target:hired_mercs_victim_area = {
-					area = {
-						limit = {
-							owned_by = root
-						}
+					area [owned_by = root] {
 						add_devastation = 15
 					}
 				}

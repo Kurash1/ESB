@@ -3,7 +3,7 @@ new estate sailors = {
 	desc = ""
 	icon = 1
 	color = {
-		0 100 255
+		0 148 255
 	}
 	trigger = {
 		culture_group = culture_groups:nord

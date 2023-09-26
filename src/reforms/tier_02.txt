@@ -58,15 +58,59 @@ new government_reform tier_2_professional_army = {
 		yearly_army_professionalism = 0.0025
 	}
 }
+new government_mechanic peasant_army_mechanic = {
+	name = "Raise Peasant Army"
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	interactions = {
+		peasant_army_button = {
+			name = "Raise Peasant Army"
+			desc = ""
+			gui = {
+				size = { x = 300 y = 85 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_tourism_increase_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+			}
+			trigger = {
+				is_in_war = {
+					defender_leader = ROOT
+				}
+				any_owned_province = {
+					NOT = { 
+						controlled_by = ROOT 
+					}
+				}
+			}
+			effect = {
+				random_owned_province = {
+					limit = {
+						NOT = {
+							controlled_by = ROOT
+						}
+					}
+					spawn_rebels = {
+						type = anti_tax_rebels
+						size = 10
+					}
+				}
+			}
+			cooldown_years = 25
+		}
+	}
+}
 new government_reform tier_2_peasant_army = {
 	name = "Peasant Army"
 	desc = ""
 	icon = "fist_in_air"
 	allow_normal_conversion = yes
 	modifiers = {
-		defineloc ability_peasant_army_mechanic = "Raise Peasant Army"
-		defineloc peasant_army_button = "Raise Peasant Army"
-		defineloc peasant_army_button_desc = ""
 		global_manpower_modifier = 0.25
 	}
 	government_abilities = {

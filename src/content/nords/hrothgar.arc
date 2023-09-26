@@ -1,3 +1,39 @@
+new government_mechanic hrothgar_mechanic = {
+	name = "Cohesion"
+	powers = {
+		hrothgar_power = {
+			name = "Cohesion"
+			desc = ""
+			gui = {
+				size = { x = 300 y = 25 }
+				moveable = 0
+				
+				# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+				iconType = { 
+					name = "government_power_bar"
+					spriteType = "GFX_fanaticism_progressbar"
+					position = { x = 16 y = 0 }
+				}	
+
+				# Frame
+				iconType = {
+					name = "government_power_bar_frame"
+					spriteType = "GFX_fanaticism_frame"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			max = 100
+			min = 0
+			monarch_power = mil
+			default = 100
+			base_monthly_growth = -0.5
+			on_min_reached = {
+				set_imperial_incident = collapse_of_hrothgar
+			}
+		}
+	}
+}
 new government_reform tier_1_hrothgar_territories = {
 	name = "Hrothgar Territories"
 	desc = ""
@@ -15,11 +51,52 @@ new government_reform tier_1_hrothgar_territories = {
 		land_maintenance_modifier = -0.5
 	}
 	government_abilities = {
-		defineloc ability_hrothgar_mechanic = "Cohesion"
-		defineloc hrothgar_power = "Cohesion"
-		defineloc hrothgar_power_desc = ""
-		defineloc monthly_hrothgar_power = "Monthly Cohesion"
 		hrothgar_mechanic
+	}
+	ai = {
+		factor = 1
+	}
+}
+new government_reform remnant_become_hrothgar_kingdom = {
+	name = "Reform into the Hrothgar Kingdom"
+	desc = ""
+	icon = "leader_icon"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = tier_1_hrothgar_territories
+	}
+	effect = {
+		
+		if [has_reform = remnant_1_focus_on_quality] { add_country_modifier = { name = remnant_1_focus_on_quality_mod duration = 3650 } }
+		if [has_reform = remnant_1_focus_on_quantity] { add_country_modifier = { name = remnant_1_focus_on_quantity_mod duration = 3650 } }
+		if [has_reform = remnant_1_focus_on_navy] { add_country_modifier = { name = remnant_1_focus_on_navy_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_taxation] { add_country_modifier = { name = remnant_2_focus_on_taxation_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_production] { add_country_modifier = { name = remnant_2_focus_on_production_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_trade] { add_country_modifier = { name = remnant_2_focus_on_trade_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_the_court] { add_country_modifier = { name = remnant_3_focus_on_the_court_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_local_forces] { add_country_modifier = { name = remnant_3_focus_on_local_forces_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_bureaucracy] { add_country_modifier = { name = remnant_3_focus_on_bureaucracy_mod duration = 3650 } }
+		
+		change_government = monarchy
+		add_government_reform = tier_1_hrothgar_kingdom
+		change_government_reform_progress = -800
+		
+		set_country_flag = reformed_remnant
+	}
+}
+new government_reform tier_1_hrothgar_kingdom = {
+	name = "Hrothgar Kingdom"
+	desc = ""
+	icon = "leader_icon"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	trigger = {
+		has_reform = tier_1_hrothgar_kingdom
+	}
+	modifiers = {
+		monarch_military_power = 1
+		land_forcelimit_modifier = 0.25
+		land_maintenance_modifier = -0.1
 	}
 	ai = {
 		factor = 1
