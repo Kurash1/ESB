@@ -1,3 +1,22 @@
+new government_reform tier_1_dragon_priestdom = {
+	name = "Dragon Priestdom"
+	desc = ""
+	icon = "dragon_priest"
+	allow_normal_conversion = yes
+	trigger = {
+		has_reform = tier_1_dragon_priestdom
+	}
+	modifiers = {
+		fire_damage = 0.10
+		idea_cost = -0.05
+		missionaries = 1
+		global_missionary_strength = 0.03
+		land_morale = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
 new government_reform tier_1_thanedom = {
 	name = "Thanedom"
 	desc = ""
