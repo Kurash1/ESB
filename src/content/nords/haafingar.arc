@@ -1,5 +1,5 @@
-new idea_group solitude_ideas = {
-	name = "Solitude"
+new idea_group haafingar_ideas = {
+	name = "Haafingar"
 	category = national
 	start = {
 		global_trade_power = 0.15
