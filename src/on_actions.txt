@@ -92,19 +92,9 @@ on_actions:on_regent += {
 on_actions:on_extend_regency += {
 	add_legitimacy = -10
 }
-on_actions:on_new_term_election += {
-	events = {
-		700
-	}
-}
 on_actions:on_heir_needed_theocracy += {
 	events = {
 		es_theocracy.1
-	}
-}
-on_actions:on_death_election += {
-	events = {
-		701
 	}
 }
 on_actions:on_bankruptcy += {

@@ -478,6 +478,40 @@ new province clay_coast = {
 		add_core = SOL
 	}
 }
+new province rock_isle = {
+	position = {
+		1677.000 2085.000 
+		1677.000 2085.000 
+		1668.000 2083.000 
+		1677.000 2082.000 
+		1668.000 2083.000 
+		1677.000 2085.000 
+		1668.000 2083.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -1.571 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = solitude_coast
+	name = "Rock Isle"
+	color = {
+		249 153 114
+	}
+	terrain = hills
+	history = {
+		religion = nordic_pantheon
+		culture = cultures:haafingarian
+		hre = yes
+		`trade_goods` = stone
+		capital = ""
+		is_city = no
+		owner = SOL
+		controller = SOL
+		add_core = SOL
+	}
+}
 new province northern_cliffs = {
 	position = {
 		1659.000 2110.000 1659.000 2110.000 1659.000 2110.000 1657.000 2109.500 1659.000 2110.000 1659.000 2110.000 1659.000 2110.000
@@ -488,7 +522,7 @@ new province northern_cliffs = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = solitude_coast
+	area = shadowgreen
 	name = "Northern Cliffs"
 	terrain = coastline
 	color = {

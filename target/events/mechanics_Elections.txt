@@ -39,15 +39,9 @@ country_event = {
 			}		
 		}
 		custom_tooltip = remains_ruler
-		if = { limit = { adm = 7 dip = 7 NOT = { mil = 7 } } change_mil = 1 }
-		else_if = { limit = { adm = 7 NOT = { dip = 7 } mil = 7 } change_dip = 1 }
-		else_if = { limit = {  NOT = { adm = 7 } dip = 7 mil = 7 } change_adm = 1 }
-		else_if = { limit = { adm = 7  NOT = { dip = 7 }  NOT = { mil = 7 } } random_list = { 50 = { change_dip = 1 } 50 = { change_mil = 1 } } }
-		else_if = { limit = { NOT = { adm = 7 } dip = 7 NOT = { mil = 7 } } random_list = { 50 = { change_adm = 1 } 50 = { change_mil = 1 } } }
-		else_if = { limit = { NOT = { adm = 7 } NOT = { dip = 7 }  mil = 7 } random_list = { 50 = { change_adm = 1 } 50 = { change_dip = 1 } } }
-		else = {
-			random_list = { 33 = { change_adm = 1 } 33 = { change_dip = 1 } 33 = { change_mil = 1 } }
-		}
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
 		if = {
 			limit = {
 				is_tribal = no 

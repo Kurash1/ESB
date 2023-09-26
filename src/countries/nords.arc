@@ -480,6 +480,7 @@ new country windhelm = {
 		}
 	}
 }
+hre_defines:emperor := windhelm
 new relation alliance = {
 	first = JRR
 	second = WND
