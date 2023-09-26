@@ -4,7 +4,7 @@ new idea_group nordic_ideas = {
 	priority = 10
 	start = {
 		infantry_cost = -20%
-		leader_land_shock = 2
+		leader_land_shock = 1
 	}
 	bonus = {
 		may_perform_slave_raid = yes
