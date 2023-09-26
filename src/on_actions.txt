@@ -1,11 +1,44 @@
+new country_event global.1 = {
+	title = "Idea March"
+	desc = ""
+	picture = REPUBLICAN_DEBATES_eventPicture
+	trigger = {
+		tag = black_mountain
+	}
+	is_triggered_only = yes
+	
+	immediate = {
+		country_event = {
+			id = global.1
+			days = (365*50)
+		}
+		every_country = {
+			add_adm_tech = 3
+			add_dip_tech = 3
+			add_mil_tech = 3
+		}
+	}
+	
+	options = {
+		{
+			name = ""
+			effect = {
+				
+			}
+			ai_chance = {
+				factor = 1
+			}
+		}
+	}
+}
 on_actions:on_startup += {
 	set_allow_female_emperor = yes
 	if [NOT = { has_global_flag = on_action_set_up_global_flag }]
 	{
 		countries:black_mountain = {
 			country_event = {
-				id = idea_march
-				days = 18250
+				id = global.1
+				days = (365*50)
 			}
 		}
 		every_country [NOT = { tag = REB }]
