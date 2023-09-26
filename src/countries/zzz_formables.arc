@@ -38,6 +38,7 @@ new decision form_eastmarch = {
 	}
 	effect = {
 		change_tag = EAS
+		swap_free_idea_group = yes
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -75,6 +76,7 @@ new decision form_winterhold = {
 	}
 	effect = {
 		change_tag = WIH
+		swap_free_idea_group = yes
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -119,6 +121,7 @@ new decision form_pale = {
 	}
 	effect = {
 		change_tag = PAL
+		swap_free_idea_group = yes
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -163,6 +166,7 @@ new decision form_whiterun = {
 	}
 	effect = {
 		change_tag = WHT
+		swap_free_idea_group = yes
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -207,6 +211,7 @@ new decision form_hjaalmarch = {
 	}
 	effect = {
 		change_tag = HJM
+		swap_free_idea_group = yes
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -251,6 +256,7 @@ new decision form_haafingar = {
 	}
 	effect = {
 		change_tag = HAA
+		swap_free_idea_group = yes
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -294,6 +300,7 @@ new decision form_orkreath = {
 	}
 	effect = {
 		change_tag = ORK
+		swap_free_idea_group = yes
 		add_government_reform = tier_1_orc_federation
 		kreath_region = {
 			add_permanent_claim = ROOT

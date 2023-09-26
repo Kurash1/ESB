@@ -67,6 +67,7 @@ monarchy = {
 				tier_2_warriors 
 				tier_2_professional_army 
 				tier_2_peasant_army
+				tier_2_battlemages_domination
 				tier_2_battlemages
 				tier_2_lunar_smithing
 			} 
@@ -85,6 +86,13 @@ monarchy = {
 				tier_4_free_magic
 				tier_4_regulations
 				tier_4_magical_society
+				tier_4_destruction_focus
+				tier_4_restoration_focus
+				tier_4_conjuration_focus
+				tier_4_alteration_focus
+				tier_4_illusion_focus
+				tier_4_necromancy_focus
+				tier_4_mysticism_focus
 			}
 		}
 		state_and_religion = {
@@ -163,7 +171,7 @@ republic = {
 	reform_levels = {
 		government_policy = {
 			reforms = {
-				
+				tier_1_pirate_republic
 			}
 		}
 		backbone_of_the_army = { 
@@ -173,6 +181,7 @@ republic = {
 				tier_2_warriors 
 				tier_2_professional_army 
 				tier_2_peasant_army
+				tier_2_battlemages_domination
 				tier_2_battlemages
 				tier_2_lunar_smithing
 			} 
@@ -191,6 +200,13 @@ republic = {
 				tier_4_free_magic
 				tier_4_regulations
 				tier_4_magical_society
+				tier_4_destruction_focus
+				tier_4_restoration_focus
+				tier_4_conjuration_focus
+				tier_4_alteration_focus
+				tier_4_illusion_focus
+				tier_4_necromancy_focus
+				tier_4_mysticism_focus
 			}
 		}
 		state_and_religion = {
@@ -269,6 +285,7 @@ tribal = {
 				tier_2_warriors 
 				tier_2_professional_army 
 				tier_2_peasant_army
+				tier_2_battlemages_domination
 				tier_2_battlemages
 				tier_2_lunar_smithing
 			} 
@@ -287,6 +304,13 @@ tribal = {
 				tier_4_free_magic
 				tier_4_regulations
 				tier_4_magical_society
+				tier_4_destruction_focus
+				tier_4_restoration_focus
+				tier_4_conjuration_focus
+				tier_4_alteration_focus
+				tier_4_illusion_focus
+				tier_4_necromancy_focus
+				tier_4_mysticism_focus
 			}
 		}
 		state_and_religion = {
@@ -365,76 +389,93 @@ native = {
 				
 			}
 		}
-		warriors = {
+		backbone_of_the_army = { 
+			reforms = { 
+				tier_2_conscription 
+				tier_2_mercenaries 
+				tier_2_warriors 
+				tier_2_professional_army 
+				tier_2_peasant_army
+				tier_2_battlemages
+				tier_2_lunar_smithing
+			} 
+		}
+		backbone_of_the_navy = {
 			reforms = {
-				battlefield_tactics
-				raiding_and_pillaging
-				ambushes
-				magic_specialization
+				tier_3_conscription
+				tier_3_ship_building
+				tier_3_fishermen
+				tier_3_vikings
+				tier_3_the_flagship
 			}
 		}
-		paganism = {
+		position_of_magic = {
 			reforms = {
-				rituals_and_festivals
-				sacrifices
-				respect_to_the_faith
-				mercenaries_of_faith
+				tier_4_free_magic
+				tier_4_regulations
+				tier_4_magical_society
+				tier_4_destruction_focus
+				tier_4_restoration_focus
+				tier_4_conjuration_focus
+				tier_4_alteration_focus
+				tier_4_illusion_focus
+				tier_4_necromancy_focus
+				tier_4_mysticism_focus
 			}
 		}
-		tribal_magic = {
+		state_and_religion = {
 			reforms = {
-				fetishes
-				tomb_magic
-				totems_and_sacred_places
-				magical_guardians
+				tier_5_secularism
+				tier_5_state_religion
+				tier_5_fanaticism
 			}
 		}
-		prisoners = {
+		rulers_powers = {
 			reforms = {
-				ransoming_captives
-				enslaving_captives
-				killing_captives
-				conscripting_captives
+				tier_6_strong_reign
+				tier_6_curtailed_reign
 			}
 		}
-		tribal_structure = {
+		bureaucracy = {
 			reforms = {
-				hierarchal
-				clans_and_hordes
-				religiois_supremacy
-				loose_confederation
+				tier_7_centralized_bureaucracy
+				tier_7_decentralized_bureaucracy
 			}
 		}
-		chieftans = {
+		diplomacy = {
 			reforms = {
-				strongman
-				tyrant
-				tribal_voice
-				tribal_succession
+				tier_8_alliance_focus
+				tier_8_subject_focus
+				tier_8_expansion_focus
+				tier_8_supremacy
 			}
 		}
-		outsiders = {
+		espionage = {
 			reforms = {
-				distructed
-				tolerated
-				killed_or_enslaved
-				embraced
+				tier_9_honest_country
+				tier_9_espionage
+				tier_9_defense_focus
+				tier_9_the_grand_game
 			}
 		}
-		civilizing = {
+		campaign_doctrine = {
 			reforms = {
-				choose_the_path_of_monarchy
-				choose_the_path_of_republic
-				choose_the_path_of_theocracy
-				choose_the_path_of_tribe
+				tier_10_climactic_victory
+				tier_10_guerilla_warfare
+				tier_10_long_campaign
 			}
 		}
-		national_identity = {
+		advisors = {
 			reforms = {
-				native_becomes_horde_reform
-				native_becomes_monarchy_reform
-				native_becomes_republic_reform
-				native_becomes_theocracy_reform
+				tier_11_royal_court
+				tier_11_expanded_powers
+				tier_11_martial_court
+			}
+		}
+		trade_policy = {
+			reforms = {
+				tier_12_internal_markets
+				tier_12_free_trade
 			}
 		}
 	}
@@ -450,7 +491,7 @@ theocracy = {
 	reform_levels = {
 		government_policy = {
 			reforms = {
-				
+				tier_1_dragon_priestdom
 			}
 		}
 		backbone_of_the_army = { 
@@ -478,6 +519,13 @@ theocracy = {
 				tier_4_free_magic
 				tier_4_regulations
 				tier_4_magical_society
+				tier_4_destruction_focus
+				tier_4_restoration_focus
+				tier_4_conjuration_focus
+				tier_4_alteration_focus
+				tier_4_illusion_focus
+				tier_4_necromancy_focus
+				tier_4_mysticism_focus
 			}
 		}
 		state_and_religion = {

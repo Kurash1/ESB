@@ -13,7 +13,7 @@ guiTypes = {
 
 	positionType = {
 		name = "specific_governments_list_position"
-		position = { x = 570 y = 30 }
+		position = { x = 555 y = 30 }
 	}
 
 	windowType = {
@@ -68,13 +68,12 @@ guiTypes = {
 			format = centre
 		}
 
-		iconType =
-		{
+		iconType = {
 			name ="government_mechanics_bg"
 			spriteType = "GFX_government_mechanics_bg"
 			position = { x= 546 y = 14 } #top is 14 #bottom is 764
 		}
-
+		
 		### ------- Government -------
 
 		iconType =
@@ -344,8 +343,14 @@ guiTypes = {
 		smoothListboxType = {
 			name = "specific_governments_list"
 			position = { x = 32 y = 228 } #do not set position here, set it above in specific_governments_list_position
-			size = { x = 300 y = 840 }
+			size = { x = 345 y = 840 }
 			scrollbartype = "standardlistbox_slider"
+		}
+
+		iconType = {
+			name ="government_mechanics_bg_overlay"
+			spriteType = "GFX_government_mechanics_bg_overlay"
+			position = { x= 546 y = 14 } #top is 14 #bottom is 764
 		}
 
 		### -----------
@@ -852,7 +857,7 @@ guiTypes = {
 		name = "government_mechanic_interactions"
 		backGround = ""
 		position = { x = 0 y = 0 }
-		size = { x = 300 y = 100 }
+		size = { x = 345 y = 100 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -863,7 +868,7 @@ guiTypes = {
 			name = "government_interaction_list"
 			position = { x = 0 y = 0 }
 			backGround = ""
-			size = { x = 300 y = 100 }
+			size = { x = 345 y = 100 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 1
 			spacing = 0
@@ -874,7 +879,7 @@ guiTypes = {
 	#button for government interactions
 	windowType = {
 		name = "government_interaction_type"
-		size = { x = 100 y = 100 }
+		size = { x = 115 y = 100 }
 		backGround = ""
 		moveable = 0
 		dontRender = ""
@@ -917,7 +922,7 @@ guiTypes = {
 		name = "government_shared_power"
 		backGround = ""
 		position = { x = 0 y = 0 }
-		size = { x = 300 y = 20 }
+		size = { x = 345 y = 20 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""

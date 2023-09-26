@@ -67,7 +67,7 @@ new government_mechanic peasant_army_mechanic = {
 			name = "Raise Peasant Army"
 			desc = ""
 			gui = {
-				size = { x = 300 y = 85 }
+				size = { x = 345 y = 50 }
 				moveable = 0
 
 				# Interaction button, graphics replaced from the interaction icon specification
@@ -150,17 +150,35 @@ special_units:musketeer:localisation := {
 	ONLY_MUSKETEER_MODIFIER = "§YAffects only Battlemage Regiments§!"
 	MODIFIER_HAS_MUSKETEER = "Country Allows Battlemages"
 }
-new government_reform tier_2_battlemages = {
+new government_reform tier_2_battlemages_domination = {
 	name = "Battlemages"
 	desc = ""
 	icon = "arcane_barrage"
 	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Domination"
+	}
 	trigger = {
 		full_idea_group = esb_warmagic
 	}
 	modifiers = {
 		has_musketeer = yes
 		allowed_musketeer_fraction = 0.10
+	}
+}
+new government_reform tier_2_battlemages = {
+	name = "Battlemages"
+	desc = ""
+	icon = "arcane_barrage"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { has_dlc = "Domination" }
+	}
+	trigger = {
+		full_idea_group = esb_warmagic
+	}
+	modifiers = {
+		fire_damage = 0.1
 	}
 }
 new government_reform tier_2_lunar_smithing = {

@@ -34,10 +34,15 @@ new mission_series eastmarch_10 = {
 				eastmarch_clan_shatter_shield
 			}
 			trigger = {
-				countries:blue-axe = {
-					has_opinion = {
-						who = ROOT
-						value = 150
+				OR = {
+					countries:blue-axe = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					NOT = {
+						exists = countries:blue-axe
 					}
 				}
 			}

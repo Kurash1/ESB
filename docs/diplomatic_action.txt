@@ -1,0 +1,72 @@
+new diplomatic_action <action> = {
+	name = <string>
+	title = <string>
+	desc = <string>
+	tooltip = <string>
+    category = <category>           # Which diplomatic action list the action will appear in.
+									# The diplomatic action category types:
+									# 		alliance
+									# 		influence
+									# 		relation
+									# 		dynasty
+									# 		covert
+									# 		economy
+									# 		access
+									# 		emperor
+									# 		papacy
+									# 		great_powers
+	
+    alert_index = <int>             # The alert to use for the action. Refer to static_actions for the indexes. Optional.
+    alert_tooltip = <key>           # The localisation key to display in the alert tooltip. Optional.
+    
+    require_acceptance = <bool>   # Whether the action needs to be accepted by the target country for the accept effect to execute.
+    
+    # Determines when the action is visible
+    potential = { #vanilla is is_visible
+        <triggers>
+    }
+    
+    # Determines when the action can be taken
+    trigger = { #vanilla is is_allowed
+        <trigger> 
+        # variable_arithmetic_trigger can be used here to use export_to_variable to extract and compare values such as ruler_age, etc
+    }
+    
+    # Which effects to execute on acceptance
+    on_accept = {
+        <effects>
+    }
+    
+    # Which effects to execute on decline (if declinable). Optional.
+    on_decline = {
+        <effects>
+    }
+    
+    # Controls the AI's acceptance of the action, if acceptable. Optional.
+    ai_acceptance = {
+        # Add an AI factor entry
+        add_entry = {
+            name = <key>    # The localisation key to display for this factor
+            
+            # Restricts this entry to the countries that validate the triggers. Optional.
+            limit = {
+                <triggers>
+            }
+            
+            # ai_value MUST always be created within an entry first.
+            export_to_variable = {
+                variable_name = ai_value
+                value = <exportable value>      # Which exportable value to export
+                who = FROM                      # Who to export the value from
+                with = THIS                     # Who the ai_value is for
+            }
+            
+            # You can then change ai_value with effects such as multiply_variable, etc
+        }
+    }
+    
+    # Controls the AI's usage of the action
+    ai_will_do = {
+        <triggers>
+    }
+}

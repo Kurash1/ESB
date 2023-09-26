@@ -1,0 +1,144 @@
+on_actions:on_heir_needed_theocracy += {
+	events = {
+		theocracy.1
+	}
+}
+new country_event theocracy.1 = {
+	title = "Heir needed in $COUNTRY$"
+	desc = "As we currently have no designated heir for $MONARCHTITLE$ $MONARCH$, we have several options to pick from."
+	picture = ES_THEOCRACY_HEIR_ELECTIONS_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_theocracy_heir_selection
+			
+			random_owned_province = {
+				save_event_target_as = es_theocracy_province
+			}
+			
+			random_neighbor_country = { 
+				limit = {
+					government = monarchy
+					has_regency = no
+					religion = ROOT
+				}
+				save_event_target_as = es_neighbor_country_for_theocracy
+			}
+		}
+	}
+	
+	options = {
+		{
+			name = "A Local Noble"
+			effect = {
+				define_heir = {
+					age = 35
+					hidden = yes
+					culture = event_target:es_theocracy_province
+				}
+					
+				add_prestige = 10
+				add_mil_power = 50
+				add_devotion = -10
+				add_legitimacy = -10
+			}
+		}
+		{
+			name = "A Foreign Noble"
+			trigger = {
+				any_neighbor_country = {
+					government = monarchy
+					has_regency = no
+					religion = ROOT
+				}
+			}
+			effect = {
+				random_neighbor_country = { 
+					limit = {
+						government = monarchy
+						has_regency = no
+						religion = ROOT
+					}
+					ROOT = { 
+						define_heir = { 
+							dynasty = PREV 
+							age = 35
+							culture = PREV
+							hidden = yes
+						} 
+					}
+					add_opinion = { who = ROOT modifier = opinion_theocracy_noble }
+				}
+				
+				add_corruption = -1.5
+				hidden_effect = {
+					define_random_theocratic_advisor = yes
+				}
+				custom_tooltip = es_theocracy.1.b.tooltip
+				add_devotion = -15
+				add_legitimacy = -15
+			}
+		}
+		{
+			name = "A Merchant's Son"
+			effect = {
+				define_heir = {
+					age = 35
+					hidden = yes
+					culture = event_target:es_theocracy_province
+				}
+				
+				add_years_of_income = 1.0
+				add_mercantilism = 1
+				add_devotion = -10
+				add_legitimacy = -10
+			}
+		}
+		{
+			name = "A Talented Theologian"
+			effect = {
+				define_heir = {
+					age = 35
+					hidden = yes
+					culture = event_target:es_theocracy_province
+				}
+				
+				add_devotion = 10
+				add_legitimacy = 10
+				random_owned_province = {
+					limit = {
+						NOT = { religion = ROOT }
+					}
+					change_religion = ROOT
+				}
+				add_prestige = -5
+			}
+		}
+		{
+			name = "A Local Preacher"
+			effect = {
+				define_heir = {
+					age = 35
+					hidden = yes
+					culture = event_target:es_theocracy_province
+				}
+				
+				add_devotion = 15
+				add_legitimacy = 15
+				random_owned_province = {
+					limit = {
+						NOT = { culture = ROOT }
+					}
+					change_culture = ROOT
+				}
+				add_prestige = -10
+			}
+		}
+	}
+	
+	after = {
+		clr_country_flag = in_theocracy_heir_selection
+	}
+}
