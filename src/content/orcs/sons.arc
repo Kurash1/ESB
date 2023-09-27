@@ -83,8 +83,8 @@ new estate sons = {
 				legitimacy = -1.5
 			}
 			benefits = {
-					global_autonomy = -0.05
-					min_autonomy = -20
+				global_autonomy = -0.05
+				min_autonomy = -20
 			}
 		}
 		new stomp_ambition = {

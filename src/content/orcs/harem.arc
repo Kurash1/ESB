@@ -62,7 +62,7 @@ new estate harem = {
 			
 		    penalties = {
 				production_efficiency = -0.25
-		    }		
+			}		
 		}	
 		new grant_more_autonomy = {
 			name = "Grant more autonomy"

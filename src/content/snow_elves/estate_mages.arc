@@ -85,7 +85,7 @@ new estate mages = {
 			land_share = 5
 			loyalty = 0.15
 			influence = 0.10
-			benefits = {}
+			benefits = { }
 			
 		}		
 	}

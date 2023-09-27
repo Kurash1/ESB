@@ -75,7 +75,7 @@ new estate priests = {
 			influence = 0.10
 			penalties = {
 				global_tax_modifier = -0.10
-				}
+			}
 			benefits = {
 				same_religion_advisor_cost = -0.2
 				global_missionary_strength = 0.01

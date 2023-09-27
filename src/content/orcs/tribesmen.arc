@@ -54,11 +54,11 @@ new estate tribesmen = {
 			max_absolutism = -5
 			penalties = {
 				production_efficiency = -10%
-				}
+			}
 			benefits = {
 				land_forcelimit_modifier = 10%
 				global_manpower_modifier = 0.10
-				}
+			}
 		}
 		new elevate_the_best = {
 			name = "Elevate the Best"
