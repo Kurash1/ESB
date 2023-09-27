@@ -78,6 +78,7 @@ new estate harem = {
 				global_unrest = 1.5
 			}	
 	    }
+		# adding an event giving leg + morale + or leg - glob unr -
 		new ask_the_wise_women_for_a_sign = {
 			name = "Ask the wise women for a sign"
 			desc = ""
@@ -91,6 +92,7 @@ new estate harem = {
 			
 			}
 	    }
+		# adding opinion modf +30 to all kreath orcs opinion
 		new marry_off_your_daughters = {
 			name = "Marry off your daughters"
 			desc = ""

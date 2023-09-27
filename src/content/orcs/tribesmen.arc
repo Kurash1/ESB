@@ -10,13 +10,13 @@ new estate tribesmen = {
 	}
 	country_modifier_happy = {
 		global_unrest = -1
-		land_forcelimit_modifier = 0.10
+		land_forcelimit_modifier = 0.15
 	}
 	country_modifier_neutral = {
 	}
 	country_modifier_angry = {
 		global_unrest = 2
-		land_forcelimit_modifier = -0.10
+		land_forcelimit_modifier = -0.15
 	}
 	land_ownership_modifier = {
 	}
@@ -60,7 +60,51 @@ new estate tribesmen = {
 				global_manpower_modifier = 0.10
 				}
 		}
-		
+		new elevate_the_best = {
+			name = "Elevate the Best"
+			desc = ""
+			icon = privilege_army_tradition
+			influence = 0.05
+			loyalty = 0.10
+			max_absolutism = -5
+			penalties = {
+				sons_loyalty_modifier = -0.1
+				legitimacy = -1
+			}
+			benefits = {
+				advisor_cost = -0.10
+				army_tradition = 1
+			}
+		}
+		new expel_the_most_troublesome = {
+			name = "Expel the most troublesome"
+			desc = ""
+			icon = privilege_migrate
+			influence = -0.05
+			loyalty = 0.5
+			max_absolutism = 5
+			penalties = {
+				idea_cost = 0.05
+				global_tax_modifier = -0.05
+				production_efficiency = -0.10
+			}
+			benefits = {
+				global_unrest = -2
+			}
+			on_granted = {
+				add_yearly_manpower = -0.05
+			}
+		}
+		# raiding is gonna have a casus belli, only mana ,money ,legitim, war reps
+		new raiding_parties = {
+			name = "Raiding Parties"
+			desc = ""
+			icon = privilege_sword_torch
+			loyalty = 0.15
+			on_granted = {
+				add_years_of_income = 1
+			}
+		}	
 	}
 	base_influence = 20
 }

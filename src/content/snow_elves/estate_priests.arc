@@ -9,12 +9,16 @@ new estate priests = {
 		culture_group = culture_groups:snow_elven
 	}
 	country_modifier_happy = {
-		state_maintenance_modifier = -0.5
+		stability_cost_modifier = -0.20
+		global_unrest = -1
+		tolerance_own = 3
 	}
 	country_modifier_neutral = {
 	}
 	country_modifier_angry = {
-		state_maintenance_modifier = 0.5
+		stability_cost_modifier = +0.20
+		global_unrest = 2
+		tolerance_own = -3
 	}
 	land_ownership_modifier = {
 	}
@@ -43,6 +47,51 @@ new estate priests = {
 				}
 			}
 		}
+		# event for auriel blessing
+		new pray_for_auriel_blessing = {
+			name = "Pray for Auriel blessing"
+			desc = ""
+			icon = privilege_auriel
+			influence = 0.05
+		}
+		# how to autodelete privileges
+		new arrange_festivities = {
+			name = "Arrange festivities"
+			desc = ""
+			icon = privilege_festivities
+			loyalty = 0.10
+			benefits = {
+				global_unrest = -2.00
+			}
+			on_granted = {
+				add_years_of_income = -1
+			}
+		}
+		new temple_tax_cut = {
+			name = "Temple tax cut"
+			desc = ""
+			icon = privilege_priests_tax
+			loyalty = 0.15
+			influence = 0.10
+			penalties = {
+				global_tax_modifier = -0.10
+				}
+			benefits = {
+				same_religion_advisor_cost = -0.2
+				global_missionary_strength = 0.01
+			}
+		}
+		new inspire_the_faithful = {
+			name = "Inspire the faithful"
+			desc = ""
+			icon = privilege_inspire
+			loyalty = 0.05
+			influence = 0.15
+			benefits = {
+				land_morale = 0.10
+			}
+		}
+		
 	}
 	base_influence = 20
 }
