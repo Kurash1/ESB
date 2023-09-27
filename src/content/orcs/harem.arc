@@ -86,12 +86,13 @@ new estate harem = {
 			influence = 0.10
 			loyalty = 0
 			max_absolutism = -5
-			comment = { Event grants legitimacy and some bonuses }
+			comment = {
+				Event grants legitimacy and some bonuses 
+			}
 			on_granted = {
 			add_prestige = 10
-			
 			}
-	    }
+		}
 		# adding opinion modf +30 to all kreath orcs opinion
 		new marry_off_your_daughters = {
 			name = "Marry off your daughters"
@@ -100,10 +101,11 @@ new estate harem = {
 			benefits = {
 			diplomatic_reputation = 1
 			}
-	        comment = { adding an event adding opinion with all tags of same culture }
+	        comment = { 
+				adding an event adding opinion with all tags of same culture
+			}
 			on_granted = {
-			
-		    }
+			}
 		}
 	}
 		
