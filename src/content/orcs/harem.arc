@@ -59,8 +59,7 @@ new estate harem = {
 				global_manpower_modifier = 0.15
 				
 			}
-			
-		    penalties = {
+			penalties = {
 				production_efficiency = -0.25
 			}		
 		}	
@@ -101,7 +100,7 @@ new estate harem = {
 			benefits = {
 			diplomatic_reputation = 1
 			}
-	        comment = { 
+			comment = { 
 				adding an event adding opinion with all tags of same culture
 			}
 			on_granted = {
