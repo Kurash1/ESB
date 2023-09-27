@@ -77,7 +77,7 @@ new estate harem = {
 			penalties = {
 				global_unrest = 1.5
 			}	
-	    }
+		}
 		# adding an event giving leg + morale + or leg - glob unr -
 		new ask_the_wise_women_for_a_sign = {
 			name = "Ask the wise women for a sign"
@@ -90,7 +90,7 @@ new estate harem = {
 				Event grants legitimacy and some bonuses 
 			}
 			on_granted = {
-			add_prestige = 10
+				add_prestige = 10
 			}
 		}
 		# adding opinion modf +30 to all kreath orcs opinion

@@ -101,10 +101,9 @@ new estate nobility = {
 					}
 				}
 			}
-		can_revoke = {
+			can_revoke = {
 				has_estate_loan = no
-		}
-			
+			}
 		}
 		new levy_more_troops = {
 			name = "Levy more troops"
