@@ -1,0 +1,47 @@
+governments:remnant:reform_levels:1 += new falmer_remnant = {
+	name = "Falmer Remnant"
+	desc = ""
+	icon = "wow_council"
+	allow_normal_conversion = yes
+	
+	potential = {
+		has_reform = falmer_remnant
+	}
+	modifiers = {
+		prestige = -0.5 
+		prestige_decay = 0.015
+		governing_capacity = -50
+		manpower_recovery_speed = -0.10
+	}
+	ai = {
+		factor = 1
+	}
+}
+governments:remnant:reform_levels:5 += new remnant_become_falmer_kingdom = {
+	name = "Reform into the Falmer Kingdom"
+	desc = ""
+	icon = "wow_cult"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = falmer_remnant
+	}
+	effect = {
+		
+		if [has_reform = remnant_1_focus_on_quality] { add_country_modifier = { name = remnant_1_focus_on_quality_mod duration = 3650 } }
+		if [has_reform = remnant_1_focus_on_quantity] { add_country_modifier = { name = remnant_1_focus_on_quantity_mod duration = 3650 } }
+		if [has_reform = remnant_1_focus_on_navy] { add_country_modifier = { name = remnant_1_focus_on_navy_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_taxation] { add_country_modifier = { name = remnant_2_focus_on_taxation_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_production] { add_country_modifier = { name = remnant_2_focus_on_production_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_trade] { add_country_modifier = { name = remnant_2_focus_on_trade_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_the_court] { add_country_modifier = { name = remnant_3_focus_on_the_court_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_local_forces] { add_country_modifier = { name = remnant_3_focus_on_local_forces_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_bureaucracy] { add_country_modifier = { name = remnant_3_focus_on_bureaucracy_mod duration = 3650 } }
+		
+		change_government = monarchy
+		add_government_reform = tier_1_falmer_kingdom
+		change_government_reform_progress = -800
+		
+		defineloc reformed_remnant = "Reformed Remnant"
+		set_country_flag = reformed_remnant
+	}
+}

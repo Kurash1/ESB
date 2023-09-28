@@ -1,0 +1,54 @@
+new event_modifier remnant_3_focus_on_the_court_mod = {
+	name = "Remnant: Focus on the Court"
+	modifier = {
+		advisor_cost = -0.2
+	}
+}
+governments:remnant:reform_levels:4 += new remnant_3_focus_on_the_court = {
+	name = "Focus on the Court"
+	desc = ""
+	icon = "dutch_guilds"
+	allow_normal_conversion = yes
+	modifiers = {
+		advisor_cost = -0.2
+	}
+	ai = {
+		factor = 1
+	}
+}
+new event_modifier remnant_3_focus_on_local_forces_mod = {
+	name = "Remnant: Focus on Local Forces"
+	modifier = {
+		governing_cost = -0.05
+	}
+}
+governments:remnant:reform_levels:4 += new remnant_3_focus_on_local_forces = {
+	name = "Focus on Local Forces"
+	desc = ""
+	icon = "generic_people"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_cost = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+new event_modifier remnant_3_focus_on_bureaucracy_mod = {
+	name = "Remnant: Focus on Bureaucracy"
+	modifier = {
+		global_autonomy = -0.05
+	}
+}
+governments:remnant:reform_levels:4 += new remnant_3_focus_on_bureaucracy = {
+	name = "Focus on Bureaucracy"
+	desc = ""
+	icon = "man_in_writing"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_autonomy = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}

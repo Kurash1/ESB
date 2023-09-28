@@ -34,7 +34,7 @@ new government_mechanic hrothgar_mechanic = {
 		}
 	}
 }
-new government_reform tier_1_hrothgar_territories = {
+governments:remnant:reform_levels:1 += new tier_1_hrothgar_territories = {
 	name = "Hrothgar Territories"
 	desc = ""
 	icon = "landscape"
@@ -57,7 +57,7 @@ new government_reform tier_1_hrothgar_territories = {
 		factor = 1
 	}
 }
-new government_reform remnant_become_hrothgar_kingdom = {
+governments:remnant:reform_levels:5 += new remnant_become_hrothgar_kingdom = {
 	name = "Reform into the Hrothgar Kingdom"
 	desc = ""
 	icon = "leader_icon"
@@ -66,7 +66,6 @@ new government_reform remnant_become_hrothgar_kingdom = {
 		has_reform = tier_1_hrothgar_territories
 	}
 	effect = {
-		
 		if [has_reform = remnant_1_focus_on_quality] { add_country_modifier = { name = remnant_1_focus_on_quality_mod duration = 3650 } }
 		if [has_reform = remnant_1_focus_on_quantity] { add_country_modifier = { name = remnant_1_focus_on_quantity_mod duration = 3650 } }
 		if [has_reform = remnant_1_focus_on_navy] { add_country_modifier = { name = remnant_1_focus_on_navy_mod duration = 3650 } }
@@ -84,7 +83,7 @@ new government_reform remnant_become_hrothgar_kingdom = {
 		set_country_flag = reformed_remnant
 	}
 }
-new government_reform tier_1_hrothgar_kingdom = {
+governments:monarchy:reform_levels:1 += new tier_1_hrothgar_kingdom = {
 	name = "Hrothgar Kingdom"
 	desc = ""
 	icon = "leader_icon"
