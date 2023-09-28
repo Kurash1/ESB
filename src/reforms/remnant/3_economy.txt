@@ -1,0 +1,54 @@
+new event_modifier remnant_2_focus_on_taxation_mod = {
+	name = "Remnant: Focus on Taxation"
+	modifier = {
+		global_tax_modifier = 0.20
+	}
+}
+governments:remnant:reform_levels:3 += new remnant_2_focus_on_taxation = {
+	name = "Focus on Taxation"
+	desc = ""
+	icon = "trading_post"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.20
+	}
+	ai = {
+		factor = 1
+	}
+}
+new event_modifier remnant_2_focus_on_production_mod = {
+	name = "Remnant: Focus on Production"
+	modifier = {
+		production_efficiency = 0.20
+	}
+}
+governments:remnant:reform_levels:3 += new remnant_2_focus_on_production = {
+	name = "Focus on Production"
+	desc = ""
+	icon = "storehouse"
+	allow_normal_conversion = yes
+	modifiers = {
+		production_efficiency = 0.20
+	}
+	ai = {
+		factor = 1
+	}
+}
+new event_modifier remnant_2_focus_on_trade_mod = {
+	name = "Remnant: Focus on Trade"
+	modifier = {
+		trade_efficiency = 0.20
+	}
+}
+governments:remnant:reform_levels:3 += new remnant_2_focus_on_trade = {
+	name = "Focus on Trade"
+	desc = ""
+	icon = "trade_hegemon"
+	allow_normal_conversion = yes
+	modifiers = {
+		trade_efficiency = 0.2
+	}
+	ai = {
+		factor = 1
+	}
+}
