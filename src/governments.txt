@@ -1,0 +1,491 @@
+new government remnant = {
+	name = "Remnant"
+	color = { 50 0 0 }
+	basic_reform = {
+		basic_reform = yes
+	
+		monarchy = yes
+		heir = yes
+		queen = yes
+		valid_for_nation_designer = no
+		modifiers = { }
+	}
+	reform_levels = {
+		1 = "Government Policy"
+		2 = "Reform Military"
+		3 = "Reform Economy"
+		4 = "Reform Administration"
+		5 = "Reform Government"
+	}
+}
+new government monarchy = {
+	name = "Monarchy"
+	color = { 179 25 25 }
+	basic_reform = {
+		basic_reform = yes
+	
+		monarchy = yes
+		heir = yes
+		queen = yes
+		valid_for_nation_designer = no
+		modifiers = { }
+	}
+	reform_levels = {
+		1 = "Government Policy"
+		2 = "Backbone of the Army"
+		3 = "Backbone of the Navy"
+		4 = "Position of Magic"
+		5 = "State and Religion"
+		6 = "Rulers Powers"
+		7 = "Bureaucracy"
+		8 = "Diplomacy"
+		9 = "Espionage"
+		10 = "Campaign Doctrine"
+		11 = "Advisors"
+		12 = "Trade Policy"
+	}
+}
+new government republic = {
+	name = "Republic"
+	color = { 65 155 220 }
+	basic_reform = {
+		basic_reform = yes
+	
+		republican_name = yes
+		royal_marriage = no
+		republic = yes
+		duration = 4
+		has_term_election = yes
+		custom_attributes = {
+			enables_plutocratic_idea_group = yes
+			enables_aristocratic_idea_group = no
+		}
+		modifiers = {
+			max_absolutism = -50
+			max_revolutionary_zeal = 75
+		}
+		valid_for_nation_designer = no
+	}
+	reform_levels = {
+		1 = "Government Policy"
+		2 = "Backbone of the Army"
+		3 = "Backbone of the Navy"
+		4 = "Position of Magic"
+		5 = "State and Religion"
+		6 = "Rulers Powers"
+		7 = "Bureaucracy"
+		8 = "Diplomacy"
+		9 = "Espionage"
+		10 = "Campaign Doctrine"
+		11 = "Advisors"
+		12 = "Trade Policy"
+	}
+}
+new government tribal = {
+	name = "Tribal"
+	color = { 220 165 95 }
+	basic_reform = {
+		basic_reform = yes
+	
+		tribal = yes
+		monarchy = yes
+		valid_for_nation_designer = no
+		heir = yes
+		queen = yes
+		modifiers = { }
+	}
+	reform_levels = {
+		1 = "Government Policy"
+		2 = "Backbone of the Army"
+		3 = "Backbone of the Navy"
+		4 = "Position of Magic"
+		5 = "State and Religion"
+		6 = "Rulers Powers"
+		7 = "Bureaucracy"
+		8 = "Diplomacy"
+		9 = "Espionage"
+		10 = "Campaign Doctrine"
+		11 = "Advisors"
+		12 = "Trade Policy"
+	}
+}
+new government native = {
+	name = "Native"
+	color = { 194 127 209 }
+	basic_reform = {
+		basic_reform = yes
+	
+		native_mechanic = yes
+		allow_migration = yes
+		valid_for_new_country = yes
+		allow_convert = yes
+		republican_name = yes
+		royal_marriage = no
+		fixed_rank = 1
+		modifiers = { }
+		valid_for_nation_designer = yes
+		nation_designer_cost = 0
+	}
+	reform_levels = {
+		1 = "Government Policy"
+		2 = "Backbone of the Army"
+		3 = "Backbone of the Navy"
+		4 = "Position of Magic"
+		5 = "State and Religion"
+		6 = "Rulers Powers"
+		7 = "Bureaucracy"
+		8 = "Diplomacy"
+		9 = "Espionage"
+		10 = "Campaign Doctrine"
+		11 = "Advisors"
+		12 = "Trade Policy"
+	}
+}
+new government theocracy = {
+	name = "Theocracy"
+	color = { 75 170 75 }
+	basic_reform = {
+		basic_reform = yes
+	
+		has_devotion = yes
+		rulers_can_be_generals = no
+		heirs_can_be_generals = no
+		royal_marriage = no
+		different_religion_acceptance = -25
+		different_religion_group_acceptance = -50
+		religion = yes
+		heir = yes
+		valid_for_nation_designer = no
+		modifiers = { }
+	}
+	reform_levels = {
+		1 = "Government Policy"
+		2 = "Backbone of the Army"
+		3 = "Backbone of the Navy"
+		4 = "Position of Magic"
+		5 = "State and Religion"
+		6 = "Rulers Powers"
+		7 = "Bureaucracy"
+		8 = "Diplomacy"
+		9 = "Espionage"
+		10 = "Campaign Doctrine"
+		11 = "Advisors"
+		12 = "Trade Policy"
+	}
+}
+
+default_reform := {
+	valid_for_new_country = yes
+	allow_convert = yes
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	fixed_rank = 0
+	republican_name = no
+	claim_states = no
+	religion = no
+	republic = no
+	dictatorship = no
+	is_elective = no
+	queen = no
+	heir = no
+	has_parliament = no
+	has_devotion = no
+	has_meritocracy = no
+	allow_force_tributary = yes
+	duration = 0
+	election_on_death = no
+	monarchy = no
+	tribal = no
+	different_religion_acceptance = 0
+	different_religion_group_acceptance = 0
+	boost_income = no
+	monastic = no
+	can_use_trade_post = no
+	native_mechanic = no
+	can_form_trade_league = no
+	free_city = no
+	is_trading_city = no
+	trade_city_reform = ""
+	maintain_dynasty = no
+	allow_migration = no
+	nation_designer_trigger = { }
+	nation_designer_cost = 0
+	papacy = no
+	has_harem = no
+	has_pashas = no
+	has_janissaries = no	
+	allow_vassal_war = no
+	allow_vassal_alliance = no
+	min_autonomy = 0
+	factions_frame = 2
+	factions = { }
+	foreign_slave_rulers = no
+	royal_marriage = yes
+	nomad = no
+	raze_province = no
+	assimilation_cultures = { }
+	states_general_mechanic = { }
+	valid_for_nation_designer = yes
+	allow_normal_conversion = yes
+	force_conversion_gives_global_holy_war_released_modifier = no
+	start_territory_to_estates = 0.75
+	has_term_election = no
+	force_admiral_leader = no
+	force_general_leader = no
+	admirals_become_rulers = no
+	generals_become_rulers = no
+	allow_banners = no
+	uses_revolutionary_zeal = no
+	revolutionary = no
+	revolutionary_client_state = no
+	allow_draft_transport_ships = no
+	free_concentrate_development = no
+	disallowed_trade_goods = {}
+	can_customise_heir = yes
+	allow_cawa = no
+	can_change_primary_culture = yes	
+	allow_carolean = no	
+	can_inherit_personal_unions = yes
+	block_cultural_union = no
+	has_cultural_union = no 
+	can_remove_idea_group = yes
+	mercs_do_not_cost_army_professionalism = no	
+	
+	government_abilities = { 
+		magicka_mechanic
+	}
+}
+
+new government_names default_monarchy = {
+	rank = {
+		1 = "Barony"
+		2 = "County"
+		3 = "Duchy"
+		4 = "Kingdom"
+		5 = "High Kingdom"
+		6 = "Empire"
+	}
+	ruler_male = {
+		1 = "Baron"
+		2 = "Count"
+		3 = "Duke"
+		4 = "King"
+		5 = "High King"
+		6 = "Emperor"
+	}
+	ruler_female = {
+		1 = "Baroness"
+		2 = "Countess"
+		3 = "Duchess"
+		4 = "Queen"
+		5 = "High Queen"
+		6 = "Empress"
+	}
+	consort_male = {
+		1 = "Baron"
+		2 = "Count"
+		3 = "Duke"
+		4 = "King"
+		5 = "High King"
+		6 = "Emperor"
+	}
+	consort_female = {
+		1 = "Baroness"
+		2 = "Countess"
+		3 = "Duchess"
+		4 = "Queen"
+		5 = "High Queen"
+		6 = "Empress"
+	}
+	heir_male = {
+		1 = "Prince"
+		2 = "Prince"
+		3 = "Prince"
+		4 = "Prince"
+		5 = "Prince"
+		6 = "Prince"
+	}
+	heir_female = {
+		1 = "Princess"
+		2 = "Princess"
+		3 = "Princess"
+		4 = "Princess"
+		5 = "Princess"
+		6 = "Princess"
+	}
+	trigger = {
+		government = monarchy
+	}
+}
+new government_names default_republic = {
+	rank = {
+		1 = "Republic"
+		2 = "Republic"
+		3 = "Republic"
+		4 = "Grand Republic"
+		5 = "Grand Republic"
+		6 = "Empire"
+	}
+	ruler_male = {
+		1 = "Lord"
+		2 = "Lord"
+		3 = "Lord"
+		4 = "Consul"
+		5 = "Consul"
+		6 = "Grand Consul"
+	}
+	ruler_female = {
+		1 = "Lady"
+		2 = "Lady"
+		3 = "Lady"
+		4 = "Consul"
+		5 = "Consul"
+		6 = "Grand Consul"
+	}
+	consort_male = {
+		1 = "Lord"
+		2 = "Lord"
+		3 = "Lord"
+		4 = "Lord"
+		5 = "Lord"
+		6 = "Lord"
+	}
+	consort_female = {
+		1 = "Lady"
+		2 = "Lady"
+		3 = "Lady"
+		4 = "Lady"
+		5 = "Lady"
+		6 = "Lady"
+	}
+	heir_male = {
+		1 = "Heir"
+		2 = "Heir"
+		3 = "Heir"
+		4 = "Heir"
+		5 = "Heir"
+		6 = "Heir"
+	}
+	heir_female = {
+		1 = "Heiress"
+		2 = "Heiress"
+		3 = "Heiress"
+		4 = "Heiress"
+		5 = "Heiress"
+		6 = "Heiress"
+	}
+	trigger = {
+		government = republic
+	}
+}
+
+new government_names default_theocracy = {
+	rank = {
+		1 = "Priory"
+		2 = "Abbey"
+		3 = "Temple Estate"
+		4 = "Bishopric"
+		5 = "Archbishopric"
+		6 = "Patriarchate"
+	}
+	ruler_male = {
+		1 = "Brother"
+		2 = "Father"
+		3 = "Father"
+		4 = "Bishop"
+		5 = "Archbishop"
+		6 = "Patriarch"
+	}
+	ruler_female = {
+		1 = "Sister"
+		2 = "Mother"
+		3 = "Mother"
+		4 = "Bishop"
+		5 = "Archbishop"
+		6 = "Matriarch"
+	}
+	heir_male = {
+		1 = "Brother"
+		2 = "Brother"
+		3 = "Brother"
+		4 = "Brother"
+		5 = "Brother"
+		6 = "Brother"
+	}
+	heir_female = {
+		1 = "Sister"
+		2 = "Sister"
+		3 = "Sister"
+		4 = "Sister"
+		5 = "Sister"
+		6 = "Sister"
+	}
+	trigger = {
+		government = theocracy
+	}
+}
+
+new government_names default_tribal = {
+	rank = {
+		1 = "Chiefdom"
+		2 = "Chiefdom"
+		3 = "High Chiefdom"
+		4 = "High Chiefdom"
+		5 = "High Chiefdom"
+		6 = "Empire"
+	}
+	ruler_male = {
+		1 = "Chief"
+		2 = "Chief"
+		3 = "Chief"
+		4 = "Chief"
+		5 = "High Chief"
+		6 = "High Chief"
+	}
+	ruler_female = {
+		1 = "Chieftess"
+		2 = "Chieftess"
+		3 = "Chieftess"
+		4 = "Chieftess"
+		5 = "High Chieftess"
+		6 = "High Chieftess"
+	}
+	consort_male = {
+		1 = "Chief"
+		2 = "Chief"
+		3 = "Chief"
+		4 = "Chief"
+		5 = "High Chief"
+		6 = "High Chief"
+	}
+	consort_female = {
+		1 = "Chieftess"
+		2 = "Chieftess"
+		3 = "Chieftess"
+		4 = "Chieftess"
+		5 = "High Chieftess"
+		6 = "High Chieftess"
+	}
+	heir_male = {
+		1 = "Heir"
+		2 = "Heir"
+		3 = "Heir"
+		4 = "Heir"
+		5 = "Heir"
+		6 = "Heir"
+	}
+	heir_female = {
+		1 = "Heiress"
+		2 = "Heiress"
+		3 = "Heiress"
+		4 = "Heiress"
+		5 = "Heiress"
+		6 = "Heiress"
+	}
+	trigger = {
+		OR = {
+			government = tribal
+			government = native
+		}
+	}
+}
