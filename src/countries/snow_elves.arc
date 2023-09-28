@@ -49,12 +49,12 @@ new country faldar = {
 	}
 	capital = faldar
 }
-new country honrich = {
+new country honnith = {
 	inherit = snow_elven_country
 	government_rank = 2
 	tag = HON
-	name = "Honrich"
-	adj = "Honrichian"
+	name = "Honnith"
+	adj = "Honnithian"
 	color = {
 		0 50 200
 	}
