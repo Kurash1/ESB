@@ -255,3 +255,237 @@ default_reform := {
 		magicka_mechanic
 	}
 }
+
+new government_names default_monarchy = {
+	rank = {
+		1 = "Barony"
+		2 = "County"
+		3 = "Duchy"
+		4 = "Kingdom"
+		5 = "High Kingdom"
+		6 = "Empire"
+	}
+	ruler_male = {
+		1 = "Baron"
+		2 = "Count"
+		3 = "Duke"
+		4 = "King"
+		5 = "High King"
+		6 = "Emperor"
+	}
+	ruler_female = {
+		1 = "Baroness"
+		2 = "Countess"
+		3 = "Duchess"
+		4 = "Queen"
+		5 = "High Queen"
+		6 = "Empress"
+	}
+	consort_male = {
+		1 = "Baron"
+		2 = "Count"
+		3 = "Duke"
+		4 = "King"
+		5 = "High King"
+		6 = "Emperor"
+	}
+	consort_female = {
+		1 = "Baroness"
+		2 = "Countess"
+		3 = "Duchess"
+		4 = "Queen"
+		5 = "High Queen"
+		6 = "Empress"
+	}
+	heir_male = {
+		1 = "Prince"
+		2 = "Prince"
+		3 = "Prince"
+		4 = "Prince"
+		5 = "Prince"
+		6 = "Prince"
+	}
+	heir_female = {
+		1 = "Princess"
+		2 = "Princess"
+		3 = "Princess"
+		4 = "Princess"
+		5 = "Princess"
+		6 = "Princess"
+	}
+	trigger = {
+		government = monarchy
+	}
+}
+new government_names default_republic = {
+	rank = {
+		1 = "Republic"
+		2 = "Republic"
+		3 = "Republic"
+		4 = "Grand Republic"
+		5 = "Grand Republic"
+		6 = "Empire"
+	}
+	ruler_male = {
+		1 = "Lord"
+		2 = "Lord"
+		3 = "Lord"
+		4 = "Consul"
+		5 = "Consul"
+		6 = "Grand Consul"
+	}
+	ruler_female = {
+		1 = "Lady"
+		2 = "Lady"
+		3 = "Lady"
+		4 = "Consul"
+		5 = "Consul"
+		6 = "Grand Consul"
+	}
+	consort_male = {
+		1 = "Lord"
+		2 = "Lord"
+		3 = "Lord"
+		4 = "Lord"
+		5 = "Lord"
+		6 = "Lord"
+	}
+	consort_female = {
+		1 = "Lady"
+		2 = "Lady"
+		3 = "Lady"
+		4 = "Lady"
+		5 = "Lady"
+		6 = "Lady"
+	}
+	heir_male = {
+		1 = "Heir"
+		2 = "Heir"
+		3 = "Heir"
+		4 = "Heir"
+		5 = "Heir"
+		6 = "Heir"
+	}
+	heir_female = {
+		1 = "Heir"
+		2 = "Heir"
+		3 = "Heir"
+		4 = "Heir"
+		5 = "Heir"
+		6 = "Heir"
+	}
+	trigger = {
+		government = republic
+	}
+}
+
+new government_names default_theocracy = {
+	rank = {
+		1 = "Priory"
+		2 = "Abbey"
+		3 = "Temple Estate"
+		4 = "Bishopric"
+		5 = "Archbishopric"
+		6 = "Patriarchate"
+	}
+	ruler_male = {
+		1 = "Brother"
+		2 = "Father"
+		3 = "Father"
+		4 = "Bishop"
+		5 = "Archbishop"
+		6 = "Patriarch"
+	}
+	ruler_female = {
+		1 = "Sister"
+		2 = "Mother"
+		3 = "Mother"
+		4 = "Bishop"
+		5 = "Archbishop"
+		6 = "Matriarch"
+	}
+	heir_male = {
+		1 = "Brother"
+		2 = "Brother"
+		3 = "Brother"
+		4 = "Brother"
+		5 = "Brother"
+		6 = "Brother"
+	}
+	heir_female = {
+		1 = "Sister"
+		2 = "Sister"
+		3 = "Sister"
+		4 = "Sister"
+		5 = "Sister"
+		6 = "Sister"
+	}
+	trigger = {
+		government = theocracy
+	}
+}
+
+new government_names default_tribal = {
+	rank = {
+		1 = "Chiefdom"
+		2 = "Chiefdom"
+		3 = "High Chiefdom"
+		4 = "High Chiefdom"
+		5 = "High Chiefdom"
+		6 = "Empire"
+	}
+	ruler_male = {
+		1 = "Chief"
+		2 = "Chief"
+		3 = "Chief"
+		4 = "Chief"
+		5 = "High Chief"
+		6 = "High Chief"
+	}
+	ruler_female = {
+		1 = "Chieftess"
+		2 = "Chieftess"
+		3 = "Chieftess"
+		4 = "Chieftess"
+		5 = "High Chieftess"
+		6 = "High Chieftess"
+	}
+	consort_male = {
+		1 = "Chief"
+		2 = "Chief"
+		3 = "Chief"
+		4 = "Chief"
+		5 = "High Chief"
+		6 = "High Chief"
+	}
+	consort_female = {
+		1 = "Chieftess"
+		2 = "Chieftess"
+		3 = "Chieftess"
+		4 = "Chieftess"
+		5 = "High Chieftess"
+		6 = "High Chieftess"
+	}
+	heir_male = {
+		1 = "Heir"
+		2 = "Heir"
+		3 = "Heir"
+		4 = "Heir"
+		5 = "Heir"
+		6 = "Heir"
+	}
+	heir_female = {
+		1 = "Heir"
+		2 = "Heir"
+		3 = "Heir"
+		4 = "Heir"
+		5 = "Heir"
+		6 = "Heir"
+	}
+	trigger = {
+		OR = {
+			government = tribal
+			government = native
+		}
+	}
+}
