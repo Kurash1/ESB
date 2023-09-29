@@ -18,6 +18,7 @@ add_permanent_claims_for_federation_nation = {
 swap_federation_idea_group = {
 	if = {
 		limit = { has_custom_ideas = no }
-		country_event = { id = ideagroups.1 } restore_country_name = yes #Swap Ideas
+		swap_free_idea_group = yes
+		restore_country_name = yes
 	}
 }

@@ -252,7 +252,6 @@ new country_event corruption_event.7 = {
 		{
 			name = "Publicly expose these lies and prepare an execution."
 			effect = {
-				reduce_meritocracy_effect = yes
 				trigger_switch = {
 					on_trigger = has_country_flag
 					advisor_events_adm = {
@@ -277,7 +276,6 @@ new country_event corruption_event.7 = {
 		{
 			name = "Arrange for a quiet retirement in house arrest."
 			effect = {
-				reduce_meritocracy_effect = yes
 				trigger_switch = {
 					on_trigger = has_country_flag
 					advisor_events_adm = {
@@ -298,7 +296,6 @@ new country_event corruption_event.7 = {
 		{
 			name = "A reprimand. Biased advice is still advice."
 			effect = {
-				reduce_meritocracy_effect = yes
 				trigger_switch = {
 					on_trigger = has_country_flag
 					advisor_events_adm = {
@@ -688,7 +685,6 @@ new country_event corruption_event.19 = {
 			name = "Failure to see through lies is also a failure."
 			effect = {
 				remove_advisor = trader
-				reduce_meritocracy_effect = yes
 				add_country_modifier = {
 					name = minor_trade_crisis
 					duration = 3650
@@ -699,7 +695,6 @@ new country_event corruption_event.19 = {
 			name = "If it works, it works."
 			effect = {
 				add_corruption = 0.5
-				reduce_meritocracy_effect = yes
 			}
 		}
 	}
