@@ -194,6 +194,12 @@ new building_line production = {
 	time = 12
 	x = 20
 	y = 234
+	build_trigger = {
+		NOT = {
+			`trade_goods` = gold
+			`trade_goods` = silver
+		}
+	}
 	idea_group_unlocks = {
 		economic_ideas
 		enchanting_ideas
@@ -525,6 +531,6 @@ new building def_manufactory = {
 	cost = 500
 	time = 60
 	manufactory = {
-		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems gold silver ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
+		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
 	}
 }
