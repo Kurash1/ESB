@@ -314,7 +314,10 @@ new government_names default_monarchy = {
 		6 = "Princess"
 	}
 	trigger = {
-		government = monarchy
+		OR = {
+			government = remnant
+			government = monarchy
+		}
 	}
 }
 new government_names default_republic = {
@@ -378,7 +381,6 @@ new government_names default_republic = {
 		government = republic
 	}
 }
-
 new government_names default_theocracy = {
 	rank = {
 		1 = "Priory"
@@ -424,7 +426,6 @@ new government_names default_theocracy = {
 		government = theocracy
 	}
 }
-
 new government_names default_tribal = {
 	rank = {
 		1 = "Chiefdom"

@@ -1,11 +1,10 @@
 new building cleansing = {
 	name = "Cleansing"
-	desc = "Let's clean our land from the tainting presence of other races
-	
-Lose §R10§! Administrative Power.
-Lose §R25§! Military Power."
+	desc = "Let's clean our land from the tainting presence of other races"
 	cost = 25
 	time = 36
+	x = 410
+	y = 34
 	build_trigger = { 
 		NOT = { 
 			culture_group = FROM 
@@ -16,13 +15,10 @@ Lose §R25§! Military Power."
 		change_religion = FROM
 		change_culture = FROM
 		remove_building = cleansing
-		add_devastation = 100 
-		set_local_autonomy = 100
+		add_devastation = 80 
+		set_local_autonomy = 80
 		add_nationalism = -100
-		FROM = {
-			add_adm_power = -10 
-			add_mil_power = -25
-		}
+		
 		if [development = 25 ] {
 			add_base_tax = -3
 			add_base_production  = -3
@@ -39,13 +35,18 @@ Lose §R25§! Military Power."
 			add_base_manpower = -1
 		}
 	}
+	ai_will_do = {
+		factor = 1000
+	}
 }	
-	
+
 new building fort_15th = {
 	name = "Fort"
 	desc = ""
 	cost = 200
 	time = 12
+	x = 20 
+	y = 34
 	modifier = {
 		fort_level = 2
 	}
@@ -59,6 +60,8 @@ new building fort_16th = {
 	desc = ""
 	cost = 400
 	time = 12
+	x = 80
+	y = 34
 	make_obsolete = fort_15th
 	modifier = {
 		fort_level = 4
@@ -73,6 +76,8 @@ new building fortup_1 = {
 	desc = ""
 	cost = 50
 	time = 12
+	x = 140
+	y = 34
 	build_trigger = {
 		fort_level = 1
 	}
@@ -89,6 +94,8 @@ new building fortup_2 = {
 	desc = ""
 	cost = 50
 	time = 12
+	x = 200
+	y = 34
 	build_trigger = {
 		fort_level = 1
 	}
@@ -105,6 +112,8 @@ new building fortup_3 = {
 	desc = ""
 	cost = 50
 	time = 12
+	x = 260
+	y = 34
 	build_trigger = {
 		fort_level = 1
 	}
@@ -121,6 +130,8 @@ new building fortup_4 = {
 	desc = ""
 	cost = 200
 	time = 12
+	x = 320
+	y = 34
 	build_trigger = {
 		fort_level = 1
 	}
@@ -137,6 +148,8 @@ new building_line tax = {
 	desc = ""
 	time = 12
 	start_offset = 1
+	x = 20
+	y = 134
 	idea_group_unlocks = {
 		economic_ideas
 		esb_treasury
@@ -176,6 +189,14 @@ new building_line production = {
 	name = "Production"
 	desc = ""
 	time = 12
+	x = 20
+	y = 234
+	build_trigger = {
+		NOT = {
+			`trade_goods` = gold
+			`trade_goods` = silver
+		}
+	}
 	idea_group_unlocks = {
 		economic_ideas
 		enchanting_ideas
@@ -215,6 +236,8 @@ new building_line trade = {
 	name = "Trade"
 	desc = ""
 	time = 12
+	x = 20
+	y = 334
 	idea_group_unlocks = {
 		economic_ideas
 		trade_ideas
@@ -251,6 +274,8 @@ new building_line army = {
 	name = "Army"
 	desc = ""
 	time = 12
+	x = 20
+	y = 434
 	idea_group_unlocks = {
 		standing_army_ideas
 		quantity_ideas
@@ -299,6 +324,8 @@ new building_line navy = {
 	name = "Navy"
 	desc = ""
 	time = 12
+	x = 200
+	y = 434
 	idea_group_unlocks = {
 		maritime_ideas
 		naval_ideas
@@ -349,6 +376,8 @@ new building_line road = {
 	name = "Road"
 	desc = ""
 	time = 3
+	x = 200
+	y = 334
 	idea_group_unlocks = {
 		trade_ideas
 		offensive_ideas
@@ -389,6 +418,8 @@ new building_line goods = {
 	name = "Goods"
 	desc = ""
 	time = 12
+	x = 200
+	y = 134
 	idea_group_unlocks = {
 		alteration_ideas
 		enchanting_ideas
@@ -420,6 +451,8 @@ new building_line state = {
 	name = "State"
 	desc = ""
 	time = 12
+	x = 200
+	y = 234
 	idea_group_unlocks = {
 		staatsverwaltung0
 		administrative_ideas
@@ -483,6 +516,8 @@ new building manufactory = {
 	desc = ""
 	cost = 500
 	time = 60
+	x = 320
+	y = 134
 	modifier = {
 		trade_goods_size = 1.0
 	}
@@ -493,6 +528,6 @@ new building def_manufactory = {
 	cost = 500
 	time = 60
 	manufactory = {
-		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems gold silver ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
+		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
 	}
 }
