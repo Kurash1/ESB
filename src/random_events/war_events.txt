@@ -1,5 +1,6 @@
 bi_yearly_events += {
 	100 = war_events.1
+	100 = war_events.2
 }
 new event_modifier talented_garrison_commander = {
 	name = "Talented Garrison Commander"
@@ -34,6 +35,38 @@ new country_event war_events.1 = {
 				{
 					add_province_modifier = {
 						name = talented_garrison_commander
+						duration = 730
+					}
+				}
+			}
+		}
+	}
+}
+new event_modifier annoying_guard = {
+	name = "Annoying Guard"
+	modifier = {
+		local_unrest = 0.1
+	}
+}
+new country_event war_events.2 = {
+	inherit = random_event
+	title = "Arrow Accident"
+	desc = ""
+	picture = arrow_in_knee_eventPicture
+	trigger = {
+		is_at_war = yes
+		any_owned_province = {
+			unit_in_battle = yes
+			units_in_province = ROOT
+		}
+	}
+	options = {
+		{
+			name = "It never bothered me anyway"
+			effect = {
+				random_owned_province = {	
+					add_province_modifier = {
+						name =	annoying_guard
 						duration = 730
 					}
 				}
