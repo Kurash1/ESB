@@ -61,16 +61,57 @@ new estate sons = {
 			on_granted = {
 				add_yearly_manpower = -0.05
 			}
-		}
+		} 
 		# event to gain leg 
 		new show_strenght = {
 			name = "Show Strenght"
-			desc = ""
+			desc = "It is time to show my sons who's really in charge or whatever "
 			icon = privilege_show_strenght
 			influence = -0.1
 			loyalty = 0.05
 			benefits = {
 				legitimacy = 0.5
+			} 
+			on_granted = {
+				random_list = {
+					100 = {
+						modifier = { 
+							factor = 1.5
+							mil = 1 
+						}
+						modifier = { 
+							factor = 1.6
+							mil = 2    
+						}
+						modifier = { 
+							factor = 1.7
+							mil = 3       
+						}
+						modifier = {     
+							factor = 1.8
+							mil = 4
+						}
+						modifier = {    
+							factor = 1.9
+							mil = 5
+						}
+						modifier = {      
+							factor = 2
+							mil = 6
+						}
+						country_event = {
+							id = orcs_people_events.1
+							days = 0
+						}
+					} 
+					
+					250 = {
+						country_event = {
+							id = orcs_people_events.2
+							days = 0
+						}
+					}	
+				}
 			}
 		}
 		new send_them_out_to_manage = {

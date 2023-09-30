@@ -1,0 +1,46 @@
+new country_event orcs_people_events.1 = {
+	title = "I won"
+	desc = ""
+	picture = orc_clansman_eventPicture
+	options = {
+		{
+			name = "We've won"
+			effect = {
+				add_legitimacy = 10
+				add_country_modifier = {
+					name = orcs_people_events_won
+					duration = 730
+				}
+			}
+		}
+	}
+} 
+new country_event orcs_people_events.2 = {
+	title = "I lost"
+	desc = ""
+	picture = orc_clansman_eventPicture
+	options = {
+		{
+			name = "We've lost"
+			effect = {
+				add_legitimacy = -10
+				add_country_modifier = {
+					name = orcs_people_events_lost
+					duration = 730
+				}
+			}	
+		}		
+	}
+}
+new event_modifier orcs_people_events_won = {
+	name = "Won the show"
+	modifier = {
+		land_morale = 0.10 
+	}
+}
+new event_modifier orcs_people_events_lost = {
+	name = "Lost the show" 
+	modifier = {
+		global_unrest = 1.5
+	}
+}
