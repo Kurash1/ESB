@@ -1,7 +1,7 @@
 on_actions:on_heir_needed_theocracy += {
 	if [has_government_attribute = rahgot_ruler] {
 		define_heir = {
-			dynasty = "Rahgot"
+			name = "Rahgot"
 			adm = 4
 			dip = 3
 			mil = 6
@@ -20,6 +20,7 @@ governments:theocracy:reform_levels:1 += new tier_1_forelhost_priestdom = {
 	desc = ""
 	icon = "dragon_priest"
 	allow_normal_conversion = yes
+	republican_name = yes
 	custom_attributes = {
 		no_heir_theocracy = yes
 		immortal_ruler = yes

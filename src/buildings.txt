@@ -5,6 +5,9 @@ new building cleansing = {
 	time = 36
 	x = 410
 	y = 34
+	modifier = {
+		allowed_num_of_buildings = 1
+	}
 	build_trigger = { 
 		NOT = { 
 			culture_group = FROM 
