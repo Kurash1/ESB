@@ -1,0 +1,16 @@
+new function add_core = {
+	args = country_scope
+	effect = {
+		`add_core = {args}`
+	}
+}
+new function history_owner = {
+	args = country
+	effect = {
+		`
+		owner = {args}
+		controller = {args}
+		add_core = {args}
+		`
+	}
+}
