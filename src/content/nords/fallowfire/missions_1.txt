@@ -1,0 +1,21 @@
+new mission_series fallowfire_2 = { 
+	slot = 2
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_honor_our_heroes = {
+			name = "Honor our heroes "
+			desc = ""
+			position = 0
+			icon = mission_unknown_mission
+			trigger = {
+				
+			}
+			effect = {
+				add_prestige = 15
+			}
+		}
+	}
+}

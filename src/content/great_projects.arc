@@ -376,30 +376,32 @@ new great_project dragon_bridge = {
 new great_project fallowstone_hall = {
 	name = "Fallowstone Hall"
 	start = shors_stone
+	starting_tier = 1
 	trigger = {
 		owner = {
-			tag = fallowfire
+			OR = {
+				tag = fallowfire
+				was_tag = fallowfire
+			}
 		}
 	}
 	tier_1 = {
 		country_modifier = {
+			discipline = 0.025
+			infantry_power = 0.05
+		}
+	}
+	tier_2 = {
+		country_modifier = {
 			discipline = 0.05
-			culture_conversion_cost = -0.1
-			culture_conversion_time = -0.1
+			infantry_power = 0.10
+			
 		}
 	}
 	tier_3 = {
 		country_modifier = {
 			discipline = 0.075
-			culture_conversion_cost = -0.2
-			culture_conversion_time = -0.2
-		}
-	}
-	tier_3 = {
-		country_modifier = {
-			discipline = 0.1
-			culture_conversion_cost = -0.25
-			culture_conversion_time = -0.25
+			infantry_power = 0.15 
 		}
 	}
 }

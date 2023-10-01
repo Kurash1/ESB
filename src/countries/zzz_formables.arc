@@ -307,6 +307,51 @@ new decision form_orkreath = {
 		}
 	}
 }
+new country rift = {
+	inherit = nordic_country
+	primary_culture = fallowfirean
+	tag = RIF
+	name = "Rift"
+	adj = "Riftish"
+	color = {
+		54 48 54
+	}
+	starting_reform = tier_1_hold
+	capital = riften
+}
+new decision form_the_rift = {
+	name = " Form the Rift "
+	major = yes
+	potential = {
+		primary_culture = cultures:fallowfirean
+		NOT = {
+			exists = RIF
+			has_reform = tier_1_hold
+		}  
+	}
+	allow = {
+		calc_true_if = {
+			amount = 60
+			regions:rift = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+	}
+	provinces_to_highlight = {
+		region = regions:rift
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		change_tag = RIF
+		swap_free_idea_group = yes
+		add_government_reform = tier_1_hold
+		rift_region = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
 
 
 

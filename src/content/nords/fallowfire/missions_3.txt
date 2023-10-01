@@ -1,0 +1,21 @@
+new mission_series fallowfire_4 = { 
+	slot = 4
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_assemble_our_men = {
+			name = "Assemble our men"
+			desc = ""
+			position = 0
+			icon = mission_unknown_mission
+			trigger = {
+				army_size_percentage = 1.0
+			}
+			effect = {
+				
+			}
+		}
+	}
+}
