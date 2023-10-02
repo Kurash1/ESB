@@ -71,9 +71,7 @@ new province lone_isle = {
 		184 109 117
 	}
 	history = {
-		owner = LBA
-		controller = LBA
-		add_core = LBA
+		history_owner = lone_band
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -101,9 +99,7 @@ new province solitude = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -135,9 +131,7 @@ new province solitude_port = {
 		`trade_goods` = naval_supplies
 		capital = ""
 		is_city = no
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 	}
 }
 new province solitude_entrance = {
@@ -157,9 +151,7 @@ new province solitude_entrance = {
 		190 186 158
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -185,9 +177,7 @@ new province solitude_farms = {
 		144 103 168
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -213,9 +203,7 @@ new province solitude_military_camp = {
 		239 147 210
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -241,9 +229,7 @@ new province solitude_fork = {
 		158 127 179
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -269,9 +255,7 @@ new province meridias_crossroad = {
 		174 195 199
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -298,9 +282,7 @@ new province dragon_bridge = {
 	terrain = hills
 	history = {
 		center_of_trade = 1
-		owner = DRB
-		controller = DRB
-		add_core = DRB
+		history_owner = dragon_bridge
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -326,9 +308,7 @@ new province castle_volkihar = {
 	}
 	terrain = coastline
 	history = {
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 		culture = cultures:haafingarian
 		religion = nordic_pantheon
 		hre = yes
@@ -354,9 +334,7 @@ new province big_sister = {
 	}
 	terrain = coastline
 	history = {
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 		culture = cultures:haafingarian
 		religion = nordic_pantheon
 		hre = yes
@@ -382,9 +360,7 @@ new province small_sister = {
 	}
 	terrain = coastline
 	history = {
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 		culture = cultures:haafingarian
 		religion = nordic_pantheon
 		hre = yes
@@ -410,9 +386,7 @@ new province rugged_island = {
 	}
 	terrain = coastline
 	history = {
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 		culture = cultures:haafingarian
 		religion = nordic_pantheon
 		hre = yes
@@ -439,9 +413,7 @@ new province solitude_lighthouse = {
 	terrain = coastline
 	history = {
 		center_of_trade = 1
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -473,9 +445,7 @@ new province clay_coast = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 	}
 }
 new province rock_isle = {
@@ -507,9 +477,7 @@ new province rock_isle = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = no
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 	}
 }
 new province northern_cliffs = {
@@ -529,9 +497,7 @@ new province northern_cliffs = {
 		236 248 151
 	}
 	history = {
-		owner = SHD
-		controller = SHD
-		add_core = SHD
+		history_owner = shadow-green
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -557,9 +523,7 @@ new province snowy_trees = {
 	}
 	terrain = forest
 	history = {
-		owner = SHD
-		controller = SHD
-		add_core = SHD
+		history_owner = shadow-green
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -585,9 +549,7 @@ new province brokenoar = {
 		227 114 140
 	}
 	history = {
-		owner = SHD
-		controller = SHD
-		add_core = SHD
+		history_owner = shadow-green
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		`trade_goods` = fish
@@ -613,9 +575,7 @@ new province shadowgreen = {
 		219 228 107
 	}
 	history = {
-		owner = SHD
-		controller = SHD
-		add_core = SHD
+		history_owner = shadow-green
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -647,9 +607,7 @@ new province gold_isle = {
 		`trade_goods` = gold
 		capital = ""
 		is_city = no
-		owner = RAV
-		controller = RAV
-		add_core = RAV
+		history_owner = raven-scar
 		57.1.1 = {
 			is_city = no
 		}
@@ -672,9 +630,7 @@ new province northern_road = {
 		200 207 188
 	}
 	history = {
-		owner = RAV
-		controller = RAV
-		add_core = RAV
+		history_owner = raven-scar
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -700,9 +656,7 @@ new province ravenscar = {
 		150 176 238
 	}
 	history = {
-		owner = RAV
-		controller = RAV
-		add_core = RAV
+		history_owner = raven-scar
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -734,9 +688,7 @@ new province widows_watch = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 	}
 }
 new province northern_mine = {
@@ -756,9 +708,7 @@ new province northern_mine = {
 		107 167 115
 	}
 	history = {
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -784,9 +734,7 @@ new province steepfall_burrow = {
 		220 153 179
 	}
 	history = {
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -812,9 +760,7 @@ new province lower_steepfall_burrow = {
 		126 243 238
 	}
 	history = {
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -841,9 +787,7 @@ new province northwatch = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = RIR
-		controller = RIR
-		add_core = RIR
+		history_owner = rime-rock
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -869,9 +813,7 @@ new province horned_coast = {
 		189 251 233
 	}
 	history = {
-		owner = PIF
-		controller = PIF
-		add_core = PIF
+		history_owner = pine_frost
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -903,9 +845,7 @@ new province low_grove = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = PIF
-		controller = PIF
-		add_core = PIF
+		history_owner = pine_frost
 	}
 }
 new province pinefrost = {
@@ -927,9 +867,7 @@ new province pinefrost = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
-		owner = PIF
-		controller = PIF
-		add_core = PIF
+		history_owner = pine_frost
 		hre = yes
 		`trade_goods` = stone
 	}
@@ -954,9 +892,7 @@ new province volskygge = {
 		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
-		owner = PIF
-		controller = PIF
-		add_core = PIF
+		history_owner = pine_frost
 		hre = yes
 		`trade_goods` = r_metals
 	}
@@ -980,9 +916,7 @@ new province deepwood_redoubt = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
-		owner = PIN
-		controller = PIN
-		add_core = PIN
+		history_owner = pine-hill
 		hre = yes
 		`trade_goods` = wood
 		capital = ""
@@ -1008,9 +942,7 @@ new province pinemoon_cave = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
-		owner = PIN
-		controller = PIN
-		add_core = PIN
+		history_owner = pine-hill
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -1032,9 +964,7 @@ new province snowpeaks = {
 		161 254 127
 	}
 	history = {
-		owner = PIN
-		controller = PIN
-		add_core = PIN
+		history_owner = pine-hill
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -1066,9 +996,7 @@ new province clearpine_pond = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = no
-		owner = PIN
-		controller = PIN
-		add_core = PIN
+		history_owner = pine-hill
 	}
 }
 new province lost_echo_cave = {
@@ -1090,9 +1018,7 @@ new province lost_echo_cave = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
-		owner = WOL
-		controller = WOL
-		add_core = WOL
+		history_owner = wolf-skull
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -1114,9 +1040,7 @@ new province wolfskull_cave = {
 		104 241 247
 	}
 	history = {
-		owner = WOL
-		controller = WOL
-		add_core = WOL
+		history_owner = wolf-skull
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -1143,9 +1067,7 @@ new province hraggstad = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = WOL
-		controller = WOL
-		add_core = WOL
+		history_owner = wolf-skull
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -1177,9 +1099,7 @@ new province kilkreath_trail = {
 		120 142 214
 	}
 	history = {
-		owner = WOL
-		controller = WOL
-		add_core = WOL
+		history_owner = wolf-skull
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -1205,9 +1125,7 @@ new province kilkreath_temple = {
 		215 127 153
 	}
 	history = {
-		owner = IRO
-		controller = IRO
-		add_core = IRO
+		history_owner = iron-back
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -1233,9 +1151,7 @@ new province ironback_hideout = {
 		130 155 255
 	}
 	history = {
-		owner = IRO
-		controller = IRO
-		add_core = IRO
+		history_owner = iron-back
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -1261,9 +1177,7 @@ new province kilkreath_peak = {
 		164 221 189
 	}
 	history = {
-		owner = IRO
-		controller = IRO
-		add_core = IRO
+		history_owner = iron-back
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes

@@ -1,0 +1,24 @@
+new localisation reformed_remnant = "Reformed Remnant"
+new effect reform_remnant = {
+	args = {
+		type = government
+		reform = government_reform
+	}
+	transpile = {
+		if [has_reform = remnant_1_focus_on_quality] { add_country_modifier = { name = remnant_1_focus_on_quality_mod duration = 3650 } }
+		if [has_reform = remnant_1_focus_on_quantity] { add_country_modifier = { name = remnant_1_focus_on_quantity_mod duration = 3650 } }
+		if [has_reform = remnant_1_focus_on_navy] { add_country_modifier = { name = remnant_1_focus_on_navy_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_taxation] { add_country_modifier = { name = remnant_2_focus_on_taxation_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_production] { add_country_modifier = { name = remnant_2_focus_on_production_mod duration = 3650 } }
+		if [has_reform = remnant_2_focus_on_trade] { add_country_modifier = { name = remnant_2_focus_on_trade_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_the_court] { add_country_modifier = { name = remnant_3_focus_on_the_court_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_local_forces] { add_country_modifier = { name = remnant_3_focus_on_local_forces_mod duration = 3650 } }
+		if [has_reform = remnant_3_focus_on_bureaucracy] { add_country_modifier = { name = remnant_3_focus_on_bureaucracy_mod duration = 3650 } }
+		set_country_flag = reformed_remnant
+		
+		change_government = args:type
+		add_government_reform = args:reform
+		
+		change_government_reform_progress = (-100*8)
+	}
+}

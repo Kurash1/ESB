@@ -10,6 +10,12 @@ new country_event theocracy.1 = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = {
+			has_government_attribute = no_heir_theocracy
+		}
+	}
+	
 	immediate = {
 		hidden_effect = {
 			set_country_flag = in_theocracy_heir_selection

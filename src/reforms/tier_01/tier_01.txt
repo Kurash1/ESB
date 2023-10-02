@@ -1,10 +1,33 @@
-governments:theocracy:reform_levels:1 += new tier_1_dragon_priestdom = {
+on_actions:on_heir_needed_theocracy += {
+	if [has_government_attribute = rahgot_ruler] {
+		define_heir = {
+			name = "Rahgot"
+			adm = 4
+			dip = 3
+			mil = 6
+			birth_date = 2012.1.1
+			fixed = yes
+		}
+		add_heir_personality = immortal_personality
+		add_ruler_modifier = {
+			name = lich
+			duration = -1
+		}
+	}
+}
+governments:theocracy:reform_levels:1 += new tier_1_forelhost_priestdom = {
 	name = "Dragon Priestdom"
 	desc = ""
 	icon = "dragon_priest"
 	allow_normal_conversion = yes
+	republican_name = yes
+	custom_attributes = {
+		no_heir_theocracy = yes
+		immortal_ruler = yes
+		rahgot_ruler = yes
+	}
 	trigger = {
-		has_reform = tier_1_dragon_priestdom
+		has_reform = tier_1_forelhost_priestdom
 	}
 	modifiers = {
 		fire_damage = 0.10
