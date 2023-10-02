@@ -93,9 +93,7 @@ new province frozen_outpost = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = WNC
-		controller = WNC
-		add_core = WNC
+		history_owner = wind-caller
 	}
 }
 new province njadhilde = {
@@ -121,9 +119,7 @@ new province njadhilde = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = no
-		owner = FRF
-		controller = FRF
-		add_core = FRF
+		history_owner = frost-flow
 	}
 }
 new province nightcaller = {
@@ -149,9 +145,7 @@ new province nightcaller = {
 		`trade_goods` = r_alchemical_ingredients
 		capital = ""
 		is_city = no
-		owner = FRF
-		controller = FRF
-		add_core = FRF
+		history_owner = frost-flow
 	}
 }
 new province goldvild = {
@@ -177,9 +171,7 @@ new province goldvild = {
 		`trade_goods` = gold
 		capital = ""
 		is_city = yes
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 	}
 }
 new province softta = {
@@ -199,9 +191,7 @@ new province softta = {
 		215 205 153
 	}
 	history = {
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -231,9 +221,7 @@ new province ingesi = {
 		102 164 223
 	}
 	history = {
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -260,9 +248,7 @@ new province verglas = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = HGA
-		controller = HGA
-		add_core = HGA
+		history_owner = high-gate
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -294,9 +280,7 @@ new province ice_isle = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 	}
 }
 new province pale_camp = {
@@ -316,9 +300,7 @@ new province pale_camp = {
 		216 237 115
 	}
 	history = {
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -350,9 +332,7 @@ new province olavnir = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 	}
 }
 new province dawnstar = {
@@ -373,9 +353,7 @@ new province dawnstar = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -407,9 +385,7 @@ new province dawn_sanctuary = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 	}
 }
 new province mavetlogi = {
@@ -429,9 +405,7 @@ new province mavetlogi = {
 		136 243 144
 	}
 	history = {
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -463,9 +437,7 @@ new province windward = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		add_core = WIN
 	}
 }
@@ -486,9 +458,7 @@ new province ilfbbi = {
 		162 105 249
 	}
 	history = {
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -514,9 +484,7 @@ new province frostmere = {
 		102 191 194
 	}
 	history = {
-		owner = FRO
-		controller = FRO
-		add_core = FRO
+		history_owner = frostmere
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -542,9 +510,7 @@ new province mzinchaleft = {
 		221 169 104
 	}
 	history = {
-		owner = FRO
-		controller = FRO
-		add_core = FRO
+		history_owner = frostmere
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -571,9 +537,7 @@ new province red_road_pass = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = FRO
-		controller = FRO
-		add_core = FRO
+		history_owner = frostmere
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -601,9 +565,7 @@ new province hall_of_the_vigilant = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = DNS
-		controller = DNS
-		add_core = DNS
+		history_owner = dunstad
 		hre = yes
 		`trade_goods` = stone
 	}
@@ -631,9 +593,7 @@ new province reyhi = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = no
-		owner = DNS
-		controller = DNS
-		add_core = DNS
+		history_owner = dunstad
 	}
 }
 new province dunstad = {
@@ -654,9 +614,7 @@ new province dunstad = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = DNS
-		controller = DNS
-		add_core = DNS
+		history_owner = dunstad
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -688,9 +646,7 @@ new province emfrljot = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = no
-		owner = DNS
-		controller = DNS
-		add_core = DNS
+		history_owner = dunstad
 	}
 }
 new province giants_gap = {
@@ -716,9 +672,7 @@ new province giants_gap = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = no
-		owner = SID
-		controller = SID
-		add_core = SID
+		history_owner = silver-drift
 	}
 }
 new province freaold = {
@@ -744,9 +698,7 @@ new province freaold = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = SID
-		controller = SID
-		add_core = SID
+		history_owner = silver-drift
 	}
 }
 new province blizzard_rest = {
@@ -772,9 +724,7 @@ new province blizzard_rest = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = HEL
-		controller = HEL
-		add_core = HEL
+		history_owner = heljarchen
 	}
 }
 new province three_point = {
@@ -800,9 +750,7 @@ new province three_point = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = HEL
-		controller = HEL
-		add_core = HEL
+		history_owner = heljarchen
 	}
 }
 new province silverdrift = {
@@ -824,9 +772,7 @@ new province silverdrift = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -849,9 +795,7 @@ new province nightgate = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -877,9 +821,7 @@ new province ironbind_barrow = {
 		199 116 131
 	}
 	history = {
-		owner = IRB
-		controller = IRB
-		add_core = IRB
+		history_owner = iron-bind
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -911,9 +853,7 @@ new province olavdolyn = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 	}
 }
 new province yorgrim_overlook = {
@@ -939,9 +879,7 @@ new province yorgrim_overlook = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 	}
 }
 new province jalaeigr = {
@@ -967,9 +905,7 @@ new province jalaeigr = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 	}
 }
 new province yorgrim_ressurection = {
@@ -995,9 +931,7 @@ new province yorgrim_ressurection = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 	}
 }
 new province lower_raldbthar = {
@@ -1019,9 +953,7 @@ new province lower_raldbthar = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -1049,9 +981,7 @@ new province tumble_arch_pass = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 	}
 }
 new province shrouded_grove = {
@@ -1071,9 +1001,7 @@ new province shrouded_grove = {
 		199 112 152
 	}
 	history = {
-		owner = NIG
-		controller = NIG
-		add_core = NIG
+		history_owner = nightgate
 		religion = nordic_pantheon
 		culture = cultures:palean
 		hre = yes
@@ -1105,9 +1033,7 @@ new province shearpoint = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = SHR
-		controller = SHR
-		add_core = SHR
+		history_owner = shearpoint
 	}
 }
 new province fellglow = {
@@ -1133,9 +1059,7 @@ new province fellglow = {
 		`trade_goods` = mag_goods
 		capital = ""
 		is_city = yes
-		owner = SHR
-		controller = SHR
-		add_core = SHR
+		history_owner = shearpoint
 	}
 }
 new province ysmir_hill = {
@@ -1161,9 +1085,7 @@ new province ysmir_hill = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = no
-		owner = SHR
-		controller = SHR
-		add_core = SHR
+		history_owner = shearpoint
 	}
 }
 new province korvanjund = {
@@ -1190,9 +1112,7 @@ new province korvanjund = {
 		`trade_goods` = arms
 		capital = ""
 		is_city = no
-		owner = HEL
-		controller = HEL
-		add_core = HEL
+		history_owner = heljarchen
 	}
 }
 new province shimmermist = {
@@ -1218,9 +1138,7 @@ new province shimmermist = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = HEL
-		controller = HEL
-		add_core = HEL
+		history_owner = heljarchen
 	}
 }
 new province long_road = {
@@ -1242,9 +1160,7 @@ new province long_road = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = HEL
-		controller = HEL
-		add_core = HEL
+		history_owner = heljarchen
 		hre = yes
 		`trade_goods` = wheat
 	}
@@ -1268,9 +1184,7 @@ new province loreius_farm = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = HEL
-		controller = HEL
-		add_core = HEL
+		history_owner = heljarchen
 		hre = yes
 		`trade_goods` = wheat
 		capital = ""
@@ -1296,9 +1210,7 @@ new province elydark = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		history_owner = volunruud
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -1322,9 +1234,7 @@ new province cranelis = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		history_owner = volunruud
 		hre = yes
 		`trade_goods` = stone
 	}
@@ -1348,9 +1258,7 @@ new province syllartha = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		history_owner = volunruud
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -1376,9 +1284,7 @@ new province volunruud = {
 		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		history_owner = volunruud
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -1402,9 +1308,7 @@ new province oladithas = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		history_owner = volunruud
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -1428,9 +1332,7 @@ new province stonehill_bluff = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		history_owner = volunruud
 		hre = yes
 		`trade_goods` = stone
 	}
@@ -1454,9 +1356,7 @@ new province heljarchen = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = HEL
-		controller = HEL
-		add_core = HEL
+		history_owner = heljarchen
 		hre = yes
 		`trade_goods` = wheat
 	}
@@ -1480,9 +1380,7 @@ new province isellarue = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		history_owner = volunruud
 		hre = yes
 		`trade_goods` = wood
 	}
@@ -1506,9 +1404,7 @@ new province lord_hill = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:palean
-		owner = VLR
-		controller = VLR
-		add_core = VLR
+		history_owner = volunruud
 		hre = yes
 		`trade_goods` = wood
 		quick_province_modifier = {
@@ -1542,9 +1438,7 @@ new province edinmund = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		57.1.1 = {
 			is_city = no
 		}
@@ -1579,9 +1473,7 @@ new province mundall = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = DAW
-		controller = DAW
-		add_core = DAW
+		history_owner = dawn-star
 		57.1.1 = {
 			is_city = no
 		}
