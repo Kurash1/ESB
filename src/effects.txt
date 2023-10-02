@@ -1,6 +1,6 @@
-new function history_owner = {
+new effect history_owner = {
 	args = country
-	effect = {
+	transpile = {
 		`owner = {args}`
 		`controller = {args}`
 		`add_core = {args}`

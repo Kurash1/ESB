@@ -1,10 +1,10 @@
 new localisation reformed_remnant = "Reformed Remnant"
-new function reform_remnant = {
+new effect reform_remnant = {
 	args = {
 		type = government
 		reform = government_reform
 	}
-	effect = {
+	transpile = {
 		if [has_reform = remnant_1_focus_on_quality] { add_country_modifier = { name = remnant_1_focus_on_quality_mod duration = 3650 } }
 		if [has_reform = remnant_1_focus_on_quantity] { add_country_modifier = { name = remnant_1_focus_on_quantity_mod duration = 3650 } }
 		if [has_reform = remnant_1_focus_on_navy] { add_country_modifier = { name = remnant_1_focus_on_navy_mod duration = 3650 } }
