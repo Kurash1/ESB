@@ -325,7 +325,7 @@ new decision form_the_rift = {
 	potential = {
 		primary_culture = cultures:fallowfirean
 		NOT = {
-			exists = RIF
+			exists = countries:rift
 			has_reform = tier_1_hold
 		}  
 	}
@@ -344,7 +344,7 @@ new decision form_the_rift = {
 		NOT = { owned_by = ROOT }
 	}
 	effect = {
-		change_tag = RIF
+		change_tag = countries:rift
 		swap_free_idea_group = yes
 		add_government_reform = tier_1_hold
 		rift_region = {

@@ -381,7 +381,7 @@ new great_project fallowstone_hall = {
 		owner = {
 			OR = {
 				tag = fallowfire
-				was_tag = fallowfire
+				was_tag = countries:fallowfire
 			}
 		}
 	}

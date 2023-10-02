@@ -5,48 +5,27 @@ new mission_series fallowfire_3 = {
 		tag = fallowfire
 	}
 	missions = {
-		fallowfire_one_people_one_purpose = {
-			name = "One People,One Purpose"
+		fallowfire_assemble_our_men = {
+			name = "Assemble our men"
 			desc = ""
 			position = 0
 			icon = mission_unknown_mission
 			trigger = {
-				stability = 1
-				has_estate_privilege = estates:clans:privileges:clan_land_rights
-				has_estate_privilege = estates:clans:privileges:hire_clan_advisors
-				has_estate_privilege = estates:warriors:privileges:warrior_land_rights
+				army_size_percentage = 1.0
 			}
 			effect = {
-				areas:clearspring, areas:snapleg = {
-					add_claim = ROOT
-				} 
-					
-			}
-		}
-		fallowfire_finishing_our_rivals = {
-			name = "Finishing our rivals"
-			desc = ""
-			position = 0
-			icon = mission_unknown_mission
-			required = {
-				fallowfire_one_people_one_purpose
-				fallowfire_honor_our_heroes
-				fallowfire_assemble_our_men
-			}
-			trigger = {
-				areas:clearspring, areas:snapleg = {
-					owned_by = ROOT
-				} 
-			}
-			effect = {
-				add_casus_belli = {
-					target = MIS
-					type = cb_vassalize_mission
-					months = 60
+				add_country_modifier = {
+					name = inspired_men
+					duration = (365*10)
 				}
-			} 
-					
+			}
 		}
 	}
-		
 }
+new event_modifier inspired_men = {
+	name = "Inspired Men"
+	modifier = {
+		land_morale = 0.10
+	}
+}
+

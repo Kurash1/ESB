@@ -5,17 +5,84 @@ new mission_series fallowfire_2 = {
 		tag = fallowfire
 	}
 	missions = {
-		fallowfire_honor_our_heroes = {
-			name = "Honor our heroes "
+		fallowfire_one_people_one_purpose = {
+			name = "One People,One Purpose"
 			desc = ""
 			position = 0
 			icon = mission_unknown_mission
 			trigger = {
-				
+				stability = 1
+				has_estate_privilege = estates:clans:privileges:clan_land_rights
+				has_estate_privilege = estates:clans:privileges:hire_clan_advisors
+				has_estate_privilege = estates:warriors:privileges:warrior_land_rights
 			}
 			effect = {
-				add_prestige = 15
+				areas:clearspring, areas:snapleg = {
+					add_claim = ROOT
+				} 
+					
 			}
 		}
+		fallowfire_finishing_our_rivals = {
+			name = "Finishing our rivals"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_one_people_one_purpose
+				fallowfire_honor_our_heroes
+				fallowfire_assemble_our_men
+			}
+			trigger = {
+				areas:clearspring, areas:snapleg = {
+					type = all
+					owned_by = ROOT
+				} 
+			}
+			effect = {
+				add_casus_belli = {
+					target = countries:mist-watch 
+					type = cb_vassalize_mission
+					months = 60
+				}
+				add_casus_belli = {
+					target = countries:north-wind
+					type = cb_vassalize_mission
+					months = 60
+				}
+			} 
+					
+		}
+		fallowfire_asserting_dominance = {
+			name = "Asserting Dominance"
+			desc = ""
+			position = 2
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_finishing_our_rivals
+			}
+			trigger = {
+				areas:ansilvund, areas:northwind, areas:mistwatch = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			} 
+			effect = {
+				add_country_modifier = {
+					name = asserted_our_dominance
+					duration = -1
+				}
+				hidden_effect = {
+					set_country_flag = boh
+				}
+			} 
+		}
+	}
+}
+new event_modifier asserted_our_dominance = {
+	name = "Asserted our dominance"
+	modifier = {
+		reduced_liberty_desire = 10
+		governing_capacity_modifier = 0.1
 	}
 }

@@ -1,0 +1,45 @@
+new mission_series fallowfire_1 = { 
+	slot = 1
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_honor_our_heroes = {
+			name = "Honor our heroes "
+			desc = ""
+			position = 0
+			icon = mission_unknown_mission
+			trigger = {
+				
+			}
+			effect = {
+				add_prestige = 15
+			}
+		}
+	}
+}
+new mission_series fallowfire_1_forelhost = {
+	slot = 1
+	ai = yes 
+	potential = {
+		tag = fallowfire
+		has_country_flag = boh
+	}
+	missions = {
+		fallowfire_deal_with_a_new_old_threat = {
+			name = "Deal with a new old threat"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			trigger = {
+			
+			}
+			effect = {
+				areas:forelhost, areas:rift_pass = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+}
