@@ -102,9 +102,7 @@ new province fellhammer = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = no
-		owner = HIL
-		controller = HIL
-		add_core = HIL
+		history_owner = hill-hammer
 	}
 }
 new province wayward_pass = {
@@ -130,9 +128,7 @@ new province wayward_pass = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = HIL
-		controller = HIL
-		add_core = HIL
+		history_owner = hill-hammer
 		57.1.1 = {
 			religion = nordic_pantheon
 			culture = cultures:winterholdian
@@ -162,9 +158,7 @@ new province hoddard = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = no
-		owner = DNS
-		controller = DNS
-		add_core = DNS
+		history_owner = dunstad
 	}
 }
 new province snowpoint = {
@@ -190,9 +184,7 @@ new province snowpoint = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = HIL
-		controller = HIL
-		add_core = HIL
+		history_owner = hill-hammer
 	}
 }
 new province frostflow = {
@@ -219,9 +211,7 @@ new province frostflow = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = FRF
-		controller = FRF
-		add_core = FRF
+		history_owner = frost-flow
 		57.1.1 = {
 			religion = nordic_pantheon
 			culture = cultures:winterholdian
@@ -251,9 +241,7 @@ new province erdlaith = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = SKT
-		controller = SKT
-		add_core = SKT
+		history_owner = sky-temple
 		57.1.1 = {
 			is_city = no
 		}
@@ -282,9 +270,7 @@ new province svangljot = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = SKT
-		controller = SKT
-		add_core = SKT
+		history_owner = sky-temple
 	}
 }
 new province serpent_stone = {
@@ -316,9 +302,7 @@ new province serpent_stone = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = BLK
-		controller = BLK
-		add_core = BLK
+		history_owner = bleak-coast
 		57.1.1 = {
 			is_city = yes
 		}
@@ -348,9 +332,7 @@ new province japhets_folly = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = BLK
-		controller = BLK
-		add_core = BLK
+		history_owner = bleak-coast
 	}
 }
 new province aegilgeth = {
@@ -376,9 +358,7 @@ new province aegilgeth = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		history_owner = snow-veil
 	}
 }
 new province snow_veil_sanctum = {
@@ -405,9 +385,7 @@ new province snow_veil_sanctum = {
 		`trade_goods` = r_metals
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		history_owner = snow-veil
 	}
 }
 new province sonior = {
@@ -433,9 +411,7 @@ new province sonior = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		history_owner = snow-veil
 	}
 }
 new province imsifa = {
@@ -461,9 +437,7 @@ new province imsifa = {
 		`trade_goods` = c_metals
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		history_owner = snow-veil
 		57.1.1 = {
 			religion = nordic_pantheon
 			culture = cultures:winterholdian
@@ -494,9 +468,7 @@ new province kastav = {
 		`trade_goods` = arms
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		history_owner = snow-veil
 	}
 }
 new province matette = {
@@ -522,9 +494,7 @@ new province matette = {
 		`trade_goods` = c_metals
 		capital = ""
 		is_city = no
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 	}
 }
 new province gwenara = {
@@ -550,9 +520,7 @@ new province gwenara = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 	}
 }
 new province driftshade = {
@@ -578,9 +546,7 @@ new province driftshade = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = FRF
-		controller = FRF
-		add_core = FRF
+		history_owner = frost-flow
 	}
 }
 new province yngvild = {
@@ -607,9 +573,7 @@ new province yngvild = {
 		`trade_goods` = mag_goods
 		capital = ""
 		is_city = no
-		owner = YNG
-		controller = YNG
-		add_core = YNG
+		history_owner = yngvild
 	}
 }
 new province fredhire = {
@@ -635,9 +599,7 @@ new province fredhire = {
 		`trade_goods` = silver
 		capital = ""
 		is_city = yes
-		owner = YNG
-		controller = YNG
-		add_core = YNG
+		history_owner = yngvild
 	}
 }
 new province hobs_fall_cave = {
@@ -663,9 +625,7 @@ new province hobs_fall_cave = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = YNG
-		controller = YNG
-		add_core = YNG
+		history_owner = yngvild
 	}
 }
 new province aldievi = {
@@ -691,9 +651,7 @@ new province aldievi = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = YNG
-		controller = YNG
-		add_core = YNG
+		history_owner = yngvild
 	}
 }
 new province tower_stone = {
@@ -725,9 +683,7 @@ new province tower_stone = {
 		`trade_goods` = r_metals
 		capital = ""
 		is_city = yes
-		owner = YNG
-		controller = YNG
-		add_core = YNG
+		history_owner = yngvild
 	}
 }
 new province joldli = {
@@ -753,9 +709,7 @@ new province joldli = {
 		is_city = yes
 		religion = nordic_pantheon
 		culture = cultures:winterholdian
-		owner = SAA
-		controller = SAA
-		add_core = SAA
+		history_owner = saarthal
 	}
 }
 new province alftand = {
@@ -781,9 +735,7 @@ new province alftand = {
 		`trade_goods` = r_metals
 		capital = ""
 		is_city = yes
-		owner = SAA
-		controller = SAA
-		add_core = SAA
+		history_owner = saarthal
 	}
 }
 new province fanais = {
@@ -809,9 +761,7 @@ new province fanais = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = no
-		owner = SAA
-		controller = SAA
-		add_core = SAA
+		history_owner = saarthal
 	}
 }
 new province mabgritte = {
@@ -837,9 +787,7 @@ new province mabgritte = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 	}
 }
 new province nimeclo = {
@@ -861,9 +809,7 @@ new province nimeclo = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:winterholdian
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 		hre = yes
 		`trade_goods` = iron
 	}
@@ -891,9 +837,7 @@ new province tildar = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 	}
 }
 new province njari = {
@@ -919,9 +863,7 @@ new province njari = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 	}
 }
 new province britara = {
@@ -947,9 +889,7 @@ new province britara = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = no
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 	}
 }
 new province frabkning = {
@@ -975,9 +915,7 @@ new province frabkning = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		history_owner = snow-veil
 	}
 }
 new province mavedolyn = {
@@ -1003,9 +941,7 @@ new province mavedolyn = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		history_owner = snow-veil
 	}
 }
 new province herkevi = {
@@ -1031,9 +967,7 @@ new province herkevi = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = SNV
-		controller = SNV
-		add_core = SNV
+		history_owner = snow-veil
 	}
 }
 new province tekltla = {
@@ -1059,9 +993,7 @@ new province tekltla = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = BLK
-		controller = BLK
-		add_core = BLK
+		history_owner = bleak-coast
 	}
 }
 new province reydis = {
@@ -1087,9 +1019,7 @@ new province reydis = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = BLK
-		controller = BLK
-		add_core = BLK
+		history_owner = bleak-coast
 	}
 }
 new province bleakcoast = {
@@ -1116,9 +1046,7 @@ new province bleakcoast = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = BLK
-		controller = BLK
-		add_core = BLK
+		history_owner = bleak-coast
 	}
 }
 new province seraina = {
@@ -1144,9 +1072,7 @@ new province seraina = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = BLK
-		controller = BLK
-		add_core = BLK
+		history_owner = bleak-coast
 	}
 }
 new province gormeki = {
@@ -1172,9 +1098,7 @@ new province gormeki = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = BLK
-		controller = BLK
-		add_core = BLK
+		history_owner = bleak-coast
 	}
 }
 new province wreck_coast = {
@@ -1200,9 +1124,7 @@ new province wreck_coast = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = BLK
-		controller = BLK
-		add_core = BLK
+		history_owner = bleak-coast
 	}
 }
 new province journeymans_nook = {
@@ -1228,9 +1150,7 @@ new province journeymans_nook = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WIH
-		controller = WIH
-		add_core = WIH
+		history_owner = winterhold
 	}
 }
 new province greiide = {
@@ -1256,9 +1176,7 @@ new province greiide = {
 		`trade_goods` = c_metals
 		capital = ""
 		is_city = yes
-		owner = WIH
-		controller = WIH
-		add_core = WIH
+		history_owner = winterhold
 	}
 }
 new province whistling_mine = {
@@ -1285,9 +1203,7 @@ new province whistling_mine = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = WIH
-		controller = WIH
-		add_core = WIH
+		history_owner = winterhold
 	}
 }
 new province anthor_peak = {
@@ -1313,9 +1229,7 @@ new province anthor_peak = {
 		`trade_goods` = c_metals
 		capital = ""
 		is_city = yes
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 	}
 }
 new province sappika = {
@@ -1341,9 +1255,7 @@ new province sappika = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = ANT
-		controller = ANT
-		add_core = ANT
+		history_owner = anthor
 	}
 }
 new province brylana = {
@@ -1369,9 +1281,7 @@ new province brylana = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = WIH
-		controller = WIH
-		add_core = WIH
+		history_owner = winterhold
 	}
 }
 new province winterhold = {
@@ -1398,9 +1308,7 @@ new province winterhold = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = WIH
-		controller = WIH
-		add_core = WIH
+		history_owner = winterhold
 	}
 }
 new province danen = {
@@ -1426,9 +1334,7 @@ new province danen = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = SKT
-		controller = SKT
-		add_core = SKT
+		history_owner = sky-temple
 	}
 }
 new province college_of_winterhold = {
@@ -1454,9 +1360,7 @@ new province college_of_winterhold = {
 		`trade_goods` = mag_goods
 		capital = ""
 		is_city = yes
-		owner = WIH
-		controller = WIH
-		add_core = WIH
+		history_owner = winterhold
 	}
 }
 new province bittegho = {
@@ -1478,9 +1382,7 @@ new province bittegho = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:winterholdian
-		owner = SKT
-		controller = SKT
-		add_core = SKT
+		history_owner = sky-temple
 		hre = yes
 		`trade_goods` = iron
 	}
@@ -1508,9 +1410,7 @@ new province mareet = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = SKT
-		controller = SKT
-		add_core = SKT
+		history_owner = sky-temple
 	}
 }
 new province lydihild = {
@@ -1530,9 +1430,7 @@ new province lydihild = {
 		195 194 190
 	}
 	history = {
-		owner = SKT
-		controller = SKT
-		add_core = SKT
+		history_owner = sky-temple
 		religion = nordic_pantheon
 		culture = cultures:winterholdian
 		hre = yes
@@ -1564,9 +1462,7 @@ new province mertlogi = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = SKT
-		controller = SKT
-		add_core = SKT
+		history_owner = sky-temple
 		57.1.1 = {
 			is_city = yes
 		}
@@ -1595,9 +1491,7 @@ new province skytemple = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = no
-		owner = SKT
-		controller = SKT
-		add_core = SKT
+		history_owner = sky-temple
 	}
 }
 new province dwarf_valley = {
@@ -1619,9 +1513,7 @@ new province dwarf_valley = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:winterholdian
-		owner = BLU
-		controller = BLU
-		add_core = BLU
+		history_owner = blue-axe
 		hre = yes
 		`trade_goods` = c_metals
 	}
@@ -1649,9 +1541,7 @@ new province drifold = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = BLU
-		controller = BLU
-		add_core = BLU
+		history_owner = blue-axe
 	}
 }
 new province ysgramoors_tomb = {
@@ -1678,9 +1568,7 @@ new province ysgramoors_tomb = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = no
-		owner = BLU
-		controller = BLU
-		add_core = BLU
+		history_owner = blue-axe
 	}
 }
 new province lilva = {
@@ -1706,9 +1594,7 @@ new province lilva = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = BLU
-		controller = BLU
-		add_core = BLU
+		history_owner = blue-axe
 	}
 }
 new province uthgke = {
@@ -1734,9 +1620,7 @@ new province uthgke = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = yes
-		owner = BLU
-		controller = BLU
-		add_core = BLU
+		history_owner = blue-axe
 	}
 }
 new province pilgrims_coast = {
@@ -1762,9 +1646,7 @@ new province pilgrims_coast = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = BLU
-		controller = BLU
-		add_core = BLU
+		history_owner = blue-axe
 	}
 }
 new province wind_break = {
@@ -1790,9 +1672,7 @@ new province wind_break = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = no
-		owner = BLU
-		controller = BLU
-		add_core = BLU
+		history_owner = blue-axe
 		57.1.1 = {
 			is_city = no
 		}
@@ -1821,9 +1701,7 @@ new province njaddir = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = BLU
-		controller = BLU
-		add_core = BLU
+		history_owner = blue-axe
 	}
 }
 new province saarthal = {
@@ -1844,9 +1722,7 @@ new province saarthal = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = SAA
-		controller = SAA
-		add_core = SAA
+		history_owner = saarthal
 		religion = nordic_pantheon
 		culture = cultures:winterholdian
 		hre = yes
@@ -1878,9 +1754,7 @@ new province netvild = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = no
-		owner = SAA
-		controller = SAA
-		add_core = SAA
+		history_owner = saarthal
 	}
 }
 new province helasine = {
@@ -1906,8 +1780,6 @@ new province helasine = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = SAA
-		controller = SAA
-		add_core = SAA
+		history_owner = saarthal
 	}
 }

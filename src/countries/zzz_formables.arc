@@ -146,6 +146,9 @@ new decision form_whiterun = {
 			region = regions:whiterun
 		}
 		NOT = {
+			primary_culture = cultures:falkrentish
+		}
+		NOT = {
 			exists = WHT
 			has_reform = tier_1_hold
 		}
@@ -261,7 +264,51 @@ new decision form_haafingar = {
 		add_government_reform = tier_1_hold
 	}
 }
-
+new country falkreath = {
+	inherit = nordic_country
+	primary_culture = falkrentish
+	tag = FLK
+	name = "Falkreath"
+	adj = "Falkrentish"
+	color = {
+		0 127 14
+	}
+	starting_reform = tier_1_hold
+	capital = falkreath
+}
+new decision form_falkreath = {
+	name = "Form Falkreath"
+	major = yes
+	potential = {
+		primary_culture = cultures:falkrentish
+		NOT = {
+			exists = FLK
+			has_reform = tier_1_hold
+		}
+	}
+	allow = {
+		calc_true_if = {
+			amount = 25
+			regions:kreath = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+	}
+	provinces_to_highlight = {
+		region = regions:kreath
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		change_tag = FLK
+		swap_free_idea_group = yes
+		add_government_reform = tier_1_hold
+		kreath_region = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
 new country orkreath = {
 	inherit = kreath_orc_country
 	primary_culture = kreath_orc

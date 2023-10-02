@@ -187,10 +187,8 @@ new province bleakrock_isle = {
 		`trade_goods` = c_metals
 		capital = ""
 		is_city = no
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = HLY
+		history_owner = windhelm
+		add_core = holly-frost
 		57.1.1 = {
 			is_city = yes
 		}
@@ -239,9 +237,7 @@ new province giants_exit = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province brandy-mug = {
@@ -267,9 +263,7 @@ new province brandy-mug = {
 		`trade_goods` = wheat
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province stoneside = {
@@ -295,9 +289,7 @@ new province stoneside = {
 		`trade_goods` = wheat
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new area holly-frost = {
@@ -327,10 +319,8 @@ new province holly-frost = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = HLY
+		history_owner = windhelm
+		add_core = holly-frost
 	}
 }
 new province yngol_barrow = {
@@ -356,10 +346,8 @@ new province yngol_barrow = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = HLY
+		history_owner = windhelm
+		add_core = holly-frost
 	}
 }
 new province frostbloom = {
@@ -385,10 +373,8 @@ new province frostbloom = {
 		`trade_goods` = wheat
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = HLY
+		history_owner = windhelm
+		add_core = holly-frost
 	}
 }
 new area dunmeth_pass = {
@@ -418,10 +404,8 @@ new province snowdrift = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = HLY
+		history_owner = windhelm
+		add_core = holly-frost
 	}
 }
 new province chillwind = {
@@ -447,10 +431,8 @@ new province chillwind = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = HLY
+		history_owner = windhelm
+		add_core = holly-frost
 	}
 }
 new province dunmeth_pass = {
@@ -476,10 +458,8 @@ new province dunmeth_pass = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = HLY
+		history_owner = windhelm
+		add_core = holly-frost
 	}
 }
 new area narzulbur = {
@@ -509,10 +489,8 @@ new province crag_forest = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = KYN
+		history_owner = windhelm
+		add_core = kynesgrove
 	}
 }
 new province greenstep = {
@@ -538,10 +516,8 @@ new province greenstep = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = KYN
+		history_owner = windhelm
+		add_core = kynesgrove
 		set_province_flag = orc_stronghold
 	}
 }
@@ -572,9 +548,7 @@ new province mzulft = {
 		`trade_goods` = r_metals
 		capital = ""
 		is_city = yes
-		owner = CRW
-		controller = CRW
-		add_core = CRW
+		history_owner = cragwallow
 		272.1.1 = {
 			`trade_goods` = unknown
 		}
@@ -603,9 +577,7 @@ new province cragwallow = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = CRW
-		controller = CRW
-		add_core = CRW
+		history_owner = cragwallow
 	}
 }
 new area broken_limb = {
@@ -863,9 +835,7 @@ new province bloody_road = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = CRW
-		controller = CRW
-		add_core = CRW
+		history_owner = cragwallow
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = cultures:eastmarcher
@@ -895,9 +865,7 @@ new province margyf = {
 		`trade_goods` = silver
 		capital = ""
 		is_city = yes
-		owner = CRW
-		controller = CRW
-		add_core = CRW
+		history_owner = cragwallow
 	}
 }
 new area cronvangr = {
@@ -998,10 +966,8 @@ new province kynesgrove = {
 	area = kynesgrove
 	history = {
 		center_of_trade = 1
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = KYN
+		history_owner = windhelm
+		add_core = kynesgrove
 		religion = nordic_pantheon
 		culture = cultures:eastmarcher
 		hre = yes
@@ -1033,10 +999,8 @@ new province erimor = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = no
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = KYN
+		history_owner = windhelm
+		add_core = kynesgrove
 	}
 }
 new province anguki = {
@@ -1092,9 +1056,7 @@ new province ansilvund = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = NOW
-		controller = NOW
-		add_core = NOW
+		history_owner = north-wind
 	}
 }
 new province stony_creek = {
@@ -1120,9 +1082,7 @@ new province stony_creek = {
 		`trade_goods` = c_metals
 		capital = ""
 		is_city = yes
-		owner = NOW
-		controller = NOW
-		add_core = NOW
+		history_owner = north-wind
 	}
 }
 new province dwarf_road = {
@@ -1148,9 +1108,7 @@ new province dwarf_road = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = NOW
-		controller = NOW
-		add_core = NOW
+		history_owner = north-wind
 	}
 }
 new area northwind = {
@@ -1180,9 +1138,7 @@ new province northwind = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = NOW
-		controller = NOW
-		add_core = NOW
+		history_owner = north-wind
 	}
 }
 new province upper_shor_way = {
@@ -1208,9 +1164,7 @@ new province upper_shor_way = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = NOW
-		controller = NOW
-		add_core = NOW
+		history_owner = north-wind
 	}
 }
 new province lower_shor_way = {
@@ -1236,9 +1190,7 @@ new province lower_shor_way = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = NOW
-		controller = NOW
-		add_core = NOW
+		history_owner = north-wind
 	}
 }
 new area darkwater_crossing = {
@@ -1269,9 +1221,7 @@ new province darkwater_crossing = {
 		`trade_goods` = r_metals
 		capital = ""
 		is_city = yes
-		owner = DAR
-		controller = DAR
-		add_core = DAR
+		history_owner = dark-water
 		quick_province_modifier = {
 			name = "Goldenrock Mine"
 			modifier = {
@@ -1362,9 +1312,7 @@ new province mistwatch = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = no
-		owner = MIS
-		controller = MIS
-		add_core = MIS
+		history_owner = mist-watch
 	}
 }
 new province mist_road = {
@@ -1390,9 +1338,7 @@ new province mist_road = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = MIS
-		controller = MIS
-		add_core = MIS
+		history_owner = mist-watch
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = cultures:eastmarcher
@@ -1422,9 +1368,7 @@ new province ysgramoors_road = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = no
-		owner = NOW
-		controller = NOW
-		add_core = NOW
+		history_owner = north-wind
 	}
 }
 new area darkwater = {
@@ -1457,9 +1401,7 @@ new province darkwater_watch = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = DAR
-		controller = DAR
-		add_core = DAR
+		history_owner = dark-water
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = cultures:eastmarcher
@@ -1486,9 +1428,7 @@ new province clay_point = {
 		northern_tg
 	}
 	history = {
-		owner = DAR
-		controller = DAR
-		add_core = DAR
+		history_owner = dark-water
 		religion = nordic_pantheon
 		culture = cultures:eastmarcher
 		hre = yes
@@ -1523,9 +1463,7 @@ new province darkwater_pass = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = DAR
-		controller = DAR
-		add_core = DAR
+		history_owner = dark-water
 	}
 }
 new province aevar_hill = {
@@ -1548,9 +1486,7 @@ new province aevar_hill = {
 		northern_tg
 	}
 	history = {
-		owner = DAR
-		controller = DAR
-		add_core = DAR
+		history_owner = dark-water
 		religion = nordic_pantheon
 		culture = cultures:eastmarcher
 		hre = yes
@@ -1590,9 +1526,7 @@ new province rough_road = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = HRO
-		controller = HRO
-		add_core = HRO
+		history_owner = hrothgar
 	}
 }
 new province east_hrothgar_pass = {
@@ -1621,9 +1555,7 @@ new province east_hrothgar_pass = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = HRO
-		controller = HRO
-		add_core = HRO
+		history_owner = hrothgar
 	}
 }
 new province gold_glade = {
@@ -1644,9 +1576,7 @@ new province gold_glade = {
 	area = lost_knife
 	base_development = 4
 	history = {
-		owner = HRO
-		controller = HRO
-		add_core = HRO
+		history_owner = hrothgar
 		religion = nordic_pantheon
 		culture = cultures:eastmarcher
 		hre = yes
@@ -1676,9 +1606,7 @@ new province top_point = {
 	}
 	base_development = 3
 	history = {
-		owner = HRO
-		controller = HRO
-		add_core = HRO
+		history_owner = hrothgar
 		religion = nordic_pantheon
 		culture = cultures:eastmarcher
 		hre = yes
@@ -1716,9 +1644,7 @@ new province dibellas_coast = {
 		hre = yes
 		`trade_goods` = wood
 		capital = ""
-		owner = HID
-		controller = HID
-		add_core = HID
+		history_owner = hillgrund
 	}
 }
 new province tree_hill = {
@@ -1747,9 +1673,7 @@ new province tree_hill = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = HID
-		controller = HID
-		add_core = HID
+		history_owner = hillgrund
 	}
 }
 new province amol = {
@@ -1779,9 +1703,7 @@ new province amol = {
 		`trade_goods` = arms
 		capital = ""
 		is_city = yes
-		owner = HID
-		controller = HID
-		add_core = HID
+		history_owner = hillgrund
 	}
 }
 new area gallows_rock = {
@@ -1814,10 +1736,8 @@ new province gallows_rock = {
 		`trade_goods` = arms
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = CRA
+		history_owner = windhelm
+		add_core = cradlecrush
 	}
 }
 new province maras_rise = {
@@ -1846,9 +1766,7 @@ new province maras_rise = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province gallows_hall = {
@@ -1873,10 +1791,8 @@ new province gallows_hall = {
 	history = {
 		religion = nordic_pantheon
 		culture = cultures:eastmarcher
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = CRA
+		history_owner = windhelm
+		add_core = cradlecrush
 		hre = yes
 		`trade_goods` = fish
 	}
@@ -1912,9 +1828,7 @@ new province mixwater = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province whiterock = {
@@ -1943,9 +1857,7 @@ new province whiterock = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province morvunskar = {
@@ -1974,9 +1886,7 @@ new province morvunskar = {
 		`trade_goods` = arms
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 		fort_16th = yes
 		2500.1.1 = {
 			quick_province_modifier = {
@@ -2019,10 +1929,8 @@ new province cradlecrush = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = CRA
+		history_owner = windhelm
+		add_core = cradlecrush
 	}
 }
 new province amol_point = {
@@ -2051,10 +1959,8 @@ new province amol_point = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = CRA
+		history_owner = windhelm
+		add_core = cradlecrush
 	}
 }
 new area hillgrund = {
@@ -2087,9 +1993,7 @@ new province darkshade = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = HID
-		controller = HID
-		add_core = HID
+		history_owner = hillgrund
 	}
 }
 new province hillgrunds_steading = {
@@ -2118,9 +2022,7 @@ new province hillgrunds_steading = {
 		`trade_goods` = wood
 		capital = ""
 		is_city = yes
-		owner = HID
-		controller = HID
-		add_core = HID
+		history_owner = hillgrund
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = cultures:eastmarcher
@@ -2157,9 +2059,7 @@ new province ysmir_overlook = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province uttering_hills = {
@@ -2188,10 +2088,8 @@ new province uttering_hills = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = YOR
+		history_owner = windhelm
+		add_core = yorgrim
 	}
 }
 new province angas_mill = {
@@ -2221,10 +2119,8 @@ new province angas_mill = {
 		`trade_goods` = c_metals
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
-		add_core = YOR
+		history_owner = windhelm
+		add_core = yorgrim
 	}
 }
 new area windhelm = {
@@ -2257,9 +2153,7 @@ new province evetsta = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province windhelm = {
@@ -2290,9 +2184,7 @@ new province windhelm = {
 		`trade_goods` = arms
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province freanna = {
@@ -2321,9 +2213,7 @@ new province freanna = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new area eastfield = {
@@ -2356,9 +2246,7 @@ new province driena = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province oriekke = {
@@ -2387,9 +2275,7 @@ new province oriekke = {
 		`trade_goods` = iron
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new province haeleke = {
@@ -2418,9 +2304,7 @@ new province haeleke = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = yes
-		owner = WND
-		controller = WND
-		add_core = WND
+		history_owner = windhelm
 	}
 }
 new adjacency windhelm_bridge = {

@@ -17,6 +17,18 @@ new country lone_band = {
 	color = {
 		0 0 100
 	}
+	history = {
+		2500.1.1 = {
+			monarch = {
+				name = "Fuldir"
+				dynasty = "Snake-eye"
+				adm = 5
+				dip = 6
+				mil = 4
+				birth_date = 2481.1.1
+			}
+		}
+	}
 	capital = lone_isle
 }
 new country valtheim = {
@@ -37,6 +49,18 @@ new country clearspring = {
 	starting_reform = tier_1_thanedom
 	name = "Clearspring"
 	adj = "Clear"
+	history = {
+		2500.1.1 = {
+			monarch = {
+				name = "Falk"
+				dynasty = "Skendeinl"
+				adm = 2
+				dip = 2
+				mil = 3
+				birth_date = 2455.1.1
+			}
+		}
+	}
 	color = {
 		0 200 50
 	}
@@ -50,6 +74,18 @@ new country fallowfire = {
 	tag = FLW
 	name = "Fallowfire"
 	adj = "Fallowfire"
+	history = {
+		2500.1.1 = {
+			monarch = {
+				name = "Akvid"
+				dynasty = "Blood-axe"
+				adm = 1
+				dip = 1
+				mil = 0
+				birth_date = 2477.1.1
+			}
+		}
+	}
 	color = {
 		84 26 39
 	}
@@ -64,10 +100,26 @@ new country forelhost = {
 	color = {
 		238 234 133
 	}
+	history = {
+		2500.1.1 = {
+			monarch = {
+				name = "Rahgot"
+				adm = 4
+				dip = 3
+				mil = 6
+				birth_date = 2012.1.1
+			}
+			add_ruler_personality = immortal_personality
+			add_ruler_modifier = {
+				name = lich
+				duration = -1
+			}
+		}
+	}
 	religion = dragon_cult
 	capital = forelhost
 	government = theocracy
-	starting_reform = tier_1_dragon_priestdom
+	starting_reform = tier_1_forelhost_priestdom
 }
 new country solitude = {
 	inherit = nordic_country

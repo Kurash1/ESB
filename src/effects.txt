@@ -1,0 +1,38 @@
+new effect history_owner = {
+	args = country
+	transpile = {
+		`owner = {args}`
+		`controller = {args}`
+		`add_core = {args}`
+	}
+}
+new effect add_core = {
+	args = country
+	transpile = {
+		`add_core = {args}`
+	}
+}
+new effect add_core = {
+	args = base_scope
+	transpile = {
+		`add_core = {args}`
+	}
+}
+new trigger ags = {
+	args = int
+	transpile = {
+		`is_year = {(args+2500)}`
+	}
+}
+new trigger tag = {
+	args = country_scope
+	transpile = {
+		`tag = {args}`
+	}
+}
+new modifier land_morale = {
+	args = float
+	transpile = {
+		`land_morale = {args}`
+	}
+}

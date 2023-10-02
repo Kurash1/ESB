@@ -30,6 +30,7 @@ new country_event barrow_hill.1 = {
 				has_building = buildings:barrow_hill
 			}
 		}
+		NOT = { has_government_attribute = immortal_ruler }
 	}
 	options = {
 		{

@@ -21,13 +21,13 @@ new mercenary_company tier_2_mercenaries_company = {
 		has_reform = tier_2_mercenaries
 	}
 }
+new localisation tier_2_mercenaries_tt = "Gain Access to a new §OMercenary Company§!"
 new government_reform tier_2_mercenaries = {
 	name = "Mercenaries"
 	desc = ""
 	icon = "tour_of_duty"
 	allow_normal_conversion = yes
 	effect = {
-		defineloc tier_2_mercenaries_tt = "Gain Access to a new §OMercenary Company§!"
 		custom_tooltip = tier_2_mercenaries_tt
 	}
 	modifiers = {
