@@ -6,3 +6,15 @@ new function history_owner = {
 		`add_core = {args}`
 	}
 }
+new effect add_core = {
+	args = country
+	transpile = {
+		`add_core = {args}`
+	}
+}
+new effect add_core = {
+	args = base_scope
+	transpile = {
+		`add_core = {args}`
+	}
+}
