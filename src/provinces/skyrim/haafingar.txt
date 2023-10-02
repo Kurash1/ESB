@@ -71,9 +71,7 @@ new province lone_isle = {
 		184 109 117
 	}
 	history = {
-		owner = LBA
-		controller = LBA
-		add_core = LBA
+		history_owner = lone_band
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -101,9 +99,7 @@ new province solitude = {
 	}
 	history = {
 		center_of_trade = 1
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -135,9 +131,7 @@ new province solitude_port = {
 		`trade_goods` = naval_supplies
 		capital = ""
 		is_city = no
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 	}
 }
 new province solitude_entrance = {
@@ -157,9 +151,7 @@ new province solitude_entrance = {
 		190 186 158
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -185,9 +177,7 @@ new province solitude_farms = {
 		144 103 168
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -213,9 +203,7 @@ new province solitude_military_camp = {
 		239 147 210
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -241,9 +229,7 @@ new province solitude_fork = {
 		158 127 179
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -269,9 +255,7 @@ new province meridias_crossroad = {
 		174 195 199
 	}
 	history = {
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -439,9 +423,7 @@ new province solitude_lighthouse = {
 	terrain = coastline
 	history = {
 		center_of_trade = 1
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 		religion = nordic_pantheon
 		culture = cultures:haafingarian
 		hre = yes
@@ -473,9 +455,7 @@ new province clay_coast = {
 		`trade_goods` = fish
 		capital = ""
 		is_city = no
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 	}
 }
 new province rock_isle = {
@@ -507,9 +487,7 @@ new province rock_isle = {
 		`trade_goods` = stone
 		capital = ""
 		is_city = no
-		owner = SOL
-		controller = SOL
-		add_core = SOL
+		history_owner = solitude
 	}
 }
 new province northern_cliffs = {
