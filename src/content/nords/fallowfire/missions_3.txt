@@ -1,0 +1,43 @@
+new mission_series fallowfire_4 = {
+	slot = 4
+	ai = yes
+	potential = {
+		tag = fallowfire
+		has_country_flag = snowy_elf
+	}
+	missions = {
+		fallowfire_looking_south = {
+			name = "Assemble our men"
+			desc = ""
+			position = 0
+			icon = mission_unknown_mission
+			trigger = {
+				army_size_percentage = 1.0
+			}
+			effect = {
+				add_country_modifier = {
+					name = inspired_men
+					duration = (365*10)
+				}
+			}
+		}
+	}
+}
+new country_event fallowfire.1 = {
+	title = "The reports of elves' disapperance were greatly exaggerated"
+	desc = ""
+	is_triggered_only = yes
+	picture = forelhost_eventPicture
+	options = {
+		{
+			name = "KILL THEM ALL"
+			effect = {
+				hidden_effect = {
+					set_country_flag = snowy_elf
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}
+	

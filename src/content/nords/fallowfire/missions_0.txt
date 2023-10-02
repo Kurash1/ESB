@@ -24,7 +24,7 @@ new mission_series fallowfire_1_forelhost = {
 	ai = yes 
 	potential = {
 		tag = fallowfire
-		has_country_flag = boh
+		has_country_flag = forelhost
 	}
 	missions = {
 		fallowfire_deal_with_a_new_old_threat = {
@@ -32,12 +32,26 @@ new mission_series fallowfire_1_forelhost = {
 			desc = ""
 			position = 1
 			icon = mission_unknown_mission
-			trigger = {
-			
-			}
 			effect = {
 				areas:forelhost, areas:rift_pass = {
 					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+}
+new country_event fallowfire.2 = {
+	title = "Discovering other humans"
+	desc = ""
+	is_triggered_only = yes
+	picture = forelhost_eventPicture
+	options = {
+		{
+			name = "Deal with the problem immediately"
+			effect = {
+				hidden_effect = {
+					set_country_flag = forelhost
+					swap_non_generic_missions = yes
 				}
 			}
 		}

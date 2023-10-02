@@ -73,7 +73,10 @@ new mission_series fallowfire_2 = {
 					duration = -1
 				}
 				hidden_effect = {
-					set_country_flag = boh
+					country_event = { 
+						id = fallowfire.1
+						days = 30
+					}
 				}
 			} 
 		}
