@@ -1,41 +1,149 @@
+new event_modifier whiterun_generic_riverwood_country = {
+	name = "Founding Riverwood"
+	modifier = {
+		global_prov_trade_power_modifier = 0.2
+	}
+}
+new event_modifier whiterun_generic_riverwood_province = {
+	name = "Gerdur Mill"
+	modifier = {
+		trade_goods_size = 0.5
+	}
+}
+new event_modifier whiterun_generic_embershard = {
+	name = "Embershard Mine"
+	modifier = {
+		trade_goods_size = 1.0
+	}
+}
 mission_trees:whiterun_generic += {
-	riverwood = {
-		name = "Riverwood"
+	skjoralmor_deal = {
+		name = "Skjoralmor Deal"
 		x = 3
 		y = 0
-	}
-	embershard = {
-		name = "Embershard"
-		required = {
-			riverwood
+		trigger = {
+			if [has_global_flag = skjoralmor_deal] {
+				has_global_flag = skjoralmor_deal
+			}
+			else {
+				treasury = 250
+				manpower = 15
+			}
 		}
+		effect = {
+			if [NOT = { has_global_flag = skjoralmor_deal }] {
+				add_treasury = -250
+				add_manpower = -15
+				countries:skjoralmor = {
+					add_treasury = 250
+					add_manpower = 15
+					regions:kreath = {
+						add_permanent_claim = skjoralmor
+					}
+				}
+				set_global_flag = skjoralmor_deal
+			}
+		}
+	}
+	brittleshin_expedition = {
+		name = "Brittleshin Expedition"
+		required = skjoralmor_deal
 		x = 2
 		y = 1
-	}
-	guardian_stones = {
-		name = "Guardian Stones"
-		required = {
-			riverwood
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = future_update
+				always = no
+			}
 		}
-		x = 3
-		y = 1
+		effect = {
+			custom_tooltip = future_update
+		}
 	}
 	bleak_falls_temple = {
 		name = "Bleak Falls Temple"
-		required = {
-			riverwood
-		}
+		required = skjoralmor_deal
 		x = 4
 		y = 1
+		trigger = {
+			owns = bleak_falls_temple
+			provinces:bleak_falls_temple = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:bleak_falls_temple = {
+				add_great_project_tier = {
+					type = bleak_falls_barrow
+					tier = 1
+				}
+			}
+		}
+	}
+	riverwood = {
+		name = "Develop Riverwood"
+		required = skjoralmor_deal
+		x = 3
+		y = 1
+		trigger = {
+			owns = riverwood
+			provinces:riverwood = {
+				development = 15
+			}
+		}
+		effect = {
+			add_modifier = {
+				modifier = whiterun_generic_riverwood_country
+				years = 50
+			}
+			provinces:riverwood = {
+				add_permanent_province_modifier = {
+					name = whiterun_generic_riverwood_province
+					duration = -1
+				}
+			}
+		}
 	}
 	river_ember_trade = {
 		name = "River Ember Trade"
-		required = {
-			embershard
-			guardian_stones
-			bleak_falls_temple
+		required = riverwood
+		x = 2
+		y = 2
+		trigger = {
+			has_merchant = trade_nodes:illinalta:location
+			provinces:riverwood = {
+				province_has_center_of_trade_of_level = 3
+			}
 		}
+		effect = {
+			trade_nodes:illinalta:location = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 30
+					key = STRONG_MERCHANTS
+				}
+			}
+		}
+	}
+	embershard_mine = {
+		name = "Embershard Mine"
+		required = riverwood
 		x = 3
 		y = 2
+		trigger = {
+			owns = embershard_mine
+			provinces:embershard_mine = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:embershard_mine = {
+				add_permanent_province_modifier = {
+					name = whiterun_generic_embershard
+					duration = -1
+				}
+			}
+		}
 	}
 }

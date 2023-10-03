@@ -31,42 +31,10 @@ new event_modifier whiterun_generic_greymoor = {
 		defensiveness = 0.25
 	}
 }
-new effect add_modifier = {
-	args = {
-		modifier = event_modifier
-		years = int
-	}
-	transpile = {
-		`add_country_modifier =` {
-			`name = {args:modifier:id}`
-			`duration = {(args:years*365)}`
-		}
-	}
-}
 mission_trees:whiterun_generic += {
-	granitehill = {
-		name = "Granitehill"
-		x = 0
-		y = 0
-		trigger = {
-			owns = granitehill
-			provinces:granitehill = {
-				development = 15
-			}
-		}
-		effect = {
-			areas:gjukar, areas:sleeping_tree, areas:granitehill = {
-				add_permanent_claim = ROOT
-			}
-			add_modifier = {
-				modifier = whiterun_generic_granitehill
-				years = 50
-			}
-		}
-	}
 	rorikstead = {
 		name = "Rorikstead"
-		x = 1
+		x = 0
 		y = 0
 		trigger = {
 			owns = rorikstead
@@ -80,6 +48,26 @@ mission_trees:whiterun_generic += {
 			}
 			add_modifier = {
 				modifier = whiterun_generic_rorikstead
+				years = 50
+			}
+		}
+	}
+	granitehill = {
+		name = "Granitehill"
+		x = 1
+		y = 0
+		trigger = {
+			owns = granitehill
+			provinces:granitehill = {
+				development = 15
+			}
+		}
+		effect = {
+			areas:gjukar, areas:sleeping_tree, areas:granitehill = {
+				add_permanent_claim = ROOT
+			}
+			add_modifier = {
+				modifier = whiterun_generic_granitehill
 				years = 50
 			}
 		}
@@ -144,9 +132,7 @@ mission_trees:whiterun_generic += {
 		name = "Whiterun Horsemen"
 		x = 1
 		y = 2
-		required = {
-			tundra_development
-		}
+		required = tundra_development
 		trigger = {
 			mil_power = 150
 		}

@@ -7,20 +7,32 @@ new effect history_owner = {
 	}
 }
 new effect add_core = {
-	args = country
+	args = country_scope
 	transpile = {
 		`add_core = {args}`
 	}
 }
-new effect add_core = {
-	args = base_scope
+new effect add_permanent_claim = {
+	args = country_scope
 	transpile = {
-		`add_core = {args}`
+		`add_permanent_claim = {args}`
 	}
 }
 new modifier land_morale = {
 	args = float
 	transpile = {
 		`land_morale = {args}`
+	}
+}
+new effect add_modifier = {
+	args = {
+		modifier = event_modifier
+		years = int
+	}
+	transpile = {
+		`add_country_modifier =` {
+			`name = {args:modifier:id}`
+			`duration = {(args:years*365)}`
+		}
 	}
 }
