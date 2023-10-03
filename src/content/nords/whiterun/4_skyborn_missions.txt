@@ -1,0 +1,21 @@
+mission_trees:whiterun_generic += {
+	silent_moons = {
+		name = "Silent Moons"
+		x = 7
+		y = 0
+	}
+	halted_stream = {
+		name = "Halted Stream"
+		x = 9
+		y = 0
+	}
+	below_skyborn = {
+		name = "Below Skyborn"
+		required = {
+			silent_moons
+			halted_stream
+		}
+		x = 8
+		y = 1
+	}
+}

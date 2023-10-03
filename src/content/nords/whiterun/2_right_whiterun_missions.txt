@@ -1,0 +1,52 @@
+mission_trees:whiterun_generic += {
+	winds_district = {
+		name = "Winds District"
+		required = {
+			ahrolsedovah
+		}
+		x = 8
+		y = 2
+	}
+	gildergreen = {
+		name = "Gildergreen"
+		required = {
+			winds_district
+		}
+		x = 7
+		y = 3
+	}
+	grey_mane = {
+		name = "Grey-Mane"
+		required = {
+			winds_district
+		}
+		x = 8
+		y = 3
+	}
+	the_jorrvaskr = {
+		name = "The Jorrvaskr"
+		required = {
+			winds_district
+		}
+		x = 9
+		y = 3
+	}
+	skyforge = {
+		name = "Skyforge"
+		required = {
+			the_jorrvaskr
+		}
+		x = 9
+		y = 4
+	}
+	center_of_trade = {
+		name = "Center of Trade"
+		required = {
+			gildergreen
+			grey_mane
+			the_jorrvaskr
+		}
+		x = 8
+		y = 4
+	}
+}

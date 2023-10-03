@@ -1,0 +1,41 @@
+mission_trees:whiterun_generic += {
+	riverwood = {
+		name = "Riverwood"
+		x = 3
+		y = 0
+	}
+	embershard = {
+		name = "Embershard"
+		required = {
+			riverwood
+		}
+		x = 2
+		y = 1
+	}
+	guardian_stones = {
+		name = "Guardian Stones"
+		required = {
+			riverwood
+		}
+		x = 3
+		y = 1
+	}
+	bleak_falls_temple = {
+		name = "Bleak Falls Temple"
+		required = {
+			riverwood
+		}
+		x = 4
+		y = 1
+	}
+	river_ember_trade = {
+		name = "River Ember Trade"
+		required = {
+			embershard
+			guardian_stones
+			bleak_falls_temple
+		}
+		x = 3
+		y = 2
+	}
+}

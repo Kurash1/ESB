@@ -1,0 +1,44 @@
+mission_trees:whiterun_generic += {
+	plains_district = {
+		name = "Plains District"
+		required = {
+			ahrolsedovah
+		}
+		x = 4
+		y = 2
+	}
+	battle_born = {
+		name = "Battle-Born"
+		required = {
+			plains_district
+		}
+		x = 3
+		y = 3
+	}
+	western_watchtower = {
+		name = "Western Watchtower"
+		required = {
+			plains_district
+		}
+		x = 4
+		y = 3
+	}
+	honningbrew = {
+		name = "Honningbrew"
+		required = {
+			plains_district
+		}
+		x = 5
+		y = 3
+	}
+	below_the_hill = {
+		name = "Below the Hill"
+		required = {
+			battle_born
+			western_watchtower
+			honningbrew
+		}
+		x = 4
+		y = 4
+	}
+}

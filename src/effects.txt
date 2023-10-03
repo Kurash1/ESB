@@ -18,18 +18,6 @@ new effect add_core = {
 		`add_core = {args}`
 	}
 }
-new trigger ags = {
-	args = int
-	transpile = {
-		`is_year = {(args+2500)}`
-	}
-}
-new trigger tag = {
-	args = country_scope
-	transpile = {
-		`tag = {args}`
-	}
-}
 new modifier land_morale = {
 	args = float
 	transpile = {

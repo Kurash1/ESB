@@ -1,0 +1,39 @@
+mission_trees:whiterun_generic += {
+	ahrolsedovah = {
+		name = "Ahrolsedovah"
+		x = 6
+		y = 1
+	}
+	clouds_district = {
+		name = "Cloud District"
+		required = {
+			ahrolsedovah
+		}
+		x = 6
+		y = 2
+	}
+	dragonsreach = {
+		name = "Dragonsreach"
+		required = {
+			clouds_district
+		}
+		x = 6
+		y = 3
+	}
+	crystalline_throne = {
+		name = "Crystalline Throne"
+		required = dragonsreach
+		x = 6
+		y = 4
+	}
+	imperial_city = {
+		name = "Imperial City of Skyrim"
+		required = {
+			below_the_hill
+			crystalline_throne
+			center_of_trade
+		}
+		x = 6
+		y = 5
+	}
+}

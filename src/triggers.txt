@@ -1,0 +1,36 @@
+new trigger owns = {
+	args = province
+	transpile = {
+		`owns = {args}`
+	}
+}
+new trigger ags = {
+	args = int
+	transpile = {
+		`is_year = {(args+2500)}`
+	}
+}
+new trigger tag = {
+	args = country_scope
+	transpile = {
+		`tag = {args}`
+	}
+}
+new trigger development_in_provinces = {
+	args = {
+		value = int
+		trigger = trigger
+	}
+	transpile = {
+		`development_in_provinces =` {
+			`value = {args:value}`
+			args:trigger
+		}
+	}
+}
+new trigger has_terrain = {
+	args = terrain
+	transpile = {
+		`has_terrain = {args}`
+	}
+}

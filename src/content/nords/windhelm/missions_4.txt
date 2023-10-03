@@ -11,7 +11,7 @@ new mission_series eastmarch_4 = {
 			position = 0
 			icon = mission_unknown_mission
 			trigger = {
-				owns = provinces:windhelm
+				owns = windhelm
 				if [ai = yes]
 				{
 					OR = {

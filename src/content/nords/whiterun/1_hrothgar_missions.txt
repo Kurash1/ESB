@@ -1,0 +1,27 @@
+mission_trees:whiterun_generic += {
+	white_river_watch = {
+		name = "White River Watch"
+		x = 4
+		y = 0
+	}
+	valtheim_tower = {
+		name = "Valtheim Tower"
+		x = 5
+		y = 0
+	}
+	hrothgar_pass = {
+		name = "Hrothgar Pass"
+		x = 6
+		y = 0
+	}
+	lower_hrothgar = {
+		name = "Develop Lower Hrothgar"
+		required = {
+			white_river_watch
+			valtheim_tower
+			hrothgar_pass
+		}
+		x = 5
+		y = 1
+	}
+}
