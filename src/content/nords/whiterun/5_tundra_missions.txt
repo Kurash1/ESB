@@ -13,6 +13,36 @@ new unit whiterun_horsemen = {
 		has_country_flag = unlocks_whiterun_horsemen
 	}
 }
+new event_modifier whiterun_generic_granitehill = {
+	name = "Founding Granitehill"
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+new event_modifier whiterun_generic_rorikstead = {
+	name = "Founding Rorikstead"
+	modifier = {
+		development_cost = -0.1
+	}
+}
+new event_modifier whiterun_generic_greymoor = {
+	name = "Founding Greymoor"
+	modifier = {
+		defensiveness = 0.25
+	}
+}
+new effect add_modifier = {
+	args = {
+		modifier = event_modifier
+		years = int
+	}
+	transpile = {
+		`add_country_modifier =` {
+			`name = {args:modifier:id}`
+			`duration = {(args:years*365)}`
+		}
+	}
+}
 mission_trees:whiterun_generic += {
 	granitehill = {
 		name = "Granitehill"
@@ -27,6 +57,10 @@ mission_trees:whiterun_generic += {
 		effect = {
 			areas:gjukar, areas:sleeping_tree, areas:granitehill = {
 				add_permanent_claim = ROOT
+			}
+			add_modifier = {
+				modifier = whiterun_generic_granitehill
+				years = 50
 			}
 		}
 	}
@@ -44,6 +78,10 @@ mission_trees:whiterun_generic += {
 			areas:rorikstead, areas:swindler, areas:talking_stone = {
 				add_permanent_claim = ROOT
 			}
+			add_modifier = {
+				modifier = whiterun_generic_rorikstead
+				years = 50
+			}
 		}
 	}
 	greymoor = {
@@ -60,6 +98,10 @@ mission_trees:whiterun_generic += {
 			areas:greymoor, areas:bleakwind = {
 				add_permanent_claim = ROOT
 			}
+			add_modifier = {
+				modifier = whiterun_generic_greymoor
+				years = 50
+			}
 		}
 	}
 	tundra_development = {
@@ -72,10 +114,23 @@ mission_trees:whiterun_generic += {
 			greymoor
 		}
 		trigger = {
+			areas:greymoor, areas:granitehill, areas:sleeping_tree, areas:gjukar, areas:swindler, areas:rorikstead, areas:talking_stone = {
+				type = all
+				owned_by = ROOT
+			}
 			development_in_provinces = {
-				value = 150
+				value = 100
 				trigger = {
 					has_terrain = steppe
+					OR = {
+						area = greymoor
+						area = granitehill
+						area = sleeping_tree
+						area = gjukar
+						area = swindler
+						area = rorikstead
+						area = talking_stone
+					}
 				}
 			}
 		}
@@ -93,10 +148,10 @@ mission_trees:whiterun_generic += {
 			tundra_development
 		}
 		trigger = {
-			mil_power = 300
+			mil_power = 150
 		}
 		effect = {
-			add_mil_power = -300
+			add_mil_power = -150
 			defineloc unlocks_whiterun_horsemen = "Unlocks §YWhiterun Horsemen§! Unit"
 			custom_tooltip = unlocks_whiterun_horsemen
 			set_country_flag = unlocks_whiterun_horsemen
