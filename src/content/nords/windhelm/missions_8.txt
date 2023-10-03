@@ -1,5 +1,5 @@
-new mission_series eastmarch_9 = {
-	slot = 9
+new mission_series eastmarch_8 = {
+	slot = 8
 	ai = yes
 	potential = {
 		tag = windhelm
@@ -8,7 +8,7 @@ new mission_series eastmarch_9 = {
 		eastmarch_clan_shatter_shield = {
 			name = "Clan Shatter-Shield"
 			desc = ""
-			position = 2
+			position = 1
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_the_ylgermet eastmarch_windhelm_port
@@ -32,7 +32,7 @@ new mission_series eastmarch_9 = {
 		eastmarch_the_north_wind = {
 			name = "The North Wind"
 			desc = ""
-			position = 3
+			position = 2
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_skjoralmor_deal eastmarch_clan_shatter_shield
@@ -60,7 +60,7 @@ new mission_series eastmarch_9 = {
 		eastmarch_ally_in_solstheim = {
 			name = "Ally in Solstheim"
 			desc = ""
-			position = 5
+			position = 4
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_develop_bleakrock eastmarch_the_north_wind eastmarch_the_winter_war
@@ -78,7 +78,7 @@ new mission_series eastmarch_9 = {
 		eastmarch_himmelhost_ally = {
 			name = "Himmelhost Ally"
 			desc = ""
-			position = 6
+			position = 5
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_ally_in_solstheim
@@ -96,7 +96,7 @@ new mission_series eastmarch_9 = {
 		eastmarch_thane_of_solstheim = {
 			name = "Thane of Solstheim"
 			desc = ""
-			position = 7
+			position = 6
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_bloodskal_ally eastmarch_himmelhost_ally eastmarch_skygge_ally
@@ -114,7 +114,7 @@ new mission_series eastmarch_9 = {
 		eastmarch_fort_frostmoth = {
 			name = "Fort Frostmoth"
 			desc = ""
-			position = 8
+			position = 7
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_thane_of_solstheim

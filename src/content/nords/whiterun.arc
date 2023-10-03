@@ -68,3 +68,275 @@ new idea_group whiterun_ideas = {
 		}
 	}
 }
+new mission_tree whiterun_generic = {
+	ai = yes
+	potential = {
+		primary_culture = cultures:whiterunish
+	}
+	
+	########################################################
+	
+	granitehill = {
+		name = "Granitehill"
+		x = 0
+		y = 0
+	}
+	rorikstead = {
+		name = "Rorikstead"
+		x = 1
+		y = 0
+	}
+	greymoor = {
+		name = "Greymoor"
+		x = 2
+		y = 0
+	}
+	tundra_development = {
+		name = "Tundra Development"
+		x = 1
+		y = 1
+		required = {
+			granitehill
+			rorikstead
+			greymoor
+		}
+	}
+	whiterun_horsemen = {
+		name = "Whiterun Horsemen"
+		x = 1
+		y = 2
+		required = {
+			tundra_development
+		}
+	}
+	
+	########################################################
+	
+	riverwood = {
+		name = "Riverwood"
+		x = 3
+		y = 0
+	}
+	embershard = {
+		name = "Embershard"
+		required = {
+			riverwood
+		}
+		x = 2
+		y = 1
+	}
+	guardian_stones = {
+		name = "Guardian Stones"
+		required = {
+			riverwood
+		}
+		x = 3
+		y = 1
+	}
+	bleak_falls_temple = {
+		name = "Bleak Falls Temple"
+		required = {
+			riverwood
+		}
+		x = 4
+		y = 1
+	}
+	river_ember_trade = {
+		name = "River Ember Trade"
+		required = {
+			embershard
+			guardian_stones
+			bleak_falls_temple
+		}
+		x = 3
+		y = 2
+	}
+	
+	########################################################
+	
+	white_river_watch = {
+		name = "White River Watch"
+		x = 4
+		y = 0
+	}
+	valtheim_tower = {
+		name = "Valtheim Tower"
+		x = 5
+		y = 0
+	}
+	hrothgar_pass = {
+		name = "Hrothgar Pass"
+		x = 6
+		y = 0
+	}
+	lower_hrothgar = {
+		name = "Develop Lower Hrothgar"
+		required = {
+			white_river_watch
+			valtheim_tower
+			hrothgar_pass
+		}
+		x = 5
+		y = 1
+	}
+	
+	########################################################
+	
+	silent_moons = {
+		name = "Silent Moons"
+		x = 7
+		y = 0
+	}
+	halted_stream = {
+		name = "Halted Stream"
+		x = 9
+		y = 0
+	}
+	below_skyborn = {
+		name = "Below Skyborn"
+		required = {
+			silent_moons
+			halted_stream
+		}
+		x = 8
+		y = 1
+	}
+	
+	########################################################
+	
+	ahrolsedovah = {
+		name = "Ahrolsedovah"
+		x = 6
+		y = 1
+	}
+	clouds_district = {
+		name = "Cloud District"
+		required = {
+			ahrolsedovah
+		}
+		x = 6
+		y = 2
+	}
+	dragonsreach = {
+		name = "Dragonsreach"
+		required = {
+			clouds_district
+		}
+		x = 6
+		y = 3
+	}
+	crystalline_throne = {
+		name = "Crystalline Throne"
+		required = dragonsreach
+		x = 6
+		y = 4
+	}
+	imperial_city = {
+		name = "Imperial City of Skyrim"
+		required = {
+			below_the_hill
+			crystalline_throne
+			center_of_trade
+		}
+		x = 6
+		y = 5
+	}
+	
+	########################################################
+	
+	plains_district = {
+		name = "Plains District"
+		required = {
+			ahrolsedovah
+		}
+		x = 4
+		y = 2
+	}
+	battle_born = {
+		name = "Battle-Born"
+		required = {
+			plains_district
+		}
+		x = 3
+		y = 3
+	}
+	western_watchtower = {
+		name = "Western Watchtower"
+		required = {
+			plains_district
+		}
+		x = 4
+		y = 3
+	}
+	honningbrew = {
+		name = "Honningbrew"
+		required = {
+			plains_district
+		}
+		x = 5
+		y = 3
+	}
+	below_the_hill = {
+		name = "Below the Hill"
+		required = {
+			battle_born
+			western_watchtower
+			honningbrew
+		}
+		x = 4
+		y = 4
+	}
+	
+	########################################################
+	
+	winds_district = {
+		name = "Winds District"
+		required = {
+			ahrolsedovah
+		}
+		x = 8
+		y = 2
+	}
+	gildergreen = {
+		name = "Gildergreen"
+		required = {
+			winds_district
+		}
+		x = 7
+		y = 3
+	}
+	grey_mane = {
+		name = "Grey-Mane"
+		required = {
+			winds_district
+		}
+		x = 8
+		y = 3
+	}
+	the_jorrvaskr = {
+		name = "The Jorrvaskr"
+		required = {
+			winds_district
+		}
+		x = 9
+		y = 3
+	}
+	skyforge = {
+		name = "Skyforge"
+		required = {
+			the_jorrvaskr
+		}
+		x = 9
+		y = 4
+	}
+	center_of_trade = {
+		name = "Center of Trade"
+		required = {
+			gildergreen
+			grey_mane
+			the_jorrvaskr
+		}
+		x = 8
+		y = 4
+	}
+}

@@ -1,5 +1,5 @@
-new mission_series eastmarch_4 = {
-	slot = 4
+new mission_series eastmarch_3 = {
+	slot = 3
 	ai = yes
 	potential = {
 		tag = windhelm
@@ -8,7 +8,7 @@ new mission_series eastmarch_4 = {
 		eastmarch_fortify_west = {
 			name = "Fortify the West"
 			desc = ""
-			position = 3
+			position = 2
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_high_king eastmarch_morvunskar
@@ -33,7 +33,7 @@ new mission_series eastmarch_4 = {
 		eastmarch_angas_mill = {
 			name = "Anga's Mill Development"
 			desc = ""
-			position = 4
+			position = 3
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_fortify_west
@@ -56,7 +56,7 @@ new mission_series eastmarch_4 = {
 		eastmarch_yorgrim_trade = {
 			name = "Yorgrim Trade"
 			desc = ""
-			position = 5
+			position = 4
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_angas_mill
@@ -86,7 +86,7 @@ new mission_series eastmarch_4 = {
 		eastmarch_darkwater = {
 			name = "Darkwater Annexation"
 			desc = ""
-			position = 6
+			position = 5
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_amol
@@ -105,7 +105,7 @@ new mission_series eastmarch_4 = {
 		eastmarch_eldergleam = {
 			name = "Eldergleam Expedition"
 			desc = ""
-			position = 7
+			position = 6
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_darkwater
