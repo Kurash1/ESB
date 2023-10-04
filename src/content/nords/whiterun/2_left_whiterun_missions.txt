@@ -6,6 +6,11 @@ mission_trees:whiterun_generic += {
 		}
 		x = 4
 		y = 2
+		trigger = {
+			provinces:whiterun = {
+				base_production = 10
+			}
+		}
 	}
 	battle_born = {
 		name = "Battle-Born"

@@ -3,6 +3,17 @@ mission_trees:whiterun_generic += {
 		name = "Ahrolsedovah"
 		x = 6
 		y = 1
+		trigger = {
+			owns = whiterun
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "Hill of the Dragon"
+				modifier = {
+					prestige = 1
+				}
+			}
+		}
 	}
 	clouds_district = {
 		name = "Cloud District"
@@ -11,6 +22,33 @@ mission_trees:whiterun_generic += {
 		}
 		x = 6
 		y = 2
+		trigger = {
+			provinces:whiterun = {
+				base_manpower = 10
+			}
+		}
+		effect = {
+			provinces:whiterun = {
+				quick_province_modifier = {
+					name = "Cloud District"
+					modifier = {
+						local_defensiveness = 0.5
+						fort_level = 1
+						local_manpower_modifier = 0.5
+					}
+				}
+			}
+			if [has_dlc = "Leviathan"]
+			{
+				provinces:black_mountain = {
+					move_great_project = {
+						type = dragonsreach
+						province = provinces:whiterun
+						instant = yes
+					}
+				}
+			}
+		}
 	}
 	dragonsreach = {
 		name = "Dragonsreach"
@@ -19,12 +57,45 @@ mission_trees:whiterun_generic += {
 		}
 		x = 6
 		y = 3
+		trigger = {
+			if [has_dlc = "Leviathan"]
+			{
+				provinces:whiterun = {
+					has_great_project = {
+						type = dragonsreach
+						tier = 1
+					}
+				}
+			}
+			else
+			{
+				provinces:whiterun = {
+					development = 35
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
+		}
 	}
 	crystalline_throne = {
 		name = "Crystalline Throne"
 		required = dragonsreach
+		icon = crystalline_throne_mission
 		x = 6
 		y = 4
+		trigger = {
+			prestige = 80
+		}
+		effect = {
+			defineloc whiterun_generic_crystalline_throne = "Crystalline Throne"
+			add_permanent_power_projection = {
+				type = whiterun_generic_crystalline_throne
+				amount = 25
+			}
+		}
 	}
 	imperial_city = {
 		name = "Imperial City of Skyrim"
@@ -35,5 +106,24 @@ mission_trees:whiterun_generic += {
 		}
 		x = 6
 		y = 5
+		trigger = {
+			provinces:whiterun = {
+				development = 45
+			}
+		}
+		effect = {
+			provinces:whiterun = {
+				quick_province_modifier = {
+					name = "Imperial City of Skyrim"
+					permanent = no
+					modifier = {
+						local_development_cost_modifier = -0.25
+						
+						reasons_to_elect = 25
+						imperial_authority = 0.1
+					}
+				}
+			}
+		}
 	}
 }

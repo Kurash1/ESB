@@ -6,6 +6,11 @@ mission_trees:whiterun_generic += {
 		}
 		x = 8
 		y = 2
+		trigger = {
+			provinces:whiterun = {
+				base_tax = 10
+			}
+		}
 	}
 	gildergreen = {
 		name = "Gildergreen"
