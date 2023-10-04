@@ -3,16 +3,68 @@ mission_trees:whiterun_generic += {
 		name = "White River Watch"
 		x = 4
 		y = 0
+		trigger = {
+			owns = white_river_watch
+			provinces:white_river_watch = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:valtheim = {
+				quick_province_modifier = {
+					name = "White River Mine"
+					permanent = no
+					modifier = {
+						trade_goods_size = 1.0
+					}
+				}
+			}
+		}
 	}
 	valtheim_tower = {
 		name = "Valtheim Tower"
 		x = 5
 		y = 0
+		trigger = {
+			owns = valtheim
+			provinces:valtheim = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:valtheim = {
+				quick_province_modifier = {
+					name = "Valtheim Tower"
+					permanent = no
+					modifier = {
+						fort_level = 1
+						trade_value_modifier = 0.5
+					}
+				}
+			}
+		}
 	}
 	hrothgar_pass = {
 		name = "Hrothgar Pass"
 		x = 6
 		y = 0
+		trigger = {
+			owns = west_hrothgar_pass
+			provinces:west_hrothgar_pass = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:west_hrothgar_pass = {
+				quick_province_modifier = {
+					name = "Hrothgar Pass"
+					permanent = no
+					modifier = {
+						fort_level = 2
+					}
+				}
+			}
+		}
 	}
 	lower_hrothgar = {
 		name = "Develop Lower Hrothgar"
@@ -23,5 +75,28 @@ mission_trees:whiterun_generic += {
 		}
 		x = 5
 		y = 1
+		trigger = {
+			development_in_provinces = {
+				value = 75
+				trigger = {
+					OR = {
+						area = white_river_watch
+						area = valtheim
+					}
+				}
+			}
+		}
+		effect = {
+			areas:white_river_watch, areas:valtheim = {
+				quick_province_modifier = {
+					name = "Developing Hrothgar"
+					permanent = no
+					modifier = {
+						local_manpower_modifier = 0.25
+						local_development_cost = -0.1
+					}
+				}
+			}
+		}
 	}
 }

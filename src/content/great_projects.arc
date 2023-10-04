@@ -43,6 +43,10 @@ new great_project lunar_forge = {
 		country_modifier = {
 			shock_damage = 5%
 		}
+		on_upgraded = {
+			defineloc lunar_forge_reform = "Unlocks §YLunar Smithing§! Government Reform"
+			custom_tooltip = lunar_forge_reform
+		}
 	}
 	tier_2 = {
 		province_modifier = {
@@ -60,10 +64,6 @@ new great_project lunar_forge = {
 		}
 		country_modifier = {
 			shock_damage = 10%
-		}
-		on_upgraded = {
-			defineloc lunar_forge_reform = "Unlocks §YLunar Smithing§! Government Reform"
-			custom_tooltip = lunar_forge_reform
 		}
 	}
 }

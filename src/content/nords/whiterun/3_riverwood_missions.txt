@@ -16,6 +16,109 @@ new event_modifier whiterun_generic_embershard = {
 		trade_goods_size = 1.0
 	}
 }
+new country_event whiterun_generic.1 = {
+	title = "Deal for Skjoralmor"
+	desc = "[deal_maker.GetName] has proposed a deal for us, the basics of the deal go as such.
+	
+	[deal_maker.GetName] will support us in the conquest of the kreath, and in exchange in 20 years time we shall give up all our territories in whiterun to them."
+	picture = TOMB_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		NOT = { 
+			has_global_flag = skjoralmor_deal 
+		}
+	}
+	options = {
+		{
+			name = "We shall accept this Deal"
+			effect = {
+				event_target:deal_maker = {
+					add_treasury = -250
+					add_manpower = -15	
+				}
+				
+				add_treasury = 250
+				add_manpower = 15
+				regions:kreath = {
+					add_permanent_claim = skjoralmor
+				}
+				
+				country_event = {
+					id = whiterun_generic.2
+					days = 30
+				}
+				
+				set_global_flag = skjoralmor_deal
+			}
+		}
+		{
+			name = "This deal is not for us"
+			effect = {
+				every_owned_province = {
+					add_permanent_claim = event_target:deal_maker
+				}
+			}
+		}
+	}
+}
+new country_event whiterun_generic.2 = {
+	title = "Deal with [deal_maker.GetName]"
+	desc = ""
+	picture = TOMB_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "We shall give up the lands"
+			effect = {
+				every_owned_province [region = whiterun_region] {
+					while [base_tax = 2] {
+						add_base_tax = -1
+						PREV = {
+							random_owned_province [
+								NOT = { 
+									base_tax = 5
+									region = whiterun_region 
+								}
+							] {
+								add_base_tax = 1
+							}
+						}
+					}
+					while [base_production = 2] {
+						add_base_production = -1
+						PREV = {
+							random_owned_province [
+								NOT = { 
+									base_production = 5
+									region = whiterun_region 
+								}
+							] {
+								add_base_production = 1
+							}
+						}
+					}
+					while [base_manpower = 2] {
+						add_base_manpower = -1
+						PREV = {
+							random_owned_province [
+								NOT = { 
+									base_manpower = 5
+									region = whiterun_region 
+								}
+							] {
+								add_base_manpower = 1
+							}
+						}
+					}
+					change_culture = whiterunish
+				
+					cede_province = event_target:deal_maker
+					remove_core = ROOT
+				}
+			}
+		}
+	}
+}
 mission_trees:whiterun_generic += {
 	skjoralmor_deal = {
 		name = "Skjoralmor Deal"
@@ -32,34 +135,31 @@ mission_trees:whiterun_generic += {
 		}
 		effect = {
 			if [NOT = { has_global_flag = skjoralmor_deal }] {
-				add_treasury = -250
-				add_manpower = -15
+				save_event_target_as = deal_maker
 				countries:skjoralmor = {
-					add_treasury = 250
-					add_manpower = 15
-					regions:kreath = {
-						add_permanent_claim = skjoralmor
+					country_event = {
+						id = whiterun_generic.1
+						days = 0
 					}
 				}
-				set_global_flag = skjoralmor_deal
 			}
 		}
 	}
-	brittleshin_expedition = {
-		name = "Brittleshin Expedition"
-		required = skjoralmor_deal
-		x = 2
-		y = 1
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = future_update
-				always = no
-			}
-		}
-		effect = {
-			custom_tooltip = future_update
-		}
-	}
+	#brittleshin_expedition = {
+	#	name = "Brittleshin Expedition"
+	#	required = skjoralmor_deal
+	#	x = 2
+	#	y = 1
+	#	trigger = {
+	#		custom_trigger_tooltip = {
+	#			tooltip = future_update
+	#			always = no
+	#		}
+	#	}
+	#	effect = {
+	#		custom_tooltip = future_update
+	#	}
+	#}
 	bleak_falls_temple = {
 		name = "Bleak Falls Temple"
 		required = skjoralmor_deal
