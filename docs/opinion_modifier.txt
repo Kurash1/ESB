@@ -1,0 +1,11 @@
+new opinion_modifier <key> = {
+	name = <string>
+	opinion = <int>                 # Opinion change. Can be negative. Do not make 0: the game won't apply it.
+	min = <int>                     # Optional. The maximum negative change this modifier can apply. 
+	max = <int>                     # Optional. The maximum positive change this modifier can apply. 
+	max_vassal = <int>              # Optional. The maximum positive change this modifier can apply to the receving vassal.
+	max_in_other_direction = <int>  # Optional. The maximum positive change this modifier can apply to the sending country.
+	
+	yearly_decay = <int>            # Optional. The rate at which the opinion change is lost per year. Can be negative.
+	months = <int>                  # Optional. The number of months until this modifier automatically expires.
+}
