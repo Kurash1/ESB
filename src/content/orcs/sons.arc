@@ -6,7 +6,7 @@ new estate sons = {
 		0 153 0
 	}
 	trigger = {
-		culture_group = culture_groups:orc
+		culture_group = orc
 	}
 	country_modifier_happy = {
 		global_unrest = -1

@@ -36,3 +36,21 @@ new modifier land_morale = {
 		`land_morale = {args}`
 	}
 }
+new trigger culture_group = {
+	args = culture_group
+	transpile = {
+		`culture_group = {args}`
+	}
+}
+new trigger culture_group = {
+	args = base_scope
+	transpile = {
+		`culture_group = {args}`
+	}
+}
+new trigger region = {
+	args = region
+	transpile = {
+		`region = {args}`
+	}
+}

@@ -6,7 +6,7 @@ new estate warriors = {
 		255 0 0
 	}
 	trigger = {
-		culture_group = culture_groups:nord
+		culture_group = nord
 	}
 	country_modifier_happy = {
 		manpower_recovery_speed = 0.5

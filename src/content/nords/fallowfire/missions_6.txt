@@ -1,0 +1,47 @@
+new mission_series fallowfire_7 = {
+	slot = 7
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_better_tax_collection = {
+			name = "Better tax collection"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			trigger = {
+			
+			}
+			effect = {
+			
+			}
+		}
+	}
+}
+new mission_series fallowfire_7_feast_dragon = {
+	slot = 7
+	ai = yes
+	potential = {
+		tag = fallowfire
+		has_country_flag = silence_1
+	}
+	missions = {
+		fallowfire_feast_for_the_dragon_cult_demise = {
+			name = "Feast for the dragon cult demise"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_better_tax_collection
+			}
+			trigger = {
+				
+			}
+			effect = {
+			
+			}
+		}
+	}
+}
+	

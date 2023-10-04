@@ -22,11 +22,152 @@ new mission_series fallowfire_3 = {
 		}
 	}
 }
+new mission_series fallowfire_3_forelhost = {
+	slot = 3
+	ai = yes 
+	potential = {
+		tag = fallowfire
+		has_country_flag = forelhost
+	}
+	missions = {
+		fallowfire_deal_with_a_new_old_threat = {
+			name = "Deal with a new old threat"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_looking_south
+			}
+			trigger = {
+				areas:forelhost, areas:rift_pass, areas:fallowstone, areas:riften = {
+						type = all
+						owned_by = ROOT
+				}
+			}
+			effect = {
+				add_country_modifier = {
+					name = converting_drive
+					duration = (20*365)
+				}
+			}
+		}
+		fallowfire_convert_the_misguided = {
+			name = "Convert the misguided"
+			desc = ""
+			position = 2
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_deal_with_a_new_old_threat
+			}
+			trigger = {
+				religious_unity = 1
+			}
+			effect = {
+				add_country_modifier = {
+					name = dragon_cult_defeated
+					duration = (30*365)
+				}
+				set_country_flag = silence_1
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}
+new mission_series fallowfire_3_silence = {
+	slot = 3
+	ai = yes
+	potential = {
+		tag = fallowfire
+		has_country_flag = silence_1
+		has_country_flag = silence_2
+	}
+	missions = {
+		fallowfire_silence_a_promise_fulfilled = {
+			name = "Silence, A promise fulfilled"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_convert_the_misguided
+				fallowfire_asserting_dominance
+				fallowfire_push_on_to_the_tasks_end
+			}
+			trigger = {
+				rift_region = {
+				type = all
+					owned_by = ROOT
+				}
+			}
+			effect = {
+				add_prestige = 10
+				country_event = { 
+					id = fallowfire.3
+					days = 0
+				}				
+			}
+		}
+	}
+}	
 new event_modifier inspired_men = {
 	name = "Inspired Men"
 	modifier = {
 		land_morale = 0.10
 	}
 }
-
-
+new event_modifier dragon_cult_defeated = {
+	name = "The cult has been defeated"
+	modifier = {
+		tolerance_own = 2
+		stability_cost_modifier = -0.15
+	}
+}
+new event_modifier converting_drive = {
+	name = "Converting Drive"
+	modifier = {
+		missionaries = 1
+		global_missionary_strength = 0.01
+	}
+}
+new country_event fallowfire.2 = {
+	title = "Discovering other humans"
+	desc = ""
+	is_triggered_only = yes
+	picture = forelhost_eventPicture
+	options = {
+		{
+			name = "Deal with the problem immediately"
+			effect = {
+				areas:forelhost, areas:rift_pass, areas:fallowstone, areas:riften = {
+					add_permanent_claim = ROOT
+				}
+				hidden_effect = {
+					set_country_flag = forelhost
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}
+new country_event fallowfire.3 = {
+	title = "Wondering about the future"
+	desc = ""
+	picture = forelhost_eventPicture
+	options = {
+		{
+			name = "Perhaps we should really settle down"
+			effect = {
+				change_tag = RIF
+				swap_free_idea_group = yes
+			}
+		}
+		{
+			name = "No! We won't stop until every single elf is dead"
+			effect = {
+				defineloc staying_fallow = "Remain Fallowfire, §Rno new content§,unrecommended"
+				custom_tooltip = staying_fallow
+			}
+		}
+	}
+}

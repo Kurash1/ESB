@@ -1,7 +1,7 @@
 new idea_group orc_ideas = {
 	name = "Orcish"
 	trigger = {
-		culture_group = culture_groups:orc
+		culture_group = orc
 	}
 	category = national
 	start = {

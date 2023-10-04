@@ -7,17 +7,79 @@ new mission_series fallowfire_4 = {
 	}
 	missions = {
 		fallowfire_looking_south = {
-			name = "Assemble our men"
+			name = "Looking south"
 			desc = ""
-			position = 0
+			position = 1
 			icon = mission_unknown_mission
+			effect = {
+				defineloc claim_elves_honrich = "§YFallowfire§ § gains permanent § §Yclaims§ §on§ §Ylake Honrich§§'s elves§"
+				custom_tooltip = claim_elves_honrich
+				hidden_effect = {
+					areas:merryfair, areas:riften, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch, provinces:vigil, provinces:sarethi [culture_group = snow_elven] {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+		fallowfire_day_of_reckoning = {
+			name = "Day of Reckoning"
+			desc = ""
+			position = 2
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_looking_south
+			}
 			trigger = {
-				army_size_percentage = 1.0
+					all_owned_province = {
+						culture_group = nord
+					}
+					areas:merryfair, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch = {
+							type = all
+							owned_by = ROOT
+					}
+					areas:riften = {
+						owned_by = ROOT
+					}
+					provinces:vigil, provinces:sarethi = {
+						owned_by = ROOT
+					}
 			}
 			effect = {
+				defineloc claim_elves_all = "§YFallowfire§ §gains permanent§ §Yclaims§ §on§ §Yall§ §snow elves' land§"
+				custom_tooltip = claim_elves_all
+				hidden_effect = {
+					areas:ivarstead, areas:honeystrand, areas:trevas_mouth, areas:sarethi, areas:nilheim, areas:geirmund, areas:autumnwatch, areas:arcwind, areas:east_haemar [ culture_group = snow_elven ] {
+						add_permanent_claim = ROOT
+					}
+					country_event = { 
+						id = fallowfire.2
+						days = 30
+					}
+				}
+			}
+		}
+		fallowfire_push_on_to_the_tasks_end = {
+			name = "Push on to the tasks' end"
+			desc = ""
+			position = 3
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_day_of_reckoning
+			}
+			trigger = {
+				rift_region = {
+					type = all
+					culture_group = ROOT
+				}
+			}
+			effect = {
+				set_country_flag = silence_2
 				add_country_modifier = {
-					name = inspired_men
-					duration = (365*10)
+					name = a_land_for_nords_only
+					duration = (50*365)
+				}
+				hidden_effect = {
+					swap_non_generic_missions = yes
 				}
 			}
 		}
@@ -40,4 +102,15 @@ new country_event fallowfire.1 = {
 		}
 	}
 }
+new event_modifier a_land_for_nords_only = {
+	name = "A land for nords only"
+	modifier = {
+		land_morale = 0.05
+		development_cost = -0.15
+		build_cost = -0.10
+	}
+}
+		
+
+	
 	

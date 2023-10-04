@@ -10,12 +10,12 @@ new mission_series fallowfire_2 = {
 			desc = ""
 			position = 0
 			icon = mission_unknown_mission
-			trigger = {
-				stability = 1
-				has_estate_privilege = estates:clans:privileges:clan_land_rights
-				has_estate_privilege = estates:clans:privileges:hire_clan_advisors
-				has_estate_privilege = estates:warriors:privileges:warrior_land_rights
-			}
+			#trigger = {
+			#	stability = 1
+			#	has_estate_privilege = estates:clans:privileges:clan_land_rights
+			#	has_estate_privilege = estates:clans:privileges:hire_clan_advisors
+			#	has_estate_privilege = estates:warriors:privileges:warrior_land_rights
+			# }
 			effect = {
 				areas:clearspring, areas:snapleg = {
 					add_claim = ROOT
@@ -89,3 +89,4 @@ new event_modifier asserted_our_dominance = {
 		governing_capacity_modifier = 0.1
 	}
 }
+

@@ -1,0 +1,37 @@
+new mission_series fallowfire_6 = {
+	slot = 6
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_improve_ebony_production_techniques = {
+			name = "Improve ebony production techniques"
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			trigger = {
+			
+			}
+			effect = {
+			
+			}
+		}
+		fallowfire_build_new_hall_defenses = {
+			name = "Build new hall defenses"			
+			desc = ""
+			position = 1
+			icon = mission_unknown_mission
+			required = {
+				fallowfire_expand_our_citys_market
+				fallowfire_improve_ebony_production_techniques
+				fallowfire_better_tax_collection
+			}
+			trigger = {
+			
+			}
+			effect = {
+			
+			}
+	}
+	

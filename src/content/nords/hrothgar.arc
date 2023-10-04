@@ -143,10 +143,10 @@ new country_event incidents.2 = {
 			effect = {
 				HRO = {
 					every_owned_province = {
-						if [region = whiterun_region] {
+						if [region = whiterun] {
 							cede_province = event_target:whiterun_owner
 						}
-						else_if [region = eastmarch_region] {
+						else_if [region = eastmarch] {
 							cede_province = event_target:amol_owner
 						}
 						else {
