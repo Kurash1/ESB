@@ -179,9 +179,7 @@ new country_event fallowfire.4 = {
 	is_triggered_only = yes
 	trigger = {
 		tag = fallowfire
-		provinces:forelhost = {
-			controller = ROOT
-		}
+		controls = forelhost
 	}
 	options = {
 		{	

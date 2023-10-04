@@ -1,14 +1,1 @@
-on_province_religion_converted = {
-	owner = {
-		if = {
-			limit = {
-				has_government_mechanic = fanaticism_mechanic
-			}
-			add_government_power = {
-				mechanic_type = fanaticism_mechanic
-				power_type = fanaticism_power
-				value = 5
-			}
-		}
-	}
-}
+on_province_religion_converted = { owner = { if = { limit = { has_government_mechanic = fanaticism_mechanic } add_government_power = { mechanic_type = fanaticism_mechanic power_type = fanaticism_power value = 5 } } }} 
