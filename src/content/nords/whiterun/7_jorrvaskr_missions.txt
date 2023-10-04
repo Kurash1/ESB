@@ -1,0 +1,65 @@
+new mission_tree jorrvaskr = {
+	ai = yes
+	potential = {
+		tag = jorrvaskr
+	}
+	remembrance = {
+		name = "Remembrance"
+		desc = "Frostfall 13th is the day the Night of Tears happened, and for that we hold a Remembrance in Frostfall"
+		x = 1
+		y = 3
+		trigger = {
+			defineloc is_frostfall = "It is §OFrostfall§!"
+			custom_trigger_tooltip = {
+				tooltip = is_frostfall
+				is_month = 9
+				NOT = { is_month = 10 }
+			}
+		}
+	}
+	warrior_rights = {
+		name = "Warrior Rights"
+		required = remembrance
+		x = 0
+		y = 4
+	}
+	a_new_age = {
+		name = "A New Age"
+		required = remembrance
+		x = 1
+		y = 4
+	}
+	mead_hall = {
+		name = "Mead Hall"
+		required = remembrance
+		x = 2
+		y = 4
+	}
+	formal_army = {
+		name = "Formal Army"
+		required = {
+			warrior_rights
+			a_new_age
+		}
+		x = 0
+		y = 5
+	}
+	new_governance = {
+		name = "New Governance"
+		required = {
+			a_new_age
+			mead_hall
+		}
+		x = 2
+		y = 5
+	}
+	a_jarl_elected = {
+		name = "A Jarl Elected"
+		required = {
+			formal_army
+			new_governance
+		}
+		x = 1
+		y = 6
+	}
+}
