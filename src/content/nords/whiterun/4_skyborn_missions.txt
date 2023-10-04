@@ -1,0 +1,87 @@
+mission_trees:whiterun_generic += {
+	silent_moons = {
+		name = "Silent Moons"
+		x = 7
+		y = 0
+		icon = silent_moons_mission
+		trigger = {
+			owns = silent_moons
+			provinces:silent_moons = {
+				development = 15
+			}
+		}
+		effect = {
+			if [has_dlc = "Leviathan"]
+			{
+				provinces:silent_moons = {
+					add_great_project_tier = {
+						type = lunar_forge
+						tier = 1
+					}
+				}
+			}
+			else
+			{
+				provinces:silent_moons = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+		}
+	}
+	halted_stream = {
+		name = "Halted Stream"
+		x = 9
+		y = 0
+		icon = halted_stream_mission
+		trigger = {
+			owns = halted_stream
+			provinces:halted_stream = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:halted_stream = {
+				quick_province_modifier = {
+					name = "Halted Stream Mine"
+					permanent = no
+					modifier = {
+						trade_goods_size = 1.0
+					}
+				}
+			}
+		}
+	}
+	below_skyborn = {
+		name = "Below Skyborn"
+		required = {
+			silent_moons
+			halted_stream
+		}
+		x = 8
+		y = 1
+		icon = below_skyborn_mission
+		trigger = {
+			areas:hamvirs_rest, areas:silent_moons, areas:halted_stream = {
+				type = all
+				owned_by = ROOT
+			}
+			areas:hamvirs_rest, areas:silent_moons, areas:halted_stream = {
+				fort_level = 1
+			}
+		}
+		effect = {
+			areas:hamvirs_rest, areas:silent_moons, areas:halted_stream = {
+				quick_province_modifier = {
+					name = "Skyborn Defenses"
+					permanent = no
+					modifier = {
+						local_defensiveness = 0.25
+						local_defender_dice_roll_bonus = 1
+					}
+				}
+			}
+		}
+	}
+}

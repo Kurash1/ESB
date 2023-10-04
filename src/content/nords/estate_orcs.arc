@@ -85,9 +85,9 @@ new estate orcs = {
 			max_absolutism = -10
 			loyalty = 0.1
 			can_select = {
-				has_estate_privilege = estates:orcs:privileges:trade_with_strongholds
-				has_estate_privilege = estates:orcs:privileges:hire_orc_warriors
-				has_estate_privilege = estates:orcs:privileges:stronghold_rights
+				has_estate_privilege = orcs:trade_with_strongholds
+				has_estate_privilege = orcs:hire_orc_warriors
+				has_estate_privilege = orcs:stronghold_rights
 			}
 			on_granted = {
 				defineloc redeemed_mauloch = "Adds Mauloch to the Deity Choices if you are of §YNordic Pantheon§! or §YOld Ways§! religion"
@@ -110,6 +110,6 @@ new personal_deity mauloch = {
 			religion = nordic_pantheon
 			religion = the_old_ways
 		}
-		has_estate_privilege = estates:orcs:privileges:redeem_mauloch
+		has_estate_privilege = orcs:redeem_mauloch
 	}
 }

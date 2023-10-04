@@ -29,7 +29,7 @@ new estate tribesmen = {
 			loyalty = -0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:tribesmen:privileges:favor_the_tribesmen_influence
+					has_estate_privilege = tribesmen:favor_the_tribesmen_influence
 				}
 			}
 		}
@@ -41,7 +41,7 @@ new estate tribesmen = {
 			loyalty = 0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:tribesmen:privileges:curtail_the_tribesmen_influence 
+					has_estate_privilege = tribesmen:curtail_the_tribesmen_influence 
 				}
 			}
 		}	

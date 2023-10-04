@@ -1,5 +1,5 @@
-new mission_series eastmarch_8 = {
-	slot = 8
+new mission_series eastmarch_7 = {
+	slot = 7
 	ai = yes
 	potential = {
 		tag = windhelm
@@ -8,7 +8,7 @@ new mission_series eastmarch_8 = {
 		eastmarch_the_ylgermet = {
 			name = "Honor The Ylgermet"
 			desc = ""
-			position = 1
+			position = 0
 			icon = mission_unknown_mission
 			trigger = {
 				advisor = naval_reformer
@@ -37,7 +37,7 @@ new mission_series eastmarch_8 = {
 		eastmarch_skjoralmor_deal = {
 			name = "Skjoralmor Deal"
 			desc = ""
-			position = 2
+			position = 1
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_the_ylgermet
@@ -78,7 +78,7 @@ new mission_series eastmarch_8 = {
 		eastmarch_fortify_east = {
 			name = "Fortify East"
 			desc = ""
-			position = 3
+			position = 2
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_high_king
@@ -109,7 +109,7 @@ new mission_series eastmarch_8 = {
 		eastmarch_develop_bleakrock = {
 			name = "Develop Bleakrock"
 			desc = ""
-			position = 4
+			position = 3
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_fortify_east
@@ -131,7 +131,7 @@ new mission_series eastmarch_8 = {
 		eastmarch_bloodskal_ally = {
 			name = "Bloodskal Ally"
 			desc = ""
-			position = 6
+			position = 5
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_ally_in_solstheim
@@ -149,7 +149,7 @@ new mission_series eastmarch_8 = {
 		eastmarch_raven_rock_mine = {
 			name = "Raven Rock Mine"
 			desc = ""
-			position = 8
+			position = 7
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_thane_of_solstheim

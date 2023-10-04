@@ -31,7 +31,7 @@ new estate priests = {
 			loyalty = -0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:priests:privileges:favor_the_priests_influence 
+					has_estate_privilege = priests:favor_the_priests_influence 
 				}
 			}
 		}
@@ -43,7 +43,7 @@ new estate priests = {
 			loyalty = 0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:priests:privileges:curtail_the_priests_influence 
+					has_estate_privilege = priests:curtail_the_priests_influence 
 				}
 			}
 		}

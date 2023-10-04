@@ -56,6 +56,22 @@ new unit nord_infantry = {
 	offensive_shock = 3
 	defensive_shock = 2
 }
+new unit nord_cavalry = {
+	name = "Scouts"
+	desc = ""
+	type = cavalry
+	trigger = {
+		primary_culture = whiterunish
+	}
+	unit_type = nord_tg
+	maneuver = 2
+	offensive_morale = 0
+	defensive_morale = 0
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 2
+	defensive_shock = 0
+}
 new unit nord_artillery = {
 	name = "Nordic Onager"
 	desc = ""

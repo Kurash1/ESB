@@ -1,5 +1,5 @@
-new mission_series eastmarch_5 = {
-	slot = 5
+new mission_series eastmarch_4 = {
+	slot = 4
 	ai = yes
 	potential = {
 		tag = windhelm
@@ -8,10 +8,10 @@ new mission_series eastmarch_5 = {
 		eastmarch_palace_of_the_kings = {
 			name = "Palace of the Kings"
 			desc = ""
-			position = 1
+			position = 0
 			icon = mission_unknown_mission
 			trigger = {
-				owns = provinces:windhelm
+				owns = windhelm
 				if [ai = yes]
 				{
 					OR = {
@@ -63,7 +63,7 @@ new mission_series eastmarch_5 = {
 		eastmarch_high_king = {
 			name = "High King"
 			desc = ""
-			position = 2
+			position = 1
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_the_ylgermet eastmarch_palace_of_the_kings eastmarch_the_second_companions
@@ -90,7 +90,7 @@ new mission_series eastmarch_5 = {
 		eastmarch_deal_with_giants = {
 			name = "Deal With Giants"
 			desc = ""
-			position = 3
+			position = 2
 			icon = mission_unknown_mission
 			trigger = {
 				provinces:cradlecrush = {
@@ -108,7 +108,7 @@ new mission_series eastmarch_5 = {
 		eastmarch_cradlecrush_giants = {
 			name = "Cradlecrush Giants"
 			desc = ""
-			position = 4
+			position = 3
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_deal_with_giants eastmarch_fortify_west
@@ -127,7 +127,7 @@ new mission_series eastmarch_5 = {
 		eastmarch_cragwallow = {
 			name = "Cragwallow Annexation"
 			desc = ""
-			position = 5
+			position = 4
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_kynesgrove
@@ -150,7 +150,7 @@ new mission_series eastmarch_5 = {
 		eastmarch_road_mistwatch = {
 			name = "Road Mistwatch"
 			desc = ""
-			position = 7
+			position = 6
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_cragwallow eastmarch_darkwater
@@ -168,7 +168,7 @@ new mission_series eastmarch_5 = {
 		eastmarch_abandon_atmoran_holdings = {
 			name = "Abandon Old Holdings"
 			desc = ""
-			position = 8
+			position = 7
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_eldergleam eastmarch_road_mistwatch eastmarch_northwind_mine
@@ -187,7 +187,7 @@ new mission_series eastmarch_5 = {
 		eastmarch_form_eastmarch = {
 			name = "Form Eastmarch"
 			desc = ""
-			position = 9
+			position = 8
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_abandon_atmoran_holdings

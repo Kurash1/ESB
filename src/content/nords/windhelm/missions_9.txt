@@ -1,5 +1,5 @@
-new mission_series eastmarch_10 = {
-	slot = 10
+new mission_series eastmarch_9 = {
+	slot = 9
 	ai = yes
 	potential = {
 		tag = windhelm
@@ -8,7 +8,7 @@ new mission_series eastmarch_10 = {
 		eastmarch_windhelm_port = {
 			name = "Windhelm Port"
 			desc = ""
-			position = 1
+			position = 0
 			icon = mission_unknown_mission
 			trigger = {
 				provinces:windhelm = {
@@ -28,7 +28,7 @@ new mission_series eastmarch_10 = {
 		eastmarch_blue_axe_sea_thane = {
 			name = "Blue-Axe Sea-Thane"
 			desc = ""
-			position = 3
+			position = 2
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_clan_shatter_shield
@@ -55,7 +55,7 @@ new mission_series eastmarch_10 = {
 		eastmarch_the_winter_war = {
 			name = "The Winter War"
 			desc = ""
-			position = 4
+			position = 3
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_blue_axe_sea_thane eastmarch_the_north_wind
@@ -86,7 +86,7 @@ new mission_series eastmarch_10 = {
 		eastmarch_skygge_ally = {
 			name = "Skygge Ally"
 			desc = ""
-			position = 6
+			position = 5
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_ally_in_solstheim
@@ -104,7 +104,7 @@ new mission_series eastmarch_10 = {
 		eastmarch_deal_with_thirsk = {
 			name = "Deal With Thirsk"
 			desc = ""
-			position = 8
+			position = 7
 			icon = mission_unknown_mission
 			required = {
 				eastmarch_thane_of_solstheim
