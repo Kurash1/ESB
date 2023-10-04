@@ -38,16 +38,6 @@ mission_trees:whiterun_generic += {
 					}
 				}
 			}
-			if [has_dlc = "Leviathan"]
-			{
-				provinces:black_mountain = {
-					move_great_project = {
-						type = dragonsreach
-						province = provinces:whiterun
-						instant = yes
-					}
-				}
-			}
 		}
 	}
 	dragonsreach = {

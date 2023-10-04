@@ -1,3 +1,34 @@
+estates:clans:privileges += new sponsor_grey_mane = {
+	name = "Sponsor Grey-Mane Smiths"
+	desc = ""
+	icon = privilege_spawn_rajput_regiments
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		owns = whiterun
+	}
+	benefits = {
+		production_efficiency = 0.2
+	}
+	penalties = {
+		state_maintenance_modifier = 0.5
+	}
+}
+new mercenary_company jorrvaskr_company = {
+	name = "Jorrvaskr Companions"
+	regiments_per_development = 0.04
+	cost_modifier = 1.0
+	home_province = whiterun
+	cavalry_weight = 0
+	artillery_weight = 0
+	trigger = {
+		has_country_flag = unlocks_jorrvaskr_companions
+	}
+	modifier = {
+		discipline = 5%
+		shock_damage = 20%
+	}
+}
 mission_trees:whiterun_generic += {
 	winds_district = {
 		name = "Winds District"
@@ -10,6 +41,17 @@ mission_trees:whiterun_generic += {
 				base_tax = 10
 			}
 		}
+		effect = {
+			provinces:whiterun = {
+				quick_province_modifier = {
+					name = "Winds District"
+					modifier = {
+						local_production_efficiency = 0.5
+						trade_goods_size_modifier = 0.25
+					}
+				}
+			}
+		}
 	}
 	gildergreen = {
 		name = "Gildergreen"
@@ -17,6 +59,33 @@ mission_trees:whiterun_generic += {
 		x = 7
 		y = 3
 		icon = gildergreen_mission
+		trigger = {
+			if [has_dlc = "Leviathan"]
+			{
+				provinces:whiterun = {
+					has_great_project = {
+						type = gildergreen
+						tier = 1
+					}
+				}
+			}
+			else
+			{
+				provinces:whiterun = {
+					development = 35
+				}
+			}
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "Blessing of Nature"
+				duration = 7300
+				modifier = {
+					development_cost = -0.1
+					global_unrest = -2
+				}
+			}
+		}
 	}
 	grey_mane = {
 		name = "Grey-Mane"
@@ -24,6 +93,18 @@ mission_trees:whiterun_generic += {
 		x = 8
 		y = 3
 		icon = grey_mane_mission
+		trigger = {
+			has_estate_privilege = clans:sponsor_grey_mane
+		}
+		effect = {
+			define_advisor = {
+				type = treasurer
+				name = "Bjorn Grey-Mane"
+				skill = 3
+				location = whiterun
+				cost_multiplier = 0.25
+			}
+		}
 	}
 	the_jorrvaskr = {
 		name = "The Jorrvaskr"
@@ -31,6 +112,28 @@ mission_trees:whiterun_generic += {
 		x = 9
 		y = 3
 		icon = the_jorrvaskr_mission
+		trigger = {
+			if [has_dlc = "Leviathan"]
+			{
+				provinces:whiterun = {
+					has_great_project = {
+						type = jorrvaskr
+						tier = 1
+					}
+				}
+			}
+			else
+			{
+				provinces:whiterun = {
+					development = 35
+				}
+			}
+		}
+		effect = {
+			defineloc unlocks_jorrvaskr_companions = "Unlocks '§YJorrvaskr Companions§!' Mercenary Company"
+			custom_tooltip = unlocks_jorrvaskr_companions
+			set_country_flag = unlocks_jorrvaskr_companions
+		}
 	}
 	skyforge = {
 		name = "Skyforge"
@@ -38,6 +141,42 @@ mission_trees:whiterun_generic += {
 		x = 9
 		y = 4
 		icon = skyforge_mission
+		trigger = {
+			if [has_dlc = "Leviathan"]
+			{
+				provinces:whiterun = {
+					has_great_project = {
+						type = skyforge
+						tier = 1
+					}
+				}
+			}
+			else
+			{
+				provinces:whiterun = {
+					development = 35
+				}
+			}
+		}
+		effect = {
+			if [has_dlc = "Leviathan"]
+			{
+				provinces:whiterun = {
+					add_great_project_tier = {
+						type = skyforge
+						tier = 1
+					}
+				}
+			}
+			else
+			{
+				provinces:whiterun = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+		}
 	}
 	center_of_trade = {
 		name = "Center of Trade"
@@ -49,5 +188,20 @@ mission_trees:whiterun_generic += {
 		x = 8
 		y = 4
 		icon = whiterun_center_of_trade_mission
+		trigger = {
+			provinces:whiterun = {
+				base_production = 15
+			}
+		}
+		effect = {
+			provinces:whiterun = {
+				quick_province_modifier = {
+					name = "Center of Trade"
+					modifier = {
+						province_trade_power_modifier = 1.0
+					}
+				}
+			}
+		}
 	}
 }

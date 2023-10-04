@@ -463,7 +463,28 @@ new great_project great_arch = {
 }
 new great_project dragonsreach = {
 	name = "Dragonsreach"
-	start = black_mountain
+	start = whiterun
+	tier_1 = {
+		country_modifier = {
+			governing_capacity_modifier = 0.05
+			max_absolutism = 10
+			yearly_absolutism = 0.1
+		}
+	}
+	tier_2 = {
+		country_modifier = {
+			governing_capacity_modifier = 0.1
+			max_absolutism = 20
+			yearly_absolutism = 0.2
+		}
+	}
+	tier_3 = {
+		country_modifier = {
+			governing_capacity_modifier = 0.15
+			max_absolutism = 30
+			yearly_absolutism = 0.3
+		}
+	}
 }
 new great_project skyforge = {
 	name = "Skyforge"
