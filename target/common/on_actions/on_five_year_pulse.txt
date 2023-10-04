@@ -1,1 +1,14 @@
-on_five_year_pulse = { if = { limit = { tag = BLA } every_province = { limit = { is_empty = yes colonysize = 1 } add_colonysize = -1000 } }} 
+on_five_year_pulse = {
+	if = {
+		limit = {
+			tag = BLA
+		}
+		every_province = {
+			limit = {
+				is_empty = yes
+				colonysize = 1
+			}
+			add_colonysize = -1000
+		}
+	}
+}

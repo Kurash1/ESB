@@ -1,1 +1,16 @@
-on_loan_repaid = { if = { limit = { has_estate_privilege = indebted_to_the_clans_privelege has_estate_loan = no } remove_estate_privilege = indebted_to_the_clans_privelege } if = { limit = { has_estate_privilege = ask_for_money_privelege has_estate_loan = no } remove_estate_privilege = ask_for_money_privelege }} 
+on_loan_repaid = {
+	if = {
+		limit = {
+			has_estate_privilege = indebted_to_the_clans_privelege
+			has_estate_loan = no
+		}
+		remove_estate_privilege = indebted_to_the_clans_privelege
+	}
+	if = {
+		limit = {
+			has_estate_privilege = ask_for_money_privelege
+			has_estate_loan = no
+		}
+		remove_estate_privilege = ask_for_money_privelege
+	}
+}

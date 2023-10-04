@@ -12,7 +12,7 @@ new mission_series fallowfire_4 = {
 			position = 1
 			icon = mission_unknown_mission
 			effect = {
-				defineloc claim_elves_honrich = "§YFallowfire§ § gains permanent § §Yclaims§ §on§ §Ylake Honrich§§'s elves§"
+				defineloc claim_elves_honrich = "§YFallowfire§! gains permanent §Yclaims§! on §Ylake Honrich§!'s elves"
 				custom_tooltip = claim_elves_honrich
 				hidden_effect = {
 					areas:merryfair, areas:riften, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch, provinces:vigil, provinces:sarethi [culture_group = snow_elven] {
@@ -45,7 +45,7 @@ new mission_series fallowfire_4 = {
 					}
 			}
 			effect = {
-				defineloc claim_elves_all = "§YFallowfire§ §gains permanent§ §Yclaims§ §on§ §Yall§ §snow elves' land§"
+				defineloc claim_elves_all = "§YFallowfire§! gains permanent §Yclaims§! on §Yall§! snow elves' land"
 				custom_tooltip = claim_elves_all
 				hidden_effect = {
 					areas:ivarstead, areas:honeystrand, areas:trevas_mouth, areas:sarethi, areas:nilheim, areas:geirmund, areas:autumnwatch, areas:arcwind, areas:east_haemar [ culture_group = snow_elven ] {
@@ -89,7 +89,7 @@ new country_event fallowfire.1 = {
 	title = "The reports of elves' disapperance were greatly exaggerated"
 	desc = ""
 	is_triggered_only = yes
-	picture = forelhost_eventPicture
+	picture = forest_trees_eventPicture
 	options = {
 		{
 			name = "KILL THEM ALL"

@@ -1,1 +1,11 @@
-on_regent = { if = { limit = { is_emperor = yes } define_ruler = { religion = root culture = root } }} 
+on_regent = {
+	if = {
+		limit = {
+			is_emperor = yes
+		}
+		define_ruler = {
+			religion = root
+			culture = root
+		}
+	}
+}

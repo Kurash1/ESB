@@ -134,7 +134,7 @@ new country_event fallowfire.2 = {
 	title = "Discovering other humans"
 	desc = ""
 	is_triggered_only = yes
-	picture = forelhost_eventPicture
+	picture = scout_eventPicture
 	options = {
 		{
 			name = "Deal with the problem immediately"
@@ -153,7 +153,8 @@ new country_event fallowfire.2 = {
 new country_event fallowfire.3 = {
 	title = "Wondering about the future"
 	desc = ""
-	picture = forelhost_eventPicture
+	picture = thinking_people_eventPicture
+	is_triggered_only = yes
 	options = {
 		{
 			name = "Perhaps we should really settle down"
@@ -165,9 +166,34 @@ new country_event fallowfire.3 = {
 		{
 			name = "No! We won't stop until every single elf is dead"
 			effect = {
-				defineloc staying_fallow = "Remain Fallowfire, §Rno new content§,unrecommended"
+				defineloc staying_fallow = "Remain Fallowfire, §Rno new content§!,unrecommended"
 				custom_tooltip = staying_fallow
 			}
 		}
 	}
 }
+new country_event fallowfire.4 = {
+	title = "The sack of Forelhost"
+	desc = ""
+	picture = siege_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = fallowfire
+		provinces:forelhost = {
+			controller = ROOT
+		}
+	}
+	options = {
+		{	
+			name = "A death unworthy of nords"
+			effect = {
+				provinces:forelhost = {
+					add_base_tax = -6
+					add_base_production = -6
+					add_base_manpower = -5
+				}
+			}
+		}
+	}
+}
+

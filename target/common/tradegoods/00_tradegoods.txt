@@ -1,1 +1,627 @@
-unknown = { color = { 0.5 0.5 0.5 } } wood = { color = { 90 77 28 } modifier = { build_cost = -0.15 } province = { local_build_cost = -0.25 } chance = { factor = 5 modifier = { factor = 0 NOT = { has_terrain = marsh } } } } iron = { color = { 52 52 52 } modifier = { global_regiment_cost = -0.1 } province = { regiment_recruit_speed = -0.33 } chance = { factor = 7 modifier = { factor = 0 NOT = { OR = { has_terrain = hot_springs has_terrain = mountain has_terrain = hills has_terrain = highlands } } } } } steel = { color = { 130 130 130 } modifier = { shock_damage_received = -0.025 fire_damage_received = -0.025 } province = { local_regiment_cost = -0.1 } chance = { factor = 0 } } fish = { color = { 141 169 197 } modifier = { naval_forcelimit_modifier = 0.15 } province = { local_sailors_modifier = 0.25 } chance = { factor = 10 modifier = { factor = 0 NOT = { has_port = yes } } } } wheat = { color = { 214 220 130 } modifier = { reinforce_speed = 0.25 } province = { local_garrison_size = 0.15 } chance = { factor = 0 } } ale = { color = { 227 238 75 } modifier = { manpower_recovery_speed = 0.15 } province = { local_unrest = -2 } chance = { factor = 0 } } wine = { color = { 70 16 124 } modifier = { stability_cost_modifier = -0.1 } province = { local_unrest = -1 } chance = { factor = 0 } } paper = { color = { 240 255 172 } modifier = { state_governing_cost = -0.1 } province = { local_governing_cost = -0.25 } chance = { factor = 0 } } alchemical_ingredients = { color = { 62 149 81 } modifier = { global_spy_defence = 0.5 } province = { supply_limit_modifier = 0.25 } chance = { factor = 10 modifier = { factor = 0 NOT = { OR = { has_terrain = marsh has_terrain = hot_springs } } } } } r_alchemical_ingredients = { color = { 14 137 27 } modifier = { diplomatic_annexation_cost = -0.2 } province = { local_hostile_attrition = 5 } chance = { factor = 5 modifier = { factor = 0 NOT = { OR = { has_terrain = marsh has_terrain = hot_springs } } } } } potions = { color = { 253 65 71 } modifier = { spy_offence = 0.25 } province = { reinforce_cost_modifier = -0.02 } chance = { factor = 0 } } stone = { color = { 185 185 185 } modifier = { defensiveness = 0.2 } province = { local_fort_maintenance_modifier = -0.25 } chance = { factor = 10 modifier = { factor = 0 NOT = { OR = { has_terrain = hot_springs has_terrain = mountain has_terrain = hills has_terrain = highlands } } } } } gems = { color = { 78 15 203 } modifier = { prestige = 1 } province = { province_trade_power_value = 5 } chance = { factor = 2 modifier = { factor = 0 NOT = { OR = { has_terrain = mountain has_terrain = hills has_terrain = highlands } } } } } gold = { color = { 196 215 26 } modifier = {  } province = {  } chance = { factor = 1 modifier = { factor = 0 NOT = { OR = { has_terrain = mountain has_terrain = hills has_terrain = highlands } } } } } silver = { color = { 205 205 205 } modifier = {  } province = { trade_goods_size_modifier = -0.5 } chance = { factor = 1 modifier = { factor = 0 NOT = { OR = { has_terrain = mountain has_terrain = hills has_terrain = highlands } } } } } ebony = { color = { 38 38 38 } modifier = { discipline = 0.05 } province = { infantry_power = 0.025 } chance = { factor = 0 } } c_metals = { color = { 204 153 51 } modifier = { global_manpower_modifier = 0.15 } province = { local_build_time = -0.33 } chance = { factor = 3 modifier = { factor = 0 NOT = { OR = { has_terrain = mountain has_terrain = hills has_terrain = highlands } } } } } r_metals = { color = { 34 191 149 } modifier = { yearly_army_professionalism = 0.005 } province = { local_prosperity_growth = 0.05 } chance = { factor = 2 modifier = { factor = 0 NOT = { OR = { has_terrain = mountain has_terrain = hills has_terrain = highlands } } } } } jewelry = { color = { 245 250 82 } modifier = { prestige_decay = -0.02 } province = { local_prosperity_growth = 0.05 } chance = { factor = 0 } } fur = { color = { 90 43 26 } modifier = { advisor_cost = -0.1 } province = { local_monthly_devastation = -0.1 } chance = { factor = 0 } } livestock = { color = { 249 123 77 } modifier = { global_supply_limit_modifier = 0.25 } province = { local_tax_modifier = 0.2 } chance = { factor = 0 } } skooma = { color = { 209 50 50 } modifier = { years_of_nationalism = -5 } province = { local_culture_conversion_cost = -0.25 } chance = { factor = 0 } } slaves = { color = { 42 42 42 } modifier = { global_trade_goods_size_modifier = 0.15 } province = { local_core_creation = -0.25 } chance = { factor = 0 } } mag_goods = { color = { 51 204 255 } modifier = { all_power_cost = -0.05 } province = { institution_growth = 1 } chance = { factor = 0 } } cloth = { color = { 193 21 176 } modifier = { global_ship_trade_power = 0.5 } province = { province_trade_power_modifier = 0.2 } chance = { factor = 0 } } fruits = { color = { 253 255 6 } modifier = { sailor_maintenance_modifer = -0.2 } province = { supply_limit = 5 } chance = { factor = 0 } } liquor = { color = { 184 188 73 } modifier = { land_forcelimit_modifier = 0.1 } province = { local_manpower_modifier = 0.25 } chance = { factor = 0 } } naval_supplies = { color = { 64 126 206 } modifier = { naval_maintenance_modifier = -0.15 } province = { local_ship_cost = -0.25 } chance = { factor = 5 modifier = { factor = 0 NOT = { has_port = yes } } } } arms = { color = { 154 172 175 } modifier = { infantry_power = 0.1 cavalry_power = 0.1 } province = { local_regiment_cost = -0.25 } chance = { factor = 0 } } glass = { color = { 70 130 180 } modifier = { monthly_splendor = 2 } province = { trade_value = 3 } chance = { factor = 0 } } drugs = { color = { 234 234 234 } modifier = { reduced_liberty_desire = 20 } province = { local_culture_conversion_cost = -0.25 } chance = { factor = 0 } } rel_goods = { color = { 135 125 35 } modifier = { tolerance_own = 2 global_missionary_strength = 0.03 } province = { local_missionary_strength = 0.05 } chance = { factor = 0 } } 
+unknown = {
+	color = {
+		0.5
+		0.5
+		0.5
+	}
+}
+wood = {
+	color = {
+		90
+		77
+		28
+	}
+	modifier = {
+		build_cost = -0.15
+	}
+	province = {
+		local_build_cost = -0.25
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				has_terrain = marsh
+			}
+		}
+	}
+}
+iron = {
+	color = {
+		52
+		52
+		52
+	}
+	modifier = {
+		global_regiment_cost = -0.1
+	}
+	province = {
+		regiment_recruit_speed = -0.33
+	}
+	chance = {
+		factor = 7
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = hot_springs
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+	}
+}
+steel = {
+	color = {
+		130
+		130
+		130
+	}
+	modifier = {
+		shock_damage_received = -0.025
+		fire_damage_received = -0.025
+	}
+	province = {
+		local_regiment_cost = -0.1
+	}
+	chance = {
+		factor = 0
+	}
+}
+fish = {
+	color = {
+		141
+		169
+		197
+	}
+	modifier = {
+		naval_forcelimit_modifier = 0.15
+	}
+	province = {
+		local_sailors_modifier = 0.25
+	}
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = {
+				has_port = yes
+			}
+		}
+	}
+}
+wheat = {
+	color = {
+		214
+		220
+		130
+	}
+	modifier = {
+		reinforce_speed = 0.25
+	}
+	province = {
+		local_garrison_size = 0.15
+	}
+	chance = {
+		factor = 0
+	}
+}
+ale = {
+	color = {
+		227
+		238
+		75
+	}
+	modifier = {
+		manpower_recovery_speed = 0.15
+	}
+	province = {
+		local_unrest = -2
+	}
+	chance = {
+		factor = 0
+	}
+}
+wine = {
+	color = {
+		70
+		16
+		124
+	}
+	modifier = {
+		stability_cost_modifier = -0.1
+	}
+	province = {
+		local_unrest = -1
+	}
+	chance = {
+		factor = 0
+	}
+}
+paper = {
+	color = {
+		240
+		255
+		172
+	}
+	modifier = {
+		state_governing_cost = -0.1
+	}
+	province = {
+		local_governing_cost = -0.25
+	}
+	chance = {
+		factor = 0
+	}
+}
+alchemical_ingredients = {
+	color = {
+		62
+		149
+		81
+	}
+	modifier = {
+		global_spy_defence = 0.5
+	}
+	province = {
+		supply_limit_modifier = 0.25
+	}
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = marsh
+					has_terrain = hot_springs
+				}
+			}
+		}
+	}
+}
+r_alchemical_ingredients = {
+	color = {
+		14
+		137
+		27
+	}
+	modifier = {
+		diplomatic_annexation_cost = -0.2
+	}
+	province = {
+		local_hostile_attrition = 5
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = marsh
+					has_terrain = hot_springs
+				}
+			}
+		}
+	}
+}
+potions = {
+	color = {
+		253
+		65
+		71
+	}
+	modifier = {
+		spy_offence = 0.25
+	}
+	province = {
+		reinforce_cost_modifier = -0.02
+	}
+	chance = {
+		factor = 0
+	}
+}
+stone = {
+	color = {
+		185
+		185
+		185
+	}
+	modifier = {
+		defensiveness = 0.2
+	}
+	province = {
+		local_fort_maintenance_modifier = -0.25
+	}
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = hot_springs
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+	}
+}
+gems = {
+	color = {
+		78
+		15
+		203
+	}
+	modifier = {
+		prestige = 1
+	}
+	province = {
+		province_trade_power_value = 5
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+	}
+}
+gold = {
+	color = {
+		196
+		215
+		26
+	}
+	modifier = {
+	}
+	province = {
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+	}
+}
+silver = {
+	color = {
+		205
+		205
+		205
+	}
+	modifier = {
+	}
+	province = {
+		trade_goods_size_modifier = -0.5
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+	}
+}
+ebony = {
+	color = {
+		38
+		38
+		38
+	}
+	modifier = {
+		discipline = 0.05
+	}
+	province = {
+		infantry_power = 0.025
+	}
+	chance = {
+		factor = 0
+	}
+}
+c_metals = {
+	color = {
+		204
+		153
+		51
+	}
+	modifier = {
+		global_manpower_modifier = 0.15
+	}
+	province = {
+		local_build_time = -0.33
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+	}
+}
+r_metals = {
+	color = {
+		34
+		191
+		149
+	}
+	modifier = {
+		yearly_army_professionalism = 0.005
+	}
+	province = {
+		local_prosperity_growth = 0.05
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = highlands
+				}
+			}
+		}
+	}
+}
+jewelry = {
+	color = {
+		245
+		250
+		82
+	}
+	modifier = {
+		prestige_decay = -0.02
+	}
+	province = {
+		local_prosperity_growth = 0.05
+	}
+	chance = {
+		factor = 0
+	}
+}
+fur = {
+	color = {
+		90
+		43
+		26
+	}
+	modifier = {
+		advisor_cost = -0.1
+	}
+	province = {
+		local_monthly_devastation = -0.1
+	}
+	chance = {
+		factor = 0
+	}
+}
+livestock = {
+	color = {
+		249
+		123
+		77
+	}
+	modifier = {
+		global_supply_limit_modifier = 0.25
+	}
+	province = {
+		local_tax_modifier = 0.2
+	}
+	chance = {
+		factor = 0
+	}
+}
+skooma = {
+	color = {
+		209
+		50
+		50
+	}
+	modifier = {
+		years_of_nationalism = -5
+	}
+	province = {
+		local_culture_conversion_cost = -0.25
+	}
+	chance = {
+		factor = 0
+	}
+}
+slaves = {
+	color = {
+		42
+		42
+		42
+	}
+	modifier = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	province = {
+		local_core_creation = -0.25
+	}
+	chance = {
+		factor = 0
+	}
+}
+mag_goods = {
+	color = {
+		51
+		204
+		255
+	}
+	modifier = {
+		all_power_cost = -0.05
+	}
+	province = {
+		institution_growth = 1
+	}
+	chance = {
+		factor = 0
+	}
+}
+cloth = {
+	color = {
+		193
+		21
+		176
+	}
+	modifier = {
+		global_ship_trade_power = 0.5
+	}
+	province = {
+		province_trade_power_modifier = 0.2
+	}
+	chance = {
+		factor = 0
+	}
+}
+fruits = {
+	color = {
+		253
+		255
+		6
+	}
+	modifier = {
+		sailor_maintenance_modifer = -0.2
+	}
+	province = {
+		supply_limit = 5
+	}
+	chance = {
+		factor = 0
+	}
+}
+liquor = {
+	color = {
+		184
+		188
+		73
+	}
+	modifier = {
+		land_forcelimit_modifier = 0.1
+	}
+	province = {
+		local_manpower_modifier = 0.25
+	}
+	chance = {
+		factor = 0
+	}
+}
+naval_supplies = {
+	color = {
+		64
+		126
+		206
+	}
+	modifier = {
+		naval_maintenance_modifier = -0.15
+	}
+	province = {
+		local_ship_cost = -0.25
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				has_port = yes
+			}
+		}
+	}
+}
+arms = {
+	color = {
+		154
+		172
+		175
+	}
+	modifier = {
+		infantry_power = 0.1
+		cavalry_power = 0.1
+	}
+	province = {
+		local_regiment_cost = -0.25
+	}
+	chance = {
+		factor = 0
+	}
+}
+glass = {
+	color = {
+		70
+		130
+		180
+	}
+	modifier = {
+		monthly_splendor = 2
+	}
+	province = {
+		trade_value = 3
+	}
+	chance = {
+		factor = 0
+	}
+}
+drugs = {
+	color = {
+		234
+		234
+		234
+	}
+	modifier = {
+		reduced_liberty_desire = 20
+	}
+	province = {
+		local_culture_conversion_cost = -0.25
+	}
+	chance = {
+		factor = 0
+	}
+}
+rel_goods = {
+	color = {
+		135
+		125
+		35
+	}
+	modifier = {
+		tolerance_own = 2
+		global_missionary_strength = 0.03
+	}
+	province = {
+		local_missionary_strength = 0.05
+	}
+	chance = {
+		factor = 0
+	}
+}
