@@ -124,6 +124,7 @@ mission_trees:whiterun_generic += {
 		name = "Skjoralmor Deal"
 		x = 3
 		y = 0
+		icon = skjoralmor_deal_mission
 		trigger = {
 			if [has_global_flag = skjoralmor_deal] {
 				has_global_flag = skjoralmor_deal
@@ -145,26 +146,28 @@ mission_trees:whiterun_generic += {
 			}
 		}
 	}
-	#brittleshin_expedition = {
-	#	name = "Brittleshin Expedition"
-	#	required = skjoralmor_deal
-	#	x = 2
-	#	y = 1
-	#	trigger = {
-	#		custom_trigger_tooltip = {
-	#			tooltip = future_update
-	#			always = no
-	#		}
-	#	}
-	#	effect = {
-	#		custom_tooltip = future_update
-	#	}
-	#}
+	brittleshin_expedition = {
+		name = "Brittleshin Expedition"
+		required = skjoralmor_deal
+		x = 2
+		y = 1
+		icon = brittleshin_expedition_mission
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = future_update
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = future_update
+		}
+	}
 	bleak_falls_temple = {
 		name = "Bleak Falls Temple"
 		required = skjoralmor_deal
 		x = 4
 		y = 1
+		icon = bleak_falls_temple_mission
 		trigger = {
 			owns = bleak_falls_temple
 			provinces:bleak_falls_temple = {
@@ -185,6 +188,7 @@ mission_trees:whiterun_generic += {
 		required = skjoralmor_deal
 		x = 3
 		y = 1
+		icon = riverwood_mission
 		trigger = {
 			owns = riverwood
 			provinces:riverwood = {
@@ -209,6 +213,7 @@ mission_trees:whiterun_generic += {
 		required = riverwood
 		x = 2
 		y = 2
+		icon = river_ember_trade_mission
 		trigger = {
 			has_merchant = trade_nodes:illinalta:location
 			provinces:riverwood = {
@@ -231,6 +236,7 @@ mission_trees:whiterun_generic += {
 		required = riverwood
 		x = 3
 		y = 2
+		icon = embershard_mine_mission
 		trigger = {
 			owns = embershard_mine
 			provinces:embershard_mine = {

@@ -17,11 +17,10 @@ estates:clans:privileges += new sponsor_battle_born = {
 mission_trees:whiterun_generic += {
 	plains_district = {
 		name = "Plains District"
-		required = {
-			ahrolsedovah
-		}
+		required = ahrolsedovah
 		x = 4
 		y = 2
+		icon = plains_district_mission
 		trigger = {
 			provinces:whiterun = {
 				base_production = 10
@@ -41,11 +40,10 @@ mission_trees:whiterun_generic += {
 	}
 	western_watchtower = {
 		name = "Western Watchtower"
-		required = {
-			plains_district
-		}
+		required = plains_district
 		x = 3
 		y = 3
+		icon = western_watchtower_mission
 		trigger = {
 			owns = western_watchtower
 			provinces:western_watchtower = {
@@ -67,11 +65,10 @@ mission_trees:whiterun_generic += {
 	}
 	battle_born = {
 		name = "Battle-Born"
-		required = {
-			plains_district
-		}
+		required = plains_district
 		x = 4
 		y = 3
+		icon = battle_born_mission
 		trigger = {
 			has_estate_privilege = clans:sponsor_battle_born
 		}
@@ -87,11 +84,10 @@ mission_trees:whiterun_generic += {
 	}
 	honningbrew = {
 		name = "Honningbrew"
-		required = {
-			plains_district
-		}
+		required = plains_district
 		x = 5
 		y = 3
+		icon = honningbrew_mission
 		trigger = {
 			owns = honningbrew
 			provinces:honningbrew = {
@@ -119,6 +115,7 @@ mission_trees:whiterun_generic += {
 		}
 		x = 4
 		y = 4
+		icon = below_the_hill_mission
 		trigger = {
 			areas:whiterun = {
 				type = all

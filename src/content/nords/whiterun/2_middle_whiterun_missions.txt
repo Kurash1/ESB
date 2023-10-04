@@ -3,6 +3,7 @@ mission_trees:whiterun_generic += {
 		name = "Ahrolsedovah"
 		x = 6
 		y = 1
+		icon = ahrolsedovah_mission
 		trigger = {
 			owns = whiterun
 		}
@@ -17,11 +18,10 @@ mission_trees:whiterun_generic += {
 	}
 	clouds_district = {
 		name = "Cloud District"
-		required = {
-			ahrolsedovah
-		}
+		required = ahrolsedovah
 		x = 6
 		y = 2
+		icon = clouds_district_mission
 		trigger = {
 			provinces:whiterun = {
 				base_manpower = 10
@@ -52,11 +52,10 @@ mission_trees:whiterun_generic += {
 	}
 	dragonsreach = {
 		name = "Dragonsreach"
-		required = {
-			clouds_district
-		}
+		required = clouds_district
 		x = 6
 		y = 3
+		icon = dragonsreach_mission
 		trigger = {
 			if [has_dlc = "Leviathan"]
 			{
@@ -104,6 +103,7 @@ mission_trees:whiterun_generic += {
 			crystalline_throne
 			center_of_trade
 		}
+		icon = imperial_city_of_skyrim_mission
 		x = 6
 		y = 5
 		trigger = {
