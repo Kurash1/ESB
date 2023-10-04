@@ -29,7 +29,7 @@ new estate sons = {
 			loyalty = -0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:sons:privileges:favor_the_sons_influence 
+					has_estate_privilege = sons:favor_the_sons_influence 
 				}
 			}
 		}
@@ -41,7 +41,7 @@ new estate sons = {
 			loyalty = 0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:sons:privileges:curtail_the_sons_influence 
+					has_estate_privilege = sons:curtail_the_sons_influence 
 				}
 			}
 		}

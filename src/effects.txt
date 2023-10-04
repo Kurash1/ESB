@@ -69,3 +69,51 @@ new effect add_power_projection = {
 		}
 	}
 }
+new effect set_estate_privilege = {
+	args = estate_privilege
+	transpile = {
+		`set_estate_privilege = {args}`
+	}
+}
+new effect remove_estate_privilege = {
+	args = estate_privilege
+	transpile = {
+		`remove_estate_privilege = {args}`
+	}
+}
+new effect define_advisor = {
+	args = {
+		type = advisor_type
+		name = string
+		skill = int
+		location = province
+		cost_multiplier = float
+	}
+	transpile = {
+		`define_advisor =` {
+			`type = {args:type}`
+			`name = "{args:name}"`
+			`skill = {args:skill}`
+			`location = {args:location}`
+			`cost_multiplier = {args:cost_multiplier}`
+		}
+	}
+}
+new effect define_advisor = {
+	args = {
+		type = advisor_type
+		discount = bool
+	}
+	transpile = {
+		`define_advisor =` {
+			`type = {args:type}`
+			`discount = {args:discount}`
+		}
+	}
+}
+new effect change_trade_goods = {
+	args = tradegood
+	transpile = {
+		`change_trade_goods = {args}`
+	}
+}

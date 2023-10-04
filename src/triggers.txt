@@ -52,3 +52,9 @@ new trigger primary_culture = {
 		`primary_culture = {args}`
 	}
 }
+new trigger has_estate_privilege = {
+	args = estate_privilege
+	transpile = {
+		`has_estate_privilege = {args}`
+	}
+}

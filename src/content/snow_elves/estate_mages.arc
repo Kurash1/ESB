@@ -29,7 +29,7 @@ new estate mages = {
 			loyalty = -0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:mages:privileges:favor_the_mages_influence 
+					has_estate_privilege = mages:favor_the_mages_influence 
 				}
 			}
 		}
@@ -41,7 +41,7 @@ new estate mages = {
 			loyalty = 0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:mages:privileges:curtail_the_mages_influence 
+					has_estate_privilege = mages:curtail_the_mages_influence 
 				}
 			}
 		}
