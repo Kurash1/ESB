@@ -215,9 +215,8 @@ mission_trees:whiterun_generic += {
 		y = 2
 		icon = river_ember_trade_mission
 		trigger = {
-			has_merchant = trade_nodes:illinalta:location
 			provinces:riverwood = {
-				province_has_center_of_trade_of_level = 3
+				province_has_center_of_trade_of_level = 2
 			}
 		}
 		effect = {
