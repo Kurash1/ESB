@@ -37,6 +37,7 @@ new estate warriors = {
 			icon = privilege_military_power
 			land_share = 10
 			max_absolutism = -5
+			influence = 0.15
 			loyalty = -0.05
 			benefits = {
 				country_military_power = 1
@@ -56,6 +57,65 @@ new estate warriors = {
 				mil_advisor_cost = -0.25
 			}
 		}
+		new warrior_retirement_homes = {
+			name = "Warrior Retirement Homes"
+			icon = privilege_peasant
+			on_granted = {
+				defineloc warrior_retirement_homes_grant_tooltip = "Every owned province producing §YWheat§! gains:
+Local Tax Modifier: §G+15.0%§!
+Monthly Autonomy Change: §R+0.05§!"
+				custom_tooltip = warrior_retirement_homes_grant_tooltip
+			}
+			on_revoked = {
+				defineloc warrior_retirement_homes_revoke_tooltip = "The modifier §YWarrior Retirement Homes§! is removed from all owned provinces."
+				custom_tooltip = warrior_retirement_homes_revoke_tooltip
+			}
+			on_granted_province = {
+				if [has_trade_goods = wheat] {
+					add_province_modifier = {
+						name = warrior_retirement_homes
+						duration = -1
+					}
+				}
+				else_if [has_province_modifier = warrior_retirement_homes] {
+					remove_province_modifier = warrior_retirement_homes
+				}
+			}
+			on_revoked_province = {
+				if [has_province_modifier = warrior_retirement_homes] {
+					remove_province_modifier = warrior_retirement_homes
+				}
+			}
+			on_invalid_province = {
+				if [has_province_modifier = warrior_retirement_homes] {
+					remove_province_modifier = warrior_retirement_homes
+				}
+			}
+		}
+		new to_sovngarde = {
+			name = "To Sovngarde"
+			icon = privilege_to_sovngarde
+			loyalty = -0.15
+			benefits = {
+				land_morale = 0.1
+			}
+		}
+		new skald_warriors = {
+			name = "Sponsor Skald Warriors"
+			icon = privilege_prestige_from_land
+			loyalty = 0.1
+			influence = 0.1
+			benefits = {
+				prestige_from_land = 0.5
+			}
+		}
 	}
 	base_influence = 25
+}
+new event_modifier warrior_retirement_homes = {
+	name = "Warrior Retirement Homes"
+	modifier = {
+		local_tax_modifier = 0.15
+		local_autonomy = 0.05
+	}
 }
