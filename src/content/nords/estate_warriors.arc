@@ -62,8 +62,10 @@ new estate warriors = {
 			icon = privilege_peasant
 			on_granted = {
 				defineloc warrior_retirement_homes_grant_tooltip = "Every owned province producing §YWheat§! gains:
-Local Tax Modifier: §G+15.0%§!
-Monthly Autonomy Change: §R+0.05§!"
+{modifier_to_string = {
+	local_tax_modifier = 0.15
+	local_autonomy = 0.05
+}}"
 				custom_tooltip = warrior_retirement_homes_grant_tooltip
 			}
 			on_revoked = {
