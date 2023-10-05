@@ -58,3 +58,9 @@ new trigger has_estate_privilege = {
 		`has_estate_privilege = {args}`
 	}
 }
+new trigger has_trade_goods = {
+	args = tradegood
+	transpile = {
+		`trade_goods = {args}`
+	}
+}
