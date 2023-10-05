@@ -90,7 +90,7 @@ new country fallowfire = {
 			}
 			country_event = {
 				id = fallowfire.5
-				days = 366
+				days = 31
 			}		
 		}
 	}

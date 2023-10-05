@@ -34,13 +34,13 @@ new country_event orc_estate_events.1 = {
 	picture = loose_berserker_eventPicture
 	trigger = {
 		has_estate = estate_orcs
-		has_estate_privilege = estates:orcs:privileges:roaming_orcs
+		has_estate_privilege = orcs:roaming_orcs
 	}
 	options = {
 		{
 			name = "Rethink our Policy"
 			effect = {
-				remove_estate_privilege = estates:orcs:privileges:roaming_orcs
+				remove_estate_privilege = orcs:roaming_orcs
 				add_estate_loyalty = {
 					estate = estate_orcs
 					loyalty = -10
@@ -161,7 +161,7 @@ new country_event orc_estate_events.4 = {
 		{
 			name = "Why are we allowing orcs?"
 			effect = {
-				remove_estate_privilege = estates:orcs:privileges:roaming_orcs
+				remove_estate_privilege = orcs:roaming_orcs
 				add_estate_loyalty = {
 					estate = estate_orcs
 					loyalty = -10
@@ -223,8 +223,8 @@ new country_event orc_estate_events.6 = {
 	picture = orc_drunk_brawl_eventPicture
 	trigger = {
 		has_estate = estate_orcs
-		has_estate_privilege = estates:orcs:privileges:roaming_orcs
 		culture_group = nord
+		has_estate_privilege = orcs:roaming_orcs
 	}
 	options = {
 		{
@@ -529,7 +529,7 @@ new country_event orc_estate_events.18 = {
 	trigger = {
 		has_estate = estate_orcs
 		NOT = {
-			has_estate_privilege = estates:orcs:privileges:roaming_orcs
+			has_estate_privilege = orcs:roaming_orcs
 		}
 	}
 	options = {

@@ -1,0 +1,140 @@
+estates:clans:privileges += new sponsor_battle_born = {
+	name = "Sponsor Battle-Born Farms"
+	desc = ""
+	icon = privilege_peasant
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		owns = whiterun
+	}
+	benefits = {
+		global_tax_modifier = 0.2
+	}
+	penalties = {
+		state_maintenance_modifier = 0.5
+	}
+}
+mission_trees:whiterun_generic += {
+	plains_district = {
+		name = "Plains District"
+		required = ahrolsedovah
+		x = 4
+		y = 2
+		icon = plains_district_mission
+		trigger = {
+			provinces:whiterun = {
+				base_production = 10
+			}
+		}
+		effect = {
+			provinces:whiterun = {
+				quick_province_modifier = {
+					name = "Plains District"
+					modifier = {
+						local_tax_modifier = 0.5
+						local_development_cost = -0.15
+					}
+				}
+			}
+		}
+	}
+	western_watchtower = {
+		name = "Western Watchtower"
+		required = plains_district
+		x = 3
+		y = 3
+		icon = western_watchtower_mission
+		trigger = {
+			owns = western_watchtower
+			provinces:western_watchtower = {
+				fort_level = 1
+			}
+		}
+		effect = {
+			provinces:western_watchtower = {
+				quick_province_modifier = {
+					name = "Watchtower"
+					modifier = {
+						local_defensiveness = 0.25
+						local_fort_maintenance_modifier = -0.5
+						global_spy_defence = 0.1
+					}
+				}
+			}
+		}
+	}
+	battle_born = {
+		name = "Battle-Born"
+		required = plains_district
+		x = 4
+		y = 3
+		icon = battle_born_mission
+		trigger = {
+			has_estate_privilege = clans:sponsor_battle_born
+		}
+		effect = {
+			define_advisor = {
+				type = army_reformer
+				name = "Erik Battle-Born"
+				skill = 3
+				location = whiterun
+				cost_multiplier = 0.25
+			}
+		}
+	}
+	honningbrew = {
+		name = "Honningbrew"
+		required = plains_district
+		x = 5
+		y = 3
+		icon = honningbrew_mission
+		trigger = {
+			owns = honningbrew
+			provinces:honningbrew = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:honningbrew = {
+				change_trade_goods = ale
+				quick_province_modifier = {
+					name = "Honningbrew Meadery"
+					modifier = {
+						trade_goods_size = 1.0
+					}
+				}
+			}
+		}
+	}
+	below_the_hill = {
+		name = "Below the Hill"
+		required = {
+			battle_born
+			western_watchtower
+			honningbrew
+		}
+		x = 4
+		y = 4
+		icon = below_the_hill_mission
+		trigger = {
+			areas:whiterun = {
+				type = all
+				owned_by = ROOT
+				development = 15
+			}
+		}
+		effect = {
+			areas:whiterun = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				quick_province_modifier = {
+					name = "Developing Whiterun"
+					modifier = {
+						local_development_cost = -0.1
+					}
+				}
+			}
+		}
+	}
+}

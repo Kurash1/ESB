@@ -31,7 +31,7 @@ new estate harem = {
 			loyalty = -0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:harem:privileges:favor_the_harem_influence 
+					has_estate_privilege = harem:favor_the_harem_influence 
 				}
 			}
 		}
@@ -43,7 +43,7 @@ new estate harem = {
 			loyalty = 0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:harem:privileges:curtail_the_harem_influence 
+					has_estate_privilege = harem:curtail_the_harem_influence 
 				}
 			}
 		}	

@@ -7,27 +7,15 @@ new effect history_owner = {
 	}
 }
 new effect add_core = {
-	args = country
-	transpile = {
-		`add_core = {args}`
-	}
-}
-new effect add_core = {
-	args = base_scope
-	transpile = {
-		`add_core = {args}`
-	}
-}
-new trigger ags = {
-	args = int
-	transpile = {
-		`is_year = {(args+2500)}`
-	}
-}
-new trigger tag = {
 	args = country_scope
 	transpile = {
-		`tag = {args}`
+		`add_core = {args}`
+	}
+}
+new effect add_permanent_claim = {
+	args = country_scope
+	transpile = {
+		`add_permanent_claim = {args}`
 	}
 }
 new modifier land_morale = {
@@ -36,27 +24,97 @@ new modifier land_morale = {
 		`land_morale = {args}`
 	}
 }
-new trigger culture_group = {
-	args = culture_group
+new effect add_modifier = {
+	args = {
+		modifier = event_modifier
+		years = int
+	}
 	transpile = {
-		`culture_group = {args}`
+		`add_country_modifier =` {
+			`name = {args:modifier:id}`
+			`duration = {(args:years*365)}`
+		}
 	}
 }
-new trigger culture_group = {
-	args = base_scope
+new effect change_culture = {
+	args = culture
+	transpile = { `change_culture = {args}` }
+}
+new effect change_culture = {
+	args = country_scope
+	transpile = { `change_culture = {args}` }
+}
+new effect add_permanent_power_projection = {
+	args = {
+		type = string
+		amount = int
+	}
 	transpile = {
-		`culture_group = {args}`
+		add_power_projection = {
+			type = args:type
+			amount = args:amount
+		}
+		custom_tooltip = PERMANENT_POWER_PROJECTION_TT
 	}
 }
-new trigger region = {
-	args = region
+new effect add_power_projection = {
+	args = {
+		type = string
+		amount = int
+	}
 	transpile = {
-		`region = {args}`
+		`add_power_projection =` {
+			`type = {args:type}`
+			`amount = {args:amount}`
+		}
 	}
 }
-new trigger controls = {
-	args = province
+new effect set_estate_privilege = {
+	args = estate_privilege
 	transpile = {
-		`controls = {args}`
+		`set_estate_privilege = {args}`
 	}
 }
+new effect remove_estate_privilege = {
+	args = estate_privilege
+	transpile = {
+		`remove_estate_privilege = {args}`
+	}
+}
+new effect define_advisor = {
+	args = {
+		type = advisor_type
+		name = string
+		skill = int
+		location = province
+		cost_multiplier = float
+	}
+	transpile = {
+		`define_advisor =` {
+			`type = {args:type}`
+			`name = "{args:name}"`
+			`skill = {args:skill}`
+			`location = {args:location}`
+			`cost_multiplier = {args:cost_multiplier}`
+		}
+	}
+}
+new effect define_advisor = {
+	args = {
+		type = advisor_type
+		discount = bool
+	}
+	transpile = {
+		`define_advisor =` {
+			`type = {args:type}`
+			`discount = {args:discount}`
+		}
+	}
+}
+new effect change_trade_goods = {
+	args = tradegood
+	transpile = {
+		`change_trade_goods = {args}`
+	}
+}
+

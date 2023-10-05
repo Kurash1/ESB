@@ -22,6 +22,7 @@ new country_event barrow_hill.1 = {
 	title = "To Build a Barrow Hill"
 	desc = ""
 	picture = TOMB_eventPicture
+	is_triggered_only = yes
 	trigger = {
 		culture_group = nord
 		any_owned_province = {

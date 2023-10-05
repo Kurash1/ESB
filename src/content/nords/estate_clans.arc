@@ -112,9 +112,9 @@ new estate clans = {
 
 on_actions:on_loan_repaid += {
 	if [
-		has_estate_privilege = estates:clans:privileges:indebted_to_the_clans
+		has_estate_privilege = clans:indebted_to_the_clans
 		has_estate_loan = no
 	] {
-		remove_estate_privilege = estates:clans:privileges:indebted_to_the_clans
+		remove_estate_privilege = clans:indebted_to_the_clans
 	}
 }

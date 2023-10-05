@@ -33,7 +33,7 @@ new estate nobility = {
 			loyalty = -0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:nobility:privileges:favor_the_nobility_influence
+					has_estate_privilege = nobility:favor_the_nobility_influence
 				}
 			}
 		}
@@ -45,7 +45,7 @@ new estate nobility = {
 			loyalty = 0.20
 			can_select = { 
 				NOT = { 
-					has_estate_privilege = estates:nobility:privileges:curtail_the_nobility_influence
+					has_estate_privilege = nobility:curtail_the_nobility_influence
 				}
 			}
 		}
@@ -124,9 +124,9 @@ new estate nobility = {
 }
 on_actions:on_loan_repaid += {
 	if [
-		has_estate_privilege = estates:nobility:privileges:ask_for_money
+		has_estate_privilege = nobility:ask_for_money
 		has_estate_loan = no
 	] {
-		remove_estate_privilege = estates:nobility:privileges:ask_for_money
+		remove_estate_privilege = nobility:ask_for_money
 	}
 }

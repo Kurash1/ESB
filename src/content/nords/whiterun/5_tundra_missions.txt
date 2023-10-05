@@ -1,0 +1,151 @@
+new unit whiterun_horsemen = {
+	name = "Whiterun Horsemen"
+	desc = ""
+	type = cavalry
+	maneuver = 2
+	offensive_morale = 3
+	defensive_morale = 2
+	offensive_fire = 0
+	defensive_fire = 2
+	offensive_shock = 5
+	defensive_shock = 4
+	trigger = {
+		has_country_flag = unlocks_whiterun_horsemen
+	}
+}
+new event_modifier whiterun_generic_granitehill = {
+	name = "Founding Granitehill"
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+new event_modifier whiterun_generic_rorikstead = {
+	name = "Founding Rorikstead"
+	modifier = {
+		development_cost = -0.1
+	}
+}
+new event_modifier whiterun_generic_greymoor = {
+	name = "Founding Greymoor"
+	modifier = {
+		defensiveness = 0.25
+	}
+}
+mission_trees:whiterun_generic += {
+	rorikstead = {
+		name = "Rorikstead"
+		x = 0
+		y = 0
+		icon = rorikstead_mission
+		trigger = {
+			owns = rorikstead
+			provinces:rorikstead = {
+				development = 15
+			}
+		}
+		effect = {
+			areas:rorikstead, areas:swindler, areas:talking_stone = {
+				add_permanent_claim = ROOT
+			}
+			add_modifier = {
+				modifier = whiterun_generic_rorikstead
+				years = 50
+			}
+		}
+	}
+	granitehill = {
+		name = "Granitehill"
+		x = 1
+		y = 0
+		icon = granitehill_mission
+		trigger = {
+			owns = granitehill
+			provinces:granitehill = {
+				development = 15
+			}
+		}
+		effect = {
+			areas:gjukar, areas:sleeping_tree, areas:granitehill = {
+				add_permanent_claim = ROOT
+			}
+			add_modifier = {
+				modifier = whiterun_generic_granitehill
+				years = 50
+			}
+		}
+	}
+	greymoor = {
+		name = "Greymoor"
+		x = 2
+		y = 0
+		icon = greymoor_mission
+		trigger = {
+			owns = greymoor
+			provinces:greymoor = {
+				development = 15
+			}
+		}
+		effect = {
+			areas:greymoor, areas:bleakwind = {
+				add_permanent_claim = ROOT
+			}
+			add_modifier = {
+				modifier = whiterun_generic_greymoor
+				years = 50
+			}
+		}
+	}
+	tundra_development = {
+		name = "Tundra Development"
+		x = 1
+		y = 1
+		icon = tundra_development_mission
+		required = {
+			granitehill
+			rorikstead
+			greymoor
+		}
+		trigger = {
+			areas:greymoor, areas:granitehill, areas:sleeping_tree, areas:gjukar, areas:swindler, areas:rorikstead, areas:talking_stone = {
+				type = all
+				owned_by = ROOT
+			}
+			development_in_provinces = {
+				value = 100
+				trigger = {
+					has_terrain = steppe
+					OR = {
+						area = greymoor
+						area = granitehill
+						area = sleeping_tree
+						area = gjukar
+						area = swindler
+						area = rorikstead
+						area = talking_stone
+					}
+				}
+			}
+		}
+		effect = {
+			every_owned_province [has_terrain = steppe] {
+				add_base_manpower = 1
+			}
+		}
+	}
+	whiterun_horsemen = {
+		name = "Whiterun Horsemen"
+		x = 1
+		y = 2
+		icon = whiterun_horsemen_mission
+		required = tundra_development
+		trigger = {
+			mil_power = 150
+		}
+		effect = {
+			add_mil_power = -150
+			defineloc unlocks_whiterun_horsemen = "Unlocks §YWhiterun Horsemen§! Unit"
+			custom_tooltip = unlocks_whiterun_horsemen
+			set_country_flag = unlocks_whiterun_horsemen
+		}
+	}
+}
