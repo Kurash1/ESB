@@ -25,6 +25,11 @@ governments:remnant:reform_levels:5 += new remnant_become_thanedom = {
 	potential = {
 		has_reform = companion_remnant
 	}
+	trigger = {
+		NOT = {
+			tag = jorrvaskr
+		}
+	}
 	effect = {
 		reform_remnant = {
 			type = monarchy

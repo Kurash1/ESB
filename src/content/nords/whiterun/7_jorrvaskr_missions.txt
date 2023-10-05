@@ -4,7 +4,7 @@ new mission_tree jorrvaskr = {
 		tag = jorrvaskr
 	}
 	remembrance = {
-		name = "Remembrance"
+		name = "Host a Remembrance"
 		desc = "Frostfall 13th is the day the Night of Tears happened, and for that we hold a Remembrance in Frostfall"
 		x = 1
 		y = 3
@@ -15,6 +15,12 @@ new mission_tree jorrvaskr = {
 				is_month = 9
 				NOT = { is_month = 10 }
 			}
+			treasury = 50
+		}
+		effect = {
+			add_treasury = -50
+			add_splendor = 250
+			add_prestige = 25
 		}
 	}
 	warrior_rights = {
@@ -22,18 +28,48 @@ new mission_tree jorrvaskr = {
 		required = remembrance
 		x = 0
 		y = 4
+		trigger = {
+			has_estate_privilege = warriors:warrior_state
+		}
+		effect = {
+			add_army_tradition = 25
+		}
 	}
 	a_new_age = {
 		name = "A New Age"
 		required = remembrance
 		x = 1
 		y = 4
+		trigger = {
+			employed_advisor = { category = ADM }
+			employed_advisor = { category = DIP }
+			employed_advisor = { category = MIL }
+		}
+		effect = {
+			change_government_reform_progress = 100
+		}
 	}
 	mead_hall = {
 		name = "Mead Hall"
 		required = remembrance
 		x = 2
 		y = 4
+		trigger = {
+			provinces:whiterun = {
+				development = 20
+			}
+		}
+		effect = {
+			provinces:whiterun = {
+				quick_province_modifier = {
+					name = "Mead Hall"
+					modifier = {
+						local_unrest = -3
+						trade_goods_size = 0.5
+					}
+				}
+			}
+		}
 	}
 	formal_army = {
 		name = "Formal Army"
@@ -43,6 +79,12 @@ new mission_tree jorrvaskr = {
 		}
 		x = 0
 		y = 5
+		trigger = {
+			army_professionalism = 0.10 
+		}
+		effect = {
+			add_army_professionalism = 0.15
+		}
 	}
 	new_governance = {
 		name = "New Governance"
@@ -52,6 +94,22 @@ new mission_tree jorrvaskr = {
 		}
 		x = 2
 		y = 5
+		trigger = {
+			OR = {
+				has_reform = remnant_3_focus_on_the_court
+				has_reform = remnant_3_focus_on_local_forces
+				has_reform = remnant_3_focus_on_bureaucracy
+			}
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "New Governance"
+				duration = 7300
+				modifier = {
+					monthly_reform_progress = 0.5
+				}
+			}
+		}
 	}
 	a_jarl_elected = {
 		name = "A Jarl Elected"
@@ -61,5 +119,20 @@ new mission_tree jorrvaskr = {
 		}
 		x = 1
 		y = 6
+		effect = {
+			if [tag = jorrvaskr] {			
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				
+				change_tag = WHT
+				swap_free_idea_group = yes
+				
+				reform_remnant = {
+					type = monarchy
+					reform = tier_1_hold
+				}
+			}
+		}
 	}
 }
