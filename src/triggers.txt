@@ -64,3 +64,9 @@ new trigger has_trade_goods = {
 		`trade_goods = {args}`
 	}
 }
+new trigger has_trade_goods = {
+	args = base_scope
+	transpile = {
+		`trade_goods = {args}`
+	}
+}

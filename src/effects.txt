@@ -36,6 +36,12 @@ new effect add_modifier = {
 		}
 	}
 }
+new effect history_trade_goods = {
+	args = tradegood
+	transpile = {
+		`trade_goods = {args}`
+	}
+}
 new effect change_culture = {
 	args = culture
 	transpile = { `change_culture = {args}` }
