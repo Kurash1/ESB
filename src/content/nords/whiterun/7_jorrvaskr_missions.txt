@@ -8,6 +8,7 @@ new mission_tree jorrvaskr = {
 		desc = "Frostfall 13th is the day the Night of Tears happened, and for that we hold a Remembrance in Frostfall"
 		x = 1
 		y = 3
+		icon = remembrance_mission
 		trigger = {
 			defineloc is_frostfall = "It is §OFrostfall§!"
 			custom_trigger_tooltip = {
@@ -28,6 +29,7 @@ new mission_tree jorrvaskr = {
 		required = remembrance
 		x = 0
 		y = 4
+		icon = warrior_rights_mission
 		trigger = {
 			has_estate_privilege = warriors:warrior_state
 		}
@@ -40,6 +42,7 @@ new mission_tree jorrvaskr = {
 		required = remembrance
 		x = 1
 		y = 4
+		icon = a_new_age_mission
 		trigger = {
 			employed_advisor = { category = ADM }
 			employed_advisor = { category = DIP }
@@ -54,6 +57,7 @@ new mission_tree jorrvaskr = {
 		required = remembrance
 		x = 2
 		y = 4
+		icon = mead_hall_mission
 		trigger = {
 			provinces:whiterun = {
 				development = 20
@@ -79,6 +83,7 @@ new mission_tree jorrvaskr = {
 		}
 		x = 0
 		y = 5
+		icon = formal_army_mission
 		trigger = {
 			army_professionalism = 0.10 
 		}
@@ -94,6 +99,7 @@ new mission_tree jorrvaskr = {
 		}
 		x = 2
 		y = 5
+		icon = new_governance_mission
 		trigger = {
 			OR = {
 				has_reform = remnant_3_focus_on_the_court
@@ -119,11 +125,31 @@ new mission_tree jorrvaskr = {
 		}
 		x = 1
 		y = 6
+		icon = a_jarl_elected_mission
 		effect = {
-			if [tag = jorrvaskr] {			
+			country_event = {
+				id = jorrvaskr.1
+				days = 0
+			}
+		}
+	}
+}
+new country_event jorrvaskr.1 = {
+	title = "Formation of Whiterun"
+	desc = ""
+	picture = crystalline_throne_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "Hail the Jarl"
+			effect = {
 				add_adm_power = 100
 				add_dip_power = 100
 				add_mil_power = 100
+				
+				regions:whiterun = {
+					add_permanent_claim = ROOT
+				}
 				
 				change_tag = WHT
 				swap_free_idea_group = yes
