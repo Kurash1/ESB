@@ -1,0 +1,32 @@
+new effect country_event = {
+	args = {
+		id = country_event
+		days = int?
+		random = int?
+		tooltip = string?
+	}
+	transpile = {
+		`country_event =` {
+			`id = {args:id}`
+			when [exists = args:days] `days = {args:days}`
+			when [exists = args:random] `random = {args:random}`
+			when [exists = args:tooltip] `tooltip = {args:tooltip}`
+		}
+	}
+}
+new effect add_country_modifier = {
+	args = {
+		name = string #don't wanna fix em kekw
+		duration = int?
+		hidden = bool?
+		desc = bool?
+	}
+	transpile = {
+		`add_country_modifier =` {
+			`name = {args:event_modifier}`
+			when [exists = args:duration] `duration = {args:duration}`
+			when [exists = args:hidden] `hidden = {args:hidden}`
+			when [exists = args:desc] `desc = {args:desc}`
+		}
+	}
+}
