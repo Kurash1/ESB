@@ -88,3 +88,15 @@ new trigger is_enemy = {
 		`is_enemy = {args}`
 	}
 }
+new trigger has_trade_goods = {
+	args = tradegood
+	transpile = {
+		`trade_goods = {args}`
+	}
+}
+new trigger has_trade_goods = {
+	args = base_scope
+	transpile = {
+		`trade_goods = {args}`
+	}
+}

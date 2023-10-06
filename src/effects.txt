@@ -36,6 +36,12 @@ new effect add_modifier = {
 		}
 	}
 }
+new effect history_trade_goods = {
+	args = tradegood
+	transpile = {
+		`trade_goods = {args}`
+	}
+}
 new effect change_culture = {
 	args = culture
 	transpile = { `change_culture = {args}` }
@@ -84,30 +90,26 @@ new effect remove_estate_privilege = {
 new effect define_advisor = {
 	args = {
 		type = advisor_type
-		name = string
-		skill = int
-		location = province
-		cost_multiplier = float
+		name = string?
+		skill = int?
+		location = province?
+		discount = bool?
+		cost_multiplier = float?
+		female = bool?
+		culture = culture?
+		religion = religion?
 	}
 	transpile = {
 		`define_advisor =` {
 			`type = {args:type}`
-			`name = "{args:name}"`
-			`skill = {args:skill}`
-			`location = {args:location}`
-			`cost_multiplier = {args:cost_multiplier}`
-		}
-	}
-}
-new effect define_advisor = {
-	args = {
-		type = advisor_type
-		discount = bool
-	}
-	transpile = {
-		`define_advisor =` {
-			`type = {args:type}`
-			`discount = {args:discount}`
+			when [exists = args:name] `name = {args:name}`
+			when [exists = args:skill] `skill = {args:skill}`
+			when [exists = args:location] `location = {args:location}`
+			when [exists = args:discount] `discount = {args:discount}`
+			when [exists = args:cost_multiplier] `cost_multiplier = {args:cost_multiplier}`
+			when [exists = args:female] `female = {args:female}`
+			when [exists = args:culture] `culture = {args:culture}`
+			when [exists = args:religion] `religion = {args:religion}`
 		}
 	}
 }

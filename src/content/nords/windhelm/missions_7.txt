@@ -61,7 +61,7 @@ new mission_series eastmarch_7 = {
 				}
 				hidden_effect = {
 					countries:skjoralmor = {
-						every_owned_province [`trade_goods` = wood]
+						every_owned_province [has_trade_goods = wood]
 						{
 							quick_province_modifier = {
 								name = "The Skjoralmor Deal"

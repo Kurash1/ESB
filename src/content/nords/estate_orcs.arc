@@ -3,7 +3,7 @@ new estate orcs = {
 	desc = ""
 	icon = 14
 	color = {
-		255 100 0
+		28 127 0
 	}
 	trigger = {
 		any_owned_province = {
@@ -38,7 +38,7 @@ new estate orcs = {
 			icon = privilege_trade_outside
 			max_absolutism = -5
 			loyalty = 0.05
-			influence = 0.05
+			influence = 0.1
 			benefits = {
 				trade_efficiency = 0.1
 			}
@@ -61,7 +61,7 @@ new estate orcs = {
 			name = "Hire Orc Warriors"
 			desc = ""
 			icon = privilege_recruit_rajput_general
-			influence = 0.05
+			influence = 0.15
 			benefits = {
 				manpower_recovery_speed = 15%
 				shock_damage = 5%
@@ -95,7 +95,7 @@ new estate orcs = {
 			}
 		}
 	}
-	base_influence = 0
+	base_influence = 5
 }
 new personal_deity mauloch = {
 	name = "Mauloch"

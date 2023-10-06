@@ -196,8 +196,8 @@ new building_line production = {
 	y = 234
 	build_trigger = {
 		NOT = {
-			`trade_goods` = gold
-			`trade_goods` = silver
+			has_trade_goods = gold
+			has_trade_goods = silver
 		}
 	}
 	idea_group_unlocks = {
@@ -340,6 +340,9 @@ new building_line navy = {
 	reform_unlocks = {
 		tier_3_conscription
 	}
+	build_trigger = {
+		has_port = yes
+	}
 	1 = {
 		cost = 100
 		name = "Navy 1"
@@ -461,23 +464,6 @@ new building_line state = {
 		administrative_ideas
 		dezentra0
 	}
-	build_trigger = {
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = state_1
-					has_building = state_2
-					has_building = state_3
-					has_construction = state_1
-					has_construction = state_2
-					has_construction = state_3
-				}
-			}
-		}
-	}
 	1 = {
 		cost = 100
 		name = "State 1"
@@ -486,6 +472,23 @@ new building_line state = {
 			statewide_governing_cost = -0.05
 			local_prosperity_growth = 0.05
 			allowed_num_of_buildings = 1
+		}
+		build_trigger = {
+			NOT = {
+				area_for_scope_province = {
+					owner = {
+						tag = ROOT
+					}
+					OR = {
+						has_building = state_1
+						has_building = state_2
+						has_building = state_3
+						has_construction = state_1
+						has_construction = state_2
+						has_construction = state_3
+					}
+				}
+			}
 		}
 	}
 	2 = {
@@ -498,6 +501,27 @@ new building_line state = {
 			local_prosperity_growth = 0.10
 			allowed_num_of_buildings = 1
 		}
+		build_trigger = {
+			NOT = {
+				area_for_scope_province = {
+					owner = {
+						tag = ROOT
+					}
+					OR = {
+						has_building = state_2
+						has_building = state_3
+						has_construction = state_1
+						has_construction = state_2
+						has_construction = state_3
+					}
+				}
+			}
+		}
+		on_built = {
+			area [has_building = state_1] {
+				remove_building = state_1
+			}
+		}
 	}
 	3 = {
 		cost = 300
@@ -508,6 +532,32 @@ new building_line state = {
 			statewide_governing_cost = -0.15
 			local_prosperity_growth = 0.15
 			allowed_num_of_buildings = 1
+		}
+		build_trigger = {
+			NOT = {
+				area_for_scope_province = {
+					owner = {
+						tag = ROOT
+					}
+					OR = {
+						has_building = state_3
+						has_construction = state_1
+						has_construction = state_2
+						has_construction = state_3
+					}
+				}
+			}
+		}
+		on_built = {
+			area [
+				OR = {
+					has_building = state_1
+					has_building = state_2
+				}
+			] {
+				remove_building = state_1
+				remove_building = state_2
+			}
 		}
 	}
 	ai_will_do = {

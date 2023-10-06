@@ -1,0 +1,16 @@
+new effect country_event = {
+	args = {
+		id = country_event
+		days = int?
+		random = int?
+		tooltip = string?
+	}
+}
+new effect add_country_modifier = {
+	args = {
+		name = string #don't wanna fix em kekw
+		duration = int?
+		hidden = bool?
+		desc = bool?
+	}
+}

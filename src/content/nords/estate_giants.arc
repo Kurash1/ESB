@@ -3,7 +3,7 @@ new estate giants = {
 	desc = ""
 	icon = 13
 	color = {
-		255 100 0
+		127 51 0
 	}
 	trigger = {
 		culture_group = nord
@@ -16,5 +16,5 @@ new estate giants = {
 	}
 	land_ownership_modifier = {
 	}
-	base_influence = 0
+	base_influence = 5
 }

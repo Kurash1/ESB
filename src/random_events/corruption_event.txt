@@ -481,7 +481,7 @@ new country_event corruption_event.11 = {
 		hidden_effect = {
 			random_owned_province [
 				NOT = {
-					`trade_goods` = unknown
+					has_trade_goods = unknown
 				}
 			] {
 				save_event_target_as = trade_goods_province
@@ -492,7 +492,7 @@ new country_event corruption_event.11 = {
 		{
 			name = "We must regain control of the [trade_goods_province.GetTradeGoodsName] market."
 			effect = {
-				every_owned_province [`trade_goods` = event_target:trade_goods_province]
+				every_owned_province [has_trade_goods = event_target:trade_goods_province]
 				{
 					add_province_modifier = {
 						name = "embezzled_goods"

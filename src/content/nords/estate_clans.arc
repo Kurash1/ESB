@@ -38,6 +38,7 @@ new estate clans = {
 			land_share = 10
 			max_absolutism = -5
 			loyalty = -0.05
+			influence = 0.15
 			benefits = {
 				country_admin_power = 1
 			}
@@ -104,6 +105,40 @@ new estate clans = {
 			}
 			ai_will_do = {
 				factor = 0
+			}
+		}
+		new autonomy_of_the_clans = {
+			name = "Autonomy of the Clans"
+			icon = privilege_autonomy
+			max_absolutism = -10
+			loyalty = 0.1
+			influence = 0.1
+			penalties = {
+				global_autonomy = 0.15
+			}
+			benefits = {
+				global_unrest = -2
+			}
+		}
+		new no_broken_homes_initiative = {
+			name = "No Broken Homes Initiative"
+			icon = privilege_demand_more_troops
+			loyalty = 0.1
+			penalties = {
+				global_manpower_modifier = -0.15
+			}
+			benefits = {
+				global_unrest = -2
+			}
+		}
+		new clan_elder_voices = {
+			name = "Clan Elder Voices"
+			icon = privilege_recruit_minister
+			max_absolutism = -15
+			loyalty = 0.05
+			influence = 0.2
+			benefits = {
+				advisor_cost = -0.2
 			}
 		}
 	}

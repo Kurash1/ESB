@@ -1,0 +1,6430 @@
+can_not_build_colonies = {
+	text = "Can NOT establish Colonies"
+	localisation_key = MODIFIER_CAN_NOT_BUILD_COLONIES
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_not_build_buildings = {
+	text = "Can NOT build buildings"
+	localisation_key = MODIFIER_CAN_NOT_BUILD_BUILDINGS
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_not_build_missionaries = {
+	text = "Can NOT send missionaries"
+	localisation_key = MODIFIER_CAN_NOT_BUILD_MISSIONARIES
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_not_declare_war = {
+	text = "Can NOT declare war"
+	localisation_key = MODIFIER_CAN_NOT_DECLARE_WAR
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_not_send_merchants = {
+	text = "Can NOT send merchants"
+	localisation_key = MODIFIER_CAN_NOT_SEND_MERCHANTS
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+capped_by_forcelimit = {
+	text = "Can NOT build over Force Limit"
+	localisation_key = MODIFIER_CAPED_BY_FORCELIMIT
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_claim_states = {
+	text = "Can claim entire states"
+	localisation_key = MODIFIER_CAN_CLAIM_STATES
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+free_concentrate_development = {
+	text = "Can concentrate development with no losses."
+	localisation_key = MODIFIER_FREE_CONCENTRATE_DEVELOPMENT
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+build_cost = {
+	text = "Construction Cost"
+	localisation_key = BUILD_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_build_cost = {
+	text = "Local Construction Cost"
+	localisation_key = LOCAL_BUILD_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+build_time = {
+	text = "Construction Time"
+	localisation_key = BUILD_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_build_time = {
+	text = "Local Construction Time"
+	localisation_key = LOCAL_BUILD_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_unrest = {
+	text = "Local Unrest"
+	localisation_key = LOCAL_UNREST
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+global_unrest = {
+	text = "National Unrest"
+	localisation_key = GLOBAL_UNREST
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+development_cost = {
+	text = "Development Cost"
+	localisation_key = DEVELOPMENT_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+development_cost_modifier = {
+	text = "Development Cost Modifier"
+	localisation_key = MODIFIER_DEVELOPMENT_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_development_cost = {
+	text = "Local Development Cost"
+	localisation_key = LOCAL_DEVELOPMENT_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_development_cost_modifier = {
+	text = "Local Development Cost Modifier"
+	localisation_key = MODIFIER_LOCAL_DEVELOPMENT_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+trade_efficiency = {
+	text = "Trade Efficiency"
+	localisation_key = TRADE_EFFICIENCY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+province_trade_power_value = {
+	text = "Local Trade Power"
+	localisation_key = PROVINCE_TRADE_VALUE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+province_trade_power_modifier = {
+	text = "Local Trade Power"
+	localisation_key = PROVINCE_TRADE_VALUE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_prov_trade_power_modifier = {
+	text = "Provincial Trade Power Modifier"
+	localisation_key = GLOBAL_PROV_TRADE_POWER_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+production_efficiency = {
+	text = "Production Efficiency"
+	localisation_key = PRODUCTION_EFFICIENCY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_production_efficiency = {
+	text = "Local Production Efficiency"
+	localisation_key = LOCAL_PRODUCTION_EFFICIENCY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+trade_goods_size = {
+	text = "Local Goods Produced"
+	localisation_key = TRADE_GOODS_SIZE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+trade_goods_size_modifier = {
+	text = "Local Goods Produced Modifier"
+	localisation_key = TRADE_GOODS_SIZE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+raze_power_gain = {
+	text = "Razing Power Gain"
+	localisation_key = RAZE_POWER_GAIN
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+monarch_power_tribute = {
+	text = "Monarch Power Tribute from Tributary States"
+	localisation_key = MODIFIER_MONARCH_POWER_TRIBUTE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+tributary_conversion_cost_modifier = {
+	text = "Tributary to Vassal Cost Modifier"
+	localisation_key = MODIFIER_TRIBUTARY_CONVERSION_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+expand_infrastructure_cost_modifier = {
+	text = "Expand Infrastructure Cost Modifier"
+	localisation_key = MODIFIER_EXPAND_INFRASTRUCTURE_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+max_absolutism_effect = {
+	text = "Max effect of Absolutism"
+	localisation_key = MODIFIER_MAX_ABSOLUTISM_EFFECT
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+centralize_state_cost = {
+	text = "Centralize State Cost"
+	localisation_key = MODIFIER_CENTRALIZE_STATE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_centralize_state_cost = {
+	text = "Local Centralize State Cost"
+	localisation_key = MODIFIER_LOCAL_CENTRALIZE_STATE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+land_morale_constant = {
+	text = "Morale of Armies"
+	localisation_key = MODIFIER_LAND_MORALE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+naval_morale_constant = {
+	text = "Morale of Navies"
+	localisation_key = MODIFIER_NAVAL_MORALE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_general_shock = {
+	text = "Max General Shock"
+	localisation_key = MODIFIER_MAX_GENERAL_SHOCK
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_general_fire = {
+	text = "Max General Fire"
+	localisation_key = MODIFIER_MAX_GENERAL_FIRE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_general_maneuver = {
+	text = "Max General Maneuver"
+	localisation_key = MODIFIER_MAX_GENERAL_MANEUVER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_general_siege = {
+	text = "Max General Siege"
+	localisation_key = MODIFIER_MAX_GENERAL_SIEGE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_admiral_shock = {
+	text = "Max Admiral Shock"
+	localisation_key = MODIFIER_MAX_ADMIRAL_SHOCK
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_admiral_fire = {
+	text = "Max Admiral Fire"
+	localisation_key = MODIFIER_MAX_ADMIRAL_FIRE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_admiral_maneuver = {
+	text = "Max Admiral Maneuver"
+	localisation_key = MODIFIER_MAX_ADMIRAL_MANEUVER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_admiral_siege = {
+	text = "Max Admiral Siege"
+	localisation_key = MODIFIER_MAX_ADMIRAL_SIEGE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+coast_raid_range = {
+	text = "Coastal Raiding Range"
+	localisation_key = MODIFIER_COAST_RAID_RANGE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+development_cost_in_primary_culture = {
+	text = "Development Cost in Primary Culture"
+	localisation_key = MODIFIER_DEVELOPMENT_COST_IN_PRIMARY_CULTURE
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+reduced_trade_penalty_on_non_main_tradenode = {
+	text = "Reduced Trade Penalty on Non Main Trade Node"
+	localisation_key = MODIFIER_REDUCED_TRADE_PENALTY_ON_NON_MAIN_TRADE_NODE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+colony_cost_modifier = {
+	text = "Colony Cost Modifier"
+	localisation_key = MODIFIER_COLONY_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_colony_cost_modifier = {
+	text = "Local Colony Cost Modifier"
+	localisation_key = MODIFIER_LOCAL_COLONY_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+spy_action_cost_modifier = {
+	text = "Spy Action Cost Modifier"
+	localisation_key = MODIFIER_SPY_ACTION_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+placed_merchant_power_modifier = {
+	text = "Placed Merchant Power Modifier"
+	localisation_key = MODIFIER_PLACED_MERCHANT_POWER_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+reduced_liberty_desire_on_other_continent = {
+	text = "Reduced Liberty Desire on other Continent"
+	localisation_key = MODIFIER_REDUCED_LIBERTY_DESIRE_ON_OTHER_CONTINENT
+	multiplier = -1
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+overextension_impact_modifier = {
+	text = "Overextension Impact Modifier"
+	localisation_key = MODIFIER_OVEREXTENSION_IMPACT_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+artillery_level_modifier = {
+	text = "Artillery Levels Contribution to Siege"
+	localisation_key = MODIFIER_ARTILLERY_LEVEL_MODIFIER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_tolerance_of_heretics = {
+	text = "Local Tolerance of Heretics"
+	localisation_key = MODIFIER_LOCAL_TOLERANCE_OF_HERETICS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_tolerance_of_heathens = {
+	text = "Local Tolerance of Heathens"
+	localisation_key = MODIFIER_LOCAL_TOLERANCE_OF_HEATHENS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+tax_income = {
+	text = "Yearly Tax Income"
+	localisation_key = YEARLY_TAX_INCOME
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+global_tax_income = {
+	text = "Yearly Tax Income"
+	localisation_key = YEARLY_TAX_INCOME
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_tax_modifier = {
+	text = "Local Tax Modifier"
+	localisation_key = LOCAL_TAX_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_tax_modifier = {
+	text = "National Tax Modifier"
+	localisation_key = GLOBAL_TAX_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+stability_cost_modifier = {
+	text = "Stability Cost Modifier"
+	localisation_key = STABILITY_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+inflation_reduction = {
+	text = "Yearly Inflation Reduction"
+	localisation_key = INFLATION_REDUCTION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+inflation_reduction_local = {
+	text = "Yearly Inflation Reduction"
+	localisation_key = INFLATION_REDUCTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+interest = {
+	text = "Interest Per Annum"
+	localisation_key = INTEREST
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+colonists = {
+	text = "Colonists"
+	localisation_key = YEARLY_COLONISTS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+missionaries = {
+	text = "Missionaries"
+	localisation_key = YEARLY_MISSIONARIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+merchants = {
+	text = "Merchants"
+	localisation_key = YEARLY_MERCHANTS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+diplomats = {
+	text = "Diplomats"
+	localisation_key = YEARLY_DIPLOMATS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+global_trade_power = {
+	text = "Global Trade Power"
+	localisation_key = MODIFIER_GLOBAL_TRADE_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_foreign_trade_power = {
+	text = "Trade Power Abroad"
+	localisation_key = MODIFIER_GLOBAL_FOREIGN_TRADE_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_own_trade_power = {
+	text = "Domestic Trade Power"
+	localisation_key = MODIFIER_GLOBAL_OWN_TRADE_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+colonist_placement_chance = {
+	text = "Settler Chance"
+	localisation_key = COLONIST_PLACEMENT_CHANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+local_colonist_placement_chance = {
+	text = "Local Settler Chance"
+	localisation_key = LOCAL_COLONIST_PLACEMENT_CHANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+global_missionary_strength = {
+	text = "Missionary Strength"
+	localisation_key = GLOBAL_MISSIONARY_STRENGTH
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+local_missionary_strength = {
+	text = "Local Missionary Strength"
+	localisation_key = LOCAL_MISSIONARY_STRENGTH
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+land_morale = {
+	text = "Morale of Armies"
+	localisation_key = LAND_MORALE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_morale = {
+	text = "Morale of Navies"
+	localisation_key = NAVAL_MORALE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_manpower = {
+	text = "Manpower Increase"
+	localisation_key = MANPOWER
+	multiplier = 1000
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+global_manpower = {
+	text = "Manpower Increase"
+	localisation_key = MANPOWER
+	multiplier = 1000
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+local_manpower_modifier = {
+	text = "Local Manpower Modifier"
+	localisation_key = LOCAL_MANPOWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_manpower_modifier = {
+	text = "National Manpower Modifier"
+	localisation_key = GLOBAL_MANPOWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+manpower_recovery_speed = {
+	text = "Manpower Recovery Speed"
+	localisation_key = MANPOWER_RECOVERY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+morale_damage_received = {
+	text = "Morale Damage Received"
+	localisation_key = MODIFIER_MORALE_DAMAGE_RECIEVED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+morale_damage = {
+	text = "Morale Damage"
+	localisation_key = MODIFIER_MORALE_DAMAGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+military_tactics = {
+	text = "Military Tactics"
+	localisation_key = MODIFIER_MILITARY_TACTICS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_sailors = {
+	text = "Sailor Increase"
+	localisation_key = SAILORS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+global_sailors = {
+	text = "Sailor Increase"
+	localisation_key = SAILORS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+local_sailors_modifier = {
+	text = "Local Sailors Modifier"
+	localisation_key = LOCAL_SAILORS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_sailors_modifier = {
+	text = "National Sailors Modifier"
+	localisation_key = GLOBAL_SAILORS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+sailors_recovery_speed = {
+	text = "Sailor Recovery Speed"
+	localisation_key = SAILORS_RECOVERY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+land_forcelimit = {
+	text = "Land Force Limit"
+	localisation_key = LAND_FORCELIMIT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+naval_forcelimit = {
+	text = "Naval Force Limit"
+	localisation_key = NAVAL_FORCELIMIT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+overlord_naval_forcelimit = {
+	text = "Overlord Naval Force Limit"
+	localisation_key = OVERLORD_NAVAL_FORCE_LIMIT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+overlord_naval_forcelimit_modifier = {
+	text = "Overlord Naval Force Limit Modifier"
+	localisation_key = OVERLORD_NAVAL_FORCE_LIMIT_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+land_forcelimit_modifier = {
+	text = "Land Force Limit Modifier"
+	localisation_key = LAND_FORCELIMIT_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_forcelimit_modifier = {
+	text = "Naval Force Limit Modifier"
+	localisation_key = NAVAL_FORCELIMIT_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+land_maintenance_modifier = {
+	text = "Land Maintenance Modifier"
+	localisation_key = LAND_MAINTENANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_maintenance_modifier = {
+	text = "Naval Maintenance Modifier"
+	localisation_key = NAVAL_MAINTENANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+merc_maintenance_modifier = {
+	text = "Mercenary Maintenance"
+	localisation_key = MERC_MAINTENANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+fort_maintenance_modifier = {
+	text = "Fort Maintenance"
+	localisation_key = FORT_MAINTENANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_fort_maintenance_modifier = {
+	text = "Local Fort Maintenance"
+	localisation_key = MODIFIER_LOCAL_FORT_MAINTENANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+mercenary_cost = {
+	text = "Mercenary Cost"
+	localisation_key = MERCENARY_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+infantry_cost = {
+	text = "Infantry Cost"
+	localisation_key = INFANTRY_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+cavalry_cost = {
+	text = "Cavalry Cost"
+	localisation_key = CAVALRY_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+artillery_cost = {
+	text = "Artillery Cost"
+	localisation_key = ARTILLERY_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+heavy_ship_cost = {
+	text = "Heavy Ship Cost"
+	localisation_key = HEAVYSHIP_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+light_ship_cost = {
+	text = "Light Ship Cost"
+	localisation_key = LIGHTSHIP_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+galley_cost = {
+	text = "Galley Cost"
+	localisation_key = GALLEY_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+transport_cost = {
+	text = "Transport Cost"
+	localisation_key = TRANSPORT_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+infantry_power = {
+	text = "Infantry Combat Ability"
+	localisation_key = INFANTRY_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+cavalry_power = {
+	text = "Cavalry Combat Ability"
+	localisation_key = CAVALRY_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+artillery_power = {
+	text = "Artillery Combat Ability"
+	localisation_key = ARTILLERY_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+heavy_ship_power = {
+	text = "Heavy Ship Combat Ability"
+	localisation_key = HEAVYSHIP_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+light_ship_power = {
+	text = "Light Ship Combat Ability"
+	localisation_key = LIGHTSHIP_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+galley_power = {
+	text = "Galley Combat Ability"
+	localisation_key = GALLEY_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+transport_power = {
+	text = "Transport Combat Ability"
+	localisation_key = TRANSPORT_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+attrition = {
+	text = "Attrition"
+	localisation_key = ATTRITION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+hostile_attrition = {
+	text = "Attrition for Enemies"
+	localisation_key = HOSTILE_ATTRITION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+artillery_barrage_cost = {
+	text = "Artillery Barrage Cost"
+	localisation_key = MODIFIER_ARTILLERY_BARRAGE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+transport_attrition = {
+	text = "Attrition when loaded on Ships"
+	localisation_key = MODIFIER_TRANSPORT_ATTRITION
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+land_attrition = {
+	text = "Land Attrition"
+	localisation_key = LAND_ATTRITION
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_attrition = {
+	text = "Naval Attrition"
+	localisation_key = NAVAL_ATTRITION
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+max_attrition = {
+	text = "Maximum Attrition"
+	localisation_key = MAX_ATTRITION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_hostile_attrition = {
+	text = "Max Hostile Attrition"
+	localisation_key = MODIFIER_MAX_HOSTILE_ATTRITION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+supply_limit = {
+	text = "Supply Limit"
+	localisation_key = SUPPLY_LIMIT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+war_exhaustion = {
+	text = "Monthly War Exhaustion"
+	localisation_key = WAR_EXHAUSTION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+war_exhaustion_cost = {
+	text = "Cost of Reducing War Exhaustion"
+	localisation_key = WAR_EXHAUSTION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_hostile_attrition = {
+	text = "Attrition for Enemies"
+	localisation_key = HOSTILE_ATTRITION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+army_tradition = {
+	text = "Yearly Army Tradition"
+	localisation_key = YEARLY_ARMY_TRADITION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+navy_tradition = {
+	text = "Yearly Navy Tradition"
+	localisation_key = YEARLY_NAVY_TRADITION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+army_tradition_decay = {
+	text = "Yearly Army Tradition Decay"
+	localisation_key = YEARLY_ARMY_TRADITION_DECAY
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+navy_tradition_decay = {
+	text = "Yearly Navy Tradition Decay"
+	localisation_key = YEARLY_NAVY_TRADITION_DECAY
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+leader_land_fire = {
+	text = "Land Leader Fire"
+	localisation_key = LEADER_LAND_FIRE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+leader_land_shock = {
+	text = "Land Leader Shock"
+	localisation_key = LEADER_LAND_SHOCK
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+leader_naval_fire = {
+	text = "Naval Leader Fire"
+	localisation_key = LEADER_NAVAL_FIRE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+leader_naval_shock = {
+	text = "Naval Leader Shock"
+	localisation_key = LEADER_NAVAL_SHOCK
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+leader_siege = {
+	text = "Leader Siege"
+	localisation_key = LEADER_SIEGE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+leader_naval_manuever = {
+	text = "Naval Leader Maneuver"
+	localisation_key = NAVAL_LEADER_MANEUVER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+leader_land_manuever = {
+	text = "Land Leader Maneuver"
+	localisation_key = LAND_LEADER_MANEUVER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+state_maintenance_modifier = {
+	text = "State Maintenance"
+	localisation_key = STATE_MAINTENANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_state_maintenance_modifier = {
+	text = "State Maintenance"
+	localisation_key = STATE_MAINTENANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_spy_defence = {
+	text = "Foreign Spy Detection"
+	localisation_key = SPY_GLOBAL_DEFENCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+spy_offence = {
+	text = "Spy Network Construction"
+	localisation_key = SPY_OFFENCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+trade_value = {
+	text = "Trade Value"
+	localisation_key = TRADE_VALUE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+fort_level = {
+	text = "Fort Level"
+	localisation_key = FORT_LEVEL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+blockade_efficiency = {
+	text = "Blockade Efficiency"
+	localisation_key = BLOCKADE_EFFICIENCY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+ship_recruit_speed = {
+	text = "Local Shipbuilding Time"
+	localisation_key = L_SHIP_RECRUIT_SPEED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+regiment_recruit_speed = {
+	text = "Local Recruitment Time"
+	localisation_key = L_REGIMENT_RECRUIT_SPEED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_ship_recruit_speed = {
+	text = "Shipbuilding Time"
+	localisation_key = SHIP_RECRUIT_SPEED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_regiment_recruit_speed = {
+	text = "Recruitment Time"
+	localisation_key = REGIMENT_RECRUIT_SPEED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+prestige = {
+	text = "Yearly Prestige"
+	localisation_key = YEARLY_PRESTIGE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+prestige_decay = {
+	text = "Prestige Decay"
+	localisation_key = PRESTIGE_DECAY
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+prestige_from_land = {
+	text = "Prestige from Land battles"
+	localisation_key = PRESTIGE_FROM_LAND
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+prestige_from_naval = {
+	text = "Prestige from Naval battles"
+	localisation_key = PRESTIGE_FROM_NAVAL
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+trade_value_modifier = {
+	text = "Trade Value Modifier"
+	localisation_key = TRADE_VALUE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+garrison_growth = {
+	text = "Garrison Growth"
+	localisation_key = GARRISON_GROWTH
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_garrison_growth = {
+	text = "National Garrison Growth"
+	localisation_key = GLOBAL_GARRISON_GROWTH
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+advisor_cost = {
+	text = "Advisor Costs"
+	localisation_key = MODIFIER_ADVISOR_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+advisor_pool = {
+	text = "Possible Advisors"
+	localisation_key = MODIFIER_ADVISOR_POOL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+female_advisor_chance = {
+	text = "Female Advisor Chance"
+	localisation_key = MODIFIER_FEMALE_ADVISOR_CHANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+technology_cost = {
+	text = "Technology Cost"
+	localisation_key = MODIFIER_TECHNOLOGY_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+discipline = {
+	text = "Discipline"
+	localisation_key = MODIFIER_DISCIPLINE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+reinforce_speed = {
+	text = "Reinforce Speed"
+	localisation_key = MODIFIER_REINFORCE_SPEED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+range = {
+	text = "Colonial Range"
+	localisation_key = MODIFIER_COLONIAL_RANGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+global_colonial_growth = {
+	text = "Global Settler Increase"
+	localisation_key = MODIFIER_COLONIAL_GROWTH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_colonial_growth = {
+	text = "Local Settler Increase"
+	localisation_key = MODIFIER_LOCAL_COLONIAL_GROWTH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+tolerance_own = {
+	text = "Tolerance of the True Faith"
+	localisation_key = MODIFIER_TOLERANCE_OWN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+tolerance_heretic = {
+	text = "Tolerance of Heretics"
+	localisation_key = MODIFIER_TOLERANCE_HERETIC
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+tolerance_heathen = {
+	text = "Tolerance of Heathens"
+	localisation_key = MODIFIER_TOLERANCE_HEATHEN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+defensiveness = {
+	text = "Fort Defense"
+	localisation_key = DEFENSIVENESS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_defensiveness = {
+	text = "Local Defensiveness"
+	localisation_key = LOCAL_DEFENSIVENESS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_ship_cost = {
+	text = "Ship Costs"
+	localisation_key = SHIP_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_ship_repair = {
+	text = "Global Ship Repair"
+	localisation_key = MODIFIER_GLOBAL_SHIP_REPAIR
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_regiment_cost = {
+	text = "Regiment Costs"
+	localisation_key = REGIMENT_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_tariffs = {
+	text = "Global Tariffs"
+	localisation_key = GLOBAL_TARIFF_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+diplomatic_reputation = {
+	text = "Diplomatic Reputation"
+	localisation_key = MODIFIER_DIPLO_SKILL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+papal_influence = {
+	text = "Yearly Papal Influence"
+	localisation_key = YEARLY_PAPAL_INFLUENCE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+devotion = {
+	text = "Yearly Devotion"
+	localisation_key = YEARLY_DEVOTION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+legitimacy = {
+	text = "Yearly Legitimacy"
+	localisation_key = YEARLY_LEGITIMACY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+horde_unity = {
+	text = "Yearly Horde Unity"
+	localisation_key = YEARLY_HORDE_UNITY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+republican_tradition = {
+	text = "Yearly Republican Tradition"
+	localisation_key = YEARLY_REPUBLICAN_TRADITION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_splendor = {
+	text = "Monthly Splendor"
+	localisation_key = MONTHLY_SPLENDOR
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_ship_cost = {
+	text = "Local Ship Cost"
+	localisation_key = MODIFIER_LOCAL_SHIP_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_ship_repair = {
+	text = "Local Ship Repair"
+	localisation_key = MODIFIER_LOCAL_SHIP_REPAIR
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_regiment_cost = {
+	text = "Local Regiment Cost"
+	localisation_key = MODIFIER_LOCAL_REGIMENT_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_friendly_movement_speed = {
+	text = "Friendly Movement Speed"
+	localisation_key = MODIFIER_LOCAL_FRIENDLY_MOVEMENT_SPEED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_hostile_movement_speed = {
+	text = "Hostile Movement Speed"
+	localisation_key = MODIFIER_LOCAL_HOSTILE_MOVEMENT_SPEED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+trade_range_modifier = {
+	text = "Trade Range"
+	localisation_key = MODIFIER_TRADE_RANGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_heretic_missionary_strength = {
+	text = "Missionary Strength vs Heretics"
+	localisation_key = MODIFIER_GLOBAL_HERETIC_MISSIONARY_STRENGTH
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+global_heathen_missionary_strength = {
+	text = "Missionary Strength vs Heathens"
+	localisation_key = MODIFIER_GLOBAL_HEATHEN_MISSIONARY_STRENGTH
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+improve_relation_modifier = {
+	text = "Improve Relations"
+	localisation_key = IMPROVE_RELATION_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+trade_steering = {
+	text = "Trade Steering"
+	localisation_key = TRADE_STEERING
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+all_power_cost = {
+	text = "All Power Costs"
+	localisation_key = MODIFIER_ALL_POWER_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+core_creation = {
+	text = "Core-Creation Cost"
+	localisation_key = MODIFIER_CORE_CREATION
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+enemy_core_creation = {
+	text = "Hostile Core-Creation Cost on us"
+	localisation_key = MODIFIER_ENEMY_CORE_CREATION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+free_leader_pool = {
+	text = "Leader(s) without Upkeep"
+	localisation_key = MODIFIER_FREE_LEADER_POOL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+idea_cost = {
+	text = "Idea Cost"
+	localisation_key = MODIFIER_IDEA_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+heir_chance = {
+	text = "Chance of New Heir"
+	localisation_key = MODIFIER_HEIR_CHANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+embargo_efficiency = {
+	text = "Embargo Efficiency"
+	localisation_key = MODIFIER_EMBARGO_EFFICIENCY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+recover_army_morale_speed = {
+	text = "Recover Army Morale Speed"
+	localisation_key = RECOVER_ARMY_MORALE_SPEED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+recover_navy_morale_speed = {
+	text = "Recover Navy Morale Speed"
+	localisation_key = RECOVER_NAVY_MORALE_SPEED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+diplomatic_upkeep = {
+	text = "Diplomatic Relations"
+	localisation_key = MODIFIER_DIPLOMATIC_UPKEEP
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+unjustified_demands = {
+	text = "Unjustified Demands"
+	localisation_key = MODIFIER_UNJUSTIFIED_DEMANDS
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+mercenary_manpower = {
+	text = "Mercenary Manpower"
+	localisation_key = MODIFIER_MERCENARY_MANPOWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+fabricate_claims_cost = {
+	text = "Cost to fabricate claims"
+	localisation_key = MODIFIER_FABRICATE_CLAIMS_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+claim_duration = {
+	text = "Claim Duration"
+	localisation_key = MODIFIER_CLAIM_DURATION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+regiment_manpower_usage = {
+	text = "Regiment Manpower Usage"
+	localisation_key = MODIFIER_REGIMENT_MANPOWER_USAGE
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+all_estate_influence_modifier = {
+	text = "All Estates Influence Modifier"
+	localisation_key = MODIFIER_ALL_ESTATE_INFLUENCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+justify_trade_conflict_cost = {
+	text = "Cost to justify trade conflict"
+	localisation_key = MODIFIER_JUSTIFY_TRADE_CONFLICT_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+rebel_support_efficiency = {
+	text = "Rebel Support Efficiency"
+	localisation_key = MODIFIER_REBEL_SUPPORT_EFFICIENCY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+discovered_relations_impact = {
+	text = "Covert Action Relation Impact"
+	localisation_key = MODIFIER_DISCOVERED_RELATION_IMPACT
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+annexation_relations_impact = {
+	text = "Annexation Relations Impact"
+	localisation_key = MODIFIER_ANNEXATION_RELATIONS_IMPACT
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+vassal_income = {
+	text = "Income from Vassals"
+	localisation_key = MODIFIER_VASSAL_INCOME
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+religious_unity = {
+	text = "Religious Unity"
+	localisation_key = MODIFIER_RELIGIOUS_UNITY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+inflation_action_cost = {
+	text = "Reduce Inflation Cost"
+	localisation_key = MODIFIER_INFLATION_ACTION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+migration_cost = {
+	text = "Migration Cost"
+	localisation_key = MIGRATION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+add_tribal_land_cost = {
+	text = "Add Tribal Land Cost"
+	localisation_key = MODIFIER_ADD_TRIBAL_LAND_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+settle_cost = {
+	text = "Settle Cost"
+	localisation_key = MODIFIER_SETTLE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+monthly_fervor_increase = {
+	text = "Monthly Fervor"
+	localisation_key = MODIFIER_MONTHLY_FERVOR_INCREASE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_piety = {
+	text = "Monthly Piety"
+	localisation_key = MODIFIER_MONTHLY_PIETY
+	multiplier = 100
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+monthly_piety_accelerator = {
+	text = "Monthly Piety Accelerator"
+	localisation_key = MODIFIER_MONTHLY_PIETY_ACCELERATOR
+	multiplier = 100
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+monthly_karma = {
+	text = "Monthly Karma"
+	localisation_key = MODIFIER_MONTHLY_KARMA
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_karma_accelerator = {
+	text = "Monthly Karma Accelerator"
+	localisation_key = MODIFIER_MONTHLY_KARMA_ACCELERATOR
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+global_rebel_suppression_efficiency = {
+	text = "Rebel Suppression Efficiency"
+	localisation_key = MODIFIER_GLOBAL_REBEL_SUPPRESSION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+caravan_power = {
+	text = "Caravan Power"
+	localisation_key = CARAVAN_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+yearly_corruption = {
+	text = "Yearly Corruption"
+	localisation_key = MODIFIER_YEARLY_CORRUPTION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+min_autonomy = {
+	text = "Minimum Autonomy"
+	localisation_key = MINIMUM_GLOBAL_AUTONOMY
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+global_autonomy = {
+	text = "Monthly Autonomy Change"
+	localisation_key = GLOBAL_AUTONOMY_MOD
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 3
+}
+min_local_autonomy = {
+	text = "Minimum Local Autonomy"
+	localisation_key = MINIMUM_LOCAL_AUTONOMY
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_autonomy = {
+	text = "Monthly Autonomy Change"
+	localisation_key = LOCAL_AUTONOMY_MOD
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 3
+}
+siege_ability = {
+	text = "Siege Ability"
+	localisation_key = MODIFIER_SIEGE_ABILITY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+privateer_efficiency = {
+	text = "Privateer Efficiency"
+	localisation_key = MODIFIER_PRIVATEER_EFFICIENCY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_trade_goods_size_modifier = {
+	text = "Goods Produced Modifier"
+	localisation_key = MODIFIER_GLOBAL_TRADE_GOODS_SIZE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_trade_goods_size = {
+	text = "Goods Produced"
+	localisation_key = MODIFIER_GLOBAL_TRADE_GOODS_SIZE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+envoy_travel_time = {
+	text = "Envoy Travel Time"
+	localisation_key = MODIFIER_ENVOY_TRAVEL_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+imperial_authority = {
+	text = "Imperial Authority Growth Modifier"
+	localisation_key = MODIFIER_IMPERIAL_AUTHORITY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+imperial_authority_value = {
+	text = "Imperial Authority Modifier"
+	localisation_key = MODIFIER_IMPERIAL_AUTHORITY_VALUE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+imperial_mandate = {
+	text = "Mandate Growth Modifier"
+	localisation_key = MODIFIER_IMPERIAL_MANDATE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+ae_impact = {
+	text = "Aggressive Expansion Impact"
+	localisation_key = MODIFIER_AE_IMPACT
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+province_warscore_cost = {
+	text = "Province War Score Cost"
+	localisation_key = MODIFIER_PROVINCE_WARSCORE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+supply_limit_modifier = {
+	text = "Supply Limit Modifier"
+	localisation_key = SUPPLY_LIMIT_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+global_supply_limit_modifier = {
+	text = "National Supply Limit Modifier"
+	localisation_key = GLOBAL_SUPPLY_LIMIT_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+national_focus_years = {
+	text = "Change National Focus Cooldown Years"
+	localisation_key = MODIFIER_NATIONAL_FOCUS_COOLDOWN_YEARS
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+vassal_forcelimit_bonus = {
+	text = "Vassal Force Limit Contribution"
+	localisation_key = MODIFIER_VASSAL_FORCELIMIT_BONUS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+vassal_naval_forcelimit_bonus = {
+	text = "Vassal Naval Force Limit Contribution"
+	localisation_key = MODIFIER_VASSAL_NAVAL_FORCELIMIT_BONUS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+vassal_manpower_bonus = {
+	text = "Vassal Manpower Contribution"
+	localisation_key = MODIFIER_VASSAL_MANPOWER_BONUS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+vassal_sailors_bonus = {
+	text = "Vassal Sailors Contribution"
+	localisation_key = MODIFIER_VASSAL_SAILORS_BONUS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+years_of_nationalism = {
+	text = "Years of Separatism"
+	localisation_key = MODIFIER_YEARS_OF_NATIONALISM
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+local_years_of_nationalism = {
+	text = "Years of Separatism"
+	localisation_key = MODIFIER_YEARS_OF_NATIONALISM
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+num_accepted_cultures = {
+	text = "Max Promoted Cultures"
+	localisation_key = MODIFIER_ACCEPTED_CULTURES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+culture_conversion_cost = {
+	text = "Culture Conversion Cost"
+	localisation_key = MODIFIER_CULTURE_CONVERSION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_culture_conversion_cost = {
+	text = "Culture Conversion Cost"
+	localisation_key = MODIFIER_CULTURE_CONVERSION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+culture_conversion_time = {
+	text = "Culture Conversion Time"
+	localisation_key = MODIFIER_CULTURE_CONVERSION_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_culture_conversion_time = {
+	text = "Culture Conversion Time"
+	localisation_key = MODIFIER_CULTURE_CONVERSION_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+diplomatic_annexation_cost = {
+	text = "Diplomatic Annexation Cost"
+	localisation_key = MODIFIER_DIPLOMATIC_ANNEXATION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+chance_to_inherit = {
+	text = "Chance to Inherit Personal Union Subjects"
+	localisation_key = MODIFIER_CHANCE_TO_INHERIT
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+ship_durability = {
+	text = "Ship Durability"
+	localisation_key = MODIFIER_SHIP_DURABILITY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+liberty_desire = {
+	text = "Liberty Desire"
+	localisation_key = MODIFIER_LIBERTY_DESIRE
+	multiplier = 1
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+reduced_liberty_desire = {
+	text = "Liberty Desire in Subjects"
+	localisation_key = MODIFIER_REDUCED_LIBERTY_DESIRE
+	multiplier = -1
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+allowed_num_of_buildings = {
+	text = "Possible Number of Buildings"
+	localisation_key = MODIFIER_ALLOWED_NUM_OF_BUILDINGS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+global_allowed_num_of_buildings = {
+	text = "Global Possible Number of Buildings"
+	localisation_key = MODIFIER_GLOBAL_ALLOWED_NUM_OF_BUILDINGS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+allowed_num_of_manufactories = {
+	text = "Possible Number of Manufactories"
+	localisation_key = MODIFIER_ALLOWED_NUM_OF_MANUFACTORIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+global_allowed_num_of_manufactories = {
+	text = "Possible Number of Manufactories"
+	localisation_key = MODIFIER_GLOBAL_ALLOWED_NUM_OF_MANUFACTORIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+church_power_modifier = {
+	text = "Church Power"
+	localisation_key = MODIFIER_CHURCH_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+monthly_church_power = {
+	text = "Monthly Faith Power"
+	localisation_key = MODIFIER_MONTHLY_CHURCH_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+garrison_size = {
+	text = "Garrison Size"
+	localisation_key = MODIFIER_GARRISON_SIZE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_garrison_size = {
+	text = "Local Garrison Size"
+	localisation_key = MODIFIER_LOCAL_GARRISON_SIZE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+loot_amount = {
+	text = "Looting Speed"
+	localisation_key = MODIFIER_LOOT_AMOUNT
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+embracement_cost = {
+	text = "Institution Embracement Cost"
+	localisation_key = MODIFIER_EMBRACEMENT_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_institution_spread = {
+	text = "Institution Spread"
+	localisation_key = MODIFIER_LOCAL_INSTITUTION_SPREAD
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_institution_spread = {
+	text = "Institution Spread"
+	localisation_key = MODIFIER_GLOBAL_INSTITUTION_SPREAD
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+native_uprising_chance = {
+	text = "Native Uprising Chance"
+	localisation_key = MODIFIER_NATIVE_UPRISING_CHANCE
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+native_assimilation = {
+	text = "Native Assimilation"
+	localisation_key = MODIFIER_NATIVE_ASSIMILATION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+may_recruit_female_generals = {
+	text = "May Recruit Female Generals"
+	localisation_key = MODIFIER_MAY_RECRUIT_FEMALE_GENERALS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+block_introduce_heir = {
+	text = "Blocks Introduce New Heir"
+	localisation_key = MODIFIER_BLOCK_INTRODUCE_NEW_HEIR
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_transfer_vassal_wargoal = {
+	text = "Allows '§YTransfer Subject§!' Peace Treaty at half cost"
+	localisation_key = MODIFIER_CAN_TRANSFER_VASSAL_WARGOAL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_chain_claim = {
+	text = "Allow Claims Bordering Claims"
+	localisation_key = MODIFIER_CAN_CHAIN_CLAIM
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+free_maintenance_on_expl_conq = {
+	text = "No Maintenance on Exploring Leaders"
+	localisation_key = MODIFIER_FREE_MAINTENANCE_ON_EXPL_CONQ
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+colony_development_boost = {
+	text = "Colony Development Boost"
+	localisation_key = MODIFIER_COLONY_DEVELOPMENT_BOOST
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+attack_bonus_in_capital_terrain = {
+	text = "Combat Bonus in Terrain of Capital"
+	localisation_key = MODIFIER_ATTACK_BONUS_IN_CAPITAL_TERRAIN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+can_bypass_forts = {
+	text = "Ignore Zone of Control"
+	localisation_key = MODIFIER_CAN_BYPASS_FORTS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+ignore_coring_distance = {
+	text = "Ignore Coring Distance"
+	localisation_key = MODIFIER_IGNORE_CORING_DISTANCE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+force_march_free = {
+	text = "Force March costs no Power"
+	localisation_key = MODIFIER_FORCE_MARCH_FREE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+possible_condottieri = {
+	text = "Possible Condottieri"
+	localisation_key = MODIFIER_POSSIBLE_CONDOTTIERI
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_ship_trade_power = {
+	text = "Ship Trade Power"
+	localisation_key = MODIFIER_GLOBAL_SHIP_TRADE_POWER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_naval_engagement_modifier = {
+	text = "Local Naval Engagement"
+	localisation_key = MODIFIER_LOCAL_NAVAL_ENGAGEMENT
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_naval_engagement_modifier = {
+	text = "Global Naval Engagement Modifier"
+	localisation_key = MODIFIER_GLOBAL_NAVAL_ENGAGEMENT_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_naval_engagement = {
+	text = "Global Naval Engagement"
+	localisation_key = MODIFIER_GLOBAL_NAVAL_ENGAGEMENT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+block_slave_raid = {
+	text = "Blocks Slave Raids"
+	localisation_key = MODIFIER_COAST_CAN_NOT_BE_RAIDED
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_perform_slave_raid = {
+	text = "May Raid Coasts"
+	localisation_key = MODIFIER_MAY_PERFORM_SLAVE_RAID
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_perform_slave_raid_on_same_religion = {
+	text = "May Raid Coasts, including coasts of countries with same religion."
+	localisation_key = MODIFIER_MAY_PERFORM_SLAVE_RAID_ON_SAME_RELIGION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+cavalry_flanking = {
+	text = "Cavalry Flanking Ability"
+	localisation_key = MODIFIER_CAVALRY_FLANKING
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+movement_speed = {
+	text = "Movement Speed"
+	localisation_key = MODIFIER_MOVEMENT_SPEED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+capture_ship_chance = {
+	text = "Chance to Capture Enemy Ships"
+	localisation_key = MODIFIER_CAPTURE_SHIP_CHANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+sunk_ship_morale_hit_recieved = {
+	text = "Morale Hit When Losing a Ship"
+	localisation_key = MODIFIER_SUNK_SHIP_MORALE_HIT_RECIEVED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+naval_tradition_from_battle = {
+	text = "Naval Tradition From Battles"
+	localisation_key = MODIFIER_NAVAL_TRADITION_FROM_BATTLE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+army_tradition_from_battle = {
+	text = "Army Tradition From Battles"
+	localisation_key = MODIFIER_ARMY_TRADITION_FROM_BATTLE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_core_creation = {
+	text = "Local Core-Creation Cost"
+	localisation_key = MODIFIER_LOCAL_CORE_CREATION
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+immortal = {
+	text = ""
+	localisation_key = MODIFIER_IMMORTAL
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+amount_of_banners = {
+	text = "Possible Manchu Banners"
+	localisation_key = MODIFIER_AMOUNT_OF_BANNERS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_amount_of_banners = {
+	text = "Possible Manchu Banners"
+	localisation_key = MODIFIER_LOCAL_AMOUNT_OF_BANNERS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+has_banners = {
+	text = "Allows Banners"
+	localisation_key = MODIFIER_HAS_BANNERS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+local_has_banners = {
+	text = "Allows Banners"
+	localisation_key = MODIFIER_HAS_BANNERS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_carolean = {
+	text = "Allows Carolean Infantry"
+	localisation_key = MODIFIER_HAS_CAROLEAN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+local_has_carolean = {
+	text = "Province Allows Carolean Infantry"
+	localisation_key = MODIFIER_LOCAL_HAS_CAROLEAN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+amount_of_carolean = {
+	text = "Possible Carolean Infantry"
+	localisation_key = MODIFIER_AMOUNT_OF_CAROLEAN
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_amount_of_carolean = {
+	text = "Possible Carolean Infantry"
+	localisation_key = MODIFIER_LOCAL_AMOUNT_OF_CAROLEAN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+can_recruit_hussars = {
+	text = "May recruit §YWinged Hussars§!"
+	localisation_key = MODIFIER_CAN_RECRUIT_HUSSARS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+amount_of_hussars = {
+	text = "Possible Winged Hussars"
+	localisation_key = MODIFIER_AMOUNT_OF_HUSSARS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_amount_of_hussars = {
+	text = "Possible Winged Hussars from development"
+	localisation_key = MODIFIER_LOCAL_AMOUNT_OF_HUSSARS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+hussars_cost_modifier = {
+	text = "Hussar Regiment Cost"
+	localisation_key = MODIFIER_HUSSARS_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+free_land_leader_pool = {
+	text = "Land Leader(s) without Upkeep"
+	localisation_key = MODIFIER_FREE_LAND_LEADER_POOL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+free_navy_leader_pool = {
+	text = "Navy Leader(s) without Upkeep"
+	localisation_key = MODIFIER_FREE_NAVY_LEADER_POOL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+amount_of_cawa = {
+	text = "Possible Cawa"
+	localisation_key = MODIFIER_AMOUNT_OF_CAWA
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_amount_of_cawa = {
+	text = "Possible Cawa"
+	localisation_key = MODIFIER_LOCAL_AMOUNT_OF_CAWA
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+fire_damage = {
+	text = "Land Fire Damage"
+	localisation_key = MODIFIER_FIRE_DAMAGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+shock_damage = {
+	text = "Shock Damage"
+	localisation_key = MODIFIER_SHOCK_DAMAGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+fire_damage_received = {
+	text = "Fire Damage Received"
+	localisation_key = MODIFIER_FIRE_DAMAGE_RECIEVED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+shock_damage_received = {
+	text = "Shock Damage Received"
+	localisation_key = MODIFIER_SHOCK_DAMAGE_RECIEVED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+reinforce_cost_modifier = {
+	text = "Reinforce Cost"
+	localisation_key = MODIFIER_REINFORCE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+garrison_damage = {
+	text = "Garrison Army Damage"
+	localisation_key = MODIFIER_GARRISON_DAMAGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_garrison_damage = {
+	text = "Local Garrison Army Damage"
+	localisation_key = MODIFIER_LOCAL_GARRISON_DAMAGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+assault_fort_cost_modifier = {
+	text = "Assault Fort cost modifier"
+	localisation_key = MODIFIER_ASSAULT_FORT_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_assault_fort_cost_modifier = {
+	text = "Local Assault Fort cost modifier"
+	localisation_key = MODIFIER_LOCAL_ASSAULT_FORT_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+assault_fort_ability = {
+	text = "Assault Fort ability"
+	localisation_key = MODIFIER_ASSAULT_FORT_ABILITY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_assault_fort_ability = {
+	text = "Local Assault Fort ability"
+	localisation_key = MODIFIER_LOCAL_ASSAULT_FORT_ABILITY
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_religious_conversion_resistance = {
+	text = "Local Resistance to Reformation"
+	localisation_key = MODIFIER_LOCAL_RELIGIOUS_CONVERSION_RESISTANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_religious_conversion_resistance = {
+	text = "Resistance to Reformation"
+	localisation_key = MODIFIER_RELIGIOUS_CONVERSION_RESISTANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+placed_merchant_power = {
+	text = "Merchant Trade Power"
+	localisation_key = MODIFIER_PLACED_MERCHANT_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+ship_power_propagation = {
+	text = "Ship Tradepower Propagation"
+	localisation_key = MODIFIER_SHIP_POWER_PROPAGATION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+institution_spread_from_true_faith = {
+	text = "Institution Spread In True Faith Provinces"
+	localisation_key = MODIFIER_INSTITUTION_SPREAD_FROM_TRUE_FAITH
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+prestige_per_development_from_conversion = {
+	text = "Prestige per Development from Missionary"
+	localisation_key = MODIFIER_PRESTIGE_PER_DEVELOPMENT_FROM_CONVERSION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+administrative_efficiency = {
+	text = "Administrative Efficiency"
+	localisation_key = MODIFIER_ADMINISTRATIVE_EFFICIENCY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+yearly_absolutism = {
+	text = "Yearly Absolutism"
+	localisation_key = MODIFIER_YEARLY_ABSOLUTISM
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_absolutism = {
+	text = "Maximum Absolutism"
+	localisation_key = MODIFIER_MAX_ABSOLUTISM
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+core_decay_on_your_own = {
+	text = "Foreign Core Duration"
+	localisation_key = MODIFIER_CORE_DECAY_ON_YOUR_OWN
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+autonomy_change_time = {
+	text = "Autonomy Change Cooldown"
+	localisation_key = MODIFIER_AUTONOMY_CHANGE_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+expand_administration_cost = {
+	text = "Expand Administration Cost"
+	localisation_key = MODIFIER_EXPAND_ADMINISTRATION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+rival_change_cost = {
+	text = "Change Rival Cost"
+	localisation_key = MODIFIER_RIVAL_CHANGE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+rival_border_fort_maintenance = {
+	text = "Fort Maintenance on border with rival"
+	localisation_key = MODIFIER_RIVAL_BORDER_FORT_MAINTENANCE
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+harsh_treatment_cost = {
+	text = "Harsh Treatment Cost"
+	localisation_key = MODIFIER_HARSH_TREATMENT_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+reduced_liberty_desire_on_same_continent = {
+	text = "Liberty Desire in Same Continent Subjects"
+	localisation_key = MODIFIER_REDUCED_LIBERTY_DESIRE_ON_SAME_CONTINENT
+	multiplier = -1
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+backrow_artillery_damage = {
+	text = "Artillery Damage from Back Row"
+	localisation_key = MODIFIER_BACKROW_ARTILLERY_DAMAGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+enforce_religion_cost = {
+	text = "Cost of enforcing religion through war"
+	localisation_key = MODIFIER_ENFORCE_RELIGION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+liberty_desire_from_subject_development = {
+	text = "Liberty Desire from Subjects Development"
+	localisation_key = MODIFIER_LIBERTY_DESIRE_FROM_SUBJECT_DEVELOPMENT
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+monarch_admin_power = {
+	text = "Monarch Administrative Skill"
+	localisation_key = MODIFIER_MONARCH_ADMIN_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monarch_diplomatic_power = {
+	text = "Monarch Diplomatic Skill"
+	localisation_key = MODIFIER_MONARCH_DIPLOMATIC_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monarch_military_power = {
+	text = "Monarch Military Skill"
+	localisation_key = MODIFIER_MONARCH_MILITARY_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_heir_adm = {
+	text = "Local Heir Administrative Skill"
+	localisation_key = MODIFIER_LOCAL_HEIR_ADMIN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_heir_dip = {
+	text = "Local Heir Diplomatic Skill"
+	localisation_key = MODIFIER_LOCAL_HEIR_DIPLOMATIC
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_heir_mil = {
+	text = "Local Heir Military Skill"
+	localisation_key = MODIFIER_LOCAL_HEIR_MILITARY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+artillery_levels_available_vs_fort = {
+	text = "Artillery Levels Available vs Fort"
+	localisation_key = MODIFIER_ARTILLERY_LEVELS_AVAILABLE_VS_FORT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+country_admin_power = {
+	text = "Monthly Administrative Power"
+	localisation_key = MODIFIER_COUNTRY_ADMIN_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+country_diplomatic_power = {
+	text = "Monthly Diplomatic Power"
+	localisation_key = MODIFIER_COUNTRY_DIPLOMATIC_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+country_military_power = {
+	text = "Monthly Military Power"
+	localisation_key = MODIFIER_COUNTRY_MILITARY_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+meritocracy = {
+	text = "Yearly Meritocracy"
+	localisation_key = YEARLY_MERITOCRACY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+yearly_harmony = {
+	text = "Yearly Harmony Increase"
+	localisation_key = MODIFIER_YEARLY_HARMONY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+harmonization_speed = {
+	text = "Religious Harmonization Speed"
+	localisation_key = MODIFIER_HARMONIZATION_SPEED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+cav_to_inf_ratio = {
+	text = "Cavalry to Infantry Ratio"
+	localisation_key = MODIFIER_CAV_TO_INF_RATIO
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_monthly_devastation = {
+	text = "Monthly Devastation"
+	localisation_key = MODIFIER_LOCAL_MONTHLY_DEVASTATION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+global_monthly_devastation = {
+	text = "Global Monthly Devastation"
+	localisation_key = MODIFIER_GLOBAL_MONTHLY_DEVASTATION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+global_prosperity_growth = {
+	text = "Global Prosperity Growth"
+	localisation_key = MODIFIER_GLOBAL_PROPSPERITY_GROWTH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_prosperity_growth = {
+	text = "Local Prosperity Growth"
+	localisation_key = MODIFIER_LOCAL_PROPSPERITY_GROWTH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_favor_modifier = {
+	text = "Monthly Favor Growth Modifier"
+	localisation_key = MODIFIER_MONTHLY_FAVOR_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+monthly_gold_inflation_modifier = {
+	text = "Monthly Gold Inflation Modifier"
+	localisation_key = MODIFIER_MONTHLY_GOLD_INFLATION_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+gold_depletion_chance_modifier = {
+	text = "Gold Depletion Chance Modifier"
+	localisation_key = MODIFIER_GOLD_DEPLETION_CHANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+local_gold_depletion_chance_modifier = {
+	text = "Local Gold Depletion Chance Modifier"
+	localisation_key = MODIFIER_LOCAL_GOLD_DEPLETION_CHANCE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+tolerance_of_heretics_capacity = {
+	text = "Maximum tolerance of Heretics"
+	localisation_key = MODIFIER_TOLERANCE_OF_HERETICS_CAPACITY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+tolerance_of_heathens_capacity = {
+	text = "Maximum tolerance of Heathens"
+	localisation_key = MODIFIER_TOLERANCE_OF_HEATHENS_CAPACITY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+move_capital_cost_modifier = {
+	text = "Move Capital cost modifier"
+	localisation_key = MODIFIER_MOVE_CAPITAL_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+war_taxes_cost_modifier = {
+	text = "War Taxes Cost"
+	localisation_key = MODIFIER_WAR_TAXES_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+siege_blockade_progress = {
+	text = "Blockade Impact on Siege"
+	localisation_key = MODIFIER_SIEGE_BLOCKADE_PROGRESS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+warscore_cost_vs_other_religion = {
+	text = "War Score Cost vs Other Religions"
+	localisation_key = MODIFIER_WARSCORE_COST_VS_OTHER_RELIGION
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+mercenary_discipline = {
+	text = "Mercenary Discipline"
+	localisation_key = MODIFIER_MERCENARY_DISCIPLINE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+sailor_maintenance_modifer = {
+	text = "Sailor Maintenance"
+	localisation_key = MODIFIER_SAILOR_MAINTENANCE
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+yearly_army_professionalism = {
+	text = "Yearly Army Professionalism"
+	localisation_key = MODIFIER_YEARLY_ARMY_PROFESSIONALISM
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+general_cost = {
+	text = "General Cost"
+	localisation_key = MODIFIER_GENERAL_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+reserves_organisation = {
+	text = "Reduced Morale Damage Taken By Reserves"
+	localisation_key = MODIFIER_RESERVES_ORGANIZATION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+drill_gain_modifier = {
+	text = "Army Drill Gain Modifier"
+	localisation_key = MODIFIER_DRILL_GAIN_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+drill_decay_modifier = {
+	text = "Regiment Drill Loss"
+	localisation_key = MODIFIER_DRILL_DECAY_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+same_culture_advisor_cost = {
+	text = "Cost of Advisors with Ruler's Culture"
+	localisation_key = MODIFIER_SAME_CULTURE_ADVISOR_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+same_religion_advisor_cost = {
+	text = "Cost of Advisors with Ruler's Religion"
+	localisation_key = MODIFIER_SAME_RELIGION_ADVISOR_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+promote_culture_cost = {
+	text = "Promote Culture cost"
+	localisation_key = MODIFIER_PROMOTE_CULTURE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+own_coast_naval_combat_bonus = {
+	text = "Naval Combat Bonus off owned coast"
+	localisation_key = MODIFIER_OWN_COAST_NAVAL_COMBAT_BONUS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_own_coast_naval_combat_bonus = {
+	text = "Naval Combat Local Bonus off owned coast"
+	localisation_key = MODIFIER_LOCAL_OWN_COAST_NAVAL_COMBAT_BONUS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+global_defender_dice_roll_bonus = {
+	text = "Global Defender Dice Roll Bonus"
+	localisation_key = MODIFIER_GLOBAL_DEFENDER_DICE_ROLL_BONUS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_defender_dice_roll_bonus = {
+	text = "Local Defender Dice Roll Bonus"
+	localisation_key = MODIFIER_LOCAL_DEFENDER_DICE_ROLL_BONUS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+global_attacker_dice_roll_bonus = {
+	text = "Global Attacker Dice Roll Bonus"
+	localisation_key = MODIFIER_GLOBAL_ATTACKER_DICE_ROLL_BONUS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_attacker_dice_roll_bonus = {
+	text = "Local Attacker Dice Roll Bonus"
+	localisation_key = MODIFIER_LOCAL_ATTACKER_DICE_ROLL_BONUS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+own_territory_dice_roll_bonus = {
+	text = "Own Territory Dice Roll Bonus"
+	localisation_key = MODIFIER_OWN_TERRITORY_DICE_ROLL_BONUS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+can_revoke_parliament_seats = {
+	text = "Can Revoke seats in Parliament"
+	localisation_key = MODIFIER_CAN_REVOKE_PARLIAMENT_SEATS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+parliament_backing_chance = {
+	text = "Parliament Debate Backing Chance"
+	localisation_key = MODIFIER_PARLIAMENT_BACKING_CHANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+parliament_effect_duration = {
+	text = "Parliament Effect Duration"
+	localisation_key = MODIFIER_PARLIAMENT_EFFECT_DURATION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+parliament_debate_duration = {
+	text = "Parliament Debate Duration"
+	localisation_key = MODIFIER_PARLIAMENT_DEBATE_DURATION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+parliament_chance_of_decision = {
+	text = "Parliament Chance of Decision"
+	localisation_key = MODIFIER_PARLIAMENT_CHANCE_OF_DECISION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+num_of_parliament_issues = {
+	text = "Number of possible Parliament Issues"
+	localisation_key = MODIFIER_NUM_OF_PARLIAMENT_ISSUES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_possible_parliament_seats = {
+	text = "Max possible Parliament Seats"
+	localisation_key = MODIFIER_MAX_POSSIBLE_PARLIAMENT_SEATS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+institution_growth = {
+	text = "Institution Growth"
+	localisation_key = MODIFIER_INSTITUTION_GROWTH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+innovativeness_gain = {
+	text = "Innovativeness Gain"
+	localisation_key = MODIFIER_INNOVATIVENESS_GAIN
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+possible_policy = {
+	text = "Possible Policies"
+	localisation_key = MODIFIER_POSSIBLE_POLICY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+free_policy = {
+	text = "Free Policies"
+	localisation_key = MODIFIER_FREE_POLICY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+possible_adm_policy = {
+	text = "Administrative Possible Policies"
+	localisation_key = MODIFIER_POSSIBLE_ADM_POLICY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+possible_dip_policy = {
+	text = "Diplomatic Possible Policies"
+	localisation_key = MODIFIER_POSSIBLE_DIP_POLICY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+possible_mil_policy = {
+	text = "Military Possible Policies"
+	localisation_key = MODIFIER_POSSIBLE_MIL_POLICY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+free_adm_policy = {
+	text = "Administrative Free Policies"
+	localisation_key = MODIFIER_FREE_ADM_POLICY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+free_dip_policy = {
+	text = "Diplomatic Free Policies"
+	localisation_key = MODIFIER_FREE_DIP_POLICY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+free_mil_policy = {
+	text = "Military Free Policies"
+	localisation_key = MODIFIER_FREE_MIL_POLICY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+adm_advisor_cost = {
+	text = "Administrative Advisor Cost"
+	localisation_key = MODIFIER_ADM_ADVISOR_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+dip_advisor_cost = {
+	text = "Diplomatic Advisor Cost"
+	localisation_key = MODIFIER_DIP_ADVISOR_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+mil_advisor_cost = {
+	text = "Military Advisor Cost"
+	localisation_key = MODIFIER_MIL_ADVISOR_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+reform_progress_growth = {
+	text = "Reform Progress Growth"
+	localisation_key = MODIFIER_REFORM_PROGRESS_GROWTH
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+reform_progress_growth_building = {
+	text = "Reform Progress Contribution"
+	localisation_key = MODIFIER_REFORM_PROGRESS_GROWTH_BUILDING
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+monthly_reform_progress = {
+	text = "Monthly Reform Progress"
+	localisation_key = MODIFIER_MONTHLY_REFORM_PROGRESS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_reform_progress_modifier = {
+	text = "Monthly Reform Progress Modifier"
+	localisation_key = MODIFIER_MONTHLY_REFORM_PROGRESS_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+monthly_reform_progress_building = {
+	text = "Monthly Reform Progress from Buildings"
+	localisation_key = MODIFIER_MONTHLY_REFORM_PROGRESS_BUILDING
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+min_autonomy_in_territories = {
+	text = "Minimum Autonomy in Territories"
+	localisation_key = MODIFIER_MIN_AUTONOMY_IN_TERRITORIES
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+reelection_cost = {
+	text = "Reelection Cost"
+	localisation_key = MODIFIER_REELECTION_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+leader_cost = {
+	text = "Leader cost"
+	localisation_key = MODIFIER_LEADER_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+candidate_random_bonus = {
+	text = "Random Candidate Bonus"
+	localisation_key = MODIFIER_CANDIDATE_RANDOM_BONUS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+election_cycle = {
+	text = "Length of Election Term"
+	localisation_key = MODIFIER_ELECTION_CYCLE
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_support_heir_gain = {
+	text = "Monthly Heir Support Gain"
+	localisation_key = MODIFIER_MONTHLY_SUPPORT_HEIR_GAIN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+power_projection_from_insults = {
+	text = "Power Projection from Insults"
+	localisation_key = MODIFIER_POWER_PROJECTION_FROM_INSULTS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_religious_unity_contribution = {
+	text = "Local Religious Unity Contribution"
+	localisation_key = MODIFIER_LOCAL_RELIGIOUS_UNITY_CONTRIBUTION
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+trade_company_investment_cost = {
+	text = "Trade Company Investment cost"
+	localisation_key = MODIFIER_TRADE_COMPANY_INVESTMENT_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+cawa_cost_modifier = {
+	text = "Cawa Regiment Cost"
+	localisation_key = MODIFIER_CAWA_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+janissary_cost_modifier = {
+	text = "Janissary Regiment Cost"
+	localisation_key = MODIFIER_JANISSARY_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+blockade_force_required = {
+	text = "Blockade Force Required"
+	localisation_key = MODIFIER_BLOCKADE_FORCE_REQUIRED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+hostile_disembark_speed = {
+	text = "Hostile Disembark Time"
+	localisation_key = MODIFIER_HOSTILE_DISEMBARK_SPEED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+hostile_fleet_attrition = {
+	text = "Hostile Fleet Attrition"
+	localisation_key = MODIFIER_HOSTILE_FLEET_ATTRITION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+regiment_disembark_speed = {
+	text = "Disembark Speed"
+	localisation_key = MODIFIER_DISEMBARK_SPEED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+allowed_tercio_fraction = {
+	text = "Tercio Force Limit Fraction"
+	localisation_key = MODIFIER_ALLOWED_TERCIO_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_tercio = {
+	text = "Tercio Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_TERCIO
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_tercio = {
+	text = "Province Allows Tercio Infantry"
+	localisation_key = MODIFIER_LOCAL_HAS_TERCIO
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_musketeer_fraction = {
+	text = "Musketeer Force Limit"
+	localisation_key = MODIFIER_ALLOWED_MUSKETEER_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_musketeers = {
+	text = "Musketeer Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_MUSKETEER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_musketeers = {
+	text = "Province Allows Musketeer Infantry"
+	localisation_key = MODIFIER_LOCAL_HAS_MUSKETEER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_samurai_fraction = {
+	text = "Samurai Force Limit"
+	localisation_key = MODIFIER_ALLOWED_SAMURAI_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_samurai = {
+	text = "Samurai Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_SAMURAI
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_samurai = {
+	text = "Province Allows Samurai Infantry"
+	localisation_key = MODIFIER_LOCAL_HAS_SAMURAI
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_qizilbash_fraction = {
+	text = ""
+	localisation_key = MODIFIER_ALLOWED_QIZILBASH_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_qizilbash = {
+	text = ""
+	localisation_key = MODIFIER_AMOUNT_OF_QIZILBASH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_qizilbash = {
+	text = ""
+	localisation_key = MODIFIER_LOCAL_HAS_QIZILBASH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_mamluks_fraction = {
+	text = ""
+	localisation_key = MODIFIER_ALLOWED_MAMLUKS_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_mamluks = {
+	text = ""
+	localisation_key = MODIFIER_AMOUNT_OF_MAMLUKS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_mamluks = {
+	text = ""
+	localisation_key = MODIFIER_LOCAL_HAS_MAMLUKS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_geobukseon_fraction = {
+	text = "Geobukseon Force Limit"
+	localisation_key = MODIFIER_ALLOWED_GEOBUKSEON_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_geobukseon = {
+	text = "Geobukseon Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_GEOBUKSEON
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_geobukseon = {
+	text = "Province Allows Geobukseon Ships"
+	localisation_key = MODIFIER_LOCAL_HAS_GEOBUKSEON
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_man_of_war_fraction = {
+	text = "Man Of War Force Limit"
+	localisation_key = MODIFIER_ALLOWED_MAN_OF_WAR_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_man_of_war = {
+	text = "Man Of War Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_MAN_OF_WAR
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_man_of_war = {
+	text = "Province Allows Man Of War Ships"
+	localisation_key = MODIFIER_LOCAL_HAS_MAN_OF_WAR
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_galleon_fraction = {
+	text = "Galleon Force Limit"
+	localisation_key = MODIFIER_ALLOWED_GALLEON_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_galleon = {
+	text = "Galleon Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_GALLEON
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_galleon = {
+	text = "Province Allows Galleon Ships"
+	localisation_key = MODIFIER_LOCAL_HAS_GALLEON
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_galleass_fraction = {
+	text = "Galleass Force Limit"
+	localisation_key = MODIFIER_ALLOWED_GALLEASS_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_galleass = {
+	text = "Galleass Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_GALLEASS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_galleass = {
+	text = "Province Allows Galleass Ships"
+	localisation_key = MODIFIER_LOCAL_HAS_GALLEASS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_caravel_fraction = {
+	text = "Caravel Force Limit"
+	localisation_key = MODIFIER_ALLOWED_CARAVEL_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_caravel = {
+	text = "Caravel Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_CARAVEL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_caravel = {
+	text = "Province Allows Caravel Ships"
+	localisation_key = MODIFIER_LOCAL_HAS_CARAVEL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_voc_indiamen_fraction = {
+	text = "VOC Indiamen Force Limit"
+	localisation_key = MODIFIER_ALLOWED_VOC_INDIAMEN_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_voc_indiamen = {
+	text = "VOC Indiamen Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_VOC_INDIAMEN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_voc_indiamen = {
+	text = "Province Allows VOC Indiamen Ships"
+	localisation_key = MODIFIER_LOCAL_HAS_VOC_INDIAMEN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_marine_fraction = {
+	text = "Marines Force Limit"
+	localisation_key = MODIFIER_ALLOWED_MARINE_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+can_recruit_janissaries = {
+	text = "Can recruit Janissaries"
+	localisation_key = MODIFIER_CAN_RECRUIT_JANISSARIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_recruit_cawa = {
+	text = "Can recruit Cawa"
+	localisation_key = MODIFIER_CAN_RECRUIT_CAWA
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_recruit_cossacks = {
+	text = "Can recruit Cossacks"
+	localisation_key = MODIFIER_CAN_RECRUIT_COSSACKS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_recruit_rajputs = {
+	text = "Can recruit Rajputs"
+	localisation_key = MODIFIER_CAN_RECRUIT_RAJPUTS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_recruit_revolutionary_guards = {
+	text = "Can recruit Revolutionary Guards"
+	localisation_key = MODIFIER_CAN_RECRUIT_REVOLUTIONARY_GUARDS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allow_janissaries_from_own_faith = {
+	text = "Allow Janissaries in True Faith Provinces"
+	localisation_key = MODIFIER_ALLOW_JANISSARIES_FROM_OWN_FAITH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allow_mercenary_drill = {
+	text = "Allow Mercenary units to Drill"
+	localisation_key = MODIFIER_ALLOW_MERCENARY_DRILL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+merc_leader_army_tradition = {
+	text = "Mercenary Leader Army Tradition Modifier"
+	localisation_key = MODIFIER_MERCENARY_LEADER_ARMY_TRADITION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+merc_independent_from_trade_range = {
+	text = "Can recruit Mercenaries from anywhere"
+	localisation_key = MODIFIER_MERCENARY_INDEPENDENT_FROM_TRADE_RANGE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allow_mercenaries_to_split = {
+	text = "Can split and merge Mercenary units"
+	localisation_key = MODIFIER_ALLOW_MERCENARIES_TO_SPLIT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_explore = {
+	text = "Allows recruitment of explorers & conquistadors."
+	localisation_key = MODIFIER_MAY_EXPLORE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+sea_repair = {
+	text = "Ships can repair when in coastal sea zones."
+	localisation_key = MODIFIER_MAY_SEA_REPAIR
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+cb_on_government_enemies = {
+	text = "Permanent Casus Belli versus other government types."
+	localisation_key = MODIFIER_MAY_ATTACK_GOVERNMENT_ENEMIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+cb_on_primitives = {
+	text = "Can Fabricate Claim Overseas in Colonial Regions."
+	localisation_key = MODIFIER_MAY_ATTACK_PRIMITIVES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+no_religion_penalty = {
+	text = "Heretic and heathen provinces do not give any penalties"
+	localisation_key = MODIFIER_MAY_NON_RELIGION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+auto_explore_adjacent_to_colony = {
+	text = "Automatically Discover Adjacent When a Colony is Built."
+	localisation_key = MODIFIER_AUTO_EXPLORE_ADJACENT_TO_COLONY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+reduced_stab_impacts = {
+	text = "Lowered impact on stability from diplomatic actions."
+	localisation_key = MODIFIER_REDUCED_STAB_IMPACTS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+extra_manpower_at_religious_war = {
+	text = "Triple manpower increase in religious wars."
+	localisation_key = MODIFIER_EXTRA_MANPOWER_AT_RELIGIOUS_WAR
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+idea_claim_colonies = {
+	text = "Can Fabricate Claims in any colonial region belonging to another nation who are also overseas from the province, or to their colonial nations."
+	localisation_key = MODIFIER_CLAIM_COLONIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_establish_frontier = {
+	text = "May Establish Siberian Frontiers"
+	localisation_key = MODIFIER_MAY_SIBERIAN_FRONTIER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+can_fabricate_for_vassals = {
+	text = "May Fabricate Claims for Subjects"
+	localisation_key = MODIFIER_MAY_FABRICATE_FOR_VASSALS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+cb_on_overseas = {
+	text = "Can Fabricate Claim Overseas in Trade Company Regions."
+	localisation_key = MODIFIER_MAY_ATTACK_OVERSEAS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+reduced_native_attacks = {
+	text = ""
+	localisation_key = MODIFIER_REDUCED_NATIVE_ATTACKS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_not_reduce_inflation = {
+	text = "Can NOT reduce inflation"
+	localisation_key = MODIFIER_MAY_NOT_REDUCE_INFLATION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+no_cost_for_reinforcing = {
+	text = "No cost for reinforcing"
+	localisation_key = MODIFIER_NO_COST_FOR_REINFORCING
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_build_supply_depot = {
+	text = "May Build Supply Depots"
+	localisation_key = MODIFIER_MAY_BUILD_SUPPLY_DEPOT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_refill_garrison = {
+	text = "May Refill Garrison"
+	localisation_key = MODIFIER_MAY_REFILL_GARRISON
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_return_manpower_on_disband = {
+	text = "Regain Manpower When Disbanding"
+	localisation_key = MODIFIER_MAY_RETURN_MANPOWER_ON_DISBAND
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+may_not_convert_territories = {
+	text = "Can NOT convert provinces in territories"
+	localisation_key = MODIFIER_MAY_NOT_CONVERT_TERRITORIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allow_client_states = {
+	text = "Can create §YClient States§!"
+	localisation_key = MODIFIER_ALLOW_CLIENT_STATES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+enable_forced_march = {
+	text = "Enable Forced March"
+	localisation_key = MODIFIER_ENABLE_FORCED_MARCH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+number_of_cannons_modifier = {
+	text = "Ship Cannons"
+	localisation_key = MODIFIER_NUMBER_OF_CANNONS_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+heavy_ship_number_of_cannons_modifier = {
+	text = "Heavy Ship Cannons"
+	localisation_key = MODIFIER_HEAVY_SHIP_NUMBER_OF_CANNONS_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+light_ship_number_of_cannons_modifier = {
+	text = "Light Ship Cannons"
+	localisation_key = MODIFIER_LIGHT_SHIP_NUMBER_OF_CANNONS_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+galley_number_of_cannons_modifier = {
+	text = "Galley Cannons"
+	localisation_key = MODIFIER_GALLEY_NUMBER_OF_CANNONS_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+transport_number_of_cannons_modifier = {
+	text = "Transport Cannons"
+	localisation_key = MODIFIER_TRANSPORT_NUMBER_OF_CANNONS_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+hull_size = {
+	text = "Hull Size of Ships"
+	localisation_key = MODIFIER_HULL_SIZE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+hull_size_modifier = {
+	text = "Hull Size"
+	localisation_key = MODIFIER_HULL_SIZE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+heavy_ship_hull_size_modifier = {
+	text = "Heavy Ship Hull Size"
+	localisation_key = MODIFIER_HEAVY_SHIP_HULL_SIZE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+light_ship_hull_size_modifier = {
+	text = "Light Ship Hull Size"
+	localisation_key = MODIFIER_LIGHT_SHIP_HULL_SIZE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+galley_hull_size_modifier = {
+	text = "Galley Hull Size"
+	localisation_key = MODIFIER_GALLEY_HULL_SIZE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+transport_hull_size_modifier = {
+	text = "Transport Hull Size"
+	localisation_key = MODIFIER_TRANSPORT_HULL_SIZE_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+engagement_cost = {
+	text = "Ship Engagement Width"
+	localisation_key = MODIFIER_ENGAGEMENT_COST
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+engagement_cost_modifier = {
+	text = "Ship Engagement Width Modifier"
+	localisation_key = MODIFIER_ENGAGEMENT_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+special_unit_cost_modifier = {
+	text = "Special Unit Cost Modifier"
+	localisation_key = MODIFIER_SPECIAL_UNIT_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+special_unit_manpower_cost_modifier = {
+	text = "Special Unit Manpower Cost Modifier"
+	localisation_key = MODIFIER_SPECIAL_UNIT_MANPOWER_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+number_of_cannons_flagship_modifier = {
+	text = "Flagship Cannons"
+	localisation_key = MODIFIER_NUMBER_OF_CANNONS_FLAGSHIP_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+number_of_cannons_flagship = {
+	text = "Flagship Cannons"
+	localisation_key = MODIFIER_NUMBER_OF_CANNONS_FLAGSHIP
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+number_of_cannons = {
+	text = "Flagship Cannons"
+	localisation_key = MODIFIER_NUMBER_OF_CANNONS_FLAGSHIP
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_flagships = {
+	text = "Max number of Flagships"
+	localisation_key = MODIFIER_MAX_FLAGSHIPS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+flagship_morale = {
+	text = "Flagship Morale"
+	localisation_key = MODIFIER_MORALE_FLAGSHIP
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_maintenance_flagship_modifier = {
+	text = "Flagship Maintenance"
+	localisation_key = MODIFIER_NAVAL_MAINTENANCE_FLAGSHIP
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+trade_power_in_fleet_modifier = {
+	text = "Trade Power per Ship in Fleet"
+	localisation_key = MODIFIER_TRADE_POWER_IN_FLEET
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+ship_trade_power = {
+	text = "Ship Trade Power"
+	localisation_key = MODIFIER_SHIP_TRADE_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+ship_trade_power_modifier = {
+	text = "Ship Trade Power Modifier"
+	localisation_key = MODIFIER_SHIP_TRADE_POWER_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+can_transport_units = {
+	text = "Can Transport Units"
+	localisation_key = MODIFIER_CAN_TRANSPORT_UNITS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+flagship_naval_engagement_modifier = {
+	text = "Fleet Engagement Width"
+	localisation_key = MODIFIER_FLAGSHIP_NAVAL_ENGAGEMENT_IN_FLEET
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+blockade_impact_on_siege_in_fleet_modifier = {
+	text = "Fleet Blockade Impact on Siege"
+	localisation_key = MODIFIER_BLOCKADE_IMPACT_ON_SIEGE_IN_FLEET
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+movement_speed_in_fleet_modifier = {
+	text = "Fleet Movement Speed"
+	localisation_key = MODIFIER_MOVEMENT_SPEED_IN_FLEET
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+flagship_durability = {
+	text = "Flagship Durability"
+	localisation_key = MODIFIER_FLAGSHIP_DURABILITY_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+morale_in_fleet_modifier = {
+	text = "Fleet Morale"
+	localisation_key = MODIFIER_NAVAL_MORALE_IN_FLEET
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+exploration_mission_range_in_fleet_modifier = {
+	text = "Fleet Exploration Range"
+	localisation_key = MODIFIER_EXPLORATION_MISSION_RANGE_IN_FLEET
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+barrage_cost_in_fleet_modifier = {
+	text = "Fleet Naval Barrage Cost"
+	localisation_key = MODIFIER_NAVAL_BARRAGE_COST_IN_FLEET
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_attrition_in_fleet_modifier = {
+	text = "Fleet Attrition"
+	localisation_key = MODIFIER_NAVAL_ATTRITION_IN_FLEET
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+cannons_for_hunting_pirates_in_fleet = {
+	text = "Fleet Hunt Pirates Efficiency"
+	localisation_key = MODIFIER_CANNONS_FOR_HUNTING_PIRATES_IN_FLEET
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+movement_speed_onto_off_boat_modifier = {
+	text = "Movement Speed On and Off Ships"
+	localisation_key = MODIFIER_MOVEMENT_SPEED_ONTO_OFF_BOAT
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+admiral_skill_gain_modifier = {
+	text = "Monthly Chance of Admiral Skill Gain on Mission"
+	localisation_key = MODIFIER_MONTHLY_CHANCE_ADMIRAL_GAINING_SKILL
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+privateering_efficiency_in_fleet_modifier = {
+	text = "Fleet Privateering Efficiency"
+	localisation_key = MODIFIER_PRIVATEERING_EFFICIENCY_IN_FLEET
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+prestige_from_battles_in_fleet_modifier = {
+	text = "Fleet Prestige from Battles"
+	localisation_key = MODIFIER_PRESTIGE_FROM_BATTLES_IN_FLEET
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_tradition_in_fleet_modifier = {
+	text = "Fleet Naval Tradition from Battles"
+	localisation_key = MODIFIER_FLAGSHIP_NAVAL_TRADITION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+landing_penalty = {
+	text = "Combat Penalty when landing"
+	localisation_key = MODIFIER_FLAGSHIP_LANDING_PENALTY
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+establish_order_cost = {
+	text = "Establish Holy Order cost"
+	localisation_key = MODIFIER_ESTABLISH_ORDER_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+treasure_fleet_income = {
+	text = "Treasure Fleet income"
+	localisation_key = MODIFIER_TREASURE_FLEET_INCOME
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+global_naval_barrage_cost = {
+	text = "Naval Barrage cost"
+	localisation_key = MODIFIER_GLOBAL_NAVAL_BARRAGE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+center_of_trade_upgrade_cost = {
+	text = "Center of Trade Upgrade Cost"
+	localisation_key = MODIFIER_CENTER_OF_TRADE_UPGRADE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_center_of_trade_upgrade_cost = {
+	text = "Local Center of Trade Upgrade Cost"
+	localisation_key = MODIFIER_LOCAL_CENTER_OF_TRADE_UPGRADE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+missionary_maintenance_cost = {
+	text = "Missionary Maintenance Cost"
+	localisation_key = MODIFIER_MISSIONARY_MAINTENANCE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_missionary_maintenance_cost = {
+	text = "Local Missionary Maintenance"
+	localisation_key = MODIFIER_LOCAL_MISSIONARY_MAINTENANCE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_tradition_from_trade = {
+	text = "Navy Tradition from Protecting Trade"
+	localisation_key = MODIFIER_NAVAL_TRADITION_FROM_TRADE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+admiral_cost = {
+	text = "Admiral Cost"
+	localisation_key = MODIFIER_ADMIRAL_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+expel_minorities_cost = {
+	text = "Expel Minorities Cost"
+	localisation_key = MODIFIER_EXPEL_MINORITIES_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+infantry_fire = {
+	text = "Infantry Fire"
+	localisation_key = MODIFIER_INFANTRY_FIRE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+cavalry_fire = {
+	text = "Cavalry Fire"
+	localisation_key = MODIFIER_CAVALRY_FIRE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+artillery_fire = {
+	text = "Artillery Fire"
+	localisation_key = MODIFIER_ARTILLERY_FIRE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+infantry_shock = {
+	text = "Infantry Shock"
+	localisation_key = MODIFIER_INFANTRY_SHOCK
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+cavalry_shock = {
+	text = "Cavalry Shock"
+	localisation_key = MODIFIER_CAVALRY_SHOCK
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+artillery_shock = {
+	text = "Artillery Shock"
+	localisation_key = MODIFIER_ARTILLERY_SHOCK
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+curia_treasury_contribution = {
+	text = "Curia Treasury Contribution"
+	localisation_key = MODIFIER_CURIA_TREASURY_CONTRIBUTION
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+cb_on_religious_enemies = {
+	text = "Permanent Casus Belli against neighboring heathens and heretics."
+	localisation_key = MAY_ATTACK_RELIGIOUS_ENEMIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+yearly_patriarch_authority = {
+	text = "Yearly Patriarch Authority"
+	localisation_key = MODIFIER_YEARLY_PATRIARCH_AUTHORITY
+	multiplier = 100
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+yearly_authority = {
+	text = "Yearly Authority"
+	localisation_key = MODIFIER_YEARLY_AUTHORITY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+yearly_karma_decay = {
+	text = "Yearly Karma Decay"
+	localisation_key = MODIFIER_YEARLY_KARMA_DECAY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+available_province_loot = {
+	text = "Available Loot"
+	localisation_key = MODIFIER_AVAILABLE_PROVINCE_LOOT
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+relation_with_heretics = {
+	text = "Opinion of Heretics"
+	localisation_key = MODIFIER_RELATION_WITH_HERETICS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+relation_with_heathens = {
+	text = "Opinion of Heathens"
+	localisation_key = MODIFIER_RELATION_WITH_HEATHENS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+relation_with_same_religion = {
+	text = "Opinion of same Religion"
+	localisation_key = MODIFIER_RELATION_WITH_SAME_RELIGION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+reverse_relation_with_same_religion = {
+	text = "Others of the same Religion Opinion of Country"
+	localisation_key = MODIFIER_REVERSE_RELATION_WITH_SAME_RELIGION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+relation_with_same_culture = {
+	text = "Opinion of same Culture"
+	localisation_key = MODIFIER_RELATION_WITH_SAME_CULTURE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+relation_with_same_culture_group = {
+	text = "Opinion of same Culture Group"
+	localisation_key = MODIFIER_RELATION_WITH_SAME_CULTURE_GROUP
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+relation_with_accepted_culture = {
+	text = "Opinion of Accepted Culture"
+	localisation_key = MODIFIER_RELATION_WITH_ACCEPED_CULTURE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+relation_with_other_culture = {
+	text = "Opinion of Non-Accepted Culture"
+	localisation_key = MODIFIER_RELATION_WITH_OTHER_CULTURE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+stability_cost_to_declare_war = {
+	text = "Stability Hit to Declare War"
+	localisation_key = MODIFIER_STABILITY_COST_TO_DECLARE_WAR
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+special_unit_forcelimit = {
+	text = "Special Unit Force Limit"
+	localisation_key = MODIFIER_SPECIAL_UNIT_FORCELIMIT
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+curia_powers_cost = {
+	text = "Curia Powers cost"
+	localisation_key = MODIFIER_CURIA_POWERS_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+appoint_cardinal_cost = {
+	text = "Appoint Cardinal cost"
+	localisation_key = MODIFIER_APPOINT_CARDINAL_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+papal_influence_from_cardinals = {
+	text = "Papal Influence from Cardinals"
+	localisation_key = MODIFIER_PAPAL_INFLUENCE_FROM_CARDINALS
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+unrest_catholic_provinces = {
+	text = "Unrest in Catholic provinces"
+	localisation_key = MODIFIER_UNREST_CATHOLIC_PROVINCES
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+imperial_reform_catholic_approval = {
+	text = "Approval of Imperial Reforms by Catholic Princes"
+	localisation_key = MODIFIER_IMPERIAL_REFORM_CATHOLIC_APPROVAL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+disengagement_chance = {
+	text = "Ship Disengagement Chance"
+	localisation_key = MODIFIER_DISENGAGEMENT_CHANCE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+manpower_in_true_faith_provinces = {
+	text = "Manpower in True Faith provinces"
+	localisation_key = MODIFIER_MANPOWER_IN_TRUE_FAITH_PROVINCES
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+manpower_in_own_culture_provinces = {
+	text = "Manpower in Primary Culture provinces"
+	localisation_key = MODIFIER_MANPOWER_IN_OWN_CULTURE_PROVINCES
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+manpower_in_culture_group_provinces = {
+	text = "Manpower in same Culture Group provinces"
+	localisation_key = MODIFIER_MANPOWER_IN_CULTURE_GROUP_PROVINCES
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+manpower_in_accepted_culture_provinces = {
+	text = "Manpower in Accepted Culture provinces"
+	localisation_key = MODIFIER_MANPOWER_IN_ACCEPTED_CULTURE_PROVINCES
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+free_city_imperial_authority = {
+	text = "Imperial Authority from Free Cities"
+	localisation_key = MODIFIER_FREE_CITY_IMPERIAL_AUTHORITY
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+imperial_mercenary_cost = {
+	text = "HRE Mercenary Recruitment Cost"
+	localisation_key = MODIFIER_IMPERIAL_MERCENARY_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+max_free_cities = {
+	text = "Number of Free Cities"
+	localisation_key = MODIFIER_MAX_FREE_CITIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+max_electors = {
+	text = "Number of Electors"
+	localisation_key = MODIFIER_MAX_ELECTORS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+manpower_against_imperial_enemies = {
+	text = "Manpower against Imperial enemies"
+	localisation_key = MODIFIER_MANPOWER_AGAINST_IMPERIAL_ENEMIES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monarch_lifespan = {
+	text = "Average Monarch Lifespan"
+	localisation_key = MODIFIER_MONARCH_LIFESPAN
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+max_revolutionary_zeal = {
+	text = "Maximum Revolutionary Zeal"
+	localisation_key = MODIFIER_MAX_REVOLUTIONARY_ZEAL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+yearly_revolutionary_zeal = {
+	text = "Yearly Revolutionary Zeal"
+	localisation_key = MODIFIER_YEARLY_REVOLUTIONARY_ZEAL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+flagship_cost = {
+	text = "Flagship cost"
+	localisation_key = FLAGSHIP_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+governing_capacity = {
+	text = "Governing Capacity"
+	localisation_key = MODIFIER_GOVERNING_CAPACITY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+governing_capacity_modifier = {
+	text = "Governing Capacity Modifier"
+	localisation_key = MODIFIER_GOVERNING_CAPACITY_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+governing_cost = {
+	text = "Governing Cost"
+	localisation_key = MODIFIER_GOVERNING_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+trade_company_governing_cost = {
+	text = "Trade Company Governing Cost"
+	localisation_key = MODIFIER_TRADE_COMPANY_GOVERNING_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+state_governing_cost = {
+	text = "States Governing Cost"
+	localisation_key = MODIFIER_STATES_GOVERNING_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+territories_governing_cost = {
+	text = "Territories Governing Cost"
+	localisation_key = MODIFIER_TERRITORY_GOVERNING_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_governing_cost = {
+	text = "Province Governing Cost"
+	localisation_key = MODIFIER_LOCAL_GOVERNING_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_governing_cost_increase = {
+	text = ""
+	localisation_key = EModDef::None
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+state_governing_cost_increase = {
+	text = ""
+	localisation_key = EModDef::None
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+statewide_governing_cost = {
+	text = "Statewide Governing Cost"
+	localisation_key = MODIFIER_STATEWIDE_GOVERNING_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+reasons_to_elect = {
+	text = "Reasons to Elect"
+	localisation_key = MODIFIER_REASONS_TO_ELECT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 0
+}
+years_to_integrate_personal_union = {
+	text = "Years for Personal Union Integration"
+	localisation_key = MODIFIER_YEARS_TO_INTEGRATE_PERSONAL_UNION
+	multiplier = 1
+	percent = false
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+legitimate_subject_elector = {
+	text = "Legitimate Subject Elector"
+	localisation_key = MODIFIER_LEGITIMATE_SUBJECT_ELECTOR
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+accept_vassalization_reasons = {
+	text = "Vassalization Acceptance"
+	localisation_key = MODIFIER_ACCEPT_VASSALIZATION_REASONS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+transfer_trade_power_reasons = {
+	text = "Transfer Trade Acceptance"
+	localisation_key = MODIFIER_TRANSFER_TRADE_POWER_REASONS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+local_warscore_cost_modifier = {
+	text = "War Score Cost"
+	localisation_key = MODIFIER_LOCAL_WARSCORE_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+mercantilism_cost = {
+	text = "Cost to Promote Mercantilism"
+	localisation_key = MODIFIER_MERCANTILISM_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+tribal_development_growth = {
+	text = "Tribal Development Growth"
+	localisation_key = MODIFIER_TRIBAL_DEVELOPMENT_GROWTH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_federation_favor_growth = {
+	text = "Monthly Federation Favor Growth"
+	localisation_key = MODIFIER_MONTHLY_FEDERATION_FAVOR_GROWTH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_heir_claim_increase = {
+	text = "Monthly Heir Claim Increase"
+	localisation_key = MODIFIER_MONTHLY_HEIR_CLAIM_INCREASE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+monthly_heir_claim_increase_modifier = {
+	text = "Monthly Heir Claim Increase Modifier"
+	localisation_key = MODIFIER_MONTHLY_HEIR_CLAIM_INCREASE_MODIFIER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+great_project_upgrade_cost = {
+	text = "Great Project Upgrade Cost"
+	localisation_key = MODIFIER_GREAT_PROJECT_UPGRADE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_great_project_upgrade_cost = {
+	text = "Local Great Project Upgrade Cost"
+	localisation_key = MODIFIER_LOCAL_GREAT_PROJECT_UPGRADE_COST
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+great_project_upgrade_time = {
+	text = "Great Project Upgrade Time"
+	localisation_key = MODIFIER_GREAT_PROJECT_UPGRADE_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+local_great_project_upgrade_time = {
+	text = "Local Great Project Upgrade Time"
+	localisation_key = MODIFIER_LOCAL_GREAT_PROJECT_UPGRADE_TIME
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+colonial_type_change_cost_modifier = {
+	text = "Colonial Type Change Cost Modifier"
+	localisation_key = MODIFIER_COLONIAL_TYPE_CHANGE_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+colonial_subject_type_upgrade_cost_modifier = {
+	text = "Colonial Subject Type Upgrade Cost Modifier"
+	localisation_key = MODIFIER_COLONIAL_SUBJECT_TYPE_UPGRADE_COST_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+yearly_doom_reduction = {
+	text = "Yearly Doom Reduction"
+	localisation_key = MODIFIER_YEARLY_DOOM_REDUCTION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+all_estate_loyalty_equilibrium = {
+	text = "All Estates' Loyalty Equilibrium"
+	localisation_key = MODIFIER_ALL_ESTATE_LOYALTY_EQUILIBRIUM
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+loyalty_change_on_revoked = {
+	text = "Estate Loyalty Change on Privilege revoked"
+	localisation_key = MODIFIER_ESTATE_LOYALTY_CHANGE_ON_REVOKED
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+estate_interaction_cooldown_modifier = {
+	text = "Estate Interaction Cooldown Modifier"
+	localisation_key = MODIFIER_ESTATE_INTERACTION_COOLDOWN_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+all_estate_possible_privileges = {
+	text = "Max Privileges per Estate"
+	localisation_key = MODIFIER_ALL_ESTATE_POSSIBLE_PRIVILEGES
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+no_stability_loss_on_monarch_death = {
+	text = "No Stability loss on Monarch death"
+	localisation_key = MODIFIER_NO_STABILITY_LOSS_ON_MONARCH_DEATH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allow_free_estate_privilege_revocation = {
+	text = "Allow Estate Privileges to be revoked regardless of Loyalty and Influence"
+	localisation_key = MODIFIER_ALLOW_FREE_ESTATE_PRIVILEGE_REVOCATION
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+warscore_from_battles_modifier = {
+	text = "War Score from Battles Modifier"
+	localisation_key = MODIFIER_WARSCORE_FROM_BATTLES_MODIFIER
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 1
+}
+yearly_innovativeness = {
+	text = "Yearly Innovativeness"
+	localisation_key = MODIFIER_YEARLY_INNOVATIVENESS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+yearly_government_power = {
+	text = "Yearly Government Power"
+	localisation_key = MODIFIER_YEARLY_GOVERNMENT_POWER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = false
+	precision = 2
+}
+no_claim_cost_increasement = {
+	text = "No additional claim cost"
+	localisation_key = MODIFIER_NO_CLAIM_COST_INCREASEMENT
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+naval_morale_damage = {
+	text = "Naval Morale Damage"
+	localisation_key = MODIFIER_NAVAL_MORALE_DAMAGE
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+naval_morale_damage_received = {
+	text = "Naval Morale Damage Received"
+	localisation_key = MODIFIER_NAVAL_MORALE_DAMAGE_RECEIVED
+	multiplier = 100
+	percent = true
+	is_good = false
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+has_tercio = {
+	text = "Country Allows Tercio Infantry"
+	localisation_key = MODIFIER_HAS_TERCIO
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_musketeer = {
+	text = "Country Allows Musketeer Infantry"
+	localisation_key = MODIFIER_HAS_MUSKETEER
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_samurai = {
+	text = "Country Allows Samurai Infantry"
+	localisation_key = MODIFIER_HAS_SAMURAI
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_qizilbash = {
+	text = ""
+	localisation_key = MODIFIER_HAS_QIZILBASH
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_mamluks = {
+	text = ""
+	localisation_key = MODIFIER_HAS_MAMLUKS
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_geobukseon = {
+	text = "Country Allows Geobukseon Ships"
+	localisation_key = MODIFIER_HAS_GEOBUKSEON
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_man_of_war = {
+	text = "Country Allows Man Of War Ships"
+	localisation_key = MODIFIER_HAS_MAN_OF_WAR
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_galleon = {
+	text = "Country Allows Galleon Ships"
+	localisation_key = MODIFIER_HAS_GALLEON
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_galleass = {
+	text = "Country Allows Galleass Ships"
+	localisation_key = MODIFIER_HAS_GALLEASSE
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_caravel = {
+	text = "Country Allows Caravel Ships"
+	localisation_key = MODIFIER_HAS_CARAVEL
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_voc_indiamen = {
+	text = "Country Allows VOC Indiamen Ships"
+	localisation_key = MODIFIER_HAS_VOC_INDIAMEN
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+has_streltsy = {
+	text = "Country Allows Streltsy Infantry"
+	localisation_key = MODIFIER_HAS_STRELTSY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_streltsy_fraction = {
+	text = "Streltsy Force Limit Fraction"
+	localisation_key = MODIFIER_ALLOWED_STRELTSY_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+amount_of_streltsy = {
+	text = "Streltsy Force Limit"
+	localisation_key = MODIFIER_AMOUNT_OF_STRELTSY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 2
+}
+local_has_streltsy = {
+	text = "Province Allows Streltsy Infantry"
+	localisation_key = MODIFIER_LOCAL_HAS_STRELTSY
+	multiplier = 1
+	percent = false
+	is_good = true
+	is_bool = true
+	is_multiplicative = false
+	precision = 0
+}
+allowed_cossack_fraction = {
+	text = "Cossack Force Limit Fraction"
+	localisation_key = MODIFIER_ALLOWED_COSSACK_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+allowed_rev_guard_fraction = {
+	text = "Revolutionary Guard Force Limit Fraction"
+	localisation_key = MODIFIER_ALLOWED_REV_GUARD_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}
+allowed_rajput_fraction = {
+	text = "Cossack Force Limit Fraction"
+	localisation_key = MODIFIER_ALLOWED_COSSACK_FRACTION
+	multiplier = 100
+	percent = true
+	is_good = true
+	is_bool = false
+	is_multiplicative = true
+	precision = 1
+}

@@ -133,7 +133,14 @@ new country_event incidents.2 = {
 		}
 		p@amol = {
 			owner = {
-				save_event_target_as = amol_owner
+				if [tag = hrothgar] {
+					emperor = {
+						save_event_target_as = amol_owner
+					}
+				}
+				else {
+					save_event_target_as = amol_owner
+				}
 			}
 		}
 	}
