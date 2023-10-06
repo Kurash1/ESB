@@ -1,3 +1,26 @@
+for = {
+	[[custom_tooltip]custom_tooltip = $custom_tooltip$]
+	hidden_effect = {
+		set_variable = {
+			which = ForLoopCounter
+			value = $amount$
+		}	
+		while = {
+			limit = {
+				check_variable = {
+					which = ForLoopCounter
+					value = 1
+				}
+			}
+			$effect$
+			subtract_variable = {
+				which = ForLoopCounter
+				value = 1
+			}
+		}
+	}
+}
+
 add_legitimacy_equivalent = {
 	add_legitimacy = $amount$
 	add_horde_unity = $amount$
