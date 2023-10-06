@@ -1,4 +1,4 @@
-version="2.1.1"
+version="2.1.2"
 picture="thumbnail.png"
 replace_path="common/advisortypes"
 replace_path="common/ages"

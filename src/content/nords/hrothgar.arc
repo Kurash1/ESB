@@ -128,7 +128,14 @@ new country_event incidents.2 = {
 	immediate = {
 		p@whiterun = {
 			owner = {
-				save_event_target_as = whiterun_owner
+				if [tag = hrothgar] {
+					emperor = {
+						save_event_target_as = whiterun_owner
+					}
+				}
+				else {
+					save_event_target_as = whiterun_owner
+				}
 			}
 		}
 		p@amol = {
