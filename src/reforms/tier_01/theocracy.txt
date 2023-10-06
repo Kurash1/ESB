@@ -145,3 +145,9 @@ new country_event theocracy.1 = {
 		clr_country_flag = in_theocracy_heir_selection
 	}
 }
+new opinion_modifier opinion_theocracy_noble = {
+	name = "Same Dynasty as Heir"
+	opinion = 50
+	years = 50
+	yearly_decay = 1
+}

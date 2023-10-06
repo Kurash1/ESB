@@ -1,5 +1,5 @@
-new mission_series fallowfire_4 = {
-	slot = 4
+new mission_series fallowfire_3 = {
+	slot = 3
 	ai = yes
 	potential = {
 		tag = fallowfire
@@ -9,8 +9,8 @@ new mission_series fallowfire_4 = {
 		fallowfire_looking_south = {
 			name = "Looking south"
 			desc = ""
-			position = 1
-			icon = mission_unknown_mission
+			position = 0
+			icon = riding_duo_mission
 			effect = {
 				defineloc claim_elves_honrich = "§YFallowfire§! gains permanent §Yclaims§! on §Ylake Honrich§!'s elves"
 				custom_tooltip = claim_elves_honrich
@@ -24,8 +24,8 @@ new mission_series fallowfire_4 = {
 		fallowfire_day_of_reckoning = {
 			name = "Day of Reckoning"
 			desc = ""
-			position = 2
-			icon = mission_unknown_mission
+			position = 1
+			icon = bloody_impaled_mission
 			required = {
 				fallowfire_looking_south
 			}
@@ -61,8 +61,8 @@ new mission_series fallowfire_4 = {
 		fallowfire_push_on_to_the_tasks_end = {
 			name = "Push on to the tasks' end"
 			desc = ""
-			position = 3
-			icon = mission_unknown_mission
+			position = 2
+			icon = heads_impaled_mission
 			required = {
 				fallowfire_day_of_reckoning
 			}
@@ -86,7 +86,7 @@ new mission_series fallowfire_4 = {
 	}
 }
 new country_event fallowfire.1 = {
-	title = "The reports of elves' disapperance were greatly exaggerated"
+	title = "The reports of the elves' disapperance were greatly exaggerated"
 	desc = ""
 	is_triggered_only = yes
 	picture = forest_trees_eventPicture

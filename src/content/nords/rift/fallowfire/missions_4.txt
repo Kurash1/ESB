@@ -1,0 +1,98 @@
+new mission_series fallowfire_4 = {
+	slot = 4
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_expand_our_citys_market = {
+			name = "Expand our city's market"
+			desc = ""
+			position = 0
+			icon = market_mission
+			trigger = {
+				provinces:shors_stone = {
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_base_production = 2
+				}
+				quick_country_modifier = {
+					name = "A bigger market square"
+					duration = (30*365)
+					modifier = {
+						trade_efficiency = 10%
+					}	
+				}
+			}
+		}
+	}
+}
+new mission_series fallowfire_5_trade_agreement = {
+	slot = 4
+	ai = yes
+	potential = {
+		tag = fallowfire 
+		has_country_flag = silence_2
+	}
+	missions = {
+		fallowfire_provide_food_and_wood_for_the_high_kingdom = {
+			name = "Provide food and wood for the high kingdom"
+			desc = ""
+			position = 1
+			icon = trade_nord_ships_mission
+			required = {
+				fallowfire_expand_our_citys_market
+			}
+			trigger = {
+				OR = {
+					countries:windhelm = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+					AND = {
+						is_enemy = windhelm
+						has_spy_network_in = {
+							who = countries:windhelm
+							value = 50
+						}
+					}
+				}
+			}
+			effect = {
+				if [countries:windhelm = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				] 
+				{ 	
+					countries:windhelm = {
+						add_historical_friend = countries:fallowfire
+					}
+					quick_country_modifier = {
+						name = "Trading with Windhelm"
+						modifier = {
+							trade_efficiency = 0.1
+							production_efficiency = 0.1
+						}
+					}
+				}
+				else {
+					quick_country_modifier = {
+						name = "Smuggling masters"
+						modifier = {
+							spy_action_cost_modifier = -0.2	
+							spy_offence = 0.1
+						}
+					}
+				
+				}
+			}
+		}
+	}

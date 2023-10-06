@@ -1,24 +1,5 @@
-new country_event fallowfire.5 = {
-	title = "Honoring our heroes"
-	desc = ""
-	picture = viking_boats_eventPicture
-	is_triggered_only = yes
-	options = {
-		{
-			name = "We shall honor their memory"
-			effect = {
-				hidden_effect = {
-					set_country_flag = honor_memos
-				}
-			}
-		}
-	}
-}
-
-
-
-new mission_series fallowfire_2 = { 
-	slot = 2
+new mission_series fallowfire_1 = { 
+	slot = 1
 	ai = yes
 	potential = {
 		tag = fallowfire
@@ -28,13 +9,13 @@ new mission_series fallowfire_2 = {
 			name = "One People,One Purpose"
 			desc = ""
 			position = 0
-			icon = mission_unknown_mission
-			#trigger = {
-			#	stability = 1
-			#	has_estate_privilege = clans:clan_land_rights
-			#	has_estate_privilege = clans:hire_clan_advisors
-			#	has_estate_privilege = warriors:warrior_land_rights
-			# }
+			icon = mission_diplomatic_relation
+			trigger = {
+				stability = 1
+				has_estate_privilege = clans:clan_land_rights
+				has_estate_privilege = clans:hire_clan_advisors
+				has_estate_privilege = warriors:warrior_land_rights
+			 }
 			effect = {
 				areas:clearspring, areas:snapleg = {
 					add_claim = ROOT
@@ -46,11 +27,11 @@ new mission_series fallowfire_2 = {
 			name = "Finishing our rivals"
 			desc = ""
 			position = 1
-			icon = mission_unknown_mission
+			icon = mission_unite_home_region
 			required = {
 				fallowfire_one_people_one_purpose
 				fallowfire_honor_our_heroes
-				fallowfire_assemble_our_men
+				fallowfire_prepare_our_men_for_war
 			}
 			trigger = {
 				areas:clearspring, areas:snapleg = {
@@ -76,7 +57,7 @@ new mission_series fallowfire_2 = {
 			name = "Asserting Dominance"
 			desc = ""
 			position = 2
-			icon = mission_unknown_mission
+			icon = mission_rb_control_electors
 			required = {
 				fallowfire_finishing_our_rivals
 			}

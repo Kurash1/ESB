@@ -1,15 +1,15 @@
-new mission_series fallowfire_3 = { 
-	slot = 3
+new mission_series fallowfire_2 = { 
+	slot = 2
 	ai = yes
 	potential = {
 		tag = fallowfire
 	}
 	missions = {
-		fallowfire_assemble_our_men = {
-			name = "Assemble our men"
+		fallowfire_prepare_our_men_for_war = {
+			name = "Prepare our men for war"
 			desc = ""
 			position = 0
-			icon = mission_unknown_mission
+			icon = armory_mission
 			trigger = {
 				army_size_percentage = 1.0
 			}
@@ -22,8 +22,8 @@ new mission_series fallowfire_3 = {
 		}
 	}
 }
-new mission_series fallowfire_3_forelhost = {
-	slot = 3
+new mission_series fallowfire_2_forelhost = {
+	slot = 2
 	ai = yes 
 	potential = {
 		tag = fallowfire
@@ -34,7 +34,7 @@ new mission_series fallowfire_3_forelhost = {
 			name = "Deal with a new old threat"
 			desc = ""
 			position = 1
-			icon = mission_unknown_mission
+			icon = bloody_axe_mission
 			required = {
 				fallowfire_looking_south
 			}
@@ -49,13 +49,17 @@ new mission_series fallowfire_3_forelhost = {
 					name = converting_drive
 					duration = (20*365)
 				}
+				country_event = {
+					id = fallowfire.4
+					days = 1
+				}
 			}
 		}
 		fallowfire_convert_the_misguided = {
 			name = "Convert the misguided"
 			desc = ""
 			position = 2
-			icon = mission_unknown_mission
+			icon = priest_mission
 			required = {
 				fallowfire_deal_with_a_new_old_threat
 			}
@@ -75,8 +79,8 @@ new mission_series fallowfire_3_forelhost = {
 		}
 	}
 }
-new mission_series fallowfire_3_silence = {
-	slot = 3
+new mission_series fallowfire_2_silence = {
+	slot = 2
 	ai = yes
 	potential = {
 		tag = fallowfire
@@ -88,7 +92,7 @@ new mission_series fallowfire_3_silence = {
 			name = "Silence, A promise fulfilled"
 			desc = ""
 			position = 1
-			icon = mission_unknown_mission
+			icon = rift_forest_mission
 			required = {
 				fallowfire_convert_the_misguided
 				fallowfire_asserting_dominance
@@ -101,7 +105,6 @@ new mission_series fallowfire_3_silence = {
 				}
 			}
 			effect = {
-				add_prestige = 10
 				country_event = { 
 					id = fallowfire.3
 					days = 0
@@ -166,20 +169,18 @@ new country_event fallowfire.3 = {
 		{
 			name = "No! We won't stop until every single elf is dead"
 			effect = {
-				defineloc staying_fallow = "Remain Fallowfire, §Rno new content§!,unrecommended"
-				custom_tooltip = staying_fallow
+				defineloc staying_fallow = "Remain Fallowfire"
 			}
 		}
 	}
 }
 new country_event fallowfire.4 = {
-	title = "The sack of Forelhost"
+	title = "The siege of Forelhost"
 	desc = ""
 	picture = siege_eventPicture
 	is_triggered_only = yes
 	trigger = {
 		tag = fallowfire
-		controls = forelhost
 	}
 	options = {
 		{	

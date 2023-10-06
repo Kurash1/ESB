@@ -1,0 +1,90 @@
+new mission_series fallowfire_6 = {
+	slot = 6
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_better_tax_collection = {
+			name = "Better tax collection"
+			desc = ""
+			position = 0
+			icon = mission_entrepot_of_india
+			trigger = {
+				provinces:shors_stone = {
+					has_building = tax_1
+				}
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_base_tax = 2
+					quick_country_modifier = {
+						name = "Less burden on administration"
+						duration = (15*365)
+						modifier = {
+							state_maintenance_modifier = -0.50
+						}
+					}
+				}
+			}
+		}
+	}
+}
+new mission_series fallowfire_7_feast_dragon = {
+	slot = 6
+	ai = yes
+	potential = {
+		tag = fallowfire
+		has_country_flag = silence_1
+	}
+	missions = {
+		fallowfire_feast_for_the_dragon_cult_demise = {
+			name = "Feast for the dragon cult demise"
+			desc = ""
+			position = 1
+			icon = banquet_mission
+			required = {
+				fallowfire_better_tax_collection
+			}
+			trigger = {
+				calc_true_if = {
+					all_country = {
+						culture_group = nord
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 3
+				}
+			}
+			effect = {
+				every_country [culture_group = nord
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				]
+				{
+					add_opinion = {
+						who = fallowfire
+						modifier = fallowfire_feast_dragon_cult
+					}		
+				}
+				quick_country_modifier = {
+						name = "Extinguishers of the Dragon Cult"
+						modifier = {
+							diplomatic_reputation = 1
+							prestige = 1
+						}
+				}
+			}
+		}
+	}
+}
+new opinion_modifier fallowfire_feast_dragon_cult = {
+	name = "Had a great time "
+	opinion = 25
+	yearly_decay = 2
+}
+	

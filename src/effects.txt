@@ -117,13 +117,36 @@ new effect change_trade_goods = {
 		`change_trade_goods = {args}`
 	}
 }
-<<<<<<< HEAD
-
-=======
 new effect set_allow_female_emperor = {
 	args = bool
 	transpile = {
 		`set_allow_female_emperor = {args}`
 	}
 }
->>>>>>> main
+new effect add_opinion = {
+	args = {
+		who = country_scope
+		modifier = opinion_modifier
+	}
+	transpile = {
+		`add_opinion =` {
+			`who = {args:who}`
+			`modifier = {args:modifier}`
+		}
+	}
+}
+#new effect add_great_project_tier = {
+#	args = {
+#	type = great_project			
+#	tier = int
+#	}
+#	transpile = {
+#		`add_great_project_tier =` {
+#			`type = {args:great_project}`
+#			`tier = {args:int}`
+#		
+#		}
+#	}
+#}	
+
+

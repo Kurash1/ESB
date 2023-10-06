@@ -82,3 +82,9 @@ new trigger controls = {
 		`controls = {args}`
 	}
 }
+new trigger is_enemy = {
+	args = country_scope
+	transpile = {
+		`is_enemy = {args}`
+	}
+}
