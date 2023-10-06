@@ -59,6 +59,10 @@ new country clearspring = {
 				mil = 3
 				birth_date = 2455.1.1
 			}
+			country_event = {
+				id = fallowfire.5
+				days = 0
+			}
 		}
 	}
 	color = {
@@ -79,11 +83,15 @@ new country fallowfire = {
 			monarch = {
 				name = "Akvid"
 				dynasty = "Blood-axe"
-				adm = 1
-				dip = 1
-				mil = 0
+				adm = 3
+				dip = 2
+				mil = 2
 				birth_date = 2477.1.1
 			}
+			country_event = {
+				id = fallowfire.5
+				days = 31
+			}		
 		}
 	}
 	color = {

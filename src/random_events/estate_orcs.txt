@@ -223,8 +223,8 @@ new country_event orc_estate_events.6 = {
 	picture = orc_drunk_brawl_eventPicture
 	trigger = {
 		has_estate = estate_orcs
+		culture_group = nord
 		has_estate_privilege = orcs:roaming_orcs
-		culture_group = culture_groups:nord
 	}
 	options = {
 		{

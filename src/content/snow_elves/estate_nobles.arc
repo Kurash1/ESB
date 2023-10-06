@@ -6,7 +6,7 @@ new estate nobility = {
 		0 100 255
 	}
 	trigger = {
-		culture_group = culture_groups:snow_elven
+		culture_group = snow_elven
 	}
 	country_modifier_happy = {
 		state_maintenance_modifier = -0.5

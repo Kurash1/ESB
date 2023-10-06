@@ -1,0 +1,45 @@
+new mission_series fallowfire_0 = { 
+	slot = 0
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_honor_our_heroes = {
+			name = "Honor our heroes"
+			desc = ""
+			position = 0
+			icon = mission_norse_faith
+			trigger = {
+				defineloc has_had_honoring_our_heroes_event = "Has had §YHonoring our heroes§! event"
+				custom_trigger_tooltip = {
+					tooltip = has_had_honoring_our_heroes_event
+					has_country_flag = honor_memos
+				}
+			}
+			effect = {
+				add_prestige = 15
+			}
+		}
+	}
+}
+new country_event fallowfire.5 = {
+	title = "Honoring our heroes"
+	desc = ""
+	picture = viking_boats_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "We shall honor their memory"
+			effect = {
+				hidden_effect = {
+					set_country_flag = honor_memos
+				}
+			}
+		}
+	}
+}
+
+
+
+

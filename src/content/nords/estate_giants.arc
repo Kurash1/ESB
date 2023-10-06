@@ -6,7 +6,7 @@ new estate giants = {
 		127 51 0
 	}
 	trigger = {
-		culture_group = culture_groups:nord
+		culture_group = nord
 	}
 	country_modifier_happy = {
 	}

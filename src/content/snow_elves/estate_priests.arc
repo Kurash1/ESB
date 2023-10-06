@@ -6,7 +6,7 @@ new estate priests = {
 		255 0 0
 	}
 	trigger = {
-		culture_group = culture_groups:snow_elven
+		culture_group = snow_elven
 	}
 	country_modifier_happy = {
 		stability_cost_modifier = -0.20

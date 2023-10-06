@@ -1,0 +1,73 @@
+new mission_series fallowfire_9 = {
+	slot = 9
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_fortify_the_north = {
+			name = "Fortify the north" 
+			desc = ""
+			position = 0
+			icon = fortress_of_belgrade
+			trigger = {
+				provinces:stony_creek, provinces:mist_road = {
+					fort_level = 1
+				}
+			}
+			effect = {
+				provinces:stony_creek, provinces:mist_road = {
+					quick_province_modifier = {
+						name = "Sturdy Walls"
+						modifier = {
+							local_defensiveness = 0.20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+new mission_series fallowfire_9_fortify_the_west_rift = {
+	slot = 9
+	ai = yes
+	potential = {
+		tag = fallowfire
+		has_country_flag = silence_2
+	}
+	missions = {
+		fallowfire_fortify_the_west = {
+			name = "Fortify the west" 
+			desc = ""
+			position = 1
+			icon = fight_bosnian_heresies
+			required = {
+				fallowfire_fortify_the_north
+			}
+			trigger = {
+				provinces:silverpass, provinces:geirhill = {
+					fort_level = 1
+				}
+			}
+			effect = {
+				provinces:silverpass, provinces:geirhill = {
+					quick_province_modifier = {
+						name = "Sturdy Walls"
+						modifier = {
+							local_defensiveness = 0.20
+						}
+					}
+				}
+				quick_country_modifier = {
+					name = "The Rift is secured"
+					duration = (15*365)
+					modifier = {
+						global_monthly_devastation = -0.2
+						global_prosperity_growth = 0.1
+					}
+					
+				}
+			}
+		}
+	}
+}

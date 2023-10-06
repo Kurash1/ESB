@@ -58,6 +58,36 @@ new trigger has_estate_privilege = {
 		`has_estate_privilege = {args}`
 	}
 }
+new trigger culture_group = {
+	args = culture_group
+	transpile = {
+		`culture_group = {args}`
+	}
+}
+new trigger culture_group = {
+	args = base_scope
+	transpile = {
+		`culture_group = {args}`
+	}
+}
+new trigger region = {
+	args = region
+	transpile = {
+		`region = {args}`
+	}
+}
+new trigger controls = {
+	args = province
+	transpile = {
+		`controls = {args}`
+	}
+}
+new trigger is_enemy = {
+	args = country_scope
+	transpile = {
+		`is_enemy = {args}`
+	}
+}
 new trigger has_trade_goods = {
 	args = tradegood
 	transpile = {

@@ -15,7 +15,7 @@ new decision form_eastmarch = {
 	major = yes
 	potential = {
 		capital_scope = {
-			region = regions:eastmarch
+			region = eastmarch
 		}
 		NOT = {
 			has_reform = tier_1_hold
@@ -23,7 +23,7 @@ new decision form_eastmarch = {
 		}
 	}
 	provinces_to_highlight = {
-		region = regions:eastmarch
+		region = eastmarch
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
@@ -48,7 +48,7 @@ new decision form_winterhold = {
 	major = yes
 	potential = {
 		capital_scope = {
-			region = regions:winterhold
+			region = winterhold
 		}
 		NOT = {
 			has_reform = tier_1_hold
@@ -61,7 +61,7 @@ new decision form_winterhold = {
 		}
 	}
 	provinces_to_highlight = {
-		region = regions:winterhold
+		region = winterhold
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
@@ -98,7 +98,7 @@ new decision form_pale = {
 	major = yes
 	potential = {
 		capital_scope = {
-			region = regions:pale
+			region = pale
 		}
 		NOT = {
 			exists = PAL
@@ -106,7 +106,7 @@ new decision form_pale = {
 		}
 	}
 	provinces_to_highlight = {
-		region = regions:pale
+		region = pale
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
@@ -143,7 +143,7 @@ new decision form_whiterun = {
 	major = yes
 	potential = {
 		capital_scope = {
-			region = regions:whiterun
+			region = whiterun
 		}
 		NOT = {
 			primary_culture = falkrentish
@@ -154,7 +154,7 @@ new decision form_whiterun = {
 		}
 	}
 	provinces_to_highlight = {
-		region = regions:whiterun
+		region = whiterun
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
@@ -191,7 +191,7 @@ new decision form_hjaalmarch = {
 	major = yes
 	potential = {
 		capital_scope = {
-			region = regions:hjaalmarch
+			region = hjaalmarch
 		}
 		NOT = {
 			exists = HJM
@@ -199,7 +199,7 @@ new decision form_hjaalmarch = {
 		}
 	}
 	provinces_to_highlight = {
-		region = regions:hjaalmarch
+		region = hjaalmarch
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
@@ -236,7 +236,7 @@ new decision form_haafingar = {
 	major = yes
 	potential = {
 		capital_scope = {
-			region = regions:haafingar
+			region = haafingar
 		}
 		NOT = {
 			exists = HAA
@@ -244,7 +244,7 @@ new decision form_haafingar = {
 		}
 	}
 	provinces_to_highlight = {
-		region = regions:haafingar
+		region = haafingar
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
@@ -297,7 +297,7 @@ new decision form_falkreath = {
 		}
 	}
 	provinces_to_highlight = {
-		region = regions:kreath
+		region = kreath
 		NOT = { owned_by = ROOT }
 	}
 	effect = {
@@ -342,7 +342,7 @@ new decision form_orkreath = {
 		}
 	}
 	provinces_to_highlight = {
-		region = regions:kreath
+		region = kreath
 		NOT = { owned_by = ROOT }
 	}
 	effect = {
@@ -350,6 +350,51 @@ new decision form_orkreath = {
 		swap_free_idea_group = yes
 		add_government_reform = tier_1_orc_federation
 		kreath_region = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+new country rift = {
+	inherit = nordic_country
+	primary_culture = fallowfirean
+	tag = RIF
+	name = "Rift"
+	adj = "Riftish"
+	color = {
+		54 48 54
+	}
+	starting_reform = tier_1_hold
+	capital = riften
+}
+new decision form_the_rift = {
+	name = " Form the Rift "
+	major = yes
+	potential = {
+		always = no
+		NOT = {
+			exists = countries:rift
+			has_reform = tier_1_hold
+		}  
+	}
+	allow = {
+		calc_true_if = {
+			amount = 60
+			regions:rift = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+	}
+	provinces_to_highlight = {
+		region = rift
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		change_tag = countries:rift
+		swap_free_idea_group = yes
+		add_government_reform = tier_1_hold
+		rift_region = {
 			add_permanent_claim = ROOT
 		}
 	}

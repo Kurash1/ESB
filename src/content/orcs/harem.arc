@@ -6,7 +6,7 @@ new estate harem = {
 		0 51 0
 	}
 	trigger = {
-		culture_group = culture_groups:orc
+		culture_group = orc
 	}
 	country_modifier_happy = {
 		production_efficiency = 0.10

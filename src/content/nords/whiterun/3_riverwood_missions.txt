@@ -70,14 +70,14 @@ new country_event whiterun_generic.2 = {
 		{
 			name = "We shall give up the lands"
 			effect = {
-				every_owned_province [region = whiterun_region] {
+				every_owned_province [region = whiterun] {
 					while [base_tax = 2] {
 						add_base_tax = -1
 						PREV = {
 							random_owned_province [
 								NOT = { 
 									base_tax = 5
-									region = whiterun_region 
+									region = whiterun
 								}
 							] {
 								add_base_tax = 1
@@ -90,7 +90,7 @@ new country_event whiterun_generic.2 = {
 							random_owned_province [
 								NOT = { 
 									base_production = 5
-									region = whiterun_region 
+									region = whiterun
 								}
 							] {
 								add_base_production = 1
@@ -103,7 +103,7 @@ new country_event whiterun_generic.2 = {
 							random_owned_province [
 								NOT = { 
 									base_manpower = 5
-									region = whiterun_region 
+									region = whiterun 
 								}
 							] {
 								add_base_manpower = 1

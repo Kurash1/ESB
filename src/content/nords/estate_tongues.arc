@@ -7,7 +7,7 @@ new estate tongues = {
 	}
 	trigger = {
 		always = no
-		culture_group = culture_groups:nord
+		culture_group = nord
 	}
 	country_modifier_happy = {
 	}

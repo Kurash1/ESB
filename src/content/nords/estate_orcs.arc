@@ -10,7 +10,7 @@ new estate orcs = {
 			has_province_flag = orc_stronghold
 		}
 		NOT = {
-			culture_group = culture_groups:orc 
+			culture_group = orc 
 		}	
 	}
 	country_modifier_happy = {

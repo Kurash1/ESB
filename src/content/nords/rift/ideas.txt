@@ -1,0 +1,68 @@
+new idea_group rift_ideas = {
+	name = "Rift"
+	category = national
+	start = {
+		diplomatic_reputation = 1
+		infantry_power = 0.10
+	}
+	bonus = {
+		advisor_cost = -25%
+	}
+	trigger = {
+		tag = rift
+	}
+	ideas = {
+		{
+			name = "The Land of abundant fish and wood"
+			desc = "By being almost completely surronded by mountains the cold winds of the north don't reach us.This made the Rift one of the most temperate regions of Skyrim.This is reflected in the abundance of a lot of things:wood ,fish ,alchemical ingredients ,mead ,honey ,wildlife and much more.Truly this must be the most blessed place of Skyrim."
+			modifier = {
+				global_trade_goods_size_modifier = 0.1
+				development_cost = -10%
+			}
+		}
+		{
+			name = "Ebony production"
+			desc = "Ebony, a rare volcanic glass,is one of the most precious substances in Tamriel.Raw ebony itself is an extremely hard, durable, black glass-like substance.This makes it an ideal material for creating weapons and armors.We are very lucky to be one of the few regions when such a material is available.This gives us the chance to give our men one of the finest military equipment in existence."
+			modifier = {
+				shock_damage = 0.10
+				shock_damage_received = -0.15
+			}
+		}
+		{
+			name = "The Great Riften Road"
+			desc = "The Great Riften Road is the hold's main thoroughfare. It starts from the Lion's Den, a valley that bridges Falkreath Hold to the southwest, and continues east along the southern Treva Riverbank until it reaches Riften's south gate. Beyond the city, it diverges north into Eastmarch and east toward the border. The road also splits north around Honeystrand Hill to Ivarstead and northeast toward Eastmarch's southern road."
+			modifier = {
+				movement_speed = 0.10
+			}
+		}
+		{
+			name = "Skyrim major trade hub"
+			desc = "Being at the crossroad between Skyrim's other holds,Morrowind and Cyrodiil makes our region ideal for trade and our people learned very well how to take advantage of this boon."
+			modifier = {
+				trade_efficiency = 10%
+			}
+		}
+		{
+			name = "Dedicated to Mara"
+			desc = "Our people have a tendency to be drawn to Mara,goddess of fertility,who we also call Mother Wolf.She asks us to spread our seed far and wide and We shall do so to honor her."
+			modifier = {
+				manpower_recovery_speed = 0.10
+				global_manpower_modifier = 0.10 
+			}
+		}
+		{
+			name = "Echoes of past deeds"
+			desc = "The Rift was the place of many great deeds.From the crew of the Fallowfire,led by Gurilda Sharktooth who battled, won and slaughtered the cowardly elves to the great Ysgramoor himself,who crashed the strong and mighty giants and single-handedly defeated the fearsome and mighty leader Sinmur.Our men strive everyday to be just as great as these heroes of the past and though this may be impossible to achieve for them they have become more disciplined in the effort."
+			modifier = {
+				discipline = 5%
+			}
+		}
+		{
+			name = "Destroyers of the Dragon Cult"
+			desc = "We are the ones who defeated the laste vestiges of the once mighty and cruel rule of the dragon priests.This achievement fills the heart of our men and women with pride and fervor."
+			modifier = {
+				land_morale = 0.10
+			}
+		}
+	}
+}

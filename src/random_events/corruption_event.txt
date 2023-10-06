@@ -464,6 +464,11 @@ new country_event corruption_event.10 = {
 		}
 	}
 }
+new opinion_modifier corrupt_ambassador = {
+	name = "Corrupt ambassador"
+	opinion = -30
+	yearly_decay = 1
+}
 new country_event corruption_event.11 = {
 	inherit = random_event
 	title = "[trade_goods_province.GetTradeGoodsName] 'Disappearing'"

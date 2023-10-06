@@ -130,7 +130,7 @@ new country_event trade.3 = {
 				] {
 					most_province_trade_power = {
 						add_opinion = {
-							who = root
+							who = ROOT
 							modifier = merchants_too_succesful
 						}
 					}
@@ -159,7 +159,7 @@ new country_event trade.3 = {
 				] {
 					most_province_trade_power = {
 						add_opinion = {
-							who = root
+							who = ROOT
 							modifier = merchants_standing_down
 						}
 					}
@@ -173,6 +173,18 @@ new country_event trade.3 = {
 			}
 		}
 	}
+}
+new opinion_modifier merchants_standing_down = {
+	name = "Merchants are standing down"
+	opinion = 25
+	years = 5
+	yearly_decay = 5
+}
+new opinion_modifier merchants_too_succesful = {
+	name = "Too successful merchants"
+	opinion = -25
+	years = 5
+	yearly_decay = 5
 }
 new event_modifier severe_trade_crisis = {
 	name = "Severe Trade Crisis"

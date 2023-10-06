@@ -10,7 +10,7 @@ new idea_group nordic_ideas = {
 		may_perform_slave_raid = yes
 	}
 	trigger = {
-		culture_group = culture_groups:nord
+		culture_group = nord
 	}
 	ideas = {
 		{

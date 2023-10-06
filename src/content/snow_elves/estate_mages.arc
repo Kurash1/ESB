@@ -6,7 +6,7 @@ new estate mages = {
 		255 100 0
 	}
 	trigger = {
-		culture_group = culture_groups:snow_elven
+		culture_group = snow_elven
 	}
 	country_modifier_happy = {
 		monthly_magicka = 0.30
