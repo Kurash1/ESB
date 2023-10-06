@@ -196,8 +196,8 @@ new building_line production = {
 	y = 234
 	build_trigger = {
 		NOT = {
-			`trade_goods` = gold
-			`trade_goods` = silver
+			has_trade_goods = gold
+			has_trade_goods = silver
 		}
 	}
 	idea_group_unlocks = {
