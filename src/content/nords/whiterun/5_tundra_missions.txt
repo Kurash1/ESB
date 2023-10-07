@@ -113,7 +113,6 @@ mission_trees:whiterun_generic += {
 			development_in_provinces = {
 				value = 100
 				trigger = {
-					has_terrain = steppe
 					OR = {
 						area = greymoor
 						area = granitehill
@@ -127,7 +126,7 @@ mission_trees:whiterun_generic += {
 			}
 		}
 		effect = {
-			every_owned_province [has_terrain = steppe] {
+			every_owned_province = {
 				add_base_manpower = 1
 			}
 		}

@@ -171,7 +171,7 @@ mission_trees:whiterun_generic += {
 		trigger = {
 			owns = bleak_falls_temple
 			provinces:bleak_falls_temple = {
-				development = 15
+				fort_level = 1
 			}
 		}
 		effect = {
@@ -239,7 +239,7 @@ mission_trees:whiterun_generic += {
 		trigger = {
 			owns = embershard_mine
 			provinces:embershard_mine = {
-				development = 15
+				has_building = def_manufactory
 			}
 		}
 		effect = {
