@@ -134,13 +134,8 @@ new age first_century = {
 			allow = {
 				culture_group = nord
 			}
-			effect = {
-				if [has_dlc = "Domination"] {
-					modifier = {
-						allowed_galleass_fraction = 0.2
-					}
-				}	
-				else { }
+			modifier = {
+				allowed_galleass_fraction = 0.2
 			}
 		}
 		ab_skjoralmor_conquests = {
