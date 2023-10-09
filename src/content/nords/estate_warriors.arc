@@ -30,6 +30,25 @@ new estate warriors = {
 			benefits = {
 				governing_capacity = 100
 			}
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					factor = 1.4
+					num_of_territories = 5
+				}
+				modifier = {
+					factor = 1.5
+					num_of_territories = 10
+				}
+				modifier = {
+					factor = 1.5
+					num_of_territories = 15
+				}
+				modifier = {
+					factor = 0
+					NOT = { governing_capacity_percentage = 0.5 }
+				}
+			}
 		}
 		new warrior_state = {
 			name = "Warrior State"
@@ -37,10 +56,15 @@ new estate warriors = {
 			icon = privilege_military_power
 			land_share = 10
 			max_absolutism = -5
-			influence = 0.15
-			loyalty = -0.05
 			benefits = {
 				country_military_power = 1
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 10
+					tag = jorrvaskr
+				}
 			}
 		}
 		new hire_warrior_advisors = {
@@ -56,10 +80,14 @@ new estate warriors = {
 			benefits = {
 				mil_advisor_cost = -0.25
 			}
+			ai_will_do = {
+				factor = 5
+			}
 		}
 		new warrior_retirement_homes = {
 			name = "Warrior Retirement Homes"
 			icon = privilege_peasant
+			loyalty = 0.1
 			on_granted = {
 				defineloc warrior_retirement_homes_grant_tooltip = "Every owned province producing §YWheat§! gains:
 {modifier_to_string = {
@@ -93,22 +121,31 @@ new estate warriors = {
 					remove_province_modifier = warrior_retirement_homes
 				}
 			}
+			ai_will_do = {
+				factor = 5
+			}
 		}
 		new to_sovngarde = {
 			name = "To Sovngarde"
 			icon = privilege_to_sovngarde
-			loyalty = -0.15
+			loyalty = -0.1
 			benefits = {
 				land_morale = 0.1
+			}
+			ai_will_do = {
+				factor = 5
 			}
 		}
 		new skald_warriors = {
 			name = "Sponsor Skald Warriors"
 			icon = privilege_prestige_from_land
 			loyalty = 0.1
-			influence = 0.1
+			influence = 0.05
 			benefits = {
 				prestige_from_land = 0.5
+			}
+			ai_will_do = {
+				factor = 5
 			}
 		}
 	}

@@ -150,5 +150,15 @@ new effect add_opinion = {
 #		}
 #	}
 #}	
-
-
+new effect set_estate_privilege = {
+	args = estate_privilege
+	transpile = {
+		`set_estate_privilege = {args}`
+	}
+}
+new effect remove_estate_privilege = {
+	args = estate_privilege
+	transpile = {
+		`remove_estate_privilege = {args}`
+	}
+}

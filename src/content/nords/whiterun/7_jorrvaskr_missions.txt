@@ -31,9 +31,15 @@ new mission_tree jorrvaskr = {
 		y = 4
 		icon = warrior_rights_mission
 		trigger = {
-			has_estate_privilege = warriors:warrior_state
+			if [ai = yes] {
+				always = yes
+			}
+			else {
+				has_estate_privilege = warriors:warrior_state
+			}
 		}
 		effect = {
+			if [ai = yes] { set_estate_privilege = warriors:warrior_state }
 			add_army_tradition = 25
 		}
 	}

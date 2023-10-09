@@ -79,8 +79,7 @@ on_actions:on_startup += {
 				days = (365*50)
 			}
 		}
-		every_country [NOT = { tag = REB }]
-		{
+		every_country [NOT = { tag = REB }] {
 			esb_change_opinion = yes
 		}
 		set_global_flag = on_action_set_up_global_flag

@@ -3,7 +3,7 @@ estates:clans:privileges += new sponsor_battle_born = {
 	desc = ""
 	icon = privilege_peasant
 	loyalty = 0.1
-	influence = 0.1
+	influence = 0.05
 	is_valid = {
 		owns = whiterun
 	}
@@ -70,9 +70,15 @@ mission_trees:whiterun_generic += {
 		y = 3
 		icon = battle_born_mission
 		trigger = {
-			has_estate_privilege = clans:sponsor_battle_born
+			if [ai = yes] {
+				always = yes
+			}
+			else {
+				has_estate_privilege = clans:sponsor_battle_born
+			}
 		}
 		effect = {
+			if [ai = yes] { set_estate_privilege = clans:sponsor_battle_born }
 			define_advisor = {
 				type = army_reformer
 				name = "Erik Battle-Born"
