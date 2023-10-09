@@ -17,11 +17,9 @@ mission_trees:skjoralmor += {
 			}
 		}
 		effect = {
-			if [has_global_flag = skjoralmor_deal] {
-				add_modifier = {
-					modifier = skjoralmor_deal
-					years = 20
-				}
+			add_modifier = {
+				modifier = skjoralmor_deal
+				years = 20
 			}
 		}
 	}
@@ -30,18 +28,29 @@ mission_trees:skjoralmor += {
 		required = a_deal
 		x = 0
 		y = 1
+		trigger = {
+			navy_size_percentage = 1
+		}
 	}
 	consult_the_guardians = {
 		name = "Consult the Guardians"
 		required = a_deal
 		x = 1
 		y = 1
+		trigger = {
+			adm = 150
+			dip = 150
+			mil = 150
+		}
 	}
 	green_army = {
 		name = "Green Army"
 		required = a_deal
 		x = 2
 		y = 1
+		trigger = {
+			army_size_percentage = 1
+		}
 	}
 	bjarfrud_skjoralmor = {
 		name = "Bjarfrud Skjoralmor"
@@ -52,6 +61,11 @@ mission_trees:skjoralmor += {
 		}
 		x = 1
 		y = 2
+		effect = {
+			regions:kreath = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	along_the_coast = {
 		name = "Along the Coast"

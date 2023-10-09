@@ -38,3 +38,80 @@ new effect add_country_modifier = {
 		desc = bool?
 	}
 }
+new effect remove_country_modifier = {
+	args = string
+}
+new effect set_country_flag = {
+	args = string
+}
+new effect clr_country_flag = {
+	args = string
+}
+new effect change_tag = {
+	args = country_scope
+}
+new effect switch_tag = {
+	args = country_scope
+}
+new effect change_graphical_culture = {
+	args = string
+}
+new effect override_country_name = {
+	args = string
+}
+new effect restore_country_name = {
+	args = bool
+}
+new effect change_country_color = {
+	args = {
+		color = block
+	}
+}
+new effect change_country_color = {
+	args = {
+		country = country_scope
+	}
+}
+new effect restore_country_color = {
+	args = bool
+}
+new effect add_adm_power = {
+	args = int
+}
+
+new effect add_dip_power = {
+	args = int
+}
+
+new effect add_mil_power = {
+	args = int
+}
+new effect set_saved_name = {
+	args = {
+		key = string?
+		type = string?
+		name = string
+		scope = country_scope
+	}
+}
+new effect clear_saved_name = {
+	args = string
+}
+new effect change_innovativeness = {
+	args = int
+}
+new effect complete_mission = {
+	args = mission
+}
+new effect swap_non_generic_missions = {
+	args = bool
+}
+new effect adm_power_cost = {
+	args = int
+}
+new effect dip_power_cost = {
+	args = int
+}
+new effect mil_power_cost = {
+	args = int
+}

@@ -1,8 +1,5 @@
 new trigger owns = {
 	args = province
-	transpile = {
-		`owns = {args}`
-	}
 }
 new trigger ags = {
 	args = int
@@ -12,9 +9,6 @@ new trigger ags = {
 }
 new trigger tag = {
 	args = country_scope
-	transpile = {
-		`tag = {args}`
-	}
 }
 new trigger development_in_provinces = {
 	args = {
@@ -30,73 +24,37 @@ new trigger development_in_provinces = {
 }
 new trigger has_terrain = {
 	args = terrain
-	transpile = {
-		`has_terrain = {args}`
-	}
 }
 new trigger area = {
 	args = area
-	transpile = {
-		`area = {args}`
-	}
 }
 new trigger primary_culture = {
 	args = culture
-	transpile = {
-		`primary_culture = {args}`
-	}
 }
 new trigger primary_culture = {
 	args = country_scope
-	transpile = {
-		`primary_culture = {args}`
-	}
 }
 new trigger has_estate_privilege = {
 	args = estate_privilege
-	transpile = {
-		`has_estate_privilege = {args}`
-	}
 }
 new trigger culture_group = {
 	args = culture_group
-	transpile = {
-		`culture_group = {args}`
-	}
 }
 new trigger culture_group = {
 	args = base_scope
-	transpile = {
-		`culture_group = {args}`
-	}
 }
 new trigger region = {
 	args = region
-	transpile = {
-		`region = {args}`
-	}
 }
 new trigger controls = {
 	args = province
-	transpile = {
-		`controls = {args}`
-	}
 }
 new trigger is_enemy = {
 	args = country_scope
-	transpile = {
-		`is_enemy = {args}`
-	}
 }
 new trigger has_trade_goods = {
 	args = tradegood
-	transpile = {
-		`trade_goods = {args}`
-	}
 }
 new trigger has_trade_goods = {
 	args = base_scope
-	transpile = {
-		`trade_goods = {args}`
-	}
 }
