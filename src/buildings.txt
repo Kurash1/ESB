@@ -1,8 +1,8 @@
 new building cleansing = {
 	name = "Cleansing"
 	desc = "Let's clean our land from the tainting presence of other races"
-	cost = 25
-	time = 36
+	cost = 10
+	time = 12
 	x = 410
 	y = 34
 	modifier = {
@@ -18,25 +18,9 @@ new building cleansing = {
 		change_religion = FROM
 		change_culture = FROM
 		remove_building = cleansing
-		add_devastation = 80 
-		set_local_autonomy = 80
+		add_devastation = 75
+		set_local_autonomy = 75
 		add_nationalism = -100
-		
-		if [development = 25 ] {
-			add_base_tax = -3
-			add_base_production  = -3
-			add_base_manpower = -3
-		}
-		else_if [development = 15 ] {
-			add_base_tax = -2
-			add_base_production = -2
-			add_base_manpower = -2
-		}
-		else {
-			add_base_tax = -1
-			add_base_production = -1
-			add_base_manpower = -1
-		}
 	}
 	ai_will_do = {
 		factor = 1000

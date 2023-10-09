@@ -102,29 +102,6 @@ on_actions:on_general_recruited += {
 }
 new incident collapse_of_hrothgar = {
 	name = "Collapse of Hrothgar"
-	event = incidents.2
-	default_option = 0
-	can_stop = {
-		NOT = {
-			exists = HRO
-		}
-	}
-	0 = {
-		factor = 1
-	}
-	1 = {
-		factor = 1
-	}
-	2 = {
-		factor = 1
-	}
-}
-new country_event incidents.2 = {
-	title = "Collapse of Hrothgar"
-	desc = ""
-	picture = DEATH_OF_HEIR_eventPicture
-	is_triggered_only = yes
-	fire_only_once = yes
 	immediate = {
 		p@whiterun = {
 			owner = {
@@ -149,6 +126,11 @@ new country_event incidents.2 = {
 					save_event_target_as = amol_owner
 				}
 			}
+		}
+	}
+	can_stop = {
+		NOT = {
+			exists = HRO
 		}
 	}
 	options = {

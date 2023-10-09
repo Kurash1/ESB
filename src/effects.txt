@@ -162,3 +162,14 @@ new effect remove_estate_privilege = {
 		`remove_estate_privilege = {args}`
 	}
 }
+new effect set_imperial_incident = {
+	args = incident
+	transpile = {
+		if [has_dlc = "Emperor"] {
+			`set_imperial_incident = {args}`
+		}
+		else {
+			args:options:1:effect
+		}
+	}
+}

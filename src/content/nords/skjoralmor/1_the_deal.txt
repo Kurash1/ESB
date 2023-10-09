@@ -1,8 +1,29 @@
+new event_modifier skjoralmor_deal = {
+	name = "Skjoralmor Deal"
+	modifier = {
+		land_morale = 0.10
+		land_forcelimit = 10
+	}
+}
 mission_trees:skjoralmor += {
 	a_deal = {
 		name = "A Deal"
 		x = 1
 		y = 0
+		trigger = {
+			OR = {
+				has_global_flag = skjoralmor_deal
+				ags = 15
+			}
+		}
+		effect = {
+			if [has_global_flag = skjoralmor_deal] {
+				add_modifier = {
+					modifier = skjoralmor_deal
+					years = 20
+				}
+			}
+		}
 	}
 	illinalta_fleet = {
 		name = "Illinalta Fleet"

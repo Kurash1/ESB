@@ -1,28 +1,10 @@
 new incident road_mistwatch = {
 	name = "Road Mistwatch"
-	event = incidents.1
-	default_option = 1
 	can_stop = {
 		NOT = {
 			exists = WND
 		}
 	}
-	0 = {
-		factor = 1
-	}
-	1 = {
-		factor = 1
-	}
-	2 = {
-		factor = 1
-	}
-}
-new country_event incidents.1 = {
-	title = "Road Mistwatch"
-	desc = ""
-	picture = DEATH_OF_HEIR_eventPicture
-	is_triggered_only = yes
-	fire_only_once = yes
 	options = {
 		{
 			name = "Full"
