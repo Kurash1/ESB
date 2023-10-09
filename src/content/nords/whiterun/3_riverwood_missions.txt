@@ -21,7 +21,7 @@ new country_event whiterun_generic.1 = {
 	desc = "[deal_maker.GetName] has proposed a deal for us, the basics of the deal go as such.
 	
 	[deal_maker.GetName] will support us in the conquest of the kreath, and in exchange in 20 years time we shall give up all our territories in whiterun to them."
-	picture = TOMB_eventPicture
+	picture = falkreath_eventPicture
 	is_triggered_only = yes
 	trigger = {
 		NOT = { 
@@ -33,8 +33,10 @@ new country_event whiterun_generic.1 = {
 			name = "We shall accept this Deal"
 			effect = {
 				event_target:deal_maker = {
-					add_treasury = -250
-					add_manpower = -15	
+					country_event = {
+						id = whiterun_generic.3
+						days = 0
+					}
 				}
 				
 				add_treasury = 250
@@ -45,18 +47,27 @@ new country_event whiterun_generic.1 = {
 				
 				country_event = {
 					id = whiterun_generic.2
-					days = 30
+					years = 20
 				}
 				
 				set_global_flag = skjoralmor_deal
+			}
+			ai_chance = {
+				factor = 1
 			}
 		}
 		{
 			name = "This deal is not for us"
 			effect = {
-				every_owned_province = {
-					add_permanent_claim = event_target:deal_maker
+				event_target:deal_maker = {
+					country_event = {
+						id = whiterun_generic.4
+						days = 0
+					}
 				}
+			}
+			ai_chance = {
+				factor = 0
 			}
 		}
 	}
@@ -64,12 +75,19 @@ new country_event whiterun_generic.1 = {
 new country_event whiterun_generic.2 = {
 	title = "Deal with [deal_maker.GetName]"
 	desc = ""
-	picture = TOMB_eventPicture
+	picture = falkreath_eventPicture
 	is_triggered_only = yes
 	options = {
 		{
 			name = "We shall give up the lands"
 			effect = {
+				event_target:deal_maker = {
+					country_event = {
+						id = whiterun_generic.5
+						days = 0
+					}
+				}
+			
 				every_owned_province [region = whiterun] {
 					while [base_tax = 2] {
 						add_base_tax = -1
@@ -115,6 +133,50 @@ new country_event whiterun_generic.2 = {
 					cede_province = event_target:deal_maker
 					remove_core = ROOT
 				}
+			}
+		}
+	}
+}
+new country_event whiterun_generic.3 = {
+	title = "Skjoralmor has accepted the Deal"
+	desc = ""
+	picture = falkreath_eventPicture
+	options = {
+		{
+			name = "Great"
+			effect = {
+				add_treasury = -250
+				add_manpower = -15	
+			}
+		}
+	}
+}
+new country_event whiterun_generic.4 = {
+	title = "Skjoralmor has rejected the Deal"
+	desc = ""
+	picture = falkreath_eventPicture
+	options = {
+		{
+			name = "Unfortunate"
+			effect = {
+				countries:skjoralmor = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+new country_event whiterun_generic.5 = {
+	title = "Skjoralmor has upheld the Deal"
+	desc = ""
+	picture = falkreath_eventPicture
+	options = {
+		{
+			name = "Great"
+			effect = {
+				
 			}
 		}
 	}
@@ -171,7 +233,7 @@ mission_trees:whiterun_generic += {
 		trigger = {
 			owns = bleak_falls_temple
 			provinces:bleak_falls_temple = {
-				development = 15
+				fort_level = 1
 			}
 		}
 		effect = {
@@ -239,7 +301,7 @@ mission_trees:whiterun_generic += {
 		trigger = {
 			owns = embershard_mine
 			provinces:embershard_mine = {
-				development = 15
+				has_building = def_manufactory
 			}
 		}
 		effect = {

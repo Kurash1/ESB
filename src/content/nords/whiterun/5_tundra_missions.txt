@@ -44,9 +44,6 @@ mission_trees:whiterun_generic += {
 			}
 		}
 		effect = {
-			areas:rorikstead, areas:swindler, areas:talking_stone = {
-				add_permanent_claim = ROOT
-			}
 			add_modifier = {
 				modifier = whiterun_generic_rorikstead
 				years = 50
@@ -65,9 +62,6 @@ mission_trees:whiterun_generic += {
 			}
 		}
 		effect = {
-			areas:gjukar, areas:sleeping_tree, areas:granitehill = {
-				add_permanent_claim = ROOT
-			}
 			add_modifier = {
 				modifier = whiterun_generic_granitehill
 				years = 50
@@ -86,9 +80,6 @@ mission_trees:whiterun_generic += {
 			}
 		}
 		effect = {
-			areas:greymoor, areas:bleakwind = {
-				add_permanent_claim = ROOT
-			}
 			add_modifier = {
 				modifier = whiterun_generic_greymoor
 				years = 50
@@ -113,7 +104,6 @@ mission_trees:whiterun_generic += {
 			development_in_provinces = {
 				value = 100
 				trigger = {
-					has_terrain = steppe
 					OR = {
 						area = greymoor
 						area = granitehill
@@ -127,7 +117,7 @@ mission_trees:whiterun_generic += {
 			}
 		}
 		effect = {
-			every_owned_province [has_terrain = steppe] {
+			every_owned_province = {
 				add_base_manpower = 1
 			}
 		}

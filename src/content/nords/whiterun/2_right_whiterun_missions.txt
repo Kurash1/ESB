@@ -3,7 +3,7 @@ estates:clans:privileges += new sponsor_grey_mane = {
 	desc = ""
 	icon = privilege_spawn_rajput_regiments
 	loyalty = 0.1
-	influence = 0.1
+	influence = 0.05
 	is_valid = {
 		owns = whiterun
 	}
@@ -94,9 +94,15 @@ mission_trees:whiterun_generic += {
 		y = 3
 		icon = grey_mane_mission
 		trigger = {
-			has_estate_privilege = clans:sponsor_grey_mane
+			if [ai = yes] {
+				always = yes
+			}
+			else {
+				has_estate_privilege = clans:sponsor_grey_mane
+			}
 		}
 		effect = {
+			if [ai = yes] { set_estate_privilege = clans:sponsor_grey_mane }
 			define_advisor = {
 				type = treasurer
 				name = "Bjorn Grey-Mane"
