@@ -130,7 +130,8 @@ new event_modifier converting_drive = {
 	name = "Converting Drive"
 	modifier = {
 		missionaries = 1
-		global_missionary_strength = 0.01
+		global_missionary_strength = 0.025
+		missionary_maintenance_cost = -0.5
 	}
 }
 new country_event fallowfire.2 = {
