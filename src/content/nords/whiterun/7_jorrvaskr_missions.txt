@@ -91,10 +91,20 @@ new mission_tree jorrvaskr = {
 		y = 5
 		icon = formal_army_mission
 		trigger = {
-			army_professionalism = 0.10 
+			if [has_dlc = "Cradle of Civilization"] {
+				army_professionalism = 0.10 
+			}
+			else {
+				manpower_percentage = 1.0
+			}
 		}
 		effect = {
-			add_army_professionalism = 0.15
+			if [has_dlc = "Cradle of Civilization"] {
+				add_army_professionalism = 0.15
+			}
+			else {
+				add_mil_power = 100
+			}
 		}
 	}
 	new_governance = {
