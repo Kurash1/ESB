@@ -1,0 +1,35 @@
+mission_trees:skjoralmor += {
+	helgen = {
+		name = "Helgen"
+		required = three_town_plan
+		x = 8
+		y = 1
+	}
+	neugrad = {
+		name = "Neugrad"
+		required = helgen
+		x = 8
+		y = 2
+	}
+	orphan_rock = {
+		name = "Orphan Rock"
+		required = helgen
+		x = 9
+		y = 2
+	}
+	skybound_watch = {
+		name = "Skybound Watch"
+		required = orphan_rock
+		x = 9
+		y = 3
+	}
+	sky_observations = {
+		name = "Sky Observations"
+		required = {
+			ancestor_glade
+			skybound_watch
+		}
+		x = 8
+		y = 4
+	}
+}

@@ -1,0 +1,35 @@
+mission_trees:skjoralmor += {
+	falkreath = {
+		name = "Falkreath"
+		x = 6
+		y = 3
+	}
+	high_hall = {
+		name = "High Hall"
+		required = falkreath
+		x = 5
+		y = 4
+	}
+	shriekwind_bastion = {
+		name = "Shriekwind Bastion"
+		required = falkreath
+		x = 6
+		y = 4
+	}
+	heroes_graveyard = {
+		name = "Heroes' Graveyard"
+		required = falkreath
+		x = 7
+		y = 4
+	}
+	capital_kreath = {
+		name = "Capital Kreath"
+		required = {
+			high_hall
+			shriekwind_bastion
+			heroes_graveyard
+		}
+		x = 6
+		y = 5
+	}
+}

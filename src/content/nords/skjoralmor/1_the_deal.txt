@@ -1,0 +1,78 @@
+mission_trees:skjoralmor += {
+	a_deal = {
+		name = "A Deal"
+		x = 1
+		y = 0
+	}
+	illinalta_fleet = {
+		name = "Illinalta Fleet"
+		required = a_deal
+		x = 0
+		y = 1
+	}
+	consult_the_guardians = {
+		name = "Consult the Guardians"
+		required = a_deal
+		x = 1
+		y = 1
+	}
+	green_army = {
+		name = "Green Army"
+		required = a_deal
+		x = 2
+		y = 1
+	}
+	bjarfrud_skjoralmor = {
+		name = "Bjarfrud Skjoralmor"
+		required = {
+			illinalta_fleet
+			consult_the_guardians
+			green_army
+		}
+		x = 1
+		y = 2
+	}
+	along_the_coast = {
+		name = "Along the Coast"
+		required = bjarfrud_skjoralmor
+		x = 0
+		y = 3
+	}
+	up_to_hill = {
+		name = "Up to Hill"
+		required = bjarfrud_skjoralmor
+		x = 2
+		y = 3
+	}
+	beastly_woods = {
+		name = "Beastly Woods"
+		required = along_the_coast
+		x = 0
+		y = 4
+	}
+	beyond_shriekwind = {
+		name = "Beyond Shriekwind"
+		required = {
+			along_the_coast
+			up_to_hill
+		}
+		x = 1
+		y = 4
+	}
+	the_jerall = {
+		name = "The Jerall"
+		required = up_to_hill
+		x = 2
+		y = 4
+	}
+	falks_kreath = {
+		name = "Falks' Kreath"
+		required = {
+			beastly_woods
+			beyond_shriekwind
+			the_jerall
+		}
+		x = 1
+		y = 5
+	}
+}

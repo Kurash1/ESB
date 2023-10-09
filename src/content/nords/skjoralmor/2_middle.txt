@@ -1,0 +1,37 @@
+mission_trees:skjoralmor += {
+	three_town_plan = {
+		name = "Three Town Plan"
+		x = 6
+		y = 0
+	}
+	pinewatch = {
+		name = "Pinewatch"
+		required = three_town_plan
+		x = 6
+		y = 1
+	}
+	lakeview = {
+		name = "Lakeview"
+		required = pinewatch
+		x = 5
+		y = 2
+	}
+	peak_shade = {
+		name = "Peak Shade"
+		required = pinewatch
+		x = 7
+		y = 2
+	}
+	bloodlet_throne = {
+		name = "Bloodlet Throne"
+		required = peak_shade
+		x = 7
+		y = 3
+	}
+	ancestor_glade = {
+		name = "Ancestor Glade"
+		required = peak_shade
+		x = 8
+		y = 3
+	}
+}

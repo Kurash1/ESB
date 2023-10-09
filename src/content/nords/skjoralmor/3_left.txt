@@ -1,0 +1,48 @@
+mission_trees:skjoralmor += {
+	half_moon = {
+		name = "Half-Moon"
+		required = three_town_plan
+		x = 4
+		y = 1
+	}
+	illinaltas_deep = {
+		name = "Illinalta's Deep"
+		required = half_moon
+		x = 3
+		y = 2
+	}
+	evergreen_grove = {
+		name = "Evergreen Grove"
+		required = half_moon
+		x = 4
+		y = 2
+	}
+	knifepoint = {
+		name = "Knifepoint"
+		required = evergreen_grove
+		x = 3
+		y = 3
+	}
+	bilegulch = {
+		name = "Bilegulch"
+		required = evergreen_grove
+		x = 4
+		y = 3
+	}
+	cracked_tusk = {
+		name = "Cracked Tusk"
+		required = evergreen_grove
+		x = 5
+		y = 3
+	}
+	tame_the_forest = {
+		name = "Tame the Forest"
+		required = {
+			knifepoint
+			bilegulch
+			cracked_tusk
+		}
+		x = 4
+		y = 4
+	}
+}
