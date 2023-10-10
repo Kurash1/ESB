@@ -1,26 +1,26 @@
 new holy_order skjoralmor_order = {
 	name = "Skjoralmor Order"
+	desc = ""
 	icon = skjoralmor_order
 	trigger = {
-		tag = skjoralmor
+		has_country_flag = unlocks_skjoralmor_order
 	}
 	color = { 20 63 11 }
 	cost_type = mil_power
 	on_apply = {
-		defineloc skjoralmor_order_tooltip = "Performs a Cleansing on the province
-
-The Religion in the §YProvince§! changes to yours
-Culture in the §YProvince§! changes to yours
-Gain §R75§! devastation in the §YProvince§!
-Set Local Autonomy in the §YProvince§! to §R75.00%§!
-Lose §G100§! Years of Separtism in the §YProvince§!"
+		defineloc skjoralmor_order_tooltip = "If the §YProvince§! is Kreath Orcish the following happens:
+	The Religion in the §YProvince§! changes to yours
+	Culture in the §YProvince§! changes to yours
+	Gain §R50§! devastation in the §YProvince§!
+	Set Local Autonomy in the §YProvince§! to §R50.00%§!
+	Lose §G100§! Years of Separtism in the §YProvince§!"
 		custom_tooltip = skjoralmor_order_tooltip
-		if [cleansing_trigger = ROOT] {
+		if [culture = kreath_orc] {
 			cleansing_effect = ROOT
 		}
 	}
 	modifier = {
-		local_development_cost = -0.15
-		local_manpower_modifier = 0.25
+		local_development_cost = -0.10
+		local_manpower_modifier = 0.20
 	}
 }

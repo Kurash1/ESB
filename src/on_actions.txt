@@ -231,7 +231,7 @@ on_actions:on_colonist_boosting_colony += {
 		}
 		if [
 			OR = {
-				culture = noculture
+				`culture = noculture`
 				variable_arithmetic_trigger = {
 					custom_tooltip = colonysize_is_larger_than_nativesize_tt
 					export_to_variable = {

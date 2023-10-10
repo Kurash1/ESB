@@ -462,6 +462,9 @@ new country skjoralmor = {
 	capital = riverwood
 	history = {
 		elector = yes
+		2500.1.1 = {
+			set_country_flag = unlocks_skjoralmor_order
+		}
 	}
 	starting_reform = tier_1_skjoralmor_clan
 }
