@@ -1,0 +1,19 @@
+new province_triggered_modifier <key> = {
+	name = <string>
+	hidden = bool #optional
+	potential = { #optional, Whether the triggered modifier is visible in the Province view window
+		<triggers>
+	}
+	trigger = { #optional, Whether the triggered modifier is active
+		<triggers>
+	}
+	modifier = { #optional, The modifier to apply when the triggered modifier is active
+		<modifiers>
+	}
+	on_apply = { #optional, Province scope, Effects to execute when the triggered modifiers switches to active
+		<effects>
+	}
+	on_remove = { #optional, Effects to execute when the triggered modifiers switches to inactive
+		<effects>
+	}
+}

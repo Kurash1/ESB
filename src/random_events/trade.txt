@@ -18,9 +18,9 @@ new country_event trade.1 = {
 	trigger = {
 		num_of_merchants = 3
 		capital_scope = {
-			has_trader = root
+			has_trader = ROOT
 			NOT = {
-				is_strongest_trade_power = root
+				is_strongest_trade_power = ROOT
 			}
 		}
 		has_idea_group = maritime_ideas
@@ -63,10 +63,10 @@ new country_event trade.2 = {
 		num_of_merchants = 3
 		num_of_light_ship = 1
 		capital_scope = {
-			has_trader = root
+			has_trader = ROOT
 			has_port = yes
 			NOT = {
-				is_strongest_trade_power = root
+				is_strongest_trade_power = ROOT
 			}
 			NOT = {
 				has_trade_modifier = {
@@ -82,7 +82,7 @@ new country_event trade.2 = {
 			effect = {
 				capital_scope = {
 					add_trade_modifier = {
-						who = root
+						who = ROOT
 						duration = 1825
 						power = -10
 						key = pirate_hunting
@@ -135,7 +135,7 @@ new country_event trade.3 = {
 						}
 					}
 					add_trade_modifier = {
-						who = root
+						who = ROOT
 						duration = 365
 						power = 5
 						key = merchants_too_succesful
@@ -164,7 +164,7 @@ new country_event trade.3 = {
 						}
 					}
 					add_trade_modifier = {
-						who = root
+						who = ROOT
 						duration = 365
 						power = -5
 						key = merchants_standing_down
@@ -281,7 +281,7 @@ new country_event trade.5 = {
 						}
 				] {
 					add_trade_modifier = {
-						who = root
+						who = ROOT
 						duration = 3650
 						power = -10
 						key = merchant_recalled
@@ -377,7 +377,7 @@ new country_event trade.7 = {
 					}
 				] {
 					add_trade_modifier = {
-						who = root
+						who = ROOT
 						duration = 3650
 						power = -10
 						key = merchant_recalled
@@ -394,7 +394,7 @@ new country_event trade.8 = {
 	picture = ES_MILITARY_CAMP_1_eventPicture
 	trigger = {
 		any_active_trade_node = {
-			has_most_province_trade_power = root
+			has_most_province_trade_power = ROOT
 			has_merchant = PREV
 		}
 	}
@@ -403,7 +403,7 @@ new country_event trade.8 = {
 			name = "This was not quite the plan"
 			effect = {
 				random_active_trade_node [
-						has_most_province_trade_power = root
+						has_most_province_trade_power = ROOT
 						has_merchant = PREV
 				] {
 					add_trade_node_income = -5
@@ -457,7 +457,7 @@ new country_event trade.10 = {
 		num_of_merchants = 3
 		any_active_trade_node = {
 			not = {
-				has_most_province_trade_power = root
+				has_most_province_trade_power = ROOT
 			}
 			has_merchant = PREV
 			NOT = {
@@ -480,7 +480,7 @@ new country_event trade.10 = {
 			effect = {
 				random_active_trade_node [
 					NOT = {
-						has_most_province_trade_power = root
+						has_most_province_trade_power = ROOT
 					}
 					has_merchant = PREV
 					NOT = {
@@ -491,7 +491,7 @@ new country_event trade.10 = {
 					}
 				] {
 					add_trade_modifier = {
-						who = root
+						who = ROOT
 						duration = 3650
 						power = -10
 						key = merchant_recalled

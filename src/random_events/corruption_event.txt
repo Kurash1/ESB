@@ -596,8 +596,8 @@ new country_event corruption_event.16 = {
 		any_hired_mercenary_company = {
 			has_company_manpower = 0.2
 			location = {
-				owned_by = root
-				is_state_core = root
+				owned_by = ROOT
+				is_state_core = ROOT
 			}
 		}
 		is_at_war = no
@@ -607,8 +607,8 @@ new country_event corruption_event.16 = {
 			random_hired_mercenary_company [
 				has_company_manpower = 0.2
 				location = {
-					owned_by = root
-					is_state_core = root
+					owned_by = ROOT
+					is_state_core = ROOT
 				}
 			] {
 				save_event_target_as = hired_merc_band
@@ -633,7 +633,7 @@ new country_event corruption_event.16 = {
 			effect = {
 				add_corruption = 1
 				event_target:hired_mercs_victim_area = {
-					area [owned_by = root] {
+					area [owned_by = ROOT] {
 						add_devastation = 15
 					}
 				}
