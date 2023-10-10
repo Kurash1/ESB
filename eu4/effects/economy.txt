@@ -1,0 +1,60 @@
+new effect add_years_of_income = {
+	args = float
+}
+new effect add_treasury = {
+	args = int
+}
+new effect add_inflation = {
+	args = float
+}
+new effect add_mercantilism = {
+	args = int
+}
+new effect add_tariff_value = {
+	args = float
+}
+new effect loan_size = {
+	args = int
+}
+new effect change_price = {
+	args = {
+		trade_goods = tradegood
+		key = string
+		value = float
+		duration = int
+	}
+}
+new effect add_loan = {
+	args = {
+		interest_modifier = float?
+		fixed_interest = float?
+		duration = int
+	}
+}
+new effect raise_war_taxes = {
+	args = int
+}
+new effect add_years_of_owned_provinces_production_income = {
+	args = {
+		years = int
+		trigger = trigger
+		custom_tooltip = string
+	}
+}
+new effect add_years_of_owned_provinces_manpower = {
+	args = {
+		years = int
+		trigger = trigger
+		custom_tooltip = string
+	}
+}
+new effect add_years_of_owned_provinces_sailors = {
+	args = {
+		years = int
+		trigger = trigger
+		custom_tooltip = string
+	}
+}
+new effect set_bankruptcy = {
+	args = country_scope
+}
