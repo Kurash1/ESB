@@ -1,0 +1,18 @@
+new holy_order skjoralmor_order = {
+	name = "Skjoralmor Order"
+	icon = GFX_holy_order_benedictines
+	trigger = {
+		tag = skjoralmor
+	}
+	color = { 20 63 11 }
+	cost_type = mil_power
+	on_apply = {
+		if [buildings:cleansing:build_trigger] {
+			buildings:cleansing:on_built
+		}
+	}
+	modifier = {
+		local_development_cost = -0.15
+		local_manpower_modifier = 0.25
+	}
+}
