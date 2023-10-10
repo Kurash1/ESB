@@ -1,12 +1,20 @@
 new holy_order skjoralmor_order = {
 	name = "Skjoralmor Order"
-	icon = GFX_holy_order_benedictines
+	icon = skjoralmor_order
 	trigger = {
 		tag = skjoralmor
 	}
 	color = { 20 63 11 }
 	cost_type = mil_power
 	on_apply = {
+		defineloc skjoralmor_order_tooltip = "Performs a Cleansing on the province
+
+The Religion in the §YProvince§! changes to yours
+Culture in the §YProvince§! changes to yours
+Gain §R75§! devastation in the §YProvince§!
+Set Local Autonomy in the §YProvince§! to §R75.00%§!
+Lose §G100§! Years of Separtism in the §YProvince§!"
+		custom_tooltip = skjoralmor_order_tooltip
 		if [cleansing_trigger = ROOT] {
 			cleansing_effect = ROOT
 		}
