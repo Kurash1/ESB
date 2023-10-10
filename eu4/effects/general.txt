@@ -3,6 +3,7 @@ new effect country_event = {
 	transpile = {
 		`country_event =` {
 			`id = {args}`
+			`days = 0`
 		}
 	}
 }
@@ -78,11 +79,9 @@ new effect restore_country_color = {
 new effect add_adm_power = {
 	args = int
 }
-
 new effect add_dip_power = {
 	args = int
 }
-
 new effect add_mil_power = {
 	args = int
 }
