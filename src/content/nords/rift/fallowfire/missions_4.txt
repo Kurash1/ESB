@@ -3,7 +3,7 @@ new mission_series fallowfire_4 = {
 	ai = yes
 	potential = {
 		tag = fallowfire 
-	#	has_country_flag = snowy_elf
+		has_country_flag = snowy_elf
 	}
 	missions = {
 		fallowfire_push_on_to_the_tasks_end = {
@@ -21,13 +21,9 @@ new mission_series fallowfire_4 = {
 				}
 			}
 			effect = {
-				set_country_flag = silence_2
 				add_country_modifier = {
 					name = a_land_for_nords_only
 					duration = (50*365)
-				}
-				hidden_effect = {
-					swap_non_generic_missions = yes
 				}
 			}
 		}	

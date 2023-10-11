@@ -10,7 +10,9 @@ new mission_series fallowfire_7 = {
 			desc = ""
 			position = 0
 			trigger = {
-				has_building = road_1
+				provinces:shors_stone = {
+					has_building = road_1
+				}
 			}
 			effect = {
 					quick_province_modifier = {
@@ -59,7 +61,7 @@ new mission_series fallowfire_7_dragon_cult = {
 	ai = yes
 	potential = {
 		tag = fallowfire
-	#	has_country_flag = forelhost
+		has_country_flag = forelhost
 	}
 	missions = {
 		fallowfire_feast_for_the_dragon_cult_demise = {

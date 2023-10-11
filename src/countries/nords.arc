@@ -59,10 +59,7 @@ new country clearspring = {
 				mil = 3
 				birth_date = 2455.1.1
 			}
-			country_event = {
-				id = fallowfire.5
-				days = 0
-			}
+			add_historical_rival = fallowfire
 		}
 	}
 	color = {
@@ -91,7 +88,8 @@ new country fallowfire = {
 			country_event = {
 				id = fallowfire.5
 				days = 31
-			}		
+			}
+			add_historical_rival = clearspring
 		}
 	}
 	color = {

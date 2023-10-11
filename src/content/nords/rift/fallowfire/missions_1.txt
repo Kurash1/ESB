@@ -86,4 +86,22 @@ new event_modifier asserted_our_dominance = {
 		governing_capacity_modifier = 0.1
 	}
 }
-
+new country_event fallowfire.8 = {
+	title = "Asserting our dominance"
+	desc = "blah blah blah "
+	is_triggered_only = yes
+	picture = forest_trees_eventPicture
+	options = {
+		{
+			name = "Cool"
+			effect = {
+				event_modifier = {
+					add_country_modifier = {
+						name = asserted_our_dominance
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}

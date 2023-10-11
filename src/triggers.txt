@@ -100,3 +100,18 @@ new trigger has_trade_goods = {
 		`trade_goods = {args}`
 	}
 }
+new trigger vassal_of = {
+	args = country_scope
+	transpile = {
+		`vassal_of = {args}`
+	}
+}
+new trigger has_opinion = {
+	args = {
+		who = country_scope
+		value = int
+	}
+}
+new trigger owned_by = {
+	args = country_scope
+}

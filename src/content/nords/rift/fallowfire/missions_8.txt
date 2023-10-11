@@ -3,7 +3,6 @@ new mission_series fallowfire_8 = {
 	ai = yes
 	potential = {
 		tag = fallowfire
-		#has_country_flag = silence_1
 	}
 	missions = {
 		fallowfire_build_new_hall_defenses = {
@@ -28,6 +27,7 @@ new mission_series fallowfire_8 = {
 						name = "A safe hall"
 						modifier = {
 							local_defensiveness = 0.25
+							fort_level = 1
 						}
 					}
 				}
@@ -50,10 +50,14 @@ new mission_series fallowfire_8 = {
 						tier = 1
 					}
 				}
+				country_event = {
+					id = fallowfire.6
+					days = 0
+				}
 			}
 		}
-		fallowfire_improve_ebony_production_techniques = {
-			name = "Improve ebony production techniques"
+		fallowfire_found_redbelly_mine = {
+			name = "Found Redbelly Mine"
 			desc = ""
 			position = 2
 			icon = mission_industrial_forging
@@ -67,10 +71,12 @@ new mission_series fallowfire_8 = {
 			}
 			effect = {
 				provinces:shors_stone = {
+					change_trade_goods = ebony
 					add_province_modifier = { 
 						name = ebony_smithing
 						duration = -1
 					}
+					
 				}
 				add_country_modifier = {
 					name = ebony_weapons_and_armors
@@ -83,25 +89,20 @@ new mission_series fallowfire_8 = {
 			desc = ""
 			position = 3
 			required = {
-				fallowfire_improve_ebony_production_techniques
+				fallowfire_found_redbelly_mine
 				fallowfire_provide_infrastructure
 				fallowfire_expand_our_citys_market
 			}
-			trigger = {
-				provinces:shors_stone = {
-					has_building = def_manufactory
-				}
-			}
 			effect = {
-				provinces:shors_stone = {
-					add_province_modifier = { 
-						name = ebony_smithing
-						duration = -1
-					}
+				country_event = {
+					id = fallowfire.7
+					days = 0
 				}
-				add_country_modifier = {
-					name = ebony_weapons_and_armors
-					duration = (30*365)
+				provinces:shors_stone = {
+					add_great_project_tier = {
+						type = fallowstone_hall
+						tier = 1
+					}
 				}
 			}
 		}				
@@ -117,5 +118,47 @@ new event_modifier ebony_weapons_and_armors = {
 	name = "Ebony weapons and armor"
 	modifier = {
 		shock_damage_received = -0.10
+	}
+}
+new country_event fallowfire.6 = {
+	title = "Our Hall grows"
+	desc = ""
+	picture = siege_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = fallowfire
+	}
+	options = {
+		{	
+			name = "Cool, I guess"
+			effect = {
+				provinces:forelhost = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 4
+				}
+			}
+		}
+	}
+}
+new country_event fallowfire.7 = {
+	title = "Our hall grows again"
+	desc = ""
+	picture = siege_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = fallowfire
+	}
+	options = {
+		{	
+			name = "Cool, I guess"
+			effect = {
+				provinces:shors_stone = {
+					add_base_tax = 4
+					add_base_production = 3
+					add_base_manpower = 2
+				}
+			}
+		}
 	}
 }

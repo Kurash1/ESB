@@ -162,3 +162,15 @@ new effect remove_estate_privilege = {
 		`remove_estate_privilege = {args}`
 	}
 }
+new effect add_historical_rival = {
+	args = country_scope
+	transpile = {
+		`add_historical_rival = {args}`
+	}
+}
+new effect vassalize = {
+	args = country_scope
+	transpile = {
+		`vassalize = {args}`
+	}
+}

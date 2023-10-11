@@ -30,24 +30,59 @@ new mission_series fallowfire_0 = {
 				fallowfire_finishing_our_rivals
 			}
 			trigger = {
-				areas:ansilvund, areas:northwind, areas:mistwatch = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			} 
+				OR = {	
+					countries:mist-watch = {
+						OR = {
+							has_opinion = {
+								who = fallowfire
+								value = 190
+							}
+							is_vassal = yes
+						}
+					}
+					
+					provinces:mistwatch, provinces:mist_road = {
+						type = all
+						owned_by = fallowfire
+					}
+				} 
+			}
 			effect = {
-				add_country_modifier = {
-					name = asserted_our_dominance
-					duration = -1
-				}
-				hidden_effect = {
-					country_event = { 
-						id = fallowfire.1
-						days = 30
+				if [countries:mist-watch = {
+						has_opinion = {
+							who = fallowfire
+							value = 190
+						}
+					}
+				] {
+					countries:fallowfire = {
+						vassalize = mist-watch
 					}
 				}
-			} 
-		}
+				else {
+					provinces:mistwatch, provinces:mist_road = {
+						quick_province_modifier = {
+							name = "Absolute control"
+							duration = (30*365)
+							modifier = {
+								local_autonomy = -0.10
+								local_monthly_devastation = -0.1
+							}
+						}
+					}
+				}
+					if [has_country_flag = northwind] {
+						country_event = { 
+							id = fallowfire.1
+							days = 31
+						}
+						country_event = {
+							id = fallowfire.8
+							days = 0
+						}
+					}
+			}
+		 }
 	}
 }
 new country_event fallowfire.5 = {

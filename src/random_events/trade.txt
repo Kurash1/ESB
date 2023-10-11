@@ -18,7 +18,7 @@ new country_event trade.1 = {
 	trigger = {
 		num_of_merchants = 3
 		capital_scope = {
-			has_trader = root
+			has_trader = ROOT
 			NOT = {
 				is_strongest_trade_power = root
 			}
