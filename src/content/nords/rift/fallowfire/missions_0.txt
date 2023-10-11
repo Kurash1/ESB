@@ -21,6 +21,33 @@ new mission_series fallowfire_0 = {
 				add_prestige = 15
 			}
 		}
+		fallowfire_clan_mistwatch = {
+			name = "Clan Mistwatch"
+			desc = ""
+			position = 2
+			icon = mission_rb_control_electors
+			required = {
+				fallowfire_finishing_our_rivals
+			}
+			trigger = {
+				areas:ansilvund, areas:northwind, areas:mistwatch = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			} 
+			effect = {
+				add_country_modifier = {
+					name = asserted_our_dominance
+					duration = -1
+				}
+				hidden_effect = {
+					country_event = { 
+						id = fallowfire.1
+						days = 30
+					}
+				}
+			} 
+		}
 	}
 }
 new country_event fallowfire.5 = {

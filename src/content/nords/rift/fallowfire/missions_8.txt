@@ -1,0 +1,121 @@
+new mission_series fallowfire_8 = {
+	slot = 8
+	ai = yes
+	potential = {
+		tag = fallowfire
+		#has_country_flag = silence_1
+	}
+	missions = {
+		fallowfire_build_new_hall_defenses = {
+			name = "Build new hall defenses"			
+			desc = ""
+			position = 0
+			icon = protect_against_the_turks
+			trigger = {
+				provinces:shors_stone = {
+					OR = {
+						has_building = fortup_1
+						has_building = fortup_2
+						has_building = fortup_3
+						has_building = fortup_4
+					}
+				}
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_base_manpower = 2
+					quick_province_modifier = {
+						name = "A safe hall"
+						modifier = {
+							local_defensiveness = 0.25
+						}
+					}
+				}
+			}
+		}
+		fallowfire_our_hall_grows = {
+			name = "Our hall grows"
+			desc = ""
+			position = 1
+			icon = fallowstone_mission
+			required = {
+				fallowfire_build_new_hall_defenses
+				fallowfire_better_tax_collection
+				fallowfire_road
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_great_project_tier = {
+						type = fallowstone_hall
+						tier = 1
+					}
+				}
+			}
+		}
+		fallowfire_improve_ebony_production_techniques = {
+			name = "Improve ebony production techniques"
+			desc = ""
+			position = 2
+			icon = mission_industrial_forging
+			required = {
+				fallowfire_our_hall_grows
+			}
+			trigger = {
+				provinces:shors_stone = {
+					has_building = def_manufactory
+				}
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_province_modifier = { 
+						name = ebony_smithing
+						duration = -1
+					}
+				}
+				add_country_modifier = {
+					name = ebony_weapons_and_armors
+					duration = (30*365)
+				}
+			}
+		}
+		fallowfire_our_fame_speaks_loud = {
+			name = "Our fame speaks loud"
+			desc = ""
+			position = 3
+			required = {
+				fallowfire_improve_ebony_production_techniques
+				fallowfire_provide_infrastructure
+				fallowfire_expand_our_citys_market
+			}
+			trigger = {
+				provinces:shors_stone = {
+					has_building = def_manufactory
+				}
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_province_modifier = { 
+						name = ebony_smithing
+						duration = -1
+					}
+				}
+				add_country_modifier = {
+					name = ebony_weapons_and_armors
+					duration = (30*365)
+				}
+			}
+		}				
+	}
+}
+new event_modifier ebony_smithing = {
+	name = "Ebony Smithing"
+	modifier = {
+		trade_goods_size = 1
+	}
+}
+new event_modifier ebony_weapons_and_armors = {
+	name = "Ebony weapons and armor"
+	modifier = {
+		shock_damage_received = -0.10
+	}
+}

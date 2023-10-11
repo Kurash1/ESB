@@ -50,35 +50,32 @@ new mission_series fallowfire_1 = {
 					type = cb_vassalize_mission
 					months = (12*20)
 				}
-			} 
-					
+			} 		
 		}
-		fallowfire_asserting_dominance = {
-			name = "Asserting Dominance"
+		fallowfire_fortify_the_north = {
+			name = "Fortify the north" 
 			desc = ""
-			position = 2
-			icon = mission_rb_control_electors
+			position = 3
+			icon = fortress_of_belgrade
 			required = {
-				fallowfire_finishing_our_rivals
+				fallowfire_clan_mistwatch
+				fallowfire_clan_northwind
 			}
 			trigger = {
-				areas:ansilvund, areas:northwind, areas:mistwatch = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+				provinces:stony_creek, provinces:mist_road = {
+					fort_level = 1
 				}
-			} 
+			}
 			effect = {
-				add_country_modifier = {
-					name = asserted_our_dominance
-					duration = -1
-				}
-				hidden_effect = {
-					country_event = { 
-						id = fallowfire.1
-						days = 30
+				provinces:stony_creek, provinces:mist_road = {
+					quick_province_modifier = {
+						name = "Sturdy Walls"
+						modifier = {
+							local_defensiveness = 0.20
+						}
 					}
 				}
-			} 
+			}
 		}
 	}
 }

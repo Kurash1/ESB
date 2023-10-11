@@ -5,69 +5,54 @@ new mission_series fallowfire_9 = {
 		tag = fallowfire
 	}
 	missions = {
-		fallowfire_fortify_the_north = {
-			name = "Fortify the north" 
+		fallowfire_better_tax_collection = {
+			name = "Better tax collection"
 			desc = ""
 			position = 0
-			icon = fortress_of_belgrade
+			icon = mission_entrepot_of_india
 			trigger = {
-				provinces:stony_creek, provinces:mist_road = {
-					fort_level = 1
+				provinces:shors_stone = {
+					has_building = tax_1
 				}
 			}
 			effect = {
-				provinces:stony_creek, provinces:mist_road = {
-					quick_province_modifier = {
-						name = "Sturdy Walls"
+				provinces:shors_stone = {
+					add_base_tax = 2
+					quick_country_modifier = {
+						name = "Less burden on administration"
+						duration = (30*365)
 						modifier = {
-							local_defensiveness = 0.20
+							state_maintenance_modifier = -0.50
 						}
 					}
 				}
 			}
 		}
-	}
-}
-new mission_series fallowfire_9_fortify_the_west_rift = {
-	slot = 9
-	ai = yes
-	potential = {
-		tag = fallowfire
-		has_country_flag = silence_2
-	}
-	missions = {
-		fallowfire_fortify_the_west = {
-			name = "Fortify the west" 
+		fallowfire_provide_infrastructure = {
+			name = "Provide Infrastructure"
 			desc = ""
-			position = 1
-			icon = fight_bosnian_heresies
+			position = 2
 			required = {
-				fallowfire_fortify_the_north
+				fallowfire_our_hall_grows
 			}
 			trigger = {
-				provinces:silverpass, provinces:geirhill = {
-					fort_level = 1
+				provinces:shors_stone = {
+					development = 35
 				}
 			}
 			effect = {
-				provinces:silverpass, provinces:geirhill = {
-					quick_province_modifier = {
-						name = "Sturdy Walls"
+				provinces:shors_stone = {
+					add_base_tax = 2
+					quick_country_modifier = {
+						name = "Good Urban Planning"
+						duration = -1
 						modifier = {
-							local_defensiveness = 0.20
+							local_production_efficiency = 0.20
+							local_build_cost = -0.10
 						}
 					}
 				}
-				quick_country_modifier = {
-					name = "The Rift is secured"
-					duration = (15*365)
-					modifier = {
-						global_monthly_devastation = -0.2
-						global_prosperity_growth = 0.1
-					}
-					
-				}
 			}
-		}
+		}			
 	}
 }

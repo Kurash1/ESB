@@ -1,116 +1,36 @@
-new mission_series fallowfire_3 = {
+new mission_series fallowfire_3_fortify_the_west_rift = {
 	slot = 3
 	ai = yes
 	potential = {
 		tag = fallowfire
-		has_country_flag = snowy_elf
+	#	has_country_flag = forelhost
 	}
 	missions = {
-		fallowfire_looking_south = {
-			name = "Looking south"
+		fallowfire_fortify_the_west = {
+			name = "Fortify the west" 
 			desc = ""
-			position = 0
-			icon = riding_duo_mission
-			effect = {
-				defineloc claim_elves_honrich = "§YFallowfire§! gains permanent §Yclaims§! on §Ylake Honrich§!'s elves"
-				custom_tooltip = claim_elves_honrich
-				hidden_effect = {
-					areas:merryfair, areas:riften, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch, provinces:vigil, provinces:sarethi [culture_group = snow_elven] {
-						add_permanent_claim = ROOT
-					}
-				}
-			}
-		}
-		fallowfire_day_of_reckoning = {
-			name = "Day of Reckoning"
-			desc = ""
-			position = 1
-			icon = bloody_impaled_mission
+			position = 3
+			icon = fight_bosnian_heresies
 			required = {
-				fallowfire_looking_south
+				fallowfire_push_on_to_the_tasks_end
 			}
 			trigger = {
-					all_owned_province = {
-						culture_group = nord
-					}
-					areas:merryfair, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch = {
-							type = all
-							owned_by = ROOT
-					}
-					areas:riften = {
-						owned_by = ROOT
-					}
-					provinces:vigil, provinces:sarethi = {
-						owned_by = ROOT
-					}
-			}
-			effect = {
-				defineloc claim_elves_all = "§YFallowfire§! gains permanent §Yclaims§! on §Yall§! snow elves' land"
-				custom_tooltip = claim_elves_all
-				hidden_effect = {
-					areas:ivarstead, areas:honeystrand, areas:trevas_mouth, areas:sarethi, areas:nilheim, areas:geirmund, areas:autumnwatch, areas:arcwind, areas:east_haemar [ culture_group = snow_elven ] {
-						add_permanent_claim = ROOT
-					}
-					country_event = { 
-						id = fallowfire.2
-						days = 30
-					}
-				}
-			}
-		}
-		fallowfire_push_on_to_the_tasks_end = {
-			name = "Push on to the tasks' end"
-			desc = ""
-			position = 2
-			icon = heads_impaled_mission
-			required = {
-				fallowfire_day_of_reckoning
-			}
-			trigger = {
-				rift_region = {
-					type = all
-					culture_group = ROOT
+				provinces:silverpass, provinces:geirhill = {
+					fort_level = 1
 				}
 			}
 			effect = {
-				set_country_flag = silence_2
-				add_country_modifier = {
-					name = a_land_for_nords_only
-					duration = (50*365)
-				}
-				hidden_effect = {
-					swap_non_generic_missions = yes
+				provinces:silverpass, provinces:geirhill = {
+					quick_province_modifier = {
+						name = "Sturdy Walls"
+						modifier = {
+							local_defensiveness = 0.20
+						}
+					}
 				}
 			}
 		}
 	}
 }
-new country_event fallowfire.1 = {
-	title = "The reports of the elves' disapperance were greatly exaggerated"
-	desc = ""
-	is_triggered_only = yes
-	picture = forest_trees_eventPicture
-	options = {
-		{
-			name = "KILL THEM ALL"
-			effect = {
-				hidden_effect = {
-					set_country_flag = snowy_elf
-					swap_non_generic_missions = yes
-				}
-			}
-		}
-	}
-}
-new event_modifier a_land_for_nords_only = {
-	name = "A land for nords only"
-	modifier = {
-		land_morale = 0.05
-		development_cost = -0.15
-		build_cost = -0.10
-	}
-}
-		
-
 	
 	

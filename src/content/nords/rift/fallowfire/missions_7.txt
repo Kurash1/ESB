@@ -1,1 +1,113 @@
-
+new mission_series fallowfire_7 = {
+	slot = 7
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_road = {
+			name = "Road"
+			desc = ""
+			position = 0
+			trigger = {
+				has_building = road_1
+			}
+			effect = {
+					quick_province_modifier = {
+						name = "Gunilda Road"
+						modifier = {
+							development_cost = -10%
+						}
+						duration = -1
+					}
+					provinces:shors_stone = {
+						add_base_production = 2
+					}
+			}
+		
+		}
+		fallowfire_expand_our_citys_market = {
+			name = "Expand our city's market"
+			desc = ""
+			position = 2
+			icon = market_mission
+			required = {
+				fallowfire_our_hall_grows
+			}
+			trigger = {
+				provinces:shors_stone = {
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_base_production = 2
+				}
+				quick_country_modifier = {
+					name = "A bigger market square"
+					duration = (30*365)
+					modifier = {
+						trade_efficiency = 10%
+					}	
+				}
+			}
+		}
+	}
+}
+new mission_series fallowfire_7_dragon_cult = {
+	slot = 7
+	ai = yes
+	potential = {
+		tag = fallowfire
+	#	has_country_flag = forelhost
+	}
+	missions = {
+		fallowfire_feast_for_the_dragon_cult_demise = {
+			name = "Feast for the dragon cult demise"
+			desc = ""
+			position = 3
+			icon = banquet_mission
+			required = {
+				fallowfire_deal_with_a_new_old_threat
+			}
+			trigger = {
+				calc_true_if = {
+					all_country = {
+						culture_group = nord
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 3
+				}
+			}
+			effect = {
+				every_country [culture_group = nord
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				]
+				{
+					add_opinion = {
+						who = fallowfire
+						modifier = fallowfire_feast_dragon_cult
+					}		
+				}
+				quick_country_modifier = {
+						name = "Extinguishers of the Dragon Cult"
+						modifier = {
+							diplomatic_reputation = 1
+							prestige = 1
+						}
+				}
+			}
+		}
+	}
+}
+new opinion_modifier fallowfire_feast_dragon_cult = {
+	name = "Had a great time "
+	opinion = 25
+	yearly_decay = 2
+}

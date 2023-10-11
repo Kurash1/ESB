@@ -1,90 +1,90 @@
 new mission_series fallowfire_6 = {
 	slot = 6
-	ai = yes
+	ai = yes 
 	potential = {
 		tag = fallowfire
+	#	has_country_flag = forelhost
 	}
 	missions = {
-		fallowfire_better_tax_collection = {
-			name = "Better tax collection"
+		fallowfire_deal_with_a_new_old_threat = {
+			name = "Deal with a new old threat"
 			desc = ""
-			position = 0
-			icon = mission_entrepot_of_india
-			trigger = {
-				provinces:shors_stone = {
-					has_building = tax_1
-				}
-			}
-			effect = {
-				provinces:shors_stone = {
-					add_base_tax = 2
-					quick_country_modifier = {
-						name = "Less burden on administration"
-						duration = (15*365)
-						modifier = {
-							state_maintenance_modifier = -0.50
-						}
-					}
-				}
-			}
-		}
-	}
-}
-new mission_series fallowfire_7_feast_dragon = {
-	slot = 6
-	ai = yes
-	potential = {
-		tag = fallowfire
-		has_country_flag = silence_1
-	}
-	missions = {
-		fallowfire_feast_for_the_dragon_cult_demise = {
-			name = "Feast for the dragon cult demise"
-			desc = ""
-			position = 1
-			icon = banquet_mission
+			position = 2
+			icon = bloody_axe_mission
 			required = {
-				fallowfire_better_tax_collection
+				fallowfire_day_of_reckoning
 			}
 			trigger = {
-				calc_true_if = {
-					all_country = {
-						culture_group = nord
-						has_opinion = {
-							who = ROOT
-							value = 150
-						}
-					}
-					amount = 3
+				areas:forelhost, areas:rift_pass, areas:fallowstone, areas:riften = {
+						type = all
+						owned_by = ROOT
 				}
 			}
 			effect = {
-				every_country [culture_group = nord
-					has_opinion = {
-						who = ROOT
-						value = 150
-					}
-				]
-				{
-					add_opinion = {
-						who = fallowfire
-						modifier = fallowfire_feast_dragon_cult
-					}		
+				add_country_modifier = {
+					name = converting_drive
+					duration = (20*365)
 				}
-				quick_country_modifier = {
-						name = "Extinguishers of the Dragon Cult"
-						modifier = {
-							diplomatic_reputation = 1
-							prestige = 1
-						}
+				country_event = {
+					id = fallowfire.4
+					days = 1
+				}
+			}
+		}
+		fallowfire_convert_the_misguided = {
+			name = "Convert the misguided"
+			desc = ""
+			position = 3
+			icon = priest_mission
+			required = {
+				fallowfire_deal_with_a_new_old_threat
+			}
+			trigger = {
+				religious_unity = 1
+			}
+			effect = {
+				add_country_modifier = {
+					name = dragon_cult_defeated
+					duration = (30*365)
 				}
 			}
 		}
 	}
 }
-new opinion_modifier fallowfire_feast_dragon_cult = {
-	name = "Had a great time "
-	opinion = 25
-	yearly_decay = 2
+new event_modifier dragon_cult_defeated = {
+	name = "The cult has been defeated"
+	modifier = {
+		tolerance_own = 2
+		stability_cost_modifier = -0.15
+	}
+}
+new event_modifier converting_drive = {
+	name = "Converting Drive"
+	modifier = {
+		missionaries = 1
+		global_missionary_strength = 0.025
+		missionary_maintenance_cost = -0.5
+	}
+}
+new country_event fallowfire.4 = {
+	title = "The siege of Forelhost"
+	desc = ""
+	picture = siege_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = fallowfire
+	}
+	options = {
+		{	
+			name = "A death unworthy of nords"
+			effect = {
+				provinces:forelhost = {
+					add_base_tax = -6
+					add_base_production = -6
+					add_base_manpower = -5
+				}
+			}
+		}
+	}
 }
 	

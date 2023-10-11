@@ -2,49 +2,42 @@ new mission_series fallowfire_4 = {
 	slot = 4
 	ai = yes
 	potential = {
-		tag = fallowfire
+		tag = fallowfire 
+	#	has_country_flag = snowy_elf
 	}
 	missions = {
-		fallowfire_expand_our_citys_market = {
-			name = "Expand our city's market"
+		fallowfire_push_on_to_the_tasks_end = {
+			name = "Push on to the tasks' end"
 			desc = ""
-			position = 0
-			icon = market_mission
+			position = 2
+			icon = heads_impaled_mission
+			required = {
+				fallowfire_day_of_reckoning
+			}
 			trigger = {
-				provinces:shors_stone = {
-					province_has_center_of_trade_of_level = 2
+				rift_region = {
+					type = all
+					culture_group = ROOT
 				}
 			}
 			effect = {
-				provinces:shors_stone = {
-					add_base_production = 2
+				set_country_flag = silence_2
+				add_country_modifier = {
+					name = a_land_for_nords_only
+					duration = (50*365)
 				}
-				quick_country_modifier = {
-					name = "A bigger market square"
-					duration = (30*365)
-					modifier = {
-						trade_efficiency = 10%
-					}	
+				hidden_effect = {
+					swap_non_generic_missions = yes
 				}
 			}
-		}
-	}
-}
-new mission_series fallowfire_5_trade_agreement = {
-	slot = 4
-	ai = yes
-	potential = {
-		tag = fallowfire 
-		has_country_flag = silence_2
-	}
-	missions = {
+		}	
 		fallowfire_provide_food_and_wood_for_the_high_kingdom = {
 			name = "Provide food and wood for the high kingdom"
 			desc = ""
-			position = 1
+			position = 3
 			icon = trade_nord_ships_mission
 			required = {
-				fallowfire_expand_our_citys_market
+				fallowfire_push_on_to_the_tasks_end
 			}
 			trigger = {
 				OR = {
@@ -96,3 +89,12 @@ new mission_series fallowfire_5_trade_agreement = {
 			}
 		}
 	}
+}		
+new event_modifier a_land_for_nords_only = {
+	name = "A land for nords only"
+	modifier = {
+		land_morale = 0.05
+		development_cost = -0.15
+		build_cost = -0.10
+	}
+}

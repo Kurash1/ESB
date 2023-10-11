@@ -367,7 +367,7 @@ new idea_group diplomatic_ideas = {
 			name = "Diplomatic Corps"
 			desc = "Through the establishment of a professional Diplomatic Corps we ensure that the hard-learned lessons of senior diplomats are passed on to the younger generation."
 			modifier = {
-				dip_tech_cost_modifier = -0.1
+				accept_vassalization_reasons = 10 
 			}
 		}
 	}
@@ -782,7 +782,7 @@ new idea_group innovativeness_ideas = {
 			name = "Scientific Revolution"
 			desc = "We should strive towards a social and economic revolution marked by technological inventions and a transfer from an agricultural society into an industrial one."
 			modifier = {
-				technology_cost = -0.1
+				idea_cost = -0.1
 				embracement_cost = -0.1
 			}
 		}
@@ -1032,7 +1032,7 @@ new idea_group esb_watermagic = {
 			name = "Dangerous Knowledge"
 			desc = "This fact is considered to be one of the most dangerous secrets about the natural order of the world, and is therefore closely guarded by the Demon of Knowledge Hermaeus Mora."
 			modifier = {
-				technology_cost = -0.1
+				idea_cost = -0.05
 			}
 		}
 		{
@@ -2725,7 +2725,7 @@ new idea_group esb_thaumaturgy = {
 			name = "Magicka Study"
 			desc = "The school of Thaumaturgy was one of the major avenues of magicka study."
 			modifier = {
-				technology_cost = -0.1
+				idea_cost = -0.05
 			}
 		}
 		{
@@ -2786,7 +2786,7 @@ new idea_group esb_sight = {
 			name = "Scrying"
 			desc = "The Sight, sometimes referred to as divination and scrying, is the ability possessed by some individuals that allows them to divine information through visions and prophecy."
 			modifier = {
-				technology_cost = -0.1
+				idea_cost = -0.05
 			}
 		}
 		{
@@ -2937,7 +2937,7 @@ new idea_group esb_thaumavocalism = {
 			name = "Study of two"
 			desc = "Their magic is focused through music. In order to improve their abilities, they must study both magic and music."
 			modifier = {
-				technology_cost = -0.1
+				idea_cost = -0.05
 			}
 		}
 		{
@@ -3380,7 +3380,7 @@ new idea_group aristocracy_ideas = {
 			name = "Military Traditions"
 			desc = "Military thought is constantly evolving and we ensure that our military thought evolves with it. By encouraging a tradition of service amongst our nobility, to be a man of status is to be a man who has won glory on the battlefield. Although bravery and stuff like that are always useful, there is nothing quite like outclassing your enemy to make it easy."
 			modifier = {
-				mil_tech_cost_modifier = -0.15
+				army_tradition_decay = -0.05
 				army_tradition = 0.5
 			}
 		}
@@ -4255,7 +4255,7 @@ new idea_group administrative_ideas = {
 			name = "Civil Service"
 			desc = "By establishing a Civil Service of eager young bureaucrats will ensure that we are able to quickly adapt to new advances in administration and governance."
 			modifier = {
-				adm_tech_cost_modifier = -0.1
+				prestige_decay = -0.01
 			}
 		}
 	}
