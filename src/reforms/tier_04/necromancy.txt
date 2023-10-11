@@ -56,18 +56,10 @@ new government_mechanic necromancy_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 25
-				}
+				has_magicka = 25
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -25
-				}
+				add_magicka = -25
 				
 				add_yearly_manpower = 2
 			}
@@ -95,18 +87,10 @@ new government_mechanic necromancy_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 25
-				}
+				has_magicka = 25
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -25
-				}
+				add_magicka = -25
 				
 				add_years_of_income = 0.5
 			}
@@ -134,21 +118,13 @@ new government_mechanic necromancy_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 75
-				}
+				has_magicka = 75
 				NOT = {
 					has_ruler_modifier = lich
 				}
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -75
-				}
+				add_magicka = -75
 				
 				if [has_ruler_flag = necromancy_lich_4] {
 					country_event = {

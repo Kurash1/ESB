@@ -14,11 +14,7 @@ You Lose §R10.00§! Magicka
 		has_government_attribute = has_siege_magic
 	}
 	trigger = {
-		has_government_power = { 
-			mechanic_type = magicka_mechanic
-			power_type = magicka
-			value = 10
-		}
+		has_magicka = 10
 		war_with = FROM
 		FROM = {
 			any_owned_province = {
@@ -38,11 +34,7 @@ You Lose §R10.00§! Magicka
 			}
 		}
 		ROOT = {
-			add_government_power = { 
-				mechanic_type = magicka_mechanic
-				power_type = magicka
-				value = -10
-			}
+			add_magicka = -10
 		}
 	}
 	
@@ -94,21 +86,13 @@ new government_mechanic destruction_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 25
-				}
+				has_magicka = 25
 				NOT = {
 					has_country_modifier = destruction_rune_traps
 				}
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -25
-				}
+				add_magicka = -25
 				
 				add_country_modifier = {
 					name = destruction_rune_traps
@@ -139,19 +123,11 @@ new government_mechanic destruction_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 25
-				}
+				has_magicka = 25
 				rebel_progress_at_least = { value = 20 }
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -25
-				}
+				add_magicka = -25
 				
 				add_rebel_progress = {
 					value = -50
@@ -181,22 +157,14 @@ new government_mechanic destruction_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 75
-				}
+				has_magicka = 75
 				
 				NOT = {
 					has_country_modifier = destruction_encourage_battlemages
 				}
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -75
-				}
+				add_magicka = -75
 				
 				add_country_modifier = {
 					name = destruction_encourage_battlemages
