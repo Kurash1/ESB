@@ -1,3 +1,14 @@
+new government_reform tier_2_skjoralmor_army = {
+	name = "Skjoralmor Army"
+	icon = skjoralmor_army
+	potential = {
+		has_country_flag = unlocks_skjoralmor_army
+	}
+	modifier = {
+		shock_damage_received = -0.05
+		extra_manpower_at_religious_war = yes
+	}
+}
 mission_trees:skjoralmor += {
 	a_deal = {
 		name = "A Deal"
@@ -71,11 +82,13 @@ mission_trees:skjoralmor += {
 			army_size_percentage = 1
 		}
 		effect = {
+			defineloc unlocks_skjoralmor_army = "Unlocks §YSkjoralmor Army§! Government Reform"
+			custom_tooltip = unlocks_skjoralmor_army
+			set_country_flag = unlocks_skjoralmor_army
 			quick_country_modifier = {
 				name = "The Green Army"
 				modifier = {
-					infantry_fire = 2
-					manpower_recovery_speed = 0.25
+					manpower_recovery_speed = 0.20
 				}
 				years = 20
 			}
