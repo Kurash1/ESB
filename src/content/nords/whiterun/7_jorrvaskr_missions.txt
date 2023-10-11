@@ -31,9 +31,15 @@ new mission_tree jorrvaskr = {
 		y = 4
 		icon = warrior_rights_mission
 		trigger = {
-			has_estate_privilege = warriors:warrior_state
+			if [ai = yes] {
+				always = yes
+			}
+			else {
+				has_estate_privilege = warriors:warrior_state
+			}
 		}
 		effect = {
+			if [ai = yes] { set_estate_privilege = warriors:warrior_state }
 			add_army_tradition = 25
 		}
 	}
@@ -85,10 +91,20 @@ new mission_tree jorrvaskr = {
 		y = 5
 		icon = formal_army_mission
 		trigger = {
-			army_professionalism = 0.10 
+			if [has_dlc = "Cradle of Civilization"] {
+				army_professionalism = 0.10 
+			}
+			else {
+				manpower_percentage = 1.0
+			}
 		}
 		effect = {
-			add_army_professionalism = 0.15
+			if [has_dlc = "Cradle of Civilization"] {
+				add_army_professionalism = 0.15
+			}
+			else {
+				add_mil_power = 100
+			}
 		}
 	}
 	new_governance = {

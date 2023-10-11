@@ -30,6 +30,25 @@ new estate clans = {
 			benefits = {
 				governing_capacity = 100
 			}
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					factor = 1.4
+					num_of_territories = 5
+				}
+				modifier = {
+					factor = 1.5
+					num_of_territories = 10
+				}
+				modifier = {
+					factor = 1.5
+					num_of_territories = 15
+				}
+				modifier = {
+					factor = 0
+					NOT = { governing_capacity_percentage = 0.5 }
+				}
+			}
 		}
 		new clan_state = {
 			name = "Clan State"
@@ -37,10 +56,11 @@ new estate clans = {
 			icon = privilege_admin_power
 			land_share = 10
 			max_absolutism = -5
-			loyalty = -0.05
-			influence = 0.15
 			benefits = {
 				country_admin_power = 1
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}
 		new hire_clan_advisors = {
@@ -112,12 +132,15 @@ new estate clans = {
 			icon = privilege_autonomy
 			max_absolutism = -10
 			loyalty = 0.1
-			influence = 0.1
+			influence = 0.05
 			penalties = {
 				global_autonomy = 0.15
 			}
 			benefits = {
 				global_unrest = -2
+			}
+			ai_will_do = {
+				factor = 5
 			}
 		}
 		new no_broken_homes_initiative = {
@@ -130,15 +153,21 @@ new estate clans = {
 			benefits = {
 				global_unrest = -2
 			}
+			ai_will_do = {
+				factor = 5
+			}
 		}
 		new clan_elder_voices = {
 			name = "Clan Elder Voices"
 			icon = privilege_recruit_minister
-			max_absolutism = -15
-			loyalty = 0.05
-			influence = 0.2
+			max_absolutism = -10
+			loyalty = 0.10
+			influence = 0.15
 			benefits = {
 				advisor_cost = -0.2
+			}
+			ai_will_do = {
+				factor = 5
 			}
 		}
 	}

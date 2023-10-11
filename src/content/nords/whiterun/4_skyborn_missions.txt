@@ -38,7 +38,7 @@ mission_trees:whiterun_generic += {
 		trigger = {
 			owns = halted_stream
 			provinces:halted_stream = {
-				development = 15
+				has_building = def_manufactory
 			}
 		}
 		effect = {
@@ -47,7 +47,7 @@ mission_trees:whiterun_generic += {
 					name = "Halted Stream Mine"
 					permanent = no
 					modifier = {
-						trade_goods_size = 1.0
+						trade_goods_size_modifier = 0.5
 					}
 				}
 			}

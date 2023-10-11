@@ -30,6 +30,25 @@ new estate sailors = {
 			benefits = {
 				governing_capacity = 100
 			}
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					factor = 1.4
+					num_of_territories = 5
+				}
+				modifier = {
+					factor = 1.5
+					num_of_territories = 10
+				}
+				modifier = {
+					factor = 1.5
+					num_of_territories = 15
+				}
+				modifier = {
+					factor = 0
+					NOT = { governing_capacity_percentage = 0.5 }
+				}
+			}
 		}
 		new sailor_state = {
 			name = "Sailor State"
@@ -37,10 +56,11 @@ new estate sailors = {
 			icon = privilege_diplo_power
 			land_share = 10
 			max_absolutism = -5
-			influence = 0.15
-			loyalty = -0.05
 			benefits = {
 				country_diplomatic_power = 1
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}
 		new hire_sailor_advisors = {
@@ -56,29 +76,42 @@ new estate sailors = {
 			benefits = {
 				dip_advisor_cost = -0.25
 			}
+			ai_will_do = {
+				factor = 5
+			}
 		}
 		new sponsor_distant_land_trading = {
 			name = "Sponsor Distant Land Trading"
 			icon = privilege_trade_range
-			influence = 0.05
+			loyalty = 0.05
 			benefits = {
 				trade_range_modifier = 0.5
+			}
+			ai_will_do = {
+				factor = 5
 			}
 		}
 		new hire_marines = {
 			name = "Hire Marines"
 			icon = privilege_marines
-			influence = 0.2
+			loyalty = 0.05
 			benefits = {
 				allowed_marine_fraction = 0.25
+			}
+			ai_will_do = {
+				factor = 5
 			}
 		}
 		new sponsor_shipbuilding = {
 			name = "Sponsor Shipbuilding"
 			icon = privilege_ship_recruit
+			loyalty = 0.05
 			influence = 0.1
 			benefits = {
 				global_ship_recruit_speed = -0.25
+			}
+			ai_will_do = {
+				factor = 5
 			}
 		}
 	}
