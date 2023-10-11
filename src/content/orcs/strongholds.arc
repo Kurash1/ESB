@@ -1,6 +1,6 @@
 new decision reload_strongholds = {
 	name = "Reload Strongholds"
-	desc = "Sometimes Orc Strongholds don't properly reload, if you notice a deactive Orc Stronghold you can press this button to reload all Strongholds"
+	desc = "Sometimes Orc Strongholds don't properly reload, if you notice an inactive Orc Stronghold you can press this button to reload all Strongholds"
 	potential = {
 		ai = no
 	}
