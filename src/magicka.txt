@@ -1,3 +1,23 @@
+new effect add_magicka = {
+	args = float
+	transpile = {
+		`add_government_power =` {
+			`mechanic_type = magicka_mechanic`
+			`power_type = magicka`
+			`value = {args}`
+		}
+	}
+}
+new trigger has_magicka = {
+	args = float
+	transpile = {
+		`has_government_power =` {
+			`mechanic_type = magicka_mechanic`
+			`power_type = magicka`
+			`value = {args}`
+		}
+	}
+}
 new government_mechanic magicka_mechanic = {
 	name = "Magicka"
 	powers = {
