@@ -1,3 +1,19 @@
+new localisation remove_orc_stronghold_tooltip = "[This.GetName] loses the conditional modifier '§YOrc Stronghold§!'."
+new effect remove_orc_stronghold = {
+	args = bool
+	transpile = {
+		custom_tooltip = remove_orc_stronghold_tooltip
+		hidden_effect = {
+			clr_province_flag = orc_stronghold
+			remove_province_triggered_modifier = orc_stronghold_primary
+			remove_province_triggered_modifier = orc_stronghold_secondary
+			remove_province_triggered_modifier = orc_stronghold_loyal
+			remove_province_triggered_modifier = orc_stronghold_neutral
+			remove_province_triggered_modifier = orc_stronghold_disloyal
+			remove_province_triggered_modifier = orc_stronghold_unknown
+		}
+	}
+}
 new decision reload_strongholds = {
 	name = "Reload Strongholds"
 	desc = "Sometimes Orc Strongholds don't properly reload, if you notice an inactive Orc Stronghold you can press this button to reload all Strongholds"
