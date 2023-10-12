@@ -15,7 +15,10 @@ mission_trees:skjoralmor += {
 		x = 1
 		y = 0
 		trigger = {
-			has_global_flag = skjoralmor_deal
+			OR = {
+				treasury = 250
+				has_global_flag = skjoralmor_deal
+			}
 		}
 		effect = {
 			quick_country_modifier = {
@@ -110,106 +113,8 @@ mission_trees:skjoralmor += {
 			defineloc unlocks_skjoralmor_order = "Unlocks §YSkjoralmor Order§! Holy Order"
 			custom_tooltip = unlocks_skjoralmor_order
 			set_country_flag = unlocks_skjoralmor_order
-			areas:helgen_step, areas:helgen, areas:lakeview, areas:half_moon = {
+			regions:kreath [has_province_flag = orc_stronghold] {
 				add_permanent_claim = ROOT
-			}
-		}
-	}
-	along_the_coast = {
-		name = "Along the Coast"
-		required = bjarfrud_skjoralmor
-		x = 0
-		y = 3
-		trigger = {
-			areas:lakeview, areas:half_moon = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			areas:bilegulch, areas:cracked_tusk, areas:falkreath, areas:halldir = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	up_to_hill = {
-		name = "Up to Hill"
-		required = bjarfrud_skjoralmor
-		x = 2
-		y = 3
-		trigger = {
-			areas:helgen_step, areas:helgen = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			areas:bloodlet, areas:orphan_rock, areas:neugrad = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	beastly_woods = {
-		name = "Beastly Woods"
-		required = along_the_coast
-		x = 0
-		y = 4
-		trigger = {
-			areas:bilegulch, areas:cracked_tusk = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-		
-		}
-	}
-	beyond_shriekwind = {
-		name = "Beyond Shriekwind"
-		required = {
-			along_the_coast
-			up_to_hill
-		}
-		x = 1
-		y = 4
-		trigger = {
-			areas:falkreath, areas:halldir = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-		
-		}
-	}
-	the_jerall = {
-		name = "The Jerall"
-		required = up_to_hill
-		x = 2
-		y = 4
-		trigger = {
-			areas:bloodlet, areas:orphan_rock, areas:neugrad = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-		
-		}
-	}
-	falks_kreath = {
-		name = "Falks' Kreath"
-		required = {
-			beastly_woods
-			beyond_shriekwind
-			the_jerall
-		}
-		x = 1
-		y = 5
-		trigger = {
-			regions:kreath = {
-				type = all
-				owned_by = ROOT
 			}
 		}
 	}

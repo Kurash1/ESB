@@ -29,6 +29,7 @@ new decision reload_strongholds = {
 		}
 	}
 }
+new localisation orc_stronghold = "Orc Stronghold"
 new province_event orc_stronghold.1 = {
 	title = "Orc Stronghold Reload"
 	desc = ""

@@ -108,7 +108,7 @@ new country agra_granosh = {
 	}
 	capital = orphan_rock
 }
-new country southfringe = {
+new country jur_tarask = {
 	inherit = kreath_orc_country
 	tag = SOU
 	name = "Jur Tarask"

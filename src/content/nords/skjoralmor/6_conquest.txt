@@ -1,0 +1,226 @@
+mission_trees:skjoralmor += {
+	nor_lorak = {
+		name = "Siege of Nor Lorak"
+		x = 0
+		y = 2
+		trigger = {
+			controls = silvercliff
+		}
+		effect = {
+			provinces:silvercliff = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	or_murimush = {
+		name = "Siege of Or Murimush"
+		x = 2
+		y = 2
+		trigger = {
+			controls = bonechill
+		}
+		effect = {
+			provinces:bonechill = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	vosh_urgalick = {
+		name = "Siege of Vosh Urgalick"
+		x = 0
+		y = 3
+		trigger = {
+			controls = cracked_tusk
+		}
+		effect = {
+			provinces:cracked_tusk = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	rakh_ubeshka = {
+		name = "Siege of Rakh Ubeshka"
+		x = 1
+		y = 3
+		trigger = {
+			controls = peak_shade
+		}
+		effect = {
+			provinces:peak_shade = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	agra_granosh = {
+		name = "Siege of Agra Granosh"
+		x = 2
+		y = 3
+		trigger = {
+			controls = orphan_rock
+		}
+		effect = {
+			provinces:orphan_rock = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	vorkhim_uhz = {
+		name = "Siege of Vorkhim Uhz"
+		x = 0
+		y = 4
+		trigger = {
+			controls = half_moon
+		}
+		effect = {
+			provinces:half_moon = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	zugra_krazak = {
+		name = "Siege of Zugra Krazak"
+		x = 1
+		y = 4
+		trigger = {
+			controls = halldir
+		}
+		effect = {
+			provinces:halldir = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	crun_beshkar = {
+		name = "Siege of Crun Beshkar"
+		x = 2
+		y = 4
+		trigger = {
+			controls = bilegulch
+		}
+		effect = {
+			provinces:bilegulch = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	aht_beshkar = {
+		name = "Siege of Aht Beshkar"
+		x = 0
+		y = 5
+		trigger = {
+			controls = knifepoint
+		}
+		effect = {
+			provinces:knifepoint = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	dulg_krazak = {
+		name = "Siege of Dulg Krazak"
+		x = 1
+		y = 5
+		trigger = {
+			controls = bloodlet
+		}
+		effect = {
+			provinces:bloodlet = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	jur_tarask = {
+		name = "Siege of Jur Tarask"
+		x = 2
+		y = 5
+		trigger = {
+			controls = southfringe
+		}
+		effect = {
+			provinces:southfringe = {
+				remove_orc_stronghold = yes
+				owner = {
+					every_owned_province = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	falks_kreath = {
+		name = "Falks' Kreath"
+		x = 1
+		y = 6
+		trigger = {
+			mission_completed = skjoralmor_nor_lorak
+			mission_completed = skjoralmor_crun_beshkar
+			mission_completed = skjoralmor_aht_beshkar
+			mission_completed = skjoralmor_vorkhim_uhz
+			mission_completed = skjoralmor_vosh_urgalick
+			mission_completed = skjoralmor_zugra_krazak
+			mission_completed = skjoralmor_rakh_ubeshka
+			mission_completed = skjoralmor_dulg_krazak
+			mission_completed = skjoralmor_or_murimush
+			mission_completed = skjoralmor_agra_granosh
+			mission_completed = skjoralmor_jur_tarask
+			regions:kreath = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				NOT = {
+					has_province_flag = orc_stronghold
+				}
+			}
+		}
+	}
+}

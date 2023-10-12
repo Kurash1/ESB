@@ -13,15 +13,10 @@ new holy_order skjoralmor_order = {
 	Culture in the §YProvince§! changes to yours
 	Gain §R50§! devastation in the §YProvince§!
 	Set Local Autonomy in the §YProvince§! to §R50.00%§!
-	Lose §G100§! Years of Separtism in the §YProvince§!
-If the §YProvince§! is an Orc Stronghold the following happens:
-	Loses the conditional modifier '§YOrc Stronghold§!'"
+	Lose §G100§! Years of Separtism in the §YProvince§!"
 		custom_tooltip = skjoralmor_order_tooltip
 		if [culture = kreath_orc] {
 			cleansing_effect = ROOT
-		}
-		if [has_province_flag = orc_stronghold] {
-			remove_orc_stronghold = yes
 		}
 	}
 	modifier = {
