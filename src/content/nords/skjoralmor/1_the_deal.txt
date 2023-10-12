@@ -113,9 +113,24 @@ mission_trees:skjoralmor += {
 			defineloc unlocks_skjoralmor_order = "Unlocks §YSkjoralmor Order§! Holy Order"
 			custom_tooltip = unlocks_skjoralmor_order
 			set_country_flag = unlocks_skjoralmor_order
-			regions:kreath [has_province_flag = orc_stronghold] {
-				add_permanent_claim = ROOT
+			defineloc skjoralmor_stronghold_conquest_tt = "§Y[This.GetName]§! gains a §YSiege of Stronghold§! Casus Belli on all §YKreath Orc§! Countries
+This Casus Belli will last for §G25§! years."
+			custom_tooltip = skjoralmor_stronghold_conquest_tt
+			hidden_effect = {
+				every_country [primary_culture = kreath_orc] {
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_stronghold_siege
+						months = 300
+					}
+				}
 			}
 		}
 	}
+}
+new casus_belli cb_stronghold_siege = {
+	name = "Siege of Stronghold"
+	is_triggered_only = yes
+	months = 300
+	war_goal = humiliate
 }
