@@ -128,9 +128,30 @@ This Casus Belli will last for §G25§! years."
 		}
 	}
 }
+new war_goal war_goal_stronghold_siege = {
+	type = take_capital
+	title = "Siege of Stronghold Title"
+	war_name = "Siege of Stronghold War Name"
+	attacker = {
+		badboy_factor = 0.25
+		prestige_factor = 2
+		peace_cost_factor = 0.75
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	defender = {
+		badboy_factor = 1
+	}
+}
 new casus_belli cb_stronghold_siege = {
 	name = "Siege of Stronghold"
 	is_triggered_only = yes
 	months = 300
-	war_goal = humiliate
+	war_goal = war_goal_stronghold_siege
 }
