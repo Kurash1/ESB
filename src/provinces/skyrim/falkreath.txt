@@ -194,9 +194,9 @@ new province neugrad = {
 		is_city = yes
 	}
 }
-new province bloodlet_peaks = {
+new province neugrad_pass = {
 	position = {
-		1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000
+		1775.000 1812.000 1775.000 1812.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1775.000 1813.000 1769.000 1808.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -205,7 +205,7 @@ new province bloodlet_peaks = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	area = neugrad
-	name = "Bloodlet Peaks"
+	name = "Neugrad Pass"
 	terrain = mountain
 	color = {
 		121 236 150
@@ -220,9 +220,35 @@ new province bloodlet_peaks = {
 		is_city = yes
 	}
 }
+new province bloodlet_peaks = {
+	position = {
+		1758.000 1800.000 1759.000 1800.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1758.000 1800.000 1769.000 1808.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = neugrad
+	name = "Bloodlet Peaks"
+	terrain = mountain
+	color = {
+		243 201 186
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
+		history_owner = jur_tarask
+		history_trade_goods = stone
+		capital = ""
+		is_city = yes
+	}
+}
 new province southfringe = {
 	position = {
-		1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000
+		1778.000 1791.000 1779.000 1791.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1779.000 1791.000 1772.000 1794.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -391,7 +417,7 @@ new province far_shriekwind = {
 }
 new province bonechill = {
 	position = {
-		1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000
+		1745.000 1823.000 1745.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1746.000 1823.000 1751.000 1823.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -404,6 +430,33 @@ new province bonechill = {
 	name = "Bonechill"
 	color = {
 		123 149 112
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
+		history_owner = or_murimush
+		history_trade_goods = silver
+		capital = ""
+		is_city = yes
+		set_province_flag = orc_stronghold
+	}
+}
+new province greywater = {
+	position = {
+		1760.000 1820.000 1760.000 1820.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1759.000 1821.000 1751.000 1823.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = helgen
+	terrain = highlands
+	name = "Greywater"
+	color = {
+		228 223 204
 	}
 	history = {
 		religion = code_of_malacath
@@ -499,9 +552,35 @@ new province angis_camp = {
 		is_city = no
 	}
 }
+new province grey_peak = {
+	position = {
+		1711.000 1791.000 1711.000 1792.000 1711.000 1804.000 1711.000 1804.000 1711.000 1804.000 1712.000 1792.000 1711.000 1804.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = bloodlet
+	name = "Grey Peak"
+	terrain = mountain
+	color = {
+		216 236 159
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
+		history_owner = dulg_krazak
+		history_trade_goods = gold
+		capital = ""
+		is_city = no
+	}
+}
 new province bloodlet = {
 	position = {
-		1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000
+		1742.000 1791.000 1742.000 1791.000 1742.000 1791.000 1732.000 1798.000 1732.000 1798.000 1742.000 1791.000 1732.000 1798.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -524,6 +603,60 @@ new province bloodlet = {
 		capital = ""
 		is_city = yes
 		set_province_flag = orc_stronghold
+	}
+}
+new province blood_peak = {
+	position = {
+		1726.000 1800.000 1726.000 1800.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1726.000 1799.000 1732.000 1798.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = bloodlet
+	name = "Blood Peak"
+	terrain = mountain
+	color = {
+		125 249 241
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
+		history_owner = dulg_krazak
+		history_trade_goods = stone
+		capital = ""
+		is_city = yes
+	}
+}
+new area ancients_ascent = {
+	name = "Ancient's Ascent"
+	region = kreath
+}
+new province ancients_ascent = {
+	position = {
+		1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = ancients_ascent
+	name = "Ancient's Ascent"
+	terrain = mountain
+	color = {
+		210 160 103
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
+		capital = ""
+		is_city = yes
 	}
 }
 new area halldir = {
@@ -558,7 +691,7 @@ new province overfalk = {
 }
 new province halldir = {
 	position = {
-		1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000
+		1675.000 1809.000 1674.000 1809.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1675.000 1808.000 1674.000 1812.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
