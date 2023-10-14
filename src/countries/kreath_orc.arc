@@ -96,7 +96,7 @@ new country or_murimush = {
 	color = {
 		255 255 182
 	}
-	capital = bonechill
+	capital = helgen
 }
 new country agra_granosh = {
 	inherit = kreath_orc_country
