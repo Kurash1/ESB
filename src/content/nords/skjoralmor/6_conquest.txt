@@ -1,3 +1,24 @@
+new effect skjoralmor_siege_effect = {
+	args = {
+		name = string
+		province = province
+		country = country
+	}
+	transpile = {
+		new_custom_tooltip = "The Orc Stronghold of §Y{args:name}§! is destroyed
+§Y[This.GetName]§! gains a permanent claim on all provinces owned by §Y{args:name}§!"
+		hidden_effect = {
+			args:province = {
+				remove_orc_stronghold = yes
+			}
+			args:country = {
+				every_owned_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+}
 mission_trees:skjoralmor += {
 	nor_lorak = {
 		name = "Siege of Nor Lorak"
@@ -7,13 +28,10 @@ mission_trees:skjoralmor += {
 			controls = silvercliff
 		}
 		effect = {
-			provinces:silvercliff = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Nor Lorak"
+				province = silvercliff
+				country = nor_lorak
 			}
 		}
 	}
@@ -25,13 +43,10 @@ mission_trees:skjoralmor += {
 			controls = helgen
 		}
 		effect = {
-			provinces:helgen = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Or Murimush"
+				province = helgen
+				country = or_murimush
 			}
 		}
 	}
@@ -43,13 +58,10 @@ mission_trees:skjoralmor += {
 			controls = cracked_tusk
 		}
 		effect = {
-			provinces:cracked_tusk = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Vosh Urgalick"
+				province = cracked_tusk
+				country = vosh_urgalick
 			}
 		}
 	}
@@ -61,13 +73,10 @@ mission_trees:skjoralmor += {
 			controls = peak_shade
 		}
 		effect = {
-			provinces:peak_shade = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Rakh Ubeshka"
+				province = peak_shade
+				country = rakh_ubeshka
 			}
 		}
 	}
@@ -79,13 +88,10 @@ mission_trees:skjoralmor += {
 			controls = orphan_rock
 		}
 		effect = {
-			provinces:orphan_rock = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Agra Granosh"
+				province = orphan_rock
+				country = agra_granosh
 			}
 		}
 	}
@@ -97,13 +103,10 @@ mission_trees:skjoralmor += {
 			controls = half_moon
 		}
 		effect = {
-			provinces:half_moon = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Vorkhim Uhz"
+				province = half_moon
+				country = vorkhim_uhz
 			}
 		}
 	}
@@ -115,13 +118,10 @@ mission_trees:skjoralmor += {
 			controls = halldir
 		}
 		effect = {
-			provinces:halldir = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Zugra Krazak"
+				province = halldir
+				country = zugra_krazak
 			}
 		}
 	}
@@ -133,13 +133,10 @@ mission_trees:skjoralmor += {
 			controls = bilegulch
 		}
 		effect = {
-			provinces:bilegulch = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Crun Beshkar"
+				province = bilegulch
+				country = crun_beshkar
 			}
 		}
 	}
@@ -151,13 +148,10 @@ mission_trees:skjoralmor += {
 			controls = knifepoint
 		}
 		effect = {
-			provinces:knifepoint = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Aht Beshkar"
+				province = knifepoint
+				country = aht_beshkar
 			}
 		}
 	}
@@ -169,13 +163,10 @@ mission_trees:skjoralmor += {
 			controls = bloodlet
 		}
 		effect = {
-			provinces:bloodlet = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Dulg Krazak"
+				province = bloodlet
+				country = dulg_krazak
 			}
 		}
 	}
@@ -187,13 +178,10 @@ mission_trees:skjoralmor += {
 			controls = southfringe
 		}
 		effect = {
-			provinces:southfringe = {
-				remove_orc_stronghold = yes
-				owner = {
-					every_owned_province = {
-						add_permanent_claim = ROOT
-					}
-				}
+			skjoralmor_siege_effect = {
+				name = "Jur Tarask"
+				province = southfringe
+				country = jur_tarask
 			}
 		}
 	}
