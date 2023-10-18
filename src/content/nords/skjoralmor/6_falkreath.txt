@@ -5,14 +5,68 @@ mission_trees:skjoralmor += {
 		x = 6
 		y = 1
 		trigger = {
-			always = no
+			provinces:falkreath = {
+				development = 15
+			}
+		}
+		effect = {
+			owns = falkreath
+			provinces:falkreath = {
+				quick_province_modifier = {
+					name = "Falkreath City"
+					modifier = {
+						local_tax_modifier = 0.25
+						local_production_efficiency = 0.25
+						local_manpower_modifier = 0.25
+						local_development_cost = -0.1
+					}
+				}
+			}
 		}
 	}
+}
+on_actions:on_battle_won_country += {
+	if [
+		tag = skjoralmor
+	] {
+		change_variable = {
+			which = total_casualties_caused
+			which = land_units_killed
+		}
+	}
+}
+on_actions:on_battle_lost_country += {
+	if [
+		tag = skjoralmor
+	] {
+		change_variable = {
+			which = total_casualties_caused
+			which = land_units_killed
+		}
+	}
+}
+mission_trees:skjoralmor += {
 	heroes_graveyard = {
 		name = "Heroes' Graveyard"
 		required = falkreath
 		x = 6
 		y = 3
+		trigger = {
+			defineloc total_casualties_caused = "Total Casualties Caused"
+			check_variable = {
+				which = total_casualties_caused
+				value = 250000
+			}
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "Heroes' Graveyard"
+				modifier = {
+					morale_damage_received = -0.05
+					reserves_organisation = 0.10
+				}
+			}
+		}
 	}
 	high_hall = {
 		name = "High Hall"
@@ -20,6 +74,8 @@ mission_trees:skjoralmor += {
 		x = 5
 		y = 4
 	}
+}
+mission_trees:skjoralmor += {
 	shriekwind_bastion = {
 		name = "Shriekwind Bastion"
 		required = heroes_graveyard

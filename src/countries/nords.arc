@@ -462,6 +462,12 @@ new country skjoralmor = {
 	capital = riverwood
 	history = {
 		elector = yes
+		1.1.1 = {
+			set_variable = {
+				which = total_casualties_caused
+				which = 0
+			}
+		}
 	}
 	starting_reform = tier_1_skjoralmor_clan
 }

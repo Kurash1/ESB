@@ -10,9 +10,9 @@ new province_event skjoralmor.1 = {
 				quick_province_modifier = {
 					name = "Settlement Focus: Navy"
 					modifier = {
-						local_sailors_modifier = 1.5
-						local_ship_cost = -0.5
-						naval_forcelimit = 5
+						local_sailors_modifier = 0.5
+						local_ship_cost = -0.3
+						naval_forcelimit = 3
 					}
 				}
 			}
@@ -23,8 +23,8 @@ new province_event skjoralmor.1 = {
 				quick_province_modifier = {
 					name = "Settlement Focus: Trade"
 					modifier = {
-						province_trade_power_modifier = 0.5
-						province_trade_power_value = 5
+						province_trade_power_modifier = 0.25
+						province_trade_power_value = 2.5
 					}
 				}
 			}
@@ -35,8 +35,8 @@ new province_event skjoralmor.1 = {
 				quick_province_modifier = {
 					name = "Settlement Focus: Exploitation"
 					modifier = {
-						trade_goods_size_modifier = 0.5
-						local_production_efficiency = 0.5
+						trade_goods_size_modifier = 0.25
+						local_production_efficiency = 0.25
 					}
 				}
 			}
@@ -46,7 +46,7 @@ new province_event skjoralmor.1 = {
 new province_event skjoralmor.2 = {
 	title = "Purpose of Cracked Tusk"
 	desc = ""
-	picture = TOMB_eventPicture
+	picture = cracked_tusk_eventPicture
 	is_triggered_only = yes
 	options = {
 		{
@@ -66,18 +66,22 @@ new province_event skjoralmor.2 = {
 			name = "§YGularz Khazgur§! will be the new home to our orc citizens"
 			effect = {
 				change_province_name = "Gularz Khazgur"
-				rename_capital = "Gularz Khazgur"
-				set_province_flag = orc_stronghold
-				province_event = {
-					id = orc_stronghold.1
-					days = 31
+				new_custom_tooltip = "§YGularz Khazgur§! gets the conditional modifier '§YOrc Stronghold§!'
+	§RDue to scripting limitations this modifier only appears in 31 days§!"
+				hidden_effect = {
+					rename_capital = "Gularz Khazgur"
+					set_province_flag = orc_stronghold
+					province_event = {
+						id = orc_stronghold.1
+						days = 31
+					}
 				}
 			}
 		}
 	}
 }
-new province_group north_kreath_road = {
-	name = "North Kreath Road"
+new province_group illinalta_road = {
+	name = "Illinalta Road"
 	provinces = {
 		illinaltas_deep half_moon green_coast roadside falkreath north_shriekwind silvercliff lakeview
 	}
@@ -124,13 +128,13 @@ mission_trees:skjoralmor += {
 			}
 		}
 	}
-	north_road = {
-		name = "North Kreath Road"
+	illinalta_road = {
+		name = "Illinalta Road"
 		required = {
 			falkreath half_moon
 		}
 		provinces_to_highlight = {
-			province_group = north_kreath_road
+			province_group = illinalta_road
 			NOT = {
 				AND = {
 					owned_by = ROOT
@@ -140,7 +144,7 @@ mission_trees:skjoralmor += {
 			}
 		}
 		trigger = {
-			province_groups:north_kreath_road = {
+			province_groups:illinalta_road = {
 				type = all
 				owned_by = ROOT
 				has_building_line = road
@@ -148,9 +152,9 @@ mission_trees:skjoralmor += {
 			}
 		}
 		effect = {
-			province_groups:north_kreath_road = {
+			province_groups:illinalta_road = {
 				quick_province_modifier = {
-					name = "North Kreath Road"
+					name = "Illinalta Road"
 					modifier = {
 						province_trade_power_modifier = 0.10
 					}

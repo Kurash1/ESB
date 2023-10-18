@@ -1,0 +1,55 @@
+new localisation north_shriekwind_exp_tooltip = "Unlocks a Great Project §YNorth Shriekwind Bastion§! in §YNorth Shriekwind§! province"
+new expedition north_shriekwind = {
+	picture = north_shriekwind_eventPicture
+	length = 1
+	on_complete = {
+		set_province_flag = north_shriekwind
+		custom_tooltip = north_shriekwind_exp_tooltip
+	}
+}
+new localisation north_shriekwind_pass_tooltip = "Connects §YNorth Shriekwind§! to §YShriekwind Bastion§!"
+new great_project north_shriekwind = {
+	name = "North Shriekwind Bastion"
+	start = north_shriekwind
+	type = canal
+	date = 3000.1.1
+	starting_tier = 3
+	time = 60
+	can_be_moved = no
+	build_cost = 500
+	build_trigger = {
+		has_province_flag = north_shriekwind
+	}
+	on_built = {
+		add_canal = north_shriekwind
+	}
+	on_destroyed = {
+		remove_canal = north_shriekwind
+	}
+	tier_0 = {
+		on_upgraded = {
+			custom_tooltip = north_shriekwind_pass_tooltip
+		}
+	}
+	tier_1 = {
+		on_upgraded = {
+			custom_tooltip = north_shriekwind_pass_tooltip
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			custom_tooltip = north_shriekwind_pass_tooltip
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			custom_tooltip = north_shriekwind_pass_tooltip
+		}
+	}
+}
+new adjacency north_shriekwind = {
+	from = shriekwind_bastion
+	to = north_shriekwind
+	through = north_shriekwind
+	type = canal
+}

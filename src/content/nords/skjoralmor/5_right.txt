@@ -6,13 +6,31 @@ mission_trees:skjoralmor += {
 		y = 1
 		trigger = {
 			always = no
+			owns = helgen
+			provinces:helgen = {
+				development = 15
+			}
 		}
 	}
-	neugrad = {
-		name = "Neugrad"
-		required = helgen
-		x = 8
+	kreath_road = {
+		name = "Kreath Road"
+		required = {
+			falkreath helgen
+		}
+		x = 7
 		y = 2
+	}
+	ancestor_glade = {
+		name = "Ancestor Glade"
+		required = kreath_road
+		x = 7
+		y = 3
+	}
+	bloodlet = {
+		name = "Bloodlet"
+		required = kreath_road
+		x = 8
+		y = 3
 	}
 	orphan_rock = {
 		name = "Orphan Rock"
@@ -20,19 +38,18 @@ mission_trees:skjoralmor += {
 		x = 9
 		y = 2
 	}
-	skybound_watch = {
-		name = "Skybound Watch"
+	neugrad = {
+		name = "Neugrad"
 		required = orphan_rock
 		x = 9
 		y = 3
 	}
-	sky_observations = {
-		name = "Sky Observations"
+	jerall = {
+		name = "Jerall"
 		required = {
-			ancestor_glade
-			skybound_watch
+			ancestor_glade bloodlet neugrad
 		}
 		x = 8
-		y = 4
+		y = 3
 	}
 }

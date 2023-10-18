@@ -26,24 +26,4 @@ mission_trees:skjoralmor += {
 			new_custom_tooltip = "Doubles the chance for §YAtmoran Settler§! events"
 		}
 	}
-	peak_shade = {
-		name = "Peak Shade"
-		required = {
-			falkreath helgen
-		}
-		x = 7
-		y = 2
-	}
-	bloodlet_throne = {
-		name = "Bloodlet Throne"
-		required = peak_shade
-		x = 7
-		y = 3
-	}
-	ancestor_glade = {
-		name = "Ancestor Glade"
-		required = peak_shade
-		x = 8
-		y = 3
-	}
 }
