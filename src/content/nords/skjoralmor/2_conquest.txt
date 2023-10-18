@@ -6,13 +6,13 @@ new effect skjoralmor_siege_effect = {
 	}
 	transpile = {
 		new_custom_tooltip = "The Orc Stronghold of §Y{args:name}§! is destroyed
-§Y[This.GetName]§! gains a permanent claim on all provinces owned by §Y{args:name}§!"
+§Y[This.GetName]§! gains a permanent claim on all core provinces of §Y{args:name}§!"
 		hidden_effect = {
 			args:province = {
 				remove_orc_stronghold = yes
 			}
 			args:country = {
-				every_owned_province = {
+				every_core_province = {
 					add_permanent_claim = ROOT
 				}
 			}
@@ -183,36 +183,6 @@ mission_trees:skjoralmor += {
 				province = southfringe
 				country = jur_tarask
 			}
-		}
-	}
-	falks_kreath = {
-		name = "Falks' Kreath"
-		x = 1
-		y = 6
-		trigger = {
-			mission_completed = skjoralmor_nor_lorak
-			mission_completed = skjoralmor_crun_beshkar
-			mission_completed = skjoralmor_aht_beshkar
-			mission_completed = skjoralmor_vorkhim_uhz
-			mission_completed = skjoralmor_vosh_urgalick
-			mission_completed = skjoralmor_zugra_krazak
-			mission_completed = skjoralmor_rakh_ubeshka
-			mission_completed = skjoralmor_dulg_krazak
-			mission_completed = skjoralmor_or_murimush
-			mission_completed = skjoralmor_agra_granosh
-			mission_completed = skjoralmor_jur_tarask
-			regions:kreath = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-				NOT = {
-					has_province_flag = orc_stronghold
-				}
-			}
-		}
-		effect = {
-			set_country_flag = extra_atmoran_settlers
-			new_custom_tooltip = "Doubles the chance for §YAtmoran Settler§! events"
 		}
 	}
 }

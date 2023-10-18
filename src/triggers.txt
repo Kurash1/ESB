@@ -1,5 +1,22 @@
+new trigger has_building_line = {
+	args = building_line
+	transpile = {
+		defineloc "has_building_line_{args}_tooltip" = "Have a §Y{args:name}§! Building"
+		custom_trigger_tooltip = {
+			tooltip = `has_building_line_{args}_tooltip`
+			OR = {
+				foreach $building in args:buildings {
+					`has_building = {$building}`
+				}
+			}
+		}
+	}
+}
 new trigger owns = {
 	args = province
+}
+new trigger province_group = {
+	args = province_group
 }
 new trigger ags = {
 	args = int

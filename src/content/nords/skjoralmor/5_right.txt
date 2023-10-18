@@ -1,9 +1,12 @@
 mission_trees:skjoralmor += {
 	helgen = {
 		name = "Helgen"
-		required = three_town_plan
+		required = falks_kreath
 		x = 8
 		y = 1
+		trigger = {
+			always = no
+		}
 	}
 	neugrad = {
 		name = "Neugrad"

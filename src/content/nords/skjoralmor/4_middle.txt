@@ -1,0 +1,49 @@
+mission_trees:skjoralmor += {
+	falks_kreath = {
+		name = "Falks' Kreath"
+		x = 6
+		y = 0
+		trigger = {
+			mission_completed = skjoralmor_nor_lorak
+			mission_completed = skjoralmor_crun_beshkar
+			mission_completed = skjoralmor_aht_beshkar
+			mission_completed = skjoralmor_vorkhim_uhz
+			mission_completed = skjoralmor_vosh_urgalick
+			mission_completed = skjoralmor_zugra_krazak
+			mission_completed = skjoralmor_rakh_ubeshka
+			mission_completed = skjoralmor_dulg_krazak
+			mission_completed = skjoralmor_or_murimush
+			mission_completed = skjoralmor_agra_granosh
+			mission_completed = skjoralmor_jur_tarask
+			regions:kreath = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = extra_atmoran_settlers
+			new_custom_tooltip = "Doubles the chance for §YAtmoran Settler§! events"
+		}
+	}
+	peak_shade = {
+		name = "Peak Shade"
+		required = {
+			falkreath helgen
+		}
+		x = 7
+		y = 2
+	}
+	bloodlet_throne = {
+		name = "Bloodlet Throne"
+		required = peak_shade
+		x = 7
+		y = 3
+	}
+	ancestor_glade = {
+		name = "Ancestor Glade"
+		required = peak_shade
+		x = 8
+		y = 3
+	}
+}
