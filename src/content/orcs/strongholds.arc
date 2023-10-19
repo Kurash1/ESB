@@ -37,33 +37,31 @@ new province_event orc_stronghold.1 = {
 	is_triggered_only = yes
 	hidden = yes
 	options = {
-		{
-			name = ""
-			effect = {
-				remove_province_triggered_modifier = orc_stronghold_primary
-				remove_province_triggered_modifier = orc_stronghold_secondary
-				remove_province_triggered_modifier = orc_stronghold_loyal
-				remove_province_triggered_modifier = orc_stronghold_neutral
-				remove_province_triggered_modifier = orc_stronghold_disloyal
-				remove_province_triggered_modifier = orc_stronghold_unknown
-				if [province_triggered_modifiers:orc_stronghold_primary:trigger] {
-					add_province_triggered_modifier = orc_stronghold_primary
-				}
-				else_if [province_triggered_modifiers:orc_stronghold_secondary:trigger] {
-					add_province_triggered_modifier = orc_stronghold_secondary
-				}
-				else_if [province_triggered_modifiers:orc_stronghold_loyal:trigger] {
-					add_province_triggered_modifier = orc_stronghold_loyal
-				}
-				else_if [province_triggered_modifiers:orc_stronghold_neutral:trigger] {
-					add_province_triggered_modifier = orc_stronghold_neutral
-				}
-				else_if [province_triggered_modifiers:orc_stronghold_disloyal:trigger] {
-					add_province_triggered_modifier = orc_stronghold_disloyal
-				}
-				else {
-					add_province_triggered_modifier = orc_stronghold_unknown
-				}
+		name = ""
+		effect = {
+			remove_province_triggered_modifier = orc_stronghold_primary
+			remove_province_triggered_modifier = orc_stronghold_secondary
+			remove_province_triggered_modifier = orc_stronghold_loyal
+			remove_province_triggered_modifier = orc_stronghold_neutral
+			remove_province_triggered_modifier = orc_stronghold_disloyal
+			remove_province_triggered_modifier = orc_stronghold_unknown
+			if [province_triggered_modifiers:orc_stronghold_primary:trigger] {
+				add_province_triggered_modifier = orc_stronghold_primary
+			}
+			else_if [province_triggered_modifiers:orc_stronghold_secondary:trigger] {
+				add_province_triggered_modifier = orc_stronghold_secondary
+			}
+			else_if [province_triggered_modifiers:orc_stronghold_loyal:trigger] {
+				add_province_triggered_modifier = orc_stronghold_loyal
+			}
+			else_if [province_triggered_modifiers:orc_stronghold_neutral:trigger] {
+				add_province_triggered_modifier = orc_stronghold_neutral
+			}
+			else_if [province_triggered_modifiers:orc_stronghold_disloyal:trigger] {
+				add_province_triggered_modifier = orc_stronghold_disloyal
+			}
+			else {
+				add_province_triggered_modifier = orc_stronghold_unknown
 			}
 		}
 	}

@@ -34,29 +34,26 @@ new country_event barrow_hill.1 = {
 		NOT = { has_government_attribute = immortal_ruler }
 	}
 	options = {
-		{
-			name = "Let us honor them"
-			effect = {
-				random_owned_province [
-					NOT = {
-						has_construction = buildings:barrow_hill
-						has_building = buildings:barrow_hill
-					}
-				]
-				{
-					add_building_construction = {
-						building = buildings:barrow_hill
-						speed = 1
-						cost = 1
-					}
+		name = "Let us honor them"
+		effect = {
+			random_owned_province [
+				NOT = {
+					has_construction = buildings:barrow_hill
+					has_building = buildings:barrow_hill
+				}
+			]
+			{
+				add_building_construction = {
+					building = buildings:barrow_hill
+					speed = 1
+					cost = 1
 				}
 			}
 		}
-		{
-			name = "We cannot afford it"
-			effect = {
-				add_prestige = -20
-			}
+	}, {
+		name = "We cannot afford it"
+		effect = {
+			add_prestige = -20
 		}
 	}
 }
