@@ -1,6 +1,7 @@
 quick_province_modifier = {
 	name = <string>
 	permanent = <bool> #optional, yes by default (whether the modifier gets removed when the owner changes)
+	years = <int> #optional, replaced by duration
 	duration = <int> #optional, -1 by default
 	desc = <string> #optional
 	modifier = {
@@ -10,6 +11,7 @@ quick_province_modifier = {
 
 quick_country_modifier = {
 	name = <string>
+	years = <int> #optional, replaced by duration
 	duration = <int> #optional, -1 by default
 	desc = <string> #optional
 	hidden = <bool> #optional, no by default

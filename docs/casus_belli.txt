@@ -1,0 +1,11 @@
+new casus_belli <key> = {
+	name = <string>
+	desc = <string> #optional
+	valid_for_subject = <bool> #optional
+	is_triggered_only = <bool> #optional
+	months = <int> #optional
+	prerequisites = { #optional
+		<triggers>
+	}
+	war_goal = <war_goal>
+}

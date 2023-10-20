@@ -1,0 +1,292 @@
+new province_event skjoralmor.3 = {
+	title = "Purpose of Helgen"
+	desc = ""
+	picture = helgen_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "A Fortress City for the east"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Fort"
+					modifier = {
+						fort_level = 1
+						local_defensiveness = 0.25
+						local_manpower_modifier = 0.5
+					}
+				}
+			}
+		}
+		{
+			name = "It is on a good trade Route"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Trade"
+					modifier = {
+						province_trade_power_modifier = 0.25
+						province_trade_power_value = 2.5
+					}
+				}
+			}
+		}
+		{
+			name = "I'm craving some Juniper Berries"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Goods"
+					modifier = {
+						trade_goods_size_modifier = 0.25
+						local_production_efficiency = 0.25
+					}
+				}
+			}
+		}
+	}
+}
+mission_trees:skjoralmor += {
+	helgen = {
+		name = "Helgen"
+		icon = helgen_mission
+		required = falks_kreath
+		x = 8
+		y = 1
+		trigger = {
+			owns = helgen
+			provinces:helgen = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:helgen = {
+				province_event = skjoralmor.3
+			}
+		}
+	}
+}
+new province_group kreath_road = {
+	name = "Kreath Road"
+	provinces = {
+		southfringe bloodlet_peaks neugrad_pass neugrad haemar orphan_rock neugrad_crossing helgen_road helgen far_shriekwind pinewatch peak_shade falkreath
+	}
+}
+mission_trees:skjoralmor += {
+	kreath_road = {
+		name = "Kreath Road"
+		icon = kreath_road_mission
+		required = {
+			falkreath helgen
+		}
+		x = 7
+		y = 2
+		provinces_to_highlight = {
+			province_group = kreath_road
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					has_building_line = road
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			province_groups:kreath_road = {
+				type = all
+				owned_by = ROOT
+				has_building_line = road
+				development = 10
+			}
+		}
+		effect = {
+			province_groups:kreath_road = {
+				quick_province_modifier = {
+					name = "Kreath Road"
+					modifier = {
+						province_trade_power_modifier = 0.10
+					}
+				}
+			}
+		}
+	}
+	ancestor_glade = {
+		name = "Ancestor Glade"
+		icon = ancestor_glade_mission
+		required = kreath_road
+		x = 7
+		y = 3
+		trigger = {
+			owns = ancestor_glade
+			provinces:ancestor_glade = {
+				if [has_dlc = "Leviathan"] {
+					has_great_project = {
+						type = ancestor_glade
+						tier = 1
+					}
+				}
+				else {
+					development = 15
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			provinces:ancestor_glade = {
+				change_trade_goods = r_alchemical_ingredients
+			}
+		}
+	}
+}
+new province_event skjoralmor.4 = {
+	title = "Owner of Mountain"
+	desc = ""
+	picture = bloodlet_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "Let us hand it to Vampires"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Vampires"
+					modifier = {
+						min_local_autonomy = 100
+						advisor_cost = -0.1
+					}
+				}
+			}
+		}
+		{
+			name = "Form the Order of the Freezing Sun"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Freezing Sun"
+					modifier = {
+						min_local_autonomy = 100
+						infantry_power = 0.10
+					}
+				}
+			}
+		}
+		{
+			name = "I shall reign over the Mountain"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Fortress"
+					modifier = {
+						fort_level = 1
+						local_defensiveness = 0.25
+						prestige = 0.5
+					}
+				}
+			}
+		}
+	}
+}
+mission_trees:skjoralmor += {
+	bloodlet = {
+		name = "Bloodlet"
+		icon = bloodlet_mission
+		required = kreath_road
+		x = 8
+		y = 3
+		trigger = {
+			provinces:bloodlet = {
+				fort_level = 4
+			}
+		}
+		effect = {
+			provinces:bloodlet = {
+				province_event = skjoralmor.4
+			}
+		}
+	}
+}
+new government_reform tier_11_orphan_rock_witches = {
+	name = "Orphan Rock Witches"
+	icon = skjoralmor_army
+	potential = {
+		has_country_flag = unlocks_orphan_rock_witches
+	}
+	modifier = {
+		monthly_magicka = 0.5
+		fire_damage = 0.1
+	}
+}
+mission_trees:skjoralmor += {
+	orphan_rock = {
+		name = "Orphan Rock"
+		icon = orphan_rock_mission
+		required = helgen
+		x = 9
+		y = 2
+		trigger = {
+			owns = orphan_rock
+			provinces:orphan_rock = {
+				development = 15
+			}
+		}
+		effect = {
+			set_country_flag = unlocks_orphan_rock_witches
+			new_custom_tooltip = "Unlocks §YOrphan Rock Witches§! Government Reform"
+		}
+	}
+	neugrad = {
+		name = "Fort Neugrad"
+		icon = neugrad_mission
+		required = orphan_rock
+		x = 9
+		y = 3
+		trigger = {
+			owns = neugrad
+			provinces:neugrad = {
+				fort_level = 2
+			}
+		}
+		effect = {
+			provinces:neugrad = {
+				change_trade_goods = gold
+			}
+		}
+	}
+}
+new province_group kreath_jerall = {
+	name = "Kreath Jerall Mountains"
+	provinces = {
+		ancestor_glade angis_camp grey_peak blood_peak bloodlet ancients_ascent bloodlet_peaks southfringe neugrad_pass neugrad neugrad_crossing orphan_rock haemar
+	}
+}
+mission_trees:skjoralmor += {
+	jerall = {
+		name = "Jerall Development"
+		icon = jerall_mission
+		required = {
+			ancestor_glade bloodlet neugrad
+		}
+		x = 8
+		y = 3
+		provinces_to_highlight = {
+			province_group = kreath_jerall
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			province_groups:kreath_jerall = {
+				type = all
+				owned_by = ROOT
+				development = 10
+			}
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "Sky Observations"
+				modifier = {
+					idea_cost = -5%
+				}
+			}
+		}
+	}
+}

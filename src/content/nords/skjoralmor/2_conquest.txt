@@ -1,0 +1,199 @@
+new effect skjoralmor_siege_effect = {
+	args = {
+		name = string
+		province = province
+		country = country
+	}
+	transpile = {
+		new_custom_tooltip = "The Orc Stronghold of §Y{args:name}§! is destroyed
+§Y[This.GetName]§! gains a permanent claim on all core provinces of §Y{args:name}§!"
+		hidden_effect = {
+			args:province = {
+				remove_orc_stronghold = yes
+			}
+			args:country = {
+				every_core_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+}
+mission_trees:skjoralmor += {
+	nor_lorak = {
+		name = "Siege of Nor Lorak"
+		icon = siege_nor_lorak_mission
+		x = 0
+		y = 2
+		trigger = {
+			controls = silvercliff
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Nor Lorak"
+				province = silvercliff
+				country = nor_lorak
+			}
+		}
+	}
+	or_murimush = {
+		name = "Siege of Or Murimush"
+		icon = siege_or_murimush_mission
+		x = 2
+		y = 2
+		trigger = {
+			controls = helgen
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Or Murimush"
+				province = helgen
+				country = or_murimush
+			}
+		}
+	}
+	vosh_urgalick = {
+		name = "Siege of Vosh Urgalick"
+		icon = siege_vosh_urgalick_mission
+		x = 0
+		y = 3
+		trigger = {
+			controls = cracked_tusk
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Vosh Urgalick"
+				province = cracked_tusk
+				country = vosh_urgalick
+			}
+		}
+	}
+	rakh_ubeshka = {
+		name = "Siege of Rakh Ubeshka"
+		icon = siege_rakh_ubeshka_mission
+		x = 1
+		y = 3
+		trigger = {
+			controls = peak_shade
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Rakh Ubeshka"
+				province = peak_shade
+				country = rakh_ubeshka
+			}
+		}
+	}
+	agra_granosh = {
+		name = "Siege of Agra Granosh"
+		icon = siege_agra_granosh_mission
+		x = 2
+		y = 3
+		trigger = {
+			controls = orphan_rock
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Agra Granosh"
+				province = orphan_rock
+				country = agra_granosh
+			}
+		}
+	}
+	vorkhim_uhz = {
+		name = "Siege of Vorkhim Uhz"
+		icon = siege_vorkhim_uhz_mission
+		x = 0
+		y = 4
+		trigger = {
+			controls = half_moon
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Vorkhim Uhz"
+				province = half_moon
+				country = vorkhim_uhz
+			}
+		}
+	}
+	zugra_krazak = {
+		name = "Siege of Zugra Krazak"
+		icon = siege_zugra_krazak_mission
+		x = 1
+		y = 4
+		trigger = {
+			controls = halldir
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Zugra Krazak"
+				province = halldir
+				country = zugra_krazak
+			}
+		}
+	}
+	crun_beshkar = {
+		name = "Siege of Crun Beshkar"
+		icon = siege_crun_beshkar_mission
+		x = 2
+		y = 4
+		trigger = {
+			controls = bilegulch
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Crun Beshkar"
+				province = bilegulch
+				country = crun_beshkar
+			}
+		}
+	}
+	aht_beshkar = {
+		name = "Siege of Aht Beshkar"
+		icon = siege_aht_beshkar_mission
+		x = 0
+		y = 5
+		trigger = {
+			controls = knifepoint
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Aht Beshkar"
+				province = knifepoint
+				country = aht_beshkar
+			}
+		}
+	}
+	dulg_krazak = {
+		name = "Siege of Dulg Krazak"
+		icon = siege_dulg_krazak_mission
+		x = 1
+		y = 5
+		trigger = {
+			controls = bloodlet
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Dulg Krazak"
+				province = bloodlet
+				country = dulg_krazak
+			}
+		}
+	}
+	jur_tarask = {
+		name = "Siege of Jur Tarask"
+		icon = siege_jur_tarask_mission
+		x = 2
+		y = 5
+		trigger = {
+			controls = southfringe
+		}
+		effect = {
+			skjoralmor_siege_effect = {
+				name = "Jur Tarask"
+				province = southfringe
+				country = jur_tarask
+			}
+		}
+	}
+}

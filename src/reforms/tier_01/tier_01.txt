@@ -165,6 +165,8 @@ governments:monarchy:reform_levels:1 += new tier_1_falmer_kingdom = {
 	}
 
 }
+new localisation mechanic_orc_stronghold = "Is a Stronghold"
+new localisation mechanic_orc_stronghold_yes = "Is a Stronghold"
 governments:tribal:reform_levels:1 += new tier_1_orc_stronghold = {
 	name = "Orc Stronghold"
 	desc = ""
@@ -173,6 +175,9 @@ governments:tribal:reform_levels:1 += new tier_1_orc_stronghold = {
 	force_general_leader = yes
 	trigger = {
 		has_reform = tier_1_orc_stronghold
+	}
+	custom_attributes = {
+		orc_stronghold = yes
 	}
 	modifiers = {
 		leader_land_shock = 1
@@ -206,12 +211,16 @@ governments:tribal:reform_levels:1 += new tier_1_reachmen_clan = {
 	}
 
 }
+new localisation mechanic_multiple_orc_strongholds = "Has Multiple Strongholds"
+new localisation mechanic_multiple_orc_strongholds_yes = "Has Multiple Strongholds"
 governments:tribal:reform_levels:1 += new tier_1_orc_federation = {
 	name = "Orc Federation"
 	desc = ""
 	icon = "all_under_tengri_reform"
 	allow_normal_conversion = yes
-	
+	custom_attributes = {
+		multiple_orc_strongholds = yes
+	}
 	trigger = {
 		has_reform = tier_1_orc_federation
 	}

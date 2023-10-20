@@ -36,20 +36,12 @@ new government_mechanic conjuration_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 25
-				}
+				has_magicka = 25
 			}
 			effect = {
 				add_yearly_manpower = 1
 				
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -25
-				}
+				add_magicka = -25
 			}
 		}
 		conjuration_secret_button = {
@@ -78,11 +70,7 @@ new government_mechanic conjuration_focus_mechanic = {
 				NOT = {
 					has_country_modifier = conjuration_focus_secret
 				}
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 50
-				}
+				has_magicka = 50
 			}
 			effect = {
 				add_country_modifier = {
@@ -90,11 +78,7 @@ new government_mechanic conjuration_focus_mechanic = {
 					duration = (365*10)
 				}
 				
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -50
-				}
+				add_magicka = -50
 			}
 		}
 		conjuration_bound_button = {
@@ -123,11 +107,7 @@ new government_mechanic conjuration_focus_mechanic = {
 				NOT = {
 					has_country_modifier = conjuration_focus_bound
 				}
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 75
-				}
+				has_magicka = 75
 			}
 			effect = {
 				add_country_modifier = {
@@ -135,11 +115,7 @@ new government_mechanic conjuration_focus_mechanic = {
 					duration = (365*10)
 				}
 				
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -75
-				}
+				add_magicka = -75
 			}
 		}
 	}

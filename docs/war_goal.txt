@@ -1,0 +1,66 @@
+new war_goal <key> = {
+	type = <take_colony|take_core|take_border|take_province|take_capital|defend_capital|defend_country|naval_superiority|superiority|take_region|blockade_ports>
+	title = <string>
+	war_name = <string>
+	
+	attacker = {
+		badboy_factor = <float> #optional
+		prestige_factor = <float> #optional
+		peace_cost_factor = <float> #optional
+		
+		required_treaty_to_take_provinces = { #optional
+			<peace_treaties>
+		}
+		
+		allowed_provinces = { #optional
+			<triggers>
+		}
+		allowed_tribal_provinces = { #optional
+			<triggers>
+		}
+		allowed_provinces_are_eligible = <bool> #optional, this is for hre
+		allow_annex = <bool> #optional, this is for japan????
+		deny_annex = <bool> #optional
+		
+		peace_options = { #optional
+			<peace_treaties>
+		}
+		
+		transfer_trade_cost_factor = <float> #optional
+		
+		is_excommunication = <bool> #optional
+		
+		country_desc = <string> #optional
+		prov_desc = <string> #optional
+	}
+	defender = {
+		badboy_factor = <float> #optional
+		prestige_factor = <float> #optional
+		peace_cost_factor = <float> #optional
+		
+		required_treaty_to_take_provinces = { #optional
+			<peace_treaties>
+		}
+		
+		allowed_provinces = { #optional
+			<triggers>
+		}
+		allowed_tribal_provinces = { #optional
+			<triggers>
+		}
+		allowed_provinces_are_eligible = <bool> #optional, this is for hre
+		allow_annex = <bool> #optional, this is for japan????
+		deny_annex = <bool> #optional
+		
+		peace_options = { #optional
+			<peace_treaties>
+		}
+		
+		transfer_trade_cost_factor = <float> #optional
+		
+		is_excommunication = <bool> #optional
+		
+		country_desc = <string> #optional
+		prov_desc = <string> #optional
+	}	
+}

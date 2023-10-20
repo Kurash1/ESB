@@ -1,0 +1,26 @@
+new holy_order <id> = {
+	name = <string>
+	desc = <string> #optional
+	icon = <string>
+	trigger = {
+		<triggers>
+	}
+	color = {
+		<int> <int> <int>
+	}
+	cost = <int> #optional
+	cost_type = <adm_power|dip_power|mil_power>
+	on_apply = { #optional
+		<effects>
+	}
+	on_remove = { #optional
+		<effects>
+	}
+	modifier = { #optional
+		<modifiers>
+	}
+	ai_priority = { #optional
+		<ai_will_do>
+	}
+	localization = <string> #optional, what localization key to use for the name of the type of holy_order
+}

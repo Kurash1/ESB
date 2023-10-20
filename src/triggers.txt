@@ -1,8 +1,22 @@
+new trigger has_building_line = {
+	args = building_line
+	transpile = {
+		defineloc "has_building_line_{args}_tooltip" = "Have a §Y{args:name}§! Building"
+		custom_trigger_tooltip = {
+			tooltip = `has_building_line_{args}_tooltip`
+			OR = {
+				foreach $building in args:buildings {
+					`has_building = {$building}`
+				}
+			}
+		}
+	}
+}
 new trigger owns = {
 	args = province
-	transpile = {
-		`owns = {args}`
-	}
+}
+new trigger province_group = {
+	args = province_group
 }
 new trigger ags = {
 	args = int
@@ -12,9 +26,6 @@ new trigger ags = {
 }
 new trigger tag = {
 	args = country_scope
-	transpile = {
-		`tag = {args}`
-	}
 }
 new trigger development_in_provinces = {
 	args = {
@@ -30,63 +41,51 @@ new trigger development_in_provinces = {
 }
 new trigger has_terrain = {
 	args = terrain
-	transpile = {
-		`has_terrain = {args}`
-	}
 }
 new trigger area = {
 	args = area
-	transpile = {
-		`area = {args}`
-	}
 }
 new trigger primary_culture = {
 	args = culture
-	transpile = {
-		`primary_culture = {args}`
-	}
 }
 new trigger primary_culture = {
 	args = country_scope
-	transpile = {
-		`primary_culture = {args}`
-	}
 }
 new trigger has_estate_privilege = {
 	args = estate_privilege
-	transpile = {
-		`has_estate_privilege = {args}`
-	}
 }
-new trigger culture_group = {
+new trigger is_race = {
 	args = culture_group
 	transpile = {
 		`culture_group = {args}`
 	}
 }
-new trigger culture_group = {
+new trigger is_race = {
 	args = base_scope
 	transpile = {
 		`culture_group = {args}`
 	}
 }
+new trigger culture_group = {
+	args = culture_group
+}
+new trigger culture_group = {
+	args = base_scope
+}
+new trigger culture = {
+	args = culture
+}
+new trigger culture = {
+	args = base_scope
+}
 new trigger region = {
 	args = region
-	transpile = {
-		`region = {args}`
-	}
 }
 new trigger controls = {
 	args = province
-	transpile = {
-		`controls = {args}`
-	}
 }
 new trigger is_enemy = {
 	args = country_scope
-	transpile = {
-		`is_enemy = {args}`
-	}
 }
 new trigger has_trade_goods = {
 	args = tradegood

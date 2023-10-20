@@ -1,0 +1,174 @@
+new government_reform tier_2_skjoralmor_army = {
+	name = "Skjoralmor Army"
+	icon = skjoralmor_army
+	potential = {
+		has_country_flag = unlocks_skjoralmor_army
+	}
+	modifier = {
+		shock_damage_received = -0.05
+		extra_manpower_at_religious_war = yes
+	}
+}
+mission_trees:skjoralmor += {
+	a_deal = {
+		name = "A Deal"
+		icon = a_jarl_elected_mission
+		x = 1
+		y = 0
+		trigger = {
+			OR = {
+				treasury = 250
+				has_global_flag = skjoralmor_deal
+			}
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "Skjoralmor Deal"
+				modifier = {
+					land_morale = 0.10
+					land_forcelimit = 5
+					monthly_splendor = 2
+				}
+				years = 20
+			}
+		}
+	}
+	illinalta_fleet = {
+		name = "Illinalta Fleet"
+		icon = illinalta_fleet_mission
+		required = a_deal
+		x = 0
+		y = 1
+		trigger = {
+			navy_size_percentage = 1
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "Illinalta Fleet"
+				modifier = {
+					galley_power = 0.2
+					ship_durability = 0.05
+				}
+				years = 20
+			}
+		}
+	}
+	consult_the_guardians = {
+		name = "Consult the Guardians"
+		icon = consult_the_guardians_mission
+		required = a_deal
+		x = 1
+		y = 1
+		trigger = {
+			adm_power = 150
+			dip_power = 150
+			mil_power = 150
+		}
+		effect = {
+			add_adm_power = -150
+			add_dip_power = -150
+			add_mil_power = -150
+			quick_country_modifier = {
+				name = "Consulted the Guardians"
+				modifier = {
+					monthly_splendor = 5
+					country_admin_power = 1
+					country_diplomatic_power = 1
+					country_military_power = 1
+				}
+				years = 20
+			}
+		}
+	}
+	green_army = {
+		name = "Green Army"
+		icon = green_army_mission
+		required = a_deal
+		x = 2
+		y = 1
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			defineloc unlocks_skjoralmor_army = "Unlocks §YSkjoralmor Army§! Government Reform"
+			custom_tooltip = unlocks_skjoralmor_army
+			set_country_flag = unlocks_skjoralmor_army
+			quick_country_modifier = {
+				name = "The Green Army"
+				modifier = {
+					manpower_recovery_speed = 0.20
+				}
+				years = 20
+			}
+		}
+	}
+	bjarfrud_skjoralmor = {
+		name = "Bjarfrud Skjoralmor"
+		icon = bjarfrud_skjoralmor_mission
+		required = {
+			illinalta_fleet
+			consult_the_guardians
+			green_army
+		}
+		x = 1
+		y = 2
+		trigger = {
+			has_age_ability = ab_skjoralmor_conquests
+		}
+		effect = {
+			define_ruler = {
+				name = "Bjarfrud"
+				dynasty = "Skjoralmor"
+				adm = 5
+				dip = 4
+				mil = 6
+				age = 20
+				claim = 95
+			}
+			defineloc unlocks_skjoralmor_order = "Unlocks §YSkjoralmor Order§! Holy Order"
+			custom_tooltip = unlocks_skjoralmor_order
+			set_country_flag = unlocks_skjoralmor_order
+			defineloc skjoralmor_stronghold_conquest_tt = "§Y[This.GetName]§! gains a §YSiege of Stronghold§! Casus Belli on all §YKreath Orc§! Countries
+This Casus Belli will last for §G25§! years."
+			custom_tooltip = skjoralmor_stronghold_conquest_tt
+			hidden_effect = {
+				every_country [primary_culture = kreath_orc] {
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_stronghold_siege
+						months = 300
+					}
+				}
+			}
+		}
+	}
+}
+new war_goal war_goal_stronghold_siege = {
+	type = take_capital
+	title = "Siege of Stronghold Title"
+	war_name = "Siege of Stronghold War Name"
+	attacker = {
+		badboy_factor = 0.25
+		prestige_factor = 2
+		peace_cost_factor = 0.75
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+	}
+}
+new casus_belli cb_stronghold_siege = {
+	name = "Siege of Stronghold"
+	is_triggered_only = yes
+	months = 300
+	war_goal = war_goal_stronghold_siege
+}
