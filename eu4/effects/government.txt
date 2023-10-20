@@ -1,0 +1,90 @@
+new effect add_absolutism = {
+	args = int
+}
+new effect add_government_reform = {
+	args = government_reform
+}
+new effect remove_government_reform = {
+	args = government_reform
+}
+new effect change_government_reform_progress = {
+	args = int
+}
+new effect add_legitimacy = {
+	args = int
+}
+new effect add_legitimacy = {
+	args = country_scope
+}
+new effect add_republican_tradition = {
+	args = int
+}
+new effect add_scaled_republican_tradition = {
+	args = int
+}
+new effect add_devotion = {
+	args = int
+}
+new effect add_horde_unity = {
+	args = int
+}
+new effect add_meritocracy = {
+	args = int
+}
+new effect set_meritocracy = {
+	args = int
+}
+new effect add_revolutionary_zeal = {
+	args = int
+}
+new effect add_tribal_allegiance = {
+	args = int
+}
+new effect adopt_reform_progress = {
+	args = country_scope
+}
+new effect change_government = {
+	args = government
+}
+new effect set_government_rank = {
+	args = int
+}
+new effect add_government_power = {
+	args = {
+		mechanic_type = government_mechanic
+		power_type = string
+		value = float
+	}
+}
+new effect add_government_power_scaled_to_seats = {
+	args = {
+		mechanic_type = government_mechanic
+		power_type = string
+		value = float
+	}
+}
+new effect set_government_power = {
+	args = {
+		mechanic_type = government_mechanic
+		power_type = string
+		value = float
+	}
+}
+new effect freeze_government_power = {
+	args = {
+		mechanic_type = government_mechanic
+		power_type = string
+	}
+}
+new effect unfreeze_government_power = {
+	args = {
+		mechanic_type = government_mechanic
+		power_type = string
+	}
+}
+new effect dissolve_parliament = {
+	args = bool
+}
+new effect reinstate_parliament = {
+	args = bool
+}

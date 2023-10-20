@@ -2092,6 +2092,24 @@ new province brittleshin = {
 	}
 	impassible = yes
 }
+new province pinewood_mountains = {
+	position = {
+		1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = "Pinewood Mountains"
+	color = {
+		16 29 50
+	}
+	history = {
+	}
+	impassible = yes
+}
 new province west_jerall_mountains = {
 	position = {
 		1720.000 1798.000 1720.000 1798.000 1720.000 1798.000 1720.000 1798.000 1720.000 1798.000 1720.000 1798.000 1720.000 1798.000
@@ -2112,7 +2130,7 @@ new province west_jerall_mountains = {
 }
 new province south_druadach_mountains = {
 	position = {
-		1577.000 1846.000 1577.000 1846.000 1577.000 1846.000 1577.000 1846.000 1577.000 1846.000 1577.000 1846.000 1577.000 1846.000
+		1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -2121,6 +2139,24 @@ new province south_druadach_mountains = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	name = "South Druadach Mountains"
+	color = {
+		29 30 15
+	}
+	history = {
+	}
+	impassible = yes
+}
+new province central_druadach_mountains = {
+	position = {
+		1577.000 1846.000 1577.000 1846.000 1577.000 1846.000 1577.000 1846.000 1577.000 1846.000 1577.000 1846.000 1577.000 1846.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = "Central Druadach Mountains"
 	color = {
 		14 10 25
 	}

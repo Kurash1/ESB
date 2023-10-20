@@ -1,3 +1,30 @@
+new area shriekwind = {
+	name = "Shriekwind"
+	region = kreath
+}
+new province shriekwind_bastion = {
+	position = {
+		1705.000 1838.000 1705.000 1838.000 1699.000 1846.000 1699.500 1853.500 1699.000 1846.000 1705.000 1838.000 1699.000 1846.000
+	}
+	rotation = {
+		0.000 0.000 0.000 2.705 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 7.750 0.365 0.365 0.365
+	}
+	area = shriekwind
+	name = "Shriekwind Bastion"
+	terrain = mountain
+	color = {
+		200 253 106
+	}
+	history = {
+		hre = no
+		capital = ""
+		religion = code_of_malacath
+		culture = kreath_orc
+	}
+}
 new area lakeview = {
 	name = "Lakeview"
 	region = kreath
@@ -20,7 +47,7 @@ new province north_shriekwind = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = vosh_urgalick
 		history_trade_goods = wood
@@ -46,12 +73,13 @@ new province silvercliff = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = nor_lorak
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new province lakeview = {
@@ -72,7 +100,7 @@ new province lakeview = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = nor_lorak
 		history_trade_goods = wood
@@ -102,7 +130,7 @@ new province copper_forest = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = or_murimush
 		history_trade_goods = wood
@@ -128,7 +156,7 @@ new province helgen_road = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = or_murimush
 		history_trade_goods = wood
@@ -154,7 +182,7 @@ new province sky_forest = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = cultures:falkrentish
+		culture = falkrentish
 		hre = yes
 		history_trade_goods = wood
 		capital = ""
@@ -185,17 +213,43 @@ new province neugrad = {
 	history = {
 		center_of_trade = 1
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
-		history_owner = southfringe
+		history_owner = jur_tarask
 		history_trade_goods = fish
+		capital = ""
+		is_city = yes
+	}
+}
+new province neugrad_pass = {
+	position = {
+		1775.000 1812.000 1775.000 1812.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1775.000 1813.000 1769.000 1808.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = neugrad
+	name = "Neugrad Pass"
+	terrain = mountain
+	color = {
+		121 236 150
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
+		history_owner = jur_tarask
+		history_trade_goods = stone
 		capital = ""
 		is_city = yes
 	}
 }
 new province bloodlet_peaks = {
 	position = {
-		1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000
+		1758.000 1800.000 1759.000 1800.000 1769.000 1808.000 1769.000 1808.000 1769.000 1808.000 1758.000 1800.000 1769.000 1808.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -207,13 +261,13 @@ new province bloodlet_peaks = {
 	name = "Bloodlet Peaks"
 	terrain = mountain
 	color = {
-		121 236 150
+		243 201 186
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
-		history_owner = southfringe
+		history_owner = jur_tarask
 		history_trade_goods = stone
 		capital = ""
 		is_city = yes
@@ -221,7 +275,7 @@ new province bloodlet_peaks = {
 }
 new province southfringe = {
 	position = {
-		1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000
+		1778.000 1791.000 1779.000 1791.000 1772.000 1794.000 1772.000 1794.000 1772.000 1794.000 1779.000 1791.000 1772.000 1794.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -237,12 +291,13 @@ new province southfringe = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
-		history_owner = southfringe
+		history_owner = jur_tarask
 		history_trade_goods = stone
 		capital = ""
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new area orphan_rock = {
@@ -270,7 +325,7 @@ new province haemar = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = agra_granosh
 		history_trade_goods = stone
@@ -296,12 +351,13 @@ new province orphan_rock = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = agra_granosh
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new province neugrad_crossing = {
@@ -322,7 +378,7 @@ new province neugrad_crossing = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = or_murimush
 		history_trade_goods = wood
@@ -352,7 +408,7 @@ new province pinewatch = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = rakh_ubeshka
 		history_trade_goods = wood
@@ -378,7 +434,7 @@ new province far_shriekwind = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = or_murimush
 		history_trade_goods = wood
@@ -388,7 +444,7 @@ new province far_shriekwind = {
 }
 new province bonechill = {
 	position = {
-		1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000
+		1745.000 1823.000 1745.000 1823.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1746.000 1823.000 1751.000 1823.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -404,7 +460,33 @@ new province bonechill = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
+		hre = no
+		history_owner = or_murimush
+		history_trade_goods = silver
+		capital = ""
+		is_city = yes
+	}
+}
+new province greywater = {
+	position = {
+		1760.000 1820.000 1760.000 1820.000 1751.000 1823.000 1751.000 1823.000 1751.000 1823.000 1759.000 1821.000 1751.000 1823.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = helgen
+	terrain = highlands
+	name = "Greywater"
+	color = {
+		228 223 204
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
 		hre = no
 		history_owner = or_murimush
 		history_trade_goods = silver
@@ -431,12 +513,13 @@ new province helgen = {
 	history = {
 		center_of_trade = 1
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = or_murimush
 		history_trade_goods = stone
 		capital = ""
 		is_city = no
+		set_province_flag = orc_stronghold
 	}
 }
 new area bloodlet = {
@@ -461,7 +544,7 @@ new province ancestor_glade = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = rakh_ubeshka
 		history_trade_goods = alchemical_ingredients
@@ -487,7 +570,7 @@ new province angis_camp = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = dulg_krazak
 		history_trade_goods = stone
@@ -495,9 +578,35 @@ new province angis_camp = {
 		is_city = no
 	}
 }
+new province grey_peak = {
+	position = {
+		1711.000 1791.000 1711.000 1792.000 1711.000 1804.000 1711.000 1804.000 1711.000 1804.000 1712.000 1792.000 1711.000 1804.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = bloodlet
+	name = "Grey Peak"
+	terrain = mountain
+	color = {
+		216 236 159
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
+		history_owner = dulg_krazak
+		history_trade_goods = gold
+		capital = ""
+		is_city = no
+	}
+}
 new province bloodlet = {
 	position = {
-		1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000
+		1742.000 1791.000 1742.000 1791.000 1742.000 1791.000 1732.000 1798.000 1732.000 1798.000 1742.000 1791.000 1732.000 1798.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -513,10 +622,65 @@ new province bloodlet = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = dulg_krazak
 		history_trade_goods = stone
+		capital = ""
+		is_city = yes
+		set_province_flag = orc_stronghold
+	}
+}
+new province blood_peak = {
+	position = {
+		1726.000 1800.000 1726.000 1800.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1726.000 1799.000 1732.000 1798.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = bloodlet
+	name = "Blood Peak"
+	terrain = mountain
+	color = {
+		125 249 241
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
+		history_owner = dulg_krazak
+		history_trade_goods = stone
+		capital = ""
+		is_city = yes
+	}
+}
+new area ancients_ascent = {
+	name = "Ancient's Ascent"
+	region = kreath
+}
+new province ancients_ascent = {
+	position = {
+		1740.000 1808.000 1740.000 1807.000 1732.000 1798.000 1732.000 1798.000 1732.000 1798.000 1741.000 1808.000 1732.000 1798.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = ancients_ascent
+	name = "Ancient's Ascent"
+	terrain = mountain
+	color = {
+		210 160 103
+	}
+	history = {
+		religion = code_of_malacath
+		culture = kreath_orc
+		hre = no
 		capital = ""
 		is_city = yes
 	}
@@ -543,7 +707,7 @@ new province overfalk = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = rakh_ubeshka
 		history_trade_goods = wood
@@ -553,7 +717,7 @@ new province overfalk = {
 }
 new province halldir = {
 	position = {
-		1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000
+		1675.000 1809.000 1674.000 1809.000 1674.000 1812.000 1674.000 1812.000 1674.000 1812.000 1675.000 1808.000 1674.000 1812.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -569,12 +733,13 @@ new province halldir = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = zugra_krazak
 		history_trade_goods = wood
 		capital = ""
 		is_city = no
+		set_province_flag = orc_stronghold
 	}
 }
 new area falkreath = {
@@ -599,7 +764,7 @@ new province roadside = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = vosh_urgalick
 		history_trade_goods = wood
@@ -626,7 +791,7 @@ new province falkreath = {
 	history = {
 		center_of_trade = 1
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = rakh_ubeshka
 		history_trade_goods = wood
@@ -652,12 +817,13 @@ new province peak_shade = {
 	}
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = rakh_ubeshka
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new area cracked_tusk = {
@@ -682,7 +848,7 @@ new province bannermist = {
 	terrain = forest
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = vosh_urgalick
 		history_trade_goods = wood
@@ -708,7 +874,7 @@ new province twilight_sepulcher = {
 	terrain = forest
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = vosh_urgalick
 		history_trade_goods = wood
@@ -737,7 +903,7 @@ new province evergreen_grove = {
 	terrain = forest
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = vosh_urgalick
 		history_trade_goods = wood
@@ -764,12 +930,13 @@ new province cracked_tusk = {
 	history = {
 		center_of_trade = 1
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = vosh_urgalick
 		history_trade_goods = arms
 		capital = ""
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new area half_moon = {
@@ -794,7 +961,7 @@ new province illinaltas_deep = {
 	terrain = forest
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = vorkhim_uhz
 		history_trade_goods = wood
@@ -821,12 +988,13 @@ new province half_moon = {
 	history = {
 		center_of_trade = 1
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = vorkhim_uhz
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new province green_coast = {
@@ -847,7 +1015,7 @@ new province green_coast = {
 	terrain = forest
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		quick_province_modifier = {
 			name = "Lady Stone"
@@ -883,7 +1051,7 @@ new province sunderstone_gorge = {
 	terrain = forest
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = crun_beshkar
 		history_trade_goods = silver
@@ -912,12 +1080,13 @@ new province bilegulch = {
 	terrain = hills
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = crun_beshkar
 		history_trade_goods = r_metals
 		capital = ""
 		is_city = yes
+		set_province_flag = orc_stronghold
 	}
 }
 new province knifepoint = {
@@ -938,12 +1107,13 @@ new province knifepoint = {
 	terrain = hills
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = aht_beshkar
 		history_trade_goods = r_metals
 		capital = ""
 		is_city = no
+		set_province_flag = orc_stronghold
 	}
 }
 new province hunters_rest = {
@@ -964,7 +1134,7 @@ new province hunters_rest = {
 	terrain = forest
 	history = {
 		religion = code_of_malacath
-		culture = cultures:kreath_orc
+		culture = kreath_orc
 		hre = no
 		history_owner = crun_beshkar
 		history_trade_goods = wood

@@ -1,0 +1,290 @@
+new province_event skjoralmor.1 = {
+	title = "Purpose of Half-Moon"
+	desc = ""
+	picture = half_moon_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "A naval port should be good"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Navy"
+					modifier = {
+						local_sailors_modifier = 0.5
+						local_ship_cost = -0.3
+						naval_forcelimit = 3
+					}
+				}
+			}
+		}
+		{
+			name = "It is on a good trade route"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Trade"
+					modifier = {
+						province_trade_power_modifier = 0.25
+						province_trade_power_value = 2.5
+					}
+				}
+			}
+		}
+		{
+			name = "We need to exploit the forest"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Exploitation"
+					modifier = {
+						trade_goods_size_modifier = 0.25
+						local_production_efficiency = 0.25
+					}
+				}
+			}
+		}
+	}
+}
+new province_event skjoralmor.2 = {
+	title = "Purpose of Cracked Tusk"
+	desc = ""
+	picture = cracked_tusk_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "§YCracked Tusk§! will be home for the §YSkjoralmor Order§!"
+			effect = {
+				quick_province_modifier = {
+					name = "Cracked Tusk Keep"
+					modifier = {
+						local_fort_maintenance_modifier = -0.5
+						local_defender_dice_roll_bonus = 1
+						establish_order_cost = -0.5
+					}
+				}
+			}
+		}
+		{
+			name = "§YGularz Khazgur§! will be the new home to our orc citizens"
+			effect = {
+				change_province_name = "Gularz Khazgur"
+				new_custom_tooltip = "§YGularz Khazgur§! gets the conditional modifier '§YOrc Stronghold§!'
+	§RDue to scripting limitations this modifier only appears in 31 days§!"
+				hidden_effect = {
+					rename_capital = "Gularz Khazgur"
+					set_province_flag = orc_stronghold
+					province_event = {
+						id = orc_stronghold.1
+						days = 31
+					}
+				}
+			}
+		}
+	}
+}
+new province_group illinalta_road = {
+	name = "Illinalta Road"
+	provinces = {
+		illinaltas_deep half_moon green_coast roadside falkreath north_shriekwind silvercliff lakeview
+	}
+}
+mission_trees:skjoralmor += {
+	half_moon = {
+		name = "Half-Moon"
+		icon = half_moon_mission
+		required = falks_kreath
+		x = 4
+		y = 1
+		trigger = {
+			owns = half_moon
+			provinces:half_moon = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:half_moon = {
+				province_event = skjoralmor.1
+			}
+		}
+	}
+	illinaltas_deep = {
+		name = "Illinalta's Deep"
+		icon = illinaltas_deep_mission
+		required = half_moon
+		x = 3
+		y = 2
+		trigger = {
+			owns = illinaltas_deep
+			provinces:illinaltas_deep = {
+				fort_level = 1
+			}
+		}
+		effect = {
+			provinces:illinaltas_deep = {
+				quick_province_modifier = {
+					name = "Port-Fort"
+					modifier = {
+						naval_forcelimit = 5
+						blockade_force_required = 1.0
+						hostile_fleet_attrition = 2
+					}
+				}
+			}
+		}
+	}
+	illinalta_road = {
+		name = "Illinalta Road"
+		icon = illinalta_road_mission
+		required = {
+			falkreath half_moon
+		}
+		provinces_to_highlight = {
+			province_group = illinalta_road
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					has_building_line = road
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			province_groups:illinalta_road = {
+				type = all
+				owned_by = ROOT
+				has_building_line = road
+				development = 10
+			}
+		}
+		effect = {
+			province_groups:illinalta_road = {
+				quick_province_modifier = {
+					name = "Illinalta Road"
+					modifier = {
+						province_trade_power_modifier = 0.10
+					}
+				}
+			}
+		}
+		x = 5
+		y = 2
+	}
+	evergreen_grove = {
+		name = "Evergreen Grove"
+		icon = evergreen_grove_mission
+		required = half_moon
+		x = 4
+		y = 2
+		trigger = {
+			owns = evergreen_grove
+			provinces:evergreen_grove = {
+				base_production = 5
+			}
+		}
+		effect = {
+			provinces:evergreen_grove = {
+				change_trade_goods = potions
+			}
+		}
+	}
+	knifepoint = {
+		name = "Knifepoint Mine"
+		icon = knifepoint_mission
+		required = evergreen_grove
+		x = 3
+		y = 3
+		trigger = {
+			owns = knifepoint
+			provinces:knifepoint = {
+				has_building = def_manufactory
+			}
+		}
+		effect = {
+			provinces:knifepoint = {
+				quick_province_modifier = {
+					name = "Knifepoint Mine"
+					modifier = {
+						trade_goods_size_modifier = 0.5
+					}
+				}
+			}
+		}
+	}
+	cracked_tusk = {
+		name = "Cracked Tusk Keep"
+		icon = cracked_tusk_mission
+		required = evergreen_grove
+		x = 4
+		y = 3
+		trigger = {
+			owns = cracked_tusk
+			provinces:cracked_tusk = {
+				fort_level = 1
+				development = 15
+			}
+		}
+		effect = {
+			provinces:cracked_tusk = {
+				province_event = skjoralmor.2
+			}
+		}
+	}
+	bilegulch = {
+		name = "Bilegulch Mine"
+		icon = bilegulch_mission
+		required = evergreen_grove
+		x = 5
+		y = 3
+		trigger = {
+			owns = bilegulch
+			provinces:bilegulch = {
+				has_building = def_manufactory
+			}
+		}
+		effect = {
+			provinces:bilegulch = {
+				quick_province_modifier = {
+					name = "Bilegulch Mine"
+					modifier = {
+						trade_goods_size_modifier = 0.5
+					}
+				}
+			}
+		}
+	}
+	tame_the_forest = {
+		name = "Tame the Forest"
+		icon = tame_the_forest_mission
+		required = {
+			knifepoint
+			bilegulch
+			cracked_tusk
+		}
+		x = 4
+		y = 4
+		provinces_to_highlight = {
+			OR = {
+				area = bilegulch
+				area = cracked_tusk
+			}
+			NOT = {
+				development = 10
+			}
+		}
+		trigger = {
+			areas:bilegulch, areas:cracked_tusk = {
+				type = all
+				development = 10
+			}
+		}
+		effect = {
+			areas:bilegulch, areas:cracked_tusk = {
+				quick_province_modifier = {
+					name = "Tamed the Forest"
+					modifier = {
+						trade_value_modifier = 0.5
+						local_friendly_movement_speed = 0.25
+					}
+				}
+			}
+		}
+	}
+}

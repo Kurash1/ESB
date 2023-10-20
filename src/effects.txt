@@ -1,3 +1,10 @@
+new effect move_great_project = {
+	args = {
+		type = great_project
+		province = province
+		instant = bool
+	}
+}
 new effect history_owner = {
 	args = country
 	transpile = {
@@ -6,23 +13,17 @@ new effect history_owner = {
 		`add_core = {args}`
 	}
 }
+new effect cede_province = {
+	args = country_scope
+}
 new effect add_core = {
 	args = country_scope
-	transpile = {
-		`add_core = {args}`
-	}
 }
 new effect add_permanent_claim = {
 	args = country_scope
-	transpile = {
-		`add_permanent_claim = {args}`
-	}
 }
 new modifier land_morale = {
 	args = float
-	transpile = {
-		`land_morale = {args}`
-	}
 }
 new effect add_modifier = {
 	args = {
@@ -44,11 +45,9 @@ new effect history_trade_goods = {
 }
 new effect change_culture = {
 	args = culture
-	transpile = { `change_culture = {args}` }
 }
 new effect change_culture = {
 	args = country_scope
-	transpile = { `change_culture = {args}` }
 }
 new effect add_permanent_power_projection = {
 	args = {
@@ -77,20 +76,14 @@ new effect add_power_projection = {
 }
 new effect set_estate_privilege = {
 	args = estate_privilege
-	transpile = {
-		`set_estate_privilege = {args}`
-	}
 }
 new effect remove_estate_privilege = {
 	args = estate_privilege
-	transpile = {
-		`remove_estate_privilege = {args}`
-	}
 }
 new effect define_advisor = {
 	args = {
 		type = advisor_type
-		name = string?
+		name = text?
 		skill = int?
 		location = province?
 		discount = bool?
@@ -99,42 +92,17 @@ new effect define_advisor = {
 		culture = culture?
 		religion = religion?
 	}
-	transpile = {
-		`define_advisor =` {
-			`type = {args:type}`
-			when [exists = args:name] `name = {args:name}`
-			when [exists = args:skill] `skill = {args:skill}`
-			when [exists = args:location] `location = {args:location}`
-			when [exists = args:discount] `discount = {args:discount}`
-			when [exists = args:cost_multiplier] `cost_multiplier = {args:cost_multiplier}`
-			when [exists = args:female] `female = {args:female}`
-			when [exists = args:culture] `culture = {args:culture}`
-			when [exists = args:religion] `religion = {args:religion}`
-		}
-	}
 }
 new effect change_trade_goods = {
 	args = tradegood
-	transpile = {
-		`change_trade_goods = {args}`
-	}
 }
 new effect set_allow_female_emperor = {
 	args = bool
-	transpile = {
-		`set_allow_female_emperor = {args}`
-	}
 }
 new effect add_opinion = {
 	args = {
 		who = country_scope
 		modifier = opinion_modifier
-	}
-	transpile = {
-		`add_opinion =` {
-			`who = {args:who}`
-			`modifier = {args:modifier}`
-		}
 	}
 }
 #new effect add_great_project_tier = {
@@ -149,16 +117,29 @@ new effect add_opinion = {
 #		
 #		}
 #	}
-#}	
+#}
 new effect set_estate_privilege = {
 	args = estate_privilege
-	transpile = {
-		`set_estate_privilege = {args}`
-	}
 }
 new effect remove_estate_privilege = {
 	args = estate_privilege
+}
+new effect set_imperial_incident = {
+	args = incident
 	transpile = {
-		`remove_estate_privilege = {args}`
+		if [has_dlc = "Emperor"] {
+			`set_imperial_incident = {args}`
+		}
+		else {
+			emperor = {
+				args:options:1:effect
+			}
+		}
 	}
+}
+new effect culture = {
+	args = culture
+}
+new effect culture = {
+	args = base_scope
 }

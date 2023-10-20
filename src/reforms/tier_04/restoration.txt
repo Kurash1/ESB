@@ -39,22 +39,14 @@ new government_mechanic restoration_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 10
-				}
+				has_magicka = 10
 				any_owned_province = {
 					NOT = { has_province_modifier = restoration_blessing }
 				}
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -10
-				}
-			
+				add_magicka = -10
+				
 				random_owned_province [NOT = { has_province_modifier = restoration_blessing }] {
 					add_province_modifier = { 
 						name = restoration_blessing
@@ -86,18 +78,10 @@ new government_mechanic restoration_focus_mechanic = {
 				}
 			}
 			trigger = {
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 50
-				}
+				has_magicka = 50
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -50
-				}
+				add_magicka = -50
 			
 				add_yearly_manpower = 2
 			}
@@ -128,18 +112,10 @@ new government_mechanic restoration_focus_mechanic = {
 				NOT = {
 					has_ruler_modifier = fortify_ruler
 				}
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 100
-				}
+				has_magicka = 100
 			}
 			effect = {
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -100
-				}
+				add_magicka = -100
 				
 				random_list = {
 					2 = {					

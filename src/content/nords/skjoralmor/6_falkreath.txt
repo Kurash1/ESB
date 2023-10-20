@@ -1,0 +1,258 @@
+mission_trees:skjoralmor += {
+	falkreath = {
+		name = "Falkreath"
+		icon = falkreath_city_mission
+		required = falks_kreath
+		x = 6
+		y = 1
+		trigger = {
+			owns = falkreath
+			provinces:falkreath = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:falkreath = {
+				quick_province_modifier = {
+					name = "Falkreath City"
+					modifier = {
+						local_tax_modifier = 0.25
+						local_production_efficiency = 0.25
+						local_manpower_modifier = 0.25
+						local_development_cost = -0.1
+					}
+				}
+			}
+		}
+	}
+}
+on_actions:on_battle_won_country += {
+	if [
+		OR = {
+			tag = skjoralmor
+			tag = falkreath
+		}
+	] {
+		change_variable = {
+			which = total_casualties_caused
+			which = land_units_killed
+		}
+	}
+}
+on_actions:on_battle_lost_country += {
+	if [
+		OR = {
+			tag = skjoralmor
+			tag = falkreath
+		}
+	] {
+		change_variable = {
+			which = total_casualties_caused
+			which = land_units_killed
+		}
+	}
+}
+mission_trees:skjoralmor += {
+	heroes_graveyard = {
+		name = "Heroes' Graveyard"
+		icon = heroes_graveyard_mission
+		required = falkreath
+		x = 6
+		y = 3
+		trigger = {
+			defineloc total_casualties_caused = "Total Casualties Caused"
+			check_variable = {
+				which = total_casualties_caused
+				value = 150000
+			}
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "Heroes' Graveyard"
+				modifier = {
+					morale_damage_received = -0.05
+					reserves_organisation = 0.10
+				}
+			}
+		}
+	}
+	high_hall = {
+		name = "High Hall"
+		icon = hakkvilds_high_hall_mission
+		required = heroes_graveyard
+		x = 5
+		y = 4
+		trigger = {
+			owns = falkreath
+			government_rank = 4
+			monthly_adm = 8
+			monthly_dip = 8
+			monthly_mil = 8
+		}
+		effect = {
+			provinces:black_mountain = {
+				if [has_dlc = "Leviathan"] {
+					move_great_project = {
+						type = hakkvilds_high_hall
+						province = falkreath
+						instant = yes
+					}
+				}
+				else {
+					quick_province_modifier = {
+						name = "Hakkvild's High Hall"
+						modifier = {
+							legitimacy = 0.5
+							governing_capacity_modifier = 0.05
+							advisor_cost = -0.1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+new great_project hakkvilds_high_hall = {
+	name = "Hakkvild's High Hall"
+	start = black_mountain
+	tier_1 = {
+		country_modifier = {
+			legitimacy = 0.5
+			governing_capacity_modifier = 0.05
+			advisor_cost = -0.1
+		}
+	}
+	tier_2 = {
+		country_modifier = {
+			legitimacy = 1
+			governing_capacity_modifier = 0.1
+			advisor_cost = -0.2
+		}
+	}
+	tier_3 = {
+		country_modifier = {
+			legitimacy = 1.5
+			governing_capacity_modifier = 0.15
+			advisor_cost = -0.25
+		}
+	}
+}
+new great_project shriekwind_bastion = {
+	name = "Shriekwind Bastion"
+	start = black_mountain
+	tier_1 = {
+		province_modifier = {
+			fort_level = 1
+			max_attrition = 1
+			local_hostile_attrition = 1
+			local_defensiveness = 0.1
+		}
+		country_modifier = {
+			prestige = 0.5
+			global_manpower_modifier = 0.1
+		}
+	}
+	tier_2 = {
+		province_modifier = {
+			fort_level = 1
+			max_attrition = 2
+			local_hostile_attrition = 2
+			local_defensiveness = 0.2
+		}
+		country_modifier = {
+			prestige = 1
+			global_manpower_modifier = 0.2
+		}
+	}
+	tier_3 = {
+		province_modifier = {
+			fort_level = 2
+			max_attrition = 3
+			local_hostile_attrition = 3
+			local_defensiveness = 0.3
+		}
+		country_modifier = {
+			prestige = 1.5
+			global_manpower_modifier = 0.25
+		}
+	}
+}
+mission_trees:skjoralmor += {
+	shriekwind_bastion = {
+		name = "Shriekwind Bastion"
+		icon = shriekwind_bastion_mission
+		required = heroes_graveyard
+		x = 7
+		y = 4
+		trigger = {
+			owns = north_shriekwind
+			provinces:north_shriekwind = {
+				has_great_project = {
+					type = north_shriekwind
+					tier = 1
+				}
+			}
+			owns = peak_shade
+			provinces:peak_shade = {
+				has_great_project = {
+					type = south_shriekwind
+					tier = 1
+				}
+			}
+		}
+		effect = {
+			provinces:black_mountain = {
+				if [has_dlc = "Leviathan"] {
+					move_great_project = {
+						type = shriekwind_bastion
+						province = shriekwind_bastion
+						instant = yes
+					}
+				}
+				else {
+					quick_province_modifier = {
+						name = "Shriekwind Bastion"
+						modifier = {
+							fort_level = 1
+							max_attrition = 1
+							local_hostile_attrition = 1
+							local_defensiveness = 0.1
+							
+							prestige = 0.5
+							global_manpower_modifier = 0.1
+						}
+					}
+				}
+			}
+		}
+	}
+	capital_kreath = {
+		name = "Capital Kreath"
+		icon = capital_kreath_mission
+		required = {
+			high_hall
+			shriekwind_bastion
+		}
+		x = 6
+		y = 5
+		trigger = {
+			owns = falkreath
+			provinces:falkreath = {
+				development = 30
+			}
+		}
+		effect = {
+			provinces:falkreath = {
+				quick_province_modifier = {
+					name = "Capital Kreath"
+					modifier = {
+						local_tax_modifier = 0.25
+						local_production_efficiency = 0.25
+						local_manpower_modifier = 0.25
+						local_development_cost = -0.1
+					}
+				}
+			}
+		}
+	}
+}

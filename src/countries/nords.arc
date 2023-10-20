@@ -462,6 +462,22 @@ new country skjoralmor = {
 	capital = riverwood
 	history = {
 		elector = yes
+		2500.1.1 = {
+			monarch = {
+				name = "Valdr"
+				dynasty = "Skjoralmor"
+				adm = 4
+				dip = 4
+				mil = 4
+				birth_date = 2482.1.1
+			}
+		}
+		1.1.1 = {
+			set_variable = {
+				which = total_casualties_caused
+				which = 0
+			}
+		}
 	}
 	starting_reform = tier_1_skjoralmor_clan
 }

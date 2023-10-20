@@ -12,11 +12,7 @@ You Lose §R15.00§! Magicka"
 		has_government_attribute = has_espionage_magic
 	}
 	trigger = {
-		has_government_power = { 
-			mechanic_type = magicka_mechanic
-			power_type = magicka
-			value = 15
-		}
+		has_magicka = 15
 	}
 	
 	on_accept = {
@@ -49,11 +45,7 @@ You Lose §R15.00§! Magicka"
 				value = 1
 			}
 		}
-		add_government_power = { 
-			mechanic_type = magicka_mechanic
-			power_type = magicka
-			value = -15
-		}
+		add_magicka = -15
 	}
 	
 	ai_will_do = {
@@ -108,11 +100,7 @@ new government_mechanic illusion_focus_mechanic = {
 				NOT = {
 					has_country_modifier = illusion_focus_spy
 				}
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 25
-				}
+				has_magicka = 25
 			}
 			effect = {
 				add_country_modifier = {
@@ -120,11 +108,7 @@ new government_mechanic illusion_focus_mechanic = {
 					duration = (365*10)
 				}
 				
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -25
-				}
+				add_magicka = -25
 			}
 		}
 		illusion_charm_button = {
@@ -153,11 +137,7 @@ new government_mechanic illusion_focus_mechanic = {
 				NOT = {
 					has_country_modifier = illusion_focus_charm
 				}
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 50
-				}
+				has_magicka = 50
 			}
 			effect = {
 				add_country_modifier = {
@@ -165,11 +145,7 @@ new government_mechanic illusion_focus_mechanic = {
 					duration = (365*10)
 				}
 				
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -50
-				}
+				add_magicka = -50
 			}
 		}
 		illusion_inspire_button = {
@@ -198,11 +174,7 @@ new government_mechanic illusion_focus_mechanic = {
 				NOT = {
 					has_country_modifier = illusion_focus_inspire
 				}
-				has_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = 75
-				}
+				has_magicka = 75
 			}
 			effect = {
 				add_country_modifier = {
@@ -210,11 +182,7 @@ new government_mechanic illusion_focus_mechanic = {
 					duration = (365*10)
 				}
 				
-				add_government_power = { 
-					mechanic_type = magicka_mechanic
-					power_type = magicka
-					value = -75
-				}
+				add_magicka = -75
 			}
 		}
 	}

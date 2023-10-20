@@ -1,0 +1,60 @@
+new localisation bonechill_exp_tooltip = "Unlocks a Great Project §YBonechill Pass§! in §YBonechill§! province"
+new expedition bonechill = {
+	picture = bonechill_pass_eventPicture
+	length = 1
+	on_complete = {
+		set_province_flag = bonechill_pass
+		custom_tooltip = bonechill_exp_tooltip
+	}
+}
+new localisation bonechill_pass_tooltip = "Connects §YBonechill§! to §YAncient's Ascent§!"
+new great_project bonechill_pass = {
+	name = "Bonechill Pass"
+	start = bonechill
+	type = canal
+	date = 3000.1.1
+	starting_tier = 3
+	time = 60
+	can_be_moved = no
+	build_cost = 500
+	build_trigger = {
+		has_province_flag = bonechill_pass
+	}
+	on_built = {
+		add_canal = bonechill_pass
+		provinces:ancients_ascent = {
+			if [is_city = no] {
+				add_siberian_construction = 100
+			}
+		}
+	}
+	on_destroyed = {
+		remove_canal = bonechill_pass
+	}
+	tier_0 = {
+		on_upgraded = {
+			custom_tooltip = bonechill_pass_tooltip
+		}
+	}
+	tier_1 = {
+		on_upgraded = {
+			custom_tooltip = bonechill_pass_tooltip
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			custom_tooltip = bonechill_pass_tooltip
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			custom_tooltip = bonechill_pass_tooltip
+		}
+	}
+}
+new adjacency bonechill_pass = {
+	from = ancients_ascent
+	to = bonechill
+	through = bonechill
+	type = canal
+}
