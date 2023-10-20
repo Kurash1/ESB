@@ -1,0 +1,61 @@
+new idea_group religious_ideas = {
+	name = "Religious"
+	category = ADM
+	ideas = {
+		{
+			name = "Missionary Schools"
+			desc = "Although there is no shortage of people ready to go out and spread the true faith, most of these people simply do more harm than good. However, specialist schools to train the missionaries will ensure we have more people who cannot only spread the faith but succeed as well."
+			modifier = {
+				missionaries = 1
+			}
+		}
+		{
+			name = "Church Attendance Duty"
+			desc = "By adopting a mandatory church attendance policy, the emphasis on religious values and beliefs will unquestionably minimize the costs of maintaining law and order."
+			modifier = {
+				stability_cost_modifier = -0.25
+			}
+		}
+		{
+			name = "Divine Supremacy"
+			desc = "It is of the utmost importance that we rid our nation and its surrounding borders from the infidels pestering our lands."
+			modifier = {
+				global_missionary_strength = 0.03
+			}
+		}
+		{
+			name = "Devoutness"
+			desc = "Religion is one of the most important bulwarks of our rulership. By public displays of piety by the rulers, the ruled will follow suit. The growing of piety amongst our people will strengthen our rule."
+			modifier = {
+				tolerance_own = 2
+			}
+		}
+		{
+			name = "Religious Tradition"
+			desc = "The strength of our faith and public displays of piety and worship are admired by other lands both near and far. This is reflected in the prestige and glory to our realm."
+			modifier = {
+				prestige = 1.0
+				relation_with_same_religion = 20
+			}
+		}
+		{
+			name = "Inquisition"
+			desc = "Establish a state-sanctioned Inquisition to maintain the religious purity of our populace by rooting out heretics and blasphemers."
+			modifier = {
+				warscore_cost_vs_other_religion = -0.15
+			}
+		}
+		{
+			name = "God Will it!"
+			desc = "Join the battle cry and crush the infidels."
+			modifier = {
+				cb_on_religious_enemies = yes
+				monthly_fanaticism_power = 1.0
+			}
+		}
+	}
+	bonus = {
+		prestige_per_development_from_conversion = 0.25
+		culture_conversion_cost = -0.25
+	}
+}

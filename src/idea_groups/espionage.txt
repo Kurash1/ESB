@@ -1,0 +1,58 @@
+new idea_group spy_ideas = {
+	name = "Espionage"
+	category = DIP
+	ideas = {
+		{
+			name = "Efficient Spies"
+			desc = "Most peasants will sell their mother for cash but find those who can do something truly useful is more difficult. Through experience, we are learning to separate the wheat from the chaff."
+			modifier = {
+				spy_offence = 0.25
+			}
+		}
+		{
+			name = "Agent Training"
+			desc = "We have many covert operations planned but lack the men for the tasks. Establishing a training method for our spies will help bolster the available agents for dangerous missions."
+			modifier = {
+				diplomats = 1
+			}
+		}
+		{
+			name = "Vetting"
+			desc = "With so many offices for profit, we sometimes find that those who run our administration are susceptible to bribes from foreign powers. A few simple background checks will weed out the most prone to corruption."
+			modifier = {
+				global_spy_defence = 0.15
+			}
+		}
+		{
+			name = "Additional Loyalist Recruitment"
+			desc = "Naturally, there are those who reside in our subjects' lands who understand the divine right of our rule. By recruiting and aiding these enlightened individuals we can strengthen our grasp on subject nations."
+			modifier = {
+				ae_impact = -0.2
+			}
+		}
+		{
+			name = "Claim Fabrication"
+			desc = "Claiming something as yours is easy, persuading everyone else that you have a valid claim is much harder. By spreading our diplomatic net wide, we can ensure that the people who matter know that this claim is ours."
+			modifier = {
+				can_fabricate_for_vassals = yes
+			}
+		}
+		{
+			name = "Privateers"
+			desc = "Waging war on enemy commerce rests on the apex of the first triad of victory. We will encourage crusty sea captains to strike at the enemy's trade."
+			modifier = {
+				privateer_efficiency = 0.35
+			}
+		}
+		{
+			name = "Audit Checks"
+			desc = "While we look to infiltrate other nations, we must be vigilant of poisonous ideas spreading around our courts. Assembling an audit team to ensure our ministers are acting in the state's interest will help root out some rotten elements."
+			modifier = {
+				yearly_corruption = -0.05
+			}
+		}
+	}
+	bonus = {
+		rebel_support_efficiency = 0.5
+	}
+}
