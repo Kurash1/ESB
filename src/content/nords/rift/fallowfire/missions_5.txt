@@ -164,7 +164,7 @@ new country_event fallowfire.3 = {
 		{
 			name = "Perhaps we should really settle down"
 			effect = {
-				change_tag = RIF
+				change_tag = rift
 				swap_free_idea_group = yes
 			}
 		}
@@ -189,8 +189,8 @@ new country_event fallowfire.9 = {
 					name = "Thirsty for slaughter"
 					duration = (30*365)
 					modifier = {
-						province_warscore_cost = -0.35
-						land_maintenance_modifier = -0.10
+						province_warscore_cost = -0.40
+						land_maintenance_modifier = -0.15
 					}
 				}	
 				provinces:shors_stone = {

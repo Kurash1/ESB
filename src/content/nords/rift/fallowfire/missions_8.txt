@@ -88,6 +88,7 @@ new mission_series fallowfire_8 = {
 			name = "Our fame speaks loud"
 			desc = ""
 			position = 3
+			icon = fallowstone_mission
 			required = {
 				fallowfire_found_redbelly_mine
 				fallowfire_provide_infrastructure
@@ -130,7 +131,7 @@ new country_event fallowfire.6 = {
 	}
 	options = {
 		{	
-			name = "Cool, I guess"
+			name = "Cool"
 			effect = {
 				provinces:forelhost = {
 					add_base_tax = 2
@@ -151,7 +152,7 @@ new country_event fallowfire.7 = {
 	}
 	options = {
 		{	
-			name = "Cool, I guess"
+			name = "Cool"
 			effect = {
 				provinces:shors_stone = {
 					add_base_tax = 4
