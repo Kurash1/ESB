@@ -139,6 +139,9 @@ new mission_tree jorrvaskr = {
 			formal_army
 			new_governance
 		}
+		trigger = {
+			NOT = { has_country_flag = no_formation_allowed }
+		}
 		x = 1
 		y = 6
 		icon = a_jarl_elected_mission

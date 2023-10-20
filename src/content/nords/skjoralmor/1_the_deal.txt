@@ -113,7 +113,12 @@ mission_trees:skjoralmor += {
 		x = 1
 		y = 2
 		trigger = {
-			has_age_ability = ab_skjoralmor_conquests
+			if [has_dlc = "Mandate of Heaven"] {
+				has_age_ability = ab_skjoralmor_conquests
+			}
+			else {
+				always = yes
+			}
 		}
 		effect = {
 			define_ruler = {

@@ -157,6 +157,7 @@ new country_event whiterun_generic.4 = {
 		{
 			name = "Unfortunate"
 			effect = {
+				clr_country_flag = no_formation_allowed
 				countries:skjoralmor = {
 					every_owned_province = {
 						add_permanent_claim = ROOT
@@ -174,7 +175,7 @@ new country_event whiterun_generic.5 = {
 		{
 			name = "Great"
 			effect = {
-				
+				clr_country_flag = no_formation_allowed
 			}
 		}
 	}
@@ -203,23 +204,9 @@ mission_trees:whiterun_generic += {
 						days = 0
 					}
 				}
+				new_custom_tooltip = "You are §RNOT§! allowed to form a new country while this mission is in effect"
+				set_country_flag = no_formation_allowed
 			}
-		}
-	}
-	brittleshin_expedition = {
-		name = "Brittleshin Expedition"
-		required = skjoralmor_deal
-		x = 2
-		y = 1
-		icon = brittleshin_expedition_mission
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = future_update
-				always = no
-			}
-		}
-		effect = {
-			custom_tooltip = future_update
 		}
 	}
 	bleak_falls_temple = {
