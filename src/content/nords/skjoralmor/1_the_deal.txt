@@ -12,6 +12,7 @@ new government_reform tier_2_skjoralmor_army = {
 mission_trees:skjoralmor += {
 	a_deal = {
 		name = "A Deal"
+		icon = falkreath_mission
 		x = 1
 		y = 0
 		trigger = {
@@ -33,6 +34,7 @@ mission_trees:skjoralmor += {
 	}
 	illinalta_fleet = {
 		name = "Illinalta Fleet"
+		icon = illinalta_fleet_mission
 		required = a_deal
 		x = 0
 		y = 1
@@ -52,6 +54,7 @@ mission_trees:skjoralmor += {
 	}
 	consult_the_guardians = {
 		name = "Consult the Guardians"
+		icon = consult_the_guardians_mission
 		required = a_deal
 		x = 1
 		y = 1
@@ -78,6 +81,7 @@ mission_trees:skjoralmor += {
 	}
 	green_army = {
 		name = "Green Army"
+		icon = green_army_mission
 		required = a_deal
 		x = 2
 		y = 1
@@ -99,6 +103,7 @@ mission_trees:skjoralmor += {
 	}
 	bjarfrud_skjoralmor = {
 		name = "Bjarfrud Skjoralmor"
+		icon = bjarfrud_skjoralmor_mission
 		required = {
 			illinalta_fleet
 			consult_the_guardians

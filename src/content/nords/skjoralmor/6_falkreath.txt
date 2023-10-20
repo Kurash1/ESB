@@ -1,6 +1,7 @@
 mission_trees:skjoralmor += {
 	falkreath = {
 		name = "Falkreath"
+		icon = falkreath_city_mission
 		required = falks_kreath
 		x = 6
 		y = 1
@@ -48,6 +49,7 @@ on_actions:on_battle_lost_country += {
 mission_trees:skjoralmor += {
 	heroes_graveyard = {
 		name = "Heroes' Graveyard"
+		icon = heroes_graveyard_mission
 		required = falkreath
 		x = 6
 		y = 3
@@ -70,6 +72,7 @@ mission_trees:skjoralmor += {
 	}
 	high_hall = {
 		name = "High Hall"
+		icon = hakkvilds_high_hall_mission
 		required = heroes_graveyard
 		x = 5
 		y = 4
@@ -159,6 +162,7 @@ new great_project shriekwind_bastion = {
 mission_trees:skjoralmor += {
 	shriekwind_bastion = {
 		name = "Shriekwind Bastion"
+		icon = shriekwind_bastion_mission
 		required = heroes_graveyard
 		x = 7
 		y = 4
@@ -190,6 +194,7 @@ mission_trees:skjoralmor += {
 	}
 	capital_kreath = {
 		name = "Capital Kreath"
+		icon = capital_kreath_mission
 		required = {
 			high_hall
 			shriekwind_bastion

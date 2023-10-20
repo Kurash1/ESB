@@ -1,7 +1,7 @@
 new province_event skjoralmor.1 = {
 	title = "Purpose of Half-Moon"
 	desc = ""
-	picture = TOMB_eventPicture
+	picture = half_moon_eventPicture
 	is_triggered_only = yes
 	options = {
 		{
@@ -89,6 +89,7 @@ new province_group illinalta_road = {
 mission_trees:skjoralmor += {
 	half_moon = {
 		name = "Half-Moon"
+		icon = half_moon_mission
 		required = falks_kreath
 		x = 4
 		y = 1
@@ -106,6 +107,7 @@ mission_trees:skjoralmor += {
 	}
 	illinaltas_deep = {
 		name = "Illinalta's Deep"
+		icon = illinaltas_deep_mission
 		required = half_moon
 		x = 3
 		y = 2
@@ -130,6 +132,7 @@ mission_trees:skjoralmor += {
 	}
 	illinalta_road = {
 		name = "Illinalta Road"
+		icon = illinalta_road_mission
 		required = {
 			falkreath half_moon
 		}
@@ -166,6 +169,7 @@ mission_trees:skjoralmor += {
 	}
 	evergreen_grove = {
 		name = "Evergreen Grove"
+		icon = evergreen_grove_mission
 		required = half_moon
 		x = 4
 		y = 2
@@ -183,6 +187,7 @@ mission_trees:skjoralmor += {
 	}
 	knifepoint = {
 		name = "Knifepoint Mine"
+		icon = knifepoint_mission
 		required = evergreen_grove
 		x = 3
 		y = 3
@@ -205,6 +210,7 @@ mission_trees:skjoralmor += {
 	}
 	cracked_tusk = {
 		name = "Cracked Tusk Keep"
+		icon = cracked_tusk_mission
 		required = evergreen_grove
 		x = 4
 		y = 3
@@ -223,6 +229,7 @@ mission_trees:skjoralmor += {
 	}
 	bilegulch = {
 		name = "Bilegulch Mine"
+		icon = bilegulch_mission
 		required = evergreen_grove
 		x = 5
 		y = 3
@@ -245,6 +252,7 @@ mission_trees:skjoralmor += {
 	}
 	tame_the_forest = {
 		name = "Tame the Forest"
+		icon = tame_the_forest_mission
 		required = {
 			knifepoint
 			bilegulch
