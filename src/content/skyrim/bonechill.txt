@@ -22,6 +22,11 @@ new great_project bonechill_pass = {
 	}
 	on_built = {
 		add_canal = bonechill_pass
+		provinces:ancients_ascent = {
+			if [is_city = no] {
+				add_siberian_construction = 100
+			}
+		}
 	}
 	on_destroyed = {
 		remove_canal = bonechill_pass

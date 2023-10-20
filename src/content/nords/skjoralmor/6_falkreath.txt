@@ -28,7 +28,10 @@ mission_trees:skjoralmor += {
 }
 on_actions:on_battle_won_country += {
 	if [
-		tag = skjoralmor
+		OR = {
+			tag = skjoralmor
+			tag = falkreath
+		}
 	] {
 		change_variable = {
 			which = total_casualties_caused
@@ -38,7 +41,10 @@ on_actions:on_battle_won_country += {
 }
 on_actions:on_battle_lost_country += {
 	if [
-		tag = skjoralmor
+		OR = {
+			tag = skjoralmor
+			tag = falkreath
+		}
 	] {
 		change_variable = {
 			which = total_casualties_caused
@@ -57,7 +63,7 @@ mission_trees:skjoralmor += {
 			defineloc total_casualties_caused = "Total Casualties Caused"
 			check_variable = {
 				which = total_casualties_caused
-				value = 250000
+				value = 150000
 			}
 		}
 		effect = {
@@ -85,10 +91,22 @@ mission_trees:skjoralmor += {
 		}
 		effect = {
 			provinces:black_mountain = {
-				move_great_project = {
-					type = hakkvilds_high_hall
-					province = falkreath
-					instant = yes
+				if [has_dlc = "Leviathan"] {
+					move_great_project = {
+						type = hakkvilds_high_hall
+						province = falkreath
+						instant = yes
+					}
+				}
+				else {
+					quick_province_modifier = {
+						name = "Hakkvild's High Hall"
+						modifier = {
+							legitimacy = 0.5
+							governing_capacity_modifier = 0.05
+							advisor_cost = -0.1
+						}
+					}
 				}
 			}
 		}
@@ -184,10 +202,26 @@ mission_trees:skjoralmor += {
 		}
 		effect = {
 			provinces:black_mountain = {
-				move_great_project = {
-					type = shriekwind_bastion
-					province = shriekwind_bastion
-					instant = yes
+				if [has_dlc = "Leviathan"] {
+					move_great_project = {
+						type = shriekwind_bastion
+						province = shriekwind_bastion
+						instant = yes
+					}
+				}
+				else {
+					quick_province_modifier = {
+						name = "Shriekwind Bastion"
+						modifier = {
+							fort_level = 1
+							max_attrition = 1
+							local_hostile_attrition = 1
+							local_defensiveness = 0.1
+							
+							prestige = 0.5
+							global_manpower_modifier = 0.1
+						}
+					}
 				}
 			}
 		}

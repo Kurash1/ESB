@@ -22,6 +22,11 @@ new great_project south_shriekwind = {
 	}
 	on_built = {
 		add_canal = south_shriekwind
+		provinces:shriekwind_bastion = {
+			if [is_city = no] {
+				add_siberian_construction = 100
+			}
+		}
 	}
 	on_destroyed = {
 		remove_canal = south_shriekwind

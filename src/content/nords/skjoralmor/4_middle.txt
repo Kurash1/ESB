@@ -18,8 +18,13 @@ mission_trees:skjoralmor += {
 			mission_completed = skjoralmor_jur_tarask
 			regions:kreath = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				OR = {
+					AND = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					is_city = no
+				}
 			}
 		}
 		effect = {

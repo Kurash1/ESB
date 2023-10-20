@@ -12,7 +12,7 @@ new government_reform tier_2_skjoralmor_army = {
 mission_trees:skjoralmor += {
 	a_deal = {
 		name = "A Deal"
-		icon = falkreath_mission
+		icon = a_jarl_elected_mission
 		x = 1
 		y = 0
 		trigger = {
@@ -27,6 +27,7 @@ mission_trees:skjoralmor += {
 				modifier = {
 					land_morale = 0.10
 					land_forcelimit = 5
+					monthly_splendor = 2
 				}
 				years = 20
 			}
@@ -115,6 +116,15 @@ mission_trees:skjoralmor += {
 			has_age_ability = ab_skjoralmor_conquests
 		}
 		effect = {
+			define_ruler = {
+				name = "Bjarfrud"
+				dynasty = "Skjoralmor"
+				adm = 5
+				dip = 4
+				mil = 6
+				age = 20
+				claim = 95
+			}
 			defineloc unlocks_skjoralmor_order = "Unlocks §YSkjoralmor Order§! Holy Order"
 			custom_tooltip = unlocks_skjoralmor_order
 			set_country_flag = unlocks_skjoralmor_order

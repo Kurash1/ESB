@@ -116,9 +116,14 @@ mission_trees:skjoralmor += {
 		trigger = {
 			owns = ancestor_glade
 			provinces:ancestor_glade = {
-				has_great_project = {
-					type = ancestor_glade
-					tier = 1
+				if [has_dlc = "Leviathan"] {
+					has_great_project = {
+						type = ancestor_glade
+						tier = 1
+					}
+				}
+				else {
+					development = 15
 				}
 			}
 		}
@@ -264,7 +269,6 @@ mission_trees:skjoralmor += {
 			NOT = {
 				AND = {
 					owned_by = ROOT
-					has_building_line = road
 					development = 10
 				}
 			}
