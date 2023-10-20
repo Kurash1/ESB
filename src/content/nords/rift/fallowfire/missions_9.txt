@@ -5,8 +5,8 @@ new mission_series fallowfire_9 = {
 		tag = fallowfire
 	}
 	missions = {
-		fallowfire_better_tax_collection = {
-			name = "Better tax collection"
+		fallowfire_kakjords_hall = {
+			name = "Kakjord's hall"
 			desc = ""
 			position = 0
 			icon = mission_entrepot_of_india
@@ -23,13 +23,21 @@ new mission_series fallowfire_9 = {
 						duration = (30*365)
 						modifier = {
 							state_maintenance_modifier = -0.50
+							global_tax_modifier = 0.1
+						}
+					}
+					quick_province_modifier = {
+						name = "The Eagle-Eyed"
+						duration = -1
+						modifier = {
+							local_tax_modifier = 0.1
 						}
 					}
 				}
 			}
 		}
 		fallowfire_provide_infrastructure = {
-			name = "Provide Infrastructure"
+			name = "A true city"
 			desc = ""
 			position = 2
 			required = {
@@ -37,7 +45,7 @@ new mission_series fallowfire_9 = {
 			}
 			trigger = {
 				provinces:shors_stone = {
-					development = 30
+					development = 35
 				}
 			}
 			effect = {
@@ -48,7 +56,8 @@ new mission_series fallowfire_9 = {
 						duration = -1
 						modifier = {
 							local_production_efficiency = 0.20
-							local_build_cost = -0.10
+							local_build_cost = -0.15
+							local_development_cost = -10%
 						}
 					}
 				}

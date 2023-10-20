@@ -5,13 +5,13 @@ new mission_series fallowfire_0 = {
 		tag = fallowfire
 	}
 	missions = {
-		fallowfire_honor_our_heroes = {
-			name = "Honor our heroes"
+		fallowfire_the_song_of_shors_stone = {
+			name = "The song of Shor's stone"
 			desc = ""
 			position = 0
 			icon = mission_norse_faith
 			trigger = {
-				defineloc has_had_honoring_our_heroes_event = "Has had §YHonoring our heroes§! event"
+				defineloc has_had_honoring_our_heroes_event = "Has had §YThe song of Shor's stone§! event"
 				custom_trigger_tooltip = {
 					tooltip = has_had_honoring_our_heroes_event
 					has_country_flag = honor_memos
@@ -31,21 +31,29 @@ new mission_series fallowfire_0 = {
 			}
 			trigger = {
 				OR = {	
-					countries:mist-watch = {
-						OR = {
-							has_opinion = {
-								who = fallowfire
-								value = 190
-							}
-							is_vassal = yes
+					OR = {
+						countries:mist-watch = {
+								has_opinion = {
+									who = fallowfire
+									value = 190
+								}
+								
+						}
+						countries:mist-watch = {
+							vassal_of = ROOT
 						}
 					}
-					
 					provinces:mistwatch, provinces:mist_road = {
-						type = all
 						owned_by = fallowfire
 					}
 				} 
+			}
+			provinces_to_highlight = {
+				OR = {
+					province_id = mist_road
+					province_id = mistwatch
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 			effect = {
 				if [countries:mist-watch = {
@@ -59,8 +67,18 @@ new mission_series fallowfire_0 = {
 						vassalize = mist-watch
 					}
 				}
+				else_if [countries:mist-watch = { vassal_of = ROOT}] {
+					countries:mist-watch {
+						add_liberty_desire = -20
+						add_opinion = {
+							who = fallowfire
+							modifier = fallowfire_pacified
+						}
+					}
+				}
 				else {
 					provinces:mistwatch, provinces:mist_road = {
+						owned_by = ROOT
 						quick_province_modifier = {
 							name = "Absolute control"
 							duration = (30*365)
@@ -70,17 +88,24 @@ new mission_series fallowfire_0 = {
 							}
 						}
 					}
-				}
+				}	
+				hidden_effect = {
+					set_country_flag = mistwatch
 					if [has_country_flag = northwind] {
 						country_event = { 
 							id = fallowfire.1
-							days = 31
+							days = 62
 						}
 						country_event = {
 							id = fallowfire.8
 							days = 0
 						}
+						country_event = {
+							id = fallowfire.9
+							days = 365
+						}
 					}
+				}
 			}
 		 }
 	}
@@ -101,7 +126,11 @@ new country_event fallowfire.5 = {
 		}
 	}
 }
-
+new opinion_modifier fallowfire_pacified = {
+	name = "Pacified"
+	opinion = 50
+	yearly_decay = 2
+}
 
 
 

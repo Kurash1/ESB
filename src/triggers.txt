@@ -115,3 +115,12 @@ new trigger has_opinion = {
 new trigger owned_by = {
 	args = country_scope
 }
+new trigger is_claim = {
+	args = country_scope
+}
+new trigger country_or_non_sovereign_subject_holds = {
+	args = country_scope
+}
+new trigger province_id = {
+	args = province
+}

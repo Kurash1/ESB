@@ -3,7 +3,7 @@ new mission_series fallowfire_4 = {
 	ai = yes
 	potential = {
 		tag = fallowfire 
-		has_country_flag = snowy_elf
+	#	has_country_flag = snowy_elf
 	}
 	missions = {
 		fallowfire_push_on_to_the_tasks_end = {
@@ -20,6 +20,11 @@ new mission_series fallowfire_4 = {
 					culture_group = ROOT
 				}
 			}
+			provinces_to_highlight = {
+				region = rift
+				NOT = { culture_group = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
 			effect = {
 				add_country_modifier = {
 					name = a_land_for_nords_only
@@ -28,7 +33,7 @@ new mission_series fallowfire_4 = {
 			}
 		}	
 		fallowfire_provide_food_and_wood_for_the_high_kingdom = {
-			name = "Provide food and wood for the high kingdom"
+			name = "A deal for the kingdom"
 			desc = ""
 			position = 3
 			icon = trade_nord_ships_mission

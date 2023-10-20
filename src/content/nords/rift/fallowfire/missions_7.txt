@@ -5,8 +5,8 @@ new mission_series fallowfire_7 = {
 		tag = fallowfire
 	}
 	missions = {
-		fallowfire_road = {
-			name = "Road"
+		fallowfire_gurildas_road = {
+			name = "Gurilda's Road"
 			desc = ""
 			position = 0
 			trigger = {
@@ -16,9 +16,9 @@ new mission_series fallowfire_7 = {
 			}
 			effect = {
 					quick_province_modifier = {
-						name = "Gunilda Road"
+						name = "Gurilda's Road"
 						modifier = {
-							development_cost = -10%
+							development_cost = -15%
 						}
 						duration = -1
 					}
@@ -28,8 +28,8 @@ new mission_series fallowfire_7 = {
 			}
 		
 		}
-		fallowfire_expand_our_citys_market = {
-			name = "Expand our city's market"
+		fallowfire_ysgramors_plaza = {
+			name = " Ysgramor's Plaza"
 			desc = ""
 			position = 2
 			icon = market_mission
@@ -37,19 +37,33 @@ new mission_series fallowfire_7 = {
 				fallowfire_our_hall_grows
 			}
 			trigger = {
-				provinces:shors_stone = {
-					province_has_center_of_trade_of_level = 2
+				if [has_dlc = "Dharma"] {
+					provinces:shors_stone = {
+						province_has_center_of_trade_of_level = 2
+					}
+				}
+				else { 
+					provinces:shors_stone = {
+						base_production = 15
+					}
 				}
 			}
 			effect = {
 				provinces:shors_stone = {
 					add_base_production = 2
+					quick_province_modifier = {
+						name = "Fuck u bitch"
+						duration = -1
+						modifier = {
+							province_trade_power_modifier = 0.1
+						}
+					}
 				}
 				quick_country_modifier = {
 					name = "A bigger market square"
 					duration = (30*365)
 					modifier = {
-						trade_efficiency = 10%
+						trade_efficiency = 20%
 					}	
 				}
 			}
@@ -61,11 +75,11 @@ new mission_series fallowfire_7_dragon_cult = {
 	ai = yes
 	potential = {
 		tag = fallowfire
-		has_country_flag = forelhost
+	#	has_country_flag = forelhost
 	}
 	missions = {
 		fallowfire_feast_for_the_dragon_cult_demise = {
-			name = "Feast for the dragon cult demise"
+			name = "Feast at Vikord's pub"
 			desc = ""
 			position = 3
 			icon = banquet_mission

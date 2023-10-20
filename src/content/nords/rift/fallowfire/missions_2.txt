@@ -29,22 +29,32 @@ new mission_series fallowfire_2 = {
 				fallowfire_finishing_our_rivals
 			}
 			trigger = {
-				OR = {	
-					countries:north-wind = {
-						OR = {
-							has_opinion = {
-								who = fallowfire
-								value = 190
-							}
-							is_vassal = yes
+				OR = {
+					OR = {
+						countries:north-wind = {
+								has_opinion = {
+									who = fallowfire
+									value = 190
+								}
+								
+						}
+						countries:north-wind = {
+							vassal_of = ROOT
 						}
 					}
-					provinces:mistwatch, provinces:mist_road = {
-						type = all
-						owns_or_non_sovereign_subject_of = fallowfire
+					areas:mistwatch, areas:ansilvund, areas:northwind = {
+						owned_by = fallowfire
 					}
-				}
+				} 
 			} 
+			provinces_to_highlight = {
+				OR = {
+					area = ansilvund
+					area = northwind
+					province_id = ysgramoors_road
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
 			effect = {
 				if [countries:north-wind = {
 						has_opinion = {
@@ -57,6 +67,15 @@ new mission_series fallowfire_2 = {
 						vassalize = north-wind
 					}
 				}
+				else_if [countries:north-wind = { vassal_of = ROOT}] {
+					countries:north-wind {
+						add_liberty_desire = -20
+						add_opinion = {
+							who = fallowfire
+							modifier = fallowfire_pacified
+						}
+					}
+				} 
 				else {
 					areas:ansilvund, areas:northwind, areas:mistwatch = {
 						quick_province_modifier = {
@@ -69,16 +88,24 @@ new mission_series fallowfire_2 = {
 						}
 					}
 				}
-					if [countries:fallowfire = {mission_completed = }] {
+			
+				hidden_effect = {
+					set_country_flag = northwind
+					if [has_country_flag = mistwatch] {
 						country_event = { 
 							id = fallowfire.1
-							days = 30
+							days = 62
 						}
 						country_event = {
 							id = fallowfire.8
 							days = 0
 						}
+						country_event = {
+							id = fallowfire.9
+							days = 365
+						}
 					}
+				}
 			} 
 		}
 	}
@@ -88,7 +115,7 @@ new mission_series fallowfire_2_valley_secured = {
 	ai = yes
 	potential = {
 		tag = fallowfire
-		has_country_flag = snowy_elf
+	#	has_country_flag = snowy_elf
 	}
 	missions = {
 		fallowfire_the_rift_is_ours = {

@@ -6,7 +6,7 @@ new mission_series fallowfire_1 = {
 	}
 	missions = {
 		fallowfire_one_people_one_purpose = {
-			name = "One People,One Purpose"
+			name = "Shed our differences"
 			desc = ""
 			position = 0
 			icon = mission_diplomatic_relation
@@ -24,13 +24,13 @@ new mission_series fallowfire_1 = {
 			}
 		}
 		fallowfire_finishing_our_rivals = {
-			name = "Finishing our rivals"
+			name = "Destroy Clearspring!"
 			desc = ""
 			position = 1
 			icon = mission_unite_home_region
 			required = {
 				fallowfire_one_people_one_purpose
-				fallowfire_honor_our_heroes
+				fallowfire_the_song_of_shors_stone
 				fallowfire_prepare_our_men_for_war
 			}
 			trigger = {
@@ -38,6 +38,13 @@ new mission_series fallowfire_1 = {
 					type = all
 					owned_by = ROOT
 				} 
+			}
+			provinces_to_highlight = {
+				OR = {
+					area = snapleg
+					area = clearspring
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 			effect = {
 				add_casus_belli = {
@@ -62,17 +69,24 @@ new mission_series fallowfire_1 = {
 				fallowfire_clan_northwind
 			}
 			trigger = {
-				provinces:stony_creek, provinces:mist_road = {
-					fort_level = 1
+				provinces:stony_creek, provinces:mistwatch = {
+					fort_level = 2
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 			effect = {
-				provinces:stony_creek, provinces:mist_road = {
+				provinces:stony_creek, provinces:mistwatch = {
 					quick_province_modifier = {
 						name = "Sturdy Walls"
 						modifier = {
 							local_defensiveness = 0.20
 						}
+					}
+				}
+				provinces:stony_creek = {
+					add_great_project_tier = {
+						type = direfrost_keep
+						tier = 1
 					}
 				}
 			}
@@ -95,13 +109,12 @@ new country_event fallowfire.8 = {
 		{
 			name = "Cool"
 			effect = {
-				event_modifier = {
-					add_country_modifier = {
-						name = asserted_our_dominance
-						duration = -1
-					}
+				add_country_modifier = {
+					name = asserted_our_dominance
+					duration = -1
 				}
 			}
 		}
 	}
 }
+

@@ -5,8 +5,8 @@ new mission_series fallowfire_8 = {
 		tag = fallowfire
 	}
 	missions = {
-		fallowfire_build_new_hall_defenses = {
-			name = "Build new hall defenses"			
+		fallowfire_bergitte_bastion = {
+			name = "Bergitte Bastion"			
 			desc = ""
 			position = 0
 			icon = protect_against_the_turks
@@ -24,7 +24,7 @@ new mission_series fallowfire_8 = {
 				provinces:shors_stone = {
 					add_base_manpower = 2
 					quick_province_modifier = {
-						name = "A safe hall"
+						name = "Bergitte Bastion"
 						modifier = {
 							local_defensiveness = 0.25
 							fort_level = 1
@@ -34,14 +34,14 @@ new mission_series fallowfire_8 = {
 			}
 		}
 		fallowfire_our_hall_grows = {
-			name = "Our hall grows"
+			name = "Vikord's pub"
 			desc = ""
 			position = 1
 			icon = fallowstone_mission
 			required = {
-				fallowfire_build_new_hall_defenses
-				fallowfire_better_tax_collection
-				fallowfire_road
+				fallowfire_bergitte_bastion
+				fallowfire_kakjords_hall
+				fallowfire_gurildas_road
 			}
 			effect = {
 				provinces:shors_stone = {
@@ -91,7 +91,7 @@ new mission_series fallowfire_8 = {
 			required = {
 				fallowfire_found_redbelly_mine
 				fallowfire_provide_infrastructure
-				fallowfire_expand_our_citys_market
+				fallowfire_ysgramors_plaza
 			}
 			effect = {
 				country_event = {

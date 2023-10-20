@@ -3,7 +3,7 @@ new mission_series fallowfire_6 = {
 	ai = yes 
 	potential = {
 		tag = fallowfire
-		has_country_flag = forelhost
+	#	has_country_flag = forelhost
 	}
 	missions = {
 		fallowfire_deal_with_a_new_old_threat = {
@@ -16,9 +16,15 @@ new mission_series fallowfire_6 = {
 			}
 			trigger = {
 				areas:forelhost, areas:rift_pass, areas:fallowstone, areas:riften = {
-						type = all
-						owned_by = ROOT
+					type = all
+					owned_by = ROOT
 				}
+			}
+			provinces_to_highlight = {
+				area = forelhost
+				area = rift_pass
+				area = fallowstone
+				area = riften
 			}
 			effect = {
 				add_country_modifier = {
@@ -28,6 +34,13 @@ new mission_series fallowfire_6 = {
 				country_event = {
 					id = fallowfire.4
 					days = 1
+				}
+				define_advisor = {
+				type = inquisitor
+				name = "Asvald Wet-Torch"
+				skill = 2
+				location = shors_stone
+				cost_multiplier = 0.50
 				}
 			}
 		}
@@ -62,7 +75,7 @@ new event_modifier converting_drive = {
 	name = "Converting Drive"
 	modifier = {
 		missionaries = 1
-		global_missionary_strength = 0.025
+		global_missionary_strength = 0.03
 		missionary_maintenance_cost = -0.5
 	}
 }
@@ -82,6 +95,17 @@ new country_event fallowfire.4 = {
 					add_base_tax = -6
 					add_base_production = -6
 					add_base_manpower = -5
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+				quick_country_modifier = {
+					name = "Crushed the heretic!"
+					duration = (15*365)
+					modifier = {
+						land_morale = 0.1
+						global_unrest = -1.5
+						infantry_shock = 0.5
+					}
 				}
 			}
 		}
