@@ -1,0 +1,60 @@
+new idea_group soldnerheer0 = {
+	name = "Mercenary"
+	category = MIL
+	trigger = {
+	}
+	ideas = {
+		{
+			name = "Free Looting"
+			desc = "We don't care what the mercenaries do in enemy land."
+			modifier = {
+				loot_amount = 0.75
+			}
+		}
+		{
+			name = "Longterm Contracts"
+			desc = "We have long-term contracts with the mercenaries."
+			modifier = {
+				mercenary_cost = -0.4
+			}
+		}
+		{
+			name = "The Sons Stay Home"
+			desc = "So long as someone else is dying, our people will maintain the will to fight."
+			modifier = {
+				war_exhaustion = -0.05
+			}
+		}
+		{
+			name = "Split the Spoils of War"
+			desc = "We will share the spoils of war with our mercenaries."
+			modifier = {
+				merc_maintenance_modifier = -0.3
+			}
+		}
+		{
+			name = "Mercenary Captains"
+			desc = "Some mercenary companies have been employed by us for so long that their captains feel a part of our officers."
+			modifier = {
+				free_leader_pool = 1
+			}
+		}
+		{
+			name = "Different Troop Types"
+			desc = "We don't care with what the mercenaries are equipped with as long as they keep their efficiency."
+			modifier = {
+				mercenary_discipline = 0.05
+			}
+		}
+		{
+			name = "Mercenary Tradition"
+			desc = "Our country has relied on mercenaries for ages."
+			modifier = {
+				mercenary_manpower = 0.5
+			}
+		}
+	}
+	bonus = {
+		possible_condottieri = 1.5
+	}
+}

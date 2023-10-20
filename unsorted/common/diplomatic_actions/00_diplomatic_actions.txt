@@ -85,9 +85,9 @@
 # ask_for_tributary_state_action
 # knowledge_sharing
 
-demand_unlawful_territory_action = {
+grant_freecity = {
 	condition = {
-		tooltip = MARWAR
+		tooltip = NOT_IMPLEMENTED
 		potential = {
 		}
 		allow = {
@@ -96,9 +96,17 @@ demand_unlawful_territory_action = {
 	}
 }
 
+demand_unlawful_territory_action = {
+	condition = {
+		tooltip = NOT_IMPLEMENTED
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+	}
+}
 
-#Cut because the Grand Crusade war doesn't really have any place in the current content, but it could be very useful for the future.
-#Also modders should have the chance to just uncomment it all so they can experience the great 30 Years War like Crusade.
 declarewar = { }
 
 allianceaction = { }

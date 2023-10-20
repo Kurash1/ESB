@@ -1,0 +1,682 @@
+new idea_group esb_warmagic = {
+	name = "War Magic"
+	category = MIL
+	trigger = {
+	}
+	ideas = {
+		{
+			name = "Wait for Vulnerability"
+			desc = "The moment to prepare your offense is the moment the enemy becomes vulnerable to attack."
+			modifier = {
+				fire_damage = 0.05
+			}
+		}
+		{
+			name = "Military Planning"
+			desc = "The enemy's vulnerability may be his strongest point; your weakness may enable you to strike the decisive blow."
+			modifier = {
+				leader_land_fire = 1
+				leader_naval_fire = 1
+			}
+		}
+		{
+			name = "Planning Campaigns"
+			desc = "When planning a campaign, take account of both the arcane and the mundane. The skillful battlemage ensures that they are in balance; a weight lifted by one hand is heavier than two weights lifted by both hands."
+			modifier = {
+				spy_offence = 0.2
+			}
+		}
+		{
+			name = "Army Movement"
+			desc = "When the arcane and mundane are in balance, the army will move effortlessly, like a swinging door on well-oiled hinges. When they are out of balance, the army will be like a three-legged dog, with one leg always dragging in the dust."
+			modifier = {
+				movement_speed = 0.1
+			}
+		}
+		{
+			name = "Thunderclap Tactics"
+			desc = "Thus when the army strikes a blow, it will be like a thunderclap out of a cloudless sky. The best victories are those unforeseen by the enemy, but obvious to everyone afterwards."
+			modifier = {
+				prestige_from_land = 0.5
+			}
+		}
+		{
+			name = "Mage Centric Battle Strategy"
+			desc = "The skillful battlemage ensures that the enemy is already defeated before the battle begins. A close-fought battle is to be avoided; the fortunes of war may turn aside the most powerful sorcery, and courage may undo the best-laid plans. Instead, win your victory ahead of time. When the enemy knows he is defeated before the battle begins, you may not need to fight."
+			modifier = {
+				army_tradition = 1.5
+			}
+		}
+		{
+			name = "Pre-emptive Threatening"
+			desc = "Victory in battle is only the least kind of victory. Victory without battle is the acme of skill."
+			modifier = {
+				land_forcelimit_modifier = 0.15
+			}
+		}
+	}
+	bonus = {
+		siege_ability = 0.25
+	}
+}
+new idea_group restoration_ideas = {
+	name = "Restoration"
+	category = MIL
+	trigger = {
+		full_idea_group = esb_warmagic
+	}
+	ideas = {
+		{
+			name = "Dedicated Healers"
+			desc = "We have dedicated healers to the local populace to alleviate the ravages of war."
+			modifier = {
+				war_exhaustion = -0.05
+			}
+		}
+		{
+			name = "Grand Healing"
+			desc = " Our healers are capable of healing many men back to full strength thus making them able to rejoin the army."
+			modifier = {
+				manpower_recovery_speed = 0.1
+			}
+		}
+		{
+			name = "Auxiliary Healers"
+			desc = " We have healers amid our army constantly aiding those who have fallen getting back on their feet."
+			modifier = {
+				reinforce_speed = 0.15
+			}
+		}
+		{
+			name = "Benevolent Healers"
+			desc = "After subjecting a country to our will, we send them our best restoration mages to mend the wounds of their people. "
+			modifier = {
+				reduced_liberty_desire = 7.5
+			}
+		}
+		{
+			name = "Heal the Citizenry"
+			desc = "After forcefully conquering new land we must ensure that those who got hurt trying to defend it are treated as equals by our medics. "
+			modifier = {
+				years_of_nationalism = -5
+			}
+		}
+		{
+			name = "Greater Wards"
+			desc = "Before great combat starts our mages will shield as many soldiers as they can with protective barriers. "
+			modifier = {
+				fire_damage_received = -0.025
+				shock_damage_received = -0.025
+			}
+		}
+		{
+			name = "Restorative Court Mages"
+			desc = "Having a dedicated healer for the ruler of the nation is crucial to ensure his rule will be long and prosper."
+			modifier = {
+				heir_chance = 0.15
+			}
+		}
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+}
+new idea_group destruction_ideas = {
+	name = "Destruction"
+	category = MIL
+	trigger = {
+		full_idea_group = arcane_ideas
+	}
+	ideas = {
+		{
+			name = "Elite Battlemages"
+			desc = "Our most skilled mages should lead our armies into battle and show them how it's done. "
+			modifier = {
+				leader_land_fire = 1
+				leader_land_manuever = 1
+			}
+		}
+		{
+			name = "Incineration"
+			desc = "Our destruction mages can rein down fireballs upon the ranks of our enemies burning several men to a crisp with each cast. "
+			modifier = {
+				fire_damage = 5%
+			}
+		}
+		{
+			name = "Arcane Admirals"
+			desc = "We all know the effectiveness of cannons but what if our admirals are the actual cannons of our navy? "
+			modifier = {
+				leader_naval_fire = 1
+				leader_naval_manuever = 1
+			}
+		}
+		{
+			name = "Ice Ballista"
+			desc = "By conjuring major ice spikes and hurling them at a fort we can quickly breach its defences"
+			modifier = {
+				artillery_levels_available_vs_fort = 2
+				siege_ability = 10%
+			}
+		}
+		{
+			name = "Storm Conjuration"
+			desc = "Our best mages stay in the back ranks channelling the most destructive magic they can muster on their foes "
+			modifier = {
+				artillery_power = 10%
+			}
+		}
+		{
+			name = "Unimpeded Mages"
+			desc = "If well protected our mages are surely going make the enemy regret their existence. "
+			modifier = {
+				backrow_artillery_damage = 20%
+			}
+		}
+		{
+			name = "Destroy the Dissidents"
+			desc = "Every time a revolt is brewing we send out a team of capable mages who make short work of any dissidents, sometimes burning entire villages to the ground."
+			modifier = {
+				harsh_treatment_cost = -20%
+			}
+		}
+	}
+	bonus = {
+		siege_ability = 20%
+	}
+}
+new idea_group esb_dark_magic = {
+	name = "Dark Magic"
+	category = ADM
+	trigger = {
+		full_idea_group = destruction_ideas
+	}
+	ideas = {
+		{
+			name = "Evil Wizards"
+			desc = "Practitioners of Dark Magic have a reputation for being evil wizards."
+			modifier = {
+				diplomatic_reputation = -5
+			}
+		}
+		{
+			name = "Harmful Magic"
+			desc = "It also replicates some of the harmful effects of spells cast by Daedra."
+			modifier = {
+				fire_damage = 0.1
+			}
+		}
+		{
+			name = "Negative Magic"
+			desc = "Dark Magic negates, drains and preys upon the magicka and power of other magic users."
+			modifier = {
+				fire_damage_received = -0.1
+			}
+		}
+		{
+			name = "Imprisonment"
+			desc = "Sorcerers who practice Dark Magic can summon wards that suppress magic and imprison foes in runes."
+			modifier = {
+				defensiveness = 0.25
+			}
+		}
+		{
+			name = "Daedric Runes"
+			desc = "They can also cast offensive spells, such as Daedric runes that explode upon contact with a mortal."
+			modifier = {
+				ae_impact = 0.1
+			}
+		}
+		{
+			name = "Lifesteal"
+			desc = "Dark Magic can be used to drain the life of others to restore the caster's vitality."
+			modifier = {
+				recover_army_morale_speed = 0.5
+				reinforce_speed = 0.5
+			}
+		}
+		{
+			name = "Glenmoril Wyrd"
+			desc = "The witches of Glenmoril Wyrd have been known to perform dark magicka rituals to cure lycanthropy."
+			modifier = {
+				shock_damage = 0.05
+			}
+		}
+	}
+	bonus = {
+		war_exhaustion = -0.02
+	}
+}
+new idea_group esb_bloodmagic = {
+	name = "Blood Magic"
+	category = MIL
+	trigger = {
+		full_idea_group = destruction_ideas
+	}
+	ideas = {
+		{
+			name = "Blood Magic"
+			desc = "Blood Magic is a dark and ancient form of magic."
+			modifier = {
+				improve_relation_modifier = -0.2
+				prestige = 1
+			}
+		}
+		{
+			name = "Drain Life"
+			desc = "Blood Magic can be used for draining life,"
+			modifier = {
+				loot_amount = 0.5
+				available_province_loot = 0.25
+			}
+		}
+		{
+			name = "Reanimation"
+			desc = "Blood Magic can be used for reanimate the dead"
+			modifier = {
+				global_manpower_modifier = 0.15
+			}
+		}
+		{
+			name = "Telekinesis"
+			desc = "Blood Magic can be used for telekinetically lifting others from a distance"
+			modifier = {
+				backrow_artillery_damage = 0.1
+			}
+		}
+		{
+			name = "Gargoyles"
+			desc = "Blood Magic can be used for summoning gargoyles"
+			modifier = {
+				shock_damage = 0.05
+			}
+		}
+		{
+			name = "Paralysis"
+			desc = "Blood Magic can be used for paralyzing others"
+			modifier = {
+				shock_damage_received = -0.025
+				fire_damage_received = -0.025
+			}
+		}
+		{
+			name = "Blood Magic Rituals"
+			desc = "Blood Magic rituals are performed to complete feats of great power. An elven arrow tainted with the blood of a pure-blooded Daughter of Coldharbour becomes a Bloodcursed elven arrow. If fired at the Sun with Auriel's Bow, it is capable of blotting out the Sun for an entire day."
+			modifier = {
+				hostile_attrition = 1.5
+			}
+		}
+	}
+	bonus = {
+		discipline = 0.05
+	}
+}
+new idea_group esb_watermagic = {
+	name = "Water Magic"
+	category = MIL
+	trigger = {
+		full_idea_group = destruction_ideas
+	}
+	ideas = {
+		{
+			name = "Water Magic"
+			desc = "Water Magic is an obscure and little-known form of magic involving the manipulation of water."
+			modifier = {
+				naval_morale = 0.15
+			}
+		}
+		{
+			name = "Of Memory"
+			desc = "On Tamriel, water is composed of memory. When a mortal dies, his or her memories become water, and in this way all the memories of Tamriel's histories are stored within its waters."
+			modifier = {
+				global_spy_defence = 0.15
+			}
+		}
+		{
+			name = "Dangerous Knowledge"
+			desc = "This fact is considered to be one of the most dangerous secrets about the natural order of the world, and is therefore closely guarded by the Demon of Knowledge Hermaeus Mora."
+			modifier = {
+				idea_cost = -0.025
+			}
+		}
+		{
+			name = "Drought-Fight"
+			desc = "For example, circa 2E 582 the water spirit of Halcyon Lake, a nereid named Lorelia, attempted to twist the natural order by stealing the memories of her mortal followers to prevent the desertification of her lake, forcing the servants of Hermaeus Mora to intervene."
+			modifier = {
+				development_cost = -0.1
+			}
+		}
+		{
+			name = "Water Memories"
+			desc = "The burial grounds of Honor's Rest had memorial pools that allowed one to view the past through the eyes of those involved in the Siege of Orsinium."
+			modifier = {
+				army_tradition_decay = -0.01
+			}
+		}
+		{
+			name = "Sphere of Storms"
+			desc = "The Ayleids of the Strident Coast utilized a weapon called the Sphere of Storms, which manipulated the waters around them to either defend their coastline, or provided for the people such as water crops or speed ships through the sea."
+			modifier = {
+				own_coast_naval_combat_bonus = 1.0
+			}
+		}
+		{
+			name = "Sea giant Magic"
+			desc = "Sea Giants are capable of wielding powerful magic to control water. Examples of such magic include flinging orbs of sea water at their foes and guiding surges of water to crash down on their enemies."
+			modifier = {
+				fire_damage = 0.05
+			}
+		}
+	}
+	bonus = {
+		naval_attrition = -0.15
+	}
+}
+new idea_group conjuration_ideas = {
+	name = "Conjuration"
+	category = MIL
+	trigger = {
+		full_idea_group = esb_warmagic
+	}
+	ideas = {
+		{
+			name = "Bound Weapons"
+			desc = " By using purely magical weapons conjured by our best mages regular soldiers can have access to legendary weapons."
+			modifier = {
+				shock_damage = 5%
+			}
+		}
+		{
+			name = "Soul Trapping"
+			desc = "By training our mages in the art of soul trapping we can increase our overall finances and the capacity to field even more conjurers. "
+			modifier = {
+				global_tax_modifier = 10%
+			}
+		}
+		{
+			name = "Daedric Conjuring"
+			desc = "Summoning daedra is a very dangerous venture thus only the very best may attempt it, regardless the conjured beings are far more powerful than the regular soldier. "
+			modifier = {
+				discipline = 5%
+			}
+		}
+		{
+			name = "Summon Shaft"
+			desc = "Even the most novice of conjurers can summon minor familiars but sending hordes of those meagre summons we can artificially boost our martial numbers."
+			modifier = {
+				global_manpower_modifier = 15%
+			}
+		}
+		{
+			name = "Conjurers Army"
+			desc = "By allowing conjurers to join the front lines we can  make it so that every conjurer counts as twice the soldier."
+			modifier = {
+				land_forcelimit_modifier = 10%
+			}
+		}
+		{
+			name = "Master Conjuration"
+			desc = "Repeatedly resummoning things without running out of Magicka is a thing only the very elite of conjurers is capable of. "
+			modifier = {
+				manpower_recovery_speed = 15%
+			}
+		}
+		{
+			name = "Animated Sentries"
+			desc = "Simple familiars while harmless can be excellent scouts."
+			modifier = {
+				fort_maintenance_modifier = -20%
+			}
+		}
+	}
+	bonus = {
+		manpower_recovery_speed = 15%
+	}
+}
+new idea_group summoning_ideas = {
+	name = "Summoning"
+	category = MIL
+	trigger = {
+		full_idea_group = conjuration_ideas
+	}
+	ideas = {
+		{
+			name = "Summon Dremora Lords"
+			desc = "they are noted to be one of the few forms of Daedra who prize honour. They have a very militaristic culture, with many ranks and subdivisions within the culture of each clan."
+			modifier = {
+				discipline = 0.05
+			}
+		}
+		{
+			name = "Summon Dremora Generals"
+			desc = " Being highly militaristic if kept in check we can even allow some of them to lead our armies."
+			modifier = {
+				free_leader_pool = 1
+				leader_land_fire = 1
+			}
+		}
+		{
+			name = "Unleash Dregoths"
+			desc = "The Dregoths are fearsome creatures that are guaranteed to inflict heavy casualties on our enemies. "
+			modifier = {
+				infantry_power = 0.1
+			}
+		}
+		{
+			name = "Summon Sentries"
+			desc = "By placing strategic sentries around our country to observe and scout we can find those who wish to bring harm to our nation. "
+			modifier = {
+				global_spy_defence = 0.5
+			}
+		}
+		{
+			name = "Summon Servants"
+			desc = " By summoning beings whose sole purpose is to ease the suffering of our people we can lessen the ravages of war."
+			modifier = {
+				war_exhaustion_cost = -0.30
+			}
+		}
+		{
+			name = "Atronach Shock Troops"
+			desc = "Atronachs are elemental beings far more resistant than the average soldier "
+			modifier = {
+				shock_damage = 0.05
+			}
+		}
+		{
+			name = "Counter Summoning"
+			desc = "To thrive in battle we also need to know how to expel our enemies' summons or even our own should they go astray."
+			modifier = {
+				fire_damage_received = -0.1
+			}
+		}
+	}
+	bonus = {
+		global_regiment_cost = -0.15
+	}
+}
+new idea_group necromacy_ideas = {
+	name = "Necromancy"
+	category = MIL
+	trigger = {
+		full_idea_group = conjuration_ideas
+	}
+	ideas = {
+		{
+			name = "Army of the Dead"
+			desc = "Our frontlines are composed of zombies and skeletons whose sole purpose is tired and delay the enemy while our elite troops watch in amusement "
+			modifier = {
+				global_manpower_modifier = 0.25
+			}
+		}
+		{
+			name = "The Dead do not Suffer"
+			desc = "When zombies and skeletons are the ones who are taking the brunt of fighting we ensure that we can keep our war enthusiasm at an all-time high "
+			modifier = {
+				war_exhaustion = -0.03
+			}
+		}
+		{
+			name = "Skeletal Body Guards"
+			desc = "Every one of our necromancers has several skeletal bodyguards to ensure their survival "
+			modifier = {
+				land_forcelimit_modifier = 0.25
+			}
+		}
+		{
+			name = "State-Sanctioned Necromancy"
+			desc = "The practice of Necromancy is not only legalized but also incentivized, thus cemeteries and graveyards are now part of the state "
+			modifier = {
+				manpower_in_true_faith_provinces = 0.35
+			}
+		}
+		{
+			name = "Recycle our Dead"
+			desc = "Those who die on the battlefield or are unfit to fight anymore can have unfortunate accidents and thus serve our country's purposes once more "
+			modifier = {
+				reinforce_speed = 0.5
+			}
+		}
+		{
+			name = "The Dead Feel no Fear"
+			desc = " The undead unlike a normal soldier will keep fighting against all odds and never retreat nor surrender."
+			modifier = {
+				land_morale = 0.15
+			}
+		}
+		{
+			name = "Relentless Undead"
+			desc = "Even if our army is defeated we can easily raise more dead ready to fight once more "
+			modifier = {
+				recover_army_morale_speed = 0.5
+			}
+		}
+	}
+	bonus = {
+		land_maintenance_modifier = -0.05
+	}
+}
+new idea_group soul_siphon_ideas = {
+	name = "Soul Siphon"
+	category = DIP
+	trigger = {
+		full_idea_group = conjuration_ideas
+	}
+	ideas = {
+		{
+			name = "Petty Soul Gems"
+			desc = "Petty soul gems are the lowliest one can have but it's often used in our internal markets. "
+			modifier = {
+				global_own_trade_power = 0.15
+			}
+		}
+		{
+			name = "Lesser Soul Gems"
+			desc = "Lesser soul gems are more sought after thus we can make considerable amounts of money. "
+			modifier = {
+				global_trade_power = 0.15
+			}
+		}
+		{
+			name = "Common Soul Gems"
+			desc = "Although more valuable common soul gems lie on the delicate balance that the common adventurer can't easily make one and the more experienced ones do not bother with it "
+			modifier = {
+				caravan_power = 0.25
+			}
+		}
+		{
+			name = "Greater Soul Gems"
+			desc = "Greater Soul Gems are very sought after  thus drawing trade towards our nation "
+			modifier = {
+				trade_steering = 0.25
+			}
+		}
+		{
+			name = "Grand Soul Gems"
+			desc = " Grand soul gems are extremely powerful able to replenish or enchant many artefacts"
+			modifier = {
+				global_trade_goods_size_modifier = 0.1
+			}
+		}
+		{
+			name = "Black Soul Gems"
+			desc = "Black soul gems are the only soul gems that contain a humanoid soul, they are highly illegal but we can always look the other way... "
+			modifier = {
+				trade_efficiency = 0.15
+			}
+		}
+		{
+			name = "Azura's Star"
+			desc = " Azura's Star is a fabled soul gem that can be filled with any soul except for humanoid souls to have such an artefact is awe-inspiring "
+			modifier = {
+				prestige_decay = -0.01
+			}
+		}
+	}
+	bonus = {
+		merchants = 1
+	}
+}
+new idea_group esb_flesh_magic = {
+	name = "Flesh Magic"
+	category = MIL
+	trigger = {
+		full_idea_group = necromacy_ideas
+	}
+	ideas = {
+		{
+			name = "Flesh Magic 1"
+			desc = ""
+			modifier = {
+				manpower_recovery_speed = 0.15
+			}
+		}
+		{
+			name = "Flesh Magic 2"
+			desc = ""
+			modifier = {
+				spy_offence = 0.2
+			}
+		}
+		{
+			name = "Flesh Magic 3"
+			desc = ""
+			modifier = {
+				reinforce_speed = 0.2
+				reinforce_cost_modifier = -0.15
+			}
+		}
+		{
+			name = "Flesh Magic 4"
+			desc = ""
+			modifier = {
+				discipline = 0.1
+				land_morale = -0.1
+			}
+		}
+		{
+			name = "Flesh Magic 5"
+			desc = ""
+			modifier = {
+				global_regiment_cost = -0.1
+			}
+		}
+		{
+			name = "Flesh Magic 6"
+			desc = ""
+			modifier = {
+				global_trade_goods_size_modifier = 0.1
+			}
+		}
+		{
+			name = "Flesh Magic 7"
+			desc = ""
+			modifier = {
+				shock_damage_received = -0.05
+			}
+		}
+	}
+	bonus = {
+		diplomatic_reputation = -1
+	}
+}

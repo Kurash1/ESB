@@ -24,22 +24,6 @@ check_if_non_state_advisor_effect = {
 				$chance_of_tertiary$ = { set_country_flag = heathen_advisor }
 			}
 		}
-		else_if = {
-			limit = {
-				capital_scope = {
-					continent = Akavir
-				}
-			}
-			random_list = { #East Asia has highest chance of non state.
-				$chance_of_primary$ = { set_country_flag = state_religion_advisor }
-				$chance_of_tertiary$ = { set_country_flag = norse_advisor }
-				$chance_of_primary$ = { set_country_flag = totemism_advisor }
-				$chance_of_secondary$ = { set_country_flag = animism_advisor }
-				$chance_of_secondary$ = { set_country_flag = mayan_advisor }
-				$chance_of_secondary$ = { set_country_flag = inca_advisor }
-				$chance_of_secondary$ = { set_country_flag = nahuatl_advisor }
-			}
-		}
 		else = {
 			set_country_flag = state_religion_advisor
 		}

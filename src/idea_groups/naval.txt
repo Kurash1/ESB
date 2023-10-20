@@ -1,0 +1,257 @@
+new idea_group naval_ideas = {
+	name = "Naval"
+	category = MIL
+	ideas = {
+		{
+			name = "Boarding Parties"
+			desc = "By teaching our naval officers to lead boarding actions against enemy ships, we can gain an edge in naval combat even when fighting superior enemy fleets."
+			modifier = {
+				leader_naval_shock = 1
+			}
+		}
+		{
+			name = "Improved Rams"
+			desc = "The concept of outfitting warships with rams goes back thousands of years, but great advancements in metallurgy have been made since then and we should take advantage of these to create sturdier rams."
+			modifier = {
+				galley_power = 0.2
+			}
+		}
+		{
+			name = "Naval Cadets"
+			desc = "By promoting the navy as the career choice of the nobility's second and third sons, we can create a professional corps of naval officers to oversee our gunnery crews."
+			modifier = {
+				leader_naval_fire = 1
+				sunk_ship_morale_hit_recieved = -0.33
+			}
+		}
+		{
+			name = "Naval Glory"
+			desc = "The sight of our glorious and prestigious navy will make all adversaries tremble in fear."
+			modifier = {
+				navy_tradition = 1
+			}
+		}
+		{
+			name = "Press Gangs"
+			desc = "Life at sea is hard and unforgiving and not everyone is keen on a career in the Navy. By legalizing the impressment of men of seafaring habits, it will be easier to crew our ships speeding up the process of commissioning ships."
+			modifier = {
+				sailors_recovery_speed = 0.25
+			}
+		}
+		{
+			name = "Oak Forests for Ships"
+			desc = "The more punishment our ships can take the more they can dish out. Let us ensure that we have a ready supply of the finest seasoned oak for our warships."
+			modifier = {
+				heavy_ship_power = 0.2
+			}
+		}
+		{
+			name = "Superior Seamanship"
+			desc = "Enables us to transform our fleet into a supreme naval force with high-class vessels and highly skilled captains and sailors."
+			modifier = {
+				global_naval_engagement_modifier = 0.15
+				naval_morale = 0.15
+			}
+		}
+	}
+	bonus = {
+		ship_durability = 0.10
+	}
+	ai_chance = {
+		factor = 5
+		modifier = {
+			factor = 1000
+			tag = windhelm
+		}
+	}
+}
+
+new idea_group galle0 = {
+	name = "Galley Focus"
+	category = DIP
+	trigger = {
+		full_idea_group = naval_ideas
+	}
+	ideas = {
+		{
+			name = "Like The Harbor of Merchants"
+			desc = "We need a lot of space for our war fleet."
+			modifier = {
+				naval_forcelimit_modifier = 0.2
+			}
+		}
+		{
+			name = "Galley-Shipyards"
+			desc = "The state maintains shipyards to more efficiently produce the ships we desire."
+			modifier = {
+				galley_cost = -0.2
+			}
+		}
+		{
+			name = "Improved Rams"
+			desc = "The concept of outfitting warships with rams goes back thousands of years, but great advancements in metallurgy have been made since then and we should take advantage of these to create sturdier rams."
+			modifier = {
+				galley_power = 0.15
+			}
+		}
+		{
+			name = "Naval Glory"
+			desc = "The sight of our glorious and prestigious navy will make all adversaries tremble in fear."
+			modifier = {
+				naval_morale = 0.1
+			}
+		}
+		{
+			name = "Improved Naval Fighting Instruction"
+			desc = "Allows our naval veterans to devise new methods to improve our fleet's efficiency in blockades."
+			modifier = {
+				blockade_efficiency = 0.25
+				sailor_maintenance_modifer = -0.25
+			}
+		}
+		{
+			name = "Double Hulls"
+			desc = "Double hulls will make our ships much more resilient."
+			modifier = {
+				ship_durability = 0.1
+			}
+		}
+		{
+			name = "Naval Ballista"
+			desc = "We can use the ballista of our ships to improve our siege progress on land."
+			modifier = {
+				siege_blockade_progress = 1
+			}
+		}
+	}
+	bonus = {
+		capture_ship_chance = 0.25
+	}
+}
+new idea_group handel0 = {
+	name = "Light Ship Focus"
+	category = DIP
+	trigger = {
+		full_idea_group = naval_ideas
+	}
+	ideas = {
+		{
+			name = "Light Ship-Shipyards"
+			desc = "The state maintains shipyards to more efficiently produce the ships we desire."
+			modifier = {
+				light_ship_cost = -0.2
+			}
+		}
+		{
+			name = "Oak Forests for Ships"
+			desc = "The more punishment our ships can take the more they can give. Let us ensure that we have a ready supply of the finest seasoned oak for our warships."
+			modifier = {
+				ship_durability = 0.1
+			}
+		}
+		{
+			name = "Trade Tradition"
+			desc = "We are a trade nation. The trade by sea is an integral part of our strategy."
+			modifier = {
+				trade_efficiency = 0.15
+			}
+		}
+		{
+			name = "Naval Cadets"
+			desc = "By promoting the navy as the career choice of the nobility's second and third sons, we can create a professional corps of naval officers to oversee our gunnery crews."
+			modifier = {
+				sailor_maintenance_modifer = 0.1
+				sailors_recovery_speed = 0.2
+			}
+		}
+		{
+			name = "Huge Trade Fleet"
+			desc = "We support a great trade fleet."
+			modifier = {
+				naval_forcelimit_modifier = 0.2
+			}
+		}
+		{
+			name = "Merchant Intelligence"
+			desc = "Our merchants do not only improve our trade, but they will also inform us about the defensive capabilities of our enemies."
+			modifier = {
+				trade_power_in_fleet_modifier = 0.5
+				navy_tradition = 1
+			}
+		}
+		{
+			name = "Superior Seamanship"
+			desc = "Enables us to transform our fleet into a supreme naval force with high-class vessels and highly skilled captains and sailors."
+			modifier = {
+				naval_morale = 0.10
+			}
+		}
+	}
+	bonus = {
+		merchants = 1
+		naval_tradition_from_trade = 0.25
+	}
+}
+new idea_group gross0 = {
+	name = "Heavy Ship Focus"
+	category = DIP
+	trigger = {
+		full_idea_group = naval_ideas
+	}
+	ideas = {
+		{
+			name = "Heavy Ship-Shipyards"
+			desc = "The state maintains shipyards to produce the ships we desire more efficiently."
+			modifier = {
+				heavy_ship_cost = -0.2
+			}
+		}
+		{
+			name = "Oak Forests for Ships"
+			desc = "The more punishment our ships can take the more they can give. Let us ensure that we have a ready supply of the finest seasoned oak for our warships."
+			modifier = {
+				heavy_ship_power = 0.15
+			}
+		}
+		{
+			name = "Mass Production"
+			desc = "We are doing everything we can to shorten our great ships' build time."
+			modifier = {
+				global_ship_recruit_speed = -0.35
+				sailor_maintenance_modifer = -0.2
+			}
+		}
+		{
+			name = "Naval Glory"
+			desc = "The sight of our glorious and prestigious navy will make all adversaries tremble in fear."
+			modifier = {
+				naval_morale = 0.1
+			}
+		}
+		{
+			name = "Double Hulls"
+			desc = "Double hulls will make our ships much more resilient."
+			modifier = {
+				ship_durability = 0.10
+			}
+		}
+		{
+			name = "Winter Harbors"
+			desc = "We have to ensure that our ships are safe at all times, in summer and winter. Because winter is always coming. \nEnables §GGrand Shipyard§W \nEnables §GHuge Shipyard§W"
+			modifier = {
+				naval_forcelimit_modifier = 0.2
+			}
+		}
+		{
+			name = "Naval Cadets"
+			desc = "By promoting the navy as the career choice of the nobility's second and third sons, we can create a professional corps of naval officers to oversee our gunnery crews."
+			modifier = {
+				sailor_maintenance_modifer = 0.1
+				sailors_recovery_speed = 0.2
+			}
+		}
+	}
+	bonus = {
+		recover_navy_morale_speed = 0.10
+	}
+}

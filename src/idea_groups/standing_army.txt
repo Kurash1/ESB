@@ -1,0 +1,434 @@
+new idea_group standing_army_ideas = {
+	name = "Standing Army"
+	category = MIL
+	ideas = {
+		{
+			name = "Specialized Infantry Training "
+			desc = "Various new implementations and techniques vastly improve the effectiveness of the frontline in a battle, thus making our infantrymen excel during the fight."
+			modifier = {
+				infantry_power = 5%
+			}
+		}
+		{
+			name = "Cavalry Round Tactics"
+			desc = "By employing hit and run as well as surprise attacks, we make excellent use of our cavalry's fierce charge and power, a force to be reckoned with."
+			modifier = {
+				cavalry_power = 5%
+			}
+		}
+		{
+			name = "Command the Barrage"
+			desc = "Raining fire upon the enemy, these archery skills are honed to perfection to deliver the most disciplined and brutal barrage."
+			modifier = {
+				artillery_power = 5%
+			}
+		}
+		{
+			name = "Military Booklet"
+			desc = "Advances in the military have led to our staff writing booklets on how to train recruits and hone their skills to perfection, thus speeding up the time it takes to drill them."
+			modifier = {
+				drill_gain_modifier = 50%
+			}
+		}
+		{
+			name = "Grandiose Achievements"
+			desc = "By memorizing and spreading the word of our military achievements we make sure our men are the talk of town and envy of kings. No army carries prestige such as ours!"
+			modifier = {
+				prestige_from_land = 50%
+			}
+		}
+		{
+			name = "Sieging Breakthrough"
+			desc = "Our military scientists always experiment with new techniques of weapons to tear down the enemy walls as quickly and efficiently as possible. We've had a breakthrough in our research."
+			modifier = {
+				siege_ability = 20%
+			}
+		}
+		{
+			name = "Fire on my Command!"
+			desc = "By training our soldiers to think and act as one, we achieve the state of absolute discipline. No soldier breaks the line, no soldier falters in front of the enemy, there is just a target and an order to fire."
+			modifier = {
+				discipline = 5%
+			}
+		}
+	}
+	bonus = {
+		drill_decay_modifier = -25%
+	}
+	ai_chance = {
+		factor = 5
+	}
+}
+new idea_group quality_ideas = {
+	name = "Quality"
+	category = MIL
+	trigger = {
+		full_idea_group = standing_army_ideas
+	}
+	ideas = {
+		{
+			name = "Private to Marshal"
+			desc = "Every private has a marshal's baton in his back. Well, perhaps not exactly, but for those who distinguish themselves in battle, promotion and rewards will follow. The troops know this and are inspired by it."
+			modifier = {
+				infantry_power = 0.1
+			}
+		}
+		{
+			name = "Quality Education"
+			desc = "The most vital moment of any army's existence is straight after a battle. Win or lose, exhausted troops are most vulnerable. We must ensure that our troops are ready for combat before the opposition is."
+			modifier = {
+				army_tradition = 0.5
+			}
+		}
+		{
+			name = "Finest of Horses"
+			desc = "How steadily those troops take the ground! How beautifully those cavalry form! Look at those grey horses! Who are those fine horsemen? These are fine troops."
+			modifier = {
+				cavalry_power = 0.1
+			}
+		}
+		{
+			name = "Corvettes"
+			desc = "Corvettes were a class of small warships that were designed to escort friendly vessels and harass the enemy, relying on speed and manoeuvrability rather than massed firepower."
+			modifier = {
+				ship_durability = 0.1
+			}
+		}
+		{
+			name = "Naval Drill"
+			desc = "The confusion of combat can leave a warship unfit for action for a long time. A well-drilled crew will recover much faster than an ordinary one."
+			modifier = {
+				naval_morale = 0.15
+			}
+		}
+		{
+			name = "Copper Bottoms"
+			desc = "Wood may be the ideal material for shipbuilding, but it tends to deteriorate over time. By fitting our ships with copper sheathing below the waterline we can reduce this deterioration, allowing them to better withstand long journeys."
+			modifier = {
+				naval_attrition = -0.25
+			}
+		}
+		{
+			name = "Massed Battery"
+			desc = "Let us mass our archers in a single grand formation, its destructive power will make a hole in the enemy lines."
+			modifier = {
+				artillery_power = 0.10
+			}
+		}
+	}
+	bonus = {
+		discipline = 0.05
+	}
+}
+new idea_group fire0 = {
+	name = "Fire"
+	category = MIL
+	trigger = {
+		full_idea_group = quality_ideas
+	}
+	ideas = {
+		{
+			name = "Concentrated Volleys"
+			desc = "An unprepared charging enemy might regret that decision."
+			modifier = {
+				shock_damage_received = -0.1
+			}
+		}
+		{
+			name = "Siege Ballista"
+			desc = "Our ballista are versatile when it comes to sieges or battles."
+			modifier = {
+				artillery_levels_available_vs_fort = 1
+			}
+		}
+		{
+			name = "Quick Reloading"
+			desc = "Training, training, training. Our ballista crews will be better than our rivals."
+			modifier = {
+				artillery_power = 0.1
+			}
+		}
+		{
+			name = "Wait 'til the last second"
+			desc = "Our men will hold their fire until the very last moment to inflict maximum damage to the enemy."
+			modifier = {
+				fire_damage = 0.1
+			}
+		}
+		{
+			name = "Defensive Fire"
+			desc = "Our fortresses are well equipped for a lasting defensive fire."
+			modifier = {
+				defensiveness = 0.25
+			}
+		}
+		{
+			name = "Concentrated Fire Support"
+			desc = "Through concentrated fire support we will be able to support our front regiments even better."
+			modifier = {
+				backrow_artillery_damage = 0.25
+			}
+		}
+		{
+			name = "Long Range Generals"
+			desc = "Our generals' education will be focused on long-range combat."
+			modifier = {
+				leader_land_fire = 1
+			}
+		}
+	}
+	bonus = {
+		fire_damage_received = -0.1
+	}
+}
+new idea_group shock0 = {
+	name = "Shock"
+	category = MIL
+	trigger = {
+		full_idea_group = quality_ideas
+	}
+	ideas = {
+		{
+			name = "Overlapping Attack"
+			desc = "When we charge the enemy, our cavalry can assault the whole frontline or just focus down a single unit. We can also react to opportunities to charge the enemy with great surprise."
+			modifier = {
+				cavalry_power = 0.15
+				cavalry_shock = 1
+			}
+		}
+		{
+			name = "Sudden Assault"
+			desc = "We will attack the enemy when he does not expect it and win because of that."
+			modifier = {
+				fire_damage_received = -0.1
+			}
+		}
+		{
+			name = "Cavalry Focus"
+			desc = "Cavalry is very important when it comes to surprising an enemy and quickly defeating him."
+			modifier = {
+				cavalry_cost = -0.25
+			}
+		}
+		{
+			name = "Wedge Formation"
+			desc = "Our cavalry wedges are feared by all our enemies."
+			modifier = {
+				cav_to_inf_ratio = 0.5
+			}
+		}
+		{
+			name = "Staggering Attack"
+			desc = "Our attacks will be delivered with such force that the enemy should waver and break."
+			modifier = {
+				shock_damage = 0.1
+			}
+		}
+		{
+			name = "Dragoon Cavalry"
+			desc = "Our Dragoon Cavalry can quickly ride into battle, hurt the enemy and then pull back. When necessary, we can also fight directly from horseback, significantly improving our long-range combat options."
+			modifier = {
+				cavalry_power = 0.15
+			}
+		}
+		{
+			name = "Shock Generals"
+			desc = "Our priority in educating generals is the teachings of close combat."
+			modifier = {
+				leader_land_shock = 1
+			}
+		}
+	}
+	bonus = {
+		shock_damage_received = -0.1
+	}
+}
+new idea_group esb_professionalism = {
+	name = "Professionalism"
+	category = MIL
+	trigger = {
+		full_idea_group = quality_ideas
+	}
+	ideas = {
+		{
+			name = "Well Maintained Army"
+			desc = ""
+			modifier = {
+				land_maintenance_modifier = 0.05
+			}
+		}
+		{
+			name = "Drilled Troops"
+			desc = ""
+			modifier = {
+				drill_gain_modifier = 0.5
+			}
+		}
+		{
+			name = "Long Memory"
+			desc = ""
+			modifier = {
+				drill_decay_modifier = -0.5
+			}
+		}
+		{
+			name = "Professional Sieges"
+			desc = ""
+			modifier = {
+				reinforce_cost_modifier = 0.25
+				siege_ability = 0.25
+			}
+		}
+		{
+			name = "Eyes on the front"
+			desc = ""
+			modifier = {
+				reserves_organisation = 0.5
+			}
+		}
+		{
+			name = "Trained Discipline"
+			desc = ""
+			modifier = {
+				discipline = 0.05
+			}
+		}
+		{
+			name = "Well known army"
+			desc = ""
+			modifier = {
+				land_morale = 0.1
+			}
+		}
+	}
+	bonus = {
+		yearly_army_professionalism = 0.005
+	}
+}
+new idea_group quantity_ideas = {
+	name = "Quantity"
+	category = MIL
+	trigger = {
+		full_idea_group = standing_army_ideas
+	}
+	ideas = {
+		{
+			name = "Mass Army"
+			desc = "We have, up to now, been very choosy over who should serve as a ranker in our military. We only took the poorest and most desperate, basically the people no one else would miss. Now though we are going to open up the ranks to everyone, who isn't rich."
+			modifier = {
+				global_manpower_modifier = 0.25
+			}
+		}
+		{
+			name = "The Young can Serve"
+			desc = "How old does a boy have to be before he is a man? How old must he be before he can die for his country? Some rulers are squeamish, we on the other hand are an equal opportunity butcher."
+			modifier = {
+				manpower_recovery_speed = 0.15
+			}
+		}
+		{
+			name = "Enforced Service"
+			desc = "The principle of volunteering underpins our whole army structure. Sometimes there aren't enough volunteers. We should force people to volunteer."
+			modifier = {
+				global_regiment_cost = -0.15
+			}
+		}
+		{
+			name = "The Old and Infirm"
+			desc = "The veteran sergeants are some of the most despicable and corrupt men imaginable, but these men are still useful. Rather than leave them to be beggars on our streets, men like this should be used when their service ends. Let's make them into drill sergeants and quartermasters so their unique skills can be put to use."
+			modifier = {
+				land_maintenance_modifier = -0.05
+			}
+		}
+		{
+			name = "Mercenary Contracts"
+			desc = "By drawing up standing contracts with certain mercenary captains we can ensure that we will always have access to a large pool of mercenaries to draw on, should they be needed."
+			modifier = {
+				global_supply_limit_modifier = 0.25
+			}
+		}
+		{
+			name = "Conscripted Garrisons"
+			desc = "By conscripting our able young men for our garrisons we can ensure that we have enough men to defend our borders."
+			modifier = {
+				garrison_size = 0.25
+			}
+		}
+		{
+			name = "Expanded Supply Trains"
+			desc = "Investing more resources into our supply trains will allow our army to operate for longer periods in a hostile land."
+			modifier = {
+				land_attrition = -0.25
+			}
+		}
+	}
+	bonus = {
+		land_forcelimit_modifier = 0.25
+	}
+}
+new idea_group esb_largearmy = {
+	name = "Large Army"
+	category = MIL
+	trigger = {
+		full_idea_group = quantity_ideas
+	}
+	ideas = {
+		{
+			name = "Conscript Every Man Mer and Beast"
+			desc = "A policy of conscripting every able-bodied individual and even beasts into military service."
+			modifier = {
+				global_manpower_modifier = 0.25
+				production_efficiency = -0.2
+			}
+		}
+		{
+			name = "Heavy Conscription"
+			desc = "Implementing heavy conscription measures to rapidly raise armies, but at the cost of burdening our economy."
+			modifier = {
+				war_taxes_cost_modifier = 1.0
+				global_monthly_devastation = 0.05
+			}
+		}
+		{
+			name = "Manpower Tactics"
+			desc = "Training our military forces with a focus on maximizing manpower, allowing us to field larger armies."
+			modifier = {
+				land_forcelimit_modifier = 0.25
+			}
+		}
+		{
+			name = "Military Complex"
+			desc = "Investing in the development of military infrastructure and logistics to reduce the maintenance costs of our armed forces."
+			modifier = {
+				land_maintenance_modifier = -0.05
+			}
+		}
+		{
+			name = "Forced Conscriptions"
+			desc = "Implementing forced conscription policies, which may negatively impact the morale of our soldiers but increase our overall manpower pool."
+			modifier = {
+				land_morale = -0.1
+				global_manpower_modifier = 0.1
+			}
+		}
+		{
+			name = "Castle Conscription"
+			desc = "Utilizing castles and fortifications for conscription efforts."
+			modifier = {
+				fort_maintenance_modifier = 1.0
+				defensiveness = 0.25
+				garrison_size = 0.5
+			}
+		}
+		{
+			name = "Large Army Expertise"
+			desc = "Developing expertise in managing large armies, allowing us to better organize and mobilize reserves during battles."
+			modifier = {
+				reserves_organisation = 0.5
+			}
+		}
+	}
+	bonus = {
+		free_leader_pool = 1
+	}
+}
