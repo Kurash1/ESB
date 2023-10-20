@@ -1,0 +1,244 @@
+new idea_group diplomatic_ideas = {
+	name = "Diplomatic"
+	category = DIP
+	ideas = {
+		{
+			name = "Foreign Embassies"
+			desc = "Diplomacy is a delicate art of trying to balance several sides at the same time. If we maintain embassies in other countries reporting to us regularly then we will have the information needed to ponder our options."
+			modifier = {
+				diplomats = 1
+			}
+		}
+		{
+			name = "Cabinet"
+			desc = "By establishing an executive council, we can assemble our most skilled diplomats."
+			modifier = {
+				diplomatic_upkeep = 1
+			}
+		}
+		{
+			name = "War Cabinet"
+			desc = "Warfare is when the country is at its most vulnerable, the stresses of wars can seriously undermine the ability to rule. By ensuring that key players are involved during the time of warfare we can avoid these stresses."
+			modifier = {
+				diplomats = 1
+			}
+		}
+		{
+			name = "Benign Diplomats"
+			desc = "By being more careful in selecting and educating our diplomats, we will greatly increase our chance to exert our influence and establish a favourable position in other countries."
+			modifier = {
+				improve_relation_modifier = 0.25
+			}
+		}
+		{
+			name = "Experienced Diplomats"
+			desc = "Sometimes it is simple enough for people to believe that we are powerful. We have worked hard on our diplomatic service to ensure that our word carries extra weight."
+			modifier = {
+				diplomatic_reputation = 2
+			}
+		}
+		{
+			name = "Flexible Negotiation"
+			desc = "You can never quite know what can be gained at the peace table so we should enter with all options open."
+			modifier = {
+				province_warscore_cost = -0.2
+			}
+		}
+		{
+			name = "Diplomatic Corps"
+			desc = "Through the establishment of a professional Diplomatic Corps we ensure that the hard-learned lessons of senior diplomats are passed on to the younger generation."
+			modifier = {
+				dip_tech_cost_modifier = -0.1
+			}
+		}
+	}
+	bonus = {
+		reduced_stab_impacts = yes
+	}
+}
+new idea_group esb_prestigious = {
+	name = "Prestigious"
+	category = DIP
+	trigger = {
+		full_idea_group = diplomatic_ideas
+	}
+	ideas = {
+		{
+			name = "Prestigious 1"
+			desc = ""
+			modifier = {
+				prestige_from_land = 0.25
+				prestige_from_naval = 0.25
+			}
+		}
+		{
+			name = "Prestigious 2"
+			desc = ""
+			modifier = {
+				prestige_decay = -0.01
+			}
+		}
+		{
+			name = "Prestigious 3"
+			desc = ""
+			modifier = {
+				monthly_splendor = 1
+			}
+		}
+		{
+			name = "Prestigious 4"
+			desc = ""
+			modifier = {
+				advisor_cost = -0.15
+			}
+		}
+		{
+			name = "Prestigious 5"
+			desc = ""
+			modifier = {
+				improve_relation_modifier = 0.15
+			}
+		}
+		{
+			name = "Prestigious 6"
+			desc = ""
+			modifier = {
+				prestige_per_development_from_conversion = 0.5
+			}
+		}
+		{
+			name = "Prestigious 7"
+			desc = ""
+			modifier = {
+				prestige = 1.5
+			}
+		}
+	}
+	bonus = {
+		land_morale = 0.10
+	}
+}
+new idea_group influence_ideas = {
+	name = "Influence"
+	category = DIP
+	trigger = {
+		full_idea_group = diplomatic_ideas
+	}
+	ideas = {
+		{
+			name = "Tribute System"
+			desc = "Strengthen our income by establishing a formalized system of yearly tribute from our vassals."
+			modifier = {
+				vassal_income = 0.25
+			}
+		}
+		{
+			name = "Establish Branches"
+			desc = "Inheritance can be a tricky business. By clearly defining roles and rights for our dynasty through Branches, we can ensure a more stable line of succession."
+			modifier = {
+				reduced_liberty_desire = 15
+			}
+		}
+		{
+			name = "Integrated Elites"
+			desc = "By bringing the ruling elite of our subject nations into our government we can smoothen the process of integrating their provinces significantly."
+			modifier = {
+				diplomatic_annexation_cost = -0.25
+			}
+		}
+		{
+			name = "State Propaganda"
+			desc = "As with a man, a nation's reputation is everything, and the establishment of an official propaganda service will ensure our good name is not smeared by the lies of our enemies."
+			modifier = {
+				diplomatic_upkeep = 1
+			}
+		}
+		{
+			name = "Diplomatic Influence"
+			desc = "By focusing on Diplomacy we can increase the power we wield on the diplomatic stage. This power can gain us many friends."
+			modifier = {
+				diplomatic_reputation = 2
+			}
+		}
+		{
+			name = "Postal Service"
+			desc = "With communications being what they are, it is difficult to ensure that our diplomatic dispatches arrive in a timely fashion. Creating a network of post offices and courier rest stops will make it easier for our voice to be heard in distant lands."
+			modifier = {
+				envoy_travel_time = -0.35
+			}
+		}
+		{
+			name = "Marcher Lords"
+			desc = "By granting considerable autonomy to vassals in border regions, these 'Marcher Lords' will be able to raise large military armies to support us in our wars."
+			modifier = {
+				vassal_forcelimit_bonus = 1
+			}
+		}
+	}
+	bonus = {
+		unjustified_demands = -0.5
+	}
+}
+new idea_group esb_feudal = {
+	name = "Feudal"
+	category = ADM
+	trigger = {
+		full_idea_group = influence_ideas
+	}
+	ideas = {
+		{
+			name = "Feudal 1"
+			desc = ""
+			modifier = {
+				legitimacy = 1
+				devotion = 1
+			}
+		}
+		{
+			name = "Feudal 2"
+			desc = ""
+			modifier = {
+				army_tradition = 0.5
+			}
+		}
+		{
+			name = "Feudal 3"
+			desc = ""
+			modifier = {
+				manpower_recovery_speed = 0.15
+			}
+		}
+		{
+			name = "Feudal 4"
+			desc = ""
+			modifier = {
+				global_tax_modifier = 0.15
+			}
+		}
+		{
+			name = "Feudal 5"
+			desc = ""
+			modifier = {
+				diplomatic_reputation = 1.5
+			}
+		}
+		{
+			name = "Feudal 6"
+			desc = ""
+			modifier = {
+				advisor_pool = 1
+			}
+		}
+		{
+			name = "Feudal 7"
+			desc = ""
+			modifier = {
+				reduced_liberty_desire = 10
+			}
+		}
+	}
+	bonus = {
+		diplomatic_annexation_cost = 0.1
+		liberty_desire_from_subject_development = -0.25
+	}
+}

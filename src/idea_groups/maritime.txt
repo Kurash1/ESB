@@ -1,0 +1,126 @@
+new idea_group maritime_ideas = {
+	name = "Maritime"
+	category = DIP
+	ideas = {
+		{
+			name = "Seahawks"
+			desc = "Allows us to focus heavily on military advancements and thereby increase our naval tradition."
+			modifier = {
+				navy_tradition = 1
+			}
+		}
+		{
+			name = "Merchant Marine"
+			desc = "Let every merchant ship fly our merchant ensign with pride and know that our navy will always be there to protect them if needs must."
+			modifier = {
+				global_sailors_modifier = 0.15
+				naval_tradition_from_trade = 0.25
+			}
+		}
+		{
+			name = "Sheltered Ports"
+			desc = "It is an unfortunate fact that ships tend to be damaged during the battle, and equally unfortunate that the damage is rarely able to be repaired at sea. To alleviate this problem we will create a system of sheltered ports along our coastline where our ships can patch themselves up."
+			modifier = {
+				global_ship_repair = 0.25
+			}
+		}
+		{
+			name = "Grand Navy"
+			desc = "Allows us to create one of the largest and most powerful fleets the world has ever seen."
+			modifier = {
+				naval_forcelimit_modifier = 0.25
+			}
+		}
+		{
+			name = "Ship's Coin"
+			desc = "Ships are expensive, what we need to do is to get other people to help pay for them. The Ship's coin is a perfect example of this."
+			modifier = {
+				global_ship_cost = -0.15
+			}
+		}
+		{
+			name = "Excellent Shipwrights"
+			desc = "By gathering the best shipbuilders our nation has to offer, we can build a fleet of modern vessels unmatched in craftsmanship and manoeuvrability."
+			modifier = {
+				leader_naval_manuever = 1
+				movement_speed_in_fleet_modifier = 1.5
+			}
+		}
+		{
+			name = "Naval Fighting Instruction"
+			desc = "Allows our naval veterans to devise new methods to improve our fleet's efficiency in blockades."
+			modifier = {
+				embargo_efficiency = 0.25
+				blockade_efficiency = 0.25
+			}
+		}
+	}
+	bonus = {
+		sea_repair = yes
+		ship_durability = 0.05
+	}
+}
+new idea_group flottenbasis0 = {
+	name = "Fleet Base"
+	category = DIP
+	trigger = {
+		full_idea_group = maritime_ideas
+	}
+	ideas = {
+		{
+			name = "We Need Bases"
+			desc = "If there always is a base nearby, our ships will improve their durability."
+			modifier = {
+				sailor_maintenance_modifer = -0.25
+			}
+		}
+		{
+			name = "Garrison Fleet"
+			desc = "A small garrison fleet can defend our base against pirates or lonely enemy ships."
+			modifier = {
+				naval_forcelimit_modifier = 0.25
+			}
+		}
+		{
+			name = "Base Conquest"
+			desc = "As a nation that relies on ships, we need bases."
+			modifier = {
+				global_manpower_modifier = 0.15
+				build_cost = -0.15
+			}
+		}
+		{
+			name = "Base Garrison"
+			desc = "We both need quite many seamen and soldiers to man our bases."
+			modifier = {
+				global_sailors_modifier = 0.25
+			}
+		}
+		{
+			name = "Experienced Seamen"
+			desc = "We always have enough competent men to hire."
+			modifier = {
+				naval_morale = 0.15
+			}
+		}
+		{
+			name = "Sea to Land Battle"
+			desc = "If we have to take an enemy base it is necessary to know the ways of the sea to land battles."
+			modifier = {
+				galley_power = 0.15
+				transport_power = 0.15
+			}
+		}
+		{
+			name = "Oversea Shipyards"
+			desc = "Repairing ships overseas can be a tricky task. It helps to have a shipwright at the next base."
+			modifier = {
+				global_ship_repair = 0.5
+			}
+		}
+	}
+	bonus = {
+		build_cost = -0.15
+		build_time = -0.15
+	}
+}

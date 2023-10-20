@@ -1,0 +1,699 @@
+new idea_group arcane_ideas = {
+	name = "Arcane"
+	category = ADM
+	ideas = {
+		{
+			name = "Arcane Apprentice"
+			desc = "To train our apprentices we generally send them on-field training to use magic to help our workers "
+			modifier = {
+				production_efficiency = 0.10
+			}
+		}
+		{
+			name = "Court Mages"
+			desc = "Mages have often positions on esteemed prestige in the courts and some of them are very well apt to conduct diplomacy on our behalf "
+			modifier = {
+				diplomats = 1
+			}
+		}
+		{
+			name = "Arcane Enchanters"
+			desc = "Arcane enchanters are workbenches for our enchanters to produce awe-inspiring things "
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Evoker Mages"
+			desc = "Our evokers can make the most of what our country produces and how to best sell it. "
+			modifier = {
+				monthly_magicka = 0.1
+			}
+		}
+		{
+			name = "The Mystic Archives"
+			desc = "Mystic Archives are vast and rich repositories of lore and arcane knowledge. "
+			modifier = {
+				advisor_cost = -0.1
+			}
+		}
+		{
+			name = "The Orrery Observatories"
+			desc = "Observatoriums allow us to look at the stars and other phenomenons from the great beyond. "
+			modifier = {
+				monthly_splendor = 1
+			}
+		}
+		{
+			name = "The Archmage"
+			desc = "The Archmage is the greatest position a mage can have and it is their duty the administer the use of magic on our nation."
+			modifier = {
+				yearly_corruption = -0.05
+			}
+		}
+	}
+	bonus = {
+		diplomatic_reputation = 2
+	}
+}
+new idea_group enchanting_ideas = {
+	name = "Enchanting"
+	category = DIP
+	trigger = {
+		full_idea_group = arcane_ideas
+	}
+	ideas = {
+		{
+			name = "Royal Artifacts"
+			desc = "Our rulers must use magical items worthy of their position and cement their rule with them. "
+			modifier = {
+				legitimacy = 1
+				republican_tradition = 0.5
+				devotion = 1
+				horde_unity = 1
+			}
+		}
+		{
+			name = "Enchanted Infrastructure"
+			desc = "By enchanting crucial parts of our infrastructure we can make grandiose cities much faster. "
+			modifier = {
+				build_time = -0.1
+			}
+		}
+		{
+			name = "Animated Services"
+			desc = "Enchanted brooms, quills and other various mundane items allow the lives of our people too much more productive. "
+			modifier = {
+				state_maintenance_modifier = -0.15
+			}
+		}
+		{
+			name = "Enchanted Tools"
+			desc = "Well crafted tools have a very high impact on manufacturing items, well crafted and enchanted tools give us an unparalleled edge in technological advance. "
+			modifier = {
+				global_trade_goods_size_modifier = 0.1
+			}
+		}
+		{
+			name = "Enchanted Weaponry"
+			desc = "The weapons of our soldiers all carry basic enchantments to make them more effective in combat. "
+			modifier = {
+				shock_damage = 0.05
+			}
+		}
+		{
+			name = "Grand Artifacts"
+			desc = "The artifacts our people can produce are famed and known through all of Nirn. "
+			modifier = {
+				prestige = 0.5
+			}
+		}
+		{
+			name = "Trading Enchanted Items"
+			desc = "Selling our enchanted items to other peoples allow us to dramatically boost our trade presence in the world "
+			modifier = {
+				global_trade_power = 0.25
+			}
+		}
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+}
+new idea_group illusion_ideas = {
+	name = "Illusion"
+	category = DIP
+	trigger = {
+		full_idea_group = arcane_ideas
+	}
+	ideas = {
+		{
+			name = "Invisibility"
+			desc = "Mages who can master the invisibility spell can get into places and hear things other people could only dream of. "
+			modifier = {
+				spy_offence = 0.3
+			}
+		}
+		{
+			name = "Instill Courage"
+			desc = "By artificially boosting the courage of our troops we can be sure they will fight until the bitter end for us "
+			modifier = {
+				land_morale = 0.1
+			}
+		}
+		{
+			name = "Instill Calm"
+			desc = "Making our neighbours calmer we can ensure they won't take arms upon us preemptively "
+			modifier = {
+				ae_impact = -0.1
+			}
+		}
+		{
+			name = "Instill Fear"
+			desc = " By making them fear us we can ensure that taking what we do not deserve is less costly"
+			modifier = {
+				unjustified_demands = -0.25
+			}
+		}
+		{
+			name = "Instill Frenzy"
+			desc = "Instilling mindless rage on our enemy's population can ensure we can send their countries into utter chaos "
+			modifier = {
+				rebel_support_efficiency = 0.5
+			}
+		}
+		{
+			name = "Pacify"
+			desc = "Any citizen that is a rabble-rouser must have a meeting with our illusionists where he will be transformed into a well behaved and law-abiding citizen. "
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Clairvoyance"
+			desc = "By peering in what is to come we can advance our nation at a much faster pace."
+			modifier = {
+				global_institution_spread = 0.25
+			}
+		}
+	}
+	bonus = {
+		diplomatic_reputation = 2
+	}
+}
+new idea_group esb_mind_magic = {
+	name = "Mind Magic"
+	category = DIP
+	trigger = {
+		full_idea_group = illusion_ideas
+	}
+	ideas = {
+		{
+			name = "Mind Magic"
+			desc = "Mind magic is an arcane art that involves the manipulation of the mind and memories of living beings."
+			modifier = {
+				prestige = 1.0
+			}
+		}
+		{
+			name = "Madness"
+			desc = "Using mind magic, the caster is able to evoke madness."
+			modifier = {
+				unjustified_demands = -0.15
+			}
+		}
+		{
+			name = "Manipulation"
+			desc = "Using mind magic, the caster is able to manipulate the thoughts and memories of their victims without them realizing that their minds have been affected."
+			modifier = {
+				fabricate_claims_cost = -0.25
+				discovered_relations_impact = -0.25
+			}
+		}
+		{
+			name = "Speak Far"
+			desc = "Mind magic can also be used to speak directly into the minds of others, which is described as a strange and defiling experience for the recipient."
+			modifier = {
+				envoy_travel_time = -0.5
+				improve_relation_modifier = -0.1
+			}
+		}
+		{
+			name = "Molag Bal"
+			desc = "Molag Bal invades the minds of his prisoners as a form of torture, a process that is agonizing for the victim."
+			modifier = {
+				harsh_treatment_cost = -0.5
+			}
+		}
+		{
+			name = "Mind Trap"
+			desc = "A mind trap is an illusion created using mind magic, where the thoughts of the caster become reality."
+			modifier = {
+				hostile_attrition = 1
+			}
+		}
+		{
+			name = "Double Edged Sword"
+			desc = "When a practitioner of mind magic forces their way into another's mind, they run the risk of opening their own thoughts to the person whose mind they're intruding upon. Those who have been troubled by a mental link of this nature can see through their assailant's eyes if they concentrate hard enough."
+			modifier = {
+				spy_offence = 0.25
+				global_spy_defence = -0.15
+			}
+		}
+	}
+	bonus = {
+		ae_impact = -0.1
+	}
+}
+new idea_group mysticism_ideas = {
+	name = "Mysticism"
+	category = ADM
+	trigger = {
+		full_idea_group = arcane_ideas
+	}
+	ideas = {
+		{
+			name = "Follow Traditions"
+			desc = "Our rulers are known to follow and respect our traditions setting an example for all our people. "
+			modifier = {
+				legitimacy = 0.5
+				republican_tradition = 0.5
+				devotion = 0.5
+				horde_unity = 0.5
+				meritocracy = 0.5
+				global_unrest = -2
+			}
+		}
+		{
+			name = "The Old Ways"
+			desc = "Those who follow in the footsteps of our ancestors are treated better than most. "
+			modifier = {
+				missionaries = 1
+			}
+		}
+		{
+			name = "The Unenlightened"
+			desc = "We need to be patient with those that are yet to see the true path and guide them accordingly"
+			modifier = {
+				tolerance_heathen = 2
+				tolerance_heretic = 2
+			}
+		}
+		{
+			name = "Secure Traditions"
+			desc = "Our grasp on our beliefs are strong enough that a few dissidents won't undermine our rule. "
+			modifier = {
+				religious_unity = 0.15
+			}
+		}
+		{
+			name = "Stable Society"
+			desc = "We should help our society feel safe and secure under our umbrella as a tame society is easier to rule. "
+			modifier = {
+				stability_cost_modifier = -0.15
+				global_unrest = -1
+			}
+		}
+		{
+			name = "Educated Preachers"
+			desc = "Our preachers and clerics are well-spoken and articulate making it easier for people to see the true light. "
+			modifier = {
+				global_missionary_strength = 0.03
+			}
+		}
+		{
+			name = "Humble Life"
+			desc = "A place to eat, drink, sleep and a couple of gold coins for the road is all our missionaries ask for in return for spreading our gospel."
+			modifier = {
+				missionary_maintenance_cost = -0.25
+				tolerance_own = 1
+			}
+		}
+	}
+	bonus = {
+		enforce_religion_cost = -0.5
+	}
+}
+new idea_group esb_shadow_magic = {
+	name = "Shadow Magic"
+	category = ADM
+	trigger = {
+		OR = {
+			full_idea_group = illusion_ideas
+			full_idea_group = mysticism_ideas
+		}
+	}
+	ideas = {
+		{
+			name = "Obscure Magic"
+			desc = "Shadow Magic is an obscure but powerful form of magic related to the schools of Illusion and Mysticism."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Azra Nightwielder"
+			desc = "It was first harnessed by Azra Nightwielder, who was the first to discover that shadow was not simply an absence of light, but a reflection of possible worlds created by forces in conflict."
+			modifier = {
+				innovativeness_gain = 0.5
+			}
+		}
+		{
+			name = "Source of Shadows"
+			desc = "Shadows can be produced by mundane forces such as light hitting a rock, or by more powerful forces such as nations at war."
+			modifier = {
+				land_morale = 0.1
+			}
+		}
+		{
+			name = "Manipulate the Source"
+			desc = "Shadow Magic involves the manipulation of shadows to affect the forces creating it."
+			modifier = {
+				province_warscore_cost = -0.1
+			}
+		}
+		{
+			name = "Distrusted Mages"
+			desc = "Shadow magic has the potential to carry a high price for its usage, for its nature is to turn on their casters, and shadowmages are often distrusted because of this"
+			modifier = {
+				diplomatic_reputation = 1
+			}
+		}
+		{
+			name = "Strongest Magic"
+			desc = "In this way, Shadow Magic rivals even the power of the Elder Scrolls themselves, having the power to potentially change the past, present, and future through the manipulation of shadow. At its strongest, it even has the capabilities of reaching into and affecting the multiverse."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Nightblades"
+			desc = "Shadow Magic is common around the Western Reach area, but is only occasionally used elsewhere. It is often harnessed by "Nightblades"."
+			modifier = {
+				shock_damage = 0.05
+			}
+		}
+	}
+	bonus = {
+		spy_offence = 0.25
+	}
+}
+new idea_group esb_auramancy = {
+	name = "Auramancy"
+	category = DIP
+	trigger = {
+		full_idea_group = mysticism_ideas
+	}
+	ideas = {
+		{
+			name = "Auramancy 1"
+			desc = ""
+			modifier = {
+				prestige_decay = -0.01
+			}
+		}
+		{
+			name = "Auramancy 2"
+			desc = ""
+			modifier = {
+				army_tradition_decay = -0.01
+				navy_tradition_decay = -0.01
+			}
+		}
+		{
+			name = "Auramancy 3"
+			desc = ""
+			modifier = {
+				global_spy_defence = -0.15
+			}
+		}
+		{
+			name = "Auramancy 4"
+			desc = ""
+			modifier = {
+				reform_progress_growth = 0.1
+			}
+		}
+		{
+			name = "Auramancy 5"
+			desc = ""
+			modifier = {
+				prestige = 1.0
+			}
+		}
+		{
+			name = "Auramancy 6"
+			desc = ""
+			modifier = {
+				possible_policy = 1
+			}
+		}
+		{
+			name = "Auramancy 7"
+			desc = ""
+			modifier = {
+				free_policy = 1
+			}
+		}
+	}
+	bonus = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+}
+new idea_group esb_thaumaturgy = {
+	name = "Thaumaturgy"
+	category = MIL
+	trigger = {
+		full_idea_group = mysticism_ideas
+	}
+	ideas = {
+		{
+			name = "Magicka Study"
+			desc = "The school of Thaumaturgy was one of the major avenues of magicka study."
+			modifier = {
+				technology_cost = -0.1
+			}
+		}
+		{
+			name = "Pacification"
+			desc = "Thaumaturgy is a School of Magic that affects will and personal state of the mind, including spells such as pacification."
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Summoning"
+			desc = "Conjuration is still superior for summoning from a distance, as Thaumaturgical summoning can be risky and can only draw from the surrounding area."
+			modifier = {
+				global_manpower_modifier = 0.1
+			}
+		}
+		{
+			name = "Battlespire"
+			desc = "Many enchanted artifacts which were once held in the Battlespire were of a Thaumaturgical nature."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Teleportation"
+			desc = "Thaumaturgy is a School of Magic that affects will and personal state of the mind, including spells such as teleportation."
+			modifier = {
+				movement_speed = 0.1
+			}
+		}
+		{
+			name = "Manipulation of Magic"
+			desc = "Thaumaturgy is a School of Magic that affects will and personal state of the mind, such as the manipulation of other magical forces."
+			modifier = {
+				fire_damage_received = -0.05
+			}
+		}
+		{
+			name = "Detection"
+			desc = "Thaumaturgy is a School of Magic that affects will and personal state of the mind, including spells such as detection."
+			modifier = {
+				global_spy_defence = 0.25
+			}
+		}
+	}
+	bonus = {
+		religious_unity = 0.1
+	}
+}
+new idea_group esb_timemagic = {
+	name = "Chronomancy"
+	category = ADM
+	trigger = {
+		full_idea_group = mysticism_ideas
+	}
+	ideas = {
+		{
+			name = "Time Magic"
+			desc = "Time Magic also known as time travel magic, time alteration, and chronomancy, is a type of magic which involves the manipulation and perversion of time. "
+			modifier = {
+				monthly_reform_progress_modifier = 0.1
+			}
+		}
+		{
+			name = "Dangerous Magic"
+			desc = "Manipulating time is notoriously difficult, with most known successes being entirely accidental or full of unintended, and very dangerous, consequences."
+			modifier = {
+				all_power_cost = 0.05
+			}
+		}
+		{
+			name = "Psijic Order"
+			desc = "The Psijic Order in particular took an active role in attempting to prevent future Dragon Breaks, regularly interfering when it seemed that time was fracturing."
+			modifier = {
+				stability_cost_modifier = -0.15
+			}
+		}
+		{
+			name = "Risk taking Sorcerers"
+			desc = "Others, however, are unswayed by the dangers and have continued to attempt manipulating time, typically at a smaller scale than a Dragon Break. Sorcerers throughout history have often used powerful Tower-based artifacts such as the Numidium or the Staff of Towers to, either intentionally or unintentionally, alter the current timeline."
+			modifier = {
+				relation_with_same_religion = -20
+				relation_with_heretics = -20
+				relation_with_heathens = -20
+				improve_relation_modifier = -0.5
+			}
+		}
+		{
+			name = "Oblivion Travel"
+			desc = "Some have traveled through time through simpler and relatively safer means, such as entering and exiting Oblivion, where causality is not always concurrent with Nirn. The downside with this tactic is the unpredictability and unreliability of when you might end up."
+			modifier = {
+				movement_speed = 0.1
+				land_attrition = 0.1
+			}
+		}
+		{
+			name = "Daedric Corruptions"
+			desc = "Other's have relied on the power of Daedric Princes to corrupt time, such was the case with Hermaeus Mora's library of time-travelling books in Shadowfen."
+			modifier = {
+				tolerance_heathen = 1
+			}
+		}
+		{
+			name = "Tonal Architecture"
+			desc = "Tonal Architecture has also been used repeatedly to send people and objects across space and time, both by Dwemer devices and Elhnofex inscriptions."
+			modifier = {
+				idea_cost = -0.05
+			}
+		}
+	}
+	bonus = {
+		country_admin_power = 1
+	}
+}
+new idea_group esb_thaumavocalism = {
+	name = "Thaumavocalism"
+	category = ADM
+	trigger = {
+		full_idea_group = mysticism_ideas
+	}
+	ideas = {
+		{
+			name = "Musical Magic"
+			desc = "Thaumavocalism is an arcane art of both musical and magical nature that involves channeling magica through song."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Song and"
+			desc = "Practitioners of this art are known as Thaumavocalists. In order to cast magic, thaumavocalists need to sing."
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Dance"
+			desc = "At least some thaumavocalists are incapable of performing magic through traditional means with the usage of gestures or innate mental powers."
+			modifier = {
+				prestige_decay = -0.01
+			}
+		}
+		{
+			name = "Study of two"
+			desc = "Their magic is focused through music. In order to improve their abilities, they must study both magic and music."
+			modifier = {
+				technology_cost = -0.1
+			}
+		}
+		{
+			name = "Accidental Spells"
+			desc = "Thaumavocalists can cast spells accidentally through singing, even as children without formal magical training."
+			modifier = {
+				state_maintenance_modifier = 0.1
+			}
+		}
+		{
+			name = "Resonance Crystals"
+			desc = "Resonance crystals can be used to improve the strength of the magic of the thaumavocalists."
+			modifier = {
+				global_tax_modifier = 0.2
+			}
+		}
+		{
+			name = "Skaldic Songs"
+			desc = "In 2E 582, Vaermina compelled a skald to sing a tune to words found in a specific tome held in Skald's Retreat's library. The song this bard sang plunged Skald's Retreat into a space between Mundus and Quagmire. A performance of The Song of Sinmur, one of the old songs of the Companions was enough to wrench Skald's Retreat from Vaermina's grasp."
+			modifier = {
+				tolerance_own = 2
+			}
+		}
+	}
+	bonus = {
+		army_tradition = 1
+		navy_tradition = 1
+	}
+}
+new idea_group esb_sight = {
+	name = "Divination"
+	category = ADM
+	trigger = {
+		full_idea_group = mysticism_ideas
+	}
+	ideas = {
+		{
+			name = "Scrying"
+			desc = "The Sight, sometimes referred to as divination and scrying, is the ability possessed by some individuals that allows them to divine information through visions and prophecy."
+			modifier = {
+				yearly_corruption = -0.05
+			}
+		}
+		{
+			name = "Reveal the Unseen"
+			desc = "The manner of visions attained by Sight vary. Such visions can include revealing hidden things."
+			modifier = {
+				spy_offence = 0.2
+			}
+		}
+		{
+			name = "Sending"
+			desc = "The manner of visions attained by Sight vary. Such visions can include communicating at a distance."
+			modifier = {
+				envoy_travel_time = -0.25
+			}
+		}
+		{
+			name = "Lore Unknown"
+			desc = "However, visions are not absolute, and may provide an incomplete story, information that is subject to change, or wisdom that is often vague, abstract, and interpretive."
+			modifier = {
+				stability_cost_modifier = 0.25
+			}
+		}
+		{
+			name = "Lineage"
+			desc = "While some are born with the Sight or a natural affinity for it, devotion to the gods can grant the Sight. It is also suggested that lineage plays some factor in one's predisposition to be born with the Sight."
+			modifier = {
+				legitimacy = 1
+				republican_tradition = 0.5
+				devotion = 1
+				horde_unity = 1
+				meritocracy = 1
+			}
+		}
+		{
+			name = "A Curse"
+			desc = "Others may receive visions involuntarily, which can be troubling."
+			modifier = {
+				global_unrest = 2
+			}
+		}
+		{
+			name = "Dragonblood"
+			desc = "Some Dragonborn are known to possess the gift of Sight. It was said that the dragon blood possessed by members of the Septim Dynasty allowed them to see more than lesser men."
+			modifier = {
+				monthly_splendor = 1
+			}
+		}
+	}
+	bonus = {
+		all_power_cost = -0.05
+	}
+}

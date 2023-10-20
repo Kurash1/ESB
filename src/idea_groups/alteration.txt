@@ -1,0 +1,192 @@
+new idea_group alteration_ideas = {
+	name = "Alteration"
+	category = MIL
+	trigger = {
+		OR = {
+			full_idea_group = arcane_ideas
+			full_idea_group = esb_warmagic
+		}
+	}
+	ideas = {
+		{
+			name = "Mage Armor"
+			desc = "Battlemages often wear little to no armour thus magic is required to make sure they do not die with a simple arrow. "
+			modifier = {
+				shock_damage_received = -0.05
+			}
+		}
+		{
+			name = "Atronach"
+			desc = "Some of our mages are so resilient to magical energies they can absorb spells and convert them to magic. "
+			modifier = {
+				fire_damage_received = -0.05
+			}
+		}
+		{
+			name = "Detect Entities"
+			desc = "By altering the way we perceive things we can see those who wish to remain hidden. "
+			modifier = {
+				global_spy_defence = 0.25
+				spy_offence = 0.15
+			}
+		}
+		{
+			name = "Transmutation"
+			desc = "Making less valuable more materials into higher quality ones is a guaranteed economic boost "
+			modifier = {
+				production_efficiency = 0.15
+			}
+		}
+		{
+			name = "Telekinesis"
+			desc = "Having mages assist workers by moving large piles of material and debris with magic allows our factories to run much more efficiently. "
+			modifier = {
+				build_cost = -0.15
+				build_time = -0.25
+			}
+		}
+		{
+			name = "Enhanced Adaptability"
+			desc = "Alteration can be used to make our armies much more suited to their current environment. "
+			modifier = {
+				land_attrition = -0.15
+			}
+		}
+		{
+			name = "Magic Powered Lamps"
+			desc = "Creating artificial sources of light that stay lit for far longer than torches makes our society stabler."
+			modifier = {
+				global_prosperity_growth = 0.1
+			}
+		}
+	}
+	bonus = {
+		defensiveness = 0.25
+		siege_ability = 0.25
+	}
+}
+new idea_group esb_weathermagic = {
+	name = "Weather Magic"
+	category = MIL
+	trigger = {
+		full_idea_group = alteration_ideas
+	}
+	ideas = {
+		{
+			name = "Xinchei-Konu"
+			desc = "On the western shore of the Oliis Bay is an ancient calendar called the Xinchei-Konu Monument. It is a device from the Days of Stone-Nest that manipulates the weather for the benefit of the people"
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Sphere of Storms"
+			desc = "The Ayleids along the coast of their empire used an artifact called the Sphere of Storms, which controlled the weather and manipulated the waves for a multitude of reasons. Mostly they used it to protect the shoreline, water the local crops, and speed the waves for transport."
+			modifier = {
+				development_cost = -0.1
+			}
+		}
+		{
+			name = "Weather Witches"
+			desc = "The Dwemer created machines called Weather Witches that are capable of manipulating the weather. They were created by the Dwemer at the height of their civilization."
+			modifier = {
+				global_monthly_devastation = -0.1
+				global_prosperity_growth = 0.1
+			}
+		}
+		{
+			name = "Harrowstorms"
+			desc = "Harrowstorms are arcane weather events created with a combination of the magic of the Icereach Coven and ancient vampire alchemy that appeared without too much warning, leaving death and destruction behind. The energies created by those storms were capable of instantly killing many people or transforming them into near-mindless shells known as harrowed, although others become feral vampires known as harrowfiends, but some who were in the vicinity of the storms were not always affected. The use of the ritual fetishes and alchemy needed to summon harrowstorms is known as harrowcraft."
+			modifier = {
+				siege_ability = 0.25
+			}
+		}
+		{
+			name = "Storm Magic"
+			desc = "The Maormer have many methods of using storm magic to obliterate their foes. They can whip up hurricanes with the intent to destroy entire fleets. They can do so with a ritual using serpent-shaped storm totems to siphon life energy from sacrifices marked with runes. Blood sacrifices such as these are only utilized when a summoner needs to rapidly accrue and release a lot of energy. The energy from the totems can be used to form powerful hurricanes."
+			modifier = {
+				fire_damage = 0.05
+			}
+		}
+		{
+			name = "Thu'um"
+			desc = "Dragons can summon storms with their shouts. Nordic Tongues could also wield the Thu'um, allowing them some mastery over the weather. Accounts of such abilities displayed by Tongues during the Dragon War include the power to diminish fogs, mists, and clouds with the sheer bravado of their shouts. According to Negil's 'Dragons at Windhelm' an army of the Tongues was capable of foiling an airborne sneak attack by Dragons who sought to strike under the cover of storm clouds."
+			modifier = {
+				leader_land_fire = 1
+			}
+		}
+		{
+			name = "Tsaesci Magic"
+			desc = "The Tsaesci are believed to wield powerful arcane forces that can control the weather across vast regions. Numerous feats were accredited to the Tasaesci's magical aptitude. During Uriel V's failed invasion of Akavir in 2E 288, the Tsaesci altered the weather during the summer season and created the hot, dry wind that prevent rain from falling. This created a drought that caused the crops of their Imperial enemies to fail and dried up entire river."
+			modifier = {
+				hostile_attrition = 1
+			}
+		}
+	}
+	bonus = {
+		global_supply_limit_modifier = 0.25
+	}
+}
+new idea_group transmutation_ideas = {
+	name = "Transmutation"
+	category = ADM
+	trigger = {
+		full_idea_group = alteration_ideas
+	}
+	ideas = {
+		{
+			name = "Golden Touch"
+			desc = "Turning iron into gold is a simple but effective way to become rich. "
+			modifier = {
+				monthly_gold_inflation_modifier = -0.5
+				gold_depletion_chance_modifier = -0.5
+			}
+		}
+		{
+			name = "Wandering Transmutators"
+			desc = "Our mages are often seen wandering the land providing many services for those who need them. "
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Manipulate Materials"
+			desc = "By transmuting poor quality materials into high-quality ones we can cut the costs on our buildings."
+			modifier = {
+				build_cost = -0.25
+				build_time = -0.15
+			}
+		}
+		{
+			name = "Alternate Infrastructure"
+			desc = "By extending our manipulation of materials policy we can improve our infrastructure as a whole. "
+			modifier = {
+				development_cost = -0.15
+			}
+		}
+		{
+			name = "Regulate Gold Transmutation"
+			desc = "We must not allow our transmuters to turn everything into gold or it will quickly lose its value. "
+			modifier = {
+				inflation_reduction = 0.05
+			}
+		}
+		{
+			name = "Reshape Environment"
+			desc = " By making newly acquired territory more in line with our needs we can settle anywhere."
+			modifier = {
+				core_creation = -0.15
+			}
+		}
+		{
+			name = "Transmutation Factories"
+			desc = "Allowing our mages to work in factories providing much-needed assistance will boost our production quotas. \n Change Trade Good Cost: §G-10%§!"
+			modifier = {
+				production_efficiency = 0.15
+			}
+		}
+	}
+	bonus = {
+		state_maintenance_modifier = -0.25
+	}
+}

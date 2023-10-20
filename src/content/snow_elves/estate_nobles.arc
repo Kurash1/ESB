@@ -57,7 +57,7 @@ new estate nobility = {
 			loyalty = 0.15
 			land_share = 5
 			on_granted = {
-				prestige = 15
+				add_prestige = 15
 			}
 		}
 		new ask_for_money = {
