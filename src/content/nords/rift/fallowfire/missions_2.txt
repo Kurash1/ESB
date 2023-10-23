@@ -44,6 +44,7 @@ new mission_series fallowfire_2 = {
 					}
 					areas:mistwatch, areas:ansilvund, areas:northwind = {
 						owned_by = fallowfire
+						type = all
 					}
 				} 
 			} 
@@ -100,10 +101,6 @@ new mission_series fallowfire_2 = {
 							id = fallowfire.8
 							days = 0
 						}
-						country_event = {
-							id = fallowfire.9
-							days = 365
-						}
 					}
 				}
 			} 
@@ -115,7 +112,7 @@ new mission_series fallowfire_2_valley_secured = {
 	ai = yes
 	potential = {
 		tag = fallowfire
-	#	has_country_flag = snowy_elf
+		has_country_flag = snowy_elf
 	}
 	missions = {
 		fallowfire_the_rift_is_ours = {

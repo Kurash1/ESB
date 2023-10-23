@@ -3,7 +3,7 @@ new mission_series fallowfire_5 = {
 	ai = yes
 	potential = {
 		tag = fallowfire
-	#	has_country_flag = snowy_elf
+		has_country_flag = snowy_elf
 	}
 	missions = {
 		fallowfire_looking_south = {
@@ -20,7 +20,7 @@ new mission_series fallowfire_5 = {
 					}
 					country_event = {
 						id = fallowfire.9
-						days = 93
+						days = 365
 					}
 				}
 			}
@@ -86,7 +86,7 @@ new mission_series fallowfire_5_silence = {
 	ai = yes
 	potential = {
 		tag = fallowfire
-	#	has_country_flag = forelhost
+		has_country_flag = forelhost
 	}
 	missions = {
 		fallowfire_silence_a_promise_fulfilled = {
@@ -129,7 +129,6 @@ new country_event fallowfire.1 = {
 				hidden_effect = {
 					set_country_flag = snowy_elf
 					swap_non_generic_missions = yes
-					complete_mission = fallowfire_looking_south
 				}
 			}
 		}
@@ -189,7 +188,7 @@ new country_event fallowfire.9 = {
 					name = "Thirsty for slaughter"
 					duration = (30*365)
 					modifier = {
-						province_warscore_cost = -0.40
+						province_warscore_cost = -0.30
 						land_maintenance_modifier = -0.15
 					}
 				}	

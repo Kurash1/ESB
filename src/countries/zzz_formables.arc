@@ -374,6 +374,7 @@ new decision form_the_rift = {
 			exists = countries:rift
 			has_reform = tier_1_hold
 		}  
+		primary_culture = fallowfirean
 	}
 	allow = {
 		calc_true_if = {
