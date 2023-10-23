@@ -46,6 +46,8 @@ governments:monarchy:reform_levels:1 += new tier_1_thanedom = {
 	icon = "hero"
 	allow_normal_conversion = yes
 	force_general_leader = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
 	trigger = {
 		has_reform = tier_1_thanedom
 	}

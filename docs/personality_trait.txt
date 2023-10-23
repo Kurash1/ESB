@@ -1,0 +1,26 @@
+new personality_trait <key> = {
+	name = <string>
+	desc = <string> #optional
+	ruler_allow = { #optional
+		<triggers>
+	}
+	heir_allow = { #optional
+		<triggers>
+	}
+	consort_allow = { #optional
+		<triggers>
+	}
+	chance = { #optional
+		<chance block>
+	}
+	allow = { #optional
+		<triggers>
+	}
+	ai_rules = { #optional
+		<ai rules>
+	}
+	modifier = { #optional
+		<modifiers>
+	}
+	nation_designer_cost = <int> #defaults to 1
+}
