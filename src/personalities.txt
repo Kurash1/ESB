@@ -1,0 +1,3026 @@
+new personality_trait just = {
+	name = "Just"
+	desc = "This ruler is Just. Due to a keen understanding of the many laws and customs of his realm our subjects trust us to rule rightfully and justly."
+	death = "Our realm will miss [Root.Monarch.GetHerHis] fair and impartial rulings."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = cruel_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				ADM = 6
+			}
+		}
+	}
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = cruel_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				heir_ADM = 6
+			}
+		}
+	}
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = cruel_personality }
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_ADM = 6
+			}
+		}
+	}
+	ai_rules = {
+		easy_war_chance_multiplier = 0.5
+		fair_fights = yes
+	}
+	modifier = {
+		global_unrest = -1
+	}
+}
+new personality_trait righteous = {
+	name = "Righteous"
+	desc = "This ruler is Righteous. Our people will be less likely to question our authority as they know that a righteous ruler always has their best interest in mind."
+	death = "Our people mourn the passing of the most virtuous [Root.Monarch.GetTitle] in our lifetime."
+	ruler_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				ADM = 6
+			}
+			modifier = {
+				factor = 1
+				has_new_dynasty = yes
+			}
+		}
+	}
+	heir_allow = {
+	
+		chance = {
+			modifier = {
+				factor = 1
+				heir_adm = 6
+			}
+		}
+	}
+	consort_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				consort_adm = 6
+			}
+		}
+	}
+	allow = {
+		OR = {
+			government = republic
+			government = monarchy
+		}
+		NOT = { government = tribal }
+		NOT = { government = native }
+	}
+	ai_rules = {
+		easy_war_chance_multiplier = 0.75
+	}
+	modifier = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+}
+new personality_trait tolerant = {
+	name = "Tolerant"
+	desc = "This ruler is Tolerant. Religious minorities will thrive during our regime."
+	death = "Our religious minorities will mourn the passing of someone of [Root.Monarch.GetHerHis] great tolerant nature."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = zealot_personality }
+			NOT = { ruler_has_personality = free_thinker_personality }
+			NOT = { ruler_has_personality = pious_personality }									  
+		}
+	}
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = zealot_personality }
+			NOT = { heir_has_personality = free_thinker_personality }
+			NOT = { heir_has_personality = pious_personality }										 
+		}
+	}
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = zealot_personality }
+			NOT = { consort_has_personality = free_thinker_personality }
+			NOT = { consort_has_personality = pious_personality }											
+		}
+	}
+	allow = {
+		OR = {
+			any_owned_province = { has_owner_religion = no }
+			any_neighbor_country = { NOT = { religion = ROOT } }
+		}
+		NOT = { 
+			has_idea_group = religious_ideas
+		}
+	}
+	chance = {
+		modifier = {
+			factor = 1
+			NOT = { dominant_religion = ROOT }
+		}
+		modifier = {
+			factor = 1
+			has_idea_group = humanist_ideas
+		}
+	}
+	ai_rules = {
+		heretic_ally_acceptance = 15
+		heathen_ally_acceptance = 25
+	}
+	modifier = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+}
+new personality_trait kind_hearted = {
+	name = "Kind-Hearted"
+	desc = "This ruler is Kind-Hearted. A great interest in the common men and women of the realm has made our ruler well-loved and our country more resistant to harsh times in general and the ravages of war in particular."
+	death = "Our people remember [Root.Monarch.GetHerHim] as a kind-hearted and loving ruler."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = cruel_personality }
+			NOT = { ruler_has_personality = malevolent_personality }
+		}
+	}
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = cruel_personality }
+			NOT = { heir_has_personality = malevolent_personality }
+		}
+	}
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = cruel_personality }
+			NOT = { consort_has_personality = malevolent_personality }
+		}
+	}
+	ai_rules = {
+		gift_chance = 65
+		alliance_acceptance = 10
+	}
+	modifier = {
+		war_exhaustion = -0.05
+	}
+	nation_designer_cost = 5
+}
+new personality_trait free_thinker = {
+	name = "Free Thinker"
+	desc = "This ruler is a Free Thinker. Unbound by strict doctrines our ruler encourages everyone to try new things and reason freely about where to take our great country in the future."
+	death = "[Root.Monarch.GetSheHeCap] was never afraid of breaking old traditions in order to advance our goals."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = careful_personality }
+			NOT = { ruler_has_personality = zealot_personality }
+			NOT = { ruler_has_personality = tolerant_personality }
+		}
+		chance = {
+			modifier = {
+			factor = 1
+				DIP = 6
+			}
+			modifier = {
+				factor = 1
+				ADM = 6
+			}
+			modifier = {
+				factor = 1
+				MIL = 6
+			}
+		}
+	}
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = careful_personality }
+			NOT = { heir_has_personality = zealot_personality }
+			NOT = { heir_has_personality = tolerant_personality }
+		}
+		chance = {
+			modifier = {
+			factor = 1
+				heir_dip = 6
+			}
+			modifier = {
+				factor = 1
+				heir_adm = 6
+			}
+			modifier = {
+				factor = 1
+				heir_mil = 6
+			}
+		}
+	}
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = careful_personality }
+			NOT = { consort_has_personality = zealot_personality }
+			NOT = { consort_has_personality = tolerant_personality }
+		}
+		chance = {
+			modifier = {
+			factor = 1
+				consort_dip = 6
+			}
+			modifier = {
+				factor = 1
+				consort_adm = 6
+			}
+			modifier = {
+				factor = 1
+				consort_mil = 6
+			}
+		}
+	}
+	ai_rules = {
+		knowledge_sharing = yes
+	}
+	modifier = {
+		idea_cost = -0.05
+	}
+	nation_designer_cost = 25
+}
+new personality_trait well_connected = {
+	name = "Well Connected"
+	desc = "This ruler is Well Connected. Our court and cabinet benefits from the wide network among the great minds of this era of our ruler."
+	death = "No doubt [Root.Monarch.GetSheHe] is now already making valuable contacts in the afterlife."
+	ruler_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				ruler_is_foreigner = yes
+			}
+			modifier = {
+				factor = 1
+				DIP = 6
+			}
+		}
+	}
+	heir_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				has_foreign_heir = yes
+			}
+			modifier = {
+				factor = 1
+				heir_dip = 6
+			}
+		}
+	}
+	consort_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				consort_dip = 6
+			}
+		}
+	}
+	chance = {
+		modifier = {
+			factor = 1
+			num_of_royal_marriages = 5
+		}
+	}
+	ai_rules = {
+		other_ai_help_us_multiplier = 2
+	}
+	modifier = {
+		advisor_cost = -0.2
+	}
+	nation_designer_cost = 2
+}
+new personality_trait calm = {
+	name = "Calm"
+	desc = "This ruler is Calm. By never losing temper or face our ruler will both inspire by example and be able to take well-thought-through decisions, allowing us to recover more quickly from any crisis the world might throw at us."
+	death = "[Root.Monarch.GetSheHeCap] brought peace and order to our realm."
+	ruler_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				is_monarch_leader = no
+			}
+		}
+	}
+	heir_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				is_heir_leader = no
+			}
+		}
+	}
+	ai_rules = {
+		war_chance_multiplier = 0.5
+		easy_war_chance_multiplier = 0.75
+	}
+	modifier = {
+		stability_cost_modifier = -0.10
+	}
+	nation_designer_cost = 2
+}
+new personality_trait careful = {
+	name = "Careful"
+	desc = "This ruler is Careful. By carefully navigating around the various unspoken rules in interstate relations our monarch is able to lessen the impact of our actual transgressions."
+	death = "[Root.Monarch.GetHerHisCap] well-planned decisions strengthened our position in the world."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = naive_personality }
+			NOT = { ruler_has_personality = free_thinker_personality }
+			NOT = { ruler_has_personality = bold_fighter_personality }
+		}
+		chance = {
+			modifier = {
+				factor = 1
+				DIP = 6
+			}
+		}
+	}
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = naive_personality }
+			NOT = { heir_has_personality = free_thinker_personality }
+			NOT = { heir_has_personality = bold_fighter_personality }
+		}
+		chance = {
+			modifier = {
+				factor = 1
+				heir_dip = 6
+			}
+		}
+	}
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = naive_personality }
+			NOT = { consort_has_personality = free_thinker_personality }
+			NOT = { consort_has_personality = bold_fighter_personality }
+		}
+		chance = {
+			modifier = {
+				factor = 1
+				consort_dip = 6
+			}
+		}
+	}
+	ai_rules = {
+		war_chance_multiplier = 0.4
+		enemy_strength_multiplier = 1.2
+	}
+	modifier = {
+		ae_impact = -0.10
+	}
+	nation_designer_cost = 5
+}
+new personality_trait secretive = {
+	name = "Secretive"
+	desc = "This ruler is Secretive. A natural instinct to keep doors closed and letters encrypted trickles down and will make our entire government harder to infiltrate for our enemies."
+	death = "Undoubtedly [Root.Monarch.GetSheHe] has taken many of [Root.Monarch.GetHerHis] secrets to [Root.Monarch.GetHerHis] grave."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = loose_lips_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				DIP = 6
+			}
+		}
+	}
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = loose_lips_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				heir_dip = 6
+			}
+		}
+	}
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = loose_lips_personality }
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_dip = 6
+			}
+		}
+	}
+	ai_rules = {
+		wants_condottieri = yes
+	}
+	modifier = {
+		global_spy_defence = 0.2
+	}
+	nation_designer_cost = 2
+}
+new personality_trait intricate_web_weaver = {
+	name = "Intricate Webweaver"
+	desc = "This ruler is an Intricate Web-Weaver. Constantly hatching new plots our ruler is able to personally take on a great part of the responsibility for foreign intelligence."
+	death = "[Root.Monarch.GetSheHeCap] is mourned by an army of informants."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = loose_lips_personality }
+			ADM = 3
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				DIP = 6
+			}
+		}
+	}
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = loose_lips_personality }
+			heir_ADM = 3
+		}
+	
+		chance = {
+			modifier = {
+			factor = 1
+				heir_DIP = 6
+			}
+		}
+	}
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = loose_lips_personality }
+			consort_adm = 3
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_DIP = 6
+			}
+		}
+	}
+	ai_rules = {
+		wants_condottieri = yes
+	}
+	modifier = {
+		spy_offence = 0.3
+	}
+	nation_designer_cost = 2
+}
+new personality_trait fertile = {
+	name = "Fertile"
+	desc = "This ruler is Fertile. Due to the natural predisposition of our ruler to have many children we are at little risk to be without an heir for long."
+	death = "[Root.Monarch.GetSheHeCap] is mourned by [Root.Monarch.GetHerHis] many descendants."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = infertile_personality }
+			NOT = { ruler_age = 35 }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = infertile_personality }
+			NOT = { heir_age = 35 }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = infertile_personality }
+			#NOT = { consort_age = 35 }
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+
+			}
+		}
+	}
+	allow = {
+		government = monarchy
+		NOT = { has_government_attribute = has_harem_events }
+		NOT = { has_government_attribute = states_general_mechanic }
+		has_government_attribute = heir
+	}
+	ai_rules = {
+		royal_marriage_acceptance = 20
+	}
+	modifier = {
+		heir_chance = 0.5
+	}
+	nation_designer_cost = 2
+}
+new personality_trait well_advised = {
+	name = "Well Advised"
+	desc = "This ruler is Well-Advised. Always ready to listen to the wise council of others our ruler attracts a greater number of people to our court and cabinet."
+	death = "[Root.Monarch.GetHerHisCap] advisors assure us it was best this way."
+	ruler_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				DIP = 6
+			}
+		}
+	}
+
+	heir_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				heir_dip = 6
+			}
+		}
+	}
+	
+	consort_allow = {
+		chance = {
+			modifier = {
+				factor = 1
+				consort_dip = 6
+			}
+		}
+	}
+	ai_rules = {
+		war_chance_multiplier = 0.6
+	}
+	modifier = {
+		advisor_pool = 1
+	}
+	nation_designer_cost = 2
+}
+new personality_trait benevolent = {
+	name = "Benevolent"
+	desc = "This ruler is Benevolent. Being seen as wanting to do good is a great asset when it comes to keeping our subjects calm."
+	death = "Our subjects lament the passing of such a benign overlord."
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = malevolent_personality }
+			DIP = 3
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				DIP = 6
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = malevolent_personality }
+			heir_DIP = 3
+		}
+	
+		chance = {
+			modifier = {
+			factor = 1
+				heir_DIP = 6
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = malevolent_personality }
+			consort_DIP = 3
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_DIP = 6
+			}
+		}
+	}
+	chance = {
+		modifier = {
+			factor = 1
+			vassal = 2
+		}
+	}
+	ai_rules = {
+		gift_chance = 25
+	}
+	modifier = {
+		reduced_liberty_desire = 5
+	}
+	nation_designer_cost = 2
+}
+new personality_trait zealot = {
+	name = "Zealot"
+	desc = "This ruler is a Zealot. Being fanatically devoted to the true faith allows our ruler to inspire more people to convert and join the state religion."
+	death = "[Root.Monarch.GetHerHisCap] energy and conviction brought many unbelievers into the fold."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = tolerant_personality } 
+			NOT = { ruler_has_personality = free_thinker_personality } 
+			NOT = { ruler_has_personality = drunkard_personality } 
+			NOT = { ruler_has_personality = sinner_personality } 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = tolerant_personality } 
+			NOT = { heir_has_personality = free_thinker_personality } 
+			NOT = { heir_has_personality = drunkard_personality } 
+			NOT = { heir_has_personality = sinner_personality } 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = tolerant_personality } 
+			NOT = { consort_has_personality = free_thinker_personality } 
+			NOT = { consort_has_personality = drunkard_personality } 
+			NOT = { consort_has_personality = sinner_personality } 
+		} 
+	} 
+	 
+	allow = { 
+		NOT = { has_idea_group = humanist_ideas } 
+	} 
+	 
+	chance = { 
+		modifier = { 
+			factor = 0.5 
+			dominant_religion = ROOT 
+			any_owned_province = { 
+				is_state = yes 
+				has_owner_religion = no 
+			} 
+		} 
+		modifier = { 
+			factor = 1 
+			num_of_missionaries = 2 
+		} 
+		modifier = { 
+			factor = 1 
+			has_border_with_religious_enemy = yes 
+		} 
+		modifier = { 
+			factor = 1 
+			is_defender_of_faith = yes 
+		}
+	} 
+	 
+	ai_rules = {
+		different_religion_war_multiplier = 2 
+		heretic_ally_acceptance = -1000 
+		heathen_ally_acceptance = -1000 
+		wants_heathen_land = yes 
+		wants_heretic_land = yes 
+	}
+	modifier = {
+		global_missionary_strength = 0.01 
+	}
+	nation_designer_cost = 2
+}
+new personality_trait pious = {
+	name = "Pious"
+	desc = "This ruler is Pious. Religiously devoted, spiritual and religious our ruler ensures that our state will not lose its course and inspire confidence in our faith."
+	death = "We may never again know a ruler of such virtue and spiritual stature."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = sinner_personality } 
+			NOT = { ruler_has_personality = drunkard_personality } 
+			NOT = { ruler_has_personality = tolerant_personality } 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = sinner_personality } 
+			NOT = { heir_has_personality = drunkard_personality } 
+			NOT = { heir_has_personality = tolerant_personality } 
+		} 
+	} 
+ 
+	allow = { 
+		government = theocracy 
+	} 
+	 
+	chance = { 
+		modifier = { 
+			factor = 1 
+			dominant_religion = ROOT 
+		} 
+	} 
+	 
+	 
+	ai_rules = {
+		different_religion_war_multiplier = 1.5 
+		wants_excommunicate = yes 
+		heretic_ally_acceptance = -30 
+	}
+	modifier = {
+		devotion = 1 
+	}
+	nation_designer_cost = 2
+}
+new personality_trait lawgiver = {
+	name = "Lawgiver"
+	desc = "This ruler is a Lawgiver. Legislation is what builds up and unites a realm. Our ruler is intent on reducing the hundreds of laws and customs of the various part of our realm to create a more centralized and just set of laws."
+	death = "At the end we will all be judged."
+	ruler_allow = { 
+		allow = { 
+			ADM = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				ADM = 6 
+			} 
+		} 
+	}
+	heir_allow = { 
+		allow = { 
+			heir_ADM = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_ADM = 6 
+			} 
+		} 
+	}
+	consort_allow = { 
+		allow = { 
+			consort_ADM = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_ADM = 6 
+			} 
+		} 
+	}
+	ai_rules = {
+	
+	}
+	modifier = {
+		global_autonomy = -0.05 
+	}
+	nation_designer_cost = 5
+}
+new personality_trait midas_touched = {
+	name = "Midas Touched"
+	desc = "This ruler is Midas-Touched. The talent to make every project profitable is a great asset to the ruler of a country. Our state coffers shall never want for money as long as our ruler remains."
+	death = "[Root.Monarch.GetHerHisCap] talent for finding money anywhere has made us a richer country."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = greedy_personality } 
+			ADM = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				DIP = 6 
+			} 
+			modifier = { 
+				factor = 1 
+				ADM = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = greedy_personality } 
+			heir_ADM = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_DIP = 6 
+			} 
+			modifier = { 
+				factor = 1 
+				heir_ADM = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = greedy_personality } 
+			consort_ADM = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_DIP = 6 
+			} 
+			modifier = { 
+				factor = 1 
+				consort_ADM = 6 
+			} 
+		} 
+	}
+	ai_rules = {
+		wants_gold = yes 
+	}
+	modifier = {
+		global_tax_modifier = 0.1
+	}
+	nation_designer_cost = 2
+}
+new personality_trait incorruptible = {
+	name = "Incorruptible"
+	desc = "This ruler is Incorruptible. In many ways building a modern state is a constant battle against corruption. State officials are always tempted to take bribes and wanting to care for your friends and relatives is a natural human instinct. By firmly rejecting all such notion and fighting it with contempt our ruler sets an example for the entire country to follow."
+	death = "[Root.Monarch.GetHerHisCap] strong character made our country a more honest place."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = embezzler_personality } 
+			NOT = { has_ruler_modifier = borgia_pope } 
+			ADM = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				ADM = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = embezzler_personality } 
+			heir_ADM = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_ADM = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = embezzler_personality } 
+			consort_ADM = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_ADM = 6 
+			} 
+		} 
+	} 
+	ai_rules = {
+		gift_chance = -50 
+		wants_avoid_debase = yes 
+	}
+	modifier = {
+		yearly_corruption = -0.05
+	}
+	nation_designer_cost = 2
+}
+new personality_trait architectural_visionary = {
+	name = "Architectural Visionary"
+	desc = "This ruler is an Architectural Visionary. Improving the infrastructure is a necessity for any state of our age and this ruler is the one who can do it. Grand visions coupled with a great understanding and talent for keeping costs down makes this ruler a great asset to us."
+	death = "[Root.Monarch.GetHerHisCap] memory shall live forever in the many buildings [Root.Monarch.GetSheHe] has left behind."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = obsessive_perfectionist_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				ADM = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = obsessive_perfectionist_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_ADM = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = obsessive_perfectionist_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_ADM = 6 
+			} 
+		} 
+	}
+	ai_rules = {
+		building_budget_multiplier = 1.8 
+	}
+	modifier = {
+		build_cost = -0.1
+	}
+	nation_designer_cost = 2
+}
+new personality_trait scholar = {
+	name = "Scholar"
+	desc = "This ruler is a Scholar. The ambition to learn about the world and the governing principles of men and nature makes our ruler able to understand and implement new technology much more efficiently than would otherwise be possible."
+	death = "[Root.Monarch.GetHerHisCap] Scholarly pursuits brought both innovation and fame to our realm."
+	ruler_allow = { 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				is_monarch_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				ADM = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				is_heir_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				heir_ADM = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_ADM = 6 
+			} 
+		} 
+	} 
+	 
+	ai_rules = {
+		knowledge_sharing = yes
+	}
+	modifier = {
+		prestige_decay = -0.01
+	}
+	nation_designer_cost = 2
+}
+new personality_trait entrepreneur = {
+	name = "Entrepreneur"
+	desc = "This ruler is an Entrepreneur. By seeing the potential for new projects in any obstacle or opportunity our ruler contributes to an ever growing number of projects to bolster our economy."
+	death = "[Root.Monarch.GetSheHeCap] shaped the economic life of [Root.Monarch.GetHerHis] age."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = drunkard_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				DIP = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = drunkard_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = drunkard_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	allow = { 
+		 
+	} 
+	 
+	chance = { 
+		modifier = { 
+			factor = 1 
+			has_government_attribute = is_merchant_republic 
+		} 
+	} 
+	 
+	 
+	ai_rules = {
+		building_budget_multiplier = 1.5 
+	}
+	modifier = {
+		trade_efficiency = 0.1 
+	}
+	nation_designer_cost = 2
+}
+new personality_trait industrious = {
+	name = "Industrious"
+	desc = "This ruler is Industrious. Never content to rest and through increasingly long work days our ruler is constantly managing the details of every province in the realm to maximize the output and collected revenue for all resources under state control."
+	death = "[Root.Monarch.GetHerHisCap] tireless efforts to improve our economy will be sorely missed."
+	ruler_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				DIP = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	allow = { } 
+	 
+	chance = { 
+		modifier = { 
+			factor = 1 
+			has_government_attribute = is_merchant_republic 
+		} 
+	} 
+	
+	ai_rules = {
+		building_budget_multiplier = 1.2
+	}
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	nation_designer_cost = 2
+}
+new personality_trait expansionist = {
+	name = "Expansionist"
+	desc = "This ruler is an Expansionist. Our ruler is personally invested in the claiming and settlement of new lands and is dedicated to ensure that colonial expansion remain a top priority for our state."
+	death = "Our colonists shall mourn the loss of their great benefactor."
+	ruler_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				DIP = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	allow = { 
+		OR = { 
+			num_of_colonists = 1  
+			AND = { 
+				has_game_started = no 
+				is_playing_custom_nation = yes 
+			} 
+		} 
+	} 
+	 
+	chance = { 
+		modifier = { 
+			factor = 1 
+			num_of_colonists = 1 
+		} 
+		modifier = { 
+			factor = 1 
+			OR = { 
+				num_of_conquistadors = 1 
+				num_of_explorers = 1 
+			} 
+		} 
+		modifier = { 
+			factor = 1 
+			OR = { 
+				num_of_conquistadors = 2 
+				num_of_explorers = 2 
+			} 
+		} 
+		modifier = { 
+			factor = 1 
+			has_idea_group = exploration_ideas 
+			has_idea_group = expansion_ideas 
+		} 
+		modifier = { 
+			factor = 0.5 
+			has_country_flag = por_more_likely_to_get_expansionist_flag 
+		} 
+	} 
+	 
+	war_priority = { 
+		modifier = { 
+			factor = 2 
+			primitives = yes 
+		} 
+	} 
+	
+	ai_rules = {
+		wants_colonies = yes
+	}
+	modifier = {
+		global_colonial_growth = 15
+	}
+	nation_designer_cost = 2
+}
+new personality_trait charismatic_negotiator = {
+	name = "Charismatic Negotiator"
+	desc = "This ruler is a Charismatic Negotiator. Through personal involvement in state diplomacy and negotiations our ruler is able to make others see things our way more often than would otherwise be possible."
+	death = "Negotiations with foreign rulers will seem quiet and bleak without [Root.Monarch.GetHerHim]."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = babbling_buffoon_personality } 
+			DIP = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				is_monarch_leader = yes 
+			} 
+			modifier = { 
+				factor = 1.5 
+				DIP = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = babbling_buffoon_personality } 
+			heir_DIP = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				is_heir_leader = yes 
+			} 
+			modifier = { 
+				factor = 1.5 
+				heir_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = babbling_buffoon_personality } 
+			consort_DIP = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1.5 
+				consort_DIP = 6 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		other_ai_peace_term_bonus = 10
+	}
+	modifier = {
+		diplomatic_reputation = 1
+	}
+	nation_designer_cost = 2
+}
+new personality_trait silver_tongue = {
+	name = "Silver Tongue"
+	desc = "This ruler is considered to have a Silver Tongue. In our communication with other state our ruler is able to present our past actions in much more favorable lighting. Once our neighbors see the reasons for our actions they are much more likely to forgive us in the long run for any transgressions."
+	death = "[Root.Monarch.GetHerHisCap] sweet words have kept the world at bay. Who will protect us now?"
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = babbling_buffoon_personality } 
+			NOT = { ruler_has_personality = naive_personality } 
+			DIP = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				is_monarch_leader = yes 
+			} 
+			modifier = { 
+				factor = 1.5 
+				DIP = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = babbling_buffoon_personality } 
+			NOT = { heir_has_personality = naive_personality } 
+			heir_DIP = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				is_heir_leader = yes 
+			} 
+			modifier = { 
+				factor = 1.5 
+				heir_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = babbling_buffoon_personality } 
+			NOT = { consort_has_personality = naive_personality } 
+			consort_DIP = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1.5 
+				consort_DIP = 6 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		other_ai_war_chance_multiplier = 0.5
+	}
+	modifier = {
+		improve_relation_modifier = 0.2
+	}
+	nation_designer_cost = 2
+}
+new personality_trait conqueror = {
+	name = "Conqueror"
+	desc = "This ruler is a conqueror. We will be able to incorporate new lands into our realm more efficiently under this regime."
+	death = "Our enemies will surely be relieved at [Root.Monarch.GetHerHis] demise."
+	ruler_allow = { 
+		allow = { 
+			MIL = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_monarch_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				MIL = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			heir_MIL = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_heir_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				heir_MIL = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			consort_MIL = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_MIL = 6 
+			} 
+		} 
+	} 
+	
+	ai_rules = {
+		easy_war_chance_multiplier = 2
+		war_chance_multiplier = 1.75
+		building_budget_multiplier = 0.2
+		gift_chance = -50
+		wants_land = yes
+	}
+	modifier = {
+		years_of_nationalism = -5
+	}
+	nation_designer_cost = 2
+}
+new personality_trait tactical_genius = {
+	name = "Tactical Genius"
+	desc = "This ruler is a Tactical Genius. A great personal interest and investment in battlefield maneuvers and feints will result in a much greater interest and experience in these matters for all our generals."
+	death = "[Root.Monarch.GetHerHisCap] intricate maneuvering left our enemies dazed and confused."
+	ruler_allow = { 
+		allow = { 
+			MIL = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_monarch_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				MIL = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			heir_MIL = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_heir_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				heir_MIL = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			consort_MIL = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_MIL = 6 
+			} 
+		} 
+	} 
+	
+	ai_rules = {
+		easy_war_chance_multiplier = 1.4 
+	}
+	modifier = {
+		leader_land_manuever = 1 
+	}
+	nation_designer_cost = 2
+}
+new personality_trait bold_fighter = {
+	name = "Bold Fighter"
+	desc = "This ruler is a Bold Fighter. Believing Shock to be of great importance on the battlefield our ruler is never fearful of the consequences and encourages everyone to lead their troops right into the midst of the enemy should the situation require it."
+	death = "[Root.Monarch.GetHerHisCap] daring charges into enemy lines have left a lasting impression on every soldier of [Root.Monarch.GetHerHis] generation."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = careful_personality } 
+			NOT = { ruler_has_personality = craven_personality } 
+		} 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_monarch_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				MIL = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = careful_personality } 
+			NOT = { heir_has_personality = craven_personality } 
+		} 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_heir_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				heir_MIL = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = careful_personality } 
+			NOT = { consort_has_personality = craven_personality } 
+		} 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_MIL = 6 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		enemy_strength_multiplier = 0.85 
+	}
+	modifier = {
+		leader_land_shock = 1 
+	}
+	nation_designer_cost = 2
+}
+new personality_trait strict = {
+	name = "Strict"
+	desc = "This ruler is Strict. Due to taking a great interest in the behavior of the troops our ruler is able to instill a strict sense of discipline in everyone in our ranks, from the lowest to the highest."
+	death = "[Root.Monarch.GetHerHisCap] constant watch always kept us on our toes."
+	ruler_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_monarch_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				MIL = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_heir_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				heir_MIL = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_MIL = 6 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		wants_avoid_debase = yes 
+		wants_avoid_loans = yes 
+		wants_ecumenical_council = yes 
+	}
+	modifier = {
+		discipline = 0.05 
+	}
+	nation_designer_cost = 2
+}
+new personality_trait inspiring_leader = {
+	name = "Inspiring Leader"
+	desc = "Our ruler is an Inspiring Leader. Great personal leadership can lead to even the most cowardly men to finding their courage."
+	death = "[Root.Monarch.GetSheHeCap] inspired a generation to take up arms against our enemies."
+	ruler_allow = { 
+		allow = { 
+			MIL = 3 
+			NOT = { ruler_has_personality = craven_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_monarch_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				MIL = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			heir_MIL = 3 
+			NOT = { heir_has_personality = craven_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				is_heir_leader = yes 
+			} 
+			modifier = { 
+				factor = 1 
+				heir_MIL = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			consort_MIL = 3 
+			NOT = { consort_has_personality = craven_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_MIL = 6 
+			} 
+		} 
+	}
+	
+	modifier = {
+		land_morale = 0.05
+	}
+	nation_designer_cost = 2
+}
+new personality_trait martial_educator = {
+	name = "Martial Educator"
+	desc = "This ruler is a Martial Educator. Under the current regiment the education and training of our officer corps is one of our highest priorities."
+	death = "The curriculum [Root.Monarch.GetSheHe] created for our officers will be used by generations to come."
+	ruler_allow = { 
+		allow = { 
+			MIL = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				MIL = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			heir_MIL = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_MIL = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			consort_MIL = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_MIL = 6 
+			} 
+		} 
+	}
+ 
+	ai_rules = {
+		easy_war_chance_multiplier = 1.2 
+	}
+	modifier = {
+		army_tradition_decay = -0.01
+	}
+	nation_designer_cost = 2
+}
+new personality_trait navigator = {
+	name = "Navigator"
+	desc = "This ruler is a Navigator. Personal involvement in everything from the curriculum for officers to the procurement of good charts and the rules and laws for shipping ensures that our ships aren't lost as often as those of our neighbors."
+	death = "[Root.Monarch.GetHerHisCap] enthusiasm for the sea has left us with a stronger navy."
+	ruler_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				DIP = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_DIP = 6 
+			} 
+		} 
+	} 
+ 
+	allow = { 
+		OR = { 
+			AND = { 
+				has_game_started = no 
+				is_playing_custom_nation = yes
+			} 
+			AND = { 
+				num_of_ports = 1 
+				navy_size = 1 
+			} 
+		} 
+		NOT = { 
+			has_reform = native_basic_reform 
+		} 
+	}
+	ai_rules = {
+		wants_explorers = yes
+	}
+	modifier = {
+		ship_durability = 0.05
+	}
+	nation_designer_cost = 2
+}
+new personality_trait fierce_negotiator = {
+	name = "Fierce Negotiator"
+	desc = "This ruler is a Fierce Negotiator. We will have an easier time convincing mercenary captains to fight for our cause for less pay than they would otherwise demand."
+	death = "[Root.Monarch.GetHerHisCap] harsh bargaining has left mercenary captains destitute throughout our lands."
+	ruler_allow = { 
+		allow = { 
+			DIP = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				DIP = 6 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			heir_DIP = 3 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_DIP = 6 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			consort_DIP = 3 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_DIP = 6 
+			} 
+		} 
+	} 
+ 
+	ai_rules = {
+		peace_desire = -10 
+	}
+	modifier = {
+		merc_maintenance_modifier = -0.25 
+	}
+	nation_designer_cost = 2
+}
+new personality_trait babbling_buffoon = {
+	name = "Babbling Buffoon"
+	desc = "This ruler is considered to be a Babbling Buffoon. While our ruler means well by personally engaging in diplomacy with our neighbors this is not coupled with a talent for conducting negotiations. Anyone is likely to have a harder time seeing the points we want to make and many of our negotiations are hampered by the ineptness of our ruler."
+	death = "Our friends will cherish this day."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = charismatic_negotiator_personality } 
+			NOT = { ruler_has_personality = silver_tongue_personality } 
+			NOT = { dip = 5 } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = charismatic_negotiator_personality } 
+			NOT = { heir_has_personality = silver_tongue_personality } 
+			NOT = { heir_dip = 5 } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = charismatic_negotiator_personality } 
+			NOT = { consort_has_personality = silver_tongue_personality } 
+			NOT = { consort_dip = 5 } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+ 
+	ai_rules = {
+		random_insults = yes
+		wants_disclose_attack = yes
+	}
+	modifier = {
+		diplomatic_reputation = -1
+	}
+	nation_designer_cost = -2
+}
+new personality_trait embezzler = {
+	name = "Embezzler"
+	desc = "This ruler is an Embezzler. One of the things that drive our ruler is a great will and talent to use the state revenue for increasing personal wealth."
+	death = "Our accountants shall not miss [Root.Monarch.GetHerHim] but [Root.Monarch.GetHerHis] nephews surely will."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = incorruptible_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = incorruptible_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = incorruptible_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+ 
+	ai_rules = {
+		wants_debase = yes 
+		wants_to_appoint_cardinals_in_his_own_land = yes 
+		wants_sell_provinces = yes 
+	}
+	modifier = {
+		yearly_corruption = 0.05 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait infertile = {
+	name = "Infertile"
+	desc = "This ruler is Infertile. Due to reasons beyond our control our monarch seems to have a much harder time than most to produce an heir."
+	death = "We can only hope [Root.Monarch.GetHerHis] successors will do more to keep the dynasty alive."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = fertile_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				ruler_age = 40 
+			} 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = fertile_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+			modifier = { 
+				factor = 1 
+				heir_age = 40 
+			} 
+		} 
+	} 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = fertile_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_age = 40 
+			} 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	allow = { 
+		NOT = { has_government_attribute = has_harem_events } 
+		government = monarchy 
+		NOT = { has_government_attribute = states_general_mechanic } 
+		has_government_attribute = heir 
+	}
+ 
+	ai_rules = {
+		royal_marriage_acceptance = -20 
+	}
+	modifier = {
+		heir_chance = -0.5 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait drunkard = {
+	name = "Indulgent"
+	desc = "This ruler is Indulgent. Always seeking relief from a general apathy our ruler indulges in great amounts of stimulants as alcohol. Having an indulgent ruler reflects poorly on the entire country."
+	death = "[Root.Monarch.GetHerHisCap] drunken stupors and expensive tastes has left the country both poorer and worse governed than it was when [Root.Monarch.GetSheHe] was crowned."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = pious_personality } 
+			NOT = { ruler_has_personality = entrepreneur_personality } 
+			NOT = { ruler_has_personality = zealot_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = pious_personality } 
+			NOT = { heir_has_personality = entrepreneur_personality } 
+			NOT = { heir_has_personality = zealot_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = pious_personality } 
+			NOT = { consort_has_personality = entrepreneur_personality } 
+			NOT = { consort_has_personality = zealot_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+ 
+	ai_rules = {
+		wants_loans = yes 
+	}
+	modifier = {
+		trade_efficiency = -0.10 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait sinner = {
+	name = "Sinner"
+	desc = "This ruler is widely regarded as a Sinner. Personal shortcomings in the leadership of our country have turned the religious establishment against us."
+	death = "[Root.Monarch.GetHerHisCap] sinful life brought nothing but shame to our country."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = pious_personality } 
+			NOT = { ruler_has_personality = zealot_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = pious_personality } 
+			NOT = { heir_has_personality = zealot_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = pious_personality } 
+			NOT = { consort_has_personality = zealot_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	allow = { 
+		OR = { 
+			religion_group = christian 
+			religion_group = muslim 
+			religion_group = jewish_group 
+		} 
+	}
+ 
+	ai_rules = {
+		different_religion_war_multiplier = 0.8 
+		razing = yes 
+		wants_to_appoint_cardinals_in_his_own_land = yes 
+	}
+	modifier = {
+		tolerance_own = -2 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait greedy = {
+	name = "Greedy"
+	desc = "This ruler is Greedy. State revenue collection is growing increasingly iron-fisted and short-sighted under our ruler who will stop at nothing to try to increase our income. Destroying or harming every source of revenue the long term effects of this short-sighted behavior is a great decrease of tax income."
+	death = "[Root.Monarch.GetHerHisCap] all consuming lust for money and wealth shall not be missed."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = midas_touched_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = midas_touched_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = midas_touched_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+	war_priority = { 
+		modifier = { 
+			factor = 1.1 
+			treasury = 100 
+		} 
+		modifier = { 
+			factor = 1.2 
+			treasury = 500 
+		} 
+		modifier = { 
+			factor = 1.2 
+			treasury = 2500 
+		} 
+		modifier = { 
+			factor = 1.1 
+			treasury = 12500 
+		} 
+		modifier = { 
+			factor = 1.2 
+			gold_income_percentage = 0.05 
+		} 
+		modifier = { 
+			factor = 1.2 
+			gold_income_percentage = 0.1 
+		} 
+		modifier = { 
+			factor = 1.2 
+			gold_income_percentage = 0.2 
+		} 
+	} 
+	
+	ai_rules = {
+		wants_gold = yes 
+		wants_to_appoint_cardinals_in_his_own_land = yes 
+		gift_chance = -100 
+		trade_league_acceptance = -10 
+	}
+	modifier = {
+		global_tax_modifier = -0.1 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait cruel = {
+	name = "Cruel"
+	desc = "This ruler is seen as Cruel. Widespread tales of arbitrary and cruel actions by our ruler personally has greatly upset many of our subjects. This may not be enough to incite a rebellion in itself but any crisis is going to hit public opinion harder as nobody lacks for reasons to revolt."
+	death = "[Root.Monarch.GetHerHisCap] evil deeds shall be remembered for generations to come."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = just_personality } 
+			NOT = { ruler_has_personality = kind_hearted_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = just_personality } 
+			NOT = { heir_has_personality = kind_hearted_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = just_personality } 
+			NOT = { consort_has_personality = kind_hearted_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	
+	ai_rules = {
+		wants_betray_allies = yes 
+		razing = yes 
+		lower_autonomy = yes 
+	}
+	modifier = {
+		global_unrest = 2 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait naive = {
+	name = "Naive Enthusiast"
+	desc = "This ruler is a Naive Enthusiast. Blindly rushing ahead and constantly underestimating the consequences of our ruler ensures that our neighbors will be slower to forgive slights and transgressions."
+	death = "[Root.Monarch.GetHerHisCap] naive meddling in foreign affairs brought nothing but misunderstandings and new enemies."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = silver_tongue_personality } 
+			NOT = { ruler_has_personality = careful_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				ruler_has_personality = free_thinker_personality 
+			} 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = silver_tongue_personality } 
+			NOT = { heir_has_personality = careful_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				heir_has_personality = free_thinker_personality 
+			} 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = silver_tongue_personality } 
+			NOT = { consort_has_personality = careful_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = 1 
+				consort_has_personality = free_thinker_personality 
+			} 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		underestimate_ae = yes 
+		fair_fights = yes 
+		gift_chance = 90 
+	}
+	modifier = {
+		improve_relation_modifier = -0.2 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait craven = {
+	name = "Craven"
+	desc = "This ruler is Craven. Desperately fearful of physical combat our ruler stays as far away from the battlefields as possible. Our troops can't help but notice that they are on their own."
+	death = "[Root.Monarch.GetHerHisCap] cowardly conduct on the battlefield shall forever be [Root.Monarch.GetHerHis] legacy."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = inspiring_leader_personality } 
+			NOT = { ruler_has_personality = bold_fighter_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				is_monarch_leader = no 
+			} 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = inspiring_leader_personality } 
+			NOT = { heir_has_personality = bold_fighter_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				is_heir_leader = no 
+			} 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = inspiring_leader_personality } 
+			NOT = { consort_has_personality = bold_fighter_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		enemy_strength_multiplier = 1.25 
+	}
+	modifier = {
+		land_morale = -0.05 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait loose_lips = {
+	name = "Loose Lips"
+	desc = "Often personally responsible for information breaches and leaks this ruler is generally too trusting and easily fooled. Unfortunately the sum of this is that our ruler does more harm than good to our counterespionage efforts."
+	death = "[Root.Monarch.GetHerHisCap] careless handling of secret information made our secrets common knowledge."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = intricate_web_weaver_personality } 
+			NOT = { ruler_has_personality = secretive_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = intricate_web_weaver_personality } 
+			NOT = { heir_has_personality = secretive_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = intricate_web_weaver_personality } 
+			NOT = { consort_has_personality = secretive_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		wants_disclose_attack = yes 
+	}
+	modifier = {
+		global_spy_defence = -0.2 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait obsessive_perfectionist = {
+	name = "Obsessive Perfectionist"
+	desc = "This ruler is an Obsessive Perfectionist. A keen interest in detail and minutiae is not always coupled with an equal talent for such things. Constantly causing interruptions and delays our ruler is doing a lot more harm than good when it comes to developing our internal infrastructure."
+	death = "[Root.Monarch.GetHerHisCap] constant meddling in every infrastructure project has left our country with a long list of expenses that we will not miss."
+	ruler_allow = { 
+		allow = { 
+			OR = { 
+				NOT = { ruler_has_personality = patron_of_arts_personality } 
+				NOT = { ruler_has_personality = architectural_visionary_personality } 
+			} 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = malevolent_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = architectural_visionary_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = malevolent_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = architectural_visionary_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = malevolent_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		wants_avoid_ugly_borders = yes 
+	}
+	modifier = {
+		build_cost = 0.1 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait malevolent = {
+	name = "Malevolent"
+	desc = "This ruler is seen as Malevolent. The actions of your ruler are often seen as motivated by malice or hostile intent. As a result any subject countries under our control are quick to anger and fear any action we take."
+	death = "Our subjects can rest easier now knowing that [Root.Monarch.GetHerHis] reign of malevolent terror is over."
+	ruler_allow = { 
+		allow = { 
+			NOT = { ruler_has_personality = benevolent_personality } 
+			NOT = { ruler_has_personality = kind_hearted_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					ruler_has_personality = obsessive_perfectionist_personality 
+					ruler_has_personality = loose_lips_personality 
+					ruler_has_personality = craven_personality 
+					ruler_has_personality = naive_personality 
+					ruler_has_personality = cruel_personality 
+					ruler_has_personality = greedy_personality 
+					ruler_has_personality = sinner_personality 
+					ruler_has_personality = drunkard_personality 
+					ruler_has_personality = infertile_personality 
+					ruler_has_personality = embezzler_personality 
+					ruler_has_personality = babbling_buffoon_personality 
+					ruler_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+ 
+	heir_allow = { 
+		allow = { 
+			NOT = { heir_has_personality = benevolent_personality } 
+			NOT = { heir_has_personality = kind_hearted_personality } 
+		} 
+	 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					heir_has_personality = obsessive_perfectionist_personality 
+					heir_has_personality = loose_lips_personality 
+					heir_has_personality = craven_personality 
+					heir_has_personality = naive_personality 
+					heir_has_personality = cruel_personality 
+					heir_has_personality = greedy_personality 
+					heir_has_personality = sinner_personality 
+					heir_has_personality = drunkard_personality 
+					heir_has_personality = infertile_personality 
+					heir_has_personality = embezzler_personality 
+					heir_has_personality = babbling_buffoon_personality 
+					heir_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	} 
+	 
+	consort_allow = { 
+		allow = { 
+			NOT = { consort_has_personality = benevolent_personality } 
+			NOT = { consort_has_personality = kind_hearted_personality } 
+		} 
+ 
+		chance = { 
+			modifier = { 
+				factor = -0.5 
+				OR = { 
+					consort_has_personality = obsessive_perfectionist_personality 
+					consort_has_personality = loose_lips_personality 
+					consort_has_personality = craven_personality 
+					consort_has_personality = naive_personality 
+					consort_has_personality = cruel_personality 
+					consort_has_personality = greedy_personality 
+					consort_has_personality = sinner_personality 
+					consort_has_personality = drunkard_personality 
+					consort_has_personality = infertile_personality 
+					consort_has_personality = embezzler_personality 
+					consort_has_personality = babbling_buffoon_personality 
+					consort_has_personality = petty_personality 
+				} 
+			} 
+		} 
+	}
+	
+	ai_rules = {
+		wants_betray_allies = yes 
+		wants_threaten_war = yes 
+		wants_disclose_attack = yes 
+		send_warning_desire = 50 
+	}
+	modifier = {
+		reduced_liberty_desire = -5 
+	}
+	nation_designer_cost = -2
+}
+new personality_trait immortal = {
+	name = "Immortal"
+	desc = "This ruler has found a way to cheat death and potentially live forever. While immune to disease and old age, they may still die from physical violence."
+	death = "Obviously, reports of their immortality were greatly exaggerated."
+	allow = {	 
+	} 
+	 
+	chance = { 
+		modifier = { 
+			factor = -2 
+		} 
+	}
+	
+	ai_rules = {
+		static = yes
+		immortal = 1
+	}
+	modifier = {
+		
+	}
+	nation_designer_cost = 800
+}
+new personality_trait mage = {
+	name = "Mage"
+	desc = "This ruler is a Mage. The ambition to learn about the arcane makes our ruler able to more knowledgeably deal with the interplay of magic and the state."
+	death = "Even the mysteries of the arcane unravelled could not prevent [Root.Monarch.GetHerHis] death"
+	
+	modifier = {
+		monthly_magicka = 0.5
+	}
+	nation_designer_cost = 5
+}
