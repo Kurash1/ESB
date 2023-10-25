@@ -3,105 +3,201 @@ new mission_series fallowfire_5 = {
 	ai = yes
 	potential = {
 		tag = fallowfire
+		has_country_flag = snowy_elf
 	}
 	missions = {
-		fallowfire_improve_ebony_production_techniques = {
-			name = "Improve ebony production techniques"
+		fallowfire_looking_south = {
+			name = "Looking south"
 			desc = ""
 			position = 0
-			icon = mission_industrial_forging
-			trigger = {
-				provinces:shors_stone = {
-					has_building = def_manufactory
-				}
-			}
+			icon = riding_duo_mission
 			effect = {
-				provinces:shors_stone = {
-					add_province_modifier = { 
-						name = ebony_smithing
-						duration = -1
+				defineloc claim_elves_honrich = "§YFallowfire§! gains permanent §Yclaims§! on §Ylake Honrich§!'s elves"
+				custom_tooltip = claim_elves_honrich
+				hidden_effect = {
+					areas:merryfair, areas:riften, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch, provinces:vigil, provinces:sarethi [culture_group = snow_elven] {
+						add_permanent_claim = ROOT
 					}
-				}
-				add_country_modifier = {
-					name = ebony_weapons_and_armors
-					duration = (30*365)
+					country_event = {
+						id = fallowfire.9
+						days = 365
+					}
 				}
 			}
 		}
-		fallowfire_build_new_hall_defenses = {
-			name = "Build new hall defenses"			
+		fallowfire_day_of_reckoning = {
+			name = "Day of Reckoning"
 			desc = ""
 			position = 1
-			icon = protect_against_the_turks
+			icon = bloody_impaled_mission
 			required = {
-				fallowfire_expand_our_citys_market
-				fallowfire_improve_ebony_production_techniques
-				fallowfire_better_tax_collection
+				fallowfire_looking_south
 			}
 			trigger = {
-				provinces:shors_stone = {
-					OR = {
-						has_building = fortup_1
-						has_building = fortup_2
-						has_building = fortup_3
-						has_building = fortup_4
+					all_owned_province = {
+						culture_group = nord
 					}
+					areas:merryfair, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch = {
+							type = all
+							owned_by = ROOT
+					}
+					areas:riften = {
+						owned_by = ROOT
+					}
+					provinces:vigil, provinces:sarethi = {
+						owned_by = ROOT
+					}
+			}
+			provinces_to_highlight = {
+				OR = {
+					area =	merryfair
+					area =	snow_shod
+					area =	heartwood
+					area =	faldar
+					area =	isle_of_gold
+					area =	redwater
+					area =	angarvunde
+					area =	trevas_watch
+					province_id = vigil
+					province_id = sarethi
+					province_id = riften
+					province_id = nightingale_hall
 				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 			effect = {
-				provinces:shors_stone = {
-					add_base_manpower = 2
-					quick_province_modifier = {
-						name = "A safe hall"
-						modifier = {
-							local_defensiveness = 0.15
-							local_development_cost = -0.1
-						}
+				defineloc claim_elves_all = "§YFallowfire§! gains permanent §Yclaims§! on §Yall§! snow elves' land"
+				custom_tooltip = claim_elves_all
+				hidden_effect = {
+					areas:ivarstead, areas:honeystrand, areas:trevas_mouth, areas:sarethi, areas:nilheim, areas:geirmund, areas:autumnwatch, areas:arcwind, areas:east_haemar [ culture_group = snow_elven ] {
+						add_permanent_claim = ROOT
+					}
+					country_event = { 
+						id = fallowfire.2
+						days = 30
 					}
 				}
 			}
 		}
 	}
 }
-new mission_series fallowfire_5_hall_grows = {
+new mission_series fallowfire_5_silence = {
 	slot = 5
 	ai = yes
 	potential = {
 		tag = fallowfire
-		has_country_flag = silence_1
+		has_country_flag = forelhost
 	}
 	missions = {
-		fallowfire_our_hall_grows = {
-			name = "Our hall grows"
+		fallowfire_silence_a_promise_fulfilled = {
+			name = "A silent valley"
 			desc = ""
-			position = 2
-			icon = fallowstone_mission
+			position = 4
+			icon = rift_forest_mission
 			required = {
-				fallowfire_build_new_hall_defenses
+				fallowfire_convert_the_misguided
 				fallowfire_provide_food_and_wood_for_the_high_kingdom
-				fallowfire_feast_for_the_dragon_cult_demise
 			}
-			effect = {
-				provinces:shors_stone = {
-					add_great_project_tier = {
-						type = fallowstone_hall
-						tier = 1
-					}
+			trigger = {
+				rift_region = {
+				type = all
+					owned_by = ROOT
 				}
 			}
-		}	
+			provinces_to_highlight = {
+				region = rift
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			effect = {
+				country_event = { 
+					id = fallowfire.3
+					days = 0
+				}				
+			}
+		}
 	}
 }
-new event_modifier ebony_smithing = {
-	name = "Ebony Smithing"
-	modifier = {
-		trade_goods_size = 1
+new country_event fallowfire.1 = {
+	title = "The reports of the elves' disapperance were greatly exaggerated"
+	desc = ""
+	is_triggered_only = yes
+	picture = forest_trees_eventPicture
+	options = {
+		{
+			name = "KILL THEM ALL"
+			effect = {
+				hidden_effect = {
+					set_country_flag = snowy_elf
+					swap_non_generic_missions = yes
+				}
+			}
+		}
 	}
 }
-new event_modifier ebony_weapons_and_armors = {
-	name = "Ebony weapons and armor"
-	modifier = {
-		shock_damage_received = -0.10
+new country_event fallowfire.2 = {
+	title = "Discovering other humans"
+	desc = ""
+	is_triggered_only = yes
+	picture = scout_eventPicture
+	options = {
+		{
+			name = "Deal with the problem immediately"
+			effect = {
+				areas:forelhost, areas:rift_pass, areas:fallowstone, areas:riften = {
+					add_permanent_claim = ROOT
+				}
+				hidden_effect = {
+					set_country_flag = forelhost
+					swap_non_generic_missions = yes
+				}
+			}
+		}
 	}
 }
-	
+new country_event fallowfire.3 = {
+	title = "Wondering about the future"
+	desc = ""
+	picture = thinking_people_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "Perhaps we should really settle down"
+			effect = {
+				change_tag = rift
+				swap_free_idea_group = yes
+			}
+		}
+		{
+			name = "No! We won't stop until every single elf is dead"
+			effect = {
+				defineloc staying_fallow = "Remain Fallowfire"
+			}
+		}
+	}
+}
+new country_event fallowfire.9 = {
+	title = "Good News"
+	desc = ""
+	is_triggered_only = yes
+	picture = scout_eventPicture
+	options = {
+		{
+			name = "Welcome brothers and sisters"
+			effect = {
+				quick_country_modifier = {
+					name = "Thirsty for slaughter"
+					duration = (30*365)
+					modifier = {
+						province_warscore_cost = -0.30
+						land_maintenance_modifier = -0.15
+					}
+				}	
+				provinces:shors_stone = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 4
+				}
+			}
+		}
+	}
+}	

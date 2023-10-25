@@ -378,16 +378,16 @@ new decision form_the_rift = {
 	name = " Form the Rift "
 	major = yes
 	potential = {
-		always = no
 		NOT = {
 			exists = countries:rift
 			has_reform = tier_1_hold
 		}  
+		primary_culture = fallowfirean
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
-			amount = 60
+			amount = 70
 			regions:rift = {
 				type = all 
 				owned_by = ROOT

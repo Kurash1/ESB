@@ -9,11 +9,11 @@ new decision hold_of_the_sea = {
 	}
 	provinces_to_highlight = {
 		OR = {
-			province_id = provinces:lone_isle
-			province_id = provinces:ice_isle
-			province_id = provinces:rock_isle
-			province_id = provinces:mundall
-			province_id = provinces:edinmund
+			province_id = lone_isle
+			province_id = ice_isle
+			province_id = rock_isle
+			province_id = mundall
+			province_id = edinmund
 		}
 		NOT = { owned_by = ROOT }
 	}
