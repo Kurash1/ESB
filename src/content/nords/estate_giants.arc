@@ -21,10 +21,13 @@ new estate giants = {
 		new sponsor_giant_hunts = {
 			name = "Sponsor Giant Hunts"
 			icon = privilege_grant_autonomy
-			loyalty = -5%
+			loyalty = -15%
 			influence = -20%
 			benefits = {
 				army_tradition = 1
+			}
+			penalties = {
+				state_maintenance_modifier = 25%
 			}
 		}
 		new promote_giant_rights = {
@@ -48,7 +51,7 @@ new estate giants = {
 		new institute_cow_sacrifices = {
 			name = "Institute Cow Sacrifices"
 			icon = privilege_grant_autonomy
-			loyalty = 10%
+			loyalty = 5%
 			penalties = {
 				production_efficiency = -10%
 			}
@@ -56,7 +59,7 @@ new estate giants = {
 		new study_giantish = {
 			name = "Studies in Giantish"
 			icon = privilege_grant_autonomy
-			loyalty = 15%
+			loyalty = 10%
 			penalties = {
 				dip_advisor_cost = 50%
 			}
@@ -90,6 +93,15 @@ new estate giants = {
 				global_unrest = -1
 			}
 		}
+		new hire_chieftains = {
+			name = "Hire Chieftains"
+			icon = privilege_grant_autonomy
+			loyalty = -10%
+			influence = 10%
+			on_granted = {
+				new_custom_tooltip = "Unlocks §YHire a Chieftain§! Decision"
+			}
+		}
 		new recruit_tundrastriders = {
 			name = "Recruit Tundrastriders"
 			icon = privilege_grant_autonomy
@@ -99,7 +111,7 @@ new estate giants = {
 			}
 			benefits = {
 				can_recruit_rajputs = yes
-				allowed_rajput_fraction = 0.1
+				allowed_rajput_fraction = 25%
 			}
 		}
 		new manufacture_giant_armor = {
@@ -111,19 +123,14 @@ new estate giants = {
 			can_select = {
 				full_idea_group = smithing_ideas
 			}
-		}
-		new fjellhork_guards = {
-			name = "Fjellhork Guards"
-			icon = privilege_grant_autonomy
-			is_valid = {
-				has_estate_privilege = giants:recruit_tundrastriders
+			on_granted = {
+				add_country_modifier = {
+					name = tundrastrider_giant_armor
+					duration = -1
+				}
 			}
-		}
-		new raise_a_high_chieftain = {
-			name = "Raise a High Chieftain"
-			icon = privilege_grant_autonomy
-			is_valid = {
-				has_estate_privilege = giants:recruit_tundrastriders
+			on_revoked = {
+				remove_country_modifier = tundrastrider_giant_armor
 			}
 		}
 		new fire_raiser_giants = {
@@ -134,6 +141,15 @@ new estate giants = {
 			}
 			can_select = {
 				full_idea_group = fire0
+			}
+			on_granted = {
+				add_country_modifier = {
+					name = tundrastrider_fire_raiser
+					duration = -1
+				}
+			}
+			on_revoked = {
+				remove_country_modifier = tundrastrider_fire_raiser
 			}
 		}
 		new sing_praises_to_sinmur = {
@@ -147,11 +163,72 @@ new estate giants = {
 					region = eastmarch
 				}
 			}
+			on_granted = {
+				add_country_modifier = {
+					name = tundrastrider_sinmurs_legacy
+					duration = -1
+				}
+			}
+			on_revoked = {
+				remove_country_modifier = tundrastrider_sinmurs_legacy
+			}
 		}
+	}
+}
+new localisation recent_giant_chieftain_hired = "Recent Giant Chieftain Hired"
+new decision giant_hire_chieftain = {
+	name = "Hire a Chieftain"
+	color = { 127 51 0 }
+	potential = {
+		has_estate_privilege = giants:hire_chieftains
+	}
+	allow = {
+		OR = {
+			NOT = {
+				has_country_flag = recent_giant_chieftain_hired
+			}
+			had_country_flag = {
+				flag = recent_giant_chieftain_hired
+				days = 3650
+			}
+		}
+	}
+	effect = {
+		clr_country_flag = recent_giant_chieftain_hired
+		set_country_flag = recent_giant_chieftain_hired
+		create_general = {
+			tradition = 80
+		}
+	}
+}
+new event_modifier tundrastrider_giant_armor = {
+	name = "Giant Armor"
+	modifier = {
+		is_rajput_modifier = yes
+		
+		shock_damage_received = -10%
+		fire_damage_received = -10%
+	}
+}
+new event_modifier tundrastrider_fire_raiser = {
+	name = "Fire Raiser Giants"
+	modifier = {
+		is_rajput_modifier = yes
+		
+		infantry_fire = 1
+	}
+}
+new event_modifier tundrastrider_sinmurs_legacy = {
+	name = "Sinmur's Legacy"
+	modifier = {
+		is_rajput_modifier = yes
+		
+		land_morale = 15%
 	}
 }
 special_units:rajput:name := "Tundrastrider"
 special_units:rajput:regiment := {
+	infantry_shock = 1
 	shock_damage = 20%
 	morale_damage = 20%
 }
