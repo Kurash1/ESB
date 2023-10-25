@@ -92,6 +92,19 @@ new effect define_advisor = {
 		culture = culture?
 		religion = religion?
 	}
+	transpile = {
+		`define_advisor =` {
+			`type = {args:type}`
+			when [exists = args:name] `name = "{args:name}"`
+			when [exists = args:skill] `skill = {args:skill}`
+			when [exists = args:location] `location = {args:location}`
+			when [exists = args:discount] `discount = {args:discount}`
+			when [exists = args:cost_multiplier] `cost_multiplier = {args:cost_multiplier}`
+			when [exists = args:female] `female = {args:female}`
+			when [exists = args:culture] `culture = {args:culture}`
+			when [exists = args:religion] `religion = {args:religion}`
+		}
+	}
 }
 new effect change_trade_goods = {
 	args = tradegood
@@ -138,9 +151,29 @@ new effect set_imperial_incident = {
 		}
 	}
 }
+
+new effect add_historical_rival = {
+	args = country_scope
+	transpile = {
+		`add_historical_rival = {args}`
+	}
+}
+new effect vassalize = {
+	args = country_scope
+	transpile = {
+		`vassalize = {args}`
+	}
+}
+new effect change_religion = {
+	args = country_scope
+}
+new effect change_religion = {
+	args = religion 
+}
 new effect culture = {
 	args = culture
 }
 new effect culture = {
 	args = base_scope
+
 }

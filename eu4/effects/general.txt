@@ -118,6 +118,9 @@ new effect change_innovativeness = {
 }
 new effect complete_mission = {
 	args = mission
+	transpile = {
+		`complete_mission = {args:id}`
+	}
 }
 new effect swap_non_generic_missions = {
 	args = bool

@@ -1,0 +1,165 @@
+new mission_series fallowfire_8 = {
+	slot = 8
+	ai = yes
+	potential = {
+		tag = fallowfire
+	}
+	missions = {
+		fallowfire_bergitte_bastion = {
+			name = "Bergitte Bastion"			
+			desc = ""
+			position = 0
+			icon = protect_against_the_turks
+			trigger = {
+				provinces:shors_stone = {
+					OR = {
+						has_building = fortup_1
+						has_building = fortup_2
+						has_building = fortup_3
+						has_building = fortup_4
+					}
+				}
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_base_manpower = 2
+					quick_province_modifier = {
+						name = "Bergitte Bastion"
+						modifier = {
+							local_defensiveness = 0.25
+							fort_level = 1
+						}
+					}
+				}
+			}
+		}
+		fallowfire_our_hall_grows = {
+			name = "Vikord's pub"
+			desc = ""
+			position = 1
+			icon = fallowstone_mission
+			required = {
+				fallowfire_bergitte_bastion
+				fallowfire_kakjords_hall
+				fallowfire_gurildas_road
+			}
+			effect = {
+				provinces:shors_stone = {
+					add_great_project_tier = {
+						type = fallowstone_hall
+						tier = 1
+					}
+				}
+				country_event = {
+					id = fallowfire.6
+					days = 0
+				}
+			}
+		}
+		fallowfire_found_redbelly_mine = {
+			name = "Found Redbelly Mine"
+			desc = ""
+			position = 2
+			icon = mission_industrial_forging
+			required = {
+				fallowfire_our_hall_grows
+			}
+			trigger = {
+				provinces:shors_stone = {
+					has_building = def_manufactory
+				}
+			}
+			effect = {
+				provinces:shors_stone = {
+					change_trade_goods = ebony
+					add_province_modifier = { 
+						name = ebony_smithing
+						duration = -1
+					}
+					
+				}
+				add_country_modifier = {
+					name = ebony_weapons_and_armors
+					duration = (30*365)
+				}
+			}
+		}
+		fallowfire_our_fame_speaks_loud = {
+			name = "Our fame speaks loud"
+			desc = ""
+			position = 3
+			icon = fallowstone_mission
+			required = {
+				fallowfire_found_redbelly_mine
+				fallowfire_provide_infrastructure
+				fallowfire_ysgramors_plaza
+			}
+			effect = {
+				country_event = {
+					id = fallowfire.7
+					days = 0
+				}
+				provinces:shors_stone = {
+					add_great_project_tier = {
+						type = fallowstone_hall
+						tier = 1
+					}
+				}
+			}
+		}				
+	}
+}
+new event_modifier ebony_smithing = {
+	name = "Ebony Smithing"
+	modifier = {
+		trade_goods_size = 1
+	}
+}
+new event_modifier ebony_weapons_and_armors = {
+	name = "Ebony weapons and armor"
+	modifier = {
+		shock_damage_received = -0.10
+	}
+}
+new country_event fallowfire.6 = {
+	title = "Our Hall grows"
+	desc = ""
+	picture = siege_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = fallowfire
+	}
+	options = {
+		{	
+			name = "Cool"
+			effect = {
+				provinces:shors_stone = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 4
+				}
+			}
+		}
+	}
+}
+new country_event fallowfire.7 = {
+	title = "Our hall grows again"
+	desc = ""
+	picture = siege_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = fallowfire
+	}
+	options = {
+		{	
+			name = "Cool"
+			effect = {
+				provinces:shors_stone = {
+					add_base_tax = 4
+					add_base_production = 3
+					add_base_manpower = 2
+				}
+			}
+		}
+	}
+}

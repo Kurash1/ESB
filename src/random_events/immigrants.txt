@@ -1,0 +1,46 @@
+bi_yearly_events += {
+	100 = immigration.1
+
+}
+new country_event immigration.1 = {
+	inherit = random_event
+	title = "Newcomers come to our hall"
+	desc = "It happens that blah blah blah and then blah blah blah etc. lorem ipsum"
+	picture = arrow_in_knee_eventPicture
+	mean_time_to_happen = {
+		days = 2
+		modifier = {
+			factor = 2
+			has_country_flag = extra_atmoran_settlers
+		}
+		modifier = {
+			factor = 0
+			NOT = { tag = fallowfire }
+		}
+		modifier = {
+			factor = 1.5
+			tag = fallowfire
+		}
+		modifier = {
+			factor = 0.5
+			ags = 50
+		}
+		modifier = {
+			factor = 0
+			ags = 100
+		}
+	}
+	options = {
+		{
+			name = "Welcome brothers and sisters"
+			effect = {
+				random_owned_province = {	
+					add_base_tax = 1
+					add_base_manpower = 1
+				}
+			}
+		}
+	}
+}
+
+
