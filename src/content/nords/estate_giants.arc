@@ -20,7 +20,7 @@ new estate giants = {
 	privileges = {
 		new sponsor_giant_hunts = {
 			name = "Sponsor Giant Hunts"
-			icon = privilege_grant_autonomy
+			icon = privilege_army_tradition
 			loyalty = -15%
 			influence = -20%
 			benefits = {
@@ -32,7 +32,7 @@ new estate giants = {
 		}
 		new promote_giant_rights = {
 			name = "Promote Giant Rights"
-			icon = privilege_grant_autonomy
+			icon = privilege_autonomy
 			loyalty = 5%
 			influence = 5%
 		}
@@ -50,7 +50,7 @@ new estate giants = {
 		}
 		new institute_cow_sacrifices = {
 			name = "Institute Cow Sacrifices"
-			icon = privilege_grant_autonomy
+			icon = privilege_cow
 			loyalty = 5%
 			penalties = {
 				production_efficiency = -10%
@@ -58,7 +58,7 @@ new estate giants = {
 		}
 		new study_giantish = {
 			name = "Studies in Giantish"
-			icon = privilege_grant_autonomy
+			icon = privilege_dip_advisor_cost_opposite
 			loyalty = 10%
 			penalties = {
 				dip_advisor_cost = 50%
@@ -66,7 +66,7 @@ new estate giants = {
 		}
 		new promote_giant_trade = {
 			name = "Promote Giant Trade"
-			icon = privilege_grant_autonomy
+			icon = privilege_monopoly
 			loyalty = 5%
 			influence = 5%
 			benefits = {
@@ -75,7 +75,7 @@ new estate giants = {
 		}
 		new establish_spiral_arts = {
 			name = "Establish Spiral Arts"
-			icon = privilege_grant_autonomy
+			icon = privilege_prestige
 			loyalty = 10%
 			on_granted = {
 				add_prestige = 25
@@ -86,7 +86,7 @@ new estate giants = {
 		}
 		new rights_of_half_giants = {
 			name = "Rights of Half-Giants"
-			icon = privilege_grant_autonomy
+			icon = privilege_global_unrest
 			loyalty = 5%
 			influence = 10%
 			benefits = {
@@ -95,7 +95,7 @@ new estate giants = {
 		}
 		new hire_chieftains = {
 			name = "Hire Chieftains"
-			icon = privilege_grant_autonomy
+			icon = privilege_army_professionalism
 			loyalty = -10%
 			influence = 10%
 			on_granted = {
@@ -104,7 +104,7 @@ new estate giants = {
 		}
 		new recruit_tundrastriders = {
 			name = "Recruit Tundrastriders"
-			icon = privilege_grant_autonomy
+			icon = privilege_can_recruit_rajputs
 			influence = 10%
 			is_valid = {
 				has_dlc = "Dharma"
@@ -116,7 +116,7 @@ new estate giants = {
 		}
 		new manufacture_giant_armor = {
 			name = "Manufacture Giant Armor"
-			icon = privilege_grant_autonomy
+			icon = privilege_shock_damage_received
 			is_valid = {
 				has_estate_privilege = giants:recruit_tundrastriders
 			}
@@ -135,7 +135,7 @@ new estate giants = {
 		}
 		new fire_raiser_giants = {
 			name = "Fire Raiser Giants"
-			icon = privilege_grant_autonomy
+			icon = privilege_morale_damage
 			is_valid = {
 				has_estate_privilege = giants:recruit_tundrastriders
 			}
@@ -154,7 +154,7 @@ new estate giants = {
 		}
 		new sing_praises_to_sinmur = {
 			name = "Sing Praises to Sinmur"
-			icon = privilege_grant_autonomy
+			icon = privilege_land_morale
 			is_valid = {
 				has_estate_privilege = giants:recruit_tundrastriders
 			}
@@ -215,7 +215,7 @@ new event_modifier tundrastrider_fire_raiser = {
 	modifier = {
 		is_rajput_modifier = yes
 		
-		infantry_fire = 1
+		morale_damage = 20%
 	}
 }
 new event_modifier tundrastrider_sinmurs_legacy = {
