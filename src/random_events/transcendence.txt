@@ -1,0 +1,183 @@
+bi_yearly_events += {
+	100 = transcendence.1
+}
+new country_event transcendence.1 = {
+	inherit = random_event
+	title = "The Path of Transcendence"
+	desc = "While studying the Arcane you have come across a magical tome describing a process by which a mortal could become an immortal undying lich. However this tome mentions that the method requires a secret which is not in this tome."
+	picture = castle_general_eventPicture
+	trigger = {
+		full_idea_group = necromancy_ideas
+		ruler_has_personality = mage_personality
+		NOT = { has_ruler_modifier = lich }
+		NOT = { has_ruler_flag = path_of_transcendence }
+	}
+	immediate = {
+		set_ruler_flag = path_of_transcendence
+		#This is so rulers can't do 2 lichdoms at the same time
+	}
+	options = {
+		{
+			name = "Send out a search party"
+			effect = {
+				add_treasury = -100
+				country_event = {
+					id = transcendence.2
+					years = 5
+				}
+			}
+		}
+		{
+			name = "I have more pressing business"
+			effect = {
+				add_adm_power = 50
+				add_dip_power = 50
+				add_mil_power = 50
+			}
+		}
+	}
+}
+new country_event transcendence.2 = {
+	inherit = random_event
+	title = "Secret Knowledge"
+	desc = ""
+	picture = castle_general_eventPicture
+	trigger = {
+		full_idea_group = necromancy_ideas
+		ruler_has_personality = mage_personality
+		NOT = { has_ruler_modifier = lich }
+	}
+	options = {
+		{
+			name = "Next I must create a Phylactery"
+			effect = {
+				add_treasury = -100
+				country_event = {
+					id = transcendence.3
+					years = 5
+				}
+			}
+		}
+		{
+			name = "This is far too expensive"
+			effect = {
+				
+			}
+		}
+	}
+}
+new country_event transcendence.3 = {
+	inherit = random_event
+	title = "Creation of the Phylactery"
+	desc = ""
+	picture = castle_general_eventPicture
+	trigger = {
+		full_idea_group = necromancy_ideas
+		ruler_has_personality = mage_personality
+		NOT = { has_ruler_modifier = lich }
+	}
+	options = {
+		{
+			name = "And finally I must plan a great sacrifice"
+			effect = {
+				add_treasury = -100
+				country_event = {
+					id = transcendence.4
+					years = 5
+				}
+			}
+		}
+		{
+			name = "I cannot do this"
+			effect = {
+				
+			}
+		}
+	}
+}
+new country_event transcendence.4 = {
+	inherit = random_event
+	title = "Grand Sacrifice"
+	desc = ""
+	picture = castle_general_eventPicture
+	trigger = {
+		full_idea_group = necromancy_ideas
+		ruler_has_personality = mage_personality
+		NOT = { has_ruler_modifier = lich }
+	}
+	options = {
+		{
+			name = "I shall sacrifice my capital"
+			effect = {
+				capital_scope = {
+					add_base_tax = -1
+					add_base_production = -1
+					add_base_manpower = -1
+					add_devastation = 25
+				}
+				country_event = transcendence.5
+			}
+		}
+		{
+			name = "I shall sacrifice my court"
+			effect = {
+				remove_advisor_by_category = ADM
+				remove_advisor_by_category = DIP
+				remove_advisor_by_category = MIL
+				country_event = transcendence.5
+			}
+			trigger = {
+				employed_advisor = {
+					category = ADM
+				}
+				employed_advisor = {
+					category = DIP
+				}
+				employed_advisor = {
+					category = MIL
+				}
+			}
+		}
+		{
+			name = "I shall sacrifice my family"
+			effect = {
+				remove_consort = yes
+				remove_heir = { allow_new_heir = no }
+				country_event = transcendence.5
+			}
+			trigger = {
+				has_heir = yes
+				has_consort = yes
+			}
+		}
+		{
+			name = "I cannot"
+			effect = {
+				
+			}
+		}
+	}
+}
+new country_event transcendence.5 = {
+	inherit = random_event
+	title = "Ascendancy"
+	desc = ""
+	picture = castle_general_eventPicture
+	trigger = {
+		full_idea_group = necromancy_ideas
+		ruler_has_personality = mage_personality
+		NOT = { has_ruler_modifier = lich }
+	}
+	options = {
+		{
+			name = "Eternity here I come"
+			effect = {
+				add_ruler_personality = immortal_personality
+				add_ruler_modifier = {
+					name = lich
+					duration = -1
+				}
+			}
+		}
+	}
+}
