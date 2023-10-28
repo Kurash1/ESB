@@ -806,6 +806,7 @@ new country skyborn = {
 	color = {
 		200 200 255
 	}
+	religion = the_old_ways
 	capital = skyborn_altar
 }
 new country yorgrim = {
