@@ -1,0 +1,55 @@
+new war_goal war_goal_orc_raid = {
+	type = take_province
+	title = "Take a province"
+	desc = "War goal is to take a province."
+	war_name = "$ORDER$$FIRST$ Conquest of $SECOND_NAME$"
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 1	
+		
+		allowed_provinces = {
+			always = yes
+		}
+
+		peace_options = {
+			po_demand_provinces
+			po_become_vassal
+			po_become_tributary_state
+			po_gold
+		}
+		
+		prov_desc = "All Provinces"
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 1	
+		
+		allowed_provinces = {
+			always = yes
+		}
+
+		peace_options = {
+			po_demand_provinces
+			po_become_vassal
+			po_become_tributary_state
+			po_gold
+		}
+		
+		prov_desc = "All Provinces"
+	}
+}
+new casus_belli cb_orc_raid = {
+	name = "Orc Raid"
+	prerequisites_self = {
+		is_race = orc
+	}
+
+	prerequisites = {
+		is_neighbor_of = FROM
+	}
+	
+	war_goal = war_goal_orc_raid
+}
