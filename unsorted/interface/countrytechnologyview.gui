@@ -286,6 +286,37 @@ guiTypes = {
 				shortcut = "n"
 			}
 		}
+	
+		iconType = {
+			name ="explanation_bg"
+			spriteType = "GFX_attach_army_bg"
+			position = { x= 111 y = 166 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "ui_tech_system_title"
+			position = { x = 111 y = 180 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}
+			maxWidth = 303
+			maxHeight = 32
+			format = center
+			text = "Technology System Explanation"
+		}
+		
+		instantTextBoxType = {
+			name = "ui_tech_system_desc"
+			position = { x = 125 y = 220 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}
+			maxWidth = 300
+			maxHeight = 270
+			format = left
+			text = "ui_tech_system_desc"
+		}
 	}
 	
 	### ------- Administrative Tech Research -------		
