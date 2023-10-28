@@ -138,7 +138,16 @@ new age first_century = {
 		ab_focus_on_longships = {
 			name = "Focus on Longships"
 			allow = {
-				culture_group = nord
+				if [has_dlc = "Domination"] {
+					culture_group = nord
+				}
+				else {
+					defineloc ab_focus_on_longships_custom_tooltip = "This Age Ability does §RNot§! Work without the §YDomination§! Dlc"
+					custom_trigger_tooltip = {
+						tooltip = ab_focus_on_longships_custom_tooltip
+						always = no
+					}
+				}
 			}
 			modifier = {
 				allowed_galleass_fraction = 0.2
