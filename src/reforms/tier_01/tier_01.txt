@@ -20,8 +20,12 @@ governments:theocracy:reform_levels:1 += new tier_1_forelhost_priestdom = {
 	desc = ""
 	icon = "dragon_priest"
 	allow_normal_conversion = yes
+	rulers_can_be_generals = yes
 	republican_name = yes
 	custom_attributes = {
+		defineloc mechanic_no_heir_theocracy_yes = "Doesn't have an Heir"
+		defineloc mechanic_immortal_ruler_yes = "Immortal Ruler"
+		defineloc mechanic_rahgot_ruler_yes = "Ruler is §YRahgot§!"
 		no_heir_theocracy = yes
 		immortal_ruler = yes
 		rahgot_ruler = yes
