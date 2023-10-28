@@ -1,6 +1,5 @@
 bi_yearly_events += {
-	100 = immigration.1
-
+	200 = immigration.1
 }
 new country_event immigration.1 = {
 	inherit = random_event
@@ -8,7 +7,7 @@ new country_event immigration.1 = {
 	desc = "It happens that blah blah blah and then blah blah blah etc. lorem ipsum"
 	picture = arrow_in_knee_eventPicture
 	mean_time_to_happen = {
-		days = 2
+		days = 1
 		modifier = {
 			factor = 2
 			has_country_flag = extra_atmoran_settlers
