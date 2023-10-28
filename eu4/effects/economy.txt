@@ -28,6 +28,7 @@ new effect add_loan = {
 	args = {
 		interest_modifier = float?
 		fixed_interest = float?
+		estate_loan = bool?
 		duration = int
 	}
 }
