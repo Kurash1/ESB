@@ -27,6 +27,7 @@ new inheritable atmoran_settler_event = {
 new country_event atmoran_settler.1 = {
 	inherit = atmoran_settler_event
 	title = "Atmoran Settlers: Adventurers"
+	desc = "Drawn in by rumors of adventure and peril to be had in Skyrim, those young atmorans decided to test their luck in the Throat of the World. All they ask for is setting up a base of operations in one of your settlements. In turn they promise to share whatever they find of value. "
 	picture = falkreath_adventurer_eventPicture
 	trigger = {
 		is_race = nord
@@ -36,6 +37,9 @@ new country_event atmoran_settler.1 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
+					if [NOT = { development = 5 }] {
+						change_religion = the_old_ways
+					}
 					add_base_tax = 1
 					add_base_production = 1
 				}
@@ -55,6 +59,9 @@ new country_event atmoran_settler.2 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
+					if [NOT = { development = 7 }] {
+						change_religion = the_old_ways
+					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -66,6 +73,7 @@ new country_event atmoran_settler.2 = {
 new country_event atmoran_settler.3 = {
 	inherit = atmoran_settler_event
 	title = "Atmoran Settlers: Warriors"
+	desc = "Hardy warriors migrating from Atmora are an ever rarer sight to behold. Yet one such group just made landfall at the coastline of the Sea of Ghosts. Following in the footsteps of Ysgramoor, those warriors want to take up arms in the name of the Nord people. "
 	picture = nord_recruit_eventPicture
 	trigger = {
 		is_race = nord
@@ -75,6 +83,9 @@ new country_event atmoran_settler.3 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
+					if [NOT = { development = 7 }] {
+						change_religion = the_old_ways
+					}
 					add_base_manpower = 3
 				}
 			}
@@ -84,6 +95,7 @@ new country_event atmoran_settler.3 = {
 new country_event atmoran_settler.4 = {
 	inherit = atmoran_settler_event
 	title = "Atmoran Settlers: Wanderers"
+	desc = "Those poor souls that were attacked by the sea ghosts of the perilious Sea of Ghosts, often make landfall in uninhabitated regions, if they make landfall at all. One such group now made it to your hall asking if they may settle down in your lands. They promise to give military service in return. "
 	picture = worldly_wanderer_eventPicture
 	trigger = {
 		is_race = nord
@@ -93,6 +105,9 @@ new country_event atmoran_settler.4 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
+					if [NOT = { development = 5 }] {
+						change_religion = the_old_ways
+					}
 					add_base_tax = 1
 					add_base_manpower = 1
 				}
@@ -103,6 +118,7 @@ new country_event atmoran_settler.4 = {
 new country_event atmoran_settler.5 = {
 	inherit = atmoran_settler_event
 	title = "Atmoran Settlers: New Village"
+	desc = "The evermore desolate climate of Atmora still brings migrants to Skyrim. Although big groups of migrants becoming an ever rarer side with the end of the merethic era they are not unheard of. One such bigger group of settlers arrived at the shores of Skyrim, asking if they may settle down."
 	picture = scouts_report_eventPicture
 	trigger = {
 		is_race = nord
@@ -112,6 +128,9 @@ new country_event atmoran_settler.5 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
+					if [NOT = { development = 13 }] {
+						change_religion = the_old_ways
+					}
 					add_base_tax = 2
 					add_base_production = 2
 					add_base_manpower = 2
