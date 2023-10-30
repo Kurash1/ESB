@@ -671,7 +671,7 @@ new province 7002 = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "7002"
+	name = ""
 	color = {
 		84 92 62
 	}
@@ -689,7 +689,7 @@ new province clearpine_lake = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "Clearpine Lake"
+	name = ""
 	color = {
 		85 92 62
 	}
@@ -725,7 +725,7 @@ new province lake_neugrad = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "Lake Neugrad"
+	name = ""
 	color = {
 		87 92 62
 	}

@@ -48,7 +48,7 @@ new idea_group administrative_ideas = {
 			name = "Civil Service"
 			desc = "By establishing a Civil Service of eager young bureaucrats will ensure that we are able to quickly adapt to new advances in administration and governance."
 			modifier = {
-				adm_tech_cost_modifier = -0.1
+				reform_progress_growth = 0.1
 			}
 		}
 	}
@@ -79,9 +79,9 @@ new idea_group society_ideas = {
 		}
 		{
 			name = "Establish Universities"
-			desc = "Universities help us to advance in technology."
+			desc = "Universities help us to advance in education."
 			modifier = {
-				global_institution_spread = 0.25
+				development_cost = -0.1
 			}
 		}
 		{
@@ -390,7 +390,6 @@ new idea_group aristocracy_ideas = {
 			name = "Military Traditions"
 			desc = "Military thought is constantly evolving and we ensure that our military thought evolves with it. By encouraging a tradition of service amongst our nobility, to be a man of status is to be a man who has won glory on the battlefield. Although bravery and stuff like that are always useful, there is nothing quite like outclassing your enemy to make it easy."
 			modifier = {
-				mil_tech_cost_modifier = -0.15
 				army_tradition = 0.5
 			}
 		}
@@ -547,8 +546,7 @@ new idea_group staatsverwaltung0 = {
 			name = "Enforcement of Progress"
 			desc = "Sometimes the peasant population and the unprogressive might be reluctant to accept technical advancements. We need to convince them that advancement is best for them."
 			modifier = {
-				global_institution_spread = 0.1
-				embracement_cost = -0.25
+				reform_progress_growth = 0.15
 			}
 		}
 		{
@@ -818,7 +816,7 @@ new idea_group indigenous_ideas = {
 		}
 	}
 	bonus = {
-		global_institution_spread = 0.25
+		defensiveness = 0.25
 	}
 }
 new idea_group horde0 = {

@@ -95,7 +95,7 @@ new effect define_advisor = {
 	transpile = {
 		`define_advisor =` {
 			`type = {args:type}`
-			when [exists = args:name] `name = "{args:name}"`
+			when [exists = args:name] `name = {args:name}`
 			when [exists = args:skill] `skill = {args:skill}`
 			when [exists = args:location] `location = {args:location}`
 			when [exists = args:discount] `discount = {args:discount}`
@@ -145,6 +145,7 @@ new effect set_imperial_incident = {
 		}
 		else {
 			emperor = {
+				args:immediate
 				args:options:1:effect
 			}
 		}

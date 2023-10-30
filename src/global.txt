@@ -1,3 +1,9 @@
+new localisation ui_tech_system_title = "Technology System Explanation"
+new localisation ui_tech_system_desc = "ESB does not use the vanilla technology system, rather you will be spending most of your mana on Idea Groups. 
+	The Mana cost for ideas has been increased.
+	Every 50 years you will be given 3 new idea group slots.
+	Note that this will also show messages for gaining new technology as we cannot implement it in any other way.
+This system was made to allow for players to choose what direction they want their countries to focus on."
 new localisation ESTATES_SUMMON_THE_DIET_DESC = "Will summon the Diet to set an §YAgenda§!
 
 Agendas will be implemented in a future update"
@@ -132,7 +138,16 @@ new age first_century = {
 		ab_focus_on_longships = {
 			name = "Focus on Longships"
 			allow = {
-				culture_group = nord
+				if [has_dlc = "Domination"] {
+					culture_group = nord
+				}
+				else {
+					defineloc ab_focus_on_longships_custom_tooltip = "This Age Ability does §RNot§! Work without the §YDomination§! Dlc"
+					custom_trigger_tooltip = {
+						tooltip = ab_focus_on_longships_custom_tooltip
+						always = no
+					}
+				}
 			}
 			modifier = {
 				allowed_galleass_fraction = 0.2

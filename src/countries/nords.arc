@@ -529,26 +529,88 @@ new country windhelm = {
 	history = {
 		historical_friend = JRR
 		elector = yes
-		2500.1.1 = {
+		1987.1.1 = {
 			monarch = {
-				name = "Torolf"
-				dynasty = "of Ysgramoor"
-				adm = 4
-				dip = 4
-				mil = 5
-				birth_date = 2480.1.1
+				name = "Ysgramoor"
+				dynasty = "the Returned"
+				birth_date = 1945.1.1
 			}
-			add_ruler_personality = martial_educator_personality
-			add_ruler_personality = navigator_personality
-			add_ruler_personality = conqueror_personality
 			add_country_modifier = {
 				name = atmoran_holdings
 				duration = -1
+			}
+		}
+		2022.1.1 = {
+			monarch = {
+				name = "Ylgar"
+				dynasty = "Ysgramoor"
+				birth_date = 2000.1.1
+			}
+		}
+		2108.1.1 = {
+			monarch = {
+				name = "Jurgar"
+				dynasty = "Ysgramoor"
+				birth_date = 2086.1.1
+			}
+		}
+		2140.1.1 = {
+			monarch = {
+				name = "Oduvid"
+				dynasty = "Ysgramoor"
+				birth_date = 2110.1.1
+			}
+		}
+		2209.1.1 = {
+			monarch = {
+				name = "Skavwulf"
+				dynasty = "Ysgramoor"
+				birth_date = 2209.1.1
+			}
+		}
+		2240.1.1 = {
+			monarch = {
+				name = "Eistaag"
+				dynasty = "Ysgramoor"
+				birth_date = 2229.1.1
+			}
+		}
+		2289.1.1 = {
+			monarch = {
+				name = "Rorygg"
+				dynasty = "Ysgramoor"
+				birth_date = 2259.1.1
 			}
 			add_country_modifier = {
 				name = aegisbane
 				duration = -1
 			}
+		}
+		2350.1.1 = {
+			monarch = {
+				name = "Vigstrom"
+				dynasty = "Ysgramoor"
+				birth_date = 2320.1.1
+			}
+		}
+		2409.1.1 = {
+			monarch = {
+				name = "Rald"
+				dynasty = "Ysgramoor"
+				birth_date = 2387.1.1
+			}
+		}
+		2479.1.1 = {
+			monarch = {
+				name = "Volharth"
+				dynasty = "Ysgramoor"
+				birth_date = 2446.1.1
+				adm = 4
+				dip = 4
+				mil = 4
+			}
+		}
+		2500.1.1 = {
 			country_event = {
 				id = eastmarch.1
 				days = (143*365)
@@ -744,6 +806,7 @@ new country skyborn = {
 	color = {
 		200 200 255
 	}
+	religion = the_old_ways
 	capital = skyborn_altar
 }
 new country yorgrim = {

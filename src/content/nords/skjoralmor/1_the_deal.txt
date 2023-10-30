@@ -113,7 +113,12 @@ mission_trees:skjoralmor += {
 		x = 1
 		y = 2
 		trigger = {
-			has_age_ability = ab_skjoralmor_conquests
+			if [has_dlc = "Mandate of Heaven"] {
+				has_age_ability = ab_skjoralmor_conquests
+			}
+			else {
+				always = yes
+			}
 		}
 		effect = {
 			define_ruler = {
@@ -146,7 +151,7 @@ This Casus Belli will last for §G25§! years."
 new war_goal war_goal_stronghold_siege = {
 	type = take_capital
 	title = "Siege of Stronghold Title"
-	war_name = "Siege of Stronghold War Name"
+	war_name = "Siege of Stronghold"
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 2

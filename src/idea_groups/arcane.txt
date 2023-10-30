@@ -173,7 +173,7 @@ new idea_group illusion_ideas = {
 			name = "Clairvoyance"
 			desc = "By peering in what is to come we can advance our nation at a much faster pace."
 			modifier = {
-				global_institution_spread = 0.25
+				reform_progress_growth = 0.1
 			}
 		}
 	}
@@ -335,7 +335,7 @@ new idea_group esb_shadow_magic = {
 			name = "Azra Nightwielder"
 			desc = "It was first harnessed by Azra Nightwielder, who was the first to discover that shadow was not simply an absence of light, but a reflection of possible worlds created by forces in conflict."
 			modifier = {
-				innovativeness_gain = 0.5
+				reform_progress_growth = 0.1
 			}
 		}
 		{
@@ -368,7 +368,7 @@ new idea_group esb_shadow_magic = {
 		}
 		{
 			name = "Nightblades"
-			desc = "Shadow Magic is common around the Western Reach area, but is only occasionally used elsewhere. It is often harnessed by "Nightblades"."
+			desc = "Shadow Magic is common around the Western Reach area, but is only occasionally used elsewhere. It is often harnessed by 'Nightblades'."
 			modifier = {
 				shock_damage = 0.05
 			}
@@ -455,7 +455,7 @@ new idea_group esb_thaumaturgy = {
 			name = "Magicka Study"
 			desc = "The school of Thaumaturgy was one of the major avenues of magicka study."
 			modifier = {
-				technology_cost = -0.1
+				idea_cost = -0.05
 			}
 		}
 		{
@@ -602,7 +602,7 @@ new idea_group esb_thaumavocalism = {
 			name = "Study of two"
 			desc = "Their magic is focused through music. In order to improve their abilities, they must study both magic and music."
 			modifier = {
-				technology_cost = -0.1
+				reform_progress_growth = 0.1
 			}
 		}
 		{

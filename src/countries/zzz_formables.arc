@@ -27,6 +27,7 @@ new decision form_eastmarch = {
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 60
 			regions:eastmarch = {
@@ -65,6 +66,7 @@ new decision form_winterhold = {
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 50
 			regions:winterhold = {
@@ -110,6 +112,7 @@ new decision form_pale = {
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 40
 			regions:pale = {
@@ -158,6 +161,7 @@ new decision form_whiterun = {
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 50
 			regions:whiterun = {
@@ -203,6 +207,7 @@ new decision form_hjaalmarch = {
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 40
 			regions:hjaalmarch = {
@@ -248,6 +253,7 @@ new decision form_haafingar = {
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 30
 			regions:haafingar = {
@@ -287,6 +293,7 @@ new decision form_falkreath = {
 		}
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 25
 			regions:kreath = {
@@ -332,6 +339,7 @@ new decision form_orkreath = {
 		}  
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 25
 			regions:kreath = {
@@ -377,6 +385,7 @@ new decision form_the_rift = {
 		primary_culture = fallowfirean
 	}
 	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
 		calc_true_if = {
 			amount = 70
 			regions:rift = {
