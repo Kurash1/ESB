@@ -9,6 +9,7 @@ new mission_series fallowfire_7 = {
 			name = "Gurilda's Road"
 			desc = ""
 			position = 0
+			icon = city_road_mission
 			trigger = {
 				provinces:shors_stone = {
 					has_building = road_1
@@ -33,7 +34,7 @@ new mission_series fallowfire_7 = {
 			name = " Ysgramor's Plaza"
 			desc = ""
 			position = 2
-			icon = market_mission
+			icon = riften_market_mission
 			required = {
 				fallowfire_our_hall_grows
 			}
