@@ -171,6 +171,9 @@ new estate clans = {
 			}
 		}
 	}
+	agendas = {
+        cock
+    }
 	base_influence = 25
 }
 
