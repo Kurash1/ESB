@@ -1,0 +1,26 @@
+new policy <key> = {
+	name = <name>
+	desc = <desc>
+	monarch_power = <ADM|DIP|MIL>
+	group = <idea group> #requires only_ideas to exist as an idea group
+	#group_1 = <idea group> #While these two are technically implemented I've broken them in global.txt
+	#group_2 = <idea group>
+	potential = {
+		<triggers>
+	}
+	allow = {
+		<triggers>
+	}
+	modifier = {
+		<modifiers>
+	}
+	effect = {
+		<effects>
+	}
+	removed_effect = {
+		<effects>
+	}
+	ai_will_do = {
+		<factor block>
+	}
+}
