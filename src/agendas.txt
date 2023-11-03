@@ -7,13 +7,38 @@ new cock agenda = {
 	}
 	provinces_to_highlight = {}
 	selection_weight = { factor = 1000 }
-	pre_effect = {}
-	immediate_effect = {}
-	task_requirements = {}
-	task_completed_effect = {}
-	failing_effect = {}
-	fail_if = {}
-	on_invalid = {}
+	pre_effect = { }
+	immediate_effect = {
+		add_country_modifier = {
+					name = inspired_men
+					duration = (365*15)
+				}
+	}
+	task_requirements = {
+		army_size_percentage = 1.0
+	}
+	task_completed_effect = {
+		add_country_modifier = {
+					name = inspired_men
+					duration = (365*15)
+				}
+	}
+	failing_effect = {
+		quick_country_modifier = {
+					name = "The Rift is secured"
+					duration = (15*365)
+					modifier = {
+						global_monthly_devastation = -0.2
+						global_prosperity_growth = 0.1
+					}
+		}
+	}
+	fail_if = {
+		army_size_percentage = 0
+	}
+	on_invalid = {
+		add_treasury = 50
+	}
 	invalid_trigger = {}
 	
 }
