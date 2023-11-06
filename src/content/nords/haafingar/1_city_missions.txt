@@ -1,0 +1,101 @@
+mission_trees:solitude += {
+	castle_upon_the_hill = {
+		name = "Castle upon the Hill"
+		x = 1
+		y = 0
+		inherit = not_implemented_mission
+	}
+	temple_of_the_divines = {
+		name = "Temple of the Divines"
+		x = 0
+		y = 1
+		required = castle_upon_the_hill
+		inherit = not_implemented_mission
+	}
+	storm_gate = {
+		name = "Storm Gate"
+		x = 1
+		y = 1
+		required = castle_upon_the_hill
+		inherit = not_implemented_mission
+	}
+	windbreaker_arch = {
+		name = "Windbreaker Arch"
+		x = 3
+		y = 0
+		inherit = not_implemented_mission
+	}
+	solitude_sewers = {
+		name = "Solitude Sewers"
+		x = 3
+		y = 1
+		required = windbreaker_arch
+		inherit = not_implemented_mission
+	}
+	solitude_countryside = {
+		name = "Solitude Countryside"
+		x = 4
+		y = 1
+		required = windbreaker_arch
+		inherit = not_implemented_mission
+	}
+	the_avenues_district = {
+		name = "The Avenues District"
+		x = 2
+		y = 1
+		required = {
+			castle_upon_the_hill
+			windbreaker_arch
+		}
+		inherit = not_implemented_mission
+	}
+	the_blue_palace = {
+		name = "The Blue Palace"
+		x = 1
+		y = 2
+		required = {
+			temple_of_the_divines
+			storm_gate
+			the_avenues_district
+		}
+		inherit = not_implemented_mission
+	}
+	grandest_hall = {
+		name = "Grandest Hall"
+		x = 0
+		y = 3
+		required = the_blue_palace
+		inherit = not_implemented_mission
+	}
+	bards_college = {
+		name = "Bards College"
+		x = 3
+		y = 2
+		required = the_avenues_district
+		inherit = not_implemented_mission
+	}
+	coterie_of_organized_scholars = {
+		name = "Coterie of Scholars"
+		x = 2
+		y = 3
+		required = {
+			the_blue_palace
+			bards_college
+		}
+		inherit = not_implemented_mission
+	}
+	poetic_edda = {
+		name = "Poetic Edda"
+		x = 3
+		y = 3
+		required = bards_college
+		inherit = not_implemented_mission
+	}
+	flame_of_callisos = {
+		name = "Flame of Callisos"
+		x = 4
+		y = 3
+		required = bards_college
+		inherit = not_implemented_mission
+	}
+}

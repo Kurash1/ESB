@@ -1,0 +1,165 @@
+mission_trees:solitude += {
+	mor_khazgur = {
+		name = "Mor Khazgur"
+		x = 8
+		y = 6
+		required = lord_of_the_forests
+		inherit = not_implemented_mission
+	}
+	karth_expedition = {
+		name = "Karth Expedition"
+		x = 9
+		y = 6
+		required = taming_the_dragon
+		inherit = not_implemented_mission
+	}
+	harmugstahl = {
+		name = "Harmugstahl"
+		x = 8
+		y = 7
+		required = {
+			mor_khazgur
+			karth_expedition
+		}
+		inherit = not_implemented_mission
+	}
+	dealings_with_reachmen = {
+		name = "Dealings with Reachmen"
+		x = 9
+		y = 8
+		required = harmugstahl
+		inherit = not_implemented_mission
+	}
+	vateshran_bards = {
+		name = "Vateshran Bards"
+		x = 8
+		y = 9
+		required = dealings_with_reachmen
+		inherit = not_implemented_mission
+	}
+	karthald = {
+		name = "Karthald"
+		x = 6
+		y = 8
+		required = {
+			hjaal_mouth
+			harmugstahl
+		}
+		inherit = not_implemented_mission
+	}
+	north_druadach = {
+		name = "North Druadach"
+		x = 5
+		y = 9
+		required = karthald
+		inherit = not_implemented_mission
+	}
+	ragnvald = {
+		name = "Ragnvald"
+		x = 4
+		y = 10
+		required = north_druadach
+		inherit = not_implemented_mission
+	}
+	karth_river = {
+		name = "Karth River"
+		x = 7
+		y = 9
+		required = karthald
+		inherit = not_implemented_mission
+	}
+	karthspire = {
+		name = "Karthspire"
+		x = 6
+		y = 10
+		required = karth_river
+		inherit = not_implemented_mission
+	}
+	far_hroldan_conquest = {
+		name = "Far Hroldan Conquest"
+		x = 5
+		y = 11
+		required = karthspire
+		inherit = not_implemented_mission
+	}
+	hendraheim = {
+		name = "Hendraheim"
+		x = 4
+		y = 12
+		required = far_hroldan_conquest
+		inherit = not_implemented_mission
+	}
+	fort_sungard = {
+		name = "Fort Sungard"
+		x = 5
+		y = 12
+		required = far_hroldan_conquest
+		inherit = not_implemented_mission
+	}
+	moldering = {
+		name = "Moldering"
+		x = 6
+		y = 11
+		required = karthspire
+		inherit = not_implemented_mission
+	}
+	markarth = {
+		name = "Markarth"
+		x = 7
+		y = 11
+		required = karth_river
+		inherit = not_implemented_mission
+	}
+	cidhna_mine = {
+		name = "Cidhna Mine"
+		x = 6
+		y = 12
+		required = markarth
+		inherit = not_implemented_mission
+	}
+	understone_keep = {
+		name = "Understone Keep"
+		x = 7
+		y = 12
+		required = markarth
+		inherit = not_implemented_mission
+	}
+	karthmad = {
+		name = "Karthmad"
+		x = 8
+		y = 12
+		required = markarth
+		inherit = not_implemented_mission
+	}
+	dusnikh_yal = {
+		name = "Dusnikh Yal"
+		x = 8
+		y = 10
+		required = karth_river
+		inherit = not_implemented_mission
+	}
+	hag_rock = {
+		name = "Hag Rock"
+		x = 8
+		y = 11
+		required = dusnikh_yal
+		inherit = not_implemented_mission
+	}
+	valthume = {
+		name = "Valthume"
+		x = 9
+		y = 11
+		required = dusnikh_yal
+		inherit = not_implemented_mission
+	}
+	lord_of_the_druadach = {
+		name = "Lord of the Druadach"
+		x = 9
+		y = 12
+		required = {
+			hag_rock
+			valthume
+		}
+		inherit = not_implemented_mission
+	}
+}

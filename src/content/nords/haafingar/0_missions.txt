@@ -1,0 +1,20 @@
+new inheritable not_implemented_mission = {
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = future_update
+			always = no
+		}
+	}
+	effect = {
+		custom_tooltip = future_update
+	}
+}
+new mission_tree solitude = {
+	ai = yes
+	potential = {
+		OR = {
+			tag = solitude
+			tag = haafingar
+		}
+	}
+}

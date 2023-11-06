@@ -1,0 +1,130 @@
+mission_trees:solitude += {
+	form_the_wolf_army = {
+		name = "Form the Wolf Army"
+		x = 7
+		y = 0
+		inherit = not_implemented_mission
+	}
+	shadowgreen_druids = {
+		name = "Shadowgreen Druids"
+		x = 5
+		y = 1
+		required = form_the_wolf_army
+		inherit = not_implemented_mission
+	}
+	wolfs_eye_lighthouse = {
+		name = "Wolf's Eye Lighthouse"
+		x = 4
+		y = 2
+		required = shadowgreen_druids
+		inherit = not_implemented_mission
+	}
+	kynes_aegis = {
+		name = "Kyne's Aegis"
+		x = 5
+		y = 2
+		required = shadowgreen_druids
+		inherit = not_implemented_mission
+	}
+	northwatch_keep = {
+		name = "Northwatch Keep"
+		x = 6
+		y = 2
+		required = shadowgreen_druids
+		inherit = not_implemented_mission
+	}
+	longboat_legions = {
+		name = "Longboat Legions"
+		x = 5
+		y = 3
+		required = northwatch_keep
+		inherit = not_implemented_mission
+	}
+	legend_of_two_sisters = {
+		name = "Legend of Two Sisters"
+		x = 4
+		y = 4
+		required = {
+			poetic_edda
+			longboat_legions
+		} 
+		inherit = not_implemented_mission
+	}
+	fuldimar_hookhand = {
+		name = "Fuldimar Hookhand"
+		x = 5
+		y = 4
+		required = longboat_legions
+		inherit = not_implemented_mission
+	}
+	the_pirate_threat = {
+		name = "The Pirate Threat"
+		x = 6
+		y = 4
+		required = longboat_legions
+		inherit = not_implemented_mission
+	}
+	poem_of_the_sea_ghosts = {
+		name = "Poem of the Sea Ghosts"
+		x = 5
+		y = 5
+		required = {
+			legend_of_two_sisters
+			fuldimar_hookhand
+			the_pirate_threat
+		}
+		inherit = not_implemented_mission
+	}
+	cascabell_hall = {
+		name = "Cascabell Hall"
+		x = 6
+		y = 3
+		required = northwatch_keep
+		inherit = not_implemented_mission
+	}
+	master_of_the_mountain = {
+		name = "Master of the Mountain"
+		x = 7
+		y = 1
+		required = form_the_wolf_army
+		inherit = not_implemented_mission
+	}
+	found_kilkreath_temple = {
+		name = "Found Kilkreath"
+		x = 8
+		y = 2
+		required = master_of_the_mountain
+		inherit = not_implemented_mission
+	}
+	castle_hraggstad = {
+		name = "Castle Hraggstad"
+		x = 7
+		y = 3
+		required = {
+			northwatch_keep
+			master_of_the_mountain
+		}
+		inherit = not_implemented_mission
+	}
+	lord_of_the_forests = {
+		name = "Lord of the forests"
+		x = 8
+		y = 4
+		required = castle_hraggstad
+		inherit = not_implemented_mission
+	}
+	far_west_pinefrost = {
+		name = "Far West Pinefrost"
+		x = 7
+		y = 5
+		required = lord_of_the_forests
+		inherit = not_implemented_mission
+	}
+	taming_the_dragon = {
+		name = "Taming the dragon"
+		x = 9
+		y = 1
+		required = form_the_wolf_army
+		inherit = not_implemented_mission
+	}
+}
