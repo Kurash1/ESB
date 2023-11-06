@@ -220,6 +220,11 @@ want_subject_provinces = {
 	min = -200
 }
 
+want_your_and_subject_provinces = {
+	opinion = -15
+	min = -200
+}
+
 border_friction = {
 	opinion = -1
 	min = -200
@@ -255,6 +260,35 @@ opinion_military_access = {
 
 opinion_fleet_access = {
 	opinion = 10
+}
+
+
+is_sphere_of_influence_overlord = {
+	opinion = 15
+}
+
+is_sphere_of_influence_subject = {
+	opinion = 15
+}
+
+left_our_sphere_of_influence = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+left_their_sphere_of_influence = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+was_removed_from_our_sphere_of_influence = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+removed_from_our_sphere_of_influence = {
+	opinion = -100
+	yearly_decay = 2
 }
 
 ##############
