@@ -1,9 +1,28 @@
+new government_reform tier_2_wolf_army = {
+	name = "Wolf Army"
+	icon = skjoralmor_army
+	potential = {
+		has_country_flag = unlocks_wolf_army
+	}
+	modifier = {
+		
+	}
+}
 mission_trees:solitude += {
 	form_the_wolf_army = {
 		name = "Form the Wolf Army"
 		x = 7
 		y = 0
-		inherit = not_implemented_mission
+		trigger = {
+			army_size = 25
+			num_of_generals = 1
+		}
+		effect = {
+			add_government_reform = tier_2_wolf_army
+			areas:dragon_bridge, areas:kilkreath, areas:shadowgreen, areas:ravenscar = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	shadowgreen_druids = {
 		name = "Shadowgreen Druids"
