@@ -28,6 +28,7 @@ new government monarchy = {
 		heir = yes
 		queen = yes
 		valid_for_nation_designer = no
+		is_eligible_for_hre_emperor = yes
 		modifiers = { }
 	}
 	reform_levels = {
@@ -250,6 +251,7 @@ default_reform := {
 	has_cultural_union = no 
 	can_remove_idea_group = yes
 	mercs_do_not_cost_army_professionalism = no	
+	is_eligible_for_hre_emperor = no
 	
 	government_abilities = { 
 		magicka_mechanic
