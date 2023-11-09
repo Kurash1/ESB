@@ -18,11 +18,18 @@ new church_aspect lord_of_silver = {
 	name = "Lord of Silver"
 	desc = ""
 	modifier = {
-		prestige = 1.5
-		all_estate_loyalty_equilibrium = 0.1
+		prestige = 1.0
+		all_estate_loyalty_equilibrium = 0.15
 	}
 }
-
+new church_aspect apprentices_favorite = {
+	name = "Apprentices' Favorite"
+	desc = ""
+	modifier = {
+		monthly_magicka = 0.15
+	#	magicka_gain_modifier = 0.10
+	}
+}
 new religion cult_of_syrabane = {
 	name = "Cult of Syrabane"
 	desc = ""
@@ -40,7 +47,7 @@ new religion cult_of_syrabane = {
 	province = {
 	}
 	aspects = {
-		syrabanes_crystal_likenesses frog_metal lord_of_silver
+		syrabanes_crystal_likenesses frog_metal lord_of_silver apprentices_favorite
 	}
 	uses_church_power = yes
 	aspects_name = {
