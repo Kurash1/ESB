@@ -227,3 +227,42 @@ new effect add_monument_as_modifier = {
 		}
 	}
 }
+new localisation scholarly_research_on_complete = "When the research is complete the following will happen:
+"
+new effect scholarly_research = {
+	args = {
+		id = string
+		on_complete = effect
+	}
+	transpile = {
+		events:coterie.1:options:1:effect +=! {
+			if [
+				has_country_flag = `coterie_{args:id}`
+				NOT = {
+					has_country_flag = `coterie_{args:id}_applied`
+				}
+			] {
+				set_country_flag = `coterie_{args:id}_applied`
+				args:on_complete
+			}
+		}
+		
+		add_country_modifier = {
+			name = coterie_of_organized_scholars_research
+			duration = 3650
+		}
+		
+		custom_tooltip = scholarly_research_on_complete
+		
+		hidden_effect = {
+			country_event = {
+				id = coterie.1
+				years = 10
+			}
+		}
+		set_country_flag = `coterie_{args:id}`
+		tooltip = {
+			args:on_complete
+		}
+	}
+}

@@ -1,0 +1,82 @@
+mission_trees:solitude += {
+	coterie_of_organized_scholars = {
+		name = "Coterie of Scholars"
+		desc = "§YCoterie of Organized Scholars§! was an organized institution devoted to scholarly pursuits in the kingdom of Western Skyrim"
+		x = 2
+		y = 3
+		required = {
+			the_blue_palace
+			bards_college
+		}
+		inherit = not_implemented_mission
+		trigger = {
+			has_advisor_level_three_of = ADM
+			has_advisor_level_three_of = DIP
+			has_advisor_level_three_of = MIL
+		}
+		effect = {
+			new_custom_tooltip = "Unlocks §YScholarly Research§! Mechanic"
+			set_country_flag = coterie_of_organized_scholars
+			#study targets
+				#magical mishaps
+				#orcish culture
+				#giant culture
+				#study dragon war
+				#hjaalmarch flora
+				#vampirism
+				#doomstones
+				#runic language
+				#snow elven ruins
+				#reachman culture
+		}
+	}
+}
+new event_modifier coterie_of_organized_scholars_research = {
+	name = "Scholarly Research in Progress"
+	modifier = {
+		all_power_cost = 0.1
+	}
+}
+new country_event coterie.1 = {
+	title = "Apply Coterie Modifiers"
+	is_triggered_only = yes
+	hidden = yes
+	options = {
+		{
+			name = "Apply"
+			effect = {
+				
+			}
+		}
+	}
+}
+new decision coterie_magical_mishaps = {
+	name = "Scholarly Research: Magical Mishaps"
+	color = { 0 255 255 }
+	potential = {
+		has_country_flag = coterie_of_organized_scholars
+		NOT = {
+			has_country_flag = coterie_magical_mishaps_applied
+		}
+		NOT = {
+			has_country_modifier = coterie_of_organized_scholars_research
+		}
+	}
+	allow = {
+		NOT = {
+			has_country_modifier = coterie_of_organized_scholars_research
+		}
+		treasury = 250
+	}
+	effect = {
+		add_treasury = -250
+		
+		scholarly_research = {
+			id = magical_mishaps
+			on_complete = {
+				new_custom_tooltip = "[Root.GetName] gets '§YScholarly Research: Magical Mishaps§!' until the end of the game, giving the following effects:
+	Chance for Magical Mishap: §G-50.0%§!"
+			}
+		}
+	}
+}

@@ -174,10 +174,6 @@ mission_trees:solitude += {
 					}
 				}
 			}
-			create_monument = {
-				monument = bards_college
-				province = solitude
-			}
 		}
 	}
 	the_blue_palace = {
@@ -214,7 +210,9 @@ mission_trees:solitude += {
 		x = 0
 		y = 3
 		required = the_blue_palace
-		inherit = not_implemented_mission
+		trigger = {
+			prestige = 100
+		}
 		effect = {
 			unlock_poetic_edda = poetic_edda_ode_to_the_founding
 		}
@@ -225,16 +223,15 @@ mission_trees:solitude += {
 		y = 2
 		required = the_avenues_district
 		inherit = not_implemented_mission
-	}
-	coterie_of_organized_scholars = {
-		name = "Coterie of Scholars"
-		x = 2
-		y = 3
-		required = {
-			the_blue_palace
-			bards_college
+		trigger = {
+			artist = 3
 		}
-		inherit = not_implemented_mission
+		effect = {
+			create_monument = {
+				monument = bards_college
+				province = solitude
+			}
+		}
 	}
 	poetic_edda = {
 		name = "Poetic Edda"
@@ -252,5 +249,21 @@ mission_trees:solitude += {
 		y = 3
 		required = bards_college
 		inherit = not_implemented_mission
+		effect = {
+			new_custom_tooltip = "§YHold a Burning§! Interaction of §YSolitude Powers§! Ability gains the additional effect of boosting one of your rulers stats by one once per ruler."
+			provinces:solitude = {
+				add_permanent_province_modifier = { 
+					name = flame_of_callisos
+					duration = -1
+				}
+			}
+		}
+	}
+}
+new event_modifier flame_of_callisos = {
+	name = "Flame of Callisos"
+	modifier = {
+		global_unrest = -1
+		war_exhaustion = -0.02
 	}
 }
