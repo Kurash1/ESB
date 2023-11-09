@@ -14,6 +14,52 @@ run_effect = {
 		}
 	}
 }
+new inheritable haafinga_mechanic_button = {
+	gui = {
+		size = { x = 115 y = 120 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType = { 
+			name = "government_interaction_button_overlay"
+			spriteType = "GFX_haafingar_button_overlay"
+			position = { x = 7 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		### interaction button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			position = { x = 0 y = 7 }
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+		
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_government_power_bar"
+			position = { x = 21 y = 100 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_government_power_bar_frame"
+			position = { x = 7 y = 96 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+}
 new government_mechanic haafingar_mechanic = {
 	name = "Solitude Powers"
 	powers = {
@@ -24,50 +70,60 @@ new government_mechanic haafingar_mechanic = {
 We gain an extra §G0.10§! §YBlue Palace Administration§! each month from each level of our advisors. §RThis is not properly shown on the tooltip!§!"
 			max = 150
 			monarch_power = ADM
+			base_monthly_growth = 0.5
 		}
 		haafingar_dip_power = {
 			name = "Bards College Fame"
-			desc = ""
+			desc = "
+
+We gain an extra §G0.01§! §YBards College Fame§! each month from each point of prestige. §RThis is not properly shown on the tooltip!§!"
 			max = 150
 			monarch_power = DIP
+			base_monthly_growth = 0.5
 		}
 		haafingar_mil_power = {
 			name = "Castle Dour Tradition"
-			desc = ""
+			desc = "
+
+We gain an extra §G0.01§! §YCastle Dour Tradition§! each month from each point of army tradition. §RThis is not properly shown on the tooltip!§!"
 			max = 150
 			monarch_power = MIL
+			base_monthly_growth = 0.5
 		}
 	}
 	interactions = {
 		haafingar_adm_button = {
-			name = "Haafingar Adm Button"
+			name = "Blue Palace"
 			desc = ""
-			icon = GFX_cossacks_ability_ADM
+			icon = GFX_haafingar_ability_adm
 			cost_type = haafingar_adm_power
 			cost = 100
 			effect = {
 				
 			}
+			inherit = haafinga_mechanic_button
 		}
 		haafingar_dip_button = {
-			name = "Haafingar Dip Button"
+			name = "Bards College"
 			desc = ""
-			icon = GFX_cossacks_ability_DIP
+			icon = GFX_haafingar_ability_dip
 			cost_type = haafingar_dip_power
 			cost = 100
 			effect = {
 				
 			}
+			inherit = haafinga_mechanic_button
 		}
 		haafingar_mil_button = {
-			name = "Haafingar Mil Button"
+			name = "Castle Dour"
 			desc = ""
-			icon = GFX_cossacks_ability_MIL
+			icon = GFX_haafingar_ability_mil
 			cost_type = haafingar_mil_power
 			cost = 100
 			effect = {
 				
 			}
+			inherit = haafinga_mechanic_button
 		}
 	}
 }
