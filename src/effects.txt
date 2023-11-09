@@ -221,7 +221,6 @@ new effect create_monument = {
 new effect add_monument_as_modifier = {
 	args = great_project
 	transpile = {
-		breakpoint
 		quick_province_modifier = {
 			name = args:name
 			modifier = args:tier_1:province_modifier

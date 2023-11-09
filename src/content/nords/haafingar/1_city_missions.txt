@@ -16,7 +16,7 @@ new event_modifier poetic_edda_ode_to_the_founding = {
 estates:warriors:privileges += new storm_gate_stalwarts = {
 	name = "Storm Gate Stalwarts"
 	desc = ""
-	icon = privilege_peasant
+	icon = privilege_army_tradition
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
@@ -32,10 +32,19 @@ mission_trees:solitude += {
 		name = "Windbreaker Arch"
 		x = 3
 		y = 0
-		inherit = not_implemented_mission
 		trigger = {
+			owns = solitude_port
 			provinces:solitude_port = {
 				development = 15
+			}
+		}
+		effect = {
+			provinces:solitude_port = {
+				add_building_construction = {
+					building = navy_3
+					speed = 1
+					cost = 0
+				}
 			}
 		}
 	}
@@ -44,6 +53,7 @@ mission_trees:solitude += {
 		x = 1
 		y = 0
 		trigger = {
+			owns = solitude
 			provinces:solitude = {
 				fort_level = 3
 			}
@@ -61,14 +71,8 @@ mission_trees:solitude += {
 		y = 1
 		required = castle_upon_the_hill
 		trigger = {
+			owns = solitude
 			full_idea_group = religious_ideas
-			provinces:solitude = {
-				OR = {
-					foreach $tax_building in building_lines:tax:buildings {
-						has_building = $tax_building
-					}
-				}
-			}
 		}
 		effect = {
 			create_monument = {
@@ -83,6 +87,7 @@ mission_trees:solitude += {
 		y = 1
 		required = castle_upon_the_hill
 		trigger = {
+			owns = solitude
 			provinces:solitude = {
 				fort_level = 6
 			}
@@ -92,19 +97,57 @@ mission_trees:solitude += {
 			set_country_flag = unlock_storm_gate_stalwarts
 		}
 	}
-	the_well_district = {
-		name = "The Well District"
+	wells_district = {
+		name = "Wells District"
 		x = 3
 		y = 1
 		required = windbreaker_arch
-		inherit = not_implemented_mission
+		trigger = {
+			provinces:solitude = {
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+		effect = {
+			provinces:solitude = {
+				quick_province_modifier = {
+					name = "Wells District"
+					modifier = {
+						merchants = 1
+						trade_value_modifier = 0.25
+						trade_goods_size_modifier = 0.25
+					}
+				}
+			}
+		}
 	}
 	solitude_countryside = {
 		name = "Solitude Countryside"
 		x = 4
 		y = 1
 		required = windbreaker_arch
-		inherit = not_implemented_mission
+		trigger = {
+			development_in_provinces = {
+				value = 125
+				trigger = {
+					OR = {
+						area = solitude_proper
+						area = solitude_countryside
+						area = solitude_coast
+					}
+				}
+			}
+		}
+		effect = {
+			areas:solitude_proper, areas:solitude_countryside, areas:solitude_coast = {
+				quick_province_modifier = {
+					name = "Founding lands of Haafingar"
+					modifier = {
+						local_tax_modifier = 0.1
+						local_development_cost = -0.1
+					}
+				}
+			}
+		}
 	}
 	the_avenues_district = {
 		name = "The Avenues District"
@@ -114,7 +157,28 @@ mission_trees:solitude += {
 			castle_upon_the_hill
 			windbreaker_arch
 		}
-		inherit = not_implemented_mission
+		trigger = {
+			provinces:solitude = {
+				development = 30
+			}
+		}
+		effect = {
+			provinces:solitude = {
+				quick_province_modifier = {
+					name = "Avenues District"
+					modifier = {
+						advisor_pool = 1
+						advisor_cost = -0.1
+						local_tax_modifier = 0.25
+						local_development_cost = -0.15
+					}
+				}
+			}
+			create_monument = {
+				monument = bards_college
+				province = solitude
+			}
+		}
 	}
 	the_blue_palace = {
 		name = "The Blue Palace"
