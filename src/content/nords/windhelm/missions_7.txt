@@ -89,19 +89,13 @@ new mission_series eastmarch_7 = {
 				}
 			}
 			effect = {
-				if [has_dlc = "Leviathan"]
-				{
-					provinces:black_mountain = {
-						move_great_project = {
-							type = dunmeth_pass
-							province = dunmeth_pass
-							instant = yes
+				create_monument = {
+					monument = dunmeth_pass
+					province = dunmeth_pass
+					backup = {
+						areas:dunmeth_pass = {
+							add_base_manpower = 2
 						}
-					}
-				}
-				else {
-					areas:dunmeth_pass = {
-						add_base_manpower = 2
 					}
 				}
 			}

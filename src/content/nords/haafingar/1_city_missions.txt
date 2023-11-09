@@ -1,9 +1,49 @@
+new effect unlock_poetic_edda = {
+	args = event_modifier
+	transpile = {
+		new_custom_tooltip = "Unlocks the §YPoetic Edda§! Modifier: §Y{args:name}§!
+which when enacted grants the following:
+	{modifier_to_string = args:modifier}"
+		set_country_flag = event_modifier:id
+	}
+}
+new event_modifier poetic_edda_ode_to_the_founding = {
+	name = "Ode to the Founding"
+	modifier = {
+		development_cost = -0.1
+	}
+}
 mission_trees:solitude += {
+	windbreaker_arch = {
+		name = "Windbreaker Arch"
+		x = 3
+		y = 0
+		inherit = not_implemented_mission
+		trigger = {
+			provinces:solitude_port = {
+				development = 15
+			}
+		}
+	}
 	castle_upon_the_hill = {
 		name = "Castle upon the Hill"
 		x = 1
 		y = 0
 		inherit = not_implemented_mission
+		trigger = {
+			provinces:solitude = {
+				fort_level = 3
+			}
+		}
+		effect = {
+			create_monument = {
+				monument = castle_dour
+				province = solitude
+				backup = {
+					
+				}
+			}
+		}
 	}
 	temple_of_the_divines = {
 		name = "Temple of the Divines"
@@ -19,14 +59,8 @@ mission_trees:solitude += {
 		required = castle_upon_the_hill
 		inherit = not_implemented_mission
 	}
-	windbreaker_arch = {
-		name = "Windbreaker Arch"
-		x = 3
-		y = 0
-		inherit = not_implemented_mission
-	}
-	solitude_sewers = {
-		name = "Solitude Sewers"
+	the_well_district = {
+		name = "The Well District"
 		x = 3
 		y = 1
 		required = windbreaker_arch
@@ -66,6 +100,9 @@ mission_trees:solitude += {
 		y = 3
 		required = the_blue_palace
 		inherit = not_implemented_mission
+		effect = {
+			unlock_poetic_edda = poetic_edda_ode_to_the_founding
+		}
 	}
 	bards_college = {
 		name = "Bards College"
@@ -88,6 +125,9 @@ mission_trees:solitude += {
 		name = "Poetic Edda"
 		x = 3
 		y = 3
+		effect = {
+			new_custom_tooltip = "Unlocks §YPoetic Edda§! Mechanic" #not implemented yet
+		}
 		required = bards_college
 		inherit = not_implemented_mission
 	}

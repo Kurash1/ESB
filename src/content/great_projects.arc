@@ -228,6 +228,10 @@ new great_project arcwind_point = {
 	name = "Arcwind Point"
 	start = black_mountain
 }
+new great_project castle_dour = {
+	name = "Castle Dour"
+	start = black_mountain
+}
 new great_project bards_college = {
 	name = "Bards College"
 	start = black_mountain

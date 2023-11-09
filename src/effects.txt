@@ -177,3 +177,27 @@ new effect culture = {
 	args = base_scope
 
 }
+new effect create_monument = {
+	args = {
+		monument = great_project
+		province = province_scope
+		backup = effect
+	}
+	transpile = {
+		if [has_dlc = "Leviathan"] {
+			new_custom_tooltip = "The monument §Y{args:monument:name}§! is created in §Y{args:province:name}§!"
+			hidden_effect = {
+				args:monument:start = {
+					move_great_project = {
+						type = args:monument
+						province = args:province
+						instant = yes
+					}
+				}
+			}
+		}
+		else {
+			args:backup
+		}
+	}
+}
