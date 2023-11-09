@@ -201,3 +201,30 @@ new effect create_monument = {
 		}
 	}
 }
+new effect create_monument = {
+	args = {
+		monument = great_project
+		province = province_scope
+	}
+	transpile = {
+		create_monument = {
+			monument = args:monument
+			province = args:province
+			backup = {
+				args:province = {
+					add_monument_as_modifier = args:monument
+				}
+			}
+		}
+	}
+}
+new effect add_monument_as_modifier = {
+	args = great_project
+	transpile = {
+		breakpoint
+		quick_province_modifier = {
+			name = args:name
+			modifier = args:tier_1:province_modifier
+		}
+	}
+}

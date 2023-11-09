@@ -13,6 +13,20 @@ new event_modifier poetic_edda_ode_to_the_founding = {
 		development_cost = -0.1
 	}
 }
+estates:warriors:privileges += new storm_gate_stalwarts = {
+	name = "Storm Gate Stalwarts"
+	desc = ""
+	icon = privilege_peasant
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		has_country_flag = unlock_storm_gate_stalwarts
+	}
+	benefits = {
+		global_defender_dice_roll_bonus = 1
+		garrison_damage = 0.5
+	}
+}
 mission_trees:solitude += {
 	windbreaker_arch = {
 		name = "Windbreaker Arch"
@@ -29,7 +43,6 @@ mission_trees:solitude += {
 		name = "Castle upon the Hill"
 		x = 1
 		y = 0
-		inherit = not_implemented_mission
 		trigger = {
 			provinces:solitude = {
 				fort_level = 3
@@ -39,9 +52,6 @@ mission_trees:solitude += {
 			create_monument = {
 				monument = castle_dour
 				province = solitude
-				backup = {
-					
-				}
 			}
 		}
 	}
@@ -50,14 +60,37 @@ mission_trees:solitude += {
 		x = 0
 		y = 1
 		required = castle_upon_the_hill
-		inherit = not_implemented_mission
+		trigger = {
+			full_idea_group = religious_ideas
+			provinces:solitude = {
+				OR = {
+					foreach $tax_building in building_lines:tax:buildings {
+						has_building = $tax_building
+					}
+				}
+			}
+		}
+		effect = {
+			create_monument = {
+				monument = temple_of_the_divines
+				province = solitude
+			}
+		}
 	}
 	storm_gate = {
 		name = "Storm Gate"
 		x = 1
 		y = 1
 		required = castle_upon_the_hill
-		inherit = not_implemented_mission
+		trigger = {
+			provinces:solitude = {
+				fort_level = 6
+			}
+		}
+		effect = {
+			new_custom_tooltip = "Unlocks §YStorm Gate Stalwarts§! Estate Privilege for Warriors Estate"
+			set_country_flag = unlock_storm_gate_stalwarts
+		}
 	}
 	the_well_district = {
 		name = "The Well District"
