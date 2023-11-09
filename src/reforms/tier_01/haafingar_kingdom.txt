@@ -1,0 +1,90 @@
+run_effect = {
+	foreach $advisor_type in advisor_types {
+		$advisor_type:skill_scaled_modifiers += {
+			{
+				trigger = {
+					owner = {
+						has_reform = tier_1_haafingar_kingdom
+					}
+				}
+				modifier = {
+					monthly_haafingar_adm_power = 0.1
+				}
+			}
+		}
+	}
+}
+new government_mechanic haafingar_mechanic = {
+	name = "Solitude Powers"
+	powers = {
+		haafingar_adm_power = {
+			name = "Blue Palace Administration"
+			desc = "
+
+We gain an extra §G0.10§! §YBlue Palace Administration§! each month from each level of our advisors. §RThis is not properly shown on the tooltip!§!"
+			max = 150
+			monarch_power = ADM
+		}
+		haafingar_dip_power = {
+			name = "Bards College Fame"
+			desc = ""
+			max = 150
+			monarch_power = DIP
+		}
+		haafingar_mil_power = {
+			name = "Castle Dour Tradition"
+			desc = ""
+			max = 150
+			monarch_power = MIL
+		}
+	}
+	interactions = {
+		haafingar_adm_button = {
+			name = "Haafingar Adm Button"
+			desc = ""
+			icon = GFX_cossacks_ability_ADM
+			cost_type = haafingar_adm_power
+			cost = 100
+			effect = {
+				
+			}
+		}
+		haafingar_dip_button = {
+			name = "Haafingar Dip Button"
+			desc = ""
+			icon = GFX_cossacks_ability_DIP
+			cost_type = haafingar_dip_power
+			cost = 100
+			effect = {
+				
+			}
+		}
+		haafingar_mil_button = {
+			name = "Haafingar Mil Button"
+			desc = ""
+			icon = GFX_cossacks_ability_MIL
+			cost_type = haafingar_mil_power
+			cost = 100
+			effect = {
+				
+			}
+		}
+	}
+}
+governments:monarchy:reform_levels:1 += new tier_1_haafingar_kingdom = {
+	name = "Haafingar Kingdom"
+	desc = ""
+	icon = haafingar_kingdom
+	allow_normal_conversion = yes
+	government_abilities = {
+		haafingar_mechanic
+	}
+	modifiers = {
+		governing_capacity = 200
+		governing_capacity_modifier = 0.2
+		trade_efficiency = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}

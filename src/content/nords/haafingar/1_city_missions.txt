@@ -189,7 +189,25 @@ mission_trees:solitude += {
 			storm_gate
 			the_avenues_district
 		}
-		inherit = not_implemented_mission
+		trigger = {
+			provinces:solitude = {
+				has_great_project = {
+					type = bards_college
+					tier = 1
+				}
+				has_great_project = {
+					type = blue_palace
+					tier = 1
+				}
+				has_great_project = {
+					type = castle_dour
+					tier = 1
+				}
+			}
+		}
+		effect = {
+			add_government_reform = tier_1_haafingar_kingdom
+		}
 	}
 	grandest_hall = {
 		name = "Grandest Hall"
