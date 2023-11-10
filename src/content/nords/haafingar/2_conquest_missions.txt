@@ -19,11 +19,28 @@ mission_trees:solitude += {
 		x = 5
 		y = 1
 		required = form_the_wolf_army
-		inherit = not_implemented_mission
+		provinces_to_highlight = {
+			OR = {
+				area = shadowgreen
+				area = ravenscar
+			}
+			NOT = { owned_by = ROOT }
+		}
 		trigger = {
 			areas:shadowgreen, areas:ravenscar = {
 				type = all
 				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:northwatch = {
+				add_permanent_claim = ROOT
+			}
+			quick_country_modifier = {
+				name = "Shadowgreen Druids"
+				modifier = {
+					monthly_magicka = 0.25
+				}
 			}
 		}
 	}
@@ -33,13 +50,53 @@ mission_trees:solitude += {
 		y = 2
 		required = shadowgreen_druids
 		inherit = not_implemented_mission
+		trigger = {
+			owns = solitude_lighthouse
+			provinces:solitude_lighthouse = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:solitude_lighthouse = {
+				quick_province_modifier = {
+					name = "Wolf's Eye Lighthouse"
+					modifier = {
+						naval_attrition = -0.15
+						trade_steering = 0.1
+						hostile_fleet_attrition = 1
+					}
+				}
+			}
+		}
 	}
-	kynes_aegis = {
-		name = "Kyne's Aegis"
+	broken_oar_grotto = {
+		name = "Broken Oar Grotto"
 		x = 5
 		y = 2
 		required = shadowgreen_druids
 		inherit = not_implemented_mission
+		trigger = {
+			provinces:broken_oar = {
+				OR = {
+					has_building = navy_1
+					has_building = navy_2
+					has_building = navy_3
+				}
+			}
+		}
+		effect = {
+			provinces:broken_oar = {
+				quick_province_modifier = {
+					name = "Broken Oar Grotto"
+					modifier = {
+						naval_forcelimit = 8
+
+						blockade_force_required = 2.5
+						block_slave_raid = yes
+					}
+				}
+			}
+		}
 	}
 	northwatch_keep = {
 		name = "Northwatch Keep"
@@ -47,6 +104,23 @@ mission_trees:solitude += {
 		y = 2
 		required = shadowgreen_druids
 		inherit = not_implemented_mission
+		trigger = {
+			areas:northwatch = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			provinces:northwatch = {
+				add_building = fort_16th
+			}
+			areas:northwatch = {
+				add_local_autonomy = -25
+			}
+			areas:lone_isle, areas:volkihar_isles, areas:hraggstad = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	longboat_legions = {
 		name = "Longboat Legions"
@@ -109,6 +183,11 @@ mission_trees:solitude += {
 				owned_by = ROOT
 			}
 		}
+		effect = {
+			areas:hraggstad = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	found_kilkreath_temple = {
 		name = "Found Kilkreath"
@@ -126,6 +205,17 @@ mission_trees:solitude += {
 			master_of_the_mountain
 		}
 		inherit = not_implemented_mission
+		trigger = {
+			areas:hraggstad = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:deepwood = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	lord_of_the_forests = {
 		name = "Lord of the forests"
@@ -133,6 +223,17 @@ mission_trees:solitude += {
 		y = 4
 		required = castle_hraggstad
 		inherit = not_implemented_mission
+		trigger = {
+			areas:deepwood = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:pinefrost = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	far_west_pinefrost = {
 		name = "Far West Pinefrost"
@@ -140,6 +241,12 @@ mission_trees:solitude += {
 		y = 5
 		required = lord_of_the_forests
 		inherit = not_implemented_mission
+		trigger = {
+			areas:pinefrost = {
+				type = all
+				owned_by = ROOT
+			}
+		}
 	}
 	taming_the_dragon = {
 		name = "Taming the dragon"

@@ -115,6 +115,7 @@ mission_trees:solitude += {
 						merchants = 1
 						trade_value_modifier = 0.25
 						trade_goods_size_modifier = 0.25
+						supply_limit = 25
 					}
 				}
 			}
@@ -141,6 +142,7 @@ mission_trees:solitude += {
 			areas:solitude_proper, areas:solitude_countryside, areas:solitude_coast = {
 				quick_province_modifier = {
 					name = "Founding lands of Haafingar"
+					years = 50
 					modifier = {
 						local_tax_modifier = 0.1
 						local_development_cost = -0.1
