@@ -222,7 +222,6 @@ mission_trees:solitude += {
 		x = 3
 		y = 2
 		required = the_avenues_district
-		inherit = not_implemented_mission
 		trigger = {
 			artist = 3
 		}
@@ -237,18 +236,32 @@ mission_trees:solitude += {
 		name = "Poetic Edda"
 		x = 3
 		y = 3
+		trigger = {
+			adm_power = 250
+			dip_power = 250
+			mil_power = 250
+		}
 		effect = {
+			add_adm_power = -250
+			add_dip_power = -250
+			add_mil_power = -250
 			new_custom_tooltip = "Unlocks §YPoetic Edda§! Mechanic" #not implemented yet
 		}
 		required = bards_college
-		inherit = not_implemented_mission
 	}
 	flame_of_callisos = {
 		name = "Flame of Callisos"
 		x = 4
 		y = 3
 		required = bards_college
-		inherit = not_implemented_mission
+		trigger = {
+			provinces:solitude = {
+				has_great_project = {
+					type = bards_college
+					tier = 1
+				}
+			}
+		}
 		effect = {
 			new_custom_tooltip = "§YHold a Burning§! Interaction of §YSolitude Powers§! Ability gains the additional effect of boosting one of your rulers stats by one once per ruler."
 			provinces:solitude = {

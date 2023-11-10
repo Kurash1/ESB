@@ -247,9 +247,15 @@ new effect scholarly_research = {
 			}
 		}
 		
+		decisions:coterie_modifiers:effect +=! {
+			if [has_country_flag = `coterie_{args:id}_applied`] {
+				args:on_complete
+			}
+		}
+		
 		add_country_modifier = {
 			name = coterie_of_organized_scholars_research
-			duration = 3650
+			duration = 1825
 		}
 		
 		custom_tooltip = scholarly_research_on_complete
@@ -257,7 +263,7 @@ new effect scholarly_research = {
 		hidden_effect = {
 			country_event = {
 				id = coterie.1
-				years = 10
+				years = 5
 			}
 		}
 		set_country_flag = `coterie_{args:id}`

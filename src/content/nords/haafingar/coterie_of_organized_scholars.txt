@@ -50,33 +50,119 @@ new country_event coterie.1 = {
 		}
 	}
 }
-new decision coterie_magical_mishaps = {
-	name = "Scholarly Research: Magical Mishaps"
-	color = { 0 255 255 }
+new scholarly_research magical_mishaps = {
+	name = "Magical Mishaps"
+	allow = {
+		treasury = 250
+	}
+	on_start = {
+		add_treasury = -250
+	}
+	on_complete = {
+		new_custom_tooltip = "[Root.GetName] gets '§YScholarly Research: Magical Mishaps§!' until the end of the game, giving the following effects:
+Chance for Magical Mishap: §G-50.0%§!"
+	}
+}
+new scholarly_research research_orcs = {
+	name = "Orcish Culture"
 	potential = {
-		has_country_flag = coterie_of_organized_scholars
-		NOT = {
-			has_country_flag = coterie_magical_mishaps_applied
-		}
-		NOT = {
-			has_country_modifier = coterie_of_organized_scholars_research
-		}
+		has_estate = estate_orcs
 	}
 	allow = {
-		NOT = {
-			has_country_modifier = coterie_of_organized_scholars_research
+		calc_true_if = {
+			amount = 3
+			foreach $privilege in estates:orcs:privileges {
+				has_estate_privilege = $privilege
+			}
 		}
 		treasury = 250
 	}
-	effect = {
+	on_start = {
 		add_treasury = -250
-		
-		scholarly_research = {
-			id = magical_mishaps
-			on_complete = {
-				new_custom_tooltip = "[Root.GetName] gets '§YScholarly Research: Magical Mishaps§!' until the end of the game, giving the following effects:
-	Chance for Magical Mishap: §G-50.0%§!"
+	}
+	on_complete = {
+		quick_country_modifier = {
+			name = "Orcish Culture"
+			modifier = {
+				orcs_loyalty_modifier = 0.1
 			}
 		}
+	}
+}
+new scholarly_research research_giants = {
+	name = "Giant Culture"
+	potential = {
+		has_estate = estate_giants
+	}
+	allow = {
+		calc_true_if = {
+			amount = 3
+			foreach $privilege in estates:giants:privileges {
+				has_estate_privilege = $privilege
+			}
+		}
+		treasury = 250
+	}
+	on_start = {
+		add_treasury = -250
+	}
+	on_complete = {
+		quick_country_modifier = {
+			name = "Giant Culture"
+			modifier = {
+				giants_loyalty_modifier = 0.1
+			}
+		}
+	}
+}
+new scholarly_research dragon_war = {
+	name = "Dragon War"
+	allow = {
+		treasury = 250
+	}
+	on_start = {
+		add_treasury = -250
+	}
+	on_complete = {
+		quick_country_modifier = {
+			name = "Dragon War"
+			modifier = {
+				land_morale = 0.05
+			}
+		}
+	}
+}
+new scholarly_research hjaalmarch_flora = {
+	name = "Hjaalmarch Flora"
+	allow = {
+		treasury = 250
+		any_owned_province = {
+			region = hjaalmarch
+		}
+	}
+	on_start = {
+		add_treasury = -250
+	}
+	on_complete = {
+		quick_country_modifier = {
+			name = "Hjaalmarch Flora"
+			modifier = {
+				global_monthly_devastation = -0.05
+			}
+		}
+	}
+}
+new decision coterie_modifiers = {
+	name = "Coterie of Organized Scholars"
+	color = { 0 108 255 }
+	potential = {
+		has_country_flag = coterie_of_organized_scholars
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+		new_custom_tooltip = "Here are the currently active §YScholarly Research§! Effects:
+"
 	}
 }

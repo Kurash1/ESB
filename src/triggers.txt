@@ -54,6 +54,12 @@ new trigger primary_culture = {
 new trigger has_estate_privilege = {
 	args = estate_privilege
 }
+new trigger accepted_culture = {
+	args = culture
+}
+new trigger accepted_culture = {
+	args = base_scope
+}
 new trigger is_race = {
 	args = culture_group
 	transpile = {

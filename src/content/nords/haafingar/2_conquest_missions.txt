@@ -20,6 +20,12 @@ mission_trees:solitude += {
 		y = 1
 		required = form_the_wolf_army
 		inherit = not_implemented_mission
+		trigger = {
+			areas:shadowgreen, areas:ravenscar = {
+				type = all
+				owned_by = ROOT
+			}
+		}
 	}
 	wolfs_eye_lighthouse = {
 		name = "Wolf's Eye Lighthouse"
@@ -97,6 +103,12 @@ mission_trees:solitude += {
 		y = 1
 		required = form_the_wolf_army
 		inherit = not_implemented_mission
+		trigger = {
+			areas:kilkreath = {
+				type = all
+				owned_by = ROOT
+			}
+		}
 	}
 	found_kilkreath_temple = {
 		name = "Found Kilkreath"
@@ -135,5 +147,11 @@ mission_trees:solitude += {
 		y = 1
 		required = form_the_wolf_army
 		inherit = not_implemented_mission
+		trigger = {
+			areas:dragon_bridge = {
+				type = all
+				owned_by = ROOT
+			}
+		}
 	}
 }
