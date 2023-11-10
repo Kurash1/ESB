@@ -2,40 +2,40 @@ new church_aspect shortening_your_stride = {
 	name = "Shortening your stride"
 	desc = ""
 	modifier = {
-		monarch_lifespan = 0.1
-		reinforce_speed = 0.20
+		monarch_lifespan = 0.15
+		advisor_pool = 2
 	}
 }
 new church_aspect watcher_of_the_adventurers = {
 	name = "Watcher of the Adventurers"
 	desc = ""
 	modifier = {
-		monarch_lifespan = 0.15
-		reinforce_speed = 0.20
+		land_morale = 0.10
+		shock_damage_received = -0.05
 	}
 }
 new church_aspect patron_of_sailors = {
 	name = "Patron of Sailors"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = 0.10
-		reinforce_speed = 0.20
+		naval_morale = 0.1
+		ship_durability = 0.1
 	}
 }
 new church_aspect guide_to_the_other_side = {
 	name = "Guide to the Other Side"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = 0.10
-		reinforce_speed = 0.20
+		no_stability_loss_on_monarch_death = yes
+		overextension_impact_modifier = -0.1
 	}
 }
 new church_aspect hero_of_the_elves = {
 	name = "Hero of the elves"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = 0.10
-		reinforce_speed = 0.20
+		extra_manpower_at_religious_war = yes
+		infantry_power = 0.10
 	}
 }
 new church_aspect dangerous_pilgrimages = {
@@ -43,7 +43,7 @@ new church_aspect dangerous_pilgrimages = {
 	desc = ""
 	modifier = {
 		manpower_recovery_speed = -0.10
-		reinforce_speed = 0.20
+		leader_cost = -0.20
 	}
 }
 new religion cult_of_phynaster = {

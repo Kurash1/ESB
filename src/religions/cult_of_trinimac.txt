@@ -1,49 +1,49 @@
-new church_aspect dangerous_pilgrimages = {
-	name = "Dangerous Pilgrimages"
+new church_aspect trinimacs_might = {
+	name = "Trinimac's might"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = -0.10
-		reinforce_speed = 0.20
+		morale_damage = 0.025
+		shock_damage = 0.10
 	}
 }
-new church_aspect dangerous_pilgrimages = {
-	name = "Dangerous Pilgrimages"
+new church_aspect champion_of_auriel = {
+	name = "Champion of Auriel"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = -0.10
-		reinforce_speed = 0.20
+		discipline = 0.05
+		army_tradition = 1
 	}
 }
-new church_aspect dangerous_pilgrimages = {
-	name = "Dangerous Pilgrimages"
+new church_aspect preacher_of_unity = {
+	name = "Preacher of Unity"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = -0.10
-		reinforce_speed = 0.20
+		harsh_treatment_cost = -0.15
+		global_heathen_missionary_strength = 0.025
 	}
 }
-new church_aspect dangerous_pilgrimages = {
-	name = "Dangerous Pilgrimages"
+new church_aspect defender_of_civilization = {
+	name = "Defender of Civilization"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = -0.10
-		reinforce_speed = 0.20
+		core_creation = -0.15
+		shock_damage_received = -0.10
 	}
 }
-new church_aspect dangerous_pilgrimages = {
-	name = "Dangerous Pilgrimages"
+new church_aspect strenght_and_honor = {
+	name = "Strenght and Honor"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = -0.10
-		reinforce_speed = 0.20
+		drill_gain_modifier = 0.50
+		monarch_military_power = 1
 	}
 }
-new church_aspect dangerous_pilgrimages = {
-	name = "Dangerous Pilgrimages"
+new church_aspect vanquisher_of_lorkhan = {
+	name = "Vanquisher of Lorkhan"
 	desc = ""
 	modifier = {
-		manpower_recovery_speed = -0.10
-		reinforce_speed = 0.20
+		recover_army_morale_speed = 0.15
+		land_morale = 0.10
 	}
 }
 new religion cult_of_trinimac = {
@@ -63,12 +63,12 @@ new religion cult_of_trinimac = {
 	province = {
 	}
 	aspects = {
-		
+		trinimacs_might champion_of_auriel preacher_of_unity defender_of_civilization strenght_and_honor vanquisher_of_lorkhan   
 	}
 	uses_church_power = yes
 	aspects_name = {
 		short = "Dogma"
-		long = "Cult of Syrabane"
+		long = "Cult of Trinimac"
 		power_name = "Church Power"
 	}
 	religious_group = snow_elven_group
