@@ -1,3 +1,51 @@
+new church_aspect a_tale_of_nature = {
+	name = "A tale of Nature"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = 0.10
+		reinforce_speed = 0.20
+	}
+}
+new church_aspect a_tale_of_the_present = {
+	name = "A tale of the present"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = 0.10
+		reinforce_speed = 0.20
+	}
+}
+new church_aspect a_tale_of_songs_and_stories = {
+	name = "A tale of songs and stories"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = 0.10
+		reinforce_speed = 0.20
+	}
+}
+new church_aspect a_tale_of_languages = {
+	name = "A tale of languages"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = 0.10
+		reinforce_speed = 0.20
+	}
+}
+new church_aspect a_tale_of_aetherius = {
+	name = "A tale of Aetherius"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = 0.10
+		reinforce_speed = 0.20
+	}
+}
+new church_aspect a_tale_of_spinners = {
+	name = "A tale of Spinners"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = 0.10
+		reinforce_speed = 0.20
+	}
+}
 new religion cult_of_jephre = {
 	name = "Cult of Jephre"
 	desc = ""
@@ -9,10 +57,19 @@ new religion cult_of_jephre = {
 		SNOW_ELVES_PANTHEON_HERETIC
 	}
 	country = {
-		global_trade_goods_size_modifier = 0.1
-		development_cost = -0.1
+		global_prosperity_growth = 0.1
+		diplomatic_reputation = 2
 	}
 	province = {
+	}
+	aspects = {
+		a_tale_of_aetherius a_tale_of_nature a_tale_of_the_present a_tale_of_songs_and_stories a_tale_of_languages a_tale_of_spinners
+	}
+	uses_church_power = yes
+	aspects_name = {
+		short = "Dogma"
+		long = "Cult of Jephre"
+		power_name = "Church Power"
 	}
 	religious_group = snow_elven_group
 }

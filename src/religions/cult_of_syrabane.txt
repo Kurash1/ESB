@@ -1,5 +1,5 @@
-new church_aspect syrabanes_crystal_likenesses = {
-	name = "Syrabane's Likenesses"
+new church_aspect crystal_likenesses = {
+	name = "Crystal Likenesses"
 	desc = ""
 	modifier = {
 		land_attrition = -0.10 
@@ -30,6 +30,22 @@ new church_aspect apprentices_favorite = {
 	#	magicka_gain_modifier = 0.10
 	}
 }
+new church_aspect healer_of_the_afflicted = {
+	name = "Healer of the Afflicted"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = 0.10
+		reinforce_speed = 0.20
+	}
+}
+new church_aspect syrabanes_joviality = {
+	name = "Syarabane's Joviality"
+	desc = ""
+	modifier = {
+		global_unrest = -2
+		monthly_reform_progress = 0.2 
+	}
+}
 new religion cult_of_syrabane = {
 	name = "Cult of Syrabane"
 	desc = ""
@@ -47,7 +63,7 @@ new religion cult_of_syrabane = {
 	province = {
 	}
 	aspects = {
-		syrabanes_crystal_likenesses frog_metal lord_of_silver apprentices_favorite
+		crystal_likenesses frog_metal lord_of_silver apprentices_favorite healer_of_the_afflicted syrabanes_joviality
 	}
 	uses_church_power = yes
 	aspects_name = {
