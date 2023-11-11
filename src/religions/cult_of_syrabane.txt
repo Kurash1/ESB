@@ -1,7 +1,55 @@
+new church_aspect crystal_likenesses = {
+	name = "Crystal Likenesses"
+	desc = ""
+	modifier = {
+		land_attrition = -0.10 
+		development_cost = -0.1
+	}
+}
+new church_aspect frog_metal = {
+	name = "Frog Metal"
+	desc = ""
+	modifier = {
+		sunk_ship_morale_hit_recieved = -0.1
+		naval_morale = 0.1
+	}
+}
+new church_aspect lord_of_silver = {
+	name = "Lord of Silver"
+	desc = ""
+	modifier = {
+		prestige = 1.0
+		all_estate_loyalty_equilibrium = 0.15
+	}
+}
+new church_aspect apprentices_favorite = {
+	name = "Apprentices' Favorite"
+	desc = ""
+	modifier = {
+		monthly_magicka = 0.15
+	#	magicka_gain_modifier = 0.10
+	}
+}
+new church_aspect healer_of_the_afflicted = {
+	name = "Healer of the Afflicted"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = 0.10
+		reinforce_speed = 0.20
+	}
+}
+new church_aspect syrabanes_joviality = {
+	name = "Syarabane's Joviality"
+	desc = ""
+	modifier = {
+		global_unrest = -2
+		monthly_reform_progress = 0.2 
+	}
+}
 new religion cult_of_syrabane = {
 	name = "Cult of Syrabane"
 	desc = ""
-	icon = 2
+	icon = 7
 	color = {
 		0 255 255
 	}
@@ -13,6 +61,15 @@ new religion cult_of_syrabane = {
 		idea_cost = -0.05
 	}
 	province = {
+	}
+	aspects = {
+		crystal_likenesses frog_metal lord_of_silver apprentices_favorite healer_of_the_afflicted syrabanes_joviality
+	}
+	uses_church_power = yes
+	aspects_name = {
+		short = "Dogma"
+		long = "Cult of Syrabane"
+		power_name = "Church Power"
 	}
 	religious_group = snow_elven_group
 }

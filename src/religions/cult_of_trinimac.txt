@@ -1,7 +1,55 @@
+new church_aspect trinimacs_might = {
+	name = "Trinimac's might"
+	desc = ""
+	modifier = {
+		morale_damage = 0.025
+		shock_damage = 0.10
+	}
+}
+new church_aspect champion_of_auriel = {
+	name = "Champion of Auriel"
+	desc = ""
+	modifier = {
+		discipline = 0.05
+		army_tradition = 1
+	}
+}
+new church_aspect preacher_of_unity = {
+	name = "Preacher of Unity"
+	desc = ""
+	modifier = {
+		harsh_treatment_cost = -0.15
+		global_heathen_missionary_strength = 0.025
+	}
+}
+new church_aspect defender_of_civilization = {
+	name = "Defender of Civilization"
+	desc = ""
+	modifier = {
+		core_creation = -0.15
+		shock_damage_received = -0.10
+	}
+}
+new church_aspect strenght_and_honor = {
+	name = "Strenght and Honor"
+	desc = ""
+	modifier = {
+		drill_gain_modifier = 0.50
+		monarch_military_power = 1
+	}
+}
+new church_aspect vanquisher_of_lorkhan = {
+	name = "Vanquisher of Lorkhan"
+	desc = ""
+	modifier = {
+		recover_army_morale_speed = 0.15
+		land_morale = 0.10
+	}
+}
 new religion cult_of_trinimac = {
 	name = "Cult of Trinimac"
 	desc = ""
-	icon = 2
+	icon = 10
 	color = {
 		38 127 0
 	}
@@ -13,6 +61,15 @@ new religion cult_of_trinimac = {
 		land_morale = 0.10
 	}
 	province = {
+	}
+	aspects = {
+		trinimacs_might champion_of_auriel preacher_of_unity defender_of_civilization strenght_and_honor vanquisher_of_lorkhan   
+	}
+	uses_church_power = yes
+	aspects_name = {
+		short = "Dogma"
+		long = "Cult of Trinimac"
+		power_name = "Church Power"
 	}
 	religious_group = snow_elven_group
 }
