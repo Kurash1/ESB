@@ -17,6 +17,7 @@ new estate clans = {
 		state_maintenance_modifier = 0.5
 	}
 	land_ownership_modifier = {
+		clans_loyalty_modifier = 0.2
 	}
 	privileges = {
 		new clan_land_rights = {

@@ -1,4 +1,4 @@
-version="2.1.3a"
+version="2.1.4a"
 picture="thumbnail.png"
 replace_path="common/advisortypes"
 replace_path="common/ages"
@@ -122,5 +122,5 @@ tags={
 	"New Nations"
 }
 name="ESB Pre-Release"
-supported_version="1.35.*"
+supported_version="1.36.*"
 remote_file_id="3033843064"

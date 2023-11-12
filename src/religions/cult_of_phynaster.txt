@@ -1,7 +1,55 @@
+new church_aspect shortening_your_stride = {
+	name = "Shortening your stride"
+	desc = ""
+	modifier = {
+		monarch_lifespan = 0.15
+		advisor_pool = 2
+	}
+}
+new church_aspect watcher_of_the_adventurers = {
+	name = "Watcher of the Adventurers"
+	desc = ""
+	modifier = {
+		land_morale = 0.10
+		shock_damage_received = -0.05
+	}
+}
+new church_aspect patron_of_sailors = {
+	name = "Patron of Sailors"
+	desc = ""
+	modifier = {
+		naval_morale = 0.1
+		ship_durability = 0.1
+	}
+}
+new church_aspect guide_to_the_other_side = {
+	name = "Guide to the Other Side"
+	desc = ""
+	modifier = {
+		no_stability_loss_on_monarch_death = yes
+		overextension_impact_modifier = -0.1
+	}
+}
+new church_aspect hero_of_the_elves = {
+	name = "Hero of the elves"
+	desc = ""
+	modifier = {
+		extra_manpower_at_religious_war = yes
+		infantry_power = 0.10
+	}
+}
+new church_aspect dangerous_pilgrimages = {
+	name = "Dangerous Pilgrimages"
+	desc = ""
+	modifier = {
+		manpower_recovery_speed = -0.10
+		leader_cost = -0.20
+	}
+}
 new religion cult_of_phynaster = {
 	name = "Cult of Phynaster"
 	desc = ""
-	icon = 2
+	icon = 8
 	color = {
 		255 216 147
 	}
@@ -9,10 +57,19 @@ new religion cult_of_phynaster = {
 		SNOW_ELVES_PANTHEON_HERETIC
 	}
 	country = {
-		fire_damage = 0.1
-		discipline = 0.05
+		monarch_lifespan = 0.1
+		leader_land_manuever = 2
 	}
 	province = {
+	}
+	aspects = {
+		shortening_your_stride watcher_of_the_adventurers patron_of_sailors guide_to_the_other_side hero_of_the_elves dangerous_pilgrimages
+	}
+	uses_church_power = yes
+	aspects_name = {
+		short = "Dogma"
+		long = "Cult of Phynaster"
+		power_name = "Church Power"
 	}
 	religious_group = snow_elven_group
 }
