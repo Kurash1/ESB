@@ -1,0 +1,67 @@
+pick_random_estate_if_present = {
+	random_list = {
+		1 = { 
+			trigger = {
+				has_estate = estate_clans
+				NOT = { has_country_flag = estate_clans_$flag$ }
+			}
+			set_country_flag = estate_clans_$flag$
+			[[estate_action]
+			$estate_action$ = estate_clans
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_sailors
+				NOT = { has_country_flag = estate_sailors_$flag$ }
+			}
+			set_country_flag = estate_sailors_$flag$
+			[[estate_action]
+			$estate_action$ = estate_sailors
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_warriors
+				NOT = { has_country_flag = estate_warriors_$flag$ }
+			}
+			set_country_flag = estate_warriors_$flag$
+			[[estate_action]
+			$estate_action$ = estate_warriors
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_tongues
+				NOT = { has_country_flag = estate_tongues_$flag$ }
+			}
+			set_country_flag = estate_tongues_$flag$
+			[[estate_action]
+			$estate_action$ = estate_tongues
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_orcs
+				NOT = { has_country_flag = estate_orcs_$flag$ }
+			}
+			set_country_flag = estate_orcs_$flag$
+			[[estate_action]
+			$estate_action$ = estate_orcs
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_giants
+				NOT = { has_country_flag = estate_giants_$flag$ }
+			}
+			set_country_flag = estate_giants_$flag$
+			[[estate_action]
+			$estate_action$ = estate_giants
+			]
+		}
+		
+		
+
+	}
+}

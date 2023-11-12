@@ -1,0 +1,179 @@
+new country_event event_for_agendas = {
+	title = "HEy"
+	desc = ""
+	picture = crystalline_throne_eventPicture
+
+	is_triggered_only = yes
+
+	#immediate = {
+	#	hidden_effect = {
+	#		pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+	#		pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+	#		pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+	#		pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+	#		pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+	#		pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+	#		pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+	#		pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+	#	}
+	#}
+
+	#after = {
+	#	clr_country_flag = estate_clans_present_agenda
+	#	clr_country_flag = estate_orcs_present_agenda
+	#	clr_country_flag = estate_giants_present_agenda
+	#	clr_country_flag = estate_sailors_present_agenda
+	#	clr_country_flag = estate_warriors_present_agenda
+	#	clr_country_flag = estate_tongues_present_agenda
+		
+	#	clear_estate_agenda_cache = ROOT
+	#}
+	options = {
+		option = {
+			name = "Cock"
+			trigger = {}
+			effect = {}
+		
+		}
+		option = {
+			name = estate_privileges_and_agendas_events.3.a
+			trigger = {} # has_country_flag = estate_clans_present_agenda }
+			start_estate_agenda = estate_clans
+			goto = estate_clans
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							loyalty = 30
+							estate = estate_clans
+						}
+					}	
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						estate_loyalty = {
+							loyalty = 20
+							estate = estate_clans
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					estate_influence = {
+						influence = 70
+						estate = estate_clans
+					}
+				}
+				modifier = {
+					factor = 2
+					is_absolutism_active = yes
+					num_of_estate_privileges = {
+						estate = estate_clans
+						value = 1
+					}
+					estate_loyalty = {
+						estate = estate_clans
+						higher_than_influence = no
+					}
+				}
+			}
+		}
+
+		option = {
+			name = estate_privileges_and_agendas_events.3.b
+			trigger = { has_country_flag = estate_sailors_present_agenda }
+			start_estate_agenda = estate_sailors
+			goto = estate_sailors
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							loyalty = 30
+							estate = estate_sailors
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						estate_loyalty = {
+							loyalty = 20
+							estate = estate_sailors
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					estate_influence = {
+						influence = 70
+						estate = estate_sailors
+					}
+				}
+				modifier = {
+					factor = 2
+					is_absolutism_active = yes
+					num_of_estate_privileges = {
+						estate = estate_sailors
+						value = 1
+					}
+					estate_loyalty = {
+						estate = estate_sailors
+						higher_than_influence = no
+					}
+				}
+			}
+		}
+
+		option = {
+			name = estate_privileges_and_agendas_events.3.c
+			trigger = { has_country_flag = estate_warriors_present_agenda }
+			start_estate_agenda = estate_warriors
+			goto = estate_warriors
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1.5
+					NOT = {
+						estate_loyalty = {
+							loyalty = 30
+							estate = estate_warriors
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						estate_loyalty = {
+							loyalty = 20
+							estate = estate_warriors
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					estate_influence = {
+						influence = 70
+						estate = estate_warriors
+					}
+				}
+				modifier = {
+					factor = 2
+					is_absolutism_active = yes
+					num_of_estate_privileges = {
+						estate = estate_warriors
+						value = 1
+					}
+					estate_loyalty = {
+						estate = estate_warriors
+						higher_than_influence = no
+					}
+				}
+			}
+		}
+	}
+}
