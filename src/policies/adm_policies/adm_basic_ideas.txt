@@ -1,16 +1,100 @@
-new policy potato = {
-	name = "potato"
-	desc = ""
+new policy trad.b = {
 	monarch_power = ADM
-	group_1 = administrative_ideas
-	group_2 = diplomatic_ideas
-	potential = {
-		
-	}
-	allow = {
-		
-	}
+	name = "b"
+	desc = ""
+	group_1 = trade_ideas
+	group_2 = economic_ideas
 	modifier = {
-		diplomatic_annexation_cost = -0.15
+		trade_efficiency = 0.1
+		production_efficiency = 0.1
+	}
+}
+new policy trad.c = {
+	monarch_power = ADM
+	name = "a"
+	desc = ""
+	group_1 = trade_ideas
+	group_2 = humanist_ideas
+	modifier = {
+		idea_cost = -0.1
+		global_institution_spread = 0.2
+	}
+}
+new policy trad.d = {
+	monarch_power = ADM
+	name = "a"
+	desc = ""
+	group_1 = trade_ideas
+	group_2 = religious_ideas
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+		global_missionary_strength = 0.01
+	}
+}
+new policy marit.e = {
+	monarch_power = ADM
+	name = "a"
+	desc = ""
+	group_1 = maritime_ideas
+	group_2 = humanist_ideas
+	modifier = {
+		sunk_ship_morale_hit_recieved = -0.25
+		global_tax_modifier = 0.2
+	}
+}
+new policy dip.b = {
+	monarch_power = ADM
+	name = "A"
+	desc = ""
+	group_1 = economic_ideas
+	group_2 = diplomatic_ideas
+	modifier = {
+		global_tax_modifier = 0.15
+		global_autonomy = -0.05
+	}
+	
+}
+new policy dip.c = {
+	monarch_power = ADM
+	name = "A"
+	desc = ""
+	group_1 = religious_ideas
+	group_2 = diplomatic_ideas
+	modifier = {
+		global_missionary_strength = 0.01
+			religious_unity = 0.25
+	}
+	
+}
+new policy espion.a = {
+	monarch_power = ADM
+	name = "a"
+	desc = ""
+	group_1 = spy_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		advisor_cost = -0.2
+		yearly_corruption = -0.15
+	}
+}
+new policy espion.b = {
+	monarch_power = ADM
+	name = "a"
+	desc = ""
+	group_1 = spy_ideas
+	group_2 = humanist_ideas
+	modifier = {
+		global_unrest = -1
+		rebel_support_efficiency = 1
+	}
+}
+new policy espion.c = {
+	monarch_power = ADM
+	name = "a"
+	desc = ""
+	group_1 = spy_ideas
+	group_2 = religious_ideas
+	modifier = {
+		global_missionary_strength = 0.02
 	}
 }

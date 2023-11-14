@@ -12,6 +12,18 @@ new policy record_keeping_act = {
 		factor = 0.6
 	}
 }
+new policy dip.a = {
+	monarch_power = DIP
+	name = "A"
+	desc = ""
+	group_1 = humanist_ideas
+	group_2 = diplomatic_ideas
+	modifier = {
+		improve_relation_modifier = 0.2
+		num_accepted_cultures = 1
+	}
+	
+}
 new policy merc.a = {
 	monarch_power = DIP
 	name = "A"
@@ -115,4 +127,103 @@ new policy nav.e = {
 		ship_trade_power = 33%
 	}
 
+}
+new policy trad.a = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = trade_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		trade_efficiency = 0.1
+		mercantilism_cost = -0.2
+	}
+}
+new policy marit.a = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = maritime_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		navy_tradition = 1
+	}
+}
+# it's 0.25 but in game is 0.35
+new policy marit.b = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = maritime_ideas
+	group_2 = economic_ideas
+	modifier = {
+		global_sailors_modifier = 0.25
+		allowed_marine_fraction = 0.1
+	}
+}
+new policy marit.c = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = maritime_ideas
+	group_2 = religious_ideas
+	modifier = {
+		naval_morale = 0.1
+		recover_navy_morale_speed = 0.1
+	}
+}
+new policy explo.a = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = exploration_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		global_colonial_growth = 10
+		colonist_placement_chance = 0.05
+	}
+}
+new policy explo.b = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = exploration_ideas
+	group_2 = economic_ideas
+	modifier = {
+		global_trade_power = 0.1
+		global_tariffs = 0.15
+	}
+}
+new policy explo.c = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = exploration_ideas
+	group_2 = humanist_ideas
+	modifier = {
+		global_colonial_growth = 10
+		native_assimilation = 0.5
+	}
+}
+new policy explo.d = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = exploration_ideas
+	group_2 = religious_ideas
+	modifier = {
+		global_missionary_strength = 0.02
+		liberty_desire_from_subject_development = -0.15
+	}
+}
+new policy espion.d = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = spy_ideas
+	group_2 = economic_ideas
+	modifier = {
+		rebel_support_efficiency = 0.5
+		diplomats = 1
+	}
 }
