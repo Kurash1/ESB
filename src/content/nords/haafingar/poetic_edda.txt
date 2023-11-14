@@ -4,6 +4,8 @@ new event_modifier poetic_edda = {
 		prestige = 0.5
 	}
 }
+new localisation show_poetic_edda_tooltip = "Currently Active §YPoetic Edda§! Modifiers
+"
 new decision show_poetic_edda = {
 	name = "Poetic Edda"
 	color = { 255 108 0 }
@@ -11,14 +13,16 @@ new decision show_poetic_edda = {
 		has_country_modifier = poetic_edda
 	}
 	allow = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = show_poetic_edda_tooltip
+			always = no
+		}
 	}
 	effect = {
-		new_custom_tooltip = "Currently Active §YPoetic Edda§! Modifiers
-"
+		custom_tooltip = show_poetic_edda_tooltip
 	}
 }
-new effect create_poetic_edda = {
+new effect create_poetic_edda_modifier = {
 	args = {
 		id = string
 		name = string
@@ -40,6 +44,14 @@ which when enacted grants the following:
 			color = decisions:show_poetic_edda:color
 			allow = {
 				has_country_modifier = poetic_edda
+			}
+		}
+		decisions:show_poetic_edda:allow +=! {
+			if [has_country_modifier = `poetic_edda_{args:id}_modifier`] {
+				custom_trigger_tooltip = {
+					tooltip = `poetic_edda_{args:id}_tooltip`
+					always = yes
+				}
 			}
 		}
 		decisions:show_poetic_edda:effect +=! {
@@ -77,14 +89,15 @@ which when enacted grants the following:
 		}
 	}
 }
-new effect unlock_poetic_edda = {
+new effect unlock_poetic_edda_modifier = {
 	args = string
 	transpile = {
 		custom_tooltip = `poetic_edda_{args}_unlock`
 		set_country_flag = `poetic_edda_{args}`
 	}
 }
-create_poetic_edda = {
+
+create_poetic_edda_modifier = {
 	id = ode_to_the_founding
 	name = "Ode to the Founding"
 	modifier = {
@@ -101,7 +114,7 @@ mission_trees:solitude += {
 			prestige = 100
 		}
 		effect = {
-			unlock_poetic_edda = ode_to_the_founding
+			unlock_poetic_edda_modifier = ode_to_the_founding
 		}
 	}
 }
