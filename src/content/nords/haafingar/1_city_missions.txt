@@ -220,7 +220,11 @@ mission_trees:solitude += {
 			add_adm_power = -250
 			add_dip_power = -250
 			add_mil_power = -250
-			new_custom_tooltip = "Unlocks §YPoetic Edda§! Mechanic" #not implemented yet
+			new_custom_tooltip = "Unlocks §YPoetic Edda§! Mechanic"
+			add_country_modifier = {
+				name = poetic_edda
+				duration = -1
+			}
 		}
 		required = bards_college
 	}

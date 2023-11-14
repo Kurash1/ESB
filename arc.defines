@@ -30,3 +30,10 @@ load_order = {
 	src/random_events/
 	src/ai_personalities.txt
 }
+headers = "
+	/replace p@ with provinces:
+	/replace c@ with countries:
+	/replace a@ with areas:
+	/replace r@ with regions:
+	/replace s@ with superregions:
+"
