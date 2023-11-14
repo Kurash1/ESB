@@ -1,0 +1,118 @@
+new policy record_keeping_act = {
+	monarch_power = DIP
+	name = "Record Keeping Act"
+	desc = ""
+	group_1 = administrative_ideas
+	group_2 = diplomatic_ideas
+	modifier = {
+		diplomats = 1
+		global_autonomy = -0.05
+	}
+	ai_will_do = {
+		factor = 0.6
+	}
+}
+new policy merc.a = {
+	monarch_power = DIP
+	name = "A"
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = diplomatic_ideas
+	modifier = {
+		diplomatic_upkeep = 2
+	}
+	
+}
+new policy merc.b = {
+	monarch_power = DIP
+	name = "b"
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = exploration_ideas
+	modifier = {
+		privateer_efficiency = 0.5
+		transport_attrition = -0.5
+	}
+
+}
+new policy merc.c = {
+	monarch_power = DIP
+	name = "c"
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = trade_ideas
+	modifier = {
+		light_ship_cost = -0.1
+		ship_trade_power = 33%
+	}
+
+}
+new policy merc.d = {
+	monarch_power = DIP
+	name = "d"
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = maritime_ideas
+	modifier = {
+		allowed_marine_fraction = 0.1
+		global_ship_cost = -0.1 
+	}
+
+}
+new policy merc.e = {
+	monarch_power = DIP
+	name = "e"
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = spy_ideas
+	modifier = {
+		defensiveness = 0.15 
+		global_spy_defence = 33%
+	}
+
+}
+new policy nav.a = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = diplomatic_ideas
+	group_2 = naval_ideas
+	modifier = {
+		capture_ship_chance = 0.33
+	}
+
+}	
+new policy nav.c = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = exploration_ideas
+	group_2 = naval_ideas
+	modifier = {
+		global_naval_engagement_modifier = 0.2
+	}
+
+}
+new policy nav.d = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = maritime_ideas
+	group_2 = naval_ideas
+	modifier = {
+		blockade_efficiency = 0.5
+		siege_blockade_progress = 1
+	}
+
+}
+new policy nav.e = {
+	monarch_power = DIP
+	name = "a"
+	desc = ""
+	group_1 = trade_ideas
+	group_2 = naval_ideas
+	modifier = {
+		ship_trade_power = 33%
+	}
+
+}
