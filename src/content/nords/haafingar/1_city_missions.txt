@@ -1,18 +1,3 @@
-new effect unlock_poetic_edda = {
-	args = event_modifier
-	transpile = {
-		new_custom_tooltip = "Unlocks the §YPoetic Edda§! Modifier: §Y{args:name}§!
-which when enacted grants the following:
-	{modifier_to_string = args:modifier}"
-		set_country_flag = event_modifier:id
-	}
-}
-new event_modifier poetic_edda_ode_to_the_founding = {
-	name = "Ode to the Founding"
-	modifier = {
-		development_cost = -0.1
-	}
-}
 estates:warriors:privileges += new storm_gate_stalwarts = {
 	name = "Storm Gate Stalwarts"
 	desc = ""
@@ -205,18 +190,6 @@ mission_trees:solitude += {
 		}
 		effect = {
 			add_government_reform = tier_1_haafingar_kingdom
-		}
-	}
-	grandest_hall = {
-		name = "Grandest Hall"
-		x = 0
-		y = 3
-		required = the_blue_palace
-		trigger = {
-			prestige = 100
-		}
-		effect = {
-			unlock_poetic_edda = poetic_edda_ode_to_the_founding
 		}
 	}
 	bards_college = {

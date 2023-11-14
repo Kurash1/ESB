@@ -1,0 +1,38 @@
+new effect unlock_poetic_edda = {
+	args = {
+		id = string
+		name = string
+		modifier = modifier
+	}
+	transpile = {
+		new_custom_tooltip = "Unlocks the §YPoetic Edda§! Modifier: §Y{args:name}§!
+which when enacted grants the following:
+	{modifier_to_string = args:modifier}"
+		set_country_flag = `poetic_edda_{args:id}`
+		
+		new event_modifier `poetic_edda_{args:id}` = {
+			name = args:name
+			modifier = args:modifier
+		}
+	}
+}
+mission_trees:solitude += {
+	grandest_hall = {
+		name = "Grandest Hall"
+		x = 0
+		y = 3
+		required = the_blue_palace
+		trigger = {
+			prestige = 100
+		}
+		effect = {
+			unlock_poetic_edda = {
+				id = ode_to_the_founding
+				name = "Ode to the Founding"
+				modifier = {
+					development_cost = -0.1
+				}
+			}
+		}
+	}
+}
