@@ -290,3 +290,98 @@ new policy genstaff.i = {
 		trade_efficiency = 0.1
 	}
 }
+new policy standarm.a = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = standing_army_ideas
+	group_2 = diplomatic_ideas
+	modifier = {
+		liberty_desire_from_subject_development = -0.10
+		vassal_income = 0.15
+	}
+}
+new policy standarm.c = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = standing_army_ideas
+	group_2 = exploration_ideas
+	modifier = {
+		reduced_liberty_desire_on_other_continent = 15
+		transport_power = 0.1 
+	}
+}
+new policy standarm.d = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = standing_army_ideas
+	group_2 = maritime_ideas
+	modifier = {
+		landing_penalty = -1
+	}
+}
+new policy standarm.e = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = standing_army_ideas
+	group_2 = trade_ideas
+	modifier = {
+		caravan_power = 0.2
+		all_estate_loyalty_equilibrium = 0.05
+	}
+}
+new policy warmag.a = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = esb_warmagic
+	group_2 = diplomatic_ideas
+	modifier = {
+		ae_impact = -0.1
+		accept_vassalization_reasons = 5
+	}
+}
+new policy warmag.b = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = esb_warmagic
+	group_2 = spy_ideas
+	modifier = {
+		overextension_impact_modifier = -0.05
+	}
+}
+new policy warmag.c = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = esb_warmagic
+	group_2 = exploration_ideas
+	modifier = {
+		ship_durability = 0.1
+	}
+}
+new policy warmag.d = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = esb_warmagic
+	group_2 = maritime_ideas
+	modifier = {
+		global_naval_engagement_modifier = 0.15
+	}
+}
+new policy warmag.e = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = esb_warmagic
+	group_2 = trade_ideas
+	modifier = {
+		global_trade_power = 0.1
+		trade_range_modifier = 0.20
+	}
+}

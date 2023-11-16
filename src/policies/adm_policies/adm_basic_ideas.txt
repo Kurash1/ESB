@@ -272,7 +272,17 @@ new policy hum.b = {
 		available_province_loot = -0.15
 	}
 }
-
+new policy standarm.b = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = standing_army_ideas
+	group_2 = spy_ideas
+	modifier = {
+		state_governing_cost = -0.1
+		global_unrest = -1
+	}
+}
 
 
 
