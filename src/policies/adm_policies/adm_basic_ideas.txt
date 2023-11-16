@@ -1,6 +1,7 @@
+# all administrative policies you can have from taking the starting ideas
 new policy trad.b = {
 	monarch_power = ADM
-	name = "b"
+	name = ""
 	desc = ""
 	group_1 = trade_ideas
 	group_2 = economic_ideas
@@ -11,7 +12,7 @@ new policy trad.b = {
 }
 new policy trad.c = {
 	monarch_power = ADM
-	name = "a"
+	name = ""
 	desc = ""
 	group_1 = trade_ideas
 	group_2 = humanist_ideas
@@ -22,7 +23,7 @@ new policy trad.c = {
 }
 new policy trad.d = {
 	monarch_power = ADM
-	name = "a"
+	name = ""
 	desc = ""
 	group_1 = trade_ideas
 	group_2 = religious_ideas
@@ -33,7 +34,7 @@ new policy trad.d = {
 }
 new policy marit.e = {
 	monarch_power = ADM
-	name = "a"
+	name = ""
 	desc = ""
 	group_1 = maritime_ideas
 	group_2 = humanist_ideas
@@ -44,7 +45,7 @@ new policy marit.e = {
 }
 new policy dip.b = {
 	monarch_power = ADM
-	name = "A"
+	name = ""
 	desc = ""
 	group_1 = economic_ideas
 	group_2 = diplomatic_ideas
@@ -56,7 +57,7 @@ new policy dip.b = {
 }
 new policy dip.c = {
 	monarch_power = ADM
-	name = "A"
+	name = ""
 	desc = ""
 	group_1 = religious_ideas
 	group_2 = diplomatic_ideas
@@ -68,7 +69,7 @@ new policy dip.c = {
 }
 new policy espion.a = {
 	monarch_power = ADM
-	name = "a"
+	name = ""
 	desc = ""
 	group_1 = spy_ideas
 	group_2 = administrative_ideas
@@ -79,7 +80,7 @@ new policy espion.a = {
 }
 new policy espion.b = {
 	monarch_power = ADM
-	name = "a"
+	name = ""
 	desc = ""
 	group_1 = spy_ideas
 	group_2 = humanist_ideas
@@ -90,7 +91,7 @@ new policy espion.b = {
 }
 new policy espion.c = {
 	monarch_power = ADM
-	name = "a"
+	name = ""
 	desc = ""
 	group_1 = spy_ideas
 	group_2 = religious_ideas
@@ -98,3 +99,182 @@ new policy espion.c = {
 		global_missionary_strength = 0.02
 	}
 }
+new policy arc.b = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = arcane_ideas
+	group_2 = spy_ideas
+	modifier = {
+		global_spy_defence = 0.1 
+		stability_cost_modifier = -0.1
+	}
+}
+new policy genstaff.a = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = generalstab0
+	group_2 = administrative_ideas
+	modifier = {
+		core_creation = -0.05
+		manpower_in_own_culture_provinces = 0.10
+	}
+}
+new policy genstaff.b = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = generalstab0
+	group_2 = economic_ideas
+	modifier = {
+		land_maintenance_modifier = -0.10
+	}
+}
+new policy genstaff.c = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = generalstab0
+	group_2 = humanist_ideas
+	modifier = {
+		manpower_in_accepted_culture_provinces = 0.15
+		manpower_recovery_speed = 0.05
+	}
+}
+new policy genstaff.d = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = generalstab0
+	group_2 = spy_ideas
+	modifier = {
+		harsh_treatment_cost = -0.15
+		spy_offence = 0.10
+	}
+}
+new policy genstaff.e = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = generalstab0
+	group_2 = exploration_ideas
+	modifier = {
+		free_leader_pool = 1
+	}
+}
+new policy merc.f = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		merc_maintenance_modifier = -0.20
+		may_build_supply_depot = yes
+	}
+}
+new policy merc.g = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = economic_ideas
+	modifier = {
+		global_tax_modifier = 0.15
+		possible_condottieri = 1
+	}
+}
+new policy merc.h = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = humanist_ideas
+	modifier = {
+		harsh_treatment_cost = -0.25
+		global_rebel_suppression_efficiency = 1
+	}
+}
+new policy adm.a = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = administrative_ideas
+	group_2 = naval_ideas
+	modifier = {
+		navy_tradition_decay = -0.01
+	}
+}
+new policy adm.b = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = administrative_ideas
+	group_2 = standing_army_ideas
+	modifier = {
+		global_regiment_recruit_speed = -0.10
+		reinforce_cost_modifier = -0.15
+	}
+}
+new policy adm.c = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = administrative_ideas
+	group_2 = esb_warmagic
+	modifier = {
+		global_regiment_cost = -0.05
+		recover_army_morale_speed = 0.10
+	}
+}
+new policy eco.a = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = economic_ideas
+	group_2 = naval_ideas
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+		production_efficiency = 0.1
+	}
+}
+new policy eco.b = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = economic_ideas
+	group_2 = standing_army_ideas
+	modifier = {
+		global_regiment_cost = -0.10
+		mil_advisor_cost = -0.15
+	}
+}
+new policy eco.c = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = economic_ideas
+	group_2 = esb_warmagic
+	modifier = {
+		monthly_magicka = 0.10
+		land_attrition = -0.15
+	}
+}
+new policy hum.b = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = humanist_ideas
+	group_2 = standing_army_ideas
+	modifier = {
+		war_exhaustion = -0.1 
+		available_province_loot = -0.15
+	}
+}
+
+
+
+
+
+

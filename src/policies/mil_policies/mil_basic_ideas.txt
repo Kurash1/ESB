@@ -1,6 +1,7 @@
+# all military policies you can have from taking the starting ideas
 new policy nav.b = {
 	monarch_power = MIL
-	name = "b"
+	name = ""
 	desc = ""
 	group_1 = spy_ideas
 	group_2 = naval_ideas
@@ -9,4 +10,146 @@ new policy nav.b = {
 		global_naval_engagement_modifier = 0.1
 	}
 
+}
+new policy arc.f = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = arcane_ideas
+	group_2 = generalstab0
+	modifier = {
+		global_supply_limit_modifier = 0.10
+		reinforce_cost_modifier = -0.10
+	}
+
+}
+new policy arc.g = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = arcane_ideas
+	group_2 = mercenary_ideas
+	modifier = {
+		merc_independent_from_trade_range = yes
+	}
+
+}
+new policy arc.h = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = arcane_ideas
+	group_2 = naval_ideas
+	modifier = {
+		hull_size_modifier = 0.1
+	}
+
+}
+new policy arc.i = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = arcane_ideas
+	group_2 = standing_army_ideas
+	modifier = {
+		fire_damage = 0.05
+		fire_damage_received = -0.1
+	}
+
+}
+new policy arc.l = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = arcane_ideas
+	group_2 = esb_warmagic
+	modifier = {
+		max_general_fire = 1
+		fire_damage = 0.05
+	}
+
+}
+new policy genstaff.f = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = generalstab0
+	group_2 = religious_ideas
+	modifier = {
+		infantry_shock = 0.1
+	}
+}
+new policy genstaff.g = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = generalstab0
+	group_2 = maritime_ideas
+	modifier = {
+		regiment_disembark_speed = 0.15
+	}
+}
+new policy merc.i = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = mercenary_ideas
+	group_2 = religious_ideas
+	modifier = {
+		land_morale = 0.1
+		global_missionary_strength = 0.02
+	}
+}
+new policy hum.a = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = humanist_ideas
+	group_2 = naval_ideas
+	modifier = {
+		ship_durability = 0.05
+		recover_navy_morale_speed = 0.10
+	}
+}
+new policy hum.c = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = humanist_ideas
+	group_2 = esb_warmagic
+	modifier = {
+		global_defender_dice_roll_bonus = 1
+	}
+}
+new policy rel.a = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = religious_ideas
+	group_2 = naval_ideas
+	modifier = {
+		sunk_ship_morale_hit_recieved = -0.1
+		leader_naval_shock = 1
+	}
+}
+new policy rel.b = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = religious_ideas
+	group_2 = standing_army_ideas
+	modifier = {
+		morale_damage = 0.025
+	}
+}
+new policy rel.c = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = religious_ideas
+	group_2 = esb_warmagic
+	modifier = {
+		infantry_fire = 0.1
+		shock_damage_received = -0.10
+	}
 }
