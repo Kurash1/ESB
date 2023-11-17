@@ -692,12 +692,12 @@ new country heljarchen = {
 	}
 	capital = heljarchen
 }
-new country silent-moon = {
+new country storm_fist = {
 	inherit = nordic_country
 	primary_culture = whiterunish
-	tag = SLM
-	name = "Silent-Moon"
-	adj = "Silent-Moon"
+	tag = STF
+	name = "Storm-Fist"
+	adj = "Storm-Fist"
 	color = {
 		25 25 100
 	}
