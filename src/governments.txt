@@ -257,6 +257,129 @@ default_reform := {
 		magicka_mechanic
 	}
 }
+new government_names remnant_monarchy = {
+	rank = {
+		1 = "Chiefdom"
+		2 = "Thanedom"
+		3 = "Jarldom"
+		4 = "Kingdom"
+		5 = "High Kingdom"
+		6 = "Empire"
+	}
+	ruler_male = {
+		1 = "Harbinger"
+		2 = "Harbinger"
+		3 = "Harbinger"
+		4 = "Harbinger"
+		5 = "Harbinger"
+		6 = "Harbinger"
+	}
+	ruler_female = {
+		1 = "Harbinger"
+		2 = "Harbinger"
+		3 = "Harbinger"
+		4 = "Harbinger"
+		5 = "Harbinger"
+		6 = "Harbinger"
+	}
+	consort_male = {
+		1 = "Chief"
+		2 = "Thane Consort"
+		3 = "Jarl Consort"
+		4 = "King"
+		5 = "High King"
+		6 = "Emperor"
+	}
+	consort_female = {
+		1 = "Chieftess"
+		2 = "Thane Consort"
+		3 = "Jarl Consort"
+		4 = "Queen"
+		5 = "High Queen"
+		6 = "Empress"
+	}
+	heir_male = {
+		1 = "Prince"
+		2 = "Prince"
+		3 = "Prince"
+		4 = "Prince"
+		5 = "Prince"
+		6 = "Prince"
+	}
+	heir_female = {
+		1 = "Princess"
+		2 = "Princess"
+		3 = "Princess"
+		4 = "Princess"
+		5 = "Princess"
+		6 = "Princess"
+	}
+	trigger = {
+		has_reform = companion_remnant
+	}
+}
+new government_names nordic_monarchy = {
+	rank = {
+		1 = "Chiefdom"
+		2 = "Thanedom"
+		3 = "Jarldom"
+		4 = "Kingdom"
+		5 = "High Kingdom"
+		6 = "Empire"
+	}
+	ruler_male = {
+		1 = "Chief"
+		2 = "Thane"
+		3 = "Jarl"
+		4 = "King"
+		5 = "High King"
+		6 = "Emperor"
+	}
+	ruler_female = {
+		1 = "Chieftess"
+		2 = "Thane"
+		3 = "Jarl"
+		4 = "Queen"
+		5 = "High Queen"
+		6 = "Empress"
+	}
+	consort_male = {
+		1 = "Chief"
+		2 = "Thane Consort"
+		3 = "Jarl Consort"
+		4 = "King"
+		5 = "High King"
+		6 = "Emperor"
+	}
+	consort_female = {
+		1 = "Chieftess"
+		2 = "Thane Consort"
+		3 = "Jarl Consort"
+		4 = "Queen"
+		5 = "High Queen"
+		6 = "Empress"
+	}
+	heir_male = {
+		1 = "Prince"
+		2 = "Prince"
+		3 = "Prince"
+		4 = "Prince"
+		5 = "Prince"
+		6 = "Prince"
+	}
+	heir_female = {
+		1 = "Princess"
+		2 = "Princess"
+		3 = "Princess"
+		4 = "Princess"
+		5 = "Princess"
+		6 = "Princess"
+	}
+	trigger = {
+		is_race = nord
+		government = monarchy
+	}
+}
 new government_names falmer_monarchy = {
 	rank = {
 		1 = "Barony"
