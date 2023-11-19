@@ -141,6 +141,17 @@ new country solitude = {
 		elector = yes
 	}
 }
+new country cascabel = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = CSC
+	name = "Cascabel"
+	adj = "Cascabellian"
+	color = {
+		200 0 0
+	}
+	capital = cascabel_hall
+}
 new country pine_frost = {
 	inherit = nordic_country
 	primary_culture = haafingarian
