@@ -101,25 +101,12 @@ new subject_type cascabel_subject = {
 		{
 			modifier = cascabel_nation
 		}
-		{
-			modifier = cascabel_bonus
-			trigger = {
-				NOT = {
-					development_of_overlord_fraction = 0.25
-				}
-			}
-			expiration_message_overlord = MARCHTOOLARGE
-			expiration_message_subject = MARCHTOOLARGEUS
-		}
-	}
-	overlord_modifiers = {
-		modifier = march_subject
 	}
 }
 new localisation cascabel_nation = "Cascabel Nation"
 new static_modifier cascabel_nation = {
-	land_forcelimit = 10
-	global_manpower = 15
+	land_forcelimit = 5
+	global_manpower = 10
 }
 new localisation cascabel_bonus = "Cascabel Bonus"
 new static_modifier cascabel_bonus = {
