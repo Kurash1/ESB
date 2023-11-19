@@ -408,6 +408,3 @@ new decision form_the_rift = {
 		}
 	}
 }
-
-
-
