@@ -1,0 +1,840 @@
+new subject_type default = {
+	# Graphics:
+	sprite = GFX_icon_vassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal # The one that the overlord sees
+	diplomacy_subject_sprite = GFX_diplomacy_amvassal	# The one that the subject sees
+
+	# Triggers:
+	is_potential_overlord = { always = no } 			# This part is not copied in copy_from. Actual default is equivalent to always = yes
+	
+	# Properties:
+	has_overlords_ruler = no
+	can_fight_independence_war = yes
+	is_voluntary = no									# Whether they can leave the relationship whenever they want
+	transfer_trade_power = no
+	transfer_trade_if_merchant_republic = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	can_be_integrated = no
+	can_release_and_play = no							# "Release Colony" in SubjectView
+	uses_tariffs = no
+	dynamically_created_during_history = no				# If the country is automatically created. ( Makes for special checks during history )
+	eats_overlords_colonies = no						# Wheter subject assumes control of overlord's colonies in same colonial region.
+	has_colonial_parent = no							# Regulates most rules that should hold only for colonies
+	overlord_can_attack = yes
+	overlord_can_be_subject = no
+	can_have_subjects_of_other_types = no
+	can_be_annexed = no
+	takes_diplo_slot = yes
+	has_power_projection = yes
+	can_release_in_peace = yes
+	uses_military_focus = yes
+	overlord_protects_external = no						# Whether overlord always gets called (declinable) against countries without the same overlord. When this is 'no' overlord will only join if the defender would have been blocked (by its subject type) from attacking the attacker.
+	counts_for_borders = yes							# Whether distance between borders counts this subject type as part of its overlord's borders.
+	overlord_enforce_peace_attacking = no				# Whether the overlord can enforce peace on the subject's enemy even when the subject is the attacker
+	can_use_claims = yes								# Whether the overlord can use the subject's claims and cores for declaring war
+	gives_daimyo_bonuses = no
+	gets_help_with_rebels = no							# Only for AI. Bidirectional.
+	share_rebel_popup = yes								# Whether the Overlord gets popups about Subject's rebels and sees them in Stability View.
+	separatists_become_subjects = no					# Whether separatist rebels enforcing demands will become subjects of the overlord.
+	allows_taking_land_without_independence = no
+	can_transfer_in_peace = yes							# Whether this subject type can be made into a vassal with the "Transfer Subject" Age Ability.
+	can_set_mil_focus = yes
+	can_send_missionary_to_subject = yes				# Requires Cradle of Civilization
+	can_union_break = no								# Only works together with has_overlords_ruler
+	overlord_can_fabricate_for = yes
+	does_overlord_size_count_for_warscore_cost = yes
+	is_colony_subtype = no
+	is_march = no
+	forms_trade_companies = yes					
+	can_concentrate_development = yes							  
+	can_have_great_projects_moved_by_overlord = no
+	extend_trading_range = no											  																								   
+	
+	max_government_rank = 0								# 0 means no limit
+	cities_required_for_bonuses = 0						# How many cities the subject needs before giving bonuses to overlord
+	trust_on_start = 35									# Overlord and subject will each get this much extra trust with each other at game start
+
+	base_liberty_desire = 0.0
+	liberty_desire_negative_prestige = 0.0
+	liberty_desire_development_ratio = 0.0
+	liberty_desire_same_dynasty = 0.0
+	liberty_desire_revolution = 35.0																					   
+	pays_overlord = 0.0									# 1.0 represents the amount payed by vassals
+	forcelimit_to_overlord = 0.0						# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.0					# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers																			 
+	military_focus = 1.0								# How much the AI subject should spend etc. on army and forts. 0 should make them spend nothing. Very high values will probably not make a big difference since there will be sanity checks.
+	annex_cost_per_development = 8.0
+	
+	relative_power_class = 2 							# See description above
+	should_quit_wars_on_activation = yes								 
+	diplomacy_view_class = 1							# See description above
+	
+	allow_settlement_growth = no
+	block_settlement_growth = no
+
+	can_fight = {
+	}
+	can_rival = {
+	}
+	can_ally = {
+	}
+	can_marry = {
+	}
+
+	# Subject Interactions:
+	# (continuous)
+	embargo_rivals = no
+	support_loyalists = no
+	subsidize_armies = no
+	scutage = no
+	send_officers = no
+	divert_trade = no
+	# (immediate)
+	placate_rulers = no
+	place_relative_on_throne = no
+	enforce_religion = no
+	customize_subject = no
+	replace_governor = no
+	grant_province = no
+	enforce_culture = no
+	siphon_income = no
+	fortify_march = no
+	seize_territory = no
+	start_colonial_war = no
+	grant_core_claim = no
+	sacrifice_ruler = no
+	sacrifice_heir = no
+	increase_tariffs = no
+	decrease_tariffs = no
+	takeondebt = no
+	bestow_gifts = no
+	send_additional_troops = no
+	demand_artifacts = no
+	demand_additional_tribute = no
+	force_seppuku = no
+	press_sailors = no
+	contribute_to_capital = no
+	force_isolation = no
+	return_land = no
+	conscript_general = no
+	knowledge_sharing = no
+	change_colonial_type = no
+	upgrade_subject_type = no						  
+	# (special)
+	sword_hunt = no
+	sankin_kotai = no
+	expel_ronin = no
+
+	# Modifiers:
+	clear_subject_modifier = yes # Use this to clear after copy_from.
+	subject_modifiers = { # Otherwise, this only adds modifiers, and doesn't remove previously added.
+		modifier = subject_nation
+	}
+	clear_overlord_modifier = yes
+
+	overlord_opinion_modifier = null # If not "null" it will look for a modifier with that name in 00_opinion_modifiers.txt and other files in that directory.
+	subject_opinion_modifier = null
+}
+
+new subject_type personal_union = {
+	copy_from = default
+
+	# Graphics:
+	sprite = GFX_court_union
+	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
+	diplomacy_subject_sprite = GFX_diplomacy_inunion
+
+	# Properties:
+    has_overlords_ruler = yes
+	is_voluntary = yes
+	can_be_integrated = yes
+	can_have_subjects_of_other_types = yes
+	overlord_protects_external = yes
+	gives_daimyo_bonuses = yes
+	gets_help_with_rebels = yes
+	allows_taking_land_without_independence = yes
+	can_union_break = yes
+	extend_trading_range = yes
+	
+	liberty_desire_negative_prestige = 1.0
+	
+	pays_overlord = 0.5
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.0
+	
+	relative_power_class = 1
+	diplomacy_view_class = 1
+	
+    # Subject Interactions:
+	# (continuous)
+	support_loyalists = yes
+	embargo_rivals = yes
+	# (immediate)
+	enforce_religion = yes
+	enforce_culture = yes
+	siphon_income = yes
+	return_land = yes
+	grant_province = yes
+	grant_core_claim = yes
+	takeondebt = yes
+	knowledge_sharing = yes
+	
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+
+	# Modifiers:
+	overlord_modifiers = {
+		modifier = union_subject
+	}
+	subject_modifiers = {
+		modifier = union_nation
+	}
+
+	overlord_opinion_modifier = in_union
+	subject_opinion_modifier = in_union
+}
+
+new subject_type march = {
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_icon_march
+	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
+	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+
+	# Properties:
+    is_voluntary = yes
+	overlord_can_be_subject = yes
+	can_have_subjects_of_other_types = yes
+	overlord_protects_external = yes
+	gives_daimyo_bonuses = yes
+	gets_help_with_rebels = yes
+	allows_taking_land_without_independence = yes
+	extend_trading_range = yes
+	
+	base_liberty_desire = -50.0
+	liberty_desire_development_ratio = -0.5
+	
+	pays_overlord = 0.35
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.0
+	
+	relative_power_class = 1
+	diplomacy_view_class = 1
+	
+	can_marry = {
+		same_overlord = all
+	}
+	
+    # Subject Interactions:
+	# (continuous)
+	subsidize_armies = yes
+	send_officers = yes
+	# (immediate)
+	enforce_religion = yes
+	takeondebt = yes
+	knowledge_sharing = yes
+	place_relative_on_throne = yes
+	fortify_march = yes
+	seize_territory = yes
+	send_additional_troops = yes
+	grant_province = yes
+	
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+
+	# Modifiers:
+	clear_overlord_modifier = yes #We don't want to duplicate the ones inherited from vassal
+	clear_subject_modifier = yes #Ditto
+	subject_modifiers = {
+		{
+			modifier = march_nation
+		}
+		{
+			modifier = march_bonus
+			trigger = {
+				NOT = {
+					development_of_overlord_fraction = 0.25
+				}
+			}
+			expiration_message_overlord = MARCHTOOLARGE
+			expiration_message_subject = MARCHTOOLARGEUS
+		}
+	}
+	overlord_modifiers = {
+		modifier = march_subject
+	}
+}
+
+new subject_type vassal = {
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_icon_vassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
+	diplomacy_subject_sprite = GFX_diplomacy_amvassal
+
+	# Properties:
+	transfer_trade_if_merchant_republic = yes
+	can_be_annexed = yes
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	forms_trade_companies = no
+
+	max_government_rank = 1
+
+	liberty_desire_development_ratio = 0.25
+	liberty_desire_same_dynasty = -5.0
+	pays_overlord = 1.0
+	forcelimit_to_overlord = 0.1
+
+	relative_power_class = 2
+	should_quit_wars_on_activation = yes
+
+	restoration_cb = cb_disloyal_vassal
+
+	# Subject Interactions:
+	scutage = yes
+	place_relative_on_throne = yes
+	sacrifice_ruler = yes
+	sacrifice_heir = yes
+	divert_trade = yes
+	seize_territory = yes
+
+	# Modifiers:
+	subject_modifiers = {
+		modifier = vassal_nation
+	}
+	overlord_modifiers = {
+		modifier = vassal_subject
+	}
+
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+}
+
+new subject_type markarth_clan = {
+	name = "Markarth Clan"
+	desc = ""
+	title = "Markarth Clan"
+	plural = "Markarth Clans"
+	overlord = "Markarth Clan Overlord"
+	subject = "Markarth Clan Subject"
+	is_our = "§Y$NAME$§! is our Markarth Clan"
+
+	copy_from = vassal
+	
+	counts_for_borders = yes
+	relative_power_class = 1
+	place_relative_on_throne = no
+}
+
+new subject_type colony = {
+	copy_from = default
+	
+	#Graphics:
+	sprite = GFX_subject_colony_icon
+	diplomacy_overlord_sprite = GFX_diplomacy_leadcolony
+	diplomacy_subject_sprite = GFX_diplomacy_subjectcolony
+
+	#Properties:
+    is_voluntary = yes
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	can_release_and_play = yes
+	uses_tariffs = yes
+	dynamically_created_during_history = yes
+	eats_overlords_colonies = yes
+	has_colonial_parent = yes
+	overlord_can_be_subject = yes
+	can_have_subjects_of_other_types = yes
+	takes_diplo_slot = no
+	overlord_protects_external = yes
+	overlord_enforce_peace_attacking = yes
+	gets_help_with_rebels = yes
+	allows_taking_land_without_independence = yes
+	extend_trading_range = yes
+	
+	liberty_desire_negative_prestige = 1.0
+	
+	cities_required_for_bonuses = 25
+	
+	pays_overlord = 0.25
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.0
+	
+	relative_power_class = 2
+	diplomacy_view_class = 1
+	
+	can_fight = {
+	    same_overlord = colony
+		other_overlord = colony
+		same_overlord = native_reservation
+		other_overlord = native_reservation
+		neighboring_primitives = yes
+		colonial_region_nations = yes
+	}
+	can_rival = {
+		same_overlord = colony
+		other_overlord = colony
+		same_overlord = native_reservation
+		other_overlord = native_reservation
+		neighboring_primitives = yes
+		colonial_region_nations = yes
+	}
+	can_ally = {
+		same_overlord = colony
+		other_overlord = colony
+		same_overlord = native_reservation
+		other_overlord = native_reservation
+		neighboring_primitives = yes
+	}
+	
+    #Subject Interactions:
+	# (continuous)
+	support_loyalists = yes
+	divert_trade = yes
+	# (immediate)
+	customize_subject = yes
+	replace_governor = yes
+
+	start_colonial_war = yes
+	increase_tariffs = yes
+	decrease_tariffs = yes
+
+	takeondebt = yes
+
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+
+	#Modifiers:
+	subject_modifiers = {
+		modifier = colony_nation
+	}
+	overlord_modifiers = {
+		modifier = large_colonial_nation
+		trigger = {
+			num_of_cities = 35
+		}
+	}
+
+	overlord_opinion_modifier = colonial_relation
+	subject_opinion_modifier = colonial_relation
+}
+
+new subject_type crown_colony = {
+	copy_from = colony
+
+	change_colonial_type = yes
+	upgrade_subject_type = yes
+	is_colony_subtype = yes
+	can_send_missionary_to_subject = yes	
+	extend_trading_range = yes
+	
+	cities_required_for_bonuses = 25
+	
+	base_liberty_desire = -15.0
+	liberty_desire_development_ratio = -0.15
+	
+	pays_overlord = 0.25
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.0
+
+	# Subject Interactions:
+	# (continuous)
+	support_loyalists = no
+	divert_trade = yes
+	# (immediate)
+	customize_subject = yes
+	replace_governor = yes
+
+	start_colonial_war = yes
+	increase_tariffs = yes
+	decrease_tariffs = yes
+	
+	enforce_religion = yes
+	takeondebt = yes
+	
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+	
+	#Modifiers:
+	subject_modifiers = {
+		modifier = crown_colony_subject
+	}
+	overlord_modifiers = {
+		modifier = crown_colony_overlord
+	}
+}
+
+new subject_type private_enterprise = {
+	copy_from = colony
+
+	change_colonial_type = yes
+	upgrade_subject_type = yes
+	is_colony_subtype = yes
+	extend_trading_range = yes
+	
+	cities_required_for_bonuses = 25
+	
+	base_liberty_desire = -25.0
+	liberty_desire_development_ratio = -0.25
+
+	pays_overlord = 0.50
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.0
+
+	# Subject Interactions:
+	# (continuous)
+	support_loyalists = no
+	placate_rulers = yes
+	embargo_rivals = yes
+	divert_trade = no
+	# (immediate)
+	customize_subject = no
+	siphon_income = yes
+	replace_governor = no
+	
+	start_colonial_war = no
+	
+	send_additional_troops = yes
+
+	increase_tariffs = yes
+	decrease_tariffs = yes
+	
+	press_sailors = yes
+	takeondebt = yes
+	
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+	
+	#Modifiers:
+	subject_modifiers = {
+		modifier = private_enterprise_subject
+	}
+	overlord_modifiers = {
+		modifier = private_enterprise_overlord
+	}
+}
+
+new subject_type self_governing_colony = {
+	copy_from = colony
+
+	change_colonial_type = yes
+	upgrade_subject_type = yes
+	is_colony_subtype = yes
+	extend_trading_range = yes
+	
+	cities_required_for_bonuses = 25
+	
+	base_liberty_desire = -35.0
+	liberty_desire_development_ratio = -0.35
+
+	pays_overlord = 0.10
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.0
+
+	# Subject Interactions:
+	# (continuous)
+	support_loyalists = yes
+	divert_trade = no
+	# (immediate)
+	customize_subject = no
+	send_officers = yes
+	replace_governor = no
+
+	subsidize_armies = yes
+	conscript_general = yes	
+	
+	start_colonial_war = no
+	
+	increase_tariffs = yes
+	decrease_tariffs = yes
+	
+	return_land = yes
+	
+	takeondebt = yes
+	
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+	
+	#Modifiers:
+	subject_modifiers = {
+		modifier = self_governing_colony_subject
+	}
+	overlord_modifiers = {
+		modifier = self_governing_colony_overlord
+	}
+}
+
+new subject_type native_reservation = {
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_icon_federation
+	diplomacy_overlord_sprite = GFX_diplomacy_leadprotectorates
+	diplomacy_subject_sprite = GFX_diplomacy_inprotectorate
+	
+	# Properties:
+    is_voluntary = yes
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	joins_overlords_wars = no
+	can_be_integrated = yes
+	uses_tariffs = yes
+	overlord_can_be_subject = yes
+	can_have_subjects_of_other_types = yes
+	takes_diplo_slot = no
+	overlord_protects_external = yes
+	overlord_enforce_peace_attacking = yes
+	gets_help_with_rebels = yes
+	allows_taking_land_without_independence = yes
+	extend_trading_range = yes
+	
+	base_liberty_desire = 5.0
+	liberty_desire_negative_prestige = 1.0
+	liberty_desire_development_ratio = 0.25
+	liberty_desire_same_dynasty = -5.0
+	
+	cities_required_for_bonuses = 5
+	
+	pays_overlord = 0.5
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.0
+	
+	relative_power_class = 2
+	diplomacy_view_class = 1
+	
+	can_fight = {
+	    same_overlord = colony
+		other_overlord = colony
+		same_overlord = native_reservation
+		other_overlord = native_reservation
+		neighboring_primitives = yes
+		colonial_region_nations = yes
+	}
+	can_rival = {
+		same_overlord = colony
+		other_overlord = colony
+		same_overlord = native_reservation
+		other_overlord = native_reservation
+		neighboring_primitives = yes
+		colonial_region_nations = yes
+	}
+	can_ally = {
+		same_overlord = colony
+		other_overlord = colony
+		same_overlord = native_reservation
+		other_overlord = native_reservation
+		neighboring_primitives = yes
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = all
+		other_overlord = all
+	}
+	
+    # Subject Interactions:
+	# (continuous)
+	divert_trade = yes
+	# (immediate)
+	placate_rulers = yes
+	siphon_income = yes
+	increase_tariffs = yes
+	decrease_tariffs = yes
+	send_additional_troops = yes
+	demand_artifacts = yes
+	conscript_general = yes	
+	takeondebt = yes
+	knowledge_sharing = yes
+	
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+	
+	# Modifiers:
+	subject_modifiers = {
+		modifier = reservation_nation
+	}
+	overlord_modifiers = {
+		modifier = reservation_subject
+		trigger = {
+			num_of_cities = 10
+		}
+	}
+	
+	overlord_opinion_modifier = colonial_relation
+	subject_opinion_modifier = colonial_relation
+}
+
+new subject_type tributary_state = {
+	#If similar subject added check if it needs to be added to these scripted triggers:
+	#is_subject_except_tributary_trigger
+	#is_free_or_tributary_trigger
+	copy_from = default
+
+	# Triggers:
+	is_potential_overlord = {
+		has_dlc = "Mandate of Heaven"
+		NOT = { 
+			is_subject_of_type = tributary_state
+		}
+		OR = {
+		    #is_emperor = yes
+			is_emperor_of_china = yes
+			has_reform = celestial_empire
+			#is_nomad = yes
+		}
+	}
+	
+	# Graphics:
+	sprite = GFX_subject_tributary_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtributary
+	diplomacy_subject_sprite = GFX_diplomacy_amtributary
+
+	# Properties:
+    is_voluntary = yes
+    can_send_tribute = yes
+	joins_overlords_wars = no
+	overlord_can_be_subject = yes
+	can_have_subjects_of_other_types = yes
+	takes_diplo_slot = no
+	overlord_protects_external = yes
+	gets_help_with_rebels = yes
+	allows_taking_land_without_independence = yes
+	
+	base_liberty_desire = 10.0
+	liberty_desire_negative_prestige = 1.0
+	liberty_desire_development_ratio = 0.15
+	liberty_desire_same_dynasty = -10.0
+	
+	pays_overlord = 0.15
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.0
+	
+	relative_power_class = 1
+	diplomacy_view_class = 1
+	
+	can_fight = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = all
+		other_overlord = all
+	}
+
+    # Subject Interactions:
+	# (continuous)
+	embargo_rivals = yes
+	subsidize_armies = yes
+	# (immediate)
+	siphon_income = yes
+	seize_territory = yes
+	bestow_gifts = yes
+	send_additional_troops = yes
+	demand_artifacts = yes
+	demand_additional_tribute = yes
+	return_land = yes
+	takeondebt = yes
+	
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+
+	# Modifiers:
+	clear_subject_modifier = yes # Tributaries don't get the ordinary subject_nation penalty 
+	subject_modifiers = {
+		{
+			modifier = tributary_state_behind_overlord_tech_adm
+			trigger = {
+				ROOT = {
+					NOT = { adm_tech = FROM }
+				}
+			}
+		}
+		{
+			modifier = tributary_state_behind_overlord_tech_dip
+			trigger = {
+				ROOT = {
+					NOT = { dip_tech = FROM }
+				}
+			}
+		}
+		{
+			modifier = tributary_state_behind_overlord_tech_mil
+			trigger = {
+				ROOT = {
+					NOT = { mil_tech = FROM }
+				}
+			}
+		}
+	}
+	overlord_modifiers = {
+		modifier = tributary_subject
+		trigger = {
+			num_of_cities = 50
+		}
+	}
+}
+
+new subject_type daimyo_vassal = {
+	copy_from = vassal
+	count = vassal
+	
+	# Graphics:
+	sprite = GFX_icon_vassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
+	diplomacy_subject_sprite = GFX_diplomacy_amvassal
+}
+
+new subject_type client_vassal = {
+	copy_from = vassal
+	count = vassal
+	
+	# Graphics:
+	diplomacy_overlord_sprite = GFX_diplomacy_leadclients
+	diplomacy_subject_sprite = GFX_diplomacy_areclients
+
+	# Properties:
+	created_by_overlord = yes
+	liberty_desire_revolution = 0
+
+	# Subject Interactions:
+	customize_subject = yes
+	return_land = no
+}
+
+new subject_type client_march = {
+	copy_from = march
+	count = march
+
+	# Graphics:
+	diplomacy_overlord_sprite = GFX_diplomacy_leadclients
+	diplomacy_subject_sprite = GFX_diplomacy_areclients
+
+	# Properties:
+	created_by_overlord = yes
+	liberty_desire_revolution = 0
+
+	# Subject Interactions:
+	customize_subject = yes
+	enforce_religion = no
+}
+
+new subject_type dummy = {
+	copy_from = default
+}

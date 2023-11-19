@@ -1,0 +1,59 @@
+mission_trees:solitude += {
+	cascabel_hall = {
+		name = "Cascabel Hall"
+		x = 6
+		y = 3
+		required = northwatch_keep
+		inherit = not_implemented_mission
+		trigger = {
+			owns = cascabel_hall
+			provinces:cascabel_hall = {
+				fort_level = 2
+			}
+		}
+		effect = {
+			provinces:cascabel_hall = {
+				change_trade_goods = fruits
+				quick_province_modifier = {
+					name = "Arbor of Golden Apples"
+					modifier = {
+						trade_value_modifier = 1.5 #this makes the base_price of the good 5 instead of 2
+						trade_goods_size_modifier = 0.5
+					}
+				}
+				quick_province_modifier = {
+					name = "Impenetrable Cascabel Walls"
+					modifier = {
+						local_defensiveness = 0.5
+						fort_level = 1
+					}
+				}
+			}
+			country_event = haafingar.1
+		}
+	}
+}
+new country_event haafingar.1 = {
+	title = "Autonomy of Cascabel Hall"
+	is_triggered_only = yes
+	options = {
+		{
+			name = "Curtail their autonomy"
+			effect = {
+				
+			}
+		}
+		{
+			name = "Autonomy for the Count of Cascabel"
+			effect = {
+			
+			}
+		}
+		{
+			name = "Sponsor the new order of Cascabel"
+			effect = {
+				
+			}
+		}
+	}
+}

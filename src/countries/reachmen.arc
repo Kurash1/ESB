@@ -398,10 +398,3 @@ new relation dependency = {
 	start_date = 2500.1.1
 	end_date = 9999.1.1
 }
-new localisation markarth_clan = "Markarth Clan"
-new localisation markarth_clan_long_desc = ""
-new localisation markarth_clan_title = "Markarth Clan"
-new localisation markarth_clan_title_plural = "Markarth Clans"
-new localisation markarth_clan_overlord = "Markarth Clan Overlord"
-new localisation markarth_clan_subject = "Markarth Clan Subject"
-new localisation markarth_clan_is_our = "§Y$NAME$§! is our Markarth Clan"

@@ -1,3 +1,17 @@
+new trigger has_longships = {
+	args = {
+		num = int
+		backup = trigger
+	}
+	transpile = {
+		if [has_dlc = "Domination"] {
+			num_of_galleass = args:num
+		}
+		else {
+			args:backup
+		}
+	}
+}
 new trigger has_building_line = {
 	args = building_line
 	transpile = {

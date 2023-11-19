@@ -128,6 +128,14 @@ mission_trees:solitude += {
 		y = 3
 		required = northwatch_keep
 		inherit = not_implemented_mission
+		trigger = {
+			has_longships = {
+				num = 50
+				backup = {
+					navy_size = 150
+				}
+			}
+		}
 	}
 	legend_of_two_sisters = {
 		name = "Legend of Two Sisters"
@@ -162,13 +170,6 @@ mission_trees:solitude += {
 			fuldimar_hookhand
 			the_pirate_threat
 		}
-		inherit = not_implemented_mission
-	}
-	cascabell_hall = {
-		name = "Cascabell Hall"
-		x = 6
-		y = 3
-		required = northwatch_keep
 		inherit = not_implemented_mission
 	}
 	master_of_the_mountain = {
