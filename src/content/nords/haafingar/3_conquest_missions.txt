@@ -127,7 +127,6 @@ mission_trees:solitude += {
 		x = 5
 		y = 3
 		required = northwatch_keep
-		inherit = not_implemented_mission
 		trigger = {
 			has_longships = {
 				num = 50
@@ -136,16 +135,25 @@ mission_trees:solitude += {
 				}
 			}
 		}
-	}
-	legend_of_two_sisters = {
-		name = "Legend of Two Sisters"
-		x = 4
-		y = 4
-		required = {
-			poetic_edda
-			longboat_legions
-		} 
-		inherit = not_implemented_mission
+		effect = {
+			if [has_dlc = "Domination"] {
+				quick_country_modifier = {
+					name = "Longboat Legions"
+					modifier = {
+						allowed_galleass_fraction = 0.15
+						max_flagships = 2
+					}
+				}
+			}
+			else {
+				quick_country_modifier = {
+					name = "Longboat Legions"
+					modifier = {
+						max_flagships = 2
+					}
+				}
+			}
+		}
 	}
 	fuldimar_hookhand = {
 		name = "Fuldimar Hookhand"
@@ -153,24 +161,36 @@ mission_trees:solitude += {
 		y = 4
 		required = longboat_legions
 		inherit = not_implemented_mission
+		trigger = {
+			treasury = 250
+		}
+		effect = {
+			add_treasury = -250
+			provinces:gold_isle = {
+				change_province_name = "Kyne's Aegis"
+				rename_capital = "Kyne's Aegis"
+				add_center_of_trade_level = 1
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
 	}
 	the_pirate_threat = {
 		name = "The Pirate Threat"
 		x = 6
 		y = 4
 		required = longboat_legions
-		inherit = not_implemented_mission
-	}
-	poem_of_the_sea_ghosts = {
-		name = "Poem of the Sea Ghosts"
-		x = 5
-		y = 5
-		required = {
-			legend_of_two_sisters
-			fuldimar_hookhand
-			the_pirate_threat
+		trigger = {
+			NOT = {
+				exists = lone_band
+			}
 		}
-		inherit = not_implemented_mission
+		effect = {
+			home_trade_node_effect_scope = {
+				add_trade_node_income = 100
+			}
+		}
 	}
 	master_of_the_mountain = {
 		name = "Master of the Mountain"

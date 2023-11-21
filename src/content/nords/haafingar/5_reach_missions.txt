@@ -11,7 +11,18 @@ mission_trees:solitude += {
 		x = 9
 		y = 6
 		required = taming_the_dragon
-		inherit = not_implemented_mission
+		trigger = {
+			num_of_explorers = 1
+			has_discovered = hroldan_river
+			has_discovered = lake_karthspire
+			has_discovered = blind_river
+			has_discovered = karth_lake
+		}
+		effect = {
+			province_groups:reachmen_discovery = {
+				discover_country = ROOT
+			}
+		}
 	}
 	harmugstahl = {
 		name = "Harmugstahl"
