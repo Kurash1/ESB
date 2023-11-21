@@ -1,5 +1,6 @@
 unsorted_target = unsorted
 transpile_target = target
+map_folder = map
 gfx_folder = gfx
 load_order = {
 	eu4/*
@@ -30,3 +31,10 @@ load_order = {
 	src/random_events/
 	src/ai_personalities.txt
 }
+headers = "
+	/replace p@ with provinces:
+	/replace c@ with countries:
+	/replace a@ with areas:
+	/replace r@ with regions:
+	/replace s@ with superregions:
+"
