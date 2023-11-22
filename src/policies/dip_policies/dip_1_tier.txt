@@ -1,0 +1,12 @@
+#all diplomatic policies with at least an idea group not available from the start 
+new policy aristo12 = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = trade_ideas
+	modifier = {
+		merchants = 1
+		global_foreign_trade_power = 0.3
+	}
+}
