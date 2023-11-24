@@ -3,14 +3,40 @@ mission_trees:solitude += {
 		name = "Form Haafingar Hold"
 		x = 3
 		y = 5
-		inherit = not_implemented_mission
+		trigger = {
+			regions:haafingar = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owner = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			decisions:form_haafingar:effect
+			areas:rivers_horn, areas:twin_bridges = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 	two_bridges = {
 		name = "Two Bridges"
 		x = 3
 		y = 6
 		required = form_haafingar_hold
-		inherit = not_implemented_mission
+		trigger = {
+			areas:rivers_horn, areas:twin_bridges = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:hjaal_river_passage, areas:hjaals_teeth, areas:snowhawk_forest, areas:snowhawk = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	snowhawk = {
 		name = "Snowhawk"
@@ -18,13 +44,29 @@ mission_trees:solitude += {
 		y = 7
 		required = two_bridges
 		inherit = not_implemented_mission
+		trigger = {
+			areas:snowhawk_forest, areas:snowhawk = {
+				type = all
+				owned_by = ROOT
+			}
+		}
 	}
 	hjaal_mouth = {
 		name = "Hjaal Mouth"
 		x = 4
 		y = 7
 		required = two_bridges
-		inherit = not_implemented_mission
+		trigger = {
+			areas:hjaal_river_passage, areas:hjaals_teeth = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:karthwasten, areas:karthald, areas:dragon_bridge_overlook, areas:broken_tower = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	morthal = {
 		name = "Morthal"

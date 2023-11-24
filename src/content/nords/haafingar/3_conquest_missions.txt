@@ -49,7 +49,6 @@ mission_trees:solitude += {
 		x = 4
 		y = 2
 		required = shadowgreen_druids
-		inherit = not_implemented_mission
 		trigger = {
 			owns = solitude_lighthouse
 			provinces:solitude_lighthouse = {
@@ -74,7 +73,6 @@ mission_trees:solitude += {
 		x = 5
 		y = 2
 		required = shadowgreen_druids
-		inherit = not_implemented_mission
 		trigger = {
 			provinces:broken_oar = {
 				OR = {
@@ -103,7 +101,6 @@ mission_trees:solitude += {
 		x = 6
 		y = 2
 		required = shadowgreen_druids
-		inherit = not_implemented_mission
 		trigger = {
 			areas:northwatch = {
 				type = all
@@ -160,7 +157,6 @@ mission_trees:solitude += {
 		x = 5
 		y = 4
 		required = longboat_legions
-		inherit = not_implemented_mission
 		trigger = {
 			treasury = 250
 		}
@@ -197,7 +193,6 @@ mission_trees:solitude += {
 		x = 7
 		y = 1
 		required = form_the_wolf_army
-		inherit = not_implemented_mission
 		trigger = {
 			areas:kilkreath = {
 				type = all
@@ -215,7 +210,22 @@ mission_trees:solitude += {
 		x = 8
 		y = 2
 		required = master_of_the_mountain
-		inherit = not_implemented_mission
+		trigger = {
+			owns = kilkreath_temple
+			provinces:kilkreath_temple = {
+				OR = {
+					has_building = tax_1
+					has_building = tax_2
+					has_building = tax_3
+				}
+			}
+		}
+		effect = {
+			create_monument = {
+				monument = kilkreath_temple
+				province = kilkreath_temple
+			}
+		}
 	}
 	castle_hraggstad = {
 		name = "Castle Hraggstad"
@@ -225,14 +235,25 @@ mission_trees:solitude += {
 			northwatch_keep
 			master_of_the_mountain
 		}
-		inherit = not_implemented_mission
 		trigger = {
+			provinces:hraggstad = {
+				fort_level = 2
+			}
 			areas:hraggstad = {
 				type = all
 				owned_by = ROOT
 			}
 		}
 		effect = {
+			provinces:hraggstad = {
+				quick_province_modifier = {
+					name = "Castle Hraggstad"
+					modifier = {
+						local_defensiveness = 0.25
+						local_fort_maintenance_modifier = -0.5
+					}
+				}
+			}
 			areas:deepwood = {
 				add_permanent_claim = ROOT
 			}
@@ -243,7 +264,6 @@ mission_trees:solitude += {
 		x = 8
 		y = 4
 		required = castle_hraggstad
-		inherit = not_implemented_mission
 		trigger = {
 			areas:deepwood = {
 				type = all
@@ -251,8 +271,14 @@ mission_trees:solitude += {
 			}
 		}
 		effect = {
+			areas:deepwood = {
+				add_base_production = 1
+			}
 			areas:pinefrost = {
 				add_permanent_claim = ROOT
+			}
+			province_groups:lord_of_the_forests = {
+				discover_country = ROOT
 			}
 		}
 	}
@@ -263,22 +289,23 @@ mission_trees:solitude += {
 		required = lord_of_the_forests
 		inherit = not_implemented_mission
 		trigger = {
+			provinces:pinefrost = {
+				fort_level = 2
+			}
 			areas:pinefrost = {
 				type = all
 				owned_by = ROOT
 			}
 		}
-	}
-	taming_the_dragon = {
-		name = "Taming the dragon"
-		x = 9
-		y = 1
-		required = form_the_wolf_army
-		inherit = not_implemented_mission
-		trigger = {
-			areas:dragon_bridge = {
-				type = all
-				owned_by = ROOT
+		effect = {
+			provinces:pinefrost = {
+				quick_province_modifier = {
+					name = "Pinefrost Tower"
+					modifier = {
+						local_defensiveness = 0.25
+						local_fort_maintenance_modifier = -0.5
+					}
+				}
 			}
 		}
 	}

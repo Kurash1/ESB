@@ -224,6 +224,10 @@ new great_project ancestor_glade = {
 		}
 	}
 }
+new great_project kilkreath_temple = {
+	name = "Kilkreath Temple"
+	start = black_mountain
+}
 new great_project arcwind_point = {
 	name = "Arcwind Point"
 	start = black_mountain

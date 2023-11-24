@@ -1,11 +1,4 @@
 mission_trees:solitude += {
-	mor_khazgur = {
-		name = "Mor Khazgur"
-		x = 8
-		y = 6
-		required = lord_of_the_forests
-		inherit = not_implemented_mission
-	}
 	karth_expedition = {
 		name = "Karth Expedition"
 		x = 9
@@ -19,8 +12,11 @@ mission_trees:solitude += {
 			has_discovered = karth_lake
 		}
 		effect = {
-			province_groups:reachmen_discovery = {
+			province_groups:karth_expedition = {
 				discover_country = ROOT
+			}
+			areas:silverway, areas:bruca, areas:harmugstahl = {
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -32,7 +28,17 @@ mission_trees:solitude += {
 			mor_khazgur
 			karth_expedition
 		}
-		inherit = not_implemented_mission
+		trigger = {
+			areas:silverway, areas:bruca, areas:harmugstahl = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:karthwasten, areas:karthald, areas:dragon_bridge_overlook, areas:broken_tower = {
+				add_permanent_claim = ROOT
+			}
+		}
 	}
 	dealings_with_reachmen = {
 		name = "Dealings with Reachmen"
@@ -57,6 +63,12 @@ mission_trees:solitude += {
 			harmugstahl
 		}
 		inherit = not_implemented_mission
+		trigger = {
+			areas:karthwasten, areas:karthald, areas:dragon_bridge_overlook, areas:broken_tower = {
+				type = all
+				owned_by = ROOT
+			}
+		}
 	}
 	north_druadach = {
 		name = "North Druadach"

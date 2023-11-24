@@ -244,6 +244,7 @@ new decision form_haafingar = {
 			region = haafingar
 		}
 		NOT = {
+			tag = solitude
 			exists = haafingar
 			has_reform = tier_1_hold
 		}
