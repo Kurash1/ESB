@@ -1,7 +1,7 @@
 #all military policies with at least an idea group not available from the start 
-new policy aristo7 = {
+new policy nobel_naval_traditions = {
 	monarch_power = MIL
-	name = ""
+	name = "Noble Naval Traditions"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = maritime_ideas
@@ -10,9 +10,9 @@ new policy aristo7 = {
 		navy_tradition_decay = -0.05
 	}
 }
-new policy aristo8 = {
+new policy the_colonial_nobility_act = {
 	monarch_power = MIL
-	name = ""
+	name = "The Colonial Nobility Act"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = exploration_ideas
@@ -20,9 +20,9 @@ new policy aristo8 = {
 		global_manpower_modifier = 0.2
 	}
 }
-new policy aristo9 = {
+new policy the_tenures_abolition_act = {
 	monarch_power = MIL
-	name = ""
+	name = "The Tenures Abolition Act"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = diplomatic_ideas
@@ -31,9 +31,9 @@ new policy aristo9 = {
 		army_tradition = 0.5
 	}
 }
-new policy aristo10 = {
+new policy noble_loyalty_act = {
 	monarch_power = MIL
-	name = ""
+	name = "Noble Loyalty Act"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = spy_ideas
@@ -44,9 +44,9 @@ new policy aristo10 = {
 		nobility_loyalty_equilibrium = 0.05
 	}
 }
-new policy aristo11 = {
+new policy autonomous_estates = {
 	monarch_power = MIL
-	name = ""
+	name = "Autonomous Estates"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = influence_ideas
@@ -55,20 +55,9 @@ new policy aristo11 = {
 		vassal_forcelimit_bonus = 1
 	}
 }
-new policy aristo18 = {
+new policy reinforced_galleys = {
 	monarch_power = MIL
-	name = ""
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = influence_ideas
-	modifier = {
-		admiral_cost = -0.1
-		leader_naval_shock = 1
-	}
-}
-new policy aristo19 = {
-	monarch_power = MIL
-	name = ""
+	name = "Reinforced Galleys"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = galle0
@@ -76,9 +65,9 @@ new policy aristo19 = {
 		galley_hull_size_modifier = 0.1
 	}
 }
-new policy aristo20 = {
+new policy reinforced_light_ships = {
 	monarch_power = MIL
-	name = ""
+	name = "Reinforced Light Ships"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = handel0
@@ -86,9 +75,9 @@ new policy aristo20 = {
 		light_ship_hull_size_modifier = 0.1
 	}
 }
-new policy aristo21 = {
+new policy reinforced_heavy_ships = {
 	monarch_power = MIL
-	name = ""
+	name = "Reinforced Heavy Ships"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = gross0

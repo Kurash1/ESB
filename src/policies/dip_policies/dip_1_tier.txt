@@ -1,7 +1,7 @@
 #all diplomatic policies with at least an idea group not available from the start 
-new policy aristo12 = {
+new policy trade_connections_policy = {
 	monarch_power = DIP
-	name = ""
+	name = "Trade Connections Policy"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = trade_ideas
@@ -10,9 +10,9 @@ new policy aristo12 = {
 		global_foreign_trade_power = 0.3
 	}
 }
-new policy aristo16 = {
+new policy merchant_houses = {
 	monarch_power = DIP
-	name = ""
+	name = "Merchant Houses"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = esb_monopoly
@@ -22,9 +22,9 @@ new policy aristo16 = {
 		production_efficiency = -0.10
 	}
 }
-new policy aristo17 = {
+new policy noble_colonial_governors = {
 	monarch_power = DIP
-	name = ""
+	name = "Noble Colonial Governors"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = kolonialimperium0

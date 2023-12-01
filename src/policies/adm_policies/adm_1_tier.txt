@@ -1,7 +1,7 @@
 #all admininistrative policies with at least an idea group not available from the start 
-new policy aristo1 = {
+new policy the_licensing_of_the_press_act = {
 	monarch_power = ADM
-	name = ""
+	name = "The Licensing of the Press Act"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = administrative_ideas
@@ -35,9 +35,9 @@ new policy manueline_architecture = {
 		build_cost = -0.15
 	}
 }
-new policy aristo4 = {
+new policy enlightened_aristocracy = {
 	monarch_power = ADM
-	name = ""
+	name = "Enlightened Aristocracy"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = humanist_ideas
@@ -68,9 +68,9 @@ new policy the_witchcraft_act = {
 	}
 }
 #estate_loyalties don't work
-new policy aristo13 = {
+new policy know_your_place = {
 	monarch_power = ADM
-	name = ""
+	name = "Know your Place"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = propaganda0
@@ -81,9 +81,9 @@ new policy aristo13 = {
 		sailors_estate_loyalty_equilibrium = 0.1
 	}
 }
-new policy aristo14 = {
+new policy blood_heritage = {
 	monarch_power = ADM
-	name = ""
+	name = "Blood Heritage"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = society_ideas
@@ -93,9 +93,9 @@ new policy aristo14 = {
 		
 	}
 }
-new policy aristo15 = {
+new policy glorious_nobility = {
 	monarch_power = ADM
-	name = ""
+	name = "Glorious Nobility"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = esb_prestigious
@@ -103,9 +103,9 @@ new policy aristo15 = {
 		administrative_efficiency = 0.025
 	}
 }
-new policy aristo22 = {
+new policy alchemic_circle = {
 	monarch_power = ADM
-	name = ""
+	name = "Alchemic Circle"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = alchemical_ideas
@@ -114,9 +114,9 @@ new policy aristo22 = {
 		production_efficiency = 0.1
 	}
 }
-new policy aristo23 = {
+new policy panem_et_circenses = {
 	monarch_power = ADM
-	name = ""
+	name = "Panem et Circenses"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = esb_treasury
@@ -127,35 +127,37 @@ new policy aristo23 = {
 }
 new policy aristo24 = {
 	monarch_power = ADM
-	name = ""
+	name = "Aristocracy + Hegemonic"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = esb_hegemonic
 	modifier = {
-			core_creation = -0.10
-			reduced_liberty_desire_on_other_continent = 15
+		core_creation = -0.15
+		idea_cost = 0.05
 	}
 }
 new policy aristo25 = {
 	monarch_power = ADM
-	name = ""
+	name = "Aristocracy + State Administration"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = staatsverwaltung0
 	modifier = {
-			core_creation = -0.05
-			reduced_liberty_desire_on_other_continent = 15
+		governing_cost = -0.20
+		yearly_corruption = 0.1
 	}
 }
+# make modifier happy nobles
 new policy aristo26 = {
 	monarch_power = ADM
-	name = ""
+	name = "Aristocracy + Justice"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = justiz0
 	modifier = {
-			core_creation = -0.05
-			reduced_liberty_desire_on_other_continent = 15
+		global_unrest = 1
+		yearly_corruption = 0.05
+		country_admin_power = 1
 	}
 }
 

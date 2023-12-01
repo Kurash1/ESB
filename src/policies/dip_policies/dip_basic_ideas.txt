@@ -81,9 +81,9 @@ new policy loyal_conduct_act = {
 	}
 
 }
-new policy nav.a = {
+new policy terms_of_surrender_statute = {
 	monarch_power = DIP
-	name = ""
+	name = "Terms of Surrender Statute"
 	desc = ""
 	group_1 = diplomatic_ideas
 	group_2 = naval_ideas
@@ -92,9 +92,9 @@ new policy nav.a = {
 	}
 
 }	
-new policy nav.c = {
+new policy skilled_cartographers = {
 	monarch_power = DIP
-	name = ""
+	name = "Skilled Cartographers"
 	desc = ""
 	group_1 = exploration_ideas
 	group_2 = naval_ideas
@@ -103,9 +103,9 @@ new policy nav.c = {
 	}
 
 }
-new policy nav.d = {
+new policy the_naval_supremacy_act = {
 	monarch_power = DIP
-	name = ""
+	name = "The Naval Supremacy Act"
 	desc = ""
 	group_1 = maritime_ideas
 	group_2 = naval_ideas
@@ -115,9 +115,9 @@ new policy nav.d = {
 	}
 
 }
-new policy nav.e = {
+new policy fortified_trading_posts = {
 	monarch_power = DIP
-	name = ""
+	name = "Fortified Trading Posts"
 	desc = ""
 	group_1 = trade_ideas
 	group_2 = naval_ideas
@@ -126,9 +126,9 @@ new policy nav.e = {
 	}
 
 }
-new policy trad.a = {
+new policy importation_act = {
 	monarch_power = DIP
-	name = ""
+	name = "Importation Act"
 	desc = ""
 	group_1 = trade_ideas
 	group_2 = administrative_ideas
@@ -137,9 +137,9 @@ new policy trad.a = {
 		mercantilism_cost = -0.2
 	}
 }
-new policy marit.a = {
+new policy the_naval_school_act = {
 	monarch_power = DIP
-	name = ""
+	name = "The Naval School Act"
 	desc = ""
 	group_1 = maritime_ideas
 	group_2 = administrative_ideas
@@ -170,9 +170,9 @@ new policy chaplains_of_the_fleet = {
 		recover_navy_morale_speed = 0.1
 	}
 }
-new policy explo.a = {
+new policy the_colonial_administration_act = {
 	monarch_power = DIP
-	name = ""
+	name = "The Colonial Administration Act"
 	desc = ""
 	group_1 = exploration_ideas
 	group_2 = administrative_ideas
@@ -181,9 +181,9 @@ new policy explo.a = {
 		colonist_placement_chance = 0.05
 	}
 }
-new policy explo.b = {
+new policy the_stamp_act = {
 	monarch_power = DIP
-	name = ""
+	name = "The Stamp Act"
 	desc = ""
 	group_1 = exploration_ideas
 	group_2 = economic_ideas
@@ -192,9 +192,9 @@ new policy explo.b = {
 		global_tariffs = 0.15
 	}
 }
-new policy explo.c = {
+new policy native_assimilation_act = {
 	monarch_power = DIP
-	name = ""
+	name = "Native Assimilation Act"
 	desc = ""
 	group_1 = exploration_ideas
 	group_2 = humanist_ideas
@@ -203,9 +203,9 @@ new policy explo.c = {
 		native_assimilation = 0.5
 	}
 }
-new policy explo.d = {
+new policy colonial_restrictions = {
 	monarch_power = DIP
-	name = ""
+	name = "Colonial Restrictions"
 	desc = ""
 	group_1 = exploration_ideas
 	group_2 = religious_ideas
@@ -214,9 +214,9 @@ new policy explo.d = {
 		liberty_desire_from_subject_development = -0.15
 	}
 }
-new policy espion.d = {
+new policy the_foreign_support_act = {
 	monarch_power = DIP
-	name = ""
+	name = "The Foreign Support Act"
 	desc = ""
 	group_1 = spy_ideas
 	group_2 = economic_ideas
@@ -227,7 +227,7 @@ new policy espion.d = {
 }
 new policy arc.a = {
 	monarch_power = DIP
-	name = ""
+	name = "Arcane + Diplomatic"
 	desc = ""
 	group_1 = arcane_ideas
 	group_2 = diplomatic_ideas
@@ -237,7 +237,7 @@ new policy arc.a = {
 }	
 new policy arc.c = {
 	monarch_power = DIP
-	name = ""
+	name = "Arcane + Exploration "
 	desc = ""
 	group_1 = arcane_ideas
 	group_2 = exploration_ideas
@@ -247,7 +247,7 @@ new policy arc.c = {
 }
 new policy arc.d = {
 	monarch_power = DIP
-	name = ""
+	name = "Arcane + Maritime"
 	desc = ""
 	group_1 = arcane_ideas
 	group_2 = maritime_ideas
@@ -257,7 +257,7 @@ new policy arc.d = {
 }
 new policy arc.e = {
 	monarch_power = DIP
-	name = ""
+	name = "Arcane + Trade"
 	desc = ""
 	group_1 = arcane_ideas
 	group_2 = trade_ideas
@@ -267,7 +267,7 @@ new policy arc.e = {
 }
 new policy genstaff.h = {
 	monarch_power = DIP
-	name = ""
+	name = "General Staff + Diplomatic"
 	desc = ""
 	group_1 = generalstab0
 	group_2 = diplomatic_ideas
@@ -278,7 +278,7 @@ new policy genstaff.h = {
 }
 new policy genstaff.i = {
 	monarch_power = DIP
-	name = ""
+	name = "General Staff + Trade"
 	desc = ""
 	group_1 = generalstab0
 	group_2 = trade_ideas
@@ -289,7 +289,7 @@ new policy genstaff.i = {
 }
 new policy standarm.a = {
 	monarch_power = DIP
-	name = ""
+	name = "Standing Army + Diplomatic"
 	desc = ""
 	group_1 = standing_army_ideas
 	group_2 = diplomatic_ideas
@@ -300,7 +300,7 @@ new policy standarm.a = {
 }
 new policy standarm.c = {
 	monarch_power = DIP
-	name = ""
+	name = "Standing Army + Exploration"
 	desc = ""
 	group_1 = standing_army_ideas
 	group_2 = exploration_ideas
@@ -311,7 +311,7 @@ new policy standarm.c = {
 }
 new policy standarm.d = {
 	monarch_power = DIP
-	name = ""
+	name = "Standing Army + Maritime"
 	desc = ""
 	group_1 = standing_army_ideas
 	group_2 = maritime_ideas
@@ -321,7 +321,7 @@ new policy standarm.d = {
 }
 new policy standarm.e = {
 	monarch_power = DIP
-	name = ""
+	name = "Standing Army + Trade"
 	desc = ""
 	group_1 = standing_army_ideas
 	group_2 = trade_ideas
@@ -332,7 +332,7 @@ new policy standarm.e = {
 }
 new policy warmag.a = {
 	monarch_power = DIP
-	name = ""
+	name = "Warmagic + Diplomatic"
 	desc = ""
 	group_1 = esb_warmagic
 	group_2 = diplomatic_ideas
@@ -343,7 +343,7 @@ new policy warmag.a = {
 }
 new policy warmag.b = {
 	monarch_power = DIP
-	name = ""
+	name = "Warmagic + Espionage"
 	desc = ""
 	group_1 = esb_warmagic
 	group_2 = spy_ideas
@@ -353,7 +353,7 @@ new policy warmag.b = {
 }
 new policy warmag.c = {
 	monarch_power = DIP
-	name = ""
+	name = "Warmagic + Exploration"
 	desc = ""
 	group_1 = esb_warmagic
 	group_2 = exploration_ideas
@@ -363,7 +363,7 @@ new policy warmag.c = {
 }
 new policy warmag.d = {
 	monarch_power = DIP
-	name = ""
+	name = "Warmagic + Maritime"
 	desc = ""
 	group_1 = esb_warmagic
 	group_2 = maritime_ideas
@@ -373,7 +373,7 @@ new policy warmag.d = {
 }
 new policy warmag.e = {
 	monarch_power = DIP
-	name = ""
+	name = "Warmagic + Trade"
 	desc = ""
 	group_1 = esb_warmagic
 	group_2 = trade_ideas
