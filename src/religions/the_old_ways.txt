@@ -1,3 +1,18 @@
+new decision return_to_our_roots = {
+	name = "Return to our Roots"
+	potential = {
+		is_race = nord
+		any_owned_province = {
+			religion = the_old_ways
+		}
+	}
+	allow = {
+		dominant_religion = the_old_ways
+	}
+	effect = {
+		change_religion = the_old_ways
+	}
+}
 new religion the_old_ways = {
 	name = "The Old Ways"
 	desc = "More commonly known as ‘The Old Ways’, Atmoran Totemist is the original religious belief of the Nords and their Atmoran ancestors. It places emphasis upon various totem animals such as the Bear, Fox, Hawk, Moth, Whale, Wolf, Snake, Owl, and Dragon. Each of which represents different virtues and aspects, practitioners have a long tradition of carving runestones depicting various animals in their temples, barrows, and religious sites.
