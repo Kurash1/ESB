@@ -260,7 +260,7 @@ mission_trees:solitude += {
 		}
 	}
 	lord_of_the_forests = {
-		name = "Lord of the forests"
+		name = "Lord of the Forests"
 		x = 8
 		y = 4
 		required = castle_hraggstad
@@ -274,7 +274,7 @@ mission_trees:solitude += {
 			areas:deepwood = {
 				add_base_production = 1
 			}
-			areas:pinefrost = {
+			areas:pinefrost, areas:mor_khazgur = {
 				add_permanent_claim = ROOT
 			}
 			province_groups:lord_of_the_forests = {
