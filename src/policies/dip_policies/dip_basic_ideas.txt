@@ -1,7 +1,7 @@
 # all diplomatic policies you can have from taking the starting ideas
-new policy record_keeping_act = {
+new policy recordkeeping_act = {
 	monarch_power = DIP
-	name = ""
+	name = "Recordkeeping Act"
 	desc = ""
 	group_1 = administrative_ideas
 	group_2 = diplomatic_ideas
@@ -9,13 +9,10 @@ new policy record_keeping_act = {
 		diplomats = 1
 		global_autonomy = -0.05
 	}
-	ai_will_do = {
-		factor = 0.6
-	}
 }
-new policy dip.a = {
+new policy multilingual_diplomats = {
 	monarch_power = DIP
-	name = ""
+	name = "Multilingual Diplomats"
 	desc = ""
 	group_1 = humanist_ideas
 	group_2 = diplomatic_ideas
@@ -25,9 +22,9 @@ new policy dip.a = {
 	}
 	
 }
-new policy merc.a = {
+new policy diplomatic_arms_act = {
 	monarch_power = DIP
-	name = ""
+	name = "Diplomatic Arms Act"
 	desc = ""
 	group_1 = mercenary_ideas
 	group_2 = diplomatic_ideas
@@ -36,9 +33,9 @@ new policy merc.a = {
 	}
 	
 }
-new policy merc.b = {
+new policy transportation_act = {
 	monarch_power = DIP
-	name = ""
+	name = "Transportation Act"
 	desc = ""
 	group_1 = mercenary_ideas
 	group_2 = exploration_ideas
@@ -48,9 +45,9 @@ new policy merc.b = {
 	}
 
 }
-new policy merc.c = {
+new policy merchants_for_hire_act = {
 	monarch_power = DIP
-	name = ""
+	name = "Merchants for Hire Act"
 	desc = ""
 	group_1 = mercenary_ideas
 	group_2 = trade_ideas
@@ -60,9 +57,9 @@ new policy merc.c = {
 	}
 
 }
-new policy merc.d = {
+new policy maritime_expertise_act = {
 	monarch_power = DIP
-	name = ""
+	name = "Maritime Expertise Act"
 	desc = ""
 	group_1 = mercenary_ideas
 	group_2 = maritime_ideas
@@ -72,9 +69,9 @@ new policy merc.d = {
 	}
 
 }
-new policy merc.e = {
+new policy loyal_conduct_act = {
 	monarch_power = DIP
-	name = ""
+	name = "Loyal Conduct Act"
 	desc = ""
 	group_1 = mercenary_ideas
 	group_2 = spy_ideas
@@ -151,9 +148,9 @@ new policy marit.a = {
 	}
 }
 # it's 0.25 but in game is 0.35
-new policy marit.b = {
+new policy the_recruitment_act = {
 	monarch_power = DIP
-	name = ""
+	name = "The Recruitment Act"
 	desc = ""
 	group_1 = maritime_ideas
 	group_2 = economic_ideas
@@ -162,9 +159,9 @@ new policy marit.b = {
 		allowed_marine_fraction = 0.1
 	}
 }
-new policy marit.c = {
+new policy chaplains_of_the_fleet = {
 	monarch_power = DIP
-	name = ""
+	name = "Chaplains of the Fleet"
 	desc = ""
 	group_1 = maritime_ideas
 	group_2 = religious_ideas

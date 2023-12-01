@@ -55,3 +55,44 @@ new policy aristo11 = {
 		vassal_forcelimit_bonus = 1
 	}
 }
+new policy aristo18 = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = influence_ideas
+	modifier = {
+		admiral_cost = -0.1
+		leader_naval_shock = 1
+	}
+}
+new policy aristo19 = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = galle0
+	modifier = {
+		galley_hull_size_modifier = 0.1
+	}
+}
+new policy aristo20 = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = handel0
+	modifier = {
+		light_ship_hull_size_modifier = 0.1
+	}
+}
+new policy aristo21 = {
+	monarch_power = MIL
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = gross0
+	modifier = {
+		heavy_ship_hull_size_modifier = 0.1	
+	}
+}

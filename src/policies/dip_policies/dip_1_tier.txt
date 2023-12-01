@@ -10,3 +10,26 @@ new policy aristo12 = {
 		global_foreign_trade_power = 0.3
 	}
 }
+new policy aristo16 = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = esb_monopoly
+	modifier = {
+		global_tax_modifier = 0.20
+		global_unrest = 2
+		production_efficiency = -0.10
+	}
+}
+new policy aristo17 = {
+	monarch_power = DIP
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = kolonialimperium0
+	modifier = {
+			core_creation = -0.05
+			reduced_liberty_desire_on_other_continent = 15
+	}
+}

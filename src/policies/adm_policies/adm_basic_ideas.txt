@@ -1,7 +1,7 @@
 # all administrative policies you can have from taking the starting ideas
-new policy trad.b = {
+new policy the_statute_of_monopolies = {
 	monarch_power = ADM
-	name = ""
+	name = "The Statute of Monopolies"
 	desc = ""
 	group_1 = trade_ideas
 	group_2 = economic_ideas
@@ -10,9 +10,9 @@ new policy trad.b = {
 		production_efficiency = 0.1
 	}
 }
-new policy trad.c = {
+new policy exchange_of_ideas = {
 	monarch_power = ADM
-	name = ""
+	name = "Exchange of Ideas"
 	desc = ""
 	group_1 = trade_ideas
 	group_2 = humanist_ideas
@@ -21,9 +21,9 @@ new policy trad.c = {
 		global_institution_spread = 0.2
 	}
 }
-new policy trad.d = {
+new policy religiously_sponsored_guilds = {
 	monarch_power = ADM
-	name = ""
+	name = "Religiously Sponsored Guilds"
 	desc = ""
 	group_1 = trade_ideas
 	group_2 = religious_ideas
@@ -32,9 +32,9 @@ new policy trad.d = {
 		global_missionary_strength = 0.01
 	}
 }
-new policy marit.e = {
+new policy the_citrus_statute = {
 	monarch_power = ADM
-	name = ""
+	name = "The Citrus Statute"
 	desc = ""
 	group_1 = maritime_ideas
 	group_2 = humanist_ideas
@@ -43,9 +43,9 @@ new policy marit.e = {
 		global_tax_modifier = 0.2
 	}
 }
-new policy dip.b = {
+new policy the_dissolution_act = {
 	monarch_power = ADM
-	name = ""
+	name = "The Dissolution Act"
 	desc = ""
 	group_1 = economic_ideas
 	group_2 = diplomatic_ideas
@@ -55,21 +55,21 @@ new policy dip.b = {
 	}
 	
 }
-new policy dip.c = {
+new policy policy_of_calculated_delay = {
 	monarch_power = ADM
-	name = ""
+	name = "Policy of Calculated Delay"
 	desc = ""
 	group_1 = religious_ideas
 	group_2 = diplomatic_ideas
 	modifier = {
 		global_missionary_strength = 0.01
-			religious_unity = 0.25
+		religious_unity = 0.25
 	}
 	
 }
-new policy espion.a = {
+new policy the_royal_commission_act = {
 	monarch_power = ADM
-	name = ""
+	name = "The Royal Commission Act"
 	desc = ""
 	group_1 = spy_ideas
 	group_2 = administrative_ideas
@@ -78,9 +78,9 @@ new policy espion.a = {
 		yearly_corruption = -0.15
 	}
 }
-new policy espion.b = {
+new policy cultural_understanding = {
 	monarch_power = ADM
-	name = ""
+	name = "Cultural Understanding"
 	desc = ""
 	group_1 = spy_ideas
 	group_2 = humanist_ideas
@@ -89,9 +89,9 @@ new policy espion.b = {
 		rebel_support_efficiency = 1
 	}
 }
-new policy espion.c = {
+new policy enforce_religious_law = {
 	monarch_power = ADM
-	name = ""
+	name = "Enforce Religious Law"
 	desc = ""
 	group_1 = spy_ideas
 	group_2 = religious_ideas
@@ -163,9 +163,9 @@ new policy genstaff.e = {
 		free_leader_pool = 1
 	}
 }
-new policy merc.f = {
+new policy mercenary_registration_act = {
 	monarch_power = ADM
-	name = ""
+	name = "Mercenary Registration Act"
 	desc = ""
 	group_1 = mercenary_ideas
 	group_2 = administrative_ideas
@@ -174,9 +174,9 @@ new policy merc.f = {
 		may_build_supply_depot = yes
 	}
 }
-new policy merc.g = {
+new policy efficient_war_taxes_act = {
 	monarch_power = ADM
-	name = ""
+	name = "Efficient War Taxes Act"
 	desc = ""
 	group_1 = mercenary_ideas
 	group_2 = economic_ideas
@@ -185,9 +185,9 @@ new policy merc.g = {
 		possible_condottieri = 1
 	}
 }
-new policy merc.h = {
+new policy peace_keeping_force_act = {
 	monarch_power = ADM
-	name = ""
+	name = "Peace-Keeping Force Act"
 	desc = ""
 	group_1 = mercenary_ideas
 	group_2 = humanist_ideas
@@ -196,9 +196,9 @@ new policy merc.h = {
 		global_rebel_suppression_efficiency = 1
 	}
 }
-new policy adm.a = {
+new policy harbor_administration = {
 	monarch_power = ADM
-	name = ""
+	name = "Harbor Administration"
 	desc = ""
 	group_1 = administrative_ideas
 	group_2 = naval_ideas
@@ -228,9 +228,9 @@ new policy adm.c = {
 		recover_army_morale_speed = 0.10
 	}
 }
-new policy eco.a = {
+new policy the_transportation_act = {
 	monarch_power = ADM
-	name = ""
+	name = "The Transportation Act"
 	desc = ""
 	group_1 = economic_ideas
 	group_2 = naval_ideas

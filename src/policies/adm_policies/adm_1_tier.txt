@@ -14,9 +14,9 @@ new policy aristo1 = {
 		reform_progress_growth = 0.2
 	}
 }
-new policy aristo2 = {
+new policy the_court_of_wards_and_liveries = {
 	monarch_power = ADM
-	name = ""
+	name = "The Court of Wards and Liveries"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = economic_ideas
@@ -25,9 +25,9 @@ new policy aristo2 = {
 		cavalry_cost = -0.10
 	}
 }
-new policy aristo3 = {
+new policy manueline_architecture = {
 	monarch_power = ADM
-	name = ""
+	name = "Manueline Architecture"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = expansion_ideas
@@ -46,9 +46,9 @@ new policy aristo4 = {
 		religious_unity = 0.25
 	}
 }
-new policy aristo5 = {
+new policy the_combination_act = {
 	monarch_power = ADM
-	name = ""
+	name = "The Combination Act"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = innovativeness_ideas
@@ -56,9 +56,9 @@ new policy aristo5 = {
 		production_efficiency = 0.2
 	}
 }
-new policy aristo6 = {
+new policy the_witchcraft_act = {
 	monarch_power = ADM
-	name = ""
+	name = "The Witchcraft Act"
 	desc = ""
 	group_1 = aristocracy_ideas
 	group_2 = religious_ideas
@@ -73,11 +73,89 @@ new policy aristo13 = {
 	name = ""
 	desc = ""
 	group_1 = aristocracy_ideas
-	group_2 = esb_prestigious
+	group_2 = propaganda0
 	modifier = {
-		global_unrest = -1
+		global_unrest = -1.5
 		tribesmen_estate_loyalty_equilibrium = 0.1
 		warriors_estate_loyalty_equilibrium = 0.1
 		sailors_estate_loyalty_equilibrium = 0.1
 	}
 }
+new policy aristo14 = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = society_ideas
+	modifier = {
+		monthly_splendor = 2
+		advisor_cost = -0.10
+		
+	}
+}
+new policy aristo15 = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = esb_prestigious
+	modifier = {
+		administrative_efficiency = 0.025
+	}
+}
+new policy aristo22 = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = alchemical_ideas
+	modifier = {
+		monthly_magicka = 0.1
+		production_efficiency = 0.1
+	}
+}
+new policy aristo23 = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = esb_treasury
+	modifier = {
+		global_tax_modifier = -0.10
+		global_unrest = -3
+	}
+}
+new policy aristo24 = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = esb_hegemonic
+	modifier = {
+			core_creation = -0.10
+			reduced_liberty_desire_on_other_continent = 15
+	}
+}
+new policy aristo25 = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = staatsverwaltung0
+	modifier = {
+			core_creation = -0.05
+			reduced_liberty_desire_on_other_continent = 15
+	}
+}
+new policy aristo26 = {
+	monarch_power = ADM
+	name = ""
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = justiz0
+	modifier = {
+			core_creation = -0.05
+			reduced_liberty_desire_on_other_continent = 15
+	}
+}
+
