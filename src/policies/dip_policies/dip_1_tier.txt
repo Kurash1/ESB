@@ -1,0 +1,35 @@
+#all diplomatic policies with at least an idea group not available from the start 
+new policy trade_connections_policy = {
+	monarch_power = DIP
+	name = "Trade Connections Policy"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = trade_ideas
+	modifier = {
+		merchants = 1
+		global_foreign_trade_power = 0.3
+	}
+}
+new policy merchant_houses = {
+	monarch_power = DIP
+	name = "Merchant Houses"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = esb_monopoly
+	modifier = {
+		global_tax_modifier = 0.20
+		global_unrest = 2
+		production_efficiency = -0.10
+	}
+}
+new policy noble_colonial_governors = {
+	monarch_power = DIP
+	name = "Noble Colonial Governors"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = kolonialimperium0
+	modifier = {
+			core_creation = -0.05
+			reduced_liberty_desire_on_other_continent = 15
+	}
+}

@@ -1,0 +1,163 @@
+#all admininistrative policies with at least an idea group not available from the start 
+new policy the_licensing_of_the_press_act = {
+	monarch_power = ADM
+	name = "The Licensing of the Press Act"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		legitimacy = 1
+		republican_tradition = 0.25
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 0.5
+		reform_progress_growth = 0.2
+	}
+}
+new policy the_court_of_wards_and_liveries = {
+	monarch_power = ADM
+	name = "The Court of Wards and Liveries"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = economic_ideas
+	modifier = {
+		global_tax_modifier = 0.1
+		cavalry_cost = -0.10
+	}
+}
+new policy manueline_architecture = {
+	monarch_power = ADM
+	name = "Manueline Architecture"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = expansion_ideas
+	modifier = {
+		build_cost = -0.15
+	}
+}
+new policy enlightened_aristocracy = {
+	monarch_power = ADM
+	name = "Enlightened Aristocracy"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = humanist_ideas
+	modifier = {
+		production_efficiency = 0.1
+		religious_unity = 0.25
+	}
+}
+new policy the_combination_act = {
+	monarch_power = ADM
+	name = "The Combination Act"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = innovativeness_ideas
+	modifier = {
+		production_efficiency = 0.2
+	}
+}
+new policy the_witchcraft_act = {
+	monarch_power = ADM
+	name = "The Witchcraft Act"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = religious_ideas
+	modifier = {
+		global_unrest = -1
+		global_missionary_strength = 0.01
+	}
+}
+#estate_loyalties don't work
+new policy know_your_place = {
+	monarch_power = ADM
+	name = "Know your Place"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = propaganda0
+	modifier = {
+		global_unrest = -1.5
+		tribesmen_estate_loyalty_modifier = 0.1
+		warriors_estate_loyalty_modifier = 0.1
+		sailors_estate_loyalty_modifier = 0.1
+	}
+}
+new policy blood_heritage = {
+	monarch_power = ADM
+	name = "Blood Heritage"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = society_ideas
+	modifier = {
+		monthly_splendor = 2
+		advisor_cost = -0.10
+		
+	}
+}
+new policy glorious_nobility = {
+	monarch_power = ADM
+	name = "Glorious Nobility"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = esb_prestigious
+	modifier = {
+		administrative_efficiency = 0.025
+	}
+}
+new policy alchemic_circle = {
+	monarch_power = ADM
+	name = "Alchemic Circle"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = alchemical_ideas
+	modifier = {
+		monthly_magicka = 0.1
+		production_efficiency = 0.1
+	}
+}
+new policy panem_et_circenses = {
+	monarch_power = ADM
+	name = "Panem et Circenses"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = esb_treasury
+	modifier = {
+		global_tax_modifier = -0.10
+		global_unrest = -3
+	}
+}
+new policy aristo24 = {
+	monarch_power = ADM
+	name = "Aristocracy + Hegemonic"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = esb_hegemonic
+	modifier = {
+		core_creation = -0.15
+		idea_cost = 0.05
+	}
+}
+new policy aristo25 = {
+	monarch_power = ADM
+	name = "Aristocracy + State Administration"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = staatsverwaltung0
+	modifier = {
+		governing_cost = -0.20
+		yearly_corruption = 0.1
+	}
+}
+# make modifier happy nobles
+new policy aristo26 = {
+	monarch_power = ADM
+	name = "Aristocracy + Justice"
+	desc = ""
+	group_1 = aristocracy_ideas
+	group_2 = justiz0
+	modifier = {
+		global_unrest = 1
+		yearly_corruption = 0.05
+		country_admin_power = 1
+	}
+}
+
