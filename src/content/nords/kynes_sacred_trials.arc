@@ -294,7 +294,7 @@ new country_event kynes_sacred_trials.8 = {
 			name = "To Battle!"
 			effect = {
 				kynes_trial = {
-					difficulty = 500
+					difficulty = 1500
 					on_fail = {
 						kill_ruler = yes
 					}
