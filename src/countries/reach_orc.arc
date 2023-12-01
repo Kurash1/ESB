@@ -6,6 +6,11 @@ new inheritable reach_orc_country = {
 	graphical_culture = easterngfx
 	starting_reform = tier_1_orc_stronghold
 	history = {
+		1.1.1 = {
+			province_groups:reachmen_discovery = {
+				discover_country = $tag
+			}
+		}
 	}
 }
 new country dushnikh_yal = {
