@@ -1,7 +1,8 @@
 unsorted_target = unsorted
 transpile_target = target
-gfx_folder = gfx
 map_folder = map
+gfx_folder = gfx
+selector_folder = selectors
 load_order = {
 	eu4/*
 	src/effects.txt
@@ -21,6 +22,7 @@ load_order = {
 	src/on_actions.txt
 	src/religious_groups.txt
 	src/interface/*
+	src/policies/*
 	src/tradegoods.txt
 	src/religions/
 	src/advisors.txt
@@ -30,3 +32,10 @@ load_order = {
 	src/random_events/
 	src/ai_personalities.txt
 }
+headers = "
+	/replace p@ with provinces:
+	/replace c@ with countries:
+	/replace a@ with areas:
+	/replace r@ with regions:
+	/replace s@ with superregions:
+"

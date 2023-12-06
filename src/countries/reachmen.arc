@@ -1,3 +1,9 @@
+new province_group reachmen_discovery = {
+	name = "Reachmen Discovery"
+	provinces = {
+		lake_karthspire hroldan_river blind_river dragon_river karth_lake imp_34 imp_35 imp_36 imp_37 imp_38 imp_39 imp_40 imp_41 imp_42 imp_43 imp_44 imp_45 imp_46 imp_47 imp_48 imp_49 imp_50 south_druadach_mountains central_druadach_mountains north_druadach_mountains bannermist twilight_sepulcher evergreen_grove cracked_tusk illinaltas_deep half_moon sunderstone_gorge bilegulch knifepoint hunters_rest volskygge deepwood_redoubt hjaals_tooth bumpy_road rugged_coast chillwind_depths rivers_road cliff_point lost_valley_redoubt cradle_stone gloomreach gretmor valthume valthume_pass arkngthamz bleeding_hill dushnikh_yal reachwind_eyrie editia hillia reachcliff purewater_ruin hag_rock_redoubt dread_crone_rock lislgeth reachwater_hill reachwater_rock thaeba markarth left_hand_mine salvius_farm groilief kolskeggr blind_cliff karerica aldiid ragnvald elselod aelagela olavete thalif riknhild malie karthwasten reydlgeth dragontooth riglaith bthardamz sirgarte druadach_redoubt bthar_zel rocky_coast harmugstahl silver_hill east_karthspire west_karthspire soljunds_sinkhole old_hroldan igrra lower_moldering algerd orieund horsorg sungard reyba moonstone_hill vigde serpents_bluff_redoubt moldering sigli bleakwind_bluff rebels_cairn ysolnhvir ranarte reach_road_turn vorigja broken_tower_redoubt karthwatch eydljot beigi cliffside_retreat dragon_bridge_overlook freyke adelreene betri bixisys itary brucas_leap_redoubt rock_dragon_coast khazgur_coast darkfall_cave agnese mor_khazgur illdund adising talking_stone jolsta brylith mackirek eismor rorikstead flatand petilief gjukar orifna broken_fang_cave granitehill
+	}
+}
 new inheritable reachman_country = {
 	government = tribal
 	technology_group = reachman_tg
@@ -6,6 +12,11 @@ new inheritable reachman_country = {
 	primary_culture = reachmen
 	graphical_culture = easterngfx
 	history = {
+		1.1.1 = {
+			province_groups:reachmen_discovery = {
+				discover_country = $tag
+			}
+		}
 	}
 }
 new country ghostsong_clan = {
