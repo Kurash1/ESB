@@ -661,7 +661,7 @@ new province dragon_river = {
 	sea = yes
 	area = karth_river
 }
-new province 7002 = {
+new province r7002 = {
 	position = {
 		1531.000 1953.000 1531.000 1953.000 1531.000 1953.000 1531.000 1953.000 1531.000 1953.000 1531.000 1953.000 1531.000 1953.000
 	}
