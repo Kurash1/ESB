@@ -1,9 +1,9 @@
-mission_trees:solitude_hidden += {
+mission_trees:solitude += {
 	karth_expedition = {
 		name = "Karth Expedition"
 		x = 9
 		y = 6
-		required = solitude:taming_the_dragon
+		required = taming_the_dragon
 		trigger = {
 			num_of_explorers = 1
 			has_discovered = hroldan_river
@@ -20,6 +20,8 @@ mission_trees:solitude_hidden += {
 			}
 		}
 	}
+}
+mission_trees:solitude_hidden += {
 	harmugstahl = {
 		name = "Harmugstahl"
 		x = 8
