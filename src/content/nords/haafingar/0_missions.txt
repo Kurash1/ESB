@@ -18,3 +18,33 @@ new mission_tree solitude = {
 		}
 	}
 }
+new mission_tree solitude_hidden = {
+	ai = yes
+	potential = {
+		OR = {
+			tag = solitude
+			tag = haafingar
+		}
+		has_country_flag = solitude_hidden
+	}
+}
+new decision show_hide_solitude_missions = {
+	name = "Show/Hide WIP Solitude Missions"
+	potential = {
+		OR = {
+			tag = solitude
+			tag = haafingar
+		}
+	}
+	allow = {
+		OR = {
+			tag = solitude
+			tag = haafingar
+		}
+	}
+	effect = {
+		if [has_country_flag = solitude_hidden] { clr_country_flag = solitude_hidden }
+		else { set_country_flag = solitude_hidden }
+		swap_non_generic_missions = yes
+	}
+}

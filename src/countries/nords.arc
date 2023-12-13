@@ -148,6 +148,7 @@ new country solitude = {
 		255 11 3
 	}
 	capital = solitude
+	government_rank = 2
 	history += {
 		elector = yes
 	}

@@ -1,9 +1,9 @@
-mission_trees:solitude += {
+mission_trees:solitude_hidden += {
 	karth_expedition = {
 		name = "Karth Expedition"
 		x = 9
 		y = 6
-		required = taming_the_dragon
+		required = solitude:taming_the_dragon
 		trigger = {
 			num_of_explorers = 1
 			has_discovered = hroldan_river
@@ -25,7 +25,7 @@ mission_trees:solitude += {
 		x = 8
 		y = 7
 		required = {
-			mor_khazgur
+			solitude:mor_khazgur
 			karth_expedition
 		}
 		trigger = {
