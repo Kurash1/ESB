@@ -19,7 +19,7 @@ new decision form_eastmarch = {
 		}
 		NOT = {
 			has_reform = tier_1_hold
-			exists = WND
+			exists = windhelm
 		}
 	}
 	provinces_to_highlight = {
@@ -56,7 +56,7 @@ new decision form_winterhold = {
 		}
 		OR = {
 			NOT = {
-				exists = WIH
+				exists = winterhold
 			}
 			tag = winterhold
 		}
@@ -103,7 +103,7 @@ new decision form_pale = {
 			region = pale
 		}
 		NOT = {
-			exists = PAL
+			exists = pale
 			has_reform = tier_1_hold
 		}
 	}
@@ -152,7 +152,7 @@ new decision form_whiterun = {
 			primary_culture = falkrentish
 		}
 		NOT = {
-			exists = WHT
+			exists = whiterun
 			has_reform = tier_1_hold
 		}
 	}
@@ -198,7 +198,7 @@ new decision form_hjaalmarch = {
 			region = hjaalmarch
 		}
 		NOT = {
-			exists = HJM
+			exists = hjaalmarch
 			has_reform = tier_1_hold
 		}
 	}
@@ -244,7 +244,8 @@ new decision form_haafingar = {
 			region = haafingar
 		}
 		NOT = {
-			exists = HAA
+			tag = solitude
+			exists = haafingar
 			has_reform = tier_1_hold
 		}
 	}
@@ -288,7 +289,7 @@ new decision form_falkreath = {
 	potential = {
 		primary_culture = falkrentish
 		NOT = {
-			exists = FLK
+			exists = falkreath
 			has_reform = tier_1_hold
 		}
 	}
@@ -334,7 +335,7 @@ new decision form_orkreath = {
 	potential = {
 		primary_culture = kreath_orc
 		NOT = {
-			exists = ORK
+			exists = orkreath
 			has_reform = tier_1_orc_federation
 		}  
 	}
@@ -379,7 +380,7 @@ new decision form_the_rift = {
 	major = yes
 	potential = {
 		NOT = {
-			exists = countries:rift
+			exists = rift
 			has_reform = tier_1_hold
 		}  
 		primary_culture = fallowfirean
@@ -408,6 +409,3 @@ new decision form_the_rift = {
 		}
 	}
 }
-
-
-

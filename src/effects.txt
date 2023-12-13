@@ -177,3 +177,98 @@ new effect culture = {
 	args = base_scope
 
 }
+new effect create_monument = {
+	args = {
+		monument = great_project
+		province = province_scope
+		backup = effect
+	}
+	transpile = {
+		if [has_dlc = "Leviathan"] {
+			new_custom_tooltip = "The monument §Y{args:monument:name}§! is created in §Y{args:province:name}§!"
+			hidden_effect = {
+				args:monument:start = {
+					move_great_project = {
+						type = args:monument
+						province = args:province
+						instant = yes
+					}
+				}
+			}
+		}
+		else {
+			args:backup
+		}
+	}
+}
+new effect create_monument = {
+	args = {
+		monument = great_project
+		province = province_scope
+	}
+	transpile = {
+		create_monument = {
+			monument = args:monument
+			province = args:province
+			backup = {
+				args:province = {
+					add_monument_as_modifier = args:monument
+				}
+			}
+		}
+	}
+}
+new effect add_monument_as_modifier = {
+	args = great_project
+	transpile = {
+		quick_province_modifier = {
+			name = args:name
+			modifier = args:tier_1:province_modifier
+		}
+	}
+}
+new localisation scholarly_research_on_complete = "When the research is complete the following will happen:
+"
+new effect scholarly_research = {
+	args = {
+		id = string
+		on_complete = effect
+	}
+	transpile = {
+		events:coterie.1:options:1:effect +=! {
+			if [
+				has_country_flag = `coterie_{args:id}`
+				NOT = {
+					has_country_flag = `coterie_{args:id}_applied`
+				}
+			] {
+				set_country_flag = `coterie_{args:id}_applied`
+				args:on_complete
+			}
+		}
+		
+		decisions:coterie_modifiers:effect +=! {
+			if [has_country_flag = `coterie_{args:id}_applied`] {
+				args:on_complete
+			}
+		}
+		
+		add_country_modifier = {
+			name = coterie_of_organized_scholars_research
+			duration = 1825
+		}
+		
+		custom_tooltip = scholarly_research_on_complete
+		
+		hidden_effect = {
+			country_event = {
+				id = coterie.1
+				years = 5
+			}
+		}
+		set_country_flag = `coterie_{args:id}`
+		tooltip = {
+			args:on_complete
+		}
+	}
+}

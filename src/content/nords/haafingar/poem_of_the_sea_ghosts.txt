@@ -1,0 +1,30 @@
+create_poetic_edda_modifier = {
+	id = poem_of_the_sea_ghosts
+	name = "Poem of the Sea Ghosts"
+	modifier = {
+		naval_attrition = -0.25
+	}
+}
+mission_trees:solitude += {
+	poem_of_the_sea_ghosts = {
+		name = "Poem of the Sea Ghosts"
+		x = 5
+		y = 5
+		required = {
+			legend_of_two_sisters
+			fuldimar_hookhand
+			the_pirate_threat
+		}
+		trigger = {
+			has_longships = {
+				num = 100
+				backup = {
+					navy_size = 300
+				}
+			}
+		}
+		effect = {
+			unlock_poetic_edda_modifier = poem_of_the_sea_ghosts
+		}
+	}
+}

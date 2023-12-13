@@ -1,3 +1,26 @@
+new trigger exists = {
+	args = country_scope
+}
+new trigger exists = {
+	args = bool
+}
+new trigger has_discovered = {
+	args = province_scope
+}
+new trigger has_longships = {
+	args = {
+		num = int
+		backup = trigger
+	}
+	transpile = {
+		if [has_dlc = "Domination"] {
+			num_of_galleass = args:num
+		}
+		else {
+			args:backup
+		}
+	}
+}
 new trigger has_building_line = {
 	args = building_line
 	transpile = {
@@ -53,6 +76,12 @@ new trigger primary_culture = {
 }
 new trigger has_estate_privilege = {
 	args = estate_privilege
+}
+new trigger accepted_culture = {
+	args = culture
+}
+new trigger accepted_culture = {
+	args = base_scope
 }
 new trigger is_race = {
 	args = culture_group
@@ -122,4 +151,25 @@ new trigger country_or_non_sovereign_subject_holds = {
 }
 new trigger province_id = {
 	args = province
+}
+new localisation has_level_three_ADM_advisors = "§YAdm§! advisor has skill of at least §Y3§!"
+new localisation has_level_three_DIP_advisors = "§YDip§! advisor has skill of at least §Y3§!"
+new localisation has_level_three_MIL_advisors = "§YMil§! advisor has skill of at least §Y3§!"
+new trigger has_advisor_level_three_of = {
+	args = string
+	transpile = {
+		custom_trigger_tooltip = {
+			tooltip = `has_level_three_{args}_advisors`
+			OR = {
+				foreach $advisor_type in advisor_types [
+					str:contains = {
+						string = $advisor_type:monarch_power
+						value = args
+					}
+				] {
+					$advisor_type = 3
+				}
+			}
+		}
+	}
 }

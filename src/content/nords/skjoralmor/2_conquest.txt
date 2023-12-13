@@ -5,12 +5,12 @@ new effect skjoralmor_siege_effect = {
 		country = country
 	}
 	transpile = {
-		new_custom_tooltip = "The Orc Stronghold of §Y{args:name}§! is destroyed
-§Y[This.GetName]§! gains a permanent claim on all core provinces of §Y{args:name}§!"
+		destroy_orc_stronghold = {
+			name = args:name
+			province = args:province
+		}
+		new_custom_tooltip = "§Y[This.GetName]§! gains a permanent claim on all core provinces of §Y{args:name}§!"
 		hidden_effect = {
-			args:province = {
-				remove_orc_stronghold = yes
-			}
 			args:country = {
 				every_core_province = {
 					add_permanent_claim = ROOT

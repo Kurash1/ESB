@@ -1,0 +1,174 @@
+run_effect = {
+	foreach $advisor_type in advisor_types {
+		$advisor_type:skill_scaled_modifiers += {
+			{
+				trigger = {
+					owner = {
+						has_reform = tier_1_haafingar_kingdom
+					}
+				}
+				modifier = {
+					monthly_haafingar_adm_power = 0.1
+				}
+			}
+		}
+	}
+}
+new inheritable haafinga_mechanic_button = {
+	gui = {
+		size = { x = 115 y = 120 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType = { 
+			name = "government_interaction_button_overlay"
+			spriteType = "GFX_haafingar_button_overlay"
+			position = { x = 7 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		### interaction button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			position = { x = 0 y = 7 }
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+		
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_government_power_bar"
+			position = { x = 21 y = 100 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_government_power_bar_frame"
+			position = { x = 7 y = 96 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+}
+new government_mechanic haafingar_mechanic = {
+	name = "Solitude Powers"
+	powers = {
+		haafingar_adm_power = {
+			name = "Blue Palace Administration"
+			desc = "
+
+We gain an extra §G0.10§! §YBlue Palace Administration§! each month from each level of our advisors. §RThis is not properly shown on the tooltip!§!"
+			max = 150
+			monarch_power = ADM
+			base_monthly_growth = 0.5
+		}
+		haafingar_dip_power = {
+			name = "Bards College Fame"
+			desc = "
+
+We gain an extra §G0.01§! §YBards College Fame§! each month from each point of prestige. §RThis is not properly shown on the tooltip!§!"
+			max = 150
+			monarch_power = DIP
+			base_monthly_growth = 0.5
+		}
+		haafingar_mil_power = {
+			name = "Castle Dour Tradition"
+			desc = "
+
+We gain an extra §G0.01§! §YCastle Dour Tradition§! each month from each point of army tradition. §RThis is not properly shown on the tooltip!§!"
+			max = 150
+			monarch_power = MIL
+			base_monthly_growth = 0.5
+		}
+	}
+	interactions = {
+		haafingar_adm_button = {
+			name = "Hold Court"
+			desc = ""
+			icon = GFX_haafingar_ability_adm
+			cost_type = haafingar_adm_power
+			cost = 100
+			effect = {
+				add_splendor = 50
+				add_adm_power = 50
+			}
+			inherit = haafinga_mechanic_button
+		}
+		haafingar_dip_button = {
+			name = "Hold a Burning"
+			desc = ""
+			icon = GFX_haafingar_ability_dip
+			cost_type = haafingar_dip_power
+			cost = 100
+			effect = {
+				add_war_exhaustion = -2
+				add_dip_power = 50
+				
+				if [
+					owns = solitude
+					provinces:solitude = {
+						has_province_modifier = flame_of_callisos
+					}
+					NOT = {
+						has_ruler_flag = flame_of_callisos_buff
+					}
+				] {
+					random_list = {
+						1 = { change_adm = 1 }
+						1 = { change_dip = 1 }
+						1 = { change_mil = 1 }
+					}
+					set_ruler_flag = flame_of_callisos_buff
+				}
+			}
+			inherit = haafinga_mechanic_button
+		}
+		haafingar_mil_button = {
+			name = "Assemble the Generals"
+			desc = ""
+			icon = GFX_haafingar_ability_mil
+			cost_type = haafingar_mil_power
+			cost = 100
+			effect = {
+				create_general = { 
+					tradition = 100
+				}
+				add_mil_power = 50
+			}
+			inherit = haafinga_mechanic_button
+		}
+	}
+}
+governments:monarchy:reform_levels:1 += new tier_1_haafingar_kingdom = {
+	name = "Haafingar Kingdom"
+	desc = ""
+	icon = haafingar_kingdom
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = tier_1_haafingar_kingdom
+	}
+	trigger = {
+		has_reform = tier_1_haafingar_kingdom
+	}
+	government_abilities = {
+		haafingar_mechanic
+	}
+	modifiers = {
+		governing_capacity = 200
+		governing_capacity_modifier = 0.2
+		trade_efficiency = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}

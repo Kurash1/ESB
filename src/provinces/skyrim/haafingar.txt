@@ -30,28 +30,24 @@ new area northwatch = {
 	name = "Northwatch"
 	region = haafingar
 }
-new area volskygge = {
-	name = "Volskygge"
+new area pinefrost = {
+	name = "Pinefrost"
 	region = haafingar
 }
-new area snowpeaks = {
-	name = "Snowpeaks"
+new area deepwood = {
+	name = "Deepwood"
 	region = haafingar
 }
 new area hraggstad = {
 	name = "Hraggstad"
 	region = haafingar
 }
-new area widows_watch = {
-	name = "Widow's Watch"
+new area volkihar_isles = {
+	name = "Volkihar Isles"
 	region = haafingar
 }
-new area outer_archipelago = {
-	name = "Outer Archipelago"
-	region = haafingar
-}
-new area castle_volkihar = {
-	name = "Castle Volkihar"
+new area lone_isle = {
+	name = "Lone Isle"
 	region = haafingar
 }
 new province lone_isle = {
@@ -64,7 +60,7 @@ new province lone_isle = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = outer_archipelago
+	area = lone_isle
 	name = "Lone Isle"
 	terrain = coastline
 	color = {
@@ -301,7 +297,7 @@ new province castle_volkihar = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = castle_volkihar
+	area = volkihar_isles
 	name = "Castle Volkihar"
 	color = {
 		128 212 180
@@ -327,7 +323,7 @@ new province big_sister = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = outer_archipelago
+	area = volkihar_isles
 	name = "Big Sister"
 	color = {
 		251 134 139
@@ -353,7 +349,7 @@ new province small_sister = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = outer_archipelago
+	area = volkihar_isles
 	name = "Small Sister"
 	color = {
 		210 247 170
@@ -379,7 +375,7 @@ new province rugged_island = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = outer_archipelago
+	area = volkihar_isles
 	name = "Rugged Island"
 	color = {
 		202 251 218
@@ -506,7 +502,7 @@ new province northern_cliffs = {
 		is_city = yes
 	}
 }
-new province snowy_trees = {
+new province cascabel_hall = {
 	position = {
 		1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000 1650.000 2102.000
 	}
@@ -517,7 +513,7 @@ new province snowy_trees = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	area = shadowgreen
-	name = "Snowy Trees"
+	name = "Cascabel Hall"
 	color = {
 		254 159 141
 	}
@@ -675,7 +671,7 @@ new province widows_watch = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = widows_watch
+	area = ravenscar
 	name = "Widow's Watch"
 	terrain = coastline
 	color = {
@@ -701,7 +697,7 @@ new province northern_mine = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = widows_watch
+	area = northwatch
 	name = "Northern Mine"
 	terrain = coastline
 	color = {
@@ -727,7 +723,7 @@ new province steepfall_burrow = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = widows_watch
+	area = northwatch
 	terrain = highlands
 	name = "Steepfall Burrow"
 	color = {
@@ -753,7 +749,7 @@ new province lower_steepfall_burrow = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = widows_watch
+	area = northwatch
 	name = "Lower Steepfall Burrow"
 	terrain = coastline
 	color = {
@@ -806,7 +802,7 @@ new province horned_coast = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = northwatch
+	area = pinefrost
 	name = "Horned Coast"
 	terrain = highlands
 	color = {
@@ -832,7 +828,7 @@ new province low_grove = {
 	height = {
 		0.377 0.377 0.377 0.377 0.377 0.377 0.377
 	}
-	area = northwatch
+	area = pinefrost
 	name = "Low Grove"
 	terrain = forest
 	color = {
@@ -858,7 +854,7 @@ new province pinefrost = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = volskygge
+	area = pinefrost
 	name = "Pinefrost"
 	terrain = highlands
 	color = {
@@ -882,7 +878,7 @@ new province volskygge = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = volskygge
+	area = deepwood
 	name = "Volskygge"
 	terrain = forest
 	color = {
@@ -907,7 +903,7 @@ new province deepwood_redoubt = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = volskygge
+	area = deepwood
 	name = "Deepwood Redoubt"
 	terrain = forest
 	color = {
@@ -933,7 +929,7 @@ new province pinemoon_cave = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = volskygge
+	area = deepwood
 	name = "Pinemoon Cave"
 	terrain = forest
 	color = {
@@ -957,7 +953,7 @@ new province snowpeaks = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = snowpeaks
+	area = deepwood
 	name = "Snowpeaks"
 	terrain = forest
 	color = {
@@ -983,7 +979,7 @@ new province clearpine_pond = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = snowpeaks
+	area = deepwood
 	terrain = forest
 	name = "Clearpine Pond"
 	color = {

@@ -90,15 +90,10 @@ mission_trees:skjoralmor += {
 			monthly_mil = 8
 		}
 		effect = {
-			provinces:black_mountain = {
-				if [has_dlc = "Leviathan"] {
-					move_great_project = {
-						type = hakkvilds_high_hall
-						province = falkreath
-						instant = yes
-					}
-				}
-				else {
+			create_monument = {
+				monument = hakkvilds_high_hall
+				province = falkreath
+				backup = {
 					quick_province_modifier = {
 						name = "Hakkvild's High Hall"
 						modifier = {
@@ -201,15 +196,10 @@ mission_trees:skjoralmor += {
 			}
 		}
 		effect = {
-			provinces:black_mountain = {
-				if [has_dlc = "Leviathan"] {
-					move_great_project = {
-						type = shriekwind_bastion
-						province = shriekwind_bastion
-						instant = yes
-					}
-				}
-				else {
+			create_monument = {
+				monument = shriekwind_bastion
+				province = shriekwind_bastion
+				backup = {
 					quick_province_modifier = {
 						name = "Shriekwind Bastion"
 						modifier = {

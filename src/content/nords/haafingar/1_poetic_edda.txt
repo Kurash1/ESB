@@ -1,0 +1,120 @@
+new event_modifier poetic_edda = {
+	name = "Poetic Edda"
+	modifier = {
+		prestige = 0.5
+	}
+}
+new localisation show_poetic_edda_tooltip = "Currently Active §YPoetic Edda§! Modifiers
+"
+new decision show_poetic_edda = {
+	name = "Poetic Edda"
+	color = { 255 108 0 }
+	potential = {
+		has_country_modifier = poetic_edda
+	}
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip = show_poetic_edda_tooltip
+			always = no
+		}
+	}
+	effect = {
+		custom_tooltip = show_poetic_edda_tooltip
+	}
+}
+new effect create_poetic_edda_modifier = {
+	args = {
+		id = string
+		name = string
+		modifier = modifier
+	}
+	transpile = {
+		new localisation `poetic_edda_{args:id}_unlock` = "Unlocks the §YPoetic Edda§! Modifier: §Y{args:name}§!
+which when enacted grants the following:
+	{modifier_to_string = args:modifier}"
+		new localisation `poetic_edda_{args:id}_tooltip` = "§Y{args:name}§!:
+	{modifier_to_string = args:modifier}
+"
+		new event_modifier `poetic_edda_{args:id}_modifier` = {
+			name = args:name
+			modifier = args:modifier
+		}
+		new decision `poetic_edda_{args:id}_decision` = {
+			name = "Contribute {args:name}"
+			color = decisions:show_poetic_edda:color
+			allow = {
+				has_country_modifier = poetic_edda
+			}
+		}
+		decisions:show_poetic_edda:allow +=! {
+			if [has_country_modifier = `poetic_edda_{args:id}_modifier`] {
+				custom_trigger_tooltip = {
+					tooltip = `poetic_edda_{args:id}_tooltip`
+					always = yes
+				}
+			}
+		}
+		decisions:show_poetic_edda:effect +=! {
+			if [has_country_modifier = `poetic_edda_{args:id}_modifier`] {
+				custom_tooltip = `poetic_edda_{args:id}_tooltip`
+			}
+		}
+		decisions:last:potential +=! {		
+			has_country_flag = `poetic_edda_{args:id}`
+			NOT = {
+				has_country_modifier = `poetic_edda_{args:id}_modifier`
+			}
+		}
+		decisions:last:allow +=! {
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+		decisions:last:effect +=! {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			
+			`add_country_modifier` = {
+				name = `poetic_edda_{args:id}_modifier`
+				duration = -1
+				hidden = yes
+			}
+			tooltip = {
+				`add_country_modifier` = {
+					name = `poetic_edda_{args:id}_modifier`
+					duration = -1
+				}
+			}
+		}
+	}
+}
+new effect unlock_poetic_edda_modifier = {
+	args = string
+	transpile = {
+		custom_tooltip = `poetic_edda_{args}_unlock`
+		set_country_flag = `poetic_edda_{args}`
+	}
+}
+
+create_poetic_edda_modifier = {
+	id = ode_to_the_founding
+	name = "Ode to the Founding"
+	modifier = {
+		development_cost = -0.1
+	}
+}
+mission_trees:solitude += {
+	grandest_hall = {
+		name = "Grandest Hall"
+		x = 0
+		y = 3
+		required = the_blue_palace
+		trigger = {
+			prestige = 100
+		}
+		effect = {
+			unlock_poetic_edda_modifier = ode_to_the_founding
+		}
+	}
+}

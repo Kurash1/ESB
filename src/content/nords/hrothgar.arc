@@ -130,7 +130,7 @@ new incident collapse_of_hrothgar = {
 	}
 	can_stop = {
 		NOT = {
-			exists = HRO
+			exists = hrothgar
 		}
 	}
 	options = {
