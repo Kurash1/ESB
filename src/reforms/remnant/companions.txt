@@ -3,7 +3,9 @@ governments:remnant:reform_levels:1 += new companion_remnant = {
 	desc = ""
 	icon = "crown"
 	allow_normal_conversion = yes
-	force_general_leader = yes
+	election_on_death = yes
+	heir = no
+	queen = no
 	potential = {
 		has_reform = companion_remnant
 	}

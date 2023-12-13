@@ -1,4 +1,4 @@
-NDefines.NGame.START_DATE = "2500.1.1"
+NDefines.NGame.START_DATE = "2568.1.1"
 NDefines.NGame.END_DATE = "9999.12.31"
 NDefines.NGame.MAX_RANDOM_NEW_WORLD = "57.1.1"
 NDefines.NGame.GREAT_POWER_FRENZY_START = "9999.12.31"	-- Latest date for the start of the Great Power Frenzy (struggle).
@@ -102,4 +102,4 @@ NDefines.NAI.AI_CONVERT_CULTURES = 1
 NDefines.NCountry.CULTURE_MIN_DEVELOPMENT_TO_PROMOTE = 50
 
 NDefines.NCountry.FEMALE_ADVISOR_CHANCE = 50
-NDefines.NMilitary.NAVAL_BASE_ENGAGEMENT_WIDTH = 40
+NDefines.NMilitary.NAVAL_BASE_ENGAGEMENT_WIDTH = 25

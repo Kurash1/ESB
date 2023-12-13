@@ -29,14 +29,14 @@ new country lone_band = {
 		0 0 100
 	}
 	history += {
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Fuldir"
 				dynasty = "Snake-eye"
 				adm = 5
 				dip = 6
 				mil = 4
-				birth_date = 2481.1.1
+				birth_date = 2549.1.1
 			}
 		}
 	}
@@ -61,14 +61,14 @@ new country clearspring = {
 	name = "Clearspring"
 	adj = "Clear"
 	history += {
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Falk"
 				dynasty = "Skendeinl"
 				adm = 2
 				dip = 2
 				mil = 3
-				birth_date = 2455.1.1
+				birth_date = 2523.1.1
 			}
 			add_historical_rival = fallowfire
 		}
@@ -87,14 +87,14 @@ new country fallowfire = {
 	name = "Fallowfire"
 	adj = "Fallowfire"
 	history += {
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Akvid"
 				dynasty = "Blood-axe"
 				adm = 3
 				dip = 2
 				mil = 2
-				birth_date = 2477.1.1
+				birth_date = 2545.1.1
 			}
 			country_event = {
 				id = fallowfire.5
@@ -118,7 +118,7 @@ new country forelhost = {
 		238 234 133
 	}
 	history += {
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Rahgot"
 				adm = 4
@@ -435,14 +435,14 @@ new country hrothgar = {
 	government = remnant
 	starting_reform = tier_1_hrothgar_territories
 	history += {
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Kor"
 				dynasty = "Tall-Tree"
 				adm = 2
 				dip = 1
 				mil = 3
-				birth_date = 2460.1.1
+				birth_date = 2528.1.1
 			}
 		}
 	}
@@ -457,14 +457,14 @@ new country broken-fang = {
 		75 75 75
 	}
 	history += {
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Wulf"
 				dynasty = "Broken-Fang"
 				adm = 4
 				dip = 3
 				mil = 3
-				birth_date = 2454.1.1
+				birth_date = 2522.1.1
 			}
 		}
 	}
@@ -482,14 +482,14 @@ new country skjoralmor = {
 	capital = riverwood
 	history += {
 		elector = yes
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Valdr"
 				dynasty = "Skjoralmor"
 				adm = 4
 				dip = 4
 				mil = 4
-				birth_date = 2482.1.1
+				birth_date = 2550.1.1
 			}
 		}
 		1.1.1 = {
@@ -516,13 +516,13 @@ new country jorrvaskr = {
 	history += {
 		historical_friend = WND
 		elector = yes
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Ulrick"
 				adm = 5
 				dip = 5
 				mil = 6
-				birth_date = 2482.1.1
+				birth_date = 2550.1.1
 			}
 		}
 	}
@@ -627,6 +627,13 @@ new country windhelm = {
 				name = "Volharth"
 				dynasty = "Ysgramoor"
 				birth_date = 2446.1.1
+			}
+		}
+		2524.1.1 = {
+			monarch = {
+				name = "Jollring"
+				dynasty = "Ysgramoor"
+				birth_date = 2504.1.1
 				adm = 4
 				dip = 4
 				mil = 4
@@ -735,14 +742,14 @@ new country black-moor = {
 		10 10 10
 	}
 	history += {
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Olf"
 				dynasty = "Black-Moor"
 				adm = 2
 				dip = 2
 				mil = 1
-				birth_date = 2414.1.1
+				birth_date = 2482.1.1
 			}
 			add_ruler_personality = infertile_personality
 		}
@@ -759,14 +766,14 @@ new country shield-shade = {
 		50 150 50
 	}
 	history += {
-		2500.1.1 = {
+		2568.1.1 = {
 			monarch = {
 				name = "Olaf"
 				dynasty = "Shield-Shade"
 				adm = 2
 				dip = 5
 				mil = 2
-				birth_date = 2441.1.1
+				birth_date = 2509.1.1
 			}
 		}
 	}
