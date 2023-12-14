@@ -1,0 +1,37 @@
+new effect define_lifespan_modifier = {
+	args = {
+		ruler_trigger = trigger
+		heir_trigger = trigger
+		multiplier = float
+	}
+	transpile = {
+		death_tick_ruler_pre_effect +=! {
+			if [args:ruler_trigger] {
+				multiply_variable = {
+					which = var_ruler_age
+					value = args:multiplier
+				}
+			}
+		}
+		death_tick_ruler_modifier +=! {
+			modifier = { 
+				factor = args:multiplier
+				args:ruler_trigger
+			}
+		}
+		death_tick_heir_pre_effect +=! {
+			if [args:heir_trigger] {
+				multiply_variable = {
+					which = var_heir_age
+					value = args:multiplier
+				}
+			}
+		}
+		death_tick_heir_modifier +=! {
+			modifier = { 
+				factor = args:multiplier
+				args:heir_trigger
+			}
+		}
+	}
+}
