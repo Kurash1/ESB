@@ -1,0 +1,85 @@
+new named_effect death_tick_heir_pre_effect = {
+	export_to_variable = {
+		variable_name = var_heir_age
+		value = trigger_value:heir_age
+	}
+}
+new named_effect death_tick_heir_post_effect = {
+	if [
+		check_variable = {
+			which = var_heir_age
+			value = 91
+		}
+	] {
+		death_tick_heir_random = 65.75
+	}
+	else_if [
+		check_variable = {
+			which = var_heir_age
+			value = 81
+		}
+	] {
+		death_tick_heir_random = 19.73
+	}
+	else_if [
+		check_variable = {
+			which = var_heir_age
+			value = 71
+		}
+	] {
+		death_tick_heir_random = 3.29
+	}
+	else_if [
+		check_variable = {
+			which = var_heir_age
+			value = 61
+		}
+	] {
+		death_tick_heir_random = 0.66
+	}
+	else_if [
+		check_variable = {
+			which = var_heir_age
+			value = 51
+		}
+	] {
+		death_tick_heir_random = 0.26
+	}
+	else_if [
+		check_variable = {
+			which = var_heir_age
+			value = 41
+		}
+	] {
+		death_tick_heir_random = 0.13
+	}
+	else {
+		death_tick_heir_random = 0.07
+	}
+}
+new effect death_tick_heir_random = {
+	args = float
+	transpile = {
+		float_random = {
+			chance = args
+			effect = {
+				death_tick_heir_death
+				
+				death_tick_heir_modifier
+			}
+		}
+	}
+}
+new named_effect death_tick_heir_trigger = {
+	NOT = { heir_has_personality = immortal_personality }
+}
+new named_effect death_tick_heir_death = {
+	heir_natural_death = yes
+}
+new named_effect death_tick_heir_modifier = { }
+new named_effect death_tick_heir = {
+	if [death_tick_heir_trigger] {
+		death_tick_heir_pre_effect
+		death_tick_heir_post_effect
+	}
+}

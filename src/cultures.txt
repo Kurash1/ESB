@@ -57,6 +57,15 @@ new culture snow_elven = {
 	name = "Snow Elven"
 	culture_group = snow_elven
 }
+define_lifespan_modifier = {
+	ruler_trigger = {
+		ruler_culture = cultures:snow_elven
+	}
+	heir_trigger = {
+		heir_culture = cultures:snow_elven
+	}
+	multiplier = 0.25
+}
 special_units:galleass:name := "Longship"
 special_units:galleass:modifier := {
 }
