@@ -37,10 +37,7 @@ new decision show_hide_solitude_missions = {
 		}
 	}
 	allow = {
-		OR = {
-			tag = solitude
-			tag = haafingar
-		}
+		ai = no
 	}
 	effect = {
 		if [has_country_flag = solitude_hidden] { clr_country_flag = solitude_hidden }
