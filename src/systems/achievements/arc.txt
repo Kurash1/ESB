@@ -1,0 +1,205 @@
+new localisation ACHIEVEMENTS_DISABLED_MODIFIED_GAME = "§Y- The ESB achievements menu has been moved to the decisions and policies screen.§!"
+new custom_button open_achievement_menu = {
+	tooltip = "Open Achievement Menu"
+	effect = {
+		if [
+			NOT = {
+				for $page as 0 to (achievement_current_page+1) {
+					has_country_flag = `open_achievement_menu_{$page}`
+				}
+			}
+		] {
+			set_country_flag = open_achievement_menu_0
+		}
+	
+		if [has_country_flag = open_achievement_menu] {
+			clr_country_flag = open_achievement_menu
+		}
+		else {
+			set_country_flag = open_achievement_menu
+		}
+	}
+}
+new custom_button close_achievement_menu = {
+	tooltip = "Close Achievement Menu"
+	potential = {
+		has_country_flag = open_achievement_menu
+	}
+	effect = {
+		clr_country_flag = open_achievement_menu
+	}
+}
+new custom_button prev_achievement_menu = {
+	tooltip = "Previous Page"
+	potential = {
+		has_country_flag = open_achievement_menu
+	}
+	effect = {
+		if [has_country_flag = open_achievement_menu_0] {
+			clr_country_flag = open_achievement_menu_0
+			set_country_flag = `open_achievement_menu_{achievement_current_page}`
+		}
+		for $page as 1 to (achievement_current_page+1) {
+			else_if [has_country_flag = `open_achievement_menu_{$page}`] {
+				clr_country_flag = `open_achievement_menu_{$page}`
+				set_country_flag = `open_achievement_menu_{($page-1)}`
+			}
+		}
+	}
+}
+new custom_button next_achievement_menu = {
+	tooltip = "Next Page"
+	potential = {
+		has_country_flag = open_achievement_menu
+	}
+	effect = {
+		if [has_country_flag = `open_achievement_menu_{achievement_current_page}`] {
+			clr_country_flag = `open_achievement_menu_{achievement_current_page}`
+			set_country_flag = open_achievement_menu_0
+		}
+		for $page as 0 to (achievement_current_page) {
+			else_if [has_country_flag = `open_achievement_menu_{$page}`] {
+				clr_country_flag = `open_achievement_menu_{$page}`
+				set_country_flag = `open_achievement_menu_{($page+1)}`
+			}
+		}
+	}
+}
+new custom_icon achievement_menu = {
+	potential = {
+		has_country_flag = open_achievement_menu
+	}
+}
+
+new named_int achievement_total_num = 0
+new named_int achievement_current_x = 0
+new named_int achievement_current_y = 0
+new named_int achievement_current_page = 0
+
+new localisation completed_achievement = "Completed Achievement"
+
+new effect define_achievement = {
+	args = {
+		icon = string
+		name = string
+		trigger = trigger
+	}
+	transpile = {
+		interface_files:countrydecisionsview:countrydecisionsview += {
+			iconType = {
+				name = `arc_achievement_{achievement_total_num}_completed`
+				spriteType = completed_achievement
+				position = { 
+					x = `{(589+127*achievement_current_x)}` 
+					y = `{(174+125*achievement_current_y)}` 
+				}
+				scripted = yes
+			}
+			guiButtonType = {
+				name = `arc_achievement_{achievement_total_num}`
+				position = { 
+					x = `{(620+127*achievement_current_x)}` 
+					y = `{(174+125*achievement_current_y)}` 
+				}
+				quadTextureSprite = args:icon
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = `arc_achievement_{achievement_total_num}_text`
+				position = { 
+					x = `{(593+127*achievement_current_x)}` 
+					y = `{(238+125*achievement_current_y)}` 
+				}
+				format = centre
+				maxWidth = 120
+				maxHeight = 55
+				scripted = yes
+			}
+		}
+		new custom_button `arc_achievement_{achievement_total_num}` = {
+			tooltip = `{args:name}`
+			potential =* {
+				has_country_flag = open_achievement_menu_*achievement_current_page*
+				has_country_flag = open_achievement_menu
+			}
+			trigger =* {
+				if [has_country_flag = arc_achievement_*achievement_total_num*] {
+					custom_trigger_tooltip = {
+						tooltip = completed_achievement
+						always = yes
+					}
+				}
+				else {
+					`{*args:trigger*}`
+				}
+			}
+			effect =* {
+				set_country_flag = arc_achievement_*achievement_total_num*
+			}
+		}
+		new custom_icon `arc_achievement_{achievement_total_num}_completed` = {
+			potential =* {
+				has_country_flag = arc_achievement_*achievement_total_num*
+			}
+		}
+		new custom_text_box `arc_achievement_{achievement_total_num}_text` = {
+			name = args:name
+			potential =* {
+				has_country_flag = open_achievement_menu_*achievement_current_page*
+				has_country_flag = open_achievement_menu
+			}
+		}
+		
+		achievement_total_num += 1
+		achievement_current_x += 1
+		
+		when [
+			int:equals = {
+				int = achievement_current_x
+				value = 6
+			}
+		] {
+			achievement_current_x := 0
+			achievement_current_y += 1
+		}
+		
+		when [
+			int:equals = {
+				int = achievement_current_y
+				value = 4
+			}
+		] {
+			achievement_current_y := 0
+			achievement_current_page += 1
+			
+			create_achievement_page = achievement_current_page
+		}
+	}
+}
+new effect create_achievement_page = {
+	args = int
+	transpile = {
+		interface_files:countrydecisionsview:countrydecisionsview += {
+			instantTextBoxType = {
+				name = `achievement_menu_page_{args}`
+				position = { 
+					x = 636
+					y = 125
+				}
+				font = "vic_29s"
+				format = centre
+				maxWidth = 670
+				maxHeight = 32
+				scripted = yes
+			}
+		}
+		new custom_text_box `achievement_menu_page_{args}` = {
+			name = "Achievements Page {(args+1)}"
+			potential =* {
+				has_country_flag = open_achievement_menu_*args*
+				has_country_flag = open_achievement_menu
+			}
+		}
+	}
+}
+create_achievement_page = 0

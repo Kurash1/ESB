@@ -1,0 +1,286 @@
+define_achievement = {
+	icon = achievement_skyrim
+	name = "Conquer Skyrim"
+	trigger = {
+		superregions:skyrim = {
+			type = all
+			owned_by = ROOT
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_kyne
+	name = "Kyne's Champion"
+	trigger = {
+		has_country_modifier = kynes_sacred_token
+	}
+}
+define_achievement = {
+	icon = achievement_alduin
+	name = "End of the line"
+	trigger = {
+		is_year = 2998
+	}
+}
+define_achievement = {
+	icon = achievement_lich
+	name = "Ascension"
+	trigger = {
+		has_ruler_modifier = lich
+	}
+}
+define_achievement = {
+	icon = achievement_dragon_cult
+	name = "Sonaak Aav"
+	trigger = {
+		provinces:forelhost; shearpoint; bromjunaar; verglas; volskygge; ragnvald; valthume = {
+			has_owner_religion = yes
+			owner = {
+				religion = dragon_cult
+			}
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_volunruud
+	name = "A Single Volunruud"
+	trigger = {
+		NOT = { land_forcelimit = 50 }
+		has_global_modifier_value = {
+			which = discipline
+			value = 0.5
+		}
+		tag = volunruud
+	}
+}
+define_achievement = {
+	icon = achievement_windhelm
+	name = "Once Mighty, Now Fallen"
+	trigger = {
+		NOT = {
+			exists = windhelm
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_saarthal
+	name = "New Saarthal"
+	trigger = {
+		owns = saarthal
+		provinces:saarthal = {
+			development = 50
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_snow_elves
+	name = "Snow Phoenix"
+	trigger = {
+		is_race = snow_elven
+		province_groups:snow_elven_discovery = {
+			type = all
+			owned_by = ROOT
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_alchemy
+	name = "Green Thumb"
+	trigger = {
+		is_race = orc
+		all_province = {
+			OR = {
+				owned_by = ROOT
+				NOT = {
+					OR = {
+						trade_goods = alchemical_ingredients
+						trade_goods = r_alchemical_ingredients
+					}
+				}
+			}
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_stronghold
+	name = "Nation of Strongholds"
+	trigger = {
+		all_province = {
+			OR = {
+				owned_by = ROOT
+				NOT = {
+					has_province_flag = orc_stronghold
+				}
+			}
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_peace
+	name = "A Day of Peace"
+	trigger = {
+		NOT = {
+			any_province = {
+				OR = {
+					is_race = orc
+					is_race = snow_elven
+				}
+			}
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_butterlord
+	name = "No longer a Butterlord"
+	trigger = {
+		tag = hrothgar
+		NOT = { has_reform = tier_1_hrothgar_territories }
+	}
+}
+define_achievement = {
+	icon = achievement_shor
+	name = "A Traditionalist Wave"
+	trigger = {
+		religion = the_old_ways
+		all_country = {
+			OR = {
+				religion = the_old_ways
+				NOT = { is_race = nord }
+			}
+		}
+	}
+}
+new trigger owns_bridge = {
+	args = adjacency
+	transpile = {
+		custom_trigger_tooltip = {
+			new_tooltip = "Owns the §Y{id_to_name = args}§!
+	({args:from:id}-{args:to:id})"
+			owns = args:from
+			owns = args:to
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_bridge
+	name = "Dragon of Bridges"
+	trigger = {
+		tag = dragon_bridge
+		foreach $adjacency in adjacencies [
+			str:contains = {
+				string = $adjacency:id
+				value = bridge
+			}
+		] {
+			owns_bridge = $adjacency
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_snow_orc
+	name = "A Fresh Coat of Paint"
+	trigger = {
+		is_race = snow_elven
+		religion = code_of_malacath
+	}
+}
+define_achievement = {
+	icon = achievement_mountains
+	name = "Lord of Five Peaks"
+	trigger = {
+		provinces:kilkreath_peak; west_karthspire; lord_hill; anthor_peak; shearpoint = {
+			owned_by = ROOT
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_aalto
+	name = "A Vacnation"
+	trigger = {
+		all_province = {
+			owned_by = ROOT
+			NOT = { has_terrain = hot_springs }
+		}
+		all_owned_province = {
+			has_terrain = hot_springs
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_friends
+	name = "Not so Lonely"
+	trigger = {
+		tag = lone_band
+		num_of_allies = 5
+	}
+}
+define_achievement = {
+	icon = achievement_dragonplate
+	name = "Fist of the Dawnstar"
+	trigger = {
+		tag = dawn-star
+		provinces:fistrock = {
+			num_of_units_in_province = {
+				who = countries:dawn-star
+				amount = 150
+			}
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_sister
+	name = "Sister Separation"
+	trigger = {
+		OR = {
+			AND = {
+				owns = big_sister
+				NOT = { owns = small_sister }
+			}
+			AND = {
+				owns = small_sister
+				NOT = { owns = big_sister }
+			}
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_stones
+	name = "Master of the Stones"
+	trigger = {
+		provinces:apprentice_stone; atronach; green_coast; lord_hill; groilief; embershard_mine; ritual_stone; serpent_stone; shadow_stone; hraggstad; tower_stone = {
+			owned_by = ROOT
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_yngvild
+	name = "Allvilds"
+	trigger = {
+		provinces:minedvild; goldvild; lydvild; yngvild; netvild = {
+			owned_by = ROOT
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_hjaalmarch
+	name = "Hjaal March"
+	trigger = {
+		countries:hjaal = {
+			march_of = ROOT
+		}
+	}
+}
+define_achievement = {
+	icon = achievement_skjoralmor
+	name = "The Light is Green!"
+	trigger = {
+		NOT = {
+			any_province = {
+				culture = kreath_orc
+			}
+		}
+		NOT = {
+			ags = 25
+		}
+	}
+}
