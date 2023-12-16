@@ -139,6 +139,8 @@ new effect define_achievement = {
 		}
 		new custom_icon `arc_achievement_{achievement_total_num}_completed` = {
 			potential =* {
+				has_country_flag = open_achievement_menu_*achievement_current_page*
+				has_country_flag = open_achievement_menu
 				has_country_flag = arc_achievement_*achievement_total_num*
 			}
 		}
