@@ -13,12 +13,6 @@ mission_trees:solitude += {
 		required = form_the_wolf_army
 		trigger = {
 			owns = dragon_bridge
-			provinces:dragon_bridge = {
-				has_great_project = {
-					type = dragon_bridge
-					tier = 1
-				}
-			}
 		}
 		effect = {
 			unlock_poetic_edda_modifier = dragon_bridge

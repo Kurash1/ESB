@@ -52,7 +52,7 @@ mission_trees:solitude += {
 	}
 	temple_of_the_divines = {
 		name = "Temple of the Divines"
-		x = 0
+		x = 1
 		y = 1
 		required = castle_upon_the_hill
 		trigger = {
@@ -68,7 +68,7 @@ mission_trees:solitude += {
 	}
 	storm_gate = {
 		name = "Storm Gate"
-		x = 1
+		x = 0
 		y = 1
 		required = castle_upon_the_hill
 		trigger = {
@@ -89,7 +89,7 @@ mission_trees:solitude += {
 		required = windbreaker_arch
 		trigger = {
 			provinces:solitude = {
-				province_has_center_of_trade_of_level = 3
+				province_has_center_of_trade_of_level = 2
 			}
 		}
 		effect = {
@@ -112,8 +112,12 @@ mission_trees:solitude += {
 		y = 1
 		required = windbreaker_arch
 		trigger = {
+			areas:solitude_proper; solitude_countryside; solitude_coast = {
+				type = all
+				owned_by = ROOT
+			}
 			development_in_provinces = {
-				value = 125
+				value = 100
 				trigger = {
 					OR = {
 						area = solitude_proper
@@ -146,7 +150,7 @@ mission_trees:solitude += {
 		}
 		trigger = {
 			provinces:solitude = {
-				development = 30
+				development = 25
 			}
 		}
 		effect = {
@@ -168,23 +172,24 @@ mission_trees:solitude += {
 		x = 1
 		y = 2
 		required = {
-			temple_of_the_divines
 			storm_gate
 			the_avenues_district
 		}
 		trigger = {
 			provinces:solitude = {
-				has_great_project = {
-					type = bards_college
-					tier = 1
-				}
-				has_great_project = {
-					type = blue_palace
-					tier = 1
-				}
-				has_great_project = {
-					type = castle_dour
-					tier = 1
+				OR = {
+					has_great_project = {
+						type = bards_college
+						tier = 1
+					}
+					has_great_project = {
+						type = blue_palace
+						tier = 1
+					}
+					has_great_project = {
+						type = castle_dour
+						tier = 1
+					}
 				}
 			}
 		}
