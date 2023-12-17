@@ -1,0 +1,19 @@
+new religion pinewood_naturalism = {
+	name = "Pinewood Naturalism"
+	desc = ""
+	icon = 5
+	color = {
+		196 255 170
+	}
+	heretic = {
+		OLD_GODS_CULT_HERETIC
+	}
+	country = {
+		global_supply_limit_modifier = 0.25
+		own_territory_dice_roll_bonus = 1
+	}
+	fervor = yes
+	province = {
+	}
+	religious_group = kreathman_group
+}
