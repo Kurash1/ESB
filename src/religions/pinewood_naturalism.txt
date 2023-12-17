@@ -1,5 +1,35 @@
+new localisation fervor_1 = "Blessings to the Travelers"
+new localisation fervor_1_short = "Travelers"
+new localisation fervor_2 = "Blessings to the Wisemen"
+new localisation fervor_2_short = "Wisemen"
+new localisation fervor_3 = "Blessings to the Hunters"
+new localisation fervor_3_short = "Hunters"
+new localisation fervor_4 = "Blessings to the Carvers"
+new localisation fervor_4_short = "Carvers"
+new localisation fervor_5 = "Blessings to the Warriors"
+new localisation fervor_5_short = "Warriors"
+new localisation FERVOR_CHANGE = "Monthly Harmony:"
+new localisation FERVOR_VALUE2 = "Harmony with Nature:"
+new localisation USES_FERVOR = "$COUNTRY|Y$ uses harmony."
+new localisation USES_NOT_FERVOR = "$COUNTRY|Y$ does NOT use harmony."
+new localisation FERVOR_VALUE_EFFECT = "§YEffects from Harmony:§W"
+new localisation fervor = "Harmony"
+new localisation ADD_FERVOR_EFFECT = "$DIRECTION$ $VALUE$ points of Harmony.\n"
+new localisation FERVOR = "Harmony"
+new localisation FERVOR_VALUE = "Harmony: $VAL|Y0$"
+new localisation FERVOR_EFFECT = "Enabling $NAME|Y$ will cost $COST|R$ points of Harmony and will then withdraw the same amount of points each month. While having it enabled, it will give the following effect:"
+new localisation fervor_modifier = "Harmony Powers"
+new localisation MODIFIER_MONTHLY_FERVOR_INCREASE = "Monthly Harmony"
+new localisation FERVOR_INCREASE_DESC = "$WHO$ gets $VAL|+=$ points of harmony each month. You can never have more than $MAX|Y$ points."
+new localisation CURRENT_FERVOR = "$WHO$ currently have $VAL|Y$ points of harmony. The maximum amount $MAX|Y$ points."
+new localisation alert_fervor_instant = "§YHigh Harmony§W"
+new localisation alert_fervor_delayed = "You have $VAL$ harmony points to spend."
+new localisation FERVOR_AFFECT_ACTIVE = "Harmony Effect already active"
+new localisation CANNOT_AFFORD_FERVOR = "You do not have the $NEEDED|Y$ Harmony required to be able to do this."
+new localisation HAS_ACTIVE_FERVOR = "$WHO|Y$ has activated a Harmony effect."
+new localisation HAS_NOT_ACTIVE_FERVOR = "$WHO|Y$ has NOT activated a Harmony effect."
 new religion pinewood_naturalism = {
-	name = "Pinewood Naturalism"
+	name = "Kreath Naturalism"
 	desc = ""
 	icon = 5
 	color = {
@@ -14,6 +44,7 @@ new religion pinewood_naturalism = {
 	}
 	fervor = yes
 	province = {
+		local_hostile_movement_speed = -0.1
 	}
 	religious_group = kreathman_group
 }
