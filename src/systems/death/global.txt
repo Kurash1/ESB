@@ -1,0 +1,6 @@
+new define NDefines.NCountry.MONARCH_DEATH = 0
+new define NDefines.NCountry.HEIR_DEATH = 0
+on_actions:on_monthly_pulse += {
+	death_tick_ruler
+	death_tick_heir
+}

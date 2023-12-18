@@ -224,8 +224,38 @@ new great_project ancestor_glade = {
 		}
 	}
 }
+new great_project kilkreath_temple = {
+	name = "Kilkreath Temple"
+	start = black_mountain
+}
 new great_project arcwind_point = {
 	name = "Arcwind Point"
+	start = black_mountain
+}
+new great_project castle_dour = {
+	name = "Castle Dour"
+	start = black_mountain
+	tier_1 = {
+		province_modifier = {
+			fort_level = 1
+			local_defensiveness = 0.1
+		}
+	}
+	tier_2 = {
+		province_modifier = {
+			fort_level = 2
+			local_defensiveness = 0.2
+		}
+	}
+	tier_3 = {
+		province_modifier = {
+			fort_level = 3
+			local_defensiveness = 0.3
+		}
+	}
+}
+new great_project temple_of_the_divines = {
+	name = "Temple of the Divines"
 	start = black_mountain
 }
 new great_project bards_college = {

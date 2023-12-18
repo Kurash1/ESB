@@ -1,0 +1,28 @@
+new expedition big_sister = {
+	length = 1
+	on_complete = {
+		province_event = sister.1
+	}
+}
+new province_event sister.1 = {
+	title = "Tomb of the Big Sister"
+	is_triggered_only = yes
+	options = {
+		{
+			name = "Let us honor her"
+			effect = {
+				add_building_construction = {
+					building = buildings:barrow_hill
+					speed = 0
+					cost = 0
+				}
+			}
+		}
+		{
+			name = "We should plunder it"
+			effect = {
+				add_treasury = 250
+			}
+		}
+	}
+}

@@ -1,0 +1,312 @@
+mission_trees:solitude += {
+	form_the_wolf_army = {
+		name = "Form the Wolf Army"
+		x = 7
+		y = 0
+		trigger = {
+			army_size = 25
+			num_of_generals = 1
+		}
+		effect = {
+			add_government_reform = tier_2_wolf_army
+			areas:dragon_bridge, areas:kilkreath, areas:shadowgreen, areas:ravenscar = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	shadowgreen_druids = {
+		name = "Shadowgreen Druids"
+		x = 5
+		y = 1
+		required = form_the_wolf_army
+		provinces_to_highlight = {
+			OR = {
+				area = shadowgreen
+				area = ravenscar
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			areas:shadowgreen, areas:ravenscar = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:northwatch = {
+				add_permanent_claim = ROOT
+			}
+			quick_country_modifier = {
+				name = "Shadowgreen Druids"
+				modifier = {
+					monthly_magicka = 0.25
+				}
+			}
+		}
+	}
+	wolfs_eye_lighthouse = {
+		name = "Wolf's Eye Lighthouse"
+		x = 4
+		y = 2
+		required = shadowgreen_druids
+		trigger = {
+			owns = solitude_lighthouse
+			provinces:solitude_lighthouse = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:solitude_lighthouse = {
+				quick_province_modifier = {
+					name = "Wolf's Eye Lighthouse"
+					modifier = {
+						naval_attrition = -0.15
+						trade_steering = 0.1
+						hostile_fleet_attrition = 1
+					}
+				}
+			}
+		}
+	}
+	broken_oar_grotto = {
+		name = "Broken Oar Grotto"
+		x = 5
+		y = 2
+		required = shadowgreen_druids
+		trigger = {
+			provinces:broken_oar = {
+				OR = {
+					has_building = navy_1
+					has_building = navy_2
+					has_building = navy_3
+				}
+			}
+		}
+		effect = {
+			provinces:broken_oar = {
+				quick_province_modifier = {
+					name = "Broken Oar Grotto"
+					modifier = {
+						naval_forcelimit = 8
+
+						blockade_force_required = 2.5
+						block_slave_raid = yes
+					}
+				}
+			}
+		}
+	}
+	northwatch_keep = {
+		name = "Northwatch Keep"
+		x = 6
+		y = 2
+		required = shadowgreen_druids
+		trigger = {
+			areas:northwatch = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			provinces:northwatch = {
+				add_building = fort_16th
+			}
+			areas:northwatch = {
+				add_local_autonomy = -25
+			}
+			areas:lone_isle, areas:volkihar_isles, areas:hraggstad = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	longboat_legions = {
+		name = "Longboat Legions"
+		x = 5
+		y = 3
+		required = northwatch_keep
+		trigger = {
+			has_longships = {
+				num = 50
+				backup = {
+					navy_size = 150
+				}
+			}
+		}
+		effect = {
+			if [has_dlc = "Domination"] {
+				quick_country_modifier = {
+					name = "Longboat Legions"
+					modifier = {
+						allowed_galleass_fraction = 0.15
+						max_flagships = 2
+					}
+				}
+			}
+			else {
+				quick_country_modifier = {
+					name = "Longboat Legions"
+					modifier = {
+						max_flagships = 2
+					}
+				}
+			}
+		}
+	}
+	fuldimar_hookhand = {
+		name = "Fuldimar Hookhand"
+		x = 5
+		y = 4
+		required = longboat_legions
+		trigger = {
+			treasury = 250
+		}
+		effect = {
+			add_treasury = -250
+			provinces:gold_isle = {
+				change_province_name = "Kyne's Aegis"
+				rename_capital = "Kyne's Aegis"
+				add_center_of_trade_level = 1
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+	}
+	the_pirate_threat = {
+		name = "The Pirate Threat"
+		x = 6
+		y = 4
+		required = longboat_legions
+		trigger = {
+			NOT = {
+				exists = lone_band
+			}
+		}
+		effect = {
+			home_trade_node_effect_scope = {
+				add_trade_node_income = 100
+			}
+		}
+	}
+	master_of_the_mountain = {
+		name = "Master of the Mountain"
+		x = 7
+		y = 1
+		required = form_the_wolf_army
+		trigger = {
+			areas:kilkreath = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:hraggstad = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	found_kilkreath_temple = {
+		name = "Found Kilkreath"
+		x = 8
+		y = 2
+		required = master_of_the_mountain
+		trigger = {
+			owns = kilkreath_temple
+			provinces:kilkreath_temple = {
+				OR = {
+					has_building = tax_1
+					has_building = tax_2
+					has_building = tax_3
+				}
+			}
+		}
+		effect = {
+			create_monument = {
+				monument = kilkreath_temple
+				province = kilkreath_temple
+			}
+		}
+	}
+	castle_hraggstad = {
+		name = "Castle Hraggstad"
+		x = 7
+		y = 3
+		required = {
+			northwatch_keep
+			master_of_the_mountain
+		}
+		trigger = {
+			provinces:hraggstad = {
+				fort_level = 2
+			}
+			areas:hraggstad = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			provinces:hraggstad = {
+				quick_province_modifier = {
+					name = "Castle Hraggstad"
+					modifier = {
+						local_defensiveness = 0.25
+						local_fort_maintenance_modifier = -0.5
+					}
+				}
+			}
+			areas:deepwood = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lord_of_the_forests = {
+		name = "Lord of the Forests"
+		x = 8
+		y = 4
+		required = castle_hraggstad
+		trigger = {
+			areas:deepwood = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:deepwood = {
+				add_base_production = 1
+			}
+			areas:pinefrost, areas:mor_khazgur = {
+				add_permanent_claim = ROOT
+			}
+			province_groups:lord_of_the_forests = {
+				discover_country = ROOT
+			}
+		}
+	}
+	far_west_pinefrost = {
+		name = "Far West Pinefrost"
+		x = 7
+		y = 5
+		required = lord_of_the_forests
+		inherit = not_implemented_mission
+		trigger = {
+			provinces:pinefrost = {
+				fort_level = 2
+			}
+			areas:pinefrost = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			provinces:pinefrost = {
+				quick_province_modifier = {
+					name = "Pinefrost Tower"
+					modifier = {
+						local_defensiveness = 0.25
+						local_fort_maintenance_modifier = -0.5
+					}
+				}
+			}
+		}
+	}
+}

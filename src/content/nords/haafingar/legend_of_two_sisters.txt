@@ -1,0 +1,28 @@
+create_poetic_edda_modifier = {
+	id = legend_of_two_sisters
+	name = "Legend of Two Sisters"
+	modifier = {
+		galley_power = 0.1
+	}
+}
+mission_trees:solitude += {
+	legend_of_two_sisters = {
+		name = "Legend of Two Sisters"
+		x = 4
+		y = 4
+		required = {
+			poetic_edda
+			longboat_legions
+		} 
+		trigger = {
+			provinces:big_sister, provinces:small_sister = {
+				NOT = {
+					has_province_modifier = expedition_target
+				}
+			}
+		}
+		effect = {
+			unlock_poetic_edda_modifier = legend_of_two_sisters
+		}
+	}
+}

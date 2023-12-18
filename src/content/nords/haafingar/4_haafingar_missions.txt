@@ -1,0 +1,185 @@
+mission_trees:solitude_hidden += {
+	form_haafingar_hold = {
+		name = "Form Haafingar Hold"
+		x = 3
+		y = 5
+		trigger = {
+			regions:haafingar = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owner = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			change_tag = haafingar
+			areas:rivers_horn, areas:twin_bridges = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	two_bridges = {
+		name = "Two Bridges"
+		x = 3
+		y = 6
+		required = form_haafingar_hold
+		trigger = {
+			areas:rivers_horn, areas:twin_bridges = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:hjaal_river_passage, areas:hjaals_teeth, areas:snowhawk_forest, areas:snowhawk = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	snowhawk = {
+		name = "Snowhawk"
+		x = 2
+		y = 7
+		required = two_bridges
+		inherit = not_implemented_mission
+		trigger = {
+			areas:snowhawk_forest, areas:snowhawk = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+	}
+	hjaal_mouth = {
+		name = "Hjaal Mouth"
+		x = 4
+		y = 7
+		required = two_bridges
+		trigger = {
+			areas:hjaal_river_passage, areas:hjaals_teeth = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			areas:karthwasten, areas:karthald, areas:dragon_bridge_overlook, areas:broken_tower = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	morthal = {
+		name = "Morthal"
+		x = 1
+		y = 8
+		required = snowhawk
+		inherit = not_implemented_mission
+	}
+	rannveig = {
+		name = "Rannveig"
+		x = 2
+		y = 8
+		required = snowhawk
+		inherit = not_implemented_mission
+	}
+	storm_hawk_expedition = {
+		name = "Storm-Hawk Expedition"
+		x = 3
+		y = 8
+		required = snowhawk
+		inherit = not_implemented_mission
+	}
+	labyrinthian = {
+		name = "Labyrinthian"
+		x = 0
+		y = 9
+		required = morthal
+		inherit = not_implemented_mission
+	}
+	bromjunaar_order = {
+		name = "Bromjunaar Order"
+		x = 0
+		y = 10
+		required = labyrinthian
+		inherit = not_implemented_mission
+	}
+	stonehills = {
+		name = "Stonehills"
+		x = 2
+		y = 9
+		required = {
+			morthal
+			storm_hawk_expedition
+		}
+		inherit = not_implemented_mission
+	}
+	folgunthur = {
+		name = "Folgunthur"
+		x = 4
+		y = 9
+		required = storm_hawk_expedition
+		inherit = not_implemented_mission
+	}
+	dominate_pale_trade = {
+		name = "Dominate Pale Trade"
+		x = 1
+		y = 10
+		required = stonehills
+		inherit = not_implemented_mission
+	}
+	winterhold_war_plans = {
+		name = "Winterhold War Plans"
+		x = 0
+		y = 11
+		required = dominate_pale_trade
+		inherit = not_implemented_mission
+	}
+	north_sea_domination = {
+		name = "North Sea Domination"
+		x = 0
+		y = 12
+		required = winterhold_war_plans
+		inherit = not_implemented_mission
+	}
+	ustengrav = {
+		name = "Ustengrav"
+		x = 3
+		y = 10
+		required = {
+			stonehills
+			folgunthur
+		}
+		inherit = not_implemented_mission
+	}
+	vassal_jarl_of_dawnstar = {
+		name = "Vassal Jarl of Dawnstar"
+		x = 2
+		y = 11
+		required = {
+			dominate_pale_trade
+			ustengrav
+		}
+		inherit = not_implemented_mission
+	}
+	volunruud_company = {
+		name = "Volunruud Company"
+		x = 1
+		y = 12
+		required = vassal_jarl_of_dawnstar
+		inherit = not_implemented_mission
+	}
+	dawnstar_port = {
+		name = "Dawnstar Port"
+		x = 2
+		y = 12
+		required = vassal_jarl_of_dawnstar
+		inherit = not_implemented_mission
+	}
+	yorgrim_woods = {
+		name = "Yorgrim Woods"
+		x = 3
+		y = 12
+		required = vassal_jarl_of_dawnstar
+		inherit = not_implemented_mission
+	}
+}

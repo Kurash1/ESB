@@ -1,0 +1,85 @@
+new named_effect death_tick_ruler_pre_effect = {
+	export_to_variable = {
+		variable_name = var_ruler_age
+		value = trigger_value:ruler_age
+	}
+}
+new named_effect death_tick_ruler_post_effect = {
+	if [
+		check_variable = {
+			which = var_ruler_age
+			value = 91
+		}
+	] {
+		death_tick_ruler_random = 65.75
+	}
+	else_if [
+		check_variable = {
+			which = var_ruler_age
+			value = 81
+		}
+	] {
+		death_tick_ruler_random = 19.73
+	}
+	else_if [
+		check_variable = {
+			which = var_ruler_age
+			value = 71
+		}
+	] {
+		death_tick_ruler_random = 3.29
+	}
+	else_if [
+		check_variable = {
+			which = var_ruler_age
+			value = 61
+		}
+	] {
+		death_tick_ruler_random = 0.66
+	}
+	else_if [
+		check_variable = {
+			which = var_ruler_age
+			value = 51
+		}
+	] {
+		death_tick_ruler_random = 0.26
+	}
+	else_if [
+		check_variable = {
+			which = var_ruler_age
+			value = 41
+		}
+	] {
+		death_tick_ruler_random = 0.13
+	}
+	else {
+		death_tick_ruler_random = 0.07
+	}
+}
+new effect death_tick_ruler_random = {
+	args = float
+	transpile = {
+		float_random = {
+			chance = args
+			effect = {
+				death_tick_ruler_death
+				
+				death_tick_ruler_modifier
+			}
+		}
+	}
+}
+new named_effect death_tick_ruler_trigger = {
+	NOT = { ruler_has_personality = immortal_personality }
+}
+new named_effect death_tick_ruler_death = {
+	ruler_natural_death = yes
+}
+new named_effect death_tick_ruler_modifier = { }
+new named_effect death_tick_ruler = {
+	if [death_tick_ruler_trigger] {
+		death_tick_ruler_pre_effect
+		death_tick_ruler_post_effect
+	}
+}

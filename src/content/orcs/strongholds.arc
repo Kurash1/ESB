@@ -1,3 +1,17 @@
+new effect destroy_orc_stronghold = {
+	args = {
+		name = string
+		province = province
+	}
+	transpile = {
+		new_custom_tooltip = "The Orc Stronghold of §Y{args:name}§! is destroyed"
+		hidden_effect = {
+			args:province = {
+				remove_orc_stronghold = yes
+			}
+		}
+	}
+}
 new localisation remove_orc_stronghold_tooltip = "[This.GetName] loses the conditional modifier '§YOrc Stronghold§!'."
 new effect remove_orc_stronghold = {
 	args = bool
