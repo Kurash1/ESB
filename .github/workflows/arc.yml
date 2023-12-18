@@ -10,7 +10,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Install .NET SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.0'  # or the version you need
+
     - name: Run Arc-Valley.exe
       run: |
-        chmod +x Arc-Valley.exe  # Ensure execute permission (for Linux)
-        ./Arc-Valley.exe all
+        dotnet ./Arc-Valley.exe
