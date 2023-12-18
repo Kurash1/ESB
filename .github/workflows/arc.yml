@@ -8,7 +8,7 @@ on:
 
 jobs:
   run-arc-valley:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
     - name: Checkout repository
@@ -21,4 +21,4 @@ jobs:
 
     - name: Run Arc-Valley.exe
       run: |
-        ./Arc-Valley.exe all
+        dotnet Arc-Valley.dll script
