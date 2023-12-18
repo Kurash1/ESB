@@ -151,6 +151,16 @@ new country solitude = {
 	government_rank = 2
 	history += {
 		elector = yes
+		2568.1.1 = {
+			monarch = {
+				name = "Vigrod"
+				dynasty = "Red-Wolf"
+				adm = 6
+				dip = 5
+				mil = 5
+				birth_date = 2531.1.1
+			}
+		}
 	}
 }
 new country cascabel = {

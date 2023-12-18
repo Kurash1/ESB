@@ -25,11 +25,12 @@ mission_trees:solitude += {
 		}
 		effect = {
 			provinces:solitude_port = {
-				add_building_construction = {
-					building = navy_3
-					speed = 1
-					cost = 0
-				}
+				add_building = navy_1
+				add_building = trade_1
+				add_building = production_1
+			}
+			provinces:folgunthur = {
+				add_siberian_construction = 100
 			}
 		}
 	}
@@ -48,11 +49,16 @@ mission_trees:solitude += {
 				monument = castle_dour
 				province = solitude
 			}
+			provinces:solitude = {
+				add_building = navy_1
+				add_building = trade_1
+				add_building = production_1
+			}
 		}
 	}
 	temple_of_the_divines = {
 		name = "Temple of the Divines"
-		x = 0
+		x = 1
 		y = 1
 		required = castle_upon_the_hill
 		trigger = {
@@ -60,6 +66,9 @@ mission_trees:solitude += {
 			full_idea_group = religious_ideas
 		}
 		effect = {
+			provinces:solitude = {
+				add_building = tax_3
+			}
 			create_monument = {
 				monument = temple_of_the_divines
 				province = solitude
@@ -68,13 +77,13 @@ mission_trees:solitude += {
 	}
 	storm_gate = {
 		name = "Storm Gate"
-		x = 1
+		x = 0
 		y = 1
 		required = castle_upon_the_hill
 		trigger = {
 			owns = solitude
 			provinces:solitude = {
-				fort_level = 6
+				fort_level = 4
 			}
 		}
 		effect = {
@@ -84,16 +93,17 @@ mission_trees:solitude += {
 	}
 	wells_district = {
 		name = "Wells District"
-		x = 3
-		y = 1
-		required = windbreaker_arch
+		x = 2
+		y = 2
+		required = the_avenues_district
 		trigger = {
 			provinces:solitude = {
-				province_has_center_of_trade_of_level = 3
+				province_has_center_of_trade_of_level = 2
 			}
 		}
 		effect = {
 			provinces:solitude = {
+				add_center_of_trade_level = 1
 				quick_province_modifier = {
 					name = "Wells District"
 					modifier = {
@@ -108,12 +118,16 @@ mission_trees:solitude += {
 	}
 	solitude_countryside = {
 		name = "Solitude Countryside"
-		x = 4
+		x = 3
 		y = 1
 		required = windbreaker_arch
 		trigger = {
+			areas:solitude_proper; solitude_countryside; solitude_coast = {
+				type = all
+				owned_by = ROOT
+			}
 			development_in_provinces = {
-				value = 125
+				value = 100
 				trigger = {
 					OR = {
 						area = solitude_proper
@@ -124,6 +138,9 @@ mission_trees:solitude += {
 			}
 		}
 		effect = {
+			provinces:solitude_farms = {
+				add_building = def_manufactory
+			}
 			areas:solitude_proper, areas:solitude_countryside, areas:solitude_coast = {
 				quick_province_modifier = {
 					name = "Founding lands of Haafingar"
@@ -132,6 +149,32 @@ mission_trees:solitude += {
 						local_tax_modifier = 0.1
 						local_development_cost = -0.1
 					}
+				}
+			}
+		}
+	}
+	master_of_the_arch = {
+		name = "Master of the Arch"
+		x = 4
+		y = 1
+		required = windbreaker_arch
+		trigger = {
+			owns = folgunthur
+			provinces:folgunthur = {
+				is_city = yes
+			}
+		}
+		effect = {
+			provinces:folgunthur = {
+				add_center_of_trade_level = 1
+			}
+			defineloc trade_modifier_master_of_the_arch = "Master of the Arch"
+			trade_nodes:solitude:location = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 50
+					key = trade_modifier_master_of_the_arch
 				}
 			}
 		}
@@ -146,7 +189,7 @@ mission_trees:solitude += {
 		}
 		trigger = {
 			provinces:solitude = {
-				development = 30
+				development = 25
 			}
 		}
 		effect = {
@@ -168,23 +211,24 @@ mission_trees:solitude += {
 		x = 1
 		y = 2
 		required = {
-			temple_of_the_divines
 			storm_gate
 			the_avenues_district
 		}
 		trigger = {
 			provinces:solitude = {
-				has_great_project = {
-					type = bards_college
-					tier = 1
-				}
-				has_great_project = {
-					type = blue_palace
-					tier = 1
-				}
-				has_great_project = {
-					type = castle_dour
-					tier = 1
+				OR = {
+					has_great_project = {
+						type = bards_college
+						tier = 1
+					}
+					has_great_project = {
+						type = blue_palace
+						tier = 1
+					}
+					has_great_project = {
+						type = castle_dour
+						tier = 1
+					}
 				}
 			}
 		}
