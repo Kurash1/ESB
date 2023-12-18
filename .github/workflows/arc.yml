@@ -1,6 +1,12 @@
-name: Run Arc-Valley.exe
+name: Run Arc-Valley
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
 
 jobs:
   run-arc-valley:
@@ -17,4 +23,4 @@ jobs:
 
     - name: Run Arc-Valley.exe
       run: |
-        dotnet ./Arc-Valley.exe
+        ./Arc-Valley.exe all
