@@ -7,30 +7,37 @@ new inheritable roscrea_imp_inherit = {
 	}
 }
 new province roscrea_imp_1 = {
+	name = "Mount Roscrea"
 	inherit = roscrea_imp_inherit
 	color = { 20 28 19 }
 }
 new province roscrea_imp_2 = {
+	name = "Thonica Hills"
 	inherit = roscrea_imp_inherit
 	color = { 5 20 15 }
 }
 new province roscrea_imp_3 = {
+	name = ""
 	inherit = roscrea_imp_inherit
 	color = { 17 21 1 }
 }
 new province roscrea_imp_4 = {
+	name = ""
 	inherit = roscrea_imp_inherit
 	color = { 20 25 24 }
 }
 new province roscrea_imp_5 = {
+	name = ""
 	inherit = roscrea_imp_inherit
 	color = { 9 5 16 }
 }
 new province roscrea_imp_6 = {
+	name = ""
 	inherit = roscrea_imp_inherit
 	color = { 1 29 1 }
 }
 new province roscrea_imp_7 = {
+	name = ""
 	inherit = roscrea_imp_inherit
 	color = { 5 14 20 }
 }
@@ -43,7 +50,8 @@ new inheritable roscrea_inherit = {
 		culture = roscrean
 	}
 }
-new province roscrea_1 = {
+new province wyrm_camp = {
+	name = "Wyrm Camp"
 	inherit = roscrea_inherit
 	color = { 139 125 252 }
 	history = {
@@ -54,7 +62,8 @@ new province roscrea_1 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_2 = {
+new province haetar = {
+	name = "Haetar"
 	inherit = roscrea_inherit
 	color = { 159 108 210 }
 	history = {
@@ -65,7 +74,8 @@ new province roscrea_2 = {
 	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_3 = {
+new province krakevik = {
+	name = "Krakevik"
 	inherit = roscrea_inherit
 	color = { 217 168 210 }
 	history = {
@@ -76,7 +86,8 @@ new province roscrea_3 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_4 = {
+new province jaldur_kair = {
+	name = "Jaldur Kair"
 	inherit = roscrea_inherit
 	color = { 254 174 222 }
 	history = {
@@ -87,7 +98,8 @@ new province roscrea_4 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_5 = {
+new province andholm = {
+	name = "Andholm"
 	inherit = roscrea_inherit
 	color = { 253 142 208 }
 	history = {
@@ -98,7 +110,8 @@ new province roscrea_5 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_6 = {
+new province hjalmers_rest = {
+	name = "Hjalmer's Rest"
 	inherit = roscrea_inherit
 	color = { 101 141 132 }
 	position = { 1932.000 2225.000 1932.000 2225.000 0.000 0.000 1932.000 2219.000 0.000 0.000 1933.000 2225.000 0.000 0.000 }
@@ -133,7 +146,8 @@ new province roscrea_10 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_11 = {
+new province port_thonica = {
+	name = "Port Thonica"
 	inherit = roscrea_inherit
 	color = { 217 254 242 }
 	position = { 1942.000 2323.000 1942.000 2323.000 1942.000 2323.000 1940.000 2315.000 1942.000 2323.000 1942.000 2323.000 1942.000 2323.000 }
@@ -147,14 +161,16 @@ new province roscrea_12 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_13 = {
+new province quicksilver_mine = {
+	name = "Quicksilver Mine"
 	inherit = roscrea_inherit
 	color = { 110 118 247 }
 	position = { 1929.000 2331.000 1929.000 2331.000 1929.000 2331.000 1925.000 2323.000 1929.000 2331.000 1929.000 2331.000 1929.000 2331.000 }
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_14 = {
+new province Haskullholm = {
+	name = "Haskullholm"
 	inherit = roscrea_inherit
 	color = { 179 151 208 }
 	position = { 1979.000 2312.000 1979.000 2312.000 1979.000 2312.000 1978.000 2307.000 1979.000 2312.000 1979.000 2312.000 1979.000 2312.000 }
@@ -238,14 +254,16 @@ new province roscrea_25 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_26 = {
+new province uriels_lamp = {
+	name = "Uriel's Lamp"
 	inherit = roscrea_inherit
 	color = { 155 204 214 }
 	position = { 1919.000 2346.000 1919.000 2346.000 1919.000 2346.000 1919.000 2346.000 1919.000 2346.000 1919.000 2346.000 1919.000 2346.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_27 = {
+new province boralvond = {
+	name = "Boralvond"
 	inherit = roscrea_inherit
 	color = { 204 104 169 }
 	position = { 1904.000 2350.000 1904.000 2350.000 1904.000 2350.000 1904.000 2350.000 1904.000 2350.000 1904.000 2350.000 1904.000 2350.000 }
@@ -266,7 +284,8 @@ new province roscrea_29 = {
 	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_30 = {
+new province morihathas_lamp = {
+	name = "Morihatha's Lamp"
 	inherit = roscrea_inherit
 	color = { 228 185 170 }
 	position = { 1945.000 2346.000 1945.000 2346.000 1945.000 2346.000 1950.000 2351.500 1945.000 2346.000 1945.000 2346.000 1945.000 2346.000 }
@@ -287,7 +306,8 @@ new province roscrea_32 = {
 	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_33 = {
+new province drakoroya = {
+	name = "Drakoroya"
 	inherit = roscrea_inherit
 	color = { 249 150 103 }
 	position = { 1914.000 2374.000 1914.000 2374.000 1914.000 2374.000 1916.500 2375.000 1914.000 2374.000 1914.000 2374.000 1914.000 2374.000 }
@@ -322,7 +342,8 @@ new province roscrea_37 = {
 	rotation = { 0.000 0.000 0.000 3.142 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_38 = {
+new province galmastrond = {
+	name = "Galmastrond"
 	inherit = roscrea_inherit
 	color = { 179 122 216 }
 	position = { 1864.000 2400.000 1864.000 2400.000 1864.000 2400.000 1867.000 2396.000 1864.000 2400.000 1864.000 2400.000 1864.000 2400.000 }
@@ -357,7 +378,8 @@ new province roscrea_42 = {
 	rotation = { 0.000 0.000 0.000 3.142 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_43 = {
+new province hranafall = {
+	name = "Hranafall"
 	inherit = roscrea_inherit
 	color = { 202 184 112 }
 	position = { 1757.000 2385.000 1757.000 2385.000 1757.000 2385.000 1756.000 2381.000 1757.000 2385.000 1757.000 2385.000 1757.000 2385.000 }
@@ -371,14 +393,16 @@ new province roscrea_44 = {
 	rotation = { 0.000 0.000 0.000 1.571 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_45 = {
+new province ukulgonak = {
+	name = "Ukulgonak"
 	inherit = roscrea_inherit
 	color = { 134 215 250 }
 	position = { 1781.000 2361.000 1781.000 2361.000 1781.000 2361.000 1778.000 2355.000 1781.000 2361.000 1781.000 2361.000 1781.000 2361.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_46 = {
+new province tibers_lamp = {
+	name = "Tiber's Lamp"
 	inherit = roscrea_inherit
 	color = { 119 144 237 }
 	position = { 1810.000 2357.000 1810.000 2357.000 1810.000 2357.000 1811.000 2348.000 1810.000 2357.000 1810.000 2357.000 1810.000 2357.000 }
@@ -462,28 +486,32 @@ new province roscrea_57 = {
 	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_58 = {
+new province aragaggahrakharak = {
+	name = "Aragaggahrakharak"
 	inherit = roscrea_inherit
 	color = { 156 107 229 }
 	position = { 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_59 = {
+new province pelagius_lamp = {
+	name = "Pelagius' Lamp"
 	inherit = roscrea_inherit
 	color = { 181 254 172 }
 	position = { 1888.000 2359.000 1888.000 2359.000 1888.000 2359.000 1888.000 2359.000 1888.000 2359.000 1888.000 2359.000 1888.000 2359.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_60 = {
+new province garrhumkhatog = {
+	name = "Garrhumkhatog"
 	inherit = roscrea_inherit
 	color = { 129 179 176 }
 	position = { 1888.000 2344.000 1888.000 2344.000 1888.000 2344.000 1888.000 2344.000 1888.000 2344.000 1888.000 2344.000 1888.000 2344.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_61 = {
+new province katariahs_lamp = {
+	name = "Katariah's Lamp"
 	inherit = roscrea_inherit
 	color = { 155 121 255 }
 	position = { 1855.000 2365.000 1855.000 2365.000 1855.000 2365.000 1855.000 2365.000 1855.000 2365.000 1855.000 2365.000 1855.000 2365.000 }
@@ -504,7 +532,8 @@ new province roscrea_63 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_64 = {
+new province dulgotigok = {
+	name = "Dulgotigok"
 	inherit = roscrea_inherit
 	color = { 145 198 241 }
 	position = { 1852.000 2353.000 1852.000 2353.000 1852.000 2353.000 1843.000 2347.000 1852.000 2353.000 1852.000 2353.000 1852.000 2353.000 }
@@ -525,7 +554,8 @@ new province roscrea_66 = {
 	rotation = { 0.000 0.000 0.000 1.571 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_67 = {
+new province orimvast = {
+	name = "Orimvast"
 	inherit = roscrea_inherit
 	color = { 207 101 107 }
 	position = { 1849.000 2331.000 1849.000 2331.000 1849.000 2331.000 1850.000 2327.000 1849.000 2331.000 1849.000 2331.000 1849.000 2331.000 }
