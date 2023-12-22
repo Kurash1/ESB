@@ -133,19 +133,47 @@ new province andholm = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
+new area hjalmer_isles = {
+	name = "Hjalmer Isles"
+	region = roscrea
+}
 new province hjalmers_rest = {
 	name = "Hjalmer's Rest"
 	terrain = coastline
+	area = hjalmer_isles
 	inherit = roscrea_inherit
 	color = { 101 141 132 }
 	position = { 1932.000 2225.000 1932.000 2225.000 0.000 0.000 1932.000 2219.000 0.000 0.000 1933.000 2225.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
+new province roscrea_77 = {
+	inherit = roscrea_inherit
+	color = { 251 161 125 }
+	area = hjalmer_isles
+	terrain = coastline
+	position = { 1901.000 2245.000 1901.000 2245.000 1901.000 2245.000 1904.000 2240.000 1901.000 2245.000 1901.000 2245.000 1901.000 2245.000 }
+	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new province roscrea_78 = {
+	inherit = roscrea_inherit
+	color = { 219 222 157 }
+	area = hjalmer_isles
+	terrain = coastline
+	position = { 1895.000 2259.000 1895.000 2259.000 1895.000 2259.000 1890.000 2256.000 1895.000 2259.000 1895.000 2259.000 1895.000 2259.000 }
+	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new area thonica_isles = {
+	name = "Thonica Isles"
+	region = roscrea
+}
 new province roscrea_7 = {
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 185 213 103 }
+	area = thonica_isles
 	position = { 1911.000 2301.000 1909.000 2301.000 0.000 0.000 1911.000 2297.000 0.000 0.000 1910.000 2301.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
@@ -154,6 +182,7 @@ new province roscrea_8 = {
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 158 118 220 }
+	area = thonica_isles
 	position = { 1909.000 2309.000 1908.000 2309.000 0.000 0.000 1916.000 2307.000 0.000 0.000 1910.000 2310.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
@@ -162,6 +191,7 @@ new province roscrea_9 = {
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 235 215 217 }
+	area = thonica_isles
 	position = { 1928.000 2311.000 1928.000 2312.000 0.000 0.000 1926.000 2307.000 0.000 0.000 1928.000 2311.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.262 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
@@ -170,15 +200,21 @@ new province roscrea_10 = {
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 137 205 192 }
+	area = thonica_isles
 	position = { 1949.000 2300.000 1950.000 2300.000 0.000 0.000 1949.000 2295.000 0.000 0.000 1950.000 2300.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
+}
+new area port_thonica = {
+	name = "Port Thonica"
+	region = roscrea
 }
 new province port_thonica = {
 	name = "Port Thonica"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 217 254 242 }
+	area = port_thonica
 	position = { 1942.000 2323.000 1942.000 2323.000 1942.000 2323.000 1940.000 2315.000 1942.000 2323.000 1942.000 2323.000 1942.000 2323.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
@@ -187,6 +223,7 @@ new province roscrea_12 = {
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 235 198 152 }
+	area = port_thonica
 	position = { 1957.000 2322.000 1957.000 2322.000 1957.000 2322.000 1958.000 2314.000 1957.000 2322.000 1957.000 2322.000 1957.000 2322.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
@@ -196,6 +233,7 @@ new province quicksilver_mine = {
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 110 118 247 }
+	area = port_thonica
 	position = { 1929.000 2331.000 1929.000 2331.000 1929.000 2331.000 1925.000 2323.000 1929.000 2331.000 1929.000 2331.000 1929.000 2331.000 }
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
@@ -751,22 +789,6 @@ new province roscrea_76 = {
 	}
 	position = { 1937.000 2202.000 1937.000 2202.000 1937.000 2202.000 1928.000 2197.000 1937.000 2202.000 1937.000 2202.000 1937.000 2202.000 }
 	rotation = { 0.000 0.000 0.000 2.356 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_77 = {
-	inherit = roscrea_inherit
-	color = { 251 161 125 }
-	terrain = coastline
-	position = { 1901.000 2245.000 1901.000 2245.000 1901.000 2245.000 1904.000 2240.000 1901.000 2245.000 1901.000 2245.000 1901.000 2245.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_78 = {
-	inherit = roscrea_inherit
-	color = { 219 222 157 }
-	terrain = coastline
-	position = { 1895.000 2259.000 1895.000 2259.000 1895.000 2259.000 1890.000 2256.000 1895.000 2259.000 1895.000 2259.000 1895.000 2259.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
 new province roscrea_79 = {
