@@ -65,8 +65,8 @@ new area wyrms_isle = {
 	name = "Wyrms Isle"
 	region = the_shatter
 }
-new province wyrm_camp = {
-	name = "Wyrm Camp"
+new province skomuldidr = {
+	name = "Skomuldidr"
 	terrain = coastline
 	inherit = roscrea_inherit
 	color = { 139 125 252 }
@@ -147,7 +147,8 @@ new province hjalmers_rest = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_77 = {
+new province rheewinith = {
+	name = "Rheewinith"
 	inherit = roscrea_inherit
 	color = { 251 161 125 }
 	area = hjalmer_isles
@@ -156,7 +157,8 @@ new province roscrea_77 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_78 = {
+new province segel = {
+	name = "Segel"
 	inherit = roscrea_inherit
 	color = { 219 222 157 }
 	area = hjalmer_isles
@@ -169,7 +171,8 @@ new area thonica_isles = {
 	name = "Thonica Isles"
 	region = roscrea
 }
-new province roscrea_7 = {
+new province kleetgeilg = {
+	name = "Kleetgeilg"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 185 213 103 }
@@ -178,7 +181,8 @@ new province roscrea_7 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_8 = {
+new province denramth = {
+	name = "Denramth"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 158 118 220 }
@@ -187,7 +191,8 @@ new province roscrea_8 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_9 = {
+new province jirgilg = {
+	name = "Jirgilg"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 235 215 217 }
@@ -196,7 +201,8 @@ new province roscrea_9 = {
 	rotation = { 0.000 0.000 0.000 0.262 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 }
-new province roscrea_10 = {
+new province rhuknol = {
+	name = "Rhuknol"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 137 205 192 }
@@ -209,8 +215,8 @@ new area port_thonica = {
 	name = "Port Thonica"
 	region = roscrea
 }
-new province port_thonica = {
-	name = "Port Thonica"
+new province rilrydr = {
+	name = "Rilrydr"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 217 254 242 }
@@ -219,7 +225,8 @@ new province port_thonica = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_12 = {
+new province teedenl = {
+	name = "Teedenl"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 235 198 152 }
@@ -228,8 +235,8 @@ new province roscrea_12 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province quicksilver_mine = {
-	name = "Quicksilver Mine"
+new province thongrild = {
+	name = "Thongrild"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 110 118 247 }
@@ -238,32 +245,141 @@ new province quicksilver_mine = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province Haskullholm = {
+new area roscrea_area_1 = {
+	name = "Roscrea 1"
+	region = roscrea
+}
+new province haskullholm = {
 	name = "Haskullholm"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 179 151 208 }
+	area = roscrea_area_1
 	position = { 1979.000 2312.000 1979.000 2312.000 1979.000 2312.000 1978.000 2307.000 1979.000 2312.000 1979.000 2312.000 1979.000 2312.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_15 = {
+new province basgral = {
+	name = "Basgral"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 243 162 160 }
+	area = roscrea_area_1
 	position = { 1986.000 2337.000 1986.000 2337.000 1986.000 2337.000 1984.000 2331.000 1986.000 2337.000 1986.000 2337.000 1986.000 2337.000 }
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_16 = {
+new province klyksarr = {
+	name = "Klyksarr"
+	inherit = roscrea_inherit
+	terrain = grasslands
+	color = { 172 204 149 }
+	area = roscrea_area_1
+	position = { 1968.000 2326.000 1968.000 2326.000 1968.000 2326.000 1975.000 2322.500 1968.000 2326.000 1968.000 2326.000 1968.000 2326.000 }
+	rotation = { 0.000 0.000 0.000 -1.571 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new province frulild = {
+	name = "Frulild"
+	inherit = roscrea_inherit
+	terrain = coastline
+	color = { 207 119 192 }
+	area = roscrea_area_1
+	position = { 1973.000 2343.000 1973.000 2343.000 1973.000 2343.000 1975.000 2342.000 1973.000 2343.000 1973.000 2343.000 1973.000 2343.000 }
+	rotation = { 0.000 0.000 0.000 -1.571 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new area roscrea_area_2 = {
+	name = "Roscrea 2"
+	region = roscrea
+}
+new province skadrus = {
+	name = "Skadrus"
+	inherit = roscrea_inherit
+	terrain = grasslands
+	color = { 195 221 203 }
+	area = roscrea_area_2
+	position = { 1961.000 2344.000 1961.000 2344.000 1961.000 2344.000 1960.000 2353.000 1961.000 2344.000 1961.000 2344.000 1961.000 2344.000 }
+	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new province vendonlun = {
+	name = "Vendonlun"
+	inherit = roscrea_inherit
+	terrain = hills
+	color = { 228 185 170 }
+	area = roscrea_area_2
+	position = { 1945.000 2346.000 1945.000 2346.000 1945.000 2346.000 1950.000 2351.500 1945.000 2346.000 1945.000 2346.000 1945.000 2346.000 }
+	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new province hluris = {
+	name = "Hluris"
+	inherit = roscrea_inherit
+	terrain = hills
+	color = { 246 182 236 }
+	area = roscrea_area_2
+	position = { 1936.000 2356.000 1936.000 2356.000 1936.000 2356.000 1945.000 2361.000 1936.000 2356.000 1936.000 2356.000 1936.000 2356.000 }
+	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new province hamiadrild = {
+	name = "Hamiadrild"
+	inherit = roscrea_inherit
+	terrain = hills
+	color = { 166 186 147 }
+	area = roscrea_area_2
+	position = { 1928.000 2365.000 1928.000 2365.000 1928.000 2365.000 1930.000 2370.000 1928.000 2365.000 1928.000 2365.000 1928.000 2365.000 }
+	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new area roscrea_area_3 = {
+	name = "Roscrea 3"
+	region = roscrea
+}
+new province drakoroya = {
+	name = "Drakoroya"
+	inherit = roscrea_inherit
+	terrain = grasslands
+	color = { 249 150 103 }
+	area = roscrea_area_3
+	position = { 1914.000 2374.000 1914.000 2374.000 1914.000 2374.000 1916.500 2375.000 1914.000 2374.000 1914.000 2374.000 1914.000 2374.000 }
+	rotation = { 0.000 0.000 0.000 -2.182 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new province kimil = {
+	name = "Kimil"
+	inherit = roscrea_inherit
+	terrain = hills
+	color = { 170 141 153 }
+	area = roscrea_area_3
+	position = { 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 }
+	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new province ridneinind = {
+	name = "Ridneinind"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 225 170 251 }
+	area = roscrea_area_3
 	position = { 1916.000 2390.000 1916.000 2390.000 1916.000 2390.000 1916.000 2386.000 1916.000 2390.000 1916.000 2390.000 1916.000 2390.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_17 = {
+new province hjitheldr = {
+	name = "Hjitheldr"
+	inherit = roscrea_inherit
+	terrain = grasslands
+	color = { 242 248 104 }
+	area = roscrea_area_3
+	position = { 1899.000 2382.000 1899.000 2382.000 1899.000 2382.000 1902.000 2386.000 1899.000 2382.000 1899.000 2382.000 1899.000 2382.000 }
+	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+
+new province konhiedr = {
+	name = "Konhiedr"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 254 190 225 }
@@ -271,7 +387,8 @@ new province roscrea_17 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_18 = {
+new province geth = {
+	name = "Geth"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 127 139 203 }
@@ -279,7 +396,8 @@ new province roscrea_18 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_19 = {
+new province heesnegarr = {
+	name = "Heesnegarr"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 206 201 132 }
@@ -287,7 +405,8 @@ new province roscrea_19 = {
 	rotation = { 0.000 0.000 0.000 1.571 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_20 = {
+new province hagik = {
+	name = "Hagik"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 249 147 126 }
@@ -295,7 +414,8 @@ new province roscrea_20 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_21 = {
+new province skasgron = {
+	name = "Skasgron"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 158 222 153 }
@@ -303,7 +423,8 @@ new province roscrea_21 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_22 = {
+new province horlyllemth = {
+	name = "Horlyllemth"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 188 143 128 }
@@ -311,7 +432,8 @@ new province roscrea_22 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_23 = {
+new province kormeill = {
+	name = "Kormeill"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 218 245 151 }
@@ -319,15 +441,8 @@ new province roscrea_23 = {
 	rotation = { 0.000 0.000 0.000 -3.927 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_24 = {
-	inherit = roscrea_inherit
-	terrain = grasslands
-	color = { 172 204 149 }
-	position = { 1968.000 2326.000 1968.000 2326.000 1968.000 2326.000 1975.000 2322.500 1968.000 2326.000 1968.000 2326.000 1968.000 2326.000 }
-	rotation = { 0.000 0.000 0.000 -1.571 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_25 = {
+new province doengir = {
+	name = "Doengir"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 184 214 163 }
@@ -335,8 +450,8 @@ new province roscrea_25 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province uriels_lamp = {
-	name = "Uriel's Lamp"
+new province rerlan = {
+	name = "Rerlan"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 155 204 214 }
@@ -353,65 +468,8 @@ new province boralvond = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_28 = {
-	inherit = roscrea_inherit
-	terrain = coastline
-	color = { 207 119 192 }
-	position = { 1973.000 2343.000 1973.000 2343.000 1973.000 2343.000 1975.000 2342.000 1973.000 2343.000 1973.000 2343.000 1973.000 2343.000 }
-	rotation = { 0.000 0.000 0.000 -1.571 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_29 = {
-	inherit = roscrea_inherit
-	terrain = grasslands
-	color = { 195 221 203 }
-	position = { 1961.000 2344.000 1961.000 2344.000 1961.000 2344.000 1960.000 2353.000 1961.000 2344.000 1961.000 2344.000 1961.000 2344.000 }
-	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province morihathas_lamp = {
-	name = "Morihatha's Lamp"
-	inherit = roscrea_inherit
-	terrain = hills
-	color = { 228 185 170 }
-	position = { 1945.000 2346.000 1945.000 2346.000 1945.000 2346.000 1950.000 2351.500 1945.000 2346.000 1945.000 2346.000 1945.000 2346.000 }
-	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_31 = {
-	inherit = roscrea_inherit
-	terrain = hills
-	color = { 246 182 236 }
-	position = { 1936.000 2356.000 1936.000 2356.000 1936.000 2356.000 1945.000 2361.000 1936.000 2356.000 1936.000 2356.000 1936.000 2356.000 }
-	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_32 = {
-	inherit = roscrea_inherit
-	terrain = hills
-	color = { 166 186 147 }
-	position = { 1928.000 2365.000 1928.000 2365.000 1928.000 2365.000 1930.000 2370.000 1928.000 2365.000 1928.000 2365.000 1928.000 2365.000 }
-	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province drakoroya = {
-	name = "Drakoroya"
-	inherit = roscrea_inherit
-	terrain = grasslands
-	color = { 249 150 103 }
-	position = { 1914.000 2374.000 1914.000 2374.000 1914.000 2374.000 1916.500 2375.000 1914.000 2374.000 1914.000 2374.000 1914.000 2374.000 }
-	rotation = { 0.000 0.000 0.000 -2.182 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_34 = {
-	inherit = roscrea_inherit
-	terrain = hills
-	color = { 170 141 153 }
-	position = { 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 1905.000 2366.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_35 = {
+new province mok = {
+	name = "Mok"
 	inherit = roscrea_inherit
 	terrain = highlands
 	color = { 149 239 253 }
@@ -419,7 +477,8 @@ new province roscrea_35 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_36 = {
+new province vomth = {
+	name = "Vomth"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 232 217 234 }
@@ -427,7 +486,8 @@ new province roscrea_36 = {
 	rotation = { 0.000 0.000 0.000 3.142 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_37 = {
+new province hremiber = {
+	name = "Hremiber"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 170 252 122 }
@@ -444,7 +504,8 @@ new province galmastrond = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_39 = {
+new province kedmahiel = {
+	name = "Kedmahiel"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 235 228 178 }
@@ -452,7 +513,8 @@ new province roscrea_39 = {
 	rotation = { 0.000 0.000 0.000 -1.571 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_40 = {
+new province bredaf = {
+	name = "Bredaf"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 165 221 173 }
@@ -460,7 +522,8 @@ new province roscrea_40 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_41 = {
+new province satal = {
+	name = "Satal"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 210 245 152 }
@@ -468,7 +531,8 @@ new province roscrea_41 = {
 	rotation = { 0.000 0.000 0.000 1.571 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_42 = {
+new province sagjun = {
+	name = "Sagjun"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 209 177 238 }
@@ -485,7 +549,8 @@ new province hranafall = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_44 = {
+new province relren = {
+	name = "Relren"
 	inherit = roscrea_inherit
 	terrain = coastline
 	color = { 237 252 110 }
@@ -502,8 +567,8 @@ new province ukulgonak = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province tibers_lamp = {
-	name = "Tiber's Lamp"
+new province hjugdrior = {
+	name = "Hjugdrior"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 119 144 237 }
@@ -511,7 +576,8 @@ new province tibers_lamp = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_47 = {
+new province bragdrir = {
+	name = "Bragdrir"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 126 153 152 }
@@ -519,7 +585,8 @@ new province roscrea_47 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_48 = {
+new province hralmuldr = {
+	name = "Hralmuldr"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 141 250 176 }
@@ -527,7 +594,8 @@ new province roscrea_48 = {
 	rotation = { 0.000 0.000 0.000 -3.927 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_49 = {
+new province merreik = {
+	name = "Merreik"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 245 230 137 }
@@ -535,7 +603,8 @@ new province roscrea_49 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_50 = {
+new province thalsgol = {
+	name = "Thalsgol"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 123 250 182 }
@@ -543,7 +612,8 @@ new province roscrea_50 = {
 	rotation = { 0.000 0.000 0.000 2.356 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_51 = {
+new province sturminl = {
+	name = "Sturminl"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 130 167 115 }
@@ -551,7 +621,8 @@ new province roscrea_51 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_52 = {
+new province stochiamth = {
+	name = "Stochiamth"
 	inherit = roscrea_inherit
 	terrain = highlands
 	color = { 107 124 226 }
@@ -559,7 +630,8 @@ new province roscrea_52 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_53 = {
+new province rhylgirr = {
+	name = "Rhylgirr"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 120 222 102 }
@@ -567,7 +639,8 @@ new province roscrea_53 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_54 = {
+new province tuknonimth = {
+	name = "Tuknonimth"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 209 126 234 }
@@ -575,15 +648,8 @@ new province roscrea_54 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_55 = {
-	inherit = roscrea_inherit
-	terrain = grasslands
-	color = { 242 248 104 }
-	position = { 1899.000 2382.000 1899.000 2382.000 1899.000 2382.000 1902.000 2386.000 1899.000 2382.000 1899.000 2382.000 1899.000 2382.000 }
-	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province roscrea_56 = {
+new province frorin = {
+	name = "Frorin"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 153 201 178 }
@@ -591,7 +657,8 @@ new province roscrea_56 = {
 	rotation = { 0.000 0.000 0.000 -3.142 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_57 = {
+new province theyf = {
+	name = "Theyf"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 182 255 192 }
@@ -608,8 +675,8 @@ new province aragaggahrakharak = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province pelagius_lamp = {
-	name = "Pelagius' Lamp"
+new province brujen = {
+	name = "Brujen"
 	inherit = roscrea_inherit
 	terrain = hills
 	color = { 181 254 172 }
@@ -626,8 +693,8 @@ new province garrhumkhatog = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province katariahs_lamp = {
-	name = "Katariah's Lamp"
+new province froheylden = {
+	name = "Froheylden"
 	inherit = roscrea_inherit
 	vterrain = hills
 	color = { 155 121 255 }
@@ -635,7 +702,8 @@ new province katariahs_lamp = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_62 = {
+new province mandialdor = {
+	name = "Mandialdor"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 126 244 108 }
@@ -643,7 +711,8 @@ new province roscrea_62 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_63 = {
+new province sveijiahol = {
+	name = "Sveijiahol"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 230 110 210 }
@@ -660,7 +729,8 @@ new province dulgotigok = {
 	rotation = { 0.000 0.000 0.000 0.436 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_65 = {
+new province hliangryl = {
+	name = "Hliangryl"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 153 230 156 }
@@ -668,7 +738,8 @@ new province roscrea_65 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_66 = {
+new province gelrif = {
+	name = "Gelrif"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 151 206 126 }
@@ -685,7 +756,8 @@ new province orimvast = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_68 = {
+new province hrodnonuld = {
+	name = "Hrodnonuld"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 214 125 103 }
@@ -693,7 +765,8 @@ new province roscrea_68 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_69 = {
+new province midreynlildr = {
+	name = "Midreynlildr"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 199 192 161 }
@@ -701,7 +774,8 @@ new province roscrea_69 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_70 = {
+new province keinheinos = {
+	name = "Keinheinos"
 	inherit = roscrea_inherit
 	terrain = grasslands
 	color = { 102 145 217 }
@@ -713,7 +787,8 @@ new area olenveld = {
 	name = "Olenveld"
 	region = winterhold
 }
-new province roscrea_71 = {
+new province hlolmalder = {
+	name = "Hlolmalder"
 	inherit = roscrea_inherit
 	color = { 147 140 177 }
 	area = olenveld
@@ -726,7 +801,8 @@ new province roscrea_71 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_72 = {
+new province segdryl = {
+	name = "Segdryl"
 	inherit = roscrea_inherit
 	color = { 120 163 198 }
 	area = olenveld
@@ -739,7 +815,8 @@ new province roscrea_72 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_73 = {
+new province rulnianladr = {
+	name = "Rulnianladr"
 	inherit = roscrea_inherit
 	color = { 202 122 177 }
 	area = olenveld
@@ -752,7 +829,8 @@ new province roscrea_73 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_74 = {
+new province volanlos = {
+	name = "Volanlos"
 	inherit = roscrea_inherit
 	color = { 155 233 242 }
 	area = olenveld
@@ -765,7 +843,8 @@ new province roscrea_74 = {
 	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_75 = {
+new province hrudnaldaf = {
+	name = "Hrudnaldaf"
 	inherit = roscrea_inherit
 	color = { 225 151 179 }
 	area = olenveld
@@ -778,7 +857,8 @@ new province roscrea_75 = {
 	rotation = { 0.000 0.000 0.000 1.571 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_76 = {
+new province hliaminind = {
+	name = "Hliaminind"
 	inherit = roscrea_inherit
 	color = { 173 169 219 }
 	area = olenveld
@@ -791,7 +871,8 @@ new province roscrea_76 = {
 	rotation = { 0.000 0.000 0.000 2.356 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_79 = {
+new province segjodr = {
+	name = "Segjodr"
 	inherit = roscrea_inherit
 	color = { 103 107 162 }
 	terrain = coastline
@@ -799,7 +880,8 @@ new province roscrea_79 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_80 = {
+new province tyrugill = {
+	name = "Tyrugill"
 	inherit = roscrea_inherit
 	color = { 226 126 121 }
 	terrain = coastline
@@ -807,7 +889,8 @@ new province roscrea_80 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_81 = {
+new province fregamth = {
+	name = "Fregamth"
 	inherit = roscrea_inherit
 	color = { 122 122 226 }
 	terrain = hills
@@ -815,7 +898,8 @@ new province roscrea_81 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_82 = {
+new province stagnith = {
+	name = "Stagnith"
 	inherit = roscrea_inherit
 	color = { 103 132 235 }
 	terrain = coastline
@@ -827,7 +911,8 @@ new province roscrea_82 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_83 = {
+new province klotmoth = {
+	name = "Klotmoth"
 	inherit = roscrea_inherit
 	color = { 103 231 235 }
 	terrain = hills
@@ -835,7 +920,8 @@ new province roscrea_83 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_84 = {
+new province gosnenl = {
+	name = "Gosnenl"
 	inherit = roscrea_inherit
 	color = { 160 219 214 }
 	terrain = coastline
@@ -843,7 +929,8 @@ new province roscrea_84 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_85 = {
+new province rhoermelialg = {
+	name = "Rhoermelialg"
 	inherit = roscrea_inherit
 	color = { 131 150 184 }
 	terrain = coastline
@@ -855,7 +942,8 @@ new province roscrea_85 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_86 = {
+new province vangem = {
+	name = "Vangem"
 	inherit = roscrea_inherit
 	color = { 201 129 113 }
 	terrain = coastline
@@ -867,7 +955,8 @@ new province roscrea_86 = {
 	rotation = { 0.000 0.000 0.000 1.309 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_87 = {
+new province bulunnik = {
+	name = "Bulunnik"
 	inherit = roscrea_inherit
 	color = { 173 140 188 }
 	terrain = hills
@@ -879,7 +968,8 @@ new province roscrea_87 = {
 	rotation = { 0.000 0.000 0.000 -1.571 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_88 = {
+new province ryskr = {
+	name = "Ryskr"
 	inherit = roscrea_inherit
 	color = { 134 152 247 }
 	terrain = coastline
@@ -891,7 +981,8 @@ new province roscrea_88 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_89 = {
+new province skongok = {
+	name = "Skongok"
 	inherit = roscrea_inherit
 	color = { 189 238 117 }
 	terrain = coastline
@@ -903,7 +994,8 @@ new province roscrea_89 = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_90 = {
+new province framth = {
+	name = "Framth"
 	inherit = roscrea_inherit
 	color = { 191 177 197 }
 	terrain = grasslands
@@ -915,7 +1007,8 @@ new province roscrea_90 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_91 = {
+new province fignynnoth = {
+	name = "Fignynnoth"
 	inherit = roscrea_inherit
 	color = { 252 207 199 }
 	terrain = grasslands
@@ -927,7 +1020,8 @@ new province roscrea_91 = {
 	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_92 = {
+new province kutgawalg = {
+	name = "Kutgawalg"
 	inherit = roscrea_inherit
 	color = { 246 242 183 }
 	terrain = grasslands
@@ -939,7 +1033,8 @@ new province roscrea_92 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_93 = {
+new province bikseth = {
+	name = "Bikseth"
 	inherit = roscrea_inherit
 	color = { 217 198 176 }
 	terrain = grasslands
@@ -951,7 +1046,8 @@ new province roscrea_93 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_94 = {
+new province virgold = {
+	name = "Virgold"
 	inherit = roscrea_inherit
 	color = { 247 198 159 }
 	terrain = grasslands
@@ -963,7 +1059,8 @@ new province roscrea_94 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_95 = {
+new province randeiskr = {
+	name = "Randeiskr"
 	inherit = roscrea_inherit
 	color = { 116 105 144 }
 	terrain = grasslands
@@ -971,7 +1068,8 @@ new province roscrea_95 = {
 	rotation = { 0.000 0.000 0.000 3.142 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_96 = {
+new province frylsgelg = {
+	name = "Frylsgelg"
 	inherit = roscrea_inherit
 	color = { 170 110 191 }
 	terrain = grasslands
@@ -979,7 +1077,8 @@ new province roscrea_96 = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_97 = {
+new province brindeilg = {
+	name = "Brindeilg"
 	inherit = roscrea_inherit
 	color = { 158 200 142 }
 	terrain = grasslands
@@ -987,7 +1086,8 @@ new province roscrea_97 = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_98 = {
+new province skelskar = {
+	name = "Skelskar"
 	inherit = roscrea_inherit
 	color = { 239 218 201 }
 	terrain = grasslands
@@ -995,7 +1095,8 @@ new province roscrea_98 = {
 	rotation = { 0.000 0.000 0.000 2.356 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new province roscrea_99 = {
+new province firkymiskr = {
+	name = "Firkymiskr"
 	inherit = roscrea_inherit
 	color = { 127 192 104 }
 	terrain = grasslands
