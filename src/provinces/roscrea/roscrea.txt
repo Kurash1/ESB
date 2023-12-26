@@ -41,17 +41,6 @@ new province roscrea_imp_7 = {
 	inherit = roscrea_imp_inherit
 	color = { 5 14 20 }
 }
-new superregion northern_isles = {
-	name = "Northern Isles"
-}
-new region roscrea = {
-	name = "Roscrea"
-	superregion = northern_isles
-}
-new region the_shatter = {
-	name = "The Shatter"
-	superregion = northern_isles
-}
 new inheritable roscrea_inherit = {
 	position = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
@@ -60,86 +49,6 @@ new inheritable roscrea_inherit = {
 		religion = the_old_ways
 		culture = roscrean
 	}
-}
-new area wyrms_isle = {
-	name = "Wyrms Isle"
-	region = the_shatter
-}
-new province skomuldidr = {
-	name = "Skomuldidr"
-	terrain = coastline
-	inherit = roscrea_inherit
-	color = { 139 125 252 }
-	area = wyrms_isle
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1413.000 2340.000 1413.000 2341.000 0.000 0.000 1402.000 2340.000 0.000 0.000 1414.000 2342.000 0.000 0.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
-}
-new province haetar = {
-	name = "Haetar"
-	terrain = hills
-	inherit = roscrea_inherit
-	color = { 159 108 210 }
-	area = wyrms_isle
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1422.000 2354.000 1422.000 2354.000 0.000 0.000 1417.500 2362.000 0.000 0.000 1423.000 2355.000 0.000 0.000 }
-	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
-	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
-}
-new province krakevik = {
-	name = "Krakevik"
-	terrain = hills
-	inherit = roscrea_inherit
-	color = { 217 168 210 }
-	area = wyrms_isle
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1429.000 2344.000 1429.000 2346.000 0.000 0.000 1424.000 2339.000 0.000 0.000 1432.000 2344.000 0.000 0.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
-}
-new area hjalmer_isles = {
-	name = "Hjalmer Isles"
-	region = roscrea
-}
-new province hjalmers_rest = {
-	name = "Hjalmer's Rest"
-	terrain = coastline
-	area = hjalmer_isles
-	inherit = roscrea_inherit
-	color = { 101 141 132 }
-	position = { 1932.000 2225.000 1932.000 2225.000 0.000 0.000 1932.000 2219.000 0.000 0.000 1933.000 2225.000 0.000 0.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
-}
-new province rheewinith = {
-	name = "Rheewinith"
-	inherit = roscrea_inherit
-	color = { 251 161 125 }
-	area = hjalmer_isles
-	terrain = coastline
-	position = { 1901.000 2245.000 1901.000 2245.000 1901.000 2245.000 1904.000 2240.000 1901.000 2245.000 1901.000 2245.000 1901.000 2245.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province segel = {
-	name = "Segel"
-	inherit = roscrea_inherit
-	color = { 219 222 157 }
-	area = hjalmer_isles
-	terrain = coastline
-	position = { 1895.000 2259.000 1895.000 2259.000 1895.000 2259.000 1890.000 2256.000 1895.000 2259.000 1895.000 2259.000 1895.000 2259.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
 new area denramth_isles = {
 	name = "Denramth Isles"
@@ -314,7 +223,7 @@ new area drakoroya = {
 new province drakoroya = {
 	name = "Drakoroya"
 	inherit = roscrea_inherit
-	terrain = grasslands
+	terrain = forest
 	color = { 249 150 103 }
 	area = drakoroya
 	position = { 1914.000 2374.000 1914.000 2374.000 1914.000 2374.000 1916.500 2375.000 1914.000 2374.000 1914.000 2374.000 1914.000 2374.000 }
@@ -344,7 +253,7 @@ new province ridneinind = {
 new province hjitheldr = {
 	name = "Hjitheldr"
 	inherit = roscrea_inherit
-	terrain = grasslands
+	terrain = forest
 	color = { 242 248 104 }
 	area = drakoroya
 	position = { 1899.000 2382.000 1899.000 2382.000 1899.000 2382.000 1902.000 2386.000 1899.000 2382.000 1899.000 2382.000 1899.000 2382.000 }
@@ -388,7 +297,7 @@ new province theyf = {
 new province frorin = {
 	name = "Frorin"
 	inherit = roscrea_inherit
-	terrain = grasslands
+	terrain = forest
 	color = { 153 201 178 }
 	area = kedmahiel
 	position = { 1882.000 2385.000 1882.000 2385.000 1882.000 2385.000 1885.000 2391.000 1882.000 2385.000 1882.000 2385.000 1882.000 2385.000 }
@@ -720,7 +629,7 @@ new area aragaggahrakharak = {
 new province aragaggahrakharak = {
 	name = "Aragaggahrakharak"
 	inherit = roscrea_inherit
-	terrain = grasslands
+	terrain = forest
 	color = { 156 107 229 }
 	area = aragaggahrakharak
 	position = { 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 1887.000 2372.000 }
@@ -869,280 +778,6 @@ new province tyrugill = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 }
-new area bikseth = {
-	name = "Bikseth"
-	region = the_shatter
-}
-new province bikseth = {
-	name = "Bikseth"
-	inherit = roscrea_inherit
-	color = { 217 198 176 }
-	area = bikseth
-	terrain = grasslands
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1737.000 2233.000 1737.000 2233.000 1737.000 2233.000 1738.000 2236.000 1737.000 2233.000 1737.000 2233.000 1737.000 2233.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province andholm = {
-	name = "Andholm"
-	terrain = coastline
-	inherit = roscrea_inherit
-	color = { 253 142 208 }
-	area = bikseth
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1765.000 2242.000 1765.000 2248.000 0.000 0.000 1762.500 2242.500 0.000 0.000 1764.000 2246.000 0.000 0.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
-}
-new province virgold = {
-	name = "Virgold"
-	inherit = roscrea_inherit
-	color = { 247 198 159 }
-	area = bikseth
-	terrain = grasslands
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1742.000 2222.000 1742.000 2222.000 1742.000 2222.000 1739.000 2214.000 1742.000 2222.000 1742.000 2222.000 1742.000 2222.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province kutgawalg = {
-	name = "Kutgawalg"
-	inherit = roscrea_inherit
-	color = { 246 242 183 }
-	area = bikseth
-	terrain = grasslands
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1724.000 2221.000 1724.000 2221.000 1724.000 2221.000 1725.000 2214.000 1724.000 2221.000 1724.000 2221.000 1724.000 2221.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province framth = {
-	name = "Framth"
-	inherit = roscrea_inherit
-	color = { 191 177 197 }
-	area = bikseth
-	terrain = grasslands
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1710.000 2233.000 1710.000 2233.000 1710.000 2233.000 1705.000 2228.000 1710.000 2233.000 1710.000 2233.000 1710.000 2233.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province fignynnoth = {
-	name = "Fignynnoth"
-	inherit = roscrea_inherit
-	color = { 252 207 199 }
-	area = bikseth
-	terrain = grasslands
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1721.000 2243.000 1721.000 2243.000 1721.000 2243.000 1727.500 2242.000 1721.000 2243.000 1721.000 2243.000 1721.000 2243.000 }
-	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province fregamth = {
-	name = "Fregamth"
-	inherit = roscrea_inherit
-	color = { 122 122 226 }
-	area = bikseth
-	terrain = hills
-	position = { 1722.000 2282.000 1722.000 2282.000 1722.000 2282.000 1719.000 2275.000 1722.000 2282.000 1722.000 2282.000 1722.000 2282.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new area randeiskr = {
-	name = "Randeiskr"
-	region = the_shatter
-}
-new province randeiskr = {
-	name = "Randeiskr"
-	inherit = roscrea_inherit
-	color = { 116 105 144 }
-	area = randeiskr
-	terrain = grasslands
-	position = { 1588.000 2249.000 1588.000 2249.000 1588.000 2249.000 1585.000 2250.500 1588.000 2249.000 1588.000 2249.000 1588.000 2249.000 }
-	rotation = { 0.000 0.000 0.000 3.142 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province frylsgelg = {
-	name = "Frylsgelg"
-	inherit = roscrea_inherit
-	color = { 170 110 191 }
-	area = randeiskr
-	terrain = grasslands
-	position = { 1581.000 2233.000 1581.000 2233.000 1581.000 2233.000 1578.000 2227.000 1581.000 2233.000 1581.000 2233.000 1581.000 2233.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province firkymiskr = {
-	name = "Firkymiskr"
-	inherit = roscrea_inherit
-	color = { 127 192 104 }
-	area = randeiskr
-	terrain = grasslands
-	position = { 1602.000 2237.000 1602.000 2237.000 1602.000 2237.000 1608.000 2235.000 1602.000 2237.000 1602.000 2237.000 1602.000 2237.000 }
-	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province brindeilg = {
-	name = "Brindeilg"
-	inherit = roscrea_inherit
-	color = { 158 200 142 }
-	area = randeiskr
-	terrain = grasslands
-	position = { 1621.000 2246.000 1621.000 2246.000 1621.000 2246.000 1622.000 2240.000 1621.000 2246.000 1621.000 2246.000 1621.000 2246.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province skelskar = {
-	name = "Skelskar"
-	inherit = roscrea_inherit
-	color = { 239 218 201 }
-	area = randeiskr
-	terrain = grasslands
-	position = { 1610.000 2258.000 1610.000 2258.000 1610.000 2258.000 1608.000 2255.000 1610.000 2258.000 1610.000 2258.000 1610.000 2258.000 }
-	rotation = { 0.000 0.000 0.000 2.356 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province stagnith = {
-	name = "Stagnith"
-	inherit = roscrea_inherit
-	color = { 103 132 235 }
-	area = randeiskr
-	terrain = coastline
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1665.000 2253.000 1665.000 2253.000 1665.000 2253.000 1667.000 2246.000 1665.000 2253.000 1665.000 2253.000 1665.000 2253.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province klotmoth = {
-	name = "Klotmoth"
-	inherit = roscrea_inherit
-	color = { 103 231 235 }
-	area = randeiskr
-	terrain = hills
-	position = { 1641.000 2301.000 1641.000 2301.000 1641.000 2301.000 1638.000 2295.000 1641.000 2301.000 1641.000 2301.000 1641.000 2301.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province gosnenl = {
-	name = "Gosnenl"
-	inherit = roscrea_inherit
-	color = { 160 219 214 }
-	area = randeiskr
-	terrain = coastline
-	position = { 1575.000 2198.000 1575.000 2198.000 1575.000 2198.000 1575.000 2192.000 1575.000 2198.000 1575.000 2198.000 1575.000 2198.000 }
-	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new area jaldur_isles = {
-	name = "Jaldur Isles"
-	region = the_shatter
-}
-new province jaldur_kair = {
-	name = "Jaldur Kair"
-	terrain = coastline
-	inherit = roscrea_inherit
-	color = { 254 174 222 }
-	area = jaldur_isles
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1492.000 2292.000 1493.000 2292.000 0.000 0.000 1496.000 2288.000 0.000 0.000 1493.000 2291.000 0.000 0.000 }
-	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
-	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
-}
-new province skongok = {
-	name = "Skongok"
-	inherit = roscrea_inherit
-	color = { 189 238 117 }
-	area = jaldur_isles
-	terrain = coastline
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1473.000 2339.000 1473.000 2339.000 1473.000 2339.000 1477.000 2333.000 1473.000 2339.000 1473.000 2339.000 1473.000 2339.000 }
-	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province ryskr = {
-	name = "Ryskr"
-	inherit = roscrea_inherit
-	color = { 134 152 247 }
-	area = jaldur_isles
-	terrain = coastline
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1550.000 2327.000 1550.000 2327.000 1550.000 2327.000 1549.000 2322.000 1550.000 2327.000 1550.000 2327.000 1550.000 2327.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province bulunnik = {
-	name = "Bulunnik"
-	inherit = roscrea_inherit
-	color = { 173 140 188 }
-	area = jaldur_isles
-	terrain = hills
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1536.000 2333.000 1536.000 2333.000 1536.000 2333.000 1542.000 2330.000 1536.000 2333.000 1536.000 2333.000 1536.000 2333.000 }
-	rotation = { 0.000 0.000 0.000 -1.571 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province rhoermelialg = {
-	name = "Rhoermelialg"
-	inherit = roscrea_inherit
-	color = { 131 150 184 }
-	area = jaldur_isles
-	terrain = coastline
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1523.000 2260.000 1523.000 2260.000 1523.000 2260.000 1524.000 2256.000 1523.000 2260.000 1523.000 2260.000 1523.000 2260.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province vangem = {
-	name = "Vangem"
-	inherit = roscrea_inherit
-	color = { 201 129 113 }
-	area = jaldur_isles
-	terrain = coastline
-	history = {
-		religion = sea_oath
-		culture = sea_giant
-	}
-	position = { 1567.000 2286.000 1567.000 2286.000 1567.000 2286.000 1560.000 2287.000 1567.000 2286.000 1567.000 2286.000 1567.000 2286.000 }
-	rotation = { 0.000 0.000 0.000 1.309 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
 new area olenveld = {
 	name = "Olenveld"
 	region = winterhold
@@ -1230,4 +865,113 @@ new province hliaminind = {
 	position = { 1937.000 2202.000 1937.000 2202.000 1937.000 2202.000 1928.000 2197.000 1937.000 2202.000 1937.000 2202.000 1937.000 2202.000 }
 	rotation = { 0.000 0.000 0.000 2.356 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new area hjalmer_isles = {
+	name = "Hjalmer Isles"
+	region = roscrea
+}
+new province hjalmers_rest = {
+	name = "Hjalmer's Rest"
+	terrain = coastline
+	inherit = roscrea_inherit
+	color = { 101 141 132 }
+	area = hjalmer_isles
+	position = { 1932.000 2225.000 1932.000 2225.000 0.000 0.000 1932.000 2219.000 0.000 0.000 1933.000 2225.000 0.000 0.000 }
+	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
+	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
+}
+new province rheewinith = {
+	name = "Rheewinith"
+	inherit = roscrea_inherit
+	color = { 251 161 125 }
+	area = hjalmer_isles
+	terrain = coastline
+	position = { 1901.000 2245.000 1901.000 2245.000 1901.000 2245.000 1904.000 2240.000 1901.000 2245.000 1901.000 2245.000 1901.000 2245.000 }
+	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+new province segel = {
+	name = "Segel"
+	inherit = roscrea_inherit
+	color = { 219 222 157 }
+	area = hjalmer_isles
+	terrain = coastline
+	position = { 1895.000 2259.000 1895.000 2259.000 1895.000 2259.000 1890.000 2256.000 1895.000 2259.000 1895.000 2259.000 1895.000 2259.000 }
+	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+}
+quick_strait = {
+	from = bragdrir
+	to = horlyllemth
+	through = new_sea_18
+}
+quick_strait = {
+	from = hrodnonuld
+	to = denramth
+	through = new_sea_7
+}
+quick_strait = {
+	from = jirgilg
+	to = denramth
+	through = new_sea_7
+}
+quick_strait = {
+	from = jirgilg
+	to = thongrild
+	through = new_sea_7
+}
+quick_strait = {
+	from = jirgilg
+	to = rilrydr
+	through = new_sea_7
+}
+quick_strait = {
+	from = jirgilg
+	to = rhuknol
+	through = new_sea_7
+}
+quick_strait = {
+	from = klyksarr
+	to = haskullholm
+	through = new_sea_8
+}
+quick_strait = {
+	from = frulild
+	to = basgral
+	through = new_sea_6
+}
+quick_strait = {
+	from = hjitheldr
+	to = ridneinind
+	through = new_sea_3
+}
+quick_strait = {
+	from = hralmuldr
+	to = konhiedr
+	through = new_sea_11
+}
+quick_strait = {
+	from = kormeill
+	to = geth
+	through = new_sea_16
+}
+quick_strait = {
+	from = thalsgol
+	to = heesnegarr
+	through = new_sea_13
+}
+quick_strait = {
+	from = bredaf
+	to = hagik
+	through = new_sea_13
+}
+quick_strait = {
+	from = hranafall
+	to = hagik
+	through = new_sea_13
+}
+quick_strait = {
+	from = satal
+	to = skasgron
+	through = new_sea_13
 }

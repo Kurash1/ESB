@@ -13,16 +13,6 @@ new inheritable impassible = {
 	}
 	impassible = yes
 }
-new superregion skyrim = {
-	name = "Skyrim"
-}
-new superregion sea_of_ghosts = {
-	name = "Sea of Ghosts"
-}
-new region skyrim_sea = {
-	name = "Skyrim Sea"
-	superregion = sea_of_ghosts
-}
 new area coast_of_winterhold = {
 	name = "Coast of Winterhold"
 	region = skyrim_sea
@@ -2235,40 +2225,4 @@ new province mount_shearpoint = {
 	history = {
 	}
 	impassible = yes
-}
-new region rift = {
-	name = "Rift"
-	superregion = skyrim
-}
-new region eastmarch = {
-	name = "Eastmarch"
-	superregion = skyrim
-}
-new region kreath = {
-	name = "Kreath"
-	superregion = skyrim
-}
-new region whiterun = {
-	name = "Whiterun"
-	superregion = skyrim
-}
-new region reach = {
-	name = "Reach"
-	superregion = skyrim
-}
-new region winterhold = {
-	name = "Winterhold"
-	superregion = skyrim
-}
-new region pale = {
-	name = "Pale"
-	superregion = skyrim
-}
-new region hjaalmarch = {
-	name = "Hjaalmarch"
-	superregion = skyrim
-}
-new region haafingar = {
-	name = "Haafingar"
-	superregion = skyrim
 }
