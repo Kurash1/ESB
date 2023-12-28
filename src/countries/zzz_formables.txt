@@ -1,3 +1,101 @@
+new country roscrea = {
+	inherit = roscrean_country
+	primary_culture = roscrean
+	tag = RSC
+	name = "Roscrea"
+	adj = "Roscrean"
+	color = {
+		0 127 127
+	}
+	starting_reform = tier_1_hold
+	capital = satal
+}
+new decision form_roscrea = {
+	name = "Form Roscrea"
+	major = yes
+	potential = {
+		capital_scope = {
+			region = roscrea
+		}
+		NOT = {
+			has_reform = tier_1_hold
+			exists = roscrea
+		}
+	}
+	provinces_to_highlight = {
+		region = roscrea
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
+		calc_true_if = {
+			amount = 60
+			regions:roscrea = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+	}
+	effect = {
+		change_tag = roscrea
+		swap_free_idea_group = yes
+		change_government = monarchy
+		add_government_reform = tier_1_hold
+		regions:the_shatter = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+new country the_shatter = {
+	inherit = roscrean_country
+	primary_culture = roscrean
+	tag = THT
+	name = "The Shatter"
+	adj = "The Shatter"
+	color = {
+		255 127 127
+	}
+	starting_reform = tier_1_hold
+	capital = randeiskr
+}
+new decision form_the_shatter = {
+	name = "Form the Shatter"
+	major = yes
+	potential = {
+		capital_scope = {
+			region = the_shatter
+		}
+		NOT = {
+			has_reform = tier_1_hold
+			exists = the_shatter
+		}
+	}
+	provinces_to_highlight = {
+		region = the_shatter
+		NOT = { owned_by = ROOT }
+	}
+	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
+		calc_true_if = {
+			amount = 40
+			regions:the_shatter = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+	}
+	effect = {
+		change_tag = the_shatter
+		swap_free_idea_group = yes
+		change_government = monarchy
+		add_government_reform = tier_1_hold
+		regions:the_shatter = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
 new country eastmarch = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
