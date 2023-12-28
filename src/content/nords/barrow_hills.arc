@@ -24,7 +24,10 @@ new country_event barrow_hill.1 = {
 	picture = TOMB_eventPicture
 	is_triggered_only = yes
 	trigger = {
-		culture_group = nord
+		OR = {
+			is_race = nord
+			is_race = atmoran
+		}
 		any_owned_province = {
 			NOT = {
 				has_construction = buildings:barrow_hill

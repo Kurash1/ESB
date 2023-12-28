@@ -1,0 +1,151 @@
+new inheritable sea_giant_country = {
+	technology_group = nord_tg
+	religion = sea_oath
+	primary_culture = sea_giant
+	graphical_culture = greekgfx
+	history = {
+		1.1.1 = {
+			province_groups:nord_discovery = {
+				discover_country = $tag
+			}
+		}
+	}
+	starting_reform = tier_1_nord_clan
+	capital = black_mountain
+}
+new country bikseth = {
+	inherit = sea_giant_country
+	tag = BIS
+	name = "Bikseth"
+	color = { 135 89 47 }
+	capital = bikseth
+	history += {
+		history_ruler = {
+			name = "Thusgrath"
+			dynasty = "Skidinl"
+			adm = 3
+			dip = 3
+			mil = 3
+			age = 25
+		}
+	}
+}
+new country stagnith = {
+	inherit = sea_giant_country
+	tag = SGN
+	name = "Stagnith"
+	color = { 0 0 100 }
+	capital = stagnith
+	history += {
+		history_ruler = {
+			name = "Brugneith"
+			dynasty = "Stosgrolg"
+			adm = 0
+			dip = 0
+			mil = 0
+			age = 20
+		}
+	}
+}
+new country threvuhul = {
+	inherit = sea_giant_country
+	tag = TEV
+	name = "Threvuhul"
+	color = { 100 150 200 }
+	capital = threvuhul
+	history += {
+		history_ruler = {
+			name = "Stesnarell"
+			dynasty = "Sisnolg"
+			adm = 4
+			dip = 0
+			mil = 1
+			age = 28
+		}
+	}
+}
+new country thelild = {
+	inherit = sea_giant_country
+	tag = THL
+	name = "Thelild"
+	color = { 73 21 50 }
+	capital = thelild
+	history += {
+		history_ruler = {
+			name = "Skochold"
+			dynasty = "Duth"
+			adm = 2
+			dip = 3
+			mil = 1
+			age = 32
+		}
+	}
+}
+new country bulunnik = {
+	inherit = sea_giant_country
+	tag = BLN
+	name = "Bulunnik"
+	color = { 200 50 50 }
+	capital = bulunnik
+	history += {
+		history_ruler = {
+			name = "Keld"
+			dynasty = "Malskiath"
+			adm = 3
+			dip = 3
+			mil = 4
+			age = 39
+		}
+	}
+}
+new country stargam = {
+	inherit = sea_giant_country
+	tag = SRG
+	name = "Stargam"
+	color = { 236 183 60 }
+	capital = stargam
+	history += {
+		history_ruler = {
+			name = "Frynl"
+			dynasty = "Rarran"
+			adm = 5
+			dip = 1
+			mil = 4
+			age = 35
+		}
+	}
+}
+new country midr = {
+	inherit = sea_giant_country
+	tag = MDR
+	name = "Midr"
+	color = { 5 40 100 }
+	capital = midr
+	history += {
+		history_ruler = {
+			name = "Rhechil"
+			dynasty = "Frosgrill"
+			adm = 2
+			dip = 5
+			mil = 1
+			age = 37
+		}
+	}
+}
+new country krakevik = {
+	inherit = sea_giant_country
+	tag = KRK
+	name = "Krakevik"
+	color = { 215 190 165 }
+	capital = krakevik
+	history += {
+		history_ruler = {
+			name = "Furlarr"
+			dynasty = "Jergeim"
+			adm = 4
+			dip = 5
+			mil = 3
+			age = 20
+		}
+	}
+}

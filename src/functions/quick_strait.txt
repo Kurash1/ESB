@@ -1,0 +1,17 @@
+new named_int strait_amount = 1
+new effect quick_strait = {
+	args = {
+		from = province
+		to = province
+		through = province
+	}
+	transpile = {
+		new adjacency `strait_{strait_amount}` = {
+			from = args:from
+			to = args:to
+			through = args:through
+			type = sea
+		}
+		strait_amount += 1
+	}
+}

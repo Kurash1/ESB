@@ -13,16 +13,6 @@ new inheritable impassible = {
 	}
 	impassible = yes
 }
-new superregion skyrim = {
-	name = "Skyrim"
-}
-new superregion sea_of_ghosts = {
-	name = "Sea of Ghosts"
-}
-new region skyrim_sea = {
-	name = "Skyrim Sea"
-	superregion = sea_of_ghosts
-}
 new area coast_of_winterhold = {
 	name = "Coast of Winterhold"
 	region = skyrim_sea
@@ -48,13 +38,13 @@ new province coast_of_bleakrock = {
 }
 new province far_japhet_sea = {
 	position = {
-		2012.000 2077.000 2012.000 2077.000 2012.000 2077.000 2012.000 2077.000 2012.000 2077.000 2012.000 2077.000 2012.000 2077.000
+		2032.000 2075.000 2033.000 2075.000 2012.000 2077.000 2032.000 2074.000 2012.000 2077.000 2033.000 2074.000 2012.000 2077.000 
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
 	}
 	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
 	}
 	name = "Far Japhet Sea"
 	color = {
@@ -2235,40 +2225,4 @@ new province mount_shearpoint = {
 	history = {
 	}
 	impassible = yes
-}
-new region rift = {
-	name = "Rift"
-	superregion = skyrim
-}
-new region eastmarch = {
-	name = "Eastmarch"
-	superregion = skyrim
-}
-new region kreath = {
-	name = "Kreath"
-	superregion = skyrim
-}
-new region whiterun = {
-	name = "Whiterun"
-	superregion = skyrim
-}
-new region reach = {
-	name = "Reach"
-	superregion = skyrim
-}
-new region winterhold = {
-	name = "Winterhold"
-	superregion = skyrim
-}
-new region pale = {
-	name = "Pale"
-	superregion = skyrim
-}
-new region hjaalmarch = {
-	name = "Hjaalmarch"
-	superregion = skyrim
-}
-new region haafingar = {
-	name = "Haafingar"
-	superregion = skyrim
 }

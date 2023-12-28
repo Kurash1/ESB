@@ -1,0 +1,69 @@
+new idea_group sea_giant_ideas = {
+	name = "Sea Giant"
+	category = national
+	priority = 10
+	start = {
+		war_exhaustion = -0.05
+		military_tactics = 0.1
+	}
+	bonus = {
+		global_attacker_dice_roll_bonus = 1
+	}
+	trigger = {
+		primary_culture = sea_giant
+	}
+	ideas = {
+		{
+			name = "Waveforged Spears"
+			desc = "Amidst the frozen waves, the Sea Giants have perfected the craft of crafting bone weapons from the remains of their prey. These Waveforged Spears, adorned with jagged ends and enchanted with the essence of the sea, are the chosen tools of Sea Giants in their maritime hunts."
+			modifier = {
+				infantry_shock = 0.5
+			}
+		}
+		{
+			name = "Mystic Tides Mastery"
+			desc = "Harnessing the magic of the frigid waters, the Sea Giants command the ebb and flow of the sea with unmatched mastery. Their Mystic Tides Mastery allows them to wield shock and frost magic, conjuring orbs of seawater and guiding powerful surges to crush any who dare oppose them."
+			modifier = {
+				heavy_ship_power = 0.1
+				light_ship_power = 0.1
+				galley_power = 0.1
+				transport_power = 0.1
+			}
+		}
+		{
+			name = "Frozen Ambush Tactics"
+			desc = "In the icy depths of the Sea of Ghosts, Sea Giants have perfected the art of surprise and stealth. Their Frozen Ambush Tactics enable them to disappear into the mist, launching sudden raids during the coldest winters. Swift and ruthless, they slaughter and pillage, leaving only chaos in their wake."
+			modifier = {
+				leader_land_manuever = 1
+			}
+		}
+		{
+			name = "Whalebone Armament"
+			desc = "The Sea Giants, efficient predators of the frozen seas, fashion their weaponry and armor from the bones of their colossal prey. Their Whalebone Armament, crafted with expertise, includes harpoons, armor, and clothing adorned with skulls, serrated teeth, and other trophies from the creatures they hunt."
+			modifier = {
+				global_regiment_cost = -0.10
+			}
+		}
+		{
+			name = "Frostbound Resilience"
+			desc = "Forged by the relentless cold of the northern waters, Sea Giants possess an innate Frostbound Resilience. Their sturdy frames, gargantuan strength, and resistance to the biting cold make them formidable adversaries, capable of leaping into frigid waters to wrestle with their prey."
+			modifier = {
+				land_attrition = -0.10
+			}
+		}
+		{
+			name = "Oceanic Harmony"
+			desc = "Unlike their landlocked cousins, Sea Giants exhibit a unique harmony with the vast oceans. Their Oceanic Harmony enables complex tool usage and group coordination, especially in the hunt for elusive whales beneath the ice. Fearless and efficient, Sea Giants form a deadly alliance to pursue their maritime prey."
+			modifier = {
+				naval_morale = 0.1
+			}
+		}
+		{
+			name = "Savage Sea Raids"
+			desc = "Known for their ruthless pillaging during the coldest winters, the Sea Giants excel in executing swift and devastating sea raids. Their tactics are as cunning as they are ferocious, leaving coastal settlements in chaos before vanishing into the misty depths."
+			modifier = {
+				may_perform_slave_raid = yes
+			}
+		}
+	}
+}
