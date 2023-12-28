@@ -13,29 +13,6 @@ new inheritable roscrean_country = {
 	starting_reform = tier_1_nord_clan
 	capital = black_mountain
 }
-new effect history_ruler = {
-	args = {
-		name = text
-		dynasty = text
-		adm = int
-		dip = int
-		mil = int
-		age = int
-	}
-	transpile = {	
-		2568.1.1 = {
-			monarch = {
-				name = args:name
-				dynasty = args:dynasty
-				adm = args:adm
-				dip = args:dip
-				mil = args:mil
-				birth_date = `{(2568-args:age)}.1.1`
-			}
-		}
-	}
-}
-breakpoint
 new country horker_husk = {
 	inherit = roscrean_country
 	tag = HHU
