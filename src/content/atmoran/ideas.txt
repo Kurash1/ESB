@@ -1,0 +1,68 @@
+new idea_group atmoran_ideas = {
+	name = "Atmoran"
+	category = national
+	priority = 10
+	start = {
+		global_manpower_modifier = 0.25
+		naval_morale = 0.1
+	}
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+	trigger = {
+		is_race = atmoran
+	}
+	ideas = {
+		{
+			name = "Children of Frostfall"
+			desc = "Atmorans, shaped by the relentless advance of Frostfall, are resilient and resourceful. Their ability to endure the harshest climates and adapt to the frozen landscapes has forged a people unyielding in the face of adversity."
+			modifier = {
+				land_attrition = -0.10
+				global_monthly_devastation = -0.1
+			}
+		}
+		{
+			name = "Shores of Jylkurfyk"
+			desc = "Jylkurfyk, the largest port on the frozen continent, was the gateway for Atmorans seeking refuge in Tamriel. The seafaring expertise and maritime resilience honed in those icy waters endure in the Atmoran spirit, shaping a people capable of navigating tumultuous seas."
+			modifier = {
+				ship_durability = 0.05
+			}
+		}
+		{
+			name = "Ancient Giants' Legacy"
+			desc = "Legends of encounters with Giants and the union of Atmorans with Giant-Wives speak of a time when titans roamed the icy expanses. The Atmorans, influenced by these ancient beings, inherit their strength and stature, standing tall in the face of challenges."
+			modifier = {
+				shock_damage = 0.1
+			}
+		}
+		{
+			name = "Animal Totems of Atmora"
+			desc = "The Atmorans revered the creatures of their homeland, deifying the hawk, wolf, snake, moth, owl, whale, bear, and fox. These animal totems played a crucial role in their society, influencing their spirituality, traditions, and even warfare. The bond with these totems remains strong among the Atmorans."
+			modifier = {
+				tolerance_own = 2
+			}
+		}
+		{
+			name = "Beasts of Atmora"
+			desc = "The diverse fauna of Atmora, from giant-sized Chub Loons to the majestic White Stag, has left an indelible mark on Atmoran culture. The Atmorans revere these creatures, incorporating their essence into their myths, rituals, and daily life."
+			modifier = {
+				global_unrest = -1
+			}
+		}
+		{
+			name = "Northern Sea Mastery"
+			desc = "Atmorans are a seafaring people, navigating treacherous waters to reach Tamriel. Their mastery of the northern seas grants them a unique advantage in naval affairs. Whether hunting in the Sea of Ghosts or establishing trade routes, the Atmorans' connection to the icy waters is unmatched."
+			modifier = {
+				naval_forcelimit_modifier = 0.1
+				global_trade_power = 0.1
+			}
+		}
+		{
+			name = "Myths of Atmora"
+			desc = "The myths and legends of Atmora shape the Atmorans' worldview. From Shor's victory over Sneggh at the Shivering Glacier to Ysgramor's exploits in the Atmoran Frostwood, these tales inspire courage and determination. The Atmorans carry the weight of their history, drawing strength from the myths that define them."
+			modifier = {
+				monthly_splendor = 1
+			}
+		}
+	}
+}

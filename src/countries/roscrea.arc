@@ -13,12 +13,45 @@ new inheritable roscrean_country = {
 	starting_reform = tier_1_nord_clan
 	capital = black_mountain
 }
+new effect history_ruler = {
+	args = {
+		name = text
+		dynasty = text
+		adm = int
+		dip = int
+		mil = int
+		age = int
+	}
+	transpile = {	
+		2568.1.1 = {
+			monarch = {
+				name = args:name
+				dynasty = args:dynasty
+				adm = args:adm
+				dip = args:dip
+				mil = args:mil
+				birth_date = `{(2568-args:age)}.1.1`
+			}
+		}
+	}
+}
+breakpoint
 new country horker_husk = {
 	inherit = roscrean_country
 	tag = HHU
 	name = "Horker-Husk"
 	color = { 203 190 148 }
 	capital = segel
+	history += {
+		history_ruler = {
+			name = "Klymth"
+			dynasty = "Horker-Husk"
+			adm = 0
+			dip = 4
+			mil = 4
+			age = 37
+		}
+	}
 }
 new country whale_watcher = {
 	inherit = roscrean_country
@@ -26,6 +59,16 @@ new country whale_watcher = {
 	name = "Whale-Watcher"
 	color = { 63 127 98 }
 	capital = rilrydr
+	history += {
+		history_ruler = {
+			name = "Baksoll"
+			dynasty = "Whale-Watcher"
+			adm = 1
+			dip = 2
+			mil = 1
+			age = 37
+		}
+	}
 }
 new country ore_breaker = {
 	inherit = roscrean_country
@@ -33,6 +76,16 @@ new country ore_breaker = {
 	name = "Ore-Breaker"
 	color = { 127 51 0 }
 	capital = boralvond
+	history += {
+		history_ruler = {
+			name = "Gasmel"
+			dynasty = "Ore-Breaker"
+			adm = 0
+			dip = 1
+			mil = 4
+			age = 23
+		}
+	}
 }
 new country storm_caller = {
 	inherit = roscrean_country
@@ -40,6 +93,16 @@ new country storm_caller = {
 	name = "Storm-Caller"
 	color = { 0 0 50 }
 	capital = keinheinos
+	history += {
+		history_ruler = {
+			name = "Stolbam"
+			dynasty = "Storm-Caller"
+			adm = 4
+			dip = 5
+			mil = 5
+			age = 25
+		}
+	}
 }
 new country rune_caller = {
 	inherit = roscrean_country
@@ -47,6 +110,16 @@ new country rune_caller = {
 	name = "Rune-Caller"
 	color = { 80 63 127 }
 	capital = vendonlun
+	history += {
+		history_ruler = {
+			name = "Fyrgin"
+			dynasty = "Rune-Caller"
+			adm = 4
+			dip = 2
+			mil = 1
+			age = 36
+		}
+	}
 }
 new country tide_tamer = {
 	inherit = roscrean_country
@@ -54,6 +127,16 @@ new country tide_tamer = {
 	name = "Tide-Tamer"
 	color = { 0 127 127 }
 	capital = drakoroya
+	history += {
+		history_ruler = {
+			name = "Thuwan"
+			dynasty = "Tide-Tamer"
+			adm = 5
+			dip = 3
+			mil = 4
+			age = 19
+		}
+	}
 }
 new country spirit_axe = {
 	inherit = roscrean_country
@@ -61,6 +144,16 @@ new country spirit_axe = {
 	name = "Spirit-Axe"
 	color = { 87 0 127 }
 	capital = aragaggahrakharak
+	history += {
+		history_ruler = {
+			name = "Rhisgrirr"
+			dynasty = "Spirit-Axe"
+			adm = 2
+			dip = 2
+			mil = 1
+			age = 29
+		}
+	}
 }
 new country thunder_drum = {
 	inherit = roscrean_country
@@ -68,6 +161,16 @@ new country thunder_drum = {
 	name = "Thunder-Drum"
 	color = { 255 216 0 }
 	capital = kedmahiel
+	history += {
+		history_ruler = {
+			name = "Rhasmuwiak"
+			dynasty = "Thunder-Drum"
+			adm = 5
+			dip = 1
+			mil = 2
+			age = 36
+		}
+	}
 }
 new country snow_bear = {
 	inherit = roscrean_country
@@ -75,6 +178,16 @@ new country snow_bear = {
 	name = "Snow-Bear"
 	color = { 255 255 255 }
 	capital = tuknonimth
+	history += {
+		history_ruler = {
+			name = "Dalskerr"
+			dynasty = "Snow-Bear"
+			adm = 1
+			dip = 0
+			mil = 5
+			age = 21
+		}
+	}
 }
 new country wraith_sword = {
 	inherit = roscrean_country
@@ -82,6 +195,17 @@ new country wraith_sword = {
 	name = "Wraith-Sword"
 	color = { 73 0 255 }
 	capital = satal
+	history += {
+		history_ruler = {
+			name = "Voknillimth"
+			dynasty = "Wraith-Sword"
+			adm = 4
+			dip = 0
+			mil = 5
+			age = 26
+		}
+	}
+
 }
 new country wolf_song = {
 	inherit = roscrean_country
@@ -89,6 +213,16 @@ new country wolf_song = {
 	name = "Wolf-Song"
 	color = { 127 0 0 }
 	capital = segjodr
+	history += {
+		history_ruler = {
+			name = "Kliskr"
+			dynasty = "Wolf-Song"
+			adm = 3
+			dip = 1
+			mil = 4
+			age = 30
+		}
+	}
 }
 new country frost_fang = {
 	inherit = roscrean_country
@@ -96,6 +230,16 @@ new country frost_fang = {
 	name = "Frost-Fang"
 	color = { 0 255 255 }
 	capital = hralmuldr
+	history += {
+		history_ruler = {
+			name = "Melymin"
+			dynasty = "Frost-Fang"
+			adm = 2
+			dip = 5
+			mil = 4
+			age = 28
+		}
+	}
 }
 new country stone_watcher = {
 	inherit = roscrean_country
@@ -103,6 +247,16 @@ new country stone_watcher = {
 	name = "Stone-Watcher"
 	color = { 65 65 65 }
 	capital = thalsgol
+	history += {
+		history_ruler = {
+			name = "Brarroenold"
+			dynasty = "Stone-Watcher"
+			adm = 2
+			dip = 5
+			mil = 3
+			age = 36
+		}
+	}
 }
 new country nymph_dance = {
 	inherit = roscrean_country
@@ -110,6 +264,16 @@ new country nymph_dance = {
 	name = "Nymph-Dance"
 	color = { 255 0 220 }
 	capital = rageld
+	history += {
+		history_ruler = {
+			name = "Mulild"
+			dynasty = "Nymph-Dance"
+			adm = 2
+			dip = 2
+			mil = 0
+			age = 19
+		}
+	}
 }
 new country star_weaver = {
 	inherit = roscrean_country
@@ -117,6 +281,16 @@ new country star_weaver = {
 	name = "Star-Weaver"
 	color = { 127 147 255 }
 	capital = skelskar
+	history += {
+		history_ruler = {
+			name = "Klarlonl"
+			dynasty = "Star-Weaver"
+			adm = 4
+			dip = 1
+			mil = 2
+			age = 29
+		}
+	}
 }
 new country sea_ghost = {
 	inherit = roscrean_country
@@ -124,6 +298,16 @@ new country sea_ghost = {
 	name = "Sea-Ghost"
 	color = { 0 38 255 }
 	capital = frylsgelg
+	history += {
+		history_ruler = {
+			name = "Dyrligim"
+			dynasty = "Sea-Ghost"
+			adm = 5
+			dip = 5
+			mil = 1
+			age = 20
+		}
+	}
 }
 new country whispering_wyrm = {
 	inherit = roscrean_country
@@ -131,4 +315,14 @@ new country whispering_wyrm = {
 	name = "Whispering Wyrm"
 	color = { 38 38 38 }
 	capital = aragaggahrakharak
+	history += {
+		history_ruler = {
+			name = "Sigemth"
+			dynasty = "Whispering Wyrm"
+			adm = 5
+			dip = 2
+			mil = 1
+			age = 18
+		}
+	}
 }

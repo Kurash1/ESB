@@ -47,6 +47,17 @@ new country valtheim = {
 	}
 	capital = valtheim
 }
+new country olenveld = {
+	inherit = nordic_country
+	primary_culture = winterholdian
+	tag = OLV
+	name = "Olenveld"
+	adj = "Olenveldian"
+	color = {
+		30 30 30
+	}
+	capital = hrudnaldaf
+}
 new country clearspring = {
 	inherit = nordic_country
 	primary_culture = fallowfirean

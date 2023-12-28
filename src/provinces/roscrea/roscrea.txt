@@ -904,7 +904,7 @@ new province aragaggahrakharak = {
 new province mandialdor = {
 	name = "Mandialdor"
 	inherit = roscrea_inherit
-	terrain = grasslands
+	terrain = forest
 	color = { 126 244 108 }
 	area = aragaggahrakharak
 	position = { 1872.000 2362.000 1872.000 2362.000 1872.000 2362.000 1872.000 2362.000 1872.000 2362.000 1872.000 2362.000 1872.000 2362.000 }
@@ -934,7 +934,7 @@ new province brujen = {
 new province sveijiahol = {
 	name = "Sveijiahol"
 	inherit = roscrea_inherit
-	terrain = grasslands
+	terrain = forest
 	color = { 230 110 210 }
 	area = aragaggahrakharak
 	position = { 1873.000 2349.000 1873.000 2349.000 1873.000 2349.000 1873.000 2349.000 1873.000 2349.000 1873.000 2349.000 1873.000 2349.000 }
@@ -1108,106 +1108,6 @@ new province tyrugill = {
 		history_owner = wolf_song
 	}
 }
-new area olenveld = {
-	name = "Olenveld"
-	region = winterhold
-}
-new province hlolmalder = {
-	name = "Hlolmalder"
-	inherit = roscrea_inherit
-	color = { 147 140 177 }
-	area = olenveld
-	terrain = grasslands
-	history = {
-		religion = the_old_ways
-		culture = roscrean
-		religion = nordic_pantheon
-		culture = winterholdian
-	}
-	position = { 1958.000 2182.000 1958.000 2182.000 1958.000 2182.000 1961.000 2183.000 1958.000 2182.000 1958.000 2182.000 1958.000 2182.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province segdryl = {
-	name = "Segdryl"
-	inherit = roscrea_inherit
-	color = { 120 163 198 }
-	area = olenveld
-	terrain = grasslands
-	history = {
-		religion = the_old_ways
-		culture = roscrean
-		religion = nordic_pantheon
-		culture = winterholdian
-	}
-	position = { 1941.000 2173.000 1941.000 2173.000 1941.000 2173.000 1941.000 2168.000 1941.000 2173.000 1941.000 2173.000 1941.000 2173.000 }
-	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province rulnianladr = {
-	name = "Rulnianladr"
-	inherit = roscrea_inherit
-	color = { 202 122 177 }
-	area = olenveld
-	terrain = grasslands
-	history = {
-		religion = the_old_ways
-		culture = roscrean
-		religion = nordic_pantheon
-		culture = winterholdian
-	}
-	position = { 1925.000 2179.000 1925.000 2179.000 1925.000 2179.000 1918.000 2178.000 1925.000 2179.000 1925.000 2179.000 1925.000 2179.000 }
-	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province volanlos = {
-	name = "Volanlos"
-	inherit = roscrea_inherit
-	color = { 155 233 242 }
-	area = olenveld
-	terrain = grasslands
-	history = {
-		religion = the_old_ways
-		culture = roscrean
-		religion = nordic_pantheon
-		culture = winterholdian
-	}
-	position = { 1955.000 2202.000 1955.000 2202.000 1955.000 2202.000 1959.000 2202.000 1955.000 2202.000 1955.000 2202.000 1955.000 2202.000 }
-	rotation = { 0.000 0.000 0.000 -2.356 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province hrudnaldaf = {
-	name = "Hrudnaldaf"
-	inherit = roscrea_inherit
-	color = { 225 151 179 }
-	area = olenveld
-	terrain = grasslands
-	history = {
-		religion = the_old_ways
-		culture = roscrean
-		religion = nordic_pantheon
-		culture = winterholdian
-	}
-	position = { 1940.000 2191.000 1940.000 2191.000 1940.000 2191.000 1933.000 2189.000 1940.000 2191.000 1940.000 2191.000 1940.000 2191.000 }
-	rotation = { 0.000 0.000 0.000 1.571 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
-new province hliaminind = {
-	name = "Hliaminind"
-	inherit = roscrea_inherit
-	color = { 173 169 219 }
-	area = olenveld
-	terrain = grasslands
-	history = {
-		religion = the_old_ways
-		culture = roscrean
-		religion = nordic_pantheon
-		culture = winterholdian
-	}
-	position = { 1937.000 2202.000 1937.000 2202.000 1937.000 2202.000 1928.000 2197.000 1937.000 2202.000 1937.000 2202.000 1937.000 2202.000 }
-	rotation = { 0.000 0.000 0.000 2.356 0.000 0.000 0.000 }
-	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
-}
 new area hjalmer_isles = {
 	name = "Hjalmer Isles"
 	region = roscrea
@@ -1221,6 +1121,11 @@ new province hjalmers_rest = {
 	position = { 1932.000 2225.000 1932.000 2225.000 0.000 0.000 1932.000 2219.000 0.000 0.000 1933.000 2225.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
+	history = {
+		religion = the_old_ways
+		culture = roscrean
+		history_owner = horker_husk
+	}
 }
 new province rheewinith = {
 	name = "Rheewinith"
