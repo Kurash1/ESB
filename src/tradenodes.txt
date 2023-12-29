@@ -110,7 +110,7 @@ new tradenode winterhold = {
 	name = "Winterhold"
 	location = winterhold
 	areas = {
-		stillborn_cave bleak_coast whistling_mine winterhold japhets_folly skytemple the_chill
+		stillborn_cave bleak_coast whistling_mine winterhold japhets_folly skytemple the_chill olenveld
 	}
 	outgoings = {
 		{
@@ -634,6 +634,80 @@ new tradenode skyborn = {
 			control = {
 				1760.000000 1968.000000 1751.000000 1953.000000 1735.000000 1936.000000
 			}
+		}
+	}
+}
+new tradenode denramth = {
+	name = "Denramth"
+	location = rilrydr
+	areas = {
+		hrodnonuld boralvond rilrydr basgral denramth_isles hjalmer_isles
+	}
+	outgoings = {
+		{
+			node = winterhold
+			path = { rilrydr new_sea_7 new_sea_14 new_sea_41 east_chill_coast coast_of_winterhold mareet danen winterhold }
+		}
+	}
+}
+new tradenode hjugdrior = {
+	name = "Hjugdrior"
+	location = hjugdrior
+	areas = {
+		satal hranafall hjugdrior stochiamth orimvast tyrugill thalsgol
+	}
+	outgoings = {
+		{
+			node = denramth
+			path = { hjugdrior new_sea_21 new_sea_22 new_sea_10 new_sea_7 rilrydr }
+			control = { 1810.000000 2357.000000 1823.000000 2338.000000 1839.000000 2309.000000 1875.000000 2287.000000 1911.000000 2319.000000 }
+		}
+	}
+}
+new tradenode tide_coast = {
+	name = "Tide Coast"
+	location = frorin
+	areas = {
+		hralmuldr kedmahiel aragaggahrakharak drakoroya hluris
+	}
+	outgoings = {
+		{
+			node = denramth
+			path = { frorin hjitheldr drakoroya new_sea_5 new_sea_6 new_sea_8 rilrydr }
+		}
+		{
+			node = hjugdrior
+			path = { frorin new_sea_2 new_sea_11 new_sea_16 new_sea_13 sagjun bragdrir hjugdrior }
+		}
+	}
+}
+new tradenode south_shatter = {
+	name = "South Shatter"
+	location = stagnith
+	areas = {
+		mysmelg randeiskr stagnith thanhiend fregamth bikseth
+	}
+	outgoings = {
+		{
+			node = northwatch
+			path = { stagnith new_sea_55 two_isle_coast coast_of_northwatch northwatch }
+		}
+		{
+			node = hjugdrior
+			path = { stagnith new_sea_54 new_sea_29 new_sea_24 new_sea_18 hjugdrior }
+		}
+	}
+}
+new tradenode north_shatter = {
+	name = "North Shatter"
+	location = stargam
+	areas = {
+		mutold jurlillath bulunnik stargam wyrms_isle
+	}
+	outgoings = {
+		{
+			node = south_shatter
+			path = { stargam new_sea_64 new_sea_63 new_sea_57 stagnith }
 		}
 	}
 }
