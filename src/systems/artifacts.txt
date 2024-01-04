@@ -1,0 +1,26 @@
+new effect give_artifact = {
+	args = {
+		id = string
+		name = string
+		modifier = modifier
+	}
+	transpile = {
+		new event_modifier `{args:id}_artifact` = {
+			name = args:name
+			modifier = args:modifier
+		}
+		add_country_modifier = {
+			name = `{args:id}_artifact`
+			duration = -1
+		}
+	}
+}
+new effect give_named_artifact = {
+	args = string
+	transpile = {
+		`add_country_modifier =` {
+			`name = {args}_artifact`
+			`duration = -1`
+		}
+	}
+}
