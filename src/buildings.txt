@@ -629,6 +629,15 @@ new building def_manufactory = {
 	cost = 500
 	time = 60
 	manufactory = {
-		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
+		wood steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
+	}
+}
+new building mine_manufactory = {
+	name = "Mine"
+	desc = ""
+	cost = 500
+	time = 60
+	manufactory = {
+		iron gems c_metals r_metals ebony
 	}
 }
