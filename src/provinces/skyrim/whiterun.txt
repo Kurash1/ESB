@@ -1417,6 +1417,15 @@ new province south_brittleshin = {
 		capital = ""
 		is_city = no
 		history_owner = skjoralmor
+		1.1.1 = {
+			create_expedition = {
+				id = south_brittleshin
+				length = 5
+				on_complete = {
+					set_province_flag = brittleshin_pass
+				}
+			}
+		}
 	}
 }
 new province anises_cabin = {

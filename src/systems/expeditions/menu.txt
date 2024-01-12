@@ -1,5 +1,36 @@
-new custom_icon expeditions_menu = {
+new custom_icon expedition_menu = {
 	potential = {
 		has_province_modifier = expedition_target
+	}
+}
+new custom_text_box expedition_progress_text = {
+    potential = {
+		has_province_modifier = expedition_target
+	}
+	name = "[This.expedition_percentage.GetValue]%"
+}
+new custom_button start_expedition = {
+	tooltip = "Start Expedition"
+	potential = {
+		has_province_modifier = expedition_target
+	}
+	effect = {
+		if [has_province_modifier = expedition_camp] {
+			new_custom_tooltip = "§OThis is the monthly chance of progress§!"
+			tooltip = {
+				random_list = {
+					10 = {
+						cause_expedition_progress = 1
+					}
+					90 = { }
+				}
+			}
+		}
+		else {
+			add_permanent_province_modifier = {
+				name = expedition_camp
+				duration = -1
+			}
+		}
 	}
 }

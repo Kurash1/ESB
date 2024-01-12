@@ -1,0 +1,45 @@
+new localisation expedition_progress = "Expedition Progress"
+new effect cause_expedition_progress = {
+	args = int
+	transpile = {
+		change_variable = {
+			which = expedition_progress
+			value = args
+		}
+		hidden_effect = {
+			set_variable = {
+				which = expedition_percentage
+				which = expedition_progress
+			}
+			divide_variable = {
+				which = expedition_percentage
+				which = expedition_length
+			}
+			multiply_variable = {
+				which = expedition_percentage
+				value = 100
+			}
+			
+			if [
+				check_variable = {
+					which = expedition_progress
+					which = expedition_length
+				}
+			] {
+				end_expedition_effect
+			}
+		}
+	}
+}
+on_actions:on_monthly_pulse += {
+	every_owned_province [
+		has_province_modifier = expedition_camp
+	] {
+		random_list = {
+			10 = {
+				cause_expedition_progress = 1
+			}
+			90 = { }
+		}
+	}
+}
