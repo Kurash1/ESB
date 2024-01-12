@@ -1,24 +1,24 @@
-superregion = {
+new class superregion = {
 	list = superregions
 	attributes = {
 		name = string
 	}
 }
-region = {
+new class region = {
 	list = regions
 	attributes = {
 		name = string
 		superregion = superregion
 	}
 }
-area = {
+new class area = {
 	list = areas
 	attributes = {
 		name = string
 		region = region
 	}
 }
-province = {
+new class province = {
 	list = provinces
 	default = {
 		sea = no
@@ -42,7 +42,7 @@ province = {
 		height = block
 	}
 }
-tradegood = {
+new class tradegood = {
 	list = tradegoods
 	attributes = {
 		name = string
@@ -55,7 +55,7 @@ tradegood = {
 		chance = block
 	}
 }
-terrain = {
+new class terrain = {
 	list = terrains
 	default = {
 		desc = ""
@@ -80,7 +80,7 @@ terrain = {
 		base_development = int
 	}
 }
-blessing = {
+new class blessing = {
 	list = blessings
 	attributes = {
 		name = string
@@ -91,7 +91,7 @@ blessing = {
 		ai_will_do = trigger
 	}
 }
-church_aspect = {
+new class church_aspect = {
 	list = church_aspects
 	default = {
 		potential = { }
@@ -116,7 +116,7 @@ church_aspect = {
 		trigger = trigger
 	}
 }
-country = {
+new class country = {
 	list = countries
 	default = {
 		adj = this:name
@@ -162,7 +162,7 @@ country = {
 		starting_reform = string?
 	}
 }
-adjacency = {
+new class adjacency = {
 	list = adjacencies
 	default = {
 		start_x = -1
@@ -183,7 +183,7 @@ adjacency = {
 		comment = string
 	}
 }
-subject_type = {
+new class subject_type = {
 	list = subject_types
 	default = { }
 	attributes = {
@@ -313,5 +313,385 @@ subject_type = {
 		clear_overlord_modifier = bool?
 		overlord_opinion_modifier = string?
 		subject_opinion_modifier = string?
+	}
+}
+new class government_names = {
+	list = government_names
+	default = {
+		rank = { }
+		ruler_male = { }
+		ruler_female = { }
+		consort_male = { }
+		consort_female = { }
+		heir_male = { }
+		heir_female = { }
+	}
+	attributes = {
+		rank = block
+		ruler_male = block
+		ruler_female = block
+		consort_male = block
+		consort_female = block
+		heir_male = block
+		heir_female = block
+		trigger = trigger
+	}
+}
+new class government_mechanic = {
+	list = government_mechanics
+	default = { }
+	attributes = {
+		name = string
+		alert_icon_gfx = string?
+		alert_icon_index = string?
+		available = trigger?
+		powers = list<block>?
+		interactions = list<block>?
+	}
+}
+new class custom_button = {
+	list = custom_buttons
+	default = {
+		potential = { }
+		trigger = { }
+		effect = { }
+	}
+	attributes = {
+		potential = trigger
+		trigger = trigger
+		effect = effect
+		tooltip = string?
+	}
+}
+new class custom_icon = {
+	list = custom_icons
+	default = {
+		potential = { }
+	}
+	attributes = {
+		potential = trigger
+		tooltip = string?
+	}
+}
+new class custom_text_box = {
+	list = custom_text_boxes
+	default = {
+		potential = { }
+	}
+	attributes = {
+		name = string
+		potential = trigger
+		tooltip = string?
+	}
+}
+new class culture_group = {
+	list = culture_groups
+	default = {
+		male_names = { }
+		female_names = { }
+		dynasty_names = { }
+		country = { }
+		province = { }
+	}
+	attributes = {
+		graphical_culture = string
+		name = string
+		male_names = block
+		female_names = block
+		dynasty_names = block
+		country = modifier
+		province = modifier
+	}
+}
+new class culture = {
+	list = cultures
+	default = {
+		male_names = { }
+		female_names = { }
+		dynasty_names = { }
+		country = { }
+		province = { }
+	}
+	attributes = {
+		name = string
+		male_names = block
+		female_names = block
+		dynasty_names = block
+		country = modifier
+		province = modifier
+		primary = country?
+		culture_group = culture_group
+	}
+}
+new enum monarch_power = {
+	ADM
+	DIP
+	MIL
+}
+new class advisor_type = {
+	list = advisor_types
+	default = {
+		ai_will_do = {
+			factor = 1
+		}
+		allow_only_male = no
+		allow_only_female = no
+		allow_only_owner_religion = no
+		chance = {
+			factor = 1
+		}
+	}
+	attributes = {
+		name = string
+		desc = string
+		modifier = modifier
+		ai_will_do = trigger
+		allow_only_male = bool
+		allow_only_female = bool
+		chance = trigger
+		monarch_power = monarch_power
+	}
+}
+new struct option = {
+	default = {
+		ai_chance = {
+			factor = 1
+		}
+		highlight = no
+		trigger = { }
+		effect = { }
+	}
+	attributes = {
+		name = string
+		ai_chance = trigger
+		highlight = bool
+		goto = province?
+		trigger = trigger
+		effect = effect
+	}
+}
+new class country_event = {
+	list = country_events
+	default = {
+		desc = ""
+		picture = template_eventPicture
+		major = no
+		major_trigger = { }
+		fire_only_once = no
+		hidden = no
+		trigger = { }
+		immediate = { }
+		after = { }
+		mean_time_to_happen = { }
+		is_triggered_only = yes
+	}
+	attributes = {
+		title = string
+		desc = string
+		picture = string
+		major = bool
+		trigger = trigger
+		fire_only_once = bool
+		hidden = bool
+		immediate = effect
+		after = effect
+		mean_time_to_happen = trigger
+		is_triggered_only = bool
+		options = mlist<option>
+	}
+}
+new class province_event = {
+	list = province_events
+	default = {
+		desc = ""
+		picture = template_eventPicture
+		major = no
+		major_trigger = { }
+		fire_only_once = no
+		hidden = no
+		trigger = { }
+		immediate = { }
+		after = { }
+		mean_time_to_happen = { }
+		is_triggered_only = yes
+	}
+	attributes = {
+		title = string
+		desc = string
+		picture = string
+		major = bool
+		trigger = trigger
+		fire_only_once = bool
+		hidden = bool
+		immediate = effect
+		after = effect
+		mean_time_to_happen = trigger
+		is_triggered_only = bool
+		options = mlist<option>
+	}
+}
+new class opinion_modifier = {
+	list = opinion_modifiers
+	attributes = {
+		name = string
+		opinion = int
+		min = int?
+		max = int?
+		max_vassal = int?
+		max_in_other_direction = int?
+		yearly_decay = int?
+		months = int?
+	}
+}
+new class event_modifier = {
+	list = event_modifiers
+	attributes = {
+		name = string
+		modifier = modifier
+	}
+}
+new class province_triggered_modifier = {
+	list = province_triggered_modifiers
+	default = {
+		potential = { }
+		trigger = { }
+		modifier = { }
+		on_apply = { }
+		on_remove = { }
+	}
+	attributes = {
+		name = string
+		potential = trigger
+		trigger = trigger
+		modifier = modifier
+		on_apply = effect
+		on_remove = effect
+	}
+}
+new class estate = {
+	list = estates
+	default = {
+		province_independence_weight = {
+			factor = 1
+		}
+		influence_modifiers = { }
+		loyalty_modifiers = { }
+		custom_names = { }
+		contributes_to_curia_treasury = no
+		priviliges = { }
+		agendas = { }
+		influence_from_dev_modifier = 1
+	}
+	attributes = {
+		name = string
+		desc = string
+		icon = int
+		color = block
+		trigger = trigger
+		country_modifier_happy = modifier
+		country_modifier_neutral = modifier
+		country_modifier_angry = modifier
+		land_ownership_modifier = modifier
+		province_independence_weight = trigger
+		base_influence = float
+		influence_modifiers = list<trigger>
+		loyalty_modifiers = list<trigger>
+		custom_names = list<trigger>
+		contributes_to_curia_treasury = bool
+		priviliges = list<block>
+		agendas = list<block>
+		influence_from_dev_modifier = float
+	}
+}
+new class government_reform = {
+	list = government_reforms
+	default = {
+		desc = ""
+	}
+	attributes = {
+		name = string
+		desc = string
+		icon = string
+		allow_normal_conversion = bool?
+		custom_attributes = block?
+		government_abilities = block?
+		potential = trigger?
+		trigger = trigger?
+		effect = effect?
+		modifier = modifier?
+		ai = trigger?
+	}
+}
+new class personality_trait = {
+	list = personality_traits
+	default = {
+		desc = ""
+		death = ""
+		ruler_allow = { }
+		heir_allow = { }
+		consort_allow = { }
+		chance = { }
+		allow = { }
+		war_priority = { }
+		ai_rules = { }
+		modifier = { }
+		nation_designer_cost = 1
+	}
+	attributes = {
+		name = string
+		desc = string
+		death = string
+		ruler_allow = trigger
+		heir_allow = trigger
+		consort_allow = trigger
+		chance = trigger
+		allow = trigger
+		war_priority = trigger
+		ai_rules = block
+		modifier = modifier
+		nation_designer_cost = int
+	}
+}
+new class diplomatic_action = {
+	list = diplomatic_actions
+	attributes = {
+		name = string
+		title = string
+		desc = string
+		tooltip = string
+		category = string
+		alert_index = int?
+		alert_tooltip = string?
+		require_acceptance = bool
+		potential = trigger
+		trigger = trigger
+		on_accept = effect
+		on_decline = effect?
+		ai_acceptance = trigger?
+		ai_will_do = trigger
+	}
+}
+new class mercenary_company = {
+	list = mercenary_companies
+	attributes = {
+		name = string
+		home_province = province?
+		cavalry_cap = int?
+		regiments_per_development = float?
+		cost_modifier = float?
+		cavalry_weight = float?
+		artillery_weight = float?
+		trigger = trigger?
+		modifier = modifier?
+	}
+}
+new class province_group = {
+	list = province_groups
+	default = {
+		provinces = { }
+	}
+	attributes = {
+		name = string
+		provinces = list<province>
 	}
 }
