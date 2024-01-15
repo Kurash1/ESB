@@ -15,11 +15,7 @@ mission_trees:solitude += {
 			longboat_legions
 		} 
 		trigger = {
-			provinces:big_sister, provinces:small_sister = {
-				NOT = {
-					has_province_modifier = expedition_target
-				}
-			}
+			always = yes
 		}
 		effect = {
 			unlock_poetic_edda_modifier = legend_of_two_sisters

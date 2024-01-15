@@ -11,10 +11,7 @@ new effect create_expedition = {
 		on_complete = effect
 	}
 	transpile = {
-		add_permanent_province_modifier = {
-			name = expedition_target
-			duration = -1
-		}
+		set_province_flag = expedition_target
 		set_variable = {
 			which = expedition_progress
 			value = 0
