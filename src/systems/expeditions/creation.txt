@@ -1,9 +1,12 @@
+new named_int expedition_count = 0
+
 new effect create_expedition = {
 	args = {
 		id = string
 		name = string
 		desc = string
 		frame = int
+		event_picture = string
 		length = int
 		on_complete = effect
 	}
@@ -24,6 +27,8 @@ new effect create_expedition = {
 			which = expedition_percentage
 			which = 0
 		}
+		
+		set_province_flag = args:id
 		
 		customizable_localizations:GetExpeditionTitle += {
 			{
@@ -50,13 +55,24 @@ new effect create_expedition = {
 			}
 		}
 		
-		set_province_flag = args:id
+		new province_event `expeditions.{expedition_count}` = {
+			title = "End of Expedition: {args:name}"
+			desc = "{args:desc}"
+			picture = "{args:event_picture}"
+			is_triggered_only = yes
+			options = {
+				name = "Finally"
+				effect =* *args:on_complete*
+			}
+		}
 		
 		end_expedition_effect +=! {
 			if [has_province_flag = args:id] {
-				args:on_complete
+				province_event = `expeditions.{expedition_count}`
 				clr_province_flag = args:id
 			}
 		}
+		
+		expedition_count += 1
 	}
 }
