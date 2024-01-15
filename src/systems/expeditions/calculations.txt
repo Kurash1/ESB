@@ -31,15 +31,38 @@ new effect cause_expedition_progress = {
 		}
 	}
 }
+new named_effect expedition_progress_pulse = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = 1.5
+				has_province_modifier = expedition_mod_cash_mod
+			}
+			modifier = {
+				factor = 1.5
+				has_province_modifier = expedition_mod_camp_mod
+			}
+			modifier = {
+				factor = 2.5
+				has_province_modifier = expedition_mod_explore_mod
+			}
+			modifier = {
+				factor = 1.5
+				has_province_modifier = expedition_mod_merc_mod
+			}
+			modifier = {
+				factor = 2
+				full_idea_group = exploration_ideas
+			}
+			cause_expedition_progress = 1
+		}
+		19 = { }
+	}
+}
 on_actions:on_monthly_pulse += {
 	every_owned_province [
 		has_province_modifier = expedition_camp
 	] {
-		random_list = {
-			10 = {
-				cause_expedition_progress = 1
-			}
-			90 = { }
-		}
+		expedition_progress_pulse
 	}
 }

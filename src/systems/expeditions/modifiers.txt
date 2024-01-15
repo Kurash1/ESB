@@ -10,3 +10,27 @@ new event_modifier expedition_camp = {
 		global_tax_income = -30
 	}
 }
+new event_modifier expedition_mod_cash_mod = {
+	name = "Expedition: Additional Funding"
+	modifier = {
+		global_tax_income = -30
+	}
+}
+new event_modifier expedition_mod_camp_mod = {
+	name = "Expedition: Military Support"
+	modifier = {
+		global_manpower = -5
+	}
+}
+new event_modifier expedition_mod_explore_mod = {
+	name = "Expedition: Explorers"
+	modifier = {
+		country_diplomatic_power = -1
+	}
+}
+new event_modifier expedition_mod_merc_mod = {
+	name = "Expedition: Mercenaries"
+	modifier = {
+		global_tax_income = -30
+	}
+}

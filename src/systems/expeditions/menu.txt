@@ -41,12 +41,7 @@ new custom_button start_expedition = {
 		if [has_province_modifier = expedition_camp] {
 			new_custom_tooltip = "§OThis is the monthly chance of progress§!"
 			tooltip = {
-				random_list = {
-					10 = {
-						cause_expedition_progress = 1
-					}
-					90 = { }
-				}
+				expedition_progress_pulse
 			}
 		}
 		else {
@@ -58,26 +53,85 @@ new custom_button start_expedition = {
 	}
 }
 new custom_button expedition_mod_cash = {
-	tooltip = ""
+	tooltip = "Grant Additional Funding"
 	potential = {
 		has_province_modifier = expedition_target
+	}
+	trigger = {
+		has_province_modifier = expedition_camp
+	}
+	effect = {
+		if [has_province_modifier = expedition_mod_cash_mod] {
+			remove_province_modifier = expedition_mod_cash_mod
+		}
+		else {
+			add_permanent_province_modifier = {
+				name = expedition_mod_cash_mod
+				duration = -1
+			}
+		}
 	}
 }
 new custom_button expedition_mod_camp = {
-	tooltip = ""
+	tooltip = "Send Military Support"
 	potential = {
 		has_province_modifier = expedition_target
+	}
+	trigger = {
+		has_province_modifier = expedition_camp
+	}
+	effect = {
+		if [has_province_modifier = expedition_mod_camp_mod] {
+			remove_province_modifier = expedition_mod_camp_mod
+		}
+		else {
+			add_permanent_province_modifier = {
+				name = expedition_mod_camp_mod
+				duration = -1
+			}
+		}
 	}
 }
 new custom_button expedition_mod_explore = {
-	tooltip = ""
+	tooltip = "Send Explorers"
 	potential = {
 		has_province_modifier = expedition_target
 	}
+	trigger = {
+		has_province_modifier = expedition_camp
+		owner = { 
+			num_of_explorers = 1
+		}
+	}
+	effect = {
+		if [has_province_modifier = expedition_mod_explore_mod] {
+			remove_province_modifier = expedition_mod_explore_mod
+		}
+		else {
+			add_permanent_province_modifier = {
+				name = expedition_mod_explore_mod
+				duration = -1
+			}
+		}
+	}
 }
 new custom_button expedition_mod_merc = {
-	tooltip = ""
+	tooltip = "Hire Mercenaries"
 	potential = {
 		has_province_modifier = expedition_target
+	}
+	trigger = {
+		has_province_modifier = expedition_camp
+	}
+	effect = {
+		if [has_province_modifier = expedition_mod_merc_mod] {
+			remove_province_modifier = expedition_mod_merc_mod
+		}
+		else {
+			add_permanent_province_modifier = {
+				name = expedition_mod_merc_mod
+				duration = -1
+			}
+		}
 	}
 }
