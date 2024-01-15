@@ -1,6 +1,9 @@
 new effect create_expedition = {
 	args = {
 		id = string
+		name = string
+		desc = string
+		frame = int
 		length = int
 		on_complete = effect
 	}
@@ -21,6 +24,32 @@ new effect create_expedition = {
 			which = expedition_percentage
 			which = 0
 		}
+		
+		customizable_localizations:GetExpeditionTitle += {
+			{
+				text = args:name
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		customizable_localizations:GetExpeditionDesc += {
+			{
+				text = args:desc
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		custom_icons:expedition_icon:frames += {
+			{
+				frame = args:frame
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		
 		set_province_flag = args:id
 		
 		end_expedition_effect +=! {

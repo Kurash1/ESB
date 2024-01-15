@@ -1,7 +1,30 @@
+new custom_icon expedition_icon = {
+	potential = {
+		has_province_modifier = expedition_target
+	}
+}
 new custom_icon expedition_menu = {
 	potential = {
 		has_province_modifier = expedition_target
 	}
+}
+new customizable_localization GetExpeditionTitle = {
+	
+}
+new custom_text_box expedition_title = {
+    potential = {
+		has_province_modifier = expedition_target
+	}
+	name = "[This.GetExpeditionTitle]"
+}
+new customizable_localization GetExpeditionDesc = {
+	
+}
+new custom_text_box expedition_desc = {
+    potential = {
+		has_province_modifier = expedition_target
+	}
+	name = "[This.GetExpeditionDesc]"
 }
 new custom_text_box expedition_progress_text = {
     potential = {
@@ -32,5 +55,29 @@ new custom_button start_expedition = {
 				duration = -1
 			}
 		}
+	}
+}
+new custom_button expedition_mod_cash = {
+	tooltip = ""
+	potential = {
+		has_province_modifier = expedition_target
+	}
+}
+new custom_button expedition_mod_camp = {
+	tooltip = ""
+	potential = {
+		has_province_modifier = expedition_target
+	}
+}
+new custom_button expedition_mod_explore = {
+	tooltip = ""
+	potential = {
+		has_province_modifier = expedition_target
+	}
+}
+new custom_button expedition_mod_merc = {
+	tooltip = ""
+	potential = {
+		has_province_modifier = expedition_target
 	}
 }

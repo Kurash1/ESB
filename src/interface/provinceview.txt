@@ -2854,12 +2854,37 @@ guiTypes = {
 			fullScreen = no
 			moveable = 0
 			Orientation = "UPPER_LEFT"
-
+			
+			iconType = {
+				name = "expedition_icon"
+				spriteType = "GFX_expedition_icon_strip"
+				position = { x = 336 y = 193 }
+				scripted = yes
+			}
 			iconType = {
 				name = "expedition_menu"
 				spriteType = "GFX_expedition_menu"
 				position = { x = 330 y = 135 }
 				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "expedition_title"
+				position = { x = 340 y = 155 }
+				textureFile = ""
+				font = "vic_22"
+				scripted = yes
+				maxWidth = 287
+				maxHeight = 32
+				format = left
+			}
+			instantTextBoxType = {
+				name = "expedition_desc"
+				position = { x = 445 y = 280 }
+				textureFile = ""
+				font = "vic_18"
+				scripted = yes
+				maxWidth = 215
+				format = left
 			}
 			instantTextBoxType = {
 				name = "expedition_progress_text"
@@ -2875,6 +2900,39 @@ guiTypes = {
 				name = "start_expedition"
 				position = { x = 337 y = 386 }
 				quadTextureSprite = "gfx_stats_button"
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			
+			guiButtonType = {
+				name = "expedition_mod_cash"
+				position = { x = 335 y = 278 }
+				quadTextureSprite = "GFX_expedition_cash_button"
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "expedition_mod_camp"
+				position = { x = 390 y = 278 }
+				quadTextureSprite = "GFX_expedition_camp_button"
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "expedition_mod_explore"
+				position = { x = 335 y = 333 }
+				quadTextureSprite = "GFX_expedition_explore_button"
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "expedition_mod_merc"
+				position = { x = 390 y = 333 }
+				quadTextureSprite = "GFX_expedition_merc_button"
 				buttonText = ""
 				buttonFont = "vic_18"
 				scripted = yes
