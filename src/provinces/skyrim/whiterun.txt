@@ -1356,6 +1356,15 @@ new province bandit_way = {
 		culture = falkrentish
 		hre = yes
 		fort_15th = yes
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Sponsored Fortifications"
+				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				modifier = {
+					local_fort_maintenance_modifier = -0.8
+				}
+			}
+		}
 		history_trade_goods = stone
 		capital = ""
 		is_city = yes
@@ -1418,13 +1427,20 @@ new province south_brittleshin = {
 		is_city = no
 		history_owner = skjoralmor
 		1.1.1 = {
+			quick_province_modifier = {
+				name = "Sponsored Fortifications"
+				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				modifier = {
+					local_fort_maintenance_modifier = -0.8
+				}
+			}
 			create_expedition = {
 				id = south_brittleshin
-				name = "South Brittleshin"
-				desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				name = "Brittleshin Cave"
+				desc = "In the shadow of the brittleshin hills, traversing through the northern kreath forest, our scouts say they found a cave. Initial explorations say that the size of the cave is beyond the scale that normal adventurers could explore."
 				frame = 2
 				event_picture = brittleshin_eventPicture
-				length = 5
+				length = 1
 				on_complete = {
 					set_province_flag = brittleshin_pass
 					new_custom_tooltip = "Unlocks a Great Project §YBrittleshin Pass§! in §YSouth Brittleshin§! province"
@@ -1512,6 +1528,15 @@ new province riverwood = {
 		hre = yes
 		history_trade_goods = wood
 		fort_15th = yes
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Sponsored Fortifications"
+				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				modifier = {
+					local_fort_maintenance_modifier = -0.8
+				}
+			}
+		}
 		capital = ""
 		is_city = yes
 		history_owner = skjoralmor
