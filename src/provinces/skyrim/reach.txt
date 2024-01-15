@@ -126,6 +126,28 @@ new province valthume = {
 		history_owner = black-moon_clan
 		history_trade_goods = alchemical_ingredients
 		is_city = no
+		
+		1.1.1 = {
+			create_expedition = {
+				id = valthume
+				name = "Valthume Ruins"
+				desc = ""
+				frame = 11
+				event_picture = valthume_eventPicture
+				length = 3
+				on_complete = {
+					owner = {
+						give_artifact = {
+							id = hevnoraak
+							name = "Hevnoraak"
+							modifier = {
+								global_unrest = -1
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new area arkngthamz = {
@@ -775,6 +797,28 @@ new province ragnvald = {
 		hre = no
 		history_trade_goods = stone
 		is_city = no
+		
+		1.1.1 = {
+			create_expedition = {
+				id = ragnvald
+				name = "Ragnvald Ruins"
+				desc = ""
+				frame = 8
+				event_picture = ragnvald_eventPicture
+				length = 3
+				on_complete = {
+					owner = {
+						give_artifact = {
+							id = otar
+							name = "Otar"
+							modifier = {
+								defensiveness = 0.15
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new area reach_camp = {

@@ -1,0 +1,75 @@
+new named_int expedition_count = 0
+
+new effect create_expedition = {
+	args = {
+		id = string
+		name = string
+		desc = string
+		frame = int
+		event_picture = string
+		length = int
+		on_complete = effect
+	}
+	transpile = {
+		set_province_flag = expedition_target
+		set_variable = {
+			which = expedition_progress
+			value = 0
+		}
+		set_variable = {
+			which = expedition_length
+			value = args:length
+		}
+		set_variable = {
+			which = expedition_percentage
+			which = 0
+		}
+		
+		set_province_flag = args:id
+		
+		customizable_localizations:GetExpeditionTitle += {
+			{
+				text = args:name
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		customizable_localizations:GetExpeditionDesc += {
+			{
+				text = args:desc
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		custom_icons:expedition_icon:frames += {
+			{
+				frame = args:frame
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		
+		new province_event `expeditions.{expedition_count}` = {
+			title = "End of Expedition: {args:name}"
+			desc = "{args:desc}"
+			picture = "{args:event_picture}"
+			is_triggered_only = yes
+			options = {
+				name = "Finally"
+				effect =* *args:on_complete*
+			}
+		}
+		
+		end_expedition_effect +=! {
+			if [has_province_flag = args:id] {
+				province_event = `expeditions.{expedition_count}`
+				clr_province_flag = args:id
+			}
+		}
+		
+		expedition_count += 1
+	}
+}

@@ -903,6 +903,27 @@ new province volskygge = {
 		history_owner = pine-hill
 		hre = yes
 		history_trade_goods = r_metals
+		1.1.1 = {
+			create_expedition = {
+				id = volskygge
+				name = "Volskygge Ruins"
+				desc = ""
+				frame = 6
+				event_picture = volskygge_eventPicture
+				length = 3
+				on_complete = {
+					owner = {
+						give_artifact = {
+							id = volsung
+							name = "Volsung"
+							modifier = {
+								movement_speed = 0.10
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new province deepwood_redoubt = {

@@ -255,6 +255,27 @@ new province verglas = {
 		history_trade_goods = fish
 		capital = "Adisena"
 		is_city = yes
+		1.1.1 = {
+			create_expedition = {
+				id = high_gate
+				name = "High Gate Ruins"
+				desc = ""
+				frame = 7
+				event_picture = high_gate_eventPicture
+				length = 3
+				on_complete = {
+					owner = {
+						give_artifact = {
+							id = vokun
+							name = "Vokun"
+							modifier = {
+								spy_offence = 0.1
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new province ice_isle = {
@@ -1034,6 +1055,28 @@ new province shearpoint = {
 		capital = ""
 		is_city = yes
 		history_owner = shearpoint
+		
+		1.1.1 = {
+			create_expedition = {
+				id = shearpoint
+				name = "Shearpoint Grave"
+				desc = ""
+				frame = 10
+				event_picture = shearpoint_eventPicture
+				length = 1
+				on_complete = {
+					owner = {
+						give_artifact = {
+							id = krosis
+							name = "Krosis"
+							modifier = {
+								improve_relation_modifier = 0.1
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new province fellglow = {
