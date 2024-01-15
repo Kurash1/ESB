@@ -1,12 +1,3 @@
-new localisation bonechill_exp_tooltip = "Unlocks a Great Project §YBonechill Pass§! in §YBonechill§! province"
-new expedition bonechill = {
-	picture = bonechill_pass_eventPicture
-	length = 1
-	on_complete = {
-		set_province_flag = bonechill_pass
-		custom_tooltip = bonechill_exp_tooltip
-	}
-}
 new localisation bonechill_pass_tooltip = "Connects §YBonechill§! to §YAncient's Ascent§!"
 new great_project bonechill_pass = {
 	name = "Bonechill Pass"

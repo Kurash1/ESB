@@ -53,6 +53,30 @@ new province north_shriekwind = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
+		1.1.1 = {
+			create_expedition = {
+				id = north_shriekwind
+				name = "North Shriekwind"
+				desc = ""
+				frame = 5
+				event_picture = north_shriekwind_eventPicture
+				length = 1
+				on_complete = {
+					set_province_flag = north_shriekwind_great_project
+					new_custom_tooltip = "Unlocks a Great Project §YNorth Shriekwind Bastion§! in §YNorth Shriekwind§! province"
+					
+					owner = {
+						random_list = {
+							1 = { add_treasury = 10 }
+							1 = { add_treasury = 20 }
+							1 = { add_treasury = 30 }
+							1 = { add_treasury = 40 }
+							1 = { add_treasury = 50 }
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new province silvercliff = {
@@ -466,6 +490,30 @@ new province bonechill = {
 		history_trade_goods = silver
 		capital = ""
 		is_city = yes
+		1.1.1 = {
+			create_expedition = {
+				id = bonechill
+				name = "Bonechill Cave"
+				desc = ""
+				frame = 3
+				event_picture = bonechill_pass_eventPicture
+				length = 1
+				on_complete = {
+					set_province_flag = bonechill_pass
+					new_custom_tooltip = "Unlocks a Great Project §YBonechill Pass§! in §YBonechill§! province"
+					
+					owner = {
+						random_list = {
+							1 = { add_treasury = 10 }
+							1 = { add_treasury = 20 }
+							1 = { add_treasury = 30 }
+							1 = { add_treasury = 40 }
+							1 = { add_treasury = 50 }
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new province greywater = {
@@ -824,6 +872,30 @@ new province peak_shade = {
 		capital = ""
 		is_city = yes
 		set_province_flag = orc_stronghold
+		1.1.1 = {
+			create_expedition = {
+				id = south_shriekwind
+				name = "South Shriekwind"
+				desc = ""
+				frame = 4
+				event_picture = south_shriekwind_eventPicture
+				length = 1
+				on_complete = {
+					set_province_flag = south_shriekwind_great_project
+					new_custom_tooltip = "Unlocks a Great Project §YSouth Shriekwind Bastion§! in §YPeak Shaded§! province"
+					
+					owner = {
+						random_list = {
+							1 = { add_treasury = 10 }
+							1 = { add_treasury = 20 }
+							1 = { add_treasury = 30 }
+							1 = { add_treasury = 40 }
+							1 = { add_treasury = 50 }
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new area cracked_tusk = {

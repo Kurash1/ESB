@@ -1444,6 +1444,16 @@ new province south_brittleshin = {
 				on_complete = {
 					set_province_flag = brittleshin_pass
 					new_custom_tooltip = "Unlocks a Great Project §YBrittleshin Pass§! in §YSouth Brittleshin§! province"
+					
+					owner = {
+						random_list = {
+							1 = { add_treasury = 10 }
+							1 = { add_treasury = 20 }
+							1 = { add_treasury = 30 }
+							1 = { add_treasury = 40 }
+							1 = { add_treasury = 50 }
+						}
+					}
 				}
 			}
 		}

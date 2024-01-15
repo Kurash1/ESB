@@ -1047,6 +1047,35 @@ new province bromjunaar = {
 		capital = ""
 		is_city = yes
 		history_owner = skyborn
+		
+		1.1.1 = {
+			create_expedition = {
+				id = bromjunaar
+				name = "Bromjunaar Ruins"
+				desc = ""
+				frame = 9
+				event_picture = bromjunaar_eventPicture
+				length = 5
+				on_complete = {
+					owner = {
+						give_artifact = {
+							id = morokei
+							name = "Morokei"
+							modifier = {
+								monthly_magicka = 0.15
+							}
+						}
+						give_artifact = {
+							id = tulnir
+							name = "Tulnir"
+							modifier = {
+								fire_damage = 0.1
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new province bromjunaar_approach = {
