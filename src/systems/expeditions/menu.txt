@@ -37,6 +37,9 @@ new custom_button start_expedition = {
 	potential = {
 		has_province_modifier = expedition_target
 	}
+	trigger = {
+		owned_by = FROM
+	}
 	effect = {
 		if [has_province_modifier = expedition_camp] {
 			new_custom_tooltip = "§OThis is the monthly chance of progress§!"
@@ -59,6 +62,7 @@ new custom_button expedition_mod_cash = {
 	}
 	trigger = {
 		has_province_modifier = expedition_camp
+		owned_by = FROM
 	}
 	effect = {
 		if [has_province_modifier = expedition_mod_cash_mod] {
@@ -79,6 +83,7 @@ new custom_button expedition_mod_camp = {
 	}
 	trigger = {
 		has_province_modifier = expedition_camp
+		owned_by = FROM
 	}
 	effect = {
 		if [has_province_modifier = expedition_mod_camp_mod] {
@@ -99,6 +104,7 @@ new custom_button expedition_mod_explore = {
 	}
 	trigger = {
 		has_province_modifier = expedition_camp
+		owned_by = FROM
 		owner = { 
 			num_of_explorers = 1
 		}
@@ -122,6 +128,7 @@ new custom_button expedition_mod_merc = {
 	}
 	trigger = {
 		has_province_modifier = expedition_camp
+		owned_by = FROM
 	}
 	effect = {
 		if [has_province_modifier = expedition_mod_merc_mod] {
