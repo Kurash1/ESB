@@ -207,7 +207,7 @@ mission_trees:solitude += {
 		}
 	}
 	the_blue_palace = {
-		name = "The Blue Palace"
+		name = "Court of Haafingar"
 		x = 1
 		y = 2
 		required = {
@@ -233,7 +233,14 @@ mission_trees:solitude += {
 			}
 		}
 		effect = {
-			add_government_reform = tier_1_haafingar_kingdom
+			quick_country_modifier = {
+				name = "Court of Haafingar"
+				modifier = {
+					monthly_haafingar_adm_power = 0.5
+					monthly_haafingar_dip_power = 0.5
+					monthly_haafingar_mil_power = 0.5
+				}
+			}
 		}
 	}
 	bards_college = {
