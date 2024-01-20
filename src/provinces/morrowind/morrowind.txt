@@ -1,3 +1,7 @@
+new area morrowind = {
+	name = "Morrowind"
+	region = morrowind
+}
 new inheritable morrowind_inherit = {
 	position = {
 		2109.000 1685.000 2109.000 1685.000 2109.000 1685.000 2109.000 1685.000 2109.000 1685.000 2109.000 1685.000 2109.000 1685.000
@@ -9,6 +13,7 @@ new inheritable morrowind_inherit = {
 		0.377 0.377 0.377 0.377 0.377 0.377 0.377
 	}
 	history = { }
+	area = morrowind
 }
 new province port_telvannis = {
 	inherit = morrowind_inherit

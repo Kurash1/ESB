@@ -17,6 +17,14 @@ new area coast_of_winterhold = {
 	name = "Coast of Winterhold"
 	region = skyrim_sea
 }
+new province new_sea_33 = {
+	inherit = sea_inherit
+	color = { 97 67 53 }
+	position = { 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 }
+	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
+	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
+	area = coast_of_winterhold
+}
 new province coast_of_bleakrock = {
 	position = {
 		2006.000 2030.000 1993.000 2027.000 2006.000 2030.000 2006.000 2030.000 2006.000 2030.000 1994.000 2027.000 2006.000 2030.000
@@ -53,7 +61,7 @@ new province far_japhet_sea = {
 	history = {
 	}
 	sea = yes
-	area = coast_of_winterhold
+	area = coast_of_solstheim
 }
 new province tale_sea = {
 	position = {

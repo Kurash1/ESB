@@ -1,3 +1,65 @@
+new event_modifier just_lost_to_rebels = {
+	name = "Rebel Victory"
+	modifier = { }
+}
+new event_modifier just_lost_to_revolutionary_rebels = {
+	name = "Revolutionary Victory"
+	modifier = { }
+}
+new event_modifier heresy = {
+	name = "Heresy"
+	modifier = {
+		local_manpower_modifier = -0.4
+		local_unrest = 2
+		local_tax_modifier = -0.33
+		local_autonomy = 0.05
+	}
+}
+new event_modifier consolidation_of_power = {
+	name = "Consolidation of Power"
+	modifier = {
+		republican_tradition = -0.1
+		global_unrest = -1
+	}
+}
+new event_modifier centralization_modifier = {
+	name = "Increased Centralization"
+	modifier = {
+		global_autonomy = -0.05
+		global_unrest = 1
+	}
+}
+new event_modifier embezzled_goods = {
+	name = "Embezzled Goods"
+	modifier = {
+		local_production_efficiency = -0.35
+	}
+}
+new event_modifier revoked_estate_modifier = {
+	name = "Local Power Vacuum"
+	modifier = {
+		local_unrest = 5
+	}
+}
+new event_modifier domain_of_spouses_family = {
+	name = "Seat of Strong Aristocrats"
+	modifier = {
+		local_autonomy = 0.1
+		local_missionary_strength = -0.05
+		local_unrest = -3
+	}
+}
+new event_modifier home_of_consort = {
+	name = "Home of Consort"
+	modifier = {
+		local_unrest = -3
+		local_production_efficiency = 0.1
+	}
+}
+new event_modifier recently_changed_religion_dummy = {
+	name = "Recently changed Religion"
+	modifier = { }
+}
 new localisation LOADING_TIP_0 = "Did You Know that Reymon Ebonarm, the God of War, had his ebony sword fused to his right arm?"
 new localisation LOADING_TIP_1 = "Did You Know that Skyrim was inhabited by Aldmer and Falmer until they were driven out by Ysgramor and the Nords in the late Merethic Era?"
 new localisation LOADING_TIP_2 = "Did You Know that some Imperial Loyalists perform pilgrimages in honor of the Eternal Champion, retracing the Champion's steps to locations such as Labyrinthian?"
