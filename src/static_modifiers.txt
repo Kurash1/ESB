@@ -1,14 +1,4 @@
-# All global modifiers are here. They are applied from certain game-features.
-#
-# Effects are fully scriptable here.
-
-# Missing static modifiers expected by code will print to the errorlog
-
-##########################################################################
-# Handicap Modifiers for human player
-##########################################################################
-
-difficulty_very_easy_player = {
+new static_modifier difficulty_very_easy_player = {
 	global_manpower_modifier = 0.5
 	manpower_recovery_speed = 0.50
 	land_forcelimit_modifier = 0.5
@@ -28,46 +18,33 @@ difficulty_very_easy_player = {
 	ae_impact = -0.25
 	yearly_corruption = -1.0
 }
-
-difficulty_easy_player = {
+new static_modifier difficulty_easy_player = {
 	manpower_recovery_speed = 0.50
 	global_unrest = -5
 	interest = -1
 	ae_impact = -0.25
 	yearly_corruption = -1.0
 }
-
-difficulty_normal_player = {
+new static_modifier difficulty_normal_player = {
 }
-
-difficulty_hard_player = {
+new static_modifier difficulty_hard_player = {
 }
-
-difficulty_very_hard_player = {
+new static_modifier difficulty_very_hard_player = {
 }
-
-##########################################################################
-# Handicap Modifiers for AI
-##########################################################################
-
-difficulty_very_easy_ai = {
+new static_modifier difficulty_very_easy_ai = {
 }
-
-difficulty_easy_ai = {
+new static_modifier difficulty_easy_ai = {
 }
-
-difficulty_normal_ai = {
+new static_modifier difficulty_normal_ai = {
 }
-
-difficulty_hard_ai = {
+new static_modifier difficulty_hard_ai = {
 	manpower_recovery_speed = 0.50
 	global_unrest = -1
 	war_exhaustion = -0.05
 	interest = -1
 	ae_impact = -0.25
 }
-
-difficulty_very_hard_ai = {
+new static_modifier difficulty_very_hard_ai = {
 	manpower_recovery_speed = 0.50
 	global_manpower_modifier = 0.5
 	land_forcelimit_modifier = 0.5
@@ -85,13 +62,7 @@ difficulty_very_hard_ai = {
 	build_cost = -0.25
 	ae_impact = -0.25
 }
-
-
-##########################################################################
-# Provincial Static Modifiers
-##########################################################################
-
-city = {
+new static_modifier city = {
 	local_tax_modifier = 0.25
 	allowed_num_of_buildings = 2
 	local_sailors_modifier = 0.25
@@ -99,43 +70,35 @@ city = {
 	allowed_num_of_manufactories = 1
 	local_has_musketeers = yes
 }
-
-port = {
+new static_modifier port = {
 	local_has_man_of_war = yes
 	local_institution_spread = 0.10
 }
-
-in_state = {
+new static_modifier in_state = {
 	local_institution_spread = 0.10
 }
-
-in_capital_state = {
+new static_modifier in_capital_state = {
 	local_institution_spread = 0.05
 	local_state_maintenance_modifier = -0.5
 	local_governing_cost = -1.0						
 }
-
-coastal = {
+new static_modifier coastal = {
 	supply_limit_modifier = 0.5
 	province_trade_power_modifier = 0.25
 }
-
-seat_in_parliament = {
+new static_modifier seat_in_parliament = {
 	local_manpower_modifier = 0.1
 	local_sailors_modifier = 0.1
 	local_tax_modifier = 0.15
 	local_production_efficiency = 0.1
 }
-
-non_coastal = {
+new static_modifier non_coastal = {
 	local_colonial_growth = -10
 }
-
-coastal_sea = {
+new static_modifier coastal_sea = {
 	local_naval_engagement_modifier = -0.20
 }
-
-tropical = {
+new static_modifier tropical = {
 	local_colonial_growth = -10
 	supply_limit_modifier = -0.3
 	local_hostile_attrition = 2
@@ -144,8 +107,7 @@ tropical = {
 
 	picture = "climate_tropical"
 }
-
-arctic = {
+new static_modifier arctic = {
 	local_colonial_growth = -10
 	supply_limit_modifier = -0.4
 	local_hostile_attrition = 1
@@ -155,8 +117,7 @@ arctic = {
 
 	picture = "climate_arctic"
 }
-
-arid = {
+new static_modifier arid = {
 	local_colonial_growth = -10
 	supply_limit_modifier = -0.2
 	local_hostile_attrition = 1
@@ -165,107 +126,89 @@ arid = {
 
 	picture = "climate_arid"
 }
-
-sea_zone = {
+new static_modifier sea_zone = {
 	max_attrition = 5
 }
-
-land_province = {
+new static_modifier land_province = {
 	max_attrition = 5
 	local_manpower_modifier = 0.25
 }
-
-mild_winter = {
+new static_modifier mild_winter = {
 	local_hostile_attrition = 1
 	supply_limit_modifier = -0.1
 
 	picture = "winter_mild"
 }
-
-normal_winter = {
+new static_modifier normal_winter = {
 	local_hostile_attrition = 2
 	supply_limit_modifier = -0.2
 	migration_cost = 0.1
 
 	picture = "winter_normal"
 }
-
-severe_winter = {
+new static_modifier severe_winter = {
 	local_hostile_attrition = 3
 	supply_limit_modifier = -0.3
 	migration_cost = 0.2
 
 	picture = "winter_severe"
 }
-
-mild_monsoon = {
+new static_modifier mild_monsoon = {
 	local_hostile_attrition = 0.5
 	local_hostile_movement_speed = -0.20
 	local_friendly_movement_speed = -0.20
 
 	picture = "monsoon_mild"
 }
-
-normal_monsoon = {
+new static_modifier normal_monsoon = {
 	local_hostile_attrition = 1
 	local_hostile_movement_speed = -0.25
 	local_friendly_movement_speed = -0.25
 
 	picture = "monsoon_normal"
 }
-
-severe_monsoon = {
+new static_modifier severe_monsoon = {
 	local_hostile_attrition = 1.5
 	local_hostile_movement_speed = -0.50
 	local_friendly_movement_speed = -0.50
 
 	picture = "monsoon_severe"
 }
-
-blockaded = {
+new static_modifier blockaded = {
 	regiment_recruit_speed = 0.2
 	ship_recruit_speed = 0.2
 	local_monthly_devastation = 0.25
 	province_trade_power_modifier = -1
 }
-
-no_adjacent_controlled = {
+new static_modifier no_adjacent_controlled = {
 	local_colonial_growth = -5
 }
-
-provincial_tax_income = {
+new static_modifier provincial_tax_income = {
 	regiment_recruit_speed = -0.02
 	local_great_project_upgrade_time = -0.01
 	local_build_time = -0.01
 	local_institution_spread = 0.02
 }
-
-provincial_production_size = {
+new static_modifier provincial_production_size = {
 	trade_goods_size = 0.2
 	ship_recruit_speed = -0.01
 }
-
-knowledge_sharing = {
+new static_modifier knowledge_sharing = {
 	institution_growth = 12
 }
-
-cardinals_spread_institution = {
+new static_modifier cardinals_spread_institution = {
 	institution_growth = 20
 }
-
-manpower = {
-	garrison_growth = 0.01					#1% increase from manpower.
+new static_modifier manpower = {
+	garrison_growth = 0.01					
 }
-
-horde_development = {
+new static_modifier horde_development = {
 
 }
-
-province_razed = {
+new static_modifier province_razed = {
 	picture = "province_razed"
 }
-
-development = {
+new static_modifier development = {
 	allowed_num_of_buildings = 0.25
 	supply_limit_modifier = 0.02
 	local_missionary_strength = -0.001
@@ -274,111 +217,91 @@ development = {
 	local_sailors = 60
 	province_trade_power_value = 0.2
 }
-
-development_scaled = {
+new static_modifier development_scaled = {
 	local_development_cost = 0.03
 }
-
-capital_city = {
+new static_modifier capital_city = {
 	fort_level = 1
 }
-
-patriarch_state = {
+new static_modifier patriarch_state = {
 	local_state_maintenance_modifier = 0.1
 	local_monthly_devastation = -0.05
 }
-
-# Multiplied in provinces of same religion.
-patriarch_authority_local = {
+new static_modifier patriarch_authority_local = {
 	local_unrest = -3
 	local_manpower_modifier = 0.33
 }
-
-#for the country
-patriarch_authority_global = {
+new static_modifier patriarch_authority_global = {
 	global_missionary_strength = 0.02
 }
-
-pasha_state = {
+new static_modifier pasha_state = {
 	local_governing_cost = -0.2
 	min_local_autonomy = 20
 	state_maintenance_modifier = -0.33
 	local_autonomy = -0.1
 	local_tolerance_of_heathens = 10
 }
-
-colony_level = {
+new static_modifier colony_level = {
 	local_colonist_placement_chance = -0.01
 	local_tax_modifier = 0.02
 }
-
-native_assimilation = {
+new static_modifier native_assimilation = {
 	trade_goods_size = 0.05
 }
-
-native_aggressiveness = {
+new static_modifier native_aggressiveness = {
 	local_colonist_placement_chance = -0.01
 }
-
-core = {
-	local_tax_modifier = 0.75				#90% more in a core
-	local_manpower_modifier = 0.75			#75% more in a core
+new static_modifier core = {
+	local_tax_modifier = 0.75				
+	local_manpower_modifier = 0.75			
 	local_sailors_modifier = 0.75
 }
-
-non_core = {
+new static_modifier non_core = {
 	local_missionary_strength = -0.02
 }
-
-colonial_core = {
-	local_tax_modifier = 0.75				#90% more in a core
-	local_manpower_modifier = 0.75			#75% more in a core
+new static_modifier colonial_core = {
+	local_tax_modifier = 0.75				
+	local_manpower_modifier = 0.75			
 	local_sailors_modifier = 0.75
 	local_missionary_strength = -0.02
 	min_local_autonomy = 50
 	local_governing_cost = -0.5
 }
-
-territory_core = {
-	local_tax_modifier = 0.75				#90% more in a core
-	local_manpower_modifier = 0.75			#75% more in a core
+new static_modifier territory_core = {
+	local_tax_modifier = 0.75				
+	local_manpower_modifier = 0.75			
 	local_sailors_modifier = 0.75
 	local_missionary_strength = -0.02
 	min_local_autonomy = 90
 	local_governing_cost = -0.75
 }
-
-territory_non_core = {
+new static_modifier territory_non_core = {
 	local_missionary_strength = -0.02
 	min_local_autonomy = 90
 	local_governing_cost = -0.75
 }
-same_culture_group = {
-	local_tax_modifier = -0.15				#10% penalty if same culture group but nothing else. Not applied if the controller is the Union Tag of the culture group, or has culture_group_union set.
+new static_modifier same_culture_group = {
+	local_tax_modifier = -0.15				
 	local_manpower_modifier = -0.15
 	local_sailors_modifier = -0.1
 }
-
-non_accepted_culture = {
+new static_modifier non_accepted_culture = {
 	local_tax_modifier = -0.33
 	local_missionary_strength = -0.02
 	local_manpower_modifier = -0.33
 	local_sailors_modifier = -0.2
-	local_unrest = 2					#1% revolt risk!
+	local_unrest = 2					
 }
-
-accepted_culture_demoted = {
+new static_modifier accepted_culture_demoted = {
 	local_unrest = 5
 }
-
-non_accepted_culture_republic = {
+new static_modifier non_accepted_culture_republic = {
 	local_tax_modifier = 0.1
 	local_manpower_modifier = 0.1
 	local_sailors_modifier = 0.05
 	local_unrest = -0.5
 }
-
-occupied = {
+new static_modifier occupied = {
 	local_tax_modifier = -0.5
 	trade_goods_size_modifier = -0.5
 	province_trade_power_modifier = -0.5
@@ -388,16 +311,14 @@ occupied = {
 
 	local_monthly_devastation = 0.2
 }
-
-under_siege = {
+new static_modifier under_siege = {
 	trade_goods_size_modifier = -0.25
 	province_trade_power_modifier = -0.25
 	local_institution_spread = -0.1
 
 	local_monthly_devastation = 0.1
 }
-
-devastation = {
+new static_modifier devastation = {
 	trade_goods_size_modifier = -2
 	supply_limit_modifier = -0.5
 	local_institution_spread = -2.0
@@ -407,116 +328,91 @@ devastation = {
 	local_hostile_movement_speed = -0.25
 	local_friendly_movement_speed = -0.25
 }
-
-prosperity = {
+new static_modifier prosperity = {
 	local_development_cost = -0.1
 	trade_goods_size_modifier = 0.25
 	local_autonomy = -0.05
 }
-
-slaves_raided = {
+new static_modifier slaves_raided = {
 	picture = "raided_for_slaves"
 }
-
-tolerance = {
+new static_modifier tolerance = {
 	local_unrest = -1
 }
-
-intolerance = {
+new static_modifier intolerance = {
 	local_unrest = -1.25
 	local_tax_modifier = 0.1
 	trade_goods_size_modifier = 0.10
 }
-
-unrest = {
-	regiment_recruit_speed = 0.1			#10% longer time to build troops for each rr
+new static_modifier unrest = {
+	regiment_recruit_speed = 0.1			
 	ship_recruit_speed = 0.1
 	local_tax_modifier = -0.02
 }
-
-nationalism = {
+new static_modifier nationalism = {
 	local_unrest = 0.5
 }
-
-harsh_treatment = {
+new static_modifier harsh_treatment = {
 	local_unrest = -10
 }
-
-local_autonomy_multiplicative = {
+new static_modifier local_autonomy_multiplicative = {
 	local_manpower_modifier = -1.0
 	local_sailors_modifier = -1.0
 	local_tax_modifier = -1.0
 	local_production_efficiency = -1.0
 	province_trade_power_modifier = -0.5
-	land_forcelimit_modifier = -1.0 # Misleading, only used to avoid errors when applying effect of Estates in code.
-	naval_forcelimit_modifier = -1.0 # Misleading, only used to avoid errors when applying effect of Estates in code.
+	land_forcelimit_modifier = -1.0 
+	naval_forcelimit_modifier = -1.0 
 }
-
-local_autonomy = {
+new static_modifier local_autonomy = {
 }
-
-local_autonomy_trade_company_multiplicative = {
+new static_modifier local_autonomy_trade_company_multiplicative = {
 	local_manpower_modifier = -1.0
 	local_sailors_modifier = -1.0
 	local_tax_modifier = -1.0
 	local_production_efficiency = -0.5
 	land_forcelimit_modifier = -1.0
 }
-
-local_autonomy_trade_company = {
+new static_modifier local_autonomy_trade_company = {
 }
-
-recent_uprising = {
+new static_modifier recent_uprising = {
 	local_unrest = -100
 	picture = "recent_uprising"						
 }
-
-friendly_regiments = {
+new static_modifier friendly_regiments = {
 	local_unrest = -1.0	
 }
-
-active_missionary = {
-	local_unrest = 6					# 6% revolt risk!
+new static_modifier active_missionary = {
+	local_unrest = 6					
 	local_institution_spread = -0.10
 }
-
-national_defense = {
+new static_modifier national_defense = {
 	local_unrest = -5
 }
-
-resource_depleted = {
+new static_modifier resource_depleted = {
 
 }
-
-in_trade_company = {
+new static_modifier in_trade_company = {
 	province_trade_power_modifier = 1
 	naval_forcelimit = 0.5
 	local_missionary_strength = -0.2
 	local_institution_spread = 0.10
 	local_governing_cost = 0.25
 }
-
-left_trade_company = {
+new static_modifier left_trade_company = {
 	trade_goods_size_modifier = -2.0
 }
-
-
-scorched_earth = {
+new static_modifier scorched_earth = {
 	local_hostile_movement_speed = -0.50
 	local_monthly_devastation = 0.25
 }
-
-##########################################################################
-# Global Static Modifiers
-##########################################################################
-
-base_values = {
-	merchants = 2							#Start with 2 merchants
-	diplomats = 2							#Start with 2 diplomats..
-	missionaries = 1						#1 missionary
-	army_tradition_decay = 0.05				#lose 5% yearly
-	navy_tradition_decay = 0.05				#lose 5% yearly
-	prestige_decay = 0.05					#lose 5% prestige each year
+new static_modifier base_values = {
+	merchants = 2							
+	diplomats = 2							
+	missionaries = 1						
+	army_tradition_decay = 0.05				
+	navy_tradition_decay = 0.05				
+	prestige_decay = 0.05					
 	tolerance_own = 3
 	diplomatic_upkeep = 3
 	tolerance_heathen = -3
@@ -543,31 +439,27 @@ base_values = {
 	num_of_parliament_issues = 10
 
 
-	#Changed in esb
+	
 	cav_to_inf_ratio = 0.2
 	max_absolutism = 30
 	
 	may_recruit_female_generals = yes
 }
-
-ai_nation = {
+new static_modifier ai_nation = {
 	diplomats = 1
 	free_leader_pool = 1
 	sailors_recovery_speed = 0.25
 }
-
-war_taxes = {
+new static_modifier war_taxes = {
 	land_maintenance_modifier = -0.15
 	naval_maintenance_modifier = -0.15
 	merc_maintenance_modifier = -0.05
 }
-
-stability = {
+new static_modifier stability = {
 	global_trade_power = 0.01
 	global_spy_defence = 0.05
 }
-
-positive_stability = {
+new static_modifier positive_stability = {
 	global_unrest = -1				
 	global_tax_modifier = 0.05
 	global_missionary_strength = 0.005
@@ -579,13 +471,11 @@ positive_stability = {
 	
 	devotion = 0.5
 }
-
-privateering = {
+new static_modifier privateering = {
 
 }
-
-negative_stability = {
-	global_unrest = -2					#-1% EXTRA revolt risk each step
+new static_modifier negative_stability = {
+	global_unrest = -2					
 	legitimacy = 1
 	interest = -1
 	migration_cost = 0.1
@@ -593,14 +483,12 @@ negative_stability = {
 	caravan_power = 0.05
 	yearly_harmony = 0.25
 }
-
-positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
+new static_modifier positive_mandate = {	
 	global_unrest = -2.5
 	all_estate_loyalty_equilibrium = 0.1
 	war_exhaustion = -0.05
 }
-
-negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mandate
+new static_modifier negative_mandate = { 
 	meritocracy = -2
 	reduced_liberty_desire = -30
 	global_trade_goods_size_modifier = -0.5
@@ -609,9 +497,8 @@ negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mand
 	global_unrest = 5
 	mercenary_manpower = -0.5
 	global_manpower_modifier = -0.5
-}		  
-
-lost_mandate_of_heaven = {
+}
+new static_modifier lost_mandate_of_heaven = {
 	discipline = -0.1
 	stability_cost_modifier = 0.5
 	global_unrest = 10
@@ -623,79 +510,69 @@ lost_mandate_of_heaven = {
 	mercenary_manpower = -0.5
 	global_manpower_modifier = -0.5
 }
-
-cancelled_loan = {
-	#no effects
+new static_modifier cancelled_loan = {
+	
 }
-
-bank_loan = {
-	#no effects
+new static_modifier bank_loan = {
+	
 }
-
-inflation = {
-	build_cost = 0.01									#1% for each inflation step.
-	infantry_cost = 0.01								#1% for each inflation step
-	cavalry_cost = 0.01									#1% for each inflation step
-	artillery_cost = 0.01								#1% for each inflation step
-	heavy_ship_cost = 0.01								#1% for each inflation step
-	light_ship_cost = 0.01								#1% for each inflation step
-	galley_cost = 0.01									#1% for each inflation step
-	transport_cost = 0.01								#1% for each inflation step
-	flagship_cost = 0.01								#1% for each inflation step
-	advisor_cost = 0.01									#1% for each inflation step
-	mercenary_cost = 0.01								#1% for each inflation step
-	fort_maintenance_modifier = 0.01					#1% for each inflation step
-	missionary_maintenance_cost = 0.01					#1% for each inflation step
-	colony_cost_modifier = 0.01							#1% for each inflation step
-	great_project_upgrade_cost = 0.01					#1% for each inflation step
-	embracement_cost = 0.01								#1% for each inflation step
-	colonial_subject_type_upgrade_cost_modifier = 0.01	#1% for each inflation step
-	colonial_type_change_cost_modifier = 0.01			#1% for each inflation step
-	center_of_trade_upgrade_cost = 0.01					#1% for each inflation step
-	trade_company_investment_cost = 0.01				#1% for each inflation step
-	state_maintenance_modifier = 0.01					#1% for each inflation step
+new static_modifier inflation = {
+	build_cost = 0.01									
+	infantry_cost = 0.01								
+	cavalry_cost = 0.01									
+	artillery_cost = 0.01								
+	heavy_ship_cost = 0.01								
+	light_ship_cost = 0.01								
+	galley_cost = 0.01									
+	transport_cost = 0.01								
+	flagship_cost = 0.01								
+	advisor_cost = 0.01									
+	mercenary_cost = 0.01								
+	fort_maintenance_modifier = 0.01					
+	missionary_maintenance_cost = 0.01					
+	colony_cost_modifier = 0.01							
+	great_project_upgrade_cost = 0.01					
+	embracement_cost = 0.01								
+	colonial_subject_type_upgrade_cost_modifier = 0.01	
+	colonial_type_change_cost_modifier = 0.01			
+	center_of_trade_upgrade_cost = 0.01					
+	trade_company_investment_cost = 0.01				
+	state_maintenance_modifier = 0.01					
 }
-
-bankruptcy = {
+new static_modifier bankruptcy = {
 	interest = 5
 	land_morale = -0.5
 	naval_morale = -0.5
-	reinforce_speed = -0.25					#Slower reinforce
+	reinforce_speed = -0.25					
 	manpower_recovery_speed = -1.0
 	sailors_recovery_speed = -1.0
 	advisor_cost = 0.5
 	global_autonomy = 0.05
 	global_institution_spread = -0.50
-	monthly_militarized_society = -0.5
 	yearly_absolutism = -2.0
 	technology_cost = 0.5
 	idea_cost = 0.5
 	imperial_mandate = -0.1
 	great_project_upgrade_cost = 0.5
 }
+new static_modifier war = {
 
-war = {
-	monthly_fury = -2
 }
-
-peace = {
+new static_modifier peace = {
 	war_exhaustion = -0.1
 	global_autonomy = -0.1
 	global_institution_spread = 0.1
 	monthly_fervor_increase = 1
 }
-
-unconditional_surrender = {
+new static_modifier unconditional_surrender = {
 	war_exhaustion = -0.1
 	global_autonomy = -0.1
 	global_institution_spread = 0.1
 }
-
-call_for_peace = {
+new static_modifier call_for_peace = {
 	war_exhaustion = 0.005
 }
-
-war_exhaustion = {
+new static_modifier war_exhaustion = {
 	global_unrest = 1
 	global_regiment_recruit_speed = 0.02
 	global_ship_recruit_speed = 0.02
@@ -705,48 +582,38 @@ war_exhaustion = {
 	siege_ability = -0.01
 	global_trade_goods_size_modifier = -0.02
 }
-
-doom = {
+new static_modifier doom = {
 	technology_cost = 0.5
 	idea_cost = 0.2
 	ae_impact = -1
 }
-
-authority = {
+new static_modifier authority = {
 	stability_cost_modifier = -0.1
 	global_unrest = -2					 
 }
-
-regency_council = {
+new static_modifier regency_council = {
 	stability_cost_modifier = 0.25
 }
-
-trade_efficiency = {
+new static_modifier trade_efficiency = {
 }
-
-production_efficiency = {
+new static_modifier production_efficiency = {
 	colonist_placement_chance = 0.2
 }
-
-trade_refusal = {
+new static_modifier trade_refusal = {
 	trade_efficiency = -0.05
 }
-
-mercantilism = {
+new static_modifier mercantilism = {
 	global_prov_trade_power_modifier = 2.0
-	embargo_efficiency = 1
-	merchants_loyalty_modifier = 0.05						
+	embargo_efficiency = 1					
 }
-
-army_tradition = {
+new static_modifier army_tradition = {
 	recover_army_morale_speed = 0.1
 	land_morale = 0.25
 	manpower_recovery_speed = 0.10
 	siege_ability = 0.05
 	monthly_haafingar_mil_power = 1
 }
-
-navy_tradition = {
+new static_modifier navy_tradition = {
 	recover_navy_morale_speed = 0.1
 	naval_morale = 0.25
 	sailors_recovery_speed = 0.2
@@ -754,92 +621,72 @@ navy_tradition = {
 	privateer_efficiency = 0.25
 	blockade_efficiency = 1
 }
-
-positive_piety = {
+new static_modifier positive_piety = {
 	technology_cost = -0.1
 	global_manpower_modifier = 0.20
 	global_tax_modifier = 0.20				   
 }
-
-negative_piety = {
+new static_modifier negative_piety = {
 	land_morale = 0.10
 	global_missionary_strength = 0.03
 	defensiveness = -0.10		  
 }
-
-defender_of_faith = {
+new static_modifier defender_of_faith = {
 	land_morale = 0.05
 	naval_morale = 0.05
 	technology_cost = 0.05
-	war_exhaustion = -0.025					#quicker recovery
+	war_exhaustion = -0.025					
 	papal_influence = 1
 	church_power_modifier = 0.1
-	prestige = 1							#1% extra prestige yearly
+	prestige = 1							
 	missionaries = 1
 	devotion = 0.5
 }
-
-defender_of_faith_refused_cta = {
+new static_modifier defender_of_faith_refused_cta = {
 	diplomatic_reputation = -1
 }
-
-emperor = {
-	spy_offence = 0.1					#minor bonus on spies.
+new static_modifier emperor = {
+	spy_offence = 0.1					
 	advisor_pool = 1
 	diplomatic_upkeep = 1
 	free_leader_pool = 1
 	prestige = 1
 }
-
-states_in_hre = {			
-	land_forcelimit	= 0.5					#each state increases forcelimit by 0.5
-	global_manpower = 0.5					#each gives 0.5 MP to the emperor.
+new static_modifier states_in_hre = {			
+	land_forcelimit	= 0.5					
+	global_manpower = 0.5					
 }
-
-free_cities_in_hre = {
+new static_modifier free_cities_in_hre = {
 	global_manpower = 2
 	land_forcelimit	= 1
 }
-
-free_city_in_hre = {
+new static_modifier free_city_in_hre = {
 	global_manpower_modifier = 0.25
 	land_forcelimit	= 5
 }
-
-member_in_hre = {
+new static_modifier member_in_hre = {
 	diplomatic_reputation = 1
 }
-
-occupied_imperial = {
+new static_modifier occupied_imperial = {
 	prestige = -1
 	legitimacy = -0.5
 }
-
-emperor_revoked_reform =  {
-	diplomatic_reputation = -3
-}
-
-num_of_marriages = {
+new static_modifier num_of_marriages = {
 	legitimacy = 0.10
 	heir_chance = 0.05
 	improve_relation_modifier = 0.01
 }
-
-num_of_provinces = {
+new static_modifier num_of_provinces = {
 
 }
-
-country_development = {
+new static_modifier country_development = {
 }
-
-tribal_allegiance = {
+new static_modifier tribal_allegiance = {
 	manpower_recovery_speed = 0.10
 	global_manpower_modifier = 0.15
 	global_unrest = -2.5
 }
-
-# Multiplied by current Legitimacy - 50
-legitimacy = {
+new static_modifier legitimacy = {
 	global_unrest = -4
 	tolerance_own = 2
 	tolerance_heathen = 2
@@ -848,16 +695,11 @@ legitimacy = {
 	vassal_income = 0.1
 	max_absolutism = 20
 }
-
-#Multiplied by current Horde Unity - 50
-horde_unity = {
+new static_modifier horde_unity = {
 	global_unrest = -4
 	discipline = 0.10
 }
-
-
-# Multiplied by current Devotion - 50
-devotion = {
+new static_modifier devotion = {
 	papal_influence = 2
 	church_power_modifier = 0.5
 	harmonization_speed = 0.5
@@ -871,19 +713,15 @@ devotion = {
 	
 	priests_loyalty_modifier = 0.05
 }
-
-# Multiplied by current meritocracy - 50
-meritocracy = {
+new static_modifier meritocracy = {
 	global_spy_defence = 1.0
 	advisor_cost = -0.5
 	reform_progress_growth = 0.5
 }
-
-low_meritocracy = {
+new static_modifier low_meritocracy = {
 	yearly_corruption = 0.2
 }
-
-corruption = {
+new static_modifier corruption = {
 	global_spy_defence = -0.25
 	spy_offence = -0.50
 	all_power_cost = 1.0
@@ -892,12 +730,10 @@ corruption = {
 	imperial_mandate = -1
 	monthly_heir_claim_increase = 0.025
 }
-
-root_out_corruption = {
+new static_modifier root_out_corruption = {
 	yearly_corruption = -1.0
 }
-
-recovery_motivation = {
+new static_modifier recovery_motivation = {
 	global_tax_modifier = 0.5
 	defensiveness = 0.25
 	manpower_recovery_speed = 0.5
@@ -907,25 +743,23 @@ recovery_motivation = {
 	interest = -1
 	horde_unity = 10
 }
-
-militarized_society = {
+new static_modifier militarized_society = {
 	discipline = 0.10
 	manpower_recovery_speed = 0.15
 	land_maintenance_modifier = -0.25
 }
-
-luck = {
-	#core
+new static_modifier luck = {
+	
 	embracement_cost = -0.25
 	global_institution_spread = 0.15
 	monthly_splendor = 1
 
-	#economy
+	
 	mercenary_cost = -0.25
 	missionary_maintenance_cost = -0.15
 	interest = -1
 
-	#military
+	
 	manpower_recovery_speed = 0.25
 	defensiveness = 0.15
 	siege_ability = 0.10
@@ -934,18 +768,17 @@ luck = {
 	discipline = 0.05
 	mercenary_discipline = 0.05
 
-	#diplomacy
+	
 	spy_offence = 0.15
 	global_spy_defence = 0.10
 	improve_relation_modifier = 0.25
 
-	#government
+	
 	ae_impact = -0.15
 	governing_capacity_modifier = 0.25
 	reform_progress_growth = 0.10
 }
-
-over_extension = {
+new static_modifier over_extension = {
 	global_foreign_trade_power = -1.0
 	stability_cost_modifier = 0.5
 	mercenary_cost = 0.5
@@ -954,43 +787,36 @@ over_extension = {
 	global_unrest = 5
 	yearly_corruption = 0.5
 	
-	#ESB extras cus fuck you
+	
 	legitimacy = -1
 	horde_unity = -1
 	devotion = -1
 	republican_tradition = -1
 	meritocracy = -1
 }
-
-territory_very_easy_difficulty = { 
+new static_modifier territory_very_easy_difficulty = { 
 
 }
-
-territory_easy_difficulty = {
+new static_modifier territory_easy_difficulty = {
 	
 }
-
-territory_normal_difficulty = {
+new static_modifier territory_normal_difficulty = {
 	
 }
-
-territory_hard_difficulty = {
+new static_modifier territory_hard_difficulty = {
 	
 }
-
-territory_very_hard_difficulty = {
+new static_modifier territory_very_hard_difficulty = {
 	
 }
-
-territory_ai_difficulty = {
+new static_modifier territory_ai_difficulty = {
 	
 }
-
-prestige = {
-	global_trade_power = 0.15			#+15/-15 total bonus from prestige.
+new static_modifier prestige = {
+	global_trade_power = 0.15			
 	land_morale = 0.1
 	naval_morale = 0.1
-	global_spy_defence = 0.1				#+10/-10
+	global_spy_defence = 0.1				
 	legitimacy = 1.0
 	improve_relation_modifier = 0.5
 	ae_impact = -0.10
@@ -999,26 +825,20 @@ prestige = {
 	monthly_haafingar_dip_power = 1
 	monthly_fervor_increase = 1
 }
-
-no_debate_in_parliament = {
+new static_modifier no_debate_in_parliament = {
 	yearly_corruption = 0.1
 }
-
-
-republican_tradition = {
+new static_modifier republican_tradition = {
 	global_unrest = -2
-	reform_progress_growth = 0.25 #Changed cus reform progess is strong here
+	reform_progress_growth = 0.25 
 }
-
-inverse_republican_tradition = {
+new static_modifier inverse_republican_tradition = {
 	stability_cost_modifier = 2.5
 }
-
-
-curia_controller = {
-	diplomats = 1							#1 extra diplomat as curia controller
-	prestige = 1							#1% extra prestige yearly
-	stability_cost_modifier = -0.1			#10% cheaper stability
+new static_modifier curia_controller = {
+	diplomats = 1							
+	prestige = 1							
+	stability_cost_modifier = -0.1			
 	advisor_pool = 2
 	advisor_cost = -0.2
 	free_leader_pool = 1
@@ -1027,81 +847,66 @@ curia_controller = {
 	diplomatic_reputation = 1
 	diplomatic_annexation_cost = -0.1	   
 }
-
-bought_indulgence = {
+new static_modifier bought_indulgence = {
 	papal_influence = 1
 }
-
-religious_unity = {
+new static_modifier religious_unity = {
 	monthly_fanaticism_power = -2
 	max_absolutism = 5
 	yearly_harmony = 1
 	monthly_fervor_increase = 1
 }
-
-inverse_religious_unity = {
-	stability_cost_modifier = 1.0		#more expensive to recover stability
+new static_modifier inverse_religious_unity = {
+	stability_cost_modifier = 1.0		
 	global_unrest = 3
 	church_power_modifier = -1
 	devotion = -1
 	yearly_corruption = 0.1
 }
-
-total_occupation = {
+new static_modifier total_occupation = {
 	war_exhaustion = 0.005			
 }
-
-total_blockaded = {
-	war_exhaustion = 0.10					#increases exhaustion.
+new static_modifier total_blockaded = {
+	war_exhaustion = 0.10					
 	global_trade_power = -0.75
 	trade_steering = -0.75
 }
-
-uncontested_cores = {
+new static_modifier uncontested_cores = {
 	prestige = -0.1
 }
-
-num_objectives_fullfilled = {
+new static_modifier num_objectives_fullfilled = {
 	monthly_splendor = 2
 }
-
-production_leader = {
+new static_modifier production_leader = {
 	trade_goods_size_modifier = 0.10
 }
-
-trade_company_bonus = {
+new static_modifier trade_company_bonus = {
 	trade_goods_size_modifier = 1.0
-}						  
-bonus_from_merchant_republics = {
+}
+new static_modifier bonus_from_merchant_republics = {
 	trade_goods_size_modifier = 0.5
 }
-
-bonus_from_merchant_republics_for_trade_league_member = {
+new static_modifier bonus_from_merchant_republics_for_trade_league_member = {
 	trade_goods_size_modifier = 1 
 }
-
-merchant_republic_mechanics_modifier = {
+new static_modifier merchant_republic_mechanics_modifier = {
 	state_governing_cost = 0.25
 	trade_company_governing_cost = -0.25
 }
-
-federation_leader = {
+new static_modifier federation_leader = {
 	diplomatic_reputation = 1
 	land_morale = 0.1
 }
-
-liberty_desire = {
-	#extra diplo slot when at least 80% LD so that they can ask for support
+new static_modifier liberty_desire = {
+	
 	diplomatic_upkeep = 1.25
 }
-
-is_great_power = {	
+new static_modifier is_great_power = {	
 	prestige_decay = -0.01
 	embracement_cost = -0.1
 	max_absolutism = 5
 }
-
-in_golden_era = {
+new static_modifier in_golden_era = {
 	all_power_cost = -0.1
 	global_trade_goods_size_modifier = 0.1
 	land_morale = 0.1
@@ -1109,30 +914,25 @@ in_golden_era = {
 	max_absolutism = 5
 	max_revolutionary_zeal = 10
 }
-
-absolutism = {
+new static_modifier absolutism = {
 	administrative_efficiency = 0.3
 	discipline = 0.05
 	core_decay_on_your_own = -0.5
 	
 	yearly_absolutism = -1.5
 }
-
-low_army_professionalism = {
+new static_modifier low_army_professionalism = {
 	mercenary_cost = -0.15
 	mercenary_manpower = 0.15
 }
-
-high_army_professionalism = {
+new static_modifier high_army_professionalism = {
 	fire_damage = 0.1
 	shock_damage = 0.1
 	siege_ability = 0.2
 	drill_decay_modifier = -0.5
 }
-
-streltsy_modifier = {}
-
-power_projection = {
+new static_modifier streltsy_modifier = {}
+new static_modifier power_projection = {
 	defensiveness = 0.1
 	global_trade_power = 0.2
 	prestige = 0.5
@@ -1143,97 +943,72 @@ power_projection = {
 	horde_unity = 0.5
 	republican_tradition = 0.2
 }
-
-power_projection_25 = {
+new static_modifier power_projection_25 = {
 	free_leader_pool = 1
 }
-
-#100 Land Forcelimit = 1
-land_forcelimit = {
-    free_land_leader_pool = 1.25 #80 Army forcelimit -> +1 free leader
+new static_modifier land_forcelimit = {
+    free_land_leader_pool = 1.25 
 }
-
-#100 Naval Forcelimit = 1
-naval_forcelimit = {
-    free_navy_leader_pool = 1.25 #80 Naval Forcelimit -> +1 Free Leader
-	#naval_maintenance_modifier = 0.05
+new static_modifier naval_forcelimit = {
+    free_navy_leader_pool = 1.25 
+	
 }
-
-trade_company_strong = {
+new static_modifier trade_company_strong = {
 	merchants = 1
 }
-
-trade_company_dominant = {
+new static_modifier trade_company_dominant = {
 }
-
-daimyo_subject = {
+new static_modifier daimyo_subject = {
 }
-
-all_nations = {
+new static_modifier all_nations = {
 	global_tax_income = 12
 	land_forcelimit	= 6
 	naval_forcelimit = 12
 }
-
-subject_nation = {
+new static_modifier subject_nation = {
 	global_tax_income = -6
 	land_forcelimit	= -3
 	naval_forcelimit = -6
 }
-
-### Subjects ##########################################################
-
-#Personal Union
-union_subject = {
+new static_modifier union_subject = {
 	legitimacy = 0.25
 	meritocracy = 0.15
 	yearly_absolutism = 0.1
 }
-
-union_nation = {
+new static_modifier union_nation = {
 	stability_cost_modifier = -0.25
 	prestige_from_land = -0.25
 	prestige_from_naval = -0.25
 }
-
-#March
-march_subject = {
+new static_modifier march_subject = {
 	land_forcelimit = 2.5
 }
-
-march_nation = {
+new static_modifier march_nation = {
 	embracement_cost = 0.35
 	build_cost = 0.25
 	technology_cost = 0.10
 	defensiveness = 0.25
 	fort_maintenance_modifier = -0.5
 }
-
-march_bonus = {
+new static_modifier march_bonus = {
 	land_maintenance_modifier = -0.15
 	naval_maintenance_modifier = -0.15
 	manpower_recovery_speed = 0.15
 }
-
-#Yokudan Vassal
-yokuda_vassal_subject = {
+new static_modifier yokuda_vassal_subject = {
 	diplomatic_upkeep = -2
 }
-
-#Holy Order
-holy_order_subject = {
+new static_modifier holy_order_subject = {
 	land_forcelimit = 1.5
 }
-
-holy_order_nation = {
+new static_modifier holy_order_nation = {
 	idea_cost = 0.25
 	global_institution_spread = -0.15
 	religious_unity = 0.15
 	global_missionary_strength = 0.05
 	missionaries = 1
 }
-
-holy_order_bonus = {
+new static_modifier holy_order_bonus = {
 	tolerance_own = 1.5
 	tolerance_heretic = -3.5
 	tolerance_heathen = -3.5
@@ -1242,161 +1017,118 @@ holy_order_bonus = {
 	global_manpower_modifier = 0.15
 	prestige_per_development_from_conversion = 0.1
 }
-
-### Vassal
-vassal_subject = {
+new static_modifier vassal_subject = {
 	global_manpower = 1
 }
-
-vassal_nation = {
+new static_modifier vassal_nation = {
 
 }
-
-### Imperial Province
-imperial_subject = {
+new static_modifier imperial_subject = {
 	imperial_authority = 0.015
 }
-
-imperial_nation = {
+new static_modifier imperial_nation = {
 	prestige = 0.5
 	diplomatic_upkeep = -1
 	unjustified_demands = 0.15
 }
-
-### Colony
-large_colonial_nation = {
+new static_modifier large_colonial_nation = {
 	merchants = 1
 	global_trade_power = 0.10
 	naval_forcelimit = 5
 	ship_power_propagation = 0.10
 	global_colonial_growth = 10
 }
-
-colony_nation = {
+new static_modifier colony_nation = {
 	native_assimilation = 0.15
 	core_creation = 0.35
 	global_missionary_strength = -0.025
 }
-
-crown_colony_overlord = {
+new static_modifier crown_colony_overlord = {
 	prestige = 0.10
 }
-
-private_enterprise_overlord = {
+new static_modifier private_enterprise_overlord = {
 	global_tariffs = -0.05
 }
-
-self_governing_colony_overlord = {
+new static_modifier self_governing_colony_overlord = {
 	global_tariffs = -0.10
 }
-
-crown_colony_subject = {
+new static_modifier crown_colony_subject = {
 	global_autonomy = -0.05
 	global_colonial_growth = 10
 	stability_cost_modifier = -0.10
 }
-
-private_enterprise_subject = {
+new static_modifier private_enterprise_subject = {
 	global_ship_trade_power = 0.25
 	naval_tradition_from_trade = 0.1
 	ship_power_propagation = 0.1
 }
+new static_modifier self_governing_colony_subject = {
 
-self_governing_colony_subject = {
-# colonists = 1
 	development_cost = -0.15
 	trade_steering = 0.25
 }
-
-### Native Reservation
-reservation_nation = {
+new static_modifier reservation_nation = {
 	global_institution_spread = 0.35
 	global_trade_power = -0.25
 	global_unrest = 5
 }
-
-reservation_subject = {
+new static_modifier reservation_subject = {
 	global_manpower_modifier = 0.05
 }
-
-### Tributaries
-tributary_state_behind_overlord_tech_adm = {
+new static_modifier tributary_state_behind_overlord_tech_adm = {
 	adm_tech_cost_modifier = -0.15
 }
-
-tributary_state_behind_overlord_tech_dip = {
+new static_modifier tributary_state_behind_overlord_tech_dip = {
 	dip_tech_cost_modifier = -0.15
 }
-
-tributary_state_behind_overlord_tech_mil = {
+new static_modifier tributary_state_behind_overlord_tech_mil = {
 	mil_tech_cost_modifier = -0.15
 }
-
-tributary_subject = {
+new static_modifier tributary_subject = {
 	global_manpower_modifier = 0.15
 }
-
-### Alliance
-alliance_subject = {
+new static_modifier alliance_subject = {
 	diplomatic_reputation = -0.5
 }
-
-alliance_nation = {
+new static_modifier alliance_nation = {
 	land_forcelimit_modifier = 0.10
 	recover_army_morale_speed = -0.10
 	recover_navy_morale_speed = -0.10
 }
-
-#######################################################################
-
-primitive_nation = {
+new static_modifier primitive_nation = {
 	development_cost = 0.5
 }
-
-maintained_forts = {
+new static_modifier maintained_forts = {
 	army_tradition = 1
 }
-
-gov_rank_1 = {
+new static_modifier gov_rank_1 = {
 }
-
-gov_rank_2 = {
+new static_modifier gov_rank_2 = {
 }
-
-gov_rank_3 = {
+new static_modifier gov_rank_3 = {
 }
-
-gov_rank_4 = {
+new static_modifier gov_rank_4 = {
 }
-
-gov_rank_5 = {
+new static_modifier gov_rank_5 = {
 }
-
-gov_rank_6 = {
+new static_modifier gov_rank_6 = {
 }
-
-gov_rank_7 = {
+new static_modifier gov_rank_7 = {
 }
-
-gov_rank_8 = {
+new static_modifier gov_rank_8 = {
 }
-
-gov_rank_9 = {
+new static_modifier gov_rank_9 = {
 }
-
-gov_rank_10 = {
+new static_modifier gov_rank_10 = {
 }
-
-autonomy_increased = {
+new static_modifier autonomy_increased = {
 	local_unrest = -10
 	picture = "autonomy_increased"
 }
-
-autonomy_decreased = {
+new static_modifier autonomy_decreased = {
 	local_unrest = 10
 }
-
-revolution_target = {
+new static_modifier revolution_target = {
 	global_manpower_modifier = 0.10
 	land_morale = 0.10
 	naval_morale = 0.1
@@ -1407,28 +1139,17 @@ revolution_target = {
 	manpower_recovery_speed = 0.25
 	sailors_recovery_speed = 0.25
 }
-
-dishonoured_alliance =  {
-	diplomatic_reputation = -1
-}
-
-drilling_armies = { # Multiplied by percentage of forcelimit currently drilling
+new static_modifier drilling_armies = { 
 	yearly_army_professionalism = 0.01
 }
-
-##################################################################################################
-# Scripted and used from Diplomatic System
-##################################################################################################
-recruitment_sabotaged = {
+new static_modifier recruitment_sabotaged = {
 	manpower_recovery_speed = -0.2
 	sailors_recovery_speed = -0.2
 }
-
-merchants_slandered = {
+new static_modifier merchants_slandered = {
 	global_trade_power = -0.1
 }
-
-discontent_sowed = {
+new static_modifier discontent_sowed = {
 	global_unrest = 2
 	legitimacy = -1
 	republican_tradition = -0.2
@@ -1436,91 +1157,55 @@ discontent_sowed = {
 	horde_unity = -1
 	meritocracy = -0.5
 }
-
-reputation_sabotaged = {
+new static_modifier reputation_sabotaged = {
 	diplomatic_reputation = -3
 }
-
-corrupt_officials = {
+new static_modifier corrupt_officials = {
 	yearly_corruption = 0.1
 }
-
-scaled_trade_league_leader = {
+new static_modifier scaled_trade_league_leader = {
 	trade_steering = 0.05
 	naval_forcelimit = 2
 	global_sailors = 1000
 	land_forcelimit = 1
 	global_manpower = 1
 }
-
-in_trade_league = {
+new static_modifier in_trade_league = {
 	global_ship_trade_power = 0.2
 	diplomatic_upkeep = -1
 }
-
-##################################################
-# Tutorial only
-##################################################
-
-tutorial_colonial_range = {
+new static_modifier tutorial_colonial_range = {
 	range = 0.1
 }
-
-########################################
-# Nation Designer
-########################################
-
-custom_setup = {
+new static_modifier custom_setup = {
 	colonists = 1
 	global_tax_income = 20
 }
-
-########################################
-# Subject Interactions (the on/off ones)
-########################################
-
-embargo_rivals = {
+new static_modifier embargo_rivals = {
 }
-
-scutage = {
+new static_modifier scutage = {
 }
-
-subsidize_armies = {
+new static_modifier subsidize_armies = {
 }
-
-support_loyalists = {
+new static_modifier support_loyalists = {
 }
-
-send_officers = {
+new static_modifier send_officers = {
 	discipline = 0.05
 	land_morale = 0.2
 }
-
-divert_trade = {
+new static_modifier divert_trade = {
 }
-
-########################################
-# Karma
-########################################
-
-karma_just_right = {
+new static_modifier karma_just_right = {
 	diplomatic_reputation = 2
 	discipline = 0.05
 }
-
-karma_too_high = {
+new static_modifier karma_too_high = {
 	diplomatic_reputation = 1
 }
-
-karma_too_low = {
+new static_modifier karma_too_low = {
 	discipline = 0.025
 }
-
-########################################
-# Bear
-########################################
-
-invasion_nation = {
+new static_modifier invasion_nation = {
 	discipline = 0.25
 	manpower_recovery_speed = 1
 	sailors_recovery_speed = 1
@@ -1534,30 +1219,17 @@ invasion_nation = {
 	land_attrition = -0.5
 	yearly_corruption = -1
 }
-
-
-########################################
-# Native policy
-########################################
-
-native_policy_coexist = {
+new static_modifier native_policy_coexist = {
 	native_uprising_chance = -1.0
 }
-
-native_policy_trade = {
+new static_modifier native_policy_trade = {
 	native_assimilation = 0.5
 	native_uprising_chance = -0.5
 }
-
-native_policy_hostile = {
+new static_modifier native_policy_hostile = {
 	global_colonial_growth = 20
 }
-
-########################################
-# Harmony
-########################################
-
-high_harmony = {
+new static_modifier high_harmony = {
 	tolerance_own = 3
 	development_cost = -0.1
 	meritocracy = 1
@@ -1566,142 +1238,104 @@ high_harmony = {
 	harmonization_speed = 0.5
 	yearly_corruption = -0.5
 }
-
-low_harmony = {
+new static_modifier low_harmony = {
 	yearly_corruption = 1
 	stability_cost_modifier = 0.2
 	legitimacy = -1
 	devotion = -2
 	meritocracy = -2
 }
-
-########################################
-# Shogun Interactions
-########################################
-
-overlord_daimyo_at_peace = {
+new static_modifier overlord_daimyo_at_peace = {
 	stability_cost_modifier = -0.02
 	legitimacy = 0.1
 }
-
-overlord_daimyo_at_peace_max = {
+new static_modifier overlord_daimyo_at_peace_max = {
 	legitimacy = 1
 }
-
-overlord_daimyo_at_peace_min = {
+new static_modifier overlord_daimyo_at_peace_min = {
 	stability_cost_modifier = -0.2
 }
-
-overlord_daimyo_same_isolationism = {
+new static_modifier overlord_daimyo_same_isolationism = {
 	prestige = 0.1
 }
-
-overlord_daimyo_different_isolationism = { # This one gets merged into overlord_daimyo_same_isolationism in the code.
+new static_modifier overlord_daimyo_different_isolationism = { 
 	prestige = -0.05
 }
-
-overlord_daimyo_isolationism_max = {
+new static_modifier overlord_daimyo_isolationism_max = {
 	prestige = 1
 }
-
-overlord_daimyo_isolationism_min = {
+new static_modifier overlord_daimyo_isolationism_min = {
 	prestige = -1
 }
-
-overlord_sankin_kotai = {
+new static_modifier overlord_sankin_kotai = {
 	diplomatic_reputation = 3
 }
-
-subject_sankin_kotai = {
+new static_modifier subject_sankin_kotai = {
 	global_autonomy = 0.25
 }
-
-overlord_expel_ronin = {
+new static_modifier overlord_expel_ronin = {
 	global_unrest = -1
 }
-
-subject_expel_ronin = {
+new static_modifier subject_expel_ronin = {
 	liberty_desire = -5
 }
-
-overlord_sword_hunt = { # Unlike the others, this one counts per subject
+new static_modifier overlord_sword_hunt = { 
 	global_regiment_cost = -0.15
 }
-
-subject_sword_hunt = {
+new static_modifier subject_sword_hunt = {
 	manpower_recovery_speed = -0.1
 }
-
-supply_depot_area = {
+new static_modifier supply_depot_area = {
 	supply_limit_modifier = 0.5
 }
-
-########################################
-# Government Interacions
-########################################
-
-efficient_tax_farming_modifier = {
+new static_modifier efficient_tax_farming_modifier = {
 	global_tax_modifier = 0.15
 }
-
-land_acquisition_modifier = {
+new static_modifier land_acquisition_modifier = {
 	core_creation = -0.05
 }
-
-lenient_taxation_modifier = {
+new static_modifier lenient_taxation_modifier = {
 	reduced_liberty_desire = 15
 	diplomatic_reputation = 1
 }
-
-train_horsemanship_modifier = {
+new static_modifier train_horsemanship_modifier = {
 	cavalry_power = 0.15
 }
-
-promote_culture_in_government_modifier = {
+new static_modifier promote_culture_in_government_modifier = {
 	all_power_cost = -0.05
 }
-
-seize_clerical_holdings_modifier = {
+new static_modifier seize_clerical_holdings_modifier = {
 	build_cost = -0.15
 }
-
-invite_minorities_modifier = {
+new static_modifier invite_minorities_modifier = {
 	local_development_cost = -0.2
 }
-
-royal_council_meeting_mod = {
+new static_modifier royal_council_meeting_mod = {
 	country_admin_power = 1
 }
-
-state_council_meeting_mod = {
+new static_modifier state_council_meeting_mod = {
 	country_diplomatic_power = 1
 }
-
-war_council_meeting_mod = {
+new static_modifier war_council_meeting_mod = {
 	country_military_power = 1
 }
-
-equipped_streltsy_modifier_weaker = {
+new static_modifier equipped_streltsy_modifier_weaker = {
 	infantry_power = 0.05
 	is_streltsy_modifier = yes
 }
-
-equipped_streltsy_modifier = {
+new static_modifier equipped_streltsy_modifier = {
 	infantry_power = 0.1
 	is_streltsy_modifier = yes
 }
-
-prepared_streltsy_modifier = {
+new static_modifier prepared_streltsy_modifier = {
 	reinforce_speed = 0.2
 	reinforce_cost_modifier = -0.1
 	is_streltsy_modifier = yes
 }
-
-new_order_regiment_mobilized_modifier = {
+new static_modifier new_order_regiment_mobilized_modifier = {
 	infantry_power = 0.15
 }
-
-inward_focus_modifier = {
+new static_modifier inward_focus_modifier = {
 	core_creation = 0.33
 	province_warscore_cost = 1
 	stability_cost_to_declare_war = 1
@@ -1713,8 +1347,7 @@ inward_focus_modifier = {
 	global_unrest = -2
 	all_estate_loyalty_equilibrium = 0.05
 }
-
-outward_focus_modifier = {
+new static_modifier outward_focus_modifier = {
 	ae_impact = 0.15
 	land_forcelimit_modifier = -0.1
 	trade_efficiency = 0.1
@@ -1723,8 +1356,7 @@ outward_focus_modifier = {
 	range = 0.25
 	harmonization_speed = 0.25
 }
-
-expansion_focus_modifier = {
+new static_modifier expansion_focus_modifier = {
 	development_cost_modifier = 0.1
 	all_estate_loyalty_equilibrium = -0.1
 	global_unrest = 2
@@ -1735,59 +1367,42 @@ expansion_focus_modifier = {
 	manpower_recovery_speed = 0.1
 	ae_impact = -0.1
 }
-
-########################################
-# Regiment Types Modifiers
-########################################
-regiment_drill_modifier = { # Used by individual regiments
+new static_modifier regiment_drill_modifier = { 
 	shock_damage = 0.1
 	fire_damage = 0.1
 	fire_damage_received = -0.25
 	shock_damage_received = -0.25
 }
-
-army_drill_modifier = { # Used by an entire army, is the average of all subunits drill
+new static_modifier army_drill_modifier = { 
 	movement_speed = 0.2
 }
-
-innovativeness = {
+new static_modifier innovativeness = {
 	all_power_cost	= -0.1
 	army_tradition_decay = -0.01
 	navy_tradition_decay = -0.01
 }
-
-raiding_parties_modifier = {
+new static_modifier raiding_parties_modifier = {
 	hostile_attrition = 1
 	local_unrest = 1.0
 	movement_speed = 0.1
 }
-
-serfs_recieved_by_cossacks = {
+new static_modifier serfs_recieved_by_cossacks = {
 	global_tax_modifier = -0.1
 }
-
-cossacks_modifier = {
+new static_modifier cossacks_modifier = {
 	stability_cost_modifier = 1.0
 }
-
-#########################################
-# Government/Reform modfiers
-########################################
-
-expand_administation_modifier = {
+new static_modifier expand_administation_modifier = {
 	expand_administration_cost = 0.20
 	governing_capacity = 20
 }
-
-# At 100% over capacity, this modifier will be fully used
-over_governing_capacity_modifier = {
+new static_modifier over_governing_capacity_modifier = {
 	stability_cost_modifier = 1.5
 	ae_impact = 1.0
 	improve_relation_modifier = -1.0
 	core_creation = 1.0
 	advisor_cost = 2.5
 	global_unrest = 25
-	monthly_militarized_society = -1.0
 	inflation_action_cost = 2.5
 	fort_maintenance_modifier = 2.5
 	war_exhaustion_cost = 2.5
@@ -1799,16 +1414,13 @@ over_governing_capacity_modifier = {
 	reinforce_cost_modifier = 2.5
 	embracement_cost = 2.5
 }
-
-lost_hegemony = {
+new static_modifier lost_hegemony = {
 	all_power_cost	= 0.10
 }
-
-at_peace_revolutionary = { # Applied if at peace while reactionaries are bordering you
+new static_modifier at_peace_revolutionary = { 
 	yearly_revolutionary_zeal = -4
 }
-
-expanded_infrastructure = {
+new static_modifier expanded_infrastructure = {
 	allowed_num_of_buildings = 1
 	allowed_num_of_manufactories = 1
 	regiment_recruit_speed = -0.15
@@ -1830,334 +1442,284 @@ expanded_infrastructure = {
 	local_governing_cost = 0.1
 	local_great_project_upgrade_cost = -0.05
 }
-
-centralize_state = {
+new static_modifier centralize_state = {
 	statewide_governing_cost = -0.2
 	local_prosperity_growth = 0.25
 	local_state_maintenance_modifier = -0.2
 }
-
-# Applied once for each guru teaching
-guru_teaching = {
+new static_modifier guru_teaching = {
 	global_missionary_strength = -0.01
 }
-
-########################################
-# Religious Schools
-########################################
-desert_wind_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier desert_wind_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	army_tradition_decay = -0.015
 }
-goutfang_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier goutfang_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	discipline = 0.05
 }
-desert_rain_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier desert_rain_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	movement_speed = 0.1
 }
-whispering_claw_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier whispering_claw_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	spy_offence = 0.15
 }
-
-alrabeg_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier alrabeg_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	discipline = 0.05
 }
-
-storihbeg_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier storihbeg_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	shock_damage = 0.10
 }
-
-uricanbeg_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier uricanbeg_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	land_forcelimit_modifier = 0.05
 }
-
-gulibeg_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier gulibeg_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	recover_army_morale_speed = 0.05
 }
-
-hrokkibeg_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier hrokkibeg_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	infantry_power = 0.10
 }
-
-dragon_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier dragon_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	fire_damage = 0.1
 }
-
-lizard_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier lizard_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	advisor_cost = -0.10
 }
-
-tortoise_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier tortoise_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	defensiveness = 0.10
 }
-
-crocodile_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier crocodile_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	recover_navy_morale_speed = 0.05
 }
-
-viper_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier viper_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	ae_impact = -0.10
 }
-
-lotus_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier lotus_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	land_morale = 0.10
 }
-
-magnolia_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier magnolia_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	trade_efficiency = 0.10
 }
-
-rose_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier rose_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	prestige_decay = -0.01
 }
-
-orchid_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier orchid_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	global_institution_spread = 0.10
 }
-
-tulip_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier tulip_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	reduced_liberty_desire = 10
 }
-
-hagraven_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier hagraven_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	free_leader_pool = 1
 }
-
-tuatara_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier tuatara_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	merchants = 1
 }
-
-carnation_school_modifier = {
-    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+new static_modifier carnation_school_modifier = {
+    religion_sub_modifier = yes 
 	religion = yes
-	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	warscore_cost_vs_other_religion = -0.1
 }
-
-# Special Units
-
-banner_regiment = {
+new static_modifier banner_regiment = {
 	land_maintenance_modifier = -0.25
 	discipline = 0.15
 	reinforce_speed = -0.5
-	# Audax Validator "." Ignore_NEXT
+	
 	regiment_manpower_usage = -0.75
 }
-
-streltsy_regiment = {
+new static_modifier streltsy_regiment = {
     fire_damage = 0.1
 }
-
-cossacks_regiment = {
+new static_modifier cossacks_regiment = {
     shock_damage = 0.1
 }
-
-carolean_regiment = {
+new static_modifier carolean_regiment = {
 	morale_damage = 0.1
 	fire_damage = 1.0
 	shock_damage = 0.50
 	reinforce_speed = -0.75
 	land_maintenance_modifier = 1.0
 }
-
-janissary_regiment = {
+new static_modifier janissary_regiment = {
 	fire_damage_received = -0.15
 	shock_damage_received = -0.15
 	drill_gain_modifier = 1.5
 	reinforce_cost_modifier = 1.5
 	reinforce_speed = -0.50
 }
-
-cawa_regiment = {
+new static_modifier cawa_regiment = {
 	morale_damage = 0.1
 	shock_damage_received = -0.15
 	land_attrition = -0.25
 	reinforce_cost_modifier = 1.0
 	reinforce_speed = -0.25
 }
-
-revolutionary_guard_regiment = {
+new static_modifier revolutionary_guard_regiment = {
 	fire_damage_received = -0.15
 	shock_damage_received = -0.15
 	drill_gain_modifier = 1.5
-} 
-
-marine_regiment = {
+}
+new static_modifier marine_regiment = {
     shock_damage_received = 0.1
 	fire_damage = 0.10
-	# Audax Validator "." Ignore_NEXT
+	
     regiment_disembark_speed = 2.5
 }
-
-
-
-ruler_adm = {
+new static_modifier ruler_adm = {
 	monthly_magicka = 0.03
 }
-
-ruler_dip = {
+new static_modifier ruler_dip = {
 	monthly_magicka = 0.03
 }
-
-ruler_mil = {
+new static_modifier ruler_mil = {
 	monthly_magicka = 0.03
 }
-
-heir_adm = {
+new static_modifier heir_adm = {
 }
-
-heir_dip = {
+new static_modifier heir_dip = {
 }
-
-heir_mil = {
+new static_modifier heir_mil = {
 }
-
-consort_adm = {
+new static_modifier consort_adm = {
 }
-
-consort_dip = {
+new static_modifier consort_dip = {
 }
-
-consort_mil = {
+new static_modifier consort_mil = {
 }
-# Audax Validator "!" Ignore_ALL
-tercio_modifier = { }
-musketeers_modifier = { }
-samurai_modifier = { }
-geobukseon_modifier = { }
-man_of_war_modifier = { }
-galleon_modifier = { }
-galleass_modifier = { }
-caravel_modifier = { }
-voc_indiamen_modifier = { }
-tercio_regiment = { }
-samurai_regiment = { }
-geobukseon_ship = { }
-man_of_war_ship = { }
-galleon_ship = { }
-caravel_ship = { }
-voc_indiamen_ship = { }
-hussars_regiment = { }
-under_governing_capacity_modifier = { }
-diplomatic_reputation = { }
-tolerance_own = { }
-tolerance_heretic = { }
-tolerance_heathen = { }
-num_accepted_cultures = { }
-papal_influence = { }
-church_power = { }
-fervor = { }
-karma = { }
-positive_karma = { }
-negative_karma = { }
-mandate = { }
-imperial_authority_emperor = { }
-positive_imperial_authority_emperor = { }
-negative_imperial_authority_emperor = { }
-imperial_authority_member = { }
-positive_imperial_authority_member = { }
-negative_imperial_authority_member = { }
-slackening_modifier = { 
+new static_modifier tercio_modifier = { }
+new static_modifier musketeers_modifier = { }
+new static_modifier samurai_modifier = { }
+new static_modifier geobukseon_modifier = { }
+new static_modifier man_of_war_modifier = { }
+new static_modifier galleon_modifier = { }
+new static_modifier galleass_modifier = { }
+new static_modifier caravel_modifier = { }
+new static_modifier voc_indiamen_modifier = { }
+new static_modifier tercio_regiment = { }
+new static_modifier samurai_regiment = { }
+new static_modifier geobukseon_ship = { }
+new static_modifier man_of_war_ship = { }
+new static_modifier galleon_ship = { }
+new static_modifier caravel_ship = { }
+new static_modifier voc_indiamen_ship = { }
+new static_modifier hussars_regiment = { }
+new static_modifier under_governing_capacity_modifier = { }
+new static_modifier diplomatic_reputation = { }
+new static_modifier tolerance_own = { }
+new static_modifier tolerance_heretic = { }
+new static_modifier tolerance_heathen = { }
+new static_modifier num_accepted_cultures = { }
+new static_modifier papal_influence = { }
+new static_modifier church_power = { }
+new static_modifier fervor = { }
+new static_modifier karma = { }
+new static_modifier positive_karma = { }
+new static_modifier negative_karma = { }
+new static_modifier mandate = { }
+new static_modifier imperial_authority_emperor = { }
+new static_modifier positive_imperial_authority_emperor = { }
+new static_modifier negative_imperial_authority_emperor = { }
+new static_modifier imperial_authority_member = { }
+new static_modifier positive_imperial_authority_member = { }
+new static_modifier negative_imperial_authority_member = { }
+new static_modifier slackening_modifier = { 
 	yearly_army_professionalism = -0.05
     manpower_recovery_speed = 2
 }
-average_overseas_subject_liberty_desire = { }
-reverse_average_overseas_subject_liberty_desire = { }
-average_subject_liberty_desire = { }
-reverse_average_subject_liberty_desire = { }
-average_global_autonomy = { }
-reverse_average_global_autonomy = { }
+new static_modifier average_overseas_subject_liberty_desire = { }
+new static_modifier reverse_average_overseas_subject_liberty_desire = { }
+new static_modifier average_subject_liberty_desire = { }
+new static_modifier reverse_average_subject_liberty_desire = { }
+new static_modifier average_global_autonomy = { }
+new static_modifier reverse_average_global_autonomy = { }
+new static_modifier pronoia_base_overlord_modifiers = {
 
-pronoia_base_overlord_modifiers = {
-	# land_forcelimit = -5
-	pronoia_amount_check_influence = 1 #used for exporting, invisible by default
 }
-
-pronoia_base_modifiers = {
+new static_modifier pronoia_base_modifiers = {
 	core_creation = 1
 	overextension_impact_modifier = 1
 	administrative_efficiency = -0.2
@@ -2165,106 +1727,86 @@ pronoia_base_modifiers = {
 	global_manpower_modifier = 0.5 
 	global_regiment_cost = -0.5
 }
-
-
-BYZ_pronoia_buff_army_tradition_modifier = {
+new static_modifier BYZ_pronoia_buff_army_tradition_modifier = {
 	army_tradition = 0.2
 }
-
-BYZ_pronoia_land_forcelimit_penalty = {
+new static_modifier BYZ_pronoia_land_forcelimit_penalty = {
 	land_forcelimit = -5
 }
-
-BYZ_extra_forcelimit_for_pronoiars = {
+new static_modifier BYZ_extra_forcelimit_for_pronoiars = {
 	land_forcelimit = 5
 }
-
-BYZ_army_trad = {
+new static_modifier BYZ_army_trad = {
 	army_tradition = 3
 }
-
-BYZ_discipline = {
+new static_modifier BYZ_discipline = {
 	discipline = 0.05
 }
-
-qizilbash_modifier = {
+new static_modifier qizilbash_modifier = {
 }
-
-mamluks_modifier = {
+new static_modifier mamluks_modifier = {
 }
-
-qizilbash_regiment = {
+new static_modifier qizilbash_regiment = {
 	fire_damage_received = -0.05
 	land_maintenance_modifier = -0.25
 }
-
-mamluks_regiment = {
+new static_modifier mamluks_regiment = {
 	drill_gain_modifier = 1
 	morale_damage = 0.1
 	reinforce_speed = 0.33 
 }
-
-
-adur_burzhen_mihr_mod = {
+new static_modifier adur_burzhen_mihr_mod = {
 	country_diplomatic_power = 1
 	development_cost = -0.1
-	monthly_asha_vahishta = -0.5
 	religion = yes
 }
-
-adur_farnbag_mod = {
+new static_modifier adur_farnbag_mod = {
 	country_admin_power = 1
 	reform_progress_growth = 0.1
-	monthly_asha_vahishta = -0.5
 	religion = yes
 }
-
-adur_gushnasp_mod = {
+new static_modifier adur_gushnasp_mod = {
 	country_military_power = 1
 	own_territory_dice_roll_bonus = 1
-	monthly_asha_vahishta = -0.5
 	religion = yes
 }
+new static_modifier culturally_influencing_countries = {
 
-culturally_influencing_countries = {
-	influence_to_vassal_elevation_cost = 20
-	monthly_persian_influence = -0.2
 }
+new static_modifier culturally_influencing_countries_same_culture = {
 
-culturally_influencing_countries_same_culture = {
-	influence_to_vassal_elevation_cost = 20
 }
-
-culturally_influenced_country = {
+new static_modifier culturally_influenced_country = {
 	relation_with_same_religion = 10
 	reverse_relation_with_same_religion = 10
 }
-
-manpower_percentage = {
-
-}
-
-reverse_manpower_percentage = {
+new static_modifier manpower_percentage = {
 
 }
-
-sailors_percentage = {
-
-}
-
-reverse_sailors_percentage = {
+new static_modifier reverse_manpower_percentage = {
 
 }
+new static_modifier sailors_percentage = {
 
-religious_zeal_at_conv = { }
-trade_post_modifier = { }
-unlawful_territory = { }
-expelled_minority = { }
-pasha_removed_modifier = { }
-chisti_timer = { }
-qadiriyya_timer = { }
-suhrawardiyya_timer = { }
-joined_league_war = { }
-global_holy_war_released_modifier = { }
-religious_center = { }
-reverse_under_governing_capacity_modifier = { }
+}
+new static_modifier reverse_sailors_percentage = {
+
+}
+new static_modifier religious_zeal_at_conv = { }
+new static_modifier trade_post_modifier = { }
+new static_modifier unlawful_territory = { }
+new static_modifier expelled_minority = { }
+new static_modifier pasha_removed_modifier = { }
+new static_modifier chisti_timer = { }
+new static_modifier qadiriyya_timer = { }
+new static_modifier suhrawardiyya_timer = { }
+new static_modifier joined_league_war = { }
+new static_modifier global_holy_war_released_modifier = { }
+new static_modifier religious_center = { }
+new static_modifier reverse_under_governing_capacity_modifier = { }
+new static_modifier emperor_revoked_reform =  {
+	diplomatic_reputation = -3
+}
+new static_modifier dishonoured_alliance =  {
+	diplomatic_reputation = -1
+}
