@@ -14,7 +14,25 @@ run_effect = {
 		}
 	}
 }
-new inheritable haafinga_mechanic_button = {
+new event_modifier haafingar_adm_modifier = {
+	name = "Held Court"
+	modifier = {
+		advisor_cost = -0.1
+	}
+}
+new event_modifier haafingar_dip_modifier = {
+	name = "Held a Burning"
+	modifier = {
+		diplomatic_reputation = 1
+	}
+}
+new event_modifier haafingar_mil_modifier = {
+	name = "Assembled the Generals"
+	modifier = {
+		army_tradition = 1
+	}
+}
+new inheritable haafingar_mechanic_button = {
 	gui = {
 		size = { x = 115 y = 120 }
 		backGround = ""
@@ -29,8 +47,7 @@ new inheritable haafinga_mechanic_button = {
 			position = { x = 7 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-
-		### interaction button
+		
 		guiButtonType = {
 			name = "government_interaction_button"
 			quadTextureSprite = "GFX_russian_ability_ADM"
@@ -68,24 +85,27 @@ new government_mechanic haafingar_mechanic = {
 			desc = "
 
 We gain an extra §G0.10§! §YBlue Palace Administration§! each month from each level of our advisors. §RThis is not properly shown on the tooltip!§!"
-			max = 150
+			max = 100
 			monarch_power = ADM
+			base_monthly_growth = 0.5
 		}
 		haafingar_dip_power = {
 			name = "Bards College Fame"
 			desc = "
 
 We gain an extra §G0.01§! §YBards College Fame§! each month from each point of prestige. §RThis is not properly shown on the tooltip!§!"
-			max = 150
+			max = 100
 			monarch_power = DIP
+			base_monthly_growth = 0.5
 		}
 		haafingar_mil_power = {
 			name = "Castle Dour Tradition"
 			desc = "
 
 We gain an extra §G0.01§! §YCastle Dour Tradition§! each month from each point of army tradition. §RThis is not properly shown on the tooltip!§!"
-			max = 150
+			max = 100
 			monarch_power = MIL
+			base_monthly_growth = 0.5
 		}
 	}
 	interactions = {
@@ -98,8 +118,15 @@ We gain an extra §G0.01§! §YCastle Dour Tradition§! each month from each poi
 			effect = {
 				add_splendor = 50
 				add_adm_power = 50
+				
+				if [has_country_flag = court_of_haafingar] {
+					add_country_modifier = {
+						name = haafingar_adm_modifier
+						duration = 1825
+					}
+				}
 			}
-			inherit = haafinga_mechanic_button
+			inherit = haafingar_mechanic_button
 		}
 		haafingar_dip_button = {
 			name = "Hold a Burning"
@@ -110,6 +137,13 @@ We gain an extra §G0.01§! §YCastle Dour Tradition§! each month from each poi
 			effect = {
 				add_war_exhaustion = -2
 				add_dip_power = 50
+				
+				if [has_country_flag = court_of_haafingar] {
+					add_country_modifier = {
+						name = haafingar_dip_modifier
+						duration = 1825
+					}
+				}
 				
 				if [
 					owns = solitude
@@ -128,7 +162,7 @@ We gain an extra §G0.01§! §YCastle Dour Tradition§! each month from each poi
 					set_ruler_flag = flame_of_callisos_buff
 				}
 			}
-			inherit = haafinga_mechanic_button
+			inherit = haafingar_mechanic_button
 		}
 		haafingar_mil_button = {
 			name = "Assemble the Generals"
@@ -138,11 +172,18 @@ We gain an extra §G0.01§! §YCastle Dour Tradition§! each month from each poi
 			cost = 100
 			effect = {
 				create_general = { 
-					tradition = 100
+					tradition = 75
 				}
 				add_mil_power = 50
+				
+				if [has_country_flag = court_of_haafingar] {
+					add_country_modifier = {
+						name = haafingar_mil_modifier
+						duration = 1825
+					}
+				}
 			}
-			inherit = haafinga_mechanic_button
+			inherit = haafingar_mechanic_button
 		}
 	}
 }

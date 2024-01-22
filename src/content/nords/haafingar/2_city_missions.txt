@@ -233,12 +233,26 @@ mission_trees:solitude += {
 			}
 		}
 		effect = {
-			quick_country_modifier = {
-				name = "Court of Haafingar"
-				modifier = {
-					monthly_haafingar_adm_power = 0.5
-					monthly_haafingar_dip_power = 0.5
-					monthly_haafingar_mil_power = 0.5
+			set_country_flag = court_of_haafingar
+			new_custom_tooltip = "§YHold Court§! Interaction of §YSolitude Powers§! Ability gains the additional effect:"
+			tooltip = {
+				add_country_modifier = {
+					name = haafingar_adm_modifier
+					duration = 1825
+				}
+			}
+			new_custom_tooltip = "§YHold a Burning§! Interaction of §YSolitude Powers§! Ability gains the additional effect:"
+			tooltip = {
+				add_country_modifier = {
+					name = haafingar_dip_modifier
+					duration = 1825
+				}
+			}
+			new_custom_tooltip = "§YAssemble the Generals§! Interaction of §YSolitude Powers§! Ability gains the additional effect:"
+			tooltip = {
+				add_country_modifier = {
+					name = haafingar_mil_modifier
+					duration = 1825
 				}
 			}
 		}
