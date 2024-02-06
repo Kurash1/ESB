@@ -57,6 +57,9 @@ new idea_group exploration_ideas = {
 	bonus = {
 		cb_on_primitives = yes
 	}
+	ai_will_do = {
+		factor = 0 # I (Kurashi) don't want ai to randomly colonize
+	}
 }
 new idea_group expansion_ideas = {
 	name = "Expansion"
