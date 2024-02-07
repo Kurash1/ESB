@@ -185,7 +185,7 @@ new effect create_monument = {
 	}
 	transpile = {
 		if [has_dlc = "Leviathan"] {
-			new_custom_tooltip = "The monument §Y{args:monument:name}§! is created in §Y{args:province:name}§!"
+			new_custom_tooltip = "The monument §Y{args:monument:name}§! is created in §Y[{args:province}.GetName]§!"
 			hidden_effect = {
 				args:monument:start = {
 					move_great_project = {

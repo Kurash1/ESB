@@ -304,7 +304,7 @@ new great_project bleak_falls_barrow = {
 }
 new great_project blue_palace = {
 	name = "Blue Palace"
-	start = solitude
+	start = black_mountain
 	tier_1 = {
 		country_modifier = {
 			governing_capacity_modifier = 0.05
