@@ -277,7 +277,7 @@ new great_project bleak_falls_barrow = {
 			global_missionary_strength = 0.01
 		}
 	}
-	tier_3 = {
+	tier_2 = {
 		province_modifier = {
 			local_fort_maintenance_modifier = -0.5
 			trade_goods_size = 1
