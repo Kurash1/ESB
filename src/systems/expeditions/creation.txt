@@ -1,5 +1,65 @@
 new named_int expedition_count = 0
-
+new effect create_expedition = {
+	args = {
+		id = string
+		name = string
+		desc = string
+		frame = int
+		length = int
+		event = event
+	}
+	transpile = {
+		set_province_flag = expedition_target
+		set_variable = {
+			which = expedition_progress
+			value = 0
+		}
+		set_variable = {
+			which = expedition_length
+			value = args:length
+		}
+		set_variable = {
+			which = expedition_percentage
+			which = 0
+		}
+		
+		set_province_flag = args:id
+		
+		customizable_localizations:GetExpeditionTitle += {
+			{
+				text = args:name
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		customizable_localizations:GetExpeditionDesc += {
+			{
+				text = args:desc
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		custom_icons:expedition_icon:frames += {
+			{
+				frame = args:frame
+				trigger =* {
+					has_province_flag = *args:id*
+				}
+			}
+		}
+		
+		end_expedition_effect +=! {
+			if [has_province_flag = args:id] {
+				province_event = args:event
+				clr_province_flag = args:id
+			}
+		}
+		
+		expedition_count += 1
+	}
+}
 new effect create_expedition = {
 	args = {
 		id = string

@@ -574,6 +574,17 @@ new province shadowgreen = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
+		
+		1.1.1 = {
+			create_expedition = {
+				id = shadowgreen
+				name = "Shadowgreen Cavern"
+				desc = ""
+				frame = 13
+				length = 1
+				event = haafingar.3
+			}
+		}
 	}
 }
 new province gold_isle = {

@@ -15,6 +15,7 @@ estates:warriors:privileges += new storm_gate_stalwarts = {
 mission_trees:solitude += {
 	the_emperors_tower = {
 		name = "The Emperor's Tower"
+		icon = emperors_tower_mission
 		x = 0
 		y = 0
 		trigger = {
@@ -36,6 +37,7 @@ mission_trees:solitude += {
 	}
 	a_new_city = {
 		name = "A New City"
+		icon = wells_district_mission
 		x = 1
 		y = 0
 		trigger = {
@@ -66,6 +68,7 @@ mission_trees:solitude += {
 	}
 	castle_upon_the_hill = {
 		name = "Castle upon the Hill"
+		icon = castle_dour_mission
 		x = 2
 		y = 0
 		trigger = {
@@ -83,6 +86,7 @@ mission_trees:solitude += {
 	}
 	new_solitude = {
 		name = "New Solitude"
+		icon = solitude_mission
 		x = 1
 		y = 1
 		required = {
@@ -139,6 +143,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	the_blue_palace = {
 		name = "Court of Haafingar"
+		icon = court_of_haafingar_mission
 		x = 0
 		y = 2
 		required = {
@@ -155,7 +160,6 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		}
 		effect = {
 			provinces:solitude = {
-				center_of_trade = 1
 				quick_province_modifier = {
 					name = "Avenues District"
 					modifier = {
@@ -193,6 +197,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	temple_of_the_divines = {
 		name = "Temple of the Divines"
+		icon = temple_of_the_divines_mission
 		x = 1
 		y = 2
 		required = new_solitude
@@ -212,6 +217,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	storm_gate = {
 		name = "Storm Gate"
+		icon = storm_gate_mission
 		x = 2
 		y = 1
 		required = castle_upon_the_hill
@@ -228,6 +234,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	bards_college = {
 		name = "Bards College"
+		icon = bards_college_mission
 		x = 2
 		y = 2
 		required = new_solitude
@@ -243,6 +250,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	flame_of_callisos = {
 		name = "Flame of Callisos"
+		icon = burning_mission
 		x = 2
 		y = 3
 		required = bards_college
@@ -266,6 +274,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	poetic_edda = {
 		name = "Poetic Edda"
+		icon = poetic_edda_mission
 		x = 3
 		y = 3
 		required = bards_college
@@ -287,6 +296,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	windbreaker_arch = {
 		name = "Windbreaker Arch"
+		icon = windbreaker_arch_mission
 		x = 4
 		y = 0
 		trigger = {
@@ -308,6 +318,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	solitude_countryside = {
 		name = "Solitude Countryside"
+		icon = solitude_countryside_mission
 		x = 3
 		y = 1
 		required = windbreaker_arch
@@ -345,6 +356,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 	}
 	master_of_the_arch = {
 		name = "Master of the Arch"
+		icon = master_arch_mission
 		x = 4
 		y = 1
 		required = windbreaker_arch

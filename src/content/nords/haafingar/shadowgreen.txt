@@ -1,0 +1,60 @@
+new great_project shadowgreen_druids = {
+	name = "Shadowgreen: Druid Council"
+	start = black_mountain
+}
+new great_project shadowgreen_glenmoril = {
+	name = "Shadowgreen: Glenmoril Coven"
+	start = black_mountain
+}
+new great_project shadowgreen_alchemy = {
+	name = "Shadowgreen: Alchemy Guild"
+	start = black_mountain
+}
+new great_project shadowgreen_holy_site = {
+	name = "Shadowgreen: Holy Site"
+	start = black_mountain
+}
+new province_event haafingar.3 = {
+	title = "What to do with the Cavern"
+	is_triggered_only = yes
+	picture = shadowgreen_eventPicture
+	options = {
+		{
+			name = "Form a druid council"
+			effect = {
+				create_monument = {
+					monument = shadowgreen_druids
+					province = shadowgreen
+				}
+			}
+		}
+		{
+			name = "Host a coven of hagravens"
+			effect = {
+				create_monument = {
+					monument = shadowgreen_glenmoril
+					province = shadowgreen
+				}
+			}
+		}
+		{
+			name = "Sponsor an alchemy guild"
+			effect = {
+				change_trade_goods = potions
+				create_monument = {
+					monument = shadowgreen_alchemy
+					province = shadowgreen
+				}
+			}
+		}
+		{
+			name = "It belongs to the gods"
+			effect = {
+				create_monument = {
+					monument = shadowgreen_holy_site
+					province = shadowgreen
+				}
+			}
+		}
+	}
+}
