@@ -15,8 +15,9 @@ mission_trees:solitude += {
 			}
 		}
 	}
-	shadowgreen_druids = {
-		name = "Shadowgreen Druids"
+	shadowgreen_cavern = {
+		name = "Shadowgreen Cavern"
+		icon = shadowgreen_cavern
 		x = 5
 		y = 1
 		required = form_the_wolf_army
@@ -31,6 +32,9 @@ mission_trees:solitude += {
 			areas:shadowgreen, areas:ravenscar = {
 				type = all
 				owned_by = ROOT
+			}
+			provinces:shadowgreen = {
+				has_province_flag = completed_shadowgreen_expedition
 			}
 		}
 		effect = {
@@ -49,7 +53,7 @@ mission_trees:solitude += {
 		name = "Wolf's Eye Lighthouse"
 		x = 4
 		y = 2
-		required = shadowgreen_druids
+		required = shadowgreen_cavern
 		trigger = {
 			owns = solitude_lighthouse
 			provinces:solitude_lighthouse = {
@@ -73,7 +77,7 @@ mission_trees:solitude += {
 		name = "Broken Oar Grotto"
 		x = 5
 		y = 2
-		required = shadowgreen_druids
+		required = shadowgreen_cavern
 		trigger = {
 			provinces:broken_oar = {
 				OR = {
@@ -101,7 +105,7 @@ mission_trees:solitude += {
 		name = "Northwatch Keep"
 		x = 6
 		y = 2
-		required = shadowgreen_druids
+		required = shadowgreen_cavern
 		trigger = {
 			areas:northwatch = {
 				type = all

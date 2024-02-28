@@ -54,6 +54,8 @@ new effect create_expedition = {
 			if [has_province_flag = args:id] {
 				province_event = args:event
 				clr_province_flag = args:id
+				defineloc `completed_{args:id}_expedition` = "Completed {args:name} Expedition"
+				set_province_flag = `completed_{args:id}_expedition`
 			}
 		}
 		
@@ -127,6 +129,8 @@ new effect create_expedition = {
 			if [has_province_flag = args:id] {
 				province_event = `expeditions.{expedition_count}`
 				clr_province_flag = args:id
+				defineloc `completed_{args:id}_expedition` = "Completed {args:name} Expedition"
+				set_province_flag = `completed_{args:id}_expedition`
 			}
 		}
 		

@@ -61,12 +61,51 @@ new great_project shadowgreen_holy_site = {
 			stability_cost_modifier = -0.1
 			tolerance_own = 1
 		}
+		on_upgraded = {
+			new_custom_tooltip = "§YKyne's Sacred Trials§! becomes slightly easier"
+		}
+		conditional_modifiers = {
+			{
+				trigger = {
+					owner = { has_personal_deity = kyne }
+				}
+				modifier = {
+					country_military_power = 1
+				}
+			}
+			{
+				trigger = {
+					owner = { has_personal_deity = dibella }
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+			}
+		}
 	}
 	tier_2 = {
 		country_modifier = {
 			monthly_splendor = 2
 			stability_cost_modifier = -0.2
 			tolerance_own = 2
+		}
+		conditional_modifiers = {
+			{
+				trigger = {
+					owner = { has_personal_deity = kyne }
+				}
+				modifier = {
+					country_military_power = 1
+				}
+			}
+			{
+				trigger = {
+					owner = { has_personal_deity = dibella }
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+			}
 		}
 	}
 	tier_3 = {
@@ -76,6 +115,24 @@ new great_project shadowgreen_holy_site = {
 			tolerance_own = 3
 			missionaries = 1
 		}
+		conditional_modifiers = {
+			{
+				trigger = {
+					owner = { has_personal_deity = kyne }
+				}
+				modifier = {
+					country_military_power = 1
+				}
+			}
+			{
+				trigger = {
+					owner = { has_personal_deity = dibella }
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+			}
+		}
 	}
 }
 new province_event haafingar.3 = {
@@ -84,9 +141,9 @@ new province_event haafingar.3 = {
 	
 	First is from the Glenmoril Wyrd, a coven of witches from western haafingar and the lands beyond the mountains, they would give us arcane knowledge in exchange for allowing us to host them in this cavern.
 	
-	Second is from a mid sized clan of solitude called 'Green-Kin', who are known for their alchemical prowess, apparently they found that the cavern is abundant in alchemical ingredients, and they could create the greatest of alchemy houses in that cave.
+	Second is from a mid sized clan of [This.Owner.GetName] called 'Green-Kin', who are known for their alchemical prowess, apparently they found that the cavern is abundant in alchemical ingredients, and they could create the greatest of alchemy houses in that cave.
 	
-	Third is from the priests of solitude, stating that the cavern is divine, the natural energies and beauty of the cavern is obviously the collaboration of Kyne and Dibella, and that it should be made a holy site."
+	Third is from the priests of [This.Owner.GetName], stating that the cavern is divine, the natural energies and beauty of the cavern is obviously the collaboration of Kyne and Dibella, and that it should be made a holy site."
 	is_triggered_only = yes
 	picture = shadowgreen_eventPicture
 	options = {
