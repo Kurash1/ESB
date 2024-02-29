@@ -1,3 +1,22 @@
+new effect conditional_effect = {
+	args = {
+		tooltip = string
+		trigger = trigger
+		effect = effect
+	}
+	transpile = {
+		if [args:trigger] {
+			new_custom_tooltip = "£yes£If {args:tooltip}"
+			args:effect
+		}
+		else {
+			new_custom_tooltip = "£no£If {args:tooltip}"
+			tooltip = {
+				args:effect
+			}
+		}
+	}
+}
 new effect move_great_project = {
 	args = {
 		type = great_project

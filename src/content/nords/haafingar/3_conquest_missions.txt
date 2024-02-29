@@ -34,17 +34,88 @@ mission_trees:solitude += {
 				owned_by = ROOT
 			}
 			provinces:shadowgreen = {
-				has_province_flag = completed_shadowgreen_expedition
+				custom_trigger_tooltip = {
+					new_tooltip = "Completed §YShadowgreen Cavern§! Expedition"
+					OR = {
+						has_great_project = { type = shadowgreen_glenmoril }
+						has_great_project = { type = shadowgreen_alchemy }
+						has_great_project = { type = shadowgreen_holy_site }
+					}
+				}
 			}
 		}
 		effect = {
 			areas:northwatch = {
 				add_permanent_claim = ROOT
 			}
-			quick_country_modifier = {
-				name = "Shadowgreen Druids"
-				modifier = {
-					monthly_magicka = 0.25
+			
+			conditional_effect = {
+				tooltip = "chose §YGlenmoril Wyrd§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_glenmoril }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_glenmoril
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Glenmoril Magic"
+						years = 25
+						modifier = {
+							fire_damage = 0.1
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YGreen-Kin§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_alchemy }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_alchemy
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Clan Unity"
+						years = 25
+						modifier = {
+							global_autonomy = -0.1
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YPriests§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_holy_site }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_holy_site
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Religious Blessings"
+						years = 25
+						modifier = {
+							prestige = 1
+						}
+					}
 				}
 			}
 		}
