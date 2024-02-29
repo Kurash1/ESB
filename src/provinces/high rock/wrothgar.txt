@@ -12,27 +12,22 @@ new province wrothgar_imp_1 = {
     inherit = wrothgar_imp_inherit
     color = { 7 21 26 }
 }
-
 new province wrothgar_imp_2 = {
     inherit = wrothgar_imp_inherit
     color = { 6 29 9 }
 }
-
 new province wrothgar_imp_3 = {
     inherit = wrothgar_imp_inherit
     color = { 1 9 19 }
 }
-
 new province wrothgar_imp_4 = {
     inherit = wrothgar_imp_inherit
     color = { 14 11 2 }
 }
-
 new province wrothgar_imp_5 = {
     inherit = wrothgar_imp_inherit
     color = { 1 19 24 }
 }
-
 new province wrothgar_imp_6 = {
     inherit = wrothgar_imp_inherit
     color = { 27 21 7 }
@@ -47,8 +42,14 @@ new inheritable wrothgar_inherit = {
 		culture = stronghold_orc
 	}
 }
+
+new area murtag = {
+	name = "Murtag"
+	region = wrothgar
+}
 new province bazgrum = {
 	name = "Bazgrum"
+	area = murtag
     inherit = wrothgar_inherit
     color = { 226 242 106 }
 	position = {
@@ -66,9 +67,9 @@ new province bazgrum = {
 		history_owner = murtag
 	}
 }
-
 new province baggrol = {
 	name = "Baggrol"
+	area = murtag
     inherit = wrothgar_inherit
     color = { 146 154 251 }
 	position = {
@@ -86,9 +87,9 @@ new province baggrol = {
 		history_owner = murtag
 	}
 }
-
 new province murtag = {
 	name = "Murtag"
+	area = murtag
     inherit = wrothgar_inherit
     color = { 195 212 173 }
 	position = {
@@ -107,9 +108,9 @@ new province murtag = {
 		history_owner = murtag
 	}
 }
-
 new province dulfmob = {
 	name = "Dulfmob"
+	area = murtag
     inherit = wrothgar_inherit
     color = { 102 230 207 }
 	position = {
@@ -128,8 +129,13 @@ new province dulfmob = {
 	}
 }
 
+new area jehanna = {
+	name = "Jehanna"
+	region = wrothgar
+}
 new province jehanna = {
 	name = "Jehanna"
+	area = jehanna
     inherit = wrothgar_inherit
     color = { 238 240 210 }
 	position = {
@@ -147,9 +153,9 @@ new province jehanna = {
 		history_owner = fharun
 	}
 }
-
 new province urzba = {
 	name = "Urzba"
+	area = jehanna
     inherit = wrothgar_inherit
     color = { 222 166 129 }
 	position = {
@@ -167,9 +173,9 @@ new province urzba = {
 		history_owner = fharun
 	}
 }
-
 new province sorrow = {
 	name = "Sorrow"
+	area = jehanna
     inherit = wrothgar_inherit
     color = { 178 148 192 }
 	position = {
@@ -187,9 +193,9 @@ new province sorrow = {
 		history_owner = fharun
 	}
 }
-
 new province gulh = {
 	name = "Gulh"
+	area = jehanna
     inherit = wrothgar_inherit
     color = { 229 134 179 }
 	position = {
@@ -208,8 +214,13 @@ new province gulh = {
 	}
 }
 
+new area fharun = {
+	name = "Fharun"
+	region = wrothgar
+}
 new province zthenganaz = {
 	name = "Zthenganaz"
+	area = fharun
     inherit = wrothgar_inherit
     color = { 194 218 178 }
 	position = {
@@ -227,9 +238,9 @@ new province zthenganaz = {
 		history_owner = fharun
 	}
 }
-
 new province fharun = {
 	name = "Fharun"
+	area = fharun
     inherit = wrothgar_inherit
     color = { 179 224 139 }
 	position = {
@@ -248,9 +259,9 @@ new province fharun = {
 		history_owner = fharun
 	}
 }
-
 new province gnarl_side = {
 	name = "Gnarl Side"
+	area = fharun
     inherit = wrothgar_inherit
     color = { 138 163 166 }
 	position = {
@@ -268,9 +279,9 @@ new province gnarl_side = {
 		history_owner = fharun
 	}
 }
-
 new province materre = {
 	name = "Materre"
+	area = fharun
     inherit = wrothgar_inherit
     color = { 203 171 111 }
 	position = {
@@ -289,8 +300,13 @@ new province materre = {
 	}
 }
 
+new area burska = {
+	name = "Burska"
+	region = wrothgar
+}
 new province burska = {
 	name = "Burska"
+	area = burska
     inherit = wrothgar_inherit
     color = { 175 205 137 }
 	position = {
@@ -309,9 +325,9 @@ new province burska = {
 		history_owner = burska
 	}
 }
-
 new province frozen_fleet = {
 	name = "Frozen Fleet"
+	area = burska
     inherit = wrothgar_inherit
     color = { 143 184 182 }
 	position = {
@@ -329,9 +345,9 @@ new province frozen_fleet = {
 		history_owner = burska
 	}
 }
-
 new province nuvaza = {
 	name = "Nuvaza"
+	area = burska
     inherit = wrothgar_inherit
     color = { 106 181 165 }
 	position = {
@@ -349,131 +365,9 @@ new province nuvaza = {
 		history_owner = tuul
 	}
 }
-
-new province urgkail = {
-	name = "Urgkail"
-    inherit = wrothgar_inherit
-    color = { 229 249 218 }
-	position = {
-        1395.000 2021.000 1395.000 2021.000 1395.000 2021.000 1395.000 2021.000 1395.000 2021.000 1395.000 2021.000 1395.000 2021.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3843 0.3843 0.3843 0.3843 0.3843 0.3843 0.3843
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		history_owner = shar
-	}
-}
-
-new province morkuldin = {
-	name = "Morkuldin"
-    inherit = wrothgar_inherit
-    color = { 230 161 146 }
-	position = {
-        1387.000 2016.000 1387.000 2016.000 1387.000 2016.000 1387.000 2016.000 1387.000 2016.000 1387.000 2016.000 1387.000 2016.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3922 0.3922 0.3922 0.3922 0.3922 0.3922 0.3922
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		history_owner = shar
-	}
-}
-
-new province shar = {
-	name = "Shar"
-    inherit = wrothgar_inherit
-    color = { 123 159 183 }
-	position = {
-        1398.000 1998.000 1398.000 1998.000 1398.000 1998.000 1398.000 1998.000 1398.000 1998.000 1398.000 1998.000 1398.000 1998.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3922 0.3922 0.3922 0.3922 0.3922 0.3922 0.3922
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		set_province_flag = orc_stronghold
-		history_owner = shar
-	}
-}
-
-new province tuul = {
-	name = "Tuul"
-    inherit = wrothgar_inherit
-    color = { 225 187 153 }
-	position = {
-        1381.000 1988.000 1381.000 1988.000 1381.000 1988.000 1381.000 1988.000 1381.000 1988.000 1381.000 1988.000 1381.000 1988.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3961 0.3961 0.3961 0.3961 0.3961 0.3961 0.3961
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		set_province_flag = orc_stronghold
-		history_owner = tuul
-	}
-}
-
-new province coldperch = {
-	name = "Coldperch"
-    inherit = wrothgar_inherit
-    color = { 187 243 144 }
-	position = {
-        1384.000 1978.000 1384.000 1978.000 1384.000 1978.000 1384.000 1978.000 1384.000 1978.000 1384.000 1978.000 1384.000 1978.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3882 0.3882 0.3882 0.3882 0.3882 0.3882 0.3882
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		history_owner = tuul
-	}
-}
-
-new province torugs_arch = {
-	name = "Torug's Arch"
-    inherit = wrothgar_inherit
-    color = { 250 214 197 }
-	position = {
-        1364.000 1979.000 1364.000 1979.000 1364.000 1979.000 1364.000 1979.000 1364.000 1979.000 1364.000 1979.000 1364.000 1979.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.4000 0.4000 0.4000 0.4000 0.4000 0.4000 0.4000
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		history_owner = tuul
-	}
-}
-
 new province orgotha = {
 	name = "Orgotha"
+	area = burska
     inherit = wrothgar_inherit
     color = { 135 175 143 }
 	position = {
@@ -492,8 +386,145 @@ new province orgotha = {
 	}
 }
 
+new area morkuldin = {
+	name = "Morkuldin"
+	region = wrothgar
+}
+new province urgkail = {
+	name = "Urgkail"
+	area = morkuldin
+    inherit = wrothgar_inherit
+    color = { 229 249 218 }
+	position = {
+        1395.000 2021.000 1395.000 2021.000 1395.000 2021.000 1395.000 2021.000 1395.000 2021.000 1395.000 2021.000 1395.000 2021.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3843 0.3843 0.3843 0.3843 0.3843 0.3843 0.3843
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = shar
+	}
+}
+new province morkuldin = {
+	name = "Morkuldin"
+	area = morkuldin
+    inherit = wrothgar_inherit
+    color = { 230 161 146 }
+	position = {
+        1387.000 2016.000 1387.000 2016.000 1387.000 2016.000 1387.000 2016.000 1387.000 2016.000 1387.000 2016.000 1387.000 2016.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3922 0.3922 0.3922 0.3922 0.3922 0.3922 0.3922
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = shar
+	}
+}
+
+new area shatul = {
+	name = "Shatul"
+	region = wrothgar
+}
+new province shar = {
+	name = "Shar"
+	area = shatul
+    inherit = wrothgar_inherit
+    color = { 123 159 183 }
+	position = {
+        1398.000 1998.000 1398.000 1998.000 1398.000 1998.000 1398.000 1998.000 1398.000 1998.000 1398.000 1998.000 1398.000 1998.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3922 0.3922 0.3922 0.3922 0.3922 0.3922 0.3922
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = shar
+	}
+}
+new province tuul = {
+	name = "Tuul"
+	area = shatul
+    inherit = wrothgar_inherit
+    color = { 225 187 153 }
+	position = {
+        1381.000 1988.000 1381.000 1988.000 1381.000 1988.000 1381.000 1988.000 1381.000 1988.000 1381.000 1988.000 1381.000 1988.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3961 0.3961 0.3961 0.3961 0.3961 0.3961 0.3961
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = tuul
+	}
+}
+new province coldperch = {
+	name = "Coldperch"
+	area = shatul
+    inherit = wrothgar_inherit
+    color = { 187 243 144 }
+	position = {
+        1384.000 1978.000 1384.000 1978.000 1384.000 1978.000 1384.000 1978.000 1384.000 1978.000 1384.000 1978.000 1384.000 1978.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3882 0.3882 0.3882 0.3882 0.3882 0.3882 0.3882
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tuul
+	}
+}
+new province torugs_arch = {
+	name = "Torug's Arch"
+	area = shatul
+    inherit = wrothgar_inherit
+    color = { 250 214 197 }
+	position = {
+        1364.000 1979.000 1364.000 1979.000 1364.000 1979.000 1364.000 1979.000 1364.000 1979.000 1364.000 1979.000 1364.000 1979.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.4000 0.4000 0.4000 0.4000 0.4000 0.4000 0.4000
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tuul
+	}
+}
+
+new area tumnosh = {
+	name = "Tumnosh"
+	region = wrothgar
+}
 new province fedar = {
 	name = "Fedar"
+	area = tumnosh
     inherit = wrothgar_inherit
     color = { 129 175 182 }
 	position = {
@@ -511,29 +542,9 @@ new province fedar = {
 		history_owner = tumnosh
 	}
 }
-
-new province brulak = {
-	name = "Brulak"
-    inherit = wrothgar_inherit
-    color = { 123 128 167 }
-	position = {
-        1346.000 1990.000 1346.000 1990.000 1346.000 1990.000 1346.000 1990.000 1346.000 1990.000 1346.000 1990.000 1346.000 1990.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3961 0.3961 0.3961 0.3961 0.3961 0.3961 0.3961
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		history_owner = bagrakh
-	}
-}
-
 new province merchants_gate = {
 	name = "Merchant's Gate"
+	area = tumnosh
     inherit = wrothgar_inherit
     color = { 131 115 253 }
 	position = {
@@ -551,30 +562,9 @@ new province merchants_gate = {
 		history_owner = tumnosh
 	}
 }
-
-new province bagrakh = {
-	name = "Bagrakh"
-    inherit = wrothgar_inherit
-    color = { 144 136 244 }
-	position = {
-        1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3922 0.3922 0.3922 0.3922 0.3922 0.3922 0.3922
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		set_province_flag = orc_stronghold
-		history_owner = bagrakh
-	}
-}
-
 new province nikolvara = {
 	name = "Nikolvara"
+	area = tumnosh
     inherit = wrothgar_inherit
     color = { 189 223 238 }
 	position = {
@@ -592,9 +582,9 @@ new province nikolvara = {
 		history_owner = tumnosh
 	}
 }
-
 new province tumnosh = {
 	name = "Tumnosh"
+	area = tumnosh
     inherit = wrothgar_inherit
     color = { 111 180 203 }
 	position = {
@@ -613,9 +603,9 @@ new province tumnosh = {
 		history_owner = tumnosh
 	}
 }
-
 new province agolas = {
 	name = "Agolas"
+	area = tumnosh
     inherit = wrothgar_inherit
     color = { 145 137 219 }
 	position = {
@@ -634,8 +624,54 @@ new province agolas = {
 	}
 }
 
+new area mazgroth = {
+	name = "Mazgroth"
+	region = wrothgar
+}
+new province brulak = {
+	name = "Brulak"
+	area = mazgroth
+    inherit = wrothgar_inherit
+    color = { 123 128 167 }
+	position = {
+        1346.000 1990.000 1346.000 1990.000 1346.000 1990.000 1346.000 1990.000 1346.000 1990.000 1346.000 1990.000 1346.000 1990.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3961 0.3961 0.3961 0.3961 0.3961 0.3961 0.3961
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = bagrakh
+	}
+}
+new province bagrakh = {
+	name = "Bagrakh"
+	area = mazgroth
+    inherit = wrothgar_inherit
+    color = { 144 136 244 }
+	position = {
+        1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3922 0.3922 0.3922 0.3922 0.3922 0.3922 0.3922
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = bagrakh
+	}
+}
 new province mazgroth = {
 	name = "Mazgroth"
+	area = mazgroth
     inherit = wrothgar_inherit
     color = { 179 160 246 }
 	position = {
@@ -654,8 +690,13 @@ new province mazgroth = {
 	}
 }
 
+new area frostbreak = {
+	name = "Frostbreak"
+	region = wrothgar
+}
 new province reylor = {
 	name = "Reylor"
+	area = frostbreak
     inherit = wrothgar_inherit
     color = { 166 149 247 }
 	position = {
@@ -673,9 +714,9 @@ new province reylor = {
 		history_owner = bagrakh
 	}
 }
-
 new province marag = {
 	name = "Marag"
+	area = frostbreak
     inherit = wrothgar_inherit
     color = { 242 141 240 }
 	position = {
@@ -694,9 +735,9 @@ new province marag = {
 		history_owner = marag
 	}
 }
-
 new province agluk = {
 	name = "Agluk"
+	area = frostbreak
     inherit = wrothgar_inherit
     color = { 217 232 109 }
 	position = {
@@ -715,9 +756,9 @@ new province agluk = {
 		history_owner = agluk
 	}
 }
-
 new province urgdosh = {
 	name = "Urgdosh"
+	area = frostbreak
     inherit = wrothgar_inherit
     color = { 174 240 227 }
 	position = {
@@ -735,9 +776,9 @@ new province urgdosh = {
 		history_owner = marag
 	}
 }
-
 new province meram = {
 	name = "Meram"
+	area = frostbreak
     inherit = wrothgar_inherit
     color = { 206 154 185 }
 	position = {
@@ -756,8 +797,13 @@ new province meram = {
 	}
 }
 
+new area enclave = {
+	name = "Enclave"
+	region = wrothgar
+}
 new province thukhozod = {
 	name = "Thukhozod"
+	area = enclave
     inherit = wrothgar_inherit
     color = { 150 195 109 }
 	position = {
@@ -775,9 +821,9 @@ new province thukhozod = {
 		history_owner = enclave
 	}
 }
-
 new province enclave = {
 	name = "Enclave"
+	area = enclave
     inherit = wrothgar_inherit
     color = { 171 234 247 }
 	position = {
@@ -796,9 +842,9 @@ new province enclave = {
 		history_owner = enclave
 	}
 }
-
 new province kireth = {
 	name = "Kireth"
+	area = enclave
     inherit = wrothgar_inherit
     color = { 166 229 125 }
 	position = {
@@ -816,70 +862,9 @@ new province kireth = {
 		history_owner = enclave
 	}
 }
-
-new province luccin = {
-	name = "Luccin"
-    inherit = wrothgar_inherit
-    color = { 250 101 196 }
-	position = {
-        1291.000 1938.000 1291.000 1938.000 1291.000 1938.000 1291.000 1938.000 1291.000 1938.000 1291.000 1938.000 1291.000 1938.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		set_province_flag = orc_stronghold
-		history_owner = luccin
-	}
-}
-
-new province zandadunoz = {
-	name = "Zandadunoz"
-    inherit = wrothgar_inherit
-    color = { 191 149 106 }
-	position = {
-        1283.000 1929.000 1283.000 1929.000 1283.000 1929.000 1283.000 1929.000 1283.000 1929.000 1283.000 1929.000 1283.000 1929.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		history_owner = luccin
-	}
-}
-
-new province boreal_forge = {
-	name = "Boreal Forge"
-    inherit = wrothgar_inherit
-    color = { 133 121 149 }
-	position = {
-        1274.000 1938.000 1274.000 1938.000 1274.000 1938.000 1274.000 1938.000 1274.000 1938.000 1274.000 1938.000 1274.000 1938.000
-    }
-    rotation = {
-        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
-    }
-    height = {
-        0.3765 0.3765 0.3765 0.3765 0.3765 0.3765 0.3765
-    }
-	history = {
-		religion = code_of_malacath
-		culture = stronghold_orc
-		history_owner = luccin
-	}
-}
-
 new province siege_road = {
 	name = "Siege Road"
+	area = enclave
     inherit = wrothgar_inherit
     color = { 209 196 187 }
 	position = {
@@ -898,8 +883,79 @@ new province siege_road = {
 	}
 }
 
+new area luccin = {
+	name = "Luccin"
+	region = wrothgar
+}
+new province luccin = {
+	name = "Luccin"
+	area = luccin
+    inherit = wrothgar_inherit
+    color = { 250 101 196 }
+	position = {
+        1291.000 1938.000 1291.000 1938.000 1291.000 1938.000 1291.000 1938.000 1291.000 1938.000 1291.000 1938.000 1291.000 1938.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = luccin
+	}
+}
+new province zandadunoz = {
+	name = "Zandadunoz"
+	area = luccin
+    inherit = wrothgar_inherit
+    color = { 191 149 106 }
+	position = {
+        1283.000 1929.000 1283.000 1929.000 1283.000 1929.000 1283.000 1929.000 1283.000 1929.000 1283.000 1929.000 1283.000 1929.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = luccin
+	}
+}
+new province boreal_forge = {
+	name = "Boreal Forge"
+	area = luccin
+    inherit = wrothgar_inherit
+    color = { 133 121 149 }
+	position = {
+        1274.000 1938.000 1274.000 1938.000 1274.000 1938.000 1274.000 1938.000 1274.000 1938.000 1274.000 1938.000 1274.000 1938.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3765 0.3765 0.3765 0.3765 0.3765 0.3765 0.3765
+    }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = luccin
+	}
+}
+
+new area igrun = {
+	name = "Igrun"
+	region = wrothgar
+}
 new province pandrum = {
 	name = "Pandrum"
+	area = igrun
     inherit = wrothgar_inherit
     color = { 114 248 101 }
 	position = {
@@ -918,9 +974,9 @@ new province pandrum = {
 		history_owner = pandrum
 	}
 }
-
 new province drudun = {
 	name = "Drudun"
+	area = igrun
     inherit = wrothgar_inherit
     color = { 106 156 114 }
 	position = {
@@ -938,9 +994,9 @@ new province drudun = {
 		history_owner = igrun
 	}
 }
-
 new province friendship_gate = {
 	name = "Friendship Gate"
+	area = igrun
     inherit = wrothgar_inherit
     color = { 105 111 181 }
 	position = {
@@ -958,9 +1014,9 @@ new province friendship_gate = {
 		history_owner = igrun
 	}
 }
-
 new province igrun = {
 	name = "Igrun"
+	area = igrun
     inherit = wrothgar_inherit
     color = { 126 253 128 }
 	position = {
