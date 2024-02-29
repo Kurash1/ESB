@@ -1,3 +1,43 @@
+new inheritable wrothgar_imp_inherit = {
+	name = ""
+	position = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
+	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
+	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
+	impassible = yes
+	history = {
+	}
+}
+
+new province wrothgar_imp_1 = {
+    inherit = wrothgar_imp_inherit
+    color = { 7 21 26 }
+}
+
+new province wrothgar_imp_2 = {
+    inherit = wrothgar_imp_inherit
+    color = { 6 29 9 }
+}
+
+new province wrothgar_imp_3 = {
+    inherit = wrothgar_imp_inherit
+    color = { 1 9 19 }
+}
+
+new province wrothgar_imp_4 = {
+    inherit = wrothgar_imp_inherit
+    color = { 14 11 2 }
+}
+
+new province wrothgar_imp_5 = {
+    inherit = wrothgar_imp_inherit
+    color = { 1 19 24 }
+}
+
+new province wrothgar_imp_6 = {
+    inherit = wrothgar_imp_inherit
+    color = { 27 21 7 }
+}
+
 new inheritable wrothgar_inherit = {
 	position = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
@@ -10,229 +50,485 @@ new inheritable wrothgar_inherit = {
 new province wrothgar_1 = {
     inherit = wrothgar_inherit
     color = { 226 242 106 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = murtag
+	}
 }
 
 new province wrothgar_2 = {
     inherit = wrothgar_inherit
     color = { 146 154 251 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = murtag
+	}
 }
 
-new province wrothgar_3 = {
+new province murtag = {
+	name = "Murtag"
     inherit = wrothgar_inherit
     color = { 195 212 173 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = murtag
+	}
 }
 
 new province wrothgar_4 = {
     inherit = wrothgar_inherit
     color = { 102 230 207 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = murtag
+	}
 }
 
 new province wrothgar_5 = {
     inherit = wrothgar_inherit
     color = { 238 240 210 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = fharun
+	}
 }
 
 new province wrothgar_6 = {
     inherit = wrothgar_inherit
     color = { 222 166 129 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = fharun
+	}
 }
 
 new province wrothgar_7 = {
     inherit = wrothgar_inherit
     color = { 178 148 192 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = fharun
+	}
 }
 
 new province wrothgar_8 = {
     inherit = wrothgar_inherit
     color = { 229 134 179 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = fharun
+	}
 }
 
 new province wrothgar_9 = {
     inherit = wrothgar_inherit
     color = { 194 218 178 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = fharun
+	}
 }
 
-new province wrothgar_10 = {
+new province fharun = {
+	name = "Fharun"
     inherit = wrothgar_inherit
     color = { 179 224 139 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = fharun
+	}
 }
 
 new province wrothgar_11 = {
     inherit = wrothgar_inherit
     color = { 138 163 166 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = fharun
+	}
 }
 
 new province wrothgar_12 = {
     inherit = wrothgar_inherit
     color = { 203 171 111 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = fharun
+	}
 }
 
-new province wrothgar_13 = {
+new province burska = {
+	name = "Burska"
     inherit = wrothgar_inherit
     color = { 175 205 137 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = burska
+	}
 }
 
 new province wrothgar_14 = {
     inherit = wrothgar_inherit
     color = { 143 184 182 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = burska
+	}
 }
 
 new province wrothgar_15 = {
     inherit = wrothgar_inherit
     color = { 106 181 165 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tuul
+	}
 }
 
 new province wrothgar_16 = {
     inherit = wrothgar_inherit
     color = { 229 249 218 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = shar
+	}
 }
 
 new province wrothgar_17 = {
     inherit = wrothgar_inherit
     color = { 230 161 146 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = shar
+	}
 }
 
-new province wrothgar_18 = {
+new province shar = {
+	name = "Shar"
     inherit = wrothgar_inherit
     color = { 123 159 183 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = shar
+	}
 }
 
-new province wrothgar_19 = {
+new province tuul = {
+	name = "Tuul"
     inherit = wrothgar_inherit
     color = { 225 187 153 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = tuul
+	}
 }
 
 new province wrothgar_20 = {
     inherit = wrothgar_inherit
     color = { 187 243 144 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tuul
+	}
 }
 
 new province wrothgar_21 = {
     inherit = wrothgar_inherit
     color = { 250 214 197 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tuul
+	}
 }
 
 new province wrothgar_22 = {
     inherit = wrothgar_inherit
     color = { 135 175 143 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tuul
+	}
 }
 
 new province wrothgar_23 = {
     inherit = wrothgar_inherit
     color = { 129 175 182 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tumnosh
+	}
 }
 
 new province wrothgar_24 = {
     inherit = wrothgar_inherit
     color = { 123 128 167 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = bagrakh
+	}
 }
 
 new province wrothgar_25 = {
     inherit = wrothgar_inherit
     color = { 131 115 253 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tumnosh
+	}
 }
 
-new province wrothgar_26 = {
+new province bagrakh = {
+	name = "Bagrakh"
     inherit = wrothgar_inherit
     color = { 144 136 244 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = bagrakh
+	}
 }
 
 new province wrothgar_27 = {
     inherit = wrothgar_inherit
     color = { 189 223 238 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tumnosh
+	}
 }
 
-new province wrothgar_28 = {
+new province tumnosh = {
+	name = "Tumnosh"
     inherit = wrothgar_inherit
     color = { 111 180 203 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = tumnosh
+	}
 }
 
 new province wrothgar_29 = {
     inherit = wrothgar_inherit
     color = { 145 137 219 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = tumnosh
+	}
 }
 
 new province wrothgar_30 = {
     inherit = wrothgar_inherit
     color = { 179 160 246 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = bagrakh
+	}
 }
 
 new province wrothgar_31 = {
     inherit = wrothgar_inherit
     color = { 166 149 247 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = bagrakh
+	}
 }
 
-new province wrothgar_32 = {
+new province marag = {
+	name = "Marag"
     inherit = wrothgar_inherit
     color = { 242 141 240 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = marag
+	}
 }
 
-new province wrothgar_33 = {
+new province agluk = {
+	name = "Agluk"
     inherit = wrothgar_inherit
     color = { 217 232 109 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = agluk
+	}
 }
 
 new province wrothgar_34 = {
     inherit = wrothgar_inherit
     color = { 174 240 227 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = marag
+	}
 }
 
 new province wrothgar_35 = {
     inherit = wrothgar_inherit
     color = { 206 154 185 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = agluk
+	}
 }
 
 new province wrothgar_36 = {
     inherit = wrothgar_inherit
     color = { 150 195 109 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = enclave
+	}
 }
 
-new province wrothgar_37 = {
+new province enclave = {
+	name = "Enclave"
     inherit = wrothgar_inherit
     color = { 171 234 247 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = enclave
+	}
 }
 
 new province wrothgar_38 = {
     inherit = wrothgar_inherit
     color = { 166 229 125 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = enclave
+	}
 }
 
-new province wrothgar_39 = {
+new province luccin = {
+	name = "Luccin"
     inherit = wrothgar_inherit
     color = { 250 101 196 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = luccin
+	}
 }
 
 new province wrothgar_40 = {
     inherit = wrothgar_inherit
     color = { 191 149 106 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = luccin
+	}
 }
 
 new province wrothgar_41 = {
     inherit = wrothgar_inherit
     color = { 133 121 149 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = luccin
+	}
 }
 
 new province wrothgar_42 = {
     inherit = wrothgar_inherit
     color = { 209 196 187 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = pandrum
+	}
 }
 
-new province wrothgar_43 = {
+new province pandrum = {
+	name = "Pandrum"
     inherit = wrothgar_inherit
     color = { 114 248 101 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = pandrum
+	}
 }
 
 new province wrothgar_44 = {
     inherit = wrothgar_inherit
     color = { 106 156 114 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = igrun
+	}
 }
 
 new province wrothgar_45 = {
     inherit = wrothgar_inherit
     color = { 105 111 181 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_owner = igrun
+	}
 }
 
-new province wrothgar_46 = {
+new province igrun = {
+	name = "Igrun"
     inherit = wrothgar_inherit
     color = { 126 253 128 }
+	history = {
+		religion = code_of_malacath
+		culture = stronghold_orc
+		set_province_flag = orc_stronghold
+		history_owner = igrun
+	}
 }
