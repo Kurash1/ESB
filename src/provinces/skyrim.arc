@@ -2100,7 +2100,7 @@ new province pinewood_mountains = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "Pinewood Mountains"
+	name = ""
 	color = {
 		16 29 50
 	}
