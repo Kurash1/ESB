@@ -43,28 +43,6 @@ new effect starting_heir = {
 		}
 	}
 }
-new effect starting_heir = {
-	args = {
-		name = string
-		dynasty = string
-		adm = int
-		dip = int
-		mil = int
-		age = int
-	}
-	transpile = {
-		2568.1.1 = {
-			heir = {
-				name = args:name
-				dynasty = args:dynasty
-				adm = args:adm
-				dip = args:dip
-				mil = args:mil
-				birth_date = `{(2568-args:age)}.1.1`
-			}
-		}
-	}
-}
 new effect conditional_effect = {
 	args = {
 		tooltip = string
