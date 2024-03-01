@@ -66,6 +66,7 @@ new province bazgrum = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = murtag
+		history_trade_goods = fish
 	}
 }
 new province baggrol = {
@@ -87,6 +88,7 @@ new province baggrol = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = murtag
+		history_trade_goods = fish
 	}
 }
 new province murtag = {
@@ -110,6 +112,7 @@ new province murtag = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = murtag
+		history_trade_goods = arms
 	}
 }
 new province dulfmob = {
@@ -131,6 +134,7 @@ new province dulfmob = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = murtag
+		history_trade_goods = fish
 	}
 }
 
@@ -158,6 +162,7 @@ new province jehanna = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = fharun
+		history_trade_goods = fish
 	}
 }
 new province urzba = {
@@ -179,6 +184,7 @@ new province urzba = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = fharun
+		history_trade_goods = fish
 	}
 }
 new province sorrow = {
@@ -200,6 +206,7 @@ new province sorrow = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = fharun
+		history_trade_goods = stone
 	}
 }
 new province gulh = {
@@ -221,6 +228,7 @@ new province gulh = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = fharun
+		history_trade_goods = iron
 	}
 }
 
@@ -247,6 +255,7 @@ new province zthenganaz = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = fharun
+		history_trade_goods = stone
 	}
 }
 new province fharun = {
@@ -271,6 +280,7 @@ new province fharun = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = fharun
+		history_trade_goods = arms
 	}
 }
 new province gnarl_side = {
@@ -292,6 +302,7 @@ new province gnarl_side = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = fharun
+		history_trade_goods = fish
 	}
 }
 new province materre = {
@@ -313,6 +324,7 @@ new province materre = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = fharun
+		history_trade_goods = fish
 	}
 }
 
@@ -341,6 +353,7 @@ new province burska = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = burska
+		history_trade_goods = naval_supplies
 	}
 }
 new province frozen_fleet = {
@@ -363,6 +376,7 @@ new province frozen_fleet = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = burska
+		history_trade_goods = fish
 	}
 }
 new province nuvaza = {
@@ -384,6 +398,7 @@ new province nuvaza = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = tuul
+		history_trade_goods = iron
 	}
 }
 new province orgotha = {
@@ -405,6 +420,7 @@ new province orgotha = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = tuul
+		history_trade_goods = wood
 	}
 }
 
@@ -431,6 +447,7 @@ new province urgkail = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = shar
+		history_trade_goods = c_metals
 	}
 }
 new province morkuldin = {
@@ -452,6 +469,7 @@ new province morkuldin = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = shar
+		history_trade_goods = stone
 	}
 }
 
@@ -480,6 +498,7 @@ new province shar = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = shar
+		history_trade_goods = r_metals
 	}
 }
 new province tuul = {
@@ -503,6 +522,7 @@ new province tuul = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = tuul
+		history_trade_goods = arms
 	}
 }
 new province coldperch = {
@@ -524,6 +544,7 @@ new province coldperch = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = tuul
+		history_trade_goods = stone
 	}
 }
 new province torugs_arch = {
@@ -545,6 +566,7 @@ new province torugs_arch = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = tuul
+		history_trade_goods = iron
 	}
 }
 
@@ -571,12 +593,14 @@ new province fedar = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = tumnosh
+		history_trade_goods = stone
 	}
 }
 new province merchants_gate = {
 	name = "Merchant's Gate"
 	area = tumnosh
     inherit = wrothgar_inherit
+	terrain = forest
     color = { 131 115 253 }
 	position = {
         1364.000 1951.000 1364.000 1951.000 1364.000 1951.000 1364.000 1951.000 1364.000 1951.000 1364.000 1951.000 1364.000 1951.000
@@ -592,6 +616,7 @@ new province merchants_gate = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = tumnosh
+		history_trade_goods = wood
 	}
 }
 new province nikolvara = {
@@ -613,6 +638,7 @@ new province nikolvara = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = tumnosh
+		history_trade_goods = stone
 	}
 }
 new province tumnosh = {
@@ -636,6 +662,7 @@ new province tumnosh = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = tumnosh
+		history_trade_goods = arms
 	}
 }
 new province agolas = {
@@ -657,6 +684,7 @@ new province agolas = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = tumnosh
+		history_trade_goods = stone
 	}
 }
 
@@ -683,12 +711,14 @@ new province brulak = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = bagrakh
+		history_trade_goods = fish
 	}
 }
 new province bagrakh = {
 	name = "Bagrakh"
 	area = mazgroth
     inherit = wrothgar_inherit
+	terrain = forest
     color = { 144 136 244 }
 	position = {
         1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000 1342.000 1974.000
@@ -705,6 +735,7 @@ new province bagrakh = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = bagrakh
+		history_trade_goods = wood
 	}
 }
 new province mazgroth = {
@@ -726,6 +757,7 @@ new province mazgroth = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = bagrakh
+		history_trade_goods = fish
 	}
 }
 
@@ -738,6 +770,7 @@ new province reylor = {
 	area = frostbreak
     inherit = wrothgar_inherit
     color = { 166 149 247 }
+	terrain = forest
 	position = {
         1327.000 1968.000 1327.000 1968.000 1327.000 1968.000 1327.000 1968.000 1327.000 1968.000 1327.000 1968.000 1327.000 1968.000
     }
@@ -751,6 +784,7 @@ new province reylor = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = bagrakh
+		history_trade_goods = wood
 	}
 }
 new province marag = {
@@ -774,6 +808,7 @@ new province marag = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = marag
+		history_trade_goods = c_metals
 	}
 }
 new province agluk = {
@@ -798,6 +833,7 @@ new province agluk = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = agluk
+		history_trade_goods = fish
 	}
 }
 new province urgdosh = {
@@ -819,6 +855,7 @@ new province urgdosh = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = marag
+		history_trade_goods = stone
 	}
 }
 new province meram = {
@@ -840,6 +877,7 @@ new province meram = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = agluk
+		history_trade_goods = fish
 	}
 }
 
@@ -866,6 +904,7 @@ new province thukhozod = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = enclave
+		history_trade_goods = fish
 	}
 }
 new province enclave = {
@@ -890,6 +929,7 @@ new province enclave = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = enclave
+		history_trade_goods = arms
 	}
 }
 new province kireth = {
@@ -911,6 +951,7 @@ new province kireth = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = enclave
+		history_trade_goods = iron
 	}
 }
 new province siege_road = {
@@ -932,6 +973,7 @@ new province siege_road = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = pandrum
+		history_trade_goods = stone
 	}
 }
 
@@ -960,6 +1002,7 @@ new province luccin = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = luccin
+		history_trade_goods = c_metals
 	}
 }
 new province zandadunoz = {
@@ -981,6 +1024,7 @@ new province zandadunoz = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = luccin
+		history_trade_goods = iron
 	}
 }
 new province boreal_forge = {
@@ -1002,6 +1046,7 @@ new province boreal_forge = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = luccin
+		history_trade_goods = r_metals
 	}
 }
 
@@ -1030,6 +1075,7 @@ new province pandrum = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = pandrum
+		history_trade_goods = c_metals
 	}
 }
 new province drudun = {
@@ -1051,6 +1097,7 @@ new province drudun = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = igrun
+		history_trade_goods = stone
 	}
 }
 new province friendship_gate = {
@@ -1073,6 +1120,7 @@ new province friendship_gate = {
 		religion = code_of_malacath
 		culture = stronghold_orc
 		history_owner = igrun
+		history_trade_goods = stone
 	}
 }
 new province igrun = {
@@ -1096,5 +1144,6 @@ new province igrun = {
 		culture = stronghold_orc
 		set_province_flag = orc_stronghold
 		history_owner = igrun
+		history_trade_goods = stone
 	}
 }
