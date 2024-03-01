@@ -43,6 +43,25 @@ governments:theocracy:reform_levels:1 += new tier_1_forelhost_priestdom = {
 		factor = 1
 	}
 }
+governments:monarchy:reform_levels:1 += new tier_1_duraki_kingdom = {
+	name = "Duraki Kingdom"
+	desc = ""
+	icon = "fort"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	trigger = {
+		has_reform = tier_1_duraki_kingdom
+	}
+	modifiers = {
+		vassal_income = 0.5
+		diplomatic_reputation = 1
+		no_religion_penalty = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
 governments:monarchy:reform_levels:1 += new tier_1_thanedom = {
 	name = "Thanedom"
 	desc = ""
