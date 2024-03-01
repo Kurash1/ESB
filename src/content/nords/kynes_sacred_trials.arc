@@ -56,6 +56,16 @@ new effect kynes_trial = {
 					factor = 2
 					mil = 6
 				}
+				modifier = {
+					factor = 1.1
+					owns = shadowgreen
+					provinces:shadowgreen = {
+						has_great_project = {
+							type = shadowgreen_holy_site
+							tier = 1
+						}
+					}
+				}
 				args:on_success
 			} 
 			args:difficulty = {
