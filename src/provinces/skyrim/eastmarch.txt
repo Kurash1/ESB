@@ -189,8 +189,27 @@ new province bleakrock_isle = {
 		is_city = no
 		history_owner = windhelm
 		add_core = holly-frost
-		57.1.1 = {
-			is_city = yes
+		
+		1.1.1 = {
+			create_expedition = {
+				id = skyshroud_barrow
+				name = "Skyshroud Barrow"
+				desc = ""
+				frame = 12
+				event_picture = skyshroud_eventPicture
+				length = 3
+				on_complete = {
+					owner = {
+						give_artifact = {
+							id = haldriin
+							name = "Haldriin"
+							modifier = {
+								prestige = 0.5
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	expedition = {
@@ -1019,7 +1038,6 @@ new province anguki = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		hre = yes
 		history_trade_goods = unknown
 		capital = ""
 		is_city = yes

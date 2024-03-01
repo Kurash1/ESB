@@ -87,20 +87,17 @@ new province solitude = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	area = solitude_proper
-	base_development = 20
-	name = "Solitude"
+	name = "Yrsten" #Changes to "Solitude" in the missions
 	terrain = mountain
 	color = {
 		241 196 104
 	}
 	history = {
-		center_of_trade = 1
 		history_owner = solitude
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = arms
-		capital = "Yrsten"
 		is_city = yes
 	}
 }
@@ -115,7 +112,7 @@ new province solitude_port = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	area = solitude_proper
-	name = "Solitude Port"
+	name = "Solitude" #Changes to "Solitude Port" in the missions
 	terrain = coastline
 	color = {
 		160 235 188
@@ -125,7 +122,6 @@ new province solitude_port = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = naval_supplies
-		capital = ""
 		is_city = no
 		history_owner = solitude
 	}
@@ -578,6 +574,19 @@ new province shadowgreen = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
+		
+		1.1.1 = {
+			create_expedition = {
+				id = shadowgreen
+				name = "Shadowgreen Cavern"
+				desc = "At the foot of the mountain there is an entrance to a large cavern, the locals say that it is home to a large grove filled with all kinds of alchemical ingredients, but with the problem that there is a massive population of wolves, bears, and spriggans.
+
+Previously many smaller clans, and mercenary bands had tried to subjugate the cave, hoping to make it into their home, however none could fell the natural order of the place."
+				frame = 13
+				length = 5
+				event = haafingar.3
+			}
+		}
 	}
 }
 new province gold_isle = {
@@ -891,6 +900,27 @@ new province volskygge = {
 		history_owner = pine-hill
 		hre = yes
 		history_trade_goods = r_metals
+		1.1.1 = {
+			create_expedition = {
+				id = volskygge
+				name = "Volskygge Ruins"
+				desc = ""
+				frame = 6
+				event_picture = volskygge_eventPicture
+				length = 3
+				on_complete = {
+					owner = {
+						give_artifact = {
+							id = volsung
+							name = "Volsung"
+							modifier = {
+								movement_speed = 0.10
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new province deepwood_redoubt = {

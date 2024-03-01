@@ -15,8 +15,13 @@ new mission_series fallowfire_5 = {
 				defineloc claim_elves_honrich = "§YFallowfire§! gains permanent §Yclaims§! on §Ylake Honrich§!'s elves"
 				custom_tooltip = claim_elves_honrich
 				hidden_effect = {
-					areas:merryfair, areas:riften, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch, provinces:vigil, provinces:sarethi [culture_group = snow_elven] {
+					areas:merryfair, areas:riften, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch [culture_group = snow_elven] {
 						add_permanent_claim = ROOT
+					}
+					provinces:vigil, provinces:sarethi = {
+						if [culture_group = snow_elven] {
+							add_permanent_claim = ROOT
+						}
 					}
 					country_event = {
 						id = fallowfire.9

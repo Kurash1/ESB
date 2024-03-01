@@ -1,0 +1,35 @@
+new event_modifier expedition_camp = {
+	name = "Expedition Camp"
+	modifier = {
+		picture = "may_build_supply_depot"
+		global_tax_income = -12
+	}
+}
+new event_modifier expedition_mod_cash_mod = {
+	name = "Expedition: Additional Funding"
+	modifier = {
+		picture = "global_tax_modifier_opposite"
+		global_tax_income = -12
+	}
+}
+new event_modifier expedition_mod_camp_mod = {
+	name = "Expedition: Military Support"
+	modifier = {
+		picture = "global_manpower"
+		global_manpower = -2.5
+	}
+}
+new event_modifier expedition_mod_explore_mod = {
+	name = "Expedition: Explorers"
+	modifier = {
+		picture = "auto_explore_adjacent_to_colony"
+		country_diplomatic_power = -1
+	}
+}
+new event_modifier expedition_mod_merc_mod = {
+	name = "Expedition: Mercenaries"
+	modifier = {
+		picture = "mercenary_manpower"
+		global_tax_income = -12
+	}
+}

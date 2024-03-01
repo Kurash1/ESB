@@ -152,14 +152,14 @@ new trigger country_or_non_sovereign_subject_holds = {
 new trigger province_id = {
 	args = province
 }
-new localisation has_level_three_ADM_advisors = "§YAdm§! advisor has skill of at least §Y3§!"
-new localisation has_level_three_DIP_advisors = "§YDip§! advisor has skill of at least §Y3§!"
-new localisation has_level_three_MIL_advisors = "§YMil§! advisor has skill of at least §Y3§!"
-new trigger has_advisor_level_three_of = {
+new localisation has_level_two_ADM_advisors = "§YAdm§! advisor has skill of at least §Y2§!"
+new localisation has_level_two_DIP_advisors = "§YDip§! advisor has skill of at least §Y2§!"
+new localisation has_level_two_MIL_advisors = "§YMil§! advisor has skill of at least §Y2§!"
+new trigger has_advisor_level_two_of = {
 	args = string
 	transpile = {
 		custom_trigger_tooltip = {
-			tooltip = `has_level_three_{args}_advisors`
+			tooltip = `has_level_two_{args}_advisors`
 			OR = {
 				foreach $advisor_type in advisor_types [
 					str:contains = {
@@ -167,7 +167,7 @@ new trigger has_advisor_level_three_of = {
 						value = args
 					}
 				] {
-					$advisor_type = 3
+					$advisor_type = 2
 				}
 			}
 		}

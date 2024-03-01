@@ -1,10 +1,11 @@
 mission_trees:solitude += {
 	form_the_wolf_army = {
 		name = "Form the Wolf Army"
+		icon = wolf_army_mission
 		x = 7
 		y = 0
 		trigger = {
-			army_size = 25
+			army_size = 15
 			num_of_generals = 1
 		}
 		effect = {
@@ -14,8 +15,9 @@ mission_trees:solitude += {
 			}
 		}
 	}
-	shadowgreen_druids = {
-		name = "Shadowgreen Druids"
+	shadowgreen_cavern = {
+		name = "Shadowgreen Cavern"
+		icon = shadowgreen_cavern
 		x = 5
 		y = 1
 		required = form_the_wolf_army
@@ -31,15 +33,89 @@ mission_trees:solitude += {
 				type = all
 				owned_by = ROOT
 			}
+			provinces:shadowgreen = {
+				custom_trigger_tooltip = {
+					new_tooltip = "Completed §YShadowgreen Cavern§! Expedition"
+					OR = {
+						has_great_project = { type = shadowgreen_glenmoril }
+						has_great_project = { type = shadowgreen_alchemy }
+						has_great_project = { type = shadowgreen_holy_site }
+					}
+				}
+			}
 		}
 		effect = {
 			areas:northwatch = {
 				add_permanent_claim = ROOT
 			}
-			quick_country_modifier = {
-				name = "Shadowgreen Druids"
-				modifier = {
-					monthly_magicka = 0.25
+			
+			conditional_effect = {
+				tooltip = "chose §YGlenmoril Wyrd§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_glenmoril }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_glenmoril
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Glenmoril Magic"
+						years = 25
+						modifier = {
+							fire_damage = 0.1
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YGreen-Kin§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_alchemy }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_alchemy
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Clan Unity"
+						years = 25
+						modifier = {
+							global_autonomy = -0.1
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YPriests§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_holy_site }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_holy_site
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Religious Blessings"
+						years = 25
+						modifier = {
+							prestige = 1
+						}
+					}
 				}
 			}
 		}
@@ -48,7 +124,7 @@ mission_trees:solitude += {
 		name = "Wolf's Eye Lighthouse"
 		x = 4
 		y = 2
-		required = shadowgreen_druids
+		required = shadowgreen_cavern
 		trigger = {
 			owns = solitude_lighthouse
 			provinces:solitude_lighthouse = {
@@ -72,7 +148,7 @@ mission_trees:solitude += {
 		name = "Broken Oar Grotto"
 		x = 5
 		y = 2
-		required = shadowgreen_druids
+		required = shadowgreen_cavern
 		trigger = {
 			provinces:broken_oar = {
 				OR = {
@@ -100,7 +176,7 @@ mission_trees:solitude += {
 		name = "Northwatch Keep"
 		x = 6
 		y = 2
-		required = shadowgreen_druids
+		required = shadowgreen_cavern
 		trigger = {
 			areas:northwatch = {
 				type = all
@@ -200,6 +276,16 @@ mission_trees:solitude += {
 			}
 		}
 		effect = {
+			provinces:ironback_hideout = {
+				add_building = fort_15th
+				quick_province_modifier = {
+					name = "Ironback Hideout"
+					modifier = {
+						local_fort_maintenance_modifier = -0.75
+						trade_goods_size = 0.5
+					}
+				}
+			}
 			areas:hraggstad = {
 				add_permanent_claim = ROOT
 			}

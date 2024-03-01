@@ -1,23 +1,3 @@
-new government remnant = {
-	name = "Remnant"
-	color = { 50 0 0 }
-	basic_reform = {
-		basic_reform = yes
-	
-		monarchy = yes
-		heir = yes
-		queen = yes
-		valid_for_nation_designer = no
-		modifiers = { }
-	}
-	reform_levels = {
-		1 = "Government Policy"
-		2 = "Reform Military"
-		3 = "Reform Economy"
-		4 = "Reform Administration"
-		5 = "Reform Government"
-	}
-}
 new government monarchy = {
 	name = "Monarchy"
 	color = { 179 25 25 }
@@ -172,6 +152,26 @@ new government theocracy = {
 		10 = "Campaign Doctrine"
 		11 = "Advisors"
 		12 = "Trade Policy"
+	}
+}
+new government remnant = {
+	name = "Remnant"
+	color = { 50 0 0 }
+	basic_reform = {
+		basic_reform = yes
+	
+		monarchy = yes
+		heir = yes
+		queen = yes
+		valid_for_nation_designer = no
+		modifiers = { }
+	}
+	reform_levels = {
+		1 = "Government Policy"
+		2 = "Reform Military"
+		3 = "Reform Economy"
+		4 = "Reform Administration"
+		5 = "Reform Government"
 	}
 }
 

@@ -57,38 +57,6 @@ new building coastal_defence = {
 		factor = 1
 	}
 }
-new event_modifier expedition_target = {
-	name = "Expedition Target"
-	modifier = {
-		
-	}
-}
-new localisation expedition_tooltip = "Current Progress: [This.expedition_length.GetValue] / [This.expedition_start_length.GetValue]"
-new building expedition = {
-	name = "Expedition"
-	desc = "Send forth an expedition"
-	cost = 0
-	time = 0
-	x = 380
-	y = 134
-	modifier = {
-		allowed_num_of_buildings = 1
-	}
-	build_trigger = {
-		has_province_modifier = expedition_target
-		NOT = { has_province_flag = expedition_in_progress }
-	}
-	on_built = {
-		if [has_province_modifier = expedition_target] {
-			custom_tooltip = expedition_tooltip
-			province_event = {
-				id = expedition.1
-				days = 0
-			}
-			remove_building = expedition
-		}
-	}
-}
 new building fort_15th = {
 	name = "Fort"
 	desc = ""
@@ -629,6 +597,15 @@ new building def_manufactory = {
 	cost = 500
 	time = 60
 	manufactory = {
-		wood iron steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone gems ebony c_metals r_metals jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
+		wood steel fish wheat ale wine paper alchemical_ingredients r_alchemical_ingredients potions stone jewelry fur livestock skooma slaves mag_goods cloth fruits liquor naval_supplies arms glass drugs rel_goods 
+	}
+}
+new building mine_manufactory = {
+	name = "Mine"
+	desc = ""
+	cost = 500
+	time = 60
+	manufactory = {
+		iron gems c_metals r_metals ebony
 	}
 }

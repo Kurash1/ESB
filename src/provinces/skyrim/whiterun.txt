@@ -1356,6 +1356,15 @@ new province bandit_way = {
 		culture = falkrentish
 		hre = yes
 		fort_15th = yes
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Sponsored Fortifications"
+				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				modifier = {
+					local_fort_maintenance_modifier = -0.8
+				}
+			}
+		}
 		history_trade_goods = stone
 		capital = ""
 		is_city = yes
@@ -1417,6 +1426,37 @@ new province south_brittleshin = {
 		capital = ""
 		is_city = no
 		history_owner = skjoralmor
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Sponsored Fortifications"
+				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				modifier = {
+					local_fort_maintenance_modifier = -0.8
+				}
+			}
+			create_expedition = {
+				id = south_brittleshin
+				name = "Brittleshin Cave"
+				desc = ""
+				frame = 2
+				event_picture = brittleshin_eventPicture
+				length = 1
+				on_complete = {
+					set_province_flag = brittleshin_pass
+					new_custom_tooltip = "Unlocks a Great Project §YBrittleshin Pass§! in §YSouth Brittleshin§! province"
+					
+					owner = {
+						random_list = {
+							1 = { add_treasury = 10 }
+							1 = { add_treasury = 20 }
+							1 = { add_treasury = 30 }
+							1 = { add_treasury = 40 }
+							1 = { add_treasury = 50 }
+						}
+					}
+				}
+			}
+		}
 	}
 }
 new province anises_cabin = {
@@ -1498,6 +1538,15 @@ new province riverwood = {
 		hre = yes
 		history_trade_goods = wood
 		fort_15th = yes
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Sponsored Fortifications"
+				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				modifier = {
+					local_fort_maintenance_modifier = -0.8
+				}
+			}
+		}
 		capital = ""
 		is_city = yes
 		history_owner = skjoralmor

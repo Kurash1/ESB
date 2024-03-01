@@ -277,7 +277,7 @@ new great_project bleak_falls_barrow = {
 			global_missionary_strength = 0.01
 		}
 	}
-	tier_3 = {
+	tier_2 = {
 		province_modifier = {
 			local_fort_maintenance_modifier = -0.5
 			trade_goods_size = 1
@@ -304,7 +304,7 @@ new great_project bleak_falls_barrow = {
 }
 new great_project blue_palace = {
 	name = "Blue Palace"
-	start = solitude
+	start = black_mountain
 	tier_1 = {
 		country_modifier = {
 			governing_capacity_modifier = 0.05

@@ -1,0 +1,24 @@
+name: Run Arc-Valley
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  run-arc-valley:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install .NET SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.0'  # or the version you need
+
+    - name: Run Arc-Valley.exe
+      run: |
+        dotnet Arc-Valley.dll script

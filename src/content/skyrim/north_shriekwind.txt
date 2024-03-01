@@ -1,12 +1,3 @@
-new localisation north_shriekwind_exp_tooltip = "Unlocks a Great Project §YNorth Shriekwind Bastion§! in §YNorth Shriekwind§! province"
-new expedition north_shriekwind = {
-	picture = north_shriekwind_eventPicture
-	length = 1
-	on_complete = {
-		set_province_flag = north_shriekwind
-		custom_tooltip = north_shriekwind_exp_tooltip
-	}
-}
 new localisation north_shriekwind_pass_tooltip = "Connects §YNorth Shriekwind§! to §YShriekwind Bastion§!"
 new great_project north_shriekwind = {
 	name = "North Shriekwind Bastion"
@@ -18,7 +9,7 @@ new great_project north_shriekwind = {
 	can_be_moved = no
 	build_cost = 500
 	build_trigger = {
-		has_province_flag = north_shriekwind
+		has_province_flag = north_shriekwind_great_project
 	}
 	on_built = {
 		add_canal = north_shriekwind
