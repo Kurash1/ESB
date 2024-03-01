@@ -43,6 +43,45 @@ new unit regular_T01 = {
 	sailors = 60
 	sprite_level = 1
 }
+new unit duraki_infantry = {
+	name = "Duraki Warriors"
+	desc = ""
+	type = infantry
+	unit_type = duraki_tg
+	maneuver = 1
+	offensive_morale = 2
+	defensive_morale = 2
+	offensive_fire = 0
+	defensive_fire = 2
+	offensive_shock = 2
+	defensive_shock = 2
+}
+new unit duraki_cavalry = {
+	name = "Duraki Paladins"
+	desc = ""
+	type = cavalry
+	unit_type = duraki_tg
+	maneuver = 2
+	offensive_morale = 3
+	defensive_morale = 3
+	offensive_fire = 0
+	defensive_fire = 2
+	offensive_shock = 3
+	defensive_shock = 3
+}
+new unit duraki_artillery = {
+	name = "Duraki Onager"
+	desc = ""
+	type = artillery
+	unit_type = duraki_tg
+	maneuver = 1
+	offensive_morale = 2
+	defensive_morale = 2
+	offensive_fire = 4
+	defensive_fire = 2
+	offensive_shock = 0
+	defensive_shock = 0
+}
 new unit nord_infantry = {
 	name = "Huscarl"
 	desc = ""

@@ -1,0 +1,40 @@
+new country forest_kingdom = {
+	tag = FKI
+	name = "Forest Kingdom"
+	adj = "Forest"
+	color = {
+		0 100 0
+	}
+	capital = pinewood
+	technology_group = duraki_tg
+	starting_reform = tier_1_duraki_kingdom
+	religion = pinewood_naturalism
+	primary_culture = pinewoodean
+	graphical_culture = easterngfx
+	government_rank = 2
+	history = {
+		1.1.1 = {
+			province_groups:kreath_orc_discovery = {
+				discover_country = $tag
+			}
+		}
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Arho"
+				dynasty = "Koivu"
+				adm = 1
+				dip = 1
+				mil = 6
+				age = 61
+			}
+			starting_heir = {
+				name = "Rami"
+				dynasty = "Koivu"
+				adm = 4
+				dip = 2
+				mil = 6
+				age = 32
+			}
+		}
+	}
+}
