@@ -1,0 +1,68 @@
+new idea_group kreathmen_ideas = {
+	name = "Kreathmen"
+	category = national
+	priority = 10
+	start = {
+		own_territory_dice_roll_bonus = 1
+		global_tax_modifier = 0.2
+	}
+	bonus = {
+		build_cost = -0.1
+	}
+	trigger = {
+		culture_group = kreathmen
+	}
+	ideas = {
+		{
+			name = "Pseudo-Duraki"
+			desc = ""
+			modifier = {
+				relation_with_accepted_culture = 15
+				num_accepted_cultures = 1
+			}
+		}
+		{
+			name = "Valley People"
+			desc = ""
+			modifier = {
+				defensiveness = 0.15
+			}
+		}
+		{
+			name = "One with Nature"
+			desc = ""
+			modifier = {
+				development_cost = -0.1
+			}
+		}
+		{
+			name = "Death Rituals"
+			desc = ""
+			modifier = {
+				no_stability_loss_on_monarch_death = yes
+			}
+		}
+		{
+			name = "Fight for Survival"
+			desc = ""
+			modifier = {
+				shock_damage_received = -0.05
+			}
+		}
+		{
+			name = "Wisdom of the Green"
+			desc = ""
+			modifier = {
+				advisor_cost = -0.1
+			}
+		}
+		{
+			name = "King Kestic"
+			desc = ""
+			modifier = {
+				max_absolutism = 20
+				yearly_absolutism = 0.1
+			}
+		}
+	}
+}
