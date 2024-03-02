@@ -4,231 +4,311 @@ new inheritable solstheim_inherit = {
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 	history = {
 		religion = nordic_pantheon
-		culture = roscrean
+		culture = solstheimean
 		history_owner = windhelm
 	}
 }
-new province solstheim_1 = {
-    inherit = solstheim_inherit
-    color = { 141 174 224 }
-	terrain = hills
-	history += {
-		history_trade_goods = wood
-	}
-}
 
-new province solstheim_2 = {
+new area raven_rock = {
+	name = "Raven Rock"
+	region = solstheim
+}
+new province bloodskal = {
+	name = "Bloodskal"
     inherit = solstheim_inherit
     color = { 134 141 142 }
 	terrain = forest
+	area = raven_rock
 	history += {
 		history_trade_goods = wood
 	}
 }
-
-new province solstheim_3 = {
-    inherit = solstheim_inherit
-    color = { 138 137 240 }
-	terrain = forest
-	history += {
-		history_trade_goods = wood
-	}
-}
-
-new province solstheim_4 = {
-    inherit = solstheim_inherit
-    color = { 108 129 184 }
-	terrain = hills
-	history += {
-		history_trade_goods = wood
-	}
-}
-
-new province solstheim_5 = {
-    inherit = solstheim_inherit
-    color = { 106 161 203 }
-	terrain = hills
-	history += {
-		history_trade_goods = wood
-	}
-}
-
-new province solstheim_6 = {
-    inherit = solstheim_inherit
-    color = { 138 219 156 }
-	terrain = mountain
-	history += {
-		history_trade_goods = stone
-	}
-}
-
-new province solstheim_7 = {
-    inherit = solstheim_inherit
-    color = { 114 174 188 }
-	terrain = glacier
-	history += {
-		history_trade_goods = fish
-	}
-}
-
-new province solstheim_8 = {
-    inherit = solstheim_inherit
-    color = { 147 197 116 }
-	terrain = glacier
-	history += {
-		history_trade_goods = c_metals
-	}
-}
-
-new province solstheim_9 = {
-    inherit = solstheim_inherit
-    color = { 247 104 223 }
-	terrain = glacier
-	history += {
-		history_trade_goods = gems
-	}
-}
-
-new province solstheim_10 = {
-    inherit = solstheim_inherit
-    color = { 178 124 157 }
-	terrain = glacier
-	history += {
-		history_trade_goods = fish
-	}
-}
-
-new province solstheim_11 = {
+new province raven_rock = {
+	name = "Raven Rock"
     inherit = solstheim_inherit
     color = { 102 174 182 }
 	terrain = forest
+	area = raven_rock
 	history += {
 		history_trade_goods = ebony
 	}
 }
-
-new province solstheim_12 = {
+new province brodir_grove = {
+	name = "Brodir Grove"
     inherit = solstheim_inherit
-    color = { 210 142 122 }
+    color = { 138 137 240 }
+	terrain = forest
+	area = raven_rock
+	history += {
+		history_trade_goods = wood
+	}
+}
+
+new area lower_moesring = {
+	name = "Lower Moesring"
+	region = solstheim
+}
+new province altar_of_thrond = {
+	name = "Altar of Thrond"
+    inherit = solstheim_inherit
+    color = { 106 161 203 }
 	terrain = hills
+	area = lower_moesring
+	history += {
+		history_trade_goods = wood
+	}
+}
+new province moesring_pass = {
+	name = "Moesring Pass"
+    inherit = solstheim_inherit
+    color = { 138 219 156 }
+	terrain = mountain
+	area = lower_moesring
 	history += {
 		history_trade_goods = stone
 	}
 }
+new province jolgeirr = {
+	name = "Jolgeirr"
+    inherit = solstheim_inherit
+    color = { 141 174 224 }
+	terrain = hills
+	area = lower_moesring
+	history += {
+		history_trade_goods = wood
+	}
+}
 
-new province solstheim_13 = {
+new area gronn = {
+	name = "Gronn"
+	region = solstheim
+}
+new province eddard = {
+	name = "Eddard"
+    inherit = solstheim_inherit
+    color = { 108 129 184 }
+	terrain = hills
+	area = gronn
+	history += {
+		history_trade_goods = wood
+	}
+}
+new province graring = {
+	name = "Graring"
     inherit = solstheim_inherit
     color = { 156 248 233 }
 	terrain = forest
+	area = gronn
 	history += {
 		history_trade_goods = wood
 	}
 }
-
-new province solstheim_14 = {
+new province igvir = {
+	name = "Igvir"
     inherit = solstheim_inherit
     color = { 224 137 215 }
 	terrain = forest
+	area = gronn
 	history += {
 		history_trade_goods = wood
 	}
 }
 
-new province solstheim_15 = {
+new area mortrag_glacier = {
+	name = "Mortrag"
+	region = solstheim
+}
+new province benkongerike = {
+	name = "Benkongerike"
+    inherit = solstheim_inherit
+    color = { 114 174 188 }
+	terrain = glacier
+	area = mortrag_glacier
+	history += {
+		history_trade_goods = fish
+	}
+}
+new province mortrag_glacier = {
+	name = "Mortrag Glacier"
+    inherit = solstheim_inherit
+    color = { 147 197 116 }
+	terrain = glacier
+	area = mortrag_glacier
+	history += {
+		history_trade_goods = c_metals
+	}
+}
+new province domme = {
+	name = "Domme"
+    inherit = solstheim_inherit
+    color = { 247 104 223 }
+	terrain = glacier
+	area = mortrag_glacier
+	history += {
+		history_trade_goods = gems
+	}
+}
+new province thormoor = {
+	name = "Thormoor"
+    inherit = solstheim_inherit
+    color = { 178 124 157 }
+	terrain = glacier
+	area = mortrag_glacier
+	history += {
+		history_trade_goods = fish
+	}
+}
+
+new area frostmoth = {
+	name = "Frostmoth"
+	region = solstheim
+}
+new province kolbjorn = {
+	name = "Kolbjorn"
+    inherit = solstheim_inherit
+    color = { 210 142 122 }
+	terrain = hills
+	area = frostmoth
+	history += {
+		history_trade_goods = stone
+	}
+}
+new province frosselmane = {
+	name = "Frosselmane"
     inherit = solstheim_inherit
     color = { 163 248 149 }
 	terrain = forest
+	area = frostmoth
 	history += {
 		history_trade_goods = wood
 	}
 }
-
-new province solstheim_16 = {
+new province stormpfund = {
+	name = "Stormpfund"
     inherit = solstheim_inherit
     color = { 236 213 145 }
 	terrain = forest
+	area = frostmoth
 	history += {
 		history_trade_goods = wood
 	}
 }
-
-new province solstheim_17 = {
+new province frostmoth = {
+	name = "Frostmoth"
     inherit = solstheim_inherit
     color = { 120 113 105 }
 	terrain = forest
+	area = frostmoth
 	history += {
 		history_trade_goods = arms
 	}
 }
 
-new province solstheim_18 = {
+new area skaal = {
+	name = "Skaal"
+	region = solstheim
+}
+new province rimhull = {
+	name = "Rimhull"
     inherit = solstheim_inherit
-    color = { 173 147 153 }
+    color = { 168 154 242 }
+	terrain = highlands
+	area = skaal
+	history += {
+		history_trade_goods = wood
+	}
+}
+new province sjobal = {
+	name = "Sjobal"
+    inherit = solstheim_inherit
+    color = { 197 157 165 }
 	terrain = hills
+	area = skaal
+	history += {
+		history_trade_goods = wood
+	}
+}
+new province skaalara = {
+	name = "Skaalara"
+    inherit = solstheim_inherit
+    color = { 132 164 168 }
+	terrain = hills
+	area = skaal
 	history += {
 		history_trade_goods = wood
 	}
 }
 
-new province solstheim_19 = {
+new area thirsk = {
+	name = "Thirsk"
+	region = solstheim
+}
+new province thirsk = {
+	name = "Thirsk"
+    inherit = solstheim_inherit
+    color = { 173 147 153 }
+	terrain = hills
+	area = thirsk
+	history += {
+		history_trade_goods = wood
+	}
+}
+new province connorflenge = {
+	name = "Connorflenge"
     inherit = solstheim_inherit
     color = { 214 218 175 }
 	terrain = hills
+	area = thirsk
 	history += {
 		history_trade_goods = iron
 	}
 }
-
-new province solstheim_20 = {
+new province valbrandr = {
+	name = "Valbrandr"
     inherit = solstheim_inherit
     color = { 239 223 197 }
 	terrain = hills
+	area = thirsk
 	history += {
 		history_trade_goods = wood
 	}
 }
 
-new province solstheim_21 = {
-    inherit = solstheim_inherit
-    color = { 168 154 242 }
-	terrain = highlands
-	history += {
-		history_trade_goods = wood
-	}
-}
 
-new province solstheim_22 = {
-    inherit = solstheim_inherit
-    color = { 197 157 165 }
-	terrain = hills
-	history += {
-		history_trade_goods = wood
-	}
+new area skogsdrake = {
+	name = "Skogsdrake"
+	region = solstheim
 }
-
-new province solstheim_23 = {
-    inherit = solstheim_inherit
-    color = { 132 164 168 }
-	terrain = hills
-	history += {
-		history_trade_goods = wood
-	}
-}
-
-new province solstheim_24 = {
+new province himmelhost = {
+	name = "Himmelhost"
     inherit = solstheim_inherit
     color = { 201 192 161 }
 	terrain = forest
+	area = skogsdrake
+	history += {
+		history_trade_goods = wood
+	}
+}
+new province skogsdrake = {
+	name = "Skogsdrake"
+    inherit = solstheim_inherit
+    color = { 187 177 125 }
+	terrain = forest
+	area = skogsdrake
 	history += {
 		history_trade_goods = wood
 	}
 }
 
-new province solstheim_25 = {
-    inherit = solstheim_inherit
-    color = { 187 177 125 }
-	terrain = forest
-	history += {
-		history_trade_goods = wood
-	}
+new adjacency iggnir_bridge = {
+	from = rimhull
+	to = benkongerike
+	through = lake_fjalding
+	type = sea
+}
+new adjacency skygge_bridge = {
+	from = skogsdrake
+	to = frosselmane
+	through = lake_fjalding
+	type = sea
 }
