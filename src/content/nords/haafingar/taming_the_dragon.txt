@@ -1,21 +1,21 @@
-create_poetic_edda_modifier = {
-	id = dragon_bridge
-	name = "The Dragon Bridge"
-	modifier = {
-		fire_damage = 0.1
-	}
-}
-mission_trees:solitude += {
-	taming_the_dragon = {
-		name = "Taming the dragon"
-		x = 9
-		y = 1
-		required = form_the_wolf_army
-		trigger = {
-			owns = dragon_bridge
-		}
-		effect = {
-			unlock_poetic_edda_modifier = dragon_bridge
-		}
-	}
-}
+#create_poetic_edda_modifier = {
+#	id = dragon_bridge
+#	name = "The Dragon Bridge"
+#	modifier = {
+#		fire_damage = 0.1
+#	}
+#}
+#mission_trees:solitude += {
+#	taming_the_dragon = {
+#		name = "Taming the dragon"
+#		x = 9
+#		y = 1
+#		required = form_the_wolf_army
+#		trigger = {
+#			owns = dragon_bridge
+#		}
+#		effect = {
+#			unlock_poetic_edda_modifier = dragon_bridge
+#		}
+#	}
+#}
