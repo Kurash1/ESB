@@ -142,6 +142,24 @@ new tradenode bleakrock = {
 		}
 	}
 }
+new tradenode solstheim = {
+	name = "Solstheim"
+	location = raven_rock
+	areas = {
+		mortrag lower_moesring raven_rock gronn frostmoth skogsdrake thirsk skaal
+	}
+	outgoings = {
+		{
+			node = bleakrock
+			path = {
+				raven_rock far_japhet_sea coast_of_bleakrock bleakrock_isle
+			}
+			control={
+				2064.000000 2079.000000 2044.000000 2056.000000 2033.359985 2035.630005 
+			}
+		}
+	}
+}
 new tradenode windhelm = {
 	name = "Windhelm"
 	location = windhelm

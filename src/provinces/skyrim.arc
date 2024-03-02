@@ -1,18 +1,3 @@
-new inheritable impassible = {
-	position = {
-		1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	name = ""
-	history = {
-	}
-	impassible = yes
-}
 new area coast_of_winterhold = {
 	name = "Coast of Winterhold"
 	region = skyrim_sea

@@ -24,20 +24,9 @@ new interface_file countrytechnologyview = {
 			Orientation = "UPPER_LEFT"
 			clicksound = close_window
 		}
-		instantTextBoxType = {
-			name = "window_title"
-			position = { x = 15 y = 78 }
-			textureFile = ""
-			font = "vic_29s"
-			borderSize = {x = 4 y = 4}
-			text = "HEADER_TECHNOLOGY"
-			maxWidth = 512
-			maxHeight = 32
-			format = centre
-		}
 		listboxType = {
 			name = "tables"
-			position = { x = -1000 y = 115}
+			position = { x = 0 y = 115}
 			backGround = ""
 			size = { x = 520 y = 450 }
 			Orientation = "UPPER_LEFT"
@@ -49,7 +38,7 @@ new interface_file countrytechnologyview = {
 		guiButtonType = {
 			name = "show_institutions"
 			spriteType = "GFX_institutions_large_icon"
-			position = { x = -1014 y = 104 }
+			position = { x = 14 y = 104 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_techgroup"
 			shortcut = "n"
@@ -57,11 +46,11 @@ new interface_file countrytechnologyview = {
 		iconType = {
 			name = "innovativeness_icon"
 			spriteType = "GFX_innovativeness_icon"
-			position = { x = -1495 y = 115 }
+			position = { x = 495 y = 115 }
 		}
 		instantTextBoxType = {
 			name = "innovativeness_text"
-			position = { x = -1446 y = 115 }
+			position = { x = 446 y = 115 }
 			textureFile = ""
 			font = "vic_22"
 			borderSize = {x = 4 y = 4}
@@ -73,7 +62,7 @@ new interface_file countrytechnologyview = {
 		### ------- Institutions -------
 		windowType = {
 			name = "institutions_window"
-			position = { x = -1011 y = 283 }
+			position = { x = 11 y = 283 }
 			moveable = 0
 			Orientation = "UPPER_LEFT"
 			iconType = {
@@ -248,6 +237,31 @@ new interface_file countrytechnologyview = {
 				buttonFont = "vic_18"
 				shortcut = "n"
 			}
+		}
+	
+		iconType = {
+			name = "custom_mechanic_overlay"
+			spriteType = "GFX_custom_mechanic_overlay"
+			position = { x = 4 y = 74 }
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "toggle_custom_mechanic_overlay"
+			position = { x = 145 y = 65 }
+			quadTextureSprite = "privilege_technology"
+			scripted = yes
+		}
+		
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 15 y = 78 }
+			textureFile = ""
+			font = "vic_29s"
+			borderSize = {x = 4 y = 4}
+			text = "HEADER_TECHNOLOGY"
+			maxWidth = 512
+			maxHeight = 32
+			format = centre
 		}
 	}
 	### ------- Administrative Tech Research -------
