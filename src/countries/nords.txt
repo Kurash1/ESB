@@ -1093,6 +1093,18 @@ new country eddard = {
 		87 124 27
 	}
 	capital = eddard
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Jolnnir"
+				dynasty = "Eddard"
+				adm = 5
+				dip = 6
+				mil = 0
+				age = 23
+			}
+		}
+	}
 }
 new country bloodskal = {
 	inherit = nordic_country
@@ -1104,6 +1116,26 @@ new country bloodskal = {
 		124 0 10
 	}
 	capital = bloodskal
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Thalulf"
+				dynasty = "Bloodskal"
+				adm = 5
+				dip = 0
+				mil = 6
+				age = 35
+			}
+			starting_heir = {
+				name = "Raruk"
+				dynasty = "Bloodskal"
+				adm = 3
+				dip = 5
+				mil = 0
+				age = 13
+			}
+		}
+	}
 }
 new country frosselmane = {
 	inherit = nordic_country
@@ -1115,6 +1147,26 @@ new country frosselmane = {
 		36 111 124
 	}
 	capital = frosselmane
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Jofild"
+				dynasty = "Frosselmane"
+				adm = 2
+				dip = 0
+				mil = 0
+				age = 33
+			}
+			starting_heir = {
+				name = "Atarik"
+				dynasty = "Frosselmane"
+				adm = 5
+				dip = 5
+				mil = 2
+				age = 6
+			}
+		}
+	}
 }
 new country valbrandr = {
 	inherit = nordic_country
@@ -1126,6 +1178,26 @@ new country valbrandr = {
 		76 0 255
 	}
 	capital = valbrandr
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Lemkar"
+				dynasty = "Valbrandr"
+				adm = 6
+				dip = 5
+				mil = 1
+				age = 35
+			}
+			starting_heir = {
+				name = "Bersgeir"
+				dynasty = "Valbrandr"
+				adm = 0
+				dip = 1
+				mil = 3
+				age = 12
+			}
+		}
+	}
 }
 new country gyldenhul = {
 	inherit = nordic_country
@@ -1137,4 +1209,24 @@ new country gyldenhul = {
 		255 194 64
 	}
 	capital = skaalara
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Erleir"
+				dynasty = "Gyldenhul"
+				adm = 4
+				dip = 5
+				mil = 4
+				age = 42
+			}
+			starting_heir = {
+				name = "Filnlar"
+				dynasty = "Gyldenhul"
+				adm = 3
+				dip = 4
+				mil = 5
+				age = 20
+			}
+		}
+	}
 }
