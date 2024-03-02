@@ -1,3 +1,21 @@
+new custom_icon custom_mechanic_overlay = {
+	potential = {
+		NOT = {
+			has_country_flag = show_technology
+		}
+	}
+}
+new custom_button toggle_custom_mechanic_overlay = {
+	tooltip = "Toggle Technology Screen"
+	effect = {
+		if [has_country_flag = show_technology] {
+			clr_country_flag = show_technology
+		}
+		else {
+			set_country_flag = show_technology
+		}
+	}
+}
 new localisation HEADER_TECHNOLOGY = "Custom Mechanics"
 new event_modifier just_lost_to_rebels = {
 	name = "Rebel Victory"

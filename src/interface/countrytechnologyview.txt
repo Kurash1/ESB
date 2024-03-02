@@ -24,20 +24,9 @@ new interface_file countrytechnologyview = {
 			Orientation = "UPPER_LEFT"
 			clicksound = close_window
 		}
-		instantTextBoxType = {
-			name = "window_title"
-			position = { x = 15 y = 78 }
-			textureFile = ""
-			font = "vic_29s"
-			borderSize = {x = 4 y = 4}
-			text = "HEADER_TECHNOLOGY"
-			maxWidth = 512
-			maxHeight = 32
-			format = centre
-		}
 		listboxType = {
 			name = "tables"
-			position = { x = -1000 y = 115}
+			position = { x = 0 y = 115}
 			backGround = ""
 			size = { x = 520 y = 450 }
 			Orientation = "UPPER_LEFT"
@@ -49,7 +38,7 @@ new interface_file countrytechnologyview = {
 		guiButtonType = {
 			name = "show_institutions"
 			spriteType = "GFX_institutions_large_icon"
-			position = { x = -1014 y = 104 }
+			position = { x = 14 y = 104 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_techgroup"
 			shortcut = "n"
@@ -57,11 +46,11 @@ new interface_file countrytechnologyview = {
 		iconType = {
 			name = "innovativeness_icon"
 			spriteType = "GFX_innovativeness_icon"
-			position = { x = -1495 y = 115 }
+			position = { x = 495 y = 115 }
 		}
 		instantTextBoxType = {
 			name = "innovativeness_text"
-			position = { x = -1446 y = 115 }
+			position = { x = 446 y = 115 }
 			textureFile = ""
 			font = "vic_22"
 			borderSize = {x = 4 y = 4}
@@ -73,7 +62,7 @@ new interface_file countrytechnologyview = {
 		### ------- Institutions -------
 		windowType = {
 			name = "institutions_window"
-			position = { x = -1011 y = 283 }
+			position = { x = 11 y = 283 }
 			moveable = 0
 			Orientation = "UPPER_LEFT"
 			iconType = {
@@ -248,6 +237,31 @@ new interface_file countrytechnologyview = {
 				buttonFont = "vic_18"
 				shortcut = "n"
 			}
+		}
+	
+		iconType = {
+			name = "custom_mechanic_overlay"
+			spriteType = "GFX_custom_mechanic_overlay"
+			position = { x = 4 y = 74 }
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "toggle_custom_mechanic_overlay"
+			position = { x = 145 y = 65 }
+			quadTextureSprite = "privilege_technology"
+			scripted = yes
+		}
+		
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 15 y = 78 }
+			textureFile = ""
+			font = "vic_29s"
+			borderSize = {x = 4 y = 4}
+			text = "HEADER_TECHNOLOGY"
+			maxWidth = 512
+			maxHeight = 32
+			format = centre
 		}
 	}
 	### ------- Administrative Tech Research -------
@@ -1382,6 +1396,126 @@ new interface_file countrytechnologyview = {
 			hint_tag = "hint_buildings"
 		}
 	}
+	
+	windowType = {
+		name = "countrytechnologyview_table_example_tech"
+		position = { x = 0 y = 0 }
+		size = { x = 536 y = 148 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		instantTextBoxType = {
+			name = "tech"
+			position = { x = 84 y = 12 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}
+			text = "mil_tech"
+			maxWidth = 256
+			maxHeight = 32
+			format = left
+		}
+		iconType = {
+			name = "current_techlevel_bg"
+			spriteType = "GFX_prov_modifier_bg"
+			position = { x = 55 y = 7 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "current_tech_level"
+			position = { x = 52 y = 9 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}
+			text = "999"
+			maxWidth = 30
+			maxHeight = 32
+			format = centre
+		}
+		guiButtonType = {
+			name = "tech_research"
+			quadTextureSprite = "GFX_technology_view_research"
+			position = { x = 25 y = 41 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+		}
+		iconType = {
+			name = "tech_icon"
+			spriteType = "GFX_icon_powers_military_tech"
+			position = { x = 28 y = 9 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_mil"
+			scale = 1.2
+		}
+		instantTextBoxType = {
+			name = "tech_research_name"
+			position = { x = 35 y = 48 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}
+			text = "Research Galloop Tactic (Military 15)"
+			maxWidth = 165
+			maxHeight = 42
+			format = left
+			alwaystransparent = yes
+		}
+		OverlappingElementsBoxType = {
+			name = "tech_researchitems"
+			position = { x = 37 y = 92 }
+			size = { x = 175 y = 36 }
+			Orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}
+		iconType = {
+			name = "power_progress"
+			spriteType = "GFX_technologyView_progressbar"
+			position = { x = 41 y = 136 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_mil"
+		}
+		iconType = {
+			name = "power_progress_frame"
+			spriteType = "GFX_technologyView_progress_frame_long"
+			position = { x = 33 y = 132 }
+			Orientation = "UPPER_LEFT"
+		}
+		OverlappingElementsBoxType = {
+			name = "required_institutions_box"
+			position = { x = 290 y = 15 }
+			size = { x = 140 y = 26 }
+			Orientation = "UPPERL_LEFT"
+			format = right
+			spacing = -15
+		}
+		iconType = {
+			name = "time_icon"
+			spriteType = "GFX_icon_time"
+			position = { x = 402 y = 8 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "time_value"
+			position = { x = 430 y = 9 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}
+			text = "+100%"
+			maxWidth = 64
+			maxHeight = 32
+			format = left
+		}
+		
+		iconType =
+		{
+			name = "buildings"
+			spriteType = "GFX_technologyView_show_buildings"
+			position = { x = 472 y = 112 }
+			scale = 0.9
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_buildings"
+		}
+	}
+	
 	################################################################################################
 	### --- Tech Research Mil Items
 	windowType = {
