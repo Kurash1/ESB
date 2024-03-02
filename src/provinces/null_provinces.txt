@@ -1,3 +1,18 @@
+new inheritable impassible = {
+	position = {
+		1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000 1823.000 1877.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = ""
+	history = {
+	}
+	impassible = yes
+}
 new area black_mountain = {
 	name = "Black Mountain"
 	region = black_mountain
@@ -63,23 +78,22 @@ new province atmora = {
 	}
 	impassible = yes
 }
-new province solstheim = {
-	position = {
-		2453.000 2413.000 2453.000 2413.000 2453.000 2413.000 2453.000 2413.000 2453.000 2413.000 2453.000 2413.000 2453.000 2413.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	name = "Solstheim"
+new province hvitkald_peak = {
+    inherit = impassible
+	name = "Hvitkald Peak"
+    color = { 6 22 3 }
+}
+new province frykte_peak = {
+    inherit = impassible
+	name = "Frykte Peak"
+    color = { 18 6 12 }
+}
+new province glenschul_peak = {
+	inherit = impassible
+	name = "Glenschul Peak"
 	color = {
 		6 9 19
 	}
-	history = {
-	}
-	impassible = yes
 }
 new province r405 = {
 	position = {

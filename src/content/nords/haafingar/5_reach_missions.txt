@@ -1,25 +1,25 @@
 mission_trees:solitude += {
-	karth_expedition = {
-		name = "Karth Expedition"
-		x = 9
-		y = 6
-		required = taming_the_dragon
-		trigger = {
-			num_of_explorers = 1
-			has_discovered = hroldan_river
-			has_discovered = lake_karthspire
-			has_discovered = blind_river
-			has_discovered = karth_lake
-		}
-		effect = {
-			province_groups:karth_expedition = {
-				discover_country = ROOT
-			}
-			areas:silverway, areas:bruca, areas:harmugstahl = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
+	#karth_expedition = {
+	#	name = "Karth Expedition"
+	#	x = 9
+	#	y = 6
+	#	required = taming_the_dragon
+	#	trigger = {
+	#		num_of_explorers = 1
+	#		has_discovered = hroldan_river
+	#		has_discovered = lake_karthspire
+	#		has_discovered = blind_river
+	#		has_discovered = karth_lake
+	#	}
+	#	effect = {
+	#		province_groups:karth_expedition = {
+	#			discover_country = ROOT
+	#		}
+	#		areas:silverway, areas:bruca, areas:harmugstahl = {
+	#			add_permanent_claim = ROOT
+	#		}
+	#	}
+	#}
 }
 mission_trees:solitude_hidden += {
 	harmugstahl = {
