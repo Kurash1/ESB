@@ -30,6 +30,16 @@ new province bloodskal = {
 	area = raven_rock
 	history += {
 		history_trade_goods = wood
+		history_owner = bloodskal
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Earth Stone"
+				modifier = {
+					shock_damage_received = -0.05
+					trade_goods_size = 0.01
+				}
+			}
+		}
 	}
 }
 new province raven_rock = {
@@ -49,6 +59,8 @@ new province raven_rock = {
 	area = raven_rock
 	history += {
 		history_trade_goods = ebony
+		history_owner = bloodskal
+		center_of_trade = 1
 	}
 }
 new province brodir_grove = {
@@ -68,6 +80,16 @@ new province brodir_grove = {
 	area = raven_rock
 	history += {
 		history_trade_goods = wood
+		history_owner = bloodskal
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Tree Stone"
+				modifier = {
+					monthly_magicka = 0.1
+					trade_goods_size = 0.01
+				}
+			}
+		}
 	}
 }
 
@@ -92,6 +114,7 @@ new province altar_of_thrond = {
 	area = lower_moesring
 	history += {
 		history_trade_goods = wood
+		history_owner = eddard
 	}
 }
 new province moesring_pass = {
@@ -111,6 +134,16 @@ new province moesring_pass = {
 	area = lower_moesring
 	history += {
 		history_trade_goods = stone
+		history_owner = eddard
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Wind Stone"
+				modifier = {
+					movement_speed = 0.1
+					trade_goods_size = 0.01
+				}
+			}
+		}
 	}
 }
 new province jolgeirr = {
@@ -130,6 +163,7 @@ new province jolgeirr = {
 	area = lower_moesring
 	history += {
 		history_trade_goods = wood
+		history_owner = bloodskal
 	}
 }
 
@@ -154,6 +188,7 @@ new province eddard = {
 	area = gronn
 	history += {
 		history_trade_goods = wood
+		history_owner = eddard
 	}
 }
 new province graring = {
@@ -173,6 +208,7 @@ new province graring = {
 	area = gronn
 	history += {
 		history_trade_goods = wood
+		history_owner = eddard
 	}
 }
 new province igvir = {
@@ -192,6 +228,7 @@ new province igvir = {
 	area = gronn
 	history += {
 		history_trade_goods = wood
+		history_owner = eddard
 	}
 }
 
@@ -216,6 +253,7 @@ new province benkongerike = {
 	area = mortrag
 	history += {
 		history_trade_goods = fish
+		history_owner = gyldenhul
 	}
 }
 new province mortrag_glacier = {
@@ -235,6 +273,7 @@ new province mortrag_glacier = {
 	area = mortrag
 	history += {
 		history_trade_goods = c_metals
+		history_owner = bloodskal
 	}
 }
 new province domme = {
@@ -254,6 +293,7 @@ new province domme = {
 	area = mortrag
 	history += {
 		history_trade_goods = gems
+		history_owner = bloodskal
 	}
 }
 new province thormoor = {
@@ -273,6 +313,16 @@ new province thormoor = {
 	area = mortrag
 	history += {
 		history_trade_goods = fish
+		history_owner = bloodskal
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Water Stone"
+				modifier = {
+					manpower_recovery_speed = 0.1
+					trade_goods_size = 0.01
+				}
+			}
+		}
 	}
 }
 
@@ -297,6 +347,7 @@ new province kolbjorn = {
 	area = frostmoth
 	history += {
 		history_trade_goods = stone
+		history_owner = bloodskal
 	}
 }
 new province frosselmane = {
@@ -316,6 +367,7 @@ new province frosselmane = {
 	area = frostmoth
 	history += {
 		history_trade_goods = wood
+		history_owner = frosselmane
 	}
 }
 new province stormpfund = {
@@ -335,6 +387,7 @@ new province stormpfund = {
 	area = frostmoth
 	history += {
 		history_trade_goods = wood
+		history_owner = bloodskal
 	}
 }
 new province frostmoth = {
@@ -354,6 +407,8 @@ new province frostmoth = {
 	area = frostmoth
 	history += {
 		history_trade_goods = arms
+		history_owner = frosselmane
+		center_of_trade = 1
 	}
 }
 
@@ -378,6 +433,8 @@ new province rimhull = {
 	area = skaal
 	history += {
 		history_trade_goods = wood
+		history_owner = gyldenhul
+		center_of_trade = 1
 	}
 }
 new province sjobal = {
@@ -397,6 +454,16 @@ new province sjobal = {
 	area = skaal
 	history += {
 		history_trade_goods = wood
+		history_owner = gyldenhul
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Beast Stone"
+				modifier = {
+					shock_damage = 0.1
+					trade_goods_size = 0.01
+				}
+			}
+		}
 	}
 }
 new province skaalara = {
@@ -416,6 +483,7 @@ new province skaalara = {
 	area = skaal
 	history += {
 		history_trade_goods = wood
+		history_owner = gyldenhul
 	}
 }
 
@@ -440,6 +508,7 @@ new province thirsk = {
 	area = thirsk
 	history += {
 		history_trade_goods = wood
+		history_owner = valbrandr
 	}
 }
 new province connorflenge = {
@@ -459,6 +528,7 @@ new province connorflenge = {
 	area = thirsk
 	history += {
 		history_trade_goods = iron
+		history_owner = valbrandr
 	}
 }
 new province valbrandr = {
@@ -478,6 +548,7 @@ new province valbrandr = {
 	area = thirsk
 	history += {
 		history_trade_goods = wood
+		history_owner = valbrandr
 	}
 }
 
@@ -502,6 +573,7 @@ new province himmelhost = {
 	area = skogsdrake
 	history += {
 		history_trade_goods = wood
+		history_owner = frosselmane
 	}
 }
 new province skogsdrake = {
@@ -521,6 +593,16 @@ new province skogsdrake = {
 	area = skogsdrake
 	history += {
 		history_trade_goods = wood
+		history_owner = frosselmane
+		1.1.1 = {
+			quick_province_modifier = {
+				name = "Sun Stone"
+				modifier = {
+					fire_damage = 0.1
+					trade_goods_size = 0.01
+				}
+			}
+		}
 	}
 }
 
