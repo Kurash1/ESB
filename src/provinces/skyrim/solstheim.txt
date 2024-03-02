@@ -114,7 +114,7 @@ new province igvir = {
 	}
 }
 
-new area mortrag_glacier = {
+new area mortrag = {
 	name = "Mortrag"
 	region = solstheim
 }
@@ -123,7 +123,7 @@ new province benkongerike = {
     inherit = solstheim_inherit
     color = { 114 174 188 }
 	terrain = glacier
-	area = mortrag_glacier
+	area = mortrag
 	history += {
 		history_trade_goods = fish
 	}
@@ -133,7 +133,7 @@ new province mortrag_glacier = {
     inherit = solstheim_inherit
     color = { 147 197 116 }
 	terrain = glacier
-	area = mortrag_glacier
+	area = mortrag
 	history += {
 		history_trade_goods = c_metals
 	}
@@ -143,7 +143,7 @@ new province domme = {
     inherit = solstheim_inherit
     color = { 247 104 223 }
 	terrain = glacier
-	area = mortrag_glacier
+	area = mortrag
 	history += {
 		history_trade_goods = gems
 	}
@@ -153,7 +153,7 @@ new province thormoor = {
     inherit = solstheim_inherit
     color = { 178 124 157 }
 	terrain = glacier
-	area = mortrag_glacier
+	area = mortrag
 	history += {
 		history_trade_goods = fish
 	}
