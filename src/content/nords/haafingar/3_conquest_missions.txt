@@ -5,7 +5,7 @@ mission_trees:solitude += {
 		x = 7
 		y = 0
 		trigger = {
-			army_size_percentage = 1
+			army_size = 15
 			num_of_generals = 1
 			mil_power = 150
 		}
@@ -27,18 +27,17 @@ mission_trees:solitude += {
 				area = shadowgreen
 				area = ravenscar
 				area = northwatch
-				area = volkihar_isles
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			areas:shadowgreen; ravenscar; northwatch; volkihar_isles = {
+			areas:shadowgreen; ravenscar; northwatch = {
 				type = all
 				owned_by = ROOT
 			}
 		}
 		effect = {
-			areas:shadowgreen; ravenscar; northwatch; volkihar_isles = {
+			areas:shadowgreen; ravenscar; northwatch = {
 				add_base_production = 1
 				add_local_autonomy = -25
 			}
@@ -54,18 +53,17 @@ mission_trees:solitude += {
 				area = kilkreath
 				area = hraggstad
 				area = deepwood
-				area = pinefrost
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			areas:kilkreath; hraggstad; deepwood; pinefrost = {
+			areas:kilkreath; hraggstad; deepwood = {
 				type = all
 				owned_by = ROOT
 			}
 		}
 		effect = {
-			areas:kilkreath; hraggstad; deepwood; pinefrost = {
+			areas:kilkreath; hraggstad; deepwood = {
 				add_base_production = 1
 				add_local_autonomy = -25
 			}

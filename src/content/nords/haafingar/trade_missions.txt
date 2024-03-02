@@ -1,0 +1,27 @@
+mission_trees:solitude += {
+	dominate_trade = {
+		name = "Dominate Trade"
+		x = 0
+		y = 3
+		trigger = {
+			trade_nodes:solitude:location = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			trade_nodes:solitude:location = {
+				every_trade_node_member_country [NOT = { tag = ROOT }] {
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_vassalize_mission
+						months = 600
+					}
+				}
+			}
+		}
+	}
+	
+}
