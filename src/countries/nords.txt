@@ -172,13 +172,21 @@ new country solitude = {
 	history += {
 		elector = yes
 		2568.1.1 = {
-			monarch = {
+			starting_ruler = {
 				name = "Vigrod"
 				dynasty = "Red-Wolf"
 				adm = 6
 				dip = 5
 				mil = 5
-				birth_date = 2531.1.1
+				age = 37
+			}
+			starting_heir = {
+				name = "Geslir"
+				dynasty = "Red-Wolf"
+				adm = 4
+				dip = 4
+				mil = 4
+				age = 7
 			}
 		}
 	}
@@ -205,7 +213,7 @@ new country pine_frost = {
 	}
 	capital = pinefrost
 }
-new country holly-frost = {
+new country holly_frost = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
 	tag = HLY
@@ -214,7 +222,7 @@ new country holly-frost = {
 	color = {
 		0 255 255
 	}
-	capital = holly-frost
+	capital = holly_frost
 }
 new country dragon_bridge = {
 	inherit = nordic_country
@@ -316,7 +324,7 @@ new country snow_hawk = {
 	}
 	capital = snowhawk
 }
-new country mort-hall = {
+new country mort_hall = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = MOH
@@ -338,7 +346,7 @@ new country high_gate = {
 	}
 	capital = verglas
 }
-new country dawn-star = {
+new country dawn_star = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = DAW
@@ -374,7 +382,7 @@ new country mire_watch = {
 	}
 	capital = myrwatch
 }
-new country wind-ward = {
+new country wind_ward = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = WIN
@@ -880,7 +888,7 @@ new country yorgrim = {
 	}
 	capital = shrouded_grove
 }
-new country fell-glow = {
+new country fell_glow = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = FEL
@@ -913,7 +921,7 @@ new country cradlecrush = {
 	}
 	capital = cradlecrush
 }
-new country dark-water = {
+new country dark_water = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
 	tag = DAR
@@ -924,7 +932,7 @@ new country dark-water = {
 	}
 	capital = darkwater_crossing
 }
-new country mist-watch = {
+new country mist_watch = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
 	tag = MIS
@@ -935,7 +943,7 @@ new country mist-watch = {
 	}
 	capital = mistwatch
 }
-new country north-wind = {
+new country north_wind = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
 	tag = NOW

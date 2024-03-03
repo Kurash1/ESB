@@ -32,14 +32,14 @@ new mission_series fallowfire_0 = {
 			trigger = {
 				OR = {	
 					OR = {
-						countries:mist-watch = {
+						countries:mist_watch = {
 								has_opinion = {
 									who = fallowfire
 									value = 190
 								}
 								
 						}
-						countries:mist-watch = {
+						countries:mist_watch = {
 							vassal_of = ROOT
 						}
 					}
@@ -56,7 +56,7 @@ new mission_series fallowfire_0 = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 			effect = {
-				if [countries:mist-watch = {
+				if [countries:mist_watch = {
 						has_opinion = {
 							who = fallowfire
 							value = 190
@@ -64,11 +64,11 @@ new mission_series fallowfire_0 = {
 					}
 				] {
 					countries:fallowfire = {
-						vassalize = mist-watch
+						vassalize = mist_watch
 					}
 				}
-				else_if [countries:mist-watch = { vassal_of = ROOT}] {
-					countries:mist-watch {
+				else_if [countries:mist_watch = { vassal_of = ROOT}] {
+					countries:mist_watch {
 						add_liberty_desire = -20
 						add_opinion = {
 							who = fallowfire

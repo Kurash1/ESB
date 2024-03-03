@@ -219,10 +219,10 @@ define_achievement = {
 	icon = achievement_dragonplate
 	name = "Fist of the Dawnstar"
 	trigger = {
-		tag = dawn-star
+		tag = dawn_star
 		provinces:fistrock = {
 			num_of_units_in_province = {
-				who = countries:dawn-star
+				who = countries:dawn_star
 				amount = 150
 			}
 		}
