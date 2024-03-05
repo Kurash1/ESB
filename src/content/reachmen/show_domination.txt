@@ -1,7 +1,11 @@
+new localisation esb_make_clan_tributary = "Make Tributary"
+new localisation PEACE_esb_make_clan_tributary = "Make Tributary"
+new localisation CB_ALLOWED_esb_make_clan_tributary = "Make Tributary"
+new localisation esb_make_clan_tributary_desc = "[From.GetName] becomes a tributary clan of [Root.GetName]"
 new war_goal war_goal_reach_show_domination = {
 	type = superiority
-	title = "Show Domination 1"
-	war_name = "Show Domination 2"
+	title = "Show Domination"
+	war_name = "$ORDER$$FIRST$ Show Domination on $SECOND_NAME$"
 	attacker = {
 		badboy_factor = 0.25
 		prestige_factor = 2
@@ -31,17 +35,6 @@ new casus_belli cb_reach_show_domination = {
 		}
 	}
 	attacker_disabled_po = {
-		po_demand_provinces
-		po_revoke_cores
-		po_change_religion
-		po_form_personal_union
-		po_become_vassal
-		po_subjugate_vassal
-		po_change_government
-		po_revoke_elector
-		po_enforce_rebel_demands
-	}
-	defender_disabled_po = {
 		po_demand_provinces
 		po_revoke_cores
 		po_change_religion
