@@ -551,13 +551,13 @@ new tradenode karthwasten = {
 	name = "Karthwasten"
 	location = karthwasten
 	areas = {
-		silverway mor_khazgur bruca bthar_zel harmugstahl dragon_bridge_overlook broken_tower karthwasten dragontooth bthardamz reach_camp karthald
+		mor_khazgur bruca harmugstahl dragon_bridge_overlook reach_camp karthald
 	}
 	outgoings = {
 		{
 			node = solitude
 			path = {
-				imp_47 rocky_coast karth_lake coast_of_solitude solitude_port solitude
+				imp_47 karth_lake coast_of_solitude solitude_port solitude
 			}
 			control = {
 				1554.000000 1986.000000 1561.000000 1989.000000 1557.000000 1997.000000 1559.000000 2004.000000 1567.000000 2013.000000 1576.000000 2024.000000 1587.000000 2028.000000 1593.000000 2030.000000 1607.000000 2043.000000 1617.000000 2053.000000 1623.000000 2058.000000 1634.000000 2062.000000 1642.000000 2068.000000
@@ -566,7 +566,7 @@ new tradenode karthwasten = {
 		{
 			node = hjaal
 			path = {
-				malie beigi karthwatch broken_tower_redoubt vorigja imp_36 bumpy_road hjaals_tooth
+				karthwasten beigi karthwatch imp_36 bumpy_road hjaals_tooth
 			}
 			control = {
 				1552.000000 1982.000000 1565.000000 1986.000000 1580.000000 1988.000000 1589.000000 1985.000000 1600.000000 1983.000000 1608.000000 1985.000000 1612.000000 1989.000000 1622.000000 1984.000000
@@ -578,13 +578,13 @@ new tradenode markarth = {
 	name = "Markarth"
 	location = markarth
 	areas = {
-		ragnvald kolskeggr markarth reachwater reachcliff karthspire hag_rock dushnikh_yal arkngthamz valthume lost_valley
+		ragnvald markarth reachwater hag_rock dushnikh_yal valthume
 	}
 	outgoings = {
 		{
 			node = karthwasten
 			path = {
-				salvius_farm groilief imp_49 karthwasten
+				salvius_farm imp_49 karthwasten
 			}
 			control = {
 				1507.000000 1941.000000 1516.000000 1948.000000 1530.000000 1947.000000 1535.000000 1955.000000 1542.000000 1966.000000 1546.000000 1976.000000
@@ -596,13 +596,13 @@ new tradenode the_moldering = {
 	name = "The Moldering"
 	location = moldering
 	areas = {
-		lower_sungard sungard old_hroldan serpents_bluff moldering highpoint
+		lower_sungard sungard old_hroldan moldering highpoint
 	}
 	outgoings = {
 		{
 			node = markarth
 			path = {
-				lower_moldering soljunds_sinkhole east_karthspire west_karthspire imp_44 lake_karthspire reachwater_hill lislgeth salvius_farm markarth
+				lower_moldering soljunds_sinkhole karthspire imp_44 lake_karthspire lislgeth salvius_farm markarth
 			}
 			control = {
 				1590.000000 1943.000000 1577.000000 1934.000000 1572.000000 1923.000000 1557.000000 1927.000000 1541.000000 1934.000000 1528.000000 1931.000000 1518.000000 1935.000000 1507.000000 1933.000000

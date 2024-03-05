@@ -1,5 +1,5 @@
-new area lost_valley = {
-	name = "Lost Valley"
+new area valthume = {
+	name = "Valthume"
 	region = reach
 }
 new province lost_valley_redoubt = {
@@ -12,7 +12,7 @@ new province lost_valley_redoubt = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = lost_valley
+	area = valthume
 	name = "Lost Valley Redoubt"
 	terrain = highlands
 	color = {
@@ -35,7 +35,7 @@ new province cradle_stone = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = lost_valley
+	area = valthume
 	name = "Cradle Stone"
 	terrain = mountain
 	color = {
@@ -47,10 +47,6 @@ new province cradle_stone = {
 		religion = reachman_faith
 		history_trade_goods = c_metals
 	}
-}
-new area valthume = {
-	name = "Valthume"
-	region = reach
 }
 new province gloomreach = {
 	position = {
@@ -64,7 +60,7 @@ new province gloomreach = {
 	}
 	area = valthume
 	name = "Gloomreach"
-	terrain = coastline
+	terrain = hills
 	color = {
 		119 103 195
 	}
@@ -73,29 +69,6 @@ new province gloomreach = {
 		culture = reachmen
 		religion = reachman_faith
 		history_trade_goods = c_metals
-	}
-}
-new province gretmor = {
-	position = {
-		1581.000 1905.000 1581.000 1905.000 1581.000 1905.000 1581.000 1905.000 1581.000 1905.000 1581.000 1905.000 1581.000 1905.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = valthume
-	name = "Gretmor"
-	terrain = highlands
-	color = {
-		212 202 227
-	}
-	history = {
-		history_owner = hearteater_clan
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = wood
 	}
 }
 new province valthume = {
@@ -146,10 +119,6 @@ new province valthume = {
 		}
 	}
 }
-new area arkngthamz = {
-	name = "Arkngthamz"
-	region = reach
-}
 new province valthume_pass = {
 	position = {
 		1566.000 1899.000 1566.000 1899.000 1566.000 1899.000 1566.000 1899.000 1566.000 1899.000 1566.000 1899.000 1566.000 1899.000
@@ -160,7 +129,7 @@ new province valthume_pass = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = arkngthamz
+	area = valthume
 	name = "Valthume Pass"
 	terrain = highlands
 	color = {
@@ -175,6 +144,11 @@ new province valthume_pass = {
 		is_city = yes
 	}
 }
+
+new area dushnikh_yal = {
+	name = "Dushnikh Yal"
+	region = reach
+}
 new province arkngthamz = {
 	position = {
 		1548.000 1899.000 1548.000 1899.000 1548.000 1899.000 1548.000 1899.000 1548.000 1899.000 1548.000 1899.000 1548.000 1899.000
@@ -185,7 +159,7 @@ new province arkngthamz = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = arkngthamz
+	area = dushnikh_yal
 	name = "Arkngthamz"
 	terrain = highlands
 	color = {
@@ -208,7 +182,7 @@ new province bleeding_hill = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = arkngthamz
+	area = dushnikh_yal
 	name = "Bleeding Hill"
 	terrain = mountain
 	color = {
@@ -220,10 +194,6 @@ new province bleeding_hill = {
 		culture = reachmen
 		history_trade_goods = silver
 	}
-}
-new area dushnikh_yal = {
-	name = "Dushnikh Yal"
-	region = reach
 }
 new province dushnikh_yal = {
 	position = {
@@ -250,29 +220,6 @@ new province dushnikh_yal = {
 		set_province_flag = orc_stronghold
 	}
 }
-new province reachwind_eyrie = {
-	position = {
-		1532.000 1915.000 1532.000 1915.000 1532.000 1915.000 1532.000 1915.000 1532.000 1915.000 1532.000 1915.000 1532.000 1915.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = dushnikh_yal
-	name = "Reachwind Eyrie"
-	terrain = highlands
-	color = {
-		245 146 241
-	}
-	history = {
-		history_owner = dushnikh_yal
-		religion = religions:code_of_malacath
-		culture = stronghold_orc
-		history_trade_goods = iron
-	}
-}
 new province editia = {
 	position = {
 		1543.000 1910.000 1543.000 1910.000 1543.000 1910.000 1543.000 1910.000 1543.000 1910.000 1543.000 1910.000 1543.000 1910.000
@@ -296,56 +243,7 @@ new province editia = {
 		history_trade_goods = iron
 	}
 }
-new area reachcliff = {
-	name = "Reachcliff"
-	region = reach
-}
-new province hillia = {
-	position = {
-		1572.000 1918.000 1572.000 1918.000 1572.000 1918.000 1567.000 1921.000 1572.000 1918.000 1572.000 1918.000 1572.000 1918.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -3.142 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.865 0.365 0.365 0.365
-	}
-	area = reachcliff
-	name = "Hillia"
-	terrain = coastline
-	color = {
-		251 243 118
-	}
-	history = {
-		history_owner = blackdrake_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = fish
-	}
-}
-new province reachcliff = {
-	position = {
-		1551.000 1923.000 1551.000 1923.000 1551.000 1923.000 1553.000 1927.000 1551.000 1923.000 1551.000 1923.000 1551.000 1923.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.915 0.365 0.365 0.365
-	}
-	area = reachcliff
-	terrain = hills
-	name = "Reachcliff"
-	color = {
-		230 182 214
-	}
-	history = {
-		history_owner = blackdrake_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = iron
-	}
-}
+
 new area hag_rock = {
 	name = "Hag Rock"
 	region = reach
@@ -419,6 +317,7 @@ new province dread_crone_rock = {
 		history_trade_goods = mag_goods
 	}
 }
+
 new area reachwater = {
 	name = "Reachwater"
 	region = reach
@@ -444,29 +343,6 @@ new province lislgeth = {
 		religion = reachman_faith
 		culture = reachmen
 		history_trade_goods = silver
-	}
-}
-new province reachwater_hill = {
-	position = {
-		1526.000 1939.000 1526.000 1939.000 1526.000 1939.000 1530.000 1940.000 1526.000 1939.000 1526.000 1939.000 1526.000 1939.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -1.571 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.715 0.365 0.365 0.365
-	}
-	area = reachwater
-	name = "Reachwater Hill"
-	terrain = hills
-	color = {
-		239 130 188
-	}
-	history = {
-		history_owner = shadowbloom_clan
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = fish
 	}
 }
 new province reachwater_rock = {
@@ -515,6 +391,54 @@ new province thaeba = {
 		history_trade_goods = stone
 	}
 }
+new province reachcliff = {
+	position = {
+		1551.000 1923.000 1551.000 1923.000 1551.000 1923.000 1553.000 1927.000 1551.000 1923.000 1551.000 1923.000 1551.000 1923.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 2.915 0.365 0.365 0.365
+	}
+	area = reachwater
+	terrain = hills
+	name = "Reachcliff"
+	color = {
+		230 182 214
+	}
+	history = {
+		history_owner = blackdrake_clan
+		religion = reachman_faith
+		culture = reachmen
+		history_trade_goods = iron
+	}
+}
+new province kolskeggr = {
+	position = {
+		1530.000 1954.000 1530.000 1954.000 1530.000 1954.000 1534.000 1955.000 1530.000 1954.000 1530.000 1954.000 1530.000 1954.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -1.571 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 2.815 0.365 0.365 0.365
+	}
+	area = reachwater
+	name = "Kolskeggr"
+	terrain = hills
+	color = {
+		175 195 185
+	}
+	history = {
+		center_of_trade = 1
+		history_owner = wildblood_clan
+		religion = reachman_faith
+		culture = reachmen
+		history_trade_goods = gold
+	}
+}
+
 new area markarth = {
 	name = "Markarth"
 	region = reach
@@ -590,86 +514,7 @@ new province salvius_farm = {
 		history_trade_goods = wheat
 	}
 }
-new area kolskeggr = {
-	name = "Kolskeggr"
-	region = reach
-}
-new province groilief = {
-	position = {
-		1519.000 1956.000 1519.000 1956.000 1519.000 1956.000 1519.000 1956.000 1519.000 1956.000 1519.000 1956.000 1519.000 1956.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = kolskeggr
-	name = "Groilief"
-	terrain = hills
-	color = {
-		221 239 181
-	}
-	history = {
-		history_owner = wildblood_clan
-		religion = reachman_faith
-		culture = reachmen
-		quick_province_modifier = {
-			name = "Lover Stone"
-			modifier = {
-				idea_cost = -5%
-			}
-		}
-		history_trade_goods = wood
-	}
-}
-new province kolskeggr = {
-	position = {
-		1530.000 1954.000 1530.000 1954.000 1530.000 1954.000 1534.000 1955.000 1530.000 1954.000 1530.000 1954.000 1530.000 1954.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -1.571 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.815 0.365 0.365 0.365
-	}
-	area = kolskeggr
-	name = "Kolskeggr"
-	terrain = coastline
-	color = {
-		175 195 185
-	}
-	history = {
-		center_of_trade = 1
-		history_owner = wildblood_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = gold
-	}
-}
-new province blind_cliff = {
-	position = {
-		1536.000 1966.000 1536.000 1966.000 1536.000 1966.000 1541.500 1967.000 1536.000 1966.000 1536.000 1966.000 1536.000 1966.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -1.571 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.815 0.365 0.365 0.365
-	}
-	area = kolskeggr
-	name = "Blind Cliff"
-	terrain = coastline
-	color = {
-		100 131 171
-	}
-	history = {
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = iron
-		history_owner = timbercrow_clan
-	}
-}
+
 new area ragnvald = {
 	name = "Ragnvald"
 	region = reach
@@ -695,6 +540,12 @@ new province karerica = {
 		religion = reachman_faith
 		culture = reachmen
 		history_trade_goods = wood
+		quick_province_modifier = {
+			name = "Lover Stone"
+			modifier = {
+				idea_cost = -5%
+			}
+		}
 	}
 }
 new province aldiid = {
@@ -766,21 +617,17 @@ new province ragnvald = {
 		}
 	}
 }
-new area reach_camp = {
-	name = "Reach Camp"
-	region = reach
-}
 new province elselod = {
-	position = {
-		1524.000 1976.000 1524.000 1976.000 1524.000 1976.000 1524.000 1976.000 1524.000 1976.000 1524.000 1976.000 1524.000 1976.000
+	position={
+		1520.000 1971.000 1520.000 1971.000 1524.000 1976.000 1524.000 1976.000 1524.000 1976.000 1519.000 1970.000 1524.000 1976.000 
 	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
 	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	height={
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
 	}
-	area = reach_camp
+	area = ragnvald
 	name = "Elselod"
 	terrain = mountain
 	color = {
@@ -793,28 +640,10 @@ new province elselod = {
 		history_trade_goods = wood
 	}
 }
-new province aelagela = {
-	position = {
-		1515.000 1972.000 1515.000 1972.000 1515.000 1972.000 1515.000 1972.000 1515.000 1972.000 1515.000 1972.000 1515.000 1972.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = reach_camp
-	name = "Aelagela"
-	terrain = hills
-	color = {
-		182 171 108
-	}
-	history = {
-		history_owner = stranglehollow_clan
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = fish
-	}
+
+new area reach_camp = {
+	name = "Reach Camp"
+	region = reach
 }
 new province olavete = {
 	position = {
@@ -862,84 +691,6 @@ new province thalif = {
 		history_owner = doomfang_clan
 	}
 }
-new area karthwasten = {
-	name = "Karthwasten"
-	region = reach
-}
-new province riknhild = {
-	position = {
-		1545.000 1976.000 1545.000 1976.000 1545.000 1976.000 1545.000 1971.000 1545.000 1976.000 1545.000 1976.000 1545.000 1976.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.815 0.365 0.365 0.365
-	}
-	area = karthwasten
-	name = "Riknhild"
-	terrain = hills
-	color = {
-		122 199 235
-	}
-	history = {
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = fish
-		history_owner = eagleseer_clan
-	}
-}
-new province malie = {
-	position = {
-		1552.000 1985.000 1552.000 1985.000 1552.000 1985.000 1556.000 1977.000 1552.000 1985.000 1552.000 1985.000 1552.000 1985.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -0.436 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.715 0.365 0.365 0.365
-	}
-	area = karthwasten
-	name = "Malie"
-	terrain = hills
-	color = {
-		245 243 144
-	}
-	history = {
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = stone
-		history_owner = crow_eye_clan
-	}
-}
-new province karthwasten = {
-	position = {
-		1541.000 1987.000 1541.000 1987.000 1541.000 1987.000 1541.000 1987.000 1541.000 1987.000 1541.000 1987.000 1541.000 1987.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = karthwasten
-	name = "Karthwasten"
-	terrain = highlands
-	color = {
-		164 218 236
-	}
-	history = {
-		center_of_trade = 1
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = silver
-		history_owner = crow_eye_clan
-	}
-}
-new area dragontooth = {
-	name = "Dragontooth"
-	region = reach
-}
 new province reydlgeth = {
 	position = {
 		1524.000 1995.000 1524.000 1995.000 1524.000 1995.000 1524.000 1995.000 1524.000 1995.000 1524.000 1995.000 1524.000 1995.000
@@ -950,7 +701,7 @@ new province reydlgeth = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = dragontooth
+	area = reach_camp
 	name = "Reydlgeth"
 	terrain = highlands
 	color = {
@@ -960,79 +711,6 @@ new province reydlgeth = {
 		religion = reachman_faith
 		culture = reachmen
 		history_trade_goods = fur
-		history_owner = shunned_ones
-	}
-}
-new province dragontooth = {
-	position = {
-		1534.000 2001.000 1534.000 2001.000 1534.000 2001.000 1534.000 2001.000 1534.000 2001.000 1534.000 2001.000 1534.000 2001.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = dragontooth
-	name = "Dragontooth"
-	terrain = hills
-	color = {
-		136 147 180
-	}
-	history = {
-		history_owner = horn_stride_clan
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = stone
-	}
-}
-new area bthardamz = {
-	name = "Bthardamz"
-	region = reach
-}
-new province riglaith = {
-	position = {
-		1514.000 1998.000 1514.000 1998.000 1514.000 1998.000 1514.000 1998.000 1514.000 1998.000 1514.000 1998.000 1514.000 1998.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bthardamz
-	name = "Riglaith"
-	terrain = hills
-	color = {
-		178 144 225
-	}
-	history = {
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = stone
-		history_owner = shunned_ones
-	}
-}
-new province bthardamz = {
-	position = {
-		1504.000 1992.000 1504.000 1992.000 1504.000 1992.000 1504.000 1992.000 1504.000 1992.000 1504.000 1992.000 1504.000 1992.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bthardamz
-	terrain = hills
-	name = "Bthardamz"
-	color = {
-		152 196 230
-	}
-	history = {
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = gold
 		history_owner = shunned_ones
 	}
 }
@@ -1046,7 +724,7 @@ new province sirgarte = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = bthardamz
+	area = reach_camp
 	name = "Sirgarte"
 	terrain = hills
 	color = {
@@ -1059,36 +737,37 @@ new province sirgarte = {
 		history_owner = starsinger_clan
 	}
 }
-new area bthar_zel = {
-	name = "Bthar-Zel"
+
+new area karthald = {
+	name = "Karthald"
 	region = reach
 }
-new province druadach_redoubt = {
+new province riknhild = {
 	position = {
-		1519.000 2012.000 1519.000 2012.000 1519.000 2012.000 1519.000 2012.000 1519.000 2012.000 1519.000 2012.000 1519.000 2012.000
+		1545.000 1976.000 1545.000 1976.000 1545.000 1976.000 1545.000 1971.000 1545.000 1976.000 1545.000 1976.000 1545.000 1976.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
 	}
 	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+		0.365 0.365 0.365 2.815 0.365 0.365 0.365
 	}
-	area = bthar_zel
-	name = "Druadach Redoubt"
+	area = karthald
+	name = "Riknhild"
 	terrain = hills
 	color = {
-		235 188 165
+		122 199 235
 	}
 	history = {
-		history_owner = stag_heart_clan
 		culture = reachmen
 		religion = reachman_faith
 		history_trade_goods = fish
+		history_owner = eagleseer_clan
 	}
 }
-new province bthar_zel = {
+new province karthwasten = {
 	position = {
-		1503.000 2010.000 1503.000 2010.000 1503.000 2010.000 1503.000 2010.000 1503.000 2010.000 1503.000 2010.000 1503.000 2010.000
+		1541.000 1987.000 1541.000 1987.000 1541.000 1987.000 1541.000 1987.000 1541.000 1987.000 1541.000 1987.000 1541.000 1987.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -1096,56 +775,104 @@ new province bthar_zel = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = bthar_zel
-	name = "Bthar-Zel"
-	terrain = hills
+	area = karthald
+	name = "Karthwasten"
+	terrain = highlands
 	color = {
-		141 176 166
+		164 218 236
 	}
 	history = {
 		center_of_trade = 1
-		religion = reachman_faith
 		culture = reachmen
-		history_trade_goods = fur
-		history_owner = stag_heart_clan
+		religion = reachman_faith
+		history_trade_goods = silver
+		history_owner = crow_eye_clan
 	}
 }
+new province karthwatch = {
+	position = {
+		1577.000 1988.000 1577.000 1988.000 1577.000 1988.000 1573.000 1986.000 1577.000 1988.000 1577.000 1988.000 1577.000 1988.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.785 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 1.715 0.365 0.365 0.365
+	}
+	area = karthald
+	name = "Karthwatch"
+	terrain = hills
+	color = {
+		108 157 253
+	}
+	history = {
+		center_of_trade = 1
+		history_owner = boneshaper_clan
+		religion = reachman_faith
+		culture = reachmen
+		history_trade_goods = fish
+	}
+}
+new province beigi = {
+	position = {
+		1564.000 1987.000 1564.000 1987.000 1564.000 1987.000 1563.000 1979.000 1564.000 1987.000 1564.000 1987.000 1564.000 1987.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 2.815 0.365 0.365 0.365
+	}
+	area = karthald
+	name = "Beigi"
+	terrain = hills
+	color = {
+		174 176 107
+	}
+	history = {
+		religion = reachman_faith
+		culture = reachmen
+		history_trade_goods = fish
+		history_owner = six_ford_clan
+	}
+}
+new province reach_road_turn = {
+	position = {
+		1608.000 1974.000 1608.000 1974.000 1608.000 1974.000 1608.000 1974.000 1608.000 1974.000 1608.000 1974.000 1608.000 1974.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = karthald
+	terrain = hills
+	name = "Reach Road Turn"
+	color = {
+		205 205 152
+	}
+	history = {
+		history_owner = treeshade_clan
+		religion = reachman_faith
+		culture = reachmen
+		history_trade_goods = stone
+	}
+}
+
 new area harmugstahl = {
 	name = "Harmugstahl"
 	region = reach
 }
-new province rocky_coast = {
-	position = {
-		1553.000 2002.000 1553.000 2002.000 1553.000 2002.000 1556.500 1998.500 1553.000 2002.000 1553.000 2002.000 1553.000 2002.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 1.865 0.365 0.365 0.365
-	}
-	area = harmugstahl
-	name = "Rocky Coast"
-	terrain = coastline
-	color = {
-		114 232 243
-	}
-	history = {
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = naval_supplies
-		history_owner = six_ford_clan
-	}
-}
 new province harmugstahl = {
-	position = {
-		1544.000 2009.000 1544.000 2009.000 1544.000 2009.000 1554.500 2007.500 1544.000 2009.000 1544.000 2009.000 1544.000 2009.000
+	position={
+		1549.000 2004.000 1549.000 2007.000 1544.000 2009.000 1554.500 2007.500 1544.000 2009.000 1548.000 2007.000 1544.000 2009.000 
 	}
-	rotation = {
-		0.000 0.000 0.000 -1.222 0.000 0.000 0.000
+	rotation={
+		0.000 0.000 0.000 -1.222 0.000 0.000 0.000 
 	}
-	height = {
-		0.365 0.365 0.365 1.865 0.365 0.365 0.365
+	height={
+		0.365 0.365 0.365 1.865 0.365 0.365 0.365 
 	}
 	area = harmugstahl
 	terrain = hills
@@ -1184,59 +911,31 @@ new province silver_hill = {
 		history_trade_goods = silver
 	}
 }
-new area karthspire = {
-	name = "Karthspire"
-	region = reach
-}
-new province east_karthspire = {
+new province bthar_zel = {
 	position = {
-		1562.000 1935.000 1562.000 1935.000 1562.000 1935.000 1558.000 1928.000 1562.000 1935.000 1562.000 1935.000 1562.000 1935.000
+		1503.000 2010.000 1503.000 2010.000 1503.000 2010.000 1503.000 2010.000 1503.000 2010.000 1503.000 2010.000 1503.000 2010.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.785 0.000 0.000 0.000
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
 	}
 	height = {
-		0.365 0.365 0.365 2.815 0.365 0.365 0.365
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = karthspire
-	name = "East Karthspire"
+	area = harmugstahl
+	name = "Bthar-Zel"
 	terrain = hills
 	color = {
-		254 131 243
-	}
-	history = {
-		history_owner = spiritdancer_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = fish
-	}
-}
-new province west_karthspire = {
-	position = {
-		1551.000 1939.000 1551.000 1939.000 1551.000 1939.000 1554.500 1935.000 1551.000 1939.000 1551.000 1939.000 1551.000 1939.000
-	}
-	rotation = {
-		0.000 0.000 0.000 5.498 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.815 0.365 0.365 0.365
-	}
-	area = karthspire
-	name = "West Karthspire"
-	terrain = hills
-	color = {
-		118 255 236
+		141 176 166
 	}
 	history = {
 		center_of_trade = 1
-		history_owner = twisted_briar_clan
 		religion = reachman_faith
 		culture = reachmen
-		hre = no
-		history_trade_goods = fish
-		is_city = yes
+		history_trade_goods = fur
+		history_owner = stag_heart_clan
 	}
 }
+
 new area old_hroldan = {
 	name = "Old Hroldan"
 	region = reach
@@ -1288,29 +987,6 @@ new province old_hroldan = {
 		history_trade_goods = stone
 	}
 }
-new province igrra = {
-	position = {
-		1588.000 1923.000 1588.000 1923.000 1588.000 1923.000 1588.000 1913.000 1588.000 1923.000 1588.000 1923.000 1588.000 1923.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.785 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.815 0.365 0.365 0.365
-	}
-	area = old_hroldan
-	name = "Igrra"
-	terrain = hills
-	color = {
-		135 220 130
-	}
-	history = {
-		history_owner = river_elk_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = stone
-	}
-}
 new province lower_moldering = {
 	position = {
 		1585.000 1939.000 1585.000 1939.000 1585.000 1939.000 1585.000 1939.000 1585.000 1939.000 1585.000 1939.000 1585.000 1939.000
@@ -1328,12 +1004,39 @@ new province lower_moldering = {
 		249 253 122
 	}
 	history = {
-		history_owner = spiritblood_clan
+		history_owner = timbercrow_clan
 		religion = reachman_faith
 		culture = reachmen
 		history_trade_goods = stone
 	}
 }
+new province karthspire = {
+	position={
+		1554.000 1939.000 1560.000 1938.000 1551.000 1939.000 1554.500 1935.000 1551.000 1939.000 1559.000 1939.000 1551.000 1939.000 
+	}
+	rotation={
+		0.000 0.000 0.000 5.498 0.000 0.000 0.000 
+	}
+	height={
+		0.365 0.365 0.365 2.815 0.365 0.365 0.365 
+	}
+	area = old_hroldan
+	name = "Karthspire"
+	terrain = hills
+	color = {
+		118 255 236
+	}
+	history = {
+		center_of_trade = 1
+		history_owner = twisted_briar_clan
+		religion = reachman_faith
+		culture = reachmen
+		hre = no
+		history_trade_goods = fish
+		is_city = yes
+	}
+}
+
 new area lower_sungard = {
 	name = "Lower Sungard"
 	region = reach
@@ -1350,7 +1053,7 @@ new province algerd = {
 	}
 	area = lower_sungard
 	name = "Algerd"
-	terrain = coastline
+	terrain = hills
 	color = {
 		131 120 152
 	}
@@ -1359,29 +1062,6 @@ new province algerd = {
 		religion = reachman_faith
 		history_trade_goods = iron
 		history_owner = stonetalon_clan
-	}
-}
-new province orieund = {
-	position = {
-		1621.000 1904.000 1621.000 1904.000 1621.000 1904.000 1621.000 1904.000 1621.000 1904.000 1621.000 1904.000 1621.000 1904.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = lower_sungard
-	name = "Orieund"
-	terrain = hills
-	color = {
-		183 200 132
-	}
-	history = {
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = r_metals
-		history_owner = dreadhorn_clan
 	}
 }
 new province horsorg = {
@@ -1407,6 +1087,30 @@ new province horsorg = {
 		history_owner = dreadhorn_clan
 	}
 }
+new province igrra = {
+	position = {
+		1588.000 1923.000 1588.000 1923.000 1588.000 1923.000 1588.000 1913.000 1588.000 1923.000 1588.000 1923.000 1588.000 1923.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.785 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 2.815 0.365 0.365 0.365
+	}
+	area = lower_sungard
+	name = "Igrra"
+	terrain = hills
+	color = {
+		135 220 130
+	}
+	history = {
+		history_owner = river_elk_clan
+		religion = reachman_faith
+		culture = reachmen
+		history_trade_goods = stone
+	}
+}
+
 new area sungard = {
 	name = "Sungard"
 	region = reach
@@ -1458,10 +1162,6 @@ new province reyba = {
 		history_trade_goods = iron
 	}
 }
-new area serpents_bluff = {
-	name = "Serpent's Bluff"
-	region = reach
-}
 new province moonstone_hill = {
 	position = {
 		1611.000 1923.000 1611.000 1923.000 1611.000 1923.000 1611.000 1923.000 1611.000 1923.000 1611.000 1923.000 1611.000 1923.000
@@ -1472,7 +1172,7 @@ new province moonstone_hill = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = serpents_bluff
+	area = sungard
 	name = "Moonstone Hill"
 	terrain = hills
 	color = {
@@ -1485,52 +1185,7 @@ new province moonstone_hill = {
 		history_trade_goods = r_metals
 	}
 }
-new province vigde = {
-	position = {
-		1612.000 1937.000 1612.000 1937.000 1612.000 1937.000 1612.000 1937.000 1612.000 1937.000 1612.000 1937.000 1612.000 1937.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = serpents_bluff
-	name = "Vigde"
-	terrain = hills
-	color = {
-		182 192 234
-	}
-	history = {
-		history_owner = rageclaw_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = fur
-	}
-}
-new province serpents_bluff_redoubt = {
-	position = {
-		1600.000 1935.000 1600.000 1935.000 1600.000 1935.000 1600.000 1935.000 1600.000 1935.000 1600.000 1935.000 1600.000 1935.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = serpents_bluff
-	name = "Serpent's Bluff Redoubt"
-	terrain = hills
-	color = {
-		211 132 200
-	}
-	history = {
-		history_owner = rageclaw_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = wood
-	}
-}
+
 new area moldering = {
 	name = "Moldering"
 	region = reach
@@ -1559,9 +1214,9 @@ new province moldering = {
 		history_trade_goods = fur
 	}
 }
-new province sigli = {
+new province vigde = {
 	position = {
-		1601.000 1960.000 1601.000 1960.000 1601.000 1960.000 1601.000 1960.000 1601.000 1960.000 1601.000 1960.000 1601.000 1960.000
+		1612.000 1937.000 1612.000 1937.000 1612.000 1937.000 1612.000 1937.000 1612.000 1937.000 1612.000 1937.000 1612.000 1937.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -1570,21 +1225,21 @@ new province sigli = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	area = moldering
-	name = "Sigli"
+	name = "Vigde"
 	terrain = hills
 	color = {
-		157 205 249
+		182 192 234
 	}
 	history = {
-		history_owner = deathwing_clan
+		history_owner = rageclaw_clan
 		religion = reachman_faith
 		culture = reachmen
-		history_trade_goods = c_metals
+		history_trade_goods = fur
 	}
 }
-new province bleakwind_bluff = {
+new province serpents_bluff_redoubt = {
 	position = {
-		1588.000 1955.000 1588.000 1955.000 1588.000 1955.000 1588.000 1955.000 1588.000 1955.000 1588.000 1955.000 1588.000 1955.000
+		1600.000 1935.000 1600.000 1935.000 1600.000 1935.000 1600.000 1935.000 1600.000 1935.000 1600.000 1935.000 1600.000 1935.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -1593,18 +1248,19 @@ new province bleakwind_bluff = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	area = moldering
-	terrain = highlands
-	name = "Bleakwind Bluff"
+	name = "Serpent's Bluff Redoubt"
+	terrain = hills
 	color = {
-		217 124 188
+		211 132 200
 	}
 	history = {
-		history_owner = deathwing_clan
+		history_owner = rageclaw_clan
 		religion = reachman_faith
 		culture = reachmen
-		history_trade_goods = c_metals
+		history_trade_goods = wood
 	}
 }
+
 new area highpoint = {
 	name = "Highpoint"
 	region = reach
@@ -1632,29 +1288,6 @@ new province rebels_cairn = {
 		history_trade_goods = alchemical_ingredients
 	}
 }
-new province ysolnhvir = {
-	position = {
-		1582.000 1975.000 1582.000 1975.000 1582.000 1975.000 1582.000 1975.000 1582.000 1975.000 1582.000 1975.000 1582.000 1975.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = highpoint
-	name = "Ysolnhvir"
-	terrain = highlands
-	color = {
-		230 131 201
-	}
-	history = {
-		history_owner = quicktalon_caln
-		culture = reachmen
-		religion = reachman_faith
-		history_trade_goods = stone
-	}
-}
 new province ranarte = {
 	position = {
 		1596.000 1973.000 1596.000 1973.000 1596.000 1973.000 1596.000 1973.000 1596.000 1973.000 1596.000 1973.000 1596.000 1973.000
@@ -1680,13 +1313,9 @@ new province ranarte = {
 		is_city = no
 	}
 }
-new area broken_tower = {
-	name = "Broken Tower"
-	region = reach
-}
-new province reach_road_turn = {
+new province sigli = {
 	position = {
-		1608.000 1974.000 1608.000 1974.000 1608.000 1974.000 1608.000 1974.000 1608.000 1974.000 1608.000 1974.000 1608.000 1974.000
+		1601.000 1960.000 1601.000 1960.000 1601.000 1960.000 1601.000 1960.000 1601.000 1960.000 1601.000 1960.000 1601.000 1960.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -1694,22 +1323,22 @@ new province reach_road_turn = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = broken_tower
+	area = highpoint
+	name = "Sigli"
 	terrain = hills
-	name = "Reach Road Turn"
 	color = {
-		205 205 152
+		157 205 249
 	}
 	history = {
-		history_owner = treeshade_clan
+		history_owner = deathwing_clan
 		religion = reachman_faith
 		culture = reachmen
-		history_trade_goods = stone
+		history_trade_goods = c_metals
 	}
 }
-new province vorigja = {
+new province bleakwind_bluff = {
 	position = {
-		1601.000 1983.000 1601.000 1983.000 1601.000 1983.000 1601.000 1983.000 1601.000 1983.000 1601.000 1983.000 1601.000 1983.000
+		1588.000 1955.000 1588.000 1955.000 1588.000 1955.000 1588.000 1955.000 1588.000 1955.000 1588.000 1955.000 1588.000 1955.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -1717,116 +1346,20 @@ new province vorigja = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = broken_tower
-	name = "Vorigja"
-	terrain = hills
+	area = highpoint
+	terrain = highlands
+	name = "Bleakwind Bluff"
 	color = {
-		210 170 112
+		217 124 188
 	}
 	history = {
-		history_owner = boneshaper_clan
+		history_owner = deathwing_clan
 		religion = reachman_faith
 		culture = reachmen
-		history_trade_goods = stone
+		history_trade_goods = c_metals
 	}
 }
-new province broken_tower_redoubt = {
-	position = {
-		1588.000 1987.000 1588.000 1987.000 1588.000 1987.000 1588.000 1987.000 1588.000 1987.000 1588.000 1987.000 1588.000 1987.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = broken_tower
-	name = "Broken Tower Redoubt"
-	terrain = hills
-	color = {
-		201 244 137
-	}
-	history = {
-		history_owner = boneshaper_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = stone
-	}
-}
-new area karthald = {
-	name = "Karthald"
-	region = reach
-}
-new province karthwatch = {
-	position = {
-		1577.000 1988.000 1577.000 1988.000 1577.000 1988.000 1573.000 1986.000 1577.000 1988.000 1577.000 1988.000 1577.000 1988.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.785 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 1.715 0.365 0.365 0.365
-	}
-	area = karthald
-	name = "Karthwatch"
-	terrain = hills
-	color = {
-		108 157 253
-	}
-	history = {
-		center_of_trade = 1
-		history_owner = boneshaper_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = fish
-	}
-}
-new province eydljot = {
-	position = {
-		1569.000 1999.000 1569.000 1999.000 1569.000 1999.000 1569.000 1992.000 1569.000 1999.000 1569.000 1999.000 1569.000 1999.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.785 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 1.765 0.365 0.365 0.365
-	}
-	area = karthald
-	name = "Eydljot"
-	terrain = hills
-	color = {
-		201 101 225
-	}
-	history = {
-		history_owner = shadefeather_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = fish
-	}
-}
-new province beigi = {
-	position = {
-		1564.000 1987.000 1564.000 1987.000 1564.000 1987.000 1563.000 1979.000 1564.000 1987.000 1564.000 1987.000 1564.000 1987.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.815 0.365 0.365 0.365
-	}
-	area = karthald
-	name = "Beigi"
-	terrain = hills
-	color = {
-		174 176 107
-	}
-	history = {
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = fish
-		history_owner = six_ford_clan
-	}
-}
+
 new area dragon_bridge_overlook = {
 	name = "Dragon Bridge Overlook"
 	region = reach
@@ -1877,128 +1410,10 @@ new province dragon_bridge_overlook = {
 		history_trade_goods = wood
 	}
 }
-new province freyke = {
-	position = {
-		1579.000 2013.000 1579.000 2013.000 1579.000 2013.000 1579.000 2013.000 1579.000 2013.000 1579.000 2013.000 1579.000 2013.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = dragon_bridge_overlook
-	name = "Freyke"
-	terrain = highlands
-	color = {
-		172 118 194
-	}
-	history = {
-		history_owner = shadefeather_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = fur
-	}
-}
-new area silverway = {
-	name = "Silverway"
-	region = reach
-}
-new province adelreene = {
-	position = {
-		1584.000 2032.000 1584.000 2032.000 1584.000 2032.000 1587.000 2029.000 1584.000 2032.000 1584.000 2032.000 1584.000 2032.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -0.785 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = silverway
-	name = "Adelreene"
-	terrain = coastline
-	color = {
-		102 165 186
-	}
-	history = {
-		history_owner = bear_heart_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = fish
-	}
-}
-new province betri = {
-	position = {
-		1571.000 2030.000 1571.000 2030.000 1571.000 2030.000 1575.500 2023.500 1571.000 2030.000 1571.000 2030.000 1571.000 2030.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -0.785 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = silverway
-	name = "Betri"
-	terrain = coastline
-	color = {
-		136 231 184
-	}
-	history = {
-		history_owner = bear_heart_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = wood
-	}
-}
-new province bixisys = {
-	position = {
-		1565.000 2022.000 1565.000 2022.000 1565.000 2022.000 1569.000 2015.000 1565.000 2022.000 1565.000 2022.000 1565.000 2022.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -0.524 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 1.865 0.365 0.365 0.365
-	}
-	area = silverway
-	name = "Bixisys"
-	terrain = coastline
-	color = {
-		134 163 135
-	}
-	history = {
-		history_owner = boldclaw_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = silver
-	}
-}
+
 new area bruca = {
 	name = "Bruca"
 	region = reach
-}
-new province itary = {
-	position = {
-		1537.000 2028.000 1537.000 2028.000 1537.000 2028.000 1537.000 2028.000 1537.000 2028.000 1537.000 2028.000 1537.000 2028.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bruca
-	name = "Itary"
-	terrain = hills
-	color = {
-		196 135 156
-	}
-	history = {
-		history_owner = spirit_tale_clan
-		religion = reachman_faith
-		culture = reachmen
-		history_trade_goods = stone
-	}
 }
 new province brucas_leap_redoubt = {
 	position = {
@@ -2012,7 +1427,7 @@ new province brucas_leap_redoubt = {
 	}
 	area = bruca
 	name = "Bruca's Leap Redoubt"
-	terrain = coastline
+	terrain = hills
 	color = {
 		254 115 254
 	}
@@ -2046,55 +1461,33 @@ new province rock_dragon_coast = {
 		history_trade_goods = wood
 	}
 }
-new province khazgur_coast = {
+new province betri = {
 	position = {
-		1525.000 2020.000 1525.000 2020.000 1525.000 2020.000 1525.000 2020.000 1525.000 2020.000 1525.000 2020.000 1525.000 2020.000
+		1571.000 2030.000 1571.000 2030.000 1571.000 2030.000 1575.500 2023.500 1571.000 2030.000 1571.000 2030.000 1571.000 2030.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 -0.785 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	area = bruca
-	name = "Khazgur Coast"
+	name = "Betri"
 	terrain = hills
 	color = {
-		210 158 107
+		136 231 184
 	}
 	history = {
-		history_owner = blackoath_clan
+		history_owner = bear_heart_clan
 		religion = reachman_faith
 		culture = reachmen
-		history_trade_goods = fish
+		history_trade_goods = wood
 	}
 }
+
 new area mor_khazgur = {
 	name = "Mor Khazgur"
 	region = reach
-}
-new province darkfall_cave = {
-	position = {
-		1527.000 2030.000 1527.000 2030.000 1527.000 2030.000 1527.000 2030.000 1527.000 2030.000 1527.000 2030.000 1527.000 2030.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = mor_khazgur
-	name = "Darkfall Cave"
-	terrain = hills
-	color = {
-		216 184 180
-	}
-	history = {
-		history_owner = mor_khazgur
-		religion = religions:code_of_malacath
-		culture = stronghold_orc
-		history_trade_goods = r_metals
-	}
 }
 new province agnese = {
 	position = {
@@ -2144,27 +1537,68 @@ new province mor_khazgur = {
 		set_province_flag = orc_stronghold
 	}
 }
+new province itary = {
+	position = {
+		1537.000 2028.000 1537.000 2028.000 1537.000 2028.000 1537.000 2028.000 1537.000 2028.000 1537.000 2028.000 1537.000 2028.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = mor_khazgur
+	name = "Itary"
+	terrain = hills
+	color = {
+		196 135 156
+	}
+	history = {
+		history_owner = spirit_tale_clan
+		religion = reachman_faith
+		culture = reachmen
+		history_trade_goods = stone
+	}
+}
+new province khazgur_coast = {
+	position = {
+		1525.000 2020.000 1525.000 2020.000 1525.000 2020.000 1525.000 2020.000 1525.000 2020.000 1525.000 2020.000 1525.000 2020.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = mor_khazgur
+	name = "Khazgur Coast"
+	terrain = hills
+	color = {
+		210 158 107
+	}
+	history = {
+		history_owner = blackoath_clan
+		religion = reachman_faith
+		culture = reachmen
+		history_trade_goods = fish
+	}
+}
+
 new adjacency karth_bridge = {
 	from = beigi
 	to = karthwatch
 	through = karth_lake
 	type = sea
 }
-new adjacency west_karthspire_bridge = {
-	from = west_karthspire
-	to = reachcliff
-	through = hroldan_river
-	type = sea
-}
 new adjacency karthspire_bridge = {
-	from = west_karthspire
-	to = east_karthspire
+	from = karthspire
+	to = reachcliff
 	through = hroldan_river
 	type = sea
 }
 new adjacency old_hroldan_bridge = {
 	from = igrra
-	to = hillia
+	to = reachcliff
 	through = hroldan_river
 	type = sea
 }

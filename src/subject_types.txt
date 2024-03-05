@@ -329,20 +329,70 @@ new subject_type vassal = {
 	subject_opinion_modifier = is_vassal
 }
 
-new subject_type markarth_clan = {
-	name = "Markarth Clan"
-	desc = ""
-	title = "Markarth Clan"
-	plural = "Markarth Clans"
-	overlord = "Markarth Clan Overlord"
-	subject = "Markarth Clan Subject"
-	is_our = "§Y$NAME$§! is our Markarth Clan"
-
-	copy_from = vassal
+new subject_type tributary_clan = {
+	copy_from = default
 	
-	counts_for_borders = yes
+	# Graphics:
+	sprite = GFX_subject_tributary_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtributary
+	diplomacy_subject_sprite = GFX_diplomacy_amtributary
+
+	# Properties:
+    is_voluntary = yes
+	joins_overlords_wars = yes
+	overlord_can_be_subject = no
+	can_have_subjects_of_other_types = no
+	takes_diplo_slot = no
+	overlord_protects_external = yes
+	gets_help_with_rebels = yes
+	allows_taking_land_without_independence = no
+	
+	base_liberty_desire = 0.0
+	liberty_desire_negative_prestige = 1.0
+	liberty_desire_development_ratio = 0.15
+	
+	pays_overlord = 1
+	forcelimit_to_overlord = 0.1
+	naval_forcelimit_to_overlord = 0.1
+	manpower_to_overlord = 0.1
+	sailors_to_overlord = 0.1
+	
+	military_focus = 1
+	
 	relative_power_class = 1
-	place_relative_on_throne = no
+	diplomacy_view_class = 1
+
+	can_be_integrated = yes
+	
+	extend_trading_range = yes
+	can_gain_favors = yes
+
+    # Subject Interactions:
+	# (continuous)
+	embargo_rivals = yes
+	support_loyalists = yes
+	subsidize_armies = yes
+	scutage = yes
+	send_officers = yes
+	divert_trade = yes
+	
+	# (immediate)
+	placate_rulers = yes
+	
+	sacrifice_ruler = yes
+	sacrifice_heir = yes
+	
+	takeondebt = yes
+	bestow_gifts = yes
+	send_additional_troops = yes
+	demand_artifacts = yes
+	demand_additional_tribute = yes
+	
+	contribute_to_capital = yes
+	conscript_general = yes
+
+	# Modifiers:
+	clear_subject_modifier = yes
 }
 
 new subject_type colony = {

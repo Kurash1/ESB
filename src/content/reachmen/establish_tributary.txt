@@ -1,0 +1,238 @@
+new diplomatic_action establish_tributary = {
+	name = "Establish Tributary"
+	title = "Establish Tributary"
+	desc = ""
+	tooltip = ""
+	category = influence
+
+	require_acceptance = yes
+	potential = {
+		FROM = {
+			is_subject = no
+			is_race = reachmen
+		}
+		is_race = reachmen
+	}
+	trigger = {
+		always = yes
+	}
+	on_accept = {
+		create_subject = {
+			who = FROM
+			subject_type = tributary_clan
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		always = yes
+	}
+	
+	ai_acceptance = {
+		add_entry = {
+            name = BASE_VALUE
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = -25
+			}
+        }
+		add_entry = {
+            name = REACH_BLESSING
+			limit = {
+				has_country_modifier = reach_blessing
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 50
+			}
+        }
+		add_entry = {
+            name = DIPLO_OPPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 0.125
+			}
+        }
+		add_entry = {
+			name = AMOUNT_OF_SUBJECTS_TT
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:num_of_subjects
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		add_entry = {
+			name = AI_TRUST_TOWARDS_ROOT
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}			
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+			#1 trust = +4 ai points
+			multiply_variable = {
+				which = ai_value
+				value = 0.4
+			}
+		}
+		add_entry = {
+			name = AI_DIPLOMATIC_REPUTATION_DIFF
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+			export_to_variable = {
+				variable_name = ai_value_temp
+				value = trigger_value:diplomatic_reputation
+				who = ROOT
+			}
+			change_variable = {
+				which = ai_value
+				which = ai_value_temp
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 3
+			}
+		}
+		add_entry = {
+			name = ARMY_SIZE_TT
+			limit = {
+				NOT = {
+					army_size = FROM
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = army_size
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+			export_to_variable = {
+				variable_name = ai_value_temp
+				value = army_size
+				who = ROOT
+			}
+			change_variable = {
+				which = ai_value
+				which = ai_value_temp
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 10
+			}
+		}
+		add_entry = {
+			name = MIL_RULER_TT
+			export_to_variable = {
+				variable_name = ai_value
+				value = MIL
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -1
+			}
+			export_to_variable = {
+				variable_name = ai_value_temp
+				value = MIL
+				who = ROOT
+			}
+			change_variable = {
+				which = ai_value
+				which = ai_value_temp
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 5
+			}
+		}
+		add_entry = {
+			name = DIPLO_BORDER_DISTANCE_TT
+			export_to_variable = {
+				variable_name = ai_value
+				value = border_distance
+				who = FROM
+				with = ROOT
+			}
+			#2 units = -1
+			multiply_variable = {
+				which = ai_value
+				value = -0.5
+			}
+		}
+		
+		add_entry = {
+			name = attitude_neutral_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_neutral } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -20 }
+		}
+		add_entry = {
+			name = attitude_rivalry_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_rivalry } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = attitude_hostile_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_hostile } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = attitude_friendly_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_friendly } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = attitude_threatened_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_threatened } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = attitude_outraged_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_outraged } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = attitude_domineering_DIPLO_ATTITUDE_TT
+			limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_domineering } } }
+			export_to_variable = { variable_name = ai_value value = 1 }
+			multiply_variable = { which = ai_value value = -1000 }
+		}
+	}
+}
