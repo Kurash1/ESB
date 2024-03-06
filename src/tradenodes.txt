@@ -11,7 +11,7 @@ new tradenode solitude = {
 	name = "Solitude"
 	location = solitude
 	areas = {
-		solitude_proper solitude_countryside dragon_bridge rivers_horn twin_bridges drajkmyr_marsh snowhawk snowhawk_forest
+		solitude_proper solitude_countryside dragon_bridge rivers_horn twin_bridges drajkmyr_marsh snowhawk
 	}
 	outgoings = {
 	}
@@ -20,7 +20,7 @@ new tradenode stonehills = {
 	name = "Stonehills"
 	location = stonehills
 	areas = {
-		ustengrav stonehills myrwatch southern_morthal northern_morthal
+		ustengrav stonehills myrwatch morthal bromjunaar
 	}
 	outgoings = {
 		{
@@ -38,7 +38,7 @@ new tradenode hjaal = {
 	name = "Hjaal"
 	location = hjaals_tooth
 	areas = {
-		hamvirs_rest greenspring_hollow rannveigs_fast swindler talking_stone hjaals_teeth hjaal_river_passage
+		hamvirs_rest greenspring_hollow swindler talking_stone hjaals_teeth hjaal_river_passage
 	}
 	outgoings = {
 		{
@@ -92,7 +92,7 @@ new tradenode saarthal = {
 	name = "Saarthal"
 	location = saarthal
 	areas = {
-		alftand saarthal ysgramoors_tomb pilgrims_coast yngvild iron_coast
+		alftand saarthal ysgramoors_tomb pilgrims_coast yngvild anthor sightless_hills north_wayward
 	}
 	outgoings = {
 		{
@@ -110,7 +110,7 @@ new tradenode winterhold = {
 	name = "Winterhold"
 	location = winterhold
 	areas = {
-		stillborn_cave bleak_coast whistling_mine winterhold japhets_folly skytemple the_chill olenveld
+		bleak_coast whistling_mine winterhold japhets_folly skytemple the_chill olenveld iron_coast
 	}
 	outgoings = {
 		{
@@ -128,7 +128,7 @@ new tradenode bleakrock = {
 	name = "Bleackrock"
 	location = bleakrock_isle
 	areas = {
-		holly_frost dunmeth_pass eastfield snow_veil bleakrock_isle
+		holly_frost dunmeth_pass eastfield snow_veil bleakrock_isle stillborn_cave kastav
 	}
 	outgoings = {
 		{
@@ -164,7 +164,7 @@ new tradenode windhelm = {
 	name = "Windhelm"
 	location = windhelm
 	areas = {
-		cronvangr mixwater gallows_rock angas_mill brandy-mug windhelm
+		cronvangr mixwater gallows_rock angas_mill brandy-mug windhelm yorgrim_overlook kynesgrove narzulbur steamcrag mzulft
 	}
 	outgoings = {
 		{
@@ -232,29 +232,11 @@ new tradenode honrich = {
 		}
 	}
 }
-new tradenode kynesgrove = {
-	name = "Kynesgrove"
-	location = kynesgrove
-	areas = {
-		kynesgrove narzulbur mzulft steamcrag akawatch bonestrew
-	}
-	outgoings = {
-		{
-			node = windhelm
-			path = {
-				giants_exit coast_of_windhelm windhelm
-			}
-			control = {
-				1939.000000 1954.000000 1940.000000 1967.000000 1941.000000 1973.000000
-			}
-		}
-	}
-}
 new tradenode ysgramoors_teeth = {
 	name = "Ysgramoors Teeth"
 	location = shors_stone
 	areas = {
-		greenwall ruunvald shors_stone autumnshade clearspring snapleg mistwatch northwind ansilvund
+		greenwall ruunvald shors_stone autumnshade clearspring snapleg mistwatch northwind ansilvund kynesgrove narzulbur akawatch
 	}
 	outgoings = {
 		{
@@ -276,12 +258,12 @@ new tradenode ysgramoors_teeth = {
 			}
 		}
 		{
-			node = kynesgrove
+			node = windhelm
 			path = {
-				ysgramoors_teeth lower_shor_way dwarf_road margyf cragwallow_hills kynesgrove
+				ysgramoors_teeth lower_shor_way dwarf_road margyf cragwallow_hills kynesgrove giants_exit coast_of_windhelm windhelm
 			}
 			control = {
-				1996.000000 1866.000000 1990.000000 1879.000000 1987.000000 1892.000000 1978.000000 1903.000000 1969.000000 1914.000000 1958.000000 1922.000000 1954.000000 1936.000000
+				1996.000000 1866.000000 1990.000000 1879.000000 1987.000000 1892.000000 1978.000000 1903.000000 1969.000000 1914.000000 1958.000000 1922.000000 1954.000000 1936.000000 1939.000000 1954.000000 1940.000000 1967.000000 1941.000000 1973.000000
 			}
 		}
 		{
@@ -299,34 +281,16 @@ new tradenode white_river = {
 	name = "White River"
 	location = whiterun
 	areas = {
-		honningbrew whiterun white_watch long_road shearpoint white_river_watch valtheim
+		honningbrew whiterun white_watch white_river_watch valtheim riverwood anise bleak_falls
 	}
 	outgoings = {
 		{
 			node = amol
 			path = {
-				battle_born white_river grund_river amol
+				battle_born white_river grund_river amol halted_stream
 			}
 			control = {
 				1797.000000 1926.000000 1808.000000 1931.000000 1816.000000 1935.000000 1826.000000 1935.000000 1840.000000 1932.000000 1850.000000 1932.000000 1860.000000 1930.000000 1869.000000 1932.000000 1872.000000 1930.000000 1869.000000 1922.000000 1874.000000 1916.000000 1881.000000 1908.000000
-			}
-		}
-	}
-}
-new tradenode illinalta = {
-	name = "Lake Illinalta"
-	location = lake_illinalta
-	areas = {
-		half_moon lakeview helgen_step riverwood anise bleak_falls
-	}
-	outgoings = {
-		{
-			node = white_river
-			path = {
-				river_ember white_river_watch honningbrew chillfurrow whiterun
-			}
-			control = {
-				1721.000000 1858.000000 1745.000000 1860.000000 1754.000000 1869.000000 1764.000000 1875.000000 1771.000000 1881.000000 1782.000000 1886.000000 1787.000000 1894.000000 1788.000000 1901.000000 1794.000000 1909.000000 1794.000000 1917.000000
 			}
 		}
 	}
@@ -335,16 +299,16 @@ new tradenode kreath_forest = {
 	name = "Kreath Forest"
 	location = falkreath
 	areas = {
-		falkreath halldir cracked_tusk bilegulch shriekwind
+		falkreath halldir cracked_tusk bilegulch shriekwind half_moon lakeview
 	}
 	outgoings = {
 		{
-			node = illinalta
+			node = white_river
 			path = {
-				imp_3 north_shriekwind lake_illinalta
+				imp_3 north_shriekwind lake_illinalta river_ember white_river_watch honningbrew chillfurrow whiterun
 			}
 			control = {
-				1683.000000 1832.000000 1699.000000 1845.000000
+				1683.000000 1832.000000 1699.000000 1845.000000 1721.000000 1858.000000 1745.000000 1860.000000 1754.000000 1869.000000 1764.000000 1875.000000 1771.000000 1881.000000 1782.000000 1886.000000 1787.000000 1894.000000 1788.000000 1901.000000 1794.000000 1909.000000 1794.000000 1917.000000
 			}
 		}
 	}
@@ -371,7 +335,7 @@ new tradenode jerall = {
 	name = "Jerall"
 	location = orphan_rock
 	areas = {
-		arcwind autumnwatch east_haemar orphan_rock neugrad helgen bloodlet ancients_ascent
+		arcwind autumnwatch east_haemar orphan_rock neugrad helgen bloodlet ancients_ascent helgen_step
 	}
 	outgoings = {
 		{
@@ -394,29 +358,11 @@ new tradenode jerall = {
 		}
 	}
 }
-new tradenode lake_yorgrim = {
-	name = "Lake Yorgrim"
-	location = nightgate
-	areas = {
-		kastav yorgrim_overlook irkngthand nightgate silverdrift
-	}
-	outgoings = {
-		{
-			node = windhelm
-			path = {
-				lake_yorgrim coast_of_windhelm windhelm
-			}
-			control = {
-				1851.000000 1987.000000 1866.000000 1984.000000 1877.000000 1983.000000 1886.000000 1977.000000 1894.000000 1972.000000 1907.000000 1973.000000 1918.000000 1974.000000 1926.000000 1978.000000
-			}
-		}
-	}
-}
 new tradenode greymoor = {
 	name = "Greymoor"
 	location = greymoor
 	areas = {
-		bleakwind greymoor granitehill sleeping_tree gjukar rorikstead
+		bleakwind greymoor granitehill sleeping_tree gjukar rorikstead halted_stream silent_moons
 	}
 	outgoings = {
 		{
@@ -438,21 +384,18 @@ new tradenode greymoor = {
 			}
 		}
 		{
-			node = illinalta
+			node = kreath_forest
 			path = {
-				north_brittleshin brittleshin lake_illinalta
-			}
-			control = {
-				1703.000000 1896.000000 1690.000000 1891.000000 1674.000000 1888.000000 1673.000000 1874.000000 1671.000000 1861.000000 1677.000000 1857.000000 1684.000000 1862.000000 1696.000000 1865.000000
+				lydvild north_brittleshin bloated_mans_grotto granitehill illinaltas_deep half_moon green_coast roadside falkreath
 			}
 		}
 	}
 }
-new tradenode giants_gap = {
-	name = "Giant's Gap"
+new tradenode yorgrim = {
+	name = "Yorgrim"
 	location = dunstad
 	areas = {
-		old_yorgrim dunstad fellhammer nightcaller driftshade
+		old_yorgrim dunstad fellhammer nightcaller driftshade lord_hill volunruud loreius nightgate silverdrift long_road shearpoint irkngthand
 	}
 	outgoings = {
 		{
@@ -465,12 +408,12 @@ new tradenode giants_gap = {
 			}
 		}
 		{
-			node = lake_yorgrim
+			node = windhelm
 			path = {
-				imp_19 wayward_pass winterhold_mountains nightgate
+				dunstad emfrljot giants_gap freaold silverdrift nightgate lake_yorgrim coast_of_windhelm windhelm
 			}
 			control = {
-				1794.000000 2006.000000 1803.000000 1998.000000 1814.000000 1994.000000 1832.000000 1995.000000
+				1794.000000 2006.000000 1803.000000 1998.000000 1814.000000 1994.000000 1832.000000 1995.000000 1851.000000 1987.000000 1866.000000 1984.000000 1877.000000 1983.000000 1886.000000 1977.000000 1894.000000 1972.000000 1907.000000 1973.000000 1918.000000 1974.000000 1926.000000 1978.000000
 			}
 		}
 		{
@@ -480,51 +423,6 @@ new tradenode giants_gap = {
 			}
 			control = {
 				1789.000000 2002.000000 1795.000000 1993.000000 1799.000000 1984.000000 1798.000000 1966.000000 1790.000000 1948.000000
-			}
-		}
-	}
-}
-new tradenode anthor = {
-	name = "Anthor"
-	location = anthor_peak
-	areas = {
-		anthor sightless_hills north_wayward
-	}
-	outgoings = {
-		{
-			node = lake_yorgrim
-			path = {
-				imp_9 tildar imp_8 ironbind_barrow nightgate
-			}
-			control = {
-				1894.000000 2026.000000 1887.000000 2031.000000 1872.000000 2027.000000 1860.000000 2027.000000 1850.000000 2021.000000 1851.000000 2005.000000
-			}
-		}
-		{
-			node = winterhold
-			path = {
-				imp_10 greiide winterhold
-			}
-			control = {
-				1910.000000 2025.000000 1914.000000 2018.000000 1927.000000 2024.000000 1934.000000 2030.000000 1926.000000 2039.000000 1915.000000 2050.000000
-			}
-		}
-		{
-			node = saarthal
-			path = {
-				nimeclo joldli saarthal
-			}
-			control = {
-				1880.000000 2039.000000 1870.000000 2052.000000
-			}
-		}
-		{
-			node = giants_gap
-			path = {
-				nimeclo imp_13 frostflow driftshade imp_18 hoddard dunstad
-			}
-			control = {
-				1895.000000 2028.000000 1888.000000 2035.000000 1877.000000 2034.000000 1864.000000 2031.000000 1849.000000 2026.000000 1843.000000 2041.000000 1837.000000 2048.000000 1826.000000 2050.000000 1822.000000 2041.000000 1820.000000 2029.000000 1806.000000 2022.000000 1795.000000 2022.000000
 			}
 		}
 	}
@@ -615,60 +513,6 @@ new tradenode the_moldering = {
 			}
 			control = {
 				1613.000000 1935.000000 1628.000000 1924.000000 1641.000000 1911.000000 1665.000000 1906.000000 1679.000000 1896.000000 1694.000000 1897.000000 1704.000000 1903.000000
-			}
-		}
-	}
-}
-new tradenode skyborn = {
-	name = "Skyborn"
-	location = volunruud
-	areas = {
-		bromjunaar silent_moons halted_stream volunruud loreius lord_hill
-	}
-	outgoings = {
-		{
-			node = giants_gap
-			path = {
-				stonehill_bluff isellarue emfrljot dunstad
-			}
-			control = {
-				1760.000000 1995.000000 1748.000000 2004.000000 1748.000000 2014.000000 1762.000000 2021.000000 1776.000000 2019.000000
-			}
-		}
-		{
-			node = hjaal
-			path = {
-				syllartha imp_23 bromjunaar_approach snowy_pines imp_25 rannveigs_fast skyborn_mountains hjaals_tooth
-			}
-			control = {
-				1753.000000 1966.000000 1735.000000 1954.000000 1716.000000 1948.000000 1694.000000 1942.000000 1683.000000 1942.000000 1678.000000 1952.000000 1660.000000 1958.000000 1654.000000 1970.000000 1639.000000 1975.000000
-			}
-		}
-		{
-			node = stonehills
-			path = {
-				syllartha imp_23 stonehills
-			}
-			control = {
-				1748.000000 1971.000000 1740.000000 1963.000000 1733.000000 1967.000000 1730.000000 1974.000000 1722.000000 1982.000000 1712.000000 1995.000000 1721.000000 2000.000000 1727.000000 2009.000000 1732.000000 2014.000000
-			}
-		}
-		{
-			node = white_river
-			path = {
-				elydark halted_stream editsine whiterun
-			}
-			control = {
-				1770.000000 1971.000000 1769.000000 1956.000000 1765.000000 1941.000000
-			}
-		}
-		{
-			node = greymoor
-			path = {
-				cranelis matior redorans_retreat greymoor lydvild
-			}
-			control = {
-				1760.000000 1968.000000 1751.000000 1953.000000 1735.000000 1936.000000
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 mission_trees:solitude += {
 	dominate_trade = {
-		name = "Dominate Trade"
+		name = "Dominate Solitude's Trade"
 		x = 0
 		y = 3
 		trigger = {
@@ -12,16 +12,209 @@ mission_trees:solitude += {
 			}
 		}
 		effect = {
-			trade_nodes:solitude:location = {
-				every_trade_node_member_country [NOT = { tag = ROOT }] {
-					reverse_add_casus_belli = {
-						target = ROOT
-						type = cb_vassalize_mission
-						months = 600
+			areas:rivers_horn [is_city = yes] {
+				add_permanent_claim = ROOT
+			}
+			add_casus_belli = {
+				target = countries:dawn_star
+				type = cb_vassalize_mission
+				months = 1200
+			}
+			add_casus_belli = {
+				target = countries:snow_hawk
+				type = cb_vassalize_mission
+				months = 1200
+			}
+		}
+	}
+	deal_with_dawnstar = {
+		name = "Deal with Dawnstar"
+		x = 0
+		y = 4
+		required = dominate_trade
+		trigger = {
+			OR = {
+				alliance_with = dawn_star
+				overlord_of = dawn_star
+				areas:dawnstar = { type = all owned_by = ROOT }
+			}
+		}
+		effect = {
+			conditional_effect = {
+				tooltip = "is the overlord of §Y[{countries:dawn_star}.GetName]§!"
+				trigger = {
+					overlord_of = dawn_star
+				}
+				effect = {
+					countries:dawn_star = {
+						quick_country_modifier = {
+							name = "Loyal Subject"
+							years = 50
+							modifier = {
+								liberty_desire = -15
+							}
+						}
+					}
+					trade_nodes:dawnstar = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = 9125
+							power = 15
+							key = STRONG_MERCHANTS
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "owns §YDawnstar§! area"
+				trigger = {
+					areas:dawnstar = { type = all owned_by = ROOT }
+				}
+				effect = {
+					trade_nodes:dawnstar = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = 9125
+							power = 30
+							key = STRONG_MERCHANTS
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "allied with §Y[{countries:dawn_star}.GetName]§!"
+				trigger = {
+					alliance_with = dawn_star
+				}
+				effect = {
+					trade_nodes:dawnstar = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = 9125
+							power = 15
+							key = STRONG_MERCHANTS
+						}
+					}
+					add_historical_friend = countries:dawn_star
+					countries:dawn_star = {
+						add_historical_friend = ROOT
 					}
 				}
 			}
 		}
 	}
-	
+	break_the_hawk = {
+		name = "Break the Hawk"
+		x = 1
+		y = 4
+		required = dominate_trade
+		trigger = {
+			OR = {
+				overlord_of = snow_hawk
+				NOT = { exists = snow_hawk }
+			}
+		}
+		effect = {
+			quick_country_modifier = {
+				name = "Broke the Hawk"
+				years = 50
+				modifier = {
+					shock_damage = 0.1
+					global_trade_goods_size_modifier = 0.1
+				}
+			}
+		
+			conditional_effect = {
+				tooltip = "is the overlord of §Y[{countries:snow_hawk}.GetName]§!"
+				trigger = {
+					overlord_of = snow_hawk
+				}
+				effect = {
+					regions:hjaalmarch [is_city = yes] {
+						add_permanent_claim = snow_hawk
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "§Y[{countries:snow_hawk}.GetName]§! does NOT exist"
+				trigger = {
+					NOT = { exists = snow_hawk }
+				}
+				effect = {
+					regions:hjaalmarch [is_city = yes] {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	stonehills = {
+		name = "Dominate the Stonehills"
+		x = 1
+		y = 5
+		required = break_the_hawk
+		trigger = {
+			areas:morthal; myrwatch; stonehills; ustengrav = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			trade_nodes:stonehills = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 30
+					key = STRONG_MERCHANTS
+				}
+			}
+		}
+	}
+	solitude_trade_pact = {
+		name = "Solitude Trade-Pact"
+		x = 0
+		y = 6
+		required = {
+			deal_with_dawnstar
+			stonehills
+		}
+		trigger = {
+			trade_nodes:solitude; northwatch; stonehills; dawnstar; hjaal = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+		effect = {
+			new_custom_tooltip = "Unlocks the use of the §YSolitude-Pact Expansion§! casus belli"
+		}
+	}
+	owner_of_the_hjaal_river = {
+		name = "Owner of the Hjaal River"
+		x = 2
+		y = 5
+		required = break_the_hawk
+		trigger = {
+		}
+		effect = {
+		}
+	}
+	roriks_farm = {
+		name = "Expand Rorik's Farms"
+		x = 2
+		y = 6
+		required = owner_of_the_hjaal_river
+		trigger = {
+		}
+		effect = {
+		}
+	}
+	gjukar_thane = {
+		name = "Gjukar-Thane Legacy"
+		x = 1
+		y = 6
+		required = owner_of_the_hjaal_river
+		trigger = {
+		}
+		effect = {
+		}
+	}
 }

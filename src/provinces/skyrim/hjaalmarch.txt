@@ -10,20 +10,12 @@ new area bromjunaar = {
 	name = "Bromjunaar"
 	region = hjaalmarch
 }
-new area rannveigs_fast = {
-	name = "Rannveig's Fast"
-	region = hjaalmarch
-}
 new area myrwatch = {
 	name = "Myrwatch"
 	region = hjaalmarch
 }
-new area southern_morthal = {
-	name = "Southern Morthal"
-	region = hjaalmarch
-}
-new area northern_morthal = {
-	name = "Northern Morthal"
+new area morthal = {
+	name = "Morthal"
 	region = hjaalmarch
 }
 new area stonehills = {
@@ -36,10 +28,6 @@ new area drajkmyr_marsh = {
 }
 new area snowhawk = {
 	name = "Snowhawk"
-	region = hjaalmarch
-}
-new area snowhawk_forest = {
-	name = "Snowhawk Forest"
 	region = hjaalmarch
 }
 new area twin_bridges = {
@@ -112,7 +100,7 @@ new province morthal = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = northern_morthal
+	area = morthal
 	name = "Morthal"
 	color = {
 		220 248 102
@@ -139,7 +127,7 @@ new province morthal_mines = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = southern_morthal
+	area = morthal
 	name = "Morthal Mines"
 	color = {
 		197 212 137
@@ -225,7 +213,7 @@ new province rannveigs_fast = {
 		0.365 0.365 0.365 2.765 0.365 0.365 0.365
 	}
 	terrain = hills
-	area = rannveigs_fast
+	area = greenspring_hollow
 	name = "Rannveig's Fast"
 	color = {
 		137 237 200
@@ -513,7 +501,7 @@ new province tranquile_woods = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = snowhawk_forest
+	area = twin_bridges
 	name = "Tranquile Woods"
 	color = {
 		229 122 192
@@ -539,7 +527,7 @@ new province snowhawk_forest = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = snowhawk_forest
+	area = snowhawk
 	name = "Snowhawk Forest"
 	color = {
 		247 156 225
@@ -565,7 +553,7 @@ new province traitorous_swamps = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = snowhawk_forest
+	area = snowhawk
 	name = "Traitorous Swamps"
 	color = {
 		251 219 179
@@ -648,7 +636,7 @@ new province dead_mens_respite = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = hills
-	area = snowhawk
+	area = hjaal_river_passage
 	name = "Dead Men's Respite"
 	color = {
 		106 129 184
@@ -701,7 +689,7 @@ new province minedvild = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = southern_morthal
+	area = morthal
 	name = "Minedvild"
 	color = {
 		192 143 123
@@ -727,7 +715,7 @@ new province drajkmyr_toll = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = snowhawk
+	area = drajkmyr_marsh
 	name = "Drajkmyr Toll"
 	color = {
 		251 214 146
@@ -1154,32 +1142,6 @@ new province abundant_mines = {
 		history_owner = rannveig
 	}
 }
-new province cold_rock_pass = {
-	position = {
-		1672.000 1982.000 1672.000 1982.000 1672.000 1982.000 1672.000 1982.000 1672.000 1982.000 1672.000 1982.000 1672.000 1982.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	terrain = mountain
-	area = rannveigs_fast
-	name = "Cold Rock Pass"
-	color = {
-		210 242 158
-	}
-	history = {
-		religion = the_old_ways
-		culture = hjaalmarcher
-		hre = yes
-		history_trade_goods = wood
-		capital = ""
-		is_city = yes
-		history_owner = rannveig
-	}
-}
 new province myrwatch = {
 	position = {
 		1701.000 2009.000 1701.000 2009.000 1701.000 2009.000 1703.000 2016.000 1701.000 2009.000 1701.000 2009.000 1701.000 2009.000
@@ -1295,7 +1257,7 @@ new province rotten_trees = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = northern_morthal
+	area = drajkmyr_marsh
 	name = "Rotten Trees"
 	color = {
 		249 189 239
@@ -1320,7 +1282,7 @@ new province morthal_colony = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = northern_morthal
+	area = drajkmyr_marsh
 	name = "Morthal Colony"
 	color = {
 		219 196 224
@@ -1368,5 +1330,17 @@ new adjacency dragon_bridge = {
 	from = dragon_bridge
 	to = rivers_road
 	through = coast_of_solitude
+	type = sea
+}
+new adjacency drajkmyr_cold_strait = {
+	from = central_drajkmyr
+	to = isle_of_sorrow
+	through = drajkmyr_marsh
+	type = sea
+}
+new adjacency drajkmyr_marsh_strait = {
+	from = morthal_colony
+	to = isle_of_sorrow
+	through = drajkmyr_marsh
 	type = sea
 }

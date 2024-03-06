@@ -44,7 +44,7 @@ new province bonestrew_mountain = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "Bonestrew Mountain"
+	name = ""
 	color = {
 		34 8 28
 	}
@@ -605,52 +605,6 @@ new province broken_limb = {
 		culture = eastmarcher
 	}
 }
-new province cherim_pond = {
-	position = {
-		1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1899.000 1901.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.873 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.750 0.365 0.365 0.365
-	}
-	name = "Cherim Pond"
-	color = {
-		215 239 117
-	}
-	terrain = hot_springs
-	area = broken_limb
-	history = {
-		religion = nordic_pantheon
-		culture = eastmarcher
-	}
-}
-new area bonestrew = {
-	name = "Bonestrew"
-	region = eastmarch
-}
-new province witchmist = {
-	position = {
-		1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	name = "Witchmist"
-	color = {
-		118 126 166
-	}
-	terrain = hot_springs
-	area = bonestrew
-	history = {
-		religion = nordic_pantheon
-		culture = eastmarcher
-	}
-}
 new province bonestrew = {
 	position = {
 		1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000 1935.000 1912.000
@@ -666,7 +620,7 @@ new province bonestrew = {
 		185 104 132
 	}
 	terrain = hot_springs
-	area = bonestrew
+	area = broken_limb
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
@@ -687,7 +641,7 @@ new province hjoie = {
 		129 157 244
 	}
 	terrain = hot_springs
-	area = bonestrew
+	area = broken_limb
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
@@ -836,6 +790,27 @@ new province margyf = {
 new area cronvangr = {
 	name = "Cronvangr"
 	region = eastmarch
+}
+new province witchmist = {
+	position = {
+		1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = "Witchmist"
+	color = {
+		118 126 166
+	}
+	terrain = hot_springs
+	area = cronvangr
+	history = {
+		religion = nordic_pantheon
+		culture = eastmarcher
+	}
 }
 new province cronvangr = {
 	position = {
@@ -1146,6 +1121,27 @@ new area darkwater_crossing = {
 	name = "Darkwater Crossing"
 	region = eastmarch
 }
+new province cherim_pond = {
+	position = {
+		1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1899.000 1901.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.873 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.750 0.365 0.365 0.365
+	}
+	name = "Cherim Pond"
+	color = {
+		215 239 117
+	}
+	terrain = hot_springs
+	area = darkwater_crossing
+	history = {
+		religion = nordic_pantheon
+		culture = eastmarcher
+	}
+}
 new province darkwater_crossing = {
 	position = {
 		1911.000 1897.000 1911.000 1897.000 1911.000 1897.000 1917.000 1888.000 1911.000 1897.000 1911.000 1897.000 1911.000 1897.000
@@ -1224,7 +1220,7 @@ new province eldergleam = {
 	color = {
 		198 237 124
 	}
-	area = darkwater_crossing
+	area = broken_limb
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
