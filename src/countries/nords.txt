@@ -11,6 +11,29 @@ new inheritable nordic_country = {
 	}
 	starting_reform = tier_1_nord_clan
 }
+new country sea_wing = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = SWI
+	name = "Sea-Wing"
+	adj = "Sea-Wing"
+	color = {
+		130 211 255
+	}
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Hroth"
+				dynasty = "Sea-Wing"
+				adm = 0
+				dip = 0
+				mil = 0
+				age = 18
+			}
+		}
+	}
+	capital = big_sister
+}
 new country lone_band = {
 	inherit = nordic_country
 	government = republic

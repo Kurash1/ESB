@@ -93,10 +93,7 @@ define_achievement = {
 			OR = {
 				owned_by = ROOT
 				NOT = {
-					OR = {
-						trade_goods = alchemical_ingredients
-						trade_goods = r_alchemical_ingredients
-					}
+					trade_goods = alchemical_ingredients
 				}
 			}
 		}

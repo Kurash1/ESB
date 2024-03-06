@@ -22,54 +22,6 @@ new tradegood wood = {
 		}
 	}
 }
-new tradegood iron = {
-	name = "Iron"
-	desc = "The most common metal found across all of Nirn, it is utilized for everything from plows to swords. Not only cheaper than other metals, it is one of the easier metals to be worked with, allowing even inexperienced smiths to produce armaments. Every warrior has to start somewhere don’t they?"
-	color = {
-		52 52 52
-	}
-	modifier = {
-		global_regiment_cost = -0.1
-	}
-	province = {
-		regiment_recruit_speed = -0.33
-	}
-	base_price = 3
-	is_gold = no
-	chance = {
-		factor = 7
-		modifier = {
-			factor = 0
-			NOT = {
-				OR = {
-					has_terrain = hot_springs
-					has_terrain = mountain
-					has_terrain = hills
-					has_terrain = highlands
-				}
-			}
-		}
-	}
-}
-new tradegood steel = {
-	name = "Steel"
-	desc = "An alloy composed of iron and corundum, Steel is far stronger and durable than its ingredients. While far harder to break than classic iron instruments, steel also requires a more advanced process to produce in and a more experienced smith. It is steel that has long served as base metal of many empires across Nirn."
-	color = {
-		130 130 130
-	}
-	modifier = {
-		shock_damage_received = -0.025
-		fire_damage_received = -0.025
-	}
-	province = {
-		local_regiment_cost = -0.1
-	}
-	base_price = 4
-	is_gold = no
-	chance = {
-		factor = 0
-	}
-}
 new tradegood fish = {
 	name = "Fish"
 	desc = "Fish have long served as one of the primary forms of sustenance across Nirn. Due to its wide availability and relatively inexpensive nature it has often served to be the feed of the lower rungs of culture across the world."
@@ -94,7 +46,7 @@ new tradegood fish = {
 		}
 	}
 }
-new tradegood wheat = {
+new tradegood grain = {
 	name = "Grain"
 	desc = "Grain represents the vegetable foodstuffs that have long served as a primary source of nourishment across Nirn. This would include the edible fungi of the deeper parts of Nirn more commonly consumed by cultures like the Dwemer. Without it, civilization is likely to collapse under threats of revolt and unrest."
 	color = {
@@ -112,9 +64,9 @@ new tradegood wheat = {
 		factor = 0
 	}
 }
-new tradegood ale = {
-	name = "Ale"
-	desc = "Alcohol is common all across Nirn and even in some planes of Oblivion. Whether based upon hops, barley, saltrice, or some other exotic ingredient, Ale represents the various beers across Nirn. Ale is often more affordable and less potent than harder alcohols. Well known examples of various ales are Golden Pear Ale, Bile Beer, Argonian Ale, even Mazte."
+new tradegood alcohol = {
+	name = "Alcohol"
+	desc = "Alcohol is common all across Nirn and even in some planes of Oblivion. Whether based upon hops, barley, saltrice, or some other exotic ingredient."
 	color = {
 		227 238 75
 	}
@@ -125,24 +77,6 @@ new tradegood ale = {
 		local_unrest = -2
 	}
 	base_price = 2.5
-	is_gold = no
-	chance = {
-		factor = 0
-	}
-}
-new tradegood wine = {
-	name = "Wine"
-	desc = "Vinum vita est, wine has long been an important good across Nirn and especially Tamriel. Wine includes traditional grape based vintages but also mead which undergrows a similar fermentation process yet is based on honey. Whether it be Alto, Spiced, Shein, or even the exclusive Shadowbanish vintage, wine has been found across nearly every table in Tamriel and likely beyond."
-	color = {
-		70 16 124
-	}
-	modifier = {
-		stability_cost_modifier = -0.1
-	}
-	province = {
-		local_unrest = -1
-	}
-	base_price = 3
 	is_gold = no
 	chance = {
 		factor = 0
@@ -182,33 +116,6 @@ new tradegood alchemical_ingredients = {
 	is_gold = no
 	chance = {
 		factor = 10
-		modifier = {
-			factor = 0
-			NOT = {
-				OR = {
-					has_terrain = marsh
-					has_terrain = hot_springs
-				}
-			}
-		}
-	}
-}
-new tradegood r_alchemical_ingredients = {
-	name = "Magical Herbs"
-	desc = "Representing the more exotic alchemical ingredients found throughout the whole of Nirn, Magical Herbs includes items such as nirnroot, giant toes, void salts, and many more. Notably throughout the Eras, various alchemical mixtures have had a variety of effects, such as the Direnni managing to formulate a potion capable of poisoning a consumer's blood and killing any vampires who attempt to feast upon them. Legend even attests to potent alchemists capable of brewing elixirs of immortality. "
-	color = {
-		14 137 27
-	}
-	modifier = {
-		diplomatic_annexation_cost = -0.2
-	}
-	province = {
-		local_hostile_attrition = 5
-	}
-	base_price = 6
-	is_gold = no
-	chance = {
-		factor = 5
 		modifier = {
 			factor = 0
 			NOT = {
@@ -368,7 +275,7 @@ new tradegood ebony = {
 }
 new tradegood c_metals = {
 	name = "Mundane Metals"
-	desc = "Mundane Metals represents the common forms of metal that can be extracted across Nirn. The most common being iron but closely followed by corundum, lead, tin, and copper. It is through refining processes that iron and corundum could be combined into steel, a stronger and more durable metal but still mundane."
+	desc = "Mundane Metals represents the common forms of metal that can be extracted across Nirn. The most common being iron but closely followed by corundum, lead, tin, and copper. It is through refining processes that c_metals and corundum could be combined into steel, a stronger and more durable metal but still mundane."
 	color = {
 		204 153 51
 	}
@@ -422,24 +329,6 @@ new tradegood r_metals = {
 		}
 	}
 }
-new tradegood jewelry = {
-	name = "Jewelry"
-	desc = "Whether composed of common or rarer metals encrusted with gems, jewelry has a long history in Nirn. Often a means of distinguishing class stratas, it has also served more practical applications throughout history. Enchanters have been known to favour jewelry for their crafts that it isn’t uncommon to find a simple silver band capable of creating light where there isn’t any. Several powerful artifacts across Nirn are simple pieces of jewelry, such as the Ring of Namira, Necromancers Amulet, and Vampiric Ring."
-	color = {
-		245 250 82
-	}
-	modifier = {
-		prestige_decay = -0.02
-	}
-	province = {
-		local_prosperity_growth = 0.05
-	}
-	base_price = 7.5
-	is_gold = no
-	chance = {
-		factor = 0
-	}
-}
 new tradegood fur = {
 	name = "Fur"
 	desc = "Across Nirn various animals have long been hunted for their furs especially in the colder northern reaches like Atmora, Skyrim, Highrock, Roscrea, and Solstheim. Whether for survival or a fashion statement, fur has long been utilized within the manufacturing of clothing across Nirn. It would go on to form the basis for Colovian Highland fashion in later Eras."
@@ -471,24 +360,6 @@ new tradegood livestock = {
 		local_tax_modifier = 0.2
 	}
 	base_price = 2
-	is_gold = no
-	chance = {
-		factor = 0
-	}
-}
-new tradegood skooma = {
-	name = "Skooma"
-	desc = "Perhaps the most infamous and addictive narcotic in Tamriel, Skooma is a hallucination-inducing substance refined from moon sugar. This oft illegal substance is primarily consumed in one of two ways, through a water pipe by smoking or simply ingested in a liquid form. The result is a hallucinogenic state alternating with periods of euphoria and lethargy. Unfortunately sustained use of the drug seemingly results in permanent confusion, mental decline, and dental rot in its frequent consumers."
-	color = {
-		209 50 50
-	}
-	modifier = {
-		years_of_nationalism = -5
-	}
-	province = {
-		local_culture_conversion_cost = -0.25
-	}
-	base_price = 6
 	is_gold = no
 	chance = {
 		factor = 0
@@ -566,24 +437,6 @@ new tradegood fruits = {
 		factor = 0
 	}
 }
-new tradegood liquor = {
-	name = "Liquor"
-	desc = "Liquor represents the incredibly potent and oft expensive spirits found throughout Nirn. Whether it be Flin, Sujamma, Moon-Sugar Rum, or any other of a long list of drinks, these beverages are usually harder to manufacture than traditional ales. They tend to have a wide range of exotic ingredients, in addition to a vast array of effects. It isn’t unheard of for workers to be paid for their labours not with coins but bottles of liquor."
-	color = {
-		184 188 73
-	}
-	modifier = {
-		land_forcelimit_modifier = 0.1
-	}
-	province = {
-		local_manpower_modifier = 0.25
-	}
-	base_price = 2.5
-	is_gold = no
-	chance = {
-		factor = 0
-	}
-}
 new tradegood naval_supplies = {
 	name = "Naval Supplies"
 	desc = "Naval supplies represent everything needed for shipbuilding. This can include wood reserved for Nordic longships to Breton linen for sails or even tar from Blackmarsh. Whether it be the Altmeri Navy, Maormer Pirates, or Atmoran explorers, no naval force has succeeded without access to naval supplies."
@@ -645,38 +498,19 @@ new tradegood glass = {
 		factor = 0
 	}
 }
-new tradegood drugs = {
-	name = "Drugs"
-	desc = "Across Nirn (and Oblivion) are a variety of substances that induce various effects upon the consumer, oft with addictive qualities. The most well-known is Moon-sugar, however there exists many others such as Daril, Ayleid Nose-hash, Felldew, and Tobacco. Often traded by such organizations as the Thieves Guild, Cammona Tong, or East Empire Company in later eras, drugs of all sorts have found their way into the shops of alchemists and addicts alike. "
+new tradegood wool = {
+	name = "Wool"
+	desc = ""
 	color = {
-		234 234 234
+		211 211 211
 	}
 	modifier = {
-		reduced_liberty_desire = 20
+		global_ship_cost = -0.05
 	}
 	province = {
-		local_culture_conversion_cost = -0.25
+		local_friendly_movement_speed = 0.10
 	}
-	base_price = 5
-	is_gold = no
-	chance = {
-		factor = 0
-	}
-}
-new tradegood rel_goods = {
-	name = "Religious Goods"
-	desc = "Idolatry is commonly practiced by the majority of faiths upon Nirn, this has led to a trade in religious goods such as amulets, statues, and many more. Craftsmen and religious officials alike have been known to manufacture (or ‘bless’ in the latters case) in exchange for coin or barter. In later eras, the idols of the Nine Divine would be one of the most sought after and crafted religious items across Tamriel."
-	color = {
-		135 125 35
-	}
-	modifier = {
-		tolerance_own = 2
-		global_missionary_strength = 0.03
-	}
-	province = {
-		local_missionary_strength = 0.05
-	}
-	base_price = 3
+	base_price = 2.5
 	is_gold = no
 	chance = {
 		factor = 0

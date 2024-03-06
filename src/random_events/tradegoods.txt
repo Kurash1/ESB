@@ -18,7 +18,7 @@ new country_event tradegoods.1 = {
 	desc = "Concerns have arisen regarding the quality of the iron resources within our borders. Miners and blacksmiths have noted that the iron being extracted from our mines is of notably poor quality. This revelation raises questions about the state of our arms and equipment."
 	picture = ES_SWORDS_ON_TABLE_eventPicture
 	trigger = {
-		iron = 1
+		c_metals = 1
 	}
 	options = {
 		{
@@ -45,7 +45,7 @@ new country_event tradegoods.2 = {
 	desc = "Concerns have arisen regarding the quality of the steel resources within our borders. Our skilled blacksmiths and craftsmen have noted that the steel being produced is of notably poor quality. This revelation raises questions about the state of our arms, armor, and industrial capabilities."
 	picture = ES_STEEL_INGOTS_eventPicture
 	trigger = {
-		steel = 1
+		c_metals = 1
 	}
 	options = {
 		{
@@ -91,7 +91,7 @@ new country_event tradegoods.4 = {
 	desc = "In the realm's fields and farmlands, the signs are clear—a bountiful harvest has been reaped this year. The fields are abundant with golden wheat, promising prosperity and plenty for our people."
 	picture = ES_HARVEST_eventPicture
 	trigger = {
-		wheat = 1
+		grain = 1
 	}
 	options = {
 		{
@@ -108,7 +108,7 @@ new country_event tradegoods.5 = {
 	desc = "Our fields have yielded disappointing results this year. The wheat harvest, upon which we rely for sustenance and prosperity, has fallen short of expectations. Infertile soil and unfavorable conditions have conspired against us."
 	picture = ES_INFERTILE_SOIL_eventPicture
 	trigger = {
-		wheat = 1
+		grain = 1
 	}
 	options = {
 		{
