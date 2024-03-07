@@ -160,13 +160,11 @@ mission_trees:solitude += {
 			}
 		}
 		effect = {
-			trade_nodes:stonehills = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = 9125
-					power = 30
-					key = STRONG_MERCHANTS
-				}
+			areas:morthal; myrwatch; stonehills; ustengrav = {
+				add_base_production = 1
+			}
+			areas:drajkmyr_marsh = {
+				add_siberian_construction = 100
 			}
 		}
 	}
