@@ -1,7 +1,7 @@
 new province_group reachmen_discovery = {
 	name = "Reachmen Discovery"
 	provinces = {
-		lake_karthspire hroldan_river blind_river dragon_river karth_lake imp_34 imp_35 imp_36 imp_37 imp_38 imp_39 imp_40 imp_41 imp_42 imp_43 imp_44 imp_45 imp_46 imp_47 imp_48 imp_49 imp_50 south_druadach_mountains central_druadach_mountains north_druadach_mountains bannermist twilight_sepulcher evergreen_grove cracked_tusk illinaltas_deep half_moon sunderstone_gorge bilegulch knifepoint hunters_rest volskygge deepwood_redoubt hjaals_tooth bumpy_road rugged_coast chillwind_depths rivers_road cliff_point lost_valley_redoubt cradle_stone gloomreach gretmor valthume valthume_pass arkngthamz bleeding_hill dushnikh_yal reachwind_eyrie editia hillia reachcliff purewater_ruin hag_rock_redoubt dread_crone_rock lislgeth reachwater_hill reachwater_rock thaeba markarth left_hand_mine salvius_farm groilief kolskeggr blind_cliff karerica aldiid ragnvald elselod aelagela olavete thalif riknhild malie karthwasten reydlgeth dragontooth riglaith bthardamz sirgarte druadach_redoubt bthar_zel rocky_coast harmugstahl silver_hill east_karthspire west_karthspire soljunds_sinkhole old_hroldan igrra lower_moldering algerd orieund horsorg sungard reyba moonstone_hill vigde serpents_bluff_redoubt moldering sigli bleakwind_bluff rebels_cairn ysolnhvir ranarte reach_road_turn vorigja broken_tower_redoubt karthwatch eydljot beigi cliffside_retreat dragon_bridge_overlook freyke adelreene betri bixisys itary brucas_leap_redoubt rock_dragon_coast khazgur_coast darkfall_cave agnese mor_khazgur illdund adising talking_stone jolsta brylith mackirek eismor rorikstead flatand petilief gjukar orifna broken_fang_cave granitehill
+		lake_karthspire hroldan_river blind_river dragon_river karth_lake imp_34 imp_35 imp_36 imp_37 imp_38 imp_39 imp_40 imp_41 imp_42 imp_43 imp_44 imp_45 imp_46 imp_47 imp_48 imp_49 imp_50 south_druadach_mountains central_druadach_mountains north_druadach_mountains bannermist twilight_sepulcher evergreen_grove cracked_tusk illinaltas_deep half_moon sunderstone_gorge bilegulch knifepoint hunters_rest volskygge deepwood_redoubt hjaals_tooth bumpy_road rugged_coast chillwind_depths rivers_road cliff_point lost_valley_redoubt cradle_stone gloomreach  valthume valthume_pass arkngthamz bleeding_hill dushnikh_yal editia reachcliff purewater_ruin hag_rock_redoubt dread_crone_rock lislgeth reachwater_rock thaeba markarth left_hand_mine salvius_farm kolskeggr karerica aldiid ragnvald elselod olavete riknhild karthwasten reydlgeth sirgarte bthar_zel harmugstahl silver_hill karthspire soljunds_sinkhole old_hroldan igrra lower_moldering algerd horsorg sungard reyba moonstone_hill vigde serpents_bluff_redoubt moldering sigli bleakwind_bluff rebels_cairn ranarte reach_road_turn karthwatch beigi cliffside_retreat dragon_bridge_overlook betri itary brucas_leap_redoubt rock_dragon_coast khazgur_coast agnese mor_khazgur illdund adising talking_stone jolsta brylith mackirek eismor rorikstead flatand petilief gjukar orifna broken_fang_cave granitehill thalif
 	}
 }
 new inheritable reachman_country = {
@@ -59,7 +59,7 @@ new country shadowbloom_clan = {
 	}
 	capital = lislgeth
 }
-new country cinder-heart_clan = {
+new country cinder_heart_clan = {
 	inherit = reachman_country
 	tag = CIN
 	name = "Cinder-Heart Clan"
@@ -89,7 +89,7 @@ new country wildspear_clan = {
 	}
 	capital = karerica
 }
-new country black-moon_clan = {
+new country black_moon_clan = {
 	inherit = reachman_country
 	tag = BLM
 	name = "Black-Moon Clan"
@@ -109,7 +109,7 @@ new country shadefeather_clan = {
 	}
 	capital = dragon_bridge_overlook
 }
-new country crow-eye_clan = {
+new country crow_eye_clan = {
 	inherit = reachman_country
 	tag = CRO
 	name = "Crow-Eye Clan"
@@ -133,7 +133,7 @@ new country twisted_briar_clan = {
 	name = "Twisted Briar Clan"
 	adj = "Twisted Briar"
 	color = { 61 0 17 }
-	capital = west_karthspire
+	capital = karthspire
 }
 new country treeshade_clan = {
 	inherit = reachman_country
@@ -149,7 +149,7 @@ new country timbercrow_clan = {
 	name = "Timbercrow Clan"
 	adj = "Timbercrow"
 	color = { 155 104 68 }
-	capital = blind_cliff
+	capital = moonstone_hill
 }
 new country timberclaw_clan = {
 	inherit = reachman_country
@@ -175,15 +175,15 @@ new country starsinger_clan = {
 	color = { 178 255 239 }
 	capital = sirgarte
 }
-new country stag-heart_clan = {
+new country stag_heart_clan = {
 	inherit = reachman_country
 	tag = STG
 	name = "Stag-Heart Clan"
 	adj = "Stag-Heart"
 	color = { 255 94 30 }
-	capital = druadach_redoubt
+	capital = bthar_zel
 }
-new country spirit-tale_clan = {
+new country spirit_tale_clan = {
 	inherit = reachman_country
 	tag = SPI
 	name = "Spirit-Tale Clan"
@@ -197,7 +197,7 @@ new country spiritdancer_clan = {
 	name = "Spiritdancer Clan"
 	adj = "Spiritdancer"
 	color = { 174 76 255 }
-	capital = east_karthspire
+	capital = old_hroldan
 }
 new country spiritblood_clan = {
 	inherit = reachman_country
@@ -215,13 +215,13 @@ new country skyweaver_clan = {
 	color = { 188 227 255 }
 	capital = lost_valley_redoubt
 }
-new country six-ford_clan = {
+new country six_ford_clan = {
 	inherit = reachman_country
 	tag = SIX
 	name = "Six-Ford Clan"
 	adj = "Six-Ford"
 	color = { 0 110 255 }
-	capital = rocky_coast
+	capital = beigi
 }
 new country shunned_ones = {
 	inherit = reachman_country
@@ -229,9 +229,9 @@ new country shunned_ones = {
 	name = "Shunned Ones"
 	adj = "Shunned"
 	color = { 50 0 100 }
-	capital = riglaith
+	capital = reydlgeth
 }
-new country river-elk_clan = {
+new country river_elk_clan = {
 	inherit = reachman_country
 	tag = RVE
 	name = "River-Elk Clan"
@@ -301,7 +301,7 @@ new country doomfang_clan = {
 	name = "Doomfang Clan"
 	adj = "Doomfang"
 	color = { 99 24 0 }
-	capital = thalif
+	capital = olavete
 }
 new country deathwing_clan = {
 	inherit = reachman_country
@@ -343,7 +343,7 @@ new country blackoath_clan = {
 	color = { 0 40 73 }
 	capital = khazgur_coast
 }
-new country bear-heart_clan = {
+new country bear_heart_clan = {
 	inherit = reachman_country
 	tag = BHE
 	name = "Bear-Heart Clan"
@@ -359,53 +359,11 @@ new country stranglehollow_clan = {
 	color = { 73 61 19 }
 	capital = elselod
 }
-new country horn-stride_clan = {
+new country horn_stride_clan = {
 	inherit = reachman_country
 	tag = HST
 	name = "Horn-Stride Clan"
 	adj = "Horn-Stride"
 	color = { 35 63 40 }
 	capital = harmugstahl
-}
-new relation dependency = {
-	subject_type = markarth_clan
-	first = TMC
-	second = HLL
-	start_date = 2500.1.1
-	end_date = 9999.1.1
-}
-new relation dependency = {
-	subject_type = markarth_clan
-	first = TMC
-	second = WIL
-	start_date = 2500.1.1
-	end_date = 9999.1.1
-}
-new relation dependency = {
-	subject_type = markarth_clan
-	first = TMC
-	second = WLD
-	start_date = 2500.1.1
-	end_date = 9999.1.1
-}
-new relation dependency = {
-	subject_type = markarth_clan
-	first = TMC
-	second = SHB
-	start_date = 2500.1.1
-	end_date = 9999.1.1
-}
-new relation dependency = {
-	subject_type = markarth_clan
-	first = TMC
-	second = MSR
-	start_date = 2500.1.1
-	end_date = 9999.1.1
-}
-new relation dependency = {
-	subject_type = markarth_clan
-	first = TMC
-	second = CIN
-	start_date = 2500.1.1
-	end_date = 9999.1.1
 }

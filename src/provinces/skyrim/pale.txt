@@ -93,7 +93,7 @@ new province frozen_outpost = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = wind-caller
+		history_owner = wind_caller
 	}
 }
 new province njadhilde = {
@@ -119,7 +119,7 @@ new province njadhilde = {
 		history_trade_goods = stone
 		capital = ""
 		is_city = no
-		history_owner = frost-flow
+		history_owner = frost_flow
 	}
 }
 new province nightcaller = {
@@ -142,10 +142,10 @@ new province nightcaller = {
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
-		history_trade_goods = r_alchemical_ingredients
+		history_trade_goods = alchemical_ingredients
 		capital = ""
 		is_city = no
-		history_owner = frost-flow
+		history_owner = frost_flow
 	}
 }
 new province goldvild = {
@@ -171,7 +171,7 @@ new province goldvild = {
 		history_trade_goods = gold
 		capital = ""
 		is_city = yes
-		history_owner = dawn-star
+		history_owner = dawn_star
 	}
 }
 new province softta = {
@@ -191,7 +191,7 @@ new province softta = {
 		215 205 153
 	}
 	history = {
-		history_owner = dawn-star
+		history_owner = dawn_star
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
@@ -221,7 +221,7 @@ new province ingesi = {
 		102 164 223
 	}
 	history = {
-		history_owner = dawn-star
+		history_owner = dawn_star
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
@@ -248,7 +248,7 @@ new province verglas = {
 	}
 	history = {
 		center_of_trade = 1
-		history_owner = high-gate
+		history_owner = high_gate
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
@@ -301,7 +301,7 @@ new province ice_isle = {
 		history_trade_goods = fish
 		capital = ""
 		is_city = no
-		history_owner = dawn-star
+		history_owner = dawn_star
 	}
 }
 new province pale_camp = {
@@ -321,7 +321,7 @@ new province pale_camp = {
 		216 237 115
 	}
 	history = {
-		history_owner = dawn-star
+		history_owner = dawn_star
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
@@ -353,7 +353,7 @@ new province olavnir = {
 		history_trade_goods = fish
 		capital = ""
 		is_city = no
-		history_owner = dawn-star
+		history_owner = dawn_star
 	}
 }
 new province dawnstar = {
@@ -374,7 +374,7 @@ new province dawnstar = {
 	}
 	history = {
 		center_of_trade = 1
-		history_owner = dawn-star
+		history_owner = dawn_star
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
@@ -406,7 +406,7 @@ new province dawn_sanctuary = {
 		history_trade_goods = fish
 		capital = ""
 		is_city = yes
-		history_owner = dawn-star
+		history_owner = dawn_star
 	}
 }
 new province mavetlogi = {
@@ -426,7 +426,7 @@ new province mavetlogi = {
 		136 243 144
 	}
 	history = {
-		history_owner = dawn-star
+		history_owner = dawn_star
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
@@ -458,8 +458,8 @@ new province windward = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = dawn-star
-		add_core = wind-ward
+		history_owner = dawn_star
+		add_core = wind_ward
 	}
 }
 new province ilfbbi = {
@@ -479,7 +479,7 @@ new province ilfbbi = {
 		162 105 249
 	}
 	history = {
-		history_owner = dawn-star
+		history_owner = dawn_star
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
@@ -693,7 +693,7 @@ new province giants_gap = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = no
-		history_owner = silver-drift
+		history_owner = silver_drift
 	}
 }
 new province freaold = {
@@ -719,7 +719,7 @@ new province freaold = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = silver-drift
+		history_owner = silver_drift
 	}
 }
 new province blizzard_rest = {
@@ -842,7 +842,7 @@ new province ironbind_barrow = {
 		199 116 131
 	}
 	history = {
-		history_owner = iron-bind
+		history_owner = iron_bind
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
@@ -1103,6 +1103,7 @@ new province fellglow = {
 		capital = ""
 		is_city = yes
 		history_owner = shearpoint
+		add_core = fell_glow
 	}
 }
 new province ysmir_hill = {
@@ -1152,7 +1153,7 @@ new province korvanjund = {
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
-		history_trade_goods = arms
+		history_trade_goods = paper
 		capital = ""
 		is_city = no
 		history_owner = heljarchen
@@ -1178,7 +1179,7 @@ new province shimmermist = {
 		religion = nordic_pantheon
 		culture = palean
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 		history_owner = heljarchen
@@ -1205,7 +1206,7 @@ new province long_road = {
 		culture = palean
 		history_owner = heljarchen
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 	}
 }
 new province loreius_farm = {
@@ -1229,7 +1230,7 @@ new province loreius_farm = {
 		culture = palean
 		history_owner = heljarchen
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 	}
@@ -1303,7 +1304,7 @@ new province syllartha = {
 		culture = palean
 		history_owner = volunruud
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = stone
 	}
 }
 new province volunruud = {
@@ -1401,7 +1402,7 @@ new province heljarchen = {
 		culture = palean
 		history_owner = heljarchen
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 	}
 }
 new province isellarue = {
@@ -1481,7 +1482,7 @@ new province edinmund = {
 		history_trade_goods = fish
 		capital = ""
 		is_city = no
-		history_owner = dawn-star
+		history_owner = dawn_star
 		57.1.1 = {
 			is_city = no
 		}
@@ -1516,7 +1517,7 @@ new province mundall = {
 		history_trade_goods = fish
 		capital = ""
 		is_city = no
-		history_owner = dawn-star
+		history_owner = dawn_star
 		57.1.1 = {
 			is_city = no
 		}

@@ -11,6 +11,29 @@ new inheritable nordic_country = {
 	}
 	starting_reform = tier_1_nord_clan
 }
+new country sea_wing = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = SWI
+	name = "Sea-Wing"
+	adj = "Sea-Wing"
+	color = {
+		130 211 255
+	}
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Hroth"
+				dynasty = "Sea-Wing"
+				adm = 0
+				dip = 0
+				mil = 0
+				age = 18
+			}
+		}
+	}
+	capital = big_sister
+}
 new country lone_band = {
 	inherit = nordic_country
 	government = republic
@@ -170,15 +193,22 @@ new country solitude = {
 	starting_reform = tier_1_haafingar_kingdom
 	government_rank = 2
 	history += {
-		elector = yes
 		2568.1.1 = {
-			monarch = {
+			starting_ruler = {
 				name = "Vigrod"
 				dynasty = "Red-Wolf"
 				adm = 6
 				dip = 5
 				mil = 5
-				birth_date = 2531.1.1
+				age = 37
+			}
+			starting_heir = {
+				name = "Geslir"
+				dynasty = "Red-Wolf"
+				adm = 4
+				dip = 4
+				mil = 4
+				age = 7
 			}
 		}
 	}
@@ -205,7 +235,7 @@ new country pine_frost = {
 	}
 	capital = pinefrost
 }
-new country holly-frost = {
+new country holly_frost = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
 	tag = HLY
@@ -214,7 +244,7 @@ new country holly-frost = {
 	color = {
 		0 255 255
 	}
-	capital = holly-frost
+	capital = holly_frost
 }
 new country dragon_bridge = {
 	inherit = nordic_country
@@ -228,7 +258,7 @@ new country dragon_bridge = {
 	}
 	capital = dragon_bridge
 }
-new country blue-axe = {
+new country blue_axe = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = BLU
@@ -239,7 +269,7 @@ new country blue-axe = {
 	}
 	capital = ysgramoors_tomb
 }
-new country pine-hill = {
+new country pine_hill = {
 	inherit = nordic_country
 	primary_culture = haafingarian
 	tag = PIN
@@ -250,7 +280,7 @@ new country pine-hill = {
 	}
 	capital = clearpine_pond
 }
-new country rime-rock = {
+new country rime_rock = {
 	inherit = nordic_country
 	primary_culture = haafingarian
 	tag = RIR
@@ -261,7 +291,7 @@ new country rime-rock = {
 	}
 	capital = northwatch
 }
-new country raven-scar = {
+new country raven_scar = {
 	inherit = nordic_country
 	primary_culture = haafingarian
 	tag = RAV
@@ -272,7 +302,7 @@ new country raven-scar = {
 	}
 	capital = ravenscar
 }
-new country iron-back = {
+new country iron_back = {
 	inherit = nordic_country
 	primary_culture = haafingarian
 	tag = IRO
@@ -283,7 +313,7 @@ new country iron-back = {
 	}
 	capital = ironback_hideout
 }
-new country wolf-skull = {
+new country wolf_skull = {
 	inherit = nordic_country
 	primary_culture = haafingarian
 	tag = WOL
@@ -294,7 +324,7 @@ new country wolf-skull = {
 	}
 	capital = hraggstad
 }
-new country chill-wind = {
+new country chill_wind = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = CHW
@@ -305,7 +335,7 @@ new country chill-wind = {
 	}
 	capital = rivers_road
 }
-new country snow-hawk = {
+new country snow_hawk = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = SNO
@@ -316,7 +346,7 @@ new country snow-hawk = {
 	}
 	capital = snowhawk
 }
-new country mort-hall = {
+new country mort_hall = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = MOH
@@ -327,7 +357,7 @@ new country mort-hall = {
 	}
 	capital = morthal
 }
-new country high-gate = {
+new country high_gate = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = HGA
@@ -338,7 +368,7 @@ new country high-gate = {
 	}
 	capital = verglas
 }
-new country dawn-star = {
+new country dawn_star = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = DAW
@@ -349,10 +379,9 @@ new country dawn-star = {
 	}
 	capital = dawnstar
 	history += {
-		elector = yes
 	}
 }
-new country stone-hill = {
+new country stone_hill = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = STO
@@ -363,7 +392,7 @@ new country stone-hill = {
 	}
 	capital = stonehills
 }
-new country mire-watch = {
+new country mire_watch = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = MIR
@@ -374,7 +403,7 @@ new country mire-watch = {
 	}
 	capital = myrwatch
 }
-new country wind-ward = {
+new country wind_ward = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = WIN
@@ -408,7 +437,7 @@ new country dunstad = {
 	}
 	capital = dunstad
 }
-new country wind-caller = {
+new country wind_caller = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = WNC
@@ -442,7 +471,7 @@ new country rorikstead = {
 	}
 	capital = rorikstead
 }
-new country river-runner = {
+new country river_runner = {
 	inherit = nordic_country
 	primary_culture = whiterunish
 	tag = RVR
@@ -478,7 +507,7 @@ new country hrothgar = {
 		}
 	}
 }
-new country broken-fang = {
+new country broken_fang = {
 	inherit = nordic_country
 	primary_culture = whiterunish
 	tag = BRK
@@ -512,7 +541,6 @@ new country skjoralmor = {
 	}
 	capital = riverwood
 	history += {
-		elector = yes
 		2568.1.1 = {
 			monarch = {
 				name = "Valdr"
@@ -546,7 +574,6 @@ new country jorrvaskr = {
 	capital = whiterun
 	history += {
 		historical_friend = WND
-		elector = yes
 		2568.1.1 = {
 			monarch = {
 				name = "Ulrick"
@@ -685,7 +712,7 @@ new relation alliance = {
 	start_date = 2500.1.1
 	end_date = 9999.1.1
 }
-new country hill-hammer = {
+new country hill_hammer = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = HIL
@@ -696,7 +723,7 @@ new country hill-hammer = {
 	}
 	capital = fellhammer
 }
-new country frost-flow = {
+new country frost_flow = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = FRF
@@ -707,7 +734,7 @@ new country frost-flow = {
 	}
 	capital = frostflow
 }
-new country silver-drift = {
+new country silver_drift = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = SID
@@ -730,7 +757,7 @@ new country nightgate = {
 	}
 	capital = nightgate
 }
-new country white-watch = {
+new country white_watch = {
 	inherit = nordic_country
 	primary_culture = whiterunish
 	tag = WHW
@@ -763,7 +790,7 @@ new country storm_fist = {
 	}
 	capital = silent_moons
 }
-new country black-moor = {
+new country black_moor = {
 	inherit = nordic_country
 	primary_culture = whiterunish
 	tag = BCM
@@ -787,7 +814,7 @@ new country black-moor = {
 	}
 	capital = greymoor
 }
-new country shield-shade = {
+new country shield_shade = {
 	inherit = nordic_country
 	primary_culture = whiterunish
 	tag = SHS
@@ -810,7 +837,7 @@ new country shield-shade = {
 	}
 	capital = granitehill
 }
-new country bleak-wind = {
+new country bleak_wind = {
 	inherit = nordic_country
 	primary_culture = whiterunish
 	tag = BLW
@@ -880,7 +907,7 @@ new country yorgrim = {
 	}
 	capital = shrouded_grove
 }
-new country fell-glow = {
+new country fell_glow = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = FEL
@@ -913,7 +940,7 @@ new country cradlecrush = {
 	}
 	capital = cradlecrush
 }
-new country dark-water = {
+new country dark_water = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
 	tag = DAR
@@ -924,7 +951,7 @@ new country dark-water = {
 	}
 	capital = darkwater_crossing
 }
-new country mist-watch = {
+new country mist_watch = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
 	tag = MIS
@@ -935,7 +962,7 @@ new country mist-watch = {
 	}
 	capital = mistwatch
 }
-new country north-wind = {
+new country north_wind = {
 	inherit = nordic_country
 	primary_culture = eastmarcher
 	tag = NOW
@@ -968,7 +995,7 @@ new country kynesgrove = {
 	}
 	capital = kynesgrove
 }
-new country iron-bind = {
+new country iron_bind = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = IRB
@@ -1027,7 +1054,7 @@ new country saarthal = {
 	}
 	capital = saarthal
 }
-new country snow-veil = {
+new country snow_veil = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = SNV
@@ -1038,7 +1065,7 @@ new country snow-veil = {
 	}
 	capital = snow_veil_sanctum
 }
-new country bleak-coast = {
+new country bleak_coast = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = BLK
@@ -1049,7 +1076,7 @@ new country bleak-coast = {
 	}
 	capital = bleakcoast
 }
-new country sky-temple = {
+new country sky_temple = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = SKT
@@ -1072,7 +1099,7 @@ new country winterhold = {
 	}
 	capital = winterhold
 }
-new country shadow-green = {
+new country shadow_green = {
 	inherit = nordic_country
 	primary_culture = haafingarian
 	tag = SHD

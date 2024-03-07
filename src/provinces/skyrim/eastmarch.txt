@@ -44,7 +44,7 @@ new province bonestrew_mountain = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "Bonestrew Mountain"
+	name = ""
 	color = {
 		34 8 28
 	}
@@ -188,7 +188,7 @@ new province bleakrock_isle = {
 		capital = ""
 		is_city = no
 		history_owner = windhelm
-		add_core = holly-frost
+		add_core = holly_frost
 		
 		1.1.1 = {
 			create_expedition = {
@@ -210,22 +210,6 @@ new province bleakrock_isle = {
 					}
 				}
 			}
-		}
-	}
-	expedition = {
-		length = 10
-		difficulty = -0.5
-		reward = 5
-		artifacts = {
-			{
-				name = "Auriel's Bow"
-				desc = "Auriel's Bow is an artifact used by the elven god Auriel. Although it takes the form of a modest elven moonstone bow, it is one of the most powerful weapons on Tamriel.\nThe bow draws its power from Aetherius itself, channeling it through the sun. It has the ability to turn any arrow into a 'missile of death', although its enchantment effects vary: it has been known to cause magical fire or shock damage, drain an opponent's stamina and magicka reserves, or harness the power of the sun. It can also make the wielder immune to lesser attacks, and is especially devastating when used against the undead. Occasionally it can be seemingly unenchanted. Without Auriel's power behind it, however, the bow uses its own store of energy for its power. Once exhausted of this energy, the bow will vanish, abandoning its owner to reappear elsewhere."
-				modifier = {
-					fire_damage = 0.1
-				}
-			}
-		}
-		on_complete = {
 		}
 	}
 }
@@ -279,7 +263,7 @@ new province brandy-mug = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
@@ -305,17 +289,17 @@ new province stoneside = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
 	}
 }
-new area holly-frost = {
+new area holly_frost = {
 	name = "Holly-Frost"
 	region = eastmarch
 }
-new province holly-frost = {
+new province holly_frost = {
 	position = {
 		1983.000 1985.000 1983.000 1985.000 1983.000 1985.000 1983.000 1985.000 1983.000 1985.000 1983.000 1985.000 1983.000 1985.000
 	}
@@ -330,7 +314,7 @@ new province holly-frost = {
 		164 152 238
 	}
 	terrain = hills
-	area = holly-frost
+	area = holly_frost
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
@@ -339,7 +323,7 @@ new province holly-frost = {
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
-		add_core = holly-frost
+		add_core = holly_frost
 	}
 }
 new province yngol_barrow = {
@@ -357,16 +341,16 @@ new province yngol_barrow = {
 		233 133 200
 	}
 	terrain = coastline
-	area = holly-frost
+	area = holly_frost
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = fish
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
-		add_core = holly-frost
+		add_core = holly_frost
 	}
 }
 new province frostbloom = {
@@ -384,16 +368,16 @@ new province frostbloom = {
 		158 206 210
 	}
 	terrain = coastline
-	area = holly-frost
+	area = holly_frost
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
-		add_core = holly-frost
+		add_core = holly_frost
 	}
 }
 new area dunmeth_pass = {
@@ -420,11 +404,11 @@ new province snowdrift = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = fish
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
-		add_core = holly-frost
+		add_core = holly_frost
 	}
 }
 new province chillwind = {
@@ -447,11 +431,11 @@ new province chillwind = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = fish
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
-		add_core = holly-frost
+		add_core = holly_frost
 	}
 }
 new province dunmeth_pass = {
@@ -478,7 +462,7 @@ new province dunmeth_pass = {
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
-		add_core = holly-frost
+		add_core = holly_frost
 	}
 }
 new area narzulbur = {
@@ -564,7 +548,7 @@ new province mzulft = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = r_metals
+		history_trade_goods = wood
 		capital = ""
 		is_city = yes
 		history_owner = cragwallow
@@ -590,7 +574,7 @@ new province cragwallow = {
 		religion = the_old_ways
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = wood
 		capital = ""
 		is_city = yes
 		history_owner = cragwallow
@@ -619,61 +603,6 @@ new province broken_limb = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = no
-	}
-}
-new province cherim_pond = {
-	position = {
-		1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1899.000 1901.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.873 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.750 0.365 0.365 0.365
-	}
-	name = "Cherim Pond"
-	color = {
-		215 239 117
-	}
-	terrain = hot_springs
-	area = broken_limb
-	history = {
-		religion = nordic_pantheon
-		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
-	}
-}
-new area bonestrew = {
-	name = "Bonestrew"
-	region = eastmarch
-}
-new province witchmist = {
-	position = {
-		1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	name = "Witchmist"
-	color = {
-		118 126 166
-	}
-	terrain = hot_springs
-	area = bonestrew
-	history = {
-		religion = nordic_pantheon
-		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new province bonestrew = {
@@ -691,13 +620,10 @@ new province bonestrew = {
 		185 104 132
 	}
 	terrain = hot_springs
-	area = bonestrew
+	area = broken_limb
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new province hjoie = {
@@ -715,13 +641,10 @@ new province hjoie = {
 		129 157 244
 	}
 	terrain = hot_springs
-	area = bonestrew
+	area = broken_limb
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new area akawatch = {
@@ -747,9 +670,6 @@ new province akawatch = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = no
 	}
 }
 new province fanella = {
@@ -771,9 +691,6 @@ new province fanella = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new province aleading = {
@@ -795,9 +712,6 @@ new province aleading = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = no
 	}
 }
 new area steamcrag = {
@@ -823,9 +737,6 @@ new province steamcrag = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new province bloody_road = {
@@ -849,13 +760,7 @@ new province bloody_road = {
 		culture = eastmarcher
 		hre = yes
 		history_trade_goods = stone
-		capital = ""
-		is_city = yes
 		history_owner = cragwallow
-		272.1.1 = {
-			religion = nordic_pantheon
-			culture = eastmarcher
-		}
 	}
 }
 new province margyf = {
@@ -878,15 +783,34 @@ new province margyf = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = silver
-		capital = ""
-		is_city = yes
+		history_trade_goods = wood
 		history_owner = cragwallow
 	}
 }
 new area cronvangr = {
 	name = "Cronvangr"
 	region = eastmarch
+}
+new province witchmist = {
+	position = {
+		1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000 1933.000 1929.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = "Witchmist"
+	color = {
+		118 126 166
+	}
+	terrain = hot_springs
+	area = cronvangr
+	history = {
+		religion = nordic_pantheon
+		culture = eastmarcher
+	}
 }
 new province cronvangr = {
 	position = {
@@ -907,9 +831,6 @@ new province cronvangr = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new province berasta = {
@@ -931,9 +852,6 @@ new province berasta = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new province riverside_shack = {
@@ -955,9 +873,6 @@ new province riverside_shack = {
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
-		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new area kynesgrove = {
@@ -988,8 +903,6 @@ new province kynesgrove = {
 		culture = eastmarcher
 		hre = yes
 		history_trade_goods = r_metals
-		capital = ""
-		is_city = yes
 	}
 }
 new province erimor = {
@@ -1013,8 +926,6 @@ new province erimor = {
 		culture = eastmarcher
 		hre = yes
 		history_trade_goods = stone
-		capital = ""
-		is_city = no
 		history_owner = windhelm
 		add_core = kynesgrove
 	}
@@ -1039,8 +950,6 @@ new province anguki = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		history_trade_goods = unknown
-		capital = ""
-		is_city = yes
 	}
 }
 new area ansilvund = {
@@ -1068,10 +977,10 @@ new province ansilvund = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
-		history_owner = north-wind
+		history_owner = north_wind
 	}
 }
 new province stony_creek = {
@@ -1097,7 +1006,7 @@ new province stony_creek = {
 		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
-		history_owner = north-wind
+		history_owner = north_wind
 	}
 }
 new province dwarf_road = {
@@ -1123,7 +1032,7 @@ new province dwarf_road = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = north-wind
+		history_owner = north_wind
 	}
 }
 new area northwind = {
@@ -1150,10 +1059,10 @@ new province northwind = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
-		history_owner = north-wind
+		history_owner = north_wind
 	}
 }
 new province upper_shor_way = {
@@ -1179,7 +1088,7 @@ new province upper_shor_way = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = north-wind
+		history_owner = north_wind
 	}
 }
 new province lower_shor_way = {
@@ -1205,12 +1114,33 @@ new province lower_shor_way = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = north-wind
+		history_owner = north_wind
 	}
 }
 new area darkwater_crossing = {
 	name = "Darkwater Crossing"
 	region = eastmarch
+}
+new province cherim_pond = {
+	position = {
+		1904.000 1908.000 1904.000 1908.000 1904.000 1908.000 1899.000 1901.000 1904.000 1908.000 1904.000 1908.000 1904.000 1908.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.873 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.750 0.365 0.365 0.365
+	}
+	name = "Cherim Pond"
+	color = {
+		215 239 117
+	}
+	terrain = hot_springs
+	area = darkwater_crossing
+	history = {
+		religion = nordic_pantheon
+		culture = eastmarcher
+	}
 }
 new province darkwater_crossing = {
 	position = {
@@ -1236,7 +1166,7 @@ new province darkwater_crossing = {
 		history_trade_goods = r_metals
 		capital = ""
 		is_city = yes
-		history_owner = dark-water
+		history_owner = dark_water
 		quick_province_modifier = {
 			name = "Goldenrock Mine"
 			modifier = {
@@ -1290,7 +1220,7 @@ new province eldergleam = {
 	color = {
 		198 237 124
 	}
-	area = darkwater_crossing
+	area = broken_limb
 	history = {
 		religion = nordic_pantheon
 		culture = eastmarcher
@@ -1327,7 +1257,7 @@ new province mistwatch = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = no
-		history_owner = mist-watch
+		history_owner = mist_watch
 	}
 }
 new province mist_road = {
@@ -1353,7 +1283,7 @@ new province mist_road = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = mist-watch
+		history_owner = mist_watch
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = eastmarcher
@@ -1383,7 +1313,7 @@ new province ysgramoors_road = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = no
-		history_owner = north-wind
+		history_owner = north_wind
 	}
 }
 new area darkwater = {
@@ -1416,7 +1346,7 @@ new province darkwater_watch = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = dark-water
+		history_owner = dark_water
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = eastmarcher
@@ -1443,7 +1373,7 @@ new province clay_point = {
 		northern_tg
 	}
 	history = {
-		history_owner = dark-water
+		history_owner = dark_water
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
@@ -1478,7 +1408,7 @@ new province darkwater_pass = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = dark-water
+		history_owner = dark_water
 	}
 }
 new province aevar_hill = {
@@ -1501,7 +1431,7 @@ new province aevar_hill = {
 		northern_tg
 	}
 	history = {
-		history_owner = dark-water
+		history_owner = dark_water
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
@@ -2100,7 +2030,7 @@ new province uttering_hills = {
 		religion = the_old_ways
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
@@ -2165,7 +2095,7 @@ new province evetsta = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
@@ -2225,7 +2155,7 @@ new province freanna = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = windhelm
@@ -2287,7 +2217,7 @@ new province oriekke = {
 		religion = nordic_pantheon
 		culture = eastmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = windhelm

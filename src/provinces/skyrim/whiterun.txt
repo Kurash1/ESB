@@ -2,32 +2,6 @@ new area talking_stone = {
 	name = "Talking Stone"
 	region = whiterun
 }
-new province illdund = {
-	position = {
-		1652.000 1956.000 1652.000 1956.000 1652.000 1956.000 1659.500 1958.000 1652.000 1956.000 1652.000 1956.000 1652.000 1956.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.915 0.365 0.365 0.365
-	}
-	area = talking_stone
-	name = "Illdund"
-	terrain = coastline
-	color = {
-		174 108 224
-	}
-	history = {
-		history_owner = river-runner
-		religion = nordic_pantheon
-		culture = whiterunish
-		hre = yes
-		history_trade_goods = fish
-		capital = ""
-		is_city = no
-	}
-}
 new province adising = {
 	position = {
 		1642.000 1969.000 1642.000 1969.000 1642.000 1969.000 1642.500 1973.500 1642.000 1969.000 1642.000 1969.000 1642.000 1969.000
@@ -134,7 +108,7 @@ new province brylith = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = no
 		57.1.1 = {
@@ -162,7 +136,7 @@ new province mackirek = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = no
 		history_owner = rorikstead
@@ -188,7 +162,7 @@ new province eismor = {
 		history_owner = rorikstead
 		religion = nordic_pantheon
 		culture = whiterunish
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		hre = yes
 	}
@@ -215,7 +189,7 @@ new province rorikstead = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 	}
@@ -223,6 +197,32 @@ new province rorikstead = {
 new area swindler = {
 	name = "Swindler"
 	region = whiterun
+}
+new province illdund = {
+	position = {
+		1652.000 1956.000 1652.000 1956.000 1652.000 1956.000 1659.500 1958.000 1652.000 1956.000 1652.000 1956.000 1652.000 1956.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 2.915 0.365 0.365 0.365
+	}
+	area = swindler
+	name = "Illdund"
+	terrain = coastline
+	color = {
+		174 108 224
+	}
+	history = {
+		history_owner = river_runner
+		religion = nordic_pantheon
+		culture = whiterunish
+		hre = yes
+		history_trade_goods = fish
+		capital = ""
+		is_city = no
+	}
 }
 new province swindlers_den = {
 	position = {
@@ -248,7 +248,7 @@ new province swindlers_den = {
 		history_trade_goods = fish
 		capital = ""
 		is_city = no
-		history_owner = river-runner
+		history_owner = river_runner
 	}
 }
 new province flatand = {
@@ -268,11 +268,11 @@ new province flatand = {
 		119 212 242
 	}
 	history = {
-		history_owner = river-runner
+		history_owner = river_runner
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
 	}
@@ -301,10 +301,10 @@ new province petilief = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = no
-		history_owner = broken-fang
+		history_owner = broken_fang
 	}
 }
 new province gjukar = {
@@ -328,13 +328,8 @@ new province gjukar = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wheat
-		capital = ""
-		is_city = no
-		history_owner = broken-fang
-		57.1.1 = {
-			is_city = no
-		}
+		history_trade_goods = livestock
+		history_owner = broken_fang
 	}
 }
 new province orifna = {
@@ -357,10 +352,10 @@ new province orifna = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = no
-		history_owner = broken-fang
+		history_owner = broken_fang
 		57.1.1 = {
 			is_city = no
 		}
@@ -387,11 +382,11 @@ new province liesekke = {
 		208 193 184
 	}
 	history = {
-		history_owner = broken-fang
+		history_owner = broken_fang
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
 	}
@@ -416,10 +411,10 @@ new province broken_fang_cave = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = livestock
 		capital = ""
 		is_city = no
-		history_owner = broken-fang
+		history_owner = broken_fang
 	}
 }
 new province sleeping_tree_camp = {
@@ -442,10 +437,10 @@ new province sleeping_tree_camp = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = alchemical_ingredients
 		capital = ""
 		is_city = no
-		history_owner = broken-fang
+		history_owner = black_moor
 	}
 }
 new area granitehill = {
@@ -476,7 +471,7 @@ new province granitehill = {
 		history_trade_goods = stone
 		capital = ""
 		is_city = no
-		history_owner = shield-shade
+		history_owner = shield_shade
 		57.1.1 = {
 			is_city = no
 		}
@@ -502,13 +497,10 @@ new province bloated_mans_grotto = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = livestock
 		capital = ""
 		is_city = no
-		history_owner = shield-shade
-		57.1.1 = {
-			is_city = no
-		}
+		history_owner = shield_shade
 	}
 }
 new province aumso = {
@@ -531,10 +523,10 @@ new province aumso = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = no
-		history_owner = shield-shade
+		history_owner = shield_shade
 	}
 }
 new province north_brittleshin = {
@@ -557,10 +549,10 @@ new province north_brittleshin = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = livestock
 		capital = ""
 		is_city = no
-		history_owner = shield-shade
+		history_owner = shield_shade
 	}
 }
 new area greymoor = {
@@ -587,10 +579,10 @@ new province lydvild = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = no
-		history_owner = shield-shade
+		history_owner = black_moor
 	}
 }
 new province greymoor = {
@@ -613,7 +605,7 @@ new province greymoor = {
 		center_of_trade = 1
 		religion = nordic_pantheon
 		culture = whiterunish
-		history_owner = black-moor
+		history_owner = black_moor
 		hre = yes
 		history_trade_goods = arms
 	}
@@ -638,10 +630,10 @@ new province silvershade = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = c_metals
+		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
-		history_owner = black-moor
+		history_owner = black_moor
 	}
 }
 new area hamvirs_rest = {
@@ -668,7 +660,7 @@ new province dragonpoint = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = fish
 		capital = ""
 		is_city = yes
 		history_owner = storm_fist
@@ -694,7 +686,7 @@ new province redorans_retreat = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
 		history_owner = storm_fist
@@ -720,7 +712,7 @@ new province hamvirs_rest = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = no
 		history_owner = storm_fist
@@ -750,10 +742,10 @@ new province bleakwind_basin = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
-		history_owner = black-moor
+		history_owner = black_moor
 	}
 }
 new province western_watchtower = {
@@ -775,9 +767,9 @@ new province western_watchtower = {
 	history = {
 		religion = nordic_pantheon
 		culture = whiterunish
-		history_owner = black-moor
+		history_owner = black_moor
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		fort_15th = yes
 	}
 }
@@ -801,10 +793,10 @@ new province alviella = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
-		history_owner = black-moor
+		history_owner = black_moor
 	}
 }
 new province secundas_kiss = {
@@ -830,7 +822,7 @@ new province secundas_kiss = {
 		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
-		history_owner = black-moor
+		history_owner = black_moor
 	}
 }
 new area silent_moons = {
@@ -881,9 +873,9 @@ new province eisilief = {
 	history = {
 		religion = nordic_pantheon
 		culture = whiterunish
-		history_owner = black-moor
+		history_owner = black_moor
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 	}
 }
 new province matior = {
@@ -907,7 +899,7 @@ new province matior = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
 	}
@@ -963,10 +955,10 @@ new province halted_stream = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = no
-		history_owner = bleak-wind
+		history_owner = bleak_wind
 	}
 }
 new province editsine = {
@@ -989,10 +981,10 @@ new province editsine = {
 		culture = whiterunish
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = no
-		history_owner = bleak-wind
+		history_owner = bleak_wind
 	}
 }
 new province ingdreid = {
@@ -1015,10 +1007,10 @@ new province ingdreid = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = livestock
 		capital = ""
 		is_city = yes
-		history_owner = bleak-wind
+		history_owner = bleak_wind
 	}
 }
 new area white_watch = {
@@ -1045,11 +1037,11 @@ new province white_watch = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = grain
 		fort_15th = yes
 		capital = ""
 		is_city = yes
-		history_owner = white-watch
+		history_owner = white_watch
 	}
 }
 new province battle_born = {
@@ -1073,7 +1065,7 @@ new province battle_born = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 	}
@@ -1132,9 +1124,7 @@ new province whiterun = {
 		culture = whiterunish
 		hre = yes
 		fort_15th = yes
-		history_trade_goods = arms
-		capital = ""
-		is_city = yes
+		history_trade_goods = cloth
 	}
 }
 new province chillfurrow = {
@@ -1158,7 +1148,7 @@ new province chillfurrow = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 	}
@@ -1216,7 +1206,7 @@ new province pelagia_farm = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = no
 		history_owner = jorrvaskr
@@ -1246,7 +1236,7 @@ new province honningbrew = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = wheat
+		history_trade_goods = grain
 		capital = ""
 		is_city = yes
 		history_owner = jorrvaskr
@@ -1302,7 +1292,7 @@ new province green_hill_road = {
 		religion = nordic_pantheon
 		culture = falkrentish
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = wood
 		capital = ""
 		is_city = yes
 		history_owner = skjoralmor
@@ -1329,7 +1319,7 @@ new province bleak_falls_temple = {
 		religion = nordic_pantheon
 		culture = falkrentish
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = skjoralmor
@@ -1391,7 +1381,7 @@ new province iron_slope = {
 		religion = nordic_pantheon
 		culture = falkrentish
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = skjoralmor
@@ -1422,7 +1412,7 @@ new province south_brittleshin = {
 		culture = falkrentish
 		hre = yes
 		fort_15th = yes
-		history_trade_goods = wood
+		history_trade_goods = fish
 		capital = ""
 		is_city = no
 		history_owner = skjoralmor
@@ -1479,7 +1469,7 @@ new province anises_cabin = {
 		religion = nordic_pantheon
 		culture = falkrentish
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = alchemical_ingredients
 		capital = ""
 		is_city = no
 		history_owner = skjoralmor
@@ -1580,7 +1570,7 @@ new province embershard_mine = {
 				monthly_magicka = 0.1
 			}
 		}
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = skjoralmor
@@ -1618,7 +1608,7 @@ new province ritual_stone = {
 				global_manpower_modifier = 10%
 			}
 		}
-		history_trade_goods = stone
+		history_trade_goods = fish
 		capital = ""
 		is_city = yes
 	}
@@ -1697,7 +1687,7 @@ new province white_river_watch = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 	}
@@ -1728,7 +1718,7 @@ new province valtheim = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = hrothgar
@@ -1756,7 +1746,7 @@ new province prafall = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = stone
+		history_trade_goods = fish
 		capital = ""
 		is_city = yes
 		history_owner = hrothgar

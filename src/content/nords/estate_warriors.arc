@@ -101,7 +101,7 @@ new estate warriors = {
 				custom_tooltip = warrior_retirement_homes_revoke_tooltip
 			}
 			on_granted_province = {
-				if [has_trade_goods = wheat] {
+				if [has_trade_goods = grain] {
 					add_province_modifier = {
 						name = warrior_retirement_homes
 						duration = -1

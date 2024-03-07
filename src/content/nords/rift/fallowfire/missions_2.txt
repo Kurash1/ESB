@@ -31,14 +31,14 @@ new mission_series fallowfire_2 = {
 			trigger = {
 				OR = {
 					OR = {
-						countries:north-wind = {
+						countries:north_wind = {
 								has_opinion = {
 									who = fallowfire
 									value = 190
 								}
 								
 						}
-						countries:north-wind = {
+						countries:north_wind = {
 							vassal_of = ROOT
 						}
 					}
@@ -57,7 +57,7 @@ new mission_series fallowfire_2 = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 			effect = {
-				if [countries:north-wind = {
+				if [countries:north_wind = {
 						has_opinion = {
 							who = fallowfire
 							value = 190
@@ -65,11 +65,11 @@ new mission_series fallowfire_2 = {
 					}
 				] {
 					countries:fallowfire = {
-						vassalize = north-wind
+						vassalize = north_wind
 					}
 				}
-				else_if [countries:north-wind = { vassal_of = ROOT}] {
-					countries:north-wind {
+				else_if [countries:north_wind = { vassal_of = ROOT}] {
+					countries:north_wind {
 						add_liberty_desire = -20
 						add_opinion = {
 							who = fallowfire

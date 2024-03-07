@@ -10,20 +10,12 @@ new area bromjunaar = {
 	name = "Bromjunaar"
 	region = hjaalmarch
 }
-new area rannveigs_fast = {
-	name = "Rannveig's Fast"
-	region = hjaalmarch
-}
 new area myrwatch = {
 	name = "Myrwatch"
 	region = hjaalmarch
 }
-new area southern_morthal = {
-	name = "Southern Morthal"
-	region = hjaalmarch
-}
-new area northern_morthal = {
-	name = "Northern Morthal"
+new area morthal = {
+	name = "Morthal"
 	region = hjaalmarch
 }
 new area stonehills = {
@@ -36,10 +28,6 @@ new area drajkmyr_marsh = {
 }
 new area snowhawk = {
 	name = "Snowhawk"
-	region = hjaalmarch
-}
-new area snowhawk_forest = {
-	name = "Snowhawk Forest"
 	region = hjaalmarch
 }
 new area twin_bridges = {
@@ -112,18 +100,18 @@ new province morthal = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = northern_morthal
+	area = morthal
 	name = "Morthal"
 	color = {
 		220 248 102
 	}
 	history = {
 		center_of_trade = 1
-		history_owner = mort-hall
+		history_owner = mort_hall
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
-		history_trade_goods = r_alchemical_ingredients
+		history_trade_goods = potions
 		capital = "Ingondolyn"
 		is_city = yes
 	}
@@ -139,7 +127,7 @@ new province morthal_mines = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = southern_morthal
+	area = morthal
 	name = "Morthal Mines"
 	color = {
 		197 212 137
@@ -151,7 +139,7 @@ new province morthal_mines = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = yes
-		history_owner = mort-hall
+		history_owner = mort_hall
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = hjaalmarcher
@@ -225,7 +213,7 @@ new province rannveigs_fast = {
 		0.365 0.365 0.365 2.765 0.365 0.365 0.365
 	}
 	terrain = hills
-	area = rannveigs_fast
+	area = greenspring_hollow
 	name = "Rannveig's Fast"
 	color = {
 		137 237 200
@@ -235,7 +223,7 @@ new province rannveigs_fast = {
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = rannveig
@@ -337,7 +325,7 @@ new province robbers_gorge = {
 		221 201 114
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -363,7 +351,7 @@ new province fishermans_hangout = {
 		219 249 244
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -389,7 +377,7 @@ new province barren_road = {
 		239 203 149
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -415,11 +403,11 @@ new province chillwind_depths = {
 		229 121 187
 	}
 	history = {
-		history_owner = chill-wind
+		history_owner = chill_wind
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
-		history_trade_goods = iron
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 	}
@@ -441,7 +429,7 @@ new province rivers_road = {
 		105 131 203
 	}
 	history = {
-		history_owner = chill-wind
+		history_owner = chill_wind
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -467,7 +455,7 @@ new province cliff_point = {
 		166 132 146
 	}
 	history = {
-		history_owner = chill-wind
+		history_owner = chill_wind
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -493,7 +481,7 @@ new province forebears_holdout = {
 		175 237 161
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -513,13 +501,13 @@ new province tranquile_woods = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = snowhawk_forest
+	area = twin_bridges
 	name = "Tranquile Woods"
 	color = {
 		229 122 192
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -539,13 +527,13 @@ new province snowhawk_forest = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = snowhawk_forest
+	area = snowhawk
 	name = "Snowhawk Forest"
 	color = {
 		247 156 225
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -565,13 +553,13 @@ new province traitorous_swamps = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = snowhawk_forest
+	area = snowhawk
 	name = "Traitorous Swamps"
 	color = {
 		251 219 179
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -628,7 +616,7 @@ new province bandits_rest = {
 		121 250 110
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -648,13 +636,13 @@ new province dead_mens_respite = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = hills
-	area = snowhawk
+	area = hjaal_river_passage
 	name = "Dead Men's Respite"
 	color = {
 		106 129 184
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -684,10 +672,10 @@ new province snowhawk = {
 		culture = hjaalmarcher
 		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = arms
+		history_trade_goods = glass
 		capital = ""
 		is_city = no
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 	}
 }
 new province minedvild = {
@@ -701,13 +689,13 @@ new province minedvild = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = forest
-	area = southern_morthal
+	area = morthal
 	name = "Minedvild"
 	color = {
 		192 143 123
 	}
 	history = {
-		history_owner = snow-hawk
+		history_owner = snow_hawk
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -727,7 +715,7 @@ new province drajkmyr_toll = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = snowhawk
+	area = drajkmyr_marsh
 	name = "Drajkmyr Toll"
 	color = {
 		251 214 146
@@ -833,7 +821,7 @@ new province windstad = {
 		169 127 249
 	}
 	history = {
-		history_owner = high-gate
+		history_owner = high_gate
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -865,7 +853,7 @@ new province ondidreid = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = no
-		history_owner = wind-caller
+		history_owner = wind_caller
 	}
 }
 new province ustengrav = {
@@ -886,11 +874,11 @@ new province ustengrav = {
 	}
 	history = {
 		center_of_trade = 1
-		history_owner = wind-caller
+		history_owner = wind_caller
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
-		history_trade_goods = r_alchemical_ingredients
+		history_trade_goods = alchemical_ingredients
 		capital = ""
 		is_city = yes
 	}
@@ -918,7 +906,7 @@ new province fistrock = {
 		history_trade_goods = stone
 		capital = ""
 		is_city = yes
-		history_owner = wind-caller
+		history_owner = wind_caller
 	}
 }
 new province snow_trail = {
@@ -938,7 +926,7 @@ new province snow_trail = {
 		118 151 202
 	}
 	history = {
-		history_owner = stone-hill
+		history_owner = stone_hill
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -965,7 +953,7 @@ new province stonehills = {
 	}
 	history = {
 		center_of_trade = 1
-		history_owner = stone-hill
+		history_owner = stone_hill
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -1101,7 +1089,7 @@ new province bromjunaar_approach = {
 		history_trade_goods = wood
 		capital = ""
 		is_city = no
-		history_owner = mire-watch
+		history_owner = mire_watch
 	}
 }
 new province snowy_pines = {
@@ -1123,7 +1111,7 @@ new province snowy_pines = {
 	history = {
 		religion = nordic_pantheon
 		culture = hjaalmarcher
-		history_owner = mire-watch
+		history_owner = mire_watch
 		hre = yes
 		history_trade_goods = wood
 	}
@@ -1148,33 +1136,7 @@ new province abundant_mines = {
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
-		history_trade_goods = iron
-		capital = ""
-		is_city = yes
-		history_owner = rannveig
-	}
-}
-new province cold_rock_pass = {
-	position = {
-		1672.000 1982.000 1672.000 1982.000 1672.000 1982.000 1672.000 1982.000 1672.000 1982.000 1672.000 1982.000 1672.000 1982.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	terrain = mountain
-	area = rannveigs_fast
-	name = "Cold Rock Pass"
-	color = {
-		210 242 158
-	}
-	history = {
-		religion = the_old_ways
-		culture = hjaalmarcher
-		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = c_metals
 		capital = ""
 		is_city = yes
 		history_owner = rannveig
@@ -1197,16 +1159,16 @@ new province myrwatch = {
 		140 212 206
 	}
 	history = {
-		history_owner = mire-watch
+		history_owner = mire_watch
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = potions
 		capital = ""
 		is_city = yes
 	}
 }
-new province bjorn_ambush = {
+new province fyrthirth = {
 	position = {
 		1719.000 2011.000 1719.000 2011.000 1719.000 2011.000 1708.000 2015.000 1719.000 2011.000 1719.000 2011.000 1719.000 2011.000
 	}
@@ -1218,17 +1180,16 @@ new province bjorn_ambush = {
 	}
 	terrain = forest
 	area = stonehills
-	name = "Bjorn Ambush"
+	name = "Fyrthirth"
 	color = {
 		198 145 155
 	}
 	history = {
-		history_owner = stone-hill
+		history_owner = stone_hill
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
 		history_trade_goods = wood
-		capital = "Ondjaarn"
 		is_city = yes
 	}
 }
@@ -1249,7 +1210,7 @@ new province folks_gathering = {
 		217 228 123
 	}
 	history = {
-		history_owner = stone-hill
+		history_owner = stone_hill
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -1275,11 +1236,11 @@ new province kjenstag = {
 		252 167 203
 	}
 	history = {
-		history_owner = stone-hill
+		history_owner = stone_hill
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
-		history_trade_goods = r_alchemical_ingredients
+		history_trade_goods = alchemical_ingredients
 		capital = "Abefinna"
 		is_city = yes
 	}
@@ -1295,7 +1256,7 @@ new province rotten_trees = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = northern_morthal
+	area = drajkmyr_marsh
 	name = "Rotten Trees"
 	color = {
 		249 189 239
@@ -1320,7 +1281,7 @@ new province morthal_colony = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
 	terrain = marsh
-	area = northern_morthal
+	area = drajkmyr_marsh
 	name = "Morthal Colony"
 	color = {
 		219 196 224
@@ -1368,5 +1329,17 @@ new adjacency dragon_bridge = {
 	from = dragon_bridge
 	to = rivers_road
 	through = coast_of_solitude
+	type = sea
+}
+new adjacency drajkmyr_cold_strait = {
+	from = central_drajkmyr
+	to = isle_of_sorrow
+	through = drajkmyr_marsh
+	type = sea
+}
+new adjacency drajkmyr_marsh_strait = {
+	from = morthal_colony
+	to = isle_of_sorrow
+	through = drajkmyr_marsh
 	type = sea
 }

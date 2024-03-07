@@ -93,10 +93,7 @@ define_achievement = {
 			OR = {
 				owned_by = ROOT
 				NOT = {
-					OR = {
-						trade_goods = alchemical_ingredients
-						trade_goods = r_alchemical_ingredients
-					}
+					trade_goods = alchemical_ingredients
 				}
 			}
 		}
@@ -189,7 +186,7 @@ define_achievement = {
 	icon = achievement_mountains
 	name = "Lord of Five Peaks"
 	trigger = {
-		provinces:kilkreath_peak; west_karthspire; lord_hill; anthor_peak; shearpoint = {
+		provinces:kilkreath_peak; karthspire; lord_hill; anthor_peak; shearpoint = {
 			owned_by = ROOT
 		}
 	}
@@ -219,10 +216,10 @@ define_achievement = {
 	icon = achievement_dragonplate
 	name = "Fist of the Dawnstar"
 	trigger = {
-		tag = dawn-star
+		tag = dawn_star
 		provinces:fistrock = {
 			num_of_units_in_province = {
-				who = countries:dawn-star
+				who = countries:dawn_star
 				amount = 150
 			}
 		}
@@ -248,7 +245,7 @@ define_achievement = {
 	icon = achievement_stones
 	name = "Master of the Stones"
 	trigger = {
-		provinces:apprentice_stone; atronach; green_coast; lord_hill; groilief; embershard_mine; ritual_stone; serpent_stone; shadow_stone; hraggstad; tower_stone = {
+		provinces:apprentice_stone; atronach; green_coast; lord_hill; karerica; embershard_mine; ritual_stone; serpent_stone; shadow_stone; hraggstad; tower_stone = {
 			owned_by = ROOT
 		}
 	}

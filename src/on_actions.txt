@@ -31,13 +31,55 @@ new country_event global.1 = {
 		}
 	}
 }
+new event_modifier reach_blessing = {
+	name = "Reach Blessing"
+	modifier = {
+		global_tax_income = 30
+		global_manpower = 10
+		land_forcelimit = 5
+	}
+}
+on_actions:on_dependency_gained += {
+	FROM = {
+		if [is_subject_of_type = tributary_clan] {
+			change_country_color = { country = ROOT }
+		}
+	}
+}
+on_actions:on_dependency_lost += {
+	FROM = {
+		restore_country_color = yes
+	}
+}
 on_actions:on_startup += {
 	set_allow_female_emperor = yes
 	every_province [has_province_flag = orc_stronghold] {
 		province_event = orc_stronghold.1
 	}
-	if [NOT = { has_global_flag = on_action_set_up_global_flag }]
-	{
+	if [NOT = { has_global_flag = on_action_set_up_global_flag }] {
+		if [
+			NOT = {
+				any_country = {
+					is_race = reachmen
+					ai = no
+				}
+			}
+		] {
+			random_country [
+				is_race = reachmen
+				NOT = {
+					has_country_modifier = reach_blessing
+				}
+			] {
+				log = "Reach Blessing: [This.GetName]"
+				add_country_modifier = {
+					name = reach_blessing
+					duration = (50*365)
+				}
+				change_mil = 6
+			}
+		}
+	
 		every_province [is_city = no] {
 			random_list = {
 				10 = { change_native_hostileness = 1 }

@@ -13,6 +13,18 @@ new government_reform tier_2_wolf_army = {
 		infantry_shock = 0.15
 	}
 }
+new government_reform tier_2_gjukars_legacy = {
+	name = "Gjukar's Legacy"
+	icon = legacy_of_gjukar
+	potential = {
+		has_reform = tier_2_gjukars_legacy
+	}
+	modifier = {
+		infantry_power = 0.10
+		shock_damage = 0.10
+		discipline = 0.05
+	}
+}
 new government_reform tier_2_conscription = {
 	name = "Conscription"
 	desc = ""

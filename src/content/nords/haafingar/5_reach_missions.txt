@@ -15,7 +15,7 @@ mission_trees:solitude += {
 	#		province_groups:karth_expedition = {
 	#			discover_country = ROOT
 	#		}
-	#		areas:silverway, areas:bruca, areas:harmugstahl = {
+	#		areas:bruca, areas:harmugstahl = {
 	#			add_permanent_claim = ROOT
 	#		}
 	#	}
@@ -31,13 +31,13 @@ mission_trees:solitude_hidden += {
 			karth_expedition
 		}
 		trigger = {
-			areas:silverway, areas:bruca, areas:harmugstahl = {
+			areas:bruca, areas:harmugstahl = {
 				type = all
 				owned_by = ROOT
 			}
 		}
 		effect = {
-			areas:karthwasten, areas:karthald, areas:dragon_bridge_overlook, areas:broken_tower = {
+			areas:karthald, areas:dragon_bridge_overlook = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -66,7 +66,7 @@ mission_trees:solitude_hidden += {
 		}
 		inherit = not_implemented_mission
 		trigger = {
-			areas:karthwasten, areas:karthald, areas:dragon_bridge_overlook, areas:broken_tower = {
+			areas:karthald, areas:dragon_bridge_overlook = {
 				type = all
 				owned_by = ROOT
 			}

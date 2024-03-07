@@ -104,17 +104,3 @@ create_poetic_edda_modifier = {
 		development_cost = -0.1
 	}
 }
-mission_trees:solitude += {
-	grandest_hall = {
-		name = "Grandest Hall"
-		x = 0
-		y = 3
-		required = the_blue_palace
-		trigger = {
-			prestige = 100
-		}
-		effect = {
-			unlock_poetic_edda_modifier = ode_to_the_founding
-		}
-	}
-}

@@ -33,7 +33,7 @@ mission_trees:solitude_hidden += {
 			}
 		}
 		effect = {
-			areas:hjaal_river_passage, areas:hjaals_teeth, areas:snowhawk_forest, areas:snowhawk = {
+			areas:hjaal_river_passage, areas:hjaals_teeth, areas:snowhawk = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -45,7 +45,7 @@ mission_trees:solitude_hidden += {
 		required = two_bridges
 		inherit = not_implemented_mission
 		trigger = {
-			areas:snowhawk_forest, areas:snowhawk = {
+			areas:snowhawk = {
 				type = all
 				owned_by = ROOT
 			}
@@ -63,7 +63,7 @@ mission_trees:solitude_hidden += {
 			}
 		}
 		effect = {
-			areas:karthwasten, areas:karthald, areas:dragon_bridge_overlook, areas:broken_tower = {
+			areas:karthald, areas:dragon_bridge_overlook = {
 				add_permanent_claim = ROOT
 			}
 		}

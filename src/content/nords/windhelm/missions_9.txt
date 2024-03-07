@@ -37,14 +37,14 @@ new mission_series eastmarch_9 = {
 			}
 			trigger = {
 				OR = {
-					countries:blue-axe = {
+					countries:blue_axe = {
 						has_opinion = {
 							who = ROOT
 							value = 150
 						}
 					}
 					NOT = {
-						exists = blue-axe
+						exists = blue_axe
 					}
 				}
 			}
@@ -65,7 +65,7 @@ new mission_series eastmarch_9 = {
 			trigger = {
 				OR = {
 					full_idea_group = naval_ideas
-					alliance_with = countries:blue-axe
+					alliance_with = blue_axe
 				}
 			}
 			effect = {

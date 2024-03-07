@@ -10,7 +10,7 @@ new idea_group pale_ideas = {
 	}
 	trigger = {
 		OR = {
-			tag = dawn-star
+			tag = dawn_star
 			tag = pale
 		}
 	}

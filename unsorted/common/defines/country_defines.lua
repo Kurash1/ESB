@@ -49,7 +49,7 @@ NDefines.NDiplomacy.IMPERIAL_REFORM_COST = 50						-- Minium Cost of enacting a 
 
 NDefines.NDiplomacy.AE_HRE_INTERNAL = 0
 
-NDefines.NDiplomacy.MAX_NUM_OF_ELECTORS = 5						-- Maximum number of electors in the interface
+NDefines.NDiplomacy.MAX_NUM_OF_ELECTORS = 1						-- Maximum number of electors in the interface
 
 NDefines.NFrontend.CAMERA_LOOKAT_X = 1855.0
 NDefines.NFrontend.CAMERA_LOOKAT_Y = 0.0

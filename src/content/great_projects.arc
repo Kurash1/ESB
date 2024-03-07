@@ -589,7 +589,7 @@ new great_project gildergreen = {
 }
 new great_project karthspire = {
 	name = "Karthspire"
-	start = west_karthspire
+	start = karthspire
 	tier_1 = { 
 		country_modifier = {
 			prestige = 0.5
