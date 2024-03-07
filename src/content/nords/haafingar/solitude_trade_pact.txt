@@ -1,0 +1,48 @@
+new localisation esb_expand_trade_pact = "Force into the Trade-Pact"
+new localisation PEACE_esb_expand_trade_pact = "Force into the Trade-Pact"
+new localisation CB_ALLOWED_esb_expand_trade_pact = "Force into the Trade-Pact"
+new localisation esb_expand_trade_pact_desc = "[From.GetName] becomes a trade-pact member of [Root.GetName]"
+new war_goal war_goal_solitude_trade_pact = {
+	type = naval_superiority
+	title = "Trade-Pact Expansion"
+	war_name = "$ORDER$$FIRST$ Trade-Pact Expansion on $SECOND_NAME$"
+	attacker = {
+		badboy_factor = 0.25
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		peace_options = {
+			esb_expand_trade_pact
+		}
+	}
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+	}
+}
+new casus_belli cb_solitude_trade_pact = {
+	name = "Trade-Pact Expansion"
+	months = 300
+	war_goal = war_goal_solitude_trade_pact
+	
+	prerequisites_self = {
+		has_country_flag = solitude_trade_pact
+	}
+	prerequisites = {
+		FROM = { 
+			is_race = nord
+		}
+	}
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_revoke_cores
+		po_change_religion
+		po_form_personal_union
+		po_become_vassal
+		po_subjugate_vassal
+		po_change_government
+		po_revoke_elector
+		po_enforce_rebel_demands
+	}
+}

@@ -329,6 +329,13 @@ new subject_type vassal = {
 	subject_opinion_modifier = is_vassal
 }
 
+new localisation tributary_clan = "Tributary Clan"
+new localisation tributary_clan_long_desc = ""
+new localisation tributary_clan_title = "Tributary Clan"
+new localisation tributary_clan_title_plural = "Tributary Clans"
+new localisation tributary_clan_overlord = "Tributary Clan Overlord"
+new localisation tributary_clan_subject = "Tributary Clan Subject"
+new localisation tributary_clan_is_our = "§Y$NAME$§! is our Tributary Clan."
 new subject_type tributary_clan = {
 	copy_from = default
 	
@@ -390,6 +397,61 @@ new subject_type tributary_clan = {
 	
 	contribute_to_capital = yes
 	conscript_general = yes
+
+	# Modifiers:
+	clear_subject_modifier = yes
+}
+
+new localisation solitude_trade_pact_member = "Trade-Pact Member"
+new localisation solitude_trade_pact_member_long_desc = ""
+new localisation solitude_trade_pact_member_title = "Trade-Pact Member"
+new localisation solitude_trade_pact_member_title_plural = "Trade-Pact Members"
+new localisation solitude_trade_pact_member_overlord = "Trade-Pact Member Overlord"
+new localisation solitude_trade_pact_member_subject = "Trade-Pact Member Subject"
+new localisation solitude_trade_pact_member_is_our = "§Y$NAME$§! is our Trade-Pact Member."
+new subject_type solitude_trade_pact_member = {
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_subject_tributary_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtributary
+	diplomacy_subject_sprite = GFX_diplomacy_amtributary
+
+	# Properties:
+    is_voluntary = yes
+	joins_overlords_wars = yes
+	overlord_can_be_subject = no
+	can_have_subjects_of_other_types = no
+	takes_diplo_slot = yes
+	overlord_protects_external = yes
+	gets_help_with_rebels = yes
+	allows_taking_land_without_independence = no
+	
+	base_liberty_desire = -50
+	
+	pays_overlord = 0.5
+	forcelimit_to_overlord = 0
+	military_focus = 1
+	
+	relative_power_class = 1
+	diplomacy_view_class = 1
+	
+	# Subject Interactions:
+	# (continuous)
+	support_loyalists = yes
+	placate_rulers = yes
+	embargo_rivals = yes
+	divert_trade = yes
+	# (immediate)
+	siphon_income = yes
+	
+	allow_settlement_growth = no
+	block_settlement_growth = no
+	
+	send_additional_troops = yes
+	
+	press_sailors = yes
+	takeondebt = yes
 
 	# Modifiers:
 	clear_subject_modifier = yes
