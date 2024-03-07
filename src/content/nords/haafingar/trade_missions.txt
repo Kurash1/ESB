@@ -3,6 +3,7 @@ mission_trees:solitude += {
 		name = "Dominate Solitude's Trade"
 		x = 0
 		y = 3
+		icon = dominate_trade
 		trigger = {
 			trade_nodes:solitude:location = {
 				trade_share = {
@@ -32,6 +33,7 @@ mission_trees:solitude += {
 		x = 0
 		y = 4
 		required = dominate_trade
+		icon = dawnstar_hall
 		trigger = {
 			OR = {
 				alliance_with = dawn_star
@@ -108,6 +110,7 @@ mission_trees:solitude += {
 		x = 1
 		y = 4
 		required = dominate_trade
+		icon = snowhawk_fort
 		trigger = {
 			OR = {
 				overlord_of = snow_hawk
@@ -154,13 +157,13 @@ mission_trees:solitude += {
 		y = 5
 		required = break_the_hawk
 		trigger = {
-			areas:morthal; myrwatch; stonehills; ustengrav = {
+			areas:morthal; myrwatch; stonehills; ustengrav; bromjunaar = {
 				type = all
 				owned_by = ROOT
 			}
 		}
 		effect = {
-			areas:morthal; myrwatch; stonehills; ustengrav = {
+			areas:morthal; myrwatch; stonehills; ustengrav; bromjunaar = {
 				add_base_production = 1
 			}
 			areas:drajkmyr_marsh = {
@@ -191,8 +194,20 @@ mission_trees:solitude += {
 		y = 5
 		required = break_the_hawk
 		trigger = {
+			areas:hjaal_river_passage; hjaals_teeth; talking_stone; swindler; hamvirs_rest; greenspring_hollow = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
+			areas:hjaal_river_passage; hjaals_teeth; talking_stone; swindler; hamvirs_rest; greenspring_hollow = {
+				add_base_production = 1
+			}
+			add_casus_belli = {
+				target = countries:rorikstead
+				type = cb_vassalize_mission
+				months = 1200
+			}
 		}
 	}
 	roriks_farm = {
@@ -201,18 +216,75 @@ mission_trees:solitude += {
 		y = 6
 		required = owner_of_the_hjaal_river
 		trigger = {
+			treasury = 500
+			areas:rorikstead = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
+			add_treasury = -500
+			areas:rorikstead = {
+				quick_province_modifier = {
+					name = "Expanded Farms"
+					modifier = {
+						trade_goods_size_modifier = 0.25
+						trade_goods_size = 0.5
+					}
+				}
+			}
 		}
 	}
 	gjukar_thane = {
-		name = "Gjukar-Thane Legacy"
+		name = "Legacy of Gjukar-Thane"
 		x = 1
 		y = 6
 		required = owner_of_the_hjaal_river
+		icon = gjukar_legacy
 		trigger = {
+			OR = {
+				owns = gjukar
+				countries:rorikstead = {
+					is_subject_of = ROOT
+					owns = gjukar
+				}
+			}
+			provinces:gjukar = {
+				has_great_project = {
+					type = gjukars_monument
+					tier = 1
+				}
+			}
 		}
 		effect = {
+			conditional_effect = {
+				tooltip = "owns §Y[{provinces:gjukar}.GetName]§!"
+				trigger = {
+					owns = gjukar
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Legacy of Gjukar-Thane"
+						modifier = {
+							infantry_power = 0.10
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "is the overlord of §Y[{countries:rorikstead}.GetName]§! who owns §Y[{provinces:gjukar}.GetName]§!"
+				trigger = {
+					countries:rorikstead = {
+						is_subject_of = ROOT
+						owns = gjukar
+					}
+				}
+				effect = {
+					countries:rorikstead = {
+						add_government_reform = tier_2_gjukars_legacy
+					}
+				}
+			}
 		}
 	}
 }

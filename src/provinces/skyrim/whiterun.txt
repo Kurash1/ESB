@@ -2,32 +2,6 @@ new area talking_stone = {
 	name = "Talking Stone"
 	region = whiterun
 }
-new province illdund = {
-	position = {
-		1652.000 1956.000 1652.000 1956.000 1652.000 1956.000 1659.500 1958.000 1652.000 1956.000 1652.000 1956.000 1652.000 1956.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 2.915 0.365 0.365 0.365
-	}
-	area = talking_stone
-	name = "Illdund"
-	terrain = coastline
-	color = {
-		174 108 224
-	}
-	history = {
-		history_owner = river_runner
-		religion = nordic_pantheon
-		culture = whiterunish
-		hre = yes
-		history_trade_goods = fish
-		capital = ""
-		is_city = no
-	}
-}
 new province adising = {
 	position = {
 		1642.000 1969.000 1642.000 1969.000 1642.000 1969.000 1642.500 1973.500 1642.000 1969.000 1642.000 1969.000 1642.000 1969.000
@@ -104,7 +78,7 @@ new province jolsta = {
 		religion = nordic_pantheon
 		culture = whiterunish
 		hre = yes
-		history_trade_goods = grain
+		history_trade_goods = stone
 		capital = ""
 		is_city = yes
 	}
@@ -223,6 +197,32 @@ new province rorikstead = {
 new area swindler = {
 	name = "Swindler"
 	region = whiterun
+}
+new province illdund = {
+	position = {
+		1652.000 1956.000 1652.000 1956.000 1652.000 1956.000 1659.500 1958.000 1652.000 1956.000 1652.000 1956.000 1652.000 1956.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 2.915 0.365 0.365 0.365
+	}
+	area = swindler
+	name = "Illdund"
+	terrain = coastline
+	color = {
+		174 108 224
+	}
+	history = {
+		history_owner = river_runner
+		religion = nordic_pantheon
+		culture = whiterunish
+		hre = yes
+		history_trade_goods = fish
+		capital = ""
+		is_city = no
+	}
 }
 new province swindlers_den = {
 	position = {
