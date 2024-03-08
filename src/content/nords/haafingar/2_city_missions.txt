@@ -379,6 +379,35 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 			}
 		}
 	}
+	tower_project = {
+		name = "Tower Project"
+		x = 3
+		y = 2
+		required = {
+			storm_gate
+			solitude_countryside
+		}
+		trigger = {
+			treasury = 1000
+			areas:solitude_proper; solitude_countryside; dragon_bridge = {
+				type = all
+				owned_by = ROOT
+				base_manpower = 5
+			}
+		}
+		effect = {
+			add_treasury = -1000
+			
+			areas:solitude_proper; solitude_countryside; dragon_bridge = {
+				quick_province_modifier = {
+					name = "Military Towers"
+					modifier = {
+						fort_level = 1
+					}
+				}
+			}
+		}
+	}
 }
 new event_modifier flame_of_callisos = {
 	name = "Flame of Callisos"

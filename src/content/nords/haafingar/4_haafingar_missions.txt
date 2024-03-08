@@ -1,8 +1,12 @@
-mission_trees:solitude_hidden += {
+mission_trees:solitude += {
 	form_haafingar_hold = {
 		name = "Form Haafingar Hold"
-		x = 3
-		y = 5
+		x = 6
+		y = 2
+		required = {
+			coast_of_haafingar
+			the_deepwood
+		}
 		trigger = {
 			regions:haafingar = {
 				type = all
@@ -16,170 +20,359 @@ mission_trees:solitude_hidden += {
 		}
 		effect = {
 			change_tag = haafingar
-			areas:rivers_horn, areas:twin_bridges = {
-				add_permanent_claim = ROOT
-			}
-		} 
+		}
 	}
-	two_bridges = {
-		name = "Two Bridges"
-		x = 3
-		y = 6
+	northwatch_keep = {
+		name = "Northwatch Keep"
+		x = 5
+		y = 3
 		required = form_haafingar_hold
 		trigger = {
-			areas:rivers_horn, areas:twin_bridges = {
-				type = all
-				owned_by = ROOT
+			owns = northwatch
+			provinces:northwatch = {
+				development = 15
+				fort_level = 2
 			}
 		}
 		effect = {
-			areas:hjaal_river_passage, areas:hjaals_teeth, areas:snowhawk = {
-				add_permanent_claim = ROOT
+			provinces:northwatch = {
+				province_event = haafingar.1
 			}
 		}
 	}
-	snowhawk = {
-		name = "Snowhawk"
-		x = 2
-		y = 7
-		required = two_bridges
-		inherit = not_implemented_mission
+	castle_hraggstad = {
+		name = "Purpose of Hraggstad"
+		x = 6
+		y = 3
+		required = form_haafingar_hold
 		trigger = {
-			areas:snowhawk = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-	}
-	hjaal_mouth = {
-		name = "Hjaal Mouth"
-		x = 4
-		y = 7
-		required = two_bridges
-		trigger = {
-			areas:hjaal_river_passage, areas:hjaals_teeth = {
-				type = all
-				owned_by = ROOT
+			owns = hraggstad
+			provinces:hraggstad = {
+				development = 15
+				fort_level = 2
 			}
 		}
 		effect = {
-			areas:karthald, areas:dragon_bridge_overlook = {
-				add_permanent_claim = ROOT
+			provinces:hraggstad = {
+				province_event = haafingar.2
 			}
 		}
 	}
-	morthal = {
-		name = "Morthal"
-		x = 1
-		y = 8
-		required = snowhawk
-		inherit = not_implemented_mission
-	}
-	rannveig = {
-		name = "Rannveig"
-		x = 2
-		y = 8
-		required = snowhawk
-		inherit = not_implemented_mission
-	}
-	storm_hawk_expedition = {
-		name = "Storm-Hawk Expedition"
-		x = 3
-		y = 8
-		required = snowhawk
-		inherit = not_implemented_mission
-	}
-	labyrinthian = {
-		name = "Labyrinthian"
-		x = 0
-		y = 9
-		required = morthal
-		inherit = not_implemented_mission
-	}
-	bromjunaar_order = {
-		name = "Bromjunaar Order"
-		x = 0
-		y = 10
-		required = labyrinthian
-		inherit = not_implemented_mission
-	}
-	stonehills = {
-		name = "Stonehills"
-		x = 2
-		y = 9
-		required = {
-			morthal
-			storm_hawk_expedition
+	cascabel_hall = {
+		name = "Autonomy of Cascabel Hall"
+		x = 7
+		y = 3
+		required = form_haafingar_hold
+		trigger = {
+			areas:shadowgreen = {
+				owned_by = ROOT
+			}
+			provinces:cascabel_hall = {
+				fort_level = 2
+			}
 		}
-		inherit = not_implemented_mission
-	}
-	folgunthur = {
-		name = "Folgunthur"
-		x = 4
-		y = 9
-		required = storm_hawk_expedition
-		inherit = not_implemented_mission
-	}
-	dominate_pale_trade = {
-		name = "Dominate Pale Trade"
-		x = 1
-		y = 10
-		required = stonehills
-		inherit = not_implemented_mission
-	}
-	winterhold_war_plans = {
-		name = "Winterhold War Plans"
-		x = 0
-		y = 11
-		required = dominate_pale_trade
-		inherit = not_implemented_mission
-	}
-	north_sea_domination = {
-		name = "North Sea Domination"
-		x = 0
-		y = 12
-		required = winterhold_war_plans
-		inherit = not_implemented_mission
-	}
-	ustengrav = {
-		name = "Ustengrav"
-		x = 3
-		y = 10
-		required = {
-			stonehills
-			folgunthur
+		effect = {
+			provinces:cascabel_hall = {
+				quick_province_modifier = {
+					name = "Arbor of Golden Apples"
+					modifier = {
+						trade_value_modifier = 1.5 #this makes the base_price of the good 5 instead of 2
+						trade_goods_size_modifier = 0.5
+					}
+				}
+				quick_province_modifier = {
+					name = "Impenetrable Cascabel Walls"
+					modifier = {
+						local_defensiveness = 0.5
+						fort_level = 1
+					}
+				}
+			}
+			
+			country_event = haafingar.3
 		}
-		inherit = not_implemented_mission
 	}
-	vassal_jarl_of_dawnstar = {
-		name = "Vassal Jarl of Dawnstar"
-		x = 2
-		y = 11
-		required = {
-			dominate_pale_trade
-			ustengrav
+}
+new province_event haafingar.1 = {
+	title = "Purpose of Northwatch Keep"
+	desc = ""
+	picture = northwatch_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "A naval port should be good"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Navy"
+					modifier = {
+						local_sailors_modifier = 0.5
+						local_ship_cost = -0.3
+						naval_forcelimit = 3
+					}
+				}
+			}
 		}
-		inherit = not_implemented_mission
+		{
+			name = "It is on a good trade route"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Trade"
+					modifier = {
+						province_trade_power_modifier = 0.25
+						province_trade_power_value = 2.5
+					}
+				}
+			}
+		}
+		{
+			name = "Hmm, have we considered torture?"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Dungeons"
+					modifier = {
+						global_unrest = -1
+						harsh_treatment_cost = -0.2
+						years_of_nationalism = -5
+						local_unrest = -10
+					}
+				}
+			}
+		}
 	}
-	volunruud_company = {
-		name = "Volunruud Company"
-		x = 1
-		y = 12
-		required = vassal_jarl_of_dawnstar
-		inherit = not_implemented_mission
+}
+new province_event haafingar.2 = {
+	title = "Purpose of Fort Hraggstad"
+	desc = ""
+	picture = northwatch_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "A Fortress City"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Fort"
+					modifier = {
+						fort_level = 1
+						local_defensiveness = 0.25
+						local_manpower_modifier = 0.5
+					}
+				}
+			}
+		}
+		{
+			name = "It is on a good trade Route"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Trade"
+					modifier = {
+						province_trade_power_modifier = 0.25
+						province_trade_power_value = 2.5
+					}
+				}
+			}
+		}
 	}
-	dawnstar_port = {
-		name = "Dawnstar Port"
-		x = 2
-		y = 12
-		required = vassal_jarl_of_dawnstar
-		inherit = not_implemented_mission
+}
+new country_event haafingar.3 = {
+	title = "Autonomy of Cascabel Hall"
+	is_triggered_only = yes
+	immediate = {
+		areas:shadowgreen = {
+			add_core = cascabel
+		}
 	}
-	yorgrim_woods = {
-		name = "Yorgrim Woods"
-		x = 3
-		y = 12
-		required = vassal_jarl_of_dawnstar
-		inherit = not_implemented_mission
+	options = {
+		{
+			name = "Curtail their autonomy"
+			effect = {
+				areas:shadowgreen = {
+					set_local_autonomy = 0
+				}
+			}
+		}
+		{
+			name = "Autonomy for the Count of Cascabel"
+			effect = {
+				hidden_effect = {
+					release = cascabel
+				}
+				create_subject = {
+					subject_type = cascabel_subject
+					subject = cascabel
+				}
+			}
+		}
+	}
+}
+new subject_type cascabel_subject = {
+	name = "County"
+	desc = ""
+	title = "County"
+	plural = "Counties"
+	overlord = "County Overlord"
+	subject = "County Subject"
+	is_our = "§Y$NAME$§! is our County"
+
+	copy_from = vassal
+	
+	sprite = GFX_icon_march
+	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
+	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+	
+	gives_daimyo_bonuses = yes
+	counts_for_borders = yes
+	takes_diplo_slot = yes
+	scutage = no
+	enforce_religion = yes
+	siphon_income = yes
+	seize_territory = no
+	takeondebt = yes
+	bestow_gifts = yes
+	send_additional_troops = yes
+	relative_power_class = 1
+	max_government_rank = 2
+	place_relative_on_throne = no
+	joins_overlords_wars = no
+	military_focus = 1.0
+	clear_overlord_modifier = yes
+	clear_subject_modifier = yes
+	subject_modifiers = {
+		{
+			modifier = cascabel_nation
+		}
+	}
+}
+new localisation cascabel_nation = "Cascabel Nation"
+new static_modifier cascabel_nation = {
+	land_forcelimit = 5
+	global_manpower = 10
+}
+new localisation cascabel_bonus = "Cascabel Bonus"
+new static_modifier cascabel_bonus = {
+	discipline = 0.1
+}
+new diplomatic_action call_cascabel = {
+	name = "Call Cascabel to War"
+	title = "Call Cascabel to War"
+	desc = "Spend up to §R20§! Favors with §Y[From.GetName]§! and call them into ALL of §Y[Root.GetAdjective]§! wars. The cost is reduced by §Y10§! Favors if we can call §Y[From.GetName]§! only into defensive wars."
+	tooltip = "Use our favors with the target country in order to call them into our wars."
+	category = influence
+
+	require_acceptance = no
+	potential = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = cascabel_subject
+		}
+	}
+	trigger = {
+		if [
+			FROM = { liberty_desire = 50 }
+		] {
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_REBELLIOUS_TT
+				FROM = { liberty_desire = 50 }
+			}
+		}
+		if [
+			is_at_war = no
+		] {
+			custom_trigger_tooltip = {
+				tooltip = ROOT_IS_NOT_AT_WAR_TT
+				is_at_war = yes
+			}
+		}
+		if [
+			FROM = {
+				NOT = {
+					owes_favors = {
+						who = ROOT
+						value = 10
+					}
+				}
+			}
+			is_in_war = {
+				defender_leader = ROOT
+			}
+		] {
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_OWE_10_FAVORS_DEFENSIVE_WAR_TT
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 10
+					}
+				}
+			}
+		}
+		if [
+			FROM = {
+				NOT = {
+					owes_favors = {
+						who = ROOT
+						value = 20
+					}
+				}
+			}
+			NOT = {
+				is_in_war = {
+					defender_leader = ROOT
+				}
+			}
+		] {
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_OWE_20_FAVORS_TT
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 20
+					}
+				}
+			}
+		}
+		if [
+			FROM = { is_at_war = yes }
+		] {
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			ROOT = {
+				add_favors = {
+					who = PREV
+					amount = -10
+				}
+			}
+			join_all_defensive_wars_of = ROOT
+		}
+		if = {
+			limit = {
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 10
+					}
+				}
+			}
+			FROM = {
+				ROOT = {
+					add_favors = {
+						who = PREV
+						amount = -10
+					}
+				}
+				join_all_offensive_wars_of = ROOT
+			}
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		always = yes
 	}
 }
