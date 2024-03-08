@@ -198,6 +198,15 @@ new building_line tax = {
 			local_autonomy = -0.15
 		}
 	}
+	4 = {
+		cost = 400
+		name = "Tax 4"
+		make_obsolete = tax_3
+		modifier = {
+			local_tax_modifier = 1.5
+			local_autonomy = -0.2
+		}
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -245,6 +254,14 @@ new building_line production = {
 			local_production_efficiency = 1.0
 		}
 	}
+	4 = {
+		cost = 400
+		name = "Production 4"
+		make_obsolete = production_3
+		modifier = {
+			local_production_efficiency = 1.5
+		}
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -259,6 +276,8 @@ new building_line trade = {
 		economic_ideas
 		trade_ideas
 		esb_monopoly
+		plutocracy_ideas
+		mobility_ideas
 	}
 	1 = {
 		cost = 100
@@ -281,6 +300,14 @@ new building_line trade = {
 		make_obsolete = trade_2
 		modifier = {
 			province_trade_power_modifier = 1.0
+		}
+	}
+	4 = {
+		cost = 400
+		name = "Trade 4"
+		make_obsolete = trade_3
+		modifier = {
+			province_trade_power_modifier = 1.5
 		}
 	}
 	ai_will_do = {
@@ -334,6 +361,15 @@ new building_line army = {
 			land_forcelimit = 2
 		}
 	}
+	4 = {
+		cost = 400
+		name = "Army 4"
+		make_obsolete = army_3
+		modifier = {
+			local_manpower_modifier = 1.5
+			land_forcelimit = 4
+		}
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -342,7 +378,7 @@ new building_line navy = {
 	name = "Navy"
 	desc = ""
 	time = 12
-	x = 200
+	x = 260
 	y = 434
 	idea_group_unlocks = {
 		maritime_ideas
@@ -389,6 +425,17 @@ new building_line navy = {
 			local_sailors_modifier = 1.0
 		}
 	}
+	4 = {
+		cost = 400
+		name = "Navy 4"
+		make_obsolete = navy_3
+		modifier = {
+			ship_recruit_speed = -0.8
+			local_ship_repair = 0.8
+			naval_forcelimit = 6
+			local_sailors_modifier = 1.5
+		}
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -397,7 +444,7 @@ new building_line road = {
 	name = "Road"
 	desc = ""
 	time = 3
-	x = 200
+	x = 260
 	y = 334
 	start_offset = 1
 	idea_group_unlocks = {
@@ -425,10 +472,19 @@ new building_line road = {
 	}
 	3 = {
 		cost = 75
-		name = "Road 2"
+		name = "Road 3"
 		make_obsolete = road_2
 		modifier = {
 			local_friendly_movement_speed = 1.5
+			allowed_num_of_buildings = 1
+		}
+	}
+	4 = {
+		cost = 100
+		name = "Road 4"
+		make_obsolete = road_3
+		modifier = {
+			local_friendly_movement_speed = 2
 			allowed_num_of_buildings = 1
 		}
 	}
@@ -440,8 +496,8 @@ new building_line goods = {
 	name = "Goods"
 	desc = ""
 	time = 12
-	x = 200
-	y = 134
+	x = 260
+	y = 234
 	idea_group_unlocks = {
 		alteration_ideas
 		enchanting_ideas
@@ -453,7 +509,7 @@ new building_line goods = {
 		name = "Goods 1"
 		modifier = {
 			trade_goods_size_modifier = 0.1
-			local_development_cost = -0.15
+			local_development_cost = -0.05
 		}
 	}
 	2 = {
@@ -462,118 +518,16 @@ new building_line goods = {
 		make_obsolete = goods_1
 		modifier = {
 			trade_goods_size_modifier = 0.2
-			local_development_cost = -0.3
-		}
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-new building_line state = {
-	name = "State"
-	desc = ""
-	time = 12
-	x = 200
-	y = 234
-	idea_group_unlocks = {
-		staatsverwaltung0
-		administrative_ideas
-		dezentra0
-	}
-	1 = {
-		cost = 100
-		name = "State 1"
-		modifier = {
-			local_state_maintenance_modifier = -0.2
-			statewide_governing_cost = -0.05
-			local_prosperity_growth = 0.05
-			allowed_num_of_buildings = 1
-		}
-		build_trigger = {
-			NOT = {
-				area_for_scope_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = state_1
-						has_building = state_2
-						has_building = state_3
-						has_construction = state_1
-						has_construction = state_2
-						has_construction = state_3
-					}
-				}
-			}
-		}
-	}
-	2 = {
-		cost = 200
-		name = "State 2"
-		make_obsolete = state_1
-		modifier = {
-			local_state_maintenance_modifier = -0.4
-			statewide_governing_cost = -0.10
-			local_prosperity_growth = 0.10
-			allowed_num_of_buildings = 1
-		}
-		build_trigger = {
-			NOT = {
-				area_for_scope_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = state_2
-						has_building = state_3
-						has_construction = state_1
-						has_construction = state_2
-						has_construction = state_3
-					}
-				}
-			}
-		}
-		on_built = {
-			area [has_building = state_1] {
-				remove_building = state_1
-			}
+			local_development_cost = -0.1
 		}
 	}
 	3 = {
 		cost = 300
-		name = "State 3"
-		make_obsolete = state_2
+		name = "Goods 3"
+		make_obsolete = goods_2
 		modifier = {
-			local_state_maintenance_modifier = -0.6
-			statewide_governing_cost = -0.15
-			local_prosperity_growth = 0.15
-			allowed_num_of_buildings = 1
-		}
-		build_trigger = {
-			NOT = {
-				area_for_scope_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = state_3
-						has_construction = state_1
-						has_construction = state_2
-						has_construction = state_3
-					}
-				}
-			}
-		}
-		on_built = {
-			area [
-				OR = {
-					has_building = state_1
-					has_building = state_2
-				}
-			] {
-				remove_building = state_1
-				remove_building = state_2
-			}
+			trade_goods_size_modifier = 0.3
+			local_development_cost = -0.15
 		}
 	}
 	ai_will_do = {
@@ -585,8 +539,8 @@ new building manufactory = {
 	desc = ""
 	cost = 500
 	time = 60
-	x = 320
-	y = 134
+	x = 440
+	y = 234
 	modifier = {
 		trade_goods_size = 1.0
 	}
