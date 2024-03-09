@@ -121,7 +121,7 @@ mission_trees:solitude += {
 		trigger = {
 			OR = {
 				overlord_of = snow_hawk
-				NOT = { exists = snow_hawk }
+				areas:snowhawk = { type = all owned_by = ROOT }
 			}
 		}
 		effect = {
@@ -146,9 +146,9 @@ mission_trees:solitude += {
 				}
 			}
 			conditional_effect = {
-				tooltip = "§Y[{countries:snow_hawk}.GetName]§! does NOT exist"
+				tooltip = "owns §YSnowhawk§! area"
 				trigger = {
-					NOT = { exists = snow_hawk }
+					areas:snowhawk; twin_bridges = { type = all owned_by = ROOT }
 				}
 				effect = {
 					regions:hjaalmarch [is_city = yes] {

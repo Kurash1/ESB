@@ -1,3 +1,44 @@
+new province_event haafingar.5 = {
+	title = "Purpose of Dragon Bridge"
+	desc = ""
+	picture = northwatch_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "Port"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Navy"
+					modifier = {
+						
+					}
+				}
+			}
+		}
+		{
+			name = "Trade"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Trade"
+					modifier = {
+						
+					}
+				}
+			}
+		}
+		{
+			name = "Fort"
+			effect = {
+				quick_province_modifier = {
+					name = "Settlement Focus: Fort"
+					modifier = {
+						
+					}
+				}
+			}
+		}
+	}
+}
 mission_trees:solitude += {
 	form_the_wolf_army = {
 		name = "Form the Wolf Army"
@@ -27,17 +68,18 @@ mission_trees:solitude += {
 				area = shadowgreen
 				area = ravenscar
 				area = northwatch
+				area = pinefrost
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			areas:shadowgreen; ravenscar; northwatch = {
+			areas:shadowgreen; ravenscar; northwatch; pinefrost = {
 				type = all
 				owned_by = ROOT
 			}
 		}
 		effect = {
-			areas:shadowgreen; ravenscar; northwatch = {
+			areas:shadowgreen; ravenscar; northwatch; pinefrost = {
 				add_base_production = 1
 				add_local_autonomy = -25
 			}
@@ -235,7 +277,23 @@ mission_trees:solitude += {
 			}
 		}
 	}
-	
+	taming_the_dragon = {
+		name = "Taming the dragon"
+		x = 9
+		y = 1
+		required = form_the_wolf_army
+		trigger = {
+			owns = dragon_bridge
+			provinces:dragon_bridge = {
+				development = 15
+			}
+		}
+		effect = {
+			provinces:dragon_bridge = {
+				province_event = haafingar.5
+			}
+		}
+	}
 	#broken_oar_grotto = {
 	#	name = "Broken Oar Grotto"
 	#	x = 5
