@@ -1,75 +1,75 @@
-mission_trees:solitude_hidden += {
-	crown_of_freydis = {
-		name = "Crown of Freydis"
-		x = 1
-		y = 3
-		inherit = not_implemented_mission
-	}
-	dominate_the_moot = {
-		name = "Dominate the Moot"
-		x = 0
-		y = 4
-		required = crown_of_freydis
-		inherit = not_implemented_mission
-	}
-	economic_hegemon = {
-		name = "Economic Hegemon"
-		x = 1
-		y = 4
-		required = crown_of_freydis
-		inherit = not_implemented_mission
-	}
-	military_sovereign = {
-		name = "Military Sovereign"
-		x = 2
-		y = 4
-		required = crown_of_freydis
-		inherit = not_implemented_mission
-	}
-	hail_the_high_king = {
-		name = "Hail the High King"
-		x = 1
-		y = 5
-		required = {
-			dominate_the_moot
-			economic_hegemon
-			military_sovereign
-		}
-		inherit = not_implemented_mission
-	}
-	tackle_the_bear = {
-		name = "Throw Fists with the Bear"
-		x = 0
-		y = 6
-		required = hail_the_high_king
-		inherit = not_implemented_mission
-	}
-	venture_beyond = {
-		name = "Beyond Fallowfire"
-		x = 0
-		y = 7
-		required = tackle_the_bear
-		inherit = not_implemented_mission
-	}
-	whiterun_tundra = {
-		name = "Whiterun Tundra"
-		x = 1
-		y = 6
-		required = hail_the_high_king
-		inherit = not_implemented_mission
-	}
-	falks_kreath = {
-		name = "The Falks' Kreath"
-		x = 1
-		y = 7
-		required = whiterun_tundra
-		inherit = not_implemented_mission
-	}
-	frigid_landing = {
-		name = "Ysgramoor's Frigid Landing"
-		x = 2
-		y = 6
-		required = hail_the_high_king
-		inherit = not_implemented_mission
-	}
-}
+#mission_trees:solitude_hidden += {
+#	crown_of_freydis = {
+#		name = "Crown of Freydis"
+#		x = 1
+#		y = 3
+#		inherit = not_implemented_mission
+#	}
+#	dominate_the_moot = {
+#		name = "Dominate the Moot"
+#		x = 0
+#		y = 4
+#		required = crown_of_freydis
+#		inherit = not_implemented_mission
+#	}
+#	economic_hegemon = {
+#		name = "Economic Hegemon"
+#		x = 1
+#		y = 4
+#		required = crown_of_freydis
+#		inherit = not_implemented_mission
+#	}
+#	military_sovereign = {
+#		name = "Military Sovereign"
+#		x = 2
+#		y = 4
+#		required = crown_of_freydis
+#		inherit = not_implemented_mission
+#	}
+#	hail_the_high_king = {
+#		name = "Hail the High King"
+#		x = 1
+#		y = 5
+#		required = {
+#			dominate_the_moot
+#			economic_hegemon
+#			military_sovereign
+#		}
+#		inherit = not_implemented_mission
+#	}
+#	tackle_the_bear = {
+#		name = "Throw Fists with the Bear"
+#		x = 0
+#		y = 6
+#		required = hail_the_high_king
+#		inherit = not_implemented_mission
+#	}
+#	venture_beyond = {
+#		name = "Beyond Fallowfire"
+#		x = 0
+#		y = 7
+#		required = tackle_the_bear
+#		inherit = not_implemented_mission
+#	}
+#	whiterun_tundra = {
+#		name = "Whiterun Tundra"
+#		x = 1
+#		y = 6
+#		required = hail_the_high_king
+#		inherit = not_implemented_mission
+#	}
+#	falks_kreath = {
+#		name = "The Falks' Kreath"
+#		x = 1
+#		y = 7
+#		required = whiterun_tundra
+#		inherit = not_implemented_mission
+#	}
+#	frigid_landing = {
+#		name = "Ysgramoor's Frigid Landing"
+#		x = 2
+#		y = 6
+#		required = hail_the_high_king
+#		inherit = not_implemented_mission
+#	}
+#}

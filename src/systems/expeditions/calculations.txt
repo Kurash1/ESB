@@ -1,33 +1,30 @@
 new localisation expedition_progress = "Expedition Progress"
-new effect cause_expedition_progress = {
-	args = int
-	transpile = {
-		change_variable = {
+new named_effect cause_expedition_progress = {
+	change_variable = {
+		which = expedition_progress
+		value = 1
+	}
+	hidden_effect = {
+		set_variable = {
+			which = expedition_percentage
 			which = expedition_progress
-			value = args
 		}
-		hidden_effect = {
-			set_variable = {
-				which = expedition_percentage
+		divide_variable = {
+			which = expedition_percentage
+			which = expedition_length
+		}
+		multiply_variable = {
+			which = expedition_percentage
+			value = 100
+		}
+		
+		if [
+			check_variable = {
 				which = expedition_progress
-			}
-			divide_variable = {
-				which = expedition_percentage
 				which = expedition_length
 			}
-			multiply_variable = {
-				which = expedition_percentage
-				value = 100
-			}
-			
-			if [
-				check_variable = {
-					which = expedition_progress
-					which = expedition_length
-				}
-			] {
-				end_expedition_effect
-			}
+		] {
+			end_expedition_effect
 		}
 	}
 }
@@ -54,7 +51,7 @@ new named_effect expedition_progress_pulse = {
 				factor = 2
 				full_idea_group = exploration_ideas
 			}
-			cause_expedition_progress = 1
+			cause_expedition_progress
 		}
 		19 = { }
 	}
