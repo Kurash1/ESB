@@ -3,7 +3,8 @@ new inheritable craglorn_inherit = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
 	history = {
-	
+		religion = pinewood_naturalism #temp
+		culture = pinewoodean #temp
 	}
 }
 
@@ -26,6 +27,9 @@ new province elinhir = {
     }
 	terrain = hills
 	area = elinhir
+	history += {
+		history_owner = blood_kingdom
+	}
 }
 new province armok = {
 	name = "Armok"
@@ -42,6 +46,9 @@ new province armok = {
     }
 	terrain = hills
 	area = elinhir
+	history += {
+		history_owner = blood_kingdom
+	}
 }
 new province durac = {
 	name = "Durac"
@@ -58,6 +65,9 @@ new province durac = {
     }
 	terrain = hills
 	area = elinhir
+	history += {
+		history_owner = blood_kingdom
+	}
 }
 new province gaaralan = {
 	name = "Gaaralan"
@@ -74,6 +84,9 @@ new province gaaralan = {
     }
 	terrain = hills
 	area = elinhir
+	history += {
+		history_owner = blood_kingdom
+	}
 }
 
 new area molavar = {
@@ -95,6 +108,9 @@ new province molavar = {
     }
 	terrain = desert
 	area = molavar
+	history += {
+		history_owner = blood_kingdom
+	}
 }
 new province conflagrant_anomaly = {
 	name = "Conflagrant Anomaly"
@@ -111,6 +127,9 @@ new province conflagrant_anomaly = {
     }
 	terrain = desert
 	area = molavar
+	history += {
+		history_owner = blood_kingdom
+	}
 }
 new province haddocks_market = {
 	name = "Haddock's Market"
@@ -127,6 +146,9 @@ new province haddocks_market = {
     }
 	terrain = desert
 	area = molavar
+	history += {
+		history_owner = spirit_kingdom
+	}
 }
 new province bloodroot_forge = {
 	name = "Bloodroot Forge"
@@ -143,6 +165,9 @@ new province bloodroot_forge = {
     }
 	terrain = desert_hills
 	area = molavar
+	history += {
+		history_owner = blood_kingdom
+	}
 }
 
 new area balamath = {
@@ -164,6 +189,9 @@ new province aetherian_archive = {
     }
 	terrain = hills
 	area = balamath
+	history += {
+		history_owner = frost_kingdom
+	}
 }
 new province fulminant_anomaly = {
 	name = "Fulminant Anomaly"
@@ -180,6 +208,9 @@ new province fulminant_anomaly = {
     }
 	terrain = hills
 	area = balamath
+	history += {
+		history_owner = frost_kingdom
+	}
 }
 new province balamath = {
 	name = "Balamath"
@@ -196,6 +227,9 @@ new province balamath = {
     }
 	terrain = hills
 	area = balamath
+	history += {
+		history_owner = frost_kingdom
+	}
 }
 new province inazzurs_hold = {
 	name = "Inazzur's Hold"
@@ -212,6 +246,9 @@ new province inazzurs_hold = {
     }
 	terrain = hills
 	area = balamath
+	history += {
+		history_owner = frost_kingdom
+	}
 }
 new province chiselshriek_mine = {
 	name = "Chiselshriek Mine"
@@ -249,6 +286,9 @@ new province haakon = {
     }
 	terrain = desert_hills
 	area = haakon
+	history += {
+		history_owner = shadow_kingdom
+	}
 }
 new province rkundzelft = {
 	name = "Rkundzelft"
@@ -265,6 +305,9 @@ new province rkundzelft = {
     }
 	terrain = desert
 	area = haakon
+	history += {
+		history_owner = shadow_kingdom
+	}
 }
 new province cyclonic_anomaly = {
 	name = "Cyclonic Anomaly"
@@ -281,6 +324,9 @@ new province cyclonic_anomaly = {
     }
 	terrain = desert_hills
 	area = haakon
+	history += {
+		history_owner = shadow_kingdom
+	}
 }
 new province nhalan = {
 	name = "Nhalan"
@@ -297,6 +343,9 @@ new province nhalan = {
     }
 	terrain = desert
 	area = haakon
+	history += {
+		history_owner = shadow_kingdom
+	}
 }
 
 new area belkarth = {
@@ -318,6 +367,9 @@ new province belkarth = {
     }
 	terrain = desert
 	area = belkarth
+	history += {
+		history_owner = spirit_kingdom
+	}
 }
 new province lyrezi = {
 	name = "Lyrezi"
@@ -334,6 +386,9 @@ new province lyrezi = {
     }
 	terrain = desert_hills
 	area = belkarth
+	history += {
+		history_owner = spirit_kingdom
+	}
 }
 new province reinholds_retreat = {
 	name = "Reinhold's Retreat"
@@ -350,6 +405,9 @@ new province reinholds_retreat = {
     }
 	terrain = desert
 	area = belkarth
+	history += {
+		history_owner = spirit_kingdom
+	}
 }
 new province mortas = {
 	name = "Mortas"
@@ -366,6 +424,9 @@ new province mortas = {
     }
 	terrain = desert
 	area = belkarth
+	history += {
+		history_owner = spirit_kingdom
+	}
 }
 
 new area spellscar = {
@@ -387,6 +448,9 @@ new province hircines_haunt = {
     }
 	terrain = desert
 	area = spellscar
+	history += {
+		history_owner = storm_kingdom
+	}
 }
 new province spellscar = {
 	name = "Spellscar"
@@ -403,6 +467,9 @@ new province spellscar = {
     }
 	terrain = desert
 	area = spellscar
+	history += {
+		history_owner = shadow_kingdom
+	}
 }
 new province anka_ras_mettle = {
 	name = "Anka-Ra's Mettle"
@@ -419,6 +486,9 @@ new province anka_ras_mettle = {
     }
 	terrain = desert
 	area = spellscar
+	history += {
+		history_owner = storm_kingdom
+	}
 }
 new province zuatha = {
 	name = "Zuatha"
@@ -435,6 +505,9 @@ new province zuatha = {
     }
 	terrain = desert
 	area = spellscar
+	history += {
+		history_owner = storm_kingdom
+	}
 }
 
 new area shavmar = {
@@ -456,6 +529,9 @@ new province shavmar = {
     }
 	terrain = desert
 	area = shavmar
+	history += {
+		history_owner = storm_kingdom
+	}
 }
 new province styriche = {
 	name = "Styriche"
@@ -472,6 +548,9 @@ new province styriche = {
     }
 	terrain = desert
 	area = shavmar
+	history += {
+		history_owner = spirit_kingdom
+	}
 }
 new province zalgazs_den = {
 	name = "Zalgaz's Den"
@@ -488,6 +567,9 @@ new province zalgazs_den = {
     }
 	terrain = desert
 	area = shavmar
+	history += {
+		history_owner = sun_kingdom
+	}
 }
 
 new area rahni_za = {
@@ -509,6 +591,9 @@ new province scorpion_ravine = {
     }
 	terrain = desert_hills
 	area = rahni_za
+	history += {
+		history_owner = sun_kingdom
+	}
 }
 new province rahni_za = {
 	name = "Rahni'Za"
@@ -525,6 +610,9 @@ new province rahni_za = {
     }
 	terrain = desert
 	area = rahni_za
+	history += {
+		history_owner = sun_kingdom
+	}
 }
 new province tombs_of_the_na_totambu = {
 	name = "Tombs of the Na-Totambu"
@@ -541,6 +629,9 @@ new province tombs_of_the_na_totambu = {
     }
 	terrain = desert
 	area = rahni_za
+	history += {
+		history_owner = sun_kingdom
+	}
 }
 new province lafara = {
 	name = "Lafara"
@@ -557,6 +648,9 @@ new province lafara = {
     }
 	terrain = desert
 	area = rahni_za
+	history += {
+		history_owner = sun_kingdom
+	}
 }
 
 new area the_seekers_archive = {
@@ -578,6 +672,9 @@ new province sandy_path = {
     }
 	terrain = desert
 	area = the_seekers_archive
+	history += {
+		history_owner = sun_kingdom
+	}
 }
 new province the_seekers_archive = {
 	name = "The Seeker's Archive"
@@ -594,6 +691,9 @@ new province the_seekers_archive = {
     }
 	terrain = desert
 	area = the_seekers_archive
+	history += {
+		history_owner = sun_kingdom
+	}
 }
 new province anka_ras_crucible = {
 	name = "Anka-Ra's Crucible"
@@ -610,6 +710,9 @@ new province anka_ras_crucible = {
     }
 	terrain = desert
 	area = the_seekers_archive
+	history += {
+		history_owner = flame_kingdom
+	}
 }
 new province bangkorai_gate = {
 	name = "Bangkorai Gate"
@@ -626,6 +729,9 @@ new province bangkorai_gate = {
     }
 	terrain = desert_hills
 	area = the_seekers_archive
+	history += {
+		history_owner = flame_kingdom
+	}
 }
 
 new area mahvia = {
@@ -647,6 +753,9 @@ new province kardala = {
     }
 	terrain = desert
 	area = mahvia
+	history += {
+		history_owner = flame_kingdom
+	}
 }
 new province buried_sands = {
 	name = "Buried Sands"
@@ -663,6 +772,9 @@ new province buried_sands = {
     }
 	terrain = desert
 	area = mahvia
+	history += {
+		history_owner = flame_kingdom
+	}
 }
 new province mahvia = {
 	name = "Mahvia"
@@ -679,6 +791,9 @@ new province mahvia = {
     }
 	terrain = desert
 	area = mahvia
+	history += {
+		history_owner = flame_kingdom
+	}
 }
 new province earthtear_cavern = {
 	name = "Earthtear Cavern"
@@ -695,6 +810,9 @@ new province earthtear_cavern = {
     }
 	terrain = desert_hills
 	area = mahvia
+	history += {
+		history_owner = flame_kingdom
+	}
 }
 
 new area dragonstar = {
@@ -716,6 +834,9 @@ new province sunken_lair = {
     }
 	terrain = hills
 	area = dragonstar
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province ornskar = {
 	name = "Ornskar"
@@ -732,6 +853,9 @@ new province ornskar = {
     }
 	terrain = hills
 	area = dragonstar
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province dragonstar = {
 	name = "Dragonstar"
@@ -748,6 +872,9 @@ new province dragonstar = {
     }
 	terrain = highlands
 	area = dragonstar
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province dragonstar_arena = {
 	name = "Dragonstar Arena"
@@ -764,6 +891,9 @@ new province dragonstar_arena = {
     }
 	terrain = mountain
 	area = dragonstar
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 
 new area skyreach = {
@@ -785,6 +915,9 @@ new province selenu = {
     }
 	terrain = highlands
 	area = skyreach
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province skyreach_pinnacle = {
 	name = "Skyreach Pinnacle"
@@ -801,6 +934,9 @@ new province skyreach_pinnacle = {
     }
 	terrain = highlands
 	area = skyreach
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province skyreach_overlook = {
 	name = "Skyreach Overlook"
@@ -817,6 +953,9 @@ new province skyreach_overlook = {
     }
 	terrain = hills
 	area = skyreach
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province skyreach_catacombs = {
 	name = "Skyreach Catacombs"
@@ -833,6 +972,9 @@ new province skyreach_catacombs = {
     }
 	terrain = hills
 	area = skyreach
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 
 new area vraseth = {
@@ -902,6 +1044,9 @@ new province orsa = {
     }
 	terrain = highlands
 	area = vraseth
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 
 new area serpents_nest = {
@@ -923,6 +1068,9 @@ new province rosathild = {
     }
 	terrain = highlands
 	area = serpents_nest
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province serpents_nest = {
 	name = "Serpent's Nest"
@@ -939,6 +1087,9 @@ new province serpents_nest = {
     }
 	terrain = mountain
 	area = serpents_nest
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province loth_na_caverns = {
 	name = "Loth'Na Caverns"
@@ -955,6 +1106,9 @@ new province loth_na_caverns = {
     }
 	terrain = highlands
 	area = serpents_nest
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 new province virgar = {
 	name = "Virgar"
@@ -971,6 +1125,9 @@ new province virgar = {
     }
 	terrain = highlands
 	area = serpents_nest
+	history += {
+		history_owner = sky_kingdom
+	}
 }
 
 new area druadach_pass = {

@@ -1,23 +1,28 @@
-new country forest_kingdom = {
-	tag = FKI
-	name = "Forest Kingdom"
-	adj = "Forest"
-	color = {
-		0 100 0
-	}
-	capital = pinewood
+new inheritable duraki_country = {
 	technology_group = duraki_tg
-	starting_reform = tier_1_duraki_kingdom
 	religion = pinewood_naturalism
 	primary_culture = pinewoodean
 	graphical_culture = easterngfx
-	government_rank = 2
 	history = {
 		1.1.1 = {
 			province_groups:orc_discovery = {
 				discover_country = $tag
 			}
 		}
+	}
+	starting_reform = tier_1_duraki_kingdom
+}
+new country forest_kingdom = {
+	inherit = duraki_country
+	tag = FKI
+	name = "Forest Kingdom"
+	adj = "Forest"
+	color = { 0 100 0 }
+	capital = pinewood
+	religion = pinewood_naturalism
+	primary_culture = pinewoodean
+	government_rank = 2
+	history += {
 		2568.1.1 = {
 			starting_ruler = {
 				name = "Arho"
@@ -37,4 +42,68 @@ new country forest_kingdom = {
 			}
 		}
 	}
+}
+new country blood_kingdom = {
+	inherit = duraki_country
+	tag = BKI
+	name = "Blood Kingdom"
+	adj = "Blood"
+	color = { 127 0 0 }
+	capital = elinhir
+}
+new country frost_kingdom = {
+	inherit = duraki_country
+	tag = FKN
+	name = "Frost Kingdom"
+	adj = "Frost"
+	color = { 0 255 255 }
+	capital = balamath
+}
+new country shadow_kingdom = {
+	inherit = duraki_country
+	tag = SKN
+	name = "Shadow Kingdom"
+	adj = "Shadow"
+	color = { 64 64 64 }
+	capital = spellscar
+}
+new country spirit_kingdom = {
+	inherit = duraki_country
+	tag = SPK
+	name = "Spirit Kingdom"
+	adj = "Spirit"
+	color = { 170 0 60 }
+	capital = belkarth
+}
+new country storm_kingdom = {
+	inherit = duraki_country
+	tag = STK
+	name = "Storm Kingdom"
+	adj = "Storm"
+	color = { 0 19 127 }
+	capital = zuatha
+}
+new country sun_kingdom = {
+	inherit = duraki_country
+	tag = SUK
+	name = "Sun Kingdom"
+	adj = "Sun"
+	color = { 255 106 0 }
+	capital = rahni_za
+}
+new country flame_kingdom = {
+	inherit = duraki_country
+	tag = FKG
+	name = "Flame Kingdom"
+	adj = "Flame"
+	color = { 255 0 0 }
+	capital = kardala
+}
+new country sky_kingdom = {
+	inherit = duraki_country
+	tag = SKK
+	name = "Sky Kingdom"
+	adj = "Sky"
+	color = { 200 255 255 }
+	capital = skyreach_pinnacle
 }
