@@ -1584,6 +1584,99 @@ new province khazgur_coast = {
 	}
 }
 
+new area druadach_pass = {
+	name = "Druadach Pass"
+	region = reach
+}
+new province merrina = {
+	name = "Merrina"
+    inherit = craglorn_inherit
+    color = { 107 127 251 }
+	position = {
+        1453.000 1884.000 1453.000 1884.000 1453.000 1884.000 1453.000 1884.000 1453.000 1884.000 1453.000 1884.000 1453.000 1884.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = stone
+	}
+}
+new province thelmyra = {
+	name = "Thelmyra"
+    inherit = craglorn_inherit
+    color = { 134 111 234 }
+	position = {
+        1468.000 1890.000 1468.000 1890.000 1468.000 1890.000 1468.000 1890.000 1468.000 1890.000 1468.000 1890.000 1468.000 1890.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = c_metals
+	}
+}
+new province colvy = {
+	name = "Colvy"
+    inherit = craglorn_inherit
+    color = { 211 231 149 }
+	position = {
+        1475.000 1906.000 1475.000 1906.000 1475.000 1906.000 1475.000 1906.000 1475.000 1906.000 1475.000 1906.000 1475.000 1906.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = stone
+	}
+}
+new province abba_arl = {
+	name = "Abba Arl"
+    inherit = craglorn_inherit
+    color = { 224 219 180 }
+	position = {
+        1463.000 1906.000 1463.000 1906.000 1463.000 1906.000 1463.000 1906.000 1463.000 1906.000 1463.000 1906.000 1463.000 1906.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = silver
+	}
+}
+
 new adjacency karth_bridge = {
 	from = beigi
 	to = karthwatch
