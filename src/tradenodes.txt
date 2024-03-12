@@ -313,69 +313,6 @@ new tradenode kreath_forest = {
 		}
 	}
 }
-new tradenode fallen_mountains = {
-	name = "Fallen Mountains"
-	location = bangkorai_gate
-	areas = {
-		rahni_za the_seekers_archive mahvia
-	}
-	outgoings = {
-	}
-}
-new tradenode dragonstar = {
-	name = "Dragonstar"
-	location = dragonstar
-	areas = {
-		druadach_pass dragonstar serpents_nest skyreach vraseth
-	}
-	outgoings = {
-		{
-			node = fallen_mountains
-			path = {
-				ornskar mahvia buried_sands bangkorai_gate
-			}
-		}
-	}
-}
-new tradenode belkarth = {
-	name = "Belkarth"
-	location = belkarth
-	areas = {
-		shavmar spellscar belkarth haakon molavar balamath elinhir
-	}
-	outgoings = {
-		{
-			node = fallen_mountains
-			path = {
-				mortas styriche zalgazs_den rahni_za tombs_of_the_na_totambu sandy_path bangkorai_gate
-			}
-		}
-	}
-}
-new tradenode pinewood = {
-	name = "Pinewood"
-	location = pinewood
-	areas = {
-		pinewood armo_valley great_peaks high_forest vill_pass
-	}
-	outgoings = {
-		{
-			node = kreath_forest
-			path = {
-				pinewood eevi armo halldir overfalk falkreath
-			}
-			control={
-				1649.000000 1797.000000 1663.000000 1804.000000 1675.000000 1810.000000 1684.000000 1809.000000 1694.000000 1813.000000 
-			}
-		}
-		{
-			node = belkarth
-			path = {
-				taito kari vill aadas_peak gaaralan durac molavar haddocks_market belkarth
-			}
-		}
-	}
-}
 new tradenode jerall = {
 	name = "Jerall"
 	location = orphan_rock
@@ -661,6 +598,75 @@ new tradenode great_bay = {
 			node = jehanna
 			path = { enclave new_sea_70 new_sea_71 new_sea_73 new_sea_75 jehanna }
 			control = { 1292.000000 1975.000000 1319.000000 1995.000000 1349.000000 2009.000000 1369.000000 2048.000000 1396.000000 2073.000000 }
+		}
+	}
+}
+new tradenode fallen_mountains = {
+	name = "Fallen Mountains"
+	location = bangkorai_gate
+	areas = {
+		rahni_za the_seekers_archive mahvia
+	}
+	outgoings = {
+	}
+}
+new tradenode dragonstar = {
+	name = "Dragonstar"
+	location = dragonstar
+	areas = {
+		druadach_pass dragonstar serpents_nest skyreach vraseth
+	}
+	outgoings = {
+		{
+			node = fallen_mountains
+			path = {
+				ornskar mahvia buried_sands bangkorai_gate
+			}
+		}
+		{
+			node = markarth
+			path = {
+				dragonstar_arena merrina thelmyra colvy dread_crone_rock hag_rock_redoubt purewater_ruin dushnikh_yal thaeba lislgeth salvius_farm markarth
+			}
+		}
+	}
+}
+new tradenode belkarth = {
+	name = "Belkarth"
+	location = belkarth
+	areas = {
+		shavmar spellscar belkarth haakon molavar balamath elinhir
+	}
+	outgoings = {
+		{
+			node = fallen_mountains
+			path = {
+				mortas styriche zalgazs_den rahni_za tombs_of_the_na_totambu sandy_path bangkorai_gate
+			}
+		}
+	}
+}
+new tradenode pinewood = {
+	name = "Pinewood"
+	location = pinewood
+	areas = {
+		pinewood armo_valley great_peaks high_forest vill_pass
+	}
+	outgoings = {
+		{
+			node = kreath_forest
+			path = {
+				pinewood eevi armo halldir overfalk falkreath
+			}
+			control={
+				1649.000000 1797.000000 1663.000000 1804.000000 1675.000000 1810.000000 1684.000000 1809.000000 1694.000000 1813.000000 
+			}
+		}
+		{
+			node = belkarth
+			path = {
+				taito kari vill aadas_peak gaaralan durac molavar haddocks_market belkarth
+			}
 		}
 	}
 }
