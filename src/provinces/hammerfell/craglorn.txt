@@ -29,6 +29,7 @@ new province elinhir = {
 	area = elinhir
 	history += {
 		history_owner = blood_kingdom
+		history_trade_goods = mag_goods
 	}
 }
 new province armok = {
@@ -48,6 +49,7 @@ new province armok = {
 	area = elinhir
 	history += {
 		history_owner = blood_kingdom
+		history_trade_goods = stone
 	}
 }
 new province durac = {
@@ -67,6 +69,7 @@ new province durac = {
 	area = elinhir
 	history += {
 		history_owner = blood_kingdom
+		history_trade_goods = wood
 	}
 }
 new province gaaralan = {
@@ -86,6 +89,7 @@ new province gaaralan = {
 	area = elinhir
 	history += {
 		history_owner = blood_kingdom
+		history_trade_goods = stone
 	}
 }
 
@@ -110,6 +114,7 @@ new province molavar = {
 	area = molavar
 	history += {
 		history_owner = blood_kingdom
+		history_trade_goods = gems
 	}
 }
 new province conflagrant_anomaly = {
@@ -129,6 +134,7 @@ new province conflagrant_anomaly = {
 	area = molavar
 	history += {
 		history_owner = blood_kingdom
+		history_trade_goods = stone
 	}
 }
 new province haddocks_market = {
@@ -148,6 +154,7 @@ new province haddocks_market = {
 	area = molavar
 	history += {
 		history_owner = spirit_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province bloodroot_forge = {
@@ -167,6 +174,7 @@ new province bloodroot_forge = {
 	area = molavar
 	history += {
 		history_owner = blood_kingdom
+		history_trade_goods = r_metals
 	}
 }
 
@@ -191,6 +199,7 @@ new province aetherian_archive = {
 	area = balamath
 	history += {
 		history_owner = frost_kingdom
+		history_trade_goods = mag_goods
 	}
 }
 new province fulminant_anomaly = {
@@ -210,6 +219,7 @@ new province fulminant_anomaly = {
 	area = balamath
 	history += {
 		history_owner = frost_kingdom
+		history_trade_goods = stone
 	}
 }
 new province balamath = {
@@ -229,6 +239,7 @@ new province balamath = {
 	area = balamath
 	history += {
 		history_owner = frost_kingdom
+		history_trade_goods = mag_goods
 	}
 }
 new province inazzurs_hold = {
@@ -246,8 +257,11 @@ new province inazzurs_hold = {
     }
 	terrain = hills
 	area = balamath
-	history += {
-		history_owner = frost_kingdom
+	history = {
+		history_owner = osh_ornim
+		culture = stronghold_orc
+		religion = code_of_malacath
+		history_trade_goods = arms
 	}
 }
 new province chiselshriek_mine = {
@@ -265,6 +279,12 @@ new province chiselshriek_mine = {
     }
 	terrain = highlands
 	area = balamath
+	history = {
+		history_owner = osh_ornim
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_trade_goods = c_metals
+	}
 }
 
 new area haakon = {
@@ -288,6 +308,7 @@ new province haakon = {
 	area = haakon
 	history += {
 		history_owner = shadow_kingdom
+		history_trade_goods = c_metals
 	}
 }
 new province rkundzelft = {
@@ -307,6 +328,7 @@ new province rkundzelft = {
 	area = haakon
 	history += {
 		history_owner = shadow_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province cyclonic_anomaly = {
@@ -326,6 +348,7 @@ new province cyclonic_anomaly = {
 	area = haakon
 	history += {
 		history_owner = shadow_kingdom
+		history_trade_goods = stone
 	}
 }
 new province nhalan = {
@@ -345,6 +368,7 @@ new province nhalan = {
 	area = haakon
 	history += {
 		history_owner = shadow_kingdom
+		history_trade_goods = livestock
 	}
 }
 
@@ -369,6 +393,7 @@ new province belkarth = {
 	area = belkarth
 	history += {
 		history_owner = spirit_kingdom
+		history_trade_goods = arms
 	}
 }
 new province lyrezi = {
@@ -388,6 +413,7 @@ new province lyrezi = {
 	area = belkarth
 	history += {
 		history_owner = spirit_kingdom
+		history_trade_goods = c_metals
 	}
 }
 new province reinholds_retreat = {
@@ -407,6 +433,7 @@ new province reinholds_retreat = {
 	area = belkarth
 	history += {
 		history_owner = spirit_kingdom
+		history_trade_goods = stone
 	}
 }
 new province mortas = {
@@ -426,6 +453,7 @@ new province mortas = {
 	area = belkarth
 	history += {
 		history_owner = spirit_kingdom
+		history_trade_goods = livestock
 	}
 }
 
@@ -450,6 +478,7 @@ new province hircines_haunt = {
 	area = spellscar
 	history += {
 		history_owner = storm_kingdom
+		history_trade_goods = fur
 	}
 }
 new province spellscar = {
@@ -469,6 +498,7 @@ new province spellscar = {
 	area = spellscar
 	history += {
 		history_owner = shadow_kingdom
+		history_trade_goods = mag_goods
 	}
 }
 new province anka_ras_mettle = {
@@ -488,6 +518,7 @@ new province anka_ras_mettle = {
 	area = spellscar
 	history += {
 		history_owner = storm_kingdom
+		history_trade_goods = c_metals
 	}
 }
 new province zuatha = {
@@ -507,6 +538,7 @@ new province zuatha = {
 	area = spellscar
 	history += {
 		history_owner = storm_kingdom
+		history_trade_goods = stone
 	}
 }
 
@@ -531,6 +563,7 @@ new province shavmar = {
 	area = shavmar
 	history += {
 		history_owner = storm_kingdom
+		history_trade_goods = stone
 	}
 }
 new province styriche = {
@@ -550,6 +583,7 @@ new province styriche = {
 	area = shavmar
 	history += {
 		history_owner = spirit_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province zalgazs_den = {
@@ -569,6 +603,7 @@ new province zalgazs_den = {
 	area = shavmar
 	history += {
 		history_owner = sun_kingdom
+		history_trade_goods = livestock
 	}
 }
 
@@ -593,6 +628,7 @@ new province scorpion_ravine = {
 	area = rahni_za
 	history += {
 		history_owner = sun_kingdom
+		history_trade_goods = c_metals
 	}
 }
 new province rahni_za = {
@@ -612,6 +648,7 @@ new province rahni_za = {
 	area = rahni_za
 	history += {
 		history_owner = sun_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province tombs_of_the_na_totambu = {
@@ -631,6 +668,7 @@ new province tombs_of_the_na_totambu = {
 	area = rahni_za
 	history += {
 		history_owner = sun_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province lafara = {
@@ -650,6 +688,7 @@ new province lafara = {
 	area = rahni_za
 	history += {
 		history_owner = sun_kingdom
+		history_trade_goods = stone
 	}
 }
 
@@ -674,6 +713,7 @@ new province sandy_path = {
 	area = the_seekers_archive
 	history += {
 		history_owner = sun_kingdom
+		history_trade_goods = stone
 	}
 }
 new province the_seekers_archive = {
@@ -693,6 +733,7 @@ new province the_seekers_archive = {
 	area = the_seekers_archive
 	history += {
 		history_owner = sun_kingdom
+		history_trade_goods = mag_goods
 	}
 }
 new province anka_ras_crucible = {
@@ -712,6 +753,7 @@ new province anka_ras_crucible = {
 	area = the_seekers_archive
 	history += {
 		history_owner = flame_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province bangkorai_gate = {
@@ -731,6 +773,7 @@ new province bangkorai_gate = {
 	area = the_seekers_archive
 	history += {
 		history_owner = flame_kingdom
+		history_trade_goods = arms
 	}
 }
 
@@ -755,6 +798,7 @@ new province kardala = {
 	area = mahvia
 	history += {
 		history_owner = flame_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province buried_sands = {
@@ -774,6 +818,7 @@ new province buried_sands = {
 	area = mahvia
 	history += {
 		history_owner = flame_kingdom
+		history_trade_goods = stone
 	}
 }
 new province mahvia = {
@@ -793,6 +838,7 @@ new province mahvia = {
 	area = mahvia
 	history += {
 		history_owner = flame_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province earthtear_cavern = {
@@ -812,6 +858,7 @@ new province earthtear_cavern = {
 	area = mahvia
 	history += {
 		history_owner = flame_kingdom
+		history_trade_goods = r_metals
 	}
 }
 
@@ -836,6 +883,7 @@ new province sunken_lair = {
 	area = dragonstar
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = livestock
 	}
 }
 new province ornskar = {
@@ -855,6 +903,7 @@ new province ornskar = {
 	area = dragonstar
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = stone
 	}
 }
 new province dragonstar = {
@@ -874,6 +923,7 @@ new province dragonstar = {
 	area = dragonstar
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = r_metals
 	}
 }
 new province dragonstar_arena = {
@@ -893,6 +943,7 @@ new province dragonstar_arena = {
 	area = dragonstar
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = arms
 	}
 }
 
@@ -917,6 +968,7 @@ new province selenu = {
 	area = skyreach
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = wood
 	}
 }
 new province skyreach_pinnacle = {
@@ -936,6 +988,7 @@ new province skyreach_pinnacle = {
 	area = skyreach
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = mag_goods
 	}
 }
 new province skyreach_overlook = {
@@ -955,6 +1008,7 @@ new province skyreach_overlook = {
 	area = skyreach
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = r_metals
 	}
 }
 new province skyreach_catacombs = {
@@ -974,6 +1028,7 @@ new province skyreach_catacombs = {
 	area = skyreach
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = r_metals
 	}
 }
 
@@ -996,6 +1051,12 @@ new province vraseth = {
     }
 	terrain = highlands
 	area = vraseth
+	history = {
+		history_owner = osh_ornim
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_trade_goods = r_metals
+	}
 }
 new province ilthags_undertower = {
 	name = "Ilthag's Undertower"
@@ -1012,6 +1073,12 @@ new province ilthags_undertower = {
     }
 	terrain = highlands
 	area = vraseth
+	history = {
+		history_owner = osh_ornim
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_trade_goods = stone
+	}
 }
 new province the_howling_sepulchers = {
 	name = "The Howling Sepulchers"
@@ -1028,6 +1095,12 @@ new province the_howling_sepulchers = {
     }
 	terrain = highlands
 	area = vraseth
+	history = {
+		history_owner = osh_ornim
+		religion = code_of_malacath
+		culture = stronghold_orc
+		history_trade_goods = stone
+	}
 }
 new province orsa = {
 	name = "Orsa"
@@ -1046,6 +1119,7 @@ new province orsa = {
 	area = vraseth
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = stone
 	}
 }
 
@@ -1070,6 +1144,7 @@ new province rosathild = {
 	area = serpents_nest
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = wood
 	}
 }
 new province serpents_nest = {
@@ -1089,6 +1164,7 @@ new province serpents_nest = {
 	area = serpents_nest
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = stone
 	}
 }
 new province loth_na_caverns = {
@@ -1108,6 +1184,7 @@ new province loth_na_caverns = {
 	area = serpents_nest
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = c_metals
 	}
 }
 new province virgar = {
@@ -1127,6 +1204,7 @@ new province virgar = {
 	area = serpents_nest
 	history += {
 		history_owner = sky_kingdom
+		history_trade_goods = r_metals
 	}
 }
 
@@ -1149,6 +1227,12 @@ new province merrina = {
     }
 	terrain = mountain
 	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = stone
+	}
 }
 new province thelmyra = {
 	name = "Thelmyra"
@@ -1165,6 +1249,12 @@ new province thelmyra = {
     }
 	terrain = mountain
 	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = c_metals
+	}
 }
 new province colvy = {
 	name = "Colvy"
@@ -1181,6 +1271,12 @@ new province colvy = {
     }
 	terrain = mountain
 	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = stone
+	}
 }
 new province abba_arl = {
 	name = "Abba Arl"
@@ -1197,4 +1293,10 @@ new province abba_arl = {
     }
 	terrain = mountain
 	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = silver
+	}
 }
