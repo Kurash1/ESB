@@ -11,12 +11,7 @@ mission_trees:solitude += {
 		trigger = {
 			regions:haafingar = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owner = {
-						is_subject_of = ROOT
-					}
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -82,24 +77,6 @@ WE are the children of Skyrim."
 		effect = {
 			provinces:northwatch = {
 				province_event = haafingar.1
-			}
-		}
-	}
-	castle_hraggstad = {
-		name = "Purpose of Hraggstad"
-		x = 6
-		y = 3
-		required = form_haafingar_hold
-		trigger = {
-			owns = hraggstad
-			provinces:hraggstad = {
-				development = 15
-				fort_level = 2
-			}
-		}
-		effect = {
-			provinces:hraggstad = {
-				province_event = haafingar.2
 			}
 		}
 	}

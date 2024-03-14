@@ -271,28 +271,6 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 			}
 		}
 	}
-	poetic_edda = {
-		name = "Poetic Edda"
-		icon = poetic_edda_mission
-		x = 3
-		y = 3
-		required = bards_college
-		trigger = {
-			adm_power = 250
-			dip_power = 250
-			mil_power = 250
-		}
-		effect = {
-			add_adm_power = -250
-			add_dip_power = -250
-			add_mil_power = -250
-			new_custom_tooltip = "Unlocks §YPoetic Edda§! Mechanic"
-			add_country_modifier = {
-				name = poetic_edda
-				duration = -1
-			}
-		}
-	}
 	windbreaker_arch = {
 		name = "Windbreaker Arch"
 		icon = windbreaker_arch_mission
@@ -384,6 +362,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 			storm_gate
 			solitude_countryside
 		}
+		icon = tower_project_mission
 		trigger = {
 			treasury = 1000
 			areas:solitude_proper; solitude_countryside; dragon_bridge = {

@@ -1,44 +1,3 @@
-new province_event haafingar.5 = {
-	title = "Purpose of Dragon Bridge"
-	desc = ""
-	picture = northwatch_eventPicture
-	is_triggered_only = yes
-	options = {
-		{
-			name = "Port"
-			effect = {
-				quick_province_modifier = {
-					name = "Settlement Focus: Navy"
-					modifier = {
-						
-					}
-				}
-			}
-		}
-		{
-			name = "Trade"
-			effect = {
-				quick_province_modifier = {
-					name = "Settlement Focus: Trade"
-					modifier = {
-						
-					}
-				}
-			}
-		}
-		{
-			name = "Fort"
-			effect = {
-				quick_province_modifier = {
-					name = "Settlement Focus: Fort"
-					modifier = {
-						
-					}
-				}
-			}
-		}
-	}
-}
 mission_trees:solitude += {
 	form_the_wolf_army = {
 		name = "Form the Wolf Army"
@@ -71,12 +30,12 @@ mission_trees:solitude += {
 				area = northwatch
 				area = pinefrost
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			areas:shadowgreen; ravenscar; northwatch; pinefrost = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -90,28 +49,54 @@ mission_trees:solitude += {
 		}
 	}
 	the_deepwood = {
-		name = "The Deepwood"
+		name = "The Deepwood Conquests"
 		x = 7
 		y = 1
 		required = form_the_wolf_army
+		icon = deepwood_mission
 		provinces_to_highlight = {
 			OR = {
 				area = kilkreath
 				area = hraggstad
 				area = deepwood
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			areas:kilkreath; hraggstad; deepwood = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			areas:kilkreath; hraggstad; deepwood = {
-				add_base_production = 1
-				add_local_autonomy = -25
+				quick_province_modifier = {
+					name = "Deepwood Conquests"
+					years = 25
+					modifier = {
+						local_autonomy = -0.25
+						tax_income = 3
+						trade_goods_size = 0.2
+					}
+				}
+			}
+		}
+	}
+	castle_hraggstad = {
+		name = "Purpose of Hraggstad"
+		x = 7
+		y = 2
+		required = the_deepwood
+		trigger = {
+			owns = hraggstad
+			provinces:hraggstad = {
+				development = 15
+				fort_level = 2
+			}
+		}
+		effect = {
+			provinces:hraggstad = {
+				province_event = haafingar.2
 			}
 		}
 	}
@@ -229,6 +214,7 @@ mission_trees:solitude += {
 			master_of_the_arch
 			coast_of_haafingar
 		}
+		icon = wolfs_eye_lighthouse_mission
 		trigger = {
 			owns = solitude_lighthouse
 			provinces:solitude_lighthouse = {
@@ -253,6 +239,7 @@ mission_trees:solitude += {
 		x = 4
 		y = 3
 		required = wolfs_eye_lighthouse
+		icon = longboat_mission
 		trigger = {
 			has_longships = {
 				num = 50
@@ -286,211 +273,54 @@ mission_trees:solitude += {
 		x = 9
 		y = 1
 		required = form_the_wolf_army
+		icon = dragon_bridge_mission
 		trigger = {
 			owns = dragon_bridge
-			provinces:dragon_bridge = {
-				development = 15
-			}
 		}
 		effect = {
-			provinces:dragon_bridge = {
-				province_event = haafingar.5
+			new country_event haafingar.5 = {
+				title = "Purpose of Dragon Bridge"
+				desc = ""
+				picture = northwatch_eventPicture
+				is_triggered_only = yes
+				options = {
+					{
+						name = "Port"
+						effect = {
+							quick_province_modifier = {
+								name = "Settlement Focus: Navy"
+								modifier = {
+									
+								}
+							}
+						}
+					}
+					{
+						name = "Trade"
+						effect = {
+							quick_province_modifier = {
+								name = "Settlement Focus: Trade"
+								modifier = {
+									
+								}
+							}
+						}
+					}
+					{
+						name = "Fort"
+						effect = {
+							quick_province_modifier = {
+								name = "Settlement Focus: Fort"
+								modifier = {
+									
+								}
+							}
+						}
+					}
+				}
 			}
+		
+			country_event = haafingar.5
 		}
 	}
-	#broken_oar_grotto = {
-	#	name = "Broken Oar Grotto"
-	#	x = 5
-	#	y = 2
-	#	required = shadowgreen_cavern
-	#	trigger = {
-	#		provinces:broken_oar = {
-	#			OR = {
-	#				has_building = navy_1
-	#				has_building = navy_2
-	#				has_building = navy_3
-	#			}
-	#		}
-	#	}
-	#	effect = {
-	#		provinces:broken_oar = {
-	#			quick_province_modifier = {
-	#				name = "Broken Oar Grotto"
-	#				modifier = {
-	#					naval_forcelimit = 8
-	#
-	#					blockade_force_required = 2.5
-	#					block_slave_raid = yes
-	#				}
-	#			}
-	#		}
-	#	}
-	#}
-	#fuldimar_hookhand = {
-	#	name = "Fuldimar Hookhand"
-	#	x = 5
-	#	y = 4
-	#	required = longboat_legions
-	#	trigger = {
-	#		treasury = 250
-	#	}
-	#	effect = {
-	#		add_treasury = -250
-	#		provinces:gold_isle = {
-	#			change_province_name = "Kyne's Aegis"
-	#			rename_capital = "Kyne's Aegis"
-	#			add_center_of_trade_level = 1
-	#			add_base_tax = 3
-	#			add_base_production = 3
-	#			add_base_manpower = 3
-	#		}
-	#	}
-	#}
-	#the_pirate_threat = {
-	#	name = "The Pirate Threat"
-	#	x = 6
-	#	y = 4
-	#	required = longboat_legions
-	#	trigger = {
-	#		NOT = {
-	#			exists = lone_band
-	#		}
-	#	}
-	#	effect = {
-	#		home_trade_node_effect_scope = {
-	#			add_trade_node_income = 100
-	#		}
-	#	}
-	#}
-	#master_of_the_mountain = {
-	#	name = "Master of the Mountain"
-	#	x = 7
-	#	y = 1
-	#	required = form_the_wolf_army
-	#	trigger = {
-	#		areas:kilkreath = {
-	#			type = all
-	#			owned_by = ROOT
-	#		}
-	#	}
-	#	effect = {
-	#		provinces:ironback_hideout = {
-	#			add_building = fort_15th
-	#			quick_province_modifier = {
-	#				name = "Ironback Hideout"
-	#				modifier = {
-	#					local_fort_maintenance_modifier = -0.75
-	#					trade_goods_size = 0.5
-	#				}
-	#			}
-	#		}
-	#		areas:hraggstad = {
-	#			add_permanent_claim = ROOT
-	#		}
-	#	}
-	#}
-	#found_kilkreath_temple = {
-	#	name = "Found Kilkreath"
-	#	x = 8
-	#	y = 2
-	#	required = master_of_the_mountain
-	#	trigger = {
-	#		owns = kilkreath_temple
-	#		provinces:kilkreath_temple = {
-	#			OR = {
-	#				has_building = tax_1
-	#				has_building = tax_2
-	#				has_building = tax_3
-	#			}
-	#		}
-	#	}
-	#	effect = {
-	#		create_monument = {
-	#			monument = kilkreath_temple
-	#			province = kilkreath_temple
-	#		}
-	#	}
-	#}
-	#castle_hraggstad = {
-	#	name = "Castle Hraggstad"
-	#	x = 7
-	#	y = 3
-	#	required = {
-	#		northwatch_keep
-	#		master_of_the_mountain
-	#	}
-	#	trigger = {
-	#		provinces:hraggstad = {
-	#			fort_level = 2
-	#		}
-	#		areas:hraggstad = {
-	#			type = all
-	#			owned_by = ROOT
-	#		}
-	#	}
-	#	effect = {
-	#		provinces:hraggstad = {
-	#			quick_province_modifier = {
-	#				name = "Castle Hraggstad"
-	#				modifier = {
-	#					local_defensiveness = 0.25
-	#					local_fort_maintenance_modifier = -0.5
-	#				}
-	#			}
-	#		}
-	#		areas:deepwood = {
-	#			add_permanent_claim = ROOT
-	#		}
-	#	}
-	#}
-	#lord_of_the_forests = {
-	#	name = "Lord of the Forests"
-	#	x = 8
-	#	y = 4
-	#	required = castle_hraggstad
-	#	trigger = {
-	#		areas:deepwood = {
-	#			type = all
-	#			owned_by = ROOT
-	#		}
-	#	}
-	#	effect = {
-	#		areas:deepwood = {
-	#			add_base_production = 1
-	#		}
-	#		areas:pinefrost, areas:mor_khazgur = {
-	#			add_permanent_claim = ROOT
-	#		}
-	#		province_groups:lord_of_the_forests = {
-	#			discover_country = ROOT
-	#		}
-	#	}
-	#}
-	#far_west_pinefrost = {
-	#	name = "Far West Pinefrost"
-	#	x = 7
-	#	y = 5
-	#	required = lord_of_the_forests
-	#	inherit = not_implemented_mission
-	#	trigger = {
-	#		provinces:pinefrost = {
-	#			fort_level = 2
-	#		}
-	#		areas:pinefrost = {
-	#			type = all
-	#			owned_by = ROOT
-	#		}
-	#	}
-	#	effect = {
-	#		provinces:pinefrost = {
-	#			quick_province_modifier = {
-	#				name = "Pinefrost Tower"
-	#				modifier = {
-	#					local_defensiveness = 0.25
-	#					local_fort_maintenance_modifier = -0.5
-	#				}
-	#			}
-	#		}
-	#	}
-	#}
 }
