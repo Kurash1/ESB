@@ -21,3 +21,12 @@ new class custom_text_box = {
 		tooltip = string?
 	}
 }
+new class modifier_definition = {
+	id = `{this:id}`
+	list = modifier_definitions
+	args = {
+		name = string
+		is_percentage = bool
+		trigger = named_trigger
+	}
+}

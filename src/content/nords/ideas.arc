@@ -18,6 +18,7 @@ new idea_group nordic_ideas = {
 			desc = "Nords are infamous for their stubbornness and ferocity, making them some of the fiercest warriors in all Tamriel."
 			modifier = {
 				land_morale = 10%
+				expedition_speed = 0.1
 			}
 		}
 		{

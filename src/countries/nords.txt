@@ -187,7 +187,7 @@ new country solitude = {
 	name = "Solitude"
 	adj = "Solitudean"
 	color = {
-		255 11 3
+		255 55 55
 	}
 	capital = solitude_port
 	starting_reform = tier_1_haafingar_kingdom
@@ -1256,4 +1256,10 @@ new country gyldenhul = {
 			}
 		}
 	}
+}
+new relation vassal = {
+	first = SOL
+	second = DRB
+	start_date = 2568.1.1
+	end_date = 9999.1.1
 }

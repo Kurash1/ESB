@@ -63,6 +63,7 @@ mission_trees:solitude += {
 		x = 5
 		y = 1
 		required = form_the_wolf_army
+		icon = coast_of_skyrim_mission
 		provinces_to_highlight = {
 			OR = {
 				area = shadowgreen
@@ -80,8 +81,11 @@ mission_trees:solitude += {
 		}
 		effect = {
 			areas:shadowgreen; ravenscar; northwatch; pinefrost = {
-				add_base_production = 1
-				add_local_autonomy = -25
+				add_local_autonomy = -100
+			}
+			add_mercantilism = 5
+			trade_nodes:northwatch = {
+				add_trade_node_income = 120
 			}
 		}
 	}
