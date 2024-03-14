@@ -29,4 +29,18 @@ new class modifier_definition = {
 		is_percentage = bool
 		trigger = named_trigger
 	}
+	on_create = {
+		arc_call = {
+			id = 0 #this creates a modifier localisation
+			key = `{this:id}`
+			text = `{this:name}`
+			localisation_key = `{this:id}`
+			multiplier = 1
+			percent = this:is_percentage
+			is_good = true
+			is_bool = false
+			is_multiplicative = true
+			precision = 1
+		}
+	}
 }

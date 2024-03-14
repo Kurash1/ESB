@@ -38,6 +38,7 @@ new building cleansing = {
 		factor = 1000
 	}
 }
+
 new building coastal_defence = {
 	name = "Coastal Defence"
 	desc = ""
@@ -57,6 +58,7 @@ new building coastal_defence = {
 		factor = 1
 	}
 }
+
 new building fort_15th = {
 	name = "Fort"
 	desc = ""
@@ -88,6 +90,7 @@ new building fort_16th = {
 		factor = 1
 	}
 }
+
 new building fortup_1 = {
 	name = "Additional Garrisons"
 	desc = ""
@@ -160,6 +163,18 @@ new building fortup_4 = {
 		factor = 0
 	}
 }
+
+new modifier unlock_tax_building = {
+	args = trigger
+	transpile = {
+		tax_line = 1
+		
+		buildings:tax_1:trigger_unlocks += { args }
+		buildings:tax_2:trigger_unlocks += { args }
+		buildings:tax_3:trigger_unlocks += { args }
+		buildings:tax_4:trigger_unlocks += { args }
+	}
+}
 new building_line tax = {
 	name = "Tax"
 	desc = ""
@@ -209,6 +224,18 @@ new building_line tax = {
 	}
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+new modifier unlock_production_building = {
+	args = trigger
+	transpile = {
+		production_line = 1
+		
+		buildings:production_1:trigger_unlocks += { args }
+		buildings:production_2:trigger_unlocks += { args }
+		buildings:production_3:trigger_unlocks += { args }
+		buildings:production_4:trigger_unlocks += { args }
 	}
 }
 new building_line production = {
@@ -266,6 +293,18 @@ new building_line production = {
 		factor = 1
 	}
 }
+
+new modifier unlock_trade_building = {
+	args = trigger
+	transpile = {
+		trade_line = 1
+		
+		buildings:trade_1:trigger_unlocks += { args }
+		buildings:trade_2:trigger_unlocks += { args }
+		buildings:trade_3:trigger_unlocks += { args }
+		buildings:trade_4:trigger_unlocks += { args }
+	}
+}
 new building_line trade = {
 	name = "Trade"
 	desc = ""
@@ -312,6 +351,18 @@ new building_line trade = {
 	}
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+new modifier unlock_army_building = {
+	args = trigger
+	transpile = {
+		army_line = 1
+		
+		buildings:army_1:trigger_unlocks += { args }
+		buildings:army_2:trigger_unlocks += { args }
+		buildings:army_3:trigger_unlocks += { args }
+		buildings:army_4:trigger_unlocks += { args }
 	}
 }
 new building_line army = {
@@ -372,6 +423,18 @@ new building_line army = {
 	}
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+new modifier unlock_navy_building = {
+	args = trigger
+	transpile = {
+		navy_line = 1
+		
+		buildings:navy_1:trigger_unlocks += { args }
+		buildings:navy_2:trigger_unlocks += { args }
+		buildings:navy_3:trigger_unlocks += { args }
+		buildings:navy_4:trigger_unlocks += { args }
 	}
 }
 new building_line navy = {
@@ -440,6 +503,18 @@ new building_line navy = {
 		factor = 1
 	}
 }
+
+new modifier unlock_road_building = {
+	args = trigger
+	transpile = {
+		road_line = 1
+		
+		buildings:road_1:trigger_unlocks += { args }
+		buildings:road_2:trigger_unlocks += { args }
+		buildings:road_3:trigger_unlocks += { args }
+		buildings:road_4:trigger_unlocks += { args }
+	}
+}
 new building_line road = {
 	name = "Road"
 	desc = ""
@@ -492,6 +567,17 @@ new building_line road = {
 		factor = 1
 	}
 }
+
+new modifier unlock_goods_building = {
+	args = trigger
+	transpile = {
+		goods_line = 1
+		
+		buildings:goods_1:trigger_unlocks += { args }
+		buildings:goods_2:trigger_unlocks += { args }
+		buildings:goods_3:trigger_unlocks += { args }
+	}
+}
 new building_line goods = {
 	name = "Goods"
 	desc = ""
@@ -534,6 +620,7 @@ new building_line goods = {
 		factor = 1
 	}
 }
+
 new building manufactory = {
 	name = "Manufactory"
 	desc = ""
