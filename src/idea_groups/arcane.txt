@@ -77,7 +77,7 @@ new idea_group enchanting_ideas = {
 			name = "Enchanted Infrastructure"
 			desc = "By enchanting crucial parts of our infrastructure we can make grandiose cities much faster. "
 			modifier = {
-				build_time = -0.1
+				road_line = 1
 			}
 		}
 		{
@@ -91,7 +91,7 @@ new idea_group enchanting_ideas = {
 			name = "Enchanted Tools"
 			desc = "Well crafted tools have a very high impact on manufacturing items, well crafted and enchanted tools give us an unparalleled edge in technological advance. "
 			modifier = {
-				global_trade_goods_size_modifier = 0.1
+				production_line = 1
 			}
 		}
 		{

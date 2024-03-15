@@ -28,7 +28,7 @@ new idea_group maritime_ideas = {
 			name = "Grand Navy"
 			desc = "Allows us to create one of the largest and most powerful fleets the world has ever seen."
 			modifier = {
-				naval_forcelimit_modifier = 0.25
+				navy_line = 1
 			}
 		}
 		{
@@ -72,6 +72,7 @@ new idea_group flottenbasis0 = {
 			desc = "If there always is a base nearby, our ships will improve their durability."
 			modifier = {
 				sailor_maintenance_modifer = -0.25
+				navy_line = 1
 			}
 		}
 		{

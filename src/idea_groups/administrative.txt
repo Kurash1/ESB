@@ -211,7 +211,7 @@ new idea_group justiz0 = {
 			name = "Business Law"
 			desc = "Business law is important to lay down some rules with the interaction with other countries."
 			modifier = {
-				trade_efficiency = 0.25
+				goods_line = 1
 			}
 		}
 		{
@@ -469,6 +469,7 @@ new idea_group plutocracy_ideas = {
 			desc = "In more reactionary and hidebound societies men of trade are looked down upon as somehow being lesser men than those who own land. Well not for us, we know that wealth is power regardless of where it comes from."
 			modifier = {
 				merchants = 1
+				trade_line = 1
 			}
 		}
 		{
@@ -587,8 +588,7 @@ new idea_group centralization_ideas = {
 			name = "Metropolis Development"
 			desc = "We are used to planning big cities."
 			modifier = {
-				fort_maintenance_modifier = -0.25
-				garrison_size = 0.5
+				goods_line = 1
 			}
 		}
 		{
@@ -618,7 +618,6 @@ new idea_group centralization_ideas = {
 			name = "Central Tax Administration"
 			desc = "Central Tax Administration allows us to collect taxes more efficiently."
 			modifier = {
-				reform_progress_growth = 0.1
 				tax_line = 1
 			}
 		}
@@ -712,7 +711,7 @@ new idea_group dezentra0 = {
 			name = "Decentralized Administration"
 			desc = "Because of our big territory, we have to work in a decentralized way to govern."
 			modifier = {
-				development_cost = -0.15
+				development_cost = -0.1
 			}
 		}
 		{
@@ -1222,8 +1221,6 @@ new idea_group esb_absolutism = {
 			name = "Centralization"
 			desc = "By centralizing power in the hands of the monarch, we can streamline decision-making and reduce the influence of local elites. This will increase our administrative efficiency and allow us to better serve the needs of our people."
 			modifier = {
-				vassal_income = 0.25
-				reduced_liberty_desire = -10
 				tax_line = 1
 			}
 		}

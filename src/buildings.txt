@@ -164,38 +164,26 @@ new building fortup_4 = {
 	}
 }
 
-new modifier unlock_tax_building = {
-	args = trigger
-	transpile = {
-		tax_line = 1
-		
-		buildings:tax_1:trigger_unlocks += { args }
-		buildings:tax_2:trigger_unlocks += { args }
-		buildings:tax_3:trigger_unlocks += { args }
-		buildings:tax_4:trigger_unlocks += { args }
-	}
-}
 new building_line tax = {
 	name = "Tax"
 	desc = ""
 	time = 12
-	start_offset = 1
 	x = 20
 	y = 134
+	build_trigger = {
+		FROM = {
+			has_global_modifier_value = {
+				which = tax_line
+				value = $tier$
+			}
+		}
+	}
 	1 = {
 		cost = 100
 		name = "Tax 1"
 		modifier = {
 			local_tax_modifier = 0.4
 			local_autonomy = -0.05
-		}
-		build_trigger = {
-			FROM = {
-				has_global_modifier_value = {
-					which = tax_line
-					value = 1
-				}
-			}
 		}
 	}
 	2 = {
@@ -206,14 +194,6 @@ new building_line tax = {
 			local_tax_modifier = 0.7
 			local_autonomy = -0.10
 		}
-		build_trigger = {
-			FROM = {
-				has_global_modifier_value = {
-					which = tax_line
-					value = 2
-				}
-			}
-		}
 	}
 	3 = {
 		cost = 300
@@ -222,14 +202,6 @@ new building_line tax = {
 		modifier = {
 			local_tax_modifier = 1.0
 			local_autonomy = -0.15
-		}
-		build_trigger = {
-			FROM = {
-				has_global_modifier_value = {
-					which = tax_line
-					value = 3
-				}
-			}
 		}
 	}
 	4 = {
@@ -240,31 +212,12 @@ new building_line tax = {
 			local_tax_modifier = 1.5
 			local_autonomy = -0.2
 		}
-		build_trigger = {
-			FROM = {
-				has_global_modifier_value = {
-					which = tax_line
-					value = 4
-				}
-			}
-		}
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-new modifier unlock_production_building = {
-	args = trigger
-	transpile = {
-		production_line = 1
-		
-		buildings:production_1:trigger_unlocks += { args }
-		buildings:production_2:trigger_unlocks += { args }
-		buildings:production_3:trigger_unlocks += { args }
-		buildings:production_4:trigger_unlocks += { args }
-	}
-}
 new building_line production = {
 	name = "Production"
 	desc = ""
@@ -276,14 +229,12 @@ new building_line production = {
 			has_trade_goods = gold
 			has_trade_goods = silver
 		}
-	}
-	idea_group_unlocks = {
-		economic_ideas
-		enchanting_ideas
-		alchemical_ideas
-		smithing_ideas
-		waffenqualitat0
-		armour_quality_ideas
+		FROM = {
+			has_global_modifier_value = {
+				which = production_line
+				value = $tier$
+			}
+		}
 	}
 	1 = {
 		cost = 100
@@ -321,29 +272,19 @@ new building_line production = {
 	}
 }
 
-new modifier unlock_trade_building = {
-	args = trigger
-	transpile = {
-		trade_line = 1
-		
-		buildings:trade_1:trigger_unlocks += { args }
-		buildings:trade_2:trigger_unlocks += { args }
-		buildings:trade_3:trigger_unlocks += { args }
-		buildings:trade_4:trigger_unlocks += { args }
-	}
-}
 new building_line trade = {
 	name = "Trade"
 	desc = ""
 	time = 12
 	x = 20
 	y = 334
-	idea_group_unlocks = {
-		economic_ideas
-		trade_ideas
-		esb_monopoly
-		plutocracy_ideas
-		mobility_ideas
+	build_trigger = {
+		FROM = {
+			has_global_modifier_value = {
+				which = trade_line
+				value = $tier$
+			}
+		}
 	}
 	1 = {
 		cost = 100
@@ -381,38 +322,19 @@ new building_line trade = {
 	}
 }
 
-new modifier unlock_army_building = {
-	args = trigger
-	transpile = {
-		army_line = 1
-		
-		buildings:army_1:trigger_unlocks += { args }
-		buildings:army_2:trigger_unlocks += { args }
-		buildings:army_3:trigger_unlocks += { args }
-		buildings:army_4:trigger_unlocks += { args }
-	}
-}
 new building_line army = {
 	name = "Army"
 	desc = ""
 	time = 12
 	x = 20
 	y = 434
-	idea_group_unlocks = {
-		standing_army_ideas
-		quantity_ideas
-		quality_ideas
-		generalstab0
-		offensive_ideas
-		defensive_ideas
-		mobility_ideas
-		esb_largearmy
-		esb_professionalism
-		esb_longwar
-	}
-	reform_unlocks = {
-		tier_2_conscription
-		tier_2_wolf_army
+	build_trigger = {
+		FROM = {
+			has_global_modifier_value = {
+				which = army_line
+				value = $tier$
+			}
+		}
 	}
 	1 = {
 		cost = 100
@@ -453,36 +375,21 @@ new building_line army = {
 	}
 }
 
-new modifier unlock_navy_building = {
-	args = trigger
-	transpile = {
-		navy_line = 1
-		
-		buildings:navy_1:trigger_unlocks += { args }
-		buildings:navy_2:trigger_unlocks += { args }
-		buildings:navy_3:trigger_unlocks += { args }
-		buildings:navy_4:trigger_unlocks += { args }
-	}
-}
 new building_line navy = {
 	name = "Navy"
 	desc = ""
 	time = 12
 	x = 260
 	y = 434
-	idea_group_unlocks = {
-		maritime_ideas
-		naval_ideas
-		flottenbasis0
-		galle0
-		handel0
-		gross0
-	}
-	reform_unlocks = {
-		tier_3_conscription
-	}
 	build_trigger = {
 		has_port = yes
+		
+		FROM = {
+			has_global_modifier_value = {
+				which = navy_line
+				value = $tier$
+			}
+		}
 	}
 	1 = {
 		cost = 100
@@ -531,29 +438,20 @@ new building_line navy = {
 	}
 }
 
-new modifier unlock_road_building = {
-	args = trigger
-	transpile = {
-		road_line = 1
-		
-		buildings:road_1:trigger_unlocks += { args }
-		buildings:road_2:trigger_unlocks += { args }
-		buildings:road_3:trigger_unlocks += { args }
-		buildings:road_4:trigger_unlocks += { args }
-	}
-}
 new building_line road = {
 	name = "Road"
 	desc = ""
 	time = 3
 	x = 260
 	y = 334
-	start_offset = 1
-	idea_group_unlocks = {
-		trade_ideas
-		offensive_ideas
-		mobility_ideas
-		imperialismus0
+	build_trigger = {
+		is_island = no
+		FROM = {
+			has_global_modifier_value = {
+				which = road_line
+				value = $tier$
+			}
+		}
 	}
 	1 = {
 		cost = 25
@@ -595,27 +493,20 @@ new building_line road = {
 	}
 }
 
-new modifier unlock_goods_building = {
-	args = trigger
-	transpile = {
-		goods_line = 1
-		
-		buildings:goods_1:trigger_unlocks += { args }
-		buildings:goods_2:trigger_unlocks += { args }
-		buildings:goods_3:trigger_unlocks += { args }
-	}
-}
 new building_line goods = {
 	name = "Goods"
 	desc = ""
 	time = 12
 	x = 260
 	y = 234
-	idea_group_unlocks = {
-		alteration_ideas
-		enchanting_ideas
-		alchemical_ideas
-		esb_treasury
+	build_trigger = {
+		is_island = no
+		FROM = {
+			has_global_modifier_value = {
+				which = goods_line
+				value = $tier$
+			}
+		}
 	}
 	1 = {
 		cost = 100

@@ -1,16 +1,13 @@
-new localisation mechanic_extra_army_building_yes = "Unlocks the next tier of §OArmy§! Buildings"
 new government_reform tier_2_wolf_army = {
 	name = "Wolf Army"
 	icon = skjoralmor_army
-	custom_attributes = {
-		extra_army_building = yes
-	}
 	potential = {
 		has_reform = tier_2_wolf_army
 	}
 	modifier = {
 		movement_speed = 0.1
 		infantry_shock = 0.15
+		army_line = 1
 	}
 }
 new government_reform tier_2_gjukars_legacy = {
@@ -30,12 +27,10 @@ new government_reform tier_2_conscription = {
 	desc = ""
 	icon = "barracks"
 	allow_normal_conversion = yes
-	custom_attributes = {
-		extra_army_building = yes
-	}
 	modifiers = {
 		land_forcelimit_modifier = 0.10
 		manpower_recovery_speed = 0.05
+		army_line = 1
 	}
 }
 new mercenary_company tier_2_mercenaries_company = {

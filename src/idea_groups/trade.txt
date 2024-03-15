@@ -14,6 +14,7 @@ new idea_group trade_ideas = {
 			desc = "The current merchant families are seeking to ensure that trade privileges remain their exclusive preserve, but we are unwilling to do so and will allow the growth of the merchant class."
 			modifier = {
 				merchants = 1
+				trade_line = 1
 			}
 		}
 		{
@@ -21,6 +22,7 @@ new idea_group trade_ideas = {
 			desc = "Allows us to make use of the numerous traders lusting for fame and fortune, eager to offer their services for a chance to search and explore new trade routes."
 			modifier = {
 				trade_range_modifier = 30%
+				trade_line = 1
 			}
 		}
 		{
@@ -71,6 +73,7 @@ new idea_group esb_monopoly = {
 			desc = "We dont need your goods. You need ours."
 			modifier = {
 				embargo_efficiency = 0.25
+				trade_line = 1
 			}
 		}
 		{

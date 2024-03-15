@@ -153,15 +153,14 @@ new idea_group transmutation_ideas = {
 			name = "Manipulate Materials"
 			desc = "By transmuting poor quality materials into high-quality ones we can cut the costs on our buildings."
 			modifier = {
-				build_cost = -0.25
-				build_time = -0.15
+				goods_line = 1
 			}
 		}
 		{
 			name = "Alternate Infrastructure"
 			desc = "By extending our manipulation of materials policy we can improve our infrastructure as a whole. "
 			modifier = {
-				development_cost = -0.15
+				road_line = 1
 			}
 		}
 		{
@@ -173,14 +172,14 @@ new idea_group transmutation_ideas = {
 		}
 		{
 			name = "Reshape Environment"
-			desc = " By making newly acquired territory more in line with our needs we can settle anywhere."
+			desc = "By making newly acquired territory more in line with our needs we can settle anywhere."
 			modifier = {
 				core_creation = -0.15
 			}
 		}
 		{
 			name = "Transmutation Factories"
-			desc = "Allowing our mages to work in factories providing much-needed assistance will boost our production quotas. \n Change Trade Good Cost: §G-10%§!"
+			desc = "Allowing our mages to work in factories providing much-needed assistance will boost our production quotas."
 			modifier = {
 				production_efficiency = 0.15
 			}
