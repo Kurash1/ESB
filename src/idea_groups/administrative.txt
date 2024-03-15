@@ -619,6 +619,7 @@ new idea_group centralization_ideas = {
 			desc = "Central Tax Administration allows us to collect taxes more efficiently."
 			modifier = {
 				reform_progress_growth = 0.1
+				tax_line = 1
 			}
 		}
 	}
@@ -662,6 +663,7 @@ new idea_group imperialismus0 = {
 			modifier = {
 				ae_impact = -0.2
 				diplomatic_reputation = -4
+				tax_line = 1
 			}
 		}
 		{
@@ -1222,6 +1224,7 @@ new idea_group esb_absolutism = {
 			modifier = {
 				vassal_income = 0.25
 				reduced_liberty_desire = -10
+				tax_line = 1
 			}
 		}
 		{

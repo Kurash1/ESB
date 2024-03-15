@@ -579,7 +579,7 @@ new province shadowgreen = {
 
 Previously many smaller clans, and mercenary bands had tried to subjugate the cave, hoping to make it into their home, however none could fell the natural order of the place."
 				frame = 13
-				length = 5
+				length = 40
 				event = haafingar.4
 			}
 		}
@@ -855,7 +855,7 @@ new province low_grove = {
 				desc = ""
 				frame = 15
 				event_picture = deepwood_vale_eventPicture
-				length = 1
+				length = 60
 				on_complete = {
 					create_monument = {
 						monument = deepwood_vale
@@ -922,7 +922,7 @@ new province volskygge = {
 Clearing these ruins would bring safety into our peoples hearts as it is believed to be a cursed location, while also allowing scholars to further study our history."
 				frame = 6
 				event_picture = volskygge_eventPicture
-				length = 3
+				length = 60
 				on_complete = {
 					owner = {
 						give_artifact = {
@@ -967,10 +967,12 @@ new province deepwood_redoubt = {
 			create_expedition = {
 				id = deepwood_vale
 				name = "Deepwood Vale"
-				desc = ""
+				desc = "A secluded valley in the mountains seperating the reach and haafingar hold, this place has for long time been home to the icereach coven of witches, here they perform rituals to their old gods, sometimes kidnapping peoples from just beyond. They mock us saying that no matter what we do, they will always hold the valley, but whose to say that must always remain so.
+
+While we are unsure what resources the valley may hold, at a minimum we can at least hope to vanquish or subjugate the icereach coven."
 				frame = 14
 				event_picture = deepwood_vale_eventPicture
-				length = 1
+				length = 100
 				on_complete = {
 					create_monument = {
 						monument = deepwood_vale

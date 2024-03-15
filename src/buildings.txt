@@ -182,17 +182,20 @@ new building_line tax = {
 	start_offset = 1
 	x = 20
 	y = 134
-	idea_group_unlocks = {
-		economic_ideas
-		esb_treasury
-		religious_ideas
-	}
 	1 = {
 		cost = 100
 		name = "Tax 1"
 		modifier = {
 			local_tax_modifier = 0.4
 			local_autonomy = -0.05
+		}
+		build_trigger = {
+			FROM = {
+				has_global_modifier_value = {
+					which = tax_line
+					value = 1
+				}
+			}
 		}
 	}
 	2 = {
@@ -203,6 +206,14 @@ new building_line tax = {
 			local_tax_modifier = 0.7
 			local_autonomy = -0.10
 		}
+		build_trigger = {
+			FROM = {
+				has_global_modifier_value = {
+					which = tax_line
+					value = 2
+				}
+			}
+		}
 	}
 	3 = {
 		cost = 300
@@ -212,6 +223,14 @@ new building_line tax = {
 			local_tax_modifier = 1.0
 			local_autonomy = -0.15
 		}
+		build_trigger = {
+			FROM = {
+				has_global_modifier_value = {
+					which = tax_line
+					value = 3
+				}
+			}
+		}
 	}
 	4 = {
 		cost = 400
@@ -220,6 +239,14 @@ new building_line tax = {
 		modifier = {
 			local_tax_modifier = 1.5
 			local_autonomy = -0.2
+		}
+		build_trigger = {
+			FROM = {
+				has_global_modifier_value = {
+					which = tax_line
+					value = 4
+				}
+			}
 		}
 	}
 	ai_will_do = {

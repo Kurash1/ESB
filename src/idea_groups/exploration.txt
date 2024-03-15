@@ -7,6 +7,14 @@ new idea_group exploration_ideas = {
 			desc = "Allows us to join the number of nations set to explore the world outside of their borders or strive to be the first nation to circumnavigate the world by commencing a quest for the new world."
 			modifier = {
 				may_explore = yes
+				monthly_expedition_progress = {
+					amount = 1
+					trigger = {
+						owner = {
+							has_idea = exploration_ideas_1
+						}
+					}
+				}
 			}
 		}
 		{

@@ -1,9 +1,14 @@
 new localisation expedition_progress = "Expedition Progress"
-new named_effect cause_expedition_progress = {
-	change_variable = {
-		which = expedition_progress
-		value = 1
+new effect cause_expedition_progress = {
+	args = float
+	transpile = {
+		change_variable = {
+			which = expedition_progress
+			value = args
+		}
 	}
+}
+new named_effect reload_expedition_progress = {
 	hidden_effect = {
 		set_variable = {
 			which = expedition_percentage
@@ -29,37 +34,14 @@ new named_effect cause_expedition_progress = {
 	}
 }
 new named_effect expedition_progress_pulse = {
-	random_list = {
-		1 = {
-			modifier = {
-				factor = 1.5
-				has_province_modifier = expedition_mod_cash_mod
-			}
-			modifier = {
-				factor = 1.5
-				has_province_modifier = expedition_mod_camp_mod
-			}
-			modifier = {
-				factor = 2.5
-				has_province_modifier = expedition_mod_explore_mod
-			}
-			modifier = {
-				factor = 1.5
-				has_province_modifier = expedition_mod_merc_mod
-			}
-			modifier = {
-				factor = 2
-				full_idea_group = exploration_ideas
-			}
-			cause_expedition_progress
-		}
-		19 = { }
-	}
+	
 }
 on_actions:on_monthly_pulse += {
 	every_owned_province [
 		has_province_modifier = expedition_camp
 	] {
 		expedition_progress_pulse
+		
+		reload_expedition_progress
 	}
 }

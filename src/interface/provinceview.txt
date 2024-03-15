@@ -2888,7 +2888,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "expedition_progress_text"
-				position = { x = 352 y = 462 }
+				position = { x = 352 y = 295 }
 				textureFile = ""
 				font = "vic_22"
 				scripted = yes
@@ -2898,7 +2898,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "start_expedition"
-				position = { x = 337 y = 386 }
+				position = { x = 337 y = 330 }
 				quadTextureSprite = "gfx_stats_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2907,7 +2907,7 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "expedition_mod_cash"
-				position = { x = 335 y = 278 }
+				position = { x = 335 y = 400 }
 				quadTextureSprite = "GFX_expedition_cash_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2915,7 +2915,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "expedition_mod_camp"
-				position = { x = 390 y = 278 }
+				position = { x = 390 y = 400 }
 				quadTextureSprite = "GFX_expedition_camp_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2923,7 +2923,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "expedition_mod_explore"
-				position = { x = 335 y = 333 }
+				position = { x = 335 y = 455 }
 				quadTextureSprite = "GFX_expedition_explore_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2931,13 +2931,29 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "expedition_mod_merc"
-				position = { x = 390 y = 333 }
+				position = { x = 390 y = 455 }
 				quadTextureSprite = "GFX_expedition_merc_button"
 				buttonText = ""
 				buttonFont = "vic_18"
 				scripted = yes
 			}
-
+			guiButtonType = {
+				name = "expedition_mod_mage"
+				position = { x = 335 y = 510 }
+				quadTextureSprite = "GFX_expedition_mages_button"
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "expedition_mod_new_btn_2"
+				position = { x = 390 y = 510 }
+				quadTextureSprite = "GFX_expedition_unknown_button"
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			
 			#### GREAT PROJECTS WINDOW
 			windowType = {
 				name = "great_projects_window"

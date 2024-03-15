@@ -7,6 +7,7 @@ new idea_group economic_ideas = {
 			desc = "Allows us to increase our tax revenues by adopting a more bureaucratic administrative system governed by state officials."
 			modifier = {
 				global_tax_modifier = 10%
+				tax_line = 1
 			}
 		}
 		{
@@ -287,6 +288,7 @@ new idea_group esb_treasury = {
 			desc = "Everyone is happier if they dont get to sign 50 papers."
 			modifier = {
 				global_tax_modifier = 0.1
+				tax_line = 1
 			}
 		}
 		{
