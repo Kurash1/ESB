@@ -216,13 +216,13 @@ mission_trees:solitude += {
 		}
 		icon = wolfs_eye_lighthouse_mission
 		trigger = {
-			owns = solitude_lighthouse
-			provinces:solitude_lighthouse = {
+			owns = wolfs_eye
+			provinces:wolfs_eye = {
 				province_has_center_of_trade_of_level = 2
 			}
 		}
 		effect = {
-			provinces:solitude_lighthouse = {
+			provinces:wolfs_eye = {
 				quick_province_modifier = {
 					name = "Wolf's Eye Lighthouse"
 					modifier = {

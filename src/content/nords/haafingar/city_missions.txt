@@ -102,7 +102,7 @@ mission_trees:solitude += {
 		effect = {
 			unlock_poetic_edda_modifier = ode_to_the_founding
 			new_custom_tooltip = "[{provinces:solitude}.GetName] renamed to §YSolitude§!.
-[{provinces:solitude_port}.GetName] renamed to §YRed-Port§!.
+[{provinces:red_port}.GetName] renamed to §YRed-Port§!.
 
 The monument §YBlue Palace§! is created in §YSolitude§! at Noteworthy level.
 Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the following effects:
@@ -134,7 +134,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 					}
 					change_province_name = "Solitude"
 				}
-				provinces:solitude_port = {
+				provinces:red_port = {
 					change_province_name = "Red-Port"
 				}
 			}
@@ -277,13 +277,13 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		x = 4
 		y = 0
 		trigger = {
-			owns = solitude_port
-			provinces:solitude_port = {
+			owns = red_port
+			provinces:red_port = {
 				development = 15
 			}
 		}
 		effect = {
-			provinces:solitude_port = {
+			provinces:red_port = {
 				add_building = navy_1
 				add_building = trade_1
 				add_building = production_1
@@ -298,7 +298,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		y = 1
 		required = windbreaker_arch
 		trigger = {
-			areas:solitude_proper; solitude_countryside; solitude_coast = {
+			areas:solitude; wolfs_eye = {
 				type = all
 				owned_by = ROOT
 			}
@@ -306,9 +306,8 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 				value = 100
 				trigger = {
 					OR = {
-						area = solitude_proper
-						area = solitude_countryside
-						area = solitude_coast
+						area = solitude
+						area = wolfs_eye
 					}
 				}
 			}
@@ -317,7 +316,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 			provinces:solitude_farms = {
 				add_building = def_manufactory
 			}
-			areas:solitude_proper; solitude_countryside; solitude_coast = {
+			areas:solitude; wolfs_eye = {
 				add_base_production = 1
 				quick_province_modifier = {
 					name = "Founding lands of Haafingar"
@@ -365,7 +364,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		icon = tower_project_mission
 		trigger = {
 			treasury = 1000
-			areas:solitude_proper; solitude_countryside; dragon_bridge = {
+			areas:solitude; dragon_bridge = {
 				type = all
 				owned_by = ROOT
 				base_manpower = 5
@@ -374,7 +373,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		effect = {
 			add_treasury = -1000
 			
-			areas:solitude_proper; solitude_countryside; dragon_bridge = {
+			areas:solitude; dragon_bridge = {
 				quick_province_modifier = {
 					name = "Military Towers"
 					modifier = {

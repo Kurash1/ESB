@@ -11,7 +11,7 @@ new tradenode solitude = {
 	name = "Solitude"
 	location = solitude
 	areas = {
-		solitude_proper solitude_countryside dragon_bridge rivers_horn twin_bridges drajkmyr_marsh snowhawk
+		solitude dragon_bridge rivers_horn twin_bridges drajkmyr_marsh snowhawk
 	}
 	outgoings = {
 	}
@@ -26,7 +26,7 @@ new tradenode stonehills = {
 		{
 			node = solitude
 			path = {
-				kjenstag coast_of_verglas solitude_port solitude
+				kjenstag coast_of_verglas red_port solitude
 			}
 			control = {
 				1719.000000 2010.000000 1704.000000 2008.000000 1689.000000 2012.000000 1672.000000 2009.000000 1657.000000 2021.000000 1658.000000 2031.000000 1653.000000 2036.000000 1646.000000 2041.000000 1637.000000 2044.000000 1637.000000 2053.000000 1639.000000 2061.000000
@@ -44,7 +44,7 @@ new tradenode hjaal = {
 		{
 			node = solitude
 			path = {
-				coast_of_morthal coast_of_solitude solitude_port solitude
+				coast_of_morthal coast_of_solitude red_port solitude
 			}
 			control = {
 				1626.000000 1988.000000 1616.000000 1993.000000 1613.000000 1999.000000 1606.000000 2009.000000 1606.000000 2019.000000 1610.000000 2029.000000 1619.000000 2038.000000 1621.000000 2044.000000 1631.000000 2045.000000 1633.000000 2054.000000 1638.000000 2063.000000
@@ -80,7 +80,7 @@ new tradenode dawnstar = {
 		{
 			node = solitude
 			path = {
-				softta olavnir pale_camp imp_26 windstad coast_of_verglas solitude_port solitude
+				softta olavnir pale_camp imp_26 windstad coast_of_verglas red_port solitude
 			}
 			control = {
 				1780.000000 2075.000000 1775.000000 2079.000000 1738.000000 2092.000000 1725.000000 2098.000000 1702.000000 2088.000000 1674.000000 2072.000000 1653.000000 2056.000000 1643.000000 2061.000000
@@ -413,7 +413,7 @@ new tradenode northwatch = {
 	name = "Northwatch"
 	location = northwatch
 	areas = {
-		solitude_coast shadowgreen ravenscar northwatch volkihar_isles lone_isle deepwood hraggstad kilkreath pinefrost
+		wolfs_eye shadowgreen ravenscar northwatch volkihar_isles lone_isle deepwood hraggstad kilkreath pinefrost
 	}
 	outgoings = {
 		{
@@ -437,7 +437,7 @@ new tradenode karthwasten = {
 		{
 			node = solitude
 			path = {
-				imp_47 karth_lake coast_of_solitude solitude_port solitude
+				imp_47 karth_lake coast_of_solitude red_port solitude
 			}
 			control = {
 				1554.000000 1986.000000 1561.000000 1989.000000 1557.000000 1997.000000 1559.000000 2004.000000 1567.000000 2013.000000 1576.000000 2024.000000 1587.000000 2028.000000 1593.000000 2030.000000 1607.000000 2043.000000 1617.000000 2053.000000 1623.000000 2058.000000 1634.000000 2062.000000 1642.000000 2068.000000

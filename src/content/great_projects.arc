@@ -1,3 +1,7 @@
+new great_project deepwood_vale = {
+	name = "Deepwood Vale"
+	start = black_mountain
+}
 new great_project dunmeth_pass = {
 	name = "Dunmeth Pass"
 	start = black_mountain
@@ -469,7 +473,7 @@ new great_project fortress_of_ice = {
 }
 new great_project great_arch = {
 	name = "Great Arch"
-	start = solitude_port
+	start = red_port
 	tier_1 = {
 		country_modifier = {
 			global_unrest = -1
