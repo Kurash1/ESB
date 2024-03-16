@@ -3,24 +3,24 @@ new idea_group administrative_ideas = {
 	category = ADM
 	ideas = {
 		{
-			name = "Organized Mercenary Payments"
-			desc = "Mercenary captains are a canny lot. They will try to get two commanders in the same army into a bidding war for their services. We will streamline our mercenary recruitment process to prevent abuses by commanders and ensure we are always in the best negotiating position."
+			name = "Imperial Census"
+			desc = "By conducting a census of our population we can ensure that everyone pays their proper tax share."
 			modifier = {
-				mercenary_cost = -0.1
+				global_tax_modifier = 0.15
 			}
 		}
 		{
 			name = "Adaptability"
 			desc = "There is what is ours and what is part of our ancestral domain that will never be surrendered. A bit of flexibility here will see much more land being considered never surrenderable and should the worst happen the whole world will know our crusade to recover it will be just."
 			modifier = {
-				core_creation = -0.25
+				core_creation = -0.2
 			}
 		}
 		{
-			name = "Benefits for Mercenaries"
-			desc = "Mercenaries will always look for the best deal, so we need to ensure that mercenaries remain with us. By ensuring we look after our mercenary companies, they will stay loyal for longer and require less direct monetary compensation."
+			name = "State Bureaucracy"
+			desc = "Educating and employing bureaucrats should help us in governing our expanding territories."
 			modifier = {
-				merc_maintenance_modifier = -0.15
+				administrative_efficiency = 0.05
 			}
 		}
 		{
@@ -31,17 +31,17 @@ new idea_group administrative_ideas = {
 			}
 		}
 		{
-			name = "Mercenary Recruitment"
-			desc = "Money is not the only limit when it comes to recruiting mercenaries. The other bottleneck is having mercenary companies who wish to serve with us. Thus we must ensure our system allows every company to join us."
+			name = "Civil oversight over the military"
+			desc = "By conducting proper civil oversight of the army we can ensure that none of our money is wasted."
 			modifier = {
-				mercenary_manpower = 0.25
+				land_maintenance_modifier = -0.05
 			}
 		}
 		{
-			name = "Administrative Efficiency"
-			desc = "The most important part of any government is getting the right advice. We must ensure that we are as inclusive as possible when it comes to advisors so we can maximize the number of different viewpoints we are presented with."
+			name = "Swift Incorporation policies"
+			desc = "Coming to the realisation, that incorporating newly acquired territory must be a swift endeavour, we streamlined the process."
 			modifier = {
-				advisor_pool = 1
+				ignore_coring_distance = yes
 			}
 		}
 		{
