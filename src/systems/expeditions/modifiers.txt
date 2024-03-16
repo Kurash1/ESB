@@ -1,3 +1,10 @@
+new modifier_definition global_expedition_progess = {
+	name = "Global Monthly Expedition Progress"
+	is_percentage = no
+	trigger = {
+		always = yes
+	}
+}
 new modifier monthly_expedition_progress = {
 	args = {
 		amount = float
@@ -88,6 +95,7 @@ new event_modifier expedition_mod_merc_mod = {
 new event_modifier expedition_mod_mage_mod = {
 	name = "Expedition: Mages"
 	modifier = {
+		picture = "monthly_magicka_opposite"
 		monthly_magicka = -0.25
 		monthly_expedition_progress = {
 			amount = 0.5

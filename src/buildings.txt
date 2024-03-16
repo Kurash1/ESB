@@ -1,20 +1,13 @@
-new trigger cleansing_trigger = {
-	args = country_scope
-	transpile = {
-		NOT = { 
-			`culture_group = {args}`
-		}
-		has_owner_accepted_culture = no
-	}
-}
 new effect cleansing_effect = {
 	args = country_scope
 	transpile = {
 		`change_religion = {args}`
 		`change_culture = {args}`
-		add_devastation = 50
-		set_local_autonomy = 50
-		add_nationalism = -100
+		add_devastation = 25
+		
+		hidden_effect = {
+			add_nationalism = -100
+		}
 	}
 }
 new building cleansing = {
@@ -22,13 +15,20 @@ new building cleansing = {
 	desc = "Let's clean our land from the tainting presence of other races"
 	cost = 10
 	time = 12
-	x = 380
-	y = 34
 	modifier = {
 		allowed_num_of_buildings = 1
 	}
 	build_trigger = {
-		cleansing_trigger = FROM
+		NOT = {
+			has_construction = any
+		}
+		OR = {
+			custom_trigger_tooltip = {
+				new_tooltip = "Have any modifier that grants cleansing"
+				always = no
+			}
+			cleansing_triggers
+		}
 	}
 	on_built = {
 		cleansing_effect = FROM

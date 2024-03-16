@@ -156,6 +156,10 @@ governments:monarchy:reform_levels:1 += new tier_1_skjoralmor_clan = {
 	icon = "fort"
 	allow_normal_conversion = yes
 	maintain_dynasty = yes
+	custom_attributes = {
+		defineloc mechanic_cleansing_on_orcs_yes = "Cleansing on §YOrcs§!"
+		cleansing_on_orcs = yes
+	}
 	potential = {
 		has_reform = tier_1_skjoralmor_clan
 	}

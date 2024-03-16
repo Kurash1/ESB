@@ -1,0 +1,67 @@
+new named_trigger cleansing_triggers = {
+	if [owner = {
+		has_government_attribute = cleansing_on_orcs
+	}] {
+		custom_trigger_tooltip = {
+			new_tooltip = "As you have '§YCleansing on Orcs§!' government attribute, you can cleanse if the culture group is §YOrc§!."
+			culture_group = orc
+		}
+	}
+	else {
+		hidden_trigger = { always = no }
+	}
+	if [owner = {
+		culture_group = nord
+	}] {
+		custom_trigger_tooltip = {
+			new_tooltip = "As you are of the '§YNord§!' culture group, you can cleanse if the culture group is §YSnow Elven§!."
+			culture_group = snow_elven
+		}
+	}
+	else {
+		hidden_trigger = { always = no }
+	}
+}
+new custom_button cleanse_province = {
+	tooltip = "Cleanse Province"
+	potential = {
+		owned_by = FROM
+	}
+	trigger = {
+		NOT = {
+			has_construction = any
+		}
+		OR = {
+			custom_trigger_tooltip = {
+				new_tooltip = "Have any modifier that grants cleansing"
+				always = no
+			}
+			cleansing_triggers
+		}
+	}
+	effect = {
+		if [
+			NOT = {
+				has_construction = any
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					new_tooltip = "Have any modifier that grants cleansing"
+					always = no
+				}
+				cleansing_triggers
+			}
+		] {
+			add_building_construction = {
+				building = cleansing
+				speed = 1
+				cost = 1
+			}
+			
+			new_custom_tooltip = "On completion:"
+			tooltip = {
+				cleansing_effect = FROM
+			}
+		}
+	}
+}

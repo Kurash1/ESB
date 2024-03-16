@@ -34,7 +34,15 @@ new named_effect reload_expedition_progress = {
 	}
 }
 new named_effect expedition_progress_pulse = {
-	
+	export_to_variable = {
+		which = expedition_progress_temp
+		value = `modifier:global_expedition_progess`
+		who = FROM
+	}
+	change_variable = {
+		which = expedition_progress
+		which = expedition_progress_temp
+	}
 }
 on_actions:on_monthly_pulse += {
 	every_owned_province [

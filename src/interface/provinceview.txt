@@ -1305,7 +1305,16 @@ guiTypes = {
 					scale = 0.8
 				}
 			}
-
+			
+			guiButtonType = {
+				name = "cleanse_province"
+				position = { x = 317 y = 196 }
+				quadTextureSprite = "GFX_cleansing_button"
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			
 			guiButtonType = {
 				name = "build_landunit_button"
 				position = { x=317 y = 245}
@@ -2856,15 +2865,15 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			
 			iconType = {
-				name = "expedition_icon"
-				spriteType = "GFX_expedition_icon_strip"
-				position = { x = 336 y = 193 }
-				scripted = yes
-			}
-			iconType = {
 				name = "expedition_menu"
 				spriteType = "GFX_expedition_menu"
 				position = { x = 330 y = 135 }
+				scripted = yes
+			}
+			iconType = {
+				name = "expedition_icon"
+				spriteType = "GFX_expedition_icon_strip"
+				position = { x = 336 y = 193 }
 				scripted = yes
 			}
 			instantTextBoxType = {

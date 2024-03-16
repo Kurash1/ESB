@@ -1,0 +1,22 @@
+#new named_int expedition_random_event_count = 0
+#new effect define_expedition_random_event = {
+#	args = event
+#	transpile = {
+#		#new customizable_localization `GetExpeditionEvent{expedition_random_event_count}` = {
+#		#	{
+#		#		text = args:title
+#		#		trigger = args:trigger
+#		#	}
+#		#	{
+#		#		text = ""
+#		#		trigger = {
+#		#			always = yes
+#		#		}
+#		#	}
+#		#}
+#		#
+#		#custom_icons:expedition_icon:tooltip += "[This.GetExpeditionEvent{expedition_random_event_count}]"
+#		#
+#		#expedition_random_event_count += 1
+#	}
+#}

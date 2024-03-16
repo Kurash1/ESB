@@ -1,0 +1,18 @@
+#new province_event expedition_random_event.1 = {
+#	inherit = random_event
+#	title = "Bandit Attack!"
+#	desc = ""
+#	picture = sparring_eventPicture
+#	trigger = {
+#		province_id = volskygge
+#	}
+#	options = {
+#		{
+#			name = ""
+#			effect = {
+#				add_base_manpower = -1
+#			}
+#		}
+#	}
+#}
+#define_expedition_random_event = expedition_random_event.1
