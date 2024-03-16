@@ -1,0 +1,67 @@
+new idea_group duraki_ideas = {
+	name = "Duraki"
+	trigger = {
+		primary_culture = duraki
+	}
+	category = national
+	start = {
+		diplomatic_upkeep = 1
+		improve_relation_modifier = 0.2
+	}
+	bonus = {
+		free_policy = 1
+	}
+	ideas = {
+		{
+			name = "The beauty of the stars and nereids"
+			desc = "The Duraki not only worship the stars and constellations but also those daedra more incline with nature, as well as various types of nymphs."
+			modifier = {
+				diplomatic_upkeep = 2
+			}
+		}
+		{
+			name = "Nereid Protectors"
+			desc = "Worshipping the Nereids grants the Duraki some benefits in the defense of their homeland against corrupting influences."
+			modifier = {
+				defensiveness = 0.1
+			}
+		}
+		{
+			name = "A splintered people"
+			desc = "The Duraki are fractured but only together will they retain their freedom. The Duraki kingdoms must be united."
+			modifier = {
+				accept_vassalization_reasons = 15
+			}
+		}
+		{
+			name = "The Stars and Constellations shall guide"
+			desc = "Being guided by the Stars and the Constellations the Duraki are a hopeful people"
+			modifier = {
+				morale_damage_received = -0.05
+			}
+		}
+		{
+			name = "Efficient land usage"
+			desc = "Living in a desert the Duraki learnt how not to build on any of the scarce arible land present."
+			modifier = {
+				development_cost = -0.1
+			}
+		}
+		{
+			name = "United through the Celestials"
+			desc = "The Celestials are the one thing uniting the fractured Duraki people."
+			modifier = {
+				reduced_liberty_desire = 15
+				vassal_income = 0.2
+			}
+		}
+		{
+			name = "Reaching for the stars"
+			desc = "Building mighty towers to channel Aetherium and Magicka through the Duraki are quite magically inclined people."
+			modifier = {
+				monthly_magicka = 0.25
+				infantry_fire = 0.25
+			}
+		}
+	}
+}
