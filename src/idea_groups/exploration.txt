@@ -3,60 +3,61 @@ new idea_group exploration_ideas = {
 	category = DIP
 	ideas = {
 		{
-			name = "Quest for the New World"
-			desc = "Allows us to join the number of nations set to explore the world outside of their borders or strive to be the first nation to circumnavigate the world by commencing a quest for the new world."
+			name = "Quest for Tamriel"
+			desc = "Tamriel is a vast place and we only know very little about it. We must find out what there is to learn."
 			modifier = {
 				may_explore = yes
-				global_expedition_progess = 1
 			}
 		}
 		{
-			name = "Colonial Ventures"
-			desc = "Enables us to send more Colonists to uncharted lands."
+			name = "That which is below"
+			desc = "There are relics and ruins of ages long past beneath our feet. The earlier we uncover their ancient knowledge the better."
 			modifier = {
-				colonists = 1
+				global_expedition_progress = 1
 			}
 		}
 		{
-			name = "Overseas Exploration"
-			desc = "Setting up colonies in distant lands is pretty much a one-way trip. If strange new diseases don't get you, the amount of time it takes to sail back means you won't be coming home. If we remind people of the potential riches, we can encourage them to seek lands further afield."
+			name = "Honored Adventures"
+			desc = "Adventuring is a perilous task with huge risk. We must honour the brave souls who dare take up those perils."
 			modifier = {
-				range = 0.5
+				#prestige_on_expedition_completion = 10
 			}
 		}
 		{
-			name = "Land of Opportunity"
-			desc = "By portraying colonial lands and new virgin land where any man can make his fortune, possibly some women too, people will emigrate quicker to the colonies. Meaning the nation will have spent less money encouraging people to go there."
+			name = "Map the Unknown"
+			desc = "Cartographers are a necessity on any expedition. We must count them among our ranks."
 			modifier = {
-				global_colonial_growth = 25
+				#survey_speed = 1
 			}
 		}
 		{
-			name = "Viceroys"
-			desc = "Makes it possible for us to establish Viceroys and thereby improve the administration of our Colonies and increase the amount of money they generate."
+			name = "Explorer's Guild"
+			desc = "By establishing a proper guild for exploration we can minimize both the risks and maximize the rewards of any given expedition."
 			modifier = {
-				global_tariffs = 0.15
-				envoy_travel_time = -0.2
+				#expedition_positive_event_chance = 0.25
 			}
 		}
 		{
-			name = "Free Colonies"
-			desc = "Only so many people are willing to move abroad to expand our great colonial empire. However, the promise of a plot of land to farm, in freehold, will encourage many more people to seek their fortune abroad. The nice thing about it is that there is plenty of land for everyone."
+			name = "Dedicated Scouting Corps"
+			desc = "With a dedicated scouting organisation we can find new resources far more efficiently than our competitors."
 			modifier = {
-				colonist_placement_chance = 0.1
-				expel_minorities_cost = -1.0
+				global_trade_goods_size_modifier = 0.1
+				cavalry_power = 0.10
 			}
 		}
 		{
-			name = "Global Empire"
-			desc = "Our commitment to our colonial empire has changed the attitude of people to jobs in the colonial administration. No longer a place for freebooters who seek to maximize their fortune, instead it is seen as a career for the brightest and the best. This is reflected in our taxes."
+			name = "A song to remember"
+			desc = "The heroic deeds of our brave explorers must not be forgotten. They shall be remembered by song for eons to come."
 			modifier = {
-				naval_forcelimit_modifier = 0.25
+				prestige = 0.5
+				monthly_splendor = 1
 			}
 		}
 	}
 	bonus = {
-		cb_on_primitives = yes
+		range = 0.5
+		trade_range_modifier = 0.5
+		merchants = 1
 	}
 	ai_will_do = {
 		factor = 0 # I (Kurashi) don't want ai to randomly colonize
