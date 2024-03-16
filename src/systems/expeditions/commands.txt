@@ -1,3 +1,37 @@
+new effect pre_add_expedition_progress = {
+	args = float
+	transpile = {
+		hidden_effect = {
+			set_variable = {
+				which = add_expedition_percentage
+				value = args
+			}
+			divide_variable = {
+				which = add_expedition_percentage
+				which = expedition_length
+			}
+			multiply_variable = {
+				which = add_expedition_percentage
+				value = 100
+			}
+		}
+	}
+}
+new localisation add_expedition_progress_tt = "Change §YExpedition Progress§! by [This.add_expedition_percentage.GetValue]%"
+new effect post_add_expedition_progress = {
+	args = float
+	transpile = {
+		custom_tooltip = add_expedition_progress_tt
+		hidden_effect = {
+			change_variable = {
+				which = expedition_progress
+				value = args
+			}
+			
+			reload_expedition_progress
+		}
+	}
+}
 new effect set_expedition_flag = {
 	args = string
 	transpile = {

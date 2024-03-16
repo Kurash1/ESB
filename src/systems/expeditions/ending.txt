@@ -1,9 +1,4 @@
 new named_effect end_expedition_effect = {
 	clr_province_flag = expedition_target
-	remove_province_modifier = expedition_camp
-	remove_province_modifier = expedition_mod_cash_mod
-	remove_province_modifier = expedition_mod_camp_mod
-	remove_province_modifier = expedition_mod_explore_mod
-	remove_province_modifier = expedition_mod_merc_mod
-	remove_province_modifier = expedition_mod_mage_mod
+	remove_expedition_modifiers
 }
