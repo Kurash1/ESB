@@ -1,18 +1,54 @@
-#new province_event expedition_random_event.1 = {
-#	inherit = random_event
-#	title = "Bandit Attack!"
-#	desc = ""
-#	picture = sparring_eventPicture
-#	trigger = {
-#		province_id = volskygge
-#	}
-#	options = {
-#		{
-#			name = ""
-#			effect = {
-#				add_base_manpower = -1
-#			}
-#		}
-#	}
-#}
-#define_expedition_random_event = expedition_random_event.1
+new province_event expedition_random_event.1 = {
+	inherit = random_event
+	title = "Hidden Treasure"
+	desc = ""
+	picture = sparring_eventPicture
+	trigger = {
+		always = yes
+	}
+	options = {
+		{
+			name = "Great!"
+			effect = {
+				owner = {
+					add_treasury = 50
+				}
+			}
+		}
+	}
+}
+define_expedition_random_event = {
+	event = expedition_random_event.1
+	is_good = yes
+}
+new province_event expedition_random_event.2 = {
+	inherit = random_event
+	title = "Lost Supplies"
+	desc = ""
+	picture = sparring_eventPicture
+	trigger = {
+		always = yes
+	}
+	options = {
+		{
+			name = "That is unfortunate"
+			effect = {
+				cause_expedition_progress = -10
+				
+				reload_expedition_progress
+			}
+		}
+		{
+			name = "Send additional supplies then"
+			effect = {
+				owner = {
+					add_treasury = -25
+				}
+			}
+		}
+	}
+}
+define_expedition_random_event = {
+	event = expedition_random_event.2
+	is_good = no
+}

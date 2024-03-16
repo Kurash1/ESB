@@ -205,7 +205,7 @@ new great_project ancestor_glade = {
 			local_development_cost_modifier = -0.1
 		}
 		country_modifier = {
-			idea_cost = -0.025
+			idea_cost = -0.01
 			advisor_cost = -0.1
 		}
 	}
@@ -214,7 +214,7 @@ new great_project ancestor_glade = {
 			local_development_cost_modifier = -0.2
 		}
 		country_modifier = {
-			idea_cost = -0.05
+			idea_cost = -0.02
 			advisor_cost = -0.2
 		}
 	}
@@ -223,7 +223,7 @@ new great_project ancestor_glade = {
 			local_development_cost_modifier = -0.25
 		}
 		country_modifier = {
-			idea_cost = -0.075
+			idea_cost = -0.03
 			advisor_cost = -0.25
 		}
 	}

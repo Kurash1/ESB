@@ -1,0 +1,18 @@
+new effect set_expedition_flag = {
+	args = string
+	transpile = {
+		`set_province_flag = expedition_flag_{args}`
+	}
+}
+new effect clr_expedition_flag = {
+	args = string
+	transpile = {
+		`clr_province_flag = expedition_flag_{args}`
+	}
+}
+new trigger has_expedition_flag = {
+	args = string
+	transpile = {
+		`has_province_flag = expedition_flag_{args}`
+	}
+}
