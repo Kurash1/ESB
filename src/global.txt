@@ -14,6 +14,14 @@ new custom_icon custom_mechanic_survey_background = {
 		}
 	}
 }
+new custom_button custom_mechanic_survey_northern_coast = {
+	tooltip = "Survey: Northern Coast"
+	potential = {
+		NOT = {
+			has_country_flag = show_technology
+		}
+	}
+}
 new custom_button toggle_custom_mechanic_overlay = {
 	tooltip = "Toggle Technology Screen"
 	effect = {

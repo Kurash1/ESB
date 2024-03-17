@@ -259,7 +259,23 @@ new interface_file countrytechnologyview = {
 			position = { x = -50 y = 400 }
 			scripted = yes
 		}
-		
+		guiButtonType = {
+			name = "custom_mechanic_survey_northern_coast"
+			position = { x = (362-50) y = (117+400) }
+			quadTextureSprite = "GFX_survey_icon"
+			scripted = yes
+		}
+		instantTextBoxType = {
+			name = "test_text"
+			position = { x = 446 y = 115 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}
+			maxWidth = 50
+			maxHeight = 32
+			format = right
+			text = "100.0"
+		}
 		
 		
 		
