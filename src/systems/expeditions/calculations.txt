@@ -50,7 +50,7 @@ new named_effect reload_expedition_progress = {
 new named_effect expedition_progress_pulse = {
 	export_to_variable = {
 		which = expedition_progress_temp
-		value = `modifier:global_expedition_progess`
+		value = `modifier:global_expedition_progress`
 		who = FROM
 	}
 	change_variable = {

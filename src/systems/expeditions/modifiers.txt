@@ -1,6 +1,27 @@
-new modifier_definition global_expedition_progess = {
+new modifier_definition global_expedition_progress = {
 	name = "Global Monthly Expedition Progress"
 	is_percentage = no
+	trigger = {
+		always = yes
+	}
+}
+new modifier_definition prestige_on_expedition_completion = {
+	name = "Prestige on Expedition Completion"
+	is_percentage = no
+	trigger = {
+		always = yes
+	}
+}
+new modifier_definition expedition_positive_event_chance = {
+	name = "Chance of positive Expedition Events"
+	is_percentage = yes
+	trigger = {
+		always = yes
+	}
+}
+new modifier_definition survey_speed = {
+	name = "Survey Speed"
+	is_percentage = yes
 	trigger = {
 		always = yes
 	}

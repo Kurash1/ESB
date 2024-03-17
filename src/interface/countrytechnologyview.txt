@@ -227,8 +227,7 @@ new interface_file countrytechnologyview = {
 				format = center
 				text = "4322 ¤"
 			}
-			guiButtonType =
-			{
+			guiButtonType = {
 				name = "back_button"
 				quadTextureSprite = "GFX_standard_button_105"
 				position = { x = 214 y = 370 }
@@ -238,7 +237,9 @@ new interface_file countrytechnologyview = {
 				shortcut = "n"
 			}
 		}
-	
+		
+		
+		
 		iconType = {
 			name = "custom_mechanic_overlay"
 			spriteType = "GFX_custom_mechanic_overlay"
@@ -251,6 +252,16 @@ new interface_file countrytechnologyview = {
 			quadTextureSprite = "privilege_technology"
 			scripted = yes
 		}
+		
+		iconType = {
+			name = "custom_mechanic_survey_background"
+			spriteType = "GFX_survey_background"
+			position = { x = -50 y = 400 }
+			scripted = yes
+		}
+		
+		
+		
 		
 		instantTextBoxType = {
 			name = "window_title"

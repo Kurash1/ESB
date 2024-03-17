@@ -7,6 +7,13 @@ new custom_icon custom_mechanic_overlay = {
 		}
 	}
 }
+new custom_icon custom_mechanic_survey_background = {
+	potential = {
+		NOT = {
+			has_country_flag = show_technology
+		}
+	}
+}
 new custom_button toggle_custom_mechanic_overlay = {
 	tooltip = "Toggle Technology Screen"
 	effect = {
