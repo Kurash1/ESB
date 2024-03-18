@@ -47,6 +47,9 @@ new class modifier_definition = {
 new class named_float = {
 	args = float
 }
+
+
+
 new class script_variable = {
 	list = variables
 	args = {
@@ -195,5 +198,13 @@ new class script_variable = {
 			}
 		}
 	}
-	
+	export = {
+		args = string
+		transpile = {
+			export_to_variable = {
+				which = this:id
+				value = args
+			}
+		}
+	}
 }

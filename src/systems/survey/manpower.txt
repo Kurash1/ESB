@@ -8,7 +8,7 @@ new custom_text_box survey_manpower_value = {
     potential = {
 		has_country_flag = show_survey_screen
 	}
-	name = "[This.survey_manpower.GetValue]"
+	name = "[This.survey_manpower.GetValue]/[This.survey_force_limit.GetValue]"
 }
 
 new custom_button survey_manpower_add_button = {

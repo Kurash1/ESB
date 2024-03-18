@@ -1,22 +1,54 @@
 new named_effect survey_calculate_expenses = {
 	variables:survey_monthly_expenses:set = 0
 	
+	#Over Company Size Limit
+	#
+	# MAX(Manpower - modifier:scouting_company_size, 0) * Manpower / 1,000,000 * SURVEY_SCOUTS_OVER_FORCE_LIMIT
+	#
+	::survey_over_force_limit := survey_manpower
+	::survey_force_limit &= modifier:scouting_company_size
+	::survey_over_force_limit -= survey_force_limit
+	if [::survey_over_force_limit < 0] {
+		::survey_over_force_limit := 0
+	}
+	else {
+		::survey_over_force_limit *= survey_manpower
+		::survey_over_force_limit /= 1000000
+		::survey_over_force_limit *= SURVEY_SCOUTS_OVER_FORCE_LIMIT
+	}
+	
+	::survey_monthly_expenses += survey_over_force_limit
+	
 	#Administrative Costs
-	variables:survey_administrative_costs:set_var = survey_manpower
-	variables:survey_administrative_costs:divide = 1000
-	variables:survey_administrative_costs:multiply = SURVEY_SCOUTS_ADMINISTRATIVE_COST
-	variables:survey_monthly_expenses:add_var = survey_administrative_costs
+	#
+	# Manpower / 1,000 * SURVEY_SCOUTS_ADMINISTRATIVE_COST_MANPOWER_MULT +
+	# SURVEY_SCOUTS_BASE_ADMINISTRATIVE_COST
+	#
+	::survey_administrative_costs := survey_manpower
+	::survey_administrative_costs /= 1000
+	::survey_administrative_costs *= SURVEY_SCOUTS_ADMINISTRATIVE_COST
+	::survey_administrative_costs += SURVEY_SCOUTS_BASE_ADMINISTRATIVE_COST
+	
+	::survey_monthly_expenses += survey_administrative_costs
 	
 	#Salaries
-	variables:survey_salary:set_var = survey_manpower
-	variables:survey_salary:divide = 1000
-	variables:survey_salary:multiply = SURVEY_SALARY_PER_STACK
-	variables:survey_monthly_expenses:add_var = survey_salary
+	#
+	# Manpower / 1000 * SURVEY_SALARY_PER_STACK
+	#
+	::survey_salary := survey_manpower
+	::survey_salary /= 1000
+	::survey_salary *= SURVEY_SALARY_PER_STACK
+	
+	::survey_monthly_expenses += survey_salary
 	
 	#Maintenance
-	variables:survey_scout_maintenance:set_var = survey_manpower
-	variables:survey_scout_maintenance:divide = 1000
-	variables:survey_scout_maintenance:multiply = SURVEY_MAINTENANCE_PER_STACK
-	variables:survey_monthly_expenses:add_var = survey_scout_maintenance
+	#
+	# Manpower / 1000 * SURVEY_MAINTENANCE_PER_STACK
+	#
+	::survey_scout_maintenance := survey_manpower
+	::survey_scout_maintenance /= 1000
+	::survey_scout_maintenance *= SURVEY_MAINTENANCE_PER_STACK
+	
+	::survey_monthly_expenses += survey_scout_maintenance
 	
 }

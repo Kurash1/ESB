@@ -1,3 +1,13 @@
-new named_float SURVEY_SCOUTS_ADMINISTRATIVE_COST = 0.05
+new named_float SURVEY_SCOUTS_BASE_ADMINISTRATIVE_COST = 0.15
+new named_float SURVEY_SCOUTS_ADMINISTRATIVE_COST = 0.1
+new named_float SURVEY_SCOUTS_OVER_FORCE_LIMIT = 0.5
 new named_float SURVEY_SALARY_PER_STACK = 0.1
 new named_float SURVEY_MAINTENANCE_PER_STACK = 0.25
+
+new modifier_definition scouting_company_size = {
+	name = "Scouting Company Force Limit"
+	is_percentage = no
+	trigger = {
+		always = yes
+	}
+}

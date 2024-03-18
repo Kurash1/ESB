@@ -275,12 +275,12 @@ new interface_file countrytechnologyview = {
 		iconType = {
 			name = "custom_mechanic_survey_background"
 			spriteType = "GFX_survey_background"
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = -9 }
 			scripted = yes
 		}
 		guiButtonType = {
 			name = "close_survey_screen"
-			position = { x = 5 y = 95 }
+			position = { x = 5 y = 86 }
 			quadTextureSprite = "GFX_button_close"
 			scripted = yes
 		}
@@ -289,7 +289,7 @@ new interface_file countrytechnologyview = {
 		
 		instantTextBoxType = {
 			name = "survey_fund_title"
-			position = { x = 20 y = 128 }
+			position = { x = 20 y = 119 }
 			textureFile = ""
 			font = "vic_22"
 			scripted = yes
@@ -299,7 +299,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_fund_value"
-			position = { x = 48 y = 154 }
+			position = { x = 48 y = 145 }
 			textureFile = ""
 			font = "vic_22"
 			scripted = yes
@@ -309,7 +309,7 @@ new interface_file countrytechnologyview = {
 		}
 		guiButtonType = {
 			name = "survey_fund_add_button"
-			position = { x = 39 y = 172 }
+			position = { x = 39 y = 163 }
 			quadTextureSprite = "GFX_province_religion_button"
 			scripted = yes
 		}
@@ -318,7 +318,7 @@ new interface_file countrytechnologyview = {
 		
 		instantTextBoxType = {
 			name = "survey_manpower_title"
-			position = { x = 20 y = 216 }
+			position = { x = 20 y = 207 }
 			textureFile = ""
 			font = "vic_22"
 			scripted = yes
@@ -328,7 +328,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_manpower_value"
-			position = { x = 48 y = 242 }
+			position = { x = 48 y = 233 }
 			textureFile = ""
 			font = "vic_22"
 			scripted = yes
@@ -338,7 +338,7 @@ new interface_file countrytechnologyview = {
 		}
 		guiButtonType = {
 			name = "survey_manpower_add_button"
-			position = { x = 39 y = 260 }
+			position = { x = 39 y = 251 }
 			quadTextureSprite = "GFX_province_religion_button"
 			scripted = yes
 		}
@@ -346,7 +346,7 @@ new interface_file countrytechnologyview = {
 		
 		instantTextBoxType = {
 			name = "survey_fund_menu_text"
-			position = { x = 120 y = 137 }
+			position = { x = 120 y = 128 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -356,7 +356,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_fund_income_text"
-			position = { x = 125 y = 158 }
+			position = { x = 125 y = 149 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -366,7 +366,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_fund_income"
-			position = { x = 240 y = 158 }
+			position = { x = 240 y = 149 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -376,7 +376,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_fund_expenses_text"
-			position = { x = 125 y = 175 }
+			position = { x = 125 y = 166 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -386,7 +386,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_fund_expenses"
-			position = { x = 240 y = 175 }
+			position = { x = 240 y = 166 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -396,7 +396,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_fund_sum_text"
-			position = { x = 125 y = 192 }
+			position = { x = 125 y = 183 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -406,7 +406,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_fund_sum"
-			position = { x = 240 y = 192 }
+			position = { x = 240 y = 183 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -417,7 +417,7 @@ new interface_file countrytechnologyview = {
 		
 		instantTextBoxType = {
 			name = "survey_manpower_menu_text"
-			position = { x = 120 y = 220 }
+			position = { x = 120 y = 211 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -427,7 +427,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_manpower_recruits_text"
-			position = { x = 125 y = 241 }
+			position = { x = 125 y = 232 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -437,7 +437,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_manpower_recruits"
-			position = { x = 240 y = 241 }
+			position = { x = 240 y = 232 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -447,7 +447,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_manpower_losses_text"
-			position = { x = 125 y = 258 }
+			position = { x = 125 y = 249 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -457,7 +457,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_manpower_losses"
-			position = { x = 240 y = 258 }
+			position = { x = 240 y = 249 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -467,7 +467,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_manpower_sum_text"
-			position = { x = 125 y = 275 }
+			position = { x = 125 y = 266 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes
@@ -477,7 +477,7 @@ new interface_file countrytechnologyview = {
 		}
 		instantTextBoxType = {
 			name = "survey_manpower_sum"
-			position = { x = 240 y = 275 }
+			position = { x = 240 y = 266 }
 			textureFile = ""
 			font = "vic_18"
 			scripted = yes

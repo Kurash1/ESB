@@ -28,10 +28,15 @@ new custom_button open_survey_screen = {
 			variables:survey_monthly_recruits:init = yes
 			variables:survey_monthly_losses:init = yes
 			variables:survey_monthly_manpower:init = yes
+			variables:survey_force_limit:init = yes
+			variables:survey_over_force_limit:init = yes
 			variables:survey_administrative_costs:init = yes
 			variables:survey_salary:init = yes
 			variables:survey_scout_maintenance:init = yes
+			
 		}
+		survey_calculate_fund_sum
+		survey_calculate_expenses
 	}
 }
 new custom_button close_survey_screen = {
