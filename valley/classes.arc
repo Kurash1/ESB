@@ -44,3 +44,20 @@ new class modifier_definition = {
 		}
 	}
 }
+new class named_float = {
+	args = float
+}
+new class script_variable = {
+	args = {
+		initial_value = float
+	}
+	add = {
+		args = float
+		transpile = {
+			change_variable = {
+				which = this:id
+				value = args
+			}
+		}
+	}
+}

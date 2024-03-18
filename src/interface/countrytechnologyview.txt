@@ -252,33 +252,12 @@ new interface_file countrytechnologyview = {
 			quadTextureSprite = "privilege_technology"
 			scripted = yes
 		}
-		
-		iconType = {
-			name = "custom_mechanic_survey_background"
-			spriteType = "GFX_survey_background"
-			position = { x = -50 y = 400 }
-			scripted = yes
-		}
 		guiButtonType = {
-			name = "custom_mechanic_survey_northern_coast"
-			position = { x = (362-50) y = (117+400) }
-			quadTextureSprite = "GFX_survey_icon"
+			name = "open_survey_screen"
+			position = { x = 145 y = 165 }
+			quadTextureSprite = "GFX_expedition_explore_button"
 			scripted = yes
 		}
-		instantTextBoxType = {
-			name = "test_text"
-			position = { x = 446 y = 115 }
-			textureFile = ""
-			font = "vic_22"
-			borderSize = {x = 4 y = 4}
-			maxWidth = 50
-			maxHeight = 32
-			format = right
-			text = "100.0"
-		}
-		
-		
-		
 		instantTextBoxType = {
 			name = "window_title"
 			position = { x = 15 y = 78 }
@@ -289,6 +268,222 @@ new interface_file countrytechnologyview = {
 			maxWidth = 512
 			maxHeight = 32
 			format = centre
+		}
+		
+		
+		
+		iconType = {
+			name = "custom_mechanic_survey_background"
+			spriteType = "GFX_survey_background"
+			position = { x = 0 y = 0 }
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "close_survey_screen"
+			position = { x = 5 y = 95 }
+			quadTextureSprite = "GFX_button_close"
+			scripted = yes
+		}
+		
+		
+		
+		instantTextBoxType = {
+			name = "survey_fund_title"
+			position = { x = 20 y = 128 }
+			textureFile = ""
+			font = "vic_22"
+			scripted = yes
+			maxWidth = 287
+			maxHeight = 32
+			format = left
+		}
+		instantTextBoxType = {
+			name = "survey_fund_value"
+			position = { x = 48 y = 154 }
+			textureFile = ""
+			font = "vic_22"
+			scripted = yes
+			maxWidth = 287
+			maxHeight = 32
+			format = left
+		}
+		guiButtonType = {
+			name = "survey_fund_add_button"
+			position = { x = 39 y = 172 }
+			quadTextureSprite = "GFX_province_religion_button"
+			scripted = yes
+		}
+		
+		
+		
+		instantTextBoxType = {
+			name = "survey_manpower_title"
+			position = { x = 20 y = 216 }
+			textureFile = ""
+			font = "vic_22"
+			scripted = yes
+			maxWidth = 287
+			maxHeight = 32
+			format = left
+		}
+		instantTextBoxType = {
+			name = "survey_manpower_value"
+			position = { x = 48 y = 242 }
+			textureFile = ""
+			font = "vic_22"
+			scripted = yes
+			maxWidth = 287
+			maxHeight = 32
+			format = left
+		}
+		guiButtonType = {
+			name = "survey_manpower_add_button"
+			position = { x = 39 y = 260 }
+			quadTextureSprite = "GFX_province_religion_button"
+			scripted = yes
+		}
+		
+		
+		instantTextBoxType = {
+			name = "survey_fund_menu_text"
+			position = { x = 120 y = 137 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 170
+			maxHeight = 17
+			format = center
+		}
+		instantTextBoxType = {
+			name = "survey_fund_income_text"
+			position = { x = 125 y = 158 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 114
+			maxHeight = 17
+			format = left
+		}
+		instantTextBoxType = {
+			name = "survey_fund_income"
+			position = { x = 240 y = 158 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 43
+			maxHeight = 17
+			format = right
+		}
+		instantTextBoxType = {
+			name = "survey_fund_expenses_text"
+			position = { x = 125 y = 175 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 114
+			maxHeight = 17
+			format = left
+		}
+		instantTextBoxType = {
+			name = "survey_fund_expenses"
+			position = { x = 240 y = 175 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 43
+			maxHeight = 17
+			format = right
+		}
+		instantTextBoxType = {
+			name = "survey_fund_sum_text"
+			position = { x = 125 y = 192 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 114
+			maxHeight = 17
+			format = left
+		}
+		instantTextBoxType = {
+			name = "survey_fund_sum"
+			position = { x = 240 y = 192 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 43
+			maxHeight = 17
+			format = right
+		}
+		
+		instantTextBoxType = {
+			name = "survey_manpower_menu_text"
+			position = { x = 120 y = 220 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 170
+			maxHeight = 17
+			format = center
+		}
+		instantTextBoxType = {
+			name = "survey_manpower_recruits_text"
+			position = { x = 125 y = 241 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 114
+			maxHeight = 17
+			format = left
+		}
+		instantTextBoxType = {
+			name = "survey_manpower_recruits"
+			position = { x = 240 y = 241 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 43
+			maxHeight = 17
+			format = right
+		}
+		instantTextBoxType = {
+			name = "survey_manpower_losses_text"
+			position = { x = 125 y = 258 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 114
+			maxHeight = 17
+			format = left
+		}
+		instantTextBoxType = {
+			name = "survey_manpower_losses"
+			position = { x = 240 y = 258 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 43
+			maxHeight = 17
+			format = right
+		}
+		instantTextBoxType = {
+			name = "survey_manpower_sum_text"
+			position = { x = 125 y = 275 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 114
+			maxHeight = 17
+			format = left
+		}
+		instantTextBoxType = {
+			name = "survey_manpower_sum"
+			position = { x = 240 y = 275 }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 43
+			maxHeight = 17
+			format = right
 		}
 	}
 	### ------- Administrative Tech Research -------

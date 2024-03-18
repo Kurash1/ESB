@@ -1,0 +1,17 @@
+new named_effect survey_calculate_fund_sum = {
+	set_variable = {
+		which = survey_funds_sum
+		which = survey_funds_income
+	}
+	subtract_variable = {
+		which = survey_funds_sum
+		which = survey_funds_expenses
+	}
+	
+	
+	
+	change_variable = {
+		which = survey_funds
+		which = survey_funds_sum
+	}
+}

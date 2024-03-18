@@ -1,0 +1,70 @@
+new custom_text_box survey_manpower_menu_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Recruits & Losses"
+}
+new custom_text_box survey_manpower_recruits_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Total Recruits"
+}
+new custom_text_box survey_manpower_recruits = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "§G[This.survey_manpower_recruits.GetValue]§!"
+}
+new custom_text_box survey_manpower_losses_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Total Losses"
+}
+new custom_text_box survey_manpower_losses = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "§R[This.survey_manpower_losses.GetValue]§!"
+}
+new custom_text_box survey_manpower_sum_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Balance"
+}
+new customizable_localization GetSurveyManpowerSum = {
+	{
+		text = "§R[This.survey_manpower_sum.GetValue]§!"
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = survey_manpower_sum
+					value = 0
+				}
+			}
+		}
+	}
+	{
+		text = "§G+[This.survey_manpower_sum.GetValue]§!"
+		trigger = {
+			check_variable = {
+				which = survey_manpower_sum
+				value = 0.01
+			}
+		}
+	}
+	{
+		text = "§Y[This.survey_manpower_sum.GetValue]§!"
+		trigger = {
+			always = yes
+		}
+	}
+}
+new custom_text_box survey_manpower_sum = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[This.GetSurveyManpowerSum]"
+}

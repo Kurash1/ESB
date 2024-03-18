@@ -1,0 +1,74 @@
+new custom_text_box survey_fund_menu_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Income & Expenses"
+}
+new custom_text_box survey_fund_income_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Total Income"
+}
+new custom_text_box survey_fund_income = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "§G[This.survey_funds_income.GetValue]§!"
+}
+new custom_text_box survey_fund_expenses_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Total Expenses"
+}
+new custom_text_box survey_fund_expenses = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "§R[This.survey_funds_expenses.GetValue]§!"
+	tooltip = "
+Administrative Costs: §Y[This.survey_administrative_costs.GetValue]§!¤
+Salaries: §Y[This.survey_salary.GetValue]§!¤
+Maintenance: §Y[This.survey_scout_maintenance.GetValue]§!¤"
+}
+new custom_text_box survey_fund_sum_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Balance"
+}
+new customizable_localization GetSurveyFundSum = {
+	{
+		text = "§R[This.survey_funds_sum.GetValue]§!"
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = survey_funds_sum
+					value = 0
+				}
+			}
+		}
+	}
+	{
+		text = "§G+[This.survey_funds_sum.GetValue]§!"
+		trigger = {
+			check_variable = {
+				which = survey_funds_sum
+				value = 0.01
+			}
+		}
+	}
+	{
+		text = "§Y[This.survey_funds_sum.GetValue]§!"
+		trigger = {
+			always = yes
+		}
+	}
+}
+new custom_text_box survey_fund_sum = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[This.GetSurveyFundSum]"
+}

@@ -1,0 +1,30 @@
+new custom_text_box survey_manpower_title = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Manpower"
+}
+new custom_text_box survey_manpower_value = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[This.survey_manpower.GetValue]"
+}
+
+new custom_button survey_manpower_add_button = {
+	tooltip = "Add Manpower"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = {
+		manpower = 0.1
+	}
+	effect = {
+		add_manpower = -0.1
+		
+		change_variable = {
+			which = survey_manpower
+			value = 100
+		}
+	}
+}
