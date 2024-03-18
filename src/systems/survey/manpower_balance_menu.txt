@@ -38,13 +38,13 @@ new customizable_localization GetSurveyManpowerSum = {
 	{
 		text = "§R[This.survey_monthly_manpower.GetValue]§!"
 		trigger = {
-			variables:survey_monthly_manpower:less_than = 0
+			&survey_monthly_manpower < 0
 		}
 	}
 	{
 		text = "§G+[This.survey_monthly_manpower.GetValue]§!"
 		trigger = {
-			variables:survey_monthly_manpower:at_least = 0.001
+			&survey_monthly_manpower > 0
 		}
 	}
 	{

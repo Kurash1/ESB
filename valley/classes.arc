@@ -47,7 +47,35 @@ new class modifier_definition = {
 new class named_float = {
 	args = float
 }
-
+new class naval_doctrine = {
+	id = `{this:id}`
+	list = naval_doctrines
+	default = {
+		desc = ""
+		can_select = {
+			is_primitive = no
+		}
+		cost = 0.1
+		country_modifier = { }
+		effect = { }
+		removed_effect = { }
+		button_gfx = 1
+	}
+	args = {
+		name = string
+		desc = string
+		can_select = named_trigger
+		cost = float
+		country_modifier = named_modifier
+		effect = named_effect
+		removed_effect = named_effect
+		button_gfx = int
+	}
+	on_create = {
+		new localisation `{this:id}` = `{this:name}`
+		new localisation `{this:id}_desc` = `{this:desc}`
+	}
+}
 
 
 new class script_variable = {

@@ -22,6 +22,6 @@ new custom_button survey_manpower_add_button = {
 	effect = {
 		add_manpower = -0.1
 		
-		variables:survey_manpower:add = 100
+		&survey_manpower += 100
 	}
 }

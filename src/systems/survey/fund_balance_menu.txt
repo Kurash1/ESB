@@ -43,13 +43,13 @@ new customizable_localization GetSurveyFundSum = {
 	{
 		text = "§R[This.survey_monthly_funds.GetValue]§!"
 		trigger = {
-			variables:survey_monthly_funds:less_than = 0
+			&survey_monthly_funds < 0
 		}
 	}
 	{
 		text = "§G+[This.survey_monthly_funds.GetValue]§!"
 		trigger = {
-			variables:survey_monthly_funds:at_least = 0.001
+			&survey_monthly_funds > 0
 		}
 	}
 	{

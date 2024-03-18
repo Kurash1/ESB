@@ -1,6 +1,6 @@
 new named_effect survey_calculate_fund_sum = {
-	variables:survey_monthly_funds:set_var = survey_monthly_income
-	variables:survey_monthly_funds:subtract_var = survey_monthly_expenses
+	&survey_monthly_funds := survey_monthly_income
+	&survey_monthly_funds -= survey_monthly_expenses
 	
-	variables:survey_funds:add_var = survey_monthly_funds
+	&survey_funds += survey_monthly_funds
 }
