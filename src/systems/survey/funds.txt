@@ -21,9 +21,6 @@ new custom_button survey_fund_add_button = {
 	effect = {
 		add_treasury = -5
 		
-		change_variable = {
-			which = survey_funds
-			value = 5
-		}
+		variables:survey_funds:add = 5
 	}
 }

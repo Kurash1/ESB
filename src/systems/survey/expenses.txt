@@ -1,61 +1,22 @@
 new named_effect survey_calculate_expenses = {
-	set_variable = {
-		which = survey_funds_expenses
-		value = 0
-	}
+	variables:survey_monthly_expenses:set = 0
 	
 	#Administrative Costs
-	set_variable = {
-		which = survey_administrative_costs
-		which = survey_manpower
-	}
-	divide_variable = {
-		which = survey_administrative_costs
-		value = 1000
-	}
-	multiply_variable = {
-		which = survey_administrative_costs
-		value = SURVEY_SCOUTS_ADMINISTRATIVE_COST
-	}
-	change_variable = {
-		which = survey_funds_expenses
-		which = survey_administrative_costs
-	}
+	variables:survey_administrative_costs:set_var = survey_manpower
+	variables:survey_administrative_costs:divide = 1000
+	variables:survey_administrative_costs:multiply = SURVEY_SCOUTS_ADMINISTRATIVE_COST
+	variables:survey_monthly_expenses:add_var = survey_administrative_costs
 	
 	#Salaries
-	set_variable = {
-		which = survey_salary
-		which = survey_manpower
-	}
-	divide_variable = {
-		which = survey_salary
-		value = 1000
-	}
-	multiply_variable = {
-		which = survey_salary
-		value = SURVEY_SALARY_PER_STACK
-	}
-	change_variable = {
-		which = survey_funds_expenses
-		which = survey_salary
-	}
+	variables:survey_salary:set_var = survey_manpower
+	variables:survey_salary:divide = 1000
+	variables:survey_salary:multiply = SURVEY_SALARY_PER_STACK
+	variables:survey_monthly_expenses:add_var = survey_salary
 	
 	#Maintenance
-	set_variable = {
-		which = survey_scout_maintenance
-		which = survey_manpower
-	}
-	divide_variable = {
-		which = survey_scout_maintenance
-		value = 1000
-	}
-	multiply_variable = {
-		which = survey_scout_maintenance
-		value = SURVEY_MAINTENANCE_PER_STACK
-	}
-	change_variable = {
-		which = survey_funds_expenses
-		which = survey_scout_maintenance
-	}
+	variables:survey_scout_maintenance:set_var = survey_manpower
+	variables:survey_scout_maintenance:divide = 1000
+	variables:survey_scout_maintenance:multiply = SURVEY_MAINTENANCE_PER_STACK
+	variables:survey_monthly_expenses:add_var = survey_scout_maintenance
 	
 }

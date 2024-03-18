@@ -14,7 +14,7 @@ new custom_text_box survey_manpower_recruits = {
     potential = {
 		has_country_flag = show_survey_screen
 	}
-	name = "§G[This.survey_manpower_recruits.GetValue]§!"
+	name = "§G[This.survey_monthly_recruits.GetValue]§!"
 }
 new custom_text_box survey_manpower_losses_text = {
     potential = {
@@ -26,7 +26,7 @@ new custom_text_box survey_manpower_losses = {
     potential = {
 		has_country_flag = show_survey_screen
 	}
-	name = "§R[This.survey_manpower_losses.GetValue]§!"
+	name = "§R[This.survey_monthly_losses.GetValue]§!"
 }
 new custom_text_box survey_manpower_sum_text = {
     potential = {
@@ -36,27 +36,19 @@ new custom_text_box survey_manpower_sum_text = {
 }
 new customizable_localization GetSurveyManpowerSum = {
 	{
-		text = "§R[This.survey_manpower_sum.GetValue]§!"
+		text = "§R[This.survey_monthly_manpower.GetValue]§!"
 		trigger = {
-			NOT = {
-				check_variable = {
-					which = survey_manpower_sum
-					value = 0
-				}
-			}
+			variables:survey_monthly_manpower:less_than = 0
 		}
 	}
 	{
-		text = "§G+[This.survey_manpower_sum.GetValue]§!"
+		text = "§G+[This.survey_monthly_manpower.GetValue]§!"
 		trigger = {
-			check_variable = {
-				which = survey_manpower_sum
-				value = 0.01
-			}
+			variables:survey_monthly_manpower:at_least = 0.001
 		}
 	}
 	{
-		text = "§Y[This.survey_manpower_sum.GetValue]§!"
+		text = "§Y[This.survey_monthly_manpower.GetValue]§!"
 		trigger = {
 			always = yes
 		}

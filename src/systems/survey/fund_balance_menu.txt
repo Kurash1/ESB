@@ -14,7 +14,7 @@ new custom_text_box survey_fund_income = {
     potential = {
 		has_country_flag = show_survey_screen
 	}
-	name = "§G[This.survey_funds_income.GetValue]§!"
+	name = "§G[This.survey_monthly_income.GetValue]§!"
 }
 new custom_text_box survey_fund_expenses_text = {
     potential = {
@@ -26,7 +26,7 @@ new custom_text_box survey_fund_expenses = {
     potential = {
 		has_country_flag = show_survey_screen
 	}
-	name = "§R[This.survey_funds_expenses.GetValue]§!"
+	name = "§R[This.survey_monthly_expenses.GetValue]§!"
 	tooltip = "
 Administrative Costs: §Y[This.survey_administrative_costs.GetValue]§!¤
 Salaries: §Y[This.survey_salary.GetValue]§!¤
@@ -40,27 +40,19 @@ new custom_text_box survey_fund_sum_text = {
 }
 new customizable_localization GetSurveyFundSum = {
 	{
-		text = "§R[This.survey_funds_sum.GetValue]§!"
+		text = "§R[This.survey_monthly_funds.GetValue]§!"
 		trigger = {
-			NOT = {
-				check_variable = {
-					which = survey_funds_sum
-					value = 0
-				}
-			}
+			variables:survey_monthly_funds:less_than = 0
 		}
 	}
 	{
-		text = "§G+[This.survey_funds_sum.GetValue]§!"
+		text = "§G+[This.survey_monthly_funds.GetValue]§!"
 		trigger = {
-			check_variable = {
-				which = survey_funds_sum
-				value = 0.01
-			}
+			variables:survey_monthly_funds:at_least = 0.001
 		}
 	}
 	{
-		text = "§Y[This.survey_funds_sum.GetValue]§!"
+		text = "§Y[This.survey_monthly_funds.GetValue]§!"
 		trigger = {
 			always = yes
 		}

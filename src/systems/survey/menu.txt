@@ -20,38 +20,17 @@ new custom_button open_survey_screen = {
 		] {
 			set_country_flag = init_survey
 			
-			set_variable = {
-				which = survey_funds
-				value = 0
-			}
-			set_variable = {
-				which = survey_manpower
-				value = 0
-			}
-			set_variable = {
-				which = survey_funds_income
-				value = 0
-			}
-			set_variable = {
-				which = survey_funds_expenses
-				value = 0
-			}
-			set_variable = {
-				which = survey_funds_sum
-				value = 0
-			}
-			set_variable = {
-				which = survey_manpower_recruits
-				value = 0
-			}
-			set_variable = {
-				which = survey_manpower_losses
-				value = 0
-			}
-			set_variable = {
-				which = survey_manpower_sum
-				value = 0
-			}
+			variables:survey_funds:init = yes
+			variables:survey_manpower:init = yes
+			variables:survey_monthly_income:init = yes
+			variables:survey_monthly_expenses:init = yes
+			variables:survey_monthly_funds:init = yes
+			variables:survey_monthly_recruits:init = yes
+			variables:survey_monthly_losses:init = yes
+			variables:survey_monthly_manpower:init = yes
+			variables:survey_administrative_costs:init = yes
+			variables:survey_salary:init = yes
+			variables:survey_scout_maintenance:init = yes
 		}
 	}
 }
