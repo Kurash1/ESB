@@ -20,6 +20,26 @@ new country dushnikh_yal = {
 	adj = "Dushnikh Yal"
 	color = { 0 63 2 }
 	capital = dushnikh_yal
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Masr"
+				dynasty = "Gro-Yal"
+				adm = 4
+				dip = 2
+				mil = 6
+				age = 60
+			}
+			starting_heir = {
+				name = "Dulgra"
+				dynasty = "Gro-Yal"
+				adm = 4
+				dip = 4
+				mil = 3
+				age = 3
+			}
+		}
+	}
 }
 new country mor_khazgur = {
 	inherit = reach_orc_country
@@ -28,6 +48,26 @@ new country mor_khazgur = {
 	adj = "Mor Khazgur"
 	color = { 63 39 36 }
 	capital = mor_khazgur
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Orokbash"
+				dynasty = "Gro-Khazgur"
+				adm = 3
+				dip = 3
+				mil = 5
+				age = 21
+			}
+			starting_heir = {
+				name = "Koffnag"
+				dynasty = "Gro-Khazgur"
+				adm = 5
+				dip = 4
+				mil = 2
+				age = 1
+			}
+		}
+	}
 }
 new country osh_ornim = {
 	inherit = reach_orc_country
@@ -38,4 +78,24 @@ new country osh_ornim = {
 	capital = rakh_krazak
 	religion = ten_iron_oaths
 	primary_culture = iron_orc
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Urblak"
+				dynasty = "Gro-Ornim"
+				adm = 3
+				dip = 2
+				mil = 5
+				age = 60
+			}
+			starting_heir = {
+				name = "Koffnag"
+				dynasty = "Gro-Ornim"
+				adm = 3
+				dip = 3
+				mil = 2
+				age = 25
+			}
+		}
+	}
 }
