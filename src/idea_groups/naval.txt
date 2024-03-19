@@ -59,10 +59,14 @@ new idea_group naval_ideas = {
 		ship_durability = 0.10
 	}
 	ai_chance = {
-		factor = 5
+		factor = 1
 		modifier = {
 			factor = 1000
 			tag = windhelm
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
 		}
 	}
 }
@@ -129,6 +133,13 @@ new idea_group galle0 = {
 	bonus = {
 		capture_ship_chance = 0.25
 	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+	}
 }
 new idea_group handel0 = {
 	name = "Light Ship Focus"
@@ -194,6 +205,13 @@ new idea_group handel0 = {
 		merchants = 1
 		naval_tradition_from_trade = 0.25
 	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+	}
 }
 new idea_group gross0 = {
 	name = "Heavy Ship Focus"
@@ -257,5 +275,12 @@ new idea_group gross0 = {
 	}
 	bonus = {
 		recover_navy_morale_speed = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
 	}
 }
