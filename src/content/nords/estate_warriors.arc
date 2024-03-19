@@ -89,7 +89,7 @@ new estate warriors = {
 			icon = privilege_peasant
 			loyalty = 0.1
 			on_granted = {
-				defineloc warrior_retirement_homes_grant_tooltip = "Every owned province producing §YWheat§! gains:
+				defineloc warrior_retirement_homes_grant_tooltip = "Every owned province producing §YFur§! or §YWood§! gains:
 {modifier_to_string = {
 	local_tax_modifier = 0.15
 	local_autonomy = 0.05
@@ -101,7 +101,12 @@ new estate warriors = {
 				custom_tooltip = warrior_retirement_homes_revoke_tooltip
 			}
 			on_granted_province = {
-				if [has_trade_goods = grain] {
+				if [
+					OR = {
+						has_trade_goods = fur
+						has_trade_goods = wood
+					}
+				] {
 					add_province_modifier = {
 						name = warrior_retirement_homes
 						duration = -1

@@ -15,6 +15,8 @@ new custom_text_box survey_fund_income = {
 		has_country_flag = show_survey_screen
 	}
 	name = "§G[This.survey_monthly_income.GetValue]§!"
+	tooltip = "
+Base: §Y[This.survey_base_income.GetValue]§!¤"
 }
 new custom_text_box survey_fund_expenses_text = {
     potential = {
@@ -29,7 +31,6 @@ new custom_text_box survey_fund_expenses = {
 	name = "§R[This.survey_monthly_expenses.GetValue]§!"
 	tooltip = "
 Administrative Costs: §Y[This.survey_administrative_costs.GetValue]§!¤
-Salaries: §Y[This.survey_salary.GetValue]§!¤
 Maintenance: §Y[This.survey_scout_maintenance.GetValue]§!¤
 Over Force Limit: §Y[This.survey_over_force_limit.GetValue]§!¤"
 }

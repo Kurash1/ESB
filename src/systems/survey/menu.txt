@@ -31,11 +31,11 @@ new custom_button open_survey_screen = {
 			variables:survey_force_limit:init = yes
 			variables:survey_over_force_limit:init = yes
 			variables:survey_administrative_costs:init = yes
-			variables:survey_salary:init = yes
 			variables:survey_scout_maintenance:init = yes
+			variables:survey_base_income:init = yes
 			
 		}
-		survey_calculate_fund_sum
+		survey_calculate_income
 		survey_calculate_expenses
 	}
 }
