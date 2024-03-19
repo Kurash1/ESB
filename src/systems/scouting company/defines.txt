@@ -1,0 +1,36 @@
+new named_float SURVEY_SCOUTS_ADMINISTRATIVE_COST_PER_STACK = 0.1
+new named_float SURVEY_SCOUTS_OVER_FORCE_LIMIT = 0.5
+new named_float SURVEY_MAINTENANCE_PER_STACK = 0.22
+new named_float SURVEY_RETIREMENT_RATE = 1
+new named_float SURVEY_QUIT_RATE = 100
+new named_float SURVEY_CASUALTY_RATE = 10
+new named_float SURVEY_BASE_SURVEY_SPEED = 2
+
+new modifier_definition scouts_administrative_cost_modifier = {
+	name = "Scouting Company Administrative Cost Modifier"
+	is_percentage = yes
+}
+new modifier_definition scouts_administrative_cost = {
+	name = "Scouting Company Administrative Cost"
+	is_percentage = no
+}
+new modifier_definition scouts_maintenance_cost_modifier = {
+	name = "Scouts Maintenance Cost Modifier"
+	is_percentage = yes
+}
+new modifier_definition scouts_base_income = {
+	name = "Scouts Base Income"
+	is_percentage = no
+}
+new modifier_definition scouts_retirement_reduction_modifier = {
+	name = "Scouts Retirement Reduction Modifier"
+	is_percentage = yes
+}
+new modifier_definition scouts_quitters_modifier = {
+	name = "Scouts Resigning Modifier"
+	is_percentage = yes
+}
+new modifier_definition scouts_casualty_reduction_modifier = {
+	name = "Scouts Casualty Reduction Modifier"
+	is_percentage = yes
+}

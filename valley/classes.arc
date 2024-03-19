@@ -24,6 +24,12 @@ new class custom_text_box = {
 new class modifier_definition = {
 	id = `{this:id}`
 	list = modifier_definitions
+	default = {
+		is_percentage = no
+		trigger = {
+			always = yes
+		}
+	}
 	args = {
 		name = string
 		is_percentage = bool

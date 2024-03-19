@@ -1,0 +1,8 @@
+new named_effect survey_end_active_survey = {
+	&survey_progress := 0
+	&survey_progress_percentage := 0
+	remove_country_modifier = currently_surveying
+	foreach $survey in surveys {
+		clr_country_flag = `surveying_{$survey}`
+	}
+}

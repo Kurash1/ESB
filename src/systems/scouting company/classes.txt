@@ -1,0 +1,77 @@
+new class survey = {
+	list = surveys
+	id = `{this:id}`
+	args = {
+		name = string
+		x = int
+		y = int
+		length = int
+		potential = trigger
+		trigger = trigger
+		on_complete = effect
+	}
+	on_create = {
+		new custom_button `start_survey_{this:id}` = {
+			tooltip = "Begin Surveying {this:name}"
+			potential =* {
+				has_country_flag = show_survey_screen
+				surveys:*this:id*:potential
+			}
+			trigger =* {
+				NOT = {
+					has_country_modifier = currently_surveying
+				}
+				surveys:*this:id*:trigger
+			}
+			effect =* {
+				add_country_modifier = {
+					name = currently_surveying
+					duration = -1
+				}
+				set_country_flag = surveying_*this:id*
+				&survey_length := *this:length*
+			}
+		}
+	
+		interface_files:countrytechnologyview:countrytechnologyview += {
+			guiButtonType = {
+				name = `start_survey_{this:id}`
+				position = { x = (this:x) y = (this:y-9) }
+				quadTextureSprite = "GFX_survey_icon"
+				scripted = yes
+			}
+		}
+	}
+}
+new event_modifier currently_surveying = {
+	name = "Currently Surveying"
+	modifier = {
+		scouts_casualty_reduction_modifier = -1
+		scouts_maintenance_cost_modifier = 1
+	}
+}
+new survey reach = {
+	name = "The Reach"
+	x = 216
+	y = 567
+	length = 282
+	potential = {
+		regions:reach = {
+			NOT = {
+				has_discovered = ROOT
+			}
+		}
+	}
+	trigger = {
+		regions:reach = {
+			any_neighbor_province = {
+				has_discovered = ROOT
+			}
+		}
+	}
+	on_complete = {
+		regions:reach = {
+			discover_country = ROOT
+		}
+	}
+}
