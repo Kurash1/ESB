@@ -1,3 +1,75 @@
+new inheritable craglorn_imp = {
+	position = {
+		1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = ""
+	history = {
+	}
+	impassible = yes
+}
+
+new province craglorn_imp_1 = {
+	inherit = craglorn_imp
+	color = {
+		29 11 15
+	}
+}
+new province craglorn_imp_2 = {
+    inherit = craglorn_imp
+    color = { 13 2 19 }
+}
+new province craglorn_imp_3 = {
+    inherit = craglorn_imp
+    color = { 10 3 28 }
+}
+new province craglorn_imp_4 = {
+    inherit = craglorn_imp
+    color = { 19 25 24 }
+}
+new province craglorn_imp_5 = {
+    inherit = craglorn_imp
+    color = { 22 19 6 }
+}
+new province craglorn_imp_6 = {
+    inherit = craglorn_imp
+    color = { 14 11 5 }
+}
+new province craglorn_imp_7 = {
+    inherit = craglorn_imp
+    color = { 3 25 1 }
+}
+new province craglorn_imp_8 = {
+    inherit = craglorn_imp
+    color = { 3 1 19 }
+}
+new province craglorn_imp_9 = {
+    inherit = craglorn_imp
+    color = { 21 19 6 }
+}
+new province craglorn_imp_10 = {
+    inherit = craglorn_imp
+    color = { 29 9 27 }
+}
+new province craglorn_imp_11 = {
+    inherit = craglorn_imp
+    color = { 20 8 2 }
+}
+new province craglorn_imp_12 = {
+    inherit = craglorn_imp
+    color = { 16 20 13 }
+}
+new province craglorn_imp_13 = {
+    inherit = craglorn_imp
+    color = { 7 10 12 }
+}
+
+
 new inheritable craglorn_inherit = {
 	position = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
@@ -258,10 +330,8 @@ new province inazzurs_hold = {
     }
 	terrain = hills
 	area = balamath
-	history = {
-		history_owner = osh_ornim
-		culture = iron_orc
-		religion = ten_iron_oaths
+	history += {
+		history_owner = shadow_kingdom
 		history_trade_goods = arms
 	}
 }
@@ -280,10 +350,8 @@ new province chiselshriek_mine = {
     }
 	terrain = highlands
 	area = balamath
-	history = {
-		history_owner = osh_ornim
-		religion = ten_iron_oaths
-		culture = iron_orc
+	history += {
+		history_owner = shadow_kingdom
 		history_trade_goods = c_metals
 	}
 }
@@ -1210,5 +1278,82 @@ new province virgar = {
 	history += {
 		history_owner = sky_kingdom
 		history_trade_goods = r_metals
+	}
+}
+
+new area valley_of_scars = {
+	name = "Valley of Scars"
+	region = craglorn
+}
+new province zugra_crun = {
+	name = "Zugra Crun"
+    inherit = craglorn_inherit
+    color = { 248 196 228 }
+	position={
+		1519.000 1845.000 1519.000 1845.000 1519.000 1845.000 1519.000 1845.000 1519.000 1845.000 1519.000 1844.000 0.000 0.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.000 0.000 1.000 0.000 0.000 0.000 0.000 
+	}
+	area = valley_of_scars
+	terrain = mountain
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		
+		history_trade_goods = r_metals
+		set_province_flag = orc_stronghold
+	}
+}
+new province vosh_tumn = {
+	name = "Vosh Tumn"
+    inherit = craglorn_inherit
+    color = { 169 180 177 }
+	position={
+		1534.000 1842.000 1534.000 1843.000 1533.000 1843.000 1533.000 1842.000 1533.000 1843.000 1535.000 1842.000 1534.000 1843.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.000 0.000 1.000 0.000 0.000 0.000 0.000 
+	}
+	area = valley_of_scars
+	terrain = mountain
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		
+		history_trade_goods = r_metals
+		set_province_flag = orc_stronghold
+	}
+}
+new province rakh_krazak = {
+	name = "Rakh Krazak"
+    inherit = craglorn_inherit
+    color = { 157 253 159 }
+	position={
+		1529.000 1853.000 1526.000 1855.000 1527.000 1854.000 1526.000 1854.000 1526.000 1854.000 1525.000 1854.000 1526.000 1854.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.000 0.000 1.000 0.000 0.000 0.000 0.000 
+	}
+	area = valley_of_scars
+	terrain = mountain
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		
+		history_trade_goods = arms
+		set_province_flag = orc_stronghold
 	}
 }
