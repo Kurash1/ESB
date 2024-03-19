@@ -5,23 +5,28 @@ new class survey = {
 		name = string
 		x = int
 		y = int
-		length = int
-		potential = trigger
-		trigger = trigger
-		on_complete = effect
+		province_group = province_group
 	}
 	on_create = {
 		new custom_button `start_survey_{this:id}` = {
 			tooltip = "Begin Surveying {this:name}"
 			potential =* {
 				has_country_flag = show_survey_screen
-				surveys:*this:id*:potential
+				surveys:*this:id*:province_group = {
+					NOT = {
+						has_discovered = ROOT
+					}
+				}
 			}
 			trigger =* {
 				NOT = {
 					has_country_modifier = currently_surveying
 				}
-				surveys:*this:id*:trigger
+				surveys:*this:id*:province_group = {
+					any_neighbor_province = {
+						has_discovered = ROOT
+					}
+				}
 			}
 			effect =* {
 				add_country_modifier = {
@@ -29,10 +34,36 @@ new class survey = {
 					duration = -1
 				}
 				set_country_flag = surveying_*this:id*
-				&survey_length := *this:length*
+				&survey_progress := 0
+				&survey_progress_percentage := 0
+				
+				surveys:*this:id*:province_group [
+					NOT = { 
+						has_discovered = ROOT
+					}
+				] {
+					ROOT = {
+						export_to_variable = {
+							which = survey_temp
+							value = trigger_value:province_size
+							who = PREV
+						}
+						log = "[Prev.GetName] : [This.survey_temp.GetValue]"
+						&survey_length += survey_temp
+					}
+				}
 			}
 		}
-	
+		
+		customizable_localizations:GetActiveSurvey += {
+			{
+				text = this:name
+				trigger =* {
+					has_country_flag = `surveying_*this:id*`
+				}
+			}
+		}
+		
 		interface_files:countrytechnologyview:countrytechnologyview += {
 			guiButtonType = {
 				name = `start_survey_{this:id}`
@@ -48,30 +79,5 @@ new event_modifier currently_surveying = {
 	modifier = {
 		scouts_casualty_reduction_modifier = -1
 		scouts_maintenance_cost_modifier = 1
-	}
-}
-new survey reach = {
-	name = "The Reach"
-	x = 216
-	y = 567
-	length = 282
-	potential = {
-		regions:reach = {
-			NOT = {
-				has_discovered = ROOT
-			}
-		}
-	}
-	trigger = {
-		regions:reach = {
-			any_neighbor_province = {
-				has_discovered = ROOT
-			}
-		}
-	}
-	on_complete = {
-		regions:reach = {
-			discover_country = ROOT
-		}
 	}
 }

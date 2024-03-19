@@ -3,7 +3,11 @@ new named_effect survey_finish_active_survey = {
 		
 	foreach $survey in surveys {
 		if [has_country_flag = `surveying_{$survey}`] {
-			$survey:on_complete
+			$survey:province_group = {
+				discover_country = ROOT
+			}
+			&survey_progress := 0
+			&survey_progress_percentage := 0
 			clr_country_flag = `surveying_{$survey}`
 		}
 	}

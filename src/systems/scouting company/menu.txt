@@ -9,6 +9,23 @@ new custom_text_box survey_progress_amount = {
 		has_country_modifier = currently_surveying
 	}
 	name = "[This.survey_progress_percentage.GetValue]%"
+	tooltip = "[This.survey_progress.GetValue]/[This.survey_length.GetValue]"
+}
+new customizable_localization GetActiveSurvey = {
+}
+new custom_text_box survey_active_survey = {
+    potential = {
+		has_country_flag = show_survey_screen
+		has_country_modifier = currently_surveying
+	}
+	name = "[This.GetActiveSurvey]"
+}
+new custom_text_box survey_is_active_survey = {
+    potential = {
+		has_country_flag = show_survey_screen
+		has_country_modifier = currently_surveying
+	}
+	name = "Currently Surveying:"
 }
 new custom_button open_survey_screen = {
 	tooltip = "Open Survey Screen"
