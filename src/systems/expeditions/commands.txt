@@ -1,3 +1,12 @@
+new effect reveal_expedition = {
+	args = bool
+	transpile = {
+		if [has_province_flag = hidden_expedition] {
+			clr_province_flag = hidden_expedition
+			set_province_flag = expedition_target
+		}
+	}
+}
 new effect pre_add_expedition_progress = {
 	args = float
 	transpile = {

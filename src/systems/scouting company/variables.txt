@@ -1,10 +1,10 @@
 new script_variable survey_funds = {
 	name = "Funds"
-	initial_value = 5000
+	initial_value = 0
 }
 new script_variable survey_manpower = {
 	name = "Stacks"
-	initial_value = 5
+	initial_value = 0
 }
 new script_variable survey_progress = {
 	name = "Survey Progress"
@@ -69,6 +69,10 @@ new script_variable survey_monthly_funds = {
 
 new script_variable survey_monthly_recruits = {
 	name = "Scouts Recruits"
+	initial_value = 0
+}
+new script_variable survey_monthly_recruits_base = {
+	name = "Scouts Base Recruits"
 	initial_value = 0
 }
 

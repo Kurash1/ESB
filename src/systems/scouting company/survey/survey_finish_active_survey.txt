@@ -5,10 +5,12 @@ new named_effect survey_finish_active_survey = {
 		if [has_country_flag = `surveying_{$survey}`] {
 			$survey:province_group = {
 				discover_country = ROOT
+				reveal_expedition = yes
 			}
 			&survey_progress := 0
 			&survey_progress_percentage := 0
 			clr_country_flag = `surveying_{$survey}`
+			set_country_flag = `surveyed_{$survey}`
 		}
 	}
 }

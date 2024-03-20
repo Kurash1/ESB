@@ -9,9 +9,11 @@ new named_effect survey_calculate_losses = {
 	&survey_retirements *= SURVEY_RETIREMENT_RATE
 	
 	&survey_temp &= modifier:scouts_retirement_reduction_modifier
-	if [&survey_temp > 0] { &survey_temp := 0 }
-	&survey_temp *= -1
-	&survey_retirements *= survey_temp
+	&survey_temp += 1
+	if [&survey_temp < 1] {
+		&survey_temp := 1
+	}
+	&survey_retirements /= survey_temp
 	
 	# Removes Decimal Manpower
 	&survey_retirements /= 1000

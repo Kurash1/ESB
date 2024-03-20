@@ -12,10 +12,8 @@ new class survey = {
 			tooltip = "Begin Surveying {this:name}"
 			potential =* {
 				has_country_flag = show_survey_screen
-				surveys:*this:id*:province_group = {
-					NOT = {
-						has_discovered = ROOT
-					}
+				NOT = {
+					has_country_flag = surveyed_*this:id*
 				}
 			}
 			trigger =* {
@@ -37,18 +35,18 @@ new class survey = {
 				&survey_progress := 0
 				&survey_progress_percentage := 0
 				
-				surveys:*this:id*:province_group [
-					NOT = { 
-						has_discovered = ROOT
-					}
-				] {
+				surveys:*this:id*:province_group = {
 					ROOT = {
 						export_to_variable = {
 							which = survey_temp
 							value = trigger_value:province_size
 							who = PREV
 						}
-						log = "[Prev.GetName] : [This.survey_temp.GetValue]"
+						
+						if [has_discovered = PREV] {
+							&survey_temp /= 10
+						}
+						
 						&survey_length += survey_temp
 					}
 				}

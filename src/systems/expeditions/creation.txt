@@ -7,9 +7,22 @@ new effect create_expedition = {
 		frame = int
 		length = int
 		event = event
+		hidden = bool
 	}
 	transpile = {
-		set_province_flag = expedition_target
+		when [bool:equals = {
+			bool = args:hidden
+			value = yes
+		}] {
+			set_province_flag = hidden_expedition
+		}
+		when [bool:equals = {
+			bool = args:hidden
+			value = no
+		}] {
+			set_province_flag = expedition_target
+		}
+		
 		set_variable = {
 			which = expedition_progress
 			value = 0
@@ -71,9 +84,22 @@ new effect create_expedition = {
 		event_picture = string
 		length = int
 		on_complete = effect
+		hidden = bool
 	}
 	transpile = {
-		set_province_flag = expedition_target
+		when [bool:equals = {
+			bool = args:hidden
+			value = yes
+		}] {
+			set_province_flag = hidden_expedition
+		}
+		when [bool:equals = {
+			bool = args:hidden
+			value = no
+		}] {
+			set_province_flag = expedition_target
+		}
+		
 		set_variable = {
 			which = expedition_progress
 			value = 0
