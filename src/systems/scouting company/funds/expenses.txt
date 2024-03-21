@@ -7,7 +7,7 @@ new named_effect survey_calculate_expenses = {
 	# + SURVEY_SCOUTS_BASE_ADMINISTRATIVE_COST
 	# * modifier:scouts_administrative_cost_modifier
 	#
-	&survey_administrative_costs := survey_manpower
+	&survey_administrative_costs := survey_monthly_recruits_base
 	&survey_administrative_costs *= SURVEY_SCOUTS_ADMINISTRATIVE_COST_PER_STACK
 	
 	&survey_temp &= modifier:scouts_administrative_cost

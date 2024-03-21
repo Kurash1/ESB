@@ -10,17 +10,45 @@ new custom_text_box survey_fund_value = {
 	}
 	name = "[This.survey_funds.GetValue]"
 }
-#new custom_button survey_fund_add_button = {
-#	tooltip = "Add Funds"
-#	potential = {
-#		has_country_flag = show_survey_screen
-#	}
-#	trigger = {
-#		treasury = 5
-#	}
-#	effect = {
-#		add_treasury = -5
-#		
-#		&survey_funds += 5
-#	}
-#}
+new custom_button survey_fund_add_button_1 = {
+	tooltip = "Add Funds"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = {
+		treasury = 1
+	}
+	effect = {
+		add_treasury = -1
+		
+		&survey_funds += 1
+	}
+}
+new custom_button survey_fund_add_button_2 = {
+	tooltip = "Add Funds"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = {
+		treasury = 10
+	}
+	effect = {
+		add_treasury = -10
+		
+		&survey_funds += 10
+	}
+}
+new custom_button survey_fund_add_button_3 = {
+	tooltip = "Add Funds"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = {
+		treasury = 100
+	}
+	effect = {
+		add_treasury = -100
+		
+		&survey_funds += 100
+	}
+}

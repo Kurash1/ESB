@@ -11,20 +11,73 @@ new custom_text_box survey_manpower_value = {
 	name = "[This.survey_real_manpower.GetValue]"
 	tooltip = ""
 }
-
-new custom_button survey_manpower_add_button = {
-	tooltip = "Add Manpower"
+new custom_text_box survey_manpower_recruit_rate = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[This.survey_monthly_recruits_base.GetValue]"
+	tooltip = ""
+}
+new custom_button survey_manpower_recruit_remove_3 = {
+	tooltip = "Reduce Recruitment"
 	potential = {
 		has_country_flag = show_survey_screen
 	}
-	trigger = {
-		manpower = 0.1
-	}
+	trigger = { }
 	effect = {
-		add_manpower = -0.1
-		
-		&survey_manpower += 0.1
-		&survey_real_manpower := survey_manpower
-		&survey_real_manpower *= 1000
+		&survey_monthly_recruits_base -= 25
+		if [&survey_monthly_recruits_base < 0] { &survey_monthly_recruits_base := 0 }
+	}
+}
+new custom_button survey_manpower_recruit_remove_2 = {
+	tooltip = "Reduce Recruitment"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_monthly_recruits_base -= 5
+		if [&survey_monthly_recruits_base < 0] { &survey_monthly_recruits_base := 0 }
+	}
+}
+new custom_button survey_manpower_recruit_remove_1 = {
+	tooltip = "Reduce Recruitment"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_monthly_recruits_base -= 1
+		if [&survey_monthly_recruits_base < 0] { &survey_monthly_recruits_base := 0 }
+	}
+}
+new custom_button survey_manpower_recruit_add_1 = {
+	tooltip = "Increase Recruitment"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_monthly_recruits_base += 1
+	}
+}
+new custom_button survey_manpower_recruit_add_2 = {
+	tooltip = "Increase Recruitment"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_monthly_recruits_base += 5
+	}
+}
+new custom_button survey_manpower_recruit_add_3 = {
+	tooltip = "Increase Recruitment"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_monthly_recruits_base += 25
 	}
 }
