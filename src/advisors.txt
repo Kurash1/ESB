@@ -1,3 +1,22 @@
+new trigger has_adm_advisor_of_level = {
+	args = int
+	transpile = {
+		custom_trigger_tooltip = {
+			new_tooltip = "Is employing an §YAdministrative§! Advisor with at least Skill §Y{args}§!"
+			
+			OR = {
+				court_mage = args
+				philosopher = args
+				natural_scientist = args
+				artist = args
+				treasurer = args
+				theologian = args
+				master_of_mint = args
+				inquisitor = args
+			}
+		}
+	}
+}
 new advisor_type court_mage = {
 	name = "Court Mage"
 	desc = "An advisor skilled in the arcane arts, serving the royal court with expertise in matters of magic."
@@ -62,6 +81,23 @@ new advisor_type inquisitor = {
 		global_missionary_strength = 0.02
 	}
 }
+
+new trigger has_dip_advisor_of_level = {
+	args = int
+	transpile = {
+		custom_trigger_tooltip = {
+			new_tooltip = "Is employing a §YDiplomatic§! Advisor with at least Skill §Y{args}§!"
+			
+			OR = {
+				statesman = args
+				naval_reformer = args
+				trader = args
+				spymaster = args
+				diplomat = args
+			}
+		}
+	}
+}
 new advisor_type statesman = {
 	name = "Statesman"
 	desc = "A skilled politician, highly efficient in governmental matters and responsibilities of the state."
@@ -100,6 +136,25 @@ new advisor_type diplomat = {
 	monarch_power = DIP
 	modifier = {
 		improve_relation_modifier = 0.2
+	}
+}
+
+new trigger has_mil_advisor_of_level = {
+	args = int
+	transpile = {
+		custom_trigger_tooltip = {
+			new_tooltip = "Is employing a §YMilitary§! Advisor with at least Skill §Y{args}§!"
+			
+			OR = {
+				army_reformer = args
+				army_organiser = args
+				commandant = args
+				quartermaster = args
+				recruitmaster = args
+				fortification_expert = args
+				grand_captain = args
+			}
+		}
 	}
 }
 new advisor_type army_reformer = {

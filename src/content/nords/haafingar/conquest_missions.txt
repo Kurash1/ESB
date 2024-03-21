@@ -84,20 +84,27 @@ mission_trees:solitude += {
 	}
 	castle_hraggstad = {
 		name = "Purpose of Hraggstad"
+		desc = "On the second highest peak of the Kilkreath mountains, we found an ancient rune stone. Our legends spoke of these stones, the Stones of fate by which heroes could rewrite their own fates, and upon the stone was the mark of the Steed.
+
+The blessing of the steed is a blessing of war, and thus it is only right for there to be fortress there."
 		x = 7
 		y = 2
 		required = the_deepwood
+		icon = hraggstad_mission
 		trigger = {
 			owns = hraggstad
 			provinces:hraggstad = {
 				development = 15
 				fort_level = 2
 			}
+			has_adm_advisor_of_level = 1
+			has_mil_advisor_of_level = 1
 		}
 		effect = {
-			provinces:hraggstad = {
-				province_event = haafingar.2
-			}
+			country_event = haafingar.2
+			new_custom_tooltip = "
+§GEvent Insight§!
+This event will allow us to choose the settlment focus for Hraggstad."
 		}
 	}
 	shadowgreen_cavern = {
