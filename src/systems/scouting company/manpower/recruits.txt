@@ -1,15 +1,21 @@
 new named_effect survey_calculate_recruits = {
 	&survey_monthly_recruits := 0
 	
-	if [has_country_modifier = currently_surveying] {
+	if [
+		OR = {
+			has_country_modifier = currently_surveying
+			&survey_real_manpower > survey_company_size
+			&survey_funds <= 0
+		}
+	] {
 		&survey_monthly_recruits_base := 0
 	}
 	else {
 		# Recruits
 		# 
-		# SURVEY_BASE_RECRUIT_RATE
-		# 
-		&survey_monthly_recruits_base := SURVEY_BASE_RECRUIT_RATE
+		# modifier:survey_recruit_base_amount
+		#
+		&survey_monthly_recruits_base &= modifier:survey_recruit_base_amount
 		
 		# Removes Decimal Manpower
 		&survey_monthly_recruits_base /= 1000
