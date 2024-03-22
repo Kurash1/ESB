@@ -283,43 +283,131 @@ This event will allow us to choose the settlment focus for Hraggstad."
 		icon = dragon_bridge_mission
 		trigger = {
 			owns = dragon_bridge
+			provinces:dragon_bridge = {
+				development = 15
+			}
 		}
 		effect = {
 			new country_event haafingar.5 = {
 				title = "Purpose of Dragon Bridge"
-				desc = ""
-				picture = northwatch_eventPicture
+				desc = "Kaal do rath, kah dovah miraad. The Dragon Bridge as it is called in our tongue has long stood as the connection point between haafingar hold to the rest of skyrim, this places it as an important trade center, and this trade and our own efforts has catapulted it to be one of the great cities of the realm. However we have yet to decide upon the focus of the settlement, so the court of the blue palace has been once again called.
+
+'Twin Dragons overlooking river, A waterfall just to the south, and ambiance of calm waves. It is destined to become a city of poetry I say.' [Root.bards_college_advisor.GetName] an advisor from the bards college says, but is quickly silenced by [Root.Mil_Advisor.GetName] our military advisor who calls it 'Poetic nonsense' [Root.Mil_Advisor.GetSheHe] instead says that we should focus on the Four Shields Order of the original town, a band of mercenaries from there, who held some renown in the past, but now have fallen. With our sponsorship we could revitalize the mercenaries of Dragon Bridge.
+
+'The Dragon skulls may look pretty and all, but they hide a sinister shadow, beneath the city is a den of thieves that is ever growing in influence' [Root.Adm_Advisor.GetName] our administrative advisor warns, but then adds to it 'Well of course if we were to make some dealings with them we might be able to use them on our enemies instead, while keeping damage to ourselves at a minimu-' [Root.Adm_Advisor.GetSheHe] is interrupted as the court shakes '§RHi al zin do dovah miraad fah faraan§!' [Root.blue_palace_tongue.GetName] the tongue continues further 'No this is a perfect opportunity to purge all corruption from the realm, let us found a scaled justice that defends the realm from thieves.'
+
+And finally [Root.Dip_Advisor.GetName] our diplomatic advisor suggests 'Wasn't the reason the city become prominent because it's on an important trade route? I think we should focus on that.'"
+				immediate = {
+					set_saved_name = {
+						key = bards_college_advisor
+						type = advisor
+						scope = ROOT
+					}
+					set_saved_name = {
+						key = blue_palace_tongue
+						type = advisor
+						scope = ROOT
+					}
+				}
+				after = {
+					clear_saved_name = bards_college_advisor
+					clear_saved_name = blue_palace_tongue
+				}
+				picture = dragon_bridge_eventPicture
 				is_triggered_only = yes
 				options = {
 					{
-						name = "Port"
+						name = "City of Poets"
 						effect = {
-							quick_province_modifier = {
-								name = "Settlement Focus: Navy"
-								modifier = {
-									
+							provinces:dragon_bridge = {
+								change_trade_goods = paper
+								quick_province_modifier = {
+									name = "City of Poets"
+									modifier = {
+										diplomatic_upkeep = 1
+										local_prosperity_growth = 0.1
+										local_production_efficiency = 0.25
+									}
 								}
 							}
 						}
 					}
 					{
-						name = "Trade"
+						name = "Four Shields Order"
 						effect = {
-							quick_province_modifier = {
-								name = "Settlement Focus: Trade"
+							new mercenary_company four_shields_order = {
+								name = "Four Shields Order"
+								regiments_per_development = 0.04
+								cost_modifier = 1.0
+								home_province = dragon_bridge
+								cavalry_weight = 0
+								artillery_weight = 0
+								trigger = {
+									has_global_flag = four_shields_order_refound
+									is_race = nord
+								}
 								modifier = {
-									
+									shock_damage_received = -25%
+								}
+							}
+							
+							new_custom_tooltip = "'§YFour Shields Order§!' Mercenary Company is enabled for all nordic countries"
+							set_global_flag = four_shields_order_refound
+							
+							provinces:dragon_bridge = {
+								change_trade_goods = arms
+								quick_province_modifier = {
+									name = "Four Shields Order"
+									modifier = {
+										mercenary_discipline = 0.05
+										local_manpower_modifier = 0.5
+										local_defensiveness = 0.25
+									}
 								}
 							}
 						}
 					}
 					{
-						name = "Fort"
+						name = "Thieves Guild"
 						effect = {
-							quick_province_modifier = {
-								name = "Settlement Focus: Fort"
-								modifier = {
-									
+							provinces:dragon_bridge = {
+								quick_province_modifier = {
+									name = "Thieves Guild"
+									modifier = {
+										spy_offence = 0.5
+										min_local_autonomy = 50
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Scaled Justice"
+						effect = {
+							provinces:dragon_bridge = {
+								quick_province_modifier = {
+									name = "Scaled Justice"
+									modifier = {
+										yearly_corruption = -0.03
+										statewide_governing_cost = -0.5
+										local_state_maintenance_modifier = -1
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Trade Route"
+						effect = {
+							provinces:dragon_bridge = {
+								add_center_of_trade_level = 1
+								quick_province_modifier = {
+									name = "Trade Route"
+									modifier = {
+										caravan_power = 0.1
+										trade_value_modifier = 1.5
+										province_trade_power_modifier = 0.5
+									}
 								}
 							}
 						}
