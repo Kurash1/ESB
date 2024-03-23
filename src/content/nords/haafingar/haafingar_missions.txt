@@ -75,8 +75,48 @@ WE are the children of Skyrim."
 			}
 		}
 		effect = {
-			provinces:northwatch = {
-				province_event = haafingar.1
+			new country_event haafingar.1 = {
+				title = "Purpose of Northwatch Keep"
+				desc = ""
+				picture = northwatch_eventPicture
+				is_triggered_only = yes
+				options = {
+					{
+						name = ""
+						effect = {
+						
+						}
+					}
+				}
+			}
+			
+			country_event = haafingar.1
+			new_custom_tooltip = "§GEvent Insight§!
+This event will allow us to choose the settlment focus for Northwatch.
+"
+			
+			conditional_effect = {
+				tooltip = "granted estate privilege §YPromote Giant Rights§! or §YGiant Land Rights§!"
+				trigger = {
+					OR = {
+						has_estate_privilege = giants:promote_giant_rights
+						has_estate_privilege = giants:giant_land_rights
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Event gains an additional option of the §YLurag-Nool§! tribe of Giants
+"
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YScaled Justice§! as the settlement focus for §YDragon Bridge§!"
+				trigger = {
+					has_country_flag = has_scaled_justice
+				}
+				effect = {
+					new_custom_tooltip = "Event gains an additional option of the §YCenter of Torture§!
+"
+				}
 			}
 		}
 	}
@@ -85,6 +125,7 @@ WE are the children of Skyrim."
 		x = 7
 		y = 3
 		required = form_haafingar_hold
+		icon = cascabel_hall_mission
 		trigger = {
 			areas:shadowgreen = {
 				owned_by = ROOT
@@ -115,134 +156,10 @@ WE are the children of Skyrim."
 		}
 	}
 }
-new province_event haafingar.1 = {
-	title = "Purpose of Northwatch Keep"
-	desc = ""
-	picture = northwatch_eventPicture
-	is_triggered_only = yes
-	options = {
-		{
-			name = "A naval port should be good"
-			effect = {
-				quick_province_modifier = {
-					name = "Settlement Focus: Navy"
-					modifier = {
-						local_sailors_modifier = 0.5
-						local_ship_cost = -0.3
-						naval_forcelimit = 3
-					}
-				}
-			}
-		}
-		{
-			name = "It is on a good trade route"
-			effect = {
-				quick_province_modifier = {
-					name = "Settlement Focus: Trade"
-					modifier = {
-						province_trade_power_modifier = 0.25
-						province_trade_power_value = 2.5
-					}
-				}
-			}
-		}
-		{
-			name = "Hmm, have we considered torture?"
-			effect = {
-				quick_province_modifier = {
-					name = "Settlement Focus: Dungeons"
-					modifier = {
-						global_unrest = -1
-						harsh_treatment_cost = -0.2
-						years_of_nationalism = -5
-						local_unrest = -10
-					}
-				}
-			}
-		}
-	}
-}
-new country_event haafingar.2 = {
-	title = "Purpose of Fort Hraggstad"
-	desc = "On the second highest peak of the Kilkreath mountains, we found an ancient rune stone. Our legends spoke of these stones, the Stones of fate by which heroes could rewrite their own fates, and upon the stone was the mark of the Steed.
-
-The blessing of the steed is a blessing of war, and thus we built a fort next to the stone, but now that fort has become a mighty fortress city, and the question comes, what should this city focus on?
-
-Our advisors of the blue palace propose multiple differing opinions on the issue:
-
-[Root.Mil_Advisor.GetName] our military advisor suggests that the city should be focused on studying the ways of war, protected by the steed, we can turn it into the ultimate training grounds.
-[Root.Adm_Advisor.GetName] our administrative advisor, on the other hand, proposes that the city should be focused on the manufacturing of the means of war, weapons.
-While a third voice shakes the court, 'Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key.' one of the mightiest tongues of our realm suggest that he would make a special force there, in resemblance to the fate-stone."
-	picture = hraggstad_eventPicture
-	is_triggered_only = yes
-	options = {
-		{
-			name = "There shall we study the ways of war."
-			effect = {
-				provinces:hraggstad = {
-					quick_province_modifier = {
-						name = "Settlement Focus: Art of War"
-						modifier = {
-							army_tradition = 1
-							local_manpower_modifier = 1
-							local_fort_maintenance_modifier = -0.5
-						}
-					}
-				}
-			}
-		}
-		{
-			name = "Let us focus our smiths there, and develop an arms industry."
-			effect = {
-				provinces:hraggstad = {
-					quick_province_modifier = {
-						name = "Settlement Focus: Industrial City"
-						modifier = {
-							production_efficiency = 0.15
-							trade_goods_size_modifier = 0.25
-						}
-					}
-				}
-			}
-		}
-		{
-			name = "Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key."
-			effect = {
-				new_custom_tooltip = "Unlocks §YSinging-Cavalry§! Unit"
-				set_country_flag = unlocks_singing_cavalry
-				provinces:hraggstad = {
-					quick_province_modifier = {
-						name = "Settlement Focus: Singing-Cavalry"
-						modifier = {
-							cavalry_power = 0.10
-							local_manpower_modifier = 1
-							local_regiment_cost = -0.25
-							regiment_recruit_speed = -0.25
-						}
-					}
-				}
-			}
-		}
-	}
-}
-new unit singing_cavalry = {
-	name = "Singing Cavalry"
-	desc = ""
-	type = cavalry
-	maneuver = 2
-	offensive_morale = 4
-	defensive_morale = 2
-	offensive_fire = 2
-	defensive_fire = 1
-	offensive_shock = 4
-	defensive_shock = 2
-	trigger = {
-		has_country_flag = unlocks_singing_cavalry
-	}
-}
 new country_event haafingar.3 = {
 	title = "Autonomy of Cascabel Hall"
 	is_triggered_only = yes
+	picture = cascabel_hall_eventPicture
 	immediate = {
 		areas:shadowgreen = {
 			add_core = cascabel
