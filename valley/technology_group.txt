@@ -1,0 +1,30 @@
+new class technology_group = {
+	id = `{this:id}_tg`
+	list = technology_groups
+	default = {
+		desc = ""
+		start_level = 3
+		start_cost_modifier = 0
+		is_primitive = no
+		nation_designer_trigger = {
+			always = yes
+		}
+		nation_designer_cost = {
+		    trigger = {
+				always = yes
+			}
+			value = 0
+		}
+	}
+	args = {
+		name = string
+		start_level = int
+		start_cost_modifier = float
+		is_primitive = bool
+		nation_designer_trigger = trigger
+		nation_designer_cost = trigger
+	}
+	on_create = {
+		new localisation `{this:id}` = `{this:name}`
+	}
+}
