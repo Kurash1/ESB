@@ -13,12 +13,20 @@ new named_effect survey_calculate_recruits = {
 	else {
 		# Recruits
 		# 
-		# modifier:survey_recruit_base_amount
+		# max_manpower * (1 + manpower_recovery_speed) / 600
+		# 			So 20% of your normal monthly manpower
+		# * survey_recruit_rate
 		#
-		&survey_monthly_recruits_base &= modifier:survey_recruit_base_amount
+		&survey_monthly_recruits_base &= max_manpower
+		&survey_temp &= modifier:manpower_recovery_speed
+		&survey_temp += 1
+		&survey_monthly_recruits_base *= survey_temp
+		&survey_monthly_recruits_base /= 600
 		
-		# Removes Decimal Manpower
-		&survey_monthly_recruits_base /= 1000
+		&survey_temp &= modifier:survey_recruit_rate
+		&survey_monthly_recruits_base *= survey_temp
+		
+		# to thousand rate
 		&survey_monthly_recruits_base *= 1000
 		
 		&survey_monthly_recruits += survey_monthly_recruits_base

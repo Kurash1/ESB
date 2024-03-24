@@ -25,7 +25,7 @@ new custom_button survey_manpower_recruit_remove_3 = {
 	}
 	trigger = { }
 	effect = {
-		&survey_company_size -= 1000
+		&survey_company_size -= 10000
 		if [&survey_company_size < 0] { &survey_company_size := 0 }
 	}
 }
@@ -36,7 +36,7 @@ new custom_button survey_manpower_recruit_remove_2 = {
 	}
 	trigger = { }
 	effect = {
-		&survey_company_size -= 100
+		&survey_company_size -= 1000
 		if [&survey_company_size < 0] { &survey_company_size := 0 }
 	}
 }
@@ -47,7 +47,7 @@ new custom_button survey_manpower_recruit_remove_1 = {
 	}
 	trigger = { }
 	effect = {
-		&survey_company_size -= 10
+		&survey_company_size -= 100
 		if [&survey_company_size < 0] { &survey_company_size := 0 }
 	}
 }
@@ -58,7 +58,7 @@ new custom_button survey_manpower_recruit_add_1 = {
 	}
 	trigger = { }
 	effect = {
-		&survey_company_size += 10
+		&survey_company_size += 100
 	}
 }
 new custom_button survey_manpower_recruit_add_2 = {
@@ -68,7 +68,7 @@ new custom_button survey_manpower_recruit_add_2 = {
 	}
 	trigger = { }
 	effect = {
-		&survey_company_size += 100
+		&survey_company_size += 1000
 	}
 }
 new custom_button survey_manpower_recruit_add_3 = {
@@ -78,6 +78,6 @@ new custom_button survey_manpower_recruit_add_3 = {
 	}
 	trigger = { }
 	effect = {
-		&survey_company_size += 1000
+		&survey_company_size += 10000
 	}
 }
