@@ -2790,18 +2790,18 @@ guiTypes = {
 		{
 			name ="deity_item_icon"
 			spriteType = "GFX_hindu_deities_strip"
-			position = { x= 5 y = -4 }
+			position = { x = 10 y = -4 }
 		}
 		
 		instantTextBoxType = {
 			name = "deity_item_name"
-			position = { x= -42 y = 7 }
+			position = { x = -45 y = -44 }
 			font = "vic_18"
-			borderSize = {x = 0 y = 0}
+			borderSize = { x = 0 y = 0 }
 			text = "DeityName"	
-			maxWidth = 32
-			maxHeight = 24
-			Orientation = "UPPER_LEFT"
+			maxWidth = 50
+			maxHeight = 46
+			Orientation = "LOWER_LEFT"
 			format = left
 		}
 		

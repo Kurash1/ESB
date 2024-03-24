@@ -20,12 +20,14 @@ At the dawn of the first Era, the main religion within Skyrim is the Nordic Divi
 	hre_religion = yes
 	religious_group = nordic_group
 }
+
+# Hearth Gods
 new personal_deity kyne = {
 	name = "Kyne"
-	desc = "Kyne, or Kaan in the dragon language, is the Nordic goddess of the Storm, widow of Shor, the Blessed Warrior-Wife, and a favored god of warriors. She is one of the Hearth Gods, and is considered the chief deity of the Nordic pantheon.As the goddess of the Storm, she is strongly associated with wind and rain, and is thought to control both forces, even when they bring misery.The ancient Nords associated her with the hawk."
+	desc = "Kyne, or Kaan in the dragon language, is the Nordic goddess of the Storm, widow of Shor, the Blessed Warrior-Wife, and a favored god of warriors. She is one of the Hearth Gods, and is considered the chief deity of the Nordic pantheon. As the goddess of the Storm, she is strongly associated with wind and rain, and is thought to control both forces, even when they bring misery.The ancient Nords associated her with the hawk."
 	sprite = 1
 	modifiers = {
-		shock_damage = 5%
+		shock_damage = 10%
 		movement_speed = 10%
 	}
 	potential = {
@@ -37,20 +39,8 @@ new personal_deity dibella = {
 	desc = "Dibella is the Goddess of Beauty  and teaches mortals to seek truth through beauty and worship. Those who follow the teachings of Dibella, and propagate beauty and promote harmony, are granted charm and grace.She is considered one of the Hearth Gods that watch over the present world . Her worship is varied as individual cults venerate different facets of her spheres of influence. In some stories, she is acclaimed as the Bed-Wife of Shor.She is represented by a moth."
 	sprite = 2
 	modifiers = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 1.5
 		ae_impact = -10%
-	}
-	potential = {
-		religion = nordic_pantheon
-	}
-}
-new personal_deity tsun = {
-	name = "Tsun"
-	desc = "Tsun is the Nordic god of trials against adversity. He died defending Shor from foreign gods, with his death remembered as bringing about the current world.Tsun and his brother Stuhn were both Shield-thanes of Shor.He currently guards the Whalebone Bridge to the Hall of Valor of Sovngarde.At Shor's bidding, he has taken on the role of the master of trials, asking new arrivals to the utopia to prove their strength in combat against him before they can enter the Hall, where he fights using his axe.Tsun held great respect for magic, which he called the Clever Craft, and wielded the power of the Voice.He's represented by a bear."
-	sprite = 3
-	modifiers = {
-		shock_damage_received = -2.5%
-		land_morale = 5%
 	}
 	potential = {
 		religion = nordic_pantheon
@@ -80,24 +70,12 @@ new personal_deity jhunal = {
 		religion = nordic_pantheon
 	}
 }
-new personal_deity shor = {
-	name = "Shor"
-	desc = "The former chief of the Nordic pantheon of Skyrim, He was the king of the gods and a champion of men in their struggles against the Elves, until being treacherously slain by elven devils, and consigned to serve as god of the underworld.Shor is also associated with the Fox, one of the ancient Atmoran animal totems"
-	sprite = 6
-	modifiers = {
-		country_military_power = 1
-		legitimacy = 1
-	}
-	potential = {
-		religion = nordic_pantheon
-	}
-}
 new personal_deity stuhn = {
 	name = "Stuhn"
-	desc = "Stuhn is the Nordic God of Ransom, Fraternity, and Justice, and is represented by a whale. He is the brother of Tsun and the shield-thane of Shor and is one of the Hearth Gods.Stuhn fought against the Aldmeri pantheon and showed Men how to take, and the benefits of taking, prisoners of war."
+	desc = "Stuhn is the Nordic God of Ransom, Fraternity, and Justice, and is represented by a whale. He is the brother of Tsun and the shield-thane of Shor and is one of the Hearth Gods. Stuhn fought against the Aldmeri pantheon and showed Men how to take, and the benefits of taking, prisoners of war."
 	sprite = 7
 	modifiers = {
-		privateer_efficiency = 50%
+		global_unrest = -2
 		loot_amount = 50%
 	}
 	potential = {
@@ -109,5 +87,102 @@ new personal_deity stuhn = {
 			factor = 20
 			has_reform = tier_1_pirate_republic
 		}
+	}
+}
+
+# Dead Gods
+new personal_deity tsun = {
+	name = "Tsun"
+	desc = "Tsun is the Nordic god of trials against adversity. He died defending Shor from foreign gods, with his death remembered as bringing about the current world.Tsun and his brother Stuhn were both Shield-thanes of Shor.He currently guards the Whalebone Bridge to the Hall of Valor of Sovngarde.At Shor's bidding, he has taken on the role of the master of trials, asking new arrivals to the utopia to prove their strength in combat against him before they can enter the Hall, where he fights using his axe.Tsun held great respect for magic, which he called the Clever Craft, and wielded the power of the Voice. He's represented by a bear."
+	sprite = 3
+	modifiers = {
+		shock_damage_received = -5%
+		land_morale = 10%
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity shor = {
+	name = "Shor"
+	desc = "The former chief of the Nordic pantheon of Skyrim, He was the king of the gods and a champion of men in their struggles against the Elves, until being treacherously slain by elven devils, and consigned to serve as god of the underworld. Shor is also associated with the Fox, one of the ancient Atmoran animal totems"
+	sprite = 6
+	modifiers = {
+		country_military_power = 1
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+
+# Twilight Gods
+new personal_deity ysmir = {
+	name = "Ysmir"
+	desc = ""
+	sprite = 17
+	modifiers = {
+		prestige = 1
+		infantry_power = 0.1
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity alduin = {
+	name = "Alduin"
+	desc = "Alduin known as the World-Eater, First Dragon, Time-Eater, Twilight God, and the Firstborn to the residents of Skyrim, is an immensely powerful black Dragon. He is depicted as a malevolent force who destroys the world periodically, and the Nords believe that his reappearance heralds the end of the current world and the beginning of the next.
+
+His name can be separated into 'Al Du In', which means 'Destroyer Devour Master' in the Dovahzul."
+	sprite = 18
+	modifiers = {
+		global_unrest = 2
+		global_autonomy = -0.25
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+
+# Testing Gods
+new personal_deity herma_mora = {
+	name = "Herma Mora"
+	desc = "Herma Mora is the Demon of Knowledge, Gardener of Men or the Woodland Man, whose sphere is forbidden knowledge, hidden shoals, whirlpools, and sudden squalls, destiny, and the scrying of the tides of Fate, weaving his way through the past and future as read in the stars and heavens, and in whose dominion are 'the treasures of knowledge and memory'. His curiosity is insatiable and he seeks all knowledge, and not to change but to observe, so that all becomes known. He 'weeps cold tears' at the plague of ignorance, where knowledge is forsaken out of fear of misuse, and seeks to enlighten all to all mysteries that have ever and will ever exist. This benevolence presented by his followers may be a facade, as Mora is said to hoard his knowledge and give nothing away for free."
+	sprite = 19
+	modifiers = {
+		global_unrest = 2
+		free_policy = 1
+	}
+	potential = {
+		religion = nordic_pantheon
+	}
+}
+new personal_deity mauloch = {
+	name = "Mauloch"
+	desc = ""
+	sprite = 16
+	modifiers = {
+		morale_damage = 10%
+		global_unrest = 2
+	}
+	potential = {
+		religion = nordic_pantheon
+		has_estate_privilege = orcs:redeem_mauloch
+	}
+}
+new personal_deity orkey = {
+	name = "Orkey"
+	desc = "Orkey, also known as Old Knocker and the Death-God, is the god of mortality in the religion of the Nords. Some sources describe him as a 'loan-god' of the Nords who combines aspects of Malacath and Arkay and whose worship was taken up during Aldmeri rule of Atmora, while others consider Orkey to be a primal Atmoran god with Arkay instead being a fusion of Atmoran and Aldmeri elements. In Nordic iconography, Orkey is represented by a snake."
+	sprite = 20
+	modifiers = {
+		global_unrest = 2
+		morale_damage_received = -5%
+	}
+	potential = {
+		religion = nordic_pantheon
 	}
 }
