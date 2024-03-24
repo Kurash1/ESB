@@ -122,12 +122,12 @@ new unit reachmen_artillery = {
 	type = artillery
 	unit_type = reachman
 	maneuver = 1
-	offensive_morale = 0
-	defensive_morale = 0
+	offensive_morale = 4
+	defensive_morale = 3
 	offensive_fire = 0
 	defensive_fire = 0
-	offensive_shock = 0
-	defensive_shock = 0
+	offensive_shock = 4
+	defensive_shock = 3
 }
 
 new technology_group orc = {
@@ -231,4 +231,90 @@ new unit duraki_artillery = {
 	defensive_fire = 2
 	offensive_shock = 0
 	defensive_shock = 0
+}
+
+new technology_group giant = {
+	name = "Giant"
+}
+new unit giant_infantry = {
+	name = "Giant Warriors"
+	desc = ""
+	type = infantry
+	unit_type = giant
+	maneuver = 1
+	offensive_morale = 4
+	defensive_morale = 2
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 4
+	defensive_shock = 2
+}
+new unit giant_cavalry = {
+	name = "War Mammoths"
+	desc = ""
+	type = cavalry
+	unit_type = giant
+	maneuver = 2
+	offensive_morale = 4
+	defensive_morale = 3
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 4
+	defensive_shock = 3
+}
+new unit giant_artillery = {
+	name = "Siege Mammoths"
+	desc = ""
+	type = artillery
+	unit_type = giant
+	maneuver = 1
+	offensive_morale = 4
+	defensive_morale = 3
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 4
+	defensive_shock = 3
+}
+
+new technology_group sea_giant = {
+	name = "Sea Giant"
+}
+new unit sea_giant_infantry = {
+	name = "Sea Giant Raiders"
+	desc = ""
+	type = infantry
+	unit_type = sea_giant
+	maneuver = 1
+	offensive_morale = 4
+	defensive_morale = 2
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 4
+	defensive_shock = 2
+}
+new unit giant_chub_loons = {
+	name = "Giant Chub Loons"
+	desc = ""
+	type = cavalry
+	unit_type = sea_giant
+	maneuver = 2
+	offensive_morale = 0
+	defensive_morale = 0
+	offensive_fire = 2
+	defensive_fire = 2
+	offensive_shock = 2
+	defensive_shock = 2
+}
+new unit sea_giant_mages = {
+	name = "Sea Giant Shamans"
+	desc = ""
+	type = artillery
+	unit_type = sea_giant
+	maneuver = 1
+	offensive_morale = 2
+	defensive_morale = 1
+	offensive_fire = 4
+	defensive_fire = 2
+	offensive_shock = 1
+	defensive_shock = 1
 }
