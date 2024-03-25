@@ -42,8 +42,16 @@ new area volkihar_isles = {
 	name = "Volkihar Isles"
 	region = haafingar
 }
+new area kynes_isles = {
+	name = "Kyne's Isles"
+	region = haafingar
+}
 new area lone_isle = {
 	name = "Lone Isle"
+	region = haafingar
+}
+new area icereach = {
+	name = "Icereach"
 	region = haafingar
 }
 new province lone_isle = {
@@ -315,7 +323,7 @@ new province big_sister = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = volkihar_isles
+	area = icereach
 	name = "Big Sister"
 	color = {
 		251 134 139
@@ -339,7 +347,7 @@ new province small_sister = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = volkihar_isles
+	area = icereach
 	name = "Small Sister"
 	color = {
 		210 247 170
@@ -363,7 +371,7 @@ new province rugged_island = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = volkihar_isles
+	area = kynes_isles
 	name = "Rugged Island"
 	color = {
 		202 251 218
@@ -591,7 +599,7 @@ new province gold_isle = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = ravenscar
+	area = kynes_isles
 	name = "Gold Isle"
 	color = {
 		162 240 177
