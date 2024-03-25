@@ -403,7 +403,7 @@ new province two_isle_coast = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "Two Isle Coast"
+	name = "Three Isle Coast"
 	color = {
 		34 61 56
 	}

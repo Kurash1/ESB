@@ -361,3 +361,36 @@ new country horn_stride_clan = {
 	color = { 35 63 40 }
 	capital = harmugstahl
 }
+
+new country winterborn_clan = {
+	inherit = reachman_country
+	tag = WNT
+	name = "Winterborn Clan"
+	adj = "Winterborn"
+	color = { 0 0 60 }
+	capital = harmugstahl
+	religion = code_of_malacath
+}
+new country blood_horn_clan = {
+	inherit = reachman_country
+	comment = "
+		https://discord.com/channels/1011657111366799391/1011657112113381398/1221703243810476053
+		name: Blood-Horn
+		religion: centered around Hircine and his daughter Daerola 
+		Culture: very militaristic,  war lusting, zealous
+		maybes: could start the game at war with the horn-stride clan
+	"
+	tag = BHC
+	name = "Blood-Horn Clan"
+	adj = "Blood-Horn"
+	color = { 60 0 0 }
+	capital = harmugstahl
+}
+new country icereach_clan = {
+	inherit = reachman_country
+	tag = ICC
+	name = "Icereach Clan"
+	adj = "Icereach"
+	color = { 72 0 255 }
+	capital = big_sister
+}

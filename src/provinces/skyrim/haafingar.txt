@@ -322,7 +322,7 @@ new province big_sister = {
 	}
 	terrain = coastline
 	history = {
-		history_owner = sea_wing
+		history_owner = icereach_clan
 		culture = haafingarian
 		religion = nordic_pantheon
 		hre = yes
@@ -348,7 +348,7 @@ new province small_sister = {
 	}
 	terrain = coastline
 	history = {
-		history_owner = sea_wing
+		history_owner = icereach_clan
 		culture = haafingarian
 		religion = nordic_pantheon
 		hre = yes
@@ -607,11 +607,7 @@ new province gold_isle = {
 		hre = yes
 		history_trade_goods = gold
 	
-		is_city = no
-		history_owner = raven_scar
-		57.1.1 = {
-			is_city = no
-		}
+		history_owner = sea_wing
 	}
 }
 new province northern_road = {
@@ -1201,4 +1197,9 @@ quick_strait = {
 	from = rock_isle
 	to = clay_coast
 	through = coast_of_verglas
+}
+quick_strait = {
+	from = big_sister
+	to = small_sister
+	through = two_isle_coast
 }
