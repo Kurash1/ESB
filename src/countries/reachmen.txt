@@ -370,6 +370,26 @@ new country winterborn_clan = {
 	color = { 0 0 60 }
 	capital = vyhidok
 	religion = code_of_malacath
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Nargisrel"
+				dynasty = "Winterborn"
+				adm = 3
+				dip = 2
+				mil = 4
+				age = 37
+			}
+			starting_heir = {
+				name = "Pryvul"
+				dynasty = "Winterborn"
+				adm = 1
+				dip = 4
+				mil = 1
+				age = 11
+			}
+		}
+	}
 }
 new country blood_horn_clan = {
 	inherit = reachman_country
@@ -385,6 +405,26 @@ new country blood_horn_clan = {
 	adj = "Blood-Horn"
 	color = { 60 0 0 }
 	capital = melros
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Dus"
+				dynasty = "Blood-Horn"
+				adm = 4
+				dip = 0
+				mil = 3
+				age = 44
+			}
+			starting_heir = {
+				name = "Enuc"
+				dynasty = "Blood-Horn"
+				adm = 3
+				dip = 2
+				mil = 3
+				age = 21
+			}
+		}
+	}
 }
 new country icereach_clan = {
 	inherit = reachman_country
@@ -393,4 +433,24 @@ new country icereach_clan = {
 	adj = "Icereach"
 	color = { 72 0 255 }
 	capital = big_sister
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Aigi"
+				dynasty = "Icereach"
+				adm = 1
+				dip = 1
+				mil = 5
+				age = 25
+			}
+			starting_heir = {
+				name = "Keia"
+				dynasty = "Icereach"
+				adm = 6
+				dip = 6
+				mil = 3
+				age = 1
+			}
+		}
+	}
 }

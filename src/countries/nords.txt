@@ -1274,6 +1274,26 @@ new country hawk_eye = {
 		122 71 30
 	}
 	capital = gold_isle
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Bulur"
+				dynasty = "Hawk-Eye"
+				adm = 1
+				dip = 6
+				mil = 6
+				age = 41
+			}
+			starting_heir = {
+				name = "Derst"
+				dynasty = "Hawk-Eye"
+				adm = 2
+				dip = 2
+				mil = 2
+				age = 4
+			}
+		}
+	}
 }
 new country whale_song = {
 	inherit = nordic_country
@@ -1285,6 +1305,26 @@ new country whale_song = {
 		64 20 122
 	}
 	capital = mundall
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Olfarth"
+				dynasty = "Whale-Song"
+				adm = 0
+				dip = 5
+				mil = 3
+				age = 66
+			}
+			starting_heir = {
+				name = "Garas"
+				dynasty = "Whale-Song"
+				adm = 4
+				dip = 5
+				mil = 1
+				age = 40
+			}
+		}
+	}
 }
 new country wave_crusher = {
 	inherit = nordic_country
@@ -1296,4 +1336,24 @@ new country wave_crusher = {
 		122 20 0
 	}
 	capital = japhets_folly
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Agarin"
+				dynasty = "Wave-Crusher"
+				adm = 5
+				dip = 4
+				mil = 3
+				age = 22
+			}
+			starting_heir = {
+				name = "Sigvi"
+				dynasty = "Wave-Crusher"
+				adm = 2
+				dip = 5
+				mil = 4
+				age = 2
+			}
+		}
+	}
 }
