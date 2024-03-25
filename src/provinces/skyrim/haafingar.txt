@@ -1197,6 +1197,98 @@ new province kilkreath_peak = {
 		is_city = yes
 	}
 }
+new province blackbone_isle = {
+	name = "Blackbone Isle"
+    inherit = wrothgar_inherit
+    color = { 130 165 110 }
+	history = {
+		history_owner = sea_wing
+		religion = nordic_pantheon
+		culture = haafingarian
+		
+		history_trade_goods = fish
+	}
+	area = volkihar_isles
+	terrain = coastline
+	position={
+		1486.000 2086.000 1486.000 2086.000 1486.000 2086.000 1487.000 2081.000 1486.000 2086.000 1486.000 2086.000 1486.000 2086.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province volkihar_isle = {
+	name = "Volkihar Isle"
+    inherit = wrothgar_inherit
+    color = { 134 128 232 }
+	history = {
+		history_owner = sea_wing
+		religion = nordic_pantheon
+		culture = haafingarian
+		
+		history_trade_goods = fish
+	}
+	area = volkihar_isles
+	terrain = coastline
+	position={
+		1495.000 2121.000 1495.000 2121.000 1495.000 2121.000 1497.000 2117.000 1495.000 2121.000 1495.000 2121.000 1495.000 2121.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
+	}
+}
+new province red_mist_isle = {
+	name = "Red Mist Isle"
+    inherit = wrothgar_inherit
+    color = { 236 146 157 }
+	history = {
+		history_owner = hawk_eye
+		religion = nordic_pantheon
+		culture = haafingarian
+		
+		history_trade_goods = fish
+	}
+	area = kynes_isles
+	terrain = coastline
+	position={
+		1603.000 2155.000 1603.000 2155.000 1603.000 2155.000 1601.000 2150.000 1603.000 2155.000 1603.000 2155.000 1603.000 2155.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
+	}
+}
+new province galsgik = {
+	name = "Galsgik"
+    inherit = wrothgar_inherit
+    color = { 230 250 188 }
+	area = kynes_isles
+	terrain = coastline
+	position={
+		1597.000 2115.000 1593.000 2115.000 1593.000 2115.000 1592.000 2114.000 1593.000 2115.000 1593.000 2115.000 1593.000 2115.000 
+	}
+	rotation={
+		0.000 0.000 0.000 1.571 0.000 0.000 0.000 
+	}
+	height={
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
+	}
+	history = {
+		history_owner = hawk_eye
+		religion = nordic_pantheon
+		culture = haafingarian
+		
+		history_trade_goods = fish
+	}
+}
 quick_strait = {
 	from = rock_isle
 	to = clay_coast

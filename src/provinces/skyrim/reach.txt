@@ -936,6 +936,29 @@ new province bthar_zel = {
 		history_owner = stag_heart_clan
 	}
 }
+new province turmilis = {
+	name = "Turmilis"
+    inherit = wrothgar_inherit
+    color = { 251 218 148 }
+	history = {
+		history_owner = stag_heart_clan
+		religion = reachman_faith
+		culture = reachmen
+		
+		history_trade_goods = stone
+	}
+	terrain = highlands
+	area = harmugstahl
+	position={
+		1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
 
 new area old_hroldan = {
 	name = "Old Hroldan"
@@ -1672,6 +1695,80 @@ new province abba_arl = {
 		religion = reachman_faith
 		history_owner = thornroot_clan
 		history_trade_goods = silver
+	}
+}
+
+new area melros = {
+	name = "Melros"
+	region = reach
+}
+new province urlemen = {
+	name = "Urlemen"
+    inherit = wrothgar_inherit
+    color = { 104 133 134 }
+	history = {
+		history_owner = blood_horn_clan
+		religion = reachman_faith
+		culture = reachmen
+		
+		history_trade_goods = stone
+	}
+	terrain = mountain
+	area = melros
+	position={
+		1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province melros = {
+	name = "Melros"
+    inherit = wrothgar_inherit
+    color = { 145 115 169 }
+	history = {
+		history_owner = blood_horn_clan
+		religion = reachman_faith
+		culture = reachmen
+		
+		history_trade_goods = arms
+	}
+	terrain = mountain
+	area = melros
+	position={
+		1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province nhymak = {
+	name = "Nhymak"
+    inherit = wrothgar_inherit
+    color = { 195 110 237 }
+	history = {
+		history_owner = blood_horn_clan
+		religion = reachman_faith
+		culture = reachmen
+		
+		history_trade_goods = silver
+	}
+	terrain = mountain
+	area = melros
+	position={
+		1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
 	}
 }
 

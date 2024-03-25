@@ -325,6 +325,29 @@ new province thormoor = {
 		}
 	}
 }
+new province giants_tooth = {
+	name = "Giants' Tooth"
+    inherit = wrothgar_inherit
+    color = { 220 188 193 }
+	history = {
+		history_owner = wave_crusher
+		religion = nordic_pantheon
+		culture = haafingarian
+		
+		history_trade_goods = wood
+	}
+	area = mortrag
+	terrain = coastline
+	position={
+		2016.000 2141.000 2016.000 2141.000 2016.000 2141.000 2010.000 2135.000 2016.000 2141.000 2016.000 2141.000 2016.000 2141.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
+	}
+}
 
 new area frostmoth = {
 	name = "Frostmoth"
