@@ -32,7 +32,40 @@ new country sea_wing = {
 			}
 		}
 	}
-	capital = big_sister
+	capital = morwath
+}
+new country hawk_eye = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = HEY
+	name = "Hawk-Eye"
+	adj = "Hawk-Eye"
+	color = {
+		122 71 30
+	}
+	capital = gold_isle
+}
+new country whale_song = {
+	inherit = nordic_country
+	primary_culture = palean
+	tag = WHS
+	name = "Whale-Song"
+	adj = "Whale-Song"
+	color = {
+		64 20 122
+	}
+	capital = mundall
+}
+new country wave_crusher = {
+	inherit = nordic_country
+	primary_culture = palean
+	tag = WRU
+	name = "Wave-Crusher"
+	adj = "Wave-Crusher"
+	color = {
+		122 20 0
+	}
+	capital = japhets_folly
 }
 new country lone_band = {
 	inherit = nordic_country
