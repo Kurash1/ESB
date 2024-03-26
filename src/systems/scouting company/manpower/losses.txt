@@ -3,7 +3,7 @@ new named_effect survey_calculate_losses = {
 	
 	# Retirement
 	# 
-	# Stacks * SURVEY_RETIREMENT_RATE * modifier:scouts_retirement_reduction_modifier
+	# Stacks * SURVEY_RETIREMENT_RATE * modifier:scouts_retirement_reduction_modifier + 1
 	# 
 	&survey_retirements := survey_manpower
 	&survey_retirements *= SURVEY_RETIREMENT_RATE
@@ -14,6 +14,7 @@ new named_effect survey_calculate_losses = {
 		&survey_temp := 1
 	}
 	&survey_retirements /= survey_temp
+	&survey_retirements += 1
 	
 	# Removes Decimal Manpower
 	&survey_retirements /= 1000
