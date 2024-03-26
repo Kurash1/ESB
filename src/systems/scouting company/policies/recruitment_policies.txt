@@ -1,18 +1,57 @@
+new country_event survey_mechanic.1 = {
+	title = "Select Recruitment Policy"
+	desc = ""
+	picture = TOMB_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		foreach $policy in survey_recruitment_policies {
+			if [has_recruitment_policy = $policy] {
+				unapply_recruitment_policy = $policy
+			}
+		}
+	}
+	options = {
+	}
+}
+
 new named_int survey_recruitment_policies_count = 1
 new class survey_recruitment_policy = {
 	list = survey_recruitment_policies
-	id = `survey_recruitment_policy_{this:id}`
+	id = `{this:id}`
+	default = {
+		slot = 0
+		potential = {
+			always = yes
+		}
+		trigger_tooltip = ""
+		trigger = {
+			always = yes
+		}
+	}
 	args = {
 		name = string
 		icon = int
 		potential = trigger
+		trigger_tooltip = string
 		trigger = trigger
 		modifier = modifier
+		slot = int
 	}
 	on_create = {
-		new event_modifier `{this:id}` = {
+		this:slot := survey_recruitment_policies_count
+		
+		new event_modifier `survey_recruitment_policy_{this:id}` = {
 			name = this:name
 			modifier = this:modifier
+		}
+		
+		events:survey_mechanic.1:options += {
+			{
+				name =* "*this:name*"
+				effect =* {
+					apply_recruitment_policy = *this:id*
+				}
+			}
 		}
 		
 		custom_icons:survey_policy_icon_1:frames += {
@@ -27,15 +66,31 @@ new class survey_recruitment_policy = {
 		survey_recruitment_policies_count += 1
 	}
 }
+new trigger has_recruitment_policy = {
+	args = survey_recruitment_policy
+	transpile = {
+		&survey_policy_1 == args:slot
+	}
+}
+new effect apply_recruitment_policy = {
+	args = survey_recruitment_policy
+	transpile = {
+		&survey_policy_1 := args:slot
+		add_country_modifier = {
+			name = `survey_recruitment_policy_{args:id}`
+			duration = -1
+		}
+	}
+}
+new effect unapply_recruitment_policy = {
+	args = survey_recruitment_policy
+	transpile = {
+		remove_country_modifier = `survey_recruitment_policy_{args:id}`
+	}
+}
 new survey_recruitment_policy no_recruitment = {
 	name = "No Recruitment"
 	icon = 1
-	potential = {
-		always = yes
-	}
-	trigger = {
-		always = yes
-	}
 	modifier = {
 		scouts_base_income = 1
 	}
@@ -43,13 +98,28 @@ new survey_recruitment_policy no_recruitment = {
 new survey_recruitment_policy standard_recruitment = {
 	name = "Standard Recruitment"
 	icon = 2
-	potential = {
-		always = yes
-	}
-	trigger = {
-		always = yes
-	}
 	modifier = {
 		survey_recruit_rate = 1
+	}
+}
+new survey_recruitment_policy heavy_recruitment = {
+	name = "Heavy Recruitment"
+	icon = 3
+	modifier = {
+		survey_recruit_rate = 2
+	}
+}
+new survey_recruitment_policy only_the_best = {
+	name = "Only the Best"
+	icon = 4
+	modifier = {
+		survey_recruit_rate = 0.5
+	}
+}
+new survey_recruitment_policy scraping_the_barrel = {
+	name = "Scraping the Barrel"
+	icon = 5
+	modifier = {
+		survey_recruit_rate = 3
 	}
 }
