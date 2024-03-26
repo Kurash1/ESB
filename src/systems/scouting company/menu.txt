@@ -60,7 +60,11 @@ new custom_button open_survey_screen = {
 			variables:survey_base_income:init = yes
 			variables:survey_monthly_recruits_base:init = yes
 			variables:survey_company_size:init = yes
-			
+			variables:survey_policy_1:init = yes
+			add_country_modifier = {
+				name = survey_recruitment_policy_no_recruitment
+				duration = -1
+			}
 		}
 		&survey_real_manpower := survey_manpower
 		&survey_real_manpower *= 1000
