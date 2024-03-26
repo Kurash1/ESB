@@ -1,7 +1,7 @@
 new country_event survey_mechanic.1 = {
 	title = "Select Recruitment Policy"
 	desc = ""
-	picture = TOMB_eventPicture
+	picture = recruits_eventPicture
 	is_triggered_only = yes
 	immediate = {
 		foreach $policy in survey_recruitment_policies {
@@ -92,7 +92,7 @@ new survey_recruitment_policy no_recruitment = {
 	name = "No Recruitment"
 	icon = 1
 	modifier = {
-		scouts_base_income = 1
+		survey_recruit_rate = -1%
 	}
 }
 new survey_recruitment_policy standard_recruitment = {
@@ -107,19 +107,22 @@ new survey_recruitment_policy heavy_recruitment = {
 	icon = 3
 	modifier = {
 		survey_recruit_rate = 2
+		scouts_recruitment_cost_efficiency = -0.1
 	}
 }
-new survey_recruitment_policy only_the_best = {
-	name = "Only the Best"
-	icon = 4
-	modifier = {
-		survey_recruit_rate = 0.5
-	}
-}
+#new survey_recruitment_policy only_the_best = {
+#	name = "Only the Best"
+#	icon = 4
+#	modifier = {
+#		survey_recruit_rate = 0.5
+#		scouts_recruitment_cost_efficiency = -0.25
+#	}
+#}
 new survey_recruitment_policy scraping_the_barrel = {
 	name = "Scraping the Barrel"
 	icon = 5
 	modifier = {
 		survey_recruit_rate = 3
+		scouts_recruitment_cost_efficiency = -0.25
 	}
 }

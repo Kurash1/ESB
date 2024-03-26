@@ -1,0 +1,106 @@
+new country_event survey_mechanic.2 = {
+	title = "Select Economic Policy"
+	desc = ""
+	picture = recruits_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		foreach $policy in survey_economic_policies {
+			if [has_economic_policy = $policy] {
+				unapply_economic_policy = $policy
+			}
+		}
+	}
+	options = {
+	}
+}
+
+new named_int survey_economic_policies_count = 1
+new class survey_economic_policy = {
+	list = survey_economic_policies
+	id = `{this:id}`
+	default = {
+		slot = 0
+		potential = {
+			always = yes
+		}
+		trigger_tooltip = ""
+		trigger = {
+			always = yes
+		}
+	}
+	args = {
+		name = string
+		icon = int
+		potential = trigger
+		trigger_tooltip = string
+		trigger = trigger
+		modifier = modifier
+		slot = int
+	}
+	on_create = {
+		this:slot := survey_economic_policies_count
+		
+		new event_modifier `survey_economic_policy_{this:id}` = {
+			name = this:name
+			modifier = this:modifier
+		}
+		
+		events:survey_mechanic.2:options += {
+			{
+				name =* "*this:name*"
+				effect =* {
+					apply_economic_policy = *this:id*
+				}
+			}
+		}
+		
+		custom_icons:survey_policy_icon_2:frames += {
+			{
+				frame = this:icon
+				trigger =* {
+					&survey_policy_2 == *survey_economic_policies_count*
+				}
+			}
+		}
+		
+		survey_economic_policies_count += 1
+	}
+}
+new trigger has_economic_policy = {
+	args = survey_economic_policy
+	transpile = {
+		&survey_policy_2 == args:slot
+	}
+}
+new effect apply_economic_policy = {
+	args = survey_economic_policy
+	transpile = {
+		&survey_policy_2 := args:slot
+		add_country_modifier = {
+			name = `survey_economic_policy_{args:id}`
+			duration = -1
+		}
+	}
+}
+new effect unapply_economic_policy = {
+	args = survey_economic_policy
+	transpile = {
+		remove_country_modifier = `survey_economic_policy_{args:id}`
+	}
+}
+new survey_economic_policy state_investments = {
+	name = "State Investments"
+	icon = 1
+	modifier = {
+		global_tax_income = -12
+		scouts_base_income = 1
+	}
+}
+new survey_economic_policy private_investors = {
+	name = "Private Investors"
+	icon = 2
+	modifier = {
+		yearly_corruption = 0.01
+		scouts_random_income = 1
+	}
+}

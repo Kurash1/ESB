@@ -1,17 +1,30 @@
 new named_effect survey_calculate_expenses = {
 	variables:survey_monthly_expenses:set = 0
 	
+	#Recruitment Costs
+	#
+	# Total Recruits / 1000 * SURVEY_RECRUIT_COST * Recruitment Cost Efficiency
+	#
+	&survey_recruitment_costs := survey_monthly_recruits_base
+	&survey_recruitment_costs /= 1000
+	&survey_recruitment_costs *= SURVEY_RECRUIT_COST
+	
+	&survey_temp := 1
+	&survey_temp_2 &= modifier:scouts_recruitment_cost_efficiency
+	&survey_temp -= survey_temp_2
+	if [&survey_temp < 0.1] {
+		&survey_temp := 0.1
+	}
+	
+	&survey_recruitment_costs *= survey_temp
+	
+	&survey_monthly_expenses += survey_recruitment_costs
+	
 	#Administrative Costs
 	#
-	# Stacks * SURVEY_SCOUTS_ADMINISTRATIVE_COST_MANPOWER_MULT
-	# + SURVEY_SCOUTS_BASE_ADMINISTRATIVE_COST
-	# * modifier:scouts_administrative_cost_modifier
+	# modifier:scouts_administrative_cost * modifier:scouts_administrative_cost_modifier
 	#
-	&survey_administrative_costs := survey_manpower
-	&survey_administrative_costs *= SURVEY_SCOUTS_ADMINISTRATIVE_COST_PER_STACK
-	
-	&survey_temp &= modifier:scouts_administrative_cost
-	&survey_administrative_costs += survey_temp
+	&survey_administrative_costs &= modifier:scouts_administrative_cost
 	
 	&survey_temp &= modifier:scouts_administrative_cost_modifier
 	&survey_administrative_costs *= survey_temp

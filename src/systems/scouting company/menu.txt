@@ -65,11 +65,11 @@ new custom_button open_survey_screen = {
 		&survey_real_manpower := survey_manpower
 		&survey_real_manpower *= 1000
 		
-		survey_calculate_income
-		survey_calculate_expenses
-		
 		survey_calculate_recruits
 		survey_calculate_losses
+		
+		survey_calculate_income
+		survey_calculate_expenses
 	}
 }
 new custom_button close_survey_screen = {
@@ -85,14 +85,14 @@ on_actions:on_monthly_pulse += {
 	if [has_country_flag = init_survey] {
 		&survey_real_manpower := survey_manpower
 		&survey_real_manpower *= 1000
-	
-		survey_calculate_income
-		survey_calculate_expenses
-		survey_calculate_fund_sum
 		
 		survey_calculate_recruits
 		survey_calculate_losses
 		survey_calculate_manpower_sum
+		
+		survey_calculate_income
+		survey_calculate_expenses
+		survey_calculate_fund_sum
 		
 		survey_calculate_active_survey
 	}

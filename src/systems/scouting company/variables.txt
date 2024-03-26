@@ -65,6 +65,10 @@ new script_variable survey_scout_maintenance = {
 	name = "Scout Maintenance"
 	initial_value = 0
 }
+new script_variable survey_recruitment_costs = {
+	name = "Scout Recruitment Costs"
+	initial_value = 0
+}
 
 new script_variable survey_monthly_funds = {
 	name = "Scouts Funds Balance"
@@ -104,5 +108,13 @@ new script_variable survey_monthly_manpower = {
 
 new script_variable survey_policy_1 = {
 	name = "Survey Recruitment Policy"
+	initial_value = 1
+}
+new script_variable survey_policy_2 = {
+	name = "Survey Economic Policy"
+	initial_value = 1
+}
+new script_variable survey_policy_3 = {
+	name = "Survey Field Policy"
 	initial_value = 1
 }
