@@ -1,0 +1,27 @@
+new religion cult_of_luck = {
+	name = "Cult of Luck"
+	desc = "The Cult of Luck follows the once mortal Sai who is said to have spread luck to everyone but himself. Eventually after having died in battle he was elevated into deity status by Ebonarm. Followers of the Cult of Luck have the believe that Sai's luck will also benefit them more than others who do not follow him as closely as they do. "
+	icon = 15
+	color = {
+		255 216 0
+	}
+	allowed_conversions = {
+		nordic_pantheon
+		the_old_ways
+		ternion_way
+		sovngarde_path
+		way_of_the_fryse
+		rune_worship
+	}
+	heretic = {
+		NORDIC_PANTHEON_HERETIC
+	}
+	country = {
+		global_attacker_dice_roll_bonus = 1
+		global_defender_dice_roll_bonus = 1
+	}
+	province = {
+		
+	}
+	religious_group = nordic_group
+}

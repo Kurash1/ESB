@@ -1,0 +1,27 @@
+new religion rune_worship = {
+	name = "Rune Worship"
+	desc = "Following the teachings of the mighty rune god Jhunal to the letter the rune cult possesses hermetic orders that focus on studying the various kinds of runes. Those runes are put into great effect in both enchanting  of literally anything and in mysterious runic magic. It is common custody among the rune cult to consult with everyone who seems wise enough to bring new information to the table. As denying knowledge and refusing to learn would certainly not please Jhunal."
+	icon = 16
+	color = {
+		0 19 127
+	}
+	allowed_conversions = {
+		nordic_pantheon
+		the_old_ways
+		ternion_way
+		sovngarde_path
+		way_of_the_fryse
+		cult_of_luck
+	}
+	heretic = {
+		NORDIC_PANTHEON_HERETIC
+	}
+	country = {
+		reform_progress_growth = 0.15
+		prestige = 0.5
+	}
+	province = {
+		
+	}
+	religious_group = nordic_group
+}

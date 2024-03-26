@@ -1,0 +1,27 @@
+new religion sovngarde_path = {
+	name = "Sovngarde Path"
+	desc = "Thus that follow the way of Sovngarde seek to die in glorious battle just like Shor did. They want to prove worthy to Tsun that they may cross the whalebone bridge and enter Sovngarde to meet their forebearers just like their parents before them. Following this belief the Path of Sovngarde is a highly martial religion that exclusively focuses on perfecting the art of combat. Members of the Sovngarde Path are by now often so skilled that it is hard for them to actually achieve glolrious death in combat."
+	icon = 17
+	color = {
+		101 124 165
+	}
+	allowed_conversions = {
+		nordic_pantheon
+		the_old_ways
+		ternion_way
+		way_of_the_fryse
+		cult_of_luck
+		rune_worship
+	}
+	heretic = {
+		NORDIC_PANTHEON_HERETIC
+	}
+	country = {
+		land_morale = 0.1
+		military_tactics = 0.05
+	}
+	province = {
+		
+	}
+	religious_group = nordic_group
+}
