@@ -15,6 +15,7 @@ estates:warriors:privileges += new storm_gate_stalwarts = {
 mission_trees:solitude += {
 	the_emperors_tower = {
 		name = "The Emperor's Tower"
+		desc = "One of the first great structures built atop the arch, the Emperor's Tower was named such due to a prophecy given by a great clever man, '§lIn the middle years of the man-gods hour, a wolf will take hold of this land, and the wolf will seek to crown an emperor sitting from this arch.§!' While the prophecy is not fully understood, the lords of solitude see it that to reign from atop the arch will bring about prosperity befitting one day of the title of Empire."
 		icon = emperors_tower_mission
 		x = 0
 		y = 0
@@ -41,11 +42,22 @@ mission_trees:solitude += {
 		x = 1
 		y = 0
 		trigger = {
-			provinces:solitude = {
-				development = 10
+			owns = solitude
+			if [ai = yes] {
+				ags = 5
+			}
+			else {
+				provinces:solitude = {
+					development = 10
+				}
 			}
 		}
 		effect = {
+			if [ai = yes] {
+				add_base_tax = 3
+				add_base_production = 2
+				add_base_manpower = 2
+			}
 			define_advisor = {
 				type = treasurer
 				name = "Thryrahilde"
@@ -73,11 +85,19 @@ mission_trees:solitude += {
 		y = 0
 		trigger = {
 			owns = solitude
-			provinces:solitude = {
-				fort_level = 2
+			if [ai = yes] {
+				ags = 5
+			}
+			else {
+				provinces:solitude = {
+					fort_level = 2
+				}
 			}
 		}
 		effect = {
+			if [ai = yes] {
+				add_building = fort_15th
+			}
 			create_monument = {
 				monument = castle_dour
 				province = solitude
@@ -205,12 +225,114 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 			full_idea_group = religious_ideas
 		}
 		effect = {
-			provinces:solitude = {
-				add_building = tax_3
-			}
 			create_monument = {
 				monument = temple_of_the_divines
 				province = solitude
+			}
+			
+			conditional_effect = {
+				tooltip = "chose §YPriests§! in the Shadowgreen Expedition"
+				trigger = {
+					always = no
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Blessing of Kyne"
+						years = 25
+						modifier = { tolerance_own = 0.5 }
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YPriests§! in the Shadowgreen Expedition"
+				trigger = {
+					always = no
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Blessing of Dibella"
+						years = 25
+						modifier = { tolerance_own = 0.5 }
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "never"
+				trigger = {
+					always = no
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Blessing of Mara"
+						years = 25
+						modifier = { tolerance_own = 0.5 }
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "never"
+				trigger = {
+					always = no
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Blessing of Jhunal"
+						years = 25
+						modifier = { tolerance_own = 0.5 }
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "§YNorthwatch§! has the Settlement Focus: §YFelhvalstag§!"
+				trigger = {
+					always = no
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Blessing of Stuhn"
+						years = 25
+						modifier = { tolerance_own = 0.5 }
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "never"
+				trigger = {
+					always = no
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Blessing of Tsun"
+						years = 25
+						modifier = { tolerance_own = 0.5 }
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "never"
+				trigger = {
+					always = no
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Blessing of Shor"
+						years = 25
+						modifier = { tolerance_own = 0.5 }
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "never"
+				trigger = {
+					always = no
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Blessing of Ysmir"
+						years = 25
+						modifier = { tolerance_own = 0.5 }
+					}
+				}
 			}
 		}
 	}

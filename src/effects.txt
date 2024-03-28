@@ -1,21 +1,22 @@
 new effect preview_idea_group = {
 	args = idea_group
 	transpile = {
+		breakpoint
 		new_custom_tooltip = "§Y{args:name} Ideas§!:
-	§Y{args:ideas:1:name}§!
-{modifier_to_string = args:ideas:1:modifier}
-	§Y{args:ideas:2:name}§!
-{modifier_to_string = args:ideas:2:modifier}
-	§Y{args:ideas:3:name}§!
-{modifier_to_string = args:ideas:3:modifier}
-	§Y{args:ideas:4:name}§!
-{modifier_to_string = args:ideas:4:modifier}
-	§Y{args:ideas:5:name}§!
-{modifier_to_string = args:ideas:5:modifier}
-	§Y{args:ideas:6:name}§!
-{modifier_to_string = args:ideas:6:modifier}
-	§Y{args:ideas:7:name}§!
-{modifier_to_string = args:ideas:7:modifier}
+	§Y{args:ideas:1:name}§!:
+		{modifier_to_string = args:ideas:1:modifier}
+	§Y{args:ideas:2:name}§!:
+		{modifier_to_string = args:ideas:2:modifier}
+	§Y{args:ideas:3:name}§!:
+		{modifier_to_string = args:ideas:3:modifier}
+	§Y{args:ideas:4:name}§!:
+		{modifier_to_string = args:ideas:4:modifier}
+	§Y{args:ideas:5:name}§!:
+		{modifier_to_string = args:ideas:5:modifier}
+	§Y{args:ideas:6:name}§!:
+		{modifier_to_string = args:ideas:6:modifier}
+	§Y{args:ideas:7:name}§!:
+		{modifier_to_string = args:ideas:7:modifier}
 "
 	}
 }
@@ -23,7 +24,6 @@ new effect form_hold = {
 	args = country
 	transpile = {
 		change_tag = args:tag
-		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
 		
 		hidden_effect = {
@@ -38,6 +38,8 @@ new effect form_hold = {
 		}
 		
 		elector = yes
+		
+		swap_free_idea_group = yes
 	}
 }
 new effect starting_ruler = {

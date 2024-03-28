@@ -81,10 +81,71 @@ WE are the children of Skyrim."
 				picture = northwatch_eventPicture
 				is_triggered_only = yes
 				options = {
-					{
-						name = ""
+					{ #Felhvalstag - Cold Whale Castle
+						name = "A Fortress to rule the waves"
 						effect = {
-						
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Felhvalstag"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Lurag-Nool - Tribe of Giants
+						name = "A permanent camp for the giants"
+						effect = {
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Lurag-Nool"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Orkvulkstag - Orc-Folk Castle
+						name = "It can serve as an embassy for the orcs of the west"
+						effect = {
+							new_custom_tooltip = "Will be locked into the §YOrsinium Path§! of the Wrothgar Missions"
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Orkvulkstag"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Hlardstrad Fortress - Bloody-River Fortress
+						name = "It can serve for future conquests to the west"
+						effect = {
+							new_custom_tooltip = "Will be locked into the §YJehanna Path§! of the Wrothgar Missions"
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Hlardstrad"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Center of Torture
+						name = "The Scaled Justice require additional locations"
+						effect = {
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Center of Torture"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
 						}
 					}
 				}
