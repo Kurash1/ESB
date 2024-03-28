@@ -1,0 +1,63 @@
+new class mercenary_company = {
+	id = `{this:id}`
+	list = mercenary_companies
+	args = {
+		name = string
+		desc = string?
+		sprites = block?
+		
+		regiments_per_development = float
+		cost_modifier = float
+		
+		home_province = province?
+		
+		cavalry_weight = float
+		artillery_weight = float
+		cavalry_cap = int?
+		
+		trigger = named_trigger
+		modifier = named_modifier?
+		
+		counts_towards_force_limit = bool?
+		min_size = int?
+		max_size = int?
+		manpower_pool = int?
+		no_additional_manpower_from_max_size = bool?
+	}
+	simple_transpile = {
+		file = common/mercenary_companies/arc.txt
+		each = {
+			new localisation `{this:id}` = "{this:name}"
+			this:id = {
+				when [exists = this:desc] {
+					new localisation `{this:id}_desc` = "{this:desc}"
+					mercenary_desc_key = `{this:id}_desc`
+				}
+				when [exists = this:sprites] {
+					sprites = {
+						this:sprites
+					}
+				}
+				regiments_per_development = this:regiments_per_development
+				cost_modifier = this:cost_modifier
+				when [exists = this:home_province] `home_province = {this:home_province}`
+				cavalry_weight = this:cavalry_weight
+				artillery_weight = this:artillery_weight
+				when [exists = this:cavalry_cap] `cavalry_cap = {this:cavalry_cap}`
+				trigger = {
+					this:trigger
+				}
+				when [exists = this:modifier] {
+					modifier = {
+						this:modifier
+					}
+				}
+				when [exists = this:counts_towards_force_limit] `counts_towards_force_limit = {this:counts_towards_force_limit}`
+				when [exists = this:min_size] `min_size = {this:min_size}`
+				when [exists = this:max_size] `max_size = {this:max_size}`
+				when [exists = this:manpower_pool] `manpower_pool = {this:manpower_pool}`
+				when [exists = this:no_additional_manpower_from_max_size] `no_additional_manpower_from_max_size = {this:no_additional_manpower_from_max_size}`
+			}
+		}
+	}
+}
