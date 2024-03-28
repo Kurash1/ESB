@@ -41,22 +41,24 @@ new custom_text_box survey_fund_sum_text = {
 	name = "Balance"
 }
 new customizable_localization GetSurveyFundSum = {
-	{
-		text = "§R[This.survey_monthly_funds.GetValue]§!"
-		trigger = {
-			&survey_monthly_funds < 0
+	texts = {
+		{
+			text = "§R[This.survey_monthly_funds.GetValue]§!"
+			trigger = {
+				&survey_monthly_funds < 0
+			}
 		}
-	}
-	{
-		text = "§G+[This.survey_monthly_funds.GetValue]§!"
-		trigger = {
-			&survey_monthly_funds > 0
+		{
+			text = "§G+[This.survey_monthly_funds.GetValue]§!"
+			trigger = {
+				&survey_monthly_funds > 0
+			}
 		}
-	}
-	{
-		text = "§Y[This.survey_monthly_funds.GetValue]§!"
-		trigger = {
-			always = yes
+		{
+			text = "§Y[This.survey_monthly_funds.GetValue]§!"
+			trigger = {
+				always = yes
+			}
 		}
 	}
 }

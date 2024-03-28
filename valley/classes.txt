@@ -82,8 +82,54 @@ new class naval_doctrine = {
 		new localisation `{this:id}_desc` = `{this:desc}`
 	}
 }
-
-
+new struct defined_text = {
+	args = {
+		text = string?
+		key = string?
+		trigger = named_trigger?
+	}
+}
+new class customizable_localization = {
+	id = `{this:id}`
+	list = customizable_localizations
+	default = {
+		texts = { }
+	}
+	args = {
+		random = bool?
+		texts = list<defined_text>
+	}
+	simple_transpile = {
+		file = customizable_localization/arc.txt
+		each = {
+			defined_text = {
+				name = this:id
+				when [exists = this:random] `random = {this:random}`
+				
+				new named_int $i = 1
+				foreach $text in this:texts {
+					text = {
+						when [exists = $text:text] {						
+							new localisation `{this:id}_text_{$i}` = "{$text:text}"
+							localisation_key = `{this:id}_text_{$i}`
+							$i += 1
+						}
+						when [exists = $text:key] {
+							localisation_key = `{$text:key}`
+						}
+						
+						when [exists = $text:trigger] {
+							trigger = {
+								$text:trigger
+							}
+						}
+					}
+				}
+				delete = $i
+			}
+		}
+	}
+}
 new class script_variable = {
 	list = variables
 	args = {

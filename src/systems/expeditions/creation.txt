@@ -26,7 +26,7 @@ new effect create_expedition = {
 		
 		set_province_flag = args:id
 		
-		customizable_localizations:GetExpeditionTitle += {
+		customizable_localizations:GetExpeditionTitle:texts += {
 			{
 				text = args:name
 				trigger =* {
@@ -34,7 +34,7 @@ new effect create_expedition = {
 				}
 			}
 		}
-		customizable_localizations:GetExpeditionDesc += {
+		customizable_localizations:GetExpeditionDesc:texts += {
 			{
 				text = args:desc
 				trigger =* {
@@ -91,7 +91,7 @@ new effect create_expedition = {
 		
 		set_province_flag = args:id
 		
-		customizable_localizations:GetExpeditionTitle += {
+		customizable_localizations:GetExpeditionTitle:texts += {
 			{
 				text = args:name
 				trigger =* {
@@ -99,7 +99,7 @@ new effect create_expedition = {
 				}
 			}
 		}
-		customizable_localizations:GetExpeditionDesc += {
+		customizable_localizations:GetExpeditionDesc:texts += {
 			{
 				text = args:desc
 				trigger =* {

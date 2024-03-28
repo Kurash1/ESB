@@ -6,14 +6,16 @@ new effect define_expedition_random_event = {
 	}
 	transpile = {
 		new customizable_localization `GetExpeditionEvent{expedition_random_event_count}` = {
-			{
-				text =* "\n	*args:event:title*"
-				trigger = args:event:trigger
-			}
-			{
-				text = ""
-				trigger = {
-					always = yes
+			texts = {
+				{
+					text =* "\n	*args:event:title*"
+					trigger = args:event:trigger
+				}
+				{
+					text = ""
+					trigger = {
+						always = yes
+					}
 				}
 			}
 		}

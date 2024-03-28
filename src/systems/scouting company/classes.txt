@@ -53,7 +53,7 @@ new class survey = {
 			}
 		}
 		
-		customizable_localizations:GetActiveSurvey += {
+		customizable_localizations:GetActiveSurvey:texts += {
 			{
 				text = this:name
 				trigger =* {

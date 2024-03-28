@@ -1,0 +1,115 @@
+new customizable_localization GetTributaryOverlord = {
+	texts = {
+		{
+			text = "Son of Heaven"
+			trigger = {
+				is_emperor_of_china = yes
+				is_female = no
+			}
+		}
+		{
+			text = "Daughter of Heaven"
+			trigger = {
+				is_emperor_of_china = yes
+				is_female = yes
+			}
+		}
+		{
+			text = "Overlord"
+			trigger = {
+				is_emperor_of_china = no
+			}
+		}
+	}
+}
+new customizable_localization GetGovernmentSupporters = {
+	texts = {
+		{
+			text = "royalist"
+			trigger = {
+				government = monarchy
+			}
+		}
+		{
+			text = "khanzada"
+			trigger = {
+				has_reform = steppe_horde
+			}
+		}
+		{
+			text = "royalist"
+			trigger = {
+				government = tribal
+			}
+		}
+		{
+			text = "republican"
+			trigger = {
+				government = republic
+			}
+		}
+		{
+			text = "clergy"
+			trigger = {
+				government = theocracy
+			}
+		}
+	}
+}
+new customizable_localization GetNoblesReplacementForOtherGovernments = {
+	texts = {
+		{
+			text = "Nobles"
+			trigger = {
+				NOT = { government = republic }
+			}
+		}
+		{
+			text = "Influential Families"
+			trigger = {
+				government = republic
+			}
+		}
+	}
+}
+new customizable_localization GetRoyalOrState = {
+	texts = {
+		{
+			text = "Royal"
+			trigger = {
+				NOT = { government = republic }
+			}
+		}
+		{
+			text = "State"
+			trigger = {
+				government = republic
+			}
+		}
+	}
+}
+new customizable_localization GetStateForm = {
+	texts = {
+		{
+			text = "Crown"
+			trigger = {
+				government = monarchy
+			}
+		}
+		{
+			text = "Council"
+			trigger = {
+				government = republic
+			}
+		}
+		{
+			text = "[This.GovernmentName]"
+			trigger = {
+				NOT = {
+					government = monarchy
+					government = republic
+				}
+			}
+		}
+	}
+}
