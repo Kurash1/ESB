@@ -48,7 +48,7 @@ new great_project lunar_forge = {
 			shock_damage = 5%
 		}
 		on_upgraded = {
-			defineloc lunar_forge_reform = "Unlocks §YLunar Smithing§! Government Reform"
+			new localisation lunar_forge_reform = "Unlocks §YLunar Smithing§! Government Reform"
 			custom_tooltip = lunar_forge_reform
 		}
 	}

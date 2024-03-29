@@ -12,7 +12,7 @@ new mission_series fallowfire_5 = {
 			position = 0
 			icon = riding_duo_mission
 			effect = {
-				defineloc claim_elves_honrich = "§YFallowfire§! gains permanent §Yclaims§! on §Ylake Honrich§!'s elves"
+				new localisation claim_elves_honrich = "§YFallowfire§! gains permanent §Yclaims§! on §Ylake Honrich§!'s elves"
 				custom_tooltip = claim_elves_honrich
 				hidden_effect = {
 					areas:merryfair, areas:riften, areas:snow_shod, areas:heartwood, areas:faldar, areas:isle_of_gold, areas:redwater, areas:angarvunde, areas:trevas_watch [culture_group = snow_elven] {
@@ -71,7 +71,7 @@ new mission_series fallowfire_5 = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 			effect = {
-				defineloc claim_elves_all = "§YFallowfire§! gains permanent §Yclaims§! on §Yall§! snow elves' land"
+				new localisation claim_elves_all = "§YFallowfire§! gains permanent §Yclaims§! on §Yall§! snow elves' land"
 				custom_tooltip = claim_elves_all
 				hidden_effect = {
 					areas:ivarstead, areas:honeystrand, areas:trevas_mouth, areas:sarethi, areas:nilheim, areas:geirmund, areas:autumnwatch, areas:arcwind, areas:east_haemar [ culture_group = snow_elven ] {
@@ -175,7 +175,7 @@ new country_event fallowfire.3 = {
 		{
 			name = "No! We won't stop until every single elf is dead"
 			effect = {
-				defineloc staying_fallow = "Remain Fallowfire"
+				new localisation staying_fallow = "Remain Fallowfire"
 			}
 		}
 	}

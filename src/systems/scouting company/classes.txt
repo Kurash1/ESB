@@ -15,6 +15,9 @@ new class survey = {
 				NOT = {
 					has_country_flag = surveyed_*this:id*
 				}
+				surveys:*this:id*:province_group = {
+					NOT = { has_discovered = ROOT }
+				}
 			}
 			trigger =* {
 				NOT = {
@@ -44,7 +47,7 @@ new class survey = {
 						}
 						
 						if [has_discovered = PREV] {
-							&survey_temp /= 10
+							&survey_temp := 0
 						}
 						
 						&survey_length += survey_temp

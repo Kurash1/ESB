@@ -89,7 +89,7 @@ new estate warriors = {
 			icon = privilege_peasant
 			loyalty = 0.1
 			on_granted = {
-				defineloc warrior_retirement_homes_grant_tooltip = "Every owned province producing §YFur§! or §YWood§! gains:
+				new localisation warrior_retirement_homes_grant_tooltip = "Every owned province producing §YFur§! or §YWood§! gains:
 {modifier_to_string = {
 	local_tax_modifier = 0.15
 	local_autonomy = 0.05
@@ -97,7 +97,7 @@ new estate warriors = {
 				custom_tooltip = warrior_retirement_homes_grant_tooltip
 			}
 			on_revoked = {
-				defineloc warrior_retirement_homes_revoke_tooltip = "The modifier §YWarrior Retirement Homes§! is removed from all owned provinces."
+				new localisation warrior_retirement_homes_revoke_tooltip = "The modifier §YWarrior Retirement Homes§! is removed from all owned provinces."
 				custom_tooltip = warrior_retirement_homes_revoke_tooltip
 			}
 			on_granted_province = {
