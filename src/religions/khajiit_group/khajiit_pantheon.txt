@@ -1,0 +1,46 @@
+new religion khajiit_pantheon = {
+	name = "Khajiit Pantheon"
+	desc = ""
+	icon = 1
+	color = {
+		0 0 0
+	}
+	heretic = {
+		OLD_GODS_CULT_HERETIC
+	}
+	country = { }
+	province = { }
+	religious_group = khajiit_group
+	
+	papacy = {
+		papal_tag = countries:black_mountain
+		election_cost = 5
+		seat_of_papacy = provinces:black_mountain
+		
+		
+		#Council of Trent Positions
+		harsh = { }
+		neutral = { }
+		concilatory = { }
+		
+		#Council of Trent Concessions
+		concessions = {
+			first_concession = {
+				harsh = { }	
+				concilatory = { }
+			}
+			second_concession = {
+				harsh = { }	
+				concilatory = { }
+			}
+			third_concession = {
+				harsh = { }	
+				concilatory = { }
+			}
+			fourth_concession = {
+				harsh = { }	
+				concilatory = { }
+			}
+		}
+	}
+}

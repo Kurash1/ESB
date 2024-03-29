@@ -54,9 +54,11 @@ mission_trees:solitude += {
 		}
 		effect = {
 			if [ai = yes] {
-				add_base_tax = 3
-				add_base_production = 2
-				add_base_manpower = 2
+				provinces:solitude = {
+					add_base_tax = 3
+					add_base_production = 2
+					add_base_manpower = 2
+				}
 			}
 			define_advisor = {
 				type = treasurer
@@ -115,12 +117,22 @@ mission_trees:solitude += {
 			castle_upon_the_hill
 		}
 		trigger = {
-			provinces:solitude = {
-				province_has_center_of_trade_of_level = 2
+			if [ai = yes] {
+				ags = 25
+			}
+			else {
+				provinces:solitude = {
+					province_has_center_of_trade_of_level = 2
+				}
 			}
 		}
 		effect = {
-			unlock_poetic_edda_modifier = ode_to_the_founding
+			if [ai = yes] {
+				provinces:solitude = {
+					add_center_of_trade_level = 1
+				}
+			}
+			
 			new_custom_tooltip = "[{provinces:solitude}.GetName] renamed to §YSolitude§!.
 [{provinces:red_port}.GetName] renamed to §YRed-Port§!.
 
