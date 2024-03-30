@@ -6,6 +6,10 @@ new named_effect survey_calculate_active_survey = {
 		&survey_temp &= modifier:survey_speed
 		&survey_temp *= survey_manpower
 		&survey_temp *= SURVEY_BASE_SURVEY_SPEED
+		&survey_temp_2 := survey_leader_mil
+		&survey_temp_2 *= 0.05
+		&survey_temp_2 += 1
+		&survey_temp *= survey_temp_2
 		&survey_progress += survey_temp
 		
 		&survey_progress_percentage := survey_progress

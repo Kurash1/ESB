@@ -24,6 +24,9 @@ new named_effect survey_calculate_recruits = {
 		&survey_monthly_recruits_base /= 600
 		
 		&survey_temp &= modifier:survey_recruit_rate
+		&survey_temp_2 := survey_leader_dip
+		&survey_temp_2 *= 0.05
+		&survey_temp += survey_temp_2
 		&survey_monthly_recruits_base *= survey_temp
 		
 		# to thousand rate

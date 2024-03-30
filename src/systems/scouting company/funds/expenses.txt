@@ -10,35 +10,47 @@ new named_effect survey_calculate_expenses = {
 	&survey_recruitment_costs *= SURVEY_RECRUIT_COST
 	
 	&survey_temp := 1
+	
 	&survey_temp_2 &= modifier:scouts_recruitment_cost_efficiency
-	&survey_temp -= survey_temp_2
+	&survey_temp += survey_temp_2
+	
+	&survey_temp_2 := survey_leader_dip
+	&survey_temp_2 *= 0.05
+	&survey_temp += survey_temp_2
+	
 	if [&survey_temp < 0.1] {
 		&survey_temp := 0.1
 	}
 	
-	&survey_recruitment_costs *= survey_temp
+	&survey_recruitment_costs /= survey_temp
 	
 	&survey_monthly_expenses += survey_recruitment_costs
 	
 	#Administrative Costs
 	#
-	# modifier:scouts_administrative_cost * modifier:scouts_administrative_cost_modifier
+	# modifier:scouts_administrative_cost * modifier:scouts_administrative_cost_modifier * (Adm * -0.05)
 	#
 	&survey_administrative_costs &= modifier:scouts_administrative_cost
 	
 	&survey_temp &= modifier:scouts_administrative_cost_modifier
+	&survey_temp_2 := survey_leader_adm
+	&survey_temp_2 *= -0.05
+	&survey_temp += survey_temp_2
 	&survey_administrative_costs *= survey_temp
 	
 	&survey_monthly_expenses += survey_administrative_costs
 	
 	#Maintenance
 	#
-	# Stacks * SURVEY_MAINTENANCE_PER_STACK * modifier:scouts_maintenance_cost_modifier
+	# Stacks * SURVEY_MAINTENANCE_PER_STACK * modifier:scouts_maintenance_cost_modifier * (Adm * -0.05)
 	#
 	&survey_scout_maintenance := survey_manpower
 	&survey_scout_maintenance *= SURVEY_MAINTENANCE_PER_STACK
 	
 	&survey_temp &= modifier:scouts_maintenance_cost_modifier
+	&survey_temp_2 := survey_leader_adm
+	&survey_temp_2 *= -0.05
+	&survey_temp += survey_temp_2
 	&survey_scout_maintenance *= survey_temp
 	
 	&survey_monthly_expenses += survey_scout_maintenance

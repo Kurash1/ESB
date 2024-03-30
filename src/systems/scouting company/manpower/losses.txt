@@ -54,6 +54,9 @@ new named_effect survey_calculate_losses = {
 	&survey_casualties *= SURVEY_CASUALTY_RATE
 	
 	&survey_temp &= modifier:scouts_casualty_reduction_modifier
+	&survey_temp_2 := survey_leader_mil
+	&survey_temp_2 *= 0.05
+	&survey_temp += survey_temp_2
 	if [&survey_temp > 0] { &survey_temp := 0 }
 	&survey_temp *= -1
 	&survey_casualties *= survey_temp
