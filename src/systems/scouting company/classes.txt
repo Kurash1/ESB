@@ -20,6 +20,10 @@ new class survey = {
 				}
 			}
 			trigger =* {
+				has_global_modifier_value = {
+					which = may_explore
+					value = 1
+				}
 				NOT = {
 					has_country_modifier = currently_surveying
 				}
