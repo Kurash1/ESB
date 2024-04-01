@@ -9,6 +9,8 @@ new effect create_expedition = {
 		event = event
 	}
 	transpile = {
+		 	add_cardinal = yes
+		
 		set_province_flag = expedition_target
 		
 		set_variable = {
@@ -74,6 +76,8 @@ new effect create_expedition = {
 		on_complete = effect
 	}
 	transpile = {
+		 	add_cardinal = yes
+		
 		set_province_flag = expedition_target
 		
 		set_variable = {

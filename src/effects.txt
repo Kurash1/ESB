@@ -2,6 +2,8 @@ new effect preview_idea_group = {
 	args = idea_group
 	transpile = {
 		new_custom_tooltip = "§Y{args:name} Ideas§!:
+	§YTraditions§!:
+		{modifier_to_string = args:start}
 	§Y{args:ideas:1:name}§!:
 		{modifier_to_string = args:ideas:1:modifier}
 	§Y{args:ideas:2:name}§!:
@@ -16,6 +18,8 @@ new effect preview_idea_group = {
 		{modifier_to_string = args:ideas:6:modifier}
 	§Y{args:ideas:7:name}§!:
 		{modifier_to_string = args:ideas:7:modifier}
+	§YAmbition§!:
+		{modifier_to_string = args:bonus}
 "
 	}
 }
