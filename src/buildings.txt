@@ -224,11 +224,8 @@ new building_line production = {
 	time = 12
 	x = 20
 	y = 234
+	allow_in_gold_provinces = no
 	build_trigger = {
-		NOT = {
-			has_trade_goods = gold
-			has_trade_goods = silver
-		}
 		FROM = {
 			has_global_modifier_value = {
 				which = production_line
