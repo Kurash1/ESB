@@ -16,32 +16,33 @@ new class customizable_localization = {
 		texts = list<defined_text>
 	}
 	simple_transpile = {
-		file = customizable_localization/arc.txt
-		each = {
-			defined_text = {
-				name = this:id
-				when [exists = this:random] `random = {this:random}`
-				
-				new named_int $i = 1
-				foreach $text in this:texts {
-					text = {
-						when [exists = $text:text] {						
-							new localisation `{this:id}_text_{$i}` = "{$text:text}"
-							localisation_key = `{this:id}_text_{$i}`
-							$i += 1
-						}
-						when [exists = $text:key] {
-							localisation_key = `{$text:key}`
-						}
-						
-						when [exists = $text:trigger] {
-							trigger = {
-								$text:trigger
+		write_file "customizable_localization/arc.txt" = {
+			foreach $custom in customizable_localizations {
+				defined_text = {
+					name = $custom:id
+					when [exists = $custom:random] `random = {$custom:random}`
+					
+					new named_int $i = 1
+					foreach $text in $custom:texts {
+						text = {
+							when [exists = $text:text] {						
+								new localisation `{$custom:id}_text_{$i}` = "{$text:text}"
+								localisation_key = `{$custom:id}_text_{$i}`
+								$i += 1
+							}
+							when [exists = $text:key] {
+								localisation_key = `{$text:key}`
+							}
+							
+							when [exists = $text:trigger] {
+								trigger = {
+									$text:trigger
+								}
 							}
 						}
 					}
+					delete = $i
 				}
-				delete = $i
 			}
 		}
 	}
