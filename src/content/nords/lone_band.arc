@@ -1,5 +1,5 @@
 new decision decision_a = {
-	name = "Decision A"
+	name = "Decision Paul"
 	potential = {
 		ai = no
 		NOT = { 
@@ -10,7 +10,7 @@ new decision decision_a = {
 		set_global_flag = pressed_decision_a
 		
 		quick_country_modifier = {
-			name = ""
+			name = "Paul"
 			modifier = {
 				manpower_recovery_speed = 0.25
 				discipline = 1.5
@@ -23,7 +23,7 @@ new decision decision_a = {
 	}
 }
 new decision decision_b = {
-	name = "Decision B"
+	name = "Decision Kurashi"
 	potential = {
 		ai = no
 		NOT = { 
@@ -34,7 +34,7 @@ new decision decision_b = {
 		set_global_flag = pressed_decision_b
 		
 		quick_country_modifier = {
-			name = ""
+			name = "Kurashi"
 			modifier = {
 				development_cost = 0.2
 				movement_speed = 2
