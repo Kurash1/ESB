@@ -116,7 +116,7 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 				is_triggered_only = yes
 				options = {
 					{
-						name = "There shall we study the ways of war."
+						name = "There shall we study the ways of war"
 						effect = {
 							provinces:hraggstad = {
 								quick_province_modifier = {
@@ -131,7 +131,7 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 						}
 					}
 					{
-						name = "Let us focus our smiths there, and develop an arms industry."
+						name = "Let us focus our smiths there, and develop an arms industry"
 						effect = {
 							provinces:hraggstad = {
 								quick_province_modifier = {
@@ -145,7 +145,7 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 						}
 					}
 					{
-						name = "Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key."
+						name = "Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key"
 						effect = {
 							new_custom_tooltip = "Unlocks §YSinging-Cavalry§! Unit"
 							set_country_flag = unlocks_singing_cavalry
@@ -181,8 +181,11 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 			}
 		
 			country_event = haafingar.2
-			new_custom_tooltip = "§GEvent Insight§!
-This event will allow us to choose the settlment focus for Hraggstad."
+			show_event_insights = {
+				tooltip = "This event will allow us to choose the settlment focus for Hraggstad."
+				event = haafingar.2
+				show_options = yes
+			}
 		}
 	}
 	shadowgreen_cavern = {

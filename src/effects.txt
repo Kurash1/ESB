@@ -1,3 +1,25 @@
+new effect show_event_insights = {
+	args = {
+		tooltip = string
+		event = event
+		show_options = bool
+	}
+	transpile = {
+		new_custom_tooltip = "§GEvent Insight§!
+{args:tooltip}"
+		when [bool:equals = {
+			bool = args:show_options
+			value = yes
+		}] {
+			foreach $option in args:event:options {
+				new_custom_tooltip = "§T{$option:name}§!:"
+				tooltip = {
+					$option:effect
+				}
+			}
+		}
+	}
+}
 new effect preview_idea_group = {
 	args = idea_group
 	transpile = {
