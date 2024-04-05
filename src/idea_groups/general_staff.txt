@@ -54,7 +54,9 @@ new idea_group generalstab0 = {
 			name = "Logistics Expansion"
 			desc = "By expanding our logistics lines, we can afford to have more capable generals leading our armies, ensuring victory on the battlefield."
 			modifier = {
-				army_tradition = 1.5
+				army_tradition = 0.5
+				army_line = 1
+				road_line = 1
 			}
 		}
 	}
@@ -95,7 +97,8 @@ new idea_group defensive_ideas = {
 			name = "Regimental System"
 			desc = "By organizing our armies into regiments tied to distinct geographical areas we can allow the army to put down roots in the community. Thus when we come to raise more battalions for our regiments they will be able to be recruited faster."
 			modifier = {
-				land_maintenance_modifier = -0.05
+				land_maintenance_modifier = -0.1
+				army_line = 1
 			}
 		}
 		{
@@ -118,6 +121,7 @@ new idea_group defensive_ideas = {
 			desc = "Traditionally we were unable to fight effectively in lands that did not supply a lot of food. However, our troops have become better at acquiring food allowing larger armies to fight."
 			modifier = {
 				land_attrition = -0.25
+				goods_line = 1
 			}
 		}
 	}
@@ -167,6 +171,7 @@ new idea_group offensive_ideas = {
 			desc = "Allows us to gather the greatest minds our nation has to offer in the area of military technology and make use of their unrivalled services."
 			modifier = {
 				siege_ability = 0.25
+				production_line = 1
 			}
 		}
 		{
@@ -174,6 +179,7 @@ new idea_group offensive_ideas = {
 			desc = "Allows us to create one of the largest and most powerful armies the world has ever seen."
 			modifier = {
 				land_forcelimit_modifier = 0.15
+				army_line = 1
 			}
 		}
 		{
@@ -199,7 +205,8 @@ new idea_group mobility_ideas = {
 			name = "Athletics"
 			desc = "Rigorous physical training ensures our soldiers have both speed and stamina to be where they need to be faster. "
 			modifier = {
-				movement_speed = 0.15
+				movement_speed = 0.1
+				road_line = 1
 			}
 		}
 		{
@@ -238,6 +245,7 @@ new idea_group mobility_ideas = {
 			modifier = {
 				cavalry_flanking = 0.25
 				cavalry_power = 0.1
+				trade_line = 1
 			}
 		}
 		{

@@ -8,22 +8,27 @@ new decision hold_of_the_sea = {
 		}
 	}
 	provinces_to_highlight = {
+		province_is_on_an_island = yes
 		OR = {
-			province_id = lone_isle
-			province_id = ice_isle
-			province_id = rock_isle
-			province_id = mundall
-			province_id = edinmund
+			region = haafingar
+			region = pale
+			region = winterhold
 		}
 		NOT = { owned_by = ROOT }
 	}
 	allow = {
-		provinces:lone_isle, provinces:ice_isle, provinces:rock_isle, provinces:mundall, provinces:edinmund = {
-			owned_by = ROOT
+		num_of_owned_provinces_with = {
+			value = 5
+			province_is_on_an_island = yes
+			OR = {
+				region = haafingar
+				region = pale
+				region = winterhold
+			}
 		}
 	}
 	effect = {
-		provinces:gold_isle, provinces:rugged_island, provinces:castle_volkihar, provinces:big_sister, provinces:small_sister, provinces:goldvild, provinces:yngvild, provinces:erdlaith, provinces:svangljot, provinces:serpent_stone, provinces:japhets_folly, provinces:bleakrock_isle = {
+		regions:haafingar; pale; winterhold [province_is_on_an_island = yes] {
 			add_permanent_claim = ROOT
 		}
 		set_country_flag = hold_of_the_sea

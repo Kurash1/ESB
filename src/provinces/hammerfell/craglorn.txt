@@ -1,0 +1,1362 @@
+new inheritable craglorn_imp = {
+	position = {
+		1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	name = ""
+	history = {
+	}
+	impassible = yes
+}
+
+new province craglorn_imp_1 = {
+	inherit = craglorn_imp
+	color = {
+		29 11 15
+	}
+}
+new province craglorn_imp_2 = {
+    inherit = craglorn_imp
+    color = { 13 2 19 }
+}
+new province craglorn_imp_3 = {
+    inherit = craglorn_imp
+    color = { 10 3 28 }
+}
+new province craglorn_imp_4 = {
+    inherit = craglorn_imp
+    color = { 19 25 24 }
+}
+new province craglorn_imp_5 = {
+    inherit = craglorn_imp
+    color = { 22 19 6 }
+}
+new province craglorn_imp_6 = {
+    inherit = craglorn_imp
+    color = { 14 11 5 }
+}
+new province craglorn_imp_7 = {
+    inherit = craglorn_imp
+    color = { 3 25 1 }
+}
+new province craglorn_imp_8 = {
+    inherit = craglorn_imp
+    color = { 3 1 19 }
+}
+new province craglorn_imp_9 = {
+    inherit = craglorn_imp
+    color = { 21 19 6 }
+}
+new province craglorn_imp_10 = {
+    inherit = craglorn_imp
+    color = { 29 9 27 }
+}
+new province craglorn_imp_11 = {
+    inherit = craglorn_imp
+    color = { 20 8 2 }
+}
+new province craglorn_imp_12 = {
+    inherit = craglorn_imp
+    color = { 16 20 13 }
+}
+new province craglorn_imp_13 = {
+    inherit = craglorn_imp
+    color = { 7 10 12 }
+}
+
+
+new inheritable craglorn_inherit = {
+	position = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
+	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
+	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
+	history = {
+		religion = cult_of_the_stars
+		culture = duraki
+	}
+}
+
+new area elinhir = {
+	name = "Elinhir"
+	region = craglorn
+}
+new province elinhir = {
+	name = "Elinhir"
+    inherit = craglorn_inherit
+    color = { 242 217 151 }
+	position = {
+        1571.000 1752.000 1571.000 1752.000 1571.000 1752.000 1571.000 1752.000 1571.000 1752.000 1571.000 1752.000 1571.000 1752.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = elinhir
+	history += {
+		history_owner = blood_kingdom
+		history_trade_goods = mag_goods
+		center_of_trade = 1
+	}
+}
+new province armok = {
+	name = "Armok"
+    inherit = craglorn_inherit
+    color = { 141 255 189 }
+	position = {
+        1559.000 1749.000 1559.000 1749.000 1559.000 1749.000 1559.000 1749.000 1559.000 1749.000 1559.000 1749.000 1559.000 1749.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = elinhir
+	history += {
+		history_owner = blood_kingdom
+		history_trade_goods = stone
+	}
+}
+new province durac = {
+	name = "Durac"
+    inherit = craglorn_inherit
+    color = { 158 143 185 }
+	position = {
+        1563.000 1767.000 1563.000 1767.000 1563.000 1767.000 1563.000 1767.000 1563.000 1767.000 1563.000 1767.000 1563.000 1767.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = elinhir
+	history += {
+		history_owner = blood_kingdom
+		history_trade_goods = wood
+	}
+}
+new province gaaralan = {
+	name = "Gaaralan"
+    inherit = craglorn_inherit
+    color = { 211 122 123 }
+	position = {
+        1576.000 1764.000 1576.000 1764.000 1576.000 1764.000 1576.000 1764.000 1576.000 1764.000 1576.000 1764.000 1576.000 1764.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = elinhir
+	history += {
+		history_owner = blood_kingdom
+		history_trade_goods = stone
+	}
+}
+
+new area molavar = {
+	name = "Molavar"
+	region = craglorn
+}
+new province molavar = {
+	name = "Molavar"
+    inherit = craglorn_inherit
+    color = { 248 125 147 }
+	position = {
+        1550.000 1761.000 1550.000 1761.000 1550.000 1761.000 1550.000 1761.000 1550.000 1761.000 1550.000 1761.000 1550.000 1761.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = molavar
+	history += {
+		history_owner = blood_kingdom
+		history_trade_goods = gems
+	}
+}
+new province conflagrant_anomaly = {
+	name = "Conflagrant Anomaly"
+    inherit = craglorn_inherit
+    color = { 174 249 102 }
+	position = {
+        1547.000 1773.000 1547.000 1773.000 1547.000 1773.000 1547.000 1773.000 1547.000 1773.000 1547.000 1773.000 1547.000 1773.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = molavar
+	history += {
+		history_owner = blood_kingdom
+		history_trade_goods = stone
+	}
+}
+new province haddocks_market = {
+	name = "Haddock's Market"
+    inherit = craglorn_inherit
+    color = { 208 107 218 }
+	position = {
+        1531.000 1769.000 1531.000 1769.000 1531.000 1769.000 1531.000 1769.000 1531.000 1769.000 1531.000 1769.000 1531.000 1769.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = molavar
+	history += {
+		history_owner = spirit_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province bloodroot_forge = {
+	name = "Bloodroot Forge"
+    inherit = craglorn_inherit
+    color = { 112 135 222 }
+	position = {
+        1538.000 1755.000 1538.000 1755.000 1538.000 1755.000 1538.000 1755.000 1538.000 1755.000 1538.000 1755.000 1538.000 1755.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert_hills
+	area = molavar
+	history += {
+		history_owner = blood_kingdom
+		history_trade_goods = r_metals
+	}
+}
+
+new area balamath = {
+	name = "Balamath"
+	region = craglorn
+}
+new province aetherian_archive = {
+	name = "Aetherian Archive"
+    inherit = craglorn_inherit
+    color = { 110 156 103 }
+	position = {
+        1569.000 1782.000 1569.000 1782.000 1569.000 1782.000 1569.000 1782.000 1569.000 1782.000 1569.000 1782.000 1569.000 1782.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = balamath
+	history += {
+		history_owner = frost_kingdom
+		history_trade_goods = mag_goods
+	}
+}
+new province fulminant_anomaly = {
+	name = "Fulminant Anomaly"
+    inherit = craglorn_inherit
+    color = { 199 184 220 }
+	position = {
+        1558.000 1786.000 1558.000 1786.000 1558.000 1786.000 1558.000 1786.000 1558.000 1786.000 1558.000 1786.000 1558.000 1786.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = balamath
+	history += {
+		history_owner = frost_kingdom
+		history_trade_goods = stone
+	}
+}
+new province balamath = {
+	name = "Balamath"
+    inherit = craglorn_inherit
+    color = { 233 240 157 }
+	position = {
+        1562.000 1800.000 1562.000 1800.000 1562.000 1800.000 1562.000 1800.000 1562.000 1800.000 1562.000 1800.000 1562.000 1800.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = balamath
+	history += {
+		history_owner = frost_kingdom
+		history_trade_goods = mag_goods
+	}
+}
+new province inazzurs_hold = {
+	name = "Inazzur's Hold"
+    inherit = craglorn_inherit
+    color = { 253 134 116 }
+	position = {
+        1552.000 1808.000 1552.000 1808.000 1552.000 1808.000 1552.000 1808.000 1552.000 1808.000 1552.000 1808.000 1552.000 1808.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = balamath
+	history += {
+		history_owner = shadow_kingdom
+		history_trade_goods = arms
+	}
+}
+new province chiselshriek_mine = {
+	name = "Chiselshriek Mine"
+    inherit = craglorn_inherit
+    color = { 141 174 109 }
+	position = {
+        1541.000 1820.000 1541.000 1820.000 1541.000 1820.000 1541.000 1820.000 1541.000 1820.000 1541.000 1820.000 1541.000 1820.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = balamath
+	history += {
+		history_owner = shadow_kingdom
+		history_trade_goods = c_metals
+	}
+}
+
+new area haakon = {
+	name = "Haakon"
+	region = craglorn
+}
+new province haakon = {
+	name = "Haakon"
+    inherit = craglorn_inherit
+    color = { 112 244 207 }
+	position = {
+        1542.000 1795.000 1542.000 1795.000 1542.000 1795.000 1542.000 1795.000 1542.000 1795.000 1542.000 1795.000 1542.000 1795.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert_hills
+	area = haakon
+	history += {
+		history_owner = shadow_kingdom
+		history_trade_goods = c_metals
+	}
+}
+new province rkundzelft = {
+	name = "Rkundzelft"
+    inherit = craglorn_inherit
+    color = { 110 137 238 }
+	position = {
+        1536.000 1783.000 1536.000 1783.000 1536.000 1783.000 1536.000 1783.000 1536.000 1783.000 1536.000 1783.000 1536.000 1783.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = haakon
+	history += {
+		history_owner = shadow_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province cyclonic_anomaly = {
+	name = "Cyclonic Anomaly"
+    inherit = craglorn_inherit
+    color = { 195 175 130 }
+	position = {
+        1535.000 1808.000 1535.000 1808.000 1535.000 1808.000 1535.000 1808.000 1535.000 1808.000 1535.000 1808.000 1535.000 1808.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert_hills
+	area = haakon
+	history += {
+		history_owner = shadow_kingdom
+		history_trade_goods = stone
+	}
+}
+new province nhalan = {
+	name = "Nhalan"
+    inherit = craglorn_inherit
+    color = { 150 193 227 }
+	position = {
+        1527.000 1797.000 1527.000 1797.000 1527.000 1797.000 1527.000 1797.000 1527.000 1797.000 1527.000 1797.000 1527.000 1797.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = haakon
+	history += {
+		history_owner = shadow_kingdom
+		history_trade_goods = livestock
+	}
+}
+
+new area belkarth = {
+	name = "Belkarth"
+	region = craglorn
+}
+new province belkarth = {
+	name = "Belkarth"
+    inherit = craglorn_inherit
+    color = { 115 156 243 }
+	position = {
+        1523.000 1756.000 1523.000 1756.000 1523.000 1756.000 1523.000 1756.000 1523.000 1756.000 1523.000 1756.000 1523.000 1756.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = belkarth
+	history += {
+		history_owner = spirit_kingdom
+		history_trade_goods = arms
+		center_of_trade = 1
+	}
+}
+new province lyrezi = {
+	name = "Lyrezi"
+    inherit = craglorn_inherit
+    color = { 155 172 158 }
+	position = {
+        1522.000 1742.000 1522.000 1742.000 1522.000 1742.000 1522.000 1742.000 1522.000 1742.000 1522.000 1742.000 1522.000 1742.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert_hills
+	area = belkarth
+	history += {
+		history_owner = spirit_kingdom
+		history_trade_goods = c_metals
+	}
+}
+new province reinholds_retreat = {
+	name = "Reinhold's Retreat"
+    inherit = craglorn_inherit
+    color = { 138 216 105 }
+	position = {
+        1511.000 1750.000 1511.000 1750.000 1511.000 1750.000 1511.000 1750.000 1511.000 1750.000 1511.000 1750.000 1511.000 1750.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = belkarth
+	history += {
+		history_owner = spirit_kingdom
+		history_trade_goods = stone
+	}
+}
+new province mortas = {
+	name = "Mortas"
+    inherit = craglorn_inherit
+    color = { 237 107 222 }
+	position = {
+        1514.000 1765.000 1514.000 1765.000 1514.000 1765.000 1514.000 1765.000 1514.000 1765.000 1514.000 1765.000 1514.000 1765.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = belkarth
+	history += {
+		history_owner = spirit_kingdom
+		history_trade_goods = livestock
+	}
+}
+
+new area spellscar = {
+	name = "Spellscar"
+	region = craglorn
+}
+new province hircines_haunt = {
+	name = "Hircine's Haunt"
+    inherit = craglorn_inherit
+    color = { 100 158 215 }
+	position = {
+        1512.000 1794.000 1512.000 1794.000 1512.000 1794.000 1512.000 1794.000 1512.000 1794.000 1512.000 1794.000 1512.000 1794.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = spellscar
+	history += {
+		history_owner = storm_kingdom
+		history_trade_goods = fur
+	}
+}
+new province spellscar = {
+	name = "Spellscar"
+    inherit = craglorn_inherit
+    color = { 156 252 189 }
+	position = {
+        1515.000 1809.000 1515.000 1809.000 1515.000 1809.000 1515.000 1809.000 1515.000 1809.000 1515.000 1809.000 1515.000 1809.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = spellscar
+	history += {
+		history_owner = shadow_kingdom
+		history_trade_goods = mag_goods
+	}
+}
+new province anka_ras_mettle = {
+	name = "Anka-Ra's Mettle"
+    inherit = craglorn_inherit
+    color = { 145 219 192 }
+	position = {
+        1494.000 1812.000 1494.000 1812.000 1494.000 1812.000 1494.000 1812.000 1494.000 1812.000 1494.000 1812.000 1494.000 1812.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = spellscar
+	history += {
+		history_owner = storm_kingdom
+		history_trade_goods = c_metals
+	}
+}
+new province zuatha = {
+	name = "Zuatha"
+    inherit = craglorn_inherit
+    color = { 153 160 102 }
+	position = {
+        1496.000 1802.000 1496.000 1802.000 1496.000 1802.000 1496.000 1802.000 1496.000 1802.000 1496.000 1802.000 1496.000 1802.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = spellscar
+	history += {
+		history_owner = storm_kingdom
+		history_trade_goods = stone
+	}
+}
+
+new area shavmar = {
+	name = "Shavmar"
+	region = craglorn
+}
+new province shavmar = {
+	name = "Shavmar"
+    inherit = craglorn_inherit
+    color = { 188 240 229 }
+	position = {
+        1503.000 1788.000 1503.000 1788.000 1503.000 1788.000 1503.000 1788.000 1503.000 1788.000 1503.000 1788.000 1503.000 1788.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = shavmar
+	history += {
+		history_owner = storm_kingdom
+		history_trade_goods = stone
+	}
+}
+new province styriche = {
+	name = "Styriche"
+    inherit = craglorn_inherit
+    color = { 228 126 242 }
+	position = {
+        1515.000 1777.000 1515.000 1777.000 1515.000 1777.000 1515.000 1777.000 1515.000 1777.000 1515.000 1777.000 1515.000 1777.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = shavmar
+	history += {
+		history_owner = spirit_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province zalgazs_den = {
+	name = "Zalgaz's Den"
+    inherit = craglorn_inherit
+    color = { 234 246 211 }
+	position = {
+        1499.000 1777.000 1499.000 1777.000 1499.000 1777.000 1499.000 1777.000 1499.000 1777.000 1499.000 1777.000 1499.000 1777.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = shavmar
+	history += {
+		history_owner = sun_kingdom
+		history_trade_goods = livestock
+	}
+}
+
+new area rahni_za = {
+	name = "Rahni'Za"
+	region = craglorn
+}
+new province scorpion_ravine = {
+	name = "Scorpion Ravine"
+    inherit = craglorn_inherit
+    color = { 236 190 253 }
+	position = {
+        1477.000 1768.000 1477.000 1768.000 1477.000 1768.000 1477.000 1768.000 1477.000 1768.000 1477.000 1768.000 1477.000 1768.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert_hills
+	area = rahni_za
+	history += {
+		history_owner = sun_kingdom
+		history_trade_goods = c_metals
+	}
+}
+new province rahni_za = {
+	name = "Rahni'Za"
+    inherit = craglorn_inherit
+    color = { 144 160 153 }
+	position = {
+        1487.000 1775.000 1487.000 1775.000 1487.000 1775.000 1487.000 1775.000 1487.000 1775.000 1487.000 1775.000 1487.000 1775.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = rahni_za
+	history += {
+		history_owner = sun_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province tombs_of_the_na_totambu = {
+	name = "Tombs of the Na-Totambu"
+    inherit = craglorn_inherit
+    color = { 106 100 159 }
+	position = {
+        1474.000 1783.000 1474.000 1783.000 1474.000 1783.000 1474.000 1783.000 1474.000 1783.000 1474.000 1783.000 1474.000 1783.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = rahni_za
+	history += {
+		history_owner = sun_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province lafara = {
+	name = "Lafara"
+    inherit = craglorn_inherit
+    color = { 193 220 164 }
+	position = {
+        1484.000 1790.000 1484.000 1790.000 1484.000 1790.000 1484.000 1790.000 1484.000 1790.000 1484.000 1790.000 1484.000 1790.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = rahni_za
+	history += {
+		history_owner = sun_kingdom
+		history_trade_goods = stone
+	}
+}
+
+new area the_seekers_archive = {
+	name = "The Seeker's Archive"
+	region = craglorn
+}
+new province sandy_path = {
+	name = "Sandy Path"
+    inherit = craglorn_inherit
+    color = { 125 101 154 }
+	position = {
+        1466.000 1795.000 1466.000 1795.000 1466.000 1795.000 1466.000 1795.000 1466.000 1795.000 1466.000 1795.000 1466.000 1795.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = the_seekers_archive
+	history += {
+		history_owner = sun_kingdom
+		history_trade_goods = stone
+	}
+}
+new province the_seekers_archive = {
+	name = "The Seeker's Archive"
+    inherit = craglorn_inherit
+    color = { 148 126 137 }
+	position = {
+        1473.000 1804.000 1473.000 1804.000 1473.000 1804.000 1473.000 1804.000 1473.000 1804.000 1473.000 1804.000 1473.000 1804.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = the_seekers_archive
+	history += {
+		history_owner = sun_kingdom
+		history_trade_goods = mag_goods
+	}
+}
+new province anka_ras_crucible = {
+	name = "Anka-Ra's Crucible"
+    inherit = craglorn_inherit
+    color = { 209 141 191 }
+	position = {
+        1461.000 1811.000 1461.000 1811.000 1461.000 1811.000 1461.000 1811.000 1461.000 1811.000 1461.000 1811.000 1461.000 1811.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = the_seekers_archive
+	history += {
+		history_owner = flame_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province bangkorai_gate = {
+	name = "Bangkorai Gate"
+    inherit = craglorn_inherit
+    color = { 148 214 185 }
+	position = {
+        1450.000 1805.000 1450.000 1805.000 1450.000 1805.000 1450.000 1805.000 1450.000 1805.000 1450.000 1805.000 1450.000 1805.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert_hills
+	area = the_seekers_archive
+	history += {
+		history_owner = flame_kingdom
+		history_trade_goods = arms
+		center_of_trade = 1
+	}
+}
+
+new area mahvia = {
+	name = "Mahvia"
+	region = craglorn
+}
+new province kardala = {
+	name = "Kardala"
+    inherit = craglorn_inherit
+    color = { 177 212 216 }
+	position = {
+        1452.000 1821.000 1452.000 1821.000 1452.000 1821.000 1452.000 1821.000 1452.000 1821.000 1452.000 1821.000 1452.000 1821.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = mahvia
+	history += {
+		history_owner = flame_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province buried_sands = {
+	name = "Buried Sands"
+    inherit = craglorn_inherit
+    color = { 117 124 252 }
+	position = {
+        1439.000 1821.000 1439.000 1821.000 1439.000 1821.000 1439.000 1821.000 1439.000 1821.000 1439.000 1821.000 1439.000 1821.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = mahvia
+	history += {
+		history_owner = flame_kingdom
+		history_trade_goods = stone
+	}
+}
+new province mahvia = {
+	name = "Mahvia"
+    inherit = craglorn_inherit
+    color = { 147 113 245 }
+	position = {
+        1449.000 1833.000 1449.000 1833.000 1449.000 1833.000 1449.000 1833.000 1449.000 1833.000 1449.000 1833.000 1449.000 1833.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert
+	area = mahvia
+	history += {
+		history_owner = flame_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province earthtear_cavern = {
+	name = "Earthtear Cavern"
+    inherit = craglorn_inherit
+    color = { 181 239 193 }
+	position = {
+        1431.000 1837.000 1431.000 1837.000 1431.000 1837.000 1431.000 1837.000 1431.000 1837.000 1431.000 1837.000 1431.000 1837.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = desert_hills
+	area = mahvia
+	history += {
+		history_owner = flame_kingdom
+		history_trade_goods = r_metals
+	}
+}
+
+new area dragonstar = {
+	name = "Dragonstar"
+	region = craglorn
+}
+new province sunken_lair = {
+	name = "Sunken Lair"
+    inherit = craglorn_inherit
+    color = { 125 169 216 }
+	position = {
+        1431.000 1850.000 1431.000 1850.000 1431.000 1850.000 1431.000 1850.000 1431.000 1850.000 1431.000 1850.000 1431.000 1850.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = dragonstar
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = livestock
+	}
+}
+new province ornskar = {
+	name = "Ornskar"
+    inherit = craglorn_inherit
+    color = { 124 163 190 }
+	position = {
+        1445.000 1850.000 1445.000 1850.000 1445.000 1850.000 1445.000 1850.000 1445.000 1850.000 1445.000 1850.000 1445.000 1850.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = dragonstar
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = stone
+	}
+}
+new province dragonstar = {
+	name = "Dragonstar"
+    inherit = craglorn_inherit
+    color = { 234 175 138 }
+	position = {
+        1440.000 1860.000 1440.000 1860.000 1440.000 1860.000 1440.000 1860.000 1440.000 1860.000 1440.000 1860.000 1440.000 1860.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = dragonstar
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = r_metals
+		center_of_trade = 1
+	}
+}
+new province dragonstar_arena = {
+	name = "Dragonstar Arena"
+    inherit = craglorn_inherit
+    color = { 145 193 181 }
+	position = {
+        1446.000 1870.000 1446.000 1870.000 1446.000 1870.000 1446.000 1870.000 1446.000 1870.000 1446.000 1870.000 1446.000 1870.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = dragonstar
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = arms
+	}
+}
+
+new area skyreach = {
+	name = "Skyreach"
+	region = craglorn
+}
+new province selenu = {
+	name = "Selenu"
+    inherit = craglorn_inherit
+    color = { 114 255 109 }
+	position = {
+        1469.000 1842.000 1469.000 1842.000 1469.000 1842.000 1469.000 1842.000 1469.000 1842.000 1469.000 1842.000 1469.000 1842.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = skyreach
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = wood
+	}
+}
+new province skyreach_pinnacle = {
+	name = "Skyreach Pinnacle"
+    inherit = craglorn_inherit
+    color = { 162 213 144 }
+	position = {
+        1483.000 1837.000 1483.000 1837.000 1483.000 1837.000 1483.000 1837.000 1483.000 1837.000 1483.000 1837.000 1483.000 1837.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = skyreach
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = mag_goods
+		center_of_trade = 1
+	}
+}
+new province skyreach_overlook = {
+	name = "Skyreach Overlook"
+    inherit = craglorn_inherit
+    color = { 188 213 124 }
+	position = {
+        1486.000 1821.000 1486.000 1821.000 1486.000 1821.000 1486.000 1821.000 1486.000 1821.000 1486.000 1821.000 1486.000 1821.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = skyreach
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = r_metals
+	}
+}
+new province skyreach_catacombs = {
+	name = "Skyreach Catacombs"
+    inherit = craglorn_inherit
+    color = { 235 141 106 }
+	 position = {
+        1465.000 1832.000 1465.000 1832.000 1465.000 1832.000 1465.000 1832.000 1465.000 1832.000 1465.000 1832.000 1465.000 1832.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = hills
+	area = skyreach
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = r_metals
+	}
+}
+
+new area vraseth = {
+	name = "Vraseth"
+	region = craglorn
+}
+new province vraseth = {
+	name = "Vraseth"
+    inherit = craglorn_inherit
+    color = { 149 250 223 }
+	position = {
+        1509.000 1839.000 1509.000 1839.000 1509.000 1839.000 1509.000 1839.000 1509.000 1839.000 1509.000 1839.000 1509.000 1839.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = vraseth
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		history_trade_goods = r_metals
+	}
+}
+new province ilthags_undertower = {
+	name = "Ilthag's Undertower"
+    inherit = craglorn_inherit
+    color = { 139 110 221 }
+	position = {
+        1516.000 1826.000 1516.000 1826.000 1516.000 1826.000 1516.000 1826.000 1516.000 1826.000 1516.000 1826.000 1516.000 1826.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = vraseth
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		history_trade_goods = stone
+	}
+}
+new province the_howling_sepulchers = {
+	name = "The Howling Sepulchers"
+    inherit = craglorn_inherit
+    color = { 179 182 148 }
+	position = {
+        1531.000 1831.000 1531.000 1831.000 1531.000 1831.000 1531.000 1831.000 1531.000 1831.000 1531.000 1831.000 1531.000 1831.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = vraseth
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		history_trade_goods = stone
+	}
+}
+new province orsa = {
+	name = "Orsa"
+    inherit = craglorn_inherit
+    color = { 111 198 252 }
+	position = {
+        1497.000 1830.000 1497.000 1830.000 1497.000 1830.000 1497.000 1830.000 1497.000 1830.000 1497.000 1830.000 1497.000 1830.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = vraseth
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = stone
+	}
+}
+
+new area serpents_nest = {
+	name = "Serpent's Nest"
+	region = craglorn
+}
+new province rosathild = {
+	name = "Rosathild"
+    inherit = craglorn_inherit
+    color = { 236 109 174 }
+	position = {
+        1461.000 1851.000 1461.000 1851.000 1461.000 1851.000 1461.000 1851.000 1461.000 1851.000 1461.000 1851.000 1461.000 1851.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = serpents_nest
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = wood
+	}
+}
+new province serpents_nest = {
+	name = "Serpent's Nest"
+    inherit = craglorn_inherit
+    color = { 188 239 121 }
+	position = {
+        1465.000 1861.000 1465.000 1861.000 1465.000 1861.000 1465.000 1861.000 1465.000 1861.000 1465.000 1861.000 1465.000 1861.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = serpents_nest
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = stone
+	}
+}
+new province loth_na_caverns = {
+	name = "Loth'Na Caverns"
+    inherit = craglorn_inherit
+    color = { 212 202 105 }
+	position = {
+        1480.000 1852.000 1480.000 1852.000 1480.000 1852.000 1480.000 1852.000 1480.000 1852.000 1480.000 1852.000 1480.000 1852.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = serpents_nest
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = c_metals
+	}
+}
+new province virgar = {
+	name = "Virgar"
+    inherit = craglorn_inherit
+    color = { 216 187 197 }
+	position = {
+        1496.000 1846.000 1496.000 1846.000 1496.000 1846.000 1496.000 1846.000 1496.000 1846.000 1496.000 1846.000 1496.000 1846.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = highlands
+	area = serpents_nest
+	history += {
+		history_owner = sky_kingdom
+		history_trade_goods = r_metals
+	}
+}
+
+new area valley_of_scars = {
+	name = "Valley of Scars"
+	region = craglorn
+}
+new province zugra_crun = {
+	name = "Zugra Crun"
+    inherit = craglorn_inherit
+    color = { 248 196 228 }
+	position={
+		1519.000 1845.000 1519.000 1845.000 1519.000 1845.000 1519.000 1845.000 1519.000 1845.000 1519.000 1844.000 0.000 0.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.000 0.000 1.000 0.000 0.000 0.000 0.000 
+	}
+	area = valley_of_scars
+	terrain = mountain
+	base_development = 11
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		
+		history_trade_goods = r_metals
+		set_province_flag = orc_stronghold
+	}
+}
+new province vosh_tumn = {
+	name = "Vosh Tumn"
+    inherit = craglorn_inherit
+    color = { 169 180 177 }
+	position={
+		1534.000 1842.000 1534.000 1843.000 1533.000 1843.000 1533.000 1842.000 1533.000 1843.000 1535.000 1842.000 1534.000 1843.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.000 0.000 1.000 0.000 0.000 0.000 0.000 
+	}
+	area = valley_of_scars
+	terrain = mountain
+	base_development = 12
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		
+		history_trade_goods = r_metals
+		set_province_flag = orc_stronghold
+	}
+}
+new province rakh_krazak = {
+	name = "Rakh Krazak"
+    inherit = craglorn_inherit
+    color = { 157 253 159 }
+	position={
+		1529.000 1853.000 1526.000 1855.000 1527.000 1854.000 1526.000 1854.000 1526.000 1854.000 1525.000 1854.000 1526.000 1854.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.000 0.000 1.000 0.000 0.000 0.000 0.000 
+	}
+	area = valley_of_scars
+	terrain = mountain
+	base_development = 14
+	history = {
+		history_owner = osh_ornim
+		religion = ten_iron_oaths
+		culture = iron_orc
+		
+		history_trade_goods = arms
+		set_province_flag = orc_stronghold
+	}
+}

@@ -253,7 +253,7 @@ new personality_trait free_thinker = {
 		knowledge_sharing = yes
 	}
 	modifier = {
-		idea_cost = -0.05
+		idea_cost = -0.025
 	}
 	nation_designer_cost = 25
 }
@@ -3012,6 +3012,7 @@ new personality_trait immortal = {
 	modifier = {
 		
 	}
+	can_be_ancestor = no
 	nation_designer_cost = 800
 }
 new personality_trait mage = {

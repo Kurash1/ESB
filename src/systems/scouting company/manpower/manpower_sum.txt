@@ -1,0 +1,15 @@
+new named_effect survey_calculate_manpower_sum = {
+	&survey_monthly_manpower := survey_monthly_recruits
+	&survey_monthly_manpower -= survey_monthly_losses
+	
+	&survey_temp := survey_monthly_manpower
+	&survey_temp /= 1000
+	
+	&survey_manpower += survey_temp
+	if [&survey_manpower < 0] { 
+		&survey_manpower := 0
+		survey_end_active_survey
+	}
+	&survey_real_manpower := survey_manpower
+	&survey_real_manpower *= 1000
+}

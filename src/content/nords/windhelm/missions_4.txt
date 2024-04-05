@@ -119,7 +119,7 @@ new mission_series eastmarch_4 = {
 				}
 			}
 			effect = {
-				defineloc unlocks_cradlecrush_giants = "Unlocks '§YCradlecrush Giant§!' Mercenary Company"
+				new localisation unlocks_cradlecrush_giants = "Unlocks '§YCradlecrush Giant§!' Mercenary Company"
 				custom_tooltip = unlocks_cradlecrush_giants
 				set_country_flag = unlocks_cradlecrush_giants
 			}
@@ -174,7 +174,7 @@ new mission_series eastmarch_4 = {
 				eastmarch_eldergleam eastmarch_road_mistwatch eastmarch_northwind_mine
 			}
 			trigger = {
-				defineloc eastmarch_has_harald = "Has had §YHarald Hand-Free§! as your ruler"
+				new localisation eastmarch_has_harald = "Has had §YHarald Hand-Free§! as your ruler"
 				custom_trigger_tooltip = {
 					tooltip = eastmarch_has_harald
 					has_country_flag = eastmarch_had_harald

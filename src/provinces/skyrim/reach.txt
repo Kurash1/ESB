@@ -103,7 +103,7 @@ new province valthume = {
 				desc = ""
 				frame = 11
 				event_picture = valthume_eventPicture
-				length = 3
+				length = 60
 				on_complete = {
 					owner = {
 						give_artifact = {
@@ -211,6 +211,7 @@ new province dushnikh_yal = {
 	color = {
 		216 138 174
 	}
+	base_development = 14
 	history = {
 		center_of_trade = 1
 		history_owner = dushnikh_yal
@@ -288,7 +289,7 @@ new province hag_rock_redoubt = {
 		131 196 244
 	}
 	history = {
-		history_owner = thornroot_clan
+		history_owner = dark_witness_clan
 		religion = reachman_faith
 		culture = reachmen
 		history_trade_goods = silver
@@ -311,7 +312,7 @@ new province dread_crone_rock = {
 		168 254 155
 	}
 	history = {
-		history_owner = thornroot_clan
+		history_owner = dark_witness_clan
 		religion = reachman_faith
 		culture = reachmen
 		history_trade_goods = mag_goods
@@ -543,7 +544,7 @@ new province karerica = {
 		quick_province_modifier = {
 			name = "Lover Stone"
 			modifier = {
-				idea_cost = -5%
+				idea_cost = -2.5%
 			}
 		}
 	}
@@ -601,7 +602,7 @@ new province ragnvald = {
 				desc = ""
 				frame = 8
 				event_picture = ragnvald_eventPicture
-				length = 3
+				length = 60
 				on_complete = {
 					owner = {
 						give_artifact = {
@@ -933,6 +934,29 @@ new province bthar_zel = {
 		culture = reachmen
 		history_trade_goods = fur
 		history_owner = stag_heart_clan
+	}
+}
+new province turmilis = {
+	name = "Turmilis"
+    inherit = wrothgar_inherit
+    color = { 251 218 148 }
+	history = {
+		history_owner = stag_heart_clan
+		religion = reachman_faith
+		culture = reachmen
+		
+		history_trade_goods = stone
+	}
+	terrain = highlands
+	area = harmugstahl
+	position={
+		1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 1491.000 2009.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
 	}
 }
 
@@ -1528,6 +1552,7 @@ new province mor_khazgur = {
 	color = {
 		161 138 228
 	}
+	base_development = 16
 	history = {
 		center_of_trade = 1
 		history_owner = mor_khazgur
@@ -1581,6 +1606,169 @@ new province khazgur_coast = {
 		religion = reachman_faith
 		culture = reachmen
 		history_trade_goods = fish
+	}
+}
+
+new area druadach_pass = {
+	name = "Druadach Pass"
+	region = reach
+}
+new province merrina = {
+	name = "Merrina"
+    color = { 107 127 251 }
+	position = {
+        1453.000 1884.000 1453.000 1884.000 1453.000 1884.000 1453.000 1884.000 1453.000 1884.000 1453.000 1884.000 1453.000 1884.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = stone
+	}
+}
+new province thelmyra = {
+	name = "Thelmyra"
+    color = { 134 111 234 }
+	position = {
+        1468.000 1890.000 1468.000 1890.000 1468.000 1890.000 1468.000 1890.000 1468.000 1890.000 1468.000 1890.000 1468.000 1890.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = c_metals
+	}
+}
+new province colvy = {
+	name = "Colvy"
+    color = { 211 231 149 }
+	position = {
+        1475.000 1906.000 1475.000 1906.000 1475.000 1906.000 1475.000 1906.000 1475.000 1906.000 1475.000 1906.000 1475.000 1906.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = stone
+	}
+}
+new province abba_arl = {
+	name = "Abba Arl"
+    color = { 224 219 180 }
+	position = {
+        1463.000 1906.000 1463.000 1906.000 1463.000 1906.000 1463.000 1906.000 1463.000 1906.000 1463.000 1906.000 1463.000 1906.000
+    }
+    rotation = {
+        0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+    }
+    height = {
+        0.3647 0.3647 0.3647 0.3647 0.3647 0.3647 0.3647
+    }
+	terrain = mountain
+	area = druadach_pass
+	history = {
+		culture = reachmen
+		religion = reachman_faith
+		history_owner = thornroot_clan
+		history_trade_goods = silver
+	}
+}
+
+new area melros = {
+	name = "Melros"
+	region = reach
+}
+new province urlemen = {
+	name = "Urlemen"
+    inherit = wrothgar_inherit
+    color = { 104 133 134 }
+	history = {
+		history_owner = blood_horn_clan
+		religion = reachman_faith
+		culture = reachmen
+		
+		history_trade_goods = stone
+	}
+	terrain = mountain
+	area = melros
+	position={
+		1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 1470.000 2008.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province melros = {
+	name = "Melros"
+    inherit = wrothgar_inherit
+    color = { 145 115 169 }
+	history = {
+		history_owner = blood_horn_clan
+		religion = reachman_faith
+		culture = reachmen
+		
+		history_trade_goods = arms
+	}
+	terrain = mountain
+	area = melros
+	position={
+		1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 1468.000 1997.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province nhymak = {
+	name = "Nhymak"
+    inherit = wrothgar_inherit
+    color = { 195 110 237 }
+	history = {
+		history_owner = blood_horn_clan
+		religion = reachman_faith
+		culture = reachmen
+		
+		history_trade_goods = silver
+	}
+	terrain = mountain
+	area = melros
+	position={
+		1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 1458.000 1985.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
 	}
 }
 

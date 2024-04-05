@@ -90,7 +90,7 @@ mission_trees:skjoralmor += {
 			army_size_percentage = 1
 		}
 		effect = {
-			defineloc unlocks_skjoralmor_army = "Unlocks §YSkjoralmor Army§! Government Reform"
+			new localisation unlocks_skjoralmor_army = "Unlocks §YSkjoralmor Army§! Government Reform"
 			custom_tooltip = unlocks_skjoralmor_army
 			set_country_flag = unlocks_skjoralmor_army
 			quick_country_modifier = {
@@ -130,10 +130,10 @@ mission_trees:skjoralmor += {
 				age = 20
 				claim = 95
 			}
-			defineloc unlocks_skjoralmor_order = "Unlocks §YSkjoralmor Order§! Holy Order"
+			new localisation unlocks_skjoralmor_order = "Unlocks §YSkjoralmor Order§! Holy Order"
 			custom_tooltip = unlocks_skjoralmor_order
 			set_country_flag = unlocks_skjoralmor_order
-			defineloc skjoralmor_stronghold_conquest_tt = "§Y[This.GetName]§! gains a §YSiege of Stronghold§! Casus Belli on all §YKreath Orc§! Countries
+			new localisation skjoralmor_stronghold_conquest_tt = "§Y[This.GetName]§! gains a §YSiege of Stronghold§! Casus Belli on all §YKreath Orc§! Countries
 This Casus Belli will last for §G25§! years."
 			custom_tooltip = skjoralmor_stronghold_conquest_tt
 			hidden_effect = {

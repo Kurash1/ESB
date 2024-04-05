@@ -1,0 +1,41 @@
+new localisation adm_tech_cs_0_name = "Available always"
+new localisation dip_tech_cs_0_name = "Available always"
+new localisation mil_tech_cs_0_name = "Available always"
+
+new localisation adm_tech_cs_0_desc = ""
+new localisation dip_tech_cs_0_desc = ""
+new localisation mil_tech_cs_0_desc = ""
+
+new effect create_tech_name_hint_single = {
+	args = {
+		level = int
+		offset = int
+	}
+	transpile = {
+		new localisation `adm_tech_cs_{(args:level*3+args:offset)}_name` = `Available at §Y{(2568+args:level*50)}§!`
+		new localisation `dip_tech_cs_{(args:level*3+args:offset)}_name` = `Available at §Y{(2568+args:level*50)}§!`
+		new localisation `mil_tech_cs_{(args:level*3+args:offset)}_name` = `Available at §Y{(2568+args:level*50)}§!`
+		
+		new localisation `adm_tech_cs_{(args:level*3+args:offset)}_desc` = ""
+		new localisation `dip_tech_cs_{(args:level*3+args:offset)}_desc` = ""
+		new localisation `mil_tech_cs_{(args:level*3+args:offset)}_desc` = ""
+	}
+}
+new named_effect generate_technology_name_hints = {
+	#not referenced anywhere, but still compiled, glory to stupidity.
+	for $i as 0 to 17 {
+		create_tech_name_hint_single = {
+			level = $i
+			offset = 1
+		}
+		create_tech_name_hint_single = {
+			level = $i
+			offset = 2
+		}
+		create_tech_name_hint_single = {
+			level = $i
+			offset = 3
+		}
+	}
+}
+

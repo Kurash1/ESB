@@ -1,68 +1,92 @@
 new localisation expedition_progress = "Expedition Progress"
 new effect cause_expedition_progress = {
-	args = int
+	args = float
 	transpile = {
 		change_variable = {
 			which = expedition_progress
 			value = args
 		}
-		hidden_effect = {
-			set_variable = {
-				which = expedition_percentage
-				which = expedition_progress
-			}
-			divide_variable = {
-				which = expedition_percentage
-				which = expedition_length
-			}
-			multiply_variable = {
-				which = expedition_percentage
-				value = 100
-			}
-			
-			if [
+	}
+}
+new named_effect reload_expedition_progress = {
+	hidden_effect = {
+		if [
+			NOT = {
 				check_variable = {
 					which = expedition_progress
-					which = expedition_length
+					value = 0
 				}
-			] {
-				end_expedition_effect
 			}
+		] {
+			set_variable = {
+				which = expedition_progress
+				value = 0
+			}
+		}
+	
+		set_variable = {
+			which = expedition_percentage
+			which = expedition_progress
+		}
+		divide_variable = {
+			which = expedition_percentage
+			which = expedition_length
+		}
+		multiply_variable = {
+			which = expedition_percentage
+			value = 100
+		}
+		
+		if [
+			check_variable = {
+				which = expedition_progress
+				which = expedition_length
+			}
+		] {
+			end_expedition_effect
 		}
 	}
 }
 new named_effect expedition_progress_pulse = {
-	random_list = {
-		1 = {
-			modifier = {
-				factor = 1.5
-				has_province_modifier = expedition_mod_cash_mod
-			}
-			modifier = {
-				factor = 1.5
-				has_province_modifier = expedition_mod_camp_mod
-			}
-			modifier = {
-				factor = 2.5
-				has_province_modifier = expedition_mod_explore_mod
-			}
-			modifier = {
-				factor = 1.5
-				has_province_modifier = expedition_mod_merc_mod
-			}
-			modifier = {
-				factor = 2
-				full_idea_group = exploration_ideas
-			}
-			cause_expedition_progress = 1
-		}
-		19 = { }
+	export_to_variable = {
+		which = expedition_progress_temp
+		value = `modifier:global_expedition_progress`
+		who = FROM
 	}
+	change_variable = {
+		which = expedition_progress
+		which = expedition_progress_temp
+	}
+}
+new named_effect expedition_good_event_list = {
+	
+}
+new named_effect expedition_bad_event_list = {
+	
 }
 on_actions:on_monthly_pulse += {
 	every_owned_province [
 		has_province_modifier = expedition_camp
 	] {
 		expedition_progress_pulse
+		
+		reload_expedition_progress
+		
+		random = {
+			chance = 4
+			
+			random_list = {
+				1 = {
+					random_list = {
+						expedition_good_event_list
+					}
+				}
+				1 = {
+					random_list = {
+						expedition_bad_event_list
+					}
+				}
+			}
+		}
 	}
 }

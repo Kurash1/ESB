@@ -10,7 +10,7 @@ new mission_tree jorrvaskr = {
 		y = 3
 		icon = remembrance_mission
 		trigger = {
-			defineloc is_frostfall = "It is §OFrostfall§!"
+			new localisation is_frostfall = "It is §OFrostfall§!"
 			custom_trigger_tooltip = {
 				tooltip = is_frostfall
 				is_month = 9
@@ -92,7 +92,12 @@ new mission_tree jorrvaskr = {
 		icon = formal_army_mission
 		trigger = {
 			if [has_dlc = "Cradle of Civilization"] {
-				army_professionalism = 0.10 
+				if [ai = yes] {
+					always = yes
+				}
+				else {
+					army_professionalism = 0.10 
+				}
 			}
 			else {
 				manpower_percentage = 1.0
@@ -170,8 +175,7 @@ new country_event jorrvaskr.1 = {
 					add_permanent_claim = ROOT
 				}
 				
-				change_tag = whiterun
-				swap_free_idea_group = yes
+				form_hold = whiterun
 				
 				reform_remnant = {
 					type = monarchy

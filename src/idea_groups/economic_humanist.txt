@@ -6,14 +6,14 @@ new idea_group economic_ideas = {
 			name = "Bureaucracy"
 			desc = "Allows us to increase our tax revenues by adopting a more bureaucratic administrative system governed by state officials."
 			modifier = {
-				global_tax_modifier = 10%
+				tax_line = 1
 			}
 		}
 		{
 			name = "Organized Construction"
 			desc = "They need to upgrade the infrastructure of our government is a costly business, if we structure the process correctly we can do this cheaper."
 			modifier = {
-				build_cost = -5%
+				build_cost = -0.1
 			}
 		}
 		{
@@ -48,7 +48,7 @@ new idea_group economic_ideas = {
 			name = "Free Economics"
 			desc = "By opposing mercantilism and restricting the state's influence in economic matters, we shall support a free market that will increase our overall production efficiency."
 			modifier = {
-				production_efficiency = 10%
+				trade_line = 1
 			}
 		}
 	}
@@ -149,7 +149,7 @@ new idea_group innovativeness_ideas = {
 			name = "Scientific Revolution"
 			desc = "We should strive towards a social and economic revolution marked by technological inventions and a transfer from an agricultural society into an industrial one."
 			modifier = {
-				idea_cost = -0.05
+				idea_cost = -0.025
 			}
 		}
 		{
@@ -178,7 +178,7 @@ new idea_group innovativeness_ideas = {
 			desc = "Traditionally officers come from the nobility, but we don't have that many nobles leading to a shortage of officers. However, there are plenty of persons of the lower class in our armies. We should consider promoting some of them as professional officers."
 			modifier = {
 				free_leader_pool = 1
-				leader_cost = -0.15
+				army_line = 1
 			}
 		}
 	}
@@ -228,7 +228,7 @@ new idea_group alchemical_ideas = {
 			name = "Green Thumb"
 			desc = "To make the best potions we need to scour our land for all ingredients it offers. "
 			modifier = {
-				global_trade_goods_size_modifier = 0.1
+				goods_line = 1
 			}
 		}
 		{
@@ -286,7 +286,7 @@ new idea_group esb_treasury = {
 			name = "Simple Tax System"
 			desc = "Everyone is happier if they dont get to sign 50 papers."
 			modifier = {
-				global_tax_modifier = 0.1
+				tax_line = 1
 			}
 		}
 		{
@@ -354,7 +354,7 @@ new idea_group smithing_ideas = {
 			name = "Armor Factories"
 			desc = "To support the war machine we need to make sure we always have the necessary materials readily available. "
 			modifier = {
-				global_trade_goods_size_modifier = 0.15
+				production_line = 1
 			}
 		}
 		{
@@ -387,7 +387,7 @@ new idea_group waffenqualitat0 = {
 			name = "Weapon Production"
 			desc = "A coordinated production of weapons is crucial to equipping a big army."
 			modifier = {
-				global_trade_goods_size_modifier = 0.15
+				global_trade_goods_size_modifier = 0.1
 			}
 		}
 		{
@@ -423,7 +423,7 @@ new idea_group waffenqualitat0 = {
 			name = "Improved Production"
 			desc = "Through production in manufactories we can produce a high number of weapons."
 			modifier = {
-				production_efficiency = 0.15
+				production_line = 1
 			}
 		}
 		{
@@ -447,7 +447,7 @@ new idea_group armour_quality_ideas = {
 	ideas = {
 		{
 			name = "Shining Armour"
-			desc = "War is often a bloody conflict but our soldiers do it with style. "
+			desc = "War is often a bloody conflict but our soldiers do it with style."
 			modifier = {
 				prestige_from_land = 0.75
 			}
@@ -484,7 +484,8 @@ new idea_group armour_quality_ideas = {
 			name = "Quality Materials"
 			desc = "The materials that compose our army are lightweight and allow for maximum mobility. "
 			modifier = {
-				movement_speed = 0.15
+				movement_speed = 0.1
+				goods_line = 1
 			}
 		}
 		{

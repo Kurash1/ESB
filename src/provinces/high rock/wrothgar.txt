@@ -137,6 +137,29 @@ new province dulfmob = {
 		history_trade_goods = fish
 	}
 }
+new province shellak = {
+	name = "Shellak"
+    inherit = wrothgar_inherit
+    color = { 217 227 123 }
+	history = {
+		history_owner = murtag
+		religion = code_of_malacath
+		culture = stronghold_orc
+		
+		history_trade_goods = stone
+	}
+	area = murtag
+	terrain = highlands
+	position={
+		1452.000 2035.000 1452.000 2035.000 1452.000 2035.000 1452.000 2035.000 1452.000 2035.000 1452.000 2035.000 1452.000 2035.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
 
 new area jehanna = {
 	name = "Jehanna"
@@ -1145,5 +1168,153 @@ new province igrun = {
 		set_province_flag = orc_stronghold
 		history_owner = igrun
 		history_trade_goods = stone
+	}
+}
+
+new area uvnes = {
+	name = "Uvnes"
+	region = wrothgar
+}
+new province kivmoth = {
+	name = "Kivmoth"
+    inherit = wrothgar_inherit
+    color = { 178 111 108 }
+	history = {
+		history_owner = winterborn_clan
+		religion = code_of_malacath
+		culture = reachmen
+		
+		history_trade_goods = stone
+	}
+	terrain = mountain
+	area = uvnes
+	position={
+		1427.000 1995.000 1427.000 1995.000 1427.000 1995.000 1427.000 1995.000 1427.000 1995.000 1427.000 1995.000 1427.000 1995.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province uvnes = {
+	name = "Uvnes"
+    inherit = wrothgar_inherit
+    color = { 194 160 196 }
+	history = {
+		history_owner = winterborn_clan
+		religion = code_of_malacath
+		culture = reachmen
+		
+		history_trade_goods = stone
+	}
+	terrain = mountain
+	area = uvnes
+	position={
+		1442.000 2000.000 1442.000 2000.000 1442.000 2000.000 1442.000 2000.000 1442.000 2000.000 1442.000 2000.000 1442.000 2000.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province darles = {
+	name = "Darles"
+    inherit = wrothgar_inherit
+    color = { 102 146 174 }
+	history = {
+		history_owner = winterborn_clan
+		religion = code_of_malacath
+		culture = reachmen
+		
+		history_trade_goods = c_metals
+	}
+	terrain = mountain
+	area = uvnes
+	position={
+		1451.000 2011.000 1451.000 2011.000 1451.000 2011.000 1451.000 2011.000 1451.000 2011.000 1451.000 2011.000 1451.000 2011.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+
+new area vyhidok = {
+	name = "Vyhidok"
+	region = wrothgar
+}
+new province nydyzik = {
+	name = "Nydyzik"
+    inherit = wrothgar_inherit
+    color = { 180 200 242 }
+	history = {
+		history_owner = winterborn_clan
+		religion = code_of_malacath
+		culture = reachmen
+		
+		history_trade_goods = stone
+	}
+	terrain = highlands
+	area = vyhidok
+	position={
+		1443.000 2022.000 1443.000 2022.000 1443.000 2022.000 1443.000 2022.000 1443.000 2022.000 1443.000 2022.000 1443.000 2022.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province vyhidok = {
+	name = "Vyhidok"
+    inherit = wrothgar_inherit
+    color = { 128 198 123 }
+	history = {
+		history_owner = winterborn_clan
+		religion = code_of_malacath
+		culture = reachmen
+		
+		history_trade_goods = arms
+	}
+	terrain = highlands
+	area = vyhidok
+	position={
+		1435.000 2011.000 1435.000 2011.000 1435.000 2011.000 1435.000 2011.000 1435.000 2011.000 1435.000 2011.000 1435.000 2011.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
+	}
+}
+new province hireloc = {
+	name = "Hireloc"
+    inherit = wrothgar_inherit
+    color = { 223 242 134 }
+	history = {
+		history_owner = winterborn_clan
+		religion = code_of_malacath
+		culture = reachmen
+		
+		history_trade_goods = c_metals
+	}
+	terrain = mountain
+	area = vyhidok
+	position={
+		1421.000 2022.000 1421.000 2022.000 1421.000 2022.000 1421.000 2022.000 1421.000 2022.000 1421.000 2022.000 1421.000 2022.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.377 0.377 0.377 0.377 0.377 0.377 0.377 
 	}
 }

@@ -1,0 +1,45 @@
+new naval_doctrine fleet_in_being = {
+	name = "Fleet In Being"
+	desc = "Our naval influence shall be felt without the expense of our fleet leaving port except under the most favorable of conditions."
+	button_gfx = 1
+	country_modifier = {
+		naval_maintenance_modifier = -0.15
+	}
+}
+new naval_doctrine free_oarsmen = {
+	name = "Free Oarsmen"
+	desc = "We shall fight the temptation to have slaves and the condemned rowing our Galleys. Free men, resilient in the face of adversity and resistant to defection shall form the muscle of our navy."
+	button_gfx = 2
+	country_modifier = {
+		galley_power = 0.15
+	}
+}
+new naval_doctrine merchant_navy = {
+	name = "Merchant Navy"
+	desc = "Our fleet's prime directive is to serve the financial interests of the State. Every effort shall be made to ensure our cargo ships are laden with foreign riches."
+	button_gfx = 3
+	country_modifier = {
+		global_ship_trade_power = 0.33
+	}
+}
+new naval_doctrine ship_boarding = {
+	name = "Ship Boarding"
+	desc = "With established Prize Law and generous Letters of Marque we will nurture a custom of seizing enemy ships intact."
+	button_gfx = 4
+	country_modifier = {
+		capture_ship_chance = 0.33
+	}
+}
+new naval_doctrine wooden_wall = {
+	name = "Wooden Wall"
+	desc = "In a world of rapid change the seas remain of crucial importance to our nation. Both as means to secure our dominance and as the first line of defense our wooden wall shall prevail."
+	button_gfx = 5
+	can_select = {
+		capital_scope = {
+			province_is_on_an_island = yes
+		}
+	}
+	country_modifier = {
+		own_coast_naval_combat_bonus = 1.0
+	}
+}

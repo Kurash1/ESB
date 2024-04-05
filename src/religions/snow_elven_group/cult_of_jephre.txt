@@ -1,0 +1,76 @@
+new church_aspect a_tale_of_nature = {
+	name = "A tale of Nature"
+	desc = ""
+	modifier = {
+		production_efficiency = -0.20
+		development_cost = -0.15
+	}
+}
+new church_aspect a_tale_of_the_present = {
+	name = "A tale of the present"
+	desc = ""
+	modifier = {
+		idea_cost = -0.05
+		stability_cost_modifier = -0.10
+	}
+}
+new church_aspect a_tale_of_songs_and_stories = {
+	name = "A tale of songs and stories"
+	desc = ""
+	modifier = {
+		diplomatic_reputation = 1
+		land_morale = 0.1
+	}
+}
+new church_aspect a_tale_of_languages = {
+	name = "A tale of languages"
+	desc = ""
+	modifier = {
+		advisor_cost = -0.15
+		promote_culture_cost = -0.25
+	}
+}
+new church_aspect a_tale_of_aetherius = {
+	name = "A tale of Aetherius"
+	desc = ""
+	modifier = {
+		monthly_splendor = 4
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+new church_aspect a_tale_of_spinners = {
+	name = "A tale of Spinners"
+	desc = ""
+	modifier = {
+		ae_impact = -0.10
+		improve_relation_modifier = 0.15
+	}
+}
+new religion cult_of_jephre = {
+	name = "Cult of Jephre"
+	desc = "The Aedra of Songs, Nature, and Stories. Jephre also known as Y’ffer is a popular deity among the Mer particularly among the Bosmeri. Serving as a source of many myths from the Summerset Isles to Skyrim it is commonly believed that Jephre is one of the gods who would become the ‘earth-bones’ and form the very world of Nirn that Men and Mer walk upon today.
+By the dawning of the first Era, the Cult of Jephre is commonplace in Valenwood but a few provinces among the Falmer of Skyrim remain, long eclipsed by the Cult of Auri-El."
+	icon = 9
+	color = {
+		37 124 47
+	}
+	heretic = {
+		SNOW_ELVES_PANTHEON_HERETIC
+	}
+	country = {
+		global_prosperity_growth = 0.1
+		diplomatic_reputation = 2
+	}
+	province = {
+	}
+	aspects = {
+		a_tale_of_aetherius a_tale_of_nature a_tale_of_the_present a_tale_of_songs_and_stories a_tale_of_languages a_tale_of_spinners
+	}
+	uses_church_power = yes
+	aspects_name = {
+		short = "Dogma"
+		long = "Cult of Jephre"
+		power_name = "Church Power"
+	}
+	religious_group = snow_elven_group
+}

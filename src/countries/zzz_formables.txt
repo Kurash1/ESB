@@ -136,8 +136,8 @@ new decision form_eastmarch = {
 		}
 	}
 	effect = {
-		change_tag = eastmarch
-		swap_free_idea_group = yes
+		form_hold = eastmarch
+		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -175,8 +175,8 @@ new decision form_winterhold = {
 		}
 	}
 	effect = {
-		change_tag = winterhold
-		swap_free_idea_group = yes
+		form_hold = winterhold
+		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -221,8 +221,8 @@ new decision form_pale = {
 		}
 	}
 	effect = {
-		change_tag = pale
-		swap_free_idea_group = yes
+		form_hold = pale
+		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -234,7 +234,7 @@ new country whiterun = {
 	name = "Whiterun"
 	adj = "Whiterunish"
 	color = {
-		150 50 0
+		200 50 0
 	}
 	starting_reform = tier_1_hold
 	capital = whiterun
@@ -270,8 +270,8 @@ new decision form_whiterun = {
 		}
 	}
 	effect = {
-		change_tag = whiterun
-		swap_free_idea_group = yes
+		form_hold = whiterun
+		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -316,8 +316,8 @@ new decision form_hjaalmarch = {
 		}
 	}
 	effect = {
-		change_tag = hjaalmarch
-		swap_free_idea_group = yes
+		form_hold = hjaalmarch
+		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -329,7 +329,7 @@ new country haafingar = {
 	name = "Haafingar"
 	adj = "Haafingarian"
 	color = {
-		255 11 3
+		200 0 0
 	}
 	starting_reform = tier_1_hold
 	capital = solitude
@@ -363,8 +363,8 @@ new decision form_haafingar = {
 		}
 	}
 	effect = {
-		change_tag = haafingar
-		swap_free_idea_group = yes
+		form_hold = haafingar
+		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
 	}
@@ -407,8 +407,8 @@ new decision form_falkreath = {
 		NOT = { owned_by = ROOT }
 	}
 	effect = {
-		change_tag = falkreath
-		swap_free_idea_group = yes
+		form_hold = falkreath
+		
 		add_government_reform = tier_1_hold
 		kreath_region = {
 			add_permanent_claim = ROOT
@@ -499,8 +499,8 @@ new decision form_the_rift = {
 		NOT = { owned_by = ROOT }
 	}
 	effect = {
-		change_tag = rift
-		swap_free_idea_group = yes
+		form_hold = rift
+		
 		add_government_reform = tier_1_hold
 		rift_region = {
 			add_permanent_claim = ROOT

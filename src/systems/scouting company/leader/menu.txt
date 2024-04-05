@@ -1,0 +1,63 @@
+new custom_icon survey_leader_gender_icon = {
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	frames = {
+		{
+			frame = 1
+			trigger = {
+				has_country_flag = survey_leader_is_female
+			}
+		}
+		{
+			frame = 2
+			trigger = {
+				NOT = {
+					has_country_flag = survey_leader_is_female
+				}
+			}
+		}
+	}
+}
+new custom_text_box survey_leader_name = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Master: [Root.survey_leader_name.GetName]"
+}
+new custom_text_box survey_leader_adm_value = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[Root.survey_leader_adm.GetValue]"
+}
+new custom_text_box survey_leader_dip_value = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[Root.survey_leader_dip.GetValue]"
+}
+new custom_text_box survey_leader_mil_value = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[Root.survey_leader_mil.GetValue]"
+}
+new custom_icon survey_leader_adm_icon = {
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	tooltip = "Administrative Skill: §Y[Root.survey_leader_adm.GetValue]§!"
+}
+new custom_icon survey_leader_dip_icon = {
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	tooltip = "Diplomatic Skill: §Y[Root.survey_leader_dip.GetValue]§!"
+}
+new custom_icon survey_leader_mil_icon = {
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	tooltip = "Military Skill: §Y[Root.survey_leader_mil.GetValue]§!"
+}

@@ -438,7 +438,11 @@ new static_modifier base_values = {
 	max_flagships = 1
 	num_of_parliament_issues = 10
 
-
+	tax_line = 1
+	road_line = 1
+	survey_speed = 1
+	scouts_administrative_cost_modifier = 1
+	scouts_maintenance_cost_modifier = 1
 	
 	cav_to_inf_ratio = 0.2
 	max_absolutism = 30
@@ -584,7 +588,6 @@ new static_modifier war_exhaustion = {
 }
 new static_modifier doom = {
 	technology_cost = 0.5
-	idea_cost = 0.2
 	ae_impact = -1
 }
 new static_modifier authority = {
@@ -1000,7 +1003,6 @@ new static_modifier holy_order_subject = {
 	land_forcelimit = 1.5
 }
 new static_modifier holy_order_nation = {
-	idea_cost = 0.25
 	global_institution_spread = -0.15
 	religious_unity = 0.15
 	global_missionary_strength = 0.05
@@ -1375,9 +1377,6 @@ new static_modifier army_drill_modifier = {
 	movement_speed = 0.2
 }
 new static_modifier innovativeness = {
-	all_power_cost	= -0.1
-	army_tradition_decay = -0.01
-	navy_tradition_decay = -0.01
 }
 new static_modifier raiding_parties_modifier = {
 	hostile_attrition = 1
@@ -1420,7 +1419,6 @@ new static_modifier at_peace_revolutionary = {
 }
 new static_modifier expanded_infrastructure = {
 	allowed_num_of_buildings = 1
-	allowed_num_of_manufactories = 1
 	regiment_recruit_speed = -0.15
 	ship_recruit_speed = -0.15
 	local_defensiveness = 0.05

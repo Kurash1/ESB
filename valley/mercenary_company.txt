@@ -1,0 +1,64 @@
+new class mercenary_company = {
+	id = `{this:id}`
+	list = mercenary_companies
+	args = {
+		name = string
+		desc = string?
+		sprites = block?
+		
+		regiments_per_development = float
+		cost_modifier = float
+		
+		home_province = province?
+		
+		cavalry_weight = float
+		artillery_weight = float
+		cavalry_cap = int?
+		
+		trigger = named_trigger
+		modifier = named_modifier?
+		
+		counts_towards_force_limit = bool?
+		min_size = int?
+		max_size = int?
+		manpower_pool = int?
+		no_additional_manpower_from_max_size = bool?
+	}
+	simple_transpile = {
+		write_file "common/mercenary_companies/arc.txt" = {
+			foreach $company in mercenary_companies {
+				new localisation `{$company:id}` = "{$company:name}"
+				$company:id = {
+					when [exists = $company:desc] {
+						new localisation `{$company:id}_desc` = "{$company:desc}"
+						mercenary_desc_key = `{$company:id}_desc`
+					}
+					when [exists = $company:sprites] {
+						sprites = {
+							$company:sprites
+						}
+					}
+					regiments_per_development = $company:regiments_per_development
+					cost_modifier = $company:cost_modifier
+					when [exists = $company:home_province] `home_province = {$company:home_province}`
+					cavalry_weight = $company:cavalry_weight
+					artillery_weight = $company:artillery_weight
+					when [exists = $company:cavalry_cap] `cavalry_cap = {$company:cavalry_cap}`
+					trigger = {
+						$company:trigger
+					}
+					when [exists = $company:modifier] {
+						modifier = {
+							$company:modifier
+						}
+					}
+					when [exists = $company:counts_towards_force_limit] `counts_towards_force_limit = {$company:counts_towards_force_limit}`
+					when [exists = $company:min_size] `min_size = {$company:min_size}`
+					when [exists = $company:max_size] `max_size = {$company:max_size}`
+					when [exists = $company:manpower_pool] `manpower_pool = {$company:manpower_pool}`
+					when [exists = $company:no_additional_manpower_from_max_size] `no_additional_manpower_from_max_size = {$company:no_additional_manpower_from_max_size}`
+				}
+			}
+		}
+	}
+}

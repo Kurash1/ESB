@@ -1,3 +1,72 @@
+new effect show_event_insights = {
+	args = {
+		tooltip = string
+		event = event
+		show_options = bool
+	}
+	transpile = {
+		new_custom_tooltip = "§GEvent Insight§!
+{args:tooltip}"
+		when [bool:equals = {
+			bool = args:show_options
+			value = yes
+		}] {
+			foreach $option in args:event:options {
+				new_custom_tooltip = "§T{$option:name}§!:"
+				tooltip = {
+					$option:effect
+				}
+			}
+		}
+	}
+}
+new effect preview_idea_group = {
+	args = idea_group
+	transpile = {
+		new_custom_tooltip = "§Y{args:name} Ideas§!:
+	§YTraditions§!:
+		{modifier_to_string = args:start}
+	§Y{args:ideas:1:name}§!:
+		{modifier_to_string = args:ideas:1:modifier}
+	§Y{args:ideas:2:name}§!:
+		{modifier_to_string = args:ideas:2:modifier}
+	§Y{args:ideas:3:name}§!:
+		{modifier_to_string = args:ideas:3:modifier}
+	§Y{args:ideas:4:name}§!:
+		{modifier_to_string = args:ideas:4:modifier}
+	§Y{args:ideas:5:name}§!:
+		{modifier_to_string = args:ideas:5:modifier}
+	§Y{args:ideas:6:name}§!:
+		{modifier_to_string = args:ideas:6:modifier}
+	§Y{args:ideas:7:name}§!:
+		{modifier_to_string = args:ideas:7:modifier}
+	§YAmbition§!:
+		{modifier_to_string = args:bonus}
+"
+	}
+}
+new effect form_hold = {
+	args = country
+	transpile = {
+		change_tag = args:tag
+		swap_non_generic_missions = yes
+		
+		hidden_effect = {
+			emperor = {
+				quick_country_modifier = {
+					name = "New Elector"
+					modifier = {
+						max_electors = 1
+					}
+				}
+			}
+		}
+		
+		elector = yes
+		
+		swap_free_idea_group = yes
+	}
+}
 new effect starting_ruler = {
 	args = {
 		name = text

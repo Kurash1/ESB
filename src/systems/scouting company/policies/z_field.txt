@@ -1,0 +1,118 @@
+new country_event survey_mechanic.3 = {
+	title = "Select Field Policy"
+	desc = ""
+	picture = recruits_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		foreach $policy in survey_field_policies {
+			if [has_field_policy = $policy] {
+				unapply_field_policy = $policy
+			}
+		}
+	}
+	options = {
+	}
+}
+
+new named_int survey_field_policies_count = 1
+new class survey_field_policy = {
+	list = survey_field_policies
+	id = `{this:id}`
+	default = {
+		slot = 0
+		potential = {
+			always = yes
+		}
+		trigger_tooltip = ""
+		trigger = {
+			always = yes
+		}
+	}
+	args = {
+		name = string
+		icon = int
+		potential = trigger
+		trigger_tooltip = string
+		trigger = trigger
+		modifier = modifier
+		slot = int
+	}
+	on_create = {
+		this:slot := survey_field_policies_count
+		
+		new event_modifier `survey_field_policy_{this:id}` = {
+			name = this:name
+			modifier = this:modifier
+		}
+		
+		events:survey_mechanic.3:options += {
+			{
+				name =* "*this:name*"
+				effect =* {
+					apply_field_policy = *this:id*
+				}
+			}
+		}
+		
+		custom_icons:survey_policy_icon_3:frames += {
+			{
+				frame = this:icon
+				trigger =* {
+					&survey_policy_3 == *survey_field_policies_count*
+				}
+			}
+		}
+		
+		survey_field_policies_count += 1
+	}
+}
+new trigger has_field_policy = {
+	args = survey_field_policy
+	transpile = {
+		&survey_policy_3 == args:slot
+	}
+}
+new effect apply_field_policy = {
+	args = survey_field_policy
+	transpile = {
+		&survey_policy_3 := args:slot
+		add_country_modifier = {
+			name = `survey_field_policy_{args:id}`
+			duration = -1
+		}
+	}
+}
+new effect unapply_field_policy = {
+	args = survey_field_policy
+	transpile = {
+		remove_country_modifier = `survey_field_policy_{args:id}`
+	}
+}
+new survey_field_policy living_off_the_land = {
+	name = "Living off the Land"
+	icon = 1
+	modifier = {
+		
+	}
+}
+new survey_field_policy supply_trains = {
+	name = "Supply Trains"
+	icon = 2
+	modifier = {
+		
+	}
+}
+new survey_field_policy local_contacts = {
+	name = "Local Contacts"
+	icon = 3
+	modifier = {
+		
+	}
+}
+new survey_field_policy follow_rivers = {
+	name = "Follow Rivers"
+	icon = 4
+	modifier = {
+		
+	}
+}

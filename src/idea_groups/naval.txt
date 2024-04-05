@@ -43,6 +43,7 @@ new idea_group naval_ideas = {
 			desc = "The more punishment our ships can take the more they can dish out. Let us ensure that we have a ready supply of the finest seasoned oak for our warships."
 			modifier = {
 				heavy_ship_power = 0.2
+				navy_line = 1
 			}
 		}
 		{
@@ -58,10 +59,14 @@ new idea_group naval_ideas = {
 		ship_durability = 0.10
 	}
 	ai_chance = {
-		factor = 5
+		factor = 1
 		modifier = {
 			factor = 1000
 			tag = windhelm
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
 		}
 	}
 }
@@ -85,6 +90,7 @@ new idea_group galle0 = {
 			desc = "The state maintains shipyards to more efficiently produce the ships we desire."
 			modifier = {
 				galley_cost = -0.2
+				navy_line = 1
 			}
 		}
 		{
@@ -127,6 +133,13 @@ new idea_group galle0 = {
 	bonus = {
 		capture_ship_chance = 0.25
 	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+	}
 }
 new idea_group handel0 = {
 	name = "Light Ship Focus"
@@ -140,6 +153,7 @@ new idea_group handel0 = {
 			desc = "The state maintains shipyards to more efficiently produce the ships we desire."
 			modifier = {
 				light_ship_cost = -0.2
+				navy_line = 1
 			}
 		}
 		{
@@ -191,6 +205,13 @@ new idea_group handel0 = {
 		merchants = 1
 		naval_tradition_from_trade = 0.25
 	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+	}
 }
 new idea_group gross0 = {
 	name = "Heavy Ship Focus"
@@ -204,6 +225,7 @@ new idea_group gross0 = {
 			desc = "The state maintains shipyards to produce the ships we desire more efficiently."
 			modifier = {
 				heavy_ship_cost = -0.2
+				navy_line = 1
 			}
 		}
 		{
@@ -253,5 +275,12 @@ new idea_group gross0 = {
 	}
 	bonus = {
 		recover_navy_morale_speed = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
 	}
 }

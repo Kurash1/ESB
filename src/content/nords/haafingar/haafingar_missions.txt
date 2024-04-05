@@ -1,0 +1,444 @@
+mission_trees:solitude += {
+	form_haafingar_hold = {
+		name = "Form Haafingar Hold"
+		x = 6
+		y = 2
+		icon = form_haafingar
+		required = {
+			coast_of_haafingar
+			the_deepwood
+		}
+		trigger = {
+			regions:haafingar = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			new country_event haafingar.6 = {
+				title = "Formation of Haafingar"
+				desc = "HARKEN, hale of Haafingar, and hear the homages of our hearth; The sweeping, sky-skimming spine of the city's solitary crescent, Rises from the rigid rock, proud and persisting, Tall against the tolling tides and the trials of interminable time. Once, o honored audience, our houses were humble. The Sea of Ghost's glacial gales, its whipping winds, Forced our forlorn forebearers, fraught and faithful, To shelter under sheer cliffs that shot up from the shore, And pray to Shor for passage through primal plumes of pummeling winter.
+
+LO, and with the reckoning of Alduin's revolving hourglass, Our people prospered, and perched upon the roost-stone, Their walls and wells, against the baleful baying of the bitter winds. Hewing stone with hardened hands, they hefted high towers — A Dour donjon, and a temple for those dutiful to the Divines. These foundations, fortress and faith-house, form the fulcrum, Of our city, Solitude, oft-sung in skaldic odes.
+
+NOW built, this bastion on the blasted and buffeted bedrock, Solitude soared and, surveying its surroundings, seized them; With unrestrained grasp, and unrepentant gaze, It harried and hammered the hinterlands into the hold of Haafingar. Many mourned, more demurred, but the moments came to murmurs: When the Jarl bore forth the wending circlet of his silver crown, Upon which was blazed the wolf, wise and wary — A symbol of the city, a solemn sigil of the spirit of Solitude.
+
+SO take up swords, sworn sons and dauntless daughters, And rally around the reign of the wolf-crowned king! Should our blood be spilled in battle, we can be blessed to know, That we shall doff our helms in the hallowed home, Sovngarde, Having slew the serpents strangling our Skyrim. Now rest, my cunning kindred, rest and keen-dream, Of the war that we will win on the morrow's dawn, And the ones that we will win for every morrow due us."
+				picture = haafingar_eventPicture
+				is_triggered_only = yes
+				immediate = { #for debugging, so we can rerun this event.
+					clr_country_flag = has_haafingar_ideas 
+					clr_country_flag = has_solitude_ideas
+				}
+				options = {
+					{
+						name = "We are the Children of Haafingar"
+						effect = {
+							set_country_flag = has_haafingar_ideas
+							form_hold = haafingar
+							
+							preview_idea_group = haafingar_ideas
+						}
+					}
+					{
+						name = "We are the Children of Solitude"
+						effect = {
+							set_country_flag = has_solitude_ideas
+							form_hold = haafingar
+							
+							preview_idea_group = solitude_ideas
+						}
+					}
+					{
+						name = "We are the Children of Skyrim"
+						effect = {
+							form_hold = haafingar
+							
+							preview_idea_group = nordic_ideas
+						}
+					}
+				}
+			}
+			country_event = { 
+				id = haafingar.6
+				days = 0
+			}
+			
+			regions:haafingar = {
+				add_nationalism = -25
+			}
+			
+			quick_country_modifier = {
+				name = "Unified Hold"
+				years = 25
+				modifier = {
+					legitimacy = 1
+					republican_tradition = 0.5
+					devotion = 1
+					horde_unity = 1
+					meritocracy = 1
+					
+					global_autonomy = -0.1
+				}
+			}
+		}
+	}
+	northwatch_keep = {
+		name = "Northwatch Keep"
+		x = 5
+		y = 3
+		required = form_haafingar_hold
+		trigger = {
+			owns = northwatch
+			provinces:northwatch = {
+				development = 15
+				fort_level = 2
+			}
+		}
+		effect = {
+			new country_event haafingar.1 = {
+				title = "Purpose of Northwatch Keep"
+				desc = ""
+				picture = northwatch_eventPicture
+				is_triggered_only = yes
+				options = {
+					{ #Felhvalstag - Cold Whale Castle
+						name = "A Fortress to rule the waves"
+						effect = {
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Felhvalstag"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Lurag-Nool - Tribe of Giants
+						name = "A permanent camp for the giants"
+						effect = {
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Lurag-Nool"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Orkvulkstag - Orc-Folk Castle
+						name = "It can serve as an embassy for the orcs of the west"
+						effect = {
+							new_custom_tooltip = "Will be locked into the §YOrsinium Path§! of the Wrothgar Missions"
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Orkvulkstag"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Hlardstrad Fortress - Bloody-River Fortress
+						name = "It can serve for future conquests to the west"
+						effect = {
+							new_custom_tooltip = "Will be locked into the §YJehanna Path§! of the Wrothgar Missions"
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Hlardstrad"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Center of Torture
+						name = "The Scaled Justice require additional locations"
+						effect = {
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Center of Torture"
+									modifier = {
+										tax_income = 1
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			country_event = haafingar.1
+			new_custom_tooltip = "§GEvent Insight§!
+This event will allow us to choose the settlment focus for Northwatch.
+"
+			
+			conditional_effect = {
+				tooltip = "granted estate privilege §YPromote Giant Rights§! or §YGiant Land Rights§!"
+				trigger = {
+					OR = {
+						has_estate_privilege = giants:promote_giant_rights
+						has_estate_privilege = giants:giant_land_rights
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Event gains an additional option of the §YLurag-Nool§! tribe of Giants
+"
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YScaled Justice§! as the settlement focus for §YDragon Bridge§!"
+				trigger = {
+					has_country_flag = has_scaled_justice
+				}
+				effect = {
+					new_custom_tooltip = "Event gains an additional option of the §YCenter of Torture§!
+"
+				}
+			}
+		}
+	}
+	cascabel_hall = {
+		name = "Autonomy of Cascabel Hall"
+		x = 7
+		y = 3
+		required = form_haafingar_hold
+		icon = cascabel_hall_mission
+		trigger = {
+			areas:shadowgreen = {
+				owned_by = ROOT
+			}
+			provinces:cascabel_hall = {
+				fort_level = 2
+			}
+		}
+		effect = {
+			provinces:cascabel_hall = {
+				quick_province_modifier = {
+					name = "Arbor of Golden Apples"
+					modifier = {
+						trade_value_modifier = 1.5 #this makes the base_price of the good 5 instead of 2
+						trade_goods_size_modifier = 0.5
+					}
+				}
+				quick_province_modifier = {
+					name = "Impenetrable Cascabel Walls"
+					modifier = {
+						local_defensiveness = 0.5
+						fort_level = 1
+					}
+				}
+			}
+			
+			country_event = haafingar.3
+		}
+	}
+}
+new country_event haafingar.3 = {
+	title = "Autonomy of Cascabel Hall"
+	is_triggered_only = yes
+	picture = cascabel_hall_eventPicture
+	immediate = {
+		areas:shadowgreen = {
+			add_core = cascabel
+		}
+	}
+	options = {
+		{
+			name = "Curtail their autonomy"
+			effect = {
+				areas:shadowgreen = {
+					set_local_autonomy = 0
+				}
+			}
+		}
+		{
+			name = "Autonomy for the Count of Cascabel"
+			effect = {
+				hidden_effect = {
+					release = cascabel
+				}
+				create_subject = {
+					subject_type = cascabel_subject
+					subject = cascabel
+				}
+			}
+		}
+	}
+}
+new subject_type cascabel_subject = {
+	name = "County"
+	desc = ""
+	title = "County"
+	plural = "Counties"
+	overlord = "County Overlord"
+	subject = "County Subject"
+	is_our = "§Y$NAME$§! is our County"
+
+	copy_from = vassal
+	
+	sprite = GFX_icon_march
+	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
+	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+	
+	gives_daimyo_bonuses = yes
+	counts_for_borders = yes
+	takes_diplo_slot = yes
+	scutage = no
+	enforce_religion = yes
+	siphon_income = yes
+	seize_territory = no
+	takeondebt = yes
+	bestow_gifts = yes
+	send_additional_troops = yes
+	relative_power_class = 1
+	max_government_rank = 2
+	place_relative_on_throne = no
+	joins_overlords_wars = no
+	military_focus = 1.0
+	clear_overlord_modifier = yes
+	clear_subject_modifier = yes
+	subject_modifiers = {
+		{
+			modifier = cascabel_nation
+		}
+	}
+}
+new localisation cascabel_nation = "Cascabel Nation"
+new static_modifier cascabel_nation = {
+	land_forcelimit = 5
+	global_manpower = 10
+}
+new localisation cascabel_bonus = "Cascabel Bonus"
+new static_modifier cascabel_bonus = {
+	discipline = 0.1
+}
+new diplomatic_action call_cascabel = {
+	name = "Call Cascabel to War"
+	title = "Call Cascabel to War"
+	desc = "Spend up to §R20§! Favors with §Y[From.GetName]§! and call them into ALL of §Y[Root.GetAdjective]§! wars. The cost is reduced by §Y10§! Favors if we can call §Y[From.GetName]§! only into defensive wars."
+	tooltip = "Use our favors with the target country in order to call them into our wars."
+	category = influence
+
+	require_acceptance = no
+	potential = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = cascabel_subject
+		}
+	}
+	trigger = {
+		if [
+			FROM = { liberty_desire = 50 }
+		] {
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_REBELLIOUS_TT
+				FROM = { liberty_desire = 50 }
+			}
+		}
+		if [
+			is_at_war = no
+		] {
+			custom_trigger_tooltip = {
+				tooltip = ROOT_IS_NOT_AT_WAR_TT
+				is_at_war = yes
+			}
+		}
+		if [
+			FROM = {
+				NOT = {
+					owes_favors = {
+						who = ROOT
+						value = 10
+					}
+				}
+			}
+			is_in_war = {
+				defender_leader = ROOT
+			}
+		] {
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_OWE_10_FAVORS_DEFENSIVE_WAR_TT
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 10
+					}
+				}
+			}
+		}
+		if [
+			FROM = {
+				NOT = {
+					owes_favors = {
+						who = ROOT
+						value = 20
+					}
+				}
+			}
+			NOT = {
+				is_in_war = {
+					defender_leader = ROOT
+				}
+			}
+		] {
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_OWE_20_FAVORS_TT
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 20
+					}
+				}
+			}
+		}
+		if [
+			FROM = { is_at_war = yes }
+		] {
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_AT_WAR_TT
+				FROM = { is_at_war = no }
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			ROOT = {
+				add_favors = {
+					who = PREV
+					amount = -10
+				}
+			}
+			join_all_defensive_wars_of = ROOT
+		}
+		if = {
+			limit = {
+				FROM = {
+					owes_favors = {
+						who = ROOT
+						value = 10
+					}
+				}
+			}
+			FROM = {
+				ROOT = {
+					add_favors = {
+						who = PREV
+						amount = -10
+					}
+				}
+				join_all_offensive_wars_of = ROOT
+			}
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		always = yes
+	}
+}

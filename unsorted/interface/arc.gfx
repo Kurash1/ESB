@@ -1,10 +1,22 @@
 spriteTypes = {
-	spriteType = { name = "GFX_disaster_taleskan_succession_crisis" texturefile = "gfx//interface//disasters//disaster_icon_taleskani_succsession_crisis.dds" noOfFrames = 3 loadType = "INGAME" }
-	spriteType = { name = "GFX_cardinal_icon" texturefile = "gfx/interface/cardinal_icon.dds" }
 	spriteType = { 
 		name = "GFX_expedition_icon_strip" 
 		texturefile = "gfx/special/expedition_icon_strip.dds"
-		noOfFrames = 13
+		noOfFrames = 15
 	}
-	
+	spriteType = {
+		name = "GFX_recruitment_policy_icon"
+		texturefile = "gfx/special/GFX_recruitment_policy_icon.dds"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_economic_policy_icon"
+		texturefile = "gfx/special/GFX_economic_policy_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_field_policy_icon"
+		texturefile = "gfx/special/GFX_field_policy_icon.dds"
+		noOfFrames = 1
+	}
 }

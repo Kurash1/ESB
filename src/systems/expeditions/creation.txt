@@ -9,7 +9,10 @@ new effect create_expedition = {
 		event = event
 	}
 	transpile = {
+		 	add_cardinal = yes
+		
 		set_province_flag = expedition_target
+		
 		set_variable = {
 			which = expedition_progress
 			value = 0
@@ -25,7 +28,7 @@ new effect create_expedition = {
 		
 		set_province_flag = args:id
 		
-		customizable_localizations:GetExpeditionTitle += {
+		customizable_localizations:GetExpeditionTitle:texts += {
 			{
 				text = args:name
 				trigger =* {
@@ -33,7 +36,7 @@ new effect create_expedition = {
 				}
 			}
 		}
-		customizable_localizations:GetExpeditionDesc += {
+		customizable_localizations:GetExpeditionDesc:texts += {
 			{
 				text = args:desc
 				trigger =* {
@@ -54,7 +57,7 @@ new effect create_expedition = {
 			if [has_province_flag = args:id] {
 				province_event = args:event
 				clr_province_flag = args:id
-				defineloc `completed_{args:id}_expedition` = "Completed {args:name} Expedition"
+				new localisation `completed_{args:id}_expedition` = "Completed {args:name} Expedition"
 				set_province_flag = `completed_{args:id}_expedition`
 			}
 		}
@@ -73,7 +76,10 @@ new effect create_expedition = {
 		on_complete = effect
 	}
 	transpile = {
+		 	add_cardinal = yes
+		
 		set_province_flag = expedition_target
+		
 		set_variable = {
 			which = expedition_progress
 			value = 0
@@ -89,7 +95,7 @@ new effect create_expedition = {
 		
 		set_province_flag = args:id
 		
-		customizable_localizations:GetExpeditionTitle += {
+		customizable_localizations:GetExpeditionTitle:texts += {
 			{
 				text = args:name
 				trigger =* {
@@ -97,7 +103,7 @@ new effect create_expedition = {
 				}
 			}
 		}
-		customizable_localizations:GetExpeditionDesc += {
+		customizable_localizations:GetExpeditionDesc:texts += {
 			{
 				text = args:desc
 				trigger =* {
@@ -129,7 +135,7 @@ new effect create_expedition = {
 			if [has_province_flag = args:id] {
 				province_event = `expeditions.{expedition_count}`
 				clr_province_flag = args:id
-				defineloc `completed_{args:id}_expedition` = "Completed {args:name} Expedition"
+				new localisation `completed_{args:id}_expedition` = "Completed {args:name} Expedition"
 				set_province_flag = `completed_{args:id}_expedition`
 			}
 		}

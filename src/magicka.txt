@@ -47,6 +47,11 @@ new government_mechanic magicka_mechanic = {
 			max = 100
 			base_monthly_growth = 0.5
 			is_good = yes
+			on_min_reached = {
+				every_owned_province [has_province_modifier = expedition_mage_mod] {
+					remove_province_modifier = expedition_mage_mod
+				}
+			}
 		}
 	}
 }

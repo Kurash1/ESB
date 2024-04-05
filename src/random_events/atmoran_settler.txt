@@ -37,9 +37,6 @@ new country_event atmoran_settler.1 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
-					if [NOT = { development = 5 }] {
-						change_religion = the_old_ways
-					}
 					add_base_tax = 1
 					add_base_production = 1
 				}
@@ -60,9 +57,6 @@ new country_event atmoran_settler.2 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
-					if [NOT = { development = 7 }] {
-						change_religion = the_old_ways
-					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -84,9 +78,6 @@ new country_event atmoran_settler.3 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
-					if [NOT = { development = 7 }] {
-						change_religion = the_old_ways
-					}
 					add_base_manpower = 3
 				}
 			}
@@ -106,9 +97,6 @@ new country_event atmoran_settler.4 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
-					if [NOT = { development = 5 }] {
-						change_religion = the_old_ways
-					}
 					add_base_tax = 1
 					add_base_manpower = 1
 				}
@@ -129,9 +117,6 @@ new country_event atmoran_settler.5 = {
 			name = "Great"
 			effect = {
 				random_owned_province = {
-					if [NOT = { development = 13 }] {
-						change_religion = the_old_ways
-					}
 					add_base_tax = 2
 					add_base_production = 2
 					add_base_manpower = 2

@@ -297,6 +297,7 @@ new province drajkmyr_marsh = {
 	}
 	sea = yes
 	area = coast_of_haafingar
+	terrain = inland_ocean
 }
 new province coast_of_dawnstar = {
 	position = {
@@ -403,7 +404,7 @@ new province two_isle_coast = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	name = "Two Isle Coast"
+	name = "Three Isle Coast"
 	color = {
 		34 61 56
 	}
@@ -510,6 +511,7 @@ new province coast_of_solitude = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new province coast_of_morthal = {
 	position = {
@@ -529,6 +531,7 @@ new province coast_of_morthal = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new province hjaal_river = {
 	position = {
@@ -548,6 +551,7 @@ new province hjaal_river = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new province upper_hjaal_river = {
 	position = {
@@ -567,6 +571,7 @@ new province upper_hjaal_river = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new province lake_karthspire = {
 	position = {
@@ -586,6 +591,7 @@ new province lake_karthspire = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new province hroldan_river = {
 	position = {
@@ -605,6 +611,7 @@ new province hroldan_river = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new province blind_river = {
 	position = {
@@ -624,6 +631,7 @@ new province blind_river = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new province dragon_river = {
 	position = {
@@ -643,6 +651,7 @@ new province dragon_river = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new province r7002 = {
 	position = {
@@ -770,6 +779,7 @@ new province karth_lake = {
 	}
 	sea = yes
 	area = karth_river
+	terrain = inland_ocean
 }
 new area white_river = {
 	name = "White River"
@@ -793,6 +803,7 @@ new province lake_yorgrim = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province coast_of_windhelm = {
 	position = {
@@ -812,6 +823,7 @@ new province coast_of_windhelm = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province lower_darkwater = {
 	position = {
@@ -831,6 +843,7 @@ new province lower_darkwater = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province grund_river = {
 	position = {
@@ -850,6 +863,7 @@ new province grund_river = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province lake_illinalta = {
 	position = {
@@ -869,6 +883,7 @@ new province lake_illinalta = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province river_ember = {
 	position = {
@@ -888,6 +903,7 @@ new province river_ember = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province white_river = {
 	position = {
@@ -907,6 +923,7 @@ new province white_river = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province mixwater_river = {
 	position = {
@@ -926,6 +943,7 @@ new province mixwater_river = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province lake_darkwater = {
 	position = {
@@ -945,6 +963,7 @@ new province lake_darkwater = {
 	}
 	sea = yes
 	area = white_river
+	terrain = inland_ocean
 }
 new province lake_honrich = {
 	position = {
@@ -964,6 +983,7 @@ new province lake_honrich = {
 	history = {
 	}
 	sea = yes
+	terrain = inland_ocean
 }
 new province aevar_river = {
 	position = {
@@ -983,6 +1003,7 @@ new province aevar_river = {
 	history = {
 	}
 	sea = yes
+	terrain = inland_ocean
 }
 new province lake_geir = {
 	position = {
@@ -1002,6 +1023,7 @@ new province lake_geir = {
 	history = {
 	}
 	sea = yes
+	terrain = inland_ocean
 }
 new province treva_river = {
 	position = {
@@ -1021,6 +1043,7 @@ new province treva_river = {
 	history = {
 	}
 	sea = yes
+	terrain = inland_ocean
 }
 new province ysgramoors_teeth = {
 	position = {

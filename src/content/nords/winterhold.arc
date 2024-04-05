@@ -59,7 +59,7 @@ new idea_group winterhold_ideas = {
 			name = "College of Winterhold"
 			desc = "One of the region's most noteworthy landmarks is the College of Winterhold, the province's premier school of magic and center of both academia and arcana."
 			modifier = {
-				idea_cost = -0.05
+				idea_cost = -0.025
 			}
 		}
 	}

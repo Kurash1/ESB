@@ -43,50 +43,15 @@ new unit regular_T01 = {
 	sailors = 60
 	sprite_level = 1
 }
-new unit duraki_infantry = {
-	name = "Duraki Warriors"
-	desc = ""
-	type = infantry
-	unit_type = duraki_tg
-	maneuver = 1
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 0
-	defensive_fire = 2
-	offensive_shock = 2
-	defensive_shock = 2
-}
-new unit duraki_cavalry = {
-	name = "Duraki Paladins"
-	desc = ""
-	type = cavalry
-	unit_type = duraki_tg
-	maneuver = 2
-	offensive_morale = 3
-	defensive_morale = 3
-	offensive_fire = 0
-	defensive_fire = 2
-	offensive_shock = 3
-	defensive_shock = 3
-}
-new unit duraki_artillery = {
-	name = "Duraki Onager"
-	desc = ""
-	type = artillery
-	unit_type = duraki_tg
-	maneuver = 1
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 4
-	defensive_fire = 2
-	offensive_shock = 0
-	defensive_shock = 0
+
+new technology_group nord = {
+	name = "Nordic"
 }
 new unit nord_infantry = {
 	name = "Huscarl"
 	desc = ""
 	type = infantry
-	unit_type = nord_tg
+	unit_type = nord
 	maneuver = 1
 	offensive_morale = 2
 	defensive_morale = 2
@@ -99,7 +64,7 @@ new unit nord_cavalry = {
 	name = "Scouts"
 	desc = ""
 	type = cavalry
-	unit_type = nord_tg
+	unit_type = nord
 	maneuver = 2
 	offensive_morale = 0
 	defensive_morale = 0
@@ -112,7 +77,7 @@ new unit nord_artillery = {
 	name = "Nordic Onager"
 	desc = ""
 	type = artillery
-	unit_type = nord_tg
+	unit_type = nord
 	maneuver = 1
 	offensive_morale = 2
 	defensive_morale = 2
@@ -121,11 +86,15 @@ new unit nord_artillery = {
 	offensive_shock = 0
 	defensive_shock = 1
 }
+
+new technology_group reachman = {
+	name = "Reachman"
+}
 new unit reachmen_infantry = {
 	name = "Hunters"
 	desc = ""
 	type = infantry
-	unit_type = reachman_tg
+	unit_type = reachman
 	maneuver = 1
 	offensive_morale = 2
 	defensive_morale = 2
@@ -138,7 +107,7 @@ new unit reachmen_cavalry = {
 	name = "Bear rider"
 	desc = ""
 	type = cavalry
-	unit_type = reachman_tg
+	unit_type = reachman
 	maneuver = 2
 	offensive_morale = 2
 	defensive_morale = 2
@@ -151,20 +120,24 @@ new unit reachmen_artillery = {
 	name = "Siege Mammoths"
 	desc = ""
 	type = artillery
-	unit_type = reachman_tg
+	unit_type = reachman
 	maneuver = 1
-	offensive_morale = 0
-	defensive_morale = 0
+	offensive_morale = 4
+	defensive_morale = 3
 	offensive_fire = 0
 	defensive_fire = 0
-	offensive_shock = 0
-	defensive_shock = 0
+	offensive_shock = 4
+	defensive_shock = 3
+}
+
+new technology_group orc = {
+	name = "Orcish"
 }
 new unit orc_infantry = {
 	name = "Berserker"
 	desc = ""
 	type = infantry
-	unit_type = orc_tg
+	unit_type = orc
 	maneuver = 1
 	offensive_morale = 4
 	defensive_morale = 2
@@ -177,7 +150,7 @@ new unit orc_artillery = {
 	name = "Battering Ram"
 	desc = ""
 	type = artillery
-	unit_type = orc_tg
+	unit_type = orc
 	maneuver = 1
 	offensive_morale = 1
 	defensive_morale = 1
@@ -186,11 +159,15 @@ new unit orc_artillery = {
 	offensive_shock = 2
 	defensive_shock = 1
 }
+
+new technology_group snow_elven = {
+	name = "Snow Elven"
+}
 new unit snow_elven_infantry = {
 	name = "Ranger"
 	desc = ""
 	type = infantry
-	unit_type = snow_elven_tg
+	unit_type = snow_elven
 	maneuver = 1
 	offensive_morale = 2
 	defensive_morale = 2
@@ -203,7 +180,7 @@ new unit snow_elven_artillery = {
 	name = "Flameslinger"
 	desc = ""
 	type = artillery
-	unit_type = snow_elven_tg
+	unit_type = snow_elven
 	maneuver = 1
 	offensive_morale = 2
 	defensive_morale = 2
@@ -211,4 +188,133 @@ new unit snow_elven_artillery = {
 	defensive_fire = 0
 	offensive_shock = 0
 	defensive_shock = 0
+}
+
+new technology_group duraki = {
+	name = "Duraki"
+}
+new unit duraki_infantry = {
+	name = "Duraki Warriors"
+	desc = ""
+	type = infantry
+	unit_type = duraki
+	maneuver = 1
+	offensive_morale = 2
+	defensive_morale = 2
+	offensive_fire = 0
+	defensive_fire = 2
+	offensive_shock = 2
+	defensive_shock = 2
+}
+new unit duraki_cavalry = {
+	name = "Duraki Paladins"
+	desc = ""
+	type = cavalry
+	unit_type = duraki
+	maneuver = 2
+	offensive_morale = 3
+	defensive_morale = 3
+	offensive_fire = 0
+	defensive_fire = 2
+	offensive_shock = 3
+	defensive_shock = 3
+}
+new unit duraki_artillery = {
+	name = "Duraki Onager"
+	desc = ""
+	type = artillery
+	unit_type = duraki
+	maneuver = 1
+	offensive_morale = 2
+	defensive_morale = 2
+	offensive_fire = 4
+	defensive_fire = 2
+	offensive_shock = 0
+	defensive_shock = 0
+}
+
+new technology_group giant = {
+	name = "Giant"
+}
+new unit giant_infantry = {
+	name = "Giant Warriors"
+	desc = ""
+	type = infantry
+	unit_type = giant
+	maneuver = 1
+	offensive_morale = 4
+	defensive_morale = 2
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 4
+	defensive_shock = 2
+}
+new unit giant_cavalry = {
+	name = "War Mammoths"
+	desc = ""
+	type = cavalry
+	unit_type = giant
+	maneuver = 2
+	offensive_morale = 4
+	defensive_morale = 3
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 4
+	defensive_shock = 3
+}
+new unit giant_artillery = {
+	name = "Siege Mammoths"
+	desc = ""
+	type = artillery
+	unit_type = giant
+	maneuver = 1
+	offensive_morale = 4
+	defensive_morale = 3
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 4
+	defensive_shock = 3
+}
+
+new technology_group sea_giant = {
+	name = "Sea Giant"
+}
+new unit sea_giant_infantry = {
+	name = "Sea Giant Raiders"
+	desc = ""
+	type = infantry
+	unit_type = sea_giant
+	maneuver = 1
+	offensive_morale = 4
+	defensive_morale = 2
+	offensive_fire = 0
+	defensive_fire = 0
+	offensive_shock = 4
+	defensive_shock = 2
+}
+new unit giant_chub_loons = {
+	name = "Giant Chub Loons"
+	desc = ""
+	type = cavalry
+	unit_type = sea_giant
+	maneuver = 2
+	offensive_morale = 0
+	defensive_morale = 0
+	offensive_fire = 2
+	defensive_fire = 2
+	offensive_shock = 2
+	defensive_shock = 2
+}
+new unit sea_giant_mages = {
+	name = "Sea Giant Shamans"
+	desc = ""
+	type = artillery
+	unit_type = sea_giant
+	maneuver = 1
+	offensive_morale = 2
+	defensive_morale = 1
+	offensive_fire = 4
+	defensive_fire = 2
+	offensive_shock = 1
+	defensive_shock = 1
 }

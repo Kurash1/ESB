@@ -84,32 +84,18 @@ new estate orcs = {
 			icon = privilege_malacath
 			max_absolutism = -10
 			loyalty = 0.1
+			is_valid = {
+				religion = nordic_pantheon
+			}
 			can_select = {
 				has_estate_privilege = orcs:trade_with_strongholds
 				has_estate_privilege = orcs:hire_orc_warriors
 				has_estate_privilege = orcs:stronghold_rights
 			}
 			on_granted = {
-				defineloc redeemed_mauloch = "Adds Mauloch to the Deity Choices if you are of §YNordic Pantheon§! or §YOld Ways§! religion"
-				custom_tooltip = redeemed_mauloch
+				new_custom_tooltip = "Adds §YMauloch§! to the Deity Choices."
 			}
 		}
 	}
 	base_influence = 5
-}
-new personal_deity mauloch = {
-	name = "Mauloch"
-	desc = ""
-	sprite = 16
-	modifiers = {
-		morale_damage = 10%
-		global_unrest = 2
-	}
-	potential = {
-		OR = {
-			religion = nordic_pantheon
-			religion = the_old_ways
-		}
-		has_estate_privilege = orcs:redeem_mauloch
-	}
 }

@@ -1,0 +1,134 @@
+new idea_group haafingar_ideas = {
+	name = "Haafingar"
+	category = national
+	start = {
+		diplomatic_reputation = 1.5
+		stability_cost_modifier = -0.15
+	}
+	bonus = {
+		province_warscore_cost = -0.15
+	}
+	trigger = {
+		tag = haafingar
+		has_country_flag = has_haafingar_ideas
+	}
+	ideas = {
+		{
+			name = "Children of Kyne"
+			desc = "Being the children of Kyne blessed warrior-wife of Shor we the people of Solitude must likewise be hardy warriors."
+			modifier = {
+				infantry_power = 0.1
+			}
+		}
+		{
+			name = "The Just Red-Wolves"
+			desc = "The Red Wolf dynasty rules as just as is humanly possible. Just as Stuhn taught us too."
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "The wolves of fertility"
+			desc = "Mara is not only the goddess of love but also of agriculture and fertility."
+			modifier = {
+				global_trade_goods_size = 0.3
+			}
+		}
+		{
+			name = "University of the wise"
+			desc = "Solitude possesses a university that harbours the wisest people of all of Skyrim. The mighty rune god Jhunal is certainly pleased by such an institution."
+			modifier = {
+				idea_cost = -0.025
+			}
+		}
+		{
+			name = "Sovngarde we will come"
+			desc = "Our Wolf army is as courageous as Shor was in the face of death."
+			modifier = {
+				land_morale = 0.1
+			}
+		}
+		{
+			name = "The Bard College"
+			desc = "The Bard College in Solitude is the foremost institution for skaldic art in the entirety of Skyrim, with it we revere smiling Dibella."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Castle Dour"
+			desc = "Just like Tsun defended Shor with his life and Castle Dour defends Solitude so shall the defenders of our fortresses emulate both of them."
+			modifier = {
+				defensiveness = 0.25
+			}
+		}
+	}
+}
+new idea_group solitude_ideas = {
+	name = "Solitude"
+	category = national
+	start = {
+		diplomatic_reputation = 1.5
+		improve_relation_modifier = 0.2
+	}
+	bonus = {
+		stability_cost_modifier = -0.2
+	}
+	trigger = {
+		OR = {
+			tag = solitude
+			has_country_flag = has_solitude_ideas
+		}
+	}
+	ideas = {
+		{
+			name = "World Port of Skyrim"
+			desc = "Solitude features the largest port in all of Skyrim the majority of all goods that enter or exit Skyrim go through this port. Solitude is therefore a trading hub without comparison in all of Skyrim."
+			modifier = {
+				trade_efficiency = 0.15
+			}
+		}
+		{
+			name = "A realm for the Hearth Gods"
+			desc = "No other Hold resembles the teachings of the hearth gods quite as well as Solitude."
+			modifier = {
+				tolerance_own = 2
+			}
+		}
+		{
+			name = "Armies of the Wolf "
+			desc = "The army of Solitude is highly drilled and tough. They will not easily falter in a battle."
+			modifier = {
+				infantry_power = 0.15
+			}
+		}
+		{
+			name = "College of Bards"
+			desc = "The Bard College is a centre for all things poetic and a highly prestigious institution."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Mighty Bulwark of western Skyrim"
+			desc = "Solitude is the singlemost defensive position in all of Skyrim and its people reflect this."
+			modifier = {
+				defensiveness = 0.2
+			}
+		}
+		{
+			name = "The Blue Palace"
+			desc = "The people of Solitude believe that this is the most beautyful seat of government of Skyrim"
+			modifier = {
+				legitimacy = 1
+			}
+		}
+		{
+			name = "Temple of the Divines"
+			desc = "Unlike other Holds Solitude possesses a temple in honour of all the divines."
+			modifier = {
+				missionaries = 1
+			}
+		}
+	}
+}

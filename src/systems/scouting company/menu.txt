@@ -1,0 +1,139 @@
+new custom_icon custom_mechanic_survey_background = {
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+}
+new custom_text_box survey_progress_amount = {
+    potential = {
+		has_country_flag = show_survey_screen
+		has_country_modifier = currently_surveying
+	}
+	name = "[This.survey_progress_percentage.GetValue]%"
+	tooltip = "[This.survey_progress.GetValue]/[This.survey_length.GetValue]"
+}
+new customizable_localization GetActiveSurvey = {
+}
+new custom_text_box survey_active_survey = {
+    potential = {
+		has_country_flag = show_survey_screen
+		has_country_modifier = currently_surveying
+	}
+	name = "[This.GetActiveSurvey]"
+}
+new custom_text_box survey_is_active_survey = {
+    potential = {
+		has_country_flag = show_survey_screen
+		has_country_modifier = currently_surveying
+	}
+	name = "Currently Surveying:"
+}
+new custom_button open_survey_screen = {
+	tooltip = "Open Survey Screen"
+	potential = {
+		NOT = {
+			has_country_flag = show_technology
+		}
+	}
+	effect = {
+		set_country_flag = show_survey_screen
+		
+		if [
+			NOT = {
+				has_country_flag = init_survey
+			}
+		] {
+			set_country_flag = init_survey
+			
+			variables:survey_funds:init = yes
+			variables:survey_manpower:init = yes
+			variables:survey_real_manpower:init = yes
+			variables:survey_monthly_income:init = yes
+			variables:survey_monthly_expenses:init = yes
+			variables:survey_monthly_funds:init = yes
+			variables:survey_monthly_recruits:init = yes
+			variables:survey_monthly_losses:init = yes
+			variables:survey_monthly_manpower:init = yes
+			variables:survey_force_limit:init = yes
+			variables:survey_over_force_limit:init = yes
+			variables:survey_administrative_costs:init = yes
+			variables:survey_scout_maintenance:init = yes
+			variables:survey_base_income:init = yes
+			variables:survey_monthly_recruits_base:init = yes
+			variables:survey_company_size:init = yes
+			
+			apply_recruitment_policy = standard_recruitment
+			apply_economic_policy = state_investments
+			apply_field_policy = living_off_the_land
+			
+			random_list = {
+				1 = { set_country_flag = survey_leader_is_female }
+				1 = { clr_country_flag = survey_leader_is_female }
+			}
+			set_saved_name = {
+				key = survey_leader_name
+				type = advisor
+				scope = ROOT
+			}
+			random_list = {
+				1 = { &survey_leader_adm := 0 }
+				2 = { &survey_leader_adm := 1 }
+				3 = { &survey_leader_adm := 2 }
+				4 = { &survey_leader_adm := 3 }
+				3 = { &survey_leader_adm := 4 }
+				2 = { &survey_leader_adm := 5 }
+				1 = { &survey_leader_adm := 6 }
+			}
+			random_list = {
+				1 = { &survey_leader_dip := 0 }
+				2 = { &survey_leader_dip := 1 }
+				3 = { &survey_leader_dip := 2 }
+				4 = { &survey_leader_dip := 3 }
+				3 = { &survey_leader_dip := 4 }
+				2 = { &survey_leader_dip := 5 }
+				1 = { &survey_leader_dip := 6 }
+			}
+			random_list = {
+				1 = { &survey_leader_mil := 0 }
+				2 = { &survey_leader_mil := 1 }
+				3 = { &survey_leader_mil := 2 }
+				4 = { &survey_leader_mil := 3 }
+				3 = { &survey_leader_mil := 4 }
+				2 = { &survey_leader_mil := 5 }
+				1 = { &survey_leader_mil := 6 }
+			}
+		}
+		&survey_real_manpower := survey_manpower
+		&survey_real_manpower *= 1000
+		
+		survey_calculate_recruits
+		survey_calculate_losses
+		
+		survey_calculate_income
+		survey_calculate_expenses
+	}
+}
+new custom_button close_survey_screen = {
+	tooltip = "Close Survey Screen"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	effect = {
+		clr_country_flag = show_survey_screen
+	}
+}
+on_actions:on_monthly_pulse += {
+	if [has_country_flag = init_survey] {
+		&survey_real_manpower := survey_manpower
+		&survey_real_manpower *= 1000
+		
+		survey_calculate_recruits
+		survey_calculate_losses
+		survey_calculate_manpower_sum
+		
+		survey_calculate_income
+		survey_calculate_expenses
+		survey_calculate_fund_sum
+		
+		survey_calculate_active_survey
+	}
+}

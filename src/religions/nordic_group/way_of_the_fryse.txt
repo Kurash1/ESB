@@ -1,0 +1,27 @@
+new religion way_of_the_fryse = {
+	name = "Way of the Fryse"
+	desc = "A heretical all female cult of Kyne that can be encountered on Solstheim. These ice witches wander around the isle of Solstheim killing everyone they encounter while also frequently using ice magic, undead and magical silver weapons to kill the poor souls that encounter them. Even fellow Nords are advised to stay away from those women as they do not recognise any form of kinship or fraternity with everyone but their own. Of the scarce reports that do exist it is known that they hold council among each other in ice caves."
+	icon = 19
+	color = {
+		29 115 85
+	}
+	allowed_conversions = {
+		nordic_pantheon
+		the_old_ways
+		ternion_way
+		sovngarde_path
+		cult_of_luck
+		rune_worship
+	}
+	heretic = {
+		NORDIC_PANTHEON_HERETIC
+	}
+	country = {
+		diplomatic_reputation = -1.5
+		shock_damage = 0.1
+	}
+	province = {
+		
+	}
+	religious_group = nordic_group
+}

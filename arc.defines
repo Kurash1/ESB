@@ -4,8 +4,10 @@ map_folder = map
 gfx_folder = gfx
 selector_folder = selectors
 load_order = {
+	valley/*
 	eu4/*
 	src/functions/*
+	src/helpers/*
 	src/static_modifiers.txt
 	src/superregions.txt
 	src/regions.txt
@@ -13,6 +15,7 @@ load_order = {
 	src/effects.txt
 	src/triggers.txt
 	src/inheritables.txt
+	src/units.txt
 	src/governments.txt
 	src/magicka.txt
 	src/terrains.txt
@@ -28,13 +31,11 @@ load_order = {
 	src/idea_groups/
 	src/buildings.txt
 	src/on_actions.txt
-	src/religious_groups.txt
 	src/policies/*
 	src/tradegoods.txt
-	src/religions/
+	src/religions/*
 	src/tradenodes.txt
 	src/content/*
-	src/units.txt
 	src/random_events/
 	src/ai_personalities.txt
 	src/achievements.txt

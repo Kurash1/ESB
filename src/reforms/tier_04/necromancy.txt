@@ -133,22 +133,22 @@ new government_mechanic necromancy_focus_mechanic = {
 					}
 				}
 				else_if [has_ruler_flag = necromancy_lich_3] {
-					defineloc necromancy_lich_4 = "Increase progress to Lichdom to §G80%§!"
+					new localisation necromancy_lich_4 = "Increase progress to Lichdom to §G80%§!"
 					custom_tooltip = necromancy_lich_4
 					set_ruler_flag = necromancy_lich_4
 				}
 				else_if [has_ruler_flag = necromancy_lich_2] {
-					defineloc necromancy_lich_3 = "Increase progress to Lichdom to §G60%§!"
+					new localisation necromancy_lich_3 = "Increase progress to Lichdom to §G60%§!"
 					custom_tooltip = necromancy_lich_3
 					set_ruler_flag = necromancy_lich_3
 				}
 				else_if [has_ruler_flag = necromancy_lich_1] {
-					defineloc necromancy_lich_2 = "Increase progress to Lichdom to §G40%§!"
+					new localisation necromancy_lich_2 = "Increase progress to Lichdom to §G40%§!"
 					custom_tooltip = necromancy_lich_2
 					set_ruler_flag = necromancy_lich_2
 				}
 				else {
-					defineloc necromancy_lich_1 = "Increase progress to Lichdom to §G20%§!"
+					new localisation necromancy_lich_1 = "Increase progress to Lichdom to §G20%§!"
 					custom_tooltip = necromancy_lich_1
 					set_ruler_flag = necromancy_lich_1
 				}

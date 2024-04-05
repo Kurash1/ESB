@@ -1,0 +1,37 @@
+new named_effect survey_calculate_recruits = {
+	&survey_monthly_recruits := 0
+	
+	if [
+		OR = {
+			has_country_modifier = currently_surveying
+			&survey_real_manpower > survey_company_size
+			&survey_funds <= 0
+		}
+	] {
+		&survey_monthly_recruits_base := 0
+	}
+	else {
+		# Recruits
+		# 
+		# max_manpower * (1 + manpower_recovery_speed) / 600
+		# 			So 20% of your normal monthly manpower
+		# * survey_recruit_rate
+		#
+		&survey_monthly_recruits_base &= max_manpower
+		&survey_temp &= modifier:manpower_recovery_speed
+		&survey_temp += 1
+		&survey_monthly_recruits_base *= survey_temp
+		&survey_monthly_recruits_base /= 600
+		
+		&survey_temp &= modifier:survey_recruit_rate
+		&survey_temp_2 := survey_leader_dip
+		&survey_temp_2 *= 0.05
+		&survey_temp += survey_temp_2
+		&survey_monthly_recruits_base *= survey_temp
+		
+		# to thousand rate
+		&survey_monthly_recruits_base *= 1000
+		
+		&survey_monthly_recruits += survey_monthly_recruits_base
+	}
+}

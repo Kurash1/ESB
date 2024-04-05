@@ -6,21 +6,21 @@ new idea_group standing_army_ideas = {
 			name = "Specialized Infantry Training "
 			desc = "Various new implementations and techniques vastly improve the effectiveness of the frontline in a battle, thus making our infantrymen excel during the fight."
 			modifier = {
-				infantry_power = 5%
+				infantry_power = 10%
 			}
 		}
 		{
 			name = "Cavalry Round Tactics"
 			desc = "By employing hit and run as well as surprise attacks, we make excellent use of our cavalry's fierce charge and power, a force to be reckoned with."
 			modifier = {
-				cavalry_power = 5%
+				cavalry_power = 10%
 			}
 		}
 		{
 			name = "Command the Barrage"
 			desc = "Raining fire upon the enemy, these archery skills are honed to perfection to deliver the most disciplined and brutal barrage."
 			modifier = {
-				artillery_power = 5%
+				artillery_power = 10%
 			}
 		}
 		{
@@ -28,6 +28,7 @@ new idea_group standing_army_ideas = {
 			desc = "Advances in the military have led to our staff writing booklets on how to train recruits and hone their skills to perfection, thus speeding up the time it takes to drill them."
 			modifier = {
 				drill_gain_modifier = 50%
+				army_line = 1
 			}
 		}
 		{
@@ -78,6 +79,7 @@ new idea_group quality_ideas = {
 			desc = "The most vital moment of any army's existence is straight after a battle. Win or lose, exhausted troops are most vulnerable. We must ensure that our troops are ready for combat before the opposition is."
 			modifier = {
 				army_tradition = 0.5
+				army_line = 1
 			}
 		}
 		{
@@ -254,7 +256,7 @@ new idea_group esb_professionalism = {
 			name = "Well Maintained Army"
 			desc = ""
 			modifier = {
-				land_maintenance_modifier = 0.05
+				army_line = 1
 			}
 		}
 		{
@@ -317,6 +319,7 @@ new idea_group quantity_ideas = {
 			desc = "We have, up to now, been very choosy over who should serve as a ranker in our military. We only took the poorest and most desperate, basically the people no one else would miss. Now though we are going to open up the ranks to everyone, who isn't rich."
 			modifier = {
 				global_manpower_modifier = 0.25
+				army_line = 1
 			}
 		}
 		{
@@ -359,6 +362,7 @@ new idea_group quantity_ideas = {
 			desc = "Investing more resources into our supply trains will allow our army to operate for longer periods in a hostile land."
 			modifier = {
 				land_attrition = -0.25
+				road_line = 1
 			}
 		}
 	}
@@ -400,7 +404,7 @@ new idea_group esb_largearmy = {
 			name = "Military Complex"
 			desc = "Investing in the development of military infrastructure and logistics to reduce the maintenance costs of our armed forces."
 			modifier = {
-				land_maintenance_modifier = -0.05
+				army_line = 1
 			}
 		}
 		{

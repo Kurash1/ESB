@@ -30,7 +30,7 @@ new diplomatic_action establish_trade_pact_member = {
 	}
 	
 	ai_acceptance = {
-		defineloc BASE_VALUE = "Base Value"
+		new localisation BASE_VALUE = "Base Value"
 		add_entry = {
 			name = BASE_VALUE
 			export_to_variable = {
@@ -42,7 +42,7 @@ new diplomatic_action establish_trade_pact_member = {
 				value = -25
 			}
 		}
-		defineloc FLOW_VALUE = "Controls the flow of their trade"
+		new localisation FLOW_VALUE = "Controls the flow of their trade"
 		add_entry = {
 			name = FLOW_VALUE
 			limit = {

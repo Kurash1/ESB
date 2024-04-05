@@ -1,0 +1,19 @@
+new named_effect survey_calculate_income = {
+	&survey_monthly_income := 0
+	
+	# Base Income
+	#
+	# modifier:scouts_base_income + (scouts_random_income * random_number)
+	#
+	&survey_base_income &= modifier:scouts_base_income
+	
+	&survey_temp &= modifier:scouts_random_income
+	random_list = {
+		for $i as 1 to 10 {
+			1 = { &survey_temp *= ($i/10) }
+		}
+	}
+	&survey_base_income += survey_temp
+	
+	&survey_monthly_income += survey_base_income
+}

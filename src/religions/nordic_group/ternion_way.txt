@@ -1,0 +1,27 @@
+new religion ternion_way = {
+	name = "Ternion Way"
+	desc = "The Ternion Way is an order of monks that worship only three of the nordic gods in their animal forms. Thus being the Fox that represents craftyness and swiftness, the Bear mighty and strong a stalward defender, and the wolf cunning and perceptive waiting for their prey. Most often the monks reside in almost inaccessible areas to meditate in seclusion. They are also quite adept at restoration magic."
+	icon = 18
+	color = {
+		165 81 44
+	}
+	allowed_conversions = {
+		nordic_pantheon
+		the_old_ways
+		sovngarde_path
+		way_of_the_fryse
+		cult_of_luck
+		rune_worship
+	}
+	heretic = {
+		NORDIC_PANTHEON_HERETIC
+	}
+	country = {
+		manpower_recovery_speed = 0.15
+		global_monthly_devastation = -0.1
+	}
+	province = {
+		
+	}
+	religious_group = nordic_group
+}

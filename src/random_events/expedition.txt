@@ -1,0 +1,132 @@
+new province_event expedition_random_event.1 = {
+	inherit = random_event
+	title = "Hidden Treasure"
+	desc = ""
+	picture = hidden_treasures_eventPicture
+	trigger = {
+		always = yes
+	}
+	options = {
+		name = "Great!"
+		effect = {
+			owner = {
+				add_treasury = 50
+			}
+		}
+	}
+}
+define_expedition_random_event = {
+	event = expedition_random_event.1
+	is_good = yes
+}
+new province_event expedition_random_event.2 = {
+	inherit = random_event
+	title = "Supplies Attacked"
+	desc = ""
+	picture = alikr_bandit_eventPicture
+	trigger = {
+		always = yes
+	}
+	immediate = {
+		pre_add_expedition_progress = -10
+	}
+	options = {
+		{
+			name = "That is unfortunate"
+			effect = {
+				post_add_expedition_progress = -10
+			}
+		}
+		{
+			name = "Send additional supplies then"
+			effect = {
+				owner = {
+					add_treasury = -25
+				}
+			}
+		}
+	}
+}
+define_expedition_random_event = {
+	event = expedition_random_event.2
+	is_good = no
+}
+new province_event expedition_random_event.3 = {
+	inherit = random_event
+	title = "Merchant Sponsors"
+	desc = ""
+	picture = crassius_favor_eventPicture
+	trigger = {
+		always = yes
+	}
+	options = {
+		{
+			name = "Great"
+			effect = {
+				add_permanent_province_modifier = {
+					name = expedition_sponsor_mod
+					duration = 365
+				}
+			}
+		}
+	}
+}
+define_expedition_random_event = {
+	event = expedition_random_event.3
+	is_good = yes
+}
+new province_event expedition_random_event.4 = {
+	inherit = random_event
+	title = "Rampant Corruption"
+	desc = ""
+	picture = indoril_mastermind_eventPicture
+	trigger = {
+		always = yes
+	}
+	options = {
+		{
+			name = "Unfortunate"
+			effect = {
+				owner = {
+					add_corruption = 1
+				}
+				add_permanent_province_modifier = {
+					name = expedition_corruption_mod
+					duration = 365
+				}
+			}
+		}
+	}
+}
+define_expedition_random_event = {
+	event = expedition_random_event.4
+	is_good = no
+}
+new province_event expedition_random_event.5 = {
+	inherit = random_event
+	title = "Champion amongst the Expedition"
+	desc = ""
+	picture = mighty_ally_eventPicture
+	trigger = {
+		always = yes
+	}
+	immediate = {
+		pre_add_expedition_progress = 10
+	}
+	options = {
+		{
+			name = "Great!"
+			effect = {
+				owner = {
+					add_army_tradition = 10
+				}
+				
+				post_add_expedition_progress = 10
+			}
+		}
+	}
+}
+define_expedition_random_event = {
+	event = expedition_random_event.5
+	is_good = yes
+}

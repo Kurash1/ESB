@@ -1,0 +1,66 @@
+new idea_group iron_orc_ideas = {
+	name = "Iron Orcish"
+	trigger = {
+		primary_culture = iron_orc
+	}
+	priority = 200
+	category = national
+	start = {
+		max_hostile_attrition = 2
+		global_defender_dice_roll_bonus = 1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	ideas = {
+		{
+			name = "Mountain Fortresses"
+			desc = "Residing in sturdiest mountain fortresses the Iron Orcs are notoriously hard to conquer."
+			modifier = {
+				defensiveness = 0.25
+			}
+		}
+		{
+			name = "Vengeance for sacrilegious deeds"
+			desc = "They forced the iron orcs to destroy their most sacred places. Now they shall commit vengeance upon them as is the orc way."
+			modifier = {
+				harsh_treatment_cost = -0.25
+			}
+		}
+		{
+			name = "Battle hardened"
+			desc = "Being literally forged out of zeal and the fire of battle Iron Orcs are notoriously hard to conquer."
+			modifier = {
+				war_exhaustion = -0.03
+			}
+		}
+		{
+			name = "Militarised society"
+			desc = "Every Iron Orc must contribute to the military so they may never be taken off-guard again."
+			modifier = {
+				global_manpower_modifier = 0.25
+			}
+		}
+		{
+			name = "Beasts of war"
+			desc = "Iron Orcs are notoriously for using the wild beasts of Craglorn for war."
+			modifier = {
+				cavalry_power = 0.2
+			}
+		}
+		{
+			name = "Battle Alchemists"
+			desc = "Utilisation of alchemy is common among the orcs of Craglorn."
+			modifier = {
+				infantry_fire = 0.25
+			}
+		}
+		{
+			name = "Uncaring environment"
+			desc = "Being steeled by the uncaring environment of the desert the Iron Orcs are particulary hardy in nature."
+			modifier = {
+				morale_damage_received = -0.05
+			}
+		}
+	}
+}

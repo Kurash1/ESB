@@ -1,3 +1,6 @@
+new localisation  HAS_CAPITAL_FORT = "Has a non-influencing fort."
+new localisation IDEA_TAKEN_EFFECT = "$EFFECT$"
+new localisation IDEA_GROUP_REMOVED_EFFECT = "$EFFECT$"
 new custom_icon custom_mechanic_overlay = {
 	potential = {
 		NOT = {
@@ -215,11 +218,6 @@ new localisation HLR = "The High Kingdom"
 new localisation M_HRE_BUTTON = "The High Kingdom"
 new localisation HRE_HRE = "The High Kingdom"
 new localisation CORE_PAUSED = "ESB Paused"
-new localisation nord_tg = "Nordic"
-new localisation reachman_tg = "Reachman"
-new localisation orc_tg = "Orcish"
-new localisation snow_elven_tg = "Snow Elven"
-new localisation duraki_tg = "Duraki"
 new localisation mage_general_personality_die_desc = "[GetHerHisCap] magical mastery will be missed by our troops."
 new localisation mage_general_personality = "Mage"
 new localisation desc_mage_general_personality = ""
@@ -327,7 +325,7 @@ new age first_century = {
 		ab_magic_organization = {
 			name = "Magic Organization"
 			modifier = {
-				idea_cost = -0.05
+				idea_cost = -0.025
 			}
 		}
 		ab_founding_of_a_nation = {
@@ -367,7 +365,7 @@ new age first_century = {
 					culture_group = nord
 				}
 				else {
-					defineloc ab_focus_on_longships_custom_tooltip = "This Age Ability does §RNot§! Work without the §YDomination§! Dlc"
+					new localisation ab_focus_on_longships_custom_tooltip = "This Age Ability does §RNot§! Work without the §YDomination§! Dlc"
 					custom_trigger_tooltip = {
 						tooltip = ab_focus_on_longships_custom_tooltip
 						always = no

@@ -28,7 +28,7 @@ new idea_group maritime_ideas = {
 			name = "Grand Navy"
 			desc = "Allows us to create one of the largest and most powerful fleets the world has ever seen."
 			modifier = {
-				naval_forcelimit_modifier = 0.25
+				navy_line = 1
 			}
 		}
 		{
@@ -59,6 +59,13 @@ new idea_group maritime_ideas = {
 		sea_repair = yes
 		ship_durability = 0.05
 	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+	}
 }
 new idea_group flottenbasis0 = {
 	name = "Fleet Base"
@@ -72,6 +79,7 @@ new idea_group flottenbasis0 = {
 			desc = "If there always is a base nearby, our ships will improve their durability."
 			modifier = {
 				sailor_maintenance_modifer = -0.25
+				navy_line = 1
 			}
 		}
 		{
@@ -122,5 +130,12 @@ new idea_group flottenbasis0 = {
 	bonus = {
 		build_cost = -0.15
 		build_time = -0.15
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
 	}
 }

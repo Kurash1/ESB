@@ -74,7 +74,7 @@ new estate mages = {
 			loyalty = 0.15
 			influence = 0.05
 			benefits = {
-				idea_cost = -0.05
+				idea_cost = -0.025
 			}
 		}
 		# allows mages college building 

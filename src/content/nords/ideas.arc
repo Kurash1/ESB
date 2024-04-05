@@ -11,6 +11,10 @@ new idea_group nordic_ideas = {
 	}
 	trigger = {
 		culture_group = nord
+		NOT = {
+			has_country_flag = has_solitude_ideas
+			has_country_flag = has_haafingar_ideas
+		}
 	}
 	ideas = {
 		{
@@ -46,7 +50,7 @@ new idea_group nordic_ideas = {
 			name = "Mead Halls"
 			desc = "The mead hall is a cornerstone of Nordic culture; A place to warm up, get drunk and listen to stories of the great heroes of old."
 			modifier = {
-				idea_cost = -5%
+				idea_cost = -2.5%
 			}
 		}
 		{

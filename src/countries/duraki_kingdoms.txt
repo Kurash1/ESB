@@ -1,23 +1,28 @@
-new country forest_kingdom = {
-	tag = FKI
-	name = "Forest Kingdom"
-	adj = "Forest"
-	color = {
-		0 100 0
-	}
-	capital = pinewood
-	technology_group = duraki_tg
-	starting_reform = tier_1_duraki_kingdom
-	religion = pinewood_naturalism
-	primary_culture = pinewoodean
+new inheritable duraki_country = {
+	technology_group = duraki
+	religion = cult_of_the_stars
+	primary_culture = duraki
 	graphical_culture = easterngfx
-	government_rank = 2
 	history = {
 		1.1.1 = {
 			province_groups:orc_discovery = {
 				discover_country = $tag
 			}
 		}
+	}
+	starting_reform = tier_1_duraki_kingdom
+}
+new country forest_kingdom = {
+	inherit = duraki_country
+	tag = FKI
+	name = "Forest Kingdom"
+	adj = "Forest"
+	color = { 0 100 0 }
+	capital = pinewood
+	religion = pinewood_naturalism
+	primary_culture = pinewoodean
+	government_rank = 2
+	history += {
 		2568.1.1 = {
 			starting_ruler = {
 				name = "Arho"
@@ -34,6 +39,222 @@ new country forest_kingdom = {
 				dip = 2
 				mil = 6
 				age = 32
+			}
+		}
+	}
+}
+new country blood_kingdom = {
+	inherit = duraki_country
+	tag = BKI
+	name = "Blood Kingdom"
+	adj = "Blood"
+	color = { 127 0 0 }
+	capital = elinhir
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Akar"
+				dynasty = "Disoth"
+				adm = 3
+				dip = 1
+				mil = 3
+				age = 40
+			}
+			starting_heir = {
+				name = "Vridon"
+				dynasty = "Disoth"
+				adm = 1
+				dip = 5
+				mil = 2
+				age = 11
+			}
+		}
+	}
+}
+new country frost_kingdom = {
+	inherit = duraki_country
+	tag = FKN
+	name = "Frost Kingdom"
+	adj = "Frost"
+	color = { 100 200 255 }
+	capital = balamath
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Nudroth"
+				dynasty = "Bekhic"
+				adm = 6
+				dip = 1
+				mil = 0
+				age = 57
+			}
+			starting_heir = {
+				name = "Virmos"
+				dynasty = "Bekhic"
+				adm = 3
+				dip = 3
+				mil = 2
+				age = 31
+			}
+		}
+	}
+}
+new country shadow_kingdom = {
+	inherit = duraki_country
+	tag = SKN
+	name = "Shadow Kingdom"
+	adj = "Shadow"
+	color = { 40 40 40 }
+	capital = spellscar
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Urador"
+				dynasty = "Turek"
+				adm = 1
+				dip = 2
+				mil = 4
+				age = 22
+			}
+			starting_heir = {
+				name = "Duhlar"
+				dynasty = "Turek"
+				adm = 2
+				dip = 1
+				mil = 3
+				age = 3
+			}
+		}
+	}
+}
+new country spirit_kingdom = {
+	inherit = duraki_country
+	tag = SPK
+	name = "Spirit Kingdom"
+	adj = "Spirit"
+	color = { 170 0 60 }
+	capital = belkarth
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Yker"
+				dynasty = "Kadec"
+				adm = 2
+				dip = 2
+				mil = 2
+				age = 22
+			}
+		}
+	}
+}
+new country storm_kingdom = {
+	inherit = duraki_country
+	tag = STK
+	name = "Storm Kingdom"
+	adj = "Storm"
+	color = { 0 19 127 }
+	capital = zuatha
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Nhyrik"
+				dynasty = "Bikisek"
+				adm = 6
+				dip = 1
+				mil = 3
+				age = 42
+			}
+			starting_heir = {
+				name = "Lyhadec"
+				dynasty = "Bikisek"
+				adm = 4
+				dip = 2
+				mil = 3
+				age = 12
+			}
+		}
+	}
+}
+new country sun_kingdom = {
+	inherit = duraki_country
+	tag = SUK
+	name = "Sun Kingdom"
+	adj = "Sun"
+	color = { 255 106 0 }
+	capital = rahni_za
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Aosac"
+				dynasty = "Vratan"
+				adm = 1
+				dip = 4
+				mil = 2
+				age = 49
+			}
+			starting_heir = {
+				name = "Yrmon"
+				dynasty = "Vratan"
+				adm = 3
+				dip = 4
+				mil = 2
+				age = 16
+			}
+		}
+	}
+}
+new country flame_kingdom = {
+	inherit = duraki_country
+	tag = FKG
+	name = "Flame Kingdom"
+	adj = "Flame"
+	color = { 255 0 0 }
+	capital = kardala
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Himaseth"
+				dynasty = "Tyrmes"
+				adm = 2
+				dip = 4
+				mil = 3
+				age = 35
+			}
+			starting_heir = {
+				name = "Nedrer"
+				dynasty = "Tyrmes"
+				adm = 3
+				dip = 6
+				mil = 3
+				age = 1
+			}
+		}
+	}
+}
+new country sky_kingdom = {
+	inherit = duraki_country
+	tag = SKK
+	name = "Sky Kingdom"
+	adj = "Sky"
+	color = { 150 200 255 }
+	capital = skyreach_pinnacle
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Vistac"
+				dynasty = "Emric"
+				adm = 5
+				dip = 3
+				mil = 3
+				age = 34
+			}
+			starting_heir = {
+				name = "Kykhis"
+				dynasty = "Emric"
+				adm = 4
+				dip = 3
+				mil = 2
+				age = 10
 			}
 		}
 	}

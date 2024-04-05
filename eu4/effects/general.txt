@@ -106,8 +106,8 @@ new effect set_saved_name = {
 	args = {
 		key = string?
 		type = string?
-		name = text
-		scope = country_scope
+		name = text?
+		scope = country_scope?
 	}
 }
 new effect clear_saved_name = {

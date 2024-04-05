@@ -1,12 +1,6 @@
-new province_group reachmen_discovery = {
-	name = "Reachmen Discovery"
-	provinces = {
-		lake_karthspire hroldan_river blind_river dragon_river karth_lake imp_34 imp_35 imp_36 imp_37 imp_38 imp_39 imp_40 imp_41 imp_42 imp_43 imp_44 imp_45 imp_46 imp_47 imp_48 imp_49 imp_50 south_druadach_mountains central_druadach_mountains north_druadach_mountains bannermist twilight_sepulcher evergreen_grove cracked_tusk illinaltas_deep half_moon sunderstone_gorge bilegulch knifepoint hunters_rest volskygge deepwood_redoubt hjaals_tooth bumpy_road rugged_coast chillwind_depths rivers_road cliff_point lost_valley_redoubt cradle_stone gloomreach  valthume valthume_pass arkngthamz bleeding_hill dushnikh_yal editia reachcliff purewater_ruin hag_rock_redoubt dread_crone_rock lislgeth reachwater_rock thaeba markarth left_hand_mine salvius_farm kolskeggr karerica aldiid ragnvald elselod olavete riknhild karthwasten reydlgeth sirgarte bthar_zel harmugstahl silver_hill karthspire soljunds_sinkhole old_hroldan igrra lower_moldering algerd horsorg sungard reyba moonstone_hill vigde serpents_bluff_redoubt moldering sigli bleakwind_bluff rebels_cairn ranarte reach_road_turn karthwatch beigi cliffside_retreat dragon_bridge_overlook betri itary brucas_leap_redoubt rock_dragon_coast khazgur_coast agnese mor_khazgur illdund adising talking_stone jolsta brylith mackirek eismor rorikstead flatand petilief gjukar orifna broken_fang_cave granitehill thalif
-	}
-}
 new inheritable reachman_country = {
 	government = tribal
-	technology_group = reachman_tg
+	technology_group = reachman
 	starting_reform = tier_1_reachmen_clan
 	religion = reachman_faith
 	primary_culture = reachmen
@@ -77,7 +71,7 @@ new country thornroot_clan = {
 	color = {
 		134 89 26
 	}
-	capital = dread_crone_rock
+	capital = thelmyra
 }
 new country wildspear_clan = {
 	inherit = reachman_country
@@ -366,4 +360,96 @@ new country horn_stride_clan = {
 	adj = "Horn-Stride"
 	color = { 35 63 40 }
 	capital = harmugstahl
+}
+new country winterborn_clan = {
+	inherit = reachman_country
+	tag = WNT
+	name = "Winterborn Clan"
+	adj = "Winterborn"
+	color = { 0 0 60 }
+	capital = vyhidok
+	religion = code_of_malacath
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Nargisrel"
+				dynasty = "Winterborn"
+				adm = 3
+				dip = 2
+				mil = 4
+				age = 37
+			}
+			starting_heir = {
+				name = "Pryvul"
+				dynasty = "Winterborn"
+				adm = 1
+				dip = 4
+				mil = 1
+				age = 11
+			}
+		}
+	}
+}
+new country blood_horn_clan = {
+	inherit = reachman_country
+	comment = "
+		https://discord.com/channels/1011657111366799391/1011657112113381398/1221703243810476053
+		name: Blood-Horn
+		religion: centered around Hircine and his daughter Daerola 
+		Culture: very militaristic,  war lusting, zealous
+		maybes: could start the game at war with the horn-stride clan
+	"
+	tag = BHC
+	name = "Blood-Horn Clan"
+	adj = "Blood-Horn"
+	color = { 60 0 0 }
+	capital = melros
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Dus"
+				dynasty = "Blood-Horn"
+				adm = 4
+				dip = 0
+				mil = 3
+				age = 44
+			}
+			starting_heir = {
+				name = "Enuc"
+				dynasty = "Blood-Horn"
+				adm = 3
+				dip = 2
+				mil = 3
+				age = 21
+			}
+		}
+	}
+}
+new country icereach_clan = {
+	inherit = reachman_country
+	tag = ICC
+	name = "Icereach Clan"
+	adj = "Icereach"
+	color = { 72 0 255 }
+	capital = big_sister
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Aigi"
+				dynasty = "Icereach"
+				adm = 1
+				dip = 1
+				mil = 5
+				age = 25
+			}
+			starting_heir = {
+				name = "Keia"
+				dynasty = "Icereach"
+				adm = 6
+				dip = 6
+				mil = 3
+				age = 1
+			}
+		}
+	}
 }

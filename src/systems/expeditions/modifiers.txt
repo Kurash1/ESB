@@ -1,35 +1,140 @@
+new modifier_definition global_expedition_progress = {
+	name = "Global Monthly Expedition Progress"
+	is_percentage = no
+	trigger = {
+		always = yes
+	}
+}
+new modifier_definition prestige_on_expedition_completion = {
+	name = "Prestige on Expedition Completion"
+	is_percentage = no
+	trigger = {
+		always = yes
+	}
+}
+new modifier_definition expedition_positive_event_chance = {
+	name = "Chance of positive Expedition Events"
+	is_percentage = yes
+	trigger = {
+		always = yes
+	}
+}
+new modifier_definition survey_speed = {
+	name = "Survey Speed"
+	is_percentage = yes
+	trigger = {
+		always = yes
+	}
+}
+new modifier monthly_expedition_progress = {
+	args = {
+		amount = float
+		modifier = string
+	}
+	transpile = {
+		`expedition_progess = {args:amount}`
+		
+		expedition_progress_pulse +=! {
+			if [has_province_modifier = args:modifier] {
+				cause_expedition_progress = args:amount
+			}
+		}
+		
+		remove_expedition_modifiers +=! {
+			remove_province_modifier = args:modifier
+		}
+	}
+}
+new modifier_definition expedition_progess = {
+	name = "Monthly Expedition Progress"
+	is_percentage = no
+	trigger = {
+		always = yes
+	}
+}
 new event_modifier expedition_camp = {
 	name = "Expedition Camp"
 	modifier = {
 		picture = "may_build_supply_depot"
 		global_tax_income = -12
+		monthly_expedition_progress = {
+			amount = 1
+			modifier = expedition_camp
+		}
 	}
 }
-new event_modifier expedition_mod_cash_mod = {
+new event_modifier expedition_cash_mod = {
 	name = "Expedition: Additional Funding"
 	modifier = {
 		picture = "global_tax_modifier_opposite"
 		global_tax_income = -12
+		monthly_expedition_progress = {
+			amount = 0.5
+			modifier = expedition_cash_mod
+		}
 	}
 }
-new event_modifier expedition_mod_camp_mod = {
+new event_modifier expedition_camp_mod = {
 	name = "Expedition: Military Support"
 	modifier = {
 		picture = "global_manpower"
 		global_manpower = -2.5
+		monthly_expedition_progress = {
+			amount = 0.5
+			modifier = expedition_camp_mod
+		}
 	}
 }
-new event_modifier expedition_mod_explore_mod = {
+new event_modifier expedition_explore_mod = {
 	name = "Expedition: Explorers"
 	modifier = {
 		picture = "auto_explore_adjacent_to_colony"
 		country_diplomatic_power = -1
+		monthly_expedition_progress = {
+			amount = 1.5
+			modifier = expedition_explore_mod
+		}
 	}
 }
-new event_modifier expedition_mod_merc_mod = {
+new event_modifier expedition_merc_mod = {
 	name = "Expedition: Mercenaries"
 	modifier = {
 		picture = "mercenary_manpower"
 		global_tax_income = -12
+		monthly_expedition_progress = {
+			amount = 0.5
+			modifier = expedition_merc_mod
+		}
+	}
+}
+new event_modifier expedition_mage_mod = {
+	name = "Expedition: Mages"
+	modifier = {
+		picture = "monthly_magicka_opposite"
+		monthly_magicka = -0.25
+		monthly_expedition_progress = {
+			amount = 0.5
+			modifier = expedition_mage_mod
+		}
+	}
+}
+new event_modifier expedition_sponsor_mod = {
+	name = "Expedition: Sponsorship"
+	modifier = {
+		picture = "global_tax_modifier"
+		monthly_expedition_progress = {
+			amount = 0.5
+			modifier = expedition_sponsor_mod
+		}
+	}
+}
+new event_modifier expedition_corruption_mod = {
+	name = "Expedition: Corruption"
+	modifier = {
+		picture = "yearly_corruption"
+		monthly_expedition_progress = {
+			amount = -0.5
+			modifier = expedition_corruption_mod
+		}
 	}
 }

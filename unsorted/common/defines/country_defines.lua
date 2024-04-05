@@ -37,7 +37,9 @@ NDefines.NCountry.TECH_TIME_COST = 0			-- tech grow with 20% cost over time.
 NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.1		-- per year ahead.
 NDefines.NCountry.PS_BUY_IDEA = 600
 
-NDefines.NDiplomacy.DESIRED_NUM_OF_ELECTORS = 5
+NDefines.NDiplomacy.MAX_NUM_OF_ELECTORS = 8						-- Maximum number of electors in the interface
+NDefines.NDiplomacy.DESIRED_NUM_OF_ELECTORS = 1
+
 NDefines.NDiplomacy.MAX_FREE_CITIES = 15
 NDefines.NDiplomacy.MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 2		-- Limit is inclusive.
 NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 10			-- Threshold below which you lose IA and above which you gain it
@@ -48,8 +50,6 @@ NDefines.NDiplomacy.LACK_OF_ELECTORS_HIT = 0					-- Also applied to vassalized e
 NDefines.NDiplomacy.IMPERIAL_REFORM_COST = 50						-- Minium Cost of enacting a new reform.
 
 NDefines.NDiplomacy.AE_HRE_INTERNAL = 0
-
-NDefines.NDiplomacy.MAX_NUM_OF_ELECTORS = 1						-- Maximum number of electors in the interface
 
 NDefines.NFrontend.CAMERA_LOOKAT_X = 1855.0
 NDefines.NFrontend.CAMERA_LOOKAT_Y = 0.0

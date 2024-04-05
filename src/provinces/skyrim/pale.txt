@@ -91,7 +91,7 @@ new province frozen_outpost = {
 		culture = hjaalmarcher
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = wind_caller
 	}
@@ -117,7 +117,7 @@ new province njadhilde = {
 		culture = palean
 		hre = yes
 		history_trade_goods = stone
-		capital = ""
+	
 		is_city = no
 		history_owner = frost_flow
 	}
@@ -143,7 +143,7 @@ new province nightcaller = {
 		culture = palean
 		hre = yes
 		history_trade_goods = alchemical_ingredients
-		capital = ""
+	
 		is_city = no
 		history_owner = frost_flow
 	}
@@ -169,7 +169,7 @@ new province goldvild = {
 		culture = palean
 		hre = yes
 		history_trade_goods = gold
-		capital = ""
+	
 		is_city = yes
 		history_owner = dawn_star
 	}
@@ -196,7 +196,7 @@ new province softta = {
 		culture = palean
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
+	
 		is_city = yes
 		272.1.1 = {
 			religion = nordic_pantheon
@@ -226,7 +226,7 @@ new province ingesi = {
 		culture = palean
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -253,7 +253,7 @@ new province verglas = {
 		culture = palean
 		hre = yes
 		history_trade_goods = fish
-		capital = "Adisena"
+	
 		is_city = yes
 		1.1.1 = {
 			create_expedition = {
@@ -262,7 +262,7 @@ new province verglas = {
 				desc = ""
 				frame = 7
 				event_picture = high_gate_eventPicture
-				length = 3
+				length = 60
 				on_complete = {
 					owner = {
 						give_artifact = {
@@ -299,9 +299,8 @@ new province ice_isle = {
 		culture = palean
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
-		is_city = no
-		history_owner = dawn_star
+		
+		history_owner = whale_song
 	}
 }
 new province pale_camp = {
@@ -326,7 +325,7 @@ new province pale_camp = {
 		culture = palean
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -351,7 +350,7 @@ new province olavnir = {
 		culture = palean
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
+	
 		is_city = no
 		history_owner = dawn_star
 	}
@@ -379,7 +378,7 @@ new province dawnstar = {
 		culture = palean
 		hre = yes
 		history_trade_goods = r_metals
-		capital = "Holmif"
+	
 		is_city = yes
 	}
 }
@@ -404,7 +403,7 @@ new province dawn_sanctuary = {
 		culture = palean
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
+	
 		is_city = yes
 		history_owner = dawn_star
 	}
@@ -431,7 +430,7 @@ new province mavetlogi = {
 		culture = palean
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -456,7 +455,7 @@ new province windward = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = dawn_star
 		add_core = wind_ward
@@ -484,7 +483,7 @@ new province ilfbbi = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -510,7 +509,7 @@ new province frostmere = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -536,7 +535,7 @@ new province mzinchaleft = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -563,7 +562,7 @@ new province red_road_pass = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -612,7 +611,7 @@ new province reyhi = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = no
 		history_owner = dunstad
 	}
@@ -640,7 +639,7 @@ new province dunstad = {
 		culture = palean
 		hre = yes
 		history_trade_goods = arms
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -665,7 +664,7 @@ new province emfrljot = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = no
 		history_owner = dunstad
 	}
@@ -691,7 +690,7 @@ new province giants_gap = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = no
 		history_owner = silver_drift
 	}
@@ -717,7 +716,7 @@ new province freaold = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = silver_drift
 	}
@@ -743,7 +742,7 @@ new province blizzard_rest = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = heljarchen
 	}
@@ -769,7 +768,7 @@ new province three_point = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = heljarchen
 	}
@@ -821,7 +820,7 @@ new province nightgate = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -847,7 +846,7 @@ new province ironbind_barrow = {
 		culture = palean
 		hre = yes
 		history_trade_goods = r_metals
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -872,7 +871,7 @@ new province olavdolyn = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = nightgate
 	}
@@ -898,7 +897,7 @@ new province yorgrim_overlook = {
 		culture = palean
 		hre = yes
 		history_trade_goods = stone
-		capital = ""
+	
 		is_city = yes
 		history_owner = nightgate
 	}
@@ -924,7 +923,7 @@ new province jalaeigr = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = nightgate
 	}
@@ -950,7 +949,7 @@ new province yorgrim_ressurection = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = nightgate
 	}
@@ -1000,7 +999,7 @@ new province tumble_arch_pass = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 		history_owner = nightgate
 	}
@@ -1027,7 +1026,7 @@ new province shrouded_grove = {
 		culture = palean
 		hre = yes
 		history_trade_goods = wood
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -1052,7 +1051,7 @@ new province shearpoint = {
 		culture = palean
 		hre = yes
 		history_trade_goods = stone
-		capital = ""
+	
 		is_city = yes
 		history_owner = shearpoint
 		
@@ -1063,7 +1062,7 @@ new province shearpoint = {
 				desc = ""
 				frame = 10
 				event_picture = shearpoint_eventPicture
-				length = 1
+				length = 20
 				on_complete = {
 					owner = {
 						give_artifact = {
@@ -1100,7 +1099,7 @@ new province fellglow = {
 		culture = palean
 		hre = yes
 		history_trade_goods = mag_goods
-		capital = ""
+	
 		is_city = yes
 		history_owner = shearpoint
 		add_core = fell_glow
@@ -1127,7 +1126,7 @@ new province ysmir_hill = {
 		culture = palean
 		hre = yes
 		history_trade_goods = stone
-		capital = ""
+	
 		is_city = no
 		history_owner = shearpoint
 	}
@@ -1154,7 +1153,7 @@ new province korvanjund = {
 		culture = palean
 		hre = yes
 		history_trade_goods = paper
-		capital = ""
+	
 		is_city = no
 		history_owner = heljarchen
 	}
@@ -1180,7 +1179,7 @@ new province shimmermist = {
 		culture = palean
 		hre = yes
 		history_trade_goods = grain
-		capital = ""
+	
 		is_city = yes
 		history_owner = heljarchen
 	}
@@ -1231,7 +1230,7 @@ new province loreius_farm = {
 		history_owner = heljarchen
 		hre = yes
 		history_trade_goods = grain
-		capital = ""
+	
 		is_city = yes
 	}
 }
@@ -1480,12 +1479,8 @@ new province edinmund = {
 		religion = nordic_pantheon
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
-		is_city = no
-		history_owner = dawn_star
-		57.1.1 = {
-			is_city = no
-		}
+		
+		history_owner = whale_song
 	}
 }
 new province mundall = {
@@ -1515,11 +1510,7 @@ new province mundall = {
 		religion = nordic_pantheon
 		hre = yes
 		history_trade_goods = fish
-		capital = ""
-		is_city = no
-		history_owner = dawn_star
-		57.1.1 = {
-			is_city = no
-		}
+		
+		history_owner = whale_song
 	}
 }

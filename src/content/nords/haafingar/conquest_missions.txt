@@ -1,0 +1,508 @@
+mission_trees:solitude += {
+	form_the_wolf_army = {
+		name = "Form the Wolf Army"
+		icon = wolf_army_mission
+		x = 7
+		y = 0
+		trigger = {
+			army_size = 15
+			num_of_generals = 1
+			mil_power = 150
+		}
+		effect = {
+			add_mil_power = -150
+			add_government_reform = tier_2_wolf_army
+			regions:haafingar = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	coast_of_haafingar = {
+		name = "Coast of Haafingar"
+		x = 5
+		y = 1
+		required = form_the_wolf_army
+		icon = coast_of_skyrim_mission
+		provinces_to_highlight = {
+			OR = {
+				area = shadowgreen
+				area = ravenscar
+				area = northwatch
+				area = pinefrost
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			areas:shadowgreen; ravenscar; northwatch; pinefrost = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			areas:shadowgreen; ravenscar; northwatch; pinefrost = {
+				add_local_autonomy = -100
+			}
+			add_mercantilism = 5
+			trade_nodes:northwatch = {
+				add_trade_node_income = 120
+			}
+		}
+	}
+	the_deepwood = {
+		name = "The Deepwood Conquests"
+		x = 7
+		y = 1
+		required = form_the_wolf_army
+		icon = deepwood_mission
+		provinces_to_highlight = {
+			OR = {
+				area = kilkreath
+				area = hraggstad
+				area = deepwood
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			areas:kilkreath; hraggstad; deepwood = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			areas:kilkreath; hraggstad; deepwood = {
+				quick_province_modifier = {
+					name = "Deepwood Conquests"
+					years = 25
+					modifier = {
+						local_autonomy = -0.25
+						tax_income = 3
+						trade_goods_size = 0.2
+					}
+				}
+			}
+		}
+	}
+	castle_hraggstad = {
+		name = "Purpose of Hraggstad"
+		desc = "On the second highest peak of the Kilkreath mountains, we found an ancient rune stone. Our legends spoke of these stones, the Stones of fate by which heroes could rewrite their own fates, and upon the stone was the mark of the Steed.
+
+The blessing of the steed is a blessing of war, and thus it is only right for there to be fortress there."
+		x = 7
+		y = 2
+		required = the_deepwood
+		icon = hraggstad_mission
+		trigger = {
+			owns = hraggstad
+			provinces:hraggstad = {
+				development = 15
+				fort_level = 2
+			}
+			has_adm_advisor_of_level = 1
+			has_mil_advisor_of_level = 1
+		}
+		effect = {
+			new country_event haafingar.2 = {
+				title = "Purpose of Fort Hraggstad"
+				desc = "On the second highest peak of the Kilkreath mountains, we found an ancient rune stone. Our legends spoke of these stones, the Stones of fate by which heroes could rewrite their own fates, and upon the stone was the mark of the Steed.
+
+			The blessing of the steed is a blessing of war, and thus we built a fort next to the stone, but now that fort has become a mighty fortress city, and the question comes, what should this city focus on?
+
+			Our advisors of the blue palace propose multiple differing opinions on the issue:
+
+			[Root.Mil_Advisor.GetName] our military advisor suggests that the city should be focused on studying the ways of war, protected by the steed, we can turn it into the ultimate training grounds.
+			[Root.Adm_Advisor.GetName] our administrative advisor, on the other hand, proposes that the city should be focused on the manufacturing of the means of war, weapons.
+			While a third voice shakes the court, 'Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key.' one of the mightiest tongues of our realm suggest that he would make a special force there, in resemblance to the fate-stone."
+				picture = hraggstad_eventPicture
+				is_triggered_only = yes
+				options = {
+					{
+						name = "There shall we study the ways of war"
+						effect = {
+							provinces:hraggstad = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Art of War"
+									modifier = {
+										army_tradition = 1
+										local_manpower_modifier = 1
+										local_fort_maintenance_modifier = -0.5
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Let us focus our smiths there, and develop an arms industry"
+						effect = {
+							provinces:hraggstad = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Industrial City"
+									modifier = {
+										production_efficiency = 0.15
+										trade_goods_size_modifier = 0.25
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key"
+						effect = {
+							new_custom_tooltip = "Unlocks §YSinging-Cavalry§! Unit"
+							set_country_flag = unlocks_singing_cavalry
+							provinces:hraggstad = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Singing-Cavalry"
+									modifier = {
+										cavalry_power = 0.10
+										local_manpower_modifier = 1
+										local_regiment_cost = -0.25
+										regiment_recruit_speed = -0.25
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			new unit singing_cavalry = {
+				name = "Singing Cavalry"
+				desc = ""
+				type = cavalry
+				maneuver = 2
+				offensive_morale = 4
+				defensive_morale = 2
+				offensive_fire = 2
+				defensive_fire = 1
+				offensive_shock = 4
+				defensive_shock = 2
+				trigger = {
+					has_country_flag = unlocks_singing_cavalry
+				}
+			}
+		
+			country_event = haafingar.2
+			show_event_insights = {
+				tooltip = "This event will allow us to choose the settlment focus for Hraggstad."
+				event = haafingar.2
+				show_options = yes
+			}
+		}
+	}
+	shadowgreen_cavern = {
+		name = "Shadowgreen Cavern"
+		icon = shadowgreen_cavern
+		x = 5
+		y = 2
+		required = coast_of_haafingar
+		provinces_to_highlight = {
+			OR = {
+				area = shadowgreen
+				area = ravenscar
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			areas:shadowgreen, areas:ravenscar = {
+				type = all
+				owned_by = ROOT
+			}
+			provinces:shadowgreen = {
+				custom_trigger_tooltip = {
+					new_tooltip = "Completed §YShadowgreen Cavern§! Expedition"
+					OR = {
+						has_great_project = { type = shadowgreen_glenmoril }
+						has_great_project = { type = shadowgreen_alchemy }
+						has_great_project = { type = shadowgreen_holy_site }
+					}
+				}
+			}
+		}
+		effect = {
+			areas:northwatch = {
+				add_permanent_claim = ROOT
+			}
+			
+			conditional_effect = {
+				tooltip = "chose §YGlenmoril Wyrd§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_glenmoril }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_glenmoril
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Glenmoril Magic"
+						years = 25
+						modifier = {
+							fire_damage = 0.1
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YGreen-Kin§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_alchemy }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_alchemy
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Clan Unity"
+						years = 25
+						modifier = {
+							global_autonomy = -0.1
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YPriests§! in the Shadowgreen Expedition"
+				trigger = {
+					provinces:shadowgreen = {
+						has_great_project = { type = shadowgreen_holy_site }
+					}
+				}
+				effect = {
+					provinces:shadowgreen = {
+						add_great_project_tier = {
+							type = shadowgreen_holy_site
+							tier = 1
+						}
+					}
+					quick_country_modifier = {
+						name = "Religious Blessings"
+						years = 25
+						modifier = {
+							prestige = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	wolfs_eye_lighthouse = {
+		name = "Wolf's Eye Lighthouse"
+		x = 4
+		y = 2
+		required = {
+			solitude_countryside
+			master_of_the_arch
+			coast_of_haafingar
+		}
+		icon = wolfs_eye_lighthouse_mission
+		trigger = {
+			owns = wolfs_eye
+			provinces:wolfs_eye = {
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+		effect = {
+			provinces:wolfs_eye = {
+				quick_province_modifier = {
+					name = "Wolf's Eye Lighthouse"
+					modifier = {
+						naval_attrition = -0.15
+						hostile_fleet_attrition = 1
+						merchants = 1
+					}
+				}
+			}
+		}
+	}
+	longboat_legions = {
+		name = "Longboat Legions"
+		x = 4
+		y = 3
+		required = wolfs_eye_lighthouse
+		icon = longboat_mission
+		trigger = {
+			has_longships = {
+				num = 50
+				backup = {
+					navy_size = 150
+				}
+			}
+		}
+		effect = {
+			if [has_dlc = "Domination"] {
+				quick_country_modifier = {
+					name = "Longboat Legions"
+					modifier = {
+						allowed_galleass_fraction = 0.1
+						max_flagships = 2
+					}
+				}
+			}
+			else {
+				quick_country_modifier = {
+					name = "Longboat Legions"
+					modifier = {
+						max_flagships = 2
+					}
+				}
+			}
+		}
+	}
+	taming_the_dragon = {
+		name = "Taming the dragon"
+		x = 9
+		y = 1
+		required = form_the_wolf_army
+		icon = dragon_bridge_mission
+		trigger = {
+			owns = dragon_bridge
+			provinces:dragon_bridge = {
+				development = 15
+			}
+			has_adm_advisor_of_level = 1
+			has_dip_advisor_of_level = 1
+			has_mil_advisor_of_level = 1
+		}
+		effect = {
+			new country_event haafingar.5 = {
+				title = "Purpose of Dragon Bridge"
+				desc = "Kaal do rath, kah dovah miraad. The Dragon Bridge as it is called in our tongue has long stood as the connection point between haafingar hold to the rest of skyrim, this places it as an important trade center, and this trade and our own efforts has catapulted it to be one of the great cities of the realm. However we have yet to decide upon the focus of the settlement, so the court of the blue palace has been once again called.
+
+'Twin Dragons overlooking river, A waterfall just to the south, and ambiance of calm waves. It is destined to become a city of poetry I say.' [Root.bards_college_advisor.GetName] an advisor from the bards college says, but is quickly silenced by [Root.Mil_Advisor.GetName] our military advisor who calls it 'Poetic nonsense' [Root.Mil_Advisor.GetSheHe] instead says that we should focus on the Four Shields Order of the original town, a band of mercenaries from there, who held some renown in the past, but now have fallen. With our sponsorship we could revitalize the mercenaries of Dragon Bridge.
+
+'The Dragon skulls may look pretty and all, but they hide a sinister shadow, beneath the city is a den of thieves that is ever growing in influence' [Root.Adm_Advisor.GetName] our administrative advisor warns, but then adds to it 'Well of course if we were to make some dealings with them we might be able to use them on our enemies instead, while keeping damage to ourselves at a minimu-' [Root.Adm_Advisor.GetSheHe] is interrupted as the court shakes '§RHi al zin do dovah miraad fah faraan§!' [Root.blue_palace_tongue.GetName] the tongue continues further 'No this is a perfect opportunity to purge all corruption from the realm, let us found a scaled justice that defends the realm from thieves.'
+
+And finally [Root.Dip_Advisor.GetName] our diplomatic advisor suggests 'Wasn't the reason the city become prominent because it's on an important trade route? I think we should focus on that.'"
+				immediate = {
+					set_saved_name = {
+						key = bards_college_advisor
+						type = advisor
+						scope = ROOT
+					}
+					set_saved_name = {
+						key = blue_palace_tongue
+						type = advisor
+						scope = ROOT
+					}
+				}
+				after = {
+					clear_saved_name = bards_college_advisor
+					clear_saved_name = blue_palace_tongue
+				}
+				picture = dragon_bridge_eventPicture
+				is_triggered_only = yes
+				options = {
+					{
+						name = "City of Poets"
+						effect = {
+							provinces:dragon_bridge = {
+								change_trade_goods = paper
+								quick_province_modifier = {
+									name = "Settlment Focus: City of Poets"
+									modifier = {
+										diplomatic_upkeep = 1
+										local_prosperity_growth = 0.1
+										local_production_efficiency = 0.25
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Four Shields Order"
+						effect = {
+							new mercenary_company four_shields_order = {
+								name = "Four Shields Order"
+								regiments_per_development = 0.04
+								cost_modifier = 1.0
+								home_province = dragon_bridge
+								cavalry_weight = 0
+								artillery_weight = 0
+								trigger = {
+									has_global_flag = four_shields_order_refound
+									is_race = nord
+								}
+								modifier = {
+									shock_damage_received = -25%
+								}
+							}
+							
+							new_custom_tooltip = "'§YFour Shields Order§!' Mercenary Company is enabled for all nordic countries"
+							set_global_flag = four_shields_order_refound
+							
+							provinces:dragon_bridge = {
+								change_trade_goods = arms
+								quick_province_modifier = {
+									name = "Settlment Focus: Four Shields Order"
+									modifier = {
+										mercenary_discipline = 0.05
+										local_manpower_modifier = 0.5
+										local_defensiveness = 0.25
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Thieves Guild"
+						effect = {
+							provinces:dragon_bridge = {
+								quick_province_modifier = {
+									name = "Settlment Focus: Thieves Guild"
+									modifier = {
+										spy_offence = 0.5
+										min_local_autonomy = 50
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Scaled Justice"
+						effect = {
+							set_country_flag = has_scaled_justice
+							provinces:dragon_bridge = {
+								quick_province_modifier = {
+									name = "Settlment Focus: Scaled Justice"
+									modifier = {
+										yearly_corruption = -0.03
+										statewide_governing_cost = -0.5
+										local_state_maintenance_modifier = -1
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Trade Route"
+						effect = {
+							provinces:dragon_bridge = {
+								add_center_of_trade_level = 1
+								quick_province_modifier = {
+									name = "Settlment Focus: Trade Route"
+									modifier = {
+										caravan_power = 0.1
+										trade_value_modifier = 1.5
+										province_trade_power_modifier = 0.5
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		
+			country_event = haafingar.5
+			new_custom_tooltip = "§GEvent Insight§!
+This event will allow us to choose the settlment focus for Dragon Bridge."
+		}
+	}
+}

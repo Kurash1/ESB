@@ -39,7 +39,7 @@ new mission_series eastmarch_6 = {
 				}
 			}
 			effect = {
-				defineloc unlocks_narzulbur_company = "Unlocks '§YNarzulbur Company§!' Mercenary Company"
+				new localisation unlocks_narzulbur_company = "Unlocks '§YNarzulbur Company§!' Mercenary Company"
 				custom_tooltip = unlocks_narzulbur_company
 				set_country_flag = unlocks_narzulbur_company
 			}
@@ -53,7 +53,7 @@ new mission_series eastmarch_6 = {
 				eastmarch_bloodskal_ally
 			}
 			trigger = {
-				defineloc future_update = "Will be implemented in a future update"
+				new localisation future_update = "Will be implemented in a future update"
 				custom_trigger_tooltip = {
 					tooltip = future_update
 					always = no

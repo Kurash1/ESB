@@ -7,6 +7,7 @@ new estate sailors = {
 	}
 	trigger = {
 		culture_group = nord
+		num_of_ports = 1
 	}
 	country_modifier_happy = {
 		sailors_recovery_speed = 0.5

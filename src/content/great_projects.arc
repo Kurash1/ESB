@@ -1,3 +1,7 @@
+new great_project deepwood_vale = {
+	name = "Deepwood Vale"
+	start = black_mountain
+}
 new great_project dunmeth_pass = {
 	name = "Dunmeth Pass"
 	start = black_mountain
@@ -44,7 +48,7 @@ new great_project lunar_forge = {
 			shock_damage = 5%
 		}
 		on_upgraded = {
-			defineloc lunar_forge_reform = "Unlocks §YLunar Smithing§! Government Reform"
+			new localisation lunar_forge_reform = "Unlocks §YLunar Smithing§! Government Reform"
 			custom_tooltip = lunar_forge_reform
 		}
 	}
@@ -201,7 +205,7 @@ new great_project ancestor_glade = {
 			local_development_cost_modifier = -0.1
 		}
 		country_modifier = {
-			idea_cost = -0.025
+			idea_cost = -0.01
 			advisor_cost = -0.1
 		}
 	}
@@ -210,7 +214,7 @@ new great_project ancestor_glade = {
 			local_development_cost_modifier = -0.2
 		}
 		country_modifier = {
-			idea_cost = -0.05
+			idea_cost = -0.02
 			advisor_cost = -0.2
 		}
 	}
@@ -219,7 +223,7 @@ new great_project ancestor_glade = {
 			local_development_cost_modifier = -0.25
 		}
 		country_modifier = {
-			idea_cost = -0.075
+			idea_cost = -0.03
 			advisor_cost = -0.25
 		}
 	}
@@ -469,7 +473,7 @@ new great_project fortress_of_ice = {
 }
 new great_project great_arch = {
 	name = "Great Arch"
-	start = solitude_port
+	start = red_port
 	tier_1 = {
 		country_modifier = {
 			global_unrest = -1

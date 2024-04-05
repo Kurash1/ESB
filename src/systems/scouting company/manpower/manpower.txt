@@ -1,0 +1,83 @@
+new custom_text_box survey_manpower_title = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Manpower"
+}
+new custom_text_box survey_manpower_value = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[This.survey_real_manpower.GetValue]"
+	tooltip = ""
+}
+new custom_text_box survey_manpower_recruit_rate = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[This.survey_company_size.GetValue]"
+	tooltip = "Preferred Company Size"
+}
+new custom_button survey_manpower_recruit_remove_3 = {
+	tooltip = "Reduce Preferred Company Size"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_company_size -= 10000
+		if [&survey_company_size < 0] { &survey_company_size := 0 }
+	}
+}
+new custom_button survey_manpower_recruit_remove_2 = {
+	tooltip = "Reduce Preferred Company Size"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_company_size -= 1000
+		if [&survey_company_size < 0] { &survey_company_size := 0 }
+	}
+}
+new custom_button survey_manpower_recruit_remove_1 = {
+	tooltip = "Reduce Preferred Company Size"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_company_size -= 100
+		if [&survey_company_size < 0] { &survey_company_size := 0 }
+	}
+}
+new custom_button survey_manpower_recruit_add_1 = {
+	tooltip = "Increase Preferred Company Size"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_company_size += 100
+	}
+}
+new custom_button survey_manpower_recruit_add_2 = {
+	tooltip = "Increase Preferred Company Size"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_company_size += 1000
+	}
+}
+new custom_button survey_manpower_recruit_add_3 = {
+	tooltip = "Increase Preferred Company Size"
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+	trigger = { }
+	effect = {
+		&survey_company_size += 10000
+	}
+}

@@ -1,0 +1,113 @@
+new religion the_old_ways = {
+	name = "The Old Ways"
+	desc = "More commonly known as ‘The Old Ways’, Atmoran Totemist is the original religious belief of the Nords and their Atmoran ancestors. It places emphasis upon various totem animals such as the Bear, Fox, Hawk, Moth, Whale, Wolf, Snake, Owl, and Dragon. Each of which represents different virtues and aspects, practitioners have a long tradition of carving runestones depicting various animals in their temples, barrows, and religious sites.
+By the dawn of the first Era, Atmoran Totemists have long dwindled with the emergence of the Nordic Divine and exists only in a few provinces within Skyrim."
+	icon = 1
+	color = {
+		185 255 245
+	}
+	allowed_conversions = {
+		nordic_pantheon
+		ternion_way
+		sovngarde_path
+		way_of_the_fryse
+		cult_of_luck
+		rune_worship
+	}
+	heretic = {
+		NORDIC_PANTHEON_HERETIC
+	}
+	country = {
+		land_morale = 0.1
+		naval_forcelimit_modifier = 0.15
+	}
+	province = {
+	}
+	personal_deity = yes
+	hre_heretic_religion = yes
+	religious_group = nordic_group
+}
+new personal_deity hawk = {
+	name = "Hawk"
+	desc = ""
+	sprite = 8
+	modifiers = {
+		shock_damage = 5%
+		movement_speed = 10%
+	}
+	potential = {
+		religion = the_old_ways
+	}
+}
+new personal_deity moth = {
+	name = "Moth"
+	desc = ""
+	sprite = 9
+	modifiers = {
+		diplomatic_reputation = 1
+		ae_impact = -10%
+	}
+	potential = {
+		religion = the_old_ways
+	}
+}
+new personal_deity bear = {
+	name = "Bear"
+	desc = ""
+	sprite = 10
+	modifiers = {
+		shock_damage_received = -2.5%
+		land_morale = 5%
+	}
+	potential = {
+		religion = the_old_ways
+	}
+}
+new personal_deity wolf = {
+	name = "Wolf"
+	desc = ""
+	sprite = 11
+	modifiers = {
+		manpower_recovery_speed = 25%
+		global_monthly_devastation = -0.1
+	}
+	potential = {
+		religion = the_old_ways
+	}
+}
+new personal_deity owl = {
+	name = "Owl"
+	desc = ""
+	sprite = 12
+	modifiers = {
+		prestige_decay = -0.01
+		monthly_magicka = 0.25
+	}
+	potential = {
+		religion = the_old_ways
+	}
+}
+new personal_deity fox = {
+	name = "Fox"
+	desc = ""
+	sprite = 13
+	modifiers = {
+		country_military_power = 1
+		legitimacy = 1
+	}
+	potential = {
+		religion = the_old_ways
+	}
+}
+new personal_deity whale = {
+	name = "Whale"
+	desc = ""
+	sprite = 14
+	modifiers = {
+		privateer_efficiency = 50%
+		loot_amount = 50%
+	}
+	potential = {
+		religion = the_old_ways
+	}
+}

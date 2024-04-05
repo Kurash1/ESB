@@ -1,0 +1,48 @@
+new named_int expedition_random_event_count = 0
+new effect define_expedition_random_event = {
+	args = {
+		event = event
+		is_good = bool
+	}
+	transpile = {
+		new customizable_localization `GetExpeditionEvent{expedition_random_event_count}` = {
+			texts = {
+				{
+					text =* "\n	*args:event:title*"
+					trigger = args:event:trigger
+				}
+				{
+					text = ""
+					trigger = {
+						always = yes
+					}
+				}
+			}
+		}
+		
+		custom_icons:expedition_icon:tooltip += "[This.GetExpeditionEvent{expedition_random_event_count}]"
+		
+		expedition_random_event_count += 1
+		
+		when [bool:equals = {
+			bool = args:is_good
+			value = yes
+		}] {
+			expedition_good_event_list +=! {
+				1 = {
+					province_event = args:event
+				}
+			}
+		}
+		when [bool:equals = {
+			bool = args:is_good
+			value = no
+		}] {
+			expedition_bad_event_list +=! {
+				1 = {
+					province_event = args:event
+				}
+			}
+		}
+	}
+}
