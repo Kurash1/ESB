@@ -1,0 +1,9 @@
+new class custom_transpile = {
+	list = custom_transpiles
+	args = effect
+	simple_transpile = {
+		foreach $custom_transpile in custom_transpiles {
+			$custom_transpile
+		}
+	}
+}

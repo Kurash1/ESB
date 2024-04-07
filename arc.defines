@@ -4,7 +4,7 @@ map_folder = map
 gfx_folder = gfx
 selector_folder = selectors
 load_order = {
-	valley/*
+	valley/classes/*
 	eu4/*
 	src/functions/*
 	src/helpers/*
@@ -39,6 +39,7 @@ load_order = {
 	src/random_events/
 	src/ai_personalities.txt
 	src/achievements.txt
+	valley/transpile/*
 }
 headers = "
 	/replace p@ with provinces:
