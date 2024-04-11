@@ -215,6 +215,9 @@ governments:tribal:reform_levels:1 += new tier_1_orc_stronghold = {
 		land_forcelimit_modifier = 15%
 		legitimacy = -2.5
 	}
+	government_abilities = { 
+		orcs_instability
+	}
 	ai = {
 		factor = 1
 	}
@@ -263,5 +266,4 @@ governments:tribal:reform_levels:1 += new tier_1_orc_federation = {
 	ai = {
 		factor = 1
 	}
-
 }
