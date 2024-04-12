@@ -154,6 +154,9 @@ His name can be separated into 'Al Du In', which means 'Destroyer Devour Master'
 	potential = {
 		religion = nordic_pantheon
 	}
+	ai_will_do = {
+		factor = 0
+	}
 }
 
 # Testing Gods
@@ -168,18 +171,24 @@ new personal_deity herma_mora = {
 	potential = {
 		religion = nordic_pantheon
 	}
+	ai_will_do = {
+		factor = 0
+	}
 }
 new personal_deity mauloch = {
 	name = "Mauloch"
 	desc = "Mauloch, the Demon of Curses, Lord of Ash and Bone, and the Defender of the Betrayed, a testing god whose sphere is 'the patronage of the spurned and ostracized, the keeper of the Sworn Oath, and the Bloody Curse', as well as conflict, battle, broken promises, and anguish."
 	sprite = 16
 	modifiers = {
-		morale_damage = 10%
+		morale_damage = 15%
 		global_unrest = 2
 	}
 	potential = {
 		religion = nordic_pantheon
 		has_estate_privilege = orcs:redeem_mauloch
+	}
+	ai_will_do = {
+		factor = 0
 	}
 }
 new personal_deity orkey = {
@@ -192,5 +201,8 @@ new personal_deity orkey = {
 	}
 	potential = {
 		religion = nordic_pantheon
+	}
+	ai_will_do = {
+		factor = 0
 	}
 }
