@@ -1,12 +1,364 @@
 mission_trees:solitude += {
-	form_haafingar_hold = {
-		name = "Form Haafingar Hold"
+	castle_project = {
+		name = "Castle Project"
 		x = 6
 		y = 2
-		icon = form_haafingar
 		required = {
 			coast_of_haafingar
 			the_deepwood
+		}
+		trigger = {
+		
+		}
+		effect = {
+			
+		}
+	}
+	castle_hraggstad = {
+		name = "Purpose of Hraggstad"
+		desc = "On the second highest peak of the Kilkreath mountains, we found an ancient rune stone. Our legends spoke of these stones, the Stones of fate by which heroes could rewrite their own fates, and upon the stone was the mark of the Steed.
+
+The blessing of the steed is a blessing of war, and thus it is only right for there to be fortress there."
+		x = 7
+		y = 3
+		required = castle_project
+		icon = hraggstad_mission
+		trigger = {
+			owns = hraggstad
+			provinces:hraggstad = {
+				development = 15
+				fort_level = 2
+			}
+			has_adm_advisor_of_level = 1
+			has_mil_advisor_of_level = 1
+		}
+		effect = {
+			new country_event haafingar.2 = {
+				title = "Purpose of Fort Hraggstad"
+				desc = "On the second highest peak of the Kilkreath mountains, we found an ancient rune stone. Our legends spoke of these stones, the Stones of fate by which heroes could rewrite their own fates, and upon the stone was the mark of the Steed.
+
+			The blessing of the steed is a blessing of war, and thus we built a fort next to the stone, but now that fort has become a mighty fortress city, and the question comes, what should this city focus on?
+
+			Our advisors of the blue palace propose multiple differing opinions on the issue:
+
+			[Root.Mil_Advisor.GetName] our military advisor suggests that the city should be focused on studying the ways of war, protected by the steed, we can turn it into the ultimate training grounds.
+			[Root.Adm_Advisor.GetName] our administrative advisor, on the other hand, proposes that the city should be focused on the manufacturing of the means of war, weapons.
+			While a third voice shakes the court, 'Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key.' one of the mightiest tongues of our realm suggest that he would make a special force there, in resemblance to the fate-stone."
+				picture = hraggstad_eventPicture
+				is_triggered_only = yes
+				options = {
+					{
+						name = "There shall we study the ways of war"
+						effect = {
+							provinces:hraggstad = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Art of War"
+									modifier = {
+										army_tradition = 1
+										local_manpower_modifier = 1
+										local_fort_maintenance_modifier = -0.5
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Let us focus our smiths there, and develop an arms industry"
+						effect = {
+							provinces:hraggstad = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Industrial City"
+									modifier = {
+										production_efficiency = 0.15
+										trade_goods_size_modifier = 0.25
+									}
+								}
+							}
+						}
+					}
+					{
+						name = "Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key"
+						effect = {
+							new_custom_tooltip = "Unlocks §YSinging-Cavalry§! Unit"
+							set_country_flag = unlocks_singing_cavalry
+							provinces:hraggstad = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Singing-Cavalry"
+									modifier = {
+										cavalry_power = 0.10
+										local_manpower_modifier = 1
+										local_regiment_cost = -0.25
+										regiment_recruit_speed = -0.25
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			new unit singing_cavalry = {
+				name = "Singing Cavalry"
+				desc = ""
+				type = cavalry
+				maneuver = 2
+				offensive_morale = 4
+				defensive_morale = 2
+				offensive_fire = 2
+				defensive_fire = 1
+				offensive_shock = 4
+				defensive_shock = 2
+				trigger = {
+					has_country_flag = unlocks_singing_cavalry
+				}
+			}
+		
+			country_event = haafingar.2
+			show_event_insights = {
+				tooltip = "This event will allow us to choose the settlment focus for Hraggstad."
+				event = haafingar.2
+				show_options = yes
+			}
+		}
+	}
+	northwatch_keep = {
+		name = "Northwatch Keep"
+		x = 5
+		y = 3
+		required = castle_project
+		trigger = {
+			owns = northwatch
+			provinces:northwatch = {
+				development = 15
+				fort_level = 2
+			}
+		}
+		effect = {
+			new country_event haafingar.1 = {
+				title = "Purpose of Northwatch Keep"
+				desc = ""
+				picture = northwatch_eventPicture
+				is_triggered_only = yes
+				options = {
+					{ #Felhvalstag - Cold Whale Castle
+						name = "A Fortress to rule the waves"
+						effect = {
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Felhvalstag"
+									modifier = {
+										local_sailors_modifier = 1
+										naval_forcelimit_modifier = 0.1
+									}
+								}
+							}
+							regions:haafingar [has_port = yes] {
+								quick_province_modifier = {
+									name = "Felhvalstag Defenses"
+									modifier = {
+										block_slave_raid = yes
+									}
+								}
+							}
+						}
+					}
+					{ #Orkvulkstag - Orc-Folk Castle
+						name = "It can serve as an embassy for the orcs of the west"
+						effect = {
+							new_custom_tooltip = "Will be locked into the §YOrsinium Path§! of the Wrothgar Missions"
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Orkvulkstag"
+									modifier = {
+										num_accepted_cultures = 1
+										promote_culture_cost = -0.25
+										trade_goods_size_modifier = 0.25
+										orcs_loyalty_modifier = 0.05
+									}
+								}
+							}
+						}
+					}
+					{ #Hlardstrad Fortress - Bloody-River Fortress
+						name = "It can serve for future conquests to the west"
+						effect = {
+							new_custom_tooltip = "Will be locked into the §YJehanna Path§! of the Wrothgar Missions"
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Hlardstrad"
+									modifier = {
+										local_manpower_modifier = 1
+										land_forcelimit = 5
+										fort_level = 1
+									}
+								}
+							}
+						}
+					}
+					{ #Lurag-Nool - Tribe of Giants
+						name = "A permanent camp for the giants"
+						effect = {
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Lurag-Nool"
+									modifier = {
+										min_local_autonomy = 100
+										land_forcelimit_modifier = 0.10
+										giants_loyalty_modifier = 0.1
+									}
+								}
+							}
+						}
+					}
+					{ #Center of Torture
+						name = "The Scaled Justice require additional locations"
+						effect = {
+							provinces:northwatch = {
+								quick_province_modifier = {
+									name = "Settlement Focus: Center of Torture"
+									modifier = {
+										harsh_treatment_cost = -0.25
+										statewide_governing_cost = -0.5
+										local_state_maintenance_modifier = -1
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			country_event = haafingar.1
+			show_event_insights = {
+				tooltip = "This event will allow us to choose the settlment focus for Northwatch."
+				event = haafingar.1
+				show_options = no #cus I have some of them hidden by conditional effects
+			}
+			
+			new_custom_tooltip = "§TA Fortress to rule the waves§!:"
+			tooltip = {
+				events:haafingar.1:options:1:effect
+			}
+			new_custom_tooltip = "§TIt can serve as an embassy for the orcs of the west§!:"
+			tooltip = {
+				events:haafingar.1:options:2:effect
+			}
+			new_custom_tooltip = "§TIt can serve for future conquests to the west§!:"
+			tooltip = {
+				events:haafingar.1:options:3:effect
+			}
+			
+			conditional_effect = {
+				tooltip = "granted estate privilege §YPromote Giant Rights§! or §YGiant Land Rights§!"
+				trigger = {
+					OR = {
+						has_estate_privilege = giants:promote_giant_rights
+						has_estate_privilege = giants:giant_land_rights
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Event gains the following additional option: §T{events:haafingar.1:options:4:name}§!:"
+					tooltip = {
+						events:haafingar.1:options:4:effect
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YScaled Justice§! as the settlement focus for §YDragon Bridge§!"
+				trigger = {
+					has_country_flag = has_scaled_justice
+				}
+				effect = {
+					new_custom_tooltip = "Event gains the following additional option: §T{events:haafingar.1:options:5:name}§!:"
+					tooltip = {
+						events:haafingar.1:options:5:effect
+					}
+				}
+			}
+		}
+	}
+	cascabel_hall = {
+		name = "Autonomy of Cascabel Hall"
+		x = 6
+		y = 3
+		required = castle_project
+		icon = cascabel_hall_mission
+		trigger = {
+			areas:shadowgreen = {
+				owned_by = ROOT
+			}
+			provinces:cascabel_hall = {
+				fort_level = 2
+			}
+		}
+		effect = {
+			new country_event haafingar.3 = {
+				title = "Autonomy of Cascabel Hall"
+				is_triggered_only = yes
+				picture = cascabel_hall_eventPicture
+				immediate = {
+					areas:shadowgreen = {
+						add_core = cascabel
+					}
+				}
+				options = {
+					{
+						name = "Curtail their autonomy"
+						effect = {
+							areas:shadowgreen = {
+								set_local_autonomy = 0
+							}
+							custom_tooltip = empty_line_tt
+						}
+					}
+					{
+						name = "Autonomy for the Count of Cascabel"
+						effect = {
+							hidden_effect = {
+								release = cascabel
+							}
+							create_subject = {
+								subject_type = cascabel_subject
+								subject = cascabel
+							}
+						}
+					}
+				}
+			}
+		
+			provinces:cascabel_hall = {
+				quick_province_modifier = {
+					name = "Arbor of Golden Apples"
+					modifier = {
+						trade_value_modifier = 1.5 #this makes the base_price of the good 5 instead of 2
+						trade_goods_size_modifier = 0.5
+					}
+				}
+				quick_province_modifier = {
+					name = "Impenetrable Cascabel Walls"
+					modifier = {
+						local_defensiveness = 0.5
+						fort_level = 1
+					}
+				}
+			}
+			
+			country_event = haafingar.3
+			show_event_insights = {
+				tooltip = "This event will allow us to choose whether Cascabel county should be autonomous."
+				event = haafingar.3
+				show_options = yes
+			}
+		}
+	}
+	form_haafingar_hold = {
+		name = "Form Haafingar Hold"
+		x = 6
+		y = 4
+		icon = form_haafingar
+		required = {
+			castle_hraggstad
+			northwatch_keep
+			cascabel_hall
 		}
 		trigger = {
 			regions:haafingar = {
@@ -159,192 +511,6 @@ A member of the §YRed-Wolf§! clan becomes your ruler.
 				}
 				effect = {
 					new_custom_tooltip = "Enact §YCouncil Hold§! Tier 1 Government Reform."
-				}
-			}
-		}
-	}
-	northwatch_keep = {
-		name = "Northwatch Keep"
-		x = 5
-		y = 3
-		required = form_haafingar_hold
-		trigger = {
-			owns = northwatch
-			provinces:northwatch = {
-				development = 15
-				fort_level = 2
-			}
-		}
-		effect = {
-			new country_event haafingar.1 = {
-				title = "Purpose of Northwatch Keep"
-				desc = ""
-				picture = northwatch_eventPicture
-				is_triggered_only = yes
-				options = {
-					{ #Felhvalstag - Cold Whale Castle
-						name = "A Fortress to rule the waves"
-						effect = {
-							provinces:northwatch = {
-								quick_province_modifier = {
-									name = "Settlement Focus: Felhvalstag"
-									modifier = {
-										tax_income = 1
-									}
-								}
-							}
-						}
-					}
-					{ #Lurag-Nool - Tribe of Giants
-						name = "A permanent camp for the giants"
-						effect = {
-							provinces:northwatch = {
-								quick_province_modifier = {
-									name = "Settlement Focus: Lurag-Nool"
-									modifier = {
-										tax_income = 1
-									}
-								}
-							}
-						}
-					}
-					{ #Orkvulkstag - Orc-Folk Castle
-						name = "It can serve as an embassy for the orcs of the west"
-						effect = {
-							new_custom_tooltip = "Will be locked into the §YOrsinium Path§! of the Wrothgar Missions"
-							provinces:northwatch = {
-								quick_province_modifier = {
-									name = "Settlement Focus: Orkvulkstag"
-									modifier = {
-										tax_income = 1
-									}
-								}
-							}
-						}
-					}
-					{ #Hlardstrad Fortress - Bloody-River Fortress
-						name = "It can serve for future conquests to the west"
-						effect = {
-							new_custom_tooltip = "Will be locked into the §YJehanna Path§! of the Wrothgar Missions"
-							provinces:northwatch = {
-								quick_province_modifier = {
-									name = "Settlement Focus: Hlardstrad"
-									modifier = {
-										tax_income = 1
-									}
-								}
-							}
-						}
-					}
-					{ #Center of Torture
-						name = "The Scaled Justice require additional locations"
-						effect = {
-							provinces:northwatch = {
-								quick_province_modifier = {
-									name = "Settlement Focus: Center of Torture"
-									modifier = {
-										tax_income = 1
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			
-			country_event = haafingar.1
-			new_custom_tooltip = "§GEvent Insight§!
-This event will allow us to choose the settlment focus for Northwatch.
-"
-			
-			conditional_effect = {
-				tooltip = "granted estate privilege §YPromote Giant Rights§! or §YGiant Land Rights§!"
-				trigger = {
-					OR = {
-						has_estate_privilege = giants:promote_giant_rights
-						has_estate_privilege = giants:giant_land_rights
-					}
-				}
-				effect = {
-					new_custom_tooltip = "Event gains an additional option of the §YLurag-Nool§! tribe of Giants
-"
-				}
-			}
-			conditional_effect = {
-				tooltip = "chose §YScaled Justice§! as the settlement focus for §YDragon Bridge§!"
-				trigger = {
-					has_country_flag = has_scaled_justice
-				}
-				effect = {
-					new_custom_tooltip = "Event gains an additional option of the §YCenter of Torture§!
-"
-				}
-			}
-		}
-	}
-	cascabel_hall = {
-		name = "Autonomy of Cascabel Hall"
-		x = 7
-		y = 3
-		required = form_haafingar_hold
-		icon = cascabel_hall_mission
-		trigger = {
-			areas:shadowgreen = {
-				owned_by = ROOT
-			}
-			provinces:cascabel_hall = {
-				fort_level = 2
-			}
-		}
-		effect = {
-			provinces:cascabel_hall = {
-				quick_province_modifier = {
-					name = "Arbor of Golden Apples"
-					modifier = {
-						trade_value_modifier = 1.5 #this makes the base_price of the good 5 instead of 2
-						trade_goods_size_modifier = 0.5
-					}
-				}
-				quick_province_modifier = {
-					name = "Impenetrable Cascabel Walls"
-					modifier = {
-						local_defensiveness = 0.5
-						fort_level = 1
-					}
-				}
-			}
-			
-			country_event = haafingar.3
-		}
-	}
-}
-new country_event haafingar.3 = {
-	title = "Autonomy of Cascabel Hall"
-	is_triggered_only = yes
-	picture = cascabel_hall_eventPicture
-	immediate = {
-		areas:shadowgreen = {
-			add_core = cascabel
-		}
-	}
-	options = {
-		{
-			name = "Curtail their autonomy"
-			effect = {
-				areas:shadowgreen = {
-					set_local_autonomy = 0
-				}
-			}
-		}
-		{
-			name = "Autonomy for the Count of Cascabel"
-			effect = {
-				hidden_effect = {
-					release = cascabel
-				}
-				create_subject = {
-					subject_type = cascabel_subject
-					subject = cascabel
 				}
 			}
 		}
