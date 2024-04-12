@@ -210,28 +210,79 @@ governments:monarchy:reform_levels:1 += new tier_1_haafingar_kingdom = {
 		factor = 1
 	}
 }
+static_modifiers:positive_stability += {
+	solitude_rock_hammer_influence = 0.1
+}
+new named_effect add_rock_hammer_building_influence = {
+	foreach $building in buildings {
+		$building:on_built += {
+			owner = {
+				add_faction_influence = {
+					faction = solitude_rock_hammer
+					influence = 1
+				}
+			}
+		}
+	}
+}
 new faction solitude_rock_hammer = {
 	name = "Rock-Hammer"
-	desc = "Test 1"
+	desc = "Faction Modifier:
+		{modifier_to_string = {
+			build_cost = -0.15
+			build_time = -0.25
+		}}
+§YGains influence through positive stability
+Gains influence through building§!
+"
 	monarch_power = ADM
 	modifier = {
-		governing_capacity = 1
+		build_cost = -0.15
+		build_time = -0.25
 	}
+}
+static_modifiers:naval_forcelimit += {
+	solitude_storm_galley_influence = 0.5
+}
+static_modifiers:mercantilism += {
+	solitude_storm_galley_influence = 1
 }
 new faction solitude_storm_galley = {
 	name = "Storm-Galley"
-	desc = "Test 2"
+	desc = "Faction Modifier:
+		{modifier_to_string = {
+			global_sailors_modifier = 0.1
+			galley_power = 0.1
+		}}
+§YGains influence through naval forcelimit
+Gains influence through mercantilism§!
+"
 	monarch_power = DIP
 	modifier = {
-		governing_capacity = 1
+		global_sailors_modifier = 0.1
+		galley_power = 0.1
 	}
+}
+static_modifiers:land_forcelimit += {
+	solitude_red_wolf_influence = 0.5
+}
+static_modifiers:war += {
+	solitude_red_wolf_influence = 0.25
 }
 new faction solitude_red_wolf = {
 	name = "Red-Wolf"
-	desc = "Test 3"
+	desc = "Faction Modifier:
+		{modifier_to_string = {
+			land_morale = 0.05
+			shock_damage = 0.10
+		}}
+§YGains influence through land forcelimit
+Gains influence through being at war§!
+"
 	monarch_power = MIL
 	modifier = {
-		governing_capacity = 1
+		land_morale = 0.05
+		shock_damage = 0.10
 	}
 }
 governments:monarchy:reform_levels:1 += new tier_1_three_clan_council = {

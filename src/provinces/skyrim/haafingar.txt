@@ -126,8 +126,9 @@ new province red_port = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = naval_supplies
-		is_city = no
 		history_owner = solitude
+		
+		add_core = storm_galley
 	}
 }
 new province maerin = {
@@ -153,7 +154,7 @@ new province maerin = {
 		hre = yes
 		history_trade_goods = grain
 	
-		is_city = yes
+		add_core = storm_galley
 	}
 }
 new province skalavik = {
@@ -179,7 +180,7 @@ new province skalavik = {
 		hre = yes
 		history_trade_goods = grain
 	
-		is_city = yes
+		add_core = storm_galley
 		
 		quick_province_modifier = {
 			name = "Seat of Clan Storm-Galley"
@@ -213,7 +214,7 @@ new province horga = {
 		hre = yes
 		history_trade_goods = grain
 	
-		is_city = yes
+		add_core = rock_hammer
 	}
 }
 new province alviora = {
@@ -239,7 +240,7 @@ new province alviora = {
 		hre = yes
 		history_trade_goods = grain
 	
-		is_city = yes
+		add_core = rock_hammer
 	}
 }
 new province esjuberg = {
@@ -265,7 +266,7 @@ new province esjuberg = {
 		hre = yes
 		history_trade_goods = wood
 	
-		is_city = yes
+		add_core = rock_hammer
 		
 		quick_province_modifier = {
 			name = "Seat of Clan Rock-Hammer"
@@ -426,7 +427,7 @@ new province wolfs_eye = {
 		hre = yes
 		history_trade_goods = fish
 	
-		is_city = yes
+		add_core = red_wolf
 		
 		quick_province_modifier = {
 			name = "Seat of Clan Red-Wolf"
@@ -458,7 +459,7 @@ new province clay_coast = {
 		hre = yes
 		history_trade_goods = fish
 	
-		is_city = no
+		add_core = red_wolf
 		history_owner = solitude
 	}
 }
@@ -490,7 +491,7 @@ new province rock_isle = {
 		hre = yes
 		history_trade_goods = stone
 	
-		is_city = no
+		add_core = red_wolf
 		history_owner = solitude
 	}
 }

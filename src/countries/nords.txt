@@ -252,6 +252,39 @@ new country cascabel = {
 	}
 	capital = cascabel_hall
 }
+new country rock_hammer = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = RHA
+	name = "Rock-Hammer"
+	adj = "Rock-Hammer"
+	color = {
+		110 70 70
+	}
+	capital = esjuberg
+}
+new country storm_galley = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = SGA
+	name = "Storm-Galley"
+	adj = "Storm-Galley"
+	color = {
+		65 100 165
+	}
+	capital = skalavik
+}
+new country red_wolf = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = RWO
+	name = "Red-Wolf"
+	adj = "Red-Wolf"
+	color = {
+		175 0 0
+	}
+	capital = wolfs_eye
+}
 new country pine_frost = {
 	inherit = nordic_country
 	primary_culture = haafingarian
@@ -1397,12 +1430,6 @@ new country gyldenhul = {
 		}
 	}
 }
-new relation vassal = {
-	first = SOL
-	second = DRB
-	start_date = 2568.1.1
-	end_date = 9999.1.1
-}
 new country hawk_eye = {
 	inherit = nordic_country
 	primary_culture = haafingarian
@@ -1495,4 +1522,23 @@ new country wave_crusher = {
 			}
 		}
 	}
+}
+
+new relation vassal = {
+	first = SOL
+	second = DRB
+	start_date = 2568.1.1
+	end_date = 9999.1.1
+}
+new relation vassal = {
+	first = DAW
+	second = HGA
+	start_date = 2568.1.1
+	end_date = 9999.1.1
+}
+new relation vassal = {
+	first = DAW
+	second = FRO
+	start_date = 2568.1.1
+	end_date = 9999.1.1
 }
