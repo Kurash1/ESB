@@ -6,7 +6,21 @@ new class event_modifier = {
 	}
 	args = {
 		name = string
+		desc = string?
 		modifier = named_modifier
+	}
+	simple_transpile = {
+		write_file "common/event_modifiers/arc.txt" = {
+			foreach $modifier in event_modifiers {
+				new localisation `{$modifier}` = "{$modifier:name}"
+				when [exists = $modifier:desc] {
+					new localisation `desc_{$modifier}` = "{$modifier:desc}"
+				}
+				$modifier = {
+					$modifier:modifier
+				}
+			}
+		}
 	}
 }
 new class custom_text_box = {

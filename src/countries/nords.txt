@@ -222,7 +222,7 @@ new country solitude = {
 		255 55 55
 	}
 	capital = red_port
-	starting_reform = tier_1_haafingar_kingdom
+	starting_reform = tier_1_three_clan_council
 	government_rank = 2
 	history += {
 		2568.1.1 = {
@@ -234,13 +234,9 @@ new country solitude = {
 				mil = 5
 				age = 37
 			}
-			starting_heir = {
-				name = "Geslir"
-				dynasty = "Red-Wolf"
-				adm = 4
-				dip = 4
-				mil = 4
-				age = 7
+			add_faction_influence = {
+				faction = solitude_red_wolf
+				influence = 15
 			}
 		}
 	}

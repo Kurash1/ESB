@@ -9,6 +9,7 @@ on_actions:on_death_election += {
 		elections.3
 	}
 }
+new localisation mechanic_special_election_yes = "Has a special Election event."
 new country_event elections.1 = {
 	title = "Election!"
 	desc = "The term is up for $MONARCH$. With enough support [Root.Monarch.GetSheHe] can stay in office, but then [Root.Monarch.GetSheHe] must defeat [Root.Monarch.GetHerHis] three primary competitors..."
@@ -108,7 +109,7 @@ new country_event elections.2 = {
 	is_triggered_only = yes
 	trigger = {
 		NOT = {
-			has_reform = companion_remnant
+			has_government_attribute = special_election
 		}
 	}
 	
@@ -222,5 +223,66 @@ new country_event elections.3 = {
 	
 	after = {
 		clr_country_flag = in_theocracy_heir_selection
+	}
+}
+new country_event elections.4 = { #This is for Solitude
+	title = "Election!"
+	desc = "The unfortunate passing of $MONARCH$ forces us to hold an election of who will rule our country next. Our three clans have put forth their own candidates..."
+	picture = REPUBLICAN_DEBATES_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		has_reform = tier_1_three_clan_council
+	}
+	
+	options = {
+		{
+			name = "The Rock-Hammer Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					dynasty = "Rock-Hammer"
+					adm = 4
+					claim = 100
+				}
+				add_faction_influence = {
+					faction = solitude_rock_hammer
+					influence = 15
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "The Storm-Galley Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					dynasty = "Storm-Galley"
+					dip = 4
+					claim = 100
+				}
+				add_faction_influence = {
+					faction = solitude_storm_galley
+					influence = 15
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "The Red-Wolf Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					dynasty = "Red-Wolf"
+					mil = 4
+					claim = 100
+				}
+				add_faction_influence = {
+					faction = solitude_red_wolf
+					influence = 15
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
 	}
 }

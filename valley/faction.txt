@@ -1,0 +1,41 @@
+new class faction = {
+	id = `{this:id}`
+	list = factions
+	args = {
+		name = string
+		desc = string
+		monarch_power = string
+		modifier = named_modifier
+	}
+	simple_transpile = {
+		write_file "common/factions/arc.txt" = {
+			foreach $faction in factions {
+				new localisation `{$faction:id}` = "{$faction:name}"
+				new localisation `{$faction}_influence` = "{$faction:name} Influence"
+				new localisation `{$faction:id}_FACTION_DESC` = "{$faction:desc}"
+				$faction = {
+					monarch_power = $faction:monarch_power
+					always = yes
+					modifier = {
+						$faction:modifier
+					}
+				}
+			}
+		}
+		write_file "interface/arc_factions.gfx" = {
+			spriteTypes = {
+				foreach $faction in factions {
+					spriteType = {
+						name = `"GFX_faction_{$faction}"`
+						texturefile = `"gfx/special/{$faction}.tga"`
+					}
+					spriteType = {
+						name = `"GFX_faction_bg_{$faction}"`
+						texturefile = "gfx/interface/faction_blue_frame.tga"
+						transparencecheck = yes
+					}
+				}
+			}
+		}
+	}
+}

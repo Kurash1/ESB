@@ -180,6 +180,14 @@ new province skalavik = {
 		history_trade_goods = grain
 	
 		is_city = yes
+		
+		quick_province_modifier = {
+			name = "Seat of Clan Storm-Galley"
+			desc = "Test description"
+			modifier = {
+				solitude_storm_galley_influence = 0.1
+			}
+		}
 	}
 }
 new province horga = {
@@ -258,6 +266,13 @@ new province esjuberg = {
 		history_trade_goods = wood
 	
 		is_city = yes
+		
+		quick_province_modifier = {
+			name = "Seat of Clan Rock-Hammer"
+			modifier = {
+				solitude_rock_hammer_influence = 0.1
+			}
+		}
 	}
 }
 new province dragon_bridge = {
@@ -412,6 +427,13 @@ new province wolfs_eye = {
 		history_trade_goods = fish
 	
 		is_city = yes
+		
+		quick_province_modifier = {
+			name = "Seat of Clan Red-Wolf"
+			modifier = {
+				solitude_red_wolf_influence = 0.1
+			}
+		}
 	}
 }
 new province clay_coast = {

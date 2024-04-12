@@ -81,6 +81,86 @@ SO take up swords, sworn sons and dauntless daughters, And rally around the reig
 					global_autonomy = -0.1
 				}
 			}
+			
+			conditional_effect = {
+				tooltip = "§YRock-Hammer§! influence is 50 or greater"
+				trigger = {
+					faction_influence = {
+						faction = solitude_rock_hammer
+						influence = 50
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform.
+A member of the §YRock-Hammer§! clan becomes your ruler.
+"
+					hidden_effect = {
+						define_ruler = {
+							dynasty = "Rock-Hammer"
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "§YStorm-Galley§! influence is 50 or greater"
+				trigger = {
+					faction_influence = {
+						faction = solitude_storm_galley
+						influence = 50
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform.
+A member of the §YStorm-Galley§! clan becomes your ruler.
+"
+					hidden_effect = {
+						define_ruler = {
+							dynasty = "Storm-Galley"
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "§YRed-Wolf§! influence is 50 or greater"
+				trigger = {
+					faction_influence = {
+						faction = solitude_red_wolf
+						influence = 50
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform.
+A member of the §YRed-Wolf§! clan becomes your ruler.
+"
+					hidden_effect = {
+						define_ruler = {
+							dynasty = "Red-Wolf"
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "no Faction has dominance"
+				trigger = {
+					NOT = {
+						faction_influence = {
+							faction = solitude_rock_hammer
+							influence = 50
+						}
+						faction_influence = {
+							faction = solitude_storm_galley
+							influence = 50
+						}
+						faction_influence = {
+							faction = solitude_red_wolf
+							influence = 50
+						}
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Enact §YCouncil Hold§! Tier 1 Government Reform."
+				}
+			}
 		}
 	}
 	northwatch_keep = {

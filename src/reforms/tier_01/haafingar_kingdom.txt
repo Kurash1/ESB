@@ -210,3 +210,54 @@ governments:monarchy:reform_levels:1 += new tier_1_haafingar_kingdom = {
 		factor = 1
 	}
 }
+new faction solitude_rock_hammer = {
+	name = "Rock-Hammer"
+	desc = "Test 1"
+	monarch_power = ADM
+	modifier = {
+		governing_capacity = 1
+	}
+}
+new faction solitude_storm_galley = {
+	name = "Storm-Galley"
+	desc = "Test 2"
+	monarch_power = DIP
+	modifier = {
+		governing_capacity = 1
+	}
+}
+new faction solitude_red_wolf = {
+	name = "Red-Wolf"
+	desc = "Test 3"
+	monarch_power = MIL
+	modifier = {
+		governing_capacity = 1
+	}
+}
+governments:monarchy:reform_levels:1 += new tier_1_three_clan_council = {
+	name = "Three Clan Council"
+	desc = ""
+	icon = generic_people
+	potential = {
+		has_reform = tier_1_three_clan_council
+	}
+	trigger = {
+		has_reform = tier_1_three_clan_council
+	}
+	factions = {
+		solitude_rock_hammer
+		solitude_storm_galley
+		solitude_red_wolf
+	}
+	heir = no
+	election_on_death = yes
+	custom_attributes = {
+		special_election = yes
+	}
+	modifiers = {
+		
+	}
+	ai = {
+		factor = 1
+	}
+}
