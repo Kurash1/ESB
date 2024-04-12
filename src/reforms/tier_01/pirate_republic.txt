@@ -12,7 +12,9 @@ governments:republic:reform_levels:1 += new tier_1_pirate_republic = {
 		privateer_efficiency = 0.5
 		may_perform_slave_raid_on_same_religion = yes
 	}
-	
+	potential = {
+		has_reform = tier_1_pirate_republic
+	}
 	trigger = {
 		has_reform = tier_1_pirate_republic
 	}

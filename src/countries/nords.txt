@@ -69,6 +69,18 @@ new country valtheim = {
 		63 75 82
 	}
 	capital = valtheim
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Sjagan"
+				dynasty = "Stone-Keep"
+				adm = 0
+				dip = 5
+				mil = 2
+				age = 19
+			}
+		}
+	}
 }
 new country olenveld = {
 	inherit = nordic_country
@@ -80,6 +92,26 @@ new country olenveld = {
 		30 30 30
 	}
 	capital = hrudnaldaf
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Harrald"
+				dynasty = "Grave-Hill"
+				adm = 1
+				dip = 0
+				mil = 5
+				age = 23
+			}
+			starting_heir = {
+				name = "Tolerd"
+				dynasty = "Grave-Hill"
+				adm = 6
+				dip = 2
+				mil = 4
+				age = 2
+			}
+		}
+	}
 }
 new country clearspring = {
 	inherit = nordic_country
@@ -190,7 +222,7 @@ new country solitude = {
 		255 55 55
 	}
 	capital = red_port
-	starting_reform = tier_1_haafingar_kingdom
+	starting_reform = tier_1_three_clan_council
 	government_rank = 2
 	history += {
 		2568.1.1 = {
@@ -202,13 +234,9 @@ new country solitude = {
 				mil = 5
 				age = 37
 			}
-			starting_heir = {
-				name = "Geslir"
-				dynasty = "Red-Wolf"
-				adm = 4
-				dip = 4
-				mil = 4
-				age = 7
+			add_faction_influence = {
+				faction = solitude_red_wolf
+				influence = 15
 			}
 		}
 	}
@@ -224,6 +252,39 @@ new country cascabel = {
 	}
 	capital = cascabel_hall
 }
+new country rock_hammer = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = RHA
+	name = "Rock-Hammer"
+	adj = "Rock-Hammer"
+	color = {
+		110 70 70
+	}
+	capital = esjuberg
+}
+new country storm_galley = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = SGA
+	name = "Storm-Galley"
+	adj = "Storm-Galley"
+	color = {
+		65 100 165
+	}
+	capital = skalavik
+}
+new country red_wolf = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = RWO
+	name = "Red-Wolf"
+	adj = "Red-Wolf"
+	color = {
+		175 0 0
+	}
+	capital = wolfs_eye
+}
 new country pine_frost = {
 	inherit = nordic_country
 	primary_culture = haafingarian
@@ -234,6 +295,26 @@ new country pine_frost = {
 		158 255 194
 	}
 	capital = pinefrost
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Keldaf"
+				dynasty = "Pine-Frost"
+				adm = 4
+				dip = 5
+				mil = 3
+				age = 38
+			}
+			starting_heir = {
+				name = "Ranry"
+				dynasty = "Pine-Frost"
+				adm = 3
+				dip = 3
+				mil = 0
+				age = 17
+			}
+		}
+	}
 }
 new country holly_frost = {
 	inherit = nordic_country
@@ -245,6 +326,26 @@ new country holly_frost = {
 		0 255 255
 	}
 	capital = holly_frost
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Jofar"
+				dynasty = "Holly-Frost"
+				adm = 3
+				dip = 2
+				mil = 3
+				age = 18
+			}
+			starting_heir = {
+				name = "Eita"
+				dynasty = "Holly-Frost"
+				adm = 6
+				dip = 1
+				mil = 2
+				age = 0
+			}
+		}
+	}
 }
 new country dragon_bridge = {
 	inherit = nordic_country
@@ -257,6 +358,26 @@ new country dragon_bridge = {
 		156 84 84
 	}
 	capital = dragon_bridge
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Hafand"
+				dynasty = "Flame-Shield"
+				adm = 3
+				dip = 6
+				mil = 4
+				age = 19
+			}
+			starting_heir = {
+				name = "Odmig"
+				dynasty = "Flame-Shield"
+				adm = 3
+				dip = 1
+				mil = 3
+				age = 0
+			}
+		}
+	}
 }
 new country blue_axe = {
 	inherit = nordic_country
@@ -268,6 +389,26 @@ new country blue_axe = {
 		73 101 255
 	}
 	capital = ysgramoors_tomb
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Satch"
+				dynasty = "Blue-Axe"
+				adm = 4
+				dip = 4
+				mil = 3
+				age = 58
+			}
+			starting_heir = {
+				name = "Brasvar"
+				dynasty = "Blue-Axe"
+				adm = 3
+				dip = 0
+				mil = 3
+				age = 22
+			}
+		}
+	}
 }
 new country pine_hill = {
 	inherit = nordic_country
@@ -279,6 +420,18 @@ new country pine_hill = {
 		158 255 102
 	}
 	capital = clearpine_pond
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Frakkil"
+				dynasty = "Pine-Hill"
+				adm = 3
+				dip = 3
+				mil = 2
+				age = 18
+			}
+		}
+	}
 }
 new country rime_rock = {
 	inherit = nordic_country
@@ -290,6 +443,26 @@ new country rime_rock = {
 		133 175 175
 	}
 	capital = northwatch
+	history += {
+		2568.1.1 = {
+			starting_ruler = {
+				name = "Honric"
+				dynasty = "Rime-Rock"
+				adm = 1
+				dip = 3
+				mil = 3
+				age = 20
+			}
+			starting_heir = {
+				name = "Torykus"
+				dynasty = "Rime-Rock"
+				adm = 1
+				dip = 2
+				mil = 4
+				age = 1
+			}
+		}
+	}
 }
 new country raven_scar = {
 	inherit = nordic_country
@@ -1257,12 +1430,6 @@ new country gyldenhul = {
 		}
 	}
 }
-new relation vassal = {
-	first = SOL
-	second = DRB
-	start_date = 2568.1.1
-	end_date = 9999.1.1
-}
 new country hawk_eye = {
 	inherit = nordic_country
 	primary_culture = haafingarian
@@ -1355,4 +1522,23 @@ new country wave_crusher = {
 			}
 		}
 	}
+}
+
+new relation vassal = {
+	first = SOL
+	second = DRB
+	start_date = 2568.1.1
+	end_date = 9999.1.1
+}
+new relation vassal = {
+	first = DAW
+	second = HGA
+	start_date = 2568.1.1
+	end_date = 9999.1.1
+}
+new relation vassal = {
+	first = DAW
+	second = FRO
+	start_date = 2568.1.1
+	end_date = 9999.1.1
 }

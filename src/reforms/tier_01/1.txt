@@ -29,6 +29,9 @@ governments:theocracy:reform_levels:1 += new tier_1_forelhost_priestdom = {
 		immortal_ruler = yes
 		rahgot_ruler = yes
 	}
+	potential = {
+		has_reform = tier_1_forelhost_priestdom
+	}
 	trigger = {
 		has_reform = tier_1_forelhost_priestdom
 	}
@@ -50,6 +53,9 @@ governments:monarchy:reform_levels:1 += new tier_1_duraki_kingdom = {
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	potential = {
+		has_reform = tier_1_duraki_kingdom
+	}
 	trigger = {
 		has_reform = tier_1_duraki_kingdom
 	}
@@ -70,6 +76,9 @@ governments:monarchy:reform_levels:1 += new tier_1_thanedom = {
 	force_general_leader = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	potential = {
+		has_reform = tier_1_thanedom
+	}
 	trigger = {
 		has_reform = tier_1_thanedom
 	}
@@ -86,6 +95,9 @@ governments:monarchy:reform_levels:1 += new tier_1_hold = {
 	desc = ""
 	icon = "commander_king_reform"
 	allow_normal_conversion = yes
+	potential = {
+		has_reform = tier_1_hold
+	}
 	trigger = {
 		has_reform = tier_1_hold
 	}
@@ -104,6 +116,9 @@ governments:monarchy:reform_levels:1 += new tier_1_warrior_house = {
 	icon = "crusading_orders_icon"
 	allow_normal_conversion = yes
 	force_general_leader = yes
+	potential = {
+		has_reform = tier_1_warrior_house
+	}
 	trigger = {
 		has_reform = tier_1_warrior_house
 	}
@@ -122,6 +137,9 @@ governments:monarchy:reform_levels:1 += new tier_1_warrior_hold = {
 	icon = "crown_of_heaven"
 	allow_normal_conversion = yes
 	force_general_leader = yes
+	potential = {
+		has_reform = tier_1_warrior_hold
+	}
 	trigger = {
 		has_reform = tier_1_warrior_hold
 	}
@@ -139,6 +157,9 @@ governments:monarchy:reform_levels:1 += new tier_1_nord_clan = {
 	icon = "generic_people"
 	allow_normal_conversion = yes
 	maintain_dynasty = yes
+	potential = {
+		has_reform = tier_1_nord_clan
+	}
 	trigger = {
 		has_reform = tier_1_nord_clan
 	}
@@ -178,7 +199,9 @@ governments:monarchy:reform_levels:1 += new tier_1_falmer_kingdom = {
 	desc = ""
 	icon = "wow_cult"
 	allow_normal_conversion = yes
-	
+	potential = {
+		has_reform = tier_1_falmer_kingdom
+	}
 	trigger = {
 		has_reform = tier_1_falmer_kingdom
 	}
@@ -201,6 +224,9 @@ governments:tribal:reform_levels:1 += new tier_1_orc_stronghold = {
 	icon = "orc_stronghold"
 	allow_normal_conversion = yes
 	force_general_leader = yes
+	potential = {
+		has_reform = tier_1_orc_stronghold
+	}
 	trigger = {
 		has_reform = tier_1_orc_stronghold
 	}
@@ -224,7 +250,9 @@ governments:tribal:reform_levels:1 += new tier_1_reachmen_clan = {
 	desc = ""
 	icon = "hero"
 	allow_normal_conversion = yes
-	
+	potential = {
+		has_reform = tier_1_reachmen_clan
+	}
 	trigger = {
 		has_reform = tier_1_reachmen_clan
 	}
@@ -248,6 +276,9 @@ governments:tribal:reform_levels:1 += new tier_1_orc_federation = {
 	allow_normal_conversion = yes
 	custom_attributes = {
 		multiple_orc_strongholds = yes
+	}
+	potential = {
+		has_reform = tier_1_orc_federation
 	}
 	trigger = {
 		has_reform = tier_1_orc_federation

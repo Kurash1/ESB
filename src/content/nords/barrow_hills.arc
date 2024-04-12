@@ -7,6 +7,9 @@ new building barrow_hill = {
 		tax_income = 6
 		local_warscore_cost_modifier = 0.1
 	}
+	ai_will_do = {
+		factor = 0
+	}
 }
 on_actions:on_monarch_death += {
 	events = {

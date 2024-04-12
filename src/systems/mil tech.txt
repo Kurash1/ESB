@@ -1,0 +1,80 @@
+new custom_transpile mil_technology = {
+	write_file "common/technologies/mil.txt" = {
+		monarch_power = MIL
+		ahead_of_time = { }
+		technology = {
+			# Tech 0 
+			year = 1
+			sprite_level = 1
+			infantry_fire = 0.35
+			infantry_shock = 0.50
+			cavalry_fire = 0.00
+			cavalry_shock = 1.0
+			artillery_fire = 1
+			artillery_shock = 0.1
+			land_morale = 3.00
+			
+			foreach $unit in units {
+				enable = $unit
+			}
+			
+			may_drill = yes
+		}
+		technology = {
+			# Tech 1
+			year = 9999
+			military_tactics = 0.5
+			combat_width = 5
+		}
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 combat_width = 5 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 combat_width = 5 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 combat_width = 5 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 combat_width = 5 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+		technology = { year = 9999 }
+	}
+}

@@ -43,6 +43,9 @@ governments:remnant:reform_levels:1 += new tier_1_hrothgar_territories = {
 	potential = {
 		has_reform = tier_1_hrothgar_territories
 	}
+	trigger = {
+		has_reform = tier_1_hrothgar_territories
+	}
 	modifiers = {
 		governing_capacity = -150
 		min_autonomy = 50
@@ -78,6 +81,9 @@ governments:monarchy:reform_levels:1 += new tier_1_hrothgar_kingdom = {
 	icon = "leader_icon"
 	allow_normal_conversion = yes
 	force_general_leader = yes
+	potential = {
+		has_reform = tier_1_hrothgar_kingdom
+	}
 	trigger = {
 		has_reform = tier_1_hrothgar_kingdom
 	}
