@@ -234,15 +234,15 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 				show_options = no #cus I have some of them hidden by conditional effects
 			}
 			
-			new_custom_tooltip = "§TA Fortress to rule the waves§!:"
+			new_custom_tooltip = "§T{events:haafingar.1:options:1:name}§!:"
 			tooltip = {
 				events:haafingar.1:options:1:effect
 			}
-			new_custom_tooltip = "§TIt can serve as an embassy for the orcs of the west§!:"
+			new_custom_tooltip = "§T{events:haafingar.1:options:2:name}§!:"
 			tooltip = {
 				events:haafingar.1:options:2:effect
 			}
-			new_custom_tooltip = "§TIt can serve for future conquests to the west§!:"
+			new_custom_tooltip = "§T{events:haafingar.1:options:3:name}§!:"
 			tooltip = {
 				events:haafingar.1:options:3:effect
 			}
@@ -361,6 +361,20 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 			cascabel_hall
 		}
 		trigger = {
+			provinces:solitude = {
+				has_great_project = {
+					type = blue_palace
+					tier = 1
+				}
+				has_great_project = {
+					type = bards_college
+					tier = 1
+				}
+				has_great_project = {
+					type = castle_dour
+					tier = 1
+				}
+			}
 			regions:haafingar = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

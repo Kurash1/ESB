@@ -82,109 +82,55 @@ mission_trees:solitude += {
 			}
 		}
 	}
-	shadowgreen_cavern = {
-		name = "Shadowgreen Cavern"
-		icon = shadowgreen_cavern
+	falconstar = {
+		name = "Falconstar"
+		x = 7
+		y = 2
+		required = the_deepwood
+		trigger = {
+			provinces:clearpine_pond = {
+				development = 15
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			provinces:snowpeaks = {
+				fort_level = 1
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			provinces:snowpeaks = {
+				quick_province_modifier = {
+					name = "Kogmenthist Castle"
+					modifier = {
+						fort_level = 1
+						local_fort_maintenance_modifier = -0.5
+						local_defensiveness = 0.25
+					}
+				}
+			}
+		}
+	}
+	haafingar_isles = {
+		name = "Haafingar Isles"
 		x = 5
 		y = 2
 		required = coast_of_haafingar
 		provinces_to_highlight = {
 			OR = {
-				area = shadowgreen
-				area = ravenscar
+				area = volkihar_isles
+				area = kynes_isles
+				area = icereach
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			areas:shadowgreen, areas:ravenscar = {
+			areas:volkihar_isles; kynes_isles; icereach = {
 				type = all
-				owned_by = ROOT
-			}
-			provinces:shadowgreen = {
-				custom_trigger_tooltip = {
-					new_tooltip = "Completed §YShadowgreen Cavern§! Expedition"
-					OR = {
-						has_great_project = { type = shadowgreen_glenmoril }
-						has_great_project = { type = shadowgreen_alchemy }
-						has_great_project = { type = shadowgreen_holy_site }
-					}
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			areas:northwatch = {
-				add_permanent_claim = ROOT
-			}
 			
-			conditional_effect = {
-				tooltip = "chose §YGlenmoril Wyrd§! in the Shadowgreen Expedition"
-				trigger = {
-					provinces:shadowgreen = {
-						has_great_project = { type = shadowgreen_glenmoril }
-					}
-				}
-				effect = {
-					provinces:shadowgreen = {
-						add_great_project_tier = {
-							type = shadowgreen_glenmoril
-							tier = 1
-						}
-					}
-					quick_country_modifier = {
-						name = "Glenmoril Magic"
-						years = 25
-						modifier = {
-							fire_damage = 0.1
-						}
-					}
-				}
-			}
-			conditional_effect = {
-				tooltip = "chose §YGreen-Kin§! in the Shadowgreen Expedition"
-				trigger = {
-					provinces:shadowgreen = {
-						has_great_project = { type = shadowgreen_alchemy }
-					}
-				}
-				effect = {
-					provinces:shadowgreen = {
-						add_great_project_tier = {
-							type = shadowgreen_alchemy
-							tier = 1
-						}
-					}
-					quick_country_modifier = {
-						name = "Clan Unity"
-						years = 25
-						modifier = {
-							global_autonomy = -0.1
-						}
-					}
-				}
-			}
-			conditional_effect = {
-				tooltip = "chose §YPriests§! in the Shadowgreen Expedition"
-				trigger = {
-					provinces:shadowgreen = {
-						has_great_project = { type = shadowgreen_holy_site }
-					}
-				}
-				effect = {
-					provinces:shadowgreen = {
-						add_great_project_tier = {
-							type = shadowgreen_holy_site
-							tier = 1
-						}
-					}
-					quick_country_modifier = {
-						name = "Religious Blessings"
-						years = 25
-						modifier = {
-							prestige = 1
-						}
-					}
-				}
-			}
 		}
 	}
 	wolfs_eye_lighthouse = {
@@ -220,7 +166,10 @@ mission_trees:solitude += {
 		name = "Longboat Legions"
 		x = 4
 		y = 3
-		required = wolfs_eye_lighthouse
+		required = {
+			wolfs_eye_lighthouse
+			haafingar_isles
+		}
 		icon = longboat_mission
 		trigger = {
 			has_longships = {
@@ -248,6 +197,29 @@ mission_trees:solitude += {
 					}
 				}
 			}
+		}
+	}
+	the_pirate_threat = {
+		name = "The Pirate Threat"
+		x = 3
+		y = 4
+		required = longboat_legions
+		provinces_to_highlight = {
+			OR = {
+				owned_by = lone_band
+				province_id = lone_isle
+			}
+		}
+		trigger = {
+			NOT = {
+				exists = lone_band
+			}
+			provinces:lone_isle = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			
 		}
 	}
 	taming_the_dragon = {
