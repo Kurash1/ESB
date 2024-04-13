@@ -12,8 +12,8 @@ new idea_group nordic_ideas = {
 	trigger = {
 		culture_group = nord
 		NOT = {
-			has_country_flag = has_solitude_ideas
-			has_country_flag = has_haafingar_ideas
+			has_country_flag = has_ni_solitude
+			has_country_flag = has_ni_haafingar
 		}
 	}
 	ideas = {
