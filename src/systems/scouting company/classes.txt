@@ -88,40 +88,112 @@ new event_modifier currently_surveying = {
 }
 new class scouting_company_idea = {
 	list = scouting_company_ideas
+	default = {
+		desc = ""
+		trigger = { }
+		on_apply = { }
+		modifier = { }
+		sprite = GFX_text_legitimacy
+	}
 	args = {
 		name = string
+		desc = string
 		x = int
 		y = int
 		trigger = named_trigger
 		on_apply = named_effect
 		modifier = named_modifier
+		sprite = string
 	}
 	on_create = {
+		new event_modifier `scouting_company_idea_{this:id}` = {
+			name = this:name
+			modifier = this:modifier
+		}
+		
+		new custom_icon `scouting_company_idea_{this:id}_back` = {
+			potential =* {
+				has_country_flag = show_survey_screen
+			}
+			frames =* {
+				{
+					frame = 3
+					trigger = {
+						has_country_modifier = `scouting_company_idea_*this:id*`
+					}
+				}
+				{
+					frame = 2
+					trigger = {
+						&scouting_company_experience >= scouting_company_idea_cost
+					}
+				}
+				{
+					frame = 1
+					trigger = {
+						always = yes
+					}
+				}
+			}
+		}
 		new custom_button `scouting_company_idea_{this:id}` = {
-			tooltip = "{this:name}"
+			tooltip = "§Y{this:name}§!
+{this:desc}"
 			potential =* {
 				has_country_flag = show_survey_screen
 			}
 			trigger =* {
-				&scouting_company_experience >= scouting_company_idea_cost
-				*this:trigger*
+				hidden_trigger = {
+					OR = {
+						has_country_modifier = `scouting_company_idea_*this:id*`
+						AND = {
+							&scouting_company_experience >= scouting_company_idea_cost
+							*this:trigger*
+						}
+					}
+				}
 			}
 			effect =* {
-				&scouting_company_idea_cost += 100
-				quick_country_modifier = {
-					name = "*this:name*"
-					modifier = {
-						*this:modifier*
-					}
+				if [
+					&scouting_company_experience >= scouting_company_idea_cost
+				] {
+					new_custom_tooltip = "It will cost §Y[scouting_company_idea_cost.GetValue]§! Experience to buy this idea."
+				}
+				else {
+					new_custom_tooltip = "You don't have enough §YExperience§! to unlock this idea. You need §Y[scouting_company_idea_cost.GetValue]§! and have §Y[scouting_company_experience.GetValue]§! available."
+				}
+				hidden_effect = {
+					&scouting_company_experience -= scouting_company_idea_cost
+					&scouting_company_idea_cost += 100
+				}
+				new_custom_tooltip = "
+{modifier_to_string = { *this:modifier* }}"
+				add_country_modifier = {
+					name = `scouting_company_idea_*this:id*`
+					hidden = yes
+					duration = -1
 				}
 				*this:on_apply*
 			}
 		}
 		interface_files:countrytechnologyview:countrytechnologyview += {
+			iconType = {
+				name = `"scouting_company_idea_{this:id}_back"`
+				position = { 
+					x = this:x
+					y = this:y
+				}
+				spriteType = "GFX_scouting_company_idea"
+				scripted = yes
+			}
 			guiButtonType = {
 				name = `"scouting_company_idea_{this:id}"`
-				position = { x = this:x y = this:y }
-				quadTextureSprite = "GFX_idea_not_yet_unlocked"
+				position = {
+					x = (this:x-4)
+					y = (this:y-4)
+				}
+				quadTextureSprite = `"{this:sprite}"`
+				scale = 0.54
 				scripted = yes
 			}
 		}

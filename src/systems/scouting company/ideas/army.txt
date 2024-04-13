@@ -1,12 +1,14 @@
 new scouting_company_idea army_1 = {
-	name = "Test"
+	name = "Indigenous Auxiliaries"
+	desc = "Recruits and trains indigenous auxiliaries to supplement regular forces, leveraging local knowledge and manpower to enhance military effectiveness in territories."
 	x = 309
 	y = 138
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		land_attrition = -0.10
 	}
+	sprite = GFX_text_supply_limit
 }
 new scouting_company_idea army_2 = {
 	name = "Test"
