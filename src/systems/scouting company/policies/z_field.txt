@@ -75,10 +75,14 @@ new trigger has_field_policy = {
 new effect apply_field_policy = {
 	args = survey_field_policy
 	transpile = {
-		&survey_policy_3 := args:slot
-		add_country_modifier = {
-			name = `survey_field_policy_{args:id}`
-			duration = -1
+		new_custom_tooltip = "{modifier_to_string = { args:modifier }}"
+		hidden_effect = {
+			&survey_policy_3 := args:slot
+			add_country_modifier = {
+				name = `survey_field_policy_{args:id}`
+				hidden = yes
+				duration = -1
+			}
 		}
 	}
 }
