@@ -1,13 +1,28 @@
+new localisation fort_banner_text = "Defense"
+new localisation fort_upgrade_banner_text = "Fort Upgrades"
+new localisation tax_banner_text = "Taxation"
+new localisation production_banner_text = "Production"
+new localisation trade_banner_text = "Trade"
+new localisation army_banner_text = "Army"
+new localisation goods_banner_text = "Trade goods"
+new localisation road_banner_text = "Infastructure"
+new localisation navy_banner_text = "Navy"
+new localisation special_banner_text = "Special"
 interface:buildings := {
 	iconType = {
 		name = "fort_banner"
 		position = { x = 20 y = 0 }
-		spriteType = "GFX_banner_left_6"
+		spriteType = "GFX_banner_left_4"
 	}
-	
+	iconType = {
+		name = "fort_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 30 y = 3 }
+		frame = 7
+	}
 	instantTextBoxType = {
 		name = "fort_banner_text"
-		position = { x = 35 y = 6 }
+		position = { x = 60 y = 9 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
@@ -16,30 +31,61 @@ interface:buildings := {
 	}
 	
 	iconType = {
-		name = "special_banner"
-		position = { x = 410 y = 0 }
-		spriteType = "GFX_banner_left_3"
+		name = "fort_upgrade_banner"
+		position = { x = 310 y = 0 }
+		spriteType = "GFX_banner_right_4"
+	}
+	iconType = {
+		name = "fort_upgrade_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 330 y = 3 }
+		frame = 9
+	}
+	instantTextBoxType = {
+		name = "fort_upgrade_banner_text"
+		position = { x = 360 y = 9 }
+		font = "vic_18"
+		borderSize = { x = 0 y = 0 }
+		maxWidth = 500
+		maxHeight = 18
+		text = "fort_upgrade_banner_text"
 	}
 	
+	iconType = {
+		name = "special_banner"
+		position = { x = 310 y = 100 }
+		spriteType = "GFX_banner_right_4"
+	}
+	iconType = {
+		name = "special_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 330 y = 103 }
+		frame = 2
+	}
 	instantTextBoxType = {
 		name = "special_banner_text"
-		position = { x = 435 y = 6 }
+		position = { x = 360 y = 109 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
 		maxHeight = 18
 		text = "special_banner_text"
 	}
-
+	
 	iconType = {
 		name = "tax_banner"
 		position = { x = 20 y = 100 }
 		spriteType = "GFX_banner_left_4"
 	}
-	
+	iconType = {
+		name = "tax_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 30 y = 103 }
+		frame = 6
+	}
 	instantTextBoxType = {
 		name = "tax_banner_text"
-		position = { x = 35 y = 106 }
+		position = { x = 60 y = 109 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
@@ -52,10 +98,15 @@ interface:buildings := {
 		position = { x = 20 y = 200 }
 		spriteType = "GFX_banner_left_4"
 	}
-	
+	iconType = {
+		name = "production_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 30 y = 203 }
+		frame = 4
+	}
 	instantTextBoxType = {
 		name = "production_banner_text"
-		position = { x = 35 y = 206 }
+		position = { x = 60 y = 209 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
@@ -68,10 +119,15 @@ interface:buildings := {
 		position = { x = 20 y = 300 }
 		spriteType = "GFX_banner_left_4"
 	}
-	
+	iconType = {
+		name = "trade_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 30 y = 303 }
+		frame = 1
+	}
 	instantTextBoxType = {
 		name = "trade_banner_text"
-		position = { x = 35 y = 306 }
+		position = { x = 60 y = 309 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
@@ -84,10 +140,15 @@ interface:buildings := {
 		position = { x = 20 y = 400 }
 		spriteType = "GFX_banner_left_4"
 	}
-	
+	iconType = {
+		name = "army_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 30 y = 403 }
+		frame = 5
+	}
 	instantTextBoxType = {
 		name = "army_banner_text"
-		position = { x = 35 y = 406 }
+		position = { x = 60 y = 409 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
@@ -97,29 +158,38 @@ interface:buildings := {
 	
 	iconType = {
 		name = "goods_banner"
-		position = { x = 260 y = 200 }
-		spriteType = "GFX_banner_left_4"
+		position = { x = 310 y = 200 }
+		spriteType = "GFX_banner_right_4"
 	}
-	
+	iconType = {
+		name = "goods_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 330 y = 203 }
+		frame = 8
+	}
 	instantTextBoxType = {
 		name = "goods_banner_text"
-		position = { x = 275 y = 206 }
+		position = { x = 360 y = 209 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
 		maxHeight = 18
-		text = "state_banner_text"
+		text = "goods_banner_text"
 	}
 	
 	iconType = {
 		name = "road_banner"
-		position = { x = 260 y = 300 }
-		spriteType = "GFX_banner_left_4"
+		position = { x = 310 y = 300 }
+		spriteType = "GFX_banner_right_4"
 	}
-	
+	iconType = {
+		name = "road_banner_icon"
+		spriteType = "GFX_road_banner_icon"
+		position = { x = 330 y = 303 }
+	}
 	instantTextBoxType = {
 		name = "road_banner_text"
-		position = { x = 275 y = 306 }
+		position = { x = 360 y = 309 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
@@ -129,13 +199,18 @@ interface:buildings := {
 	
 	iconType = {
 		name = "navy_banner"
-		position = { x = 260 y = 400 }
-		spriteType = "GFX_banner_left_4"
+		position = { x = 310 y = 400 }
+		spriteType = "GFX_banner_right_4"
 	}
-	
+	iconType = {
+		name = "navy_banner_icon"
+		spriteType = "GFX_macro_buildings_category_strip"
+		position = { x = 330 y = 403 }
+		frame = 3
+	}
 	instantTextBoxType = {
 		name = "navy_banner_text"
-		position = { x = 275 y = 406 }
+		position = { x = 360 y = 409 }
 		font = "vic_18"
 		borderSize = { x = 0 y = 0 }
 		maxWidth = 500
