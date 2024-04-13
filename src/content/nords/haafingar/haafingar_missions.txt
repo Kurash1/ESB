@@ -8,10 +8,21 @@ mission_trees:solitude += {
 			the_deepwood
 		}
 		trigger = {
-		
+			fortification_expert = 2
+			provinces:hraggstad; northwatch; cascabel_hall; snowpeaks; widows_watch = {
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					has_construction = any
+				}
+			}
 		}
 		effect = {
-			
+			provinces:hraggstad; northwatch; cascabel_hall; snowpeaks; widows_watch = {
+				add_building_construction = {
+					building = fort_15th
+					cost = 0
+				}				
+			}
 		}
 	}
 	castle_hraggstad = {
