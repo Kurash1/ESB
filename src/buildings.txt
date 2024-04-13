@@ -44,7 +44,7 @@ new building coastal_defence = {
 	desc = ""
 	cost = 100
 	time = 12
-	x = 320
+	x = 520
 	y = 134
 	build_trigger = {
 		has_port = yes
@@ -128,7 +128,7 @@ new building fortup_1 = {
 	desc = ""
 	cost = 50
 	time = 12
-	x = 320
+	x = 340
 	y = 34
 	build_trigger = {
 		fort_level = 1
@@ -146,13 +146,14 @@ new building fortup_2 = {
 	desc = ""
 	cost = 50
 	time = 12
-	x = 380
+	x = 400
 	y = 34
 	build_trigger = {
 		fort_level = 1
 	}
 	modifier = {
 		local_hostile_attrition = 1
+		max_attrition = 1
 		local_fort_maintenance_modifier = 0.25
 	}
 	ai_will_do = {
@@ -164,7 +165,7 @@ new building fortup_3 = {
 	desc = ""
 	cost = 50
 	time = 12
-	x = 440
+	x = 460
 	y = 34
 	build_trigger = {
 		fort_level = 1
@@ -182,7 +183,7 @@ new building fortup_4 = {
 	desc = ""
 	cost = 200
 	time = 12
-	x = 500
+	x = 520
 	y = 34
 	build_trigger = {
 		fort_level = 1
@@ -201,7 +202,7 @@ new building_line tax = {
 	desc = ""
 	time = 12
 	x = 20
-	y = 134
+	y = 234
 	build_trigger = {
 		FROM = {
 			has_global_modifier_value = {
@@ -223,7 +224,7 @@ new building_line tax = {
 		name = "Tax 2"
 		make_obsolete = tax_1
 		modifier = {
-			local_tax_modifier = 0.7
+			local_tax_modifier = 0.8
 			local_autonomy = -0.10
 		}
 	}
@@ -232,7 +233,7 @@ new building_line tax = {
 		name = "Tax 3"
 		make_obsolete = tax_2
 		modifier = {
-			local_tax_modifier = 1.0
+			local_tax_modifier = 1.2
 			local_autonomy = -0.15
 		}
 	}
@@ -241,8 +242,17 @@ new building_line tax = {
 		name = "Tax 4"
 		make_obsolete = tax_3
 		modifier = {
-			local_tax_modifier = 1.5
+			local_tax_modifier = 1.6
 			local_autonomy = -0.2
+		}
+	}
+	5 = {
+		cost = 500
+		name = "Tax 5"
+		make_obsolete = tax_4
+		modifier = {
+			local_tax_modifier = 2
+			local_autonomy = -0.25
 		}
 	}
 	ai_will_do = {
@@ -255,7 +265,7 @@ new building_line production = {
 	desc = ""
 	time = 12
 	x = 20
-	y = 234
+	y = 334
 	allow_in_gold_provinces = no
 	build_trigger = {
 		FROM = {
@@ -269,7 +279,7 @@ new building_line production = {
 		cost = 100
 		name = "Production 1"
 		modifier = {
-			local_production_efficiency = 0.4
+			local_production_efficiency = 0.5
 		}
 	}
 	2 = {
@@ -277,7 +287,7 @@ new building_line production = {
 		name = "Production 2"
 		make_obsolete = production_1
 		modifier = {
-			local_production_efficiency = 0.7
+			local_production_efficiency = 1
 		}
 	}
 	3 = {
@@ -285,7 +295,7 @@ new building_line production = {
 		name = "Production 3"
 		make_obsolete = production_2
 		modifier = {
-			local_production_efficiency = 1.0
+			local_production_efficiency = 1.5
 		}
 	}
 	4 = {
@@ -293,7 +303,15 @@ new building_line production = {
 		name = "Production 4"
 		make_obsolete = production_3
 		modifier = {
-			local_production_efficiency = 1.5
+			local_production_efficiency = 2
+		}
+	}
+	5 = {
+		cost = 500
+		name = "Production 5"
+		make_obsolete = production_4
+		modifier = {
+			local_production_efficiency = 2.5
 		}
 	}
 	ai_will_do = {
@@ -306,7 +324,7 @@ new building_line trade = {
 	desc = ""
 	time = 12
 	x = 20
-	y = 334
+	y = 434
 	build_trigger = {
 		FROM = {
 			has_global_modifier_value = {
@@ -319,7 +337,7 @@ new building_line trade = {
 		cost = 100
 		name = "Trade 1"
 		modifier = {
-			province_trade_power_modifier = 0.4
+			province_trade_power_modifier = 0.5
 		}
 	}
 	2 = {
@@ -327,7 +345,7 @@ new building_line trade = {
 		name = "Trade 2"
 		make_obsolete = trade_1
 		modifier = {
-			province_trade_power_modifier = 0.7
+			province_trade_power_modifier = 1
 		}
 	}
 	3 = {
@@ -335,7 +353,7 @@ new building_line trade = {
 		name = "Trade 3"
 		make_obsolete = trade_2
 		modifier = {
-			province_trade_power_modifier = 1.0
+			province_trade_power_modifier = 1.5
 		}
 	}
 	4 = {
@@ -343,7 +361,15 @@ new building_line trade = {
 		name = "Trade 4"
 		make_obsolete = trade_3
 		modifier = {
-			province_trade_power_modifier = 1.5
+			province_trade_power_modifier = 2
+		}
+	}
+	5 = {
+		cost = 500
+		name = "Trade 5"
+		make_obsolete = trade_4
+		modifier = {
+			province_trade_power_modifier = 2.5
 		}
 	}
 	ai_will_do = {
@@ -355,8 +381,8 @@ new building_line army = {
 	name = "Army"
 	desc = ""
 	time = 12
-	x = 20
-	y = 434
+	x = 340
+	y = 334
 	build_trigger = {
 		FROM = {
 			has_global_modifier_value = {
@@ -408,7 +434,7 @@ new building_line navy = {
 	name = "Navy"
 	desc = ""
 	time = 12
-	x = 320
+	x = 340
 	y = 434
 	build_trigger = {
 		has_port = yes
@@ -471,8 +497,8 @@ new building_line road = {
 	name = "Road"
 	desc = ""
 	time = 3
-	x = 320
-	y = 334
+	x = 20
+	y = 134
 	build_trigger = {
 		is_island = no
 		FROM = {
@@ -488,6 +514,7 @@ new building_line road = {
 		modifier = {
 			local_friendly_movement_speed = 0.5
 			local_development_cost = -0.025
+			supply_limit_modifier = 0.25
 			allowed_num_of_buildings = 1
 		}
 	}
@@ -498,6 +525,7 @@ new building_line road = {
 		modifier = {
 			local_friendly_movement_speed = 1.0
 			local_development_cost = -0.05
+			supply_limit_modifier = 0.5
 			allowed_num_of_buildings = 1
 		}
 	}
@@ -508,6 +536,7 @@ new building_line road = {
 		modifier = {
 			local_friendly_movement_speed = 1.5
 			local_development_cost = -0.075
+			supply_limit_modifier = 0.75
 			allowed_num_of_buildings = 1
 		}
 	}
@@ -518,6 +547,7 @@ new building_line road = {
 		modifier = {
 			local_friendly_movement_speed = 2
 			local_development_cost = -0.1
+			supply_limit_modifier = 1
 			allowed_num_of_buildings = 1
 		}
 	}
@@ -530,7 +560,7 @@ new building_line goods = {
 	name = "Goods"
 	desc = ""
 	time = 12
-	x = 320
+	x = 340
 	y = 234
 	build_trigger = {
 		is_island = no
@@ -574,7 +604,7 @@ new building manufactory = {
 	desc = ""
 	cost = 500
 	time = 60
-	x = 500
+	x = 520
 	y = 234
 	modifier = {
 		trade_goods_size = 1.0
