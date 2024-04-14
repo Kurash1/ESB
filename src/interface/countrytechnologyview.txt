@@ -708,6 +708,54 @@ new interface_file countrytechnologyview = {
 			scripted = yes
 		}
 		
+		instantTextBoxType = {
+			name = "survey_idea_army_text"
+			position = { x = (300 + 128 - 118) y = (128 + 148 - 155 - 6) }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "?"
+			maxWidth = 40
+			maxHeight = 14
+			format = centre
+			scripted = yes
+		}
+		instantTextBoxType = {
+			name = "survey_idea_company_text"
+			position = { x = (300 + 128 - 118 + 60) y = (128 + 148 - 155 - 6) }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "?"
+			maxWidth = 40
+			maxHeight = 14
+			format = centre
+			scripted = yes
+		}
+		instantTextBoxType = {
+			name = "survey_idea_nation_text"
+			position = { x = (300 + 128 - 118 + 120) y = (128 + 148 - 155 - 6) }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "?"
+			maxWidth = 40
+			maxHeight = 14
+			format = centre
+			scripted = yes
+		}
+		instantTextBoxType = {
+			name = "survey_idea_survey_text"
+			position = { x = (300 + 128 - 118 + 180) y = (128 + 148 - 155 - 6) }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "?"
+			maxWidth = 40
+			maxHeight = 14
+			format = centre
+			scripted = yes
+		}
 	}
 	### ------- Administrative Tech Research -------
 	windowType = {

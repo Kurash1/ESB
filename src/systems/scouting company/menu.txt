@@ -11,6 +11,30 @@ new custom_text_box survey_progress_amount = {
 	name = "[This.survey_progress_percentage.GetValue]%"
 	tooltip = "[This.survey_progress.GetValue]/[This.survey_length.GetValue]"
 }
+new custom_text_box survey_idea_army_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Army"
+}
+new custom_text_box survey_idea_company_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Company"
+}
+new custom_text_box survey_idea_nation_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Nation"
+}
+new custom_text_box survey_idea_survey_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Survey"
+}
 new customizable_localization GetActiveSurvey = {
 }
 new custom_text_box survey_active_survey = {
