@@ -1,30 +1,26 @@
+new named_effect clear_passive_activity = {
+	foreach $policy in survey_passive_activities {
+		if [has_passive_activity = $policy] {
+			unapply_passive_activity = $policy
+		}
+	}
+}
 new country_event survey_mechanic.3 = {
-	title = "Select Field Policy"
+	title = "Select Passive Activity"
 	desc = ""
 	picture = recruits_eventPicture
 	is_triggered_only = yes
-	immediate = {
-		foreach $policy in survey_field_policies {
-			if [has_field_policy = $policy] {
-				unapply_field_policy = $policy
-			}
-		}
-	}
 	options = {
 	}
 }
 
-new named_int survey_field_policies_count = 1
-new class survey_field_policy = {
-	list = survey_field_policies
+new named_int survey_passive_activities_count = 1
+new class survey_passive_activity = {
+	list = survey_passive_activities
 	id = `{this:id}`
 	default = {
 		slot = 0
 		potential = {
-			always = yes
-		}
-		trigger_tooltip = ""
-		trigger = {
 			always = yes
 		}
 	}
@@ -32,15 +28,16 @@ new class survey_field_policy = {
 		name = string
 		icon = int
 		potential = trigger
-		trigger_tooltip = string
-		trigger = trigger
+		trigger_tooltip = string?
+		trigger = trigger?
+		tooltip = string
 		modifier = modifier
 		slot = int
 	}
 	on_create = {
-		this:slot := survey_field_policies_count
+		this:slot := survey_passive_activities_count
 		
-		new event_modifier `survey_field_policy_{this:id}` = {
+		new event_modifier `survey_passive_activity_{this:id}` = {
 			name = this:name
 			modifier = this:modifier
 		}
@@ -49,7 +46,31 @@ new class survey_field_policy = {
 			{
 				name =* "*this:name*"
 				effect =* {
-					apply_field_policy = *this:id*
+					when [
+						exists = survey_passive_activities:*this:id*:trigger_tooltip
+						exists = survey_passive_activities:*this:id*:trigger
+					] {
+						conditional_effect = {
+							tooltip = survey_passive_activities:*this:id*:trigger_tooltip
+							trigger = {
+								survey_passive_activities:*this:id*:trigger
+							}
+							effect = {
+								hidden_effect = {
+									clear_passive_activity
+								}
+								apply_passive_activity = *this:id*
+							}
+						}
+					}
+					when [
+						NOT = {
+							exists = survey_passive_activities:*this:id*:trigger_tooltip
+							exists = survey_passive_activities:*this:id*:trigger
+						}
+					] {
+						apply_passive_activity = *this:id*
+					}
 				}
 			}
 		}
@@ -58,65 +79,112 @@ new class survey_field_policy = {
 			{
 				frame = this:icon
 				trigger =* {
-					&survey_policy_3 == *survey_field_policies_count*
+					&survey_policy_3 == *survey_passive_activities_count*
 				}
 			}
 		}
 		
-		survey_field_policies_count += 1
+		survey_passive_activities_count += 1
 	}
 }
-new trigger has_field_policy = {
-	args = survey_field_policy
+new trigger has_passive_activity = {
+	args = survey_passive_activity
 	transpile = {
 		&survey_policy_3 == args:slot
 	}
 }
-new effect apply_field_policy = {
-	args = survey_field_policy
+new effect apply_passive_activity = {
+	args = survey_passive_activity
 	transpile = {
-		new_custom_tooltip = "{modifier_to_string = { args:modifier }}"
+		new_custom_tooltip = "{modifier_to_string = { args:modifier }}
+
+{args:tooltip}"
 		hidden_effect = {
 			&survey_policy_3 := args:slot
 			add_country_modifier = {
-				name = `survey_field_policy_{args:id}`
+				name = `survey_passive_activity_{args:id}`
 				hidden = yes
 				duration = -1
 			}
 		}
 	}
 }
-new effect unapply_field_policy = {
-	args = survey_field_policy
+new effect unapply_passive_activity = {
+	args = survey_passive_activity
 	transpile = {
-		remove_country_modifier = `survey_field_policy_{args:id}`
+		remove_country_modifier = `survey_passive_activity_{args:id}`
 	}
 }
-new survey_field_policy living_off_the_land = {
-	name = "Living off the Land"
+new survey_passive_activity training = {
+	name = "Training"
 	icon = 1
+	tooltip = "Focus on training your scouts, gaining §YExperience§! dependant on the size of the Company."
 	modifier = {
 		
 	}
 }
-new survey_field_policy supply_trains = {
-	name = "Supply Trains"
+new survey_passive_activity recruitment = {
+	name = "Recruitment"
 	icon = 2
+	tooltip = ""
 	modifier = {
-		scouts_casualty_reduction_modifier = 0.25
+		survey_recruit_rate = 0.5
 	}
 }
-new survey_field_policy local_contacts = {
-	name = "Local Contacts"
+new survey_passive_activity questing = {
+	name = "Questing"
 	icon = 3
+	tooltip = "Focus on questing, whenever your survey progress reaches 1000 the company gains some amount of funds and an owned province gains the following modifier:
+	{modifier_to_string = {
+		local_unrest = -2
+	}}"
 	modifier = {
 		
 	}
 }
-new survey_field_policy follow_rivers = {
-	name = "Follow Rivers"
+new survey_passive_activity espionage = {
+	name = "Espionage"
 	icon = 4
+	tooltip = "Focus on espionage, sending out your scouts to neighboring countries gaining some amount of spy network whenever your survey progress reaches 1000."
 	modifier = {
 		
+	}
+}
+new survey_passive_activity skirmishing = {
+	name = "Skirmishing"
+	icon = 5
+	tooltip = ""
+	trigger_tooltip = "Company Size at least 25% of Land Force limit"
+	trigger = {
+		variable_arithmetic_trigger = {
+			custom_tooltip = empty
+			
+			&survey_temp &= land_forcelimit
+			&survey_temp *= 0.25
+			
+			&survey_manpower >= survey_temp
+		}
+	}
+	modifier = {
+		hostile_attrition = 1
+	}
+}
+new survey_passive_activity help_administration = {
+	name = "Help Administration"
+	icon = 6
+	tooltip = ""
+	trigger_tooltip = "Company Size at least 25% of Land Force limit"
+	trigger = {
+		variable_arithmetic_trigger = {
+			custom_tooltip = empty
+			
+			&survey_temp &= land_forcelimit
+			&survey_temp *= 0.25
+			
+			&survey_manpower >= survey_temp
+		}
+	}
+	modifier = {
+		state_maintenance_modifier = -0.25
 	}
 }
