@@ -155,25 +155,34 @@ new class scouting_company_idea = {
 			}
 			effect =* {
 				if [
+					has_country_modifier = `scouting_company_idea_*this:id*`
+				]	{
+					
+				}
+				else_if [
 					&scouting_company_experience >= scouting_company_idea_cost
 				] {
-					new_custom_tooltip = "It will cost §Y[scouting_company_idea_cost.GetValue]§! Experience to buy this idea."
+					new_custom_tooltip = "It will cost §Y[scouting_company_idea_cost.GetValue]§! Experience to buy this idea.
+"
+					hidden_effect = {
+						&scouting_company_experience -= scouting_company_idea_cost
+						&scouting_company_idea_cost += 100
+						*this:on_apply*
+					}
+					add_country_modifier = {
+						name = `scouting_company_idea_*this:id*`
+						hidden = yes
+						duration = -1
+					}
 				}
 				else {
-					new_custom_tooltip = "You don't have enough §YExperience§! to unlock this idea. You need §Y[scouting_company_idea_cost.GetValue]§! and have §Y[scouting_company_experience.GetValue]§! available."
+					new_custom_tooltip = "You don't have enough §YExperience§! to unlock this idea. You need §Y[scouting_company_idea_cost.GetValue]§! and have §Y[scouting_company_experience.GetValue]§! available.
+"
 				}
-				hidden_effect = {
-					&scouting_company_experience -= scouting_company_idea_cost
-					&scouting_company_idea_cost += 100
+				new_custom_tooltip = "{modifier_to_string = { *this:modifier* }}"
+				tooltip = {
+					*this:on_apply*
 				}
-				new_custom_tooltip = "
-{modifier_to_string = { *this:modifier* }}"
-				add_country_modifier = {
-					name = `scouting_company_idea_*this:id*`
-					hidden = yes
-					duration = -1
-				}
-				*this:on_apply*
 			}
 		}
 		interface_files:countrytechnologyview:countrytechnologyview += {
