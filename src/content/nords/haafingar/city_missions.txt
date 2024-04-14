@@ -61,7 +61,7 @@ mission_trees:solitude += {
 				}
 			}
 			define_advisor = {
-				type = treasurer
+				type = fortification_expert
 				name = "Thryrahilde"
 				skill = 2
 				discount = yes
@@ -98,7 +98,9 @@ mission_trees:solitude += {
 		}
 		effect = {
 			if [ai = yes] {
-				add_building = fort_15th
+				provinces:solitude = {
+					add_building = fort_15th
+				}
 			}
 			create_monument = {
 				monument = castle_dour
@@ -355,7 +357,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		y = 1
 		required = castle_upon_the_hill
 		trigger = {
-			owns = solitude
+			owns_or_non_sovereign_subject_of = solitude
 			provinces:solitude = {
 				fort_level = 4
 			}
@@ -418,9 +420,6 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		}
 		effect = {
 			provinces:red_port = {
-				add_building = navy_1
-				add_building = trade_1
-				add_building = production_1
 				center_of_trade = 1
 			}
 		}
@@ -432,7 +431,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		y = 1
 		required = windbreaker_arch
 		trigger = {
-			areas:solitude; wolfs_eye = {
+			areas:solitude; wolfs_eye; dragon_bridge = {
 				type = all
 				owned_by = ROOT
 			}
@@ -441,6 +440,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 				trigger = {
 					OR = {
 						area = solitude
+						area = dragon_bridge
 						area = wolfs_eye
 					}
 				}
@@ -470,7 +470,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 		y = 1
 		required = windbreaker_arch
 		trigger = {
-			owns = folgunthur
+			owns_or_non_sovereign_subject_of = folgunthur
 			provinces:folgunthur = {
 				is_city = yes
 			}
@@ -480,7 +480,7 @@ Solitude gets '§YCity of the Wolf§!' until the end of the game, giving the fol
 			trade_nodes:solitude:location = {
 				add_trade_modifier = {
 					who = ROOT
-					duration = 9125
+					duration = 18250
 					power = 25
 					key = trade_modifier_master_of_the_arch
 				}

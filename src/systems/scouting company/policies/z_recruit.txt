@@ -75,10 +75,14 @@ new trigger has_recruitment_policy = {
 new effect apply_recruitment_policy = {
 	args = survey_recruitment_policy
 	transpile = {
-		&survey_policy_1 := args:slot
-		add_country_modifier = {
-			name = `survey_recruitment_policy_{args:id}`
-			duration = -1
+		new_custom_tooltip = "{modifier_to_string = { args:modifier }}"
+		hidden_effect = {
+			&survey_policy_1 := args:slot
+			add_country_modifier = {
+				name = `survey_recruitment_policy_{args:id}`
+				hidden = yes
+				duration = -1
+			}
 		}
 	}
 }
@@ -92,7 +96,7 @@ new survey_recruitment_policy no_recruitment = {
 	name = "No Recruitment"
 	icon = 1
 	modifier = {
-		survey_recruit_rate = -1%
+		survey_recruit_rate = -1
 	}
 }
 new survey_recruitment_policy standard_recruitment = {

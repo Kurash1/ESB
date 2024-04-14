@@ -1,0 +1,97 @@
+new scouting_company_idea nation_1 = {
+	name = "Surveyor Corps"
+	desc = "Mapping and surveying the land is the first step towards its development and exploitation. By establishing a dedicated surveyor corps, we can systematically map out the terrain, identify valuable resources, and plan for the strategic development of our colonies and territories."
+	sprite = development_cost
+	x = 429
+	y = 138
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		development_cost = -0.05
+	}
+}
+new scouting_company_idea nation_2 = {
+	name = "Navigational Innovations"
+	desc = "The art of navigation is ever-evolving, and our nation leads the way in developing new techniques and tools for seafaring. By investing in navigational innovations, we can improve our ships' ability to traverse the oceans safely and efficiently, opening up new trade routes and opportunities for exploration."
+	sprite = leader_naval_manuever
+	x = 456
+	y = 138
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		leader_naval_manuever = 1
+	}
+}
+new scouting_company_idea nation_3 = {
+	name = "Sentinel Surveillance"
+	desc = "Sentinel Surveillance establishes a network of watchtowers, signal posts, and lookout stations along our borders and coastlines, enhancing our ability to detect and respond to potential threats, invasion attempts, and unauthorized incursions into our territory."
+	sprite = global_spy_defence
+	x = 429
+	y = 163
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		global_spy_defence = 0.1
+	}
+}
+new scouting_company_idea nation_4 = {
+	name = "Stealth Operations"
+	desc = "Stealth Operations trains specialized operatives to conduct covert reconnaissance missions, sabotage enemy infrastructure, and gather intelligence behind enemy lines, providing our nation with a tactical advantage in times of war and espionage."
+	sprite = spy_offence
+	x = 456
+	y = 163
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		spy_offence = 0.15
+	}
+}
+new scouting_company_idea nation_5 = {
+	name = "Cultural Observatories"
+	desc = "Establishing cultural observatories and research institutions allows us to study and document the customs, languages, and traditions of foreign lands. This cultural exchange not only enriches our own society but also fosters goodwill and understanding with other nations."
+	sprite = relation_with_other_culture
+	x = 429
+	y = 188
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		relation_with_other_culture = 10
+		relation_with_accepted_culture = 10
+	}
+}
+new scouting_company_idea nation_6 = {
+	name = "Swift Couriers"
+	desc = "A network of reliable messengers ensures rapid communication between distant provinces, facilitating swift response to crises and coordination of military operations."
+	sprite = envoy_travel_time
+	x = 456
+	y = 188
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		envoy_travel_time = -0.2
+	}
+}
+new scouting_company_idea nation_7 = {
+	name = "Signal Flare Systems"
+	desc = "Implementing sophisticated signal flare systems across our territories and naval fleets will facilitate rapid communication and coordination, allowing us to react swiftly to emerging threats and opportunities with decisive action."
+	sprite = overseas_income
+	x = 429
+	y = 213
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		global_tax_income = 1
+	}
+}
+new scouting_company_idea nation_8 = {
+	name = "Waystation Infrastructure"
+	desc = "Developing a system of strategically located waystations and supply depots to support our explorers and expeditions. With reliable rest stops and logistical support along our routes, we can extend our reach into distant lands and ensure the success of our scouting endeavors."
+	sprite = overseas_income
+	x = 456
+	y = 213
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		global_tax_income = 1
+	}
+}

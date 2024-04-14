@@ -11,6 +11,35 @@ new custom_text_box survey_progress_amount = {
 	name = "[This.survey_progress_percentage.GetValue]%"
 	tooltip = "[This.survey_progress.GetValue]/[This.survey_length.GetValue]"
 }
+new custom_icon survey_percent_overlay = {
+	potential = {
+		has_country_flag = show_survey_screen
+	}
+}
+new custom_text_box survey_idea_army_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Army"
+}
+new custom_text_box survey_idea_company_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Company"
+}
+new custom_text_box survey_idea_nation_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Nation"
+}
+new custom_text_box survey_idea_survey_text = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "Survey"
+}
 new customizable_localization GetActiveSurvey = {
 }
 new custom_text_box survey_active_survey = {
@@ -60,10 +89,12 @@ new custom_button open_survey_screen = {
 			variables:survey_base_income:init = yes
 			variables:survey_monthly_recruits_base:init = yes
 			variables:survey_company_size:init = yes
+			variables:scouting_company_experience:init = yes
+			variables:scouting_company_idea_cost:init = yes
 			
 			apply_recruitment_policy = standard_recruitment
 			apply_economic_policy = state_investments
-			apply_field_policy = living_off_the_land
+			apply_passive_activity = training
 			
 			random_list = {
 				1 = { set_country_flag = survey_leader_is_female }
@@ -126,6 +157,24 @@ on_actions:on_monthly_pulse += {
 		&survey_real_manpower := survey_manpower
 		&survey_real_manpower *= 1000
 		
+		if [
+			variable_arithmetic_trigger = {
+				custom_tooltip = empty
+				
+				&survey_temp &= land_forcelimit
+				&survey_temp *= 0.25
+				
+				&survey_manpower < survey_temp
+			}
+			OR = {
+				has_passive_activity = skirmishing
+				has_passive_activity = help_administration
+			}
+		] {
+			clear_passive_activity
+			apply_passive_activity = training
+		}
+		
 		survey_calculate_recruits
 		survey_calculate_losses
 		survey_calculate_manpower_sum
@@ -133,6 +182,13 @@ on_actions:on_monthly_pulse += {
 		survey_calculate_income
 		survey_calculate_expenses
 		survey_calculate_fund_sum
+		
+		if [has_passive_activity = training] {
+			&survey_temp := survey_manpower
+			&survey_temp *= 10
+		
+			&scouting_company_experience += survey_temp
+		}
 		
 		survey_calculate_active_survey
 	}

@@ -1,3 +1,5 @@
+new localisation CV_IDEAS_UNLOCK_ADM_LEVEL = "Unlocked at $NAME$"
+
 new localisation adm_tech_cs_0_name = "Available always"
 new localisation dip_tech_cs_0_name = "Available always"
 new localisation mil_tech_cs_0_name = "Available always"
@@ -12,9 +14,9 @@ new effect create_tech_name_hint_single = {
 		offset = int
 	}
 	transpile = {
-		new localisation `adm_tech_cs_{(args:level*3+args:offset)}_name` = `Available at §Y{(2568+args:level*50)}§!`
-		new localisation `dip_tech_cs_{(args:level*3+args:offset)}_name` = `Available at §Y{(2568+args:level*50)}§!`
-		new localisation `mil_tech_cs_{(args:level*3+args:offset)}_name` = `Available at §Y{(2568+args:level*50)}§!`
+		new localisation `adm_tech_cs_{(args:level*3+args:offset)}_name` = `§Y{(2568+args:level*50)}§!`
+		new localisation `dip_tech_cs_{(args:level*3+args:offset)}_name` = `§Y{(2568+args:level*50)}§!`
+		new localisation `mil_tech_cs_{(args:level*3+args:offset)}_name` = `§Y{(2568+args:level*50)}§!`
 		
 		new localisation `adm_tech_cs_{(args:level*3+args:offset)}_desc` = ""
 		new localisation `dip_tech_cs_{(args:level*3+args:offset)}_desc` = ""

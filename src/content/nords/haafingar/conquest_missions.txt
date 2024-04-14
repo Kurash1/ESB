@@ -82,215 +82,55 @@ mission_trees:solitude += {
 			}
 		}
 	}
-	castle_hraggstad = {
-		name = "Purpose of Hraggstad"
-		desc = "On the second highest peak of the Kilkreath mountains, we found an ancient rune stone. Our legends spoke of these stones, the Stones of fate by which heroes could rewrite their own fates, and upon the stone was the mark of the Steed.
-
-The blessing of the steed is a blessing of war, and thus it is only right for there to be fortress there."
+	falconstar = {
+		name = "Falconstar"
 		x = 7
 		y = 2
 		required = the_deepwood
-		icon = hraggstad_mission
 		trigger = {
-			owns = hraggstad
-			provinces:hraggstad = {
+			provinces:falconstar = {
 				development = 15
-				fort_level = 2
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			has_adm_advisor_of_level = 1
-			has_mil_advisor_of_level = 1
+			provinces:snowpeaks = {
+				fort_level = 1
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			new country_event haafingar.2 = {
-				title = "Purpose of Fort Hraggstad"
-				desc = "On the second highest peak of the Kilkreath mountains, we found an ancient rune stone. Our legends spoke of these stones, the Stones of fate by which heroes could rewrite their own fates, and upon the stone was the mark of the Steed.
-
-			The blessing of the steed is a blessing of war, and thus we built a fort next to the stone, but now that fort has become a mighty fortress city, and the question comes, what should this city focus on?
-
-			Our advisors of the blue palace propose multiple differing opinions on the issue:
-
-			[Root.Mil_Advisor.GetName] our military advisor suggests that the city should be focused on studying the ways of war, protected by the steed, we can turn it into the ultimate training grounds.
-			[Root.Adm_Advisor.GetName] our administrative advisor, on the other hand, proposes that the city should be focused on the manufacturing of the means of war, weapons.
-			While a third voice shakes the court, 'Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key.' one of the mightiest tongues of our realm suggest that he would make a special force there, in resemblance to the fate-stone."
-				picture = hraggstad_eventPicture
-				is_triggered_only = yes
-				options = {
-					{
-						name = "There shall we study the ways of war"
-						effect = {
-							provinces:hraggstad = {
-								quick_province_modifier = {
-									name = "Settlement Focus: Art of War"
-									modifier = {
-										army_tradition = 1
-										local_manpower_modifier = 1
-										local_fort_maintenance_modifier = -0.5
-									}
-								}
-							}
-						}
-					}
-					{
-						name = "Let us focus our smiths there, and develop an arms industry"
-						effect = {
-							provinces:hraggstad = {
-								quick_province_modifier = {
-									name = "Settlement Focus: Industrial City"
-									modifier = {
-										production_efficiency = 0.15
-										trade_goods_size_modifier = 0.25
-									}
-								}
-							}
-						}
-					}
-					{
-						name = "Thur-do-ahrol-moro, Ahrk faal lahvu do lovaas key"
-						effect = {
-							new_custom_tooltip = "Unlocks §YSinging-Cavalry§! Unit"
-							set_country_flag = unlocks_singing_cavalry
-							provinces:hraggstad = {
-								quick_province_modifier = {
-									name = "Settlement Focus: Singing-Cavalry"
-									modifier = {
-										cavalry_power = 0.10
-										local_manpower_modifier = 1
-										local_regiment_cost = -0.25
-										regiment_recruit_speed = -0.25
-									}
-								}
-							}
-						}
+			provinces:snowpeaks = {
+				quick_province_modifier = {
+					name = "Kogmenthist Castle"
+					modifier = {
+						fort_level = 1
+						local_fort_maintenance_modifier = -0.5
+						local_defensiveness = 0.25
 					}
 				}
-			}
-			new unit singing_cavalry = {
-				name = "Singing Cavalry"
-				desc = ""
-				type = cavalry
-				maneuver = 2
-				offensive_morale = 4
-				defensive_morale = 2
-				offensive_fire = 2
-				defensive_fire = 1
-				offensive_shock = 4
-				defensive_shock = 2
-				trigger = {
-					has_country_flag = unlocks_singing_cavalry
-				}
-			}
-		
-			country_event = haafingar.2
-			show_event_insights = {
-				tooltip = "This event will allow us to choose the settlment focus for Hraggstad."
-				event = haafingar.2
-				show_options = yes
 			}
 		}
 	}
-	shadowgreen_cavern = {
-		name = "Shadowgreen Cavern"
-		icon = shadowgreen_cavern
+	haafingar_isles = {
+		name = "Haafingar Isles"
 		x = 5
 		y = 2
 		required = coast_of_haafingar
 		provinces_to_highlight = {
 			OR = {
-				area = shadowgreen
-				area = ravenscar
+				area = volkihar_isles
+				area = kynes_isles
+				area = icereach
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			areas:shadowgreen, areas:ravenscar = {
+			areas:volkihar_isles; kynes_isles; icereach = {
 				type = all
-				owned_by = ROOT
-			}
-			provinces:shadowgreen = {
-				custom_trigger_tooltip = {
-					new_tooltip = "Completed §YShadowgreen Cavern§! Expedition"
-					OR = {
-						has_great_project = { type = shadowgreen_glenmoril }
-						has_great_project = { type = shadowgreen_alchemy }
-						has_great_project = { type = shadowgreen_holy_site }
-					}
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			areas:northwatch = {
-				add_permanent_claim = ROOT
-			}
 			
-			conditional_effect = {
-				tooltip = "chose §YGlenmoril Wyrd§! in the Shadowgreen Expedition"
-				trigger = {
-					provinces:shadowgreen = {
-						has_great_project = { type = shadowgreen_glenmoril }
-					}
-				}
-				effect = {
-					provinces:shadowgreen = {
-						add_great_project_tier = {
-							type = shadowgreen_glenmoril
-							tier = 1
-						}
-					}
-					quick_country_modifier = {
-						name = "Glenmoril Magic"
-						years = 25
-						modifier = {
-							fire_damage = 0.1
-						}
-					}
-				}
-			}
-			conditional_effect = {
-				tooltip = "chose §YGreen-Kin§! in the Shadowgreen Expedition"
-				trigger = {
-					provinces:shadowgreen = {
-						has_great_project = { type = shadowgreen_alchemy }
-					}
-				}
-				effect = {
-					provinces:shadowgreen = {
-						add_great_project_tier = {
-							type = shadowgreen_alchemy
-							tier = 1
-						}
-					}
-					quick_country_modifier = {
-						name = "Clan Unity"
-						years = 25
-						modifier = {
-							global_autonomy = -0.1
-						}
-					}
-				}
-			}
-			conditional_effect = {
-				tooltip = "chose §YPriests§! in the Shadowgreen Expedition"
-				trigger = {
-					provinces:shadowgreen = {
-						has_great_project = { type = shadowgreen_holy_site }
-					}
-				}
-				effect = {
-					provinces:shadowgreen = {
-						add_great_project_tier = {
-							type = shadowgreen_holy_site
-							tier = 1
-						}
-					}
-					quick_country_modifier = {
-						name = "Religious Blessings"
-						years = 25
-						modifier = {
-							prestige = 1
-						}
-					}
-				}
-			}
 		}
 	}
 	wolfs_eye_lighthouse = {
@@ -326,7 +166,10 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 		name = "Longboat Legions"
 		x = 4
 		y = 3
-		required = wolfs_eye_lighthouse
+		required = {
+			wolfs_eye_lighthouse
+			haafingar_isles
+		}
 		icon = longboat_mission
 		trigger = {
 			has_longships = {
@@ -354,6 +197,29 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 					}
 				}
 			}
+		}
+	}
+	the_pirate_threat = {
+		name = "The Pirate Threat"
+		x = 3
+		y = 4
+		required = longboat_legions
+		provinces_to_highlight = {
+			OR = {
+				owned_by = lone_band
+				province_id = lone_isle
+			}
+		}
+		trigger = {
+			NOT = {
+				exists = lone_band
+			}
+			provinces:lone_isle = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			
 		}
 	}
 	taming_the_dragon = {
@@ -403,8 +269,13 @@ And finally [Root.Dip_Advisor.GetName] our diplomatic advisor suggests 'Wasn't t
 					{
 						name = "City of Poets"
 						effect = {
+							new_custom_tooltip = "§YPaper§! will now be produced in §Y[{provinces:dragon_bridge}.GetName]§!"
 							provinces:dragon_bridge = {
-								change_trade_goods = paper
+								hidden_effect = {
+									change_trade_goods = paper
+								}
+							}
+							provinces:dragon_bridge = {
 								quick_province_modifier = {
 									name = "Settlment Focus: City of Poets"
 									modifier = {
@@ -438,8 +309,13 @@ And finally [Root.Dip_Advisor.GetName] our diplomatic advisor suggests 'Wasn't t
 							new_custom_tooltip = "'§YFour Shields Order§!' Mercenary Company is enabled for all nordic countries"
 							set_global_flag = four_shields_order_refound
 							
+							new_custom_tooltip = "§YArmaments§! will now be produced in §Y[{provinces:dragon_bridge}.GetName]§!"
 							provinces:dragon_bridge = {
-								change_trade_goods = arms
+								hidden_effect = {
+									change_trade_goods = arms
+								}
+							}
+							provinces:dragon_bridge = {
 								quick_province_modifier = {
 									name = "Settlment Focus: Four Shields Order"
 									modifier = {
@@ -484,8 +360,13 @@ And finally [Root.Dip_Advisor.GetName] our diplomatic advisor suggests 'Wasn't t
 					{
 						name = "Trade Route"
 						effect = {
+							new_custom_tooltip = "Center of Trade level in §Y[{provinces:dragon_bridge}.GetName]§! is increased by §Y1§!"
 							provinces:dragon_bridge = {
-								add_center_of_trade_level = 1
+								hidden_effect = {
+									add_center_of_trade_level = 1
+								}
+							}
+							provinces:dragon_bridge = {
 								quick_province_modifier = {
 									name = "Settlment Focus: Trade Route"
 									modifier = {
@@ -501,8 +382,11 @@ And finally [Root.Dip_Advisor.GetName] our diplomatic advisor suggests 'Wasn't t
 			}
 		
 			country_event = haafingar.5
-			new_custom_tooltip = "§GEvent Insight§!
-This event will allow us to choose the settlment focus for Dragon Bridge."
+			show_event_insights = {
+				tooltip = "This event will allow us to choose the settlment focus for Dragon Bridge."
+				event = haafingar.5
+				show_options = yes
+			}
 		}
 	}
 }

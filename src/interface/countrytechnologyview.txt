@@ -254,8 +254,8 @@ new interface_file countrytechnologyview = {
 		}
 		guiButtonType = {
 			name = "open_survey_screen"
-			position = { x = 145 y = 165 }
-			quadTextureSprite = "GFX_expedition_explore_button"
+			position = { x = 118 y = 113 }
+			quadTextureSprite = "GFX_scouting_company_menu"
 			scripted = yes
 		}
 		instantTextBoxType = {
@@ -704,6 +704,63 @@ new interface_file countrytechnologyview = {
 			name = "survey_leader_mil_icon"
 			spriteType = "GFX_icon_powers_military"
 			position = { x = (300 + 114) y = (128 + 146) }
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		
+		instantTextBoxType = {
+			name = "survey_idea_army_text"
+			position = { x = (300 + 128 - 118) y = (128 + 148 - 155 - 6) }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "?"
+			maxWidth = 40
+			maxHeight = 14
+			format = centre
+			scripted = yes
+		}
+		instantTextBoxType = {
+			name = "survey_idea_company_text"
+			position = { x = (300 + 128 - 118 + 60) y = (128 + 148 - 155 - 6) }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "?"
+			maxWidth = 40
+			maxHeight = 14
+			format = centre
+			scripted = yes
+		}
+		instantTextBoxType = {
+			name = "survey_idea_nation_text"
+			position = { x = (300 + 128 - 118 + 120) y = (128 + 148 - 155 - 6) }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "?"
+			maxWidth = 40
+			maxHeight = 14
+			format = centre
+			scripted = yes
+		}
+		instantTextBoxType = {
+			name = "survey_idea_survey_text"
+			position = { x = (300 + 128 - 118 + 180) y = (128 + 148 - 155 - 6) }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "?"
+			maxWidth = 40
+			maxHeight = 14
+			format = centre
+			scripted = yes
+		}
+	
+		iconType = {
+			name = "survey_percent_overlay"
+			spriteType = "GFX_survey_percent_overlay"
+			position = { x = (300 + 114 - 185) y = (128 + 146 + 40) }
 			Orientation = "UPPER_LEFT"
 			scripted = yes
 		}

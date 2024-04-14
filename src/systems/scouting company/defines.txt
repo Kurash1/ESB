@@ -6,8 +6,8 @@ new named_float SURVEY_BASE_SURVEY_SPEED = 100
 new named_float SURVEY_BASE_RECRUIT_RATE = 10
 new named_float SURVEY_RECRUIT_COST = 5
 
-new modifier_definition scouts_administrative_cost_modifier = {
-	name = "Scouting Company Administrative Cost Modifier"
+new modifier_definition scouts_administrative_cost_reduction_modifier = {
+	name = "Scouting Company Administrative Cost Reduction Modifier"
 	is_percentage = yes
 }
 new modifier_definition scouts_administrative_cost = {
@@ -45,4 +45,8 @@ new modifier_definition survey_recruit_rate = {
 new modifier_definition scouts_recruitment_cost_efficiency = {
 	name = "Scouts Recruitment Cost Efficiency"
 	is_percentage = yes
+}
+new modifier_definition survey_prestige_gain = {
+	name = "Prestige on Survey Completion"
+	is_percentage = no
 }

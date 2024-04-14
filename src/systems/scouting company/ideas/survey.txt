@@ -1,0 +1,96 @@
+new scouting_company_idea survey_1 = {
+	name = "Native Diplomacy"
+	desc = "Coexistence with the indigenous peoples of newly discovered lands requires skillful diplomacy and cultural understanding. By engaging in diplomatic relations with native tribes and respecting their customs and traditions, we can foster peaceful relations and establish mutually beneficial alliances."
+	sprite = native_uprising_chance
+	x = 489
+	y = 138
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		native_uprising_chance = -0.25
+	}
+}
+new scouting_company_idea survey_2 = {
+	name = "Trade Route Reconnaissance"
+	desc = "The key to wealth and power lies in controlling trade routes and dominating the flow of goods. By conducting reconnaissance missions along key trade routes, we can gather valuable intelligence on our rivals' activities and identify opportunities to expand our influence and secure lucrative trade deals."
+	sprite = global_trade_power
+	x = 516
+	y = 138
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		global_trade_power = 0.1
+	}
+}
+new scouting_company_idea survey_3 = {
+	name = "Cartographic Mastery"
+	desc = "Mastery of the maps and charts is essential for any ambitious explorer. By investing in cartographic research and education, we can create accurate maps of newly discovered lands, charting the seas and continents with precision to aid future exploration and navigation."
+	sprite = survey_speed
+	x = 489
+	y = 163
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		survey_speed = 0.15
+	}
+}
+new scouting_company_idea survey_4 = {
+	name = "Global Mapping Initiative"
+	desc = "Launching a comprehensive mapping initiative on a global scale, we aim to produce the most detailed and accurate maps ever seen, shedding light on the darkest corners of the world and cementing our legacy as pioneers of exploration."
+	sprite = overseas_income
+	x = 516
+	y = 163
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		survey_prestige_gain = 10
+	}
+}
+new scouting_company_idea survey_5 = {
+	name = "Pathfinders"
+	desc = "Explorers and scouts are the vanguards of expansion, venturing into the unknown to chart new territories and uncover hidden treasures. By investing in skilled pathfinders, we can ensure that our expeditions are well-equipped and our discoveries are maximized."
+	sprite = overseas_income
+	x = 489
+	y = 188
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		scouts_casualty_reduction_modifier = 0.2
+	}
+}
+new scouting_company_idea survey_6 = {
+	name = "Maritime Surveillance"
+	desc = "Strengthening our naval presence and surveillance capabilities will enable us to monitor maritime traffic, detect enemy movements, and safeguard our trade routes, ensuring the security of our overseas interests."
+	sprite = overseas_income
+	x = 516
+	y = 188
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		global_tax_income = 1
+	}
+}
+new scouting_company_idea survey_7 = {
+	name = "Global Surveillance Initiative"
+	desc = "Establishing a global surveillance initiative will enable us to maintain constant vigilance over the entire known world, gathering real-time intelligence and monitoring the activities of rival powers, ensuring that we remain one step ahead in the game of geopolitics."
+	sprite = overseas_income
+	x = 489
+	y = 213
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		global_tax_income = 1
+	}
+}
+new scouting_company_idea survey_8 = {
+	name = "Surveillance Techniques"
+	desc = "Effective surveillance requires more than just keen observation—it also requires the ability to interpret and analyze the information gathered. By investing in surveillance techniques, we can train our scouts to identify patterns, detect anomalies, and extract valuable insights from the data they collect."
+	sprite = overseas_income
+	x = 516
+	y = 213
+	trigger = { }
+	on_apply = { }
+	modifier = {
+		global_tax_income = 1
+	}
+}

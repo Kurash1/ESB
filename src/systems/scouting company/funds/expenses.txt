@@ -28,15 +28,15 @@ new named_effect survey_calculate_expenses = {
 	
 	#Administrative Costs
 	#
-	# modifier:scouts_administrative_cost * modifier:scouts_administrative_cost_modifier * (Adm * -0.05)
+	# modifier:scouts_administrative_cost / modifier:scouts_administrative_cost_reduction_modifier * (Adm * 0.05)
 	#
 	&survey_administrative_costs &= modifier:scouts_administrative_cost
 	
-	&survey_temp &= modifier:scouts_administrative_cost_modifier
+	&survey_temp &= modifier:scouts_administrative_cost_reduction_modifier
 	&survey_temp_2 := survey_leader_adm
-	&survey_temp_2 *= -0.05
+	&survey_temp_2 *= 0.05
 	&survey_temp += survey_temp_2
-	&survey_administrative_costs *= survey_temp
+	&survey_administrative_costs /= survey_temp
 	
 	&survey_monthly_expenses += survey_administrative_costs
 	
