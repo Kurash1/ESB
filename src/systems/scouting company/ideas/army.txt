@@ -1,6 +1,7 @@
 new scouting_company_idea army_1 = {
 	name = "Indigenous Auxiliaries"
 	desc = "Recruits and trains indigenous auxiliaries to supplement regular forces, leveraging local knowledge and manpower to enhance military effectiveness in territories."
+	sprite = GFX_scouting_idea_land_attrition
 	x = 309
 	y = 138
 	trigger = { }
@@ -8,40 +9,47 @@ new scouting_company_idea army_1 = {
 	modifier = {
 		land_attrition = -0.10
 	}
-	sprite = GFX_text_supply_limit
 }
 new scouting_company_idea army_2 = {
-	name = "Test"
+	name = "Cartographic Mastery"
+	desc = "Cartographic Mastery emphasizes the importance of accurate maps and navigation techniques, allowing our nation to better understand geographical features, trade routes, and strategic locations both at home and abroad."
+	sprite = GFX_scouting_idea_movement_speed
 	x = 336
 	y = 138
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		movement_speed = 0.05
 	}
 }
 new scouting_company_idea army_3 = {
-	name = "Test"
+	name = "Frontier Fortifications"
+	desc = "In the untamed wilderness of the frontier, security is paramount. By constructing fortified outposts and garrisons along our borders, we can defend our country from hostile incursions and maintain law and order in the face of adversity."
+	sprite = GFX_scouting_idea_defensiveness
 	x = 309
 	y = 163
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		defensiveness = 0.1
 	}
 }
 new scouting_company_idea army_4 = {
-	name = "Test"
+	name = "Seafaring Tradition"
+	desc = "Building upon centuries of maritime expertise, we cultivate a tradition of seamanship and navigation, empowering our sailors to navigate the seas with confidence and precision."
+	sprite = GFX_scouting_idea_navy_tradition
 	x = 336
 	y = 163
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		navy_tradition = 0.5
 	}
 }
 new scouting_company_idea army_5 = {
-	name = "Test"
+	name = "Rapid Deployment"
+	desc = "In the fast-paced world of espionage and reconnaissance, speed is of the essence. By focusing on rapid deployment tactics, we can ensure our scouts are able to cover more ground in less time, providing us with timely information that could make all the difference in critical situations."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 309
 	y = 188
 	trigger = { }
@@ -51,7 +59,9 @@ new scouting_company_idea army_5 = {
 	}
 }
 new scouting_company_idea army_6 = {
-	name = "Test"
+	name = "Scouting Flotillas"
+	desc = "Commissioning specialized flotillas equipped for reconnaissance and coastal exploration will enhance our ability to survey coastlines, scout enemy movements, and identify strategic points of interest."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 336
 	y = 188
 	trigger = { }
@@ -61,7 +71,9 @@ new scouting_company_idea army_6 = {
 	}
 }
 new scouting_company_idea army_7 = {
-	name = "Test"
+	name = "Eagle Eyes"
+	desc = "A network of skilled observers and lookout posts stationed strategically across our borders and beyond. With their keen eyesight and vigilance, they provide early warnings of potential threats and opportunities, allowing us to react swiftly to changing circumstances."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 309
 	y = 213
 	trigger = { }
@@ -71,7 +83,9 @@ new scouting_company_idea army_7 = {
 	}
 }
 new scouting_company_idea army_8 = {
-	name = "Test"
+	name = "Ranger Outposts"
+	desc = "Establishing fortified ranger outposts and observation posts along our borders and in remote regions. These outposts serve as strategic bases for scouting missions, monitoring enemy movements, and safeguarding our territory against threats from within and without."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 336
 	y = 213
 	trigger = { }

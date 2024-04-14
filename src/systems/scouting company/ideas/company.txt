@@ -1,35 +1,43 @@
 new scouting_company_idea company_1 = {
-	name = "Test"
+	name = "Wayfarer Networks"
+	desc = "Wayfarer Networks establishes a network of reliable contacts and informants across the globe, facilitating the exchange of valuable information and insights on diplomatic affairs, trade opportunities, and potential alliances with foreign powers."
+	sprite = GFX_scouting_idea_improve_relation_modifier
 	x = 369
 	y = 138
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		improve_relation_modifier = 0.1
 	}
 }
 new scouting_company_idea company_2 = {
-	name = "Test"
+	name = "Explorer's Guild"
+	desc = "Founding an official guild dedicated to exploration and discovery attracts skilled adventurers and explorers to our cause, fostering a culture of exploration and innovation within our nation."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 396
 	y = 138
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		scouts_administrative_cost_reduction_modifier = 0.15
 	}
 }
 new scouting_company_idea company_3 = {
-	name = "Test"
+	name = "Exploration Funding"
+	desc = "Bold exploration requires ample resources, from provisions and supplies to ships and equipment. By investing in exploration funding, we can finance ambitious expeditions, empowering our explorers to push the boundaries of the known world."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 369
 	y = 163
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		scouts_base_income = 0.25
 	}
 }
 new scouting_company_idea company_4 = {
-	name = "Test"
+	name = "Scout Training Program"
+	desc = "The effectiveness of our scouting company relies on the skill and dedication of its members. By implementing a comprehensive scout training program, we ensure that our scouts are equipped with the necessary expertise in navigation, survival, and reconnaissance techniques. Well-trained scouts are invaluable assets in exploring unknown territories and gathering vital information."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 396
 	y = 163
 	trigger = { }
@@ -39,7 +47,9 @@ new scouting_company_idea company_4 = {
 	}
 }
 new scouting_company_idea company_5 = {
-	name = "Test"
+	name = "Explorer's Academy"
+	desc = "Establishing a prestigious institution dedicated to the training of explorers and navigators will ensure a steady stream of skilled individuals ready to chart unknown territories and uncover valuable information about the world."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 369
 	y = 188
 	trigger = { }
@@ -49,7 +59,9 @@ new scouting_company_idea company_5 = {
 	}
 }
 new scouting_company_idea company_6 = {
-	name = "Test"
+	name = "Pioneer Spirit"
+	desc = "Instilling a pioneering spirit within our populace will encourage exploration, colonization, and innovation, driving our nation forward into new frontiers and ensuring our place as a leading force in the global arena."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 396
 	y = 188
 	trigger = { }
@@ -59,7 +71,9 @@ new scouting_company_idea company_6 = {
 	}
 }
 new scouting_company_idea company_7 = {
-	name = "Test"
+	name = "Master Scouts"
+	desc = "A master scout is worth a dozen ordinary soldiers, capable of infiltrating enemy territory, gathering intelligence, and returning safely with their findings. By investing in the training and development of our scouts, we can create a corps of elite operatives who are unmatched in their ability to scout out the enemy and report back with vital information."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 369
 	y = 213
 	trigger = { }
@@ -69,7 +83,9 @@ new scouting_company_idea company_7 = {
 	}
 }
 new scouting_company_idea company_8 = {
-	name = "Test"
+	name = "Colonial Survey Initiative"
+	desc = "Launching comprehensive surveys and assessments of potential colonial territories to evaluate their suitability for settlement and exploitation. By conducting thorough research and analysis, we can identify the most promising sites for colonization and ensure the success of our colonial ventures."
+	sprite = GFX_scouting_idea_add_tribal_land_cost
 	x = 396
 	y = 213
 	trigger = { }
