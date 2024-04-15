@@ -23,15 +23,18 @@ new class survey_passive_activity = {
 		potential = {
 			always = yes
 		}
+		on_apply = {
+		}
 	}
 	args = {
 		name = string
 		icon = int
-		potential = trigger
+		potential = named_trigger
 		trigger_tooltip = string?
-		trigger = trigger?
+		trigger = named_trigger?
 		tooltip = string
-		modifier = modifier
+		modifier = named_modifier
+		on_apply = named_effect
 		slot = int
 	}
 	on_create = {
@@ -99,6 +102,7 @@ new effect apply_passive_activity = {
 		new_custom_tooltip = "{modifier_to_string = { args:modifier }}
 
 {args:tooltip}"
+		args:on_apply
 		hidden_effect = {
 			&survey_policy_3 := args:slot
 			add_country_modifier = {
@@ -131,6 +135,25 @@ new survey_passive_activity recruitment = {
 		survey_recruit_rate = 0.5
 	}
 }
+new special_survey questing = {
+	name = "Questing"
+	length = 2500
+	on_complete = {
+		if [has_passive_activity = questing] {
+			start_special_survey = questing
+		}
+		random_owned_province = {
+			quick_province_modifier = {
+				name = "Succesful Quest"
+				years = 10
+				modifier = {
+					local_unrest = -2
+				}
+			}
+		}
+		&survey_funds += 10
+	}
+}
 new survey_passive_activity questing = {
 	name = "Questing"
 	icon = 3
@@ -138,6 +161,15 @@ new survey_passive_activity questing = {
 	{modifier_to_string = {
 		local_unrest = -2
 	}}"
+	trigger_tooltip = "is NOT currently surveying"
+	trigger = {
+		NOT = {
+			has_country_modifier = currently_surveying
+		}
+	}
+	on_apply = {
+		start_special_survey = questing
+	}
 	modifier = {
 		
 	}
@@ -146,6 +178,12 @@ new survey_passive_activity espionage = {
 	name = "Espionage"
 	icon = 4
 	tooltip = "Focus on espionage, sending out your scouts to neighboring countries gaining some amount of spy network whenever your survey progress reaches 1000."
+	trigger_tooltip = "is NOT currently surveying"
+	trigger = {
+		NOT = {
+			has_country_modifier = currently_surveying
+		}
+	}
 	modifier = {
 		
 	}

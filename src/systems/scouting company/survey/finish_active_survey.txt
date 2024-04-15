@@ -1,6 +1,6 @@
 new named_effect survey_finish_active_survey = {
 	remove_country_modifier = currently_surveying
-		
+	
 	foreach $survey in surveys {
 		if [has_country_flag = `surveying_{$survey}`] {
 			$survey:province_group = {
@@ -11,6 +11,16 @@ new named_effect survey_finish_active_survey = {
 			&survey_progress_percentage := 0
 			clr_country_flag = `surveying_{$survey}`
 			set_country_flag = `surveyed_{$survey}`
+		}
+	}	
+	foreach $survey in special_surveys {
+		if [has_country_flag = `surveying_{$survey}`] {
+			&survey_progress := 0
+			&survey_progress_percentage := 0
+			clr_country_flag = `surveying_{$survey}`
+			set_country_flag = `surveyed_{$survey}`
+			
+			$survey:on_complete
 		}
 	}
 }

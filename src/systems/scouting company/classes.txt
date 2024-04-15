@@ -79,6 +79,38 @@ new class survey = {
 		}
 	}
 }
+new class special_survey = {
+	list = special_surveys
+	id = `{this:id}`
+	args = {
+		name = string
+		length = int
+		on_complete = named_effect
+	}
+	on_create = {
+		customizable_localizations:GetActiveSurvey:texts += {
+			{
+				text = this:name
+				trigger =* {
+					has_country_flag = `surveying_*this:id*`
+				}
+			}
+		}
+	}
+}
+new effect start_special_survey = {
+	args = special_survey
+	transpile = {
+		add_country_modifier = {
+			name = currently_surveying
+			duration = -1
+		}
+		set_country_flag = `surveying_{args:id}`
+		&survey_progress := 0
+		&survey_progress_percentage := 0
+		&survey_length := args:length
+	}
+}
 new event_modifier currently_surveying = {
 	name = "Currently Surveying"
 	modifier = {
