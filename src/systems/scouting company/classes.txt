@@ -26,6 +26,7 @@ new class survey = {
 				}
 				NOT = {
 					has_country_modifier = currently_surveying
+					has_country_modifier = currently_passive_surveying
 				}
 				surveys:*this:id*:province_group = {
 					any_neighbor_province = {
@@ -99,20 +100,42 @@ new class special_survey = {
 	}
 }
 new effect start_special_survey = {
-	args = special_survey
+	args = {
+		survey = special_survey
+		show_tooltip = bool
+	}
 	transpile = {
 		add_country_modifier = {
-			name = currently_surveying
+			name = currently_passive_surveying
 			duration = -1
 		}
-		set_country_flag = `surveying_{args:id}`
-		&survey_progress := 0
-		&survey_progress_percentage := 0
-		&survey_length := args:length
+		hidden_effect = {
+			set_country_flag = `surveying_{args:survey:id}`
+			&survey_progress := 0
+			&survey_progress_percentage := 0
+			&survey_length := args:survey:length
+		}
+		
+		when [bool:equals = {
+			bool = args:show_tooltip
+			value = yes
+		}] {
+			custom_tooltip = "The following happens upon the completion of the Survey:"
+			tooltip = {
+				args:survey:on_complete
+			}
+		}
 	}
 }
 new event_modifier currently_surveying = {
 	name = "Currently Surveying"
+	modifier = {
+		scouts_casualty_reduction_modifier = -1
+		scouts_maintenance_cost_modifier = 1
+	}
+}
+new event_modifier currently_passive_surveying = {
+	name = "Currently doing a Passive Survey"
 	modifier = {
 		scouts_casualty_reduction_modifier = -1
 		scouts_maintenance_cost_modifier = 1

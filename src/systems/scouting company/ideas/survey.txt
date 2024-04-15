@@ -61,36 +61,36 @@ new scouting_company_idea survey_5 = {
 new scouting_company_idea survey_6 = {
 	name = "Maritime Surveillance"
 	desc = "Strengthening our naval presence and surveillance capabilities will enable us to monitor maritime traffic, detect enemy movements, and safeguard our trade routes, ensuring the security of our overseas interests."
-	sprite = overseas_income
+	sprite = global_naval_engagement_modifier
 	x = 516
 	y = 188
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		global_naval_engagement_modifier = 0.1
 	}
 }
 new scouting_company_idea survey_7 = {
 	name = "Global Surveillance Initiative"
 	desc = "Establishing a global surveillance initiative will enable us to maintain constant vigilance over the entire known world, gathering real-time intelligence and monitoring the activities of rival powers, ensuring that we remain one step ahead in the game of geopolitics."
-	sprite = overseas_income
+	sprite = diplomats
 	x = 489
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		diplomats = 1
 	}
 }
 new scouting_company_idea survey_8 = {
 	name = "Surveillance Techniques"
 	desc = "Effective surveillance requires more than just keen observation—it also requires the ability to interpret and analyze the information gathered. By investing in surveillance techniques, we can train our scouts to identify patterns, detect anomalies, and extract valuable insights from the data they collect."
-	sprite = overseas_income
+	sprite = spy_action_cost_modifier
 	x = 516
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		spy_action_cost_modifier = -0.1
 	}
 }

@@ -1,5 +1,6 @@
 new named_effect survey_finish_active_survey = {
 	remove_country_modifier = currently_surveying
+	remove_country_modifier = currently_passive_surveying
 	
 	foreach $survey in surveys {
 		if [has_country_flag = `surveying_{$survey}`] {

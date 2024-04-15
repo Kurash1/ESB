@@ -1,5 +1,10 @@
 new named_effect survey_calculate_active_survey = {
-	if [has_country_modifier = currently_surveying] {
+	if [
+		OR = {
+			has_country_modifier = currently_surveying
+			has_country_modifier = currently_passive_surveying
+		}
+	] {
 		#
 		# modifier:survey_speed * Manpower * SURVEY_BASE_SURVEY_SPEED
 		#

@@ -1,7 +1,7 @@
 new named_float SURVEY_MAINTENANCE_PER_STACK = 0.10
 new named_float SURVEY_RETIREMENT_RATE = 1
 new named_float SURVEY_QUIT_RATE = 100
-new named_float SURVEY_CASUALTY_RATE = 10
+new named_float SURVEY_CASUALTY_RATE = 5
 new named_float SURVEY_BASE_SURVEY_SPEED = 100
 new named_float SURVEY_BASE_RECRUIT_RATE = 10
 new named_float SURVEY_RECRUIT_COST = 5
@@ -42,6 +42,10 @@ new modifier_definition survey_recruit_rate = {
 	name = "Scouts Recruitment Rate"
 	is_percentage = yes
 }
+new modifier_definition survey_recruits_modifier = {
+	name = "Scouts Recruitment Modifier"
+	is_percentage = yes
+}
 new modifier_definition scouts_recruitment_cost_efficiency = {
 	name = "Scouts Recruitment Cost Efficiency"
 	is_percentage = yes
@@ -49,4 +53,8 @@ new modifier_definition scouts_recruitment_cost_efficiency = {
 new modifier_definition survey_prestige_gain = {
 	name = "Prestige on Survey Completion"
 	is_percentage = no
+}
+new modifier_definition survey_experience_gain = {
+	name = "Scouts Experience Gain"
+	is_percentage = yes
 }

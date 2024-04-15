@@ -11,15 +11,14 @@ new scouting_company_idea army_1 = {
 	}
 }
 new scouting_company_idea army_2 = {
-	name = "Cartographic Mastery"
-	desc = "Cartographic Mastery emphasizes the importance of accurate maps and navigation techniques, allowing our nation to better understand geographical features, trade routes, and strategic locations both at home and abroad."
-	sprite = movement_speed
+	name = ""
+	desc = ""
 	x = 336
 	y = 138
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		movement_speed = 0.05
+		
 	}
 }
 new scouting_company_idea army_3 = {
@@ -31,7 +30,7 @@ new scouting_company_idea army_3 = {
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		defensiveness = 0.1
+		defensiveness = 0.15
 	}
 }
 new scouting_company_idea army_4 = {
@@ -49,48 +48,47 @@ new scouting_company_idea army_4 = {
 new scouting_company_idea army_5 = {
 	name = "Rapid Deployment"
 	desc = "In the fast-paced world of espionage and reconnaissance, speed is of the essence. By focusing on rapid deployment tactics, we can ensure our scouts are able to cover more ground in less time, providing us with timely information that could make all the difference in critical situations."
-	sprite = overseas_income
+	sprite = global_regiment_recruit_speed
 	x = 309
 	y = 188
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		global_regiment_recruit_speed = -0.25
 	}
 }
 new scouting_company_idea army_6 = {
 	name = "Scouting Flotillas"
 	desc = "Commissioning specialized flotillas equipped for reconnaissance and coastal exploration will enhance our ability to survey coastlines, scout enemy movements, and identify strategic points of interest."
-	sprite = overseas_income
+	sprite = naval_attrition
 	x = 336
 	y = 188
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		naval_attrition = -0.1
 	}
 }
 new scouting_company_idea army_7 = {
-	name = "Eagle Eyes"
-	desc = "A network of skilled observers and lookout posts stationed strategically across our borders and beyond. With their keen eyesight and vigilance, they provide early warnings of potential threats and opportunities, allowing us to react swiftly to changing circumstances."
-	sprite = overseas_income
+	name = ""
+	desc = ""
 	x = 309
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		
 	}
 }
 new scouting_company_idea army_8 = {
 	name = "Ranger Outposts"
 	desc = "Establishing fortified ranger outposts and observation posts along our borders and in remote regions. These outposts serve as strategic bases for scouting missions, monitoring enemy movements, and safeguarding our territory against threats from within and without."
-	sprite = overseas_income
+	sprite = fort_maintenance_modifier
 	x = 336
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		fort_maintenance_modifier = -0.10
 	}
 }
