@@ -131,14 +131,14 @@ new event_modifier currently_surveying = {
 	name = "Currently Surveying"
 	modifier = {
 		scouts_casualty_reduction_modifier = -1
-		scouts_maintenance_cost_modifier = 1
+		scouts_maintenance_efficiency = -0.5
 	}
 }
 new event_modifier currently_passive_surveying = {
 	name = "Currently doing a Passive Survey"
 	modifier = {
 		scouts_casualty_reduction_modifier = -1
-		scouts_maintenance_cost_modifier = 1
+		scouts_maintenance_efficiency = -0.5
 	}
 }
 new class scouting_company_idea = {

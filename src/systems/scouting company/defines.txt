@@ -6,33 +6,13 @@ new named_float SURVEY_BASE_SURVEY_SPEED = 100
 new named_float SURVEY_BASE_RECRUIT_RATE = 10
 new named_float SURVEY_RECRUIT_COST = 5
 
-new modifier_definition scouts_administrative_cost_reduction_modifier = {
-	name = "Scouting Company Administrative Cost Reduction Modifier"
-	is_percentage = yes
-}
-new modifier_definition scouts_administrative_cost = {
-	name = "Scouting Company Administrative Cost"
-	is_percentage = no
-}
-new modifier_definition scouts_maintenance_cost_modifier = {
-	name = "Scouts Maintenance Cost Modifier"
+new modifier_definition scouts_maintenance_efficiency = {
+	name = "Scouts Maintenance Efficiency"
 	is_percentage = yes
 }
 new modifier_definition scouts_base_income = {
 	name = "Scouts Base Income"
 	is_percentage = no
-}
-new modifier_definition scouts_random_income = {
-	name = "Scouts Random Income"
-	is_percentage = no
-}
-new modifier_definition scouts_retirement_reduction_modifier = {
-	name = "Scouts Retirement Reduction Modifier"
-	is_percentage = yes
-}
-new modifier_definition scouts_quitters_modifier = {
-	name = "Scouts Resigning Modifier"
-	is_percentage = yes
 }
 new modifier_definition scouts_casualty_reduction_modifier = {
 	name = "Scouts Casualty Reduction Modifier"
@@ -47,7 +27,7 @@ new modifier_definition survey_recruits_modifier = {
 	is_percentage = yes
 }
 new modifier_definition scouts_recruitment_cost_efficiency = {
-	name = "Scouts Recruitment Cost Efficiency"
+	name = "Scouts Recruitment Efficiency"
 	is_percentage = yes
 }
 new modifier_definition survey_prestige_gain = {
