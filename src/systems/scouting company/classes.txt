@@ -221,6 +221,7 @@ new class scouting_company_idea = {
 "
 					hidden_effect = {
 						&scouting_company_experience -= scouting_company_idea_cost
+						evaluate_survey_experience
 						&scouting_company_idea_cost += 100
 						*this:on_apply*
 					}

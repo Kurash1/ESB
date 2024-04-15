@@ -92,6 +92,14 @@ new effect unapply_economic_policy = {
 		remove_country_modifier = `survey_economic_policy_{args:id}`
 	}
 }
+new modifier scouts_funding = {
+	args = float
+	transpile = {
+		breakpoint
+		global_tax_income = (-12 * args)
+		scouts_base_income = args
+	}
+}
 new survey_economic_policy level_0 = {
 	name = "None"
 	icon = 1
@@ -101,79 +109,69 @@ new survey_economic_policy level_1 = {
 	name = "State Investments: 1"
 	icon = 1
 	modifier = {
-		global_tax_income = -3
-		scouts_base_income = 0.25
+		scouts_funding = 1
 	}
 }
 new survey_economic_policy level_2 = {
 	name = "State Investments: 2"
 	icon = 1
 	modifier = {
-		global_tax_income = -6
-		scouts_base_income = 0.5
+		scouts_funding = 2
 	}
 }
 new survey_economic_policy level_3 = {
 	name = "State Investments: 3"
 	icon = 1
 	modifier = {
-		global_tax_income = -9
-		scouts_base_income = 0.75
+		scouts_funding = 3
 	}
 }
 new survey_economic_policy level_4 = {
 	name = "State Investments: 4"
 	icon = 1
 	modifier = {
-		global_tax_income = -12
-		scouts_base_income = 1
+		scouts_funding = 4
 	}
 }
 new survey_economic_policy level_5 = {
 	name = "State Investments: 5"
 	icon = 1
 	modifier = {
-		global_tax_income = -15
-		scouts_base_income = 1.25
+		scouts_funding = 5
 	}
 }
 new survey_economic_policy level_6 = {
 	name = "State Investments: 6"
 	icon = 1
 	modifier = {
-		global_tax_income = -18
-		scouts_base_income = 1.5
+		scouts_funding = 6
 	}
 }
 new survey_economic_policy level_7 = {
 	name = "State Investments: 7"
 	icon = 1
 	modifier = {
-		global_tax_income = -21
-		scouts_base_income = 1.75
+		scouts_funding = 7
 	}
 }
 new survey_economic_policy level_8 = {
 	name = "State Investments: 8"
 	icon = 1
 	modifier = {
-		global_tax_income = -24
-		scouts_base_income = 2
+		scouts_funding = 8
 	}
 }
 new survey_economic_policy level_9 = {
 	name = "State Investments: 9"
 	icon = 1
 	modifier = {
-		global_tax_income = -27
-		scouts_base_income = 2.25
+		scouts_funding = 9
 	}
 }
 new survey_economic_policy level_10 = {
 	name = "State Investments: 10"
 	icon = 1
 	modifier = {
-		global_tax_income = -30
-		scouts_base_income = 2.5
+		scouts_funding = 10
 	}
 }

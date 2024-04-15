@@ -8,5 +8,6 @@ new named_effect survey_calculate_passive_activities = {
 		&survey_temp *= survey_temp_2
 		
 		&scouting_company_experience += survey_temp
+		evaluate_survey_experience
 	}
 }

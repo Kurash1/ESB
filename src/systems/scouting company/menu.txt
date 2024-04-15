@@ -19,6 +19,12 @@ new custom_icon survey_percent_overlay = {
 		has_country_flag = show_survey_screen
 	}
 }
+new custom_text_box custom_mechanic_survey_experience_value = {
+    potential = {
+		has_country_flag = show_survey_screen
+	}
+	name = "[This.scouting_company_experience_visible.GetValue]"
+}
 new custom_text_box survey_idea_army_text = {
     potential = {
 		has_country_flag = show_survey_screen
@@ -99,6 +105,7 @@ new custom_button open_survey_screen = {
 			variables:survey_monthly_recruits_base:init = yes
 			variables:survey_company_size:init = yes
 			variables:scouting_company_experience:init = yes
+			evaluate_survey_experience
 			variables:scouting_company_idea_cost:init = yes
 			
 			apply_recruitment_policy = standard_recruitment

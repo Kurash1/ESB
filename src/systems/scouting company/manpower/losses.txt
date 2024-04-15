@@ -20,7 +20,12 @@ new named_effect survey_calculate_losses = {
 	# 
 	# (Stacks + 0.1) * SURVEY_QUIT_RATE * (modifier:scouts_quitters_modifier + 100% if [funds < 0]) 
 	# 
-	if [&survey_manpower == 0] { 
+	if [
+		OR = {
+			&survey_manpower == 0
+			&survey_funds >= 0
+		}
+	] {
 		&survey_resignments := 0 
 	}
 	else {
