@@ -11,14 +11,15 @@ new scouting_company_idea army_1 = {
 	}
 }
 new scouting_company_idea army_2 = {
-	name = ""
-	desc = ""
+	name = "Maritime Surveillance"
+	desc = "Strengthening our naval presence and surveillance capabilities will enable us to monitor maritime traffic, detect enemy movements, and safeguard our trade routes, ensuring the security of our overseas interests."
+	sprite = global_naval_engagement_modifier
 	x = 336
 	y = 138
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		
+		global_naval_engagement_modifier = 0.1
 	}
 }
 new scouting_company_idea army_3 = {
@@ -70,14 +71,15 @@ new scouting_company_idea army_6 = {
 	}
 }
 new scouting_company_idea army_7 = {
-	name = ""
-	desc = ""
+	name = "Trailblazing"
+	desc = "The scouts of our company are expert trailblazers, capable of navigating the most challenging terrains with ease."
+	sprite = movement_speed
 	x = 309
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		
+		movement_speed = 0.1
 	}
 }
 new scouting_company_idea army_8 = {

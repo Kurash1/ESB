@@ -59,15 +59,15 @@ new scouting_company_idea survey_5 = {
 	}
 }
 new scouting_company_idea survey_6 = {
-	name = "Maritime Surveillance"
-	desc = "Strengthening our naval presence and surveillance capabilities will enable us to monitor maritime traffic, detect enemy movements, and safeguard our trade routes, ensuring the security of our overseas interests."
-	sprite = global_naval_engagement_modifier
+	name = "Local Guides Network"
+	desc = "Building a Local Guides Network establishes strong connections with indigenous populations and local informants. Your scouts gain valuable insights and support from native guides, enhancing their effectiveness in reconnaissance and enabling smoother diplomatic interactions in foreign lands."
+	sprite = num_accepted_cultures
 	x = 516
 	y = 188
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_naval_engagement_modifier = 0.1
+		num_accepted_cultures = 1
 	}
 }
 new scouting_company_idea survey_7 = {
