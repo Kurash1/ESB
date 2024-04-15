@@ -37,7 +37,7 @@ new scouting_company_idea survey_3 = {
 new scouting_company_idea survey_4 = {
 	name = "Global Mapping Initiative"
 	desc = "Launching a comprehensive mapping initiative on a global scale, we aim to produce the most detailed and accurate maps ever seen, shedding light on the darkest corners of the world and cementing our legacy as pioneers of exploration."
-	sprite = overseas_income
+	sprite = survey_prestige_gain
 	x = 516
 	y = 163
 	trigger = { }
@@ -49,13 +49,13 @@ new scouting_company_idea survey_4 = {
 new scouting_company_idea survey_5 = {
 	name = "Pathfinders"
 	desc = "Explorers and scouts are the vanguards of expansion, venturing into the unknown to chart new territories and uncover hidden treasures. By investing in skilled pathfinders, we can ensure that our expeditions are well-equipped and our discoveries are maximized."
-	sprite = overseas_income
+	sprite = scouts_survival_efficiency
 	x = 489
 	y = 188
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		scouts_casualty_reduction_modifier = 0.2
+		scouts_survival_efficiency = 0.2
 	}
 }
 new scouting_company_idea survey_6 = {

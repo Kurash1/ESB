@@ -37,19 +37,26 @@ new named_effect survey_calculate_losses = {
 	
 	# Casualties
 	# 
-	# (Stacks + 1) * SURVEY_CASUALTY_RATE * -modifier:scouts_casualty_reduction_modifier
+	# (Stacks + 1) * SURVEY_CASUALTY_RATE * -modifier:scouts_survival_efficiency
 	# 
 	&survey_casualties := survey_manpower
 	&survey_casualties += 1
 	&survey_casualties *= SURVEY_CASUALTY_RATE
 	
-	&survey_temp &= modifier:scouts_casualty_reduction_modifier
+	&survey_temp &= modifier:scouts_survival_efficiency
 	&survey_temp_2 := survey_leader_mil
 	&survey_temp_2 *= 0.05
 	&survey_temp += survey_temp_2
-	if [&survey_temp > 0] { &survey_temp := 0 }
-	&survey_temp *= -1
-	&survey_casualties *= survey_temp
+	if [&survey_temp < 0.1] { &survey_temp := 0.1 }
+	&survey_casualties /= survey_temp
+	if [
+		NOT = {
+			has_country_modifier = currently_surveying
+			has_country_modifier = currently_passive_surveying
+		}
+	] {
+		&survey_casualties := 0
+	}
 	
 	# Removes Decimal Manpower
 	&survey_casualties /= 1000
