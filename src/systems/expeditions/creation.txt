@@ -9,22 +9,11 @@ new effect create_expedition = {
 		event = event
 	}
 	transpile = {
-		 	add_cardinal = yes
-		
 		set_province_flag = expedition_target
 		
-		set_variable = {
-			which = expedition_progress
-			value = 0
-		}
-		set_variable = {
-			which = expedition_length
-			value = args:length
-		}
-		set_variable = {
-			which = expedition_percentage
-			which = 0
-		}
+		&expedition_progress := 0
+		&expedition_length := args:length
+		&expedition_percentage := 0
 		
 		set_province_flag = args:id
 		
@@ -76,22 +65,11 @@ new effect create_expedition = {
 		on_complete = effect
 	}
 	transpile = {
-		 	add_cardinal = yes
-		
 		set_province_flag = expedition_target
 		
-		set_variable = {
-			which = expedition_progress
-			value = 0
-		}
-		set_variable = {
-			which = expedition_length
-			value = args:length
-		}
-		set_variable = {
-			which = expedition_percentage
-			which = 0
-		}
+		&expedition_progress := 0
+		&expedition_length := args:length
+		&expedition_percentage := 0
 		
 		set_province_flag = args:id
 		
