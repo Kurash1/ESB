@@ -95,7 +95,6 @@ new effect unapply_economic_policy = {
 new modifier scouts_funding = {
 	args = float
 	transpile = {
-		breakpoint
 		global_tax_income = (-12 * args)
 		scouts_base_income = args
 	}
