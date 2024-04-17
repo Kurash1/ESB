@@ -113,42 +113,6 @@ new province r405 = {
 	}
 	impassible = yes
 }
-new province hammerfell = {
-	position = {
-		1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	name = "Hammerfell"
-	color = {
-		19 11 6
-	}
-	history = {
-	}
-	impassible = yes
-}
-new province south_bjoulsae = {
-	position = {
-		1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000 1520.000 1735.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	name = "South Bjoulsae"
-	color = {
-		19 31 6
-	}
-	history = {
-	}
-	impassible = yes
-}
 new province r526 = {
 	position = {
 		388.000 609.000 388.000 609.000 388.000 609.000 388.000 609.000 388.000 609.000 388.000 609.000 388.000 609.000
@@ -527,24 +491,6 @@ new province morrowind = {
 	}
 	impassible = yes
 }
-new province high_rock = {
-	position = {
-		1078.000 1915.000 1078.000 1915.000 1078.000 1915.000 1078.000 1915.000 1078.000 1915.000 1078.000 1915.000 1078.000 1915.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	name = "High Rock"
-	color = {
-		12 21 16
-	}
-	history = {
-	}
-	impassible = yes
-}
 new province r1532 = {
 	position = {
 		2146.000 1556.000 2146.000 1556.000 2146.000 1556.000 2146.000 1556.000 2146.000 1556.000 2146.000 1556.000 2146.000 1556.000
@@ -778,4 +724,74 @@ new province summerset = {
 	history = {
 	}
 	impassible = yes
+}
+
+new province glenumbra = {
+	inherit = impassible
+	name = "Glenumbra"
+	color = { 12 21 16 }
+}
+new province rivenspire = {
+	inherit = impassible
+	name = "Rivenspire"
+	color = { 29 15 13 }
+}
+new province stormhaven = {
+	inherit = impassible
+	name = "Stormhaven"
+	color = { 21 28 10 }
+}
+new province bangkorai = {
+	inherit = impassible
+	name = "Bangkorai"
+	color = { 27 20 22 }
+}
+new province bantha = {
+	inherit = impassible
+	name = "Bantha"
+	color = {
+		19 31 6
+	}
+}
+new province alikr = {
+	inherit = impassible
+	name = "Alikr"
+	color = {
+		19 11 6
+	}
+}
+new province fallen_wastes = {
+	inherit = impassible
+	name = "Fallen Wastes"
+	color = {
+		13 17 13
+	}
+}
+new province sunforge = {
+	inherit = impassible
+	name = "Sunforge"
+	color = {
+		9 1 1
+	}
+}
+new province khefrem = {
+	inherit = impassible
+	name = "Khefrem"
+	color = {
+		28 8 29
+	}
+}
+new province brena_area = {
+	inherit = impassible
+	name = "Brena Area"
+	color = {
+		21 13 21
+	}
+}
+new province karnver = {
+	inherit = impassible
+	name = "Karnver"
+	color = {
+		26 3 1
+	}
 }
