@@ -54,8 +54,7 @@ new class modifier_definition = {
 			bool = this:is_percentage
 			value = yes
 		}] {
-			arc_call = {
-				id = 0 #this creates a modifier localisation
+			DEFINE_MODIFIER = {
 				key = `{this:id}`
 				text = `{this:name}`
 				localisation_key = `{this:id}`
@@ -72,8 +71,7 @@ new class modifier_definition = {
 			bool = this:is_percentage
 			value = no
 		}] {
-			arc_call = {
-				id = 0 #this creates a modifier localisation
+			DEFINE_MODIFIER = {
 				key = `{this:id}`
 				text = `{this:name}`
 				localisation_key = `{this:id}`
