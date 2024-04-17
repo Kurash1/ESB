@@ -1,0 +1,43 @@
+new effect create_flagship = {
+	args = {
+		where = province
+		name = text
+		type = string
+		traits = list<string>
+	}
+	transpile = {
+		set_country_flag = forced_trait
+		
+		foreach $trait in args:traits {
+			set_country_flag = $trait
+		}
+		
+		args:where = {
+			`create_flagship` = {
+				name = args:name
+				type = args:type
+			}
+		}
+		
+		foreach $trait in args:traits {
+			clr_country_flag = $trait
+		}
+		
+		clr_country_flag = forced_trait
+	}
+}
+new effect create_flagship = {
+	args = {
+		where = province
+		name = text
+		type = string
+	}
+	transpile = {
+		args:where = {
+			`create_flagship` = {
+				name = args:name
+				type = args:type
+			}
+		}
+	}
+}
