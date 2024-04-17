@@ -1,0 +1,33 @@
+new named_int nct_amount = 0
+new effect new_tooltip = {
+	args = string
+	transpile = {
+		new localisation `nct_{nct_amount}` = `{args}`
+		tooltip = `nct_{nct_amount}`
+		nct_amount += 1
+	}
+}
+new trigger new_tooltip = {
+	args = string
+	transpile = {
+		new localisation `nct_{nct_amount}` = `{args}`
+		tooltip = `nct_{nct_amount}`
+		nct_amount += 1
+	}
+}
+new modifier new_tooltip = {
+	args = string
+	transpile = {
+		new localisation `nct_{nct_amount}` = `{args}`
+		tooltip = `nct_{nct_amount}`
+		nct_amount += 1
+	}
+}
+new effect new_custom_tooltip = {
+	args = string
+	transpile = {
+		new localisation `nct_{nct_amount}` = `{args}`
+		custom_tooltip = `nct_{nct_amount}`
+		nct_amount += 1
+	}
+}
