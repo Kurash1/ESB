@@ -24,20 +24,14 @@ new effect define_expedition_random_event = {
 		
 		expedition_random_event_count += 1
 		
-		when [bool:equals = {
-			bool = args:is_good
-			value = yes
-		}] {
+		when [args:is_good == yes] {
 			expedition_good_event_list +=! {
 				1 = {
 					province_event = args:event
 				}
 			}
 		}
-		when [bool:equals = {
-			bool = args:is_good
-			value = no
-		}] {
+		when [args:is_good == no] {
 			expedition_bad_event_list +=! {
 				1 = {
 					province_event = args:event

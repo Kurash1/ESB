@@ -116,10 +116,7 @@ new effect start_special_survey = {
 			&survey_length := args:survey:length
 		}
 		
-		when [bool:equals = {
-			bool = args:show_tooltip
-			value = yes
-		}] {
+		when [args:show_tooltip == yes] {
 			custom_tooltip = "The following happens upon the completion of the Survey:"
 			tooltip = {
 				args:survey:on_complete

@@ -50,10 +50,7 @@ new class modifier_definition = {
 		trigger = named_trigger
 	}
 	on_create = {
-		when [bool:equals = {
-			bool = this:is_percentage
-			value = yes
-		}] {
+		when [this:is_percentage == yes] {
 			DEFINE_MODIFIER = {
 				key = `{this:id}`
 				text = `{this:name}`
@@ -67,10 +64,7 @@ new class modifier_definition = {
 			}
 
 		}
-		when [bool:equals = {
-			bool = this:is_percentage
-			value = no
-		}] {
+		when [this:is_percentage == no] {
 			DEFINE_MODIFIER = {
 				key = `{this:id}`
 				text = `{this:name}`

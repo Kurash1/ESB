@@ -7,10 +7,7 @@ new effect show_event_insights = {
 	transpile = {
 		new_custom_tooltip = "§GEvent Insight§!
 {args:tooltip}"
-		when [bool:equals = {
-			bool = args:show_options
-			value = yes
-		}] {
+		when [args:show_options == yes] {
 			foreach $option in args:event:options {
 				new_custom_tooltip = "§T{$option:name}§!:"
 				tooltip = {
