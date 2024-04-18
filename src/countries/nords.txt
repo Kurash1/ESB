@@ -225,6 +225,9 @@ new country solitude = {
 	starting_reform = tier_1_three_clan_council
 	government_rank = 2
 	history += {
+		add_historical_friend = dawn_star
+		add_historical_rival = snow_hawk
+	
 		2568.1.1 = {
 			starting_ruler = {
 				name = "Vigrod"
@@ -518,6 +521,9 @@ new country snow_hawk = {
 		200 255 200
 	}
 	capital = snowhawk
+	history += {
+		add_historical_rival = solitude
+	}
 }
 new country mort_hall = {
 	inherit = nordic_country
@@ -552,6 +558,7 @@ new country dawn_star = {
 	}
 	capital = dawnstar
 	history += {
+		add_historical_friend = solitude
 	}
 }
 new country stone_hill = {
@@ -1524,6 +1531,12 @@ new country wave_crusher = {
 	}
 }
 
+new relation alliance = {
+	first = SOL
+	second = DAW
+	start_date = 2500.1.1
+	end_date = 9999.1.1
+}
 new relation vassal = {
 	first = SOL
 	second = DRB
