@@ -1,0 +1,55 @@
+new class tradegood = {
+	list = trade_goods
+	default = {
+		desc = ""
+		is_gold = no
+		is_latent = no
+		is_valuable = no
+		chance = { }
+	}
+	args = {
+		name = string
+		desc = string
+		color = named_block
+		modifier = named_modifier?
+		province = named_modifier?
+		base_price = float
+		is_gold = bool
+		is_latent = bool
+		is_valuable = bool
+		trigger = named_trigger?
+		chance = named_trigger
+	}
+	simple_transpile = {
+		write_file "common/tradegoods/00_tradegoods.txt" = {
+			foreach $good in trade_goods {
+				new localisation `{$good}` = "{$good:name}"
+				new localisation `{$good}DESC` = "{$good:desc}"
+				
+				$good = {
+					color = { $good:color }
+					when [exists = $good:modifier] {
+						modifier = { $good:modifier }
+					}
+					when [exists = $good:province] {
+						province = { $good:province }
+					}
+					is_latent = $good:is_latent
+					is_valuable = $good:is_valuable
+					when [exists = $good:trigger] {
+						trigger = { $good:trigger }
+					}
+					chance = { $good:chance }
+				}
+			}
+		}
+		write_file "common/prices/00_prices.txt" = {
+			foreach $good in trade_goods {
+				$good = {
+					base_price = $good:base_price
+					goldtype = $good:is_gold
+				}
+			}
+		}
+	}
+}
