@@ -2,50 +2,26 @@ new localisation expedition_progress = "Expedition Progress"
 new effect cause_expedition_progress = {
 	args = float
 	transpile = {
-		change_variable = {
-			which = expedition_progress
-			value = args
-		}
+		&expedition_progress += args
 	}
 }
 new named_effect reload_expedition_progress = {
 	hidden_effect = {
-		if [
-			NOT = {
-				check_variable = {
-					which = expedition_progress
-					value = 0
-				}
-			}
-		] {
-			set_variable = {
-				which = expedition_progress
-				value = 0
-			}
+		if [&expedition_progress < 0] {
+			&expedition_progress := 0
 		}
 	
-		set_variable = {
-			which = expedition_percentage
-			which = expedition_progress
-		}
-		divide_variable = {
-			which = expedition_percentage
-			which = expedition_length
-		}
-		multiply_variable = {
-			which = expedition_percentage
-			value = 100
-		}
+		&expedition_percentage := expedition_progress
+		&expedition_percentage /= expedition_length
+		&expedition_percentage *= 100
 		
-		if [
-			check_variable = {
-				which = expedition_progress
-				which = expedition_length
-			}
-		] {
+		if [&expedition_progress >= expedition_length] {
 			end_expedition_effect
 		}
 	}
+}
+new named_effect expedition_province_modifiers = {
+	
 }
 new named_effect expedition_progress_pulse = {
 	export_to_variable = {
@@ -53,10 +29,16 @@ new named_effect expedition_progress_pulse = {
 		value = `modifier:global_expedition_progress`
 		who = FROM
 	}
-	change_variable = {
-		which = expedition_progress
-		which = expedition_progress_temp
+	expedition_province_modifiers
+	
+	export_to_variable = {
+		which = expedition_progress_temp_2
+		value = `modifier:global_expedition_speed`
+		who = FROM
 	}
+	&expedition_progress_temp *= expedition_progress_temp_2
+	
+	&expedition_progress += expedition_progress_temp
 }
 new named_effect expedition_good_event_list = {
 	

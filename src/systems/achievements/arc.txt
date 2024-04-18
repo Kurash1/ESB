@@ -155,22 +155,12 @@ new effect define_achievement = {
 		achievement_total_num += 1
 		achievement_current_x += 1
 		
-		when [
-			int:equals = {
-				int = achievement_current_x
-				value = 6
-			}
-		] {
+		when [achievement_current_x == 6] {
 			achievement_current_x := 0
 			achievement_current_y += 1
 		}
 		
-		when [
-			int:equals = {
-				int = achievement_current_y
-				value = 4
-			}
-		] {
+		when [achievement_current_y == 4] {
 			achievement_current_y := 0
 			achievement_current_page += 1
 			

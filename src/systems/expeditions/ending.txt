@@ -1,4 +1,12 @@
 new named_effect end_expedition_effect = {
 	clr_province_flag = expedition_target
 	remove_expedition_modifiers
+	
+	owner = {
+		&survey_temp &= modifier:prestige_on_expedition_completion
+		while [&survey_temp > 0] {
+			&survey_temp -= 1
+			add_prestige = 1
+		}
+	}
 }

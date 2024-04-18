@@ -21,4 +21,4 @@ jobs:
 
     - name: Run Arc-Valley.exe
       run: |
-        dotnet Arc-Valley.dll script
+        dotnet Arc-Valley.dll script format no-vdir

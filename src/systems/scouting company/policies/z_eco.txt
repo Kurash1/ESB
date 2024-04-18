@@ -92,19 +92,85 @@ new effect unapply_economic_policy = {
 		remove_country_modifier = `survey_economic_policy_{args:id}`
 	}
 }
-new survey_economic_policy state_investments = {
-	name = "State Investments"
-	icon = 1
-	modifier = {
-		global_tax_income = -12
-		scouts_base_income = 1
+new modifier scouts_funding = {
+	args = float
+	transpile = {
+		global_tax_income = (-12 * args)
+		scouts_base_income = args
 	}
 }
-new survey_economic_policy private_investors = {
-	name = "Private Investors"
-	icon = 2
+new survey_economic_policy level_0 = {
+	name = "None"
+	icon = 1
+	modifier = { }
+}
+new survey_economic_policy level_1 = {
+	name = "State Investments: 1"
+	icon = 1
 	modifier = {
-		yearly_corruption = 0.01
-		scouts_random_income = 1
+		scouts_funding = 1
+	}
+}
+new survey_economic_policy level_2 = {
+	name = "State Investments: 2"
+	icon = 1
+	modifier = {
+		scouts_funding = 2
+	}
+}
+new survey_economic_policy level_3 = {
+	name = "State Investments: 3"
+	icon = 1
+	modifier = {
+		scouts_funding = 3
+	}
+}
+new survey_economic_policy level_4 = {
+	name = "State Investments: 4"
+	icon = 1
+	modifier = {
+		scouts_funding = 4
+	}
+}
+new survey_economic_policy level_5 = {
+	name = "State Investments: 5"
+	icon = 1
+	modifier = {
+		scouts_funding = 5
+	}
+}
+new survey_economic_policy level_6 = {
+	name = "State Investments: 6"
+	icon = 1
+	modifier = {
+		scouts_funding = 6
+	}
+}
+new survey_economic_policy level_7 = {
+	name = "State Investments: 7"
+	icon = 1
+	modifier = {
+		scouts_funding = 7
+	}
+}
+new survey_economic_policy level_8 = {
+	name = "State Investments: 8"
+	icon = 1
+	modifier = {
+		scouts_funding = 8
+	}
+}
+new survey_economic_policy level_9 = {
+	name = "State Investments: 9"
+	icon = 1
+	modifier = {
+		scouts_funding = 9
+	}
+}
+new survey_economic_policy level_10 = {
+	name = "State Investments: 10"
+	icon = 1
+	modifier = {
+		scouts_funding = 10
 	}
 }

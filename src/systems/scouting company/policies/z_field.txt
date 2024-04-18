@@ -1,4 +1,5 @@
 new named_effect clear_passive_activity = {
+	survey_end_active_survey
 	foreach $policy in survey_passive_activities {
 		if [has_passive_activity = $policy] {
 			unapply_passive_activity = $policy
@@ -23,15 +24,18 @@ new class survey_passive_activity = {
 		potential = {
 			always = yes
 		}
+		on_apply = {
+		}
 	}
 	args = {
 		name = string
 		icon = int
-		potential = trigger
+		potential = named_trigger
 		trigger_tooltip = string?
-		trigger = trigger?
+		trigger = named_trigger?
 		tooltip = string
-		modifier = modifier
+		modifier = named_modifier
+		on_apply = named_effect
 		slot = int
 	}
 	on_create = {
@@ -63,12 +67,10 @@ new class survey_passive_activity = {
 							}
 						}
 					}
-					when [
-						NOT = {
-							exists = survey_passive_activities:*this:id*:trigger_tooltip
-							exists = survey_passive_activities:*this:id*:trigger
+					when_not {
+						hidden_effect = {
+							clear_passive_activity
 						}
-					] {
 						apply_passive_activity = *this:id*
 					}
 				}
@@ -96,9 +98,8 @@ new trigger has_passive_activity = {
 new effect apply_passive_activity = {
 	args = survey_passive_activity
 	transpile = {
-		new_custom_tooltip = "{modifier_to_string = { args:modifier }}
-
-{args:tooltip}"
+		new_custom_tooltip = "{modifier_to_string = { args:modifier }}{args:tooltip}"
+		args:on_apply
 		hidden_effect = {
 			&survey_policy_3 := args:slot
 			add_country_modifier = {
@@ -128,24 +129,95 @@ new survey_passive_activity recruitment = {
 	icon = 2
 	tooltip = ""
 	modifier = {
-		survey_recruit_rate = 0.5
+		survey_recruits_modifier = 0.5
+	}
+}
+new special_survey questing = {
+	name = "Questing"
+	length = 2500
+	on_complete = {
+		if [has_passive_activity = questing] {
+			start_special_survey = {
+				survey = questing
+				show_tooltip = no
+			}
+		}
+		new_custom_tooltip = "	A random owned province gets '§YSuccessful Quest§!' for §Y5§! Years, giving the following effects:
+		{modifier_to_string = {
+			local_unrest = -2
+		}}"
+		hidden_effect = {
+			random_owned_province = {
+				quick_province_modifier = {
+					name = "Successful Quest"
+					years = 10
+					modifier = {
+						local_unrest = -2
+					}
+				}
+			}
+		}
 	}
 }
 new survey_passive_activity questing = {
 	name = "Questing"
 	icon = 3
-	tooltip = "Focus on questing, whenever your survey progress reaches 1000 the company gains some amount of funds and an owned province gains the following modifier:
-	{modifier_to_string = {
-		local_unrest = -2
-	}}"
+	tooltip = ""
+	trigger_tooltip = "is NOT currently surveying"
+	trigger = {
+		NOT = {
+			has_country_modifier = currently_surveying
+			has_country_modifier = currently_passive_surveying
+		}
+	}
+	on_apply = {
+		start_special_survey = {
+			survey = questing
+			show_tooltip = yes
+		}
+	}
 	modifier = {
 		
+	}
+}
+new special_survey espionage = {
+	name = "Espionage"
+	length = 2500
+	on_complete = {
+		if [has_passive_activity = espionage] {
+			start_special_survey = {
+				survey = espionage
+				show_tooltip = no
+			}
+		}
+		new_custom_tooltip = "	[This.GetName] gains §G10§! Spy Network size in all neighboring countries."
+		hidden_effect = {
+			every_neighbor_country = {
+				add_spy_network_from = {
+					who = ROOT
+					value = 10
+				}
+			}
+		}
 	}
 }
 new survey_passive_activity espionage = {
 	name = "Espionage"
 	icon = 4
-	tooltip = "Focus on espionage, sending out your scouts to neighboring countries gaining some amount of spy network whenever your survey progress reaches 1000."
+	tooltip = ""
+	trigger_tooltip = "is NOT currently surveying"
+	trigger = {
+		NOT = {
+			has_country_modifier = currently_surveying
+			has_country_modifier = currently_passive_surveying
+		}
+	}
+	on_apply = {
+		start_special_survey = {
+			survey = espionage
+			show_tooltip = yes
+		}
+	}
 	modifier = {
 		
 	}

@@ -1,0 +1,13 @@
+new named_effect survey_calculate_passive_activities = {
+	if [has_passive_activity = training] {
+		&survey_temp := survey_manpower
+		&survey_temp *= 10
+		
+		&survey_temp_2 &= modifier:survey_experience_gain
+		if [&survey_temp_2 < 0.1] { &survey_temp_2 := 0.1 }
+		&survey_temp *= survey_temp_2
+		
+		&scouting_company_experience += survey_temp
+		evaluate_survey_experience
+	}
+}

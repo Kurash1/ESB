@@ -135,6 +135,15 @@ new script_variable scouting_company_experience = {
 	name = "Company Experience"
 	initial_value = 0
 }
+new named_effect evaluate_survey_experience = {
+	&scouting_company_experience_visible := scouting_company_experience
+	&scouting_company_experience_visible /= 1000
+	&scouting_company_experience_visible *= 1000
+}
+new script_variable scouting_company_experience_visible = {
+	name = "Company Experience Visible"
+	initial_value = 0
+}
 new script_variable scouting_company_idea_cost = {
 	name = "Company Idea Cost"
 	initial_value = 100

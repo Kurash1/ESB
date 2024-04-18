@@ -1,30 +1,18 @@
 new modifier_definition global_expedition_progress = {
 	name = "Global Monthly Expedition Progress"
 	is_percentage = no
-	trigger = {
-		always = yes
-	}
 }
 new modifier_definition prestige_on_expedition_completion = {
 	name = "Prestige on Expedition Completion"
 	is_percentage = no
-	trigger = {
-		always = yes
-	}
 }
-new modifier_definition expedition_positive_event_chance = {
-	name = "Chance of positive Expedition Events"
+new modifier_definition global_expedition_speed = {
+	name = "Global Expedition Speed"
 	is_percentage = yes
-	trigger = {
-		always = yes
-	}
 }
 new modifier_definition survey_speed = {
 	name = "Survey Speed"
 	is_percentage = yes
-	trigger = {
-		always = yes
-	}
 }
 new modifier monthly_expedition_progress = {
 	args = {
@@ -34,9 +22,9 @@ new modifier monthly_expedition_progress = {
 	transpile = {
 		`expedition_progess = {args:amount}`
 		
-		expedition_progress_pulse +=! {
+		expedition_province_modifiers +=! {
 			if [has_province_modifier = args:modifier] {
-				cause_expedition_progress = args:amount
+				&expedition_progress_temp += args:amount
 			}
 		}
 		

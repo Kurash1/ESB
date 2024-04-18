@@ -7,90 +7,92 @@ new scouting_company_idea company_1 = {
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		improve_relation_modifier = 0.1
+		improve_relation_modifier = 0.2
 	}
 }
 new scouting_company_idea company_2 = {
 	name = "Explorer's Guild"
 	desc = "Founding an official guild dedicated to exploration and discovery attracts skilled adventurers and explorers to our cause, fostering a culture of exploration and innovation within our nation."
-	sprite = overseas_income
+	sprite = scouts_maintenance_efficiency
 	x = 396
 	y = 138
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		scouts_administrative_cost_reduction_modifier = 0.15
+		scouts_maintenance_efficiency = 0.05
+		scouts_survival_efficiency = 0.05
+		scouts_recruitment_cost_efficiency = 0.05
 	}
 }
 new scouting_company_idea company_3 = {
 	name = "Exploration Funding"
 	desc = "Bold exploration requires ample resources, from provisions and supplies to ships and equipment. By investing in exploration funding, we can finance ambitious expeditions, empowering our explorers to push the boundaries of the known world."
-	sprite = overseas_income
+	sprite = scouts_base_income
 	x = 369
 	y = 163
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		scouts_base_income = 0.25
+		scouts_base_income = 0.2
 	}
 }
 new scouting_company_idea company_4 = {
 	name = "Scout Training Program"
 	desc = "The effectiveness of our scouting company relies on the skill and dedication of its members. By implementing a comprehensive scout training program, we ensure that our scouts are equipped with the necessary expertise in navigation, survival, and reconnaissance techniques. Well-trained scouts are invaluable assets in exploring unknown territories and gathering vital information."
-	sprite = overseas_income
+	sprite = survey_experience_gain
 	x = 396
 	y = 163
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		survey_experience_gain = 0.25
 	}
 }
 new scouting_company_idea company_5 = {
 	name = "Explorer's Academy"
 	desc = "Establishing a prestigious institution dedicated to the training of explorers and navigators will ensure a steady stream of skilled individuals ready to chart unknown territories and uncover valuable information about the world."
-	sprite = overseas_income
+	sprite = survey_recruits_modifier
 	x = 369
 	y = 188
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		survey_recruits_modifier = 0.15
 	}
 }
 new scouting_company_idea company_6 = {
 	name = "Pioneer Spirit"
 	desc = "Instilling a pioneering spirit within our populace will encourage exploration, colonization, and innovation, driving our nation forward into new frontiers and ensuring our place as a leading force in the global arena."
-	sprite = overseas_income
+	sprite = free_dip_policy
 	x = 396
 	y = 188
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		free_dip_policy = 1
 	}
 }
 new scouting_company_idea company_7 = {
 	name = "Master Scouts"
 	desc = "A master scout is worth a dozen ordinary soldiers, capable of infiltrating enemy territory, gathering intelligence, and returning safely with their findings. By investing in the training and development of our scouts, we can create a corps of elite operatives who are unmatched in their ability to scout out the enemy and report back with vital information."
-	sprite = overseas_income
+	sprite = prestige
 	x = 369
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		prestige = 0.5
 	}
 }
 new scouting_company_idea company_8 = {
 	name = "Colonial Survey Initiative"
 	desc = "Launching comprehensive surveys and assessments of potential colonial territories to evaluate their suitability for settlement and exploitation. By conducting thorough research and analysis, we can identify the most promising sites for colonization and ensure the success of our colonial ventures."
-	sprite = overseas_income
+	sprite = global_colonial_growth
 	x = 396
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		global_colonial_growth = 25
 	}
 }

@@ -11,18 +11,9 @@ new effect pre_add_expedition_progress = {
 	args = float
 	transpile = {
 		hidden_effect = {
-			set_variable = {
-				which = add_expedition_percentage
-				value = args
-			}
-			divide_variable = {
-				which = add_expedition_percentage
-				which = expedition_length
-			}
-			multiply_variable = {
-				which = add_expedition_percentage
-				value = 100
-			}
+			&add_expedition_percentage := args
+			&add_expedition_percentage /= expedition_length
+			&add_expedition_percentage *= 100
 		}
 	}
 }
@@ -32,10 +23,7 @@ new effect post_add_expedition_progress = {
 	transpile = {
 		custom_tooltip = add_expedition_progress_tt
 		hidden_effect = {
-			change_variable = {
-				which = expedition_progress
-				value = args
-			}
+			&expedition_progress += args
 			
 			reload_expedition_progress
 		}

@@ -651,6 +651,17 @@ new interface_file countrytechnologyview = {
 			scripted = yes
 		}
 		instantTextBoxType = {
+			name = "survey_has_no_leader"
+			position = { x = (300 + 16) y = (128 + 118) }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 250
+			maxHeight = 29
+			format = left
+			scripted = yes
+		}
+		instantTextBoxType = {
 			name = "survey_leader_adm_value"
 			position = { x = (300 + 28) y = (128 + 148) }
 			textureFile = ""
@@ -756,7 +767,7 @@ new interface_file countrytechnologyview = {
 			format = centre
 			scripted = yes
 		}
-	
+		
 		iconType = {
 			name = "survey_percent_overlay"
 			spriteType = "GFX_survey_percent_overlay"
@@ -765,6 +776,16 @@ new interface_file countrytechnologyview = {
 			scripted = yes
 		}
 		
+		instantTextBoxType = {
+			name = "custom_mechanic_survey_experience_value"
+			position = { x = (244 - 153) y = (317 - 14) }
+			textureFile = ""
+			font = "vic_18"
+			scripted = yes
+			maxWidth = 52
+			maxHeight = 22
+			format = center
+		}
 	}
 	### ------- Administrative Tech Research -------
 	windowType = {

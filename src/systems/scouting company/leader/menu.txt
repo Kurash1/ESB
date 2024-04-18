@@ -1,6 +1,7 @@
 new custom_icon survey_leader_gender_icon = {
 	potential = {
 		has_country_flag = show_survey_screen
+		has_country_flag = survey_has_scout_master
 	}
 	frames = {
 		{
@@ -22,8 +23,18 @@ new custom_icon survey_leader_gender_icon = {
 new custom_text_box survey_leader_name = {
     potential = {
 		has_country_flag = show_survey_screen
+		has_country_flag = survey_has_scout_master
 	}
 	name = "Master: [Root.survey_leader_name.GetName]"
+}
+new custom_text_box survey_has_no_leader = {
+    potential = {
+		has_country_flag = show_survey_screen
+		NOT = {
+			has_country_flag = survey_has_scout_master
+		}
+	}
+	name = "Has no Scout-Master"
 }
 new custom_text_box survey_leader_adm_value = {
     potential = {

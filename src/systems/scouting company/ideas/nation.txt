@@ -7,7 +7,7 @@ new scouting_company_idea nation_1 = {
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		development_cost = -0.05
+		development_cost = -0.1
 	}
 }
 new scouting_company_idea nation_2 = {
@@ -68,30 +68,30 @@ new scouting_company_idea nation_6 = {
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		envoy_travel_time = -0.2
+		envoy_travel_time = -0.25
 	}
 }
 new scouting_company_idea nation_7 = {
 	name = "Signal Flare Systems"
 	desc = "Implementing sophisticated signal flare systems across our territories and naval fleets will facilitate rapid communication and coordination, allowing us to react swiftly to emerging threats and opportunities with decisive action."
-	sprite = overseas_income
+	sprite = global_monthly_devastation
 	x = 429
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		global_monthly_devastation = -0.1
 	}
 }
 new scouting_company_idea nation_8 = {
 	name = "Waystation Infrastructure"
 	desc = "Developing a system of strategically located waystations and supply depots to support our explorers and expeditions. With reliable rest stops and logistical support along our routes, we can extend our reach into distant lands and ensure the success of our scouting endeavors."
-	sprite = overseas_income
+	sprite = road_line
 	x = 456
 	y = 213
 	trigger = { }
 	on_apply = { }
 	modifier = {
-		global_tax_income = 1
+		road_line = 1
 	}
 }

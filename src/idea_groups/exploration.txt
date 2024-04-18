@@ -13,7 +13,7 @@ new idea_group exploration_ideas = {
 			name = "That which is below"
 			desc = "There are relics and ruins of ages long past beneath our feet. The earlier we uncover their ancient knowledge the better."
 			modifier = {
-				global_expedition_progress = 1
+				global_expedition_speed = 0.15
 			}
 		}
 		{
@@ -27,14 +27,14 @@ new idea_group exploration_ideas = {
 			name = "Map the Unknown"
 			desc = "Cartographers are a necessity on any expedition. We must count them among our ranks."
 			modifier = {
-				survey_speed = 1
+				survey_speed = 0.5
 			}
 		}
 		{
 			name = "Explorer's Guild"
 			desc = "By establishing a proper guild for exploration we can minimize both the risks and maximize the rewards of any given expedition."
 			modifier = {
-				expedition_positive_event_chance = 0.25
+				global_expedition_progress = 0.25
 			}
 		}
 		{
@@ -42,7 +42,7 @@ new idea_group exploration_ideas = {
 			desc = "With a dedicated scouting organisation we can find new resources far more efficiently than our competitors."
 			modifier = {
 				global_trade_goods_size_modifier = 0.1
-				cavalry_power = 0.10
+				survey_experience_gain = 0.1
 			}
 		}
 		{

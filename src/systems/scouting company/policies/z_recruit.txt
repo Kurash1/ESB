@@ -1,15 +1,15 @@
+new named_effect clear_recruit_policy = {
+	foreach $policy in survey_recruitment_policies {
+		if [has_recruitment_policy = $policy] {
+			unapply_recruitment_policy = $policy
+		}
+	}
+}
 new country_event survey_mechanic.1 = {
 	title = "Select Recruitment Policy"
 	desc = ""
 	picture = recruits_eventPicture
 	is_triggered_only = yes
-	immediate = {
-		foreach $policy in survey_recruitment_policies {
-			if [has_recruitment_policy = $policy] {
-				unapply_recruitment_policy = $policy
-			}
-		}
-	}
 	options = {
 	}
 }
@@ -49,6 +49,8 @@ new class survey_recruitment_policy = {
 			{
 				name =* "*this:name*"
 				effect =* {
+					clear_recruit_policy
+					
 					apply_recruitment_policy = *this:id*
 				}
 			}
@@ -96,7 +98,7 @@ new survey_recruitment_policy no_recruitment = {
 	name = "No Recruitment"
 	icon = 1
 	modifier = {
-		survey_recruit_rate = -1
+		survey_recruit_rate = 0
 	}
 }
 new survey_recruitment_policy standard_recruitment = {
