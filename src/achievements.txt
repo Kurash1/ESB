@@ -164,12 +164,7 @@ define_achievement = {
 	name = "Dragon of Bridges"
 	trigger = {
 		tag = dragon_bridge
-		foreach $adjacency in adjacencies [
-			str:contains = {
-				string = $adjacency:id
-				value = bridge
-			}
-		] {
+		foreach $adjacency in adjacencies [$adjacency:id:contains = bridge] {
 			owns_bridge = $adjacency
 		}
 	}

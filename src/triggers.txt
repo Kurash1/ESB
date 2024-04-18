@@ -161,12 +161,7 @@ new trigger has_advisor_level_two_of = {
 		custom_trigger_tooltip = {
 			tooltip = `has_level_two_{args}_advisors`
 			OR = {
-				foreach $advisor_type in advisor_types [
-					str:contains = {
-						string = $advisor_type:monarch_power
-						value = args
-					}
-				] {
+				foreach $advisor_type in advisor_types [$advisor_type:monarch_power == args] {
 					$advisor_type = 2
 				}
 			}
