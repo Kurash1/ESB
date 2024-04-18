@@ -67,12 +67,7 @@ new class survey_passive_activity = {
 							}
 						}
 					}
-					when [
-						NOT = {
-							exists = survey_passive_activities:*this:id*:trigger_tooltip
-							exists = survey_passive_activities:*this:id*:trigger
-						}
-					] {
+					when_not {
 						hidden_effect = {
 							clear_passive_activity
 						}
