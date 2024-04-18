@@ -657,13 +657,11 @@ new province northern_road = {
 		200 207 188
 	}
 	history = {
-		history_owner = raven_scar
+		history_owner = shadow_green
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = wood
-	
-		is_city = no
 	}
 }
 new province ravenscar = {
@@ -713,8 +711,8 @@ new province widows_watch = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = wood
-	
-		is_city = yes
+		
+		fort_15th = yes
 		history_owner = raven_scar
 	}
 }
@@ -739,7 +737,8 @@ new province northern_mine = {
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = c_metals
+		mine = yes
 	
 		is_city = yes
 	}
@@ -840,7 +839,7 @@ new province horned_coast = {
 		189 251 233
 	}
 	history = {
-		history_owner = pine_frost
+		history_owner = rime_rock
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
@@ -870,9 +869,8 @@ new province low_grove = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = stone
-	
-		is_city = yes
-		history_owner = pine_frost
+		
+		history_owner = rime_rock
 		
 		1.1.1 = {
 			create_expedition = {
@@ -914,6 +912,7 @@ new province pinefrost = {
 		history_owner = pine_frost
 		hre = yes
 		history_trade_goods = stone
+		fort_15th = yes
 	}
 }
 new province volskygge = {
@@ -1084,6 +1083,9 @@ new province lost_echo_cave = {
 		history_owner = wolf_skull
 		hre = yes
 		history_trade_goods = wood
+		2568.1.1 = {
+			add_claim = skjoralmor
+		}
 	}
 }
 new province wolfskull_cave = {
@@ -1107,7 +1109,7 @@ new province wolfskull_cave = {
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = mag_goods
 	
 		is_city = yes
 	}
@@ -1167,8 +1169,6 @@ new province kilkreath_temple = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = wood
-	
-		is_city = yes
 	}
 }
 new province ironback_hideout = {
@@ -1292,6 +1292,11 @@ new province galsgik = {
 quick_strait = {
 	from = rock_isle
 	to = clay_coast
+	through = coast_of_verglas
+}
+quick_strait = {
+	from = rock_isle
+	to = wolfs_eye
 	through = coast_of_verglas
 }
 quick_strait = {
