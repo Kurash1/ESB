@@ -1,0 +1,76 @@
+new historical_war war_of_twin_bridges = {
+	name = "War of Twin Bridges"
+	war_goal = {
+		type = superiority_punitive
+		casus_belli = cb_super_badboy
+	}
+	dates = {
+		2559.11.19 = {
+			add_attacker = countries:snow_hawk
+			add_defender = countries:solitude
+		}
+		2560.4.1 = { #Battle of Dragon Bridge
+			add_defender = countries:dragon_bridge
+			battle = {
+				name = "Dragon Bridge"
+				location = provinces:dragon_bridge
+				attacker = {
+					commander = "Hjolfr Frost-Blade"
+					infantry = 12000
+					cavalry = 1000
+					artillery = 2000
+					losses = 5
+					country = countries:snow_hawk
+				}
+				defender = {
+					commander = "Svari of Four Shields"
+					infantry = 3000
+					losses = 80
+					country = countries:dragon_bridge
+				}
+				result = yes
+			}
+		}
+		2562.7.5 = { #Battle of Alviora
+			battle = {
+				name = "Alviora"
+				location = provinces:alviora
+				attacker = {
+					commander = "Hjolfr Frost-Blade"
+					infantry = 12000
+					cavalry = 1000
+					artillery = 2000
+					losses = 35
+					country = countries:snow_hawk
+				}
+				defender = {
+					commander = "Varric Rock-Hammer"
+					infantry = 11000
+					artillery = 1000
+					losses = 40
+					country = countries:solitude
+				}
+				result = yes
+			}
+		}
+		#2566.1.4 = {
+		#	#Siege of Esjuberg
+		#}
+		2566.4.5 = { #Treaty of Horga Hills
+			rem_attacker = countries:snow_hawk
+			rem_defender = countries:solitude
+		}
+	}
+}
+new relation vassal = {
+	first = SOL
+	second = DRB
+	start_date = 2566.4.5
+	end_date = 9999.1.1
+}
+new relation guarantee = {
+	first = SOL
+	second = CHW
+	start_date = 2566.4.5
+	end_date = 9999.1.1
+}
