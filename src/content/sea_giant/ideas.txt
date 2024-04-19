@@ -14,6 +14,14 @@ new idea_group sea_giant_ideas = {
 	}
 	ideas = {
 		{
+			name = "Savage Sea Raids"
+			desc = "Known for their ruthless pillaging during the coldest winters, the Sea Giants excel in executing swift and devastating sea raids. Their tactics are as cunning as they are ferocious, leaving coastal settlements in chaos before vanishing into the misty depths."
+			modifier = {
+				may_perform_slave_raid_on_same_religion = yes
+				coast_raid_range = 2
+			}
+		}
+		{
 			name = "Waveforged Spears"
 			desc = "Amidst the frozen waves, the Sea Giants have perfected the craft of crafting bone weapons from the remains of their prey. These Waveforged Spears, adorned with jagged ends and enchanted with the essence of the sea, are the chosen tools of Sea Giants in their maritime hunts."
 			modifier = {
@@ -56,13 +64,6 @@ new idea_group sea_giant_ideas = {
 			desc = "Unlike their landlocked cousins, Sea Giants exhibit a unique harmony with the vast oceans. Their Oceanic Harmony enables complex tool usage and group coordination, especially in the hunt for elusive whales beneath the ice. Fearless and efficient, Sea Giants form a deadly alliance to pursue their maritime prey."
 			modifier = {
 				naval_morale = 0.1
-			}
-		}
-		{
-			name = "Savage Sea Raids"
-			desc = "Known for their ruthless pillaging during the coldest winters, the Sea Giants excel in executing swift and devastating sea raids. Their tactics are as cunning as they are ferocious, leaving coastal settlements in chaos before vanishing into the misty depths."
-			modifier = {
-				may_perform_slave_raid = yes
 			}
 		}
 	}
