@@ -228,6 +228,9 @@ new country solitude = {
 		add_historical_friend = dawn_star
 		add_historical_rival = snow_hawk
 	
+		2566.4.5 = { #Treaty of Horga Hills
+			add_manpower = -7.5
+		}
 		2568.1.1 = {
 			starting_ruler = {
 				name = "Vigrod"
@@ -523,6 +526,9 @@ new country snow_hawk = {
 	capital = snowhawk
 	history += {
 		add_historical_rival = solitude
+		2566.4.5 = { #Treaty of Horga Hills
+			add_manpower = -6
+		}
 	}
 }
 new country mort_hall = {
@@ -639,6 +645,11 @@ new country hjaal = {
 		50 106 188
 	}
 	capital = hjaals_tooth
+	history += {
+		2566.4.5 = { #Treaty of Horga Hills
+			add_manpower = -5.5
+		}
+	}
 }
 new country rorikstead = {
 	inherit = nordic_country
@@ -1531,22 +1542,16 @@ new country wave_crusher = {
 	}
 }
 
-new relation guarantee = {
-	first = SOL
-	second = CHW
-	start_date = 2500.1.1
+new relation march = {
+	first = SNO
+	second = HJA
+	start_date = 2550.1.1
 	end_date = 9999.1.1
 }
 new relation alliance = {
 	first = SOL
 	second = DAW
-	start_date = 2567.1.1
-	end_date = 9999.1.1
-}
-new relation vassal = {
-	first = SOL
-	second = DRB
-	start_date = 2568.1.1
+	start_date = 2550.1.1
 	end_date = 9999.1.1
 }
 new relation vassal = {
