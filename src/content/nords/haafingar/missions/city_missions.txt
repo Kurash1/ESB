@@ -243,6 +243,7 @@ mission_trees:solitude += {
 		required = {
 			the_emperors_tower
 			a_new_city
+			castle_upon_the_hill
 		}
 		trigger = {
 			provinces:solitude = {
@@ -254,6 +255,7 @@ mission_trees:solitude += {
 				name = "Build the Avenues District"
 				potential = {
 					has_country_flag = build_solitude_districts
+					NOT = { has_country_flag = build_the_avenues_district }
 				}
 				allow = {
 					owns = solitude
@@ -261,6 +263,7 @@ mission_trees:solitude += {
 				}
 				effect = {
 					add_treasury = -500
+					set_country_flag = build_the_avenues_district
 					provinces:solitude = {
 						quick_province_modifier = {
 							name = "Avenues District"
@@ -277,6 +280,7 @@ mission_trees:solitude += {
 				name = "Build the Wells District"
 				potential = {
 					has_country_flag = build_solitude_districts
+					NOT = { has_country_flag = build_the_wells_district }
 				}
 				allow = {
 					owns = solitude
@@ -284,6 +288,7 @@ mission_trees:solitude += {
 				}
 				effect = {
 					add_treasury = -500
+					set_country_flag = build_the_wells_district
 					provinces:solitude = {
 						quick_province_modifier = {
 							name = "Wells District"
@@ -300,6 +305,7 @@ mission_trees:solitude += {
 				name = "Found the Bards College"
 				potential = {
 					has_country_flag = found_solitude_organizations
+					NOT = { has_country_flag = found_the_bards_college }
 				}
 				allow = {
 					owns = solitude
@@ -308,8 +314,9 @@ mission_trees:solitude += {
 				}
 				effect = {
 					add_treasury = -1000
+					set_country_flag = build_the_wells_district
 					new_custom_tooltip = "The monument §YBards College§! is created in §Y[{provinces:solitude}.GetName]§! at Noteworthy level."
-			
+					
 					hidden_effect = {
 						create_monument = {
 							monument = bards_college
@@ -328,6 +335,7 @@ mission_trees:solitude += {
 				name = "Found the Coterie of Organized Scholars"
 				potential = {
 					has_country_flag = found_solitude_organizations
+					NOT = { has_country_flag = found_the_coterie_of_organized_scholars }
 				}
 				allow = {
 					owns = solitude
@@ -335,6 +343,7 @@ mission_trees:solitude += {
 				}
 				effect = {
 					add_treasury = -1000
+					set_country_flag = found_the_coterie_of_organized_scholars
 					quick_country_modifier = {
 						name = "Coterie of Organized Scholars"
 						modifier = {
@@ -406,7 +415,7 @@ Unlocks §YFound the Coterie of Organized Scholars§! Decision.
 		}
 	}
 	a_new_port = {
-		name = "Great Port\n of Red"
+		name = "The Great Port of Red"
 		desc = "Once known as the capital of the realm, now §YRed-Port§! is the second most important port of Haafingar right after §YSkalavik§!, but many of our advisors suggest that having our primary port closer to our capital would benefit in both trade and military operations. Thus came the proposals to build a new §YGreat Port of Red§!."
 		icon = red_port_mission
 		x = 0
@@ -448,5 +457,370 @@ Unlocks §YFound the Coterie of Organized Scholars§! Decision.
 			}
 		}
 	}
-	
+	solitude_trade_pact = {
+		name = "Solitude Trade-Pact"
+		desc = "Through great effort we have become the dominant trade power all across Western Skyrim, some merchants are even saying that we could force others to become our vassals through the influence of our money. While this is often said in a joking tone, whose to say it must stay a joke."
+		x = 0
+		y = 5
+		icon = dainty_sload_mission
+		required = a_new_port
+		trigger = {
+			is_strongest_trade_power_in = solitude
+			is_strongest_trade_power_in = northwatch
+			is_strongest_trade_power_in = stonehills
+			is_strongest_trade_power_in = hjaal
+			is_strongest_trade_power_in = karthwasten
+		}
+		effect = {
+			new_custom_tooltip = "Unlocks the use of the §YSolitude-Pact Expansion§! casus belli
+Unlocks the use of the §YInvite into the Trade-Pact§! diplomatic action"
+			set_country_flag = solitude_trade_pact
+		}
+	}
+	longship_legions = {
+		name = "Longship Legions"
+		desc = "We came to these lands amongst three ships made in Atmora, and our people never forgot what it means to be born of the north, and what it means to be one with the seas. Our ports mighty, Skalavik, Red-Port, Northwatch, have produced a navy of longships so great it can be called a Legion."
+		x = 1
+		y = 5
+		required = a_new_port
+		icon = longboat_mission
+		trigger = {
+			has_longships = {
+				num = 50
+				backup = {
+					navy_size = 150
+				}
+			}
+		}
+		effect = {
+			new naval_doctrine longship_legions = {
+				name = "Longship Legions"
+				desc = ""
+				button_gfx = 13
+				can_select = {
+					has_dlc = "Domination"
+					has_country_flag = has_longship_legions
+				}
+				country_modifier = {
+					allowed_galleass_fraction = 0.25
+					max_flagships = 2
+				}
+			}
+			new naval_doctrine longship_legions_no_dlc = {
+				name = "Longship Legions"
+				desc = ""
+				button_gfx = 13
+				can_select = {
+					NOT = { has_dlc = "Domination" }
+					has_country_flag = has_longship_legions
+				}
+				country_modifier = {
+					max_flagships = 2
+				}
+			}
+			
+			new_custom_tooltip = "Unlocks §YLongship Legions§! Naval Doctrine, which upon selecting grants the following:
+	{modifier_to_string = {
+		allowed_galleass_fraction = 0.25
+		max_flagships = 2
+	}}"
+			set_country_flag = has_longship_legions
+		}
+	}
+	three_clans_of_solitude = {
+		name = "Three Clans of Solitude"
+		x = 4
+		y = 0
+		trigger = {
+			stability = 1
+		}
+		effect = {
+			estates:clans:privileges += new rock_hammer_castle_rights = {
+				name = "Rock-Hammer Castle Rights"
+				icon = privilege_fort
+				loyalty = 0.1
+				influence = 0.1
+				max_absolutism = -5
+				is_valid = { has_country_flag = solitude_clan_privileges }
+				benefits = {
+					fort_maintenance_modifier = -0.25
+				}
+				on_granted = {
+					new_custom_tooltip = "Increases the chance for the §YA Private Castle§! Random Event."
+				}
+			}
+			estates:clans:privileges += new rock_hammer_mining_rights = {
+				name = "Rock-Hammer Mining Rights"
+				icon = privilege_ore
+				loyalty = 0.1
+				influence = 0.1
+				max_absolutism = -5
+				is_valid = { 
+					has_country_flag = solitude_clan_privileges
+				}
+				can_select = {
+					OR = {
+						c_metals = 1
+						r_metals = 1
+					}
+				}
+				on_granted = {
+					new_custom_tooltip = "Every owned province producing §YCommon Metals§! or §YRare Metals§! gains:
+	{modifier_to_string = {
+		trade_goods_size_modifier = 0.25
+		min_local_autonomy = 10
+	}}"
+				}
+				on_revoked = {
+					new_custom_tooltip = "The modifier §YRock-Hammer Miners§! is removed from all owned provinces."
+				}
+				on_granted_province = {
+					if [
+						OR = {
+							has_trade_goods = c_metals
+							has_trade_goods = r_metals
+						}
+					] {
+						quick_province_modifier = {
+							id = rock_hammer_enhanced_mining
+							name = "Rock-Hammer Miners"
+							modifier = {
+								trade_goods_size_modifier = 0.25
+								min_local_autonomy = 10
+							}
+						}
+					}
+					else_if [has_province_modifier = rock_hammer_enhanced_mining] {
+						remove_province_modifier = rock_hammer_enhanced_mining
+					}
+				}
+				on_revoked_province = {
+					if [has_province_modifier = rock_hammer_enhanced_mining] {
+						remove_province_modifier = rock_hammer_enhanced_mining
+					}
+				}
+				on_invalid_province = {
+					if [has_province_modifier = rock_hammer_enhanced_mining] {
+						remove_province_modifier = rock_hammer_enhanced_mining
+					}
+				}
+			}
+			estates:clans:privileges += new storm_galley_fishing_rights = {
+				name = "Storm-Galley Fishing Rights"
+				icon = privilege_fish
+				loyalty = 0.1
+				influence = 0.1
+				max_absolutism = -5
+				is_valid = { has_country_flag = solitude_clan_privileges }
+				can_select = { fish = 1 }
+				benefits = {
+					sailors_loyalty_modifier = -0.1
+					sailors_influence_modifier = -0.05
+				}
+				on_granted = {
+					new_custom_tooltip = "Every owned province producing §YFish§! gains:
+	{modifier_to_string = {
+		trade_goods_size_modifier = 0.25
+		min_local_autonomy = 10
+	}}"
+				}
+				on_revoked = {
+					new_custom_tooltip = "The modifier §YStorm-Galley Fishermen§! is removed from all owned provinces."
+				}
+				on_granted_province = {
+					if [has_trade_goods = fish] {
+						quick_province_modifier = {
+							id = storm_galley_enhanced_fishers
+							name = "Storm-Galley Fishermen"
+							modifier = {
+								trade_goods_size_modifier = 0.25
+								min_local_autonomy = 10
+							}
+						}
+					}
+					else_if [has_province_modifier = storm_galley_enhanced_fishers] {
+						remove_province_modifier = storm_galley_enhanced_fishers
+					}
+				}
+				on_revoked_province = {
+					if [has_province_modifier = storm_galley_enhanced_fishers] {
+						remove_province_modifier = storm_galley_enhanced_fishers
+					}
+				}
+				on_invalid_province = {
+					if [has_province_modifier = storm_galley_enhanced_fishers] {
+						remove_province_modifier = storm_galley_enhanced_fishers
+					}
+				}
+			}
+			estates:clans:privileges += new storm_galley_naval_rights = {
+				name = "Storm-Galley Naval Rights"
+				icon = privilege_galley
+				loyalty = 0.1
+				influence = 0.1
+				max_absolutism = -5
+				is_valid = { has_country_flag = solitude_clan_privileges }
+				benefits = {
+					naval_forcelimit_modifier = 0.15
+					sailors_loyalty_modifier = -0.1
+					sailors_influence_modifier = -0.05
+				}
+			}
+			estates:clans:privileges += new red_wolf_general_rights = {
+				name = "Red-Wolf General Rights"
+				icon = privilege_army_professionalism
+				loyalty = 0.1
+				influence = 0.1
+				max_absolutism = -5
+				is_valid = { has_country_flag = solitude_clan_privileges }
+				benefits = {
+					general_cost = -0.25
+					warriors_loyalty_modifier = -0.1
+					warriors_influence_modifier = -0.05
+				}
+				on_granted = {
+					new localisation EST_VAL_RED_WOLF_GENERAL_RIGHTS_INFLUENCE = "Recruited a general from Clan Red-Wolf"
+					new_custom_tooltip = "Upon recruitment of a new general the §YClans§! Estate gains §Y5§! influence for §Y10§! years."
+					
+					on_actions:on_general_recruited += {
+						if [has_estate_privilege = clans:red_wolf_general_rights] {
+							add_estate_influence_modifier = {
+								estate = estate_clans
+								desc = EST_VAL_RED_WOLF_GENERAL_RIGHTS_INFLUENCE
+								influence = 5
+								duration = 3650
+							}
+						}
+					}
+				}
+			}
+			estates:clans:privileges += new red_wolf_warrior_rights = {
+				name = "Red-Wolf Warrior Rights"
+				icon = privilege_demand_more_troops
+				loyalty = 0.1
+				influence = 0.1
+				max_absolutism = -5
+				is_valid = { has_country_flag = solitude_clan_privileges }
+				benefits = {
+					manpower_recovery_speed = 0.15
+					warriors_loyalty_modifier = -0.1
+					warriors_influence_modifier = -0.05
+				}
+			}
+			set_country_flag = solitude_clan_privileges
+			new_custom_tooltip = "Unlocks §YRock-Hammer Castle Rights§! Privilege for Clans.
+Unlocks §YRock-Hammer Mining Rights§! Privilege for Clans.
+Unlocks §YStorm-Galley Fishing Rights§! Privilege for Clans.
+Unlocks §YStorm-Galley Naval Rights§! Privilege for Clans.
+Unlocks §YRed-Wolf General Rights§! Privilege for Clans.
+Unlocks §YRed-Wolf Warrior Rights§! Privilege for Clans."
+		}
+	}
+	repair_esjuberg = {
+		name = "Repair Fort Esjuberg"
+		x = 3
+		y = 1
+		required = three_clans_of_solitude
+		trigger = {
+			provinces:esjuberg = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			
+		}
+	}
+	castle_upon_the_hill = {
+		name = "Castle upon the Hill"
+		icon = castle_dour_mission
+		x = 2
+		y = 2
+		required = repair_esjuberg
+		trigger = {
+			owns = solitude
+			provinces:solitude = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			new_custom_tooltip = "The monument §YCastle Dour§! is created in §Y[{provinces:solitude}.GetName]§! at Noteworthy level.\n"
+			
+			hidden_effect = {
+				create_monument = {
+					monument = castle_dour
+					province = solitude
+				}
+				provinces:solitude = {
+					add_great_project_tier = {
+						type = castle_dour
+						tier = 1
+					}
+				}
+			}
+		}
+	}
+	tower_project = {
+		name = "Tower Project"
+		x = 2
+		y = 5
+		required = {
+			castle_upon_the_hill
+			solitude_countryside
+		}
+		icon = tower_project_mission
+		trigger = {
+			treasury = 1000
+			areas:solitude; dragon_bridge; wolfs_eye = {
+				type = all
+				owned_by = ROOT
+				base_manpower = 5
+			}
+		}
+		effect = {
+			add_treasury = -1000
+			
+			areas:solitude; dragon_bridge; wolfs_eye = {
+				quick_province_modifier = {
+					name = "Military Towers"
+					modifier = {
+						fort_level = 1
+					}
+				}
+			}
+		}
+	}
+	skalavik_navy = {
+		name = "Skalavik Navy"
+		x = 4
+		y = 1
+		required = three_clans_of_solitude
+		trigger = {
+			
+		}
+		effect = {
+			
+		}
+	}
+	end_the_pirate_threat = {
+		name = "End the Pirate Threat"
+		x = 3
+		y = 2
+		required = skalavik_navy
+		trigger = {
+			
+		}
+		effect = {
+			
+		}
+	}
 }

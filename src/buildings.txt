@@ -59,6 +59,20 @@ new building coastal_defence = {
 	}
 }
 
+new building fort_14th = {
+	name = "Damaged Fort"
+	desc = ""
+	cost = 100
+	time = 30
+	modifier = {
+		fort_level = 1
+		local_defensiveness = -0.5
+	}
+	influencing_fort = yes
+	ai_will_do = {
+		factor = 1
+	}
+}
 new building fort_15th = {
 	name = "Fort"
 	desc = ""
@@ -66,6 +80,7 @@ new building fort_15th = {
 	time = 30
 	x = 20 
 	y = 34
+	make_obsolete = fort_14th
 	modifier = {
 		fort_level = 2
 	}

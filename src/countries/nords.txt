@@ -240,9 +240,32 @@ new country solitude = {
 				mil = 5
 				age = 37
 			}
+			
 			add_faction_influence = {
 				faction = solitude_red_wolf
 				influence = 15
+			}
+			
+			on_initialize += {
+				countries:solitude = {
+					disband_all_units = yes
+					provinces:esjuberg = { #Army
+						create_infantry = 10
+						create_artillery = 1
+					}
+					provinces:skalavik = { #Fleet
+						create_heavy_ship = 1
+						if [has_dlc = "Domination"] {
+							create_galleass_galley = 4
+						}
+						else {
+							create_galley = 4
+						}
+						create_galley = 2
+						create_light_ship = 3
+						create_transport = 4
+					}
+				}
 			}
 		}
 	}

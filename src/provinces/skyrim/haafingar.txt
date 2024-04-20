@@ -118,6 +118,7 @@ new province red_port = {
 	area = solitude
 	name = "Solitude" #Changes to "Solitude Port" in the missions
 	terrain = coastline
+	base_development = 11
 	color = {
 		160 235 188
 	}
@@ -170,10 +171,13 @@ new province skalavik = {
 	area = solitude
 	name = "Skalavik"
 	terrain = coastline
+	base_development = 13
 	color = {
 		144 103 168
 	}
 	history = {
+		center_of_trade = 1
+	
 		history_owner = solitude
 		religion = nordic_pantheon
 		culture = haafingarian
@@ -231,6 +235,7 @@ new province alviora = {
 	area = dragon_bridge
 	name = "Alviora"
 	terrain = coastline
+	base_development = 4
 	color = {
 		158 127 179
 	}
@@ -257,6 +262,7 @@ new province esjuberg = {
 	area = dragon_bridge
 	name = "Esjuberg"
 	terrain = hills
+	base_development = 11
 	color = {
 		174 195 199
 	}
@@ -269,7 +275,7 @@ new province esjuberg = {
 	
 		add_core = rock_hammer
 		
-		fort_15th = yes
+		fort_14th = yes
 		quick_province_modifier = {
 			name = "Seat of Clan Rock-Hammer"
 			modifier = {
@@ -422,6 +428,7 @@ new province wolfs_eye = {
 		167 222 241
 	}
 	terrain = coastline
+	base_development = 10
 	history = {
 		center_of_trade = 1
 		history_owner = solitude
