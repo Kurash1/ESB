@@ -529,6 +529,8 @@ Unlocks the use of the §YInvite into the Trade-Pact§! diplomatic action"
 	}
 	three_clans_of_solitude = {
 		name = "Three Clans of Solitude"
+		desc = "Solitude was founded by the Three Clans §YRock-Hammer§!, §YStorm-Galley§!, and §YRed-Wolf§! after a brutal raid by sea giants on clan §YRed-Wolf§!, for nearly a century solitude was rivals with this nameless tribe of sea giants as they continuously invaded our fair lands, but finally they were vanquished in 2561. Now that our purpose of unification has dissapeared the legitimacy of the realm lies in question, but through show of stability we can keep the realm united."
+		icon = mission_che_the_council_house
 		x = 4
 		y = 0
 		trigger = {
@@ -718,6 +720,8 @@ Unlocks §YRed-Wolf Warrior Rights§! Privilege for Clans."
 	}
 	repair_esjuberg = {
 		name = "Repair Fort Esjuberg"
+		desc = "During the §YWar of Twin Bridges§!, Esjuberg, Seat of Clan §YRock-Hammer§! was put to siege by the vile armies of §YSnow-Hawk§!, and after a 4 year long siege the fort fell, and the forces of §YSnow-Hawk§! were not content with simply seizing the Fort, but rather destroyed it. If we were to repair the damaged fort, it would make our western lands safer, and restore some of clan §YRock-Hammer§!'s lost power would be restored."
+		icon = mission_fortify_rajputana
 		x = 3
 		y = 1
 		required = three_clans_of_solitude
@@ -732,11 +736,36 @@ Unlocks §YRed-Wolf Warrior Rights§! Privilege for Clans."
 			}
 		}
 		effect = {
+			provinces:esjuberg = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
 			
+			add_estate_loyalty = {
+				estate = estate_clans
+				loyalty = 10
+			}
+			
+			add_faction_influence = {
+				faction = solitude_rock_hammer
+				influence = 10
+			}
+			
+			conditional_effect = {
+				tooltip = "your ruler is of clan §YRock-Hammer§!"
+				trigger = {
+					dynasty = "Rock-Hammer"
+				}
+				effect = {
+					change_adm = 1
+				}
+			}
 		}
 	}
 	castle_upon_the_hill = {
 		name = "Castle upon the Hill"
+		desc = "After our recent restoration of Fort Esjuberg further discussions betwix clan §YRock-Hammer§! and our Generals have resulted in a proposal for a mighty castle on the hill side overlooking our fair §Y[{provinces:red_port}.GetName]§!. This castle would serve as both center of military command, and protector for our Capital."
 		icon = castle_dour_mission
 		x = 2
 		y = 2
@@ -771,6 +800,7 @@ Unlocks §YRed-Wolf Warrior Rights§! Privilege for Clans."
 	}
 	tower_project = {
 		name = "Tower Project"
+		desc = "Through great efforts we have built the mightiest of fortifications, and our homeland has become a beacon of civilization with continued development, but this development makes it a target for foreign incursions, and our fortifications are only at key locations while most of the lands are undefended. Our generals have proposed an ambitious plan to build dozens of small military towers across the hills and fields to watch over our homeland."
 		x = 2
 		y = 5
 		required = {
@@ -794,30 +824,144 @@ Unlocks §YRed-Wolf Warrior Rights§! Privilege for Clans."
 					name = "Military Towers"
 					modifier = {
 						fort_level = 1
+						block_slave_raid = yes
 					}
 				}
 			}
 		}
 	}
 	skalavik_navy = {
-		name = "Skalavik Navy"
+		name = "Expand Skalavik's Ports"
+		desc = "Skalavik is the first port of Solitude, and seat of clan §YStorm-Galley§!, when the settlement was founded there was a period of three decades where each and every single architect tried to one up each other with their creations. This era of innovation ended up with it becoming a port unlike any other, of that day that is. Nowadays the port is beginning to fall behind others, but we might be able to revitalize this original spirit by sponsoring our own ship construction sites."
+		icon = mission_secure_hajj_ports
 		x = 4
 		y = 1
 		required = three_clans_of_solitude
 		trigger = {
-			
+			provinces:skalavik = {
+				OR = {
+					has_building = navy_2
+					has_building = navy_3
+					has_building = navy_4
+				}
+			}
+			navy_size = 30
 		}
 		effect = {
+			countries:lone_band = {
+				every_owned_province = {
+					add_permanent_claim = ROOT
+				}
+			}
 			
+			provinces:skalavik = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				
+				add_building = navy_4
+			}
+			
+			add_estate_loyalty = {
+				estate = estate_clans
+				loyalty = 10
+			}
+			
+			add_faction_influence = {
+				faction = solitude_storm_galley
+				influence = 10
+			}
+			
+			conditional_effect = {
+				tooltip = "your ruler is of clan §YStorm-Galley§!"
+				trigger = {
+					dynasty = "Storm-Galley"
+				}
+				effect = {
+					change_dip = 1
+				}
+			}
 		}
 	}
 	end_the_pirate_threat = {
 		name = "End the Pirate Threat"
+		desc = "The §YLone Band§!, fearsome vikingr and reavers, these nords hide away on an abandoned isle amidst the sea of ghosts, raiding every so often our fair lands. While to having the same brutality as the Sea Giants, they end up a thorn on the side of our merchants and populace. But by way of boat and sword can we bring down their black flag."
+		icon = mission_pirate_fleet
 		x = 3
 		y = 2
 		required = skalavik_navy
 		trigger = {
+			NOT = {
+				exists = lone_band
+			}
+		}
+		effect = {
+			home_trade_node_effect_scope = {
+				add_trade_node_income = 12
+			}
 			
+			add_prestige = 15
+			
+			add_power_projection = { 
+				type = mission_rewards_power_projection
+				amount = 25 
+			}
+		}
+	}
+	restoration_of_forces = {
+		name = "Restoration of Forces"
+		desc = "Between §Y2559§! and §Y2566§! we fought a bloody war against §YSnow-Hawk§! and our armies remain damaged from the conflict. Only by restoring our forces may we ensure the safety of our realm, and the stability of haafingarian politics."
+		icon = mission_native_build_army_mission
+		x = 7
+		y = 0
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.75
+		}
+		effect = {
+			add_mil_power = 250
+			add_yearly_manpower = 1
+		}
+	}
+	the_wolf_army = {
+		name = "Form the Wolf Army"
+		desc = "Clan §YRed-Wolf§! has proposed multiple military reforms in which we would change our focus into more aggressive and faster paced methods of warfare, instead of waiting to be attacked we should attack the enemy first."
+		icon = swiss_mercenaries
+		required = {
+			restoration_of_forces
+			three_clans_of_solitude
+		}
+		x = 5
+		y = 1
+		trigger = {
+			army_size = 20
+			num_of_generals = 1
+			faction_in_power = solitude_red_wolf
+			mil_power = 300
+		}
+		effect = {
+			add_mil_power = -300
+			add_government_reform = tier_2_wolf_army
+			
+			add_faction_influence = {
+				faction = solitude_red_wolf
+				influence = 10
+			}
+			
+			areas:hraggstad; kilkreath; shadowgreen; ravenscar; northwatch = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	end_the_treaty = {
+		name = "End the Treaty"
+		desc = ""
+		icon = mission_the_sudebnik
+		required = restoration_of_forces
+		x = 7
+		y = 1
+		trigger = {
+			always = no
 		}
 		effect = {
 			
