@@ -18,3 +18,11 @@ new mission_tree solitude = {
 		}
 	}
 }
+new run_file complete_mt_solitude = {
+	effect = {
+		foreach $mission in mission_trees:solitude {
+			$mission:effect
+			complete_mission = $mission
+		}
+	}
+}

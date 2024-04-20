@@ -1,0 +1,15 @@
+new class run_file = {
+	list = run_files
+	args = {
+		effect = named_effect
+	}
+	simple_transpile = {
+		foreach $run_file in run_files {
+			write_file "{$run_file}.txt" = {
+				ROOT = {
+					$run_file:effect
+				}
+			}
+		}
+	}
+}
