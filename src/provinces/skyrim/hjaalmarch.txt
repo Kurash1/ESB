@@ -256,32 +256,6 @@ new province hjaals_tooth = {
 		is_city = yes
 	}
 }
-new province bumpy_road = {
-	position = {
-		1622.000 1983.000 1622.000 1983.000 1622.000 1983.000 1623.000 1988.000 1622.000 1983.000 1622.000 1983.000 1622.000 1983.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	terrain = steppe
-	area = hjaals_teeth
-	name = "Bumpy Road"
-	color = {
-		126 102 232
-	}
-	history = {
-		history_owner = hjaal
-		religion = nordic_pantheon
-		culture = hjaalmarcher
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-	}
-}
 new province rugged_coast = {
 	position = {
 		1609.000 1995.000 1609.000 1995.000 1609.000 1995.000 1613.500 1991.500 1609.000 1995.000 1609.000 1995.000 1609.000 1995.000
@@ -360,32 +334,6 @@ new province fishermans_hangout = {
 		is_city = yes
 	}
 }
-new province barren_road = {
-	position = {
-		1610.000 2015.000 1610.000 2015.000 1610.000 2015.000 1608.000 2010.000 1610.000 2015.000 1610.000 2015.000 1610.000 2015.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.785 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	terrain = steppe
-	area = twin_bridges
-	name = "Barren Road"
-	color = {
-		239 203 149
-	}
-	history = {
-		history_owner = snow_hawk
-		religion = nordic_pantheon
-		culture = hjaalmarcher
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-	}
-}
 new province chillwind_depths = {
 	position = {
 		1600.000 2014.000 1600.000 2014.000 1600.000 2014.000 1604.000 2013.000 1600.000 2014.000 1600.000 2014.000 1600.000 2014.000
@@ -438,32 +386,6 @@ new province rivers_road = {
 		is_city = yes
 	}
 }
-new province cliff_point = {
-	position = {
-		1610.000 2038.000 1610.000 2038.000 1610.000 2038.000 1615.500 2041.500 1610.000 2038.000 1610.000 2038.000 1610.000 2038.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	terrain = grasslands
-	area = rivers_horn
-	name = "Cliff Point"
-	color = {
-		166 132 146
-	}
-	history = {
-		history_owner = chill_wind
-		religion = nordic_pantheon
-		culture = hjaalmarcher
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-	}
-}
 new province forebears_holdout = {
 	position = {
 		1620.000 2028.000 1620.000 2028.000 1620.000 2028.000 1613.000 2029.000 1620.000 2028.000 1620.000 2028.000 1620.000 2028.000
@@ -482,6 +404,32 @@ new province forebears_holdout = {
 	}
 	history = {
 		history_owner = snow_hawk
+		religion = nordic_pantheon
+		culture = hjaalmarcher
+		hre = yes
+		history_trade_goods = fish
+	
+		is_city = yes
+	}
+}
+new province cliff_point = {
+	position = {
+		1610.000 2038.000 1610.000 2038.000 1610.000 2038.000 1615.500 2041.500 1610.000 2038.000 1610.000 2038.000 1610.000 2038.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	terrain = grasslands
+	area = rivers_horn
+	name = "Cliff Point"
+	color = {
+		166 132 146
+	}
+	history = {
+		history_owner = chill_wind
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -695,7 +643,7 @@ new province minedvild = {
 		192 143 123
 	}
 	history = {
-		history_owner = snow_hawk
+		history_owner = mort_hall
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -1298,31 +1246,39 @@ new province morthal_colony = {
 new adjacency morthal_bridge = {
 	from = morthal
 	to = morthal_colony
-	through = coast_of_solitude
+	through = coast_of_morthal
 	type = sea
 }
 new adjacency snowhawk_bridge = {
 	from = snowhawk
 	to = minedvild
-	through = coast_of_solitude
+	through = coast_of_morthal
 	type = sea
 }
 new adjacency first_bridge = {
-	from = barren_road
-	to = rivers_road
-	through = coast_of_morthal
+	from = forebears_holdout
+	to = chillwind_depths
+	through = hjaal_river
 	type = sea
+	start_x = 1607
+	start_y = (2816-788)
+	stop_x = 1610
+	stop_y = (2816-790)
 }
 new adjacency second_bridge = {
 	from = forebears_holdout
 	to = cliff_point
-	through = coast_of_morthal
+	through = hjaal_river
 	type = sea
+	start_x = 1613
+	start_y = (2816-781)
+	stop_x = 1616
+	stop_y = (2816-784)
 }
 new adjacency hjaal_bridge = {
-	from = bumpy_road
+	from = hjaals_tooth
 	to = robbers_gorge
-	through = coast_of_morthal
+	through = hjaal_river
 	type = sea
 }
 new adjacency dragon_bridge = {
