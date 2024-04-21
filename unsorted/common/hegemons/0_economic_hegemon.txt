@@ -1,13 +1,7 @@
 economic_hegemon = {
 	allow = {
 		is_great_power = yes
-		if = {
-			limit = {
-				NOT = { has_country_flag = halve_hegemony_requirements }
-			}
-			monthly_income = 1000 
-		}
-		else = { monthly_income = 500 } 
+		monthly_income = 1000 
 		NOT = { any_other_great_power = { monthly_income = root } }
 		NOT = { has_country_modifier = lost_hegemony }
 	}

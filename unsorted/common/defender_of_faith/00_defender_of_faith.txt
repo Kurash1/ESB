@@ -26,24 +26,6 @@ defender_of_faith_1 = {
 				num_of_cities = 20
 			}
 		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
-			}
-		}
 	}
 }
 
@@ -74,24 +56,6 @@ defender_of_faith_2 = {
 			factor = 0
 			NOT = {
 				num_of_cities = 15
-			}
-		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
 			}
 		}
 	}
@@ -128,24 +92,6 @@ defender_of_faith_3 = {
 				num_of_cities = 10
 			}
 		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
-			}
-		}
 	}
 }
 
@@ -179,24 +125,6 @@ defender_of_faith_4 = {
 			factor = 0
 			NOT = {
 				num_of_cities = 10
-			}
-		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
 			}
 		}
 	}
@@ -235,24 +163,6 @@ defender_of_faith_5 = {
 			factor = 0
 			NOT = {
 				num_of_cities = 10
-			}
-		}
-		modifier = {
-			factor = 5
-			tag = SPA
-			religion = catholic
-		}
-		modifier = {
-			factor = 5
-			tag = SWE
-			religion = protestant
-		}
-		modifier = {
-			factor = 5
-			NOT = { has_idea_group = humanist_ideas }
-			num_of_owned_provinces_with = {
-				value = 10
-				NOT = { religion = ROOT }
 			}
 		}
 	}

@@ -3,30 +3,6 @@ NDefines.NGame.END_DATE = "9999.12.31"
 NDefines.NGame.MAX_RANDOM_NEW_WORLD = "57.1.1"
 NDefines.NGame.GREAT_POWER_FRENZY_START = "9999.12.31"	-- Latest date for the start of the Great Power Frenzy (struggle).
 
-NDefines.NCountry.MIN_DEV_FOR_FREE_CITY = 25					-- Capital must have at least this much development to be a free city
-NDefines.NCountry.MAX_PROVINCES_FOR_FREE_CITY = 1			-- A free city cannot have more provinces than this
-NDefines.NCountry.HRE_RANK = 5								-- Emperor of the HRE is displayed as this rank (for ruler title only)
-NDefines.NCountry.HRE_MAX_RANK = 3							-- for members
-NDefines.NCountry.HRE_MAX_RANK_ELECTOR = 4					-- for electors
-
-NDefines.NCountry.PRESTIGE_GAIN_FOR_GOV_RANK_2   = 0			-- Prestige gained on upgrading to government rank 2
-NDefines.NCountry.PRESTIGE_GAIN_FOR_GOV_RANK_3   = 0			-- Prestige gained on upgrading to government rank 3
-NDefines.NCountry.PRESTIGE_GAIN_FOR_GOV_RANK_4   = 0			-- Prestige gained on upgrading to government rank 4
-NDefines.NCountry.PRESTIGE_GAIN_FOR_GOV_RANK_5   = 0			-- Prestige gained on upgrading to government rank 5
-NDefines.NCountry.PRESTIGE_GAIN_FOR_GOV_RANK_6   = 0			-- Prestige gained on upgrading to government rank 6
-NDefines.NCountry.MIN_PRESTIGE_FOR_GOV_RANK_2    = 0			-- Required prestige to to upgrade to government rank 2
-NDefines.NCountry.MIN_PRESTIGE_FOR_GOV_RANK_3    = 0			-- Required prestige to to upgrade to government rank 3
-NDefines.NCountry.MIN_PRESTIGE_FOR_GOV_RANK_4    = 0			-- Required prestige to to upgrade to government rank 4
-NDefines.NCountry.MIN_PRESTIGE_FOR_GOV_RANK_5    = 0			-- Required prestige to to upgrade to government rank 5
-NDefines.NCountry.MIN_PRESTIGE_FOR_GOV_RANK_6    = 0			-- Required prestige to to upgrade to government rank 6
-NDefines.NCountry.MIN_DEVELOPMENT_FOR_GOV_RANK_2 = 75			-- Need at least this much development to upgrade to government rank 3
-NDefines.NCountry.MIN_DEVELOPMENT_FOR_GOV_RANK_3 = 200			-- Need at least this much development to upgrade to government rank 4
-NDefines.NCountry.MIN_DEVELOPMENT_FOR_GOV_RANK_4 = 400			-- Need at least this much development to upgrade to government rank 5
-NDefines.NCountry.MIN_DEVELOPMENT_FOR_GOV_RANK_5 = 700			-- Need at least this much development to upgrade to government rank 6
-NDefines.NCountry.MIN_DEVELOPMENT_FOR_GOV_RANK_6 = 1000			-- Need at least this much development to upgrade to government rank 7
-NDefines.NCountry.ADDITIONAL_MIN_DEVELOPMENT_FOR_GOV_RANK_X = 0	-- ADDITIONAL development needed to upgrade to government rank above 3
-NDefines.NCountry.MAX_GOV_RANK = 6									-- Max possible is 10
-
 NDefines.NCountry.ALLOW_FEMALE_GENERALS = 1
 NDefines.NCountry.FEMALE_ADVISOR_CHANCE = 2.15						-- If Women in History is enabled chance of an advisor (or general if permitted) spawning as female
 NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.34

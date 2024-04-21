@@ -22,8 +22,8 @@ pretender_rebels = {
 	
 	
 	artillery = 0.1
-	infantry = 0.5
-	cavalry = 0.4
+	infantry = 0.9
+	cavalry = 0.0
 	
 	morale = 1.25
 	
@@ -52,20 +52,13 @@ pretender_rebels = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 2
-			owner = {
-				government = republic
-				aristocracy_ideas = 1
-			}
-		}
-		modifier = {	  
 			factor = 5.0
 			owner = {
 				government = republic
 				NOT = { republican_tradition = 40 }
 			}
 		}	
-		modifier = {	  
+		modifier = {
 			factor = 30
 			owner = {
 				government = monarchy
@@ -155,10 +148,6 @@ pretender_rebels = {
 			}
 		}
 		modifier = {
-			factor = 10
-			owner = { has_country_modifier = "tribal_succession_crisis" }
-		}
-		modifier = {
 			factor = 2.5
 			owner = {
 				government = tribal
@@ -183,15 +172,15 @@ pretender_rebels = {
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 2.5
+			unrest = 2
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 5
+			unrest = 4
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 7.5
+			unrest = 6
 		}
 	}
  
@@ -224,37 +213,17 @@ pretender_rebels = {
 			}
 		}
 		if = {
-			limit = {
-				has_states_general_mechanic = yes
-			}
-			change_statists_vs_orangists = 1
+			limit = { has_heir = yes }
+			kill_heir = { allow_new_heir = no }
 		}
 		if = {
-			limit = {
-				NOT = {
-					OR = {
-						government = theocracy
-						has_reform = steppe_horde
-						government = native
-						government = tribal 
-					}
-				}
-			}
-			change_government = REB
-			#set_legacy_government = despotic_monarchy
+			limit = { has_consort = yes }
+			kill_consort = yes
 		}
 		set_country_flag = no_new_succession_crisis_if_pretender_rebels #This is used in the event that triggers from the on_action to ensure that you don't get new pretenders if these pretenders are happening because of a succession crisis.
 		define_ruler = {
 			rebel = yes
 		}
 		clr_country_flag = no_new_succession_crisis_if_pretender_rebels
-		if = {
-			limit = { has_heir = yes }
-			kill_heir = {  }
-		}
-		if = {
-			limit = { is_revolution_target = yes }
-			set_revolution_target = ---
-		}
 	}
 }
