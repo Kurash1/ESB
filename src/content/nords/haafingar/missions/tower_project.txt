@@ -1,0 +1,34 @@
+mission_trees:solitude += {
+	tower_project = {
+		name = "Tower Project"
+		desc = "Through great efforts we have built the mightiest of fortifications, and our homeland has become a beacon of civilization with continued development, but this development makes it a target for foreign incursions, and our fortifications are only at key locations while most of the lands are undefended. Our generals have proposed an ambitious plan to build dozens of small military towers across the hills and fields to watch over our homeland."
+		x = 2
+		y = 5
+		required = {
+			castle_upon_the_hill
+			solitude_countryside
+		}
+		icon = tower_project_mission
+		trigger = {
+			treasury = 1000
+			areas:solitude; dragon_bridge; wolfs_eye = {
+				type = all
+				owned_by = ROOT
+				base_manpower = 5
+			}
+		}
+		effect = {
+			add_treasury = -1000
+			
+			areas:solitude; dragon_bridge; wolfs_eye = {
+				quick_province_modifier = {
+					name = "Military Towers"
+					modifier = {
+						fort_level = 1
+						block_slave_raid = yes
+					}
+				}
+			}
+		}
+	}
+}

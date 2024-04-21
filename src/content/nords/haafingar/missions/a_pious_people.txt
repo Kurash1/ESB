@@ -1,0 +1,59 @@
+mission_trees:solitude += {
+	a_pious_people = {
+		name = "Pious People of Solitude"
+		desc = "From our earliest history the three clans of Solitude have been some of the most pious amongst all the northern men. By investing in theological pursuits we can establish a more organized method of worship through building interconnected churches across the lands."
+		icon = temple_of_the_divines_mission
+		x = 2
+		y = 1
+		required = old_solitude
+		trigger = {
+			has_idea_group = religious_ideas
+			has_idea = religious_ideas_1
+			has_idea = religious_ideas_2
+			has_idea = religious_ideas_3
+		}
+		effect = {
+			quick_country_modifier = {
+				id = solitude_organized_churches
+				name = "Organized Churches"
+				modifier = {
+					tax_line = 1
+				}
+			}
+			
+			new_custom_tooltip = "Additionally all Tax buildings gain the following bonus:
+	{modifier_to_string = {
+		local_unrest = -2
+		local_missionary_strength = 0.025
+	}}"
+			hidden_effect = {
+				every_owned_province [has_building_line = tax] {
+					quick_province_modifier = {
+						id = solitude_organized_churches_province
+						name = "Organized Church"
+						modifier = {
+							local_unrest = -2
+							local_missionary_strength = 0.025
+						}
+					}
+				}
+			}
+			
+			foreach $building in building_lines:tax:buildings {
+				$building:on_built += {
+					if [owner = { 
+						has_country_modifier = solitude_organized_churches
+					}] {
+						add_permanent_province_modifier = {
+							name = solitude_organized_churches_province
+							duration = -1
+						}
+					}
+				}
+				$building:on_destroyed += {
+					remove_province_modifier = solitude_organized_churches_province
+				}
+			}
+		}
+	}
+}

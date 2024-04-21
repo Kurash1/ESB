@@ -1,0 +1,46 @@
+mission_trees:solitude += {
+	old_sage_of_solitude = {
+		name = "Old Sage of Solitude"
+		desc = "§YTujenhelf the Old§!, also known by his more common title '§YOld Sage of Solitude§!', is an immortal clever-man living in a cave within the §YGreat Arch§!, he is said to have been amongst Ysgramoor’s five hundred when they landed on Skyrim. His wisdom would benefit our realm if he were to become an advisor of ours, however he is known to be fickle, and would not speak to messengers, but only to those who sought him by their own initiative."
+		icon = old_sage_mission
+		x = 0
+		y = 1
+		required = old_solitude
+		trigger = {
+			any_army = {
+				is_ruler_commanding_unit = yes
+				location = {
+					province_id = solitude
+				}
+			}
+		}
+		effect = {
+			set_country_flag = old_sage_of_solitude
+			
+			new event_modifier tujenhelf_support = {
+				name = "Tujenhelf's Council"
+				modifier = {
+					all_power_cost = -0.025
+				}
+			}
+			add_ruler_modifier = { 
+				name = tujenhelf_support
+				duration = -1
+			}
+			
+			new_custom_tooltip = "And upon the ascension of a new ruler §YTujenhelf the Old§! will decide whether to give council to the new ruler."
+			
+			on_actions:on_monarch_death += {
+				if [has_country_flag = old_sage_of_solitude] {
+					random = {
+						chance = 50
+						add_ruler_modifier = { 
+							name = tujenhelf_support
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
+}

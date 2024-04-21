@@ -1,0 +1,144 @@
+new decision build_the_avenues_district = {
+	name = "Build the Avenues District"
+	potential = {
+		has_country_flag = build_solitude_districts
+		NOT = { has_country_flag = build_the_avenues_district }
+	}
+	allow = {
+		owns = solitude
+		treasury = 500
+	}
+	effect = {
+		add_treasury = -500
+		set_country_flag = build_the_avenues_district
+		provinces:solitude = {
+			quick_province_modifier = {
+				name = "Avenues District"
+				modifier = {
+					local_tax_modifier = 0.5
+					trade_value_modifier = 0.25
+					local_development_cost_modifier = -0.1
+				}
+			}
+		}
+	}
+}
+new decision build_the_wells_district = {
+	name = "Build the Wells District"
+	potential = {
+		has_country_flag = build_solitude_districts
+		NOT = { has_country_flag = build_the_wells_district }
+	}
+	allow = {
+		owns = solitude
+		treasury = 500
+	}
+	effect = {
+		add_treasury = -500
+		set_country_flag = build_the_wells_district
+		provinces:solitude = {
+			quick_province_modifier = {
+				name = "Wells District"
+				modifier = {
+					local_production_efficiency = 0.5
+					province_trade_power_modifier = 0.5
+					trade_goods_size_modifier = 0.25
+				}
+			}
+		}
+	}
+}
+new decision found_the_bards_college = {
+	name = "Found the Bards College"
+	potential = {
+		has_country_flag = found_solitude_organizations
+		NOT = { has_country_flag = found_the_bards_college }
+	}
+	allow = {
+		owns = solitude
+		artist = 1
+		treasury = 1000
+	}
+	effect = {
+		add_treasury = -1000
+		set_country_flag = build_the_wells_district
+		new_custom_tooltip = "The monument §YBards College§! is created in §Y[{provinces:solitude}.GetName]§! at Noteworthy level."
+		
+		hidden_effect = {
+			create_monument = {
+				monument = bards_college
+				province = solitude
+			}
+			provinces:solitude = {
+				add_great_project_tier = {
+					type = bards_college
+					tier = 1
+				}
+			}
+		}
+	}
+}
+new decision found_the_coterie_of_organized_scholars = {
+	name = "Found the Coterie of Organized Scholars"
+	potential = {
+		has_country_flag = found_solitude_organizations
+		NOT = { has_country_flag = found_the_coterie_of_organized_scholars }
+	}
+	allow = {
+		owns = solitude
+		treasury = 1000
+	}
+	effect = {
+		add_treasury = -1000
+		set_country_flag = found_the_coterie_of_organized_scholars
+		quick_country_modifier = {
+			name = "Coterie of Organized Scholars"
+			modifier = {
+				advisor_cost = -0.1
+				advisor_pool = 1
+				global_expedition_speed = 0.25
+			}
+		}
+	}
+}
+mission_trees:solitude += {
+	new_solitude = {
+		name = "Capital in the Skies"
+		desc = "With continued development of the lands above the Arch, our people believe it high time that we declare that our new capital."
+		icon = solitude_mission
+		x = 1
+		y = 3
+		required = {
+			the_emperors_tower
+			a_new_city
+			castle_upon_the_hill
+		}
+		trigger = {
+			provinces:solitude = {
+				development = 30
+			}
+		}
+		effect = {
+			new_custom_tooltip = "[{provinces:solitude}.GetName] renamed to §YSolitude§!.
+[{provinces:red_port}.GetName] renamed to §YRed-Port§!.
+§YSolitude§! will become the new Capital.
+
+Unlocks §YBuild the Avenues District§! Decision.
+Unlocks §YBuild the Wells District§! Decision.
+Unlocks §YFound the Bards College§! Decision.
+Unlocks §YFound the Coterie of Organized Scholars§! Decision.
+"
+			hidden_effect = {
+				set_country_flag = build_solitude_districts
+				set_country_flag = found_solitude_organizations
+				set_capital = provinces:solitude
+				provinces:solitude = {
+					change_province_name = "Solitude"
+				}
+				provinces:red_port = {
+					change_province_name = "Red-Port"
+				}
+			}
+		}
+	}
+}

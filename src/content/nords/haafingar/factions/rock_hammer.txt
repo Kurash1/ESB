@@ -1,0 +1,31 @@
+static_modifiers:positive_stability += {
+	nc_rock_hammer_influence = 0.1
+}
+new named_effect add_rock_hammer_building_influence = {
+	foreach $building in buildings {
+		$building:on_built += {
+			owner = {
+				add_faction_influence = {
+					faction = nc_rock_hammer
+					influence = 1
+				}
+			}
+		}
+	}
+}
+new faction nc_rock_hammer = {
+	name = "Rock-Hammer"
+	desc = "Faction Modifier:
+		{modifier_to_string = {
+			build_cost = -0.15
+			build_time = -0.25
+		}}
+§YGains influence through positive stability
+Gains influence through building§!
+"
+	monarch_power = ADM
+	modifier = {
+		build_cost = -0.15
+		build_time = -0.25
+	}
+}

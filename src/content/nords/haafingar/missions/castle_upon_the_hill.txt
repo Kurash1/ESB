@@ -1,0 +1,37 @@
+mission_trees:solitude += {
+	castle_upon_the_hill = {
+		name = "Castle upon the Hill"
+		desc = "After our recent restoration of Fort Esjuberg further discussions betwix clan §YRock-Hammer§! and our Generals have resulted in a proposal for a mighty castle on the hill side overlooking our fair §Y[{provinces:red_port}.GetName]§!. This castle would serve as both center of military command, and protector for our Capital."
+		icon = castle_dour_mission
+		x = 2
+		y = 2
+		required = repair_esjuberg
+		trigger = {
+			owns = solitude
+			provinces:solitude = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			new_custom_tooltip = "The monument §YCastle Dour§! is created in §Y[{provinces:solitude}.GetName]§! at Noteworthy level.\n"
+			
+			hidden_effect = {
+				create_monument = {
+					monument = castle_dour
+					province = solitude
+				}
+				provinces:solitude = {
+					add_great_project_tier = {
+						type = castle_dour
+						tier = 1
+					}
+				}
+			}
+		}
+	}
+}

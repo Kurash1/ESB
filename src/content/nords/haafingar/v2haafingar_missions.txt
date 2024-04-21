@@ -464,7 +464,7 @@ SO take up swords, sworn sons and dauntless daughters, And rally around the reig
 				tooltip = "§YRock-Hammer§! influence is 50 or greater"
 				trigger = {
 					faction_influence = {
-						faction = solitude_rock_hammer
+						faction = nc_rock_hammer
 						influence = 50
 					}
 				}
@@ -483,7 +483,7 @@ A member of the §YRock-Hammer§! clan becomes your ruler.
 				tooltip = "§YStorm-Galley§! influence is 50 or greater"
 				trigger = {
 					faction_influence = {
-						faction = solitude_storm_galley
+						faction = nc_storm_galley
 						influence = 50
 					}
 				}
@@ -502,7 +502,7 @@ A member of the §YStorm-Galley§! clan becomes your ruler.
 				tooltip = "§YRed-Wolf§! influence is 50 or greater"
 				trigger = {
 					faction_influence = {
-						faction = solitude_red_wolf
+						faction = nc_red_wolf
 						influence = 50
 					}
 				}
@@ -522,15 +522,15 @@ A member of the §YRed-Wolf§! clan becomes your ruler.
 				trigger = {
 					NOT = {
 						faction_influence = {
-							faction = solitude_rock_hammer
+							faction = nc_rock_hammer
 							influence = 50
 						}
 						faction_influence = {
-							faction = solitude_storm_galley
+							faction = nc_storm_galley
 							influence = 50
 						}
 						faction_influence = {
-							faction = solitude_red_wolf
+							faction = nc_red_wolf
 							influence = 50
 						}
 					}

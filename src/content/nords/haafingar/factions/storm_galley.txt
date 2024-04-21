@@ -1,0 +1,22 @@
+static_modifiers:naval_forcelimit += {
+	nc_storm_galley_influence = 0.5
+}
+static_modifiers:mercantilism += {
+	nc_storm_galley_influence = 1
+}
+new faction nc_storm_galley = {
+	name = "Storm-Galley"
+	desc = "Faction Modifier:
+		{modifier_to_string = {
+			global_sailors_modifier = 0.1
+			galley_power = 0.1
+		}}
+§YGains influence through naval forcelimit
+Gains influence through mercantilism§!
+"
+	monarch_power = DIP
+	modifier = {
+		global_sailors_modifier = 0.1
+		galley_power = 0.1
+	}
+}

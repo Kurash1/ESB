@@ -1,0 +1,23 @@
+mission_trees:solitude += {
+	old_solitude = {
+		name = "Beneath the Windbreaker"
+		desc = "Originally named §YSolitude-Broken§! by Bard-Thane §YHarald Storm-Galley§! after it was founded as a Stone-Circle, a type of ancient atmoran temporary court. The settlement has grown to become capital of the council of three clans, and its name simplified by the populace to §YSolitude§!. Further development of the realms capital is paramount for continued prosperity."
+		icon = windbreaker_arch_mission
+		x = 1
+		y = 0
+		trigger = {
+			owns = red_port
+			provinces:red_port = {
+				development = 15
+			}
+		}
+		effect = {
+			new_custom_tooltip = "Create a level §Y1§! Center of Trade in §G[{provinces:red_port}.GetName]§!"
+			hidden_effect = {
+				provinces:red_port = {
+					center_of_trade = 1
+				}
+			}
+		}
+	}
+}

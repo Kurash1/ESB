@@ -1,0 +1,39 @@
+mission_trees:solitude += {
+	solitude_countryside = {
+		name = "Lands of our Founders"
+		desc = "As our new Capital flourishes to new heights we must not forget the lands of our founders, the hills of the west where the §YRock-Hammers§! built great towers to protect us from the clans of the deepwood, Skalavik and the coasts where §YStorm-Galley§! built the flotilla which defended us from incursions over the seas, and the rocky north where the §YRed-Wolves§! trained their blades to fight to protect our people."
+		icon = solitude_countryside_mission
+		x = 1
+		y = 4
+		required = new_solitude
+		trigger = {
+			areas:solitude; wolfs_eye; dragon_bridge = {
+				type = all
+				owned_by = ROOT
+			}
+			development_in_provinces = {
+				value = 100
+				trigger = {
+					OR = {
+						area = solitude
+						area = dragon_bridge
+						area = wolfs_eye
+					}
+				}
+			}
+		}
+		effect = {
+			areas:solitude; wolfs_eye; dragon_bridge = {
+				add_base_production = 1
+				quick_province_modifier = {
+					name = "Founding lands of Haafingar"
+					years = 50
+					modifier = {
+						local_tax_modifier = 0.25
+						local_development_cost = -0.1
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+mission_trees:solitude += {
+	coast_of_haafingar = {
+		name = "Coast of Haafingar"
+		x = 4
+		y = 2
+		required = skalavik_navy
+		icon = coast_of_skyrim_mission
+		trigger = {
+			areas:shadowgreen; ravenscar; northwatch = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+		}
+	}
+}

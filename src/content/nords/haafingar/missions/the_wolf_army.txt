@@ -1,0 +1,42 @@
+mission_trees:solitude += {
+	the_wolf_army = {
+		name = "Form the Wolf Army"
+		desc = "Clan §YRed-Wolf§! has proposed multiple military reforms in which we would change our focus into more aggressive and faster paced methods of warfare, instead of waiting to be attacked we should attack the enemy first."
+		icon = swiss_mercenaries
+		required = {
+			restoration_of_forces
+			three_clans_of_solitude
+		}
+		x = 5
+		y = 1
+		trigger = {
+			army_size = 20
+			num_of_generals = 1
+			faction_in_power = nc_red_wolf
+			mil_power = 300
+		}
+		effect = {
+			add_mil_power = -300
+			add_government_reform = tier_2_wolf_army
+			
+			add_faction_influence = {
+				faction = nc_red_wolf
+				influence = 10
+			}
+			
+			conditional_effect = {
+				tooltip = "your ruler is of clan §YRed-Wolf§!"
+				trigger = {
+					dynasty = "Red-Wolf"
+				}
+				effect = {
+					change_mil = 1
+				}
+			}
+			
+			regions:haafingar = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

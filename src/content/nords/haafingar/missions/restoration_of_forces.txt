@@ -1,0 +1,17 @@
+mission_trees:solitude += {
+	restoration_of_forces = {
+		name = "Restoration of Forces"
+		desc = "Between §Y2559§! and §Y2566§! we fought a bloody war against §YSnow-Hawk§! and our armies remain damaged from the conflict. Only by restoring our forces may we ensure the safety of our realm, and the stability of haafingarian politics."
+		icon = mission_native_build_army_mission
+		x = 7
+		y = 0
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.75
+		}
+		effect = {
+			add_mil_power = 250
+			add_yearly_manpower = 1
+		}
+	}
+}
