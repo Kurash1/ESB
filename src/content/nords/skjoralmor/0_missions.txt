@@ -1,6 +1,9 @@
 new mission_tree skjoralmor = {
 	ai = yes
 	potential = {
-		tag = skjoralmor
+		OR = {
+			tag = skjoralmor
+			tag = falkreath
+		}
 	}
 }

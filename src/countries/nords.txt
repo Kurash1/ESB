@@ -186,7 +186,7 @@ new country forelhost = {
 				mil = 6
 				birth_date = 2012.1.1
 			}
-			add_ruler_personality = immortal_personality
+			add_ruler_personality = immortal
 			add_ruler_modifier = {
 				name = lich
 				duration = -1
@@ -826,99 +826,205 @@ new country windhelm = {
 	history += {
 		historical_friend = JRR
 		elector = yes
-		1987.1.1 = {
-			monarch = {
-				name = "Ysgramoor"
-				dynasty = "the Returned"
-				birth_date = 1945.1.1
-			}
-			add_country_modifier = {
-				name = atmoran_holdings
-				duration = -1
-			}
-		}
-		2022.1.1 = {
-			monarch = {
-				name = "Ylgar"
-				dynasty = "Ysgramoor"
-				birth_date = 2000.1.1
+		history_ruler_info = {
+			name = "Ysgramoor"
+			dynasty = "the Returned"
+			birth_date = 1945.1.1
+			crowned = 1987.1.1
+			death_date = 2022.1.1
+			adm = 2
+			dip = 4
+			mil = 6
+			effect = {
+				add_country_modifier = {
+					name = atmoran_holdings
+					duration = -1
+				}
 			}
 		}
-		2108.1.1 = {
-			monarch = {
-				name = "Jurgar"
-				dynasty = "Ysgramoor"
-				birth_date = 2086.1.1
+		history_ruler_info = {
+			name = "Ylgar"
+			dynasty = "Ysgramoor"
+			birth_date = 2000.1.1
+			crowned = 2022.1.1
+			death_date = 2108.1.1
+			adm = 4
+			dip = 4
+			mil = 3
+		}
+		history_ruler_info = {
+			name = "Jurgar"
+			dynasty = "Ysgramoor"
+			birth_date = 2086.1.1
+			crowned = 2108.1.1
+			death_date = 2140.1.1
+			adm = 3
+			dip = 1
+			mil = 1
+		}
+		history_ruler_info = {
+			name = "Oduvid"
+			dynasty = "Ysgramoor"
+			birth_date = 2110.1.1
+			crowned = 2140.1.1
+			death_date = 2209.1.1
+			adm = 1
+			dip = 0
+			mil = 4
+		}
+		history_ruler_info = {
+			name = "Skavwulf"
+			dynasty = "Ysgramoor"
+			birth_date = 2209.1.1
+			crowned = 2209.1.2
+			death_date = 2240.1.1
+			adm = 0
+			dip = 0
+			mil = 6
+		}
+		history_ruler_info = {
+			name = "Eistaag"
+			dynasty = "Ysgramoor"
+			birth_date = 2229.1.1
+			crowned = 2240.1.1
+			death_date = 2259.1.1
+			adm = 1
+			dip = 5
+			mil = 2
+		}
+		history_ruler_info = {
+			name = "Rorygg"
+			dynasty = "Ysgramoor"
+			birth_date = 2229.1.1
+			crowned = 2259.1.1
+			death_date = 2350.1.1
+			adm = 1
+			dip = 4
+			mil = 6
+			effect = {
+				add_country_modifier = {
+					name = aegisbane
+					duration = -1
+				}
 			}
 		}
-		2140.1.1 = {
-			monarch = {
-				name = "Oduvid"
-				dynasty = "Ysgramoor"
-				birth_date = 2110.1.1
+		history_ruler_info = {
+			name = "Vigstrom"
+			dynasty = "Ysgramoor"
+			birth_date = 2320.1.1
+			crowned = 2350.1.1
+			death_date = 2409.1.1
+			adm = 4
+			dip = 1
+			mil = 1
+		}
+		history_ruler_info = {
+			name = "Rald"
+			dynasty = "Ysgramoor"
+			birth_date = 2387.1.1
+			crowned = 2409.1.1
+			death_date = 2479.1.1
+			adm = 6
+			dip = 4
+			mil = 3
+		}
+		history_ruler_info = {
+			name = "Volharth"
+			dynasty = "Ysgramoor"
+			birth_date = 2446.1.1
+			crowned = 2479.1.1
+			death_date = 2524.1.1
+			adm = 2
+			dip = 2
+			mil = 6
+		}
+		history_ruler_info = {
+			name = "Jollring"
+			dynasty = "Ysgramoor"
+			birth_date = 2504.1.1
+			crowned = 2524.1.1
+			death_date = 2583.1.1
+			adm = 4
+			dip = 4
+			mil = 4
+			effect = {
+				clear_scripted_personalities = yes
+				add_ruler_personality = incorruptible
+				add_ruler_personality = strict
+				add_ruler_personality = bold_fighter
+				
+				add_heir_personality = calm
 			}
 		}
-		2209.1.1 = {
-			monarch = {
-				name = "Skavwulf"
-				dynasty = "Ysgramoor"
-				birth_date = 2209.1.1
-			}
+		history_ruler_info = {
+			name = "Olav"
+			dynasty = "Ysgramoor"
+			birth_date = 2556.1.1
+			crowned = 2583.1.1
+			death_date = 2643.1.1
+			adm = 1
+			dip = 3
+			mil = 2
 		}
-		2240.1.1 = {
-			monarch = {
-				name = "Eistaag"
-				dynasty = "Ysgramoor"
-				birth_date = 2229.1.1
-			}
-		}
-		2289.1.1 = {
-			monarch = {
-				name = "Rorygg"
-				dynasty = "Ysgramoor"
-				birth_date = 2259.1.1
-			}
-			add_country_modifier = {
-				name = aegisbane
-				duration = -1
-			}
-		}
-		2350.1.1 = {
-			monarch = {
-				name = "Vigstrom"
-				dynasty = "Ysgramoor"
-				birth_date = 2320.1.1
-			}
-		}
-		2409.1.1 = {
-			monarch = {
-				name = "Rald"
-				dynasty = "Ysgramoor"
-				birth_date = 2387.1.1
-			}
-		}
-		2479.1.1 = {
-			monarch = {
-				name = "Volharth"
-				dynasty = "Ysgramoor"
-				birth_date = 2446.1.1
-			}
-		}
-		2524.1.1 = {
-			monarch = {
-				name = "Jollring"
-				dynasty = "Ysgramoor"
-				birth_date = 2504.1.1
-				adm = 4
-				dip = 4
-				mil = 4
-			}
+		history_ruler_info = {
+			name = "Harald"
+			dynasty = "Ysgramoor"
+			birth_date = 2613.1.1
+			crowned = 2643.1.1
+			death_date = 2721.1.1
+			adm = 6
+			dip = 6
+			mil = 6
 		}
 		2500.1.1 = {
 			country_event = {
 				id = eastmarch.1
 				days = (143*365)
 			}
+		}
+	}
+}
+new effect history_ruler_info = {
+	default = {
+		female = no
+		effect = { }
+	}
+	args = {
+		name = string
+		dynasty = string
+		birth_date = string
+		death_date = string
+		crowned = string
+		female = bool
+		adm = int
+		dip = int
+		mil = int
+		effect = effect
+	}
+	transpile = {
+		args:birth_date = {
+			heir = {
+				name = args:name
+				monarch_name = args:name
+				dynasty = args:dynasty
+				claim = 100
+				birth_date = args:birth_date
+				death_date = args:death_date
+				adm = args:adm
+				dip = args:dip
+				mil = args:mil
+			}
+		}
+		args:crowned = {
+			monarch = {
+				name = args:name
+				dynasty = args:dynasty
+				birth_date = args:birth_date
+				adm = args:adm
+				dip = args:dip
+				mil = args:mil
+			}
+			args:effect
 		}
 	}
 }
@@ -1026,7 +1132,7 @@ new country black_moor = {
 				mil = 1
 				birth_date = 2482.1.1
 			}
-			add_ruler_personality = infertile_personality
+			add_ruler_personality = infertile
 		}
 	}
 	capital = greymoor
