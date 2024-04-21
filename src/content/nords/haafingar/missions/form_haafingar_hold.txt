@@ -1,0 +1,184 @@
+new country_event haafingar.6 = {
+	title = "Formation of Haafingar"
+	desc = "HARKEN, hale of Haafingar, and hear the homages of our hearth; The sweeping, sky-skimming spine of the city's solitary crescent, Rises from the rigid rock, proud and persisting, Tall against the tolling tides and the trials of interminable time. Once, o honored audience, our houses were humble. The Sea of Ghost's glacial gales, its whipping winds, Forced our forlorn forebearers, fraught and faithful, To shelter under sheer cliffs that shot up from the shore, And pray to Shor for passage through primal plumes of pummeling winter.
+
+LO, and with the reckoning of Alduin's revolving hourglass, Our people prospered, and perched upon the roost-stone, Their walls and wells, against the baleful baying of the bitter winds. Hewing stone with hardened hands, they hefted high towers — A Dour donjon, and a temple for those dutiful to the Divines. These foundations, fortress and faith-house, form the fulcrum, Of our city, Solitude, oft-sung in skaldic odes.
+
+NOW built, this bastion on the blasted and buffeted bedrock, Solitude soared and, surveying its surroundings, seized them; With unrestrained grasp, and unrepentant gaze, It harried and hammered the hinterlands into the hold of Haafingar. Many mourned, more demurred, but the moments came to murmurs: When the Jarl bore forth the wending circlet of his silver crown, Upon which was blazed the wolf, wise and wary — A symbol of the city, a solemn sigil of the spirit of Solitude.
+
+SO take up swords, sworn sons and dauntless daughters, And rally around the reign of the wolf-crowned king! Should our blood be spilled in battle, we can be blessed to know, That we shall doff our helms in the hallowed home, Sovngarde, Having slew the serpents strangling our Skyrim. Now rest, my cunning kindred, rest and keen-dream, Of the war that we will win on the morrow's dawn, And the ones that we will win for every morrow due us."
+	picture = haafingar_eventPicture
+	is_triggered_only = yes
+	immediate = { #for debugging, so we can rerun this event.
+		clr_country_flag = has_haafingar_ideas 
+		clr_country_flag = has_solitude_ideas
+	}
+	options = {
+		{
+			name = "We are the Children of Haafingar"
+			effect = {
+				set_country_flag = has_haafingar_ideas
+				form_hold = haafingar
+				
+				preview_idea_group = haafingar_ideas
+			}
+		}
+		{
+			name = "We are the Children of Solitude"
+			effect = {
+				set_country_flag = has_solitude_ideas
+				form_hold = haafingar
+				
+				preview_idea_group = solitude_ideas
+			}
+		}
+		{
+			name = "We are the Children of Skyrim"
+			effect = {
+				form_hold = haafingar
+				
+				preview_idea_group = nordic_ideas
+			}
+		}
+	}
+}
+mission_trees:solitude += {
+	form_haafingar_hold = {
+		name = "Form Haafingar Hold"
+		desc = "Victor over Snow-Hawk, Defender from Sea Giant Raids, Destroyer of Pirates and Master of the Deepwood, We rule over Kilkreath and all the lands which fall into its shadow. We rule over Haafingar Hold, and it is high time that we declare it as such. Hail the Jarl of §YHaafingar Hold§!."
+		x = 4
+		y = 4
+		icon = form_haafingar
+		required = {
+			the_haafingar_isles
+			the_deepwood
+		}
+		trigger = {
+			prestige = 50
+			regions:haafingar = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = { 
+				id = haafingar.6
+				days = 0
+			}
+			add_prestige = 50
+			
+			conditional_effect = {
+				tooltip = "§YRock-Hammer§! influence is 50 or greater"
+				trigger = {
+					faction_influence = {
+						faction = nc_rock_hammer
+						influence = 50
+					}
+				}
+				effect = {
+					if [NOT = {
+						dynasty = "Rock-Hammer"
+					}] {
+						new_custom_tooltip = "A member of the §YRock-Hammer§! clan becomes your ruler."
+						hidden_effect = {
+							define_ruler = {
+								dynasty = "Rock-Hammer"
+							}
+						}
+					}
+					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform."
+					hidden_effect = {
+						add_government_reform = tier_1_haafingar_kingdom
+					}
+					quick_country_modifier = {
+						name = "Clan Rock-Hammer"
+						modifier = factions:nc_rock_hammer:modifier
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "§YStorm-Galley§! influence is 50 or greater"
+				trigger = {
+					faction_influence = {
+						faction = nc_storm_galley
+						influence = 50
+					}
+				}
+				effect = {
+					if [NOT = {
+						dynasty = "Storm-Galley"
+					}] {
+						new_custom_tooltip = "A member of the §YStorm-Galley§! clan becomes your ruler."
+						hidden_effect = {
+							define_ruler = {
+								dynasty = "Storm-Galley"
+							}
+						}
+					}
+					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform."
+					hidden_effect = {
+						add_government_reform = tier_1_haafingar_kingdom
+					}
+					quick_country_modifier = {
+						name = "Clan Storm-Galley"
+						modifier = factions:nc_storm_galley:modifier
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "§YRed-Wolf§! influence is 50 or greater"
+				trigger = {
+					faction_influence = {
+						faction = nc_storm_galley
+						influence = 50
+					}
+				}
+				effect = {
+					if [NOT = {
+						dynasty = "Red-Wolf"
+					}] {
+						new_custom_tooltip = "A member of the §YRed-Wolf§! clan becomes your ruler."
+						hidden_effect = {
+							define_ruler = {
+								dynasty = "Red-Wolf"
+							}
+						}
+					}
+					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform."
+					hidden_effect = {
+						add_government_reform = tier_1_haafingar_kingdom
+					}
+					quick_country_modifier = {
+						name = "Clan Red-Wolf"
+						modifier = factions:nc_red_wolf:modifier
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "no Faction has dominance"
+				trigger = {
+					NOT = {
+						faction_influence = {
+							faction = nc_rock_hammer
+							influence = 50
+						}
+						faction_influence = {
+							faction = nc_storm_galley
+							influence = 50
+						}
+						faction_influence = {
+							faction = nc_red_wolf
+							influence = 50
+						}
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Enact §YCouncil Hold§! Tier 1 Government Reform."
+					hidden_effect = {
+						add_government_reform = tier_1_council_hold
+					}
+				}
+			}
+		}
+	}
+}

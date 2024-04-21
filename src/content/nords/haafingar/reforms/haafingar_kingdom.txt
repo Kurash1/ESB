@@ -1,0 +1,26 @@
+governments:monarchy:reform_levels:1 += new tier_1_haafingar_kingdom = {
+	name = "Haafingar Kingdom"
+	desc = "When Haafingar Hold was formed one of the three founding clans of Solitude had become so dominant in power that they managed to take over the government crowning themselves the true rulers of the Realm."
+	icon = england_bill_of_rights
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = tier_1_haafingar_kingdom
+			has_reform = tier_1_council_hold
+			has_reform = tier_1_three_clan_council
+		}
+	}
+	trigger = {
+		has_reform = tier_1_haafingar_kingdom
+	}
+	government_abilities = {
+		haafingar_mechanic
+	}
+	modifiers = {
+		governing_capacity = 100
+		trade_efficiency = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
