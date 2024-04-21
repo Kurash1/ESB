@@ -1,3 +1,16 @@
+new named_effect reduce_shatter_development = {
+	foreach $province in provinces [
+		exists = $province:area
+		$province:area:region:id == "Shatter"
+		$province:base_development == $province:terrain:base_development
+	] {
+		$province:base_development -= 3
+		when [$province:base_development < 3] {
+			$province:base_development := 3
+		}
+	}
+}
+
 new inheritable shatter_inherit = {
 	position = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
