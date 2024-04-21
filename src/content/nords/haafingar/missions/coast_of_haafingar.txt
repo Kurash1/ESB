@@ -1,9 +1,13 @@
 mission_trees:solitude += {
 	coast_of_haafingar = {
 		name = "Coast of Haafingar"
+		desc = "The Rocky coasts of northern Haafingar have for long been prime raiding grounds for our enemies the sea giants. Like us the lands are occupied by a variety of Nordic Clans, but they did not join our fair council when it was formed. This mistake of theirs must be rectified, if we are to defend our interests within Haafingar, for we require control over all the coasts so that our navies may strike at the Sea Giants before they can reach our core-lands, and defend our merchants in all lands and seas."
 		x = 4
 		y = 2
-		required = skalavik_navy
+		required = {
+			skalavik_navy
+			the_wolf_army
+		}
 		icon = coast_of_skyrim_mission
 		trigger = {
 			areas:shadowgreen; ravenscar; northwatch = {
@@ -12,7 +16,7 @@ mission_trees:solitude += {
 			}
 		}
 		effect = {
-			add_mercantilism = 5
+			add_mercantilism = 10
 		}
 	}
 }
