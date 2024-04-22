@@ -1,15 +1,31 @@
 mission_trees:solitude += {
 	shade_of_the_skyborn = {
 		name = "Shade of the Skyborn"
+		desc = "In the shade of the Skyborn mountains which split Hjaalmarch from the great plains of Whiterun, there are many settlements whose trade flows towards our ports. With our enemy Snow-Hawk defeated, it is high time that we take over these lands, so that we may fully control our economy."
 		icon = prosper_in_piedmont
 		required = hawk_defeated
 		x = 6
 		y = 4
 		trigger = {
-			always = no
+			areas:morthal; myrwatch; stonehills; ustengrav = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			
+			areas:morthal; myrwatch; stonehills; ustengrav = {
+				add_base_production = 1
+				add_core = kjenstag
+			}
+			provinces:kjenstag = {
+				quick_province_modifier = {
+					name = "Kjenstag Stone-Circle"
+					modifier = {
+						governing_capacity_modifier = 0.1
+						merchants = 1
+					}
+				}
+			}
 		}
 	}
 }

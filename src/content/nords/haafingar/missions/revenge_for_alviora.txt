@@ -1,15 +1,34 @@
 mission_trees:solitude += {
 	revenge_for_alviora = {
 		name = "Revenge for Alviora"
+		desc = "The §YBattle of Alviora§! was our greatest military loss in recent history, during the §YWar of Twin Bridges§! our forces tired from marching to the frontlines engaged with the forces of §YSnow-Hawk§!, and lost. The forces of §YSnow-Hawk§! were not content with merely defeating us in battle, they destroyed the village of Alviora as well. Our people demand Revenge for this loss, and for their cruelty against the innocent populace of Alviora."
 		icon = mission_rb_conquer_the_highlands
 		required = end_the_treaty
 		x = 7
 		y = 2
 		trigger = {
-			always = no
+			if [exists = snow_hawk] {
+				war_with = snow_hawk
+			}
+			else {
+				NOT = {
+					exists = snow_hawk
+				}
+			}
 		}
 		effect = {
-			
+			if [exists = snow_hawk] {
+				quick_country_modifier = {
+					name = "Revenge for Alviora"
+					years = 10
+					modifier = {
+						land_morale = 0.25
+					}
+				}
+			}
+			else {
+				add_prestige = 25
+			}
 		}
 	}
 }

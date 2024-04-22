@@ -4,3 +4,18 @@ new trigger alliance_with = {
 new trigger truce_with = {
 	args = country_scope
 }
+new trigger war_with = {
+	args = country_scope
+}
+new trigger offensive_war_with = {
+	args = country_scope
+}
+new trigger defensive_war_with = {
+	args = country_scope
+}
+new trigger has_won_war_against = {
+	args = {
+		who = country_scope
+		max_years_since = int
+	}
+}

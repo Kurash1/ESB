@@ -11,6 +11,18 @@ new inheritable nordic_country = {
 	}
 	starting_reform = tier_1_nord_clan
 }
+new country karthald = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	starting_reform = tier_1_hold
+	tag = KRT
+	name = "Karthald"
+	adj = "Karthald"
+	color = {
+		72 56 40
+	}
+	capital = karthwatch
+}
 new country sea_wing = {
 	inherit = nordic_country
 	primary_culture = haafingarian
@@ -33,6 +45,28 @@ new country sea_wing = {
 		}
 	}
 	capital = morwath
+}
+new country storm_hawk = {
+	inherit = nordic_country
+	primary_culture = hjaalmarcher
+	tag = STH
+	name = "Storm-Hawk"
+	adj = "Storm-Hawk"
+	color = {
+		0 0 50
+	}
+	capital = folgunthur
+}
+new country kjenstag = {
+	inherit = nordic_country
+	primary_culture = hjaalmarcher
+	tag = KJE
+	name = "Kjenstag"
+	adj = "Kjen"
+	color = {
+		124 94 73
+	}
+	capital = kjenstag
 }
 new country lone_band = {
 	inherit = nordic_country

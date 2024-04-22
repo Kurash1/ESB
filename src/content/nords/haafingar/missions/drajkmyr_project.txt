@@ -1,15 +1,21 @@
 mission_trees:solitude += {
 	drajkmyr_project = {
 		name = "Drajkmyr Project"
+		desc = "A man named §YHoromir Storm-Hawk§! has recently approached the court about a project to colonize the previously uninhebitable Drajkmyr Marsh, he showed multiple designs that would allow for settlementation within the area, but the upfront cost of such a project would be great. This project if sponsored could extend the borders of our realm even further, but is it worth the cost?"
 		required = hawk_defeated
 		icon = mission_clear_the_delta
 		x = 7
 		y = 4
 		trigger = {
-			always = no
+			treasury = 1000
 		}
 		effect = {
+			add_treasury = -1000
 			
+			areas:drajkmyr_marsh = {
+				add_siberian_construction = 100
+				add_core = storm_hawk
+			}
 		}
 	}
 }

@@ -1,15 +1,62 @@
 mission_trees:solitude += {
 	legacy_of_gjukar_thane = {
 		name = "Legacy of Gjukar-Thane"
+		desc = "A long time ago the western reaches of the whiterun hold were home to many tribes of reachmen, these violent barbaric humans ruled these land, making deals with all forms of demons, singing ancient odes to the horned one. However this all ended when the master of the Horse, §YGjukar the Brave§! lead an army of nords and cleansed the lands, of his legendary conquest only one memento was left, a mighty stone pillar erected after the greatest battle of his conquest."
 		icon = gjukar_legacy_mission
 		required = trade_of_the_hjaal
 		x = 8
 		y = 5
 		trigger = {
-			always = no
+			OR = {
+				owns = gjukar
+				any_subject_country = {
+					owns = gjukar
+				}
+			}
+			provinces:gjukar = {
+				has_great_project = {
+					type = gjukars_monument
+					tier = 1
+				}
+			}
 		}
 		effect = {
-			
+			conditional_effect = {
+				tooltip = "owns §Y[{provinces:gjukar}.GetName]§!"
+				trigger = {
+					owns = gjukar
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Legacy of Gjukar-Thane"
+						modifier = {
+							infantry_power = 0.10
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "a subject of ours owns §Y[{provinces:gjukar}.GetName]§!"
+				trigger = {
+					any_subject_country = {
+						owns = gjukar
+					}
+				}
+				effect = {
+					if [any_subject_country = {
+						owns = gjukar
+					}] {
+						random_subject_country [owns = gjukar] {
+							add_government_reform = tier_2_gjukars_legacy
+						}
+					}
+					else {
+						countries:rorikstead = {
+							add_government_reform = tier_2_gjukars_legacy
+						}
+					}
+				}
+			}
 		}
 	}
 }

@@ -1,15 +1,23 @@
 mission_trees:solitude += {
 	trade_of_the_hjaal = {
 		name = "Trade of the Hjaal"
+		desc = "The Hjaal River connecting deep into the Whiterun Plains is a critical source of the trade that flows into our home, but we have yet to fully grasp control over this trade, this we hope to rectify."
 		icon = sources_of_trade
 		required = hawk_defeated
 		x = 8
 		y = 4
 		trigger = {
-			always = no
+			trade_nodes:hjaal:location = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
+			}
 		}
 		effect = {
-			
+			areas:hjaals_tooth; talking_stone; rorikstead; swindler; gjukar; sleeping_tree; hamvirs_rest; greenspring_hollow = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }

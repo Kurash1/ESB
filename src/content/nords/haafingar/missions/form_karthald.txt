@@ -1,15 +1,38 @@
 mission_trees:solitude += {
 	form_karthald = {
 		name = "A Reach Hold, Karthald"
+		desc = "With our recent conquests into the Reach, we have realised that to rule a realm so large from a centralized point is beyond us, and we believe it would be better to setup a seperate government to rule our territories in the reach. This proposed idea is called §YKarthald§!, and due to our large amounts of territory, it can be declared a full Hold without the Jarls making a fuss."
 		icon = mission_catholic_heddal_church
 		required = karth_expedition
 		x = 9
 		y = 5
 		trigger = {
-			always = no
+			areas:mor_khazgur; bruca; harmugstahl; karthald; dragon_bridge_overlook; reach_camp = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
-			
+			new_custom_tooltip = "Release §YKarthald§! as a March Hold"
+			hidden_effect = {
+				every_owned_province [region = reach] {
+					add_core = karthald
+					remove_core = ROOT
+					set_in_empire = yes
+				}
+				
+				release = karthald
+				create_march = karthald
+				countries:karthald = {
+					form_hold = karthald
+					add_government_reform = tier_1_hold
+				}
+			}
+			countries:karthald = {
+				regions:reach = {
+					add_permanent_claim = PREV
+				}
+			}
 		}
 	}
 }

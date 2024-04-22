@@ -1,15 +1,126 @@
+new country_event haafingar.5 = {
+	title = "Purpose of Dragon Bridge"
+	desc = "Kaal do rath, kah dovah miraad. The Dragon Bridge as it is called in our tongue has long stood as the connection point between haafingar hold to the rest of skyrim, this places it as an important trade center, and this trade and our own efforts has catapulted it to be one of the great cities of the realm. However we have yet to decide upon the focus of the settlement, so the court of the blue palace has been once again called.
+
+'Twin Dragons overlooking river, A waterfall just to the south, and ambiance of calm waves. It is destined to become a city of poetry I say.' [Root.bards_college_advisor.GetName] an advisor from the bards college says, but is quickly silenced by [Root.Mil_Advisor.GetName] our military advisor who calls it Poetic nonsense.
+
+'The Dragon skulls may look pretty and all, but they hide a sinister shadow, beneath the city is a den of thieves that is ever growing in influence' [Root.Adm_Advisor.GetName] our administrative advisor warns, but then adds to it 'Well of course if we were to make some dealings with them we might be able to use them on our enemies instead, while keeping damage to ourselves at a minimu-' [Root.Adm_Advisor.GetSheHe] is interrupted as the court shakes '§RHi al zin do dovah miraad fah faraan§!' [Root.blue_palace_tongue.GetName] the tongue continues further 'No this is a perfect opportunity to purge all corruption from the realm, let us found a scaled justice that defends the realm from thieves.'
+
+And finally [Root.Dip_Advisor.GetName] our diplomatic advisor suggests 'Wasn't the reason the city become prominent because it's on an important trade route? I think we should focus on that.'"
+	immediate = {
+		set_saved_name = {
+			key = bards_college_advisor
+			type = advisor
+			scope = ROOT
+		}
+		set_saved_name = {
+			key = blue_palace_tongue
+			type = advisor
+			scope = ROOT
+		}
+	}
+	after = {
+		clear_saved_name = bards_college_advisor
+		clear_saved_name = blue_palace_tongue
+	}
+	picture = dragon_bridge_eventPicture
+	is_triggered_only = yes
+	options = {
+		{
+			name = "City of Poets"
+			effect = {
+				new_custom_tooltip = "§YPaper§! will now be produced in §Y[{provinces:dragon_bridge}.GetName]§!"
+				provinces:dragon_bridge = {
+					hidden_effect = {
+						change_trade_goods = paper
+					}
+				}
+				provinces:dragon_bridge = {
+					quick_province_modifier = {
+						name = "Settlment Focus: City of Poets"
+						modifier = {
+							diplomatic_upkeep = 1
+							local_prosperity_growth = 0.1
+							local_production_efficiency = 0.25
+						}
+					}
+				}
+			}
+		}
+		{
+			name = "Thieves Guild"
+			effect = {
+				provinces:dragon_bridge = {
+					quick_province_modifier = {
+						name = "Settlment Focus: Thieves Guild"
+						modifier = {
+							spy_offence = 0.5
+							min_local_autonomy = 50
+						}
+					}
+				}
+			}
+		}
+		{
+			name = "Scaled Justice"
+			effect = {
+				set_country_flag = has_scaled_justice
+				provinces:dragon_bridge = {
+					quick_province_modifier = {
+						name = "Settlment Focus: Scaled Justice"
+						modifier = {
+							yearly_corruption = -0.03
+							statewide_governing_cost = -0.5
+							local_state_maintenance_modifier = -1
+						}
+					}
+				}
+			}
+		}
+		{
+			name = "Trade Route"
+			effect = {
+				new_custom_tooltip = "Center of Trade level in §Y[{provinces:dragon_bridge}.GetName]§! is increased by §Y1§!"
+				provinces:dragon_bridge = {
+					hidden_effect = {
+						add_center_of_trade_level = 1
+					}
+				}
+				provinces:dragon_bridge = {
+					quick_province_modifier = {
+						name = "Settlment Focus: Trade Route"
+						modifier = {
+							caravan_power = 0.1
+							trade_value_modifier = 1.5
+							province_trade_power_modifier = 0.5
+						}
+					}
+				}
+			}
+		}
+	}
+}
 mission_trees:solitude += {
 	taming_the_dragon = {
 		name = "Taming the Dragon"
+		desc = "During the §YWar of the Twin Bridges§! Dragon Bridge tried to stay neutral, but were attacked by the forces of Snow-Hawk, who could not bother to find another route into our fair lands. The majority of their forces ended up being destroyed, and they were forced to come to us for assistance, and that assistance we gave. We fought against Snow-Hawk valiantly, and in the §YTreaty of Horga Hills§! we stipulated that Dragon Bridge should become our vassal state, so that Snow-Hawk would not attack their weakened self. However this vassalage of theirs is not seen as a permanent thing, rather we hope to slowly integrate them, and make them an integral part of our realm."
 		icon = dragon_bridge_mission
 		required = restoration_of_forces
 		x = 9
 		y = 1
 		trigger = {
-			always = no
+			owns = dragon_bridge
+			has_adm_advisor_of_level = 1
+			has_dip_advisor_of_level = 1
+			has_mil_advisor_of_level = 1
 		}
 		effect = {
-			
+			country_event = haafingar.5
+			show_event_insights = {
+				tooltip = "This event will allow us to choose the settlment focus for Dragon Bridge."
+				event = haafingar.5
+				show_options = yes
+			}
 		}
 	}
 }

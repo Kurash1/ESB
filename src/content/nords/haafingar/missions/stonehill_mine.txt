@@ -1,15 +1,26 @@
 mission_trees:solitude += {
 	stonehill_mine = {
 		name = "Stonehill Mining"
+		desc = "The Township of Stonehills was established through continous trade between small villages and the Rockwallow mine that is near it, this set it up as a trade hub for the eastern parts of Hjaalmarch. However this mine while old was never properly build, but rather miners had to fend for themselves inside. If we were to build it up to code, then it would probably be one of the greatest in skyrim."
 		required = shade_of_the_skyborn
 		icon = mission_iron_and_copper
 		x = 7
 		y = 5
 		trigger = {
-			always = no
+			owns = stonehills
+			provinces:stonehills = {
+				has_building = mine_manufactory
+			}
 		}
 		effect = {
-			
+			provinces:stonehills = {
+				quick_province_modifier = {
+					name = "Rockwallow Mine"
+					modifier = {
+						trade_goods_size_modifier = 0.5
+					}
+				}
+			}
 		}
 	}
 }

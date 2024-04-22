@@ -1,6 +1,23 @@
+new mercenary_company four_shields_order = {
+	name = "Four Shields Order"
+	regiments_per_development = 0.04
+	cost_modifier = 1.0
+	home_province = dragon_bridge
+	cavalry_weight = 0
+	artillery_weight = 0
+	trigger = {
+		has_global_flag = four_shields_order_refound
+		is_race = nord
+	}
+	modifier = {
+		shock_damage_received = -25%
+		morale_damage_received = -25%
+	}
+}
 mission_trees:solitude += {
 	refound_the_four_shields = {
 		name = "Refound the Four Shields"
+		desc = "Dragon Bridge was originally founded by Four Brothers, each a Shield-Thane of an assassinated atmoran Jarl, they fled to skyrim in search of a more peaceful place to be, as they did not believe themselves fit to continue their post as they had failed to protect their liege. These four brothers built the original town right next to the Dragon Bridge which had been before feared by the locals, and they taught the locals their skills of war, that they had learnt in Atmora, even after their passing their legacy continued, as mercenary after mercenary taught the teachings of the Four Shields, and it formed into a full company. This Company was unfortunately destroyed in the §YWar of the Twin Bridges§!, but through our sponsorship we could refound it."
 		icon = mission_build_up_to_force_limit
 		required = {
 			end_the_treaty
@@ -9,10 +26,27 @@ mission_trees:solitude += {
 		x = 8
 		y = 2
 		trigger = {
-			always = no
+			manpower = 5
+			owns = dragon_bridge
+			provinces:dragon_bridge = {
+				base_manpower = 7
+			}
 		}
 		effect = {
+			add_manpower = -5
+			new_custom_tooltip = "'§YFour Shields Order§!' Mercenary Company is enabled for all nordic countries"
+			set_global_flag = four_shields_order_refound
 			
+			provinces:dragon_bridge = {
+				quick_province_modifier = {
+					name = "Four Shields Order"
+					modifier = {
+						mercenary_discipline = 0.05
+						local_manpower_modifier = 0.5
+						local_defensiveness = 0.25
+					}
+				}
+			}
 		}
 	}
 }
