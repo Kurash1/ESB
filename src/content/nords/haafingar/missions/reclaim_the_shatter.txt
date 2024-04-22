@@ -1,0 +1,18 @@
+mission_trees:solitude += {
+	reclaim_the_shatter = {
+		name = "Reclaim the Shatter"
+		icon = mission_rb_colonise_canada
+		required = {
+			seeking_vengeance
+			form_haafingar_hold
+		}
+		x = 3
+		y = 5
+		trigger = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
+}

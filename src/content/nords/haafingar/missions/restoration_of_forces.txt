@@ -14,6 +14,15 @@ mission_trees:solitude += {
 		effect = {
 			add_mil_power = 250
 			add_yearly_manpower = 1
+			
+			quick_country_modifier = {
+				name = "Spirit of War"
+				years = 25
+				modifier = {
+					manpower_recovery_speed = 0.15
+					global_regiment_cost = -0.10
+				}
+			}
 		}
 	}
 }

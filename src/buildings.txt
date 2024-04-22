@@ -370,6 +370,7 @@ new building_line army = {
 		name = "Army 1"
 		modifier = {
 			local_manpower_modifier = 0.5
+			land_forcelimit = 1
 		}
 	}
 	2 = {
@@ -377,8 +378,8 @@ new building_line army = {
 		name = "Army 2"
 		make_obsolete = army_1
 		modifier = {
-			local_manpower_modifier = 0.75
-			land_forcelimit = 1
+			local_manpower_modifier = 1
+			land_forcelimit = 2
 		}
 	}
 	3 = {
@@ -386,8 +387,8 @@ new building_line army = {
 		name = "Army 3"
 		make_obsolete = army_2
 		modifier = {
-			local_manpower_modifier = 1.0
-			land_forcelimit = 2
+			local_manpower_modifier = 1.5
+			land_forcelimit = 3
 		}
 	}
 	4 = {
@@ -395,7 +396,7 @@ new building_line army = {
 		name = "Army 4"
 		make_obsolete = army_3
 		modifier = {
-			local_manpower_modifier = 1.5
+			local_manpower_modifier = 2
 			land_forcelimit = 4
 		}
 	}

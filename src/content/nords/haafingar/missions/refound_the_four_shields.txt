@@ -1,0 +1,18 @@
+mission_trees:solitude += {
+	refound_the_four_shields = {
+		name = "Refound the Four Shields"
+		icon = mission_build_up_to_force_limit
+		required = {
+			end_the_treaty
+			taming_the_dragon
+		}
+		x = 8
+		y = 2
+		trigger = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
+}

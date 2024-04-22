@@ -1,0 +1,18 @@
+mission_trees:solitude += {
+	form_jehanna = {
+		name = "Form Jehanna Hold"
+		icon = mission_secure_hajj_ports
+		required = {
+			bridge_over_hlardstrad
+			form_haafingar_hold
+		}
+		x = 5
+		y = 5
+		trigger = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
+}

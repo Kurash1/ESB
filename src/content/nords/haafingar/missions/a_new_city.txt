@@ -14,10 +14,12 @@ mission_trees:solitude += {
 			owns = solitude
 		}
 		effect = {
-			new_custom_tooltip = "§YPaper§! will now be produced in §Y[{provinces:solitude}.GetName]§!."
+			new_custom_tooltip = "§YPaper§! will now be produced in §Y[{provinces:solitude}.GetName]§!.
+Create a level §Y1§! Center of Trade in §G[{provinces:solitude}.GetName]§!"
 			hidden_effect = {
 				provinces:solitude = {
 					change_trade_goods = paper
+					center_of_trade = 1
 				}
 			}
 			provinces:solitude = {

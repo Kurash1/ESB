@@ -7,7 +7,12 @@ mission_trees:solitude += {
 		x = 7
 		y = 1
 		trigger = {
-			always = no
+			OR = {
+				areas:rivers_horn = {
+					owned_by = ROOT
+				}
+				overlord_of = chill_wind
+			}
 		}
 		effect = {
 			
