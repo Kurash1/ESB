@@ -22,12 +22,29 @@ new named_trigger cleansing_triggers = {
 		hidden_trigger = { always = no }
 	}
 }
-new custom_button cleanse_province = {
-	tooltip = "Cleanse Province"
-	potential = {
-		owned_by = FROM
+new country_event cleansing.1 = {
+	title = "Cleansing"
+	hidden = yes
+	options = {
+		name = ""
+		effect = {
+			event_target:cleansing_target = {
+				add_siberian_construction = 100
+			}
+		}
 	}
-	trigger = {
+}
+new building cleansing = {
+	name = "Cleansing"
+	desc = "Let's clean our land from the tainting presence of other races"
+	cost = 10
+	time = 12
+	x = 460
+	y = 134
+	modifier = {
+		allowed_num_of_buildings = 1
+	}
+	build_trigger = {
 		NOT = {
 			has_construction = any
 		}
@@ -39,29 +56,64 @@ new custom_button cleanse_province = {
 			cleansing_triggers
 		}
 	}
-	effect = {
-		if [
-			NOT = {
-				has_construction = any
-			}
-			OR = {
-				custom_trigger_tooltip = {
-					new_tooltip = "Have any modifier that grants cleansing"
-					always = no
-				}
-				cleansing_triggers
-			}
-		] {
-			add_building_construction = {
-				building = cleansing
-				speed = 1
-				cost = 1
-			}
-			
-			new_custom_tooltip = "On completion:"
-			tooltip = {
-				cleansing_effect = FROM
-			}
+	on_built = {
+		change_religion = FROM
+		change_culture = FROM
+		hidden_effect = {
+			add_nationalism = -100
 		}
+		
+		`cede_province = ---`
+		save_event_target_as = cleansing_target
+		FROM = {
+			country_event = cleansing.1
+		}
+		remove_building = cleansing
+	}
+	ai_will_do = {
+		factor = 1000
 	}
 }
+#new custom_button cleanse_province = {
+#	tooltip = "Cleanse Province"
+#	potential = {
+#		owned_by = FROM
+#	}
+#	trigger = {
+#		NOT = {
+#			has_construction = any
+#		}
+#		OR = {
+#			custom_trigger_tooltip = {
+#				new_tooltip = "Have any modifier that grants cleansing"
+#				always = no
+#			}
+#			cleansing_triggers
+#		}
+#	}
+#	effect = {
+#		if [
+#			NOT = {
+#				has_construction = any
+#			}
+#			OR = {
+#				custom_trigger_tooltip = {
+#					new_tooltip = "Have any modifier that grants cleansing"
+#					always = no
+#				}
+#				cleansing_triggers
+#			}
+#		] {
+#			add_building_construction = {
+#				building = cleansing
+#				speed = 1
+#				cost = 1
+#			}
+#			
+#			new_custom_tooltip = "On completion:"
+#			tooltip = {
+#				cleansing_effect = FROM
+#			}
+#		}
+#	}
+#}

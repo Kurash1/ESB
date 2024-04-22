@@ -6,7 +6,9 @@ mission_trees:solitude += {
 		x = 7
 		y = 0
 		trigger = {
-			army_size_percentage = 1
+			if [ai = no] {
+				army_size_percentage = 0.9
+			}
 			manpower_percentage = 0.75
 		}
 		effect = {

@@ -230,14 +230,14 @@ new province rannveigs_fast = {
 	}
 }
 new province hjaals_tooth = {
-	position = {
-		1632.000 1983.000 1632.000 1983.000 1632.000 1983.000 1629.000 1987.500 1632.000 1983.000 1632.000 1983.000 1632.000 1983.000
+	position={
+		1627.000 1981.000 1628.000 1981.000 1632.000 1983.000 1629.500 1985.500 1633.000 1982.000 1629.000 1981.000 1632.000 1983.000 
 	}
-	rotation = {
-		0.000 0.000 0.000 2.356 0.000 0.000 0.000
+	rotation={
+		0.000 0.000 0.000 3.141 0.000 0.000 0.000 
 	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	height={
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
 	}
 	terrain = steppe
 	area = hjaals_teeth
@@ -880,7 +880,7 @@ new province snow_trail = {
 		hre = yes
 		history_trade_goods = wood
 	
-		is_city = yes
+		fort_15th = yes
 	}
 }
 new province stonehills = {
@@ -905,9 +905,7 @@ new province stonehills = {
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
-		history_trade_goods = stone
-	
-		is_city = yes
+		history_trade_goods = c_metals
 	}
 }
 new province skyborn_altar = {
@@ -1190,7 +1188,7 @@ new province kjenstag = {
 		hre = yes
 		history_trade_goods = alchemical_ingredients
 	
-		is_city = yes
+		fort_14th = yes
 	}
 }
 new province rotten_trees = {

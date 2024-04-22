@@ -5,6 +5,9 @@ new inheritable roscrean_country = {
 	graphical_culture = greekgfx
 	history = {
 		1.1.1 = {
+			province_groups:shatter_discovery = {
+				discover_country = $tag
+			}
 			province_groups:nord_discovery = {
 				discover_country = $tag
 			}
@@ -242,9 +245,6 @@ new country nymph_dance = {
 	color = { 255 0 220 }
 	capital = rageld
 	history += {
-		province_groups:shatter_discovery = {
-			discover_country = $tag
-		}
 		history_ruler = {
 			name = "Mulild"
 			dynasty = "Nymph-Dance"
@@ -262,10 +262,6 @@ new country star_weaver = {
 	color = { 127 147 255 }
 	capital = skelskar
 	history += {
-		province_groups:shatter_discovery = {
-			discover_country = $tag
-		}
-
 		history_ruler = {
 			name = "Klarlonl"
 			dynasty = "Star-Weaver"
@@ -283,10 +279,6 @@ new country sea_ghost = {
 	color = { 0 38 255 }
 	capital = frylsgelg
 	history += {
-		province_groups:shatter_discovery = {
-			discover_country = $tag
-		}
-		
 		history_ruler = {
 			name = "Dyrligim"
 			dynasty = "Sea-Ghost"

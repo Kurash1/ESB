@@ -1,0 +1,23 @@
+mission_trees:solitude += {
+	seeking_vengeance = {
+		name = "Seeking Vengeance"
+		desc = ""
+		x = 3
+		y = 4
+		icon = bloody_impaled_mission
+		required = the_haafingar_isles
+		trigger = {
+			any_owned_province = {
+				culture = sea_giant
+			}
+		}
+		effect = {
+			province_groups:shatter_discovery = {
+				discover_country = ROOT
+			}
+			regions:the_shatter = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
