@@ -1,0 +1,50 @@
+new decision establish_scouting_company = {
+	name = "Establish Scouting Company"
+	potential = {
+		ai = no
+		NOT = { has_country_flag = init_survey }
+	}
+	allow = {
+		land_forcelimit = 25
+		treasury = 100
+		manpower = 1
+	}
+	effect = {
+		set_country_flag = init_survey
+		
+		add_treasury = -100
+		&survey_funds := 100
+		
+		add_manpower = -1
+		&survey_real_manpower := 1000
+		
+		set_country_flag = scouting_company
+		hidden_effect = {
+			&survey_manpower := 1
+			variables:survey_monthly_income:init = yes
+			variables:survey_monthly_expenses:init = yes
+			variables:survey_monthly_funds:init = yes
+			variables:survey_monthly_recruits:init = yes
+			variables:survey_monthly_losses:init = yes
+			variables:survey_monthly_manpower:init = yes
+			variables:survey_force_limit:init = yes
+			variables:survey_over_force_limit:init = yes
+			variables:survey_administrative_costs:init = yes
+			variables:survey_scout_maintenance:init = yes
+			variables:survey_base_income:init = yes
+			variables:survey_monthly_recruits_base:init = yes
+			variables:survey_company_size:init = yes
+			variables:scouting_company_experience:init = yes
+			evaluate_survey_experience
+			variables:scouting_company_idea_cost:init = yes
+			
+			apply_recruitment_policy = standard_recruitment
+			apply_economic_policy = level_0
+			apply_passive_activity = training
+			
+			&survey_leader_adm := 0
+			&survey_leader_dip := 0
+			&survey_leader_mil := 0
+		}
+	}
+}

@@ -226,13 +226,13 @@ new survey_passive_activity skirmishing = {
 	name = "Skirmishing"
 	icon = 5
 	tooltip = ""
-	trigger_tooltip = "Company Size at least 25% of Land Force limit"
+	trigger_tooltip = "Company Size at least 10% of Land Force limit"
 	trigger = {
 		variable_arithmetic_trigger = {
 			custom_tooltip = empty
 			
 			&survey_temp &= land_forcelimit
-			&survey_temp *= 0.25
+			&survey_temp *= 0.1
 			
 			&survey_manpower >= survey_temp
 		}
@@ -245,13 +245,13 @@ new survey_passive_activity help_administration = {
 	name = "Help Administration"
 	icon = 6
 	tooltip = ""
-	trigger_tooltip = "Company Size at least 25% of Land Force limit"
+	trigger_tooltip = "Company Size at least 10% of Land Force limit"
 	trigger = {
 		variable_arithmetic_trigger = {
 			custom_tooltip = empty
 			
 			&survey_temp &= land_forcelimit
-			&survey_temp *= 0.25
+			&survey_temp *= 0.1
 			
 			&survey_manpower >= survey_temp
 		}

@@ -78,52 +78,22 @@ new custom_button open_survey_screen = {
 			has_country_flag = show_technology
 		}
 	}
+	trigger = {
+		has_country_flag = scouting_company
+	}
 	effect = {
 		set_country_flag = show_survey_screen
 		
-		if [
-			NOT = {
-				has_country_flag = init_survey
-			}
-		] {
-			set_country_flag = init_survey
+		hidden_effect = {
+			&survey_real_manpower := survey_manpower
+			&survey_real_manpower *= 1000
 			
-			variables:survey_funds:init = yes
-			variables:survey_manpower:init = yes
-			variables:survey_real_manpower:init = yes
-			variables:survey_monthly_income:init = yes
-			variables:survey_monthly_expenses:init = yes
-			variables:survey_monthly_funds:init = yes
-			variables:survey_monthly_recruits:init = yes
-			variables:survey_monthly_losses:init = yes
-			variables:survey_monthly_manpower:init = yes
-			variables:survey_force_limit:init = yes
-			variables:survey_over_force_limit:init = yes
-			variables:survey_administrative_costs:init = yes
-			variables:survey_scout_maintenance:init = yes
-			variables:survey_base_income:init = yes
-			variables:survey_monthly_recruits_base:init = yes
-			variables:survey_company_size:init = yes
-			variables:scouting_company_experience:init = yes
-			evaluate_survey_experience
-			variables:scouting_company_idea_cost:init = yes
+			survey_calculate_recruits
+			survey_calculate_losses
 			
-			apply_recruitment_policy = standard_recruitment
-			apply_economic_policy = level_0
-			apply_passive_activity = training
-			
-			&survey_leader_adm := 0
-			&survey_leader_dip := 0
-			&survey_leader_mil := 0
+			survey_calculate_income
+			survey_calculate_expenses
 		}
-		&survey_real_manpower := survey_manpower
-		&survey_real_manpower *= 1000
-		
-		survey_calculate_recruits
-		survey_calculate_losses
-		
-		survey_calculate_income
-		survey_calculate_expenses
 	}
 }
 new custom_button close_survey_screen = {
@@ -140,12 +110,23 @@ on_actions:on_monthly_pulse += {
 		&survey_real_manpower := survey_manpower
 		&survey_real_manpower *= 1000
 		
+		float_random = {
+			chance = 0.2
+			effect = {
+				&survey_leader_adm := 0
+				&survey_leader_dip := 0
+				&survey_leader_mil := 0
+				
+				clr_country_flag = survey_has_scout_master
+			}
+		}
+		
 		if [
 			variable_arithmetic_trigger = {
 				custom_tooltip = empty
 				
 				&survey_temp &= land_forcelimit
-				&survey_temp *= 0.25
+				&survey_temp *= 0.1
 				
 				&survey_manpower < survey_temp
 			}
