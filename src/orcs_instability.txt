@@ -5,7 +5,7 @@ new government_mechanic orcs_instability  = {
 	powers = {
 		orcs_boldness = {
 			name = "Orcs Boldness"
-			desc = "Blah balh kfjewdc"
+			desc = "Boh"
 			gui = {
 				size = { x = 345 y = 50 }
 				moveable = 0
@@ -32,13 +32,18 @@ new government_mechanic orcs_instability  = {
 			base_monthly_growth = 0.5 
 			#development_scaled_monthly_growth = <float> 
 			#show_before_interactions = <bool>
-			#scaled_modifier = {
+			scaled_modifier = {
 			#	start_value = <float> 
 			#	end_value = <float> 
 			#	extend_beyond_value = <bool> 
 			#	trigger = <trigger>
-			#	modifier = <modifier>
-			#}
+				modifier = {
+					land_morale = 0.1
+					shock_damage = 0.1
+					global_unrest = 5
+					stability_cost_modifier = 0.5
+				}
+			}
 			#reverse_scaled_modifier = {
 			#	start_value = <float> 
 			#	end_value = <float> 
@@ -59,3 +64,4 @@ new government_mechanic orcs_instability  = {
 	}
 
 }
+#new event
