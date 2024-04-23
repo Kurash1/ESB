@@ -12,6 +12,7 @@ NDefines.NCountry.IDEA_TO_TECH = -0			-- percentage on tech reduction per idea.
 NDefines.NCountry.TECH_TIME_COST = 0			-- tech grow with 20% cost over time.
 NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.1		-- per year ahead.
 NDefines.NCountry.PS_BUY_IDEA = 600
+NDefines.NCountry.PS_FACTION_BOOST = 50
 
 NDefines.NDiplomacy.MAX_NUM_OF_ELECTORS = 8						-- Maximum number of electors in the interface
 NDefines.NDiplomacy.DESIRED_NUM_OF_ELECTORS = 1
