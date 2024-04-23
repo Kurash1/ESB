@@ -1,7 +1,3 @@
-new great_project deepwood_vale = {
-	name = "Deepwood Vale"
-	start = black_mountain
-}
 new great_project dunmeth_pass = {
 	name = "Dunmeth Pass"
 	start = black_mountain
@@ -228,42 +224,8 @@ new great_project ancestor_glade = {
 		}
 	}
 }
-new great_project kilkreath_temple = {
-	name = "Kilkreath Temple"
-	start = black_mountain
-}
 new great_project arcwind_point = {
 	name = "Arcwind Point"
-	start = black_mountain
-}
-new great_project castle_dour = {
-	name = "Castle Dour"
-	start = black_mountain
-	tier_1 = {
-		province_modifier = {
-			fort_level = 1
-			local_defensiveness = 0.1
-		}
-	}
-	tier_2 = {
-		province_modifier = {
-			fort_level = 2
-			local_defensiveness = 0.2
-		}
-	}
-	tier_3 = {
-		province_modifier = {
-			fort_level = 3
-			local_defensiveness = 0.3
-		}
-	}
-}
-new great_project temple_of_the_divines = {
-	name = "Temple of the Divines"
-	start = black_mountain
-}
-new great_project bards_college = {
-	name = "Bards College"
 	start = black_mountain
 }
 new great_project bleak_falls_barrow = {
@@ -305,35 +267,6 @@ new great_project bleak_falls_barrow = {
 			global_missionary_strength = 0.03
 		}
 	}
-}
-new great_project blue_palace = {
-	name = "Blue Palace"
-	start = black_mountain
-	tier_1 = {
-		country_modifier = {
-			governing_capacity_modifier = 0.05
-			reform_progress_growth = 0.05
-			advisor_cost = -0.10
-		}
-	}
-	tier_2 = {
-		country_modifier = {
-			governing_capacity_modifier = 0.1
-			reform_progress_growth = 0.1
-			advisor_cost = -0.2
-		}
-	}
-	tier_3 = {
-		country_modifier = {
-			governing_capacity_modifier = 0.15
-			reform_progress_growth = 0.15
-			advisor_cost = -0.25
-		}
-	}
-}
-new great_project castle_volkihar = {
-	name = "Castle Volkihar"
-	start = black_mountain
 }
 new great_project college_of_winterhold = {
 	name = "College of Winterhold"
@@ -470,32 +403,6 @@ new great_project forelhost = {
 new great_project fortress_of_ice = {
 	name = "Fortress of Ice"
 	start = black_mountain
-}
-new great_project great_arch = {
-	name = "Great Arch"
-	start = red_port
-	tier_1 = {
-		country_modifier = {
-			global_unrest = -1
-			center_of_trade_upgrade_cost = -0.05
-			trade_steering = 0.05
-		}
-	}
-	tier_2 = {
-		country_modifier = {
-			global_unrest = -2
-			center_of_trade_upgrade_cost = -0.1
-			trade_steering = 0.1
-		}
-	}
-	tier_3 = {
-		country_modifier = {
-			global_unrest = -3
-			center_of_trade_upgrade_cost = -0.15
-			trade_steering = 0.15
-			own_coast_naval_combat_bonus = 1.0
-		}
-	}
 }
 new great_project dragonsreach = {
 	name = "Dragonsreach"

@@ -879,23 +879,6 @@ new province low_grove = {
 		history_trade_goods = stone
 		
 		history_owner = rime_rock
-		
-		1.1.1 = {
-			create_expedition = {
-				id = dragonhome
-				name = "Dragonhome"
-				desc = ""
-				frame = 15
-				event_picture = deepwood_vale_eventPicture
-				length = 60
-				on_complete = {
-					create_monument = {
-						monument = deepwood_vale
-						province = deepwood_redoubt
-					}
-				}
-			}
-		}
 	}
 }
 new province pinefrost = {

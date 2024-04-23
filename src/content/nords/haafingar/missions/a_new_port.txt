@@ -2,7 +2,7 @@ mission_trees:solitude += {
 	a_new_port = {
 		name = "The Great Port of Red"
 		desc = "Once known as the capital of the realm, now §YRed-Port§! is the second most important port of Haafingar right after §YSkalavik§!, but many of our advisors suggest that having our primary port closer to our capital would benefit in both trade and military operations. Thus came the proposals to build a new §YGreat Port of Red§!."
-		icon = red_port_mission
+		icon = renaissance_city
 		x = 0
 		y = 4
 		required = new_solitude
@@ -16,14 +16,6 @@ mission_trees:solitude += {
 			add_dip_power = -250
 			provinces:red_port = {
 				add_base_production = 5
-			}
-			
-			new great_project red_port = {
-				name = "Red Port"
-				start = black_mountain
-				tier_1 = { }
-				tier_2 = { }
-				tier_3 = { }
 			}
 			
 			new_custom_tooltip = "The monument §YRed Port§! is created in §Y[{provinces:red_port}.GetName]§! at Noteworthy level.\n"

@@ -1,6 +1,7 @@
 mission_trees:solitude += {
 	form_jehanna = {
-		name = "Form Jehanna Hold"
+		name = "Found the city of Jehanna"
+		desc = "As our conquests in the west allow us to take a foothold within the Orcish lands, we must finally establish a base of operations for continued expansion within the region. Our generals suggest that we build a fort at [{provinces:jehanna}.GetName], and establish a seperate military government for the region."
 		icon = mission_secure_hajj_ports
 		required = {
 			bridge_over_hlardstrad
@@ -9,10 +10,42 @@ mission_trees:solitude += {
 		x = 5
 		y = 5
 		trigger = {
-			always = no
+			owns = jehanna
+			provinces:jehanna = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
 		}
 		effect = {
-			
+			provinces:jehanna = {
+				change_culture = ROOT
+				change_religion = ROOT
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				center_of_trade = 1
+				change_province_name = "Jehanna"
+			}
+			new_custom_tooltip = "Release §YJehanna§! as a March"
+			hidden_effect = {
+				every_owned_province [region = wrothgar] {
+					add_core = jehanna
+					remove_core = ROOT
+					set_in_empire = yes
+				}
+				
+				release = jehanna
+				create_march = jehanna
+			}
+			countries:jehanna = {
+				regions:wrothgar = {
+					add_permanent_claim = PREV
+				}
+			}
 		}
 	}
 }

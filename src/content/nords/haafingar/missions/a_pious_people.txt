@@ -2,7 +2,7 @@ mission_trees:solitude += {
 	a_pious_people = {
 		name = "Pious People of Solitude"
 		desc = "From our earliest history the three clans of Solitude have been some of the most pious amongst all the northern men. By investing in theological pursuits we can establish a more organized method of worship through building interconnected churches across the lands."
-		icon = temple_of_the_divines_mission
+		icon = mission_hands_praying
 		x = 2
 		y = 1
 		required = old_solitude
@@ -13,6 +13,11 @@ mission_trees:solitude += {
 			has_idea = religious_ideas_3
 		}
 		effect = {
+			create_monument = {
+				monument = temple_of_the_divines
+				province = solitude
+			}
+			
 			quick_country_modifier = {
 				id = solitude_organized_churches
 				name = "Organized Churches"

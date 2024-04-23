@@ -11,8 +11,24 @@ mission_trees:solitude += {
 				type = all
 				owned_by = ROOT
 			}
+			owns = karthwatch
+			provinces:karthwatch = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
 		}
 		effect = {
+			provinces:karthwatch = {
+				change_culture = ROOT
+				change_religion = ROOT
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
 			new_custom_tooltip = "Release §YKarthald§! as a March Hold"
 			hidden_effect = {
 				every_owned_province [region = reach] {

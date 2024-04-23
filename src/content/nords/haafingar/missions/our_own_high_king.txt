@@ -1,15 +1,25 @@
 mission_trees:solitude += {
 	our_own_high_king = {
 		name = "Our own High King"
+		desc = "With the support of the other Jarls we have finally managed to crown ourselves High King, usurping that position from Ysgramoor's heirs. This great feat gives more credence to the statement that §Y[Root.Capital.GetName]§! is the greatest city of skyrim, and with our new authority we can even declare it the §Y§Imperial Capital of Skyrim§!."
 		icon = mission_empire
 		required = form_haafingar_hold
 		x = 4
 		y = 5
 		trigger = {
-			always = no
+			is_emperor = yes
 		}
 		effect = {
-			
+			capital_scope = {
+				quick_province_modifier = {
+					name = "Imperial Capital of Skyrim"
+					modifier = {
+						diplomats = 1
+						governing_capacity_modifier = 0.1
+						local_development_cost_modifier = -0.1
+					}
+				}
+			}
 		}
 	}
 }

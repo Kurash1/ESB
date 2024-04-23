@@ -255,6 +255,7 @@ new subject_type march = {
 	seize_territory = yes
 	send_additional_troops = yes
 	grant_province = yes
+	divert_trade = yes
 	
 	block_settlement_growth = yes
 	allow_settlement_growth = yes
@@ -327,6 +328,31 @@ new subject_type vassal = {
 
 	overlord_opinion_modifier = is_vassal
 	subject_opinion_modifier = is_vassal
+}
+
+new localisation founded_clan = "Founded Clan"
+new localisation founded_clan_long_desc = ""
+new localisation founded_clan_title = "Founded Clan"
+new localisation founded_clan_title_plural = "Founded Clans"
+new localisation founded_clan_overlord = "Founded Clan Overlord"
+new localisation founded_clan_subject = "Founded Clan Subject"
+new localisation founded_clan_is_our = "§Y$NAME$§! is our Founded Clan."
+new subject_type founded_clan = {
+	copy_from = vassal
+	
+	base_liberty_desire = -10
+	liberty_desire_development_ratio = 0.15
+	
+	pays_overlord = 1
+	forcelimit_to_overlord = 0.1
+	naval_forcelimit_to_overlord = 0.1
+	manpower_to_overlord = 0.1
+	sailors_to_overlord = 0.1
+	
+	relative_power_class = 3
+	
+	place_relative_on_throne = no
+	takes_diplo_slot = no
 }
 
 new localisation tributary_clan = "Tributary Clan"
