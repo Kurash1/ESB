@@ -1,0 +1,36 @@
+mission_trees:solitude += {
+	hawk_defeated = {
+		name = "The Hawk Defeated"
+		desc = "Clan §YSnow-Hawk§!, our enemy of many decades, has finally fallen, and as they destroyed our lands, so shall we destroy theirs. Their capital, once prosperious is now in our hands, and it will fall, and be burned, like Alviora and Esjuberg were."
+		icon = mission_fire_of_london
+		required = revenge_for_alviora
+		x = 7
+		y = 3
+		trigger = {
+			NOT = { exists = snow_hawk }
+			owns = snowhawk
+		}
+		effect = {
+			new_custom_tooltip = "Gain §G50§! Administrative Power for each point of base tax in §Y[{provinces:snowhawk}.GetName]§!.
+Gain §G50§! Diplomatic Power for each point of base production in §Y[{provinces:snowhawk}.GetName]§!.
+Gain §G50§! Military Power for each point of base manpower in §Y[{provinces:snowhawk}.GetName]§!."
+			hidden_effect = {
+				provinces:snowhawk = {
+					add_scaled_local_adm_power = 50
+					add_scaled_local_dip_power = 50
+					add_scaled_local_mil_power = 50
+				}
+			}
+			provinces:snowhawk = {
+				add_base_tax = -100
+				add_base_production = -100
+				add_base_manpower = -100
+				add_devastation = 100
+			}
+			
+			areas:morthal; myrwatch; stonehills; ustengrav = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

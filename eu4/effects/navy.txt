@@ -41,3 +41,59 @@ new effect create_flagship = {
 		}
 	}
 }
+new effect create_infantry = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			infantry = PREV
+		}
+	}
+}
+new effect create_artillery = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			artillery = PREV
+		}
+	}
+}
+new effect create_heavy_ship = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			heavy_ship = PREV
+		}
+	}
+}
+new effect create_light_ship = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			light_ship = PREV
+		}
+	}
+}
+new effect create_galley = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			galley = PREV
+		}
+	}
+}
+new effect create_transport = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			transport = PREV
+		}
+	}
+}
+new effect create_galleass_galley = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			galleass_galley = PREV
+		}
+	}
+}

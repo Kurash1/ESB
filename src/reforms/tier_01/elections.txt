@@ -3,11 +3,13 @@ on_actions:on_new_term_election += {
 		elections.1
 	}
 }
+new named_effect death_election_events = {
+	elections.2
+	elections.3
+}
 on_actions:on_death_election += {
 	events = {
-		elections.2
-		elections.3
-		elections.4
+		death_election_events
 	}
 }
 new localisation mechanic_special_election_yes = "Has a special Election event."
@@ -224,66 +226,5 @@ new country_event elections.3 = {
 	
 	after = {
 		clr_country_flag = in_theocracy_heir_selection
-	}
-}
-new country_event elections.4 = { #This is for Solitude
-	title = "Election!"
-	desc = "The unfortunate passing of $MONARCH$ forces us to hold an election of who will rule our country next. Our three clans have put forth their own candidates..."
-	picture = REPUBLICAN_DEBATES_eventPicture
-	
-	is_triggered_only = yes
-	trigger = {
-		has_reform = tier_1_three_clan_council
-	}
-	
-	options = {
-		{
-			name = "The Rock-Hammer Candidate"
-			effect = {
-				define_ruler = {
-					hide_skills = yes
-					dynasty = "Rock-Hammer"
-					adm = 4
-					claim = 100
-				}
-				add_faction_influence = {
-					faction = solitude_rock_hammer
-					influence = 15
-				}
-			}
-			ai_chance = { factor = 20 }
-		}
-		{
-			name = "The Storm-Galley Candidate"
-			effect = {
-				define_ruler = {
-					hide_skills = yes
-					dynasty = "Storm-Galley"
-					dip = 4
-					claim = 100
-				}
-				add_faction_influence = {
-					faction = solitude_storm_galley
-					influence = 15
-				}
-			}
-			ai_chance = { factor = 20 }
-		}
-		{
-			name = "The Red-Wolf Candidate"
-			effect = {
-				define_ruler = {
-					hide_skills = yes
-					dynasty = "Red-Wolf"
-					mil = 4
-					claim = 100
-				}
-				add_faction_influence = {
-					faction = solitude_red_wolf
-					influence = 15
-				}
-			}
-			ai_chance = { factor = 20 }
-		}
 	}
 }

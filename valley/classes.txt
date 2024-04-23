@@ -23,6 +23,25 @@ new class event_modifier = {
 		}
 	}
 }
+new class historical_war = {
+	list = historical_wars
+	args = {
+		name = string
+		war_goal = named_block
+		dates = named_effect
+	}
+	simple_transpile = {
+		foreach $war in historical_wars {
+			write_file "history/wars/{$war}.txt" = {
+				name = `"{$war:name}"`
+				war_goal = {
+					$war:war_goal
+				}
+				$war:dates
+			}
+		}
+	}
+}
 new class custom_text_box = {
 	id = `{this:id}`
 	list = custom_text_boxes

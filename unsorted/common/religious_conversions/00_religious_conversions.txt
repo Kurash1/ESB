@@ -37,18 +37,6 @@ propagate_religion_policy = {
 			has_port = no
 		}
 		modifier = {
-			factor = 1.15
-			has_province_modifier = trading_settlement
-		}
-		modifier = {
-			factor = 1.5
-			has_province_modifier = islamic_missionaries
-		}
-		modifier = {
-			factor = 1.5
-			has_province_modifier = muslim_sailor_community
-		}
-		modifier = {
 			factor = 2.5
 			OR = {
 				any_neighbor_province = {

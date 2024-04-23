@@ -1,44 +1,3 @@
-new effect cleansing_effect = {
-	args = country_scope
-	transpile = {
-		`change_religion = {args}`
-		`change_culture = {args}`
-		add_devastation = 25
-		
-		hidden_effect = {
-			add_nationalism = -100
-		}
-	}
-}
-new building cleansing = {
-	name = "Cleansing"
-	desc = "Let's clean our land from the tainting presence of other races"
-	cost = 10
-	time = 12
-	modifier = {
-		allowed_num_of_buildings = 1
-	}
-	build_trigger = {
-		NOT = {
-			has_construction = any
-		}
-		OR = {
-			custom_trigger_tooltip = {
-				new_tooltip = "Have any modifier that grants cleansing"
-				always = no
-			}
-			cleansing_triggers
-		}
-	}
-	on_built = {
-		cleansing_effect = FROM
-		remove_building = cleansing
-	}
-	ai_will_do = {
-		factor = 1000
-	}
-}
-
 new building coastal_defence = {
 	name = "Coastal Defence"
 	desc = ""
@@ -59,6 +18,20 @@ new building coastal_defence = {
 	}
 }
 
+new building fort_14th = {
+	name = "Damaged Fort"
+	desc = ""
+	cost = 100
+	time = 30
+	modifier = {
+		fort_level = 1
+		local_defensiveness = -0.5
+	}
+	influencing_fort = yes
+	ai_will_do = {
+		factor = 1
+	}
+}
 new building fort_15th = {
 	name = "Fort"
 	desc = ""
@@ -66,12 +39,13 @@ new building fort_15th = {
 	time = 30
 	x = 20 
 	y = 34
+	make_obsolete = fort_14th
 	modifier = {
 		fort_level = 2
 	}
 	influencing_fort = yes
 	ai_will_do = {
-		factor = 4
+		factor = 1
 	}
 }
 new building fort_16th = {
@@ -396,6 +370,7 @@ new building_line army = {
 		name = "Army 1"
 		modifier = {
 			local_manpower_modifier = 0.5
+			land_forcelimit = 1
 		}
 	}
 	2 = {
@@ -403,8 +378,8 @@ new building_line army = {
 		name = "Army 2"
 		make_obsolete = army_1
 		modifier = {
-			local_manpower_modifier = 0.75
-			land_forcelimit = 1
+			local_manpower_modifier = 1
+			land_forcelimit = 2
 		}
 	}
 	3 = {
@@ -412,8 +387,8 @@ new building_line army = {
 		name = "Army 3"
 		make_obsolete = army_2
 		modifier = {
-			local_manpower_modifier = 1.0
-			land_forcelimit = 2
+			local_manpower_modifier = 1.5
+			land_forcelimit = 3
 		}
 	}
 	4 = {
@@ -421,7 +396,7 @@ new building_line army = {
 		name = "Army 4"
 		make_obsolete = army_3
 		modifier = {
-			local_manpower_modifier = 1.5
+			local_manpower_modifier = 2
 			land_forcelimit = 4
 		}
 	}
@@ -450,9 +425,10 @@ new building_line navy = {
 		cost = 100
 		name = "Navy 1"
 		modifier = {
-			ship_recruit_speed = -0.2
-			local_ship_repair = 0.2
-			local_sailors_modifier = 0.4
+			ship_recruit_speed = -0.15
+			local_ship_repair = 0.5
+			naval_forcelimit = 1
+			local_sailors_modifier = 0.5
 		}
 	}
 	2 = {
@@ -460,10 +436,10 @@ new building_line navy = {
 		name = "Navy 2"
 		make_obsolete = navy_1
 		modifier = {
-			ship_recruit_speed = -0.4
-			local_ship_repair = 0.4
+			ship_recruit_speed = -0.3
+			local_ship_repair = 1
 			naval_forcelimit = 2
-			local_sailors_modifier = 0.7
+			local_sailors_modifier = 1
 		}
 	}
 	3 = {
@@ -471,10 +447,10 @@ new building_line navy = {
 		name = "Navy 3"
 		make_obsolete = navy_2
 		modifier = {
-			ship_recruit_speed = -0.6
-			local_ship_repair = 0.6
-			naval_forcelimit = 4
-			local_sailors_modifier = 1.0
+			ship_recruit_speed = -0.45
+			local_ship_repair = 1.5
+			naval_forcelimit = 3
+			local_sailors_modifier = 1.5
 		}
 	}
 	4 = {
@@ -482,10 +458,10 @@ new building_line navy = {
 		name = "Navy 4"
 		make_obsolete = navy_3
 		modifier = {
-			ship_recruit_speed = -0.8
-			local_ship_repair = 0.8
-			naval_forcelimit = 6
-			local_sailors_modifier = 1.5
+			ship_recruit_speed = -0.6
+			local_ship_repair = 2
+			naval_forcelimit = 4
+			local_sailors_modifier = 2
 		}
 	}
 	ai_will_do = {

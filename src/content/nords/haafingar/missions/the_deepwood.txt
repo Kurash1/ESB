@@ -1,0 +1,94 @@
+estates:clans:privileges += new deepwood_lumbering = {
+	name = "Deepwood Lumbering"
+	icon = privilege_wood
+	loyalty = 0.1
+	influence = 0.1
+	max_absolutism = -5
+	is_valid = { 
+		has_country_flag = solitude_deepwood_privileges
+	}
+	can_select = {
+		wood = 1
+	}
+	on_granted = {
+		new_custom_tooltip = "Every owned province producing §YWood§! gains:
+	{modifier_to_string = {
+		trade_goods_size_modifier = 0.5
+	}}"
+	}
+	on_revoked = {
+		new_custom_tooltip = "The modifier §YDeepwood Lumbering§! is removed from all owned provinces."
+	}
+	on_granted_province = {
+		if [has_trade_goods = wood] {
+			quick_province_modifier = {
+				id = deepwood_lumbering_province
+				name = "Deepwood Lumbering"
+				modifier = {
+					trade_goods_size_modifier = 0.5
+				}
+			}
+		}
+		else_if [has_province_modifier = deepwood_lumbering_province] {
+			remove_province_modifier = deepwood_lumbering_province
+		}
+	}
+	on_revoked_province = {
+		if [has_province_modifier = deepwood_lumbering_province] {
+			remove_province_modifier = deepwood_lumbering_province
+		}
+	}
+	on_invalid_province = {
+		if [has_province_modifier = deepwood_lumbering_province] {
+			remove_province_modifier = deepwood_lumbering_province
+		}
+	}
+}
+estates:sailors:privileges += new ironwood_boats = {
+	name = "Ironwood Boats"
+	icon = privilege_ship_durability
+	loyalty = 0.1
+	influence = 0.1
+	max_absolutism = -5
+	is_valid = { has_country_flag = solitude_deepwood_privileges }
+	benefits = {
+		ship_durability = 0.05
+	}
+}
+estates:warriors:privileges += new forest_scouts = {
+	name = "Deepwood Scouts Training"
+	icon = privilege_survey_experience_gain
+	loyalty = 0.1
+	influence = 0.1
+	max_absolutism = -5
+	is_valid = { has_country_flag = solitude_deepwood_privileges }
+	benefits = {
+		survey_experience_gain = 0.15
+	}
+}
+mission_trees:solitude += {
+	the_deepwood = {
+		name = "The Deepwood Conquests"
+		desc = "Between the Hag Hills of the south, the Druadach of the west, and the Kilkreath of the north there exists a great forest, known to our people as the Deepwood. It has been known to be the home of many reachmen raiders who we've had to fight at our borders, and further then it's said that the locals of the deepwood have many techniques which have not spread outside, but through our guiding hand can we elevate them to the entire realm."
+		x = 5
+		y = 3
+		required = lord_of_kilkreath
+		icon = mission_expand_into_the_forest
+		provinces_to_highlight = {
+			area = deepwood
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			areas:deepwood = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			new_custom_tooltip = "Unlocks §YDeepwood Lumbering§! Privilege for Clans.
+Unlocks §YIronwood Boats§! Privilege for Sailors.
+Unlocks §YDeepwood Scouts Training§! Privilege for Warriors."
+			set_country_flag = solitude_deepwood_privileges
+		}
+	}
+}

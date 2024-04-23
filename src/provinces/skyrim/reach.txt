@@ -1,3 +1,13 @@
+new named_effect increase_reach_development = {
+	foreach $province in provinces [
+		exists = $province:area
+		$province:area:region:name == "Reach"
+		$province:base_development == $province:terrain:base_development
+	] {
+		$province:base_development += 5
+	}
+}
+
 new area valthume = {
 	name = "Valthume"
 	region = reach
@@ -1502,7 +1512,7 @@ new province betri = {
 		136 231 184
 	}
 	history = {
-		history_owner = bear_heart_clan
+		history_owner = boldclaw_clan
 		religion = reachman_faith
 		culture = reachmen
 		history_trade_goods = wood

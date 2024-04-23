@@ -1,0 +1,47 @@
+mission_trees:solitude += {
+	repair_esjuberg = {
+		name = "Repair Fort Esjuberg"
+		desc = "During the §YWar of Twin Bridges§!, Esjuberg, Seat of Clan §YRock-Hammer§! was put to siege by the vile armies of §YSnow-Hawk§!, and after a 4 year long siege the fort fell, and the forces of §YSnow-Hawk§! were not content with simply seizing the Fort, but rather destroyed it. If we were to repair the damaged fort, it would make our western lands safer, and restore some of clan §YRock-Hammer§!'s lost power would be restored."
+		icon = mission_fortify_rajputana
+		x = 3
+		y = 1
+		required = three_clans_of_solitude
+		trigger = {
+			provinces:esjuberg = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			provinces:esjuberg = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			
+			add_estate_loyalty = {
+				estate = estate_clans
+				loyalty = 10
+			}
+			
+			add_faction_influence = {
+				faction = nc_rock_hammer
+				influence = 10
+			}
+			
+			conditional_effect = {
+				tooltip = "your ruler is of clan §YRock-Hammer§!"
+				trigger = {
+					dynasty = "Rock-Hammer"
+				}
+				effect = {
+					change_adm = 1
+				}
+			}
+		}
+	}
+}

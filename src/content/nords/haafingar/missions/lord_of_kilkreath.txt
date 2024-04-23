@@ -1,0 +1,23 @@
+mission_trees:solitude += {
+	lord_of_kilkreath = {
+		name = "Lord of the Mountain"
+		desc = "§YMount Kilkreath§!, that majestic mountain which has for long overlooked our homes, those peaks so tall always in the horizon. If we were to rule over them, then all the lands below would know of our glory, for our splendor pierces the skies, like the §YMount Kilkreath§!."
+		x = 6
+		y = 2
+		icon = mission_portuguese_interference
+		required = the_wolf_army
+		trigger = {
+			areas:kilkreath; hraggstad = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
+			
+			add_splendor = 400
+		}
+	}
+}

@@ -1,0 +1,55 @@
+mission_trees:solitude += {
+	the_blue_palace = {
+		name = "A Blue Palace for our Jarl"
+		desc = "Our Thane promoted Jarl, with recognizition of our Rocky Hold, now all that remains is to build a more fitting palace for our governance. A famed architect proposed a Blue Palace that would sit at the furthest edge of the Great Arch, the last hold of our city if it were to be sieged. This idea is widely acclaimed by both bards for its recognizability, and our generals for its practicality."
+		icon = court_of_haafingar_mission
+		x = 0
+		y = 3
+		required = the_emperors_tower
+		trigger = {
+			is_elector = yes
+			treasury = 1000
+		}
+		effect = {
+			add_treasury = -1000
+			
+			new_custom_tooltip = "The monument §YBlue Palace§! is created in §Y[{provinces:solitude}.GetName]§! at Noteworthy level.\n"
+			
+			hidden_effect = {
+				create_monument = {
+					monument = blue_palace
+					province = solitude
+				}
+				provinces:solitude = {
+					add_great_project_tier = {
+						type = blue_palace
+						tier = 1
+					}
+				}
+			}
+			
+			set_country_flag = court_of_haafingar
+			new_custom_tooltip = "§YHold Court§! Interaction of §YSolitude Powers§! Ability gains the additional effect:"
+			tooltip = {
+				add_country_modifier = {
+					name = haafingar_adm_modifier
+					duration = 1825
+				}
+			}
+			new_custom_tooltip = "§YHold a Burning§! Interaction of §YSolitude Powers§! Ability gains the additional effect:"
+			tooltip = {
+				add_country_modifier = {
+					name = haafingar_dip_modifier
+					duration = 1825
+				}
+			}
+			new_custom_tooltip = "§YAssemble the Generals§! Interaction of §YSolitude Powers§! Ability gains the additional effect:"
+			tooltip = {
+				add_country_modifier = {
+					name = haafingar_mil_modifier
+					duration = 1825
+				}
+			}
+		}
+	}
+}

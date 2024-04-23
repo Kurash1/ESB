@@ -1,0 +1,70 @@
+new adjacency hlardstrad_bridge = {
+	from = bazgrum
+	to = low_grove
+	through = low_grove
+	type = canal
+}
+new great_project hlardstrad_bridge = {
+	name = "Hlardstrad Bridge"
+	start = low_grove
+	type = canal
+	date = 3000.1.1
+	starting_tier = 3
+	time = 10
+	can_be_moved = no
+	build_cost = 250
+	build_trigger = {
+		always = yes
+	}
+	on_built = {
+		add_canal = hlardstrad_bridge
+		show_ambient_object = hlardstrad_bridge
+	}
+	on_destroyed = {
+		remove_canal = hlardstrad_bridge
+		hide_ambient_object = hlardstrad_bridge
+	}
+	tier_0 = {
+		on_upgraded = {
+			new_custom_tooltip = "Connects §Y[{provinces:low_grove}.GetName]§! to §Y[{provinces:bazgrum}.GetName]§!"
+		}
+	}
+	tier_1 = {
+		on_upgraded = {
+			new_custom_tooltip = "Connects §Y[{provinces:low_grove}.GetName]§! to §Y[{provinces:bazgrum}.GetName]§!"
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			new_custom_tooltip = "Connects §Y[{provinces:low_grove}.GetName]§! to §Y[{provinces:bazgrum}.GetName]§!"
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			new_custom_tooltip = "Connects §Y[{provinces:low_grove}.GetName]§! to §Y[{provinces:bazgrum}.GetName]§!"
+		}
+	}
+}
+mission_trees:solitude += {
+	bridge_over_hlardstrad = {
+		name = "Bridge over Hlardstrad"
+		desc = "On the western edge of Haafingar hold, there flows the Hlardstrad, the Bloody-River, this river seperates the lands of men and the lands of the beastly orcs of Wrothgar, but those orcs are not to be trusted, and only by pushing the border even further west can we sleep in peace, for this purpose we must build a bridge over the Hlardstrad."
+		icon = mission_defeat_jaunpur
+		required = the_deepwood
+		x = 5
+		y = 4
+		trigger = {
+			provinces:low_grove = {
+				has_great_project = {
+					type = hlardstrad_bridge
+					tier = 1
+				}
+			}
+		}
+		effect = {
+			areas:murtag; vyhidok; uvnes; jehanna; fharun = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

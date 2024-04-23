@@ -1,0 +1,17 @@
+new mission_tree solitude = {
+	ai = yes
+	potential = {
+		OR = {
+			tag = solitude
+			tag = haafingar
+		}
+	}
+}
+new run_file complete_mt_solitude = {
+	effect = {
+		foreach $mission in mission_trees:solitude {
+			$mission:effect
+			complete_mission = $mission
+		}
+	}
+}

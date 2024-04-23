@@ -1,0 +1,176 @@
+new country_event haafingar.1 = {
+	title = "Purpose of Northwatch Keep"
+	desc = "A Castle overlooking our most western coasts, this stalwart defender of the people has attracted many a settler around it, and it has begun to show itself as a core part of our western realm. However we have yet to deign any focus for the settlment.
+
+Our three clans say that we should build it as a fortress against sea giants, further put forth is priests of Stuhn saying that it would be the perfect port to rule the waves in the west, they say that we should make it into a fortress that will rule the waves.
+
+While some voices say that it should serve as an embassy to the recently discovered orcs of the far west, but this point is instantly rebutted by §YTujenhelf§! who says that the orcs cannot be discussed with, and should be killed instead."
+	picture = northwatch_eventPicture
+	is_triggered_only = yes
+	options = {
+		{ #Felhvalstag - Cold Whale Castle
+			name = "A Fortress to rule the waves"
+			effect = {
+				new_custom_tooltip = "§YFelhvalstag§! stands for §YCold Whale Castle§!\n"
+				
+				provinces:northwatch = {
+					quick_province_modifier = {
+						name = "Settlement Focus: Felhvalstag"
+						modifier = {
+							local_sailors_modifier = 1
+							naval_forcelimit_modifier = 0.1
+						}
+					}
+				}
+				regions:haafingar [has_port = yes] {
+					quick_province_modifier = {
+						name = "Felhvalstag Defenses"
+						modifier = {
+							block_slave_raid = yes
+						}
+					}
+				}
+			}
+		}
+		{ #Orkvulkstag - Orc-Folk Castle
+			name = "It can serve as an embassy for the orcs of the west"
+			effect = {
+				new_custom_tooltip = "§YOrkvulkstag§! stands for §YOrc-Folk Castle§!\n"
+				
+				provinces:northwatch = {
+					quick_province_modifier = {
+						name = "Settlement Focus: Orkvulkstag"
+						modifier = {
+							num_accepted_cultures = 1
+							promote_culture_cost = -0.25
+							trade_goods_size_modifier = 0.25
+							orcs_loyalty_modifier = 0.05
+						}
+					}
+				}
+			}
+		}
+		{ #Hlardstrad Fortress - Bloody-River Fortress
+			name = "It can serve for future conquests to the west"
+			effect = {
+				new_custom_tooltip = "§YHlardstrad§! stands for §YBloody-River§!\n"
+				
+				provinces:northwatch = {
+					quick_province_modifier = {
+						name = "Settlement Focus: Hlardstrad Spirit"
+						modifier = {
+							local_manpower_modifier = 1
+							land_forcelimit = 5
+							fort_level = 1
+						}
+					}
+				}
+			}
+		}
+		{ #Lurag-Nool - Tribe of Giants
+			name = "A permanent camp for the giants"
+			trigger = {
+				OR = {
+					has_estate_privilege = giants:promote_giant_rights
+					has_estate_privilege = giants:giant_land_rights
+				}
+			}
+			effect = {
+				provinces:northwatch = {
+					quick_province_modifier = {
+						name = "Settlement Focus: Lurag-Nool"
+						modifier = {
+							min_local_autonomy = 100
+							land_forcelimit_modifier = 0.10
+							giants_loyalty_modifier = 0.1
+						}
+					}
+				}
+			}
+		}
+		{ #Center of Torture
+			name = "The Scaled Justice require additional locations"
+			effect = {
+				trigger = {
+					has_country_flag = has_scaled_justice
+				}
+				provinces:northwatch = {
+					quick_province_modifier = {
+						name = "Settlement Focus: Center of Torture"
+						modifier = {
+							harsh_treatment_cost = -0.25
+							statewide_governing_cost = -0.5
+							local_state_maintenance_modifier = -1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+mission_trees:solitude += {
+	purpose_of_northwatch = {
+		name = "Purpose of Northwatch"
+		desc = "Though the western coast has gone under our rule, and under our protection. We are having trouble protecting it fully as the distance from our primary Red-Port means that our navies cannot properly resupply in the far west. Some of our advisors suggest that we should build a mighty fortress there, and focus on developing it into a third primary port."
+		x = 4
+		y = 3
+		icon = mission_novgorod_the_great
+		required = coast_of_haafingar
+		trigger = {
+			owns = northwatch
+			provinces:northwatch = {
+				development = 15
+				fort_level = 2
+			}
+		}
+		effect = {
+			country_event = haafingar.1
+			show_event_insights = {
+				tooltip = "This event will allow us to choose the settlment focus for Northwatch."
+				event = haafingar.1
+				show_options = no #cus I have some of them hidden by conditional effects
+			}
+			
+			new_custom_tooltip = "§T{events:haafingar.1:options:1:name}§!:"
+			tooltip = {
+				events:haafingar.1:options:1:effect
+			}
+			new_custom_tooltip = "§T{events:haafingar.1:options:2:name}§!:"
+			tooltip = {
+				events:haafingar.1:options:2:effect
+			}
+			new_custom_tooltip = "§T{events:haafingar.1:options:3:name}§!:"
+			tooltip = {
+				events:haafingar.1:options:3:effect
+			}
+			
+			conditional_effect = {
+				tooltip = "granted estate privilege §YPromote Giant Rights§! or §YGiant Land Rights§!"
+				trigger = {
+					OR = {
+						has_estate_privilege = giants:promote_giant_rights
+						has_estate_privilege = giants:giant_land_rights
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Event gains the following additional option: §T{events:haafingar.1:options:4:name}§!:"
+					tooltip = {
+						events:haafingar.1:options:4:effect
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "chose §YScaled Justice§! as the settlement focus for §YDragon Bridge§!"
+				trigger = {
+					has_country_flag = has_scaled_justice
+				}
+				effect = {
+					new_custom_tooltip = "Event gains the following additional option: §T{events:haafingar.1:options:5:name}§!:"
+					tooltip = {
+						events:haafingar.1:options:5:effect
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,120 @@
+new mercenary_company clan_storm_shield = {
+	name = "Clan Storm-Shield"
+	regiments_per_development = 0.04
+	cost_modifier = 0.5
+	home_province = steepfall_burrow
+	cavalry_weight = 0
+	artillery_weight = 0
+	trigger = {
+		has_country_modifier = vengeance_against_sea_giants
+		is_race = nord
+	}
+	modifier = {
+		shock_damage_received = -0.25
+	}
+}
+new mercenary_company maelstrom_legion = {
+	name = "Maelstrom Legion"
+	regiments_per_development = 0.04
+	cost_modifier = 0.5
+	home_province = solitude
+	cavalry_weight = 0
+	artillery_weight = 0
+	trigger = {
+		has_country_modifier = vengeance_against_sea_giants
+		is_race = nord
+	}
+	modifier = {
+		shock_damage_received = -0.1
+		shock_damage = 0.05
+		morale_damage = 0.05
+	}
+}
+new mercenary_company frostreavers = {
+	name = "Frostreavers"
+	regiments_per_development = 0.04
+	cost_modifier = 0.5
+	home_province = pinefrost
+	cavalry_weight = 0
+	artillery_weight = 0
+	trigger = {
+		has_country_modifier = vengeance_against_sea_giants
+		is_race = nord
+	}
+	modifier = {
+		morale_damage_received = -0.15
+	}
+}
+new mercenary_company red_mist_berserkers = {
+	name = "Red-Mist Berserkers"
+	regiments_per_development = 0.04
+	cost_modifier = 0.5
+	home_province = red_mist_isle
+	cavalry_weight = 0
+	artillery_weight = 0
+	trigger = {
+		has_country_modifier = vengeance_against_sea_giants
+		is_race = nord
+	}
+	modifier = {
+		fire_damage = 0.15
+		shock_damage = 0.15
+		morale_damage = 0.15
+	}
+}
+mission_trees:solitude += {
+	seeking_vengeance = {
+		name = "Seeking Vengeance"
+		desc = "In a recent conquest we came to find the homeland of the Sea Giants, the shattered isles of the north, where those brutal raiders live. Amongst our people a sudden drive for vengeance has sparked the formation of multiple bands of warriors, explorers, and commanders with one united voice calling for §RVengeance§!."
+		x = 3
+		y = 4
+		icon = bloody_axe_mission
+		required = the_haafingar_isles
+		trigger = {
+			any_owned_province = {
+				culture = sea_giant
+			}
+		}
+		effect = {
+			regions:the_shatter = {
+				add_permanent_claim = ROOT
+			}
+			
+			add_yearly_manpower = 2.5
+			
+			define_general = { 
+				name = "Ashgar Iron-Back"
+				fire = 2
+				shock = 6
+				manuever = 4
+				siege = 4
+				trait = tongue_personality
+			}
+			define_explorer = {
+				name = "Wulf Pine-Hill"
+				fire = 5
+				shock = 3
+				manuever = 2
+				siege = 2
+			}
+			define_conquistador = {
+				name = "Ittir Raven-Scar"
+				fire = 4
+				shock = 3
+				manuever = 6
+				siege = 2
+			}
+			
+			hidden_effect = {
+				quick_country_modifier = {
+					id = vengeance_against_sea_giants
+					name = "Vengeance against Sea Giants"
+					modifier = { }
+					years = 25
+					hidden = yes
+				}
+			}
+			new_custom_tooltip = "Unlocks §YClan Storm-Shield§!, §YMaelstrom Legion§!, §YFrostreavers§!, and §YRed-Mist Berserkers§! Mercenary Companies for 25 years."
+		}
+	}
+}

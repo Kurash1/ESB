@@ -1,0 +1,75 @@
+mission_trees:solitude += {
+	end_the_treaty = {
+		name = "End the Treaty of Horga Hills"
+		desc = "§YThe Treaty of Horga Hills§! is the peace treaty that ended the bloody §YWar of Twin Bridges§! with our rival clan §YSnow-Hawk§!, this treaty demands that we may not cross the Dragon Bridge for the purposes of expansion, but still forces us to defend the free clan of Chill-Wind. While the war was original about defending Chill-Wind by allowing them to join our council, this treaty forced us into a situation where we only lose resources to them. We must end §YThe Treaty of Horga Hills§!, and rightfully bring clan Chill-Wind into the council as it was meant to be."
+		icon = mission_the_sudebnik
+		required = restoration_of_forces
+		x = 7
+		y = 1
+		trigger = {
+			OR = {
+				areas:rivers_horn = {
+					type = all
+					owned_by = ROOT
+				}
+				overlord_of = chill_wind
+				AND = {
+					alliance_with = chill_wind
+					reverse_has_opinion = {
+						who = countries:chill_wind
+						value = 150
+					}
+				}
+			}
+		}
+		effect = {
+			areas:snowhawk; twin_bridges; hjaal_river_passage = {
+				add_permanent_claim = ROOT
+			}
+			
+			conditional_effect = {
+				tooltip = "conquered §YRiver's Horn§!"
+				trigger = {
+					areas:rivers_horn = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Gain §G10§! Administrative Power for each point of base tax in the §YRiver's Horn§! area."
+					hidden_effect = {
+						areas:rivers_horn = {
+							add_scaled_local_adm_power = 10
+						}
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "is overlord of §YChill-Wind§!"
+				trigger = {
+					overlord_of = chill_wind
+				}
+				effect = {
+					countries:chill_wind = {
+						add_liberty_desire = -25
+					}
+				}
+			}
+			conditional_effect = {
+				tooltip = "is allied with §YChill-Wind§!"
+				trigger = {
+					AND = {
+						alliance_with = chill_wind
+						reverse_has_opinion = {
+							who = countries:chill_wind
+							value = 150
+						}
+					}
+				}
+				effect = {
+					vassalize = countries:chill_wind
+				}
+			}
+		}
+	}
+}

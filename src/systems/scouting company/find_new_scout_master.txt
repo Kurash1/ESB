@@ -1,0 +1,57 @@
+new decision find_new_scout_master = {
+	name = "Find new Scout-Master"
+	potential = {
+		ai = no
+		has_country_flag = init_survey
+		NOT = {
+			has_country_flag = survey_has_scout_master
+		}
+	}
+	allow = {
+		treasury = 50
+	}
+	effect = {
+		add_treasury = -50
+		
+		new_custom_tooltip = "A new Scout-Master takes over your Scouting Company."
+		hidden_effect = {
+			set_country_flag = survey_has_scout_master
+			random_list = {
+				1 = { set_country_flag = survey_leader_is_female }
+				1 = { clr_country_flag = survey_leader_is_female }
+			}
+			set_saved_name = {
+				key = survey_leader_name
+				type = advisor
+				scope = ROOT
+			}
+			random_list = {
+				1 = { &survey_leader_adm := 0 }
+				2 = { &survey_leader_adm := 1 }
+				3 = { &survey_leader_adm := 2 }
+				4 = { &survey_leader_adm := 3 }
+				3 = { &survey_leader_adm := 4 }
+				2 = { &survey_leader_adm := 5 }
+				1 = { &survey_leader_adm := 6 }
+			}
+			random_list = {
+				1 = { &survey_leader_dip := 0 }
+				2 = { &survey_leader_dip := 1 }
+				3 = { &survey_leader_dip := 2 }
+				4 = { &survey_leader_dip := 3 }
+				3 = { &survey_leader_dip := 4 }
+				2 = { &survey_leader_dip := 5 }
+				1 = { &survey_leader_dip := 6 }
+			}
+			random_list = {
+				1 = { &survey_leader_mil := 0 }
+				2 = { &survey_leader_mil := 1 }
+				3 = { &survey_leader_mil := 2 }
+				4 = { &survey_leader_mil := 3 }
+				3 = { &survey_leader_mil := 4 }
+				2 = { &survey_leader_mil := 5 }
+				1 = { &survey_leader_mil := 6 }
+			}
+		}
+	}
+}

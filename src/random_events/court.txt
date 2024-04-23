@@ -3,7 +3,7 @@ bi_yearly_events += {
 	100 = court.2
 	100 = court.3
 	100 = court.4
-	100 = court.5
+	25 = court.5
 	100 = court.6
 }
 new country_event court.1 = {
@@ -97,6 +97,13 @@ new country_event court.5 = {
 					}
 				}
 			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 4
+			has_estate_privilege = clans:rock_hammer_castle_rights
 		}
 	}
 }

@@ -11,6 +11,18 @@ new inheritable nordic_country = {
 	}
 	starting_reform = tier_1_nord_clan
 }
+new country karthald = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	starting_reform = tier_1_hold
+	tag = KRT
+	name = "Karthald"
+	adj = "Karthald"
+	color = {
+		72 56 40
+	}
+	capital = karthwatch
+}
 new country sea_wing = {
 	inherit = nordic_country
 	primary_culture = haafingarian
@@ -33,6 +45,28 @@ new country sea_wing = {
 		}
 	}
 	capital = morwath
+}
+new country storm_hawk = {
+	inherit = nordic_country
+	primary_culture = hjaalmarcher
+	tag = STH
+	name = "Storm-Hawk"
+	adj = "Storm-Hawk"
+	color = {
+		0 0 50
+	}
+	capital = folgunthur
+}
+new country kjenstag = {
+	inherit = nordic_country
+	primary_culture = hjaalmarcher
+	tag = KJE
+	name = "Kjenstag"
+	adj = "Kjen"
+	color = {
+		124 94 73
+	}
+	capital = kjenstag
 }
 new country lone_band = {
 	inherit = nordic_country
@@ -186,7 +220,7 @@ new country forelhost = {
 				mil = 6
 				birth_date = 2012.1.1
 			}
-			add_ruler_personality = immortal_personality
+			add_ruler_personality = immortal
 			add_ruler_modifier = {
 				name = lich
 				duration = -1
@@ -223,8 +257,13 @@ new country solitude = {
 	}
 	capital = red_port
 	starting_reform = tier_1_three_clan_council
-	government_rank = 2
 	history += {
+		add_historical_friend = dawn_star
+		add_historical_rival = snow_hawk
+	
+		2566.4.5 = { #Treaty of Horga Hills
+			add_manpower = -7.5
+		}
 		2568.1.1 = {
 			starting_ruler = {
 				name = "Vigrod"
@@ -234,9 +273,36 @@ new country solitude = {
 				mil = 5
 				age = 37
 			}
+			
 			add_faction_influence = {
-				faction = solitude_red_wolf
+				faction = nc_storm_galley
+				influence = 10
+			}
+			add_faction_influence = {
+				faction = nc_red_wolf
 				influence = 15
+			}
+			
+			on_initialize += {
+				countries:solitude = {
+					disband_all_units = yes
+					provinces:esjuberg = { #Army
+						create_infantry = 10
+						create_artillery = 1
+					}
+					provinces:skalavik = { #Fleet
+						create_heavy_ship = 1
+						if [has_dlc = "Domination"] {
+							create_galleass_galley = 4
+						}
+						else {
+							create_galley = 4
+						}
+						create_galley = 2
+						create_light_ship = 3
+						create_transport = 4
+					}
+				}
 			}
 		}
 	}
@@ -518,6 +584,12 @@ new country snow_hawk = {
 		200 255 200
 	}
 	capital = snowhawk
+	history += {
+		add_historical_rival = solitude
+		2566.4.5 = { #Treaty of Horga Hills
+			add_manpower = -6
+		}
+	}
 }
 new country mort_hall = {
 	inherit = nordic_country
@@ -552,6 +624,7 @@ new country dawn_star = {
 	}
 	capital = dawnstar
 	history += {
+		add_historical_friend = solitude
 	}
 }
 new country stone_hill = {
@@ -632,6 +705,11 @@ new country hjaal = {
 		50 106 188
 	}
 	capital = hjaals_tooth
+	history += {
+		2566.4.5 = { #Treaty of Horga Hills
+			add_manpower = -5.5
+		}
+	}
 }
 new country rorikstead = {
 	inherit = nordic_country
@@ -782,99 +860,205 @@ new country windhelm = {
 	history += {
 		historical_friend = JRR
 		elector = yes
-		1987.1.1 = {
-			monarch = {
-				name = "Ysgramoor"
-				dynasty = "the Returned"
-				birth_date = 1945.1.1
-			}
-			add_country_modifier = {
-				name = atmoran_holdings
-				duration = -1
-			}
-		}
-		2022.1.1 = {
-			monarch = {
-				name = "Ylgar"
-				dynasty = "Ysgramoor"
-				birth_date = 2000.1.1
+		history_ruler_info = {
+			name = "Ysgramoor"
+			dynasty = "the Returned"
+			birth_date = 1945.1.1
+			crowned = 1987.1.1
+			death_date = 2022.1.1
+			adm = 2
+			dip = 4
+			mil = 6
+			effect = {
+				add_country_modifier = {
+					name = atmoran_holdings
+					duration = -1
+				}
 			}
 		}
-		2108.1.1 = {
-			monarch = {
-				name = "Jurgar"
-				dynasty = "Ysgramoor"
-				birth_date = 2086.1.1
+		history_ruler_info = {
+			name = "Ylgar"
+			dynasty = "Ysgramoor"
+			birth_date = 2000.1.1
+			crowned = 2022.1.1
+			death_date = 2108.1.1
+			adm = 4
+			dip = 4
+			mil = 3
+		}
+		history_ruler_info = {
+			name = "Jurgar"
+			dynasty = "Ysgramoor"
+			birth_date = 2086.1.1
+			crowned = 2108.1.1
+			death_date = 2140.1.1
+			adm = 3
+			dip = 1
+			mil = 1
+		}
+		history_ruler_info = {
+			name = "Oduvid"
+			dynasty = "Ysgramoor"
+			birth_date = 2110.1.1
+			crowned = 2140.1.1
+			death_date = 2209.1.1
+			adm = 1
+			dip = 0
+			mil = 4
+		}
+		history_ruler_info = {
+			name = "Skavwulf"
+			dynasty = "Ysgramoor"
+			birth_date = 2209.1.1
+			crowned = 2209.1.2
+			death_date = 2240.1.1
+			adm = 0
+			dip = 0
+			mil = 6
+		}
+		history_ruler_info = {
+			name = "Eistaag"
+			dynasty = "Ysgramoor"
+			birth_date = 2229.1.1
+			crowned = 2240.1.1
+			death_date = 2259.1.1
+			adm = 1
+			dip = 5
+			mil = 2
+		}
+		history_ruler_info = {
+			name = "Rorygg"
+			dynasty = "Ysgramoor"
+			birth_date = 2229.1.1
+			crowned = 2259.1.1
+			death_date = 2350.1.1
+			adm = 1
+			dip = 4
+			mil = 6
+			effect = {
+				add_country_modifier = {
+					name = aegisbane
+					duration = -1
+				}
 			}
 		}
-		2140.1.1 = {
-			monarch = {
-				name = "Oduvid"
-				dynasty = "Ysgramoor"
-				birth_date = 2110.1.1
+		history_ruler_info = {
+			name = "Vigstrom"
+			dynasty = "Ysgramoor"
+			birth_date = 2320.1.1
+			crowned = 2350.1.1
+			death_date = 2409.1.1
+			adm = 4
+			dip = 1
+			mil = 1
+		}
+		history_ruler_info = {
+			name = "Rald"
+			dynasty = "Ysgramoor"
+			birth_date = 2387.1.1
+			crowned = 2409.1.1
+			death_date = 2479.1.1
+			adm = 6
+			dip = 4
+			mil = 3
+		}
+		history_ruler_info = {
+			name = "Volharth"
+			dynasty = "Ysgramoor"
+			birth_date = 2446.1.1
+			crowned = 2479.1.1
+			death_date = 2524.1.1
+			adm = 2
+			dip = 2
+			mil = 6
+		}
+		history_ruler_info = {
+			name = "Jollring"
+			dynasty = "Ysgramoor"
+			birth_date = 2504.1.1
+			crowned = 2524.1.1
+			death_date = 2583.1.1
+			adm = 4
+			dip = 4
+			mil = 4
+			effect = {
+				clear_scripted_personalities = yes
+				add_ruler_personality = incorruptible
+				add_ruler_personality = strict
+				add_ruler_personality = bold_fighter
+				
+				add_heir_personality = calm
 			}
 		}
-		2209.1.1 = {
-			monarch = {
-				name = "Skavwulf"
-				dynasty = "Ysgramoor"
-				birth_date = 2209.1.1
-			}
+		history_ruler_info = {
+			name = "Olav"
+			dynasty = "Ysgramoor"
+			birth_date = 2556.1.1
+			crowned = 2583.1.1
+			death_date = 2643.1.1
+			adm = 1
+			dip = 3
+			mil = 2
 		}
-		2240.1.1 = {
-			monarch = {
-				name = "Eistaag"
-				dynasty = "Ysgramoor"
-				birth_date = 2229.1.1
-			}
-		}
-		2289.1.1 = {
-			monarch = {
-				name = "Rorygg"
-				dynasty = "Ysgramoor"
-				birth_date = 2259.1.1
-			}
-			add_country_modifier = {
-				name = aegisbane
-				duration = -1
-			}
-		}
-		2350.1.1 = {
-			monarch = {
-				name = "Vigstrom"
-				dynasty = "Ysgramoor"
-				birth_date = 2320.1.1
-			}
-		}
-		2409.1.1 = {
-			monarch = {
-				name = "Rald"
-				dynasty = "Ysgramoor"
-				birth_date = 2387.1.1
-			}
-		}
-		2479.1.1 = {
-			monarch = {
-				name = "Volharth"
-				dynasty = "Ysgramoor"
-				birth_date = 2446.1.1
-			}
-		}
-		2524.1.1 = {
-			monarch = {
-				name = "Jollring"
-				dynasty = "Ysgramoor"
-				birth_date = 2504.1.1
-				adm = 4
-				dip = 4
-				mil = 4
-			}
+		history_ruler_info = {
+			name = "Harald"
+			dynasty = "Ysgramoor"
+			birth_date = 2613.1.1
+			crowned = 2643.1.1
+			death_date = 2721.1.1
+			adm = 6
+			dip = 6
+			mil = 6
 		}
 		2500.1.1 = {
 			country_event = {
 				id = eastmarch.1
 				days = (143*365)
 			}
+		}
+	}
+}
+new effect history_ruler_info = {
+	default = {
+		female = no
+		effect = { }
+	}
+	args = {
+		name = string
+		dynasty = string
+		birth_date = string
+		death_date = string
+		crowned = string
+		female = bool
+		adm = int
+		dip = int
+		mil = int
+		effect = effect
+	}
+	transpile = {
+		args:birth_date = {
+			heir = {
+				name = args:name
+				monarch_name = args:name
+				dynasty = args:dynasty
+				claim = 100
+				birth_date = args:birth_date
+				death_date = args:death_date
+				adm = args:adm
+				dip = args:dip
+				mil = args:mil
+			}
+		}
+		args:crowned = {
+			monarch = {
+				name = args:name
+				dynasty = args:dynasty
+				birth_date = args:birth_date
+				adm = args:adm
+				dip = args:dip
+				mil = args:mil
+			}
+			args:effect
 		}
 	}
 }
@@ -982,7 +1166,7 @@ new country black_moor = {
 				mil = 1
 				birth_date = 2482.1.1
 			}
-			add_ruler_personality = infertile_personality
+			add_ruler_personality = infertile
 		}
 	}
 	capital = greymoor
@@ -1524,10 +1708,113 @@ new country wave_crusher = {
 	}
 }
 
-new relation vassal = {
+new country iron_heart = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = IHE
+	name = "Iron-Heart"
+	color = { 200 200 200 }
+	capital = fignynnoth
+}
+new country storm_crest = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = SCE
+	name = "Storm-Crest"
+	color = { 90 0 150 }
+	capital = fregamth
+}
+new country oak_spear = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = OSP
+	name = "Oak-Spear"
+	color = { 165 131 109 }
+	capital = rageld
+}
+new country raven_eye = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = REY
+	name = "Raven-Eye"
+	color = { 0 0 25 }
+	capital = stagnith
+}
+new country fire_bane = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = FBA
+	name = "Fire-Bane"
+	color = { 150 0 0 }
+	capital = randeiskr
+}
+new country thunder_hoof = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = THU
+	name = "Thunder-Hoof"
+	color = { 255 216 0 }
+	capital = mysmelg
+}
+new country steel_song = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = SSO
+	name = "Steel-Song"
+	color = { 128 128 128 }
+	capital = mutold
+}
+new country ash_claw = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = ACL
+	name = "Ash-Claw"
+	color = { 40 40 40 }
+	capital = thelild
+}
+new country silver_blood = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = SBO
+	name = "Silver-Blood"
+	color = { 255 100 200 }
+	capital = ryskr
+}
+new country moon_walker = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = MWA
+	name = "Moon-Walker"
+	color = { 0 0 100 }
+	capital = stargam
+}
+new country winter_thorn = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = WHR
+	name = "Winter-Thorn"
+	color = { 200 200 255 }
+	capital = krakevik
+}
+new country jehanna = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = JEH
+	name = "Jehanna"
+	color = { 0 148 255 }
+	capital = jehanna
+}
+
+new relation march = {
+	first = SNO
+	second = HJA
+	start_date = 2550.1.1
+	end_date = 9999.1.1
+}
+new relation alliance = {
 	first = SOL
-	second = DRB
-	start_date = 2568.1.1
+	second = DAW
+	start_date = 2550.1.1
 	end_date = 9999.1.1
 }
 new relation vassal = {

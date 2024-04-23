@@ -1,0 +1,51 @@
+new naval_doctrine longship_legions = {
+	name = "Longship Legions"
+	desc = ""
+	button_gfx = 13
+	can_select = {
+		has_dlc = "Domination"
+		has_country_flag = has_longship_legions
+	}
+	country_modifier = {
+		allowed_galleass_fraction = 0.25
+		max_flagships = 2
+	}
+}
+new naval_doctrine longship_legions_no_dlc = {
+	name = "Longship Legions"
+	desc = ""
+	button_gfx = 13
+	can_select = {
+		NOT = { has_dlc = "Domination" }
+		has_country_flag = has_longship_legions
+	}
+	country_modifier = {
+		max_flagships = 2
+	}
+}
+mission_trees:solitude += {
+	longship_legions = {
+		name = "Longship Legions"
+		desc = "We came to these lands amongst three ships made in Atmora, and our people never forgot what it means to be born of the north, and what it means to be one with the seas. Our ports mighty, Skalavik, Red-Port, Northwatch, have produced a navy of longships so great it can be called a Legion."
+		x = 1
+		y = 5
+		required = a_new_port
+		icon = mission_longships
+		trigger = {
+			has_longships = {
+				num = 50
+				backup = {
+					navy_size = 150
+				}
+			}
+		}
+		effect = {
+			new_custom_tooltip = "Unlocks §YLongship Legions§! Naval Doctrine, which upon selecting grants the following:
+	{modifier_to_string = {
+		allowed_galleass_fraction = 0.25
+		max_flagships = 2
+	}}"
+			set_country_flag = has_longship_legions
+		}
+	}
+}

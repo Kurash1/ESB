@@ -118,6 +118,7 @@ new province red_port = {
 	area = solitude
 	name = "Solitude" #Changes to "Solitude Port" in the missions
 	terrain = coastline
+	base_development = 11
 	color = {
 		160 235 188
 	}
@@ -170,10 +171,13 @@ new province skalavik = {
 	area = solitude
 	name = "Skalavik"
 	terrain = coastline
+	base_development = 13
 	color = {
 		144 103 168
 	}
 	history = {
+		center_of_trade = 1
+	
 		history_owner = solitude
 		religion = nordic_pantheon
 		culture = haafingarian
@@ -182,11 +186,12 @@ new province skalavik = {
 	
 		add_core = storm_galley
 		
+		navy_1 = yes
 		quick_province_modifier = {
 			name = "Seat of Clan Storm-Galley"
 			desc = "Test description"
 			modifier = {
-				solitude_storm_galley_influence = 0.1
+				nc_storm_galley_influence = 0.1
 			}
 		}
 	}
@@ -230,6 +235,7 @@ new province alviora = {
 	area = dragon_bridge
 	name = "Alviora"
 	terrain = coastline
+	base_development = 4
 	color = {
 		158 127 179
 	}
@@ -256,6 +262,7 @@ new province esjuberg = {
 	area = dragon_bridge
 	name = "Esjuberg"
 	terrain = hills
+	base_development = 11
 	color = {
 		174 195 199
 	}
@@ -268,10 +275,11 @@ new province esjuberg = {
 	
 		add_core = rock_hammer
 		
+		fort_14th = yes
 		quick_province_modifier = {
 			name = "Seat of Clan Rock-Hammer"
 			modifier = {
-				solitude_rock_hammer_influence = 0.1
+				nc_rock_hammer_influence = 0.1
 			}
 		}
 	}
@@ -292,6 +300,7 @@ new province dragon_bridge = {
 		201 202 125
 	}
 	terrain = hills
+	base_development = 11
 	history = {
 		center_of_trade = 1
 		history_owner = dragon_bridge
@@ -419,6 +428,7 @@ new province wolfs_eye = {
 		167 222 241
 	}
 	terrain = coastline
+	base_development = 10
 	history = {
 		center_of_trade = 1
 		history_owner = solitude
@@ -429,10 +439,11 @@ new province wolfs_eye = {
 	
 		add_core = red_wolf
 		
+		army_1 = yes
 		quick_province_modifier = {
 			name = "Seat of Clan Red-Wolf"
 			modifier = {
-				solitude_red_wolf_influence = 0.1
+				nc_red_wolf_influence = 0.1
 			}
 		}
 	}
@@ -654,13 +665,11 @@ new province northern_road = {
 		200 207 188
 	}
 	history = {
-		history_owner = raven_scar
+		history_owner = shadow_green
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = wood
-	
-		is_city = no
 	}
 }
 new province ravenscar = {
@@ -710,8 +719,8 @@ new province widows_watch = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = wood
-	
-		is_city = yes
+		
+		fort_15th = yes
 		history_owner = raven_scar
 	}
 }
@@ -736,7 +745,8 @@ new province northern_mine = {
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = c_metals
+		mine_manufactory = yes
 	
 		is_city = yes
 	}
@@ -837,7 +847,7 @@ new province horned_coast = {
 		189 251 233
 	}
 	history = {
-		history_owner = pine_frost
+		history_owner = rime_rock
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
@@ -867,26 +877,8 @@ new province low_grove = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = stone
-	
-		is_city = yes
-		history_owner = pine_frost
 		
-		1.1.1 = {
-			create_expedition = {
-				id = dragonhome
-				name = "Dragonhome"
-				desc = ""
-				frame = 15
-				event_picture = deepwood_vale_eventPicture
-				length = 60
-				on_complete = {
-					create_monument = {
-						monument = deepwood_vale
-						province = deepwood_redoubt
-					}
-				}
-			}
-		}
+		history_owner = rime_rock
 	}
 }
 new province pinefrost = {
@@ -911,6 +903,7 @@ new province pinefrost = {
 		history_owner = pine_frost
 		hre = yes
 		history_trade_goods = stone
+		fort_15th = yes
 	}
 }
 new province volskygge = {
@@ -931,11 +924,11 @@ new province volskygge = {
 	}
 	history = {
 		center_of_trade = 1
-		religion = nordic_pantheon
-		culture = haafingarian
-		history_owner = pine_hill
-		hre = yes
+		history_owner = bear_heart_clan
+		religion = reachman_faith
+		culture = reachmen
 		history_trade_goods = wood
+		
 		1.1.1 = {
 			set_expedition_flag = nordic_tomb
 			create_expedition = {
@@ -979,10 +972,9 @@ new province deepwood_redoubt = {
 		187 232 173
 	}
 	history = {
-		religion = nordic_pantheon
-		culture = haafingarian
-		history_owner = pine_hill
-		hre = yes
+		history_owner = bear_heart_clan
+		religion = reachman_faith
+		culture = reachmen
 		history_trade_goods = wood
 	
 		is_city = yes
@@ -1024,10 +1016,9 @@ new province snowpeaks = {
 		161 254 127
 	}
 	history = {
-		history_owner = pine_hill
-		religion = nordic_pantheon
-		culture = haafingarian
-		hre = yes
+		history_owner = bear_heart_clan
+		religion = reachman_faith
+		culture = reachmen
 		history_trade_goods = wood
 	
 		is_city = yes
@@ -1081,6 +1072,9 @@ new province lost_echo_cave = {
 		history_owner = wolf_skull
 		hre = yes
 		history_trade_goods = wood
+		2568.1.1 = {
+			add_claim = skjoralmor
+		}
 	}
 }
 new province wolfskull_cave = {
@@ -1104,7 +1098,7 @@ new province wolfskull_cave = {
 		religion = nordic_pantheon
 		culture = haafingarian
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = mag_goods
 	
 		is_city = yes
 	}
@@ -1164,8 +1158,6 @@ new province kilkreath_temple = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = wood
-	
-		is_city = yes
 	}
 }
 new province ironback_hideout = {
@@ -1190,32 +1182,6 @@ new province ironback_hideout = {
 		culture = haafingarian
 		hre = yes
 		history_trade_goods = c_metals
-	
-		is_city = yes
-	}
-}
-new province kilkreath_peak = {
-	position = {
-		1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000 1632.000 2079.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = kilkreath
-	name = "Kilkreath Peak"
-	terrain = mountain
-	color = {
-		164 221 189
-	}
-	history = {
-		history_owner = iron_back
-		religion = nordic_pantheon
-		culture = haafingarian
-		hre = yes
-		history_trade_goods = wood
 	
 		is_city = yes
 	}
@@ -1315,6 +1281,11 @@ new province galsgik = {
 quick_strait = {
 	from = rock_isle
 	to = clay_coast
+	through = coast_of_verglas
+}
+quick_strait = {
+	from = rock_isle
+	to = wolfs_eye
 	through = coast_of_verglas
 }
 quick_strait = {

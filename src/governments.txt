@@ -257,123 +257,229 @@ default_reform := {
 		magicka_mechanic
 	}
 }
-new government_names remnant_monarchy = {
+
+new inheritable default_monarchy_names = {
 	rank = {
-		1 = "Chiefdom"
-		2 = "Thanedom"
-		3 = "Jarldom"
-		4 = "Kingdom"
-		5 = "High Kingdom"
-		6 = "Empire"
+		1 = "Duchy"
+		2 = "Kingdom"
+		3 = "Empire"
 	}
 	ruler_male = {
-		1 = "Harbinger"
-		2 = "Harbinger"
-		3 = "Harbinger"
-		4 = "Harbinger"
-		5 = "Harbinger"
-		6 = "Harbinger"
+		1 = "Duke"
+		2 = "King"
+		3 = "Emperor"
 	}
 	ruler_female = {
-		1 = "Harbinger"
-		2 = "Harbinger"
-		3 = "Harbinger"
-		4 = "Harbinger"
-		5 = "Harbinger"
-		6 = "Harbinger"
+		1 = "Duchess"
+		2 = "Queen"
+		3 = "Empress"
 	}
 	consort_male = {
-		1 = "Chief"
-		2 = "Thane Consort"
-		3 = "Jarl Consort"
-		4 = "King"
-		5 = "High King"
-		6 = "Emperor"
+		1 = "Duke"
+		2 = "King"
+		3 = "Emperor"
 	}
 	consort_female = {
-		1 = "Chieftess"
-		2 = "Thane Consort"
-		3 = "Jarl Consort"
-		4 = "Queen"
-		5 = "High Queen"
-		6 = "Empress"
+		1 = "Duchess"
+		2 = "Queen"
+		3 = "Empress"
 	}
 	heir_male = {
 		1 = "Prince"
 		2 = "Prince"
 		3 = "Prince"
-		4 = "Prince"
-		5 = "Prince"
-		6 = "Prince"
 	}
 	heir_female = {
 		1 = "Princess"
 		2 = "Princess"
 		3 = "Princess"
-		4 = "Princess"
-		5 = "Princess"
-		6 = "Princess"
+	}
+}
+new inheritable default_republic_names = {
+	rank = {
+		1 = "Republic"
+		2 = "Republic"
+		3 = "Grand Republic"
+	}
+	ruler_male = {
+		1 = "Lord"
+		2 = "Consul"
+		3 = "Grand Consul"
+	}
+	ruler_female = {
+		1 = "Lady"
+		2 = "Consul"
+		3 = "Grand Consul"
+	}
+	consort_male = {
+		1 = "Lord"
+		2 = "Lord"
+		3 = "Lord"
+	}
+	consort_female = {
+		1 = "Lady"
+		2 = "Lady"
+		3 = "Lady"
+	}
+	heir_male = {
+		1 = "Heir"
+		2 = "Heir"
+		3 = "Heir"
+	}
+	heir_female = {
+		1 = "Heiress"
+		2 = "Heiress"
+		3 = "Heiress"
+	}
+}
+new inheritable default_theocracy_names = {
+	rank = {
+		1 = "Bishopric"
+		2 = "Archbishopric"
+		3 = "Patriarchate"
+	}
+	ruler_male = {
+		1 = "Bishop"
+		2 = "Archbishop"
+		3 = "Patriarch"
+	}
+	ruler_female = {
+		1 = "Bishop"
+		2 = "Archbishop"
+		3 = "Matriarch"
+	}
+	heir_male = {
+		1 = "Brother"
+		2 = "Brother"
+		3 = "Brother"
+	}
+	heir_female = {
+		1 = "Sister"
+		2 = "Sister"
+		3 = "Sister"
+	}
+	consort_male = {
+		1 = "Bishop Consort"
+		2 = "Archbishop Consort"
+		3 = "Patriarch Consort"
+	}
+	consort_female = {
+		1 = "Bishop Consort"
+		2 = "Archbishop Consort"
+		3 = "Matriarch Consort"
+	}
+}
+new inheritable default_tribal_names = {
+	rank = {
+		1 = "Chiefdom"
+		2 = "High Chiefdom"
+		3 = "Great Chiefdom"
+	}
+	ruler_male = {
+		1 = "Chief"
+		2 = "High Chief"
+		3 = "Great Chief"
+	}
+	ruler_female = {
+		1 = "Chieftess"
+		2 = "High Chieftess"
+		3 = "Great Chieftess"
+	}
+	consort_male = {
+		1 = "Chief Consort"
+		2 = "Chief Consort"
+		3 = "Chief Consort"
+	}
+	consort_female = {
+		1 = "Chieftess Consort"
+		2 = "Chieftess Consort"
+		3 = "Chieftess Consort"
+	}
+	heir_male = {
+		1 = "Heir"
+		2 = "Heir"
+		3 = "Heir"
+	}
+	heir_female = {
+		1 = "Heiress"
+		2 = "Heiress"
+		3 = "Heiress"
+	}
+}
+
+new government_names remnant_monarchy = {
+	inherit = default_monarchy_names
+	ruler_male = {
+		1 = "Harbinger"
+		2 = "Harbinger"
+		3 = "Harbinger"
+	}
+	ruler_female = {
+		1 = "Harbinger"
+		2 = "Harbinger"
+		3 = "Harbinger"
 	}
 	trigger = {
 		has_reform = companion_remnant
 	}
 }
-new government_names nordic_monarchy = {
+new government_names nordic_clan_monarchy = {
+	inherit = default_monarchy_names
 	rank = {
-		1 = "Chiefdom"
-		2 = "Thanedom"
-		3 = "Jarldom"
-		4 = "Kingdom"
-		5 = "High Kingdom"
-		6 = "Empire"
+		1 = "Clan"
+		2 = "High Clan"
+		3 = "Great Clan"
 	}
 	ruler_male = {
 		1 = "Chief"
-		2 = "Thane"
-		3 = "Jarl"
-		4 = "King"
-		5 = "High King"
-		6 = "Emperor"
+		2 = "High Chief"
+		3 = "Great Chief"
 	}
 	ruler_female = {
-		1 = "Chieftess"
-		2 = "Thane"
-		3 = "Jarl"
-		4 = "Queen"
-		5 = "High Queen"
-		6 = "Empress"
+		1 = "Chief"
+		2 = "High Chief"
+		3 = "Great Chief"
 	}
 	consort_male = {
-		1 = "Chief"
-		2 = "Thane Consort"
-		3 = "Jarl Consort"
-		4 = "King"
-		5 = "High King"
-		6 = "Emperor"
+		1 = "Chief Consort"
+		2 = "Chief Consort"
+		3 = "Chief Consort"
 	}
 	consort_female = {
-		1 = "Chieftess"
-		2 = "Thane Consort"
-		3 = "Jarl Consort"
-		4 = "Queen"
-		5 = "High Queen"
-		6 = "Empress"
+		1 = "Chief Consort"
+		2 = "Chief Consort"
+		3 = "Chief Consort"
 	}
-	heir_male = {
-		1 = "Prince"
-		2 = "Prince"
-		3 = "Prince"
-		4 = "Prince"
-		5 = "Prince"
-		6 = "Prince"
+	trigger = {
+		has_reform = tier_1_nord_clan
 	}
-	heir_female = {
-		1 = "Princess"
-		2 = "Princess"
-		3 = "Princess"
-		4 = "Princess"
-		5 = "Princess"
-		6 = "Princess"
+}
+new government_names nordic_monarchy = {
+	inherit = default_monarchy_names
+	rank = {
+		1 = "Thanedom"
+		2 = "Jarldom"
+		3 = "High Kingdom"
+	}
+	ruler_male = {
+		1 = "Thane"
+		2 = "Jarl"
+		3 = "High King"
+	}
+	ruler_female = {
+		1 = "Thane"
+		2 = "Jarl"
+		3 = "High King"
+	}
+	consort_male = {
+		1 = "Thane Consort"
+		2 = "Jarl Consort"
+		3 = "High King Consort"
+	}
+	consort_female = {
+		1 = "Thane Consort"
+		2 = "Jarl Consort"
+		3 = "High Queen Consort"
 	}
 	trigger = {
 		is_race = nord
@@ -381,61 +487,21 @@ new government_names nordic_monarchy = {
 	}
 }
 new government_names falmer_monarchy = {
+	inherit = default_monarchy_names
 	rank = {
-		1 = "Barony"
-		2 = "County"
-		3 = "Duchy"
-		4 = "Kingdom"
-		5 = "High Kingdom"
-		6 = "Empire"
+		1 = "Duchy"
+		2 = "Kingdom"
+		3 = "Empire"
 	}
 	ruler_male = {
-		1 = "Baron"
-		2 = "Count"
-		3 = "Duke"
-		4 = "Aran"
-		5 = "Amalaran"
-		6 = "Emperor"
+		1 = "Aran"
+		2 = "Amalaran"
+		3 = "Emperor"
 	}
 	ruler_female = {
-		1 = "Baroness"
-		2 = "Countess"
-		3 = "Duchess"
-		4 = "Arana"
-		5 = "Amalarana"
-		6 = "Empress"
-	}
-	consort_male = {
-		1 = "Baron"
-		2 = "Count"
-		3 = "Duke"
-		4 = "King"
-		5 = "High King"
-		6 = "Emperor"
-	}
-	consort_female = {
-		1 = "Baroness"
-		2 = "Countess"
-		3 = "Duchess"
-		4 = "Queen"
-		5 = "High Queen"
-		6 = "Empress"
-	}
-	heir_male = {
-		1 = "Prince"
-		2 = "Prince"
-		3 = "Prince"
-		4 = "Prince"
-		5 = "Prince"
-		6 = "Prince"
-	}
-	heir_female = {
-		1 = "Princess"
-		2 = "Princess"
-		3 = "Princess"
-		4 = "Princess"
-		5 = "Princess"
-		6 = "Princess"
+		1 = "Arana"
+		2 = "Amalarana"
+		3 = "Empress"
 	}
 	trigger = {
 		is_race = snow_elven
@@ -446,62 +512,7 @@ new government_names falmer_monarchy = {
 	}
 }
 new government_names default_monarchy = {
-	rank = {
-		1 = "Barony"
-		2 = "County"
-		3 = "Duchy"
-		4 = "Kingdom"
-		5 = "High Kingdom"
-		6 = "Empire"
-	}
-	ruler_male = {
-		1 = "Baron"
-		2 = "Count"
-		3 = "Duke"
-		4 = "King"
-		5 = "High King"
-		6 = "Emperor"
-	}
-	ruler_female = {
-		1 = "Baroness"
-		2 = "Countess"
-		3 = "Duchess"
-		4 = "Queen"
-		5 = "High Queen"
-		6 = "Empress"
-	}
-	consort_male = {
-		1 = "Baron"
-		2 = "Count"
-		3 = "Duke"
-		4 = "King"
-		5 = "High King"
-		6 = "Emperor"
-	}
-	consort_female = {
-		1 = "Baroness"
-		2 = "Countess"
-		3 = "Duchess"
-		4 = "Queen"
-		5 = "High Queen"
-		6 = "Empress"
-	}
-	heir_male = {
-		1 = "Prince"
-		2 = "Prince"
-		3 = "Prince"
-		4 = "Prince"
-		5 = "Prince"
-		6 = "Prince"
-	}
-	heir_female = {
-		1 = "Princess"
-		2 = "Princess"
-		3 = "Princess"
-		4 = "Princess"
-		5 = "Princess"
-		6 = "Princess"
-	}
+	inherit = default_monarchy_names
 	trigger = {
 		OR = {
 			government = remnant
@@ -510,168 +521,19 @@ new government_names default_monarchy = {
 	}
 }
 new government_names default_republic = {
-	rank = {
-		1 = "Republic"
-		2 = "Republic"
-		3 = "Republic"
-		4 = "Grand Republic"
-		5 = "Grand Republic"
-		6 = "Empire"
-	}
-	ruler_male = {
-		1 = "Lord"
-		2 = "Lord"
-		3 = "Lord"
-		4 = "Consul"
-		5 = "Consul"
-		6 = "Grand Consul"
-	}
-	ruler_female = {
-		1 = "Lady"
-		2 = "Lady"
-		3 = "Lady"
-		4 = "Consul"
-		5 = "Consul"
-		6 = "Grand Consul"
-	}
-	consort_male = {
-		1 = "Lord"
-		2 = "Lord"
-		3 = "Lord"
-		4 = "Lord"
-		5 = "Lord"
-		6 = "Lord"
-	}
-	consort_female = {
-		1 = "Lady"
-		2 = "Lady"
-		3 = "Lady"
-		4 = "Lady"
-		5 = "Lady"
-		6 = "Lady"
-	}
-	heir_male = {
-		1 = "Heir"
-		2 = "Heir"
-		3 = "Heir"
-		4 = "Heir"
-		5 = "Heir"
-		6 = "Heir"
-	}
-	heir_female = {
-		1 = "Heiress"
-		2 = "Heiress"
-		3 = "Heiress"
-		4 = "Heiress"
-		5 = "Heiress"
-		6 = "Heiress"
-	}
+	inherit = default_republic_names
 	trigger = {
 		government = republic
 	}
 }
 new government_names default_theocracy = {
-	rank = {
-		1 = "Priory"
-		2 = "Abbey"
-		3 = "Temple Estate"
-		4 = "Bishopric"
-		5 = "Archbishopric"
-		6 = "Patriarchate"
-	}
-	ruler_male = {
-		1 = "Brother"
-		2 = "Father"
-		3 = "Father"
-		4 = "Bishop"
-		5 = "Archbishop"
-		6 = "Patriarch"
-	}
-	ruler_female = {
-		1 = "Sister"
-		2 = "Mother"
-		3 = "Mother"
-		4 = "Bishop"
-		5 = "Archbishop"
-		6 = "Matriarch"
-	}
-	heir_male = {
-		1 = "Brother"
-		2 = "Brother"
-		3 = "Brother"
-		4 = "Brother"
-		5 = "Brother"
-		6 = "Brother"
-	}
-	heir_female = {
-		1 = "Sister"
-		2 = "Sister"
-		3 = "Sister"
-		4 = "Sister"
-		5 = "Sister"
-		6 = "Sister"
-	}
+	inherit = default_theocracy_names
 	trigger = {
 		government = theocracy
 	}
 }
 new government_names default_tribal = {
-	rank = {
-		1 = "Chiefdom"
-		2 = "Chiefdom"
-		3 = "High Chiefdom"
-		4 = "High Chiefdom"
-		5 = "High Chiefdom"
-		6 = "Empire"
-	}
-	ruler_male = {
-		1 = "Chief"
-		2 = "Chief"
-		3 = "Chief"
-		4 = "Chief"
-		5 = "High Chief"
-		6 = "High Chief"
-	}
-	ruler_female = {
-		1 = "Chieftess"
-		2 = "Chieftess"
-		3 = "Chieftess"
-		4 = "Chieftess"
-		5 = "High Chieftess"
-		6 = "High Chieftess"
-	}
-	consort_male = {
-		1 = "Chief"
-		2 = "Chief"
-		3 = "Chief"
-		4 = "Chief"
-		5 = "High Chief"
-		6 = "High Chief"
-	}
-	consort_female = {
-		1 = "Chieftess"
-		2 = "Chieftess"
-		3 = "Chieftess"
-		4 = "Chieftess"
-		5 = "High Chieftess"
-		6 = "High Chieftess"
-	}
-	heir_male = {
-		1 = "Heir"
-		2 = "Heir"
-		3 = "Heir"
-		4 = "Heir"
-		5 = "Heir"
-		6 = "Heir"
-	}
-	heir_female = {
-		1 = "Heiress"
-		2 = "Heiress"
-		3 = "Heiress"
-		4 = "Heiress"
-		5 = "Heiress"
-		6 = "Heiress"
-	}
+	inherit = default_tribal_names
 	trigger = {
 		OR = {
 			government = tribal

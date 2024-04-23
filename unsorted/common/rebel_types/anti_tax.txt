@@ -10,19 +10,19 @@ anti_tax_rebels = {
 	defection = none					# Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 120
-	gfx_type = culture_province				 
+	gfx_type = culture_province
 	
 	resilient = no					# Disbands on retreat
-	reinforcing = yes				# Does not receive reinforcements
-	general = yes					# Does not use generals
+	reinforcing = no				# Does not receive reinforcements
+	general = no					# Does not use generals
 	smart = no						# Does not assault forts, tactically withdraw from battle, etc.
 	unit_transfer = no				# Units do not remain after enforcing demands.
 	will_relocate = yes				# Units will relocate if they have sieged all provinces nearby and has to move over sea.
 	
 	artillery = 0.0
-	infantry = 0.9
-	cavalry = 0.1
-	morale = 1.0
+	infantry = 1.0
+	cavalry = 0.0
+	morale = 0.8
 	
 	
 	# Possible handle actions
@@ -34,13 +34,6 @@ anti_tax_rebels = {
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
 		factor = 2
-		modifier = {
-			factor = 10
-			owner = {
-				has_global_flag = great_peasants_war_flag
-				is_part_of_hre = yes
-			}
-		}
 		modifier = {
 			factor = 0.5
 			is_overseas = yes
@@ -78,15 +71,15 @@ anti_tax_rebels = {
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 2.5
+			unrest = 2
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 5
+			unrest = 4
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 7.5
+			unrest = 6
 		}
 	}
 	
@@ -120,6 +113,7 @@ anti_tax_rebels = {
 				hidden = yes
 			}
 		}
+		
 		every_owned_province = {
 			limit = {
 				has_rebel_faction = REB
@@ -127,6 +121,7 @@ anti_tax_rebels = {
 			}
 			add_local_autonomy = 20
 		}
+		
 		add_prestige = -50
 	}
 }

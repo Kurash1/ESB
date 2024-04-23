@@ -1,0 +1,51 @@
+mission_trees:solitude += {
+	skalavik_navy = {
+		name = "Expand Skalavik's Ports"
+		desc = "Skalavik is the first port of Solitude, and seat of clan §YStorm-Galley§!, when the settlement was founded there was a period of three decades where each and every single architect tried to one up each other with their creations. This era of innovation ended up with it becoming a port unlike any other, of that day that is. Nowadays the port is beginning to fall behind others, but we might be able to revitalize this original spirit by sponsoring our own ship construction sites."
+		icon = mission_secure_hajj_ports
+		x = 4
+		y = 1
+		required = three_clans_of_solitude
+		trigger = {
+			dip_power = 150
+			navy_size = 30
+		}
+		effect = {
+			add_dip_power = -150
+			
+			countries:lone_band = {
+				every_owned_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+			
+			provinces:skalavik = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				
+				add_building = navy_4
+			}
+			
+			add_estate_loyalty = {
+				estate = estate_clans
+				loyalty = 10
+			}
+			
+			add_faction_influence = {
+				faction = nc_storm_galley
+				influence = 10
+			}
+			
+			conditional_effect = {
+				tooltip = "your ruler is of clan §YStorm-Galley§!"
+				trigger = {
+					dynasty = "Storm-Galley"
+				}
+				effect = {
+					change_dip = 1
+				}
+			}
+		}
+	}
+}

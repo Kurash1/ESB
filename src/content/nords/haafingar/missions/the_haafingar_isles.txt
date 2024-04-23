@@ -1,0 +1,54 @@
+mission_trees:solitude += {
+	the_haafingar_isles = {
+		name = "Isles of the North"
+		desc = "The Sea Giants are somewhere deep in the sea of ghosts, some poets say that in the far north there is a thousand isles of endless fire where they are born from liquid cruelty. To defend our lands even further from their raids we must take the fight towards them, so to say, we must conquer the isles north of haafingar. These isles are filled with all kinds of tales, an explorer states that on one of them there is a castle that is as old as Ysgramoor, while another is completely covered in a red mist. Furthest is the Icereach witches, powerful reachmen mages who stole their lands from nords with an unholy bargain. While most of these isles seem to be more dangerous than beneficial, a man named §YFuldimar Hookhand§! states that he has found an isle worth settling down on, and in honor of our priests he wishes to call it §YKyne's Aegis§!."
+		x = 3
+		y = 3
+		icon = kynes_aegis_mission
+		required = {
+			coast_of_haafingar
+			end_the_pirate_threat
+		}
+		trigger = {
+			areas:volkihar_isles; kynes_isles; icereach = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			provinces:gold_isle = {
+				change_province_name = "Kyne's Aegis"
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				center_of_trade = 1
+			}
+			areas:mysmelg = {
+				add_permanent_claim = ROOT
+			}
+			conditional_effect = {
+				tooltip = "has accepted §YReachmen§!"
+				trigger = {
+					accepted_culture = reachmen
+				}
+				effect = {
+					quick_country_modifier = {
+						name = "Icereach Coven's Witches"
+						modifier = {
+							monthly_magicka = 0.5
+						}
+					}
+					areas:icereach = {
+						quick_province_modifier = {
+							name = "Icereach Coven Present"
+							permanent = no
+							modifier = {
+								min_local_autonomy = 100
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

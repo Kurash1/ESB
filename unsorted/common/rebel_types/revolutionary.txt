@@ -17,13 +17,13 @@ revolutionary_rebels = {
 	reinforcing = yes
 	general = yes
 	smart = yes
-	revolutionary = yes				
+	revolutionary = yes
 	
 	artillery = 0.1
-	infantry = 0.6
-	cavalry = 0.3
+	infantry = 0.9
+	cavalry = 0.0
 	
-	morale = 1.15
+	morale = 1.1
 	
 	# Possible handle actions
 	handle_action_negotiate = no
@@ -33,43 +33,7 @@ revolutionary_rebels = {
 	
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
-		factor = 1
-		modifier = {
-			factor = 0
-			owner = {
-				has_parliament = yes
-			}
-		}		
-		modifier = {
-			factor = 0
-			owner = {
-				is_revolutionary = yes
-			}
-		}	
-		modifier = {	  
-			factor = 2
-			is_year = 1700
-		}
-		modifier = {
-			factor = 2
-			is_year = 1740
-		}
-		modifier = {
-			factor = 2
-			is_year = 1780
-		}
-		modifier = {
-			 factor = 2
-			has_revolution_in_province = yes
-		}
-		modifier = {
-			factor = 0.05
-			is_overseas = yes
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { is_year = 1600 }
-		}
+		factor = 0
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -89,22 +53,32 @@ revolutionary_rebels = {
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 2.5
+			unrest = 2
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 5
+			unrest = 4
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 7.5
+			unrest = 6
+		}
+		modifier = {
+			factor = 6
+			has_revolution_in_province = no
+		}
+		modifier = {
+			factor = 0.25
+			has_revolution_in_province = yes
 		}
 	}
  
  	# Province Scope
  	siege_won_trigger = {
+		
  	}
 	siege_won_effect = {
+		
 	}
 	
 	# Country scope
@@ -134,28 +108,17 @@ revolutionary_rebels = {
 				hidden = yes
 			}
 		}
-		add_prestige = -50		
+		add_prestige = -50
 		if = {
 			limit = {
 				NOT = { 
-					OR = {
-						government = republic
-						is_revolutionary_republic_trigger = yes
-					}
+					government = republic
 				}
 			}
 			change_government = republic
 		}
 		define_ruler = {
 			rebel = yes
-		}
-		if = {
-			limit = {
-				has_dlc = "Rights of Man"
-				is_revolutionary_republic_trigger = yes
-			}
-			remove_country_modifier = constitutional_project
-			remove_country_modifier = consolidation_of_power
 		}
 	}
 }

@@ -8,8 +8,6 @@ nothingness_modifier = {
 	trigger = {
 		always = yes
 	}
-	
-	may_return_manpower_on_disband = yes
 }
 
 supply_depot_modifier = {
@@ -48,8 +46,8 @@ return_manpower_modifier = {
 	trigger = {
 		always = yes
 	}
-	
-	drill_gain_modifier = 1.0
+
+	may_return_manpower_on_disband = yes
 }
 
 general_cost_modifier = {
@@ -77,5 +75,6 @@ reserves_organisation_modifier = {
 		always = yes
 	}
 
-	drill_decay_modifier = -0.5
+	general_cost = -0.5
+	drill_gain_modifier = 1
 }

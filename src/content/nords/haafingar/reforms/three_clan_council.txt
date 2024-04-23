@@ -1,0 +1,98 @@
+governments:monarchy:reform_levels:1 += new tier_1_three_clan_council = {
+	name = "Three Clan Council"
+	desc = "Some centuries after the Return, the atmoran clans Red-Wolf, Rock-Hammer, and Storm-Galley landed on the coasts of that great arch which looms over the Karth. They split off and built their own founding settlments, but then due to continued raids by sea giants the clans formed a temporary council. This temporary council turned out to be not so temporary as the clans stayed united for many centuries all the way to the beginning of the First Era."
+	icon = generic_people
+	potential = {
+		OR = {
+			has_reform = tier_1_haafingar_kingdom
+			has_reform = tier_1_council_hold
+			has_reform = tier_1_three_clan_council
+		}
+	}
+	trigger = {
+		has_reform = tier_1_three_clan_council
+	}
+	factions = {
+		nc_rock_hammer
+		nc_storm_galley
+		nc_red_wolf
+	}
+	heir = no
+	election_on_death = yes
+	custom_attributes = {
+		special_election = yes
+	}
+	modifiers = {
+		stability_cost_modifier = -0.25
+		clans_influence_modifier = 0.2
+		global_autonomy = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+death_election_events += elections.4
+new country_event elections.4 = {
+	title = "Election!"
+	desc = "The unfortunate passing of $MONARCH$ forces us to hold an election of who will rule our country next. Our three clans have put forth their own candidates..."
+	picture = REPUBLICAN_DEBATES_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_reform = tier_1_three_clan_council
+			has_reform = tier_1_council_hold
+		}
+	}
+	
+	options = {
+		{
+			name = "The Rock-Hammer Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					dynasty = "Rock-Hammer"
+					adm = 4
+					claim = 100
+				}
+				add_faction_influence = {
+					faction = nc_rock_hammer
+					influence = 15
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "The Storm-Galley Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					dynasty = "Storm-Galley"
+					dip = 4
+					claim = 100
+				}
+				add_faction_influence = {
+					faction = nc_storm_galley
+					influence = 15
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "The Red-Wolf Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					dynasty = "Red-Wolf"
+					mil = 4
+					claim = 100
+				}
+				add_faction_influence = {
+					faction = nc_red_wolf
+					influence = 15
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+	}
+}

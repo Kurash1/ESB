@@ -1,0 +1,222 @@
+new inheritable shatter_clan_event = {
+	desc = "A clan of our fair realm has made the difficult voyage to our new lands of the Shatter, and have begun contruction of a new settlement. This is one of the steps by which the lands of the Shatter can once again become civilized."
+}
+new effect shatter_clan_effect = {
+	args = {
+		country = country
+		area = area
+	}
+	transpile = {
+		args:country:capital = {
+			add_core = args:country
+			if [owned_by = ROOT] {
+				change_culture = ROOT
+				change_religion = ROOT
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		args:area = {
+			if [owned_by = ROOT] {
+				add_core = args:country
+				remove_core = ROOT
+				add_random_development = 1
+			}
+			else {
+				add_permanent_claim = args:country
+			}
+		}
+		release = args:country
+		create_subject = {
+			subject_type = founded_clan
+			subject = args:country
+		}
+	}
+}
+new country_event haafingar.7 = {
+	inherit = shatter_clan_event
+	title = "Clan Iron-Heart"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = iron_heart
+				area = bikseth
+			}
+		}
+	}
+}
+new country_event haafingar.8 = {
+	inherit = shatter_clan_event
+	title = "Clan Storm-Crest"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = storm_crest
+				area = fregamth
+			}
+		}
+	}
+}
+new country_event haafingar.9 = {
+	inherit = shatter_clan_event
+	title = "Clan Oak-Spear"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = oak_spear
+				area = thanhiend
+			}
+		}
+	}
+}
+new country_event haafingar.10 = {
+	inherit = shatter_clan_event
+	title = "Clan Raven-Eye"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = raven_eye
+				area = stagnith
+			}
+		}
+	}
+}
+new country_event haafingar.11 = {
+	inherit = shatter_clan_event
+	title = "Clan Fire-Bane"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = fire_bane
+				area = randeiskr
+			}
+		}
+	}
+}
+new country_event haafingar.12 = {
+	inherit = shatter_clan_event
+	title = "Clan Thunder-Hoof"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = thunder_hoof
+				area = mysmelg
+			}
+		}
+	}
+}
+new country_event haafingar.13 = {
+	inherit = shatter_clan_event
+	title = "Clan Steel-Song"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = steel_song
+				area = mutold
+			}
+		}
+	}
+}
+new country_event haafingar.14 = {
+	inherit = shatter_clan_event
+	title = "Clan Ash-Claw"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = ash_claw
+				area = jurlillath
+			}
+		}
+	}
+}
+new country_event haafingar.15 = {
+	inherit = shatter_clan_event
+	title = "Clan Silver-Blood"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = silver_blood
+				area = bulunnik
+			}
+		}
+	}
+}
+new country_event haafingar.16 = {
+	inherit = shatter_clan_event
+	title = "Clan Moon-Walker"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = moon_walker
+				area = stargam
+			}
+		}
+	}
+}
+new country_event haafingar.17 = {
+	inherit = shatter_clan_event
+	title = "Clan Winter-Thorn"
+	picture = scouts_report_eventPicture
+	options = {
+		name = "Great"
+		effect = {
+			shatter_clan_effect = {
+				country = winter_thorn
+				area = wyrms_isle
+			}
+		}
+	}
+}
+mission_trees:solitude += {
+	reclaim_the_shatter = {
+		name = "Reclaim the Shatter"
+		desc = "With the defeat of the Sea Giants we have reclaimed the isles of the Shatter, once part of the atmoran domains, these lands are now mostly empty of civilized life, but just as we nords did with skyrim, many clans will hope to colonize these lands. So best let nature take its course."
+		icon = mission_rb_colonise_canada
+		required = {
+			seeking_vengeance
+			form_haafingar_hold
+		}
+		x = 3
+		y = 5
+		trigger = {
+			regions:the_shatter = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			country_event = { id = haafingar.7 days =  365 random = (365*4) }
+			country_event = { id = haafingar.8 days =  365 random = (365*4) }
+			country_event = { id = haafingar.9 days =  365 random = (365*4) }
+			country_event = { id = haafingar.10 days = 365 random = (365*4) }
+			country_event = { id = haafingar.11 days = 365 random = (365*4) }
+			country_event = { id = haafingar.12 days = 365 random = (365*4) }
+			country_event = { id = haafingar.13 days = 365 random = (365*4) }
+			country_event = { id = haafingar.14 days = 365 random = (365*4) }
+			country_event = { id = haafingar.15 days = 365 random = (365*4) }
+			country_event = { id = haafingar.16 days = 365 random = (365*4) }
+			country_event = { id = haafingar.17 days = 365 random = (365*4) }
+		}
+	}
+}

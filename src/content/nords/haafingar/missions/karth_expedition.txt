@@ -1,0 +1,25 @@
+mission_trees:solitude += {
+	karth_expedition = {
+		name = "Karth Expedition"
+		desc = "Flowing under the Dragon Bridge is the Karth River, while we do not know how long this river flows for, it is known that every so often raiders worshipping demons come from upstream. To map the river and the surrounding regions is paramount so that we can properly block continued attacks on our internal coasts."
+		icon = mission_exploration
+		required = taming_the_dragon
+		x = 9
+		y = 4
+		trigger = {
+			has_discovered = dragon_river
+			has_discovered = karth_lake
+			has_discovered = blind_river
+			has_discovered = lake_karthspire
+			has_discovered = hroldan_river
+		}
+		effect = {
+			province_groups:survey_reach = {
+				discover_country = ROOT
+			}
+			areas:mor_khazgur; bruca; harmugstahl; karthald; dragon_bridge_overlook; reach_camp = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

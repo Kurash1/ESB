@@ -1,0 +1,40 @@
+mission_trees:solitude += {
+	a_new_city = {
+		name = "To live with the Clouds"
+		desc = "The top of the §YGreat Arch§! remained undeveloped for a very long time, due to the harsh winds of the northern sea, and the rugged and rocky terrain. However, this changed through the council of §YTujenhelf§!, who taught our tongues a secret word which would flatten the land, and our priests who, through many prayers to §YKyne§!, managed to calm the northern winds."
+		icon = mission_eastern_european_city
+		x = 1
+		y = 2
+		required = {
+			old_solitude
+			old_sage_of_solitude
+			a_pious_people
+		}
+		trigger = {
+			owns = solitude
+		}
+		effect = {
+			new_custom_tooltip = "§YPaper§! will now be produced in §Y[{provinces:solitude}.GetName]§!.
+Create a level §Y1§! Center of Trade in §G[{provinces:solitude}.GetName]§!"
+			hidden_effect = {
+				provinces:solitude = {
+					change_trade_goods = paper
+					center_of_trade = 1
+				}
+			}
+			provinces:solitude = {
+				quick_province_modifier = {
+					name = "Mastery over Nature"
+					modifier = {
+						local_development_cost = -0.5
+						supply_limit = 20
+						local_build_cost = -0.5
+						local_build_time = -0.5
+						regiment_recruit_speed = -0.5
+						ship_recruit_speed = -0.5
+					}
+				}
+			}
+		}
+	}
+}

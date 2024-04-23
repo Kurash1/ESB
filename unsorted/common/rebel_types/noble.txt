@@ -19,8 +19,8 @@ noble_rebels = {
 	smart = yes
 	
 	artillery = 0.0
-	infantry = 0.6
-	cavalry = 0.4
+	infantry = 1.0
+	cavalry = 0.0
 	
 	morale = 1.0
 	
@@ -51,34 +51,6 @@ noble_rebels = {
 			}
 		}
 		modifier = {
-			factor = 3.0
-			owner = {
-				estate_territory = {
-					estate = estate_nobility
-					territory = 20
-				}
-			}
-		}
-		modifier = {
-			factor = 2.0
-			owner = {
-				estate_territory = {
-					estate = estate_nobility
-					territory = 30
-				}
-			}
-		}
-		modifier = {
-			factor = 2.0
-			owner = {
-				estate_territory = {
-					estate = estate_nobility
-					territory = 40
-				}
-			}
-		}
-		
-		modifier = {
 			factor = 2.5
 			owner = {
 				government = republic
@@ -107,15 +79,15 @@ noble_rebels = {
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 2.5
+			unrest = 2
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 5
+			unrest = 4
 		}
 		modifier = {
 			factor = 1.5
-			unrest = 7.5
+			unrest = 6
 		}
 	}
  
@@ -125,31 +97,6 @@ noble_rebels = {
 	}
 	siege_won_effect = {
 		add_local_autonomy = 10
-		 owner = {
-			if = {
-				limit = { has_estate = estate_nobility }
-				change_estate_land_share = {
-					estate = estate_nobility
-					share = 10.0
-					province = ROOT
-				}
-			}
-			else_if = {
-				limit = { has_estate = estate_warriors }
-				change_estate_land_share = {
-					estate = estate_warriors
-					share = 10.0
-					province = ROOT
-				}
-			}
-			else = { # Fallback
-				change_estate_land_share = {
-					estate = all
-					share = 10.0
-					province = ROOT
-				}
-			}
-		}
 	}
 	
 	# Country scope
@@ -174,18 +121,16 @@ noble_rebels = {
 				hidden = yes
 			}
 		}
+		
 		every_owned_province = {
 			limit = {
 				has_rebel_faction = REB
 			}
 			add_local_autonomy = 20
-		}	
+		}
+		
 		add_prestige = -20
 		add_legitimacy = -20
 		add_horde_unity = -20
-		change_estate_land_share = {
-			estate = all
-			share = 10.0
-		}
 	}
 }

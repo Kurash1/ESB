@@ -1,0 +1,11 @@
+new trigger is_strongest_trade_power_in = {
+	args = tradenode
+	transpile = {
+		custom_trigger_tooltip = {
+			new_tooltip = "§Y[This.GetName]§! is the strongest Trade Power in §Y{args:name}§!."
+			args:location = {
+				is_strongest_trade_power = PREV
+			}
+		}
+	}
+}

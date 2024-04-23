@@ -1,3 +1,16 @@
+new named_effect reduce_shatter_development = {
+	foreach $province in provinces [
+		exists = $province:area
+		$province:area:region:id == "Shatter"
+		$province:base_development == $province:terrain:base_development
+	] {
+		$province:base_development -= 3
+		when [$province:base_development < 3] {
+			$province:base_development := 3
+		}
+	}
+}
+
 new inheritable shatter_inherit = {
 	position = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
@@ -440,9 +453,9 @@ new province brindeilg = {
 	rotation = { 0.000 0.000 0.000 0.000 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 	history = {
-		religion = the_old_ways
-		culture = roscrean
-		history_owner = sea_ghost
+		religion = sea_oath
+		culture = sea_giant
+		history_owner = stagnith
 		history_trade_goods = fish
 	}
 }
@@ -511,9 +524,9 @@ new province fusgrill = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 	history = {
-		religion = the_old_ways
-		culture = roscrean
-		history_owner = star_weaver
+		religion = sea_oath
+		culture = sea_giant
+		history_owner = thelild
 		history_trade_goods = fish
 	}
 }
@@ -566,9 +579,9 @@ new province skydinold = {
 	rotation = { 0.000 0.000 0.000 -0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 	history = {
-		religion = the_old_ways
-		culture = roscrean
-		history_owner = star_weaver
+		religion = sea_oath
+		culture = sea_giant
+		history_owner = thelild
 		history_trade_goods = fish
 	}
 }
@@ -612,9 +625,9 @@ new province klotmoth = {
 	rotation = { 0.000 0.000 0.000 2.356 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 	history = {
-		religion = the_old_ways
-		culture = roscrean
-		history_owner = star_weaver
+		religion = sea_oath
+		culture = sea_giant
+		history_owner = thelild
 		history_trade_goods = c_metals
 	}
 }
@@ -706,9 +719,9 @@ new province fregamth = {
 	rotation = { 0.000 0.000 0.000 0.785 0.000 0.000 0.000 }
 	height = { 0.365 0.365 0.365 0.365 0.365 0.365 0.365 }
 	history = {
-		religion = the_old_ways
-		culture = roscrean
-		history_owner = nymph_dance
+		religion = sea_oath
+		culture = sea_giant
+		history_owner = bikseth
 		history_trade_goods = fish
 	}
 }
@@ -825,7 +838,7 @@ new province framth = {
 	history = {
 		religion = sea_oath
 		culture = sea_giant
-		history_owner = stagnith
+		history_owner = bikseth
 		history_trade_goods = alcohol
 	}
 }

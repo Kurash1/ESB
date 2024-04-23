@@ -57,76 +57,7 @@ on_actions:on_startup += {
 		province_event = orc_stronghold.1
 	}
 	if [NOT = { has_global_flag = on_action_set_up_global_flag }] {
-		if [
-			NOT = {
-				any_country = {
-					is_race = reachmen
-					ai = no
-				}
-			}
-		] {
-			random_country [
-				is_race = reachmen
-				NOT = {
-					has_country_modifier = reach_blessing
-				}
-			] {
-				log = "Reach Blessing: [This.GetName]"
-				add_country_modifier = {
-					name = reach_blessing
-					duration = (50*365)
-				}
-				change_mil = 6
-			}
-		}
-	
-		every_province [is_city = no] {
-			random_list = {
-				10 = { change_native_hostileness = 1 }
-				10 = { change_native_hostileness = 2 }
-				10 = { change_native_hostileness = 3 }
-				10 = { change_native_hostileness = 4 }
-				10 = { change_native_hostileness = 5 }
-				10 = { change_native_hostileness = 6 }
-				10 = { change_native_hostileness = 7 }
-				10 = { change_native_hostileness = 8 }
-				10 = { change_native_hostileness = 9 }
-				10 = { change_native_hostileness = 10 }
-			}
-			random_list = {
-				10 = { change_native_size = 10 }
-				10 = { change_native_size = 9 }
-				10 = { change_native_size = 8 }
-				10 = { change_native_size = 7 }
-				10 = { change_native_size = 6 }
-				10 = { change_native_size = 5 }
-				10 = { change_native_size = 4 }
-				10 = { change_native_size = 3 }
-				10 = { change_native_size = 2 }
-				10 = { change_native_size = 1 }
-			}
-			random_list = {
-				3 = { change_native_ferocity = 1 }
-				5 = { change_native_ferocity = 2 }
-				7 = { change_native_ferocity = 3 }
-				10 = { change_native_ferocity = 4 }
-				12 = { change_native_ferocity = 5 }
-				15 = { change_native_ferocity = 6 }
-				17 = { change_native_ferocity = 7 }
-				20 = { change_native_ferocity = 8 }
-				23 = { change_native_ferocity = 9 }
-				25 = { change_native_ferocity = 10 }
-			}
-		}
-		countries:black_mountain = {
-			country_event = {
-				id = global.1
-				days = (365*50)
-			}
-		}
-		every_country [NOT = { tag = REB }] {
-			esb_change_opinion = yes
-		}
+		on_initialize
 		set_global_flag = on_action_set_up_global_flag
 	}
 }

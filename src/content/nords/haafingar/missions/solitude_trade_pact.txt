@@ -1,0 +1,22 @@
+mission_trees:solitude += {
+	solitude_trade_pact = {
+		name = "Solitude Trade-Pact"
+		desc = "Through great effort we have become the dominant trade power all across Western Skyrim, some merchants are even saying that we could force others to become our vassals through the influence of our money. While this is often said in a joking tone, whose to say it must stay a joke."
+		x = 0
+		y = 5
+		icon = mission_trade_company_region_abroad
+		required = a_new_port
+		trigger = {
+			is_strongest_trade_power_in = solitude
+			is_strongest_trade_power_in = northwatch
+			is_strongest_trade_power_in = stonehills
+			is_strongest_trade_power_in = hjaal
+			is_strongest_trade_power_in = karthwasten
+		}
+		effect = {
+			new_custom_tooltip = "Unlocks the use of the §YSolitude-Pact Expansion§! casus belli
+Unlocks the use of the §YInvite into the Trade-Pact§! diplomatic action"
+			set_country_flag = solitude_trade_pact
+		}
+	}
+}

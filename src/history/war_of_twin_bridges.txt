@@ -1,0 +1,103 @@
+#War of Twin Bridges:
+#
+#Attacker: Snow-Hawk, and their march, the Hjaal Thanedom
+#Defender: Solitude, Chill-Wind, Dragon Bridge, and Solitude's ally, Dawn-Star, and their 2 vassals High-Gate and Frostmere
+#Casus Belli: Retaliation for Solitude accepting Clan Chill-Wind into their country, which had previously been the border of the two countries.
+#
+#Early Stage: During the early stage of the war Solitude was too busy fighting against the sea giants in the north, and Snow-Hawk managed to cross the twin bridges occupying the territories of clan Chill-Wind.
+#
+#Battle of Dragon Bridge: While the independant township of Dragon Bridge had been neutral in the conflict, they refused to let the armies of Snow-Hawk cross their lands, as they were under the protection of solitude from the sea giants. Snow-Hawk declared Dragon Bridge Cobelligirent in the war, and attacked the township. The Armies of the Lord fled the city in order to rally together with the Thane of Solitude, but the Four Shields Order remained to defend the City. The Order was completely wiped in the battle, but managed to cause major casualties.
+#
+#Battle of Alviora: This battle was the shame of the Army of Solitude, exhausted after a long campaign of fighting Sea Giants they marched back down to the south to fight the forces of Snow-Hawk with their allies from Dragon Bridge. It was an abysmal loss on Solitude's side.
+#
+#Siege of Esjuberg: A bloody siege right after the battle of Alviora, Snow-Hawk lost most of their reserves to take the Fort built by Clan Rock-Hammer. The siege gave Solitude the time to reorganize their armies, and the fall of the fort created a wave of Revanchism in the army.
+#
+#Treaty of Horga Hills: The last "battle" of the war, one week after the fall of Esjuberg the forces of Snow-Hawk hoping to quickly end the war, as the forces of Dawn-Star had finally reached their homeland, rushed eastward only to be met by the army of solitude. Both sides at this point were exhausted and wanted to end the war, even if they didn't manage to get what they wanted. Both sides had their tongues shout across the hills to propose the treaty, and it was finally agreed that Chill-Wind would stay independant, Dragon Bridge would become a vassal-state of Solitude, and Solitude may not cross the Dragon Bridge into Chill-Wind.
+new historical_war war_of_twin_bridges = {
+	name = "War of Twin Bridges"
+	war_goal = {
+		type = superiority_punitive
+		casus_belli = cb_super_badboy
+	}
+	dates = {
+		2559.11.19 = {
+			add_attacker = countries:snow_hawk
+			add_attacker = countries:hjaal
+			add_defender = countries:solitude
+			add_defender = countries:chill_wind
+			add_defender = countries:dawn_star
+		}
+		2560.4.1 = { #Battle of Dragon Bridge
+			add_defender = countries:dragon_bridge
+			battle = {
+				name = "Dragon Bridge"
+				location = provinces:dragon_bridge
+				attacker = {
+					commander = "Hjolfr Frost-Blade"
+					infantry = 12000
+					cavalry = 1000
+					artillery = 2000
+					losses = 5
+					country = countries:snow_hawk
+				}
+				defender = {
+					commander = "Svari of Four Shields"
+					infantry = 3000
+					losses = 80
+					country = countries:dragon_bridge
+				}
+				result = yes
+			}
+		}
+		2562.7.5 = { #Battle of Alviora
+			battle = {
+				name = "Alviora"
+				location = provinces:alviora
+				attacker = {
+					commander = "Hjolfr Frost-Blade"
+					infantry = 12000
+					cavalry = 1000
+					artillery = 2000
+					losses = 35
+					country = countries:snow_hawk
+				}
+				defender = {
+					commander = "Varric Rock-Hammer"
+					infantry = 11000
+					artillery = 1000
+					losses = 40
+					country = countries:solitude
+				}
+				result = yes
+			}
+		}
+		#2566.3.28 = {
+		#	#Siege of Esjuberg
+		#}
+		2566.4.5 = { #Treaty of Horga Hills
+			rem_attacker = countries:snow_hawk
+			rem_attacker = countries:hjaal
+			rem_defender = countries:solitude
+			rem_defender = countries:chill_wind
+			rem_defender = countries:dawn_star
+		}
+	}
+}
+new relation vassal = {
+	first = SOL
+	second = DRB
+	start_date = 2566.4.5
+	end_date = 9999.1.1
+}
+new relation guarantee = {
+	first = SOL
+	second = CHW
+	start_date = 2566.4.5
+	end_date = 9999.1.1
+}
+new relation guarantee = {
+	first = SNO
+	second = CHW
+	start_date = 2566.4.5
+	end_date = 9999.1.1
+}

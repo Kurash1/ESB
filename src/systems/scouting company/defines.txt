@@ -1,10 +1,12 @@
-new named_float SURVEY_MAINTENANCE_PER_STACK = 0.10
+new named_float SURVEY_BASE_RECRUIT_RATE = 0.1
+new named_float SURVEY_RECRUIT_COST = 20
+new named_float SURVEY_MAINTENANCE_PER_STACK = ( 0.25 / 12 * SURVEY_RECRUIT_COST )
+
 new named_float SURVEY_RETIREMENT_RATE = 1
 new named_float SURVEY_QUIT_RATE = 100
 new named_float SURVEY_CASUALTY_RATE = 5
+
 new named_float SURVEY_BASE_SURVEY_SPEED = 100
-new named_float SURVEY_BASE_RECRUIT_RATE = 10
-new named_float SURVEY_RECRUIT_COST = 5
 
 new modifier_definition scouts_maintenance_efficiency = {
 	name = "Scouts Maintenance Efficiency"

@@ -1,0 +1,213 @@
+run_effect = {
+	foreach $advisor_type in advisor_types {
+		$advisor_type:skill_scaled_modifiers += {
+			{
+				trigger = {
+					owner = {
+						has_reform = tier_1_haafingar_kingdom
+					}
+				}
+				modifier = {
+					monthly_haafingar_adm_power = 0.1
+				}
+			}
+		}
+	}
+}
+new event_modifier haafingar_adm_modifier = {
+	name = "Held Court"
+	modifier = {
+		advisor_cost = -0.1
+	}
+}
+new event_modifier haafingar_dip_modifier = {
+	name = "Held a Burning"
+	modifier = {
+		diplomatic_reputation = 1
+	}
+}
+new event_modifier haafingar_mil_modifier = {
+	name = "Assembled the Generals"
+	modifier = {
+		army_tradition = 1
+	}
+}
+new inheritable haafingar_mechanic_button = {
+	gui = {
+		size = { x = 115 y = 120 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType = { 
+			name = "government_interaction_button_overlay"
+			spriteType = "GFX_haafingar_button_overlay"
+			position = { x = 7 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			position = { x = 0 y = 7 }
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+		
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_government_power_bar"
+			position = { x = 21 y = 100 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_government_power_bar_frame"
+			position = { x = 7 y = 96 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+}
+new government_mechanic haafingar_mechanic = {
+	name = "Solitude Powers"
+	powers = {
+		haafingar_adm_power = {
+			name = "Blue Palace Administration"
+			desc = "
+
+We gain an extra §G0.10§! §YBlue Palace Administration§! each month from each level of our advisors. §RThis is not properly shown on the tooltip!§!"
+			max = 100
+			monarch_power = ADM
+			base_monthly_growth = 0.5
+		}
+		haafingar_dip_power = {
+			name = "Bards College Fame"
+			desc = "
+
+We gain an extra §G0.01§! §YBards College Fame§! each month from each point of prestige. §RThis is not properly shown on the tooltip!§!"
+			max = 100
+			monarch_power = DIP
+			base_monthly_growth = 0.5
+		}
+		haafingar_mil_power = {
+			name = "Castle Dour Tradition"
+			desc = "
+
+We gain an extra §G0.01§! §YCastle Dour Tradition§! each month from each point of army tradition. §RThis is not properly shown on the tooltip!§!"
+			max = 100
+			monarch_power = MIL
+			base_monthly_growth = 0.5
+		}
+	}
+	interactions = {
+		haafingar_adm_button = {
+			name = "Hold Court"
+			desc = ""
+			icon = GFX_haafingar_ability_adm
+			cost_type = haafingar_adm_power
+			cost = 100
+			effect = {
+				add_adm_power = 25
+				add_dip_power = 25
+				add_mil_power = 25
+				
+				if [has_country_flag = court_of_haafingar] {
+					add_country_modifier = {
+						name = haafingar_adm_modifier
+						duration = 1825
+					}
+				}
+			}
+			inherit = haafingar_mechanic_button
+		}
+		haafingar_dip_button = {
+			name = "Hold a Burning"
+			desc = ""
+			icon = GFX_haafingar_ability_dip
+			cost_type = haafingar_dip_power
+			cost = 100
+			effect = {
+				add_war_exhaustion = -2
+				add_yearly_manpower = 1
+				
+				if [has_country_flag = court_of_haafingar] {
+					add_country_modifier = {
+						name = haafingar_dip_modifier
+						duration = 1825
+					}
+				}
+				
+				if [
+					owns = solitude
+					provinces:solitude = {
+						has_province_modifier = flame_of_callisos
+					}
+					NOT = {
+						has_ruler_flag = flame_of_callisos_buff
+					}
+				] {
+					random_list = {
+						1 = { change_adm = 1 }
+						1 = { change_dip = 1 }
+						1 = { change_mil = 1 }
+					}
+					set_ruler_flag = flame_of_callisos_buff
+				}
+			}
+			inherit = haafingar_mechanic_button
+		}
+		haafingar_mil_button = {
+			name = "Assemble the Generals"
+			desc = ""
+			icon = GFX_haafingar_ability_mil
+			cost_type = haafingar_mil_power
+			cost = 100
+			effect = {
+				random_neighbor_country [
+					NOT = { is_subject_of = ROOT }
+					NOT = { overlord_of = ROOT }
+					NOT = { alliance_with = ROOT }
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = 25
+						}
+					}
+					any_owned_province = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_claim = ROOT
+						}
+					}
+				] {
+					every_owned_province [
+						any_neighbor_province = {
+							owned_by = ROOT
+						}
+					] {
+						area = {
+							add_claim = ROOT
+						}
+					}
+				}
+				
+				if [has_country_flag = court_of_haafingar] {
+					add_country_modifier = {
+						name = haafingar_mil_modifier
+						duration = 1825
+					}
+				}
+			}
+			inherit = haafingar_mechanic_button
+		}
+	}
+}

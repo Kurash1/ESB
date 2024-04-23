@@ -118,9 +118,6 @@ new effect change_innovativeness = {
 }
 new effect complete_mission = {
 	args = mission
-	transpile = {
-		`complete_mission = {args:id}`
-	}
 }
 new effect swap_non_generic_missions = {
 	args = bool
@@ -133,4 +130,13 @@ new effect dip_power_cost = {
 }
 new effect mil_power_cost = {
 	args = int
+}
+new effect add_claim = {
+	args = country_scope
+}
+new effect add_ruler_personality = {
+	args = personality_trait
+}
+new effect add_heir_personality = {
+	args = personality_trait
 }

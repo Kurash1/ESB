@@ -1,0 +1,27 @@
+mission_trees:solitude += {
+	end_the_pirate_threat = {
+		name = "End the Pirate Threat"
+		desc = "The §YLone Band§!, fearsome vikingr and reavers, these nords hide away on an abandoned isle amidst the sea of ghosts, raiding every so often our fair lands. Whilst not having the same brutality as the Sea Giants, they end up a thorn on the side of our merchants and populace. But by way of boat and sword can we bring down their black flag."
+		icon = mission_pirate_fleet
+		x = 3
+		y = 2
+		required = skalavik_navy
+		trigger = {
+			NOT = {
+				exists = lone_band
+			}
+		}
+		effect = {
+			home_trade_node_effect_scope = {
+				add_trade_node_income = 12
+			}
+			
+			add_prestige = 15
+			
+			add_power_projection = { 
+				type = mission_rewards_power_projection
+				amount = 25 
+			}
+		}
+	}
+}

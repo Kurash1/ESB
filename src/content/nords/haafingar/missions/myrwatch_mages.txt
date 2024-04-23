@@ -1,0 +1,33 @@
+mission_trees:solitude += {
+	myrwatch_mages = {
+		name = "Myrwatch Mages"
+		desc = "Myrwatch is home to a reclusive circle of Jhunal worshipping Mages, called the Myrwatch Order, however due to our populaces distrust of Mages there has been constant conflict with the locals. The Order has recently asked us to build a castle for them where they could seperate themselves from the world, so that they would not bother the populace, and in exchange they would help the realm in both magical and military endeavors."
+		icon = fight_bosnian_heresies
+		required = shade_of_the_skyborn
+		x = 6
+		y = 5
+		trigger = {
+			owns = myrwatch
+			provinces:myrwatch = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			provinces:myrwatch = {
+				quick_province_modifier = {
+					name = "Myrwatch Mages"
+					modifier = {
+						monthly_magicka = 0.25
+						infantry_fire = 0.1
+						local_defensiveness = 0.5
+					}
+				}
+			}
+		}
+	}
+}
