@@ -1,0 +1,44 @@
+new country_event civil_war.2 = {
+	title = "A Cry for Help"
+	desc = "The opposition against $MONARCH$ has been attracting more supporters by the day and the possibility of a deposition is becoming very plausible. In a desperate attempt to save the throne and restore order, $MONARCH$ contemplates turning to $COUNTRY$'s foreign allies in [ally_country.GetUsableName] asking for help."
+	picture = indoril_mastermind_eventPicture
+	goto = rebel_province
+	major = yes
+	
+	trigger = {
+		revolt_percentage = 0.05
+		num_of_allies = 1
+	}
+	immediate = {
+		hidden_effect = {
+			random_ally = {
+				save_event_target_as = ally_country
+			}
+		}
+	}
+	
+	options = {
+		{
+			name = "Request aid from [ally_country.GetName]."
+			effect = {
+				add_dip_power = -100
+			}
+			ai_chance = { factor = 40 }
+		}
+		{
+			name = "Rely on our own strength."
+			effect = {
+				add_legitimacy = 5
+				random_owned_province [is_core = ROOT] {
+					spawn_rebels = {
+						type = 	pretender_rebels
+						religion = ROOT
+						size = 1
+						win = yes
+					}
+				}
+			}
+			ai_chance = { factor = 60 }
+		}
+	}
+}

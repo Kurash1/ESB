@@ -1,0 +1,25 @@
+new country_event civil_war.100 = {
+	title = "End of Civil War"
+	desc = "With [Root.Monarch.GetTitle] [Root.Monarch.GetName] emerging victories, the instability of the Civil War is at an end. The remaining stragglers who oppose [Root.Monarch.GetHerHis] rule are retreating into exile, unable to continue their resistence at home. This is our chance to end this madness and restore order."
+	picture = nord_rally_eventPicture
+	goto = rebel_province
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = civilwar_on_capital
+			clr_country_flag = total_war_peak
+			clr_country_flag = favoured_faction
+			clr_country_flag = dominant_faction
+			clr_country_flag = civil_war_knees_event
+		}
+	}
+	
+	options = {
+		name = "Victory is ours!"
+		effect = {
+			add_legitimacy = 10
+			add_stability = 3
+		}
+	}
+}

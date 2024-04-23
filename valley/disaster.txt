@@ -1,6 +1,6 @@
 new class disaster = {
 	list = disasters
-	id = `{this:id}_disaster`
+	id = `{this:id}`
 	default = {
 		desc = ""
 	}
@@ -32,20 +32,22 @@ new class disaster = {
 			new localisation `{$disaster:id}` = `{$disaster:name}`
 			new localisation `{$disaster:id}_desc` = `{$disaster:desc}`
 			write_file "common/disasters/{$disaster:id}.txt" = {
-				when [exists = $disaster:potential] { potential = { $disaster:potential } }
-				when [exists = $disaster:progress] { progress = { $disaster:progress } }
-				when [exists = $disaster:down_progress] { down_progress = { $disaster:down_progress } }
-				when [exists = $disaster:can_start] { can_start = { $disaster:can_start } }
-				when [exists = $disaster:can_stop] { can_stop = { $disaster:can_stop } }
-				when [exists = $disaster:can_end] { can_end = { $disaster:can_end } }
-				when [exists = $disaster:modifier] { modifier = { $disaster:modifier } }
-				when [exists = $disaster:ended_by_country_breaking_to_rebels] { ended_by_country_breaking_to_rebels = $disaster:ended_by_country_breaking_to_rebels }
-				when [exists = $disaster:stability_hit_on_war] { stability_hit_on_war = $disaster:stability_hit_on_war }
-				when [exists = $disaster:on_start] { on_start = $disaster:on_start }
-				when [exists = $disaster:on_end] { on_end = $disaster:on_end }
-				when [exists = $disaster:on_monthly] { on_monthly = { $disaster:on_monthly } }
-				when [exists = $disaster:on_start_effect] { on_monthly = { $disaster:on_monthly } }
-				when [exists = $disaster:on_progress_effect] { on_monthly = { $disaster:on_monthly } }
+				$disaster:id = {
+					when [exists = $disaster:potential] { potential = { $disaster:potential } }
+					when [exists = $disaster:progress] { progress = { $disaster:progress } }
+					when [exists = $disaster:down_progress] { down_progress = { $disaster:down_progress } }
+					when [exists = $disaster:can_start] { can_start = { $disaster:can_start } }
+					when [exists = $disaster:can_stop] { can_stop = { $disaster:can_stop } }
+					when [exists = $disaster:can_end] { can_end = { $disaster:can_end } }
+					when [exists = $disaster:modifier] { modifier = { $disaster:modifier } }
+					when [exists = $disaster:ended_by_country_breaking_to_rebels] { ended_by_country_breaking_to_rebels = $disaster:ended_by_country_breaking_to_rebels }
+					when [exists = $disaster:stability_hit_on_war] { stability_hit_on_war = $disaster:stability_hit_on_war }
+					when [exists = $disaster:on_start] { on_start = $disaster:on_start }
+					when [exists = $disaster:on_end] { on_end = $disaster:on_end }
+					when [exists = $disaster:on_monthly] { on_monthly = { $disaster:on_monthly } }
+					when [exists = $disaster:on_start_effect] { on_monthly = { $disaster:on_monthly } }
+					when [exists = $disaster:on_progress_effect] { on_monthly = { $disaster:on_monthly } }
+				}
 			}
 		}
 	}
