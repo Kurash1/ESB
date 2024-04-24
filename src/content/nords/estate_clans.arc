@@ -6,7 +6,10 @@ new estate clans = {
 		255 100 0
 	}
 	trigger = {
-		culture_group = nord
+		OR = {
+			is_race = nord
+			is_race = atmoran
+		}
 		NOT = {
 			has_government_attribute = no_clans_estate
 		}

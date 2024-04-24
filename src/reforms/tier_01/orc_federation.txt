@@ -1,0 +1,29 @@
+new localisation mechanic_multiple_orc_strongholds = "Has Multiple Strongholds"
+new localisation mechanic_multiple_orc_strongholds_yes = "Has Multiple Strongholds"
+governments:tribal:reform_levels:1 += new tier_1_orc_federation = {
+	name = "Orc Federation"
+	desc = ""
+	icon = "all_under_tengri_reform"
+	allow_normal_conversion = yes
+	custom_attributes = {
+		multiple_orc_strongholds = yes
+	}
+	potential = {
+		has_reform = tier_1_orc_federation
+	}
+	trigger = {
+		has_reform = tier_1_orc_federation
+	}
+	modifiers = {
+		leader_land_shock = 2
+		shock_damage = 0.10
+		army_tradition_decay = -0.01
+		land_maintenance_modifier = -0.10
+		land_forcelimit_modifier = 10%
+		production_efficiency = 0.15
+	}
+	ai = {
+		factor = 1
+	}
+
+}

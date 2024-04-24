@@ -1,0 +1,20 @@
+governments:monarchy:reform_levels:1 += new tier_1_hold = {
+	name = "Hold"
+	desc = ""
+	icon = "commander_king_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = tier_1_hold
+	}
+	trigger = {
+		has_reform = tier_1_hold
+	}
+	modifiers = {
+		governing_capacity = 50
+		num_accepted_cultures = 1
+		global_unrest = -2
+	}
+	ai = {
+		factor = 1
+	}
+}
