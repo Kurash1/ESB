@@ -1,7 +1,7 @@
 new named_effect reduce_shatter_development = {
 	foreach $province in provinces [
 		exists = $province:area
-		$province:area:region:id == "Shatter"
+		$province:area:region:name == "Shatter"
 		$province:base_development == $province:terrain:base_development
 	] {
 		$province:base_development -= 3
