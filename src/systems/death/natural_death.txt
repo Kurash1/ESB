@@ -1,12 +1,6 @@
-new effect ruler_natural_death = {
-	args = bool
-	transpile = {
-		kill_ruler = yes
-	}
+new named_effect ruler_natural_death = {
+	kill_ruler = yes
 }
 new effect heir_natural_death = {
-	args = bool
-	transpile = {
-		kill_heir = { }
-	}
+	kill_heir = { }
 }
