@@ -1,3 +1,25 @@
+new trigger check_for_human_race = {
+	args = string
+	transpile = {
+		OR = {
+			`{args} = {culture_groups:nord}`
+			`{args} = {culture_groups:kreathmen}`
+			`{args} = {culture_groups:atmoran}`
+			`{args} = {culture_groups:reachmen}`
+			`{args} = {culture_groups:keptu}`
+		}
+	}
+}
+new trigger check_for_elven_race = {
+	args = string
+	transpile = {
+		OR = {
+			`{args} = {culture_groups:snow_elven}`
+			`{args} = {culture_groups:orc}`
+		}
+	}
+}
+
 new culture_group nord = {
 	name = "Nord Race"
 	graphical_culture = eastern_gfx
