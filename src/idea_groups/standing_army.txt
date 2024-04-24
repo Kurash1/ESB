@@ -299,7 +299,7 @@ new idea_group esb_professionalism = {
 			name = "Well known army"
 			desc = ""
 			modifier = {
-				land_morale = 0.1
+				land_morale_constant = 0.1
 			}
 		}
 	}
@@ -411,7 +411,7 @@ new idea_group esb_largearmy = {
 			name = "Forced Conscriptions"
 			desc = "Implementing forced conscription policies, which may negatively impact the morale of our soldiers but increase our overall manpower pool."
 			modifier = {
-				land_morale = -0.1
+				land_morale_constant = -0.1
 				global_manpower_modifier = 0.1
 			}
 		}
