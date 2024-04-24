@@ -1,0 +1,154 @@
+new insult default = {
+	text = "Your mother was a hamster and your father smells of elderberries!"
+}
+new insult default2 = {
+	text = "Judgment day is upon us! The minions of the evil daedra walk upon the earth- Oh. No, it is merely the [Root.GetAdjective]."
+}
+new insult default3 = {
+	text = "Furthermore, I believe that [Root.Capital.GetCapitalName] must be destroyed!"
+}
+new insult default4 = {
+	text = "When the account of our time is written by future generations, they will look at you with that mix of pity and disgust called compassion."
+}
+new insult default5 = {
+	text = "My last visit to the commode was vastly more enjoyable than dinner with the [Root.GetAdjective] ambassador."
+}
+new insult default6 = {
+	text = "Oh, look. There's some lovely filth over here."
+}
+new insult default7 = {
+	text = "Your blood will make the soil I take from you all the richer."
+}
+new insult default8 = {
+	text = "The [Root.GetAdjective] know nothing about running a state!"
+}
+new insult default9 = {
+	text = "There is a problem most rife with [Root.GetName], and I suspect the cause are the [Root.Culture.GetName]."
+	trigger = {
+		NOT = { primary_culture = FROM }
+	}
+}
+new insult default10 = {
+	text = "In this great game we play, you are a mere pawn."
+}
+new insult default11 = {
+	text = "In [From.GetName], '[Root.GetName]' is a word synonymous with manure."
+}
+new insult default12 = {
+	text = "Tales of your misdeeds are told from Yokuda to Akavir."
+}
+new insult default13 = {
+	text = "[Root.GetAdjective] culture is something of an oxymoron, don't you think?"
+}
+new insult default14 = {
+	text = "May your sky be filled with comets."
+}
+new insult default15 = {
+	text = "No map can be a work of art as long as your nation is on it."
+}
+new insult no_army = {
+	text = "What are you going to do, bleed on me?"
+	trigger = {
+		NOT = { army_size = 1 }
+	}
+}
+new insult bookkeeping = {
+	text = "One day, even [Root.GetAdjective] merchants will understand bookkeeping."
+	trigger = {
+		FROM = {
+			trade_income_percentage = 0.33
+		}
+		NOT  = { trade_income_percentage = 0.33 }
+	}
+}
+new insult heir_hunter = {
+	text = "I've heard your heir enjoys hunting. Do be careful, it would be such a shame if an unforeseen accident would happen."
+	trigger = {
+		has_regency = no
+		has_heir = yes
+		OR = {
+			heir_adm = 4
+			heir_mil = 4
+			heir_dip = 4
+		}
+	}
+}
+new insult monarchy = {
+	text = "Your entire line suffers from delusions of adequacy."
+	trigger = {
+		government = monarchy
+		has_regency = no
+		FROM = {
+			government = monarchy
+		}
+	}
+}
+new insult pvp = {
+	text = "l2playnoob!" #from vanilla
+	trigger = {
+		ai = no
+		FROM = { ai = no }
+	}
+}
+new insult pvp2 = {
+	text = "Git gud." #from vanilla
+	trigger = {
+		ai = no
+		FROM = { ai = no }
+	}
+}
+new insult fort = {
+	text = 1
+	trigger = {
+		any_owned_province = {
+			fort_level = 2
+		}
+	}
+}
+new insult monarchy_rank = {
+	text = "Is that sorry thing on your head what passes for a crown in [Root.GetName]?"
+	trigger = {
+		FROM = {
+			government = monarchy
+			government_rank = 2
+		}
+		government_rank = 1
+		has_regency = no
+	}
+}
+new insult low_adm = {
+	text = "I had another insult prepared for you, but I doubt you would be able to read it."
+	trigger = {
+		NOT = {
+			ADM = 2
+		}
+	}
+}
+new insult against_craven = {
+	text = "I suggest you change your uniform trousers to brown."
+	trigger = {
+		ruler_has_personality = craven_personality
+	}
+}
+new insult against_sinner = {
+	text = "Does [Root.Consort.GetName] know how many hand-maidens you keep in your chambers?"
+	trigger = {
+		ruler_has_personality = sinner_personality
+		has_consort = yes
+	}
+}
+new insult loans = {
+	text = "The dreadful state of your economy is a warning to all would-be rulers."
+	trigger = {
+		OR = {
+			num_of_loans = 5
+			is_bankrupt = yes
+		}
+	}
+}
+new insult rebels = {
+	text = "I hear your people are revolting. You have that in common."
+	trigger = {
+		num_of_rebel_armies = 1
+	}
+}

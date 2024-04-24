@@ -1,0 +1,23 @@
+new class insult = {
+	id = `insult_{this:id}`
+	list = insults
+	default = {
+		trigger = {
+			always = yes
+		}
+	}
+	args = {
+		text = string
+		trigger = named_trigger
+	}
+	simple_transpile = {
+		write_file "common/insults/arc.txt" = {
+			foreach $insult in insults {
+				new localisation `{$insult}` = "{$insult:text}"
+				$insult = {
+					$insult:trigger
+				}
+			}
+		}
+	}
+}

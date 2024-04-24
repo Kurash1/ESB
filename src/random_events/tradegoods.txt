@@ -65,10 +65,7 @@ new country_event tradegoods.3 = {
 	desc = "In the coastal provinces blessed with abundant fisheries, a notable development has occurred. The seamen and fishermen from these regions have demonstrated exceptional resilience and skill in navigating the tumultuous waters, strengthening our maritime capabilities."
 	picture = ES_PORT_eventPicture
 	trigger = {
-		any_owned_province = {
-			has_trade_goods = fish
-			has_port = yes
-		}
+		fish = 1
 	}
 	options = {
 		{
