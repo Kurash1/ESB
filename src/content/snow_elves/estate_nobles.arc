@@ -3,7 +3,7 @@ new estate nobility = {
 	desc = ""
 	icon = 9
 	color = {
-		0 100 255
+		246 0 0
 	}
 	trigger = {
 		culture_group = snow_elven

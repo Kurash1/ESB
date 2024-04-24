@@ -3,7 +3,7 @@ new estate priests = {
 	desc = ""
 	icon = 8
 	color = {
-		255 0 0
+		255 216 0
 	}
 	trigger = {
 		culture_group = snow_elven
