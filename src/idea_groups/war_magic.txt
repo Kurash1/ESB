@@ -542,7 +542,7 @@ new idea_group necromancy_ideas = {
 			name = "The Dead Feel no Fear"
 			desc = " The undead unlike a normal soldier will keep fighting against all odds and never retreat nor surrender."
 			modifier = {
-				land_morale = 0.15
+				land_morale_constant = 0.15
 			}
 		}
 		{
@@ -652,7 +652,7 @@ new idea_group esb_flesh_magic = {
 			desc = ""
 			modifier = {
 				discipline = 0.1
-				land_morale = -0.1
+				land_morale_constant = -0.1
 			}
 		}
 		{

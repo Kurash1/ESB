@@ -488,41 +488,6 @@ new interface_file countrydecisionsview = {
 				clicksound = back_click
 			}
 		}
-		
-		guiButtonType = {
-			name = "open_achievement_menu"
-			position = { x = 15 y = 398 }
-			quadTextureSprite = "GFX_button_achievements"
-			scripted = yes
-		}
-		
-		iconType = {
-			name = "achievement_menu"
-			spriteType = "GFX_modifier_bg"
-			position = { x = 575 y = 110 }
-			scripted = yes
-		}
-		guiButtonType = {
-			name = "close_achievement_menu"
-			position = { x = 864 y = 673 }
-			quadTextureSprite = "button_type_4"
-			buttonText = "CLOSE"
-			buttonFont = "vic_18"
-			scripted = yes
-		}
-		guiButtonType = {
-			name = "prev_achievement_menu"
-			position = { x = 837 y = 674 }
-			quadTextureSprite = "button_left"
-			scripted = yes
-		}
-		guiButtonType = {
-			name = "next_achievement_menu"
-			position = { x = 1085 y = 674 }
-			quadTextureSprite = "button_right"
-			scripted = yes
-		}
-		
 	}
 
 	windowType = {

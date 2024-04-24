@@ -1,0 +1,44 @@
+new country_event civil_war.1 = {
+	title = "Civil War!"
+	desc = "[Root.Monarch.GetName]'s continuous scheming and plotting has infuriated the nobles and made [Root.Monarch.GetHerHim] some powerful enemies among the aristocracy. Now, things have come to a head as whispers and rumors of plots to end [Root.Monarch.GetHerHis]'s misrule have turned into reality: [Root.upstart_pretender.GetName], one of [Root.Monarch.GetName]'s harshest critics among the nobles, has gathered an army around him and is openly challenging [Root.Monarch.GetHerHis]'s rule of the country."
+	picture = a_land_divided_eventPicture
+	goto = rebel_province
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_saved_name = {
+				key = upstart_pretender
+				type = leader
+			}
+		}
+		random_owned_province = {
+			limit = {
+				is_core = ROOT 
+				development = 10
+				is_capital = no
+			}
+			spawn_rebels = {
+				type = 	pretender_rebels
+				leader = upstart_pretender
+				religion = ROOT
+				size = 2
+				win = yes
+			}
+			add_local_autonomy = 25
+			
+			hidden_effect = { save_event_target_as = rebel_province }
+		}
+		set_country_flag = had_civil_war
+	}
+	after = {
+		clear_saved_name = upstart_pretender
+	}
+	
+	options = {
+		name = "Crush them!"
+		effect = {
+			add_prestige = -10
+		}
+	}
+}

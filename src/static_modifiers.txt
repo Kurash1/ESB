@@ -72,13 +72,10 @@ new static_modifier city = {
 }
 new static_modifier port = {
 	local_has_man_of_war = yes
-	local_institution_spread = 0.10
 }
 new static_modifier in_state = {
-	local_institution_spread = 0.10
 }
 new static_modifier in_capital_state = {
-	local_institution_spread = 0.05
 	local_state_maintenance_modifier = -0.5
 	local_governing_cost = -1.0						
 }
@@ -187,17 +184,14 @@ new static_modifier provincial_tax_income = {
 	regiment_recruit_speed = -0.02
 	local_great_project_upgrade_time = -0.01
 	local_build_time = -0.01
-	local_institution_spread = 0.02
 }
 new static_modifier provincial_production_size = {
 	trade_goods_size = 0.2
 	ship_recruit_speed = -0.01
 }
 new static_modifier knowledge_sharing = {
-	institution_growth = 12
 }
 new static_modifier cardinals_spread_institution = {
-	institution_growth = 20
 }
 new static_modifier manpower = {
 	garrison_growth = 0.01					
@@ -307,21 +301,18 @@ new static_modifier occupied = {
 	province_trade_power_modifier = -0.5
 	local_manpower_modifier = -0.5
 	local_sailors_modifier = -0.5
-	local_institution_spread = -0.1
 
 	local_monthly_devastation = 0.2
 }
 new static_modifier under_siege = {
 	trade_goods_size_modifier = -0.25
 	province_trade_power_modifier = -0.25
-	local_institution_spread = -0.1
 
 	local_monthly_devastation = 0.1
 }
 new static_modifier devastation = {
 	trade_goods_size_modifier = -2
 	supply_limit_modifier = -0.5
-	local_institution_spread = -2.0
 	local_development_cost = 0.2
 	local_manpower_modifier = -2.0
 	local_sailors_modifier = -2.0
@@ -383,8 +374,7 @@ new static_modifier friendly_regiments = {
 	local_unrest = -1.0	
 }
 new static_modifier active_missionary = {
-	local_unrest = 6					
-	local_institution_spread = -0.10
+	local_unrest = 6
 }
 new static_modifier national_defense = {
 	local_unrest = -5
@@ -396,7 +386,6 @@ new static_modifier in_trade_company = {
 	province_trade_power_modifier = 1
 	naval_forcelimit = 0.5
 	local_missionary_strength = -0.2
-	local_institution_spread = 0.10
 	local_governing_cost = 0.25
 }
 new static_modifier left_trade_company = {
@@ -473,7 +462,6 @@ new static_modifier positive_stability = {
 	global_missionary_strength = 0.005
 	stability_cost_modifier = 0.50
 	yearly_corruption = -0.02
-	global_institution_spread = 0.05
 	yearly_harmony = 0.25
 	monthly_fervor_increase = 1
 	
@@ -556,7 +544,6 @@ new static_modifier bankruptcy = {
 	sailors_recovery_speed = -1.0
 	advisor_cost = 0.5
 	global_autonomy = 0.05
-	global_institution_spread = -0.50
 	yearly_absolutism = -2.0
 	technology_cost = 0.5
 	idea_cost = 0.5
@@ -569,13 +556,11 @@ new static_modifier war = {
 new static_modifier peace = {
 	war_exhaustion = -0.1
 	global_autonomy = -0.1
-	global_institution_spread = 0.1
 	monthly_fervor_increase = 1
 }
 new static_modifier unconditional_surrender = {
 	war_exhaustion = -0.1
 	global_autonomy = -0.1
-	global_institution_spread = 0.1
 }
 new static_modifier call_for_peace = {
 	war_exhaustion = 0.005
@@ -756,7 +741,6 @@ new static_modifier militarized_society = {
 new static_modifier luck = {
 	
 	embracement_cost = -0.25
-	global_institution_spread = 0.15
 	monthly_splendor = 1
 
 	
@@ -1007,7 +991,6 @@ new static_modifier holy_order_subject = {
 	land_forcelimit = 1.5
 }
 new static_modifier holy_order_nation = {
-	global_institution_spread = -0.15
 	religious_unity = 0.15
 	global_missionary_strength = 0.05
 	missionaries = 1
@@ -1072,7 +1055,6 @@ new static_modifier self_governing_colony_subject = {
 	trade_steering = 0.25
 }
 new static_modifier reservation_nation = {
-	global_institution_spread = 0.35
 	global_trade_power = -0.25
 	global_unrest = 5
 }
@@ -1574,7 +1556,6 @@ new static_modifier orchid_school_modifier = {
 	religion = yes
 	is_scholar_modifier = yes 
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	global_institution_spread = 0.10
 }
 new static_modifier tulip_school_modifier = {
     religion_sub_modifier = yes 

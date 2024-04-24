@@ -29,9 +29,9 @@ new government_mechanic magical_society_mechanic = {
 			effect = {
 				add_magicka = -25
 				
-				add_adm_power = 25
-				add_dip_power = 25
-				add_mil_power = 25
+				add_adm_power = 10
+				add_dip_power = 10
+				add_mil_power = 10
 			}
 		}
 		society_destruction_button = { 
@@ -92,11 +92,12 @@ new government_mechanic magical_society_mechanic = {
 			}
 			trigger = {
 				has_magicka = 50
+				NOT = { manpower_percentage = 0.9 }
 			}
 			effect = {
 				add_magicka = -50
 			
-				add_yearly_manpower = 2
+				add_yearly_manpower = 1
 			}
 		}
 		society_conjuration_button = { 
@@ -218,8 +219,8 @@ new government_reform tier_4_magical_society = {
 	icon = "wow_cult"
 	allow_normal_conversion = yes
 	trigger = {
-		full_idea_group = arcane_ideas
-		full_idea_group = esb_warmagic
+		sufficient_idea_group_for_magic = arcane_ideas
+		sufficient_idea_group_for_magic = esb_warmagic
 	}
 	government_abilities = {
 		magical_society_mechanic

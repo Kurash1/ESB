@@ -37,9 +37,10 @@ new government_mechanic conjuration_focus_mechanic = {
 			}
 			trigger = {
 				has_magicka = 25
+				NOT = { manpower_percentage = 0.9 }
 			}
 			effect = {
-				add_yearly_manpower = 1
+				add_yearly_manpower = 0.5
 				
 				add_magicka = -25
 			}
@@ -153,7 +154,7 @@ new government_reform tier_4_conjuration_focus = {
 		unlock_conjuration_mercs = yes
 	}
 	trigger = {
-		full_idea_group = conjuration_ideas
+		sufficient_idea_group_for_magic = conjuration_ideas
 	}
 	modifiers = {
 		morale_damage = 5%

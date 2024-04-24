@@ -109,7 +109,7 @@ new idea_group society_ideas = {
 			name = "Through thick and thin"
 			desc = "The solidarity of society is important for defending a nation."
 			modifier = {
-				land_morale = 0.1
+				land_morale_constant = 0.1
 			}
 		}
 	}
@@ -454,7 +454,7 @@ new idea_group plutocracy_ideas = {
 			name = "Abolished Serfdom"
 			desc = "We know from reading the accounts of Elven times that a citizen army of free men is far more willing to fight than those who are forced. We must make our peasantry fairly free and they will fight to defend their freedom."
 			modifier = {
-				land_morale = 0.15
+				land_morale_constant = 0.15
 			}
 		}
 		{
@@ -678,7 +678,7 @@ new idea_group imperialismus0 = {
 			desc = "The army of an empire needs to be big."
 			modifier = {
 				improve_relation_modifier = -0.2
-				land_morale = 0.1
+				land_morale_constant = 0.1
 			}
 		}
 		{
@@ -791,7 +791,7 @@ new idea_group indigenous_ideas = {
 			name = "Braves"
 			desc = "Our culture has had a long tradition of rites of passages for young men to become warriors. An act of bravery to complete the journey to adulthood."
 			modifier = {
-				land_morale = 0.10
+				land_morale_constant = 0.10
 			}
 		}
 		{
@@ -907,7 +907,7 @@ new idea_group aristo0 = {
 			name = "Divine Assault"
 			desc = "With God on our side, we cannot lose."
 			modifier = {
-				land_morale = 0.15
+				land_morale_constant = 0.15
 			}
 		}
 		{
@@ -1038,7 +1038,7 @@ new idea_group republik0 = {
 			name = "Abolished Serfdom"
 			desc = "We know from reading the accounts of Elven times that a citizen army of free men is far more willing to fight than those who are forced. We must make our peasantry fairly free and they will fight to defend their freedom."
 			modifier = {
-				land_morale = 0.1
+				land_morale_constant = 0.1
 				global_manpower_modifier = 0.1
 			}
 		}
@@ -1095,7 +1095,7 @@ new idea_group esb_native = {
 			name = "Counting Coups"
 			desc = ""
 			modifier = {
-				land_morale = 0.1
+				land_morale_constant = 0.1
 			}
 		}
 		{

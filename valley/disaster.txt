@@ -1,0 +1,54 @@
+new class disaster = {
+	list = disasters
+	id = `{this:id}`
+	default = {
+		desc = ""
+	}
+	args = {
+		name = string
+		desc = string
+		
+		potential = named_trigger?
+		progress = named_trigger?
+		down_progress = named_trigger?
+		
+		can_start = named_trigger?
+		can_stop = named_trigger?
+		can_end = named_trigger?
+		
+		modifier = named_modifier?
+		
+		ended_by_country_breaking_to_rebels = bool?
+		stability_hit_on_war = int?
+		
+		on_start = country_event?
+		on_end = country_event?
+		on_monthly = named_effect?
+		on_start_effect = named_effect?
+		on_progress_effect = named_effect?
+	}
+	simple_transpile = {
+		foreach $disaster in disasters {
+			new localisation `{$disaster:id}` = `{$disaster:name}`
+			new localisation `{$disaster:id}_desc` = `{$disaster:desc}`
+			write_file "common/disasters/{$disaster:id}.txt" = {
+				$disaster:id = {
+					when [exists = $disaster:potential] { potential = { $disaster:potential } }
+					when [exists = $disaster:progress] { progress = { $disaster:progress } }
+					when [exists = $disaster:down_progress] { down_progress = { $disaster:down_progress } }
+					when [exists = $disaster:can_start] { can_start = { $disaster:can_start } }
+					when [exists = $disaster:can_stop] { can_stop = { $disaster:can_stop } }
+					when [exists = $disaster:can_end] { can_end = { $disaster:can_end } }
+					when [exists = $disaster:modifier] { modifier = { $disaster:modifier } }
+					when [exists = $disaster:ended_by_country_breaking_to_rebels] { ended_by_country_breaking_to_rebels = $disaster:ended_by_country_breaking_to_rebels }
+					when [exists = $disaster:stability_hit_on_war] { stability_hit_on_war = $disaster:stability_hit_on_war }
+					when [exists = $disaster:on_start] { on_start = $disaster:on_start }
+					when [exists = $disaster:on_end] { on_end = $disaster:on_end }
+					when [exists = $disaster:on_monthly] { on_monthly = { $disaster:on_monthly } }
+					when [exists = $disaster:on_start_effect] { on_monthly = { $disaster:on_monthly } }
+					when [exists = $disaster:on_progress_effect] { on_monthly = { $disaster:on_monthly } }
+				}
+			}
+		}
+	}
+}

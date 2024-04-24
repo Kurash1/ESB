@@ -1,6 +1,49 @@
 new localisation ACHIEVEMENTS_DISABLED_MODIFIED_GAME = "§Y- The ESB achievements menu has been moved to the decisions and policies screen.§!"
+
+interface_files:countrytechnologyview:countrytechnologyview += {
+	guiButtonType = {
+		name = "open_achievement_menu"
+		position = { x = (118 + 107) y = 113 }
+		quadTextureSprite = "GFX_achievement_menu"
+		scripted = yes
+	}
+	iconType = {
+		name = "achievement_menu"
+		spriteType = "GFX_empty_custom_mechanic_overlay"
+		position = { x = (575 - 571) y = (110 - 36) }
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "close_achievement_menu"
+		position = { x = (864 - 571 - 124) y = (673 - 36 - 124) }
+		quadTextureSprite = "button_type_4"
+		buttonText = "CLOSE"
+		buttonFont = "vic_18"
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "prev_achievement_menu"
+		position = { x = (837 - 571 - 124) y = (674 - 36 - 124) }
+		quadTextureSprite = "button_left"
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "next_achievement_menu"
+		position = { x = (1085 - 571 - 124) y = (674 - 36 - 124) }
+		quadTextureSprite = "button_right"
+		scripted = yes
+	}
+}		
+
 new custom_button open_achievement_menu = {
-	tooltip = "Open Achievement Menu"
+	tooltip = "Open Achievements Screen"
+	potential = {
+		NOT = {
+			has_country_flag = show_technology
+			has_country_flag = open_achievement_menu
+			has_country_flag = show_survey_screen
+		}
+	}
 	effect = {
 		if [
 			NOT = {
@@ -21,7 +64,7 @@ new custom_button open_achievement_menu = {
 	}
 }
 new custom_button close_achievement_menu = {
-	tooltip = "Close Achievement Menu"
+	tooltip = "Close Achievements Screen"
 	potential = {
 		has_country_flag = open_achievement_menu
 	}
@@ -85,21 +128,21 @@ new effect define_achievement = {
 		trigger = trigger
 	}
 	transpile = {
-		interface_files:countrydecisionsview:countrydecisionsview += {
+		interface_files:countrytechnologyview:countrytechnologyview += {
 			iconType = {
 				name = `arc_achievement_{achievement_total_num}_completed`
 				spriteType = completed_achievement
 				position = { 
-					x = `{(589+127*achievement_current_x)}` 
-					y = `{(174+125*achievement_current_y)}` 
+					x = `{(589+127*achievement_current_x-571)}` 
+					y = `{(174+125*achievement_current_y-36)}` 
 				}
 				scripted = yes
 			}
 			guiButtonType = {
 				name = `arc_achievement_{achievement_total_num}`
 				position = { 
-					x = `{(620+127*achievement_current_x)}` 
-					y = `{(174+125*achievement_current_y)}` 
+					x = `{(620+127*achievement_current_x-571)}` 
+					y = `{(174+125*achievement_current_y-36)}` 
 				}
 				quadTextureSprite = args:icon
 				scripted = yes
@@ -107,8 +150,8 @@ new effect define_achievement = {
 			instantTextBoxType = {
 				name = `arc_achievement_{achievement_total_num}_text`
 				position = { 
-					x = `{(593+127*achievement_current_x)}` 
-					y = `{(238+125*achievement_current_y)}` 
+					x = `{(593+127*achievement_current_x-571)}` 
+					y = `{(238+125*achievement_current_y-36)}` 
 				}
 				format = centre
 				maxWidth = 120
@@ -155,12 +198,12 @@ new effect define_achievement = {
 		achievement_total_num += 1
 		achievement_current_x += 1
 		
-		when [achievement_current_x == 6] {
+		when [achievement_current_x == 4] {
 			achievement_current_x := 0
 			achievement_current_y += 1
 		}
 		
-		when [achievement_current_y == 4] {
+		when [achievement_current_y == 3] {
 			achievement_current_y := 0
 			achievement_current_page += 1
 			
@@ -171,12 +214,12 @@ new effect define_achievement = {
 new effect create_achievement_page = {
 	args = int
 	transpile = {
-		interface_files:countrydecisionsview:countrydecisionsview += {
+		interface_files:countrytechnologyview:countrytechnologyview += {
 			instantTextBoxType = {
 				name = `achievement_menu_page_{args}`
 				position = { 
-					x = 636
-					y = 125
+					x = (636 - 571 - 124)
+					y = (125 - 36 - 4)
 				}
 				font = "vic_29s"
 				format = centre

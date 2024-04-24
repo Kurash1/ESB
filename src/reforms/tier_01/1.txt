@@ -157,6 +157,10 @@ governments:monarchy:reform_levels:1 += new tier_1_nord_clan = {
 	icon = "generic_people"
 	allow_normal_conversion = yes
 	maintain_dynasty = yes
+	custom_attributes = {
+		new localisation mechanic_no_clans_estate_yes = "Doesn't have a §YClans§! Estate."
+		no_clans_estate = yes
+	}
 	potential = {
 		has_reform = tier_1_nord_clan
 	}
@@ -165,7 +169,8 @@ governments:monarchy:reform_levels:1 += new tier_1_nord_clan = {
 	}
 	modifiers = {
 		governing_capacity = -100
-		global_autonomy = -0.25
+		global_autonomy = -0.1
+		country_admin_power = 1
 	}
 	ai = {
 		factor = 1

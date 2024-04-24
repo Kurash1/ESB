@@ -10,6 +10,16 @@ new effect remove_government_reform = {
 new effect change_government_reform_progress = {
 	args = int
 }
+new effect add_stability = {
+	args = int
+}
+new effect add_stability_or_adm_power = {
+	args = bool
+	transpile = {
+		if [stability = 3] { add_adm_power = 100 }
+		else { add_stability = 1 }
+	}
+}
 new effect add_legitimacy = {
 	args = int
 }

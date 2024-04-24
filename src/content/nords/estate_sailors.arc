@@ -92,17 +92,6 @@ new estate sailors = {
 				factor = 5
 			}
 		}
-		new hire_marines = {
-			name = "Hire Marines"
-			icon = privilege_marines
-			loyalty = 0.05
-			benefits = {
-				allowed_marine_fraction = 0.25
-			}
-			ai_will_do = {
-				factor = 5
-			}
-		}
 		new sponsor_shipbuilding = {
 			name = "Sponsor Shipbuilding"
 			icon = privilege_ship_recruit

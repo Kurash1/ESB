@@ -180,7 +180,7 @@ new government_reform tier_4_destruction_focus = {
 	icon = "arcane_barrage"
 	allow_normal_conversion = yes
 	trigger = {
-		full_idea_group = destruction_ideas
+		sufficient_idea_group_for_magic = destruction_ideas
 	}
 	modifiers = {
 		fire_damage = 10%

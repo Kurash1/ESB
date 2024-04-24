@@ -1,0 +1,35 @@
+new country_event internal_conflicts.1 = {
+	title = "Internal Conflicts"
+	desc = "Beginning in $YEAR$, $COUNTRY$ faced almost a decade of utter chaos slowly consuming the country from within and bringing it to the verge of collapse. Our nation is struggling both socially and economically as famine and war plague our people and the growing opposition against the aristocracy and church has resulted in a series of rebellions and assassination attempts against the monarch."
+	picture = alternate_jarl_balgruuf_eventPicture
+	major = yes
+	
+	options = {
+		name = "Dire times are ahead of us."
+		effect = {
+			set_country_flag = had_internal_conflicts
+			add_stability = -2
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					fort_level = 1
+				}
+				spawn_rebels = {
+						type = noble_rebels
+						size = 2
+						win = yes
+					}
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 2
+					win = yes
+				}
+			}
+		}
+	}
+}

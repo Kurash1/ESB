@@ -5,6 +5,9 @@ new religion cult_of_luck = {
 	color = {
 		255 216 0
 	}
+	on_convert = {
+		add_prestige = -100
+	}
 	allowed_conversions = {
 		nordic_pantheon
 		the_old_ways

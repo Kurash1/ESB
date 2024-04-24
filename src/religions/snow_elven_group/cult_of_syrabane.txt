@@ -57,6 +57,16 @@ With the dawning of the first Era, the Cult of Syrabane can be found in a few pr
 	heretic = {
 		SNOW_ELVES_PANTHEON_HERETIC
 	}
+	on_convert = {
+		add_prestige = -100
+	}
+	allowed_conversions = {
+		auriels_true_way
+		cult_of_jephre
+		cult_of_phynaster
+		cult_of_syrabane
+		cult_of_trinimac
+	}
 	country = {
 		monthly_magicka = 0.25
 		idea_cost = -0.05

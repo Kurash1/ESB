@@ -1,0 +1,434 @@
+new country_event civil_war.2 = {
+	title = "A Cry for Help"
+	desc = "The opposition against $MONARCH$ has been attracting more supporters by the day and the possibility of a deposition is becoming very plausible. In a desperate attempt to save the throne and restore order, $MONARCH$ contemplates turning to $COUNTRY$'s foreign allies in [ally_country.GetUsableName] asking for help."
+	picture = indoril_mastermind_eventPicture
+	goto = rebel_province
+	
+	trigger = {
+		revolt_percentage = 0.05
+		num_of_allies = 1
+	}
+	immediate = {
+		hidden_effect = {
+			random_ally = {
+				save_event_target_as = ally_country
+			}
+		}
+	}
+	
+	options = {
+		{
+			name = "Request aid from [ally_country.GetName]."
+			effect = {
+				add_dip_power = -100
+			}
+			ai_chance = { factor = 40 }
+		}
+		{
+			name = "Rely on our own strength."
+			effect = {
+				add_legitimacy = 5
+				random_owned_province [is_core = ROOT] {
+					spawn_rebels = {
+						type = 	pretender_rebels
+						religion = ROOT
+						size = 1
+						win = yes
+					}
+				}
+			}
+			ai_chance = { factor = 60 }
+		}
+	}
+}
+new country_event civil_war.3 = {
+	title = "Unscrupulous In-laws"
+	desc = "A royal marriage can sometimes be a blessing, but in our weakened state due to the clash between the monarch and the aristocracy, it is nothing less than a curse. Our opportunistic in-laws regard this as the perfect timing to expand their influence and obtain more power. They have set their sights on [inlaws_province.GetName]. Unless we take action, our authority in the province will be greatly reduced."
+	picture = drinking_at_dinner_eventPicture
+	goto = inlaws_province
+	
+	trigger = {
+		if = {
+			limit = {
+				has_dlc = "Rights of Man"
+			}
+			has_consort = yes
+		}
+		else = {
+			num_of_royal_marriages = 1
+		}
+		any_owned_province = {
+			is_capital = no
+			is_core = ROOT
+			NOT = { local_autonomy = 90 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					is_core = ROOT
+					NOT = { local_autonomy = 90 }
+				}
+				save_event_target_as = inlaws_province
+			}	
+		}
+	}
+	
+	options = {
+		{
+			name = "Take appropriate measures."
+			effect = {
+				add_adm_power = -25		
+				event_target:inlaws_province = {
+					pretender_rebels = 1
+				}
+			}
+			ai_chance = { factor = 40 }
+		}
+		{
+			name = "Ignore their pathetic attempts."
+			effect = {
+				add_prestige = -20
+				event_target:inlaws_province = {
+					add_local_autonomy = 20
+				}
+			}
+			ai_chance = { factor = 60 }
+		}
+	}
+}
+new country_event civil_war.5 = {
+	title = "Army Deserters"
+	desc = "The morale of our troops is low, and groups of deserters have been spotted joining rebel ranks. If this continues, we will soon find ourselves unable to stop the rebels from taking over the country."
+	picture = veteran_gladiator_eventPicture
+	
+	trigger = {
+		NOT = { has_country_modifier = deserters }
+		NOT = { has_country_modifier = morale_boost }
+		manpower_percentage = 0.01
+	}
+	
+	options = {
+		{
+			name = "Try to strengthen their morale."
+			effect = {
+				add_years_of_income = -0.50
+				add_legitimacy = 5
+				quick_country_modifier = {
+					name = "Morale Boost"
+					desc = "The civil war that has engulfed our nation is draining the morale of our troops. Economic measures have been taken to stop this."
+					duration = 1825
+					modifier = {
+						land_morale = 0.10
+						discipline = 0.05
+						recover_army_morale_speed = 0.2
+					}
+				}
+			}
+			ai_chance = { factor = 1 }
+		}
+		{
+			name = "We have no resources for that."
+			effect = {
+				quick_country_modifier = {
+					name = "Deserters"
+					desc = "The civil war that has engulfed our nation is draining the morale of our troops, but we don't have any economic resources to stop this."
+					duration = 1825
+					modifier = {
+						land_morale = -0.10
+					}
+				}
+				add_yearly_manpower = -0.25
+			}
+			ai_chance = { factor = 0 }
+		}
+	}
+}
+new country_event civil_war.6 = {
+	title = "Rebel Support in $CAPITAL$"
+	desc = "Even in the capital has the pretender found support. There is an army just outside the gates of $CAPITAL_CITY$, and the city is about to fall!"
+	picture = blackwood_eventPicture
+	goto = capital
+	
+	trigger = {
+		NOT = { 
+			has_country_flag = civilwar_on_capital
+		}
+		capital_scope = {
+			controlled_by = owner
+			has_siege = no		
+		}
+	}
+	
+	immediate = {
+		set_country_flag = civilwar_on_capital
+		hidden_effect = {
+			capital_scope = {
+				save_event_target_as = capital
+			}
+		}
+	}
+	
+	options = {
+		{
+			name = "This is serious!"
+			effect = {
+				capital_scope = {
+					pretender_rebels = 2
+				}
+			}
+		}
+	}
+}
+new country_event civil_war.7 = {
+	title = "Civil War Brings our Nation to its Knees"
+	desc = "The Civil War has tormented our nation for far too long. The chaos is consuming all our energy, weakening us and making us easy prey for our enemies. Drastic measures will be necessary if we are to restore our nation's prominence and put an end to the infighting before it is too late."
+	picture = ancestors_battleaxe_eventPicture
+	
+	trigger = {
+		had_country_flag = {
+			flag = had_civil_war
+			days = 365
+		}
+		NOT = { has_country_flag = civil_war_knees_event }
+		any_owned_province = {
+			controlled_by = REB
+		}
+	}
+	
+	immediate = {
+		set_country_flag = civil_war_knees_event
+	}
+	
+	options = {
+		{
+			name = "There is nothing we can do."
+			effect = {
+				every_owned_province = {
+					limit = {
+						is_capital = no
+						is_core = ROOT
+					}
+					add_local_autonomy = 15
+				}
+			}
+		}
+		{
+			name = "Do whatever is needed to restore order."
+			effect = {
+				add_adm_power = -100
+				add_legitimacy = 10
+			}
+		}
+		{
+			name = "Surely we can bribe off some of our opponents."
+			effect = {
+				add_years_of_income = -0.25
+				add_prestige = -25
+				add_legitimacy = 5
+			}
+		}
+	}
+}
+new country_event civil_war.8 = {
+	title = "The Chaos of the Civil War Multiplies"
+	desc = "It seems there is no end to the instability! Even our most loyal supporters now threaten to abandon us unless we change course and bow to their demands. We must take action quickly, lest we allow [Root.GetUsableName] to be overwhelmed by chaos."
+	picture = uther_nere_eventPicture
+	
+	options = {
+		{
+			name = "We shall fight them in battle!"
+			effect = {
+				add_stability = -1
+				random_owned_province = {
+					limit = { is_core = ROOT }
+					pretender_rebels = 1
+				}
+			}
+		}
+		{
+			name = "Grant concessions, we cannot risk losing their support."
+			effect = {
+				add_years_of_income = -0.25
+				add_prestige = -25
+				add_legitimacy = 5
+			}
+		}
+	}
+}
+new country_event civil_war.9 = {
+	title = "The Opposition Factions"
+	desc = "In the midst of the ongoing chaos, small but powerful factions have emerged, each of them trying to gain the upper hand by swaying important nobles from our court to side with them and their cause. Some are violently opposed to the [Root.Monarch.GetTitle], but others could be brought over to our side if granted sufficient concessions."
+	picture = wrothgar_kingpin_eventPicture
+	
+	options = {
+		{
+			name = "Offer the moderates concessions."
+			effect = {
+				add_adm_power = -75
+				add_dip_power = -75
+				set_country_flag = favoured_faction
+				add_legitimacy = 5
+			}
+		}
+		{
+			name = "Don't support any faction."
+			effect = {
+				add_stability = -1
+			}
+		}
+	}
+}
+new country_event civil_war.10 = {
+	title = "Faction Requests Financial Aid"
+	desc = "The moderates whose support we have enlisted in our struggle against the rebels lack the funds to sustain the war against the rebels. They ask for financial support to keep up the struggle and help us put an end to the turmoil."
+	picture = septim_coin_eventPicture
+	
+	trigger = {
+		has_country_flag = favoured_faction
+	}
+	
+	options = {
+		{
+			name = "Lend support."
+			effect = {
+				add_years_of_income = -0.5
+				add_legitimacy = 5
+			}
+		}
+		{
+			name = "Ignore their pleas."
+			effect = {
+				add_prestige = -10
+				add_legitimacy = -5
+			}
+			ai_chance = { factor = 0 }
+		}
+	}
+}
+new country_event civil_war.11 = {
+	title = "Dissentions among our Supporters"
+	desc = "Disputes have emerged among the moderates whose support we had enlisted. It seems that not all of them are happy with the deal they struck with the [Root.Monarch.GetTitle]. An individual of [rebel_province.Culture.GetName] origin, who has managed to gain considerable influence in the moderate faction, is calling for greater autonomy for his people, threatening to join the rebels if we refuse his demands."
+	picture = speaker_terenus_eventPicture
+	goto = rebel_province
+	
+	trigger = {
+		has_country_flag = favoured_faction
+		any_owned_province = {
+			has_owner_culture = no
+			has_owner_accepted_culture = no
+			is_capital = no
+			NOT = { local_autonomy = 75 }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_owner_culture = no
+					has_owner_accepted_culture = no
+					is_capital = no
+					NOT = { local_autonomy = 75 }
+				}
+				save_event_target_as = rebel_province
+			}
+		}
+	}
+	
+	options = {
+		{
+			name = "We don't need his support."
+			effect = {
+				event_target:rebel_province = {
+					pretender_rebels = 1
+				}
+				add_legitimacy = 5
+			}
+		}
+		{
+			name = "Give in to his demands."
+			effect = {
+				event_target:rebel_province = {
+					add_local_autonomy = 50
+				}
+				add_prestige = -10
+			}
+		}
+	}
+}
+new country_event civil_war.12 = {
+	title = "Civil War Becomes Total War"
+	desc = "What initially began as minor clashes between different factions supporting or opposing the [Root.Monarch.GetTitle] has turned into pure mayhem. Unless we can turn things around fast, our nation will likely crumble before our eyes."
+	picture = ulfrics_zealot_eventPicture
+	
+	trigger = {
+		NOT = { has_country_flag = total_war_peak }
+		revolt_percentage = 0.20
+	}
+	
+	immediate = {
+		set_country_flag = total_war_peak
+	}
+	
+	options = {
+		{
+			name = "We can't do anything about it."
+			effect = {
+				add_legitimacy = -5
+				every_core_province = {
+					limit = {
+						is_capital = no
+						is_core = ROOT
+					}
+					add_local_autonomy = 15
+				}
+			}
+		}
+		{
+			name = "Try to suppress the worst spots."
+			effect = {
+				add_adm_power = -100
+				add_dip_power = -100
+				add_mil_power = -100
+				add_legitimacy = 5
+			}
+		}
+	}
+}
+new country_event civil_war.13 = {
+	title = "Dominant Faction Emerges"
+	desc = "The conflict has taken a most unexpected turn: one of the smaller opposition factions has increased its power and influence immensely during the past few weeks. They are now able to pose a serious threat if not handled carefully."
+	picture = companion_harbringer_eventPicture
+	
+	trigger = {
+		has_country_flag = total_war_peak
+		has_country_flag = favoured_faction
+		NOT = { has_country_flag = dominant_faction }
+	}
+	
+	immediate = {
+		set_country_flag = dominant_faction
+	}
+	
+	options = {
+		{
+			name = "Fight it out with them."
+			effect = {
+				random_owned_province = {
+					limit = { is_core = ROOT }
+					pretender_rebels = 1
+				}
+			}
+		}
+		{
+			name = "Negotiate a settlement between all major factions."
+			effect = {
+				add_years_of_income = -0.50
+				add_legitimacy = 5
+			}
+		}
+	}
+}

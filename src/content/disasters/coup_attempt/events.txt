@@ -1,0 +1,288 @@
+new country_event coup_in_palace_events.1 = {
+	title = "Coup Rumors"
+	desc = "Halls in the palace are busier than ever, people from all the country gather there and exchange information, celebrate meetings or simply try to forge alliances or solve old disputes. This would not be strange, but for the sole reason that everytime [Root.Monarch.GetName] goes through those halls, silence becomes tangible. It is not the common silence derived from respect, but an uncomfortable silence that makes everyone feel uneasy. As our interest grows about this strange behavior, gossips that a coup is being plotted have arrived to our ears. Who would dare to attack us?"
+	picture = jarl_balgruuf_eventPicture
+	
+	options = {
+		{
+			name = "An investigation must be done so light is cast over the issue."
+			effect = {
+				add_years_of_income = -1.5
+				random_list = {
+					25 = {
+						custom_tooltip = coup_ended_tooltip
+						set_country_flag = plot_failed_flag
+						hidden_effect = {
+							country_event = { 
+								id = coup_in_palace_events.2
+								days = 30
+								random = 15
+							}
+						}
+					}
+					75 = {
+						custom_tooltip = nothing_found_tooltip
+						hidden_effect = {
+							add_disaster_progress = {
+								disaster = coup_attempt_disaster
+								value = 50
+							}
+							country_event = { 
+								id = coup_in_palace_events.3
+								days = 30
+								random = 15
+							}
+						}
+					}
+				}
+			}
+			ai_chance = {
+				factor = 75
+				modifier = {
+					factor = 0
+					NOT = { years_of_income = 1.5 }
+				}
+			}
+		}
+		{
+			name = "An investigation must be done so light is cast over the issue."
+			effect = {
+				random_list = {
+					10 = {
+						custom_tooltip = gossips_end_tooltip
+						set_country_flag = plot_failed_flag
+						end_disaster = coup_attempt_disaster
+					}
+					90 = {
+						custom_tooltip = gossips_continue_tooltip
+						hidden_effect = {
+							country_event = { 
+								id = coup_in_palace_events.3
+								days = 30
+								random = 15
+							}
+						}
+					}
+				}
+			}
+			ai_chance = {
+				factor = 25
+				modifier = {
+					factor = 4
+					NOT = { years_of_income = 1.5 }
+				}
+			}
+		}
+	}
+}
+new country_event coup_in_palace_events.2 = {
+	title = "Plot Discovered"
+	desc = "After days of investigation, bribes and threats here and there and countless nights without sleep, the plotters have been discovered and the coup attempt neutralized. Culprits will be sent to the dungeons and finally executed, owing to the fact that traitors deserve nothing else. As in so many cases, the less obvious enemies appear at the top of a conspiracy and hearts are broken in disappointment. 'Tu quoque, Brute, fili mi?'."
+	picture = completed_contract_eventPicture
+	
+	options = {
+		{
+			name = "It's time to punish the traitors and put an end on this."
+			effect = {
+				set_country_flag = plot_failed_flag 
+				country_event = { id = coup_in_palace_events.6 } 
+			}
+		}
+	}
+}
+new country_event coup_in_palace_events.3 = {
+	title = "Plot Continues"
+	desc = "If gossips were quite obvious in the last few weeks, they are deafening in the last days. Some people are not even hiding what they are talking about anymore and simply keep on chatting about it even in our presence. Something big is about to happen, and we do not really know what our next step must be. The country is held in suspense as the feeling that bad things are coming spreads like a wildfire."
+	picture = palace_conspirator_eventPicture
+	
+	options = {
+		{
+			name = "What will happen?"
+			effect = {
+				random_list = {
+					15 = {
+						custom_tooltip = coup_fails_tooltip
+						hidden_effect = {
+							country_event = { 
+								id = coup_in_palace_events.4
+								days = 30
+								random = 15
+							}
+							set_country_flag = plot_failed_flag
+						}
+						
+						modifier = {
+							factor = 2
+							spy_master = 1
+						}
+						modifier = {
+							factor = 2
+							spy_master = 3
+						}
+						modifier = {
+							factor = 2
+							ruler_has_personality = intricate_web_weaver
+						}
+					}
+					85 = {
+						custom_tooltip = coup_succeeds_tooltip
+						hidden_effect = {
+							country_event = { 
+								id = coup_in_palace_events.5
+								days = 30 
+								random = 15
+							}
+							set_country_flag = plot_succeeded_flag
+						}
+					}
+				}
+			}
+			ai_chance = { factor = 10 }
+		}
+		{
+			name = "Purge them. Purge them all."
+			effect = {
+				random_owned_province = {
+					limit = { controlled_by = ROOT }
+					spawn_rebels = {
+						type = noble_rebels
+						size = 3
+					}
+					spawn_rebels = {
+						type = noble_rebels
+						size = 2
+					}
+				}
+				add_stability = -4 
+				remove_advisor = random
+				remove_advisor = random
+				clr_country_flag = plot_succeeded_flag 
+				set_country_flag = plot_failed_flag 
+				country_event = { id = coup_in_palace_events.6 } 
+			}
+			ai_chance = { factor = 1 }
+		}
+	}
+}
+new country_event coup_in_palace_events.4 = {
+	title = "The Plot Fails"
+	desc = "If this plot teaches us something is that one must never take things for granted. When the night was the darkest and everything seemed lost, our agents have managed, just in the last minute, to catch the plotters 'in flagrante' while the fools were celebrating what they considered a certain victory and a change in the throne. Their hangovers will be soured by their tears and pleas for pardon."
+	picture = morthal_executioner_eventPicture
+	
+	options = {
+		{
+			name = "Our realm is safe!"
+			effect = {
+				set_country_flag = plot_failed_flag
+				country_event = { id = coup_in_palace_events.6 } 
+			}
+		}
+	}
+}
+new country_event coup_in_palace_events.5 = {
+	title = "The Plot Succeeds"
+	desc = "The enemy is within! Everything is lost! Our agents were close to catching the plotters, but they have managed to avoid our scrutiny and move on with the perfidious plans. We have to get our people to safety or they will be killed if they are perceived as a threat to the new power behind the throne. We have to move quickly!"
+	picture = dagger_eventPicture
+	
+	options = {
+		{
+			name = "No, hope is lost. Theirs is the throne and our faith."
+			effect = {
+				set_country_flag = plot_succeeded_flag 
+				add_absolutism = -75
+				change_estate_land_share = { 
+					estate = all 
+					share = 30 
+				}
+				country_event = { id = coup_in_palace_events.6 }
+			}
+		}
+	}
+}
+new event_modifier recent_coup_modifier = {
+	name = "Had a recent Coup Attempt"
+	modifier = { }
+}
+new country_event coup_in_palace_events.6 = {
+	title = "The Aftermath"
+	desc = "The plot has been brought to light and recent events have dictated its outcome. For better or worse, our country will now move forward in a new light regardless of the outcome. Such is the nature of politics and backroom dealing..."
+	picture = alternate_jarl_balgruuf_eventPicture
+	
+	immediate = {
+		set_country_flag = plot_ended_flag 
+	}
+	
+	options = {
+		{
+			name = "What now?"
+			trigger = { 
+				custom_trigger_tooltip = {
+					tooltip = plot_succeeded_tooltip
+					has_country_flag = plot_succeeded_flag 
+				}
+			}
+			effect = {
+				if [has_consort_regency = yes] { 
+					kill_consort = yes 
+					remove_heir = { } 
+					define_ruler = {
+						max_random_adm = 3 
+						max_random_dip = 3 
+						max_random_mil = 3 
+						claim = 5 
+					}
+				}
+				else {
+					custom_tooltip = estate_regent_prevails_tt
+					hidden_effect = { change_estate_regent_to_ruler = yes }
+				}
+				end_disaster = coup_attempt_disaster 
+				clr_country_flag = burgher_coup
+				clr_country_flag = church_coup
+				clr_country_flag = noble_coup
+				clr_country_flag = coup_attempt_starts
+				clr_country_flag = plot_failed_flag
+				clr_country_flag = plot_succeeded_flag
+				clr_country_flag = plot_ended_flag
+				
+				hidden_effect = { 
+					add_country_modifier = {
+						name = recent_coup_modifier
+						duration = 7300 
+						hidden = yes 
+					}
+				}
+			}
+		}
+		{
+			name = "What now?"
+			trigger = { 
+				NOT = {
+					custom_trigger_tooltip = {
+						tooltip = plot_succeeded_tooltip
+						has_country_flag = plot_succeeded_flag 
+					}
+				}
+			}
+			effect = {
+				end_disaster = coup_attempt_disaster 
+				add_legitimacy = 25 
+				clr_country_flag = burgher_coup
+				clr_country_flag = church_coup
+				clr_country_flag = noble_coup
+				clr_country_flag = coup_attempt_starts
+				clr_country_flag = plot_failed_flag
+				clr_country_flag = plot_succeeded_flag	
+				clr_country_flag = plot_ended_flag
+				
+				hidden_effect = { 
+					add_country_modifier = {
+						name = recent_coup_modifier
+						duration = 7300
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+}

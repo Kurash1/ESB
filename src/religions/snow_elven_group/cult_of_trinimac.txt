@@ -57,6 +57,16 @@ By the dawn of the first Era, the Cult of Trinimac has long faded into obscurity
 	heretic = {
 		SNOW_ELVES_PANTHEON_HERETIC
 	}
+	on_convert = {
+		add_prestige = -100
+	}
+	allowed_conversions = {
+		auriels_true_way
+		cult_of_jephre
+		cult_of_phynaster
+		cult_of_syrabane
+		cult_of_trinimac
+	}
 	country = {
 		discipline = 0.05
 		land_morale = 0.10

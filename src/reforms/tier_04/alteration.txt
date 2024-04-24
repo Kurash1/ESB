@@ -140,7 +140,7 @@ new government_reform tier_4_alteration_focus = {
 	icon = "tome_alteration"
 	allow_normal_conversion = yes
 	trigger = {
-		full_idea_group = alteration_ideas
+		sufficient_idea_group_for_magic = alteration_ideas
 	}
 	modifiers = {
 		development_cost = -0.1

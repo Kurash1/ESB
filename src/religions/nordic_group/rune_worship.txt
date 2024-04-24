@@ -5,6 +5,9 @@ new religion rune_worship = {
 	color = {
 		0 19 127
 	}
+	on_convert = {
+		add_prestige = -100
+	}
 	allowed_conversions = {
 		nordic_pantheon
 		the_old_ways

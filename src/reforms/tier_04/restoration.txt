@@ -79,11 +79,12 @@ new government_mechanic restoration_focus_mechanic = {
 			}
 			trigger = {
 				has_magicka = 50
+				NOT = { manpower_percentage = 0.9 }
 			}
 			effect = {
 				add_magicka = -50
 			
-				add_yearly_manpower = 2
+				add_yearly_manpower = 1
 			}
 		}
 		restoration_3_button = {
@@ -142,7 +143,7 @@ new government_reform tier_4_restoration_focus = {
 	icon = "blessed_hands"
 	allow_normal_conversion = yes
 	trigger = {
-		full_idea_group = restoration_ideas
+		sufficient_idea_group_for_magic = restoration_ideas
 	}
 	modifiers = {
 		global_monthly_devastation = -0.1

@@ -7,6 +7,9 @@ new estate clans = {
 	}
 	trigger = {
 		culture_group = nord
+		NOT = {
+			has_government_attribute = no_clans_estate
+		}
 	}
 	country_modifier_happy = {
 		state_maintenance_modifier = -0.5

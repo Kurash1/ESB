@@ -41,22 +41,6 @@ new effect create_flagship = {
 		}
 	}
 }
-new effect create_infantry = {
-	args = int
-	transpile = {
-		for $i as 0 to args {
-			infantry = PREV
-		}
-	}
-}
-new effect create_artillery = {
-	args = int
-	transpile = {
-		for $i as 0 to args {
-			artillery = PREV
-		}
-	}
-}
 new effect create_heavy_ship = {
 	args = int
 	transpile = {

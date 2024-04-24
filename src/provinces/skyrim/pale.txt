@@ -848,6 +848,23 @@ new province ironbind_barrow = {
 		history_trade_goods = r_metals
 	
 		is_city = yes
+		
+		1.1.1 = {
+			create_expedition = {
+				id = wayward_pass
+				name = "Wayward Pass"
+				desc = "Through the Winterhold Mountains splitting the Pale from Winterhold there is said to exist a pass, however this pass is not well documented, and many a traveler who searches for it ends up dying on their journey, but if we were to send forth an expedition we might be able to make it a proper route through the mountains.
+
+This route could be used to foster new trade routes, to bypass enemy defenses, or more connect our realm on both sides."
+				frame = 16
+				event_picture = flood_the_pass_eventPicture
+				length = 20
+				on_complete = {
+					set_province_flag = unlock_wayward_pass
+					new_custom_tooltip = "Unlocks a Great Project §YWayward Pass§! in §Y[{provinces:ironbind_barrow}.GetName]§! province"
+				}
+			}
+		}
 	}
 }
 new province olavdolyn = {
@@ -860,7 +877,7 @@ new province olavdolyn = {
 	height = {
 		0.365 0.365 0.365 1.865 0.365 0.365 0.365
 	}
-	area = yorgrim_overlook
+	area = nightgate
 	terrain = forest
 	name = "Olavdolyn"
 	color = {
@@ -876,32 +893,6 @@ new province olavdolyn = {
 		history_owner = nightgate
 	}
 }
-new province yorgrim_overlook = {
-	position = {
-		1880.000 2005.000 1880.000 2005.000 1880.000 2005.000 1880.000 2005.000 1880.000 2005.000 1880.000 2005.000 1880.000 2005.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = yorgrim_overlook
-	name = "Yorgrim Overlook"
-	terrain = mountain
-	color = {
-		101 124 120
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = palean
-		hre = yes
-		history_trade_goods = stone
-	
-		is_city = yes
-		history_owner = nightgate
-	}
-}
 new province jalaeigr = {
 	position = {
 		1888.000 1996.000 1888.000 1996.000 1888.000 1996.000 1888.000 1996.000 1888.000 1996.000 1888.000 1996.000 1888.000 1996.000
@@ -912,7 +903,7 @@ new province jalaeigr = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = yorgrim_overlook
+	area = nightgate
 	name = "Jalaeigr"
 	terrain = hills
 	color = {
@@ -938,7 +929,7 @@ new province yorgrim_ressurection = {
 	height = {
 		0.365 0.365 0.365 1.915 0.365 0.365 0.365
 	}
-	area = yorgrim_overlook
+	area = nightgate
 	name = "Yorgrim Ressurection"
 	terrain = hills
 	color = {
@@ -1512,5 +1503,83 @@ new province mundall = {
 		history_trade_goods = fish
 		
 		history_owner = whale_song
+	}
+}
+
+new area fellhammer = {
+	name = "Fellhammer"
+	region = pale
+}
+new province fellhammer = {
+	position = {
+		1808.000 2023.000 1808.000 2023.000 1808.000 2023.000 1808.000 2023.000 1808.000 2023.000 1808.000 2023.000 1808.000 2023.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = fellhammer
+	name = "Fellhammer"
+	terrain = highlands
+	color = {
+		160 158 102
+	}
+	history = {
+		center_of_trade = 1
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = c_metals
+		history_owner = hill_hammer
+	}
+}
+new province wayward_pass = {
+	position = {
+		1806.000 2009.000 1806.000 2009.000 1806.000 2009.000 1806.000 2009.000 1806.000 2009.000 1806.000 2009.000 1806.000 2009.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = fellhammer
+	name = "Wayward Pass"
+	terrain = hills
+	color = {
+		152 197 242
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = stone
+		history_owner = hill_hammer
+	}
+}
+new province hoddard = {
+	position = {
+		1798.000 2028.000 1798.000 2028.000 1798.000 2028.000 1798.000 2028.000 1798.000 2028.000 1798.000 2028.000 1798.000 2028.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = fellhammer
+	name = "Hoddard"
+	terrain = forest
+	color = {
+		208 191 237
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = wood
+		history_owner = dunstad
 	}
 }

@@ -1,3 +1,15 @@
 new trigger overlord_of = {
 	args = country_scope
 }
+new trigger is_free_or_tributary_trigger = {
+	args = bool
+	transpile = {
+		custom_trigger_tooltip = {
+			tooltip = is_free_or_tributary_trigger_tooltip
+			OR = {
+				is_subject = no
+				is_subject_of_type = tributary_state
+			}
+		}
+	}
+}
