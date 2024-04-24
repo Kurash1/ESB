@@ -12,6 +12,11 @@ new government_reform tier_6_curtailed_reign = {
 	desc = ""
 	icon = "generic_people"
 	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			government = republic
+		}
+	}
 	modifiers = {
 		no_stability_loss_on_monarch_death = yes
 	}
