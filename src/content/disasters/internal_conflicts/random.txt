@@ -1,0 +1,320 @@
+new country_event internal_conflicts.2 = {
+	title = "Religious Struggles"
+	desc = "The government of $COUNTRY$ is constantly faced with the problem of outside forces trying to influence the local population to convert their religious beliefs. The outbursts that have followed have been particularly violent in $PROVINCENAME$ and the possibility of the riots spreading outside of the province's borders is becoming a serious threat to the surrounding areas."
+	picture = priest_of_mara_eventPicture
+	
+	trigger = {
+		NOT = {	has_country_modifier = 	religious_intolerance }
+		NOT = {	has_country_modifier = 	religious_tolerance }
+		any_owned_province = {
+			is_overseas = no
+			has_owner_religion = no
+		}
+		is_at_war = yes
+	}
+	
+	options = {
+		{
+			name = "One nation, one belief!"
+			effect = {
+				add_dip_power = -50
+				quick_country_modifier = {
+					id = religious_intolerance
+					name = "Religious Intolerance"
+					desc = "Religious struggles, some more violent than others, were very common during this time and revolts would spring up on a regular basis."
+					modifier = {
+						global_heretic_missionary_strength = 0.01
+						tolerance_heretic = -2
+						tolerance_heathen = -2
+					}
+					years = 10
+				}
+			}
+		}
+		{
+			name = "Tolerate all beliefs"
+			effect = {
+				add_adm_power = -50
+				quick_country_modifier = {
+					id = religious_tolerance
+					name = "Religious Tolerance"
+					desc = "In a time plagued by religious struggles, efforts to mediate between these different religious groups only became harder."
+					modifier = {
+						stability_cost_modifier = -0.1
+						tolerance_heretic = 1
+						tolerance_heathen = 1
+						tolerance_own = -2
+					}
+					years = 10
+				}
+			}
+		}
+	}
+}
+new event_modifier domestic_improvements = {
+	name = "Domestic Improvements"
+	desc = "The mental strain of war, financial neglect and political instability had eventually forced the government to focus on its domestic problems."
+	modifier = {
+		diplomatic_reputation = -5
+	}
+}
+new country_event internal_conflicts.3 = {
+	title = "National Instability"
+	desc = "The mental strain of war, declining population numbers and the conniving of nobles, attempting to preserve and strengthen their authority, has hardly improved our nation's critical condition. Peasant uprisings are becoming increasingly common and without drastic measures, we are facing a long recovery."
+	picture = crime_spree_eventPicture
+	
+	trigger = {
+		NOT = { stability = 0 }
+		is_at_war = yes
+		NOT = { has_country_modifier = domestic_improvements }
+	}
+	
+	options = {
+		{
+			name = "The war is our main concern"
+			effect = {
+				every_owned_province = {
+					limit = { is_capital = no }
+					add_local_autonomy = 15
+				}
+			}
+		}
+		{
+			name = "Our domestic problems are our main concern"
+			effect = {
+				if = {
+					limit = {
+						has_disaster = internal_conflicts
+					}
+					add_disaster_modifier = {
+						name = domestic_improvements
+						duration = -1
+						disaster = internal_conflicts
+					}
+				}
+			}
+		}
+	}
+}
+new event_modifier enforce_serfdom = {
+	name = "Enforce Serfdom"
+	desc = "The increased efforts to control the legal and economic status of the peasants are draining the strength of the common people and unrest is brewing among the lower classes of society."
+	modifier = {
+		global_unrest = 1
+		global_manpower_modifier = 0.25
+	}
+}
+new event_modifier restrict_serfdom = {
+	name = "Restrict Serfdom"
+	desc = "Plans to improve the conditions for the serfs and eventually also abolish serfdom are under consideration."
+	modifier = {
+		global_unrest = -1
+		global_manpower_modifier = -0.25
+	}
+}
+new country_event internal_conflicts.4 = {
+	title = "Unrest Among the Peasants"
+	desc = "Starvation, plague and our increased effort to control the legal and economic status of the peasants are draining the strength of the common people. Unrest is brewing among the lower classes of society and is threatening to worsen the disorder of our already tormented nation."
+	picture = angry_villager_eventPicture
+	
+	trigger = {
+		NOT = {	has_country_modifier = 	restrict_serfdom }
+		NOT = {	has_country_modifier = 	enforce_serfdom }		
+	}
+	
+	options = {
+		{
+			name = "Restrict serfdom"
+			effect = {
+				random_owned_province = { noble_rebels = 1 }
+				if = {
+					limit = {
+						has_disaster = internal_conflicts
+					}
+					add_disaster_modifier = {
+						name = restrict_serfdom
+						duration = -1
+						disaster = internal_conflicts
+					}
+				}
+			}
+		}
+		{
+			name = "Keep the masses in chains"
+			effect = {
+				random_owned_province = { anti_tax_rebels = 1 }
+				if = {
+					limit = {
+						has_disaster = internal_conflicts
+					}
+					add_disaster_modifier = {
+						name = enforce_serfdom
+						duration = -1
+						disaster = internal_conflicts
+					}
+				}
+			}
+		}
+	}
+}
+new event_modifier decreased_morale = {
+	name = "Decreased Morale"
+	desc = "The mental strain of war, financial neglect and political instability had eventually forced the government to revise its war expenditures."
+	modifier = {
+		global_unrest = -1
+		global_manpower_modifier = -0.25
+	}
+}
+new country_event internal_conflicts.5 = {
+	title = "War Exhaustion"
+	desc = "With plague, starvation and war ravaging our country, our people find themselves in a state of extreme mental and physical fatigue. Our population is begging our government to ease their misery and put an end to their sacrifice and suffering."
+	picture = lay_down_arms_eventPicture
+	
+	trigger = {
+		NOT = {	has_country_modifier = 	decreased_morale }
+		war_exhaustion = 5
+	}
+	
+	options = {
+		{
+			name = "There is no immediate solution at hand"
+			effect = {
+				if = {
+					limit = {
+						has_disaster = internal_conflicts
+					}
+					add_disaster_modifier = {
+						name = decreased_morale
+						duration = -1
+						disaster = internal_conflicts
+					}
+				}
+			}
+		}
+		{
+			name = "Let their voices be heard"
+			effect = {
+				add_mil_power = -50
+				add_yearly_manpower = -0.25
+			}
+		}
+	}
+}
+new event_modifier support_monarch = {
+	name = "Support our Monarch"
+	desc = "Despite the number of assassination attempts and revolutionary tendencies infecting our nation, our Monarch has recently received a surprising amount of support."
+	modifier = {
+		legitimacy = 0.5
+	}
+}
+new event_modifier oppose_monarch = {
+	name = "Oppose our Monarch"
+	desc = "Our Monarch's indecisiveness and poor administration has led the people to question his right to rule and the number of conspiracies to increase."
+	modifier = {
+		global_unrest = 1
+	}
+}
+new country_event internal_conflicts.6 = {
+	title = "Conspiracies"
+	desc = "Due to poor administration, $MONARCH$ has become the victim of several conspiracies by ambitious opponents. The opposition is growing stronger by the day and it is becoming apparent that $MONARCH$ most certainly isn't the right person to lead our nation in such troubled times."
+	picture = palace_conspirator_eventPicture
+	
+	trigger = {
+		NOT = {	has_country_modifier = 	support_monarch }
+		NOT = {	has_country_modifier = 	oppose_monarch }
+		OR = {
+			NOT = { adm = 3 }
+			NOT = { dip = 3 }
+			NOT = { mil = 3 }
+		}
+		government = monarchy
+		any_owned_province = { development = 8 }
+	}
+	
+	options = {
+		{
+			name = "Leave the nation's fate in his hands"
+			effect = {
+				random_owned_province [development = 8] {
+					pretender_rebels = 3 
+					pretender_rebels = 3 
+				}
+				if [has_disaster = internal_conflicts] {
+					add_disaster_modifier = {
+						name = support_monarch
+						duration = -1
+						disaster = internal_conflicts
+					}
+				}
+			}
+		}
+		{
+			name = "Oppose $MONARCH$"
+			effect = {
+				random_owned_province [development = 8] {
+					noble_rebels = 3 
+				}
+				random_owned_province = { noble_rebels = 2 }
+				if [has_disaster = internal_conflicts] {
+					add_disaster_modifier = {
+						name = oppose_monarch
+						duration = -1
+						disaster = internal_conflicts
+					}
+				}
+			}
+		}
+	}
+}
+new event_modifier alleviate_population = {
+	name = "Alleviate Population"
+	desc = "Widespread crop failure has left our people with very little, or nothing to eat, but measures have been taken to alleviate their suffering."
+	modifier = {
+		global_unrest = -1
+	}
+}
+new event_modifier starvation = {
+	name = "Starvation"
+	desc = "Widespread crop failure has left our people with very little, or nothing to eat, but we don't have any resources to help them."
+	modifier = {
+		global_autonomy = 0.05
+	}
+}
+new country_event internal_conflicts.7 = {
+	title = "Famine Strikes $COUNTRY$"
+	desc = "Widespread crop failure has left our people with very little, or nothing to eat. The people are crying out for the government to relieve their suffering, but to help so many will be very costly."
+	picture = shanty_town_eventPicture
+	
+	trigger = {
+		NOT = {	has_country_modifier = 	alleviate_population }
+		NOT = {	has_country_modifier = 	starvation }
+	}
+	
+	options = {
+		{
+			name = "Try to alleviate the suffering"
+			effect = {
+				add_years_of_income = -1.0
+				if [has_disaster = internal_conflicts] {
+					add_disaster_modifier = {
+						name = alleviate_population
+						duration = -1
+						disaster = internal_conflicts
+					}
+				}
+			}
+		}
+		{
+			name = "We are helpless in the face of such a disaster..."
+			effect = {
+				if [has_disaster = internal_conflicts] {
+					add_disaster_modifier = {
+						name = starvation
+						duration = -1
+						disaster = internal_conflicts
+					}
+				}
+			}
+		}
+	}
+}

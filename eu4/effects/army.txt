@@ -1,0 +1,24 @@
+new effect create_infantry = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			infantry = PREV
+		}
+	}
+}
+new effect create_cavalry = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			cavalry = PREV
+		}
+	}
+}
+new effect create_artillery = {
+	args = int
+	transpile = {
+		for $i as 0 to args {
+			artillery = PREV
+		}
+	}
+}

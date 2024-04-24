@@ -1,0 +1,13 @@
+new country_event internal_conflicts.8 = {
+	title = "The End of the Internal Conflicts"
+	desc = "The instability of the past years now finally seems to be over!"
+	picture = whiterun_recruit_eventPicture
+	major = yes
+	
+	options = {
+		name = "Restore order"
+		effect = {
+			add_stability_or_adm_power = yes
+		}
+	}
+}
