@@ -29,7 +29,7 @@ ruler_natural_death += {
 	if [can_build_barrow_hill] {
 		random = {
 			chance = 20
-			barrow_hill.1
+			country_event = barrow_hill.1
 		}
 	}
 }
@@ -37,7 +37,7 @@ heir_natural_death += {
 	if [can_build_barrow_hill] {
 		random = {
 			chance = 20
-			barrow_hill.1
+			country_event = barrow_hill.1
 		}
 	}
 }
