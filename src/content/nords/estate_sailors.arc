@@ -6,7 +6,10 @@ new estate sailors = {
 		0 148 255
 	}
 	trigger = {
-		culture_group = nord
+		OR = {
+			is_race = nord
+			is_race = atmoran
+		}
 		num_of_ports = 1
 	}
 	country_modifier_happy = {
