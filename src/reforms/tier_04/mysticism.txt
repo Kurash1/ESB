@@ -84,9 +84,9 @@ new government_mechanic mysticism_focus_mechanic = {
 			effect = {
 				add_magicka = -25
 				
-				add_adm_power = 25
-				add_dip_power = 25
-				add_mil_power = 25
+				add_adm_power = 10
+				add_dip_power = 10
+				add_mil_power = 10
 			}
 		}
 		mysticism_2_button = {
@@ -134,7 +134,7 @@ new government_reform tier_4_mysticism_focus = {
 	icon = "tome_1"
 	allow_normal_conversion = yes
 	trigger = {
-		full_idea_group = mysticism_ideas
+		sufficient_idea_group_for_magic = mysticism_ideas
 	}
 	modifiers = {
 		advisor_cost = -0.25

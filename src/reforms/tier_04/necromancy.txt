@@ -57,11 +57,12 @@ new government_mechanic necromancy_focus_mechanic = {
 			}
 			trigger = {
 				has_magicka = 25
+				NOT = { manpower_percentage = 0.9 }
 			}
 			effect = {
 				add_magicka = -25
 				
-				add_yearly_manpower = 2
+				add_yearly_manpower = 1
 			}
 		}
 		necromancy_2_button = {
@@ -207,7 +208,7 @@ new government_reform tier_4_necromancy_focus = {
 	icon = "undead_army"
 	allow_normal_conversion = yes
 	trigger = {
-		full_idea_group = necromancy_ideas
+		sufficient_idea_group_for_magic = necromancy_ideas
 	}
 	modifiers = {
 		manpower_recovery_speed = 0.2

@@ -1,3 +1,12 @@
+new trigger sufficient_idea_group_for_magic = {
+	args = idea_group
+	transpile = {
+		has_idea_group = args:id
+		has_idea = `{args:id}_1`
+		has_idea = `{args:id}_2`
+		has_idea = `{args:id}_3`
+	}
+}
 new trigger exists = {
 	args = country_scope
 }
