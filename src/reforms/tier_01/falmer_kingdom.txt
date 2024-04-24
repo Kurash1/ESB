@@ -1,0 +1,22 @@
+governments:monarchy:reform_levels:1 += new tier_1_falmer_kingdom = {
+	name = "Falmer Kingdom"
+	desc = ""
+	icon = "wow_cult"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = tier_1_falmer_kingdom
+	}
+	trigger = {
+		has_reform = tier_1_falmer_kingdom
+	}
+	modifiers = {
+		land_morale = 0.10
+		prestige_decay = 0.01
+		governing_capacity = 100
+		global_autonomy = -0.10
+	}
+	ai = {
+		factor = 1
+	}
+
+}

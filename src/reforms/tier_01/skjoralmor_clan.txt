@@ -1,0 +1,23 @@
+governments:monarchy:reform_levels:1 += new tier_1_skjoralmor_clan = {
+	name = "Skjormalmor Clan"
+	desc = ""
+	icon = "fort"
+	allow_normal_conversion = yes
+	maintain_dynasty = yes
+	custom_attributes = {
+		new localisation mechanic_cleansing_on_orcs_yes = "Cleansing on §YOrcs§!"
+		cleansing_on_orcs = yes
+	}
+	potential = {
+		has_reform = tier_1_skjoralmor_clan
+	}
+	modifiers = {
+		governing_capacity = -50
+		global_autonomy = -0.10
+		development_cost = -0.1
+		fort_maintenance_modifier = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}

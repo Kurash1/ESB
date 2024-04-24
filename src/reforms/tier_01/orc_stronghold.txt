@@ -1,0 +1,29 @@
+new localisation mechanic_orc_stronghold = "Is a Stronghold"
+new localisation mechanic_orc_stronghold_yes = "Is a Stronghold"
+governments:tribal:reform_levels:1 += new tier_1_orc_stronghold = {
+	name = "Orc Stronghold"
+	desc = ""
+	icon = "orc_stronghold"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	potential = {
+		has_reform = tier_1_orc_stronghold
+	}
+	trigger = {
+		has_reform = tier_1_orc_stronghold
+	}
+	custom_attributes = {
+		orc_stronghold = yes
+	}
+	modifiers = {
+		leader_land_shock = 1
+		shock_damage = 0.10
+		min_autonomy = 35
+		land_maintenance_modifier = -0.20
+		land_forcelimit_modifier = 15%
+		legitimacy = -2.5
+	}
+	ai = {
+		factor = 1
+	}
+}

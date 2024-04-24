@@ -1,0 +1,20 @@
+governments:monarchy:reform_levels:1 += new tier_1_warrior_hold = {
+	name = "Warrior Hold"
+	desc = ""
+	icon = "crown_of_heaven"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	potential = {
+		has_reform = tier_1_warrior_hold
+	}
+	trigger = {
+		has_reform = tier_1_warrior_hold
+	}
+	modifiers = {
+		monarch_military_power = 1
+		shock_damage = 0.10
+	}
+	ai = {
+		factor = 1
+	}
+}

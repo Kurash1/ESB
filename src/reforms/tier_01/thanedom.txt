@@ -1,0 +1,22 @@
+governments:monarchy:reform_levels:1 += new tier_1_thanedom = {
+	name = "Thanedom"
+	desc = ""
+	icon = "hero"
+	allow_normal_conversion = yes
+	force_general_leader = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	potential = {
+		has_reform = tier_1_thanedom
+	}
+	trigger = {
+		has_reform = tier_1_thanedom
+	}
+	modifiers = {
+		monarch_military_power = 1
+		land_forcelimit_modifier = 0.10
+	}
+	ai = {
+		factor = 1
+	}
+}
