@@ -6,10 +6,6 @@ new area anthor = {
 	name = "Anthor"
 	region = winterhold
 }
-new area fellhammer = {
-	name = "Fellhammer"
-	region = winterhold
-}
 new area driftshade = {
 	name = "Driftshade"
 	region = winterhold
@@ -77,89 +73,6 @@ new area japhets_folly = {
 new area the_chill = {
 	name = "The Chill"
 	region = winterhold
-}
-new province fellhammer = {
-	position = {
-		1808.000 2023.000 1808.000 2023.000 1808.000 2023.000 1808.000 2023.000 1808.000 2023.000 1808.000 2023.000 1808.000 2023.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = fellhammer
-	name = "Fellhammer"
-	terrain = highlands
-	color = {
-		160 158 102
-	}
-	history = {
-		center_of_trade = 1
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = c_metals
-	
-		is_city = no
-		history_owner = hill_hammer
-	}
-}
-new province wayward_pass = {
-	position = {
-		1806.000 2009.000 1806.000 2009.000 1806.000 2009.000 1806.000 2009.000 1806.000 2009.000 1806.000 2009.000 1806.000 2009.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = fellhammer
-	name = "Wayward Pass"
-	terrain = hills
-	color = {
-		152 197 242
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = stone
-	
-		is_city = yes
-		history_owner = hill_hammer
-		57.1.1 = {
-			religion = nordic_pantheon
-			culture = winterholdian
-		}
-	}
-}
-new province hoddard = {
-	position = {
-		1798.000 2028.000 1798.000 2028.000 1798.000 2028.000 1798.000 2028.000 1798.000 2028.000 1798.000 2028.000 1798.000 2028.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = fellhammer
-	name = "Hoddard"
-	terrain = forest
-	color = {
-		208 191 237
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = wood
-	
-		is_city = no
-		history_owner = dunstad
-	}
 }
 new province snowpoint = {
 	position = {
