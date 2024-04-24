@@ -42,7 +42,7 @@ new decision form_roscrea = {
 		swap_free_idea_group = yes
 		change_government = monarchy
 		add_government_reform = tier_1_hold
-		regions:the_shatter = {
+		regions:roscrea = {
 			add_permanent_claim = ROOT
 		}
 	}
@@ -140,6 +140,9 @@ new decision form_eastmarch = {
 		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
+		regions:eastmarch = {
+			add_permanent_claim = ROOT
+		}
 	}
 }
 new decision form_winterhold = {
@@ -179,6 +182,9 @@ new decision form_winterhold = {
 		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
+		regions:winterhold = {
+			add_permanent_claim = ROOT
+		}
 	}
 }
 new country pale = {
@@ -225,6 +231,9 @@ new decision form_pale = {
 		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
+		regions:pale = {
+			add_permanent_claim = ROOT
+		}
 	}
 }
 new country whiterun = {
@@ -274,6 +283,9 @@ new decision form_whiterun = {
 		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
+		regions:whiterun = {
+			add_permanent_claim = ROOT
+		}
 	}
 }
 new country hjaalmarch = {
@@ -320,6 +332,9 @@ new decision form_hjaalmarch = {
 		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
+		regions:hjaalmarch = {
+			add_permanent_claim = ROOT
+		}
 	}
 }
 new country haafingar = {
@@ -367,6 +382,9 @@ new decision form_haafingar = {
 		
 		change_government = monarchy
 		add_government_reform = tier_1_hold
+		regions:haafingar = {
+			add_permanent_claim = ROOT
+		}
 	}
 }
 new country falkreath = {
@@ -410,7 +428,7 @@ new decision form_falkreath = {
 		form_hold = falkreath
 		
 		add_government_reform = tier_1_hold
-		kreath_region = {
+		regions:kreath = {
 			add_permanent_claim = ROOT
 		}
 	}
@@ -428,7 +446,7 @@ new country orkreath = {
 	capital = falkreath
 }
 new decision form_orkreath = {
-	name = " Form an Orc Homeland "
+	name = "Form Orkreath"
 	major = yes
 	potential = {
 		primary_culture = kreath_orc
@@ -456,7 +474,7 @@ new decision form_orkreath = {
 		change_tag = orkreath
 		swap_free_idea_group = yes
 		add_government_reform = tier_1_orc_federation
-		kreath_region = {
+		regions:kreath = {
 			add_permanent_claim = ROOT
 		}
 	}
@@ -474,7 +492,7 @@ new country rift = {
 	capital = riften
 }
 new decision form_the_rift = {
-	name = " Form the Rift "
+	name = "Form the Rift"
 	major = yes
 	potential = {
 		NOT = {
@@ -502,7 +520,7 @@ new decision form_the_rift = {
 		form_hold = rift
 		
 		add_government_reform = tier_1_hold
-		rift_region = {
+		regions:rift = {
 			add_permanent_claim = ROOT
 		}
 	}
