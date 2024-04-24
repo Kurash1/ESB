@@ -152,3 +152,109 @@ new insult rebels = {
 		num_of_rebel_armies = 1
 	}
 }
+new insult mer_1 = {
+	text = "Your knife-ears are not even good for cutting anything."
+	trigger = {
+		check_for_elven_race = culture_group
+	}
+}
+new insult mer_2 = {
+	text = "Go and follow Magnus then you are finally out of my sight. Oh that is right you cannot do that fools!"
+	trigger = {
+		check_for_elven_race = culture_group
+	}
+}
+new insult mer_3 = {
+	text = "You have as many daddy issues as Meridia."
+	trigger = {
+		check_for_elven_race = culture_group
+	}
+}
+new insult dragon_cult_1 = {
+	text = "The ruler of [Root.GetName] is a Ruth Nikriin and a Zaam."
+	trigger = {
+		religion = dragon_cult
+	}
+}
+new insult dragon_cult_2 = {
+	text = "May Alduin take care of your soul."
+	trigger = {
+		religion = dragon_cult
+	}
+}
+new insult nord_1 = {
+	text = "The people of [Root.GetName] are a bunch of milk-drinkers"
+	trigger = {
+		is_race = nord
+	}
+}
+new insult nord_2 = {
+	text = "By Shor's Bones are you sure you can even breathe?"
+	trigger = {
+		is_race = nord
+	}
+}
+new insult human_1 = {
+	text = "Monkey-faced degenerates should not rule countries."
+	trigger = {
+		check_for_human_race = culture_group
+	}
+}
+new insult human_2 = {
+	text = "Maybe Stendarr will have mercy upon you filthy rats for we will not."
+	trigger = {
+		check_for_human_race = culture_group
+	}
+}
+new insult falmer_1 = {
+	text = "You filthy pests still exist?"
+	trigger = {
+		is_race = snow_elven
+	}
+}
+new insult falmer_2 = {
+	text = "Skyrim cannot breathe freely as long as one of you still draws breath."
+	trigger = {
+		is_race = snow_elven
+	}
+}
+new insult orc_1 = {
+	text = "Filthy pig-faced spawns"
+	trigger = {
+		is_race = orc
+	}
+}
+new insult orc_2 = {
+	text = "Did Boethiah released you together with Malacath or why do you look so awful?"
+	trigger = {
+		is_race = orc
+	}
+}
+new insult orc_3 = {
+	text = "Go back to your pits orc-pigs."
+	trigger = {
+		is_race = orc
+	}
+}
+new insult we_orc_1 = {
+	text = "The army of [Root.GetName] cries like a breton girl that lost her favorite dolly."
+	trigger = {
+		FROM = {
+			is_race = orc
+		}
+	}
+}
+new insult we_orc_2 = {
+	text = "Even an ogre is smarter than [Root.Monarch.GetName]."
+	trigger = {
+		FROM = {
+			is_race = orc
+		}
+	}
+}
+new insult reachmen_1 = {
+	text = "Ah I see you are still cosplaying as bosmer?"
+	trigger = {
+		is_race = reachmen
+	}
+}
