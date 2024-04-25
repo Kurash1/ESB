@@ -10,14 +10,14 @@ SO take up swords, sworn sons and dauntless daughters, And rally around the reig
 	picture = haafingar_eventPicture
 	is_triggered_only = yes
 	immediate = { #for debugging, so we can rerun this event.
-		clr_country_flag = has_haafingar_ideas 
-		clr_country_flag = has_solitude_ideas
+		clr_country_flag = has_ni_haafingar 
+		clr_country_flag = has_ni_solitude
 	}
 	options = {
 		{
 			name = "We are the Children of Haafingar"
 			effect = {
-				set_country_flag = has_haafingar_ideas
+				set_country_flag = has_ni_haafingar
 				form_hold = haafingar
 				
 				preview_idea_group = haafingar_ideas
@@ -26,7 +26,7 @@ SO take up swords, sworn sons and dauntless daughters, And rally around the reig
 		{
 			name = "We are the Children of Solitude"
 			effect = {
-				set_country_flag = has_solitude_ideas
+				set_country_flag = has_ni_solitude
 				form_hold = haafingar
 				
 				preview_idea_group = solitude_ideas
@@ -68,6 +68,31 @@ mission_trees:solitude += {
 			add_prestige = 50
 			
 			conditional_effect = {
+				tooltip = "no Faction has dominance"
+				trigger = {
+					NOT = {
+						faction_influence = {
+							faction = nc_rock_hammer
+							influence = 50
+						}
+						faction_influence = {
+							faction = nc_storm_galley
+							influence = 50
+						}
+						faction_influence = {
+							faction = nc_red_wolf
+							influence = 50
+						}
+					}
+				}
+				effect = {
+					new_custom_tooltip = "Enact §YCouncil Hold§! Tier 1 Government Reform."
+					hidden_effect = {
+						add_government_reform = tier_1_council_hold
+					}
+				}
+			}
+			conditional_effect = {
 				tooltip = "§YRock-Hammer§! influence is 50 or greater"
 				trigger = {
 					faction_influence = {
@@ -77,13 +102,14 @@ mission_trees:solitude += {
 				}
 				effect = {
 					if [NOT = {
-						dynasty = "Rock-Hammer"
+						has_ruler_flag = is_clan_rock_hammer
 					}] {
 						new_custom_tooltip = "A member of the §YRock-Hammer§! clan becomes your ruler."
 						hidden_effect = {
 							define_ruler = {
 								dynasty = "Rock-Hammer"
 							}
+							set_ruler_flag = is_clan_rock_hammer
 						}
 					}
 					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform."
@@ -106,13 +132,14 @@ mission_trees:solitude += {
 				}
 				effect = {
 					if [NOT = {
-						dynasty = "Storm-Galley"
+						has_ruler_flag = is_clan_storm_galley
 					}] {
 						new_custom_tooltip = "A member of the §YStorm-Galley§! clan becomes your ruler."
 						hidden_effect = {
 							define_ruler = {
 								dynasty = "Storm-Galley"
 							}
+							set_ruler_flag = is_clan_storm_galley
 						}
 					}
 					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform."
@@ -129,19 +156,20 @@ mission_trees:solitude += {
 				tooltip = "§YRed-Wolf§! influence is 50 or greater"
 				trigger = {
 					faction_influence = {
-						faction = nc_storm_galley
+						faction = nc_red_wolf
 						influence = 50
 					}
 				}
 				effect = {
 					if [NOT = {
-						dynasty = "Red-Wolf"
+						has_ruler_flag = is_clan_red_wolf
 					}] {
 						new_custom_tooltip = "A member of the §YRed-Wolf§! clan becomes your ruler."
 						hidden_effect = {
 							define_ruler = {
 								dynasty = "Red-Wolf"
 							}
+							set_ruler_flag = is_clan_red_wolf
 						}
 					}
 					new_custom_tooltip = "Enact §YHaafingar Kingdom§! Tier 1 Government Reform."
@@ -151,31 +179,6 @@ mission_trees:solitude += {
 					quick_country_modifier = {
 						name = "Clan Red-Wolf"
 						modifier = factions:nc_red_wolf:modifier
-					}
-				}
-			}
-			conditional_effect = {
-				tooltip = "no Faction has dominance"
-				trigger = {
-					NOT = {
-						faction_influence = {
-							faction = nc_rock_hammer
-							influence = 50
-						}
-						faction_influence = {
-							faction = nc_storm_galley
-							influence = 50
-						}
-						faction_influence = {
-							faction = nc_red_wolf
-							influence = 50
-						}
-					}
-				}
-				effect = {
-					new_custom_tooltip = "Enact §YCouncil Hold§! Tier 1 Government Reform."
-					hidden_effect = {
-						add_government_reform = tier_1_council_hold
 					}
 				}
 			}

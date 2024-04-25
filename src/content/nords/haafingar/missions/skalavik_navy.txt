@@ -40,7 +40,7 @@ mission_trees:solitude += {
 			conditional_effect = {
 				tooltip = "your ruler is of clan §YStorm-Galley§!"
 				trigger = {
-					dynasty = "Storm-Galley"
+					has_ruler_flag = is_clan_storm_galley
 				}
 				effect = {
 					change_dip = 1

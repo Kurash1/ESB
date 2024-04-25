@@ -27,7 +27,7 @@ mission_trees:solitude += {
 			conditional_effect = {
 				tooltip = "your ruler is of clan §YRed-Wolf§!"
 				trigger = {
-					dynasty = "Red-Wolf"
+					has_ruler_flag = is_clan_red_wolf
 				}
 				effect = {
 					change_mil = 1
