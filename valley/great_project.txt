@@ -1,0 +1,221 @@
+new struct conditional_modifier = {
+	args = {
+		trigger = named_trigger
+		modifier = named_modifier
+	}
+}
+new struct great_project_tier = {
+	default = {
+		province_modifier = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifier = { }
+		on_upgraded = { }
+		conditional_modifiers = { }
+	}
+	args = {
+		upgrade_time = int?
+		cost_to_upgrade = int?
+		province_modifier = named_modifier
+		area_modifier = named_modifier
+		region_modifier = named_modifier
+		country_modifier = named_modifier
+		on_upgraded = named_effect
+		conditional_modifiers = list<conditional_modifier>
+	}
+}
+new struct scaling_tier = {
+	default = {
+		province_modifier = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifier = { }
+	}
+	args = {
+		province_modifier = modifier
+		area_modifier = modifier
+		region_modifier = modifier
+		country_modifier = modifier
+	}
+}
+new effect transpile_single_tier = {
+	args = {
+		scaling = scaling_tier
+		tier = great_project_tier
+		num = int
+		upgrade_time = int
+		cost_to_upgrade = int
+	}
+	transpile = {
+		new named_int $tier = args:num
+		
+		`tier_{args:num}` = {
+			when [exists = args:tier:upgrade_time] { upgrade_time = { months = args:tier:upgrade_time } }
+			when_not { upgrade_time = { months = args:upgrade_time } }
+			when [exists = args:tier:cost_to_upgrade] { cost_to_upgrade = { factor = args:tier:cost_to_upgrade } }
+			when_not { cost_to_upgrade = { factor = args:cost_to_upgrade } }
+			
+			province_modifiers = {
+				args:tier:province_modifier
+				args:scaling:province_modifier
+			}
+			area_modifier = {
+				args:tier:area_modifier
+				args:scaling:area_modifier
+			}
+			region_modifier = {
+				args:tier:region_modifier
+				args:scaling:region_modifier
+			}
+			country_modifiers = {
+				args:tier:country_modifier
+				args:scaling:country_modifier
+			}
+			
+			on_upgraded = {
+				args:tier:on_upgraded
+			}
+			
+			foreach cond_mod in args:tier:conditional_modifiers {
+				conditional_modifier = {
+					trigger = {
+						cond_mod:trigger
+					}
+					modifier = {
+						cond_mod:modifier
+					}
+				}
+			}
+		}
+		
+		delete = $tier
+	}
+}
+new class great_project = {
+	id = `{this:id}`
+	list = great_projects
+	default = {
+		date = 1.1.1
+		starting_tier = 0
+		type = monument
+		
+		time = 0
+		build_cost = 0
+		can_be_moved = yes
+		move_days_per_unit_distance = 100
+		
+		trigger = { }
+		build_trigger = { }
+		can_use_modifiers_trigger = { }
+		can_upgrade_trigger = { }
+		keep_trigger = { always = yes }
+		
+		on_built = { }
+		on_destroyed = { }
+		
+		scaling_tier = { }
+		tier_0 = { }
+		tier_1 = { }
+		tier_2 = { }
+		tier_3 = { }
+	}
+	args = {
+		name = string
+		desc = string?
+		
+		start = province
+		date = string
+		starting_tier = int
+		type = string
+		
+		time = int
+		build_cost = int
+		can_be_moved = bool
+		move_days_per_unit_distance = int
+		
+		trigger = named_trigger
+		build_trigger = named_trigger
+		can_use_modifiers_trigger = named_trigger
+		can_upgrade_trigger = named_trigger
+		keep_trigger = named_trigger
+		
+		on_built = named_effect?
+		on_destroyed = named_effect?
+		
+		scaling_tier = scaling_tier
+		tier_0 = great_project_tier
+		tier_1 = great_project_tier
+		tier_2 = great_project_tier
+		tier_3 = great_project_tier
+	}
+	simple_transpile = {
+		write_file "common/great_projects/arc.txt" = {
+			foreach $ in great_projects {
+				new localisation `{$:id}` = `{$:name}`
+				when [exists = $:desc] { new localisation `{$:id}_desc` = `{$:desc}` }
+				$:id = {
+					start = $:start
+					date = $:date
+					time = { months = $:time }
+					build_cost = $:build_cost
+					can_be_moved = $:can_be_moved
+					starting_tier = $:starting_tier
+					type = $:type
+					move_days_per_unit_distance = $:move_days_per_unit_distance
+					
+					build_trigger = {
+						$:trigger
+						$:build_trigger
+					}
+					can_use_modifiers_trigger = {
+						$:trigger
+						$:can_use_modifiers_trigger
+					}
+					can_upgrade_trigger = {
+						$:trigger
+						$:can_use_modifiers_trigger
+					}
+					keep_trigger = {
+						$:keep_trigger
+					}
+					
+					on_built = {
+						$:on_built
+					}
+					on_destroyed = {
+						$:on_destroyed
+					}
+					
+					transpile_single_tier = {
+						scaling = $:scaling_tier
+						tier = $:tier_0
+						num = 0
+						upgrade_time = 0
+						cost_to_upgrade = 0
+					}
+					transpile_single_tier = {
+						scaling = $:scaling_tier
+						tier = $:tier_1
+						num = 1
+						upgrade_time = 120
+						cost_to_upgrade = 1000
+					}
+					transpile_single_tier = {
+						scaling = $:scaling_tier
+						tier = $:tier_2
+						num = 2
+						upgrade_time = 240
+						cost_to_upgrade = 2500
+					}
+					transpile_single_tier = {
+						scaling = $:scaling_tier
+						tier = $:tier_3
+						num = 3
+						upgrade_time = 480
+						cost_to_upgrade = 5000
+					}
+				}
+			}
+		}
+	}
+}
