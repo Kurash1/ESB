@@ -1,0 +1,32 @@
+new class estate_interaction = {
+	id = `{this:id}`
+	list = estate_interactions
+	args = {
+		random_seed = string
+		cooldown_months = int
+		trigger = named_trigger
+		effect = named_effect
+		ai_will_do = named_trigger
+	}
+	simple_transpile = {
+		write_file "common/estate_crown_land/00_interactions.txt" = {
+			foreach $ in estate_interactions {
+				interaction = {
+					key = $
+					random_seed = $:random_seed
+					cooldown_months = $:cooldown_months
+					
+					trigger = {
+						$:trigger
+					}
+					effect = {
+						$:effect
+					}
+					ai_will_do = {
+						$:ai_will_do
+					}
+				}
+			}
+		}
+	}
+}
