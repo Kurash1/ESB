@@ -59,6 +59,71 @@ new idea_group economic_ideas = {
 		factor = 5
 	}
 }
+new idea_group infrastructure_ideas = {
+	name = "Infrastructure"
+	category = ADM
+	trigger = {
+		full_idea_group = economic_ideas
+	}
+	ideas = {
+		{
+			name = "Local Infrastructure Complexes"
+			desc = "Despite our focus on the country-wide scale of affairs, we must not neglect tending to our local state legislators and bailiffs."
+			modifier = {
+				global_prosperity_growth = 0.25
+				state_maintenance_modifier = -0.33
+			}
+		}
+		{
+			name = "Organized Construction"
+			desc = "The need to upgrade the infrastructure of our government is a costly business. If we structure the process correctly we can do this cheaper."
+			modifier = {
+				build_cost = -0.1
+			}
+		}
+		{
+			name = "Efficient Construction Plans"
+			desc = "Our efficient planning around construction allows us to complete orders of work without cutting any corners."
+			modifier = {
+				expand_infrastructure_cost_modifier = -0.25
+			}
+		}
+		{
+			name = "Expanded Infrastructure Network"
+			desc = "The road network within our nation is a vital part of our commercial and administrative flourishing. As such, we should care to improve and maintain it."
+			modifier = {
+				road_line = 1
+				movement_speed = 0.1
+				center_of_trade_upgrade_cost = -0.2
+			}
+		}
+		{
+			name = "Administrative Efficiency"
+			desc = "The most important part of any government is getting the right advice. We must ensure that we are as inclusive as possible when it comes to advisors so we can maximize the number of different viewpoints we are presented with."
+			modifier = {
+				state_governing_cost = -0.1
+			}
+		}
+		{
+			name = "Fortification Logistics"
+			desc = "By ordering our system of fortifications in a proper manner both construction-wise and logistically, we may save some coin on maintaining it in the longterm."
+			modifier = {
+				fort_maintenance_modifier = -0.25
+			}
+		}
+		{
+			name = "Regulation Bureau"
+			desc = "A legislative body whose jurisdiction involves the maintenance and promotion of inflation-related laws as well as the local administration of our provinces."
+			modifier = {
+				expand_administration_cost = -1
+				build_time = -0.25
+			}
+		}
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+}
 new idea_group humanist_ideas = {
 	name = "Humanist"
 	category = ADM
