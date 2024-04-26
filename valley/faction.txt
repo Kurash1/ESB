@@ -7,6 +7,19 @@ new class faction = {
 		monarch_power = string
 		modifier = named_modifier
 	}
+	on_create = {
+		DEFINE_MODIFIER = {
+			key = `{this:id}_influence`
+			text = `{this:name} Influence`
+			localisation_key = `{this:id}_influence`
+			multiplier = 1
+			percent = no
+			is_good = true
+			is_bool = false
+			is_multiplicative = no
+			precision = 1
+		}
+	}
 	simple_transpile = {
 		write_file "common/factions/arc.txt" = {
 			foreach $faction in factions {

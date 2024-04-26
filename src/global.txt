@@ -1,3 +1,21 @@
+new named_effect monuments_for_plebs = {
+	foreach $m in great_projects [
+		$m:start:name != "Black Mountain"
+	] {
+		$m:start:history +=! {
+			if [NOT = { has_dlc = "Leviathan" }] {
+				quick_province_modifier = {
+					name =* "*$m:name*"
+					modifier =* {
+						great_projects:*$m:id*:tier_1:province_modifier
+						great_projects:*$m:id*:tier_1:country_modifier
+					}
+				}
+			}
+		}
+	}
+}
+
 new define NDefines.NEconomy.MAX_BUILDING_SLOTS = 16
 new localisation empty_line_tt = "	"
 new localisation  HAS_CAPITAL_FORT = "Has a non-influencing fort."
