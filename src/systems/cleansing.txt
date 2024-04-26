@@ -34,6 +34,25 @@ new country_event cleansing.1 = {
 		}
 	}
 }
+new custom_transpile natives = {
+	write_file "common/natives/00_natives.txt" = {
+		natives_american_inuit = {
+			graphical_culture = inuitgfx
+			color = { 0 255 255 }
+			icon = 4
+			
+			unit = nord_infantry
+			
+			provinces = {
+				foreach $ in provinces [
+					$:lake == no
+					$:sea == no
+					$:impassible == no
+				] { $ }
+			}
+		}
+	}
+}
 new building cleansing = {
 	name = "Cleansing"
 	desc = "Let's clean our land from the tainting presence of other races"
@@ -57,16 +76,17 @@ new building cleansing = {
 		}
 	}
 	on_built = {
-		change_religion = FROM
-		change_culture = FROM
 		hidden_effect = {
 			add_nationalism = -100
 		}
 		
-		`cede_province = ---`
-		save_event_target_as = cleansing_target
-		FROM = {
-			country_event = cleansing.1
+		decolonize = THIS
+		new_custom_tooltip = "Create a Frontier in §Y[This.GetName]§!."
+		hidden_effect = {
+			save_event_target_as = cleansing_target
+			FROM = {
+				country_event = cleansing.1
+			}
 		}
 		remove_building = cleansing
 	}
