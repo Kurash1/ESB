@@ -81,22 +81,6 @@ new province denramth = {
 		history_trade_goods = fish
 	}
 }
-new province jirgilg = {
-	name = "Jirgilg"
-	inherit = roscrea_inherit
-	terrain = coastline
-	color = { 235 215 217 }
-	area = denramth_isles
-	position = { 1928.000 2311.000 1928.000 2312.000 0.000 0.000 1926.000 2307.000 0.000 0.000 1928.000 2311.000 0.000 0.000 }
-	rotation = { 0.000 0.000 0.000 0.262 0.000 0.000 0.000 }
-	height = { 0.000 0.000 1.000 0.000 0.000 0.000 0.000 }
-	history = {
-		religion = the_old_ways
-		culture = roscrean
-		history_owner = whale_watcher
-		history_trade_goods = fish
-	}
-}
 new province rhuknol = {
 	name = "Rhuknol"
 	inherit = roscrea_inherit
@@ -1243,47 +1227,27 @@ quick_strait = {
 quick_strait = {
 	from = hrodnonuld
 	to = denramth
-	through = new_sea_7
-}
-quick_strait = {
-	from = jirgilg
-	to = denramth
-	through = new_sea_7
-}
-quick_strait = {
-	from = jirgilg
-	to = thongrild
-	through = new_sea_7
-}
-quick_strait = {
-	from = jirgilg
-	to = rilrydr
-	through = new_sea_7
-}
-quick_strait = {
-	from = jirgilg
-	to = rhuknol
-	through = new_sea_7
+	through = rilrydr_bay
 }
 quick_strait = {
 	from = klyksarr
 	to = haskullholm
-	through = new_sea_8
+	through = hlalds_tale
 }
 quick_strait = {
 	from = frulild
 	to = basgral
-	through = new_sea_6
+	through = coast_of_basgral
 }
 quick_strait = {
 	from = hjitheldr
 	to = ridneinind
-	through = new_sea_3
+	through = drako_coast
 }
 quick_strait = {
 	from = hralmuldr
 	to = konhiedr
-	through = new_sea_11
+	through = coast_of_konhiedr
 }
 quick_strait = {
 	from = kormeill
@@ -1293,20 +1257,20 @@ quick_strait = {
 quick_strait = {
 	from = thalsgol
 	to = heesnegarr
-	through = new_sea_13
+	through = satal_bay
 }
 quick_strait = {
 	from = bredaf
 	to = hagik
-	through = new_sea_13
+	through = satal_bay
 }
 quick_strait = {
 	from = hranafall
 	to = hagik
-	through = new_sea_13
+	through = satal_bay
 }
 quick_strait = {
 	from = satal
 	to = skasgron
-	through = new_sea_13
+	through = satal_bay
 }
