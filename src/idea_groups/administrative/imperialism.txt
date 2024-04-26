@@ -1,0 +1,63 @@
+new idea_group imperialism_ideas = {
+	name = "Imperialism"
+	category = MIL
+	trigger = {
+		full_idea_group = state_administration_ideas
+	}
+	ideas = {
+		{
+			name = "The Law of the Force"
+			desc = "We have the right to conquer enemy land because we can."
+			modifier = {
+				core_creation = -0.1
+			}
+		}
+		{
+			name = "Long Tradition"
+			desc = "Our land has a long tradition. We shall put it to use."
+			modifier = {
+				global_unrest = -1
+				years_of_nationalism = -5
+			}
+		}
+		{
+			name = "Glorious Past"
+			desc = "Our glorious past helps us always keep the shine of glory."
+			modifier = {
+				prestige_from_land = 0.25
+				prestige_from_naval = 0.25
+			}
+		}
+		{
+			name = "Imperial Taxes"
+			desc = "Through imperial administration, we can collect many taxes."
+			modifier = {
+				tax_line = 1
+			}
+		}
+		{
+			name = "Imperial Fleet"
+			desc = "The fleet of an empire needs to be big."
+			modifier = {
+				naval_forcelimit_modifier = 0.1
+			}
+		}
+		{
+			name = "Imperial Army"
+			desc = "The army of an empire needs to be big."
+			modifier = {
+				land_forcelimit_modifier = 0.1
+			}
+		}
+		{
+			name = "Imperial Guard"
+			desc = "The imperial guard consists of just the best soldiers of our land."
+			modifier = {
+				discipline = 0.05
+			}
+		}
+	}
+	bonus = {
+		max_absolutism = 10
+	}
+}

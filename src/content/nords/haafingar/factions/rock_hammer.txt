@@ -2,7 +2,7 @@ static_modifiers:positive_stability += {
 	nc_rock_hammer_influence = 0.1
 }
 new named_effect add_rock_hammer_building_influence = {
-	foreach $building in buildings {
+	foreach $building in buildings [$building:id != manufactory] {
 		$building:on_built += {
 			owner = {
 				add_faction_influence = {

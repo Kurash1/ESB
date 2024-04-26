@@ -3,7 +3,7 @@ new estate mages = {
 	desc = ""
 	icon = 7
 	color = {
-		255 100 0
+		0 148 255
 	}
 	trigger = {
 		culture_group = snow_elven

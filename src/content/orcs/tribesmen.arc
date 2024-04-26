@@ -3,7 +3,7 @@ new estate tribesmen = {
 	desc = ""
 	icon = 6
 	color = {
-		204 0 0
+		127 0 0
 	}
 	trigger = {
 		culture_group = orc

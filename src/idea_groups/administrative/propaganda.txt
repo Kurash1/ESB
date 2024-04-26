@@ -1,0 +1,62 @@
+new idea_group propaganda_ideas = {
+	name = "Propaganda"
+	category = DIP
+	trigger = {
+		full_idea_group = administrative_ideas
+	}
+	ideas = {
+		{
+			name = "War Propaganda"
+			desc = "Good propaganda can inspire people to keep fighting."
+			modifier = {
+				war_exhaustion = -0.03
+			}
+		}
+		{
+			name = "Minister of Propaganda"
+			desc = "A minister of propaganda can be very beneficial."
+			modifier = {
+				diplomats = 1
+			}
+		}
+		{
+			name = "Influence Foreign Countries"
+			desc = "Because of our propaganda even other nations buy some of our stories."
+			modifier = {
+				improve_relation_modifier = 0.25
+			}
+		}
+		{
+			name = "Credibility"
+			desc = "By telling the truth at least sometimes or partly, we convey credibility."
+			modifier = {
+				diplomatic_reputation = 2
+			}
+		}
+		{
+			name = "Strive For Big Things"
+			desc = "We always strive for the biggest thing, that is the essence of our propaganda."
+			modifier = {
+				reform_progress_growth = 0.15
+			}
+		}
+		{
+			name = "General Vindication"
+			desc = "Our argumentation is as flexible as it has to be."
+			modifier = {
+				unjustified_demands = -0.25
+			}
+		}
+		{
+			name = "Duty to Win"
+			desc = "People of our country do not lose. Never."
+			modifier = {
+				siege_ability = 0.15
+				defensiveness = 0.15
+			}
+		}
+	}
+	bonus = {
+		army_line = 1
+	}
+}

@@ -3,7 +3,7 @@ new estate sons = {
 	desc = ""
 	icon = 5
 	color = {
-		0 153 0
+		255 216 0
 	}
 	trigger = {
 		culture_group = orc

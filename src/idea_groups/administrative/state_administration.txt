@@ -1,0 +1,63 @@
+new idea_group state_administration_ideas = {
+	name = "State Administration"
+	category = ADM
+	trigger = {
+		full_idea_group = administrative_ideas
+	}
+	ideas = {
+		{
+			name = "Community Law"
+			desc = "Community law will ensure that we keep control over distant provinces and thus increase our capabilities to maintain many states."
+			modifier = {
+				min_autonomy_in_territories = -0.1
+			}
+		}
+		{
+			name = "Administrative Law"
+			desc = "Administrative law keeps the administration transparent and incorrupt."
+			modifier = {
+				yearly_corruption = -0.1
+			}
+		}
+		{
+			name = "Inland Trade"
+			desc = "We need to support inland trade by building a road system."
+			modifier = {
+				build_cost = -0.15
+				caravan_power = 0.15
+			}
+		}
+		{
+			name = "Administrative Espionage"
+			desc = "Our eyes and ears need to be everywhere or we might miss an important detail."
+			modifier = {
+				global_spy_defence = 0.25
+				spy_offence = 0.15
+			}
+		}
+		{
+			name = "Steering Trade"
+			desc = "We need to steer trade to the direction where it is most profitable for us."
+			modifier = {
+				trade_steering = 0.15
+			}
+		}
+		{
+			name = "Enforcement of Progress"
+			desc = "Sometimes the peasant population and the unprogressive might be reluctant to accept technical advancements. We need to convince them that advancement is best for them."
+			modifier = {
+				reform_progress_growth = 0.15
+			}
+		}
+		{
+			name = "Simplification for Manufactory Foundings"
+			desc = "We simplify the process of founding manufactories to improve the production of goods in our country."
+			modifier = {
+				global_trade_goods_size_modifier = 0.1
+			}
+		}
+	}
+	bonus = {
+		governing_capacity_modifier = 0.25
+	}
+}

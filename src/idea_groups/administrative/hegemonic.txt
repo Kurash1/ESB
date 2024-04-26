@@ -1,0 +1,65 @@
+new idea_group hegemonic_ideas = {
+	name = "Hegemonic"
+	category = ADM
+	trigger = {
+		full_idea_group = administrative_ideas
+	}
+	ideas = {
+		{
+			name = "Imperial Bureaucracy"
+			desc = "A well-organized bureaucracy is essential for managing an empire. By investing in our imperial bureaucracy, we can improve our efficiency and increase our revenues."
+			modifier = {
+				tax_line = 1
+			}
+		}
+		{
+			name = "Imperial Prestige"
+			desc = "Our position as the hegemon of the world brings with it a certain prestige and respect. By cultivating this prestige, we can enhance our reputation and influence on the global stage."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Imperial Advisors"
+			desc = "As an empire, we have access to a wide range of advisors with diverse skills and expertise. By investing in these advisors, we can improve the quality of our decision-making and better serve the needs of our subjects."
+			modifier = {
+				advisor_pool = 2
+			}
+		}
+		{
+			name = "Imperial Governance"
+			desc = "Effective governance is crucial for maintaining control over a large and diverse empire. By investing in our governing capacity, we can better manage our territories and ensure the loyalty of our subjects."
+			modifier = {
+				governing_capacity_modifier = 0.1
+			}
+		}
+		{
+			name = "Imperial Military"
+			desc = "As the dominant military power in the world, it is important that we maintain a strong and well-equipped military. By investing in our imperial military, we can deter potential rivals and maintain order within our territories."
+			modifier = {
+				global_regiment_cost = -0.025
+			}
+		}
+		{
+			name = "Imperial Manpower"
+			desc = "An empire relies on the strength and productivity of its people. By investing in our imperial manpower, we can improve our military and economic strength."
+			modifier = {
+				global_manpower_modifier = 0.15
+			}
+		}
+		{
+			name = "Imperial Diplomacy"
+			desc = "As the dominant power in the world, it is important that we maintain strong diplomatic ties with other nations. By investing in our imperial diplomacy, we can more effectively project our influence abroad and shape the international order to our advantage."
+			modifier = {
+				envoy_travel_time = -0.25
+				diplomats = 1
+				diplomatic_upkeep = 1
+			}
+		}
+	}
+	bonus = {
+		legitimacy = 0.5
+		republican_tradition = 0.25
+		devotion = 0.5
+	}
+}

@@ -1,0 +1,64 @@
+new idea_group centralization_ideas = {
+	name = "Centralization"
+	category = ADM
+	trigger = {
+		full_idea_group = state_administration_ideas
+	}
+	ideas = {
+		{
+			name = "Minister of Construction"
+			desc = "The minister of construction will oversee our most important projects and reduce construction time considerably."
+			modifier = {
+				build_cost = -0.15
+				build_time = -0.25
+			}
+		}
+		{
+			name = "Central Production"
+			desc = "Concentrating our production in certain areas will raise our capacity to produce."
+			modifier = {
+				inflation_reduction = 0.03
+			}
+		}
+		{
+			name = "Metropolis Development"
+			desc = "We are used to planning big cities."
+			modifier = {
+				goods_line = 1
+			}
+		}
+		{
+			name = "Autonomy Reduction"
+			desc = "We are keen on reducing autonomy in our provinces to push back local elites."
+			modifier = {
+				global_supply_limit_modifier = 0.15
+				reinforce_speed = 0.25
+			}
+		}
+		{
+			name = "Central Recruiting"
+			desc = "Through the concentration of our people we can easily find men for the army."
+			modifier = {
+				global_autonomy = -0.05
+			}
+		}
+		{
+			name = "Central Administration"
+			desc = "Central Administration allows us to govern our provinces very effectively. However, we can only govern so many provinces this way."
+			modifier = {
+				yearly_absolutism = 0.15
+				max_absolutism = 10
+			}
+		}
+		{
+			name = "Central Tax Administration"
+			desc = "Central Tax Administration allows us to collect taxes more efficiently."
+			modifier = {
+				tax_line = 1
+			}
+		}
+	}
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+}

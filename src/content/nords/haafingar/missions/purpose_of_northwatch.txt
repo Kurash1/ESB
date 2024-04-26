@@ -90,10 +90,10 @@ While some voices say that it should serve as an embassy to the recently discove
 		}
 		{ #Center of Torture
 			name = "The Scaled Justice require additional locations"
+			trigger = {
+				has_country_flag = has_scaled_justice
+			}
 			effect = {
-				trigger = {
-					has_country_flag = has_scaled_justice
-				}
 				provinces:northwatch = {
 					quick_province_modifier = {
 						name = "Settlement Focus: Center of Torture"

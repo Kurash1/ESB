@@ -1,0 +1,179 @@
+new country_event estate_privileges_and_agendas_events.3 = {
+	title = "The Agenda of the Diet"
+	desc = "The Estates of [Root.GetName] have proposed agendas for the summoned Diet. Favoring one of the Estates here could have large benefits in the long term.\n\n[Root.GetCachedAgendasFlavorText]"
+	picture = thinking_people_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			foreach $estate in estates {
+				if [
+					has_estate = $estate
+					NOT = {
+						has_country_flag = `{$estate}_present_agenda`
+					}
+				] {
+					set_country_flag = `{$estate}_present_agenda`
+					generate_estate_agenda = $estate
+				}
+			}
+		}
+	}
+	
+	after = {
+		foreach $estate in estates {
+			clr_country_flag = `{$estate}_present_agenda`
+		}
+		clear_estate_agenda_cache = ROOT
+	}
+	
+	options = { }
+}
+new named_effect populate_agenda_options = {
+	foreach $estate in estates {
+		events:estate_privileges_and_agendas_events.3:options += {
+			{
+				name =* "The Proposal of the *$estate:name*"
+				trigger =* {
+					has_country_flag = *$estate*_present_agenda
+				}
+				effect =* {
+					start_estate_agenda = *$estate*
+				}
+			}
+		}
+		
+		new agenda `{$estate}_develop_x` = {
+			name =* "Increase Tax Income in [agenda_province.GetName]"
+			desc =* "The *$estate:name* request that we invest in the prosperity of their lands in [agenda_province.GetName]."
+			can_select = {
+				capital_scope = {
+					is_state_core = ROOT
+				}
+			}
+			pre_effect = { 
+				random_list = { 
+					1 = { 
+						random_owned_province = { 
+							limit = { 
+								is_state_core = ROOT
+								area_for_scope_province = { 
+									is_capital_of = ROOT
+								} 
+							} 
+							save_event_target_as = agenda_province 
+						} 
+					} 
+					2 = { 
+						trigger = { 
+							any_owned_province = { 
+								is_state_core = ROOT 
+								OR = { 
+									AND = { 
+										religion = ROOT 
+										OR = { 
+											culture = ROOT 
+											has_owner_accepted_culture = yes 
+										} 
+									} 
+								} 
+								region_for_scope_province = { 
+									is_capital_of = ROOT 
+								} 
+							} 
+						} 
+						random_owned_province = { 
+							limit = { 
+								is_state_core = ROOT 
+								OR = { 
+									AND = { 
+										religion = ROOT 
+										OR = { 
+											culture = ROOT 
+											has_owner_accepted_culture = yes 
+										} 
+									} 
+								} 
+								region_for_scope_province = { 
+									is_capital_of = ROOT 
+								} 
+							} 
+							save_event_target_as = agenda_province 
+						} 
+					} 
+					1 = { 
+						random_owned_province = { 
+							limit = { 
+								is_state_core = ROOT 
+							} 
+							save_event_target_as = agenda_province 
+						} 
+					} 
+				} 
+				event_target:agenda_province = { 
+					if = { 
+						limit = { 
+							check_variable = { 
+								which = province_adm_var 
+								value = 1 
+							} 
+						} 
+						set_variable = { 
+							which = province_adm_var 
+							value = 0 
+						} 
+					} 
+					export_to_variable = { 
+						which = province_adm_var 
+						value = trigger_value:base_tax 
+					} 
+					change_variable = { 
+						which = province_adm_var 
+						value = 2 
+					} 
+				} 
+			} 
+			provinces_to_highlight = { 
+				`province_id = event_target:agenda_province`
+			} 
+			fail_if = { 
+				event_target:agenda_province = { 
+					NOT = { owned_by = ROOT } 
+				} 
+			} 
+			task_requirements = { 
+				event_target:agenda_province = { 
+					base_tax = "province_adm_var" 
+				}
+			} 
+			task_completed_effect =* {
+				add_estate_loyalty = { 
+					estate = *$estate* 
+					loyalty = 10 
+				} 
+				add_prestige = 10 
+			} 
+			failing_effect =* { 
+				on_failed_agenda_effect = yes 
+				event_target:agenda_province = { 
+					if = { 
+						limit = { owned_by = ROOT } 
+						add_named_unrest = { 
+							name = local_clergy_displeased 
+							value = 5 
+						} 
+					} 
+				} 
+				add_estate_loyalty_modifier = { 
+					estate = *$estate* 
+					desc = EST_VAL_AGENDA_DENIED 
+					loyalty = -5 
+					duration = 7300 
+				} 
+			} 
+		}
+	
+		$estate:agendas += `{$estate}_develop_x`
+	}
+}

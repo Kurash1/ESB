@@ -15,7 +15,9 @@ new class insult = {
 			foreach $insult in insults {
 				new localisation `{$insult}` = "{$insult:text}"
 				$insult = {
-					$insult:trigger
+					trigger = {
+						$insult:trigger
+					}
 				}
 			}
 		}

@@ -99,6 +99,7 @@ new class special_survey = {
 		}
 	}
 }
+new localisation survey_completion_tt = "The following happens upon the completion of the Survey:"
 new effect start_special_survey = {
 	args = {
 		survey = special_survey
@@ -117,7 +118,7 @@ new effect start_special_survey = {
 		}
 		
 		when [args:show_tooltip == yes] {
-			custom_tooltip = "The following happens upon the completion of the Survey:"
+			custom_tooltip = survey_completion_tt
 			tooltip = {
 				args:survey:on_complete
 			}

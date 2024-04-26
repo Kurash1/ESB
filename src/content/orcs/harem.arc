@@ -3,7 +3,7 @@ new estate harem = {
 	desc = ""
 	icon = 4
 	color = {
-		0 51 0
+		255 0 220
 	}
 	trigger = {
 		culture_group = orc

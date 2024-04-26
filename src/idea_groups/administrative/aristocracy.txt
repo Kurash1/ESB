@@ -1,0 +1,65 @@
+new idea_group aristocracy_ideas = {
+	name = "Aristocratic"
+	category = MIL
+	trigger = {
+		full_idea_group = administrative_ideas
+	}
+	ideas = {
+		{
+			name = "Noble Knights"
+			desc = "Supporting cavalry requires an economic system that produces a large number of surplus horses. If we were to guarantee the privileges of our noble class not only would they be much happier they would do much of the work to produce the needed horses. Our court fool described it as service guarantees serfs."
+			modifier = {
+				cavalry_cost = -0.25
+				caravan_power = 0.15
+			}
+		}
+		{
+			name = "Military Traditions"
+			desc = "Military thought is constantly evolving and we ensure that our military thought evolves with it. By encouraging a tradition of service amongst our nobility, to be a man of status is to be a man who has won glory on the battlefield. Although bravery and stuff like that are always useful, there is nothing quite like outclassing your enemy to make it easy."
+			modifier = {
+				army_tradition = 0.5
+			}
+		}
+		{
+			name = "Local Nobility"
+			desc = "The nobility know they are simply better than normal people and will give their loyalty to those that are worthy. If we confirm their privileges, they will of course remember our largess and be more resistant to the inducements of foreign powers."
+			modifier = {
+				global_autonomy = -0.05
+				state_maintenance_modifier = -0.1
+			}
+		}
+		{
+			name = "Serfdom"
+			desc = "A foot soldier in the army is not quite the career that anyone wanted, what with the poor food, low pay, and virtually nonexistent medical services. If we were to tie our peasants to the land we would know exactly where to look for recruits."
+			modifier = {
+				global_unrest = 1
+				goods_line = 1
+			}
+		}
+		{
+			name = "Noble Officers"
+			desc = "Who leads our troops is an important choice. Our nobility is seeking to ensure that preference is given to them. It will give them a chance to show their valour by giving the enemy cold steel and we will allow them to do this."
+			modifier = {
+				army_tradition_decay = -0.01
+			}
+		}
+		{
+			name = "International Nobility"
+			desc = "International relations are a tricky business. Some say that the merchant class who are used to dealing with foreigners are best for this. Those who say this ignore the kindred ties that our noble families have established through the years, these ties should be taken advantage of to help our cause diplomatically."
+			modifier = {
+				diplomats = 1
+				improve_relation_modifier = 0.15
+			}
+		}
+		{
+			name = "Noble Connections"
+			desc = "The various mercenary groups of this continent are often headed by lesser nobles. By befriending the nobility, we can make use of their network of contacts to seek out more and larger groups of mercenary soldiers."
+			modifier = {
+				discipline = 0.05
+			}
+		}
+	}
+	bonus = {
+		prestige = 1
+	}
+}
