@@ -1,0 +1,61 @@
+new idea_group society_ideas = {
+	name = "Society"
+	category = DIP
+	trigger = {
+		full_idea_group = administrative_ideas
+	}
+	ideas = {
+		{
+			name = "War Bonds"
+			desc = "War bonds will help us to pay our soldiers."
+			modifier = {
+				land_maintenance_modifier = -0.05
+			}
+		}
+		{
+			name = "Exchange Program"
+			desc = "Exchange programs further understanding between peoples and improve our relations with other countries."
+			modifier = {
+				improve_relation_modifier = 0.25
+			}
+		}
+		{
+			name = "Establish Universities"
+			desc = "Universities help us to advance in education."
+			modifier = {
+				development_cost = -0.1
+			}
+		}
+		{
+			name = "Chances of Advancement"
+			desc = "Chances of advancement motivate people without a great family to work hard for their success."
+			modifier = {
+				advisor_cost = -0.1
+			}
+		}
+		{
+			name = "Alert Population"
+			desc = "Our people are alert to every threat."
+			modifier = {
+				global_spy_defence = 0.2
+			}
+		}
+		{
+			name = "Content People"
+			desc = "Content people are less likely to rise in rebellion."
+			modifier = {
+				global_unrest = -1
+			}
+		}
+		{
+			name = "Through thick and thin"
+			desc = "The solidarity of society is important for defending a nation."
+			modifier = {
+				land_morale_constant = 0.1
+			}
+		}
+	}
+	bonus = {
+		goods_line = 1
+	}
+}

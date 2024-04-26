@@ -1,0 +1,59 @@
+# Not having a building bonus is intentional, because administrative_efficiency is strong.
+new idea_group administrative_ideas = {
+	name = "Administrative"
+	category = ADM
+	ideas = {
+		{
+			name = "Imperial Census"
+			desc = "By conducting a census of our population we can ensure that everyone pays their proper tax share."
+			modifier = {
+				global_tax_modifier = 0.15
+			}
+		}
+		{
+			name = "Adaptability"
+			desc = "There is what is ours and what is part of our ancestral domain that will never be surrendered. A bit of flexibility here will see much more land being considered never surrenderable and should the worst happen the whole world will know our crusade to recover it will be just."
+			modifier = {
+				core_creation = -0.2
+			}
+		}
+		{
+			name = "State Bureaucracy"
+			desc = "Educating and employing bureaucrats should help us in governing our expanding territories."
+			modifier = {
+				administrative_efficiency = 0.05
+			}
+		}
+		{
+			name = "Bookkeeping"
+			desc = "Sometimes money is short and we need to borrow. Lenders always worry that they will not be paid back. By maintaining meticulous records, we will be able to ensure that everyone gets paid and that will allow us to negotiate lower rates of interest."
+			modifier = {
+				interest = -1
+			}
+		}
+		{
+			name = "Civil oversight over the military"
+			desc = "By conducting proper civil oversight of the army we can ensure that none of our money is wasted."
+			modifier = {
+				land_maintenance_modifier = -0.05
+			}
+		}
+		{
+			name = "Swift Incorporation policies"
+			desc = "Coming to the realisation, that incorporating newly acquired territory must be a swift endeavour, we streamlined the process."
+			modifier = {
+				global_autonomy = -0.05
+			}
+		}
+		{
+			name = "Civil Service"
+			desc = "By establishing a Civil Service of eager young bureaucrats will ensure that we are able to quickly adapt to new advances in administration and governance."
+			modifier = {
+				reform_progress_growth = 0.1
+			}
+		}
+	}
+	bonus = {
+		governing_capacity_modifier = 0.1
+	}
+}

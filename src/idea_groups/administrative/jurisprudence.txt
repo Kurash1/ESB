@@ -1,0 +1,61 @@
+new idea_group jurisprudence_ideas = {
+	name = "Jurisprudence"
+	category = ADM
+	trigger = {
+		full_idea_group = administrative_ideas
+	}
+	ideas = {
+		{
+			name = "Collection of Laws"
+			desc = "Laws give people security and foothold."
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Ministry of Justice"
+			desc = "The ministry of justice is occupied creating new laws and updating old ones."
+			modifier = {
+				yearly_corruption = -0.05
+			}
+		}
+		{
+			name = "Lawyer Tradition"
+			desc = "Our lawyers keep the land running."
+			modifier = {
+				global_autonomy = -0.1
+			}
+		}
+		{
+			name = "Business Law"
+			desc = "Business law is important to lay down some rules with the interaction with other countries."
+			modifier = {
+				goods_line = 1
+			}
+		}
+		{
+			name = "Anti Usury Laws"
+			desc = "Usury paralyzes the economy. We shall fight it."
+			modifier = {
+				interest = -1
+			}
+		}
+		{
+			name = "Public International Law"
+			desc = "Public international law determines some basic rules in the interactions of states."
+			modifier = {
+				state_governing_cost = -0.1
+			}
+		}
+		{
+			name = "Minority Rights"
+			desc = "Minority rights stabilize our realm and reduce uprisings."
+			modifier = {
+				global_unrest = -2
+			}
+		}
+	}
+	bonus = {
+		tax_line = 1
+	}
+}

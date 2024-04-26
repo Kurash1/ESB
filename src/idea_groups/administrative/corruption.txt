@@ -1,0 +1,63 @@
+new idea_group corruption_ideas = {
+	name = "Corruption"
+	category = ADM
+	trigger = {
+		full_idea_group = administrative_ideas
+	}
+	ideas = {
+		{
+			name = "Fighting high corruption"
+			desc = "By introducing petty corruption as an option in our country we can fight the dangerous fever of high corruption more effectively, all while leaving the benefits in place."
+			modifier = {
+				yearly_corruption = -0.05
+			}
+		}
+		{
+			name = "Foreign opportunities"
+			desc = "While we ourselves are clean of any corrupt endeavours officials in foreign countries may not be so much. We could acquire their help in our foreign affairs."
+			modifier = {
+				spy_offence = 0.1
+				global_spy_defence = -0.15
+			}
+		}
+		{
+			name = "Deals with magnates"
+			desc = "We know that extensive bureaucracy can slacken industries a lot. Offering our magnates a deal will increase production significantly but will likely result in reduced taxation as well."
+			modifier = {
+				global_tax_modifier = -0.1
+				production_efficiency = 0.1
+			}
+		}
+		{
+			name = "Supervisory complainment office"
+			desc = "By establish a proper bureau to report corrupt behaviour we strengthen the trust of our citiziens in the government."
+			modifier = {
+				global_unrest = -1
+			}
+		}
+		{
+			name = "Slacken construction regulations"
+			desc = "By cutting some corners in regulations for construction work we can save a significant amount of money"
+			modifier = {
+				build_cost = 0.1
+			}
+		}
+		{
+			name = "Lobby employment"
+			desc = "We ensure that our advisors get a comfortable position after their retirement. This way they will be willing to work for less money for us."
+			modifier = {
+				advisor_cost = -0.1
+			}
+		}
+		{
+			name = "Envy of others"
+			desc = "Our efforts in fighting high corruption have yielded a significant annoyance in other countries. Our increased resilience makes it far harder for them to intervene in our internal affairs."
+			modifier = {
+				prestige = -1
+			}
+		}
+	}
+	bonus = {
+		state_maintenance_modifier = -0.25
+	}
+}
