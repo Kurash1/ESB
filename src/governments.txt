@@ -407,6 +407,17 @@ new inheritable default_tribal_names = {
 	}
 }
 
+new government_names sybil_theocracy = {
+	inherit = default_theocracy_names
+	ruler_female = {
+		1 = "Sybil"
+		2 = "High Sybil"
+		3 = "Great Sybil"
+	}
+	trigger = {
+		has_reform = tier_1_sybildom
+	}
+}
 new government_names remnant_monarchy = {
 	inherit = default_monarchy_names
 	ruler_male = {

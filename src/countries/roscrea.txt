@@ -244,14 +244,19 @@ new country nymph_dance = {
 	name = "Nymph-Dance"
 	color = { 255 0 220 }
 	capital = rageld
+	government = theocracy
+	starting_reform = tier_1_sybildom
 	history += {
-		history_ruler = {
-			name = "Mulild"
-			dynasty = "Nymph-Dance"
-			adm = 2
-			dip = 2
-			mil = 0
-			age = 19
+		2568.1.1 = {
+			monarch = {
+				name = "Seif"
+				dynasty = "Nymph-Dance"
+				female = yes
+				adm = 2
+				dip = 2
+				mil = 0
+				birth_date = `{(2568-19)}.1.1`
+			}
 		}
 	}
 }

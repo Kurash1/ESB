@@ -508,7 +508,7 @@ new tradenode denramth = {
 	outgoings = {
 		{
 			node = winterhold
-			path = { rilrydr rilrydr_bay klet_pass new_sea_41 east_chill_coast coast_of_winterhold mareet danen winterhold }
+			path = { rilrydr rilrydr_bay klet_pass coast_of_volanlos east_chill_coast coast_of_winterhold mareet danen winterhold }
 		}
 	}
 }
@@ -521,7 +521,7 @@ new tradenode hjugdrior = {
 	outgoings = {
 		{
 			node = denramth
-			path = { hjugdrior new_sea_21 new_sea_22 coast_of_hliangryl rilrydr_bay rilrydr }
+			path = { hjugdrior dulgotik_bay coast_of_orimvast coast_of_hliangryl rilrydr_bay rilrydr }
 			control = { 1810.000000 2357.000000 1823.000000 2338.000000 1839.000000 2309.000000 1875.000000 2287.000000 1911.000000 2319.000000 }
 		}
 	}
@@ -539,7 +539,7 @@ new tradenode tide_coast = {
 		}
 		{
 			node = hjugdrior
-			path = { frorin frulcost coast_of_konhiedr new_sea_16 satal_bay sagjun bragdrir hjugdrior }
+			path = { frorin frulcost coast_of_konhiedr coast_of_vomth satal_bay sagjun bragdrir hjugdrior }
 		}
 	}
 }
@@ -552,11 +552,11 @@ new tradenode south_shatter = {
 	outgoings = {
 		{
 			node = northwatch
-			path = { stagnith new_sea_55 two_isle_coast coast_of_northwatch northwatch }
+			path = { stagnith coast_of_brindeilg two_isle_coast coast_of_northwatch northwatch }
 		}
 		{
 			node = hjugdrior
-			path = { stagnith new_sea_54 new_sea_29 new_sea_24 new_sea_18 hjugdrior }
+			path = { stagnith hamvir_valley path_of_poets fjaldorths_sea asmans_sea hjugdrior }
 		}
 	}
 }
@@ -569,7 +569,7 @@ new tradenode north_shatter = {
 	outgoings = {
 		{
 			node = south_shatter
-			path = { stargam new_sea_64 new_sea_63 new_sea_57 stagnith }
+			path = { stargam swamp_of_whispers great_mountain lake_thanhiend stagnith }
 		}
 	}
 }
@@ -582,7 +582,7 @@ new tradenode jehanna = {
 	outgoings = {
 		{
 			node = northwatch
-			path = { jehanna new_sea_76 forgotten_coast northwatch }
+			path = { jehanna coast_of_jehanna forgotten_coast northwatch }
 			control = { 1441.000000 2072.000000 1484.000000 2081.000000 1508.000000 2092.000000 }
 		}
 	}
@@ -596,7 +596,7 @@ new tradenode great_bay = {
 	outgoings = {
 		{
 			node = jehanna
-			path = { enclave new_sea_70 new_sea_71 new_sea_73 new_sea_75 jehanna }
+			path = { enclave orcish_coast coast_of_brulak coast_of_fharun coast_of_urzba jehanna }
 			control = { 1292.000000 1975.000000 1319.000000 1995.000000 1349.000000 2009.000000 1369.000000 2048.000000 1396.000000 2073.000000 }
 		}
 	}

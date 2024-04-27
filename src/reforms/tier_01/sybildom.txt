@@ -1,10 +1,4 @@
-on_actions:on_heir_needed_theocracy += {
-	events = {
-		theocracy.1
-		theocracy.2
-	}
-}
-new country_event theocracy.1 = {
+new country_event theocracy.2 = {
 	title = "Heir needed in $COUNTRY$"
 	desc = "As we currently have no designated heir for $MONARCHTITLE$ $MONARCH$, we have several options to pick from."
 	picture = ES_THEOCRACY_HEIR_ELECTIONS_eventPicture
@@ -12,10 +6,7 @@ new country_event theocracy.1 = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = {
-			has_government_attribute = no_heir_theocracy
-			has_government_attribute = special_election
-		}
+		has_reform = tier_1_sybildom
 	}
 	
 	immediate = {
@@ -45,6 +36,7 @@ new country_event theocracy.1 = {
 					age = 35
 					hidden = yes
 					culture = event_target:es_theocracy_province
+					female = yes
 				}
 					
 				add_prestige = 10
@@ -75,6 +67,7 @@ new country_event theocracy.1 = {
 							age = 35
 							culture = PREV
 							hidden = yes
+							female = yes
 						} 
 					}
 					add_opinion = { who = ROOT modifier = opinion_theocracy_noble }
@@ -93,6 +86,7 @@ new country_event theocracy.1 = {
 					age = 35
 					hidden = yes
 					culture = event_target:es_theocracy_province
+					female = yes
 				}
 				
 				add_years_of_income = 1.0
@@ -108,6 +102,7 @@ new country_event theocracy.1 = {
 					age = 35
 					hidden = yes
 					culture = event_target:es_theocracy_province
+					female = yes
 				}
 				
 				add_devotion = 10
@@ -128,6 +123,7 @@ new country_event theocracy.1 = {
 					age = 35
 					hidden = yes
 					culture = event_target:es_theocracy_province
+					female = yes
 				}
 				
 				add_devotion = 15
@@ -147,9 +143,27 @@ new country_event theocracy.1 = {
 		clr_country_flag = in_theocracy_heir_selection
 	}
 }
-new opinion_modifier opinion_theocracy_noble = {
-	name = "Same Dynasty as Heir"
-	opinion = 50
-	years = 50
-	yearly_decay = 1
+
+governments:theocracy:reform_levels:1 += new tier_1_sybildom = {
+	name = "Sybildom"
+	desc = ""
+	icon = "dibella_amulet"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = tier_1_sybildom
+	}
+	trigger = {
+		has_reform = tier_1_sybildom
+	}
+	custom_attributes = {
+		special_election = yes
+	}
+	modifiers = {
+		idea_cost = -0.025
+		female_advisor_chance = 0.8
+		production_efficiency = 0.1
+	}
+	ai = {
+		factor = 1
+	}
 }
