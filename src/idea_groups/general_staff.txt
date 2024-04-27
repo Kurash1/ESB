@@ -1,4 +1,4 @@
-new idea_group generalstab0 = {
+new idea_group general_staff_ideas = {
 	name = "General Staff"
 	category = MIL
 	ideas = {
@@ -68,7 +68,7 @@ new idea_group defensive_ideas = {
 	name = "Defensive"
 	category = MIL
 	trigger = {
-		full_idea_group = generalstab0
+		full_idea_group = general_staff_ideas
 	}
 	ideas = {
 		{
@@ -133,7 +133,7 @@ new idea_group offensive_ideas = {
 	name = "Offensive"
 	category = MIL
 	trigger = {
-		full_idea_group = generalstab0
+		full_idea_group = general_staff_ideas
 	}
 	ideas = {
 		{

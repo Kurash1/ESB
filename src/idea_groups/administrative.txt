@@ -65,7 +65,7 @@ new idea_group court_ideas = {
 		devotion = 0.5
 	}
 }
-new idea_group dezentra0 = {
+new idea_group decentralization_ideas = {
 	name = "Decentralization"
 	category = ADM
 	trigger = {
@@ -192,7 +192,7 @@ new idea_group indigenous_ideas = {
 		defensiveness = 0.25
 	}
 }
-new idea_group horde0 = {
+new idea_group horde_ideas = {
 	name = "Horde"
 	category = ADM
 	trigger = {
@@ -260,7 +260,7 @@ new idea_group horde0 = {
 		movement_speed = 0.15
 	}
 }
-new idea_group aristo0 = {
+new idea_group theocracy_ideas = {
 	name = "Theocracy"
 	category = ADM
 	trigger = {
@@ -323,7 +323,7 @@ new idea_group aristo0 = {
 		monthly_fanaticism_power = 1.0
 	}
 }
-new idea_group monarchie0 = {
+new idea_group monarchy_ideas = {
 	name = "Monarchy"
 	category = ADM
 	trigger = {
@@ -391,7 +391,7 @@ new idea_group monarchie0 = {
 		reduced_liberty_desire = 15
 	}
 }
-new idea_group republik0 = {
+new idea_group republican_ideas = {
 	name = "Republican"
 	category = ADM
 	trigger = {
@@ -455,7 +455,7 @@ new idea_group republik0 = {
 		reform_progress_growth = 0.1
 	}
 }
-new idea_group esb_native = {
+new idea_group native_ideas = {
 	name = "Native"
 	category = ADM
 	trigger = {
@@ -523,7 +523,7 @@ new idea_group dynastic_ideas = {
 	name = "Dynastic"
 	category = ADM
 	trigger = {
-		full_idea_group = monarchie0
+		full_idea_group = monarchy_ideas
 	}
 	ideas = {
 		{
@@ -582,11 +582,11 @@ new idea_group dynastic_ideas = {
 		loyalty_change_on_revoked = 0.25
 	}
 }
-new idea_group esb_absolutism = {
+new idea_group absolutistic_ideas = {
 	name = "Absolutistic"
 	category = ADM
 	trigger = {
-		full_idea_group = monarchie0
+		full_idea_group = monarchy_ideas
 	}
 	ideas = {
 		{

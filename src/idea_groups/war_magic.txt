@@ -1,4 +1,4 @@
-new idea_group esb_warmagic = {
+new idea_group war_magic_ideas = {
 	name = "War Magic"
 	category = MIL
 	trigger = {
@@ -64,7 +64,7 @@ new idea_group restoration_ideas = {
 	name = "Restoration"
 	category = MIL
 	trigger = {
-		full_idea_group = esb_warmagic
+		full_idea_group = war_magic_ideas
 	}
 	ideas = {
 		{
@@ -186,7 +186,7 @@ new idea_group destruction_ideas = {
 		siege_ability = 20%
 	}
 }
-new idea_group esb_dark_magic = {
+new idea_group dark_magic_ideas = {
 	name = "Dark Magic"
 	category = ADM
 	trigger = {
@@ -248,7 +248,7 @@ new idea_group esb_dark_magic = {
 		war_exhaustion = -0.02
 	}
 }
-new idea_group esb_bloodmagic = {
+new idea_group blood_magic_ideas = {
 	name = "Blood Magic"
 	category = MIL
 	trigger = {
@@ -312,7 +312,7 @@ new idea_group esb_bloodmagic = {
 		discipline = 0.05
 	}
 }
-new idea_group esb_watermagic = {
+new idea_group water_magic_ideas = {
 	name = "Water Magic"
 	category = MIL
 	trigger = {
@@ -377,7 +377,7 @@ new idea_group conjuration_ideas = {
 	name = "Conjuration"
 	category = MIL
 	trigger = {
-		full_idea_group = esb_warmagic
+		full_idea_group = war_magic_ideas
 	}
 	ideas = {
 		{
@@ -618,7 +618,7 @@ new idea_group soul_siphon_ideas = {
 		merchants = 1
 	}
 }
-new idea_group esb_flesh_magic = {
+new idea_group flesh_magic_ideas = {
 	name = "Flesh Magic"
 	category = MIL
 	trigger = {
