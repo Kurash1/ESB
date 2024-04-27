@@ -2,7 +2,8 @@ new area coast_of_winterhold = {
 	name = "Coast of Winterhold"
 	region = skyrim_sea
 }
-new province new_sea_33 = {
+new province coast_of_olenveld = {
+	name = "Coast of Olenveld"
 	inherit = sea_inherit
 	color = { 97 67 53 }
 	position = { 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 1910.000 2188.000 }
