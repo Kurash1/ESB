@@ -60,7 +60,7 @@ new idea_group exploration_ideas = {
 		merchants = 1
 	}
 	ai_will_do = {
-		factor = 0 # I (Kurashi) don't want ai to randomly colonize
+		factor = 1
 	}
 }
 new idea_group expansion_ideas = {
@@ -129,7 +129,7 @@ new idea_group expansion_ideas = {
 		min_autonomy_in_territories = -0.1
 	}
 }
-new idea_group kolonialimperium0 = {
+new idea_group colonial_empire_ideas = {
 	name = "Colonial Empire"
 	category = DIP
 	trigger = {

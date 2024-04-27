@@ -1,8 +1,7 @@
 new war_goal war_goal_orc_raid = {
-	type = take_province
-	title = "Take a province"
-	desc = "War goal is to take a province."
-	war_name = "$ORDER$$FIRST$ Conquest of $SECOND_NAME$"
+	type = superiority
+	title = "Orcish Raid"
+	war_name = "$ORDER$$FIRST$ Raid on $SECOND_NAME$"
 	attacker = {
 		badboy_factor = 0.75
 		prestige_factor = 1

@@ -140,7 +140,7 @@ new estate giants = {
 				has_estate_privilege = giants:recruit_tundrastriders
 			}
 			can_select = {
-				full_idea_group = fire0
+				full_idea_group = fire_ideas
 			}
 			on_granted = {
 				add_country_modifier = {

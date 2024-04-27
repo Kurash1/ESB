@@ -182,7 +182,7 @@ new government_reform tier_2_battlemages_domination = {
 		has_dlc = "Domination"
 	}
 	trigger = {
-		full_idea_group = esb_warmagic
+		full_idea_group = war_magic_ideas
 	}
 	modifiers = {
 		has_musketeer = yes
@@ -198,7 +198,7 @@ new government_reform tier_2_battlemages = {
 		NOT = { has_dlc = "Domination" }
 	}
 	trigger = {
-		full_idea_group = esb_warmagic
+		full_idea_group = war_magic_ideas
 	}
 	modifiers = {
 		fire_damage = 0.1

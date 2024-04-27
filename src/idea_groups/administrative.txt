@@ -65,7 +65,7 @@ new idea_group court_ideas = {
 		devotion = 0.5
 	}
 }
-new idea_group dezentra0 = {
+new idea_group decentralization_ideas = {
 	name = "Decentralization"
 	category = ADM
 	trigger = {
@@ -192,7 +192,7 @@ new idea_group indigenous_ideas = {
 		defensiveness = 0.25
 	}
 }
-new idea_group horde0 = {
+new idea_group horde_ideas = {
 	name = "Horde"
 	category = ADM
 	trigger = {
@@ -260,7 +260,7 @@ new idea_group horde0 = {
 		movement_speed = 0.15
 	}
 }
-new idea_group aristo0 = {
+new idea_group theocracy_ideas = {
 	name = "Theocracy"
 	category = ADM
 	trigger = {
@@ -323,7 +323,7 @@ new idea_group aristo0 = {
 		monthly_fanaticism_power = 1.0
 	}
 }
-new idea_group monarchie0 = {
+new idea_group monarchy_ideas = {
 	name = "Monarchy"
 	category = ADM
 	trigger = {
@@ -391,7 +391,7 @@ new idea_group monarchie0 = {
 		reduced_liberty_desire = 15
 	}
 }
-new idea_group republik0 = {
+new idea_group republican_ideas = {
 	name = "Republican"
 	category = ADM
 	trigger = {
@@ -455,7 +455,7 @@ new idea_group republik0 = {
 		reform_progress_growth = 0.1
 	}
 }
-new idea_group esb_native = {
+new idea_group native_ideas = {
 	name = "Native"
 	category = ADM
 	trigger = {
@@ -519,74 +519,74 @@ new idea_group esb_native = {
 		diplomatic_upkeep = 1
 	}
 }
-new idea_group esb_dynastic = {
+new idea_group dynastic_ideas = {
 	name = "Dynastic"
 	category = ADM
 	trigger = {
-		full_idea_group = monarchie0
+		full_idea_group = monarchy_ideas
 	}
 	ideas = {
 		{
-			name = "Dynastic 1"
-			desc = ""
+			name = "Royal birth register"
+			desc = "By establishing a register for any birth in the royal family we can ensure that any potential heir to our position is properly found at once."
 			modifier = {
 				heir_chance = 0.25
 			}
 		}
 		{
-			name = "Dynastic 2"
-			desc = ""
+			name = "Estate oaths"
+			desc = "By requiring all members of the estates to swear an oath on our government and country we ensure that they view us as legitimate."
 			modifier = {
 				monthly_heir_claim_increase = 0.05
 				legitimacy = 1
 			}
 		}
 		{
-			name = "Dynastic 3"
-			desc = ""
+			name = "Council of ministers"
+			desc = "Coming to the realisation that governing alone is a faulty endeavour we appointed a council of several ministers to aid us in this tas"
 			modifier = {
-				monthly_support_heir_gain = 0.1
-				improve_relation_modifier = 0.15
+				governing_capacity_modifier = 0.1
 			}
 		}
 		{
-			name = "Dynastic 4"
-			desc = ""
+			name = "The royal ball"
+			desc = "By holding a yearly royal ball we show the estates that we care for their well being."
 			modifier = {
-				diplomatic_reputation = 1.5
+				all_estate_loyalty_equilibrium = 0.05
 			}
 		}
 		{
-			name = "Dynastic 5"
-			desc = ""
+			name = "Just rulers"
+			desc = "We shall be just rulers for all our people."
 			modifier = {
-				vassal_income = 0.20
+				global_unrest = -1
 			}
 		}
 		{
-			name = "Dynastic 6"
-			desc = ""
+			name = "A pinnacle of faith and devotion"
+			desc = "By living after the tenants of the divines we are a role modell for our subjects."
 			modifier = {
-				vassal_forcelimit_bonus = 0.25
+				religious_unity = 0.1
 			}
 		}
 		{
-			name = "Dynastic 7"
-			desc = ""
+			name = "Prime ministers"
+			desc = "Supervising everything our ministers do ourselves is likewise just as tedious. A prime minister who does this in our stead should streamline this process."
 			modifier = {
-				liberty_desire_from_subject_development = -0.2
+				governing_cost = -0.1
 			}
 		}
 	}
 	bonus = {
-		monarch_lifespan = 0.1
+		allow_free_estate_privilege_revocation = yes
+		loyalty_change_on_revoked = 0.25
 	}
 }
-new idea_group esb_absolutism = {
+new idea_group absolutistic_ideas = {
 	name = "Absolutistic"
 	category = ADM
 	trigger = {
-		full_idea_group = monarchie0
+		full_idea_group = monarchy_ideas
 	}
 	ideas = {
 		{
