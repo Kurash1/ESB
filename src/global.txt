@@ -1,3 +1,11 @@
+new run_file add_all_idea_groups = {
+	type = command
+	effect = {
+		foreach $ in idea_groups {
+			add_idea_group $:id __ARC.FORCE_END_LINE__
+		}
+	}
+}
 new named_effect monuments_for_plebs = {
 	foreach $m in great_projects [
 		$m:start:name != "Black Mountain"

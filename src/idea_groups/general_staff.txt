@@ -261,7 +261,7 @@ new idea_group mobility_ideas = {
 		reserves_organisation = 0.5
 	}
 }
-new idea_group esb_longwar = {
+new idea_group extended_campaign_ideas = {
 	name = "Extended Campaign"
 	category = MIL
 	trigger = {
@@ -269,50 +269,50 @@ new idea_group esb_longwar = {
 	}
 	ideas = {
 		{
-			name = "Extended Campaign 1"
-			desc = ""
+			name = "Codification of the war tax"
+			desc = "By codifiying the war tax as a statute we can reduce it's running costs significantly."
 			modifier = {
 				war_taxes_cost_modifier = -0.5
 			}
 		}
 		{
-			name = "Extended Campaign 2"
-			desc = ""
+			name = "Rally the people"
+			desc = "The people must know that our war is just and our enemies are cruel. We shall show them that surrender is not an option."
 			modifier = {
 				war_exhaustion = -0.02
 			}
 		}
 		{
-			name = "Extended Campaign 3"
-			desc = ""
+			name = "Field Hospitals"
+			desc = "By establishing real hospitals near the frontline more wounded and sick soldiers will live to see another day of fighting."
 			modifier = {
 				manpower_recovery_speed = 0.15
 			}
 		}
 		{
-			name = "Extended Campaign 4"
-			desc = ""
+			name = "Bulwarks"
+			desc = "Our forts have been strengthened to the point that they are more mountains than actual fortresses. Defending them should be a breeze."
 			modifier = {
 				defensiveness = 0.3
 			}
 		}
 		{
-			name = "Extended Campaign 5"
-			desc = ""
+			name = "Living of the occupied territories"
+			desc = "Paying Soldiers during a long campaign becomes increasingly difficult. If we allow them to loot the occupied territories instead we can acquire more funds to pay them."
 			modifier = {
 				available_province_loot = 0.5
 			}
 		}
 		{
-			name = "Extended Campaign 6"
-			desc = ""
+			name = "Home front training camps"
+			desc = "By establishing training camps at the home front we can send properly trained soldiers for less cost to replace the fallen and fill the gaps."
 			modifier = {
 				reinforce_cost_modifier = -0.25
 			}
 		}
 		{
-			name = "Extended Campaign 7"
-			desc = ""
+			name = "The army marches on its stomach"
+			desc = "We recognised that not battles but logistics win wars. Our armies thus get ample provisions with them at all times to ensure survival of our soldiers."
 			modifier = {
 				land_attrition = -0.15
 			}

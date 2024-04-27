@@ -56,7 +56,7 @@ new idea_group diplomatic_ideas = {
 		reduced_stab_impacts = yes
 	}
 }
-new idea_group esb_prestigious = {
+new idea_group prestigious_ideas = {
 	name = "Prestigious"
 	category = DIP
 	trigger = {
@@ -64,51 +64,51 @@ new idea_group esb_prestigious = {
 	}
 	ideas = {
 		{
-			name = "Prestigious 1"
-			desc = ""
+			name = "Glorious combat"
+			desc = "The glory of combat is not to be neglected. We shall prevail terra marique."
 			modifier = {
 				prestige_from_land = 0.25
 				prestige_from_naval = 0.25
 			}
 		}
 		{
-			name = "Prestigious 2"
-			desc = ""
+			name = "National epos"
+			desc = "By writing down our past deeds as a nation we can demonstrate that they actually occured."
 			modifier = {
 				prestige_decay = -0.01
 			}
 		}
 		{
-			name = "Prestigious 3"
-			desc = ""
+			name = "Glorious court"
+			desc = "Our Court is so glorious everyone is astonished by it."
 			modifier = {
-				monthly_splendor = 1
+				monthly_splendor = 2
 			}
 		}
 		{
-			name = "Prestigious 4"
-			desc = ""
+			name = "Consort advisors"
+			desc = "By employing advisors our consort knows from their old home we can minimise spending."
 			modifier = {
 				advisor_cost = -0.15
 			}
 		}
 		{
-			name = "Prestigious 5"
-			desc = ""
+			name = "State parties"
+			desc = "We invite even foreign rulers and diplomats to our state banquetts and balls."
 			modifier = {
 				improve_relation_modifier = 0.15
 			}
 		}
 		{
-			name = "Prestigious 6"
-			desc = ""
+			name = "Cuius regio eius religio"
+			desc = "There should only be only those religions in our realm our rulers approve of."
 			modifier = {
 				prestige_per_development_from_conversion = 0.5
 			}
 		}
 		{
-			name = "Prestigious 7"
-			desc = ""
+			name = "Grande lobby"
+			desc = "Our royal lobby is so grandeous it inspires nothing but awe."
 			modifier = {
 				prestige = 1.5
 			}
@@ -179,7 +179,7 @@ new idea_group influence_ideas = {
 		unjustified_demands = -0.5
 	}
 }
-new idea_group esb_feudal = {
+new idea_group feudal_ideas = {
 	name = "Feudal"
 	category = ADM
 	trigger = {
@@ -187,51 +187,51 @@ new idea_group esb_feudal = {
 	}
 	ideas = {
 		{
-			name = "Feudal 1"
-			desc = ""
+			name = "By the grace of the divines"
+			desc = "We rule by the grace of the gods."
 			modifier = {
 				legitimacy = 1
 				devotion = 1
 			}
 		}
 		{
-			name = "Feudal 2"
-			desc = ""
+			name = "Experienced levies"
+			desc = "Our levies are more experienced than those of other nations."
 			modifier = {
 				army_tradition = 0.5
 			}
 		}
 		{
-			name = "Feudal 3"
-			desc = ""
+			name = "Deals with the nobility"
+			desc = "By striking deals with the nobility we can increase the provided amount of levies significantly."
 			modifier = {
 				manpower_recovery_speed = 0.15
 			}
 		}
 		{
-			name = "Feudal 4"
-			desc = ""
+			name = "Church taxes"
+			desc = "By collecting the church taxes for the church we can earn a bit of money for our service."
 			modifier = {
 				global_tax_modifier = 0.15
 			}
 		}
 		{
-			name = "Feudal 5"
-			desc = ""
+			name = "Knightly tournaments"
+			desc = "By hosting knightly tournaments we can show other nations our chivalry."
 			modifier = {
 				diplomatic_reputation = 1.5
 			}
 		}
 		{
-			name = "Feudal 6"
-			desc = ""
+			name = "Estate advisors"
+			desc = "The estates offered us to provide advisors for our court."
 			modifier = {
-				advisor_pool = 1
+				advisor_cost = -0.1
 			}
 		}
 		{
-			name = "Feudal 7"
-			desc = ""
+			name = "Shielding our vassals"
+			desc = "We only have the best interest of our vassals in mind and they know that."
 			modifier = {
 				reduced_liberty_desire = 10
 			}
