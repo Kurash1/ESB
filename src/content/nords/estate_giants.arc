@@ -9,12 +9,19 @@ new estate giants = {
 		is_race = nord
 	}
 	country_modifier_happy = {
+		manpower_recovery_speed = 0.1
+		land_maintenance_modifier = -0.05
 	}
 	country_modifier_neutral = {
+		manpower_recovery_speed = 0.1
 	}
 	country_modifier_angry = {
+		manpower_recovery_speed = -0.05
+		land_maintenance_modifier = 0.05
+		global_unrest = 2
 	}
 	land_ownership_modifier = {
+		giants_loyalty_modifier = 0.2
 	}
 	base_influence = 5
 	privileges = {

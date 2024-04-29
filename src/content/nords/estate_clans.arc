@@ -15,12 +15,17 @@ new estate clans = {
 		}
 	}
 	country_modifier_happy = {
-		state_maintenance_modifier = -0.5
+		state_maintenance_modifier = -0.25
+		global_tax_modifier = 0.2
+		development_cost = -0.1
 	}
 	country_modifier_neutral = {
+		state_maintenance_modifier = -0.25
 	}
 	country_modifier_angry = {
-		state_maintenance_modifier = 0.5
+		state_maintenance_modifier = 0.25
+		global_tax_modifier = -0.2
+		global_unrest = 2
 	}
 	land_ownership_modifier = {
 		clans_loyalty_modifier = 0.2
