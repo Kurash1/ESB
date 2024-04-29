@@ -1,0 +1,136 @@
+new effect create_develop_manpower_agenda = {
+	args = estate
+	transpile = {
+		new agenda `{args}_develop_manpower` = {
+			name =* "Increase Manpower in [agenda_province.GetName]"
+			desc =* "The *args:name* request that we invest in the prosperity of their lands in [agenda_province.GetName]."
+			can_select = {
+				capital_scope = {
+					is_state_core = ROOT
+				}
+			}
+			pre_effect = { 
+				random_list = { 
+					1 = { 
+						random_owned_province = { 
+							limit = { 
+								is_state_core = ROOT
+								area_for_scope_province = { 
+									is_capital_of = ROOT
+								} 
+							} 
+							save_event_target_as = agenda_province 
+						} 
+					} 
+					2 = { 
+						trigger = { 
+							any_owned_province = { 
+								is_state_core = ROOT 
+								OR = { 
+									AND = { 
+										religion = ROOT 
+										OR = { 
+											culture = ROOT 
+											has_owner_accepted_culture = yes 
+										} 
+									} 
+								} 
+								region_for_scope_province = { 
+									is_capital_of = ROOT 
+								} 
+							} 
+						} 
+						random_owned_province = { 
+							limit = { 
+								is_state_core = ROOT 
+								OR = { 
+									AND = { 
+										religion = ROOT 
+										OR = { 
+											culture = ROOT 
+											has_owner_accepted_culture = yes 
+										} 
+									} 
+								} 
+								region_for_scope_province = { 
+									is_capital_of = ROOT 
+								} 
+							} 
+							save_event_target_as = agenda_province 
+						} 
+					} 
+					1 = { 
+						random_owned_province = { 
+							limit = { 
+								is_state_core = ROOT 
+							} 
+							save_event_target_as = agenda_province 
+						} 
+					} 
+				} 
+				event_target:agenda_province = { 
+					if = { 
+						limit = { 
+							check_variable = { 
+								which = province_mil_var 
+								value = 1 
+							} 
+						} 
+						set_variable = { 
+							which = province_mil_var 
+							value = 0 
+						} 
+					} 
+					export_to_variable = { 
+						which = province_mil_var 
+						value = trigger_value:base_manpower
+					} 
+					change_variable = { 
+						which = province_mil_var 
+						value = 2 
+					} 
+				} 
+			} 
+			provinces_to_highlight = { 
+				`province_id = event_target:agenda_province`
+			} 
+			fail_if = { 
+				event_target:agenda_province = { 
+					NOT = { owned_by = ROOT } 
+				} 
+			} 
+			task_requirements = { 
+				event_target:agenda_province = { 
+					base_manpower = "province_mil_var" 
+				}
+			} 
+			task_completed_effect =* {
+				add_estate_loyalty = { 
+					estate = *args* 
+					loyalty = 10 
+				} 
+				add_prestige = 10 
+			} 
+			failing_effect =* { 
+				on_failed_agenda_effect = yes 
+				event_target:agenda_province = { 
+					if = { 
+						limit = { owned_by = ROOT } 
+						add_named_unrest = { 
+							name = local_*args*_displeased 
+							value = 5 
+						} 
+					} 
+				} 
+				add_estate_loyalty_modifier = { 
+					estate = *args* 
+					desc = EST_VAL_AGENDA_DENIED 
+					loyalty = -5 
+					duration = 7300 
+				} 
+			} 
+		}
+	
+		args:agendas += `{args}_develop_manpower`
+	}
+}

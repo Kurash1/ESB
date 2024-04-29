@@ -108,3 +108,4 @@ new estate tribesmen = {
 	}
 	base_influence = 20
 }
+create_develop_manpower_agenda = tribesmen

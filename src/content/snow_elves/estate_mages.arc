@@ -92,3 +92,4 @@ new estate mages = {
 	base_influence = 30
 }
 
+create_develop_production_agenda = mages

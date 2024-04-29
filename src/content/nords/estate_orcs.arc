@@ -99,3 +99,4 @@ new estate orcs = {
 	}
 	base_influence = 5
 }
+create_develop_manpower_agenda = orcs

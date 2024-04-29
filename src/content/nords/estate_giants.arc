@@ -253,3 +253,6 @@ special_units:rajput:localisation := {
 	MODIFIER_ALLOWED_RAJPUT_FRACTION = "Tundrastrider Force Limit Fraction"
 	RAJPUT_DESC = ""
 }
+create_develop_tax_agenda = giants
+create_develop_production_agenda = giants
+create_develop_manpower_agenda = giants

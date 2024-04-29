@@ -95,3 +95,5 @@ new estate priests = {
 	}
 	base_influence = 20
 }
+
+create_develop_tax_agenda = priests

@@ -107,3 +107,4 @@ new estate sons = {
 	
 	base_influence = 25
 }
+create_develop_tax_agenda = sons

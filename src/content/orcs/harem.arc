@@ -110,3 +110,4 @@ new estate harem = {
 		
 	base_influence = 25
 }
+create_develop_production_agenda = harem

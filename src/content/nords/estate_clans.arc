@@ -189,3 +189,4 @@ on_actions:on_loan_repaid += {
 		remove_estate_privilege = clans:indebted_to_the_clans
 	}
 }
+create_develop_tax_agenda = clans

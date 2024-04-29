@@ -166,3 +166,4 @@ new event_modifier warrior_retirement_homes = {
 		local_autonomy = 0.05
 	}
 }
+create_develop_manpower_agenda = warriors

@@ -19,3 +19,4 @@ new estate tongues = {
 	}
 	base_influence = 0
 }
+create_develop_manpower_agenda = tongues

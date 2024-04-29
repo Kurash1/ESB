@@ -130,3 +130,5 @@ on_actions:on_loan_repaid += {
 		remove_estate_privilege = nobility:ask_for_money
 	}
 }
+
+create_develop_manpower_agenda = nobility

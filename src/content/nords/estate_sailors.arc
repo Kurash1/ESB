@@ -110,3 +110,4 @@ new estate sailors = {
 	}
 	base_influence = 25
 }
+create_develop_production_agenda = sailors
