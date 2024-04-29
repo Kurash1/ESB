@@ -167,3 +167,7 @@ new event_modifier warrior_retirement_homes = {
 	}
 }
 create_develop_manpower_agenda = warriors
+create_hire_advisor_agenda = { estate = warriors category = MIL }
+create_fire_advisor_agenda = { estate = warriors category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = warriors category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = warriors category = { full = MIL loc = Mil name = "Military" } }

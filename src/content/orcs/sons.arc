@@ -108,3 +108,7 @@ new estate sons = {
 	base_influence = 25
 }
 create_develop_tax_agenda = sons
+create_hire_advisor_agenda = { estate = sons category = ADM }
+create_fire_advisor_agenda = { estate = sons category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = sons category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = sons category = { full = MIL loc = Mil name = "Military" } }

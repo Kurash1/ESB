@@ -97,3 +97,7 @@ new estate priests = {
 }
 
 create_develop_tax_agenda = priests
+create_hire_advisor_agenda = { estate = priests category = ADM }
+create_fire_advisor_agenda = { estate = priests category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = priests category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = priests category = { full = MIL loc = Mil name = "Military" } }

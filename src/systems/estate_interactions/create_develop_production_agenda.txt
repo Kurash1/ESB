@@ -111,8 +111,7 @@ new effect create_develop_production_agenda = {
 				} 
 				add_prestige = 10 
 			} 
-			failing_effect =* { 
-				on_failed_agenda_effect = yes 
+			failing_effect =* {
 				event_target:agenda_province = { 
 					if = { 
 						limit = { owned_by = ROOT } 

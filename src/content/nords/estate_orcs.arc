@@ -100,3 +100,7 @@ new estate orcs = {
 	base_influence = 5
 }
 create_develop_manpower_agenda = orcs
+create_hire_advisor_agenda = { estate = orcs category = MIL }
+create_fire_advisor_agenda = { estate = orcs category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = orcs category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = orcs category = { full = MIL loc = Mil name = "Military" } }

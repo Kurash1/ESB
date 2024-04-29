@@ -132,3 +132,7 @@ on_actions:on_loan_repaid += {
 }
 
 create_develop_manpower_agenda = nobility
+create_hire_advisor_agenda = { estate = nobility category = MIL }
+create_fire_advisor_agenda = { estate = nobility category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = nobility category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = nobility category = { full = MIL loc = Mil name = "Military" } }

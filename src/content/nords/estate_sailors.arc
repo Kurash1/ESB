@@ -111,3 +111,7 @@ new estate sailors = {
 	base_influence = 25
 }
 create_develop_production_agenda = sailors
+create_hire_advisor_agenda = { estate = sailors category = DIP }
+create_fire_advisor_agenda = { estate = sailors category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = sailors category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = sailors category = { full = MIL loc = Mil name = "Military" } }

@@ -109,3 +109,7 @@ new estate tribesmen = {
 	base_influence = 20
 }
 create_develop_manpower_agenda = tribesmen
+create_hire_advisor_agenda = { estate = tribesmen category = MIL }
+create_fire_advisor_agenda = { estate = tribesmen category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = tribesmen category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = tribesmen category = { full = MIL loc = Mil name = "Military" } }
