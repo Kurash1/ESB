@@ -12,14 +12,19 @@ new estate warriors = {
 		}
 	}
 	country_modifier_happy = {
-		manpower_recovery_speed = 0.5
+		manpower_recovery_speed = 0.2 
+		land_maintenance_modifier = -0.1
 	}
 	country_modifier_neutral = {
+		manpower_recovery_speed = 0.2 
 	}
 	country_modifier_angry = {
-		manpower_recovery_speed = -0.5
+		manpower_recovery_speed = -0.1
+		land_maintenance_modifier = 0.1
+		global_unrest = 2
 	}
 	land_ownership_modifier = {
+		warriors_loyalty_modifier = 0.2
 	}
 	privileges = {
 		new warrior_land_rights = {

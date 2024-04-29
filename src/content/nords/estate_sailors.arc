@@ -13,14 +13,19 @@ new estate sailors = {
 		num_of_ports = 1
 	}
 	country_modifier_happy = {
-		sailors_recovery_speed = 0.5
+		sailors_recovery_speed = 0.2 
+		naval_maintenance_modifier = -0.1
 	}
 	country_modifier_neutral = {
+		sailors_recovery_speed = 0.2 
 	}
 	country_modifier_angry = {
-		sailors_recovery_speed = -0.5
+		sailors_recovery_speed = -0.1
+		naval_maintenance_modifier = 0.1
+		global_unrest = 2
 	}
 	land_ownership_modifier = {
+		sailors_loyalty_modifier = 0.2
 	}
 	privileges = {
 		new sailor_land_rights = {
