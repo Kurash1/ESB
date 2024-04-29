@@ -1,0 +1,44 @@
+new effect create_hire_advisor_agenda = {
+	args = {
+		estate = estate
+		category = string
+	}
+	transpile = {
+		new agenda `{args:estate}_hire_advisor` = {
+			name =* "Hire an Advisor"
+			desc =* "The *args:estate:name* desire the [Root.Monarch.GetTitle] to hire a new advisor."
+			can_select =* {
+				NOT = {
+					employed_advisor = {
+						category = *args:category*
+					}
+				}
+			}
+			task_requirements =* { 
+				employed_advisor = {
+					category = *args:category*
+				}
+				is_in_deficit = no
+			}
+			selection_weight = {
+				factor = 1
+			}
+			task_completed_effect =* {
+				add_estate_loyalty = { 
+					estate = *args:estate*
+					loyalty = 10
+				}
+			}
+			failing_effect =* {
+				add_estate_loyalty_modifier = { 
+					estate = *args:estate*
+					desc = EST_VAL_AGENDA_DENIED 
+					loyalty = -5 
+					duration = 7300 
+				} 
+			}
+		}
+	
+		args:estate:agendas += `{args:estate}_hire_advisor`
+	}
+}

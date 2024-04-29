@@ -189,3 +189,8 @@ on_actions:on_loan_repaid += {
 		remove_estate_privilege = clans:indebted_to_the_clans
 	}
 }
+create_develop_tax_agenda = clans
+create_hire_advisor_agenda = { estate = clans category = ADM }
+create_fire_advisor_agenda = { estate = clans category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = clans category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = clans category = { full = MIL loc = Mil name = "Military" } }

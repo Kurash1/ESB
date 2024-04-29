@@ -1,0 +1,86 @@
+new effect create_fire_advisor_agenda = {
+	args = {
+		estate = estate
+		category = {
+			full = string
+			loc = string
+			name = string
+		}
+	}
+	transpile = {
+		new agenda `{args:estate}_fire_{args:category:full}_advisor` = {
+			name =* "Fire our *args:category:name* Advisor"
+			desc =* "[Root.*args:category:loc*_Advisor.GetTitle] [Root.*args:category:loc*_Advisor.GetName] has insulted the *args:estate:name*. They demand that we fire [Root.*args:category:loc*_Advisor.GetHerHim]!"
+			can_select =* {
+				employed_advisor = {
+					category = *args:category:full*
+				}
+			}
+			immediate_effect =* { 
+				hidden_effect = { 
+					set_country_flag = need_to_fire_*args:category:full*_advisor 
+				} 
+			} 
+			on_invalid =* { 
+				clr_country_flag = need_to_fire_*args:category:full*_advisor 
+			} 
+			task_requirements =* { 
+				custom_trigger_tooltip = { 
+					tooltip = fire_adm_advisor_tooltip 
+					has_country_flag = just_fired_*args:category:full*_advisor 
+				} 
+			}
+			task_completed_effect =* {
+				add_estate_loyalty = { 
+					estate = *args:estate*
+					loyalty = 10
+				}
+				clr_country_flag = just_fired_*args:category:full*_advisor 
+				clr_country_flag = need_to_fire_*args:category:full*_advisor 
+			}
+			invalid_trigger =* { 
+				NOT = { 
+					employed_advisor = { 
+						category = ADM 
+					} 
+				} 
+				NOT = { has_country_flag = just_fired_*args:category:full*_advisor } 
+			} 
+			failing_effect =* {
+				add_estate_loyalty_modifier = { 
+					estate = *args:estate*
+					desc = EST_VAL_AGENDA_DENIED 
+					loyalty = -5 
+					duration = 7300 
+				} 
+				clr_country_flag = need_to_fire_*args:category:full*_advisor 
+			}
+		}
+	
+		args:estate:agendas += `{args:estate}_fire_{args:category:full}_advisor`
+	}
+}
+on_actions:on_pre_adm_advisor_fired += {
+	if = {
+		limit = {
+			has_country_flag = need_to_fire_ADM_advisor
+		}
+		set_country_flag = just_fired_ADM_advisor
+	}
+}
+on_actions:on_pre_dip_advisor_fired += {
+	if = {
+		limit = {
+			has_country_flag = need_to_fire_DIP_advisor
+		}
+		set_country_flag = just_fired_DIP_advisor
+	}
+}
+on_actions:on_pre_mil_advisor_fired += {
+	if = {
+		limit = {
+			has_country_flag = need_to_fire_MIL_advisor
+		}
+		set_country_flag = just_fired_MIL_advisor
+	}
+}

@@ -92,3 +92,8 @@ new estate mages = {
 	base_influence = 30
 }
 
+create_develop_production_agenda = mages
+create_hire_advisor_agenda = { estate = mages category = DIP }
+create_fire_advisor_agenda = { estate = mages category = { full = ADM loc = Adm name = "Administrative" } }
+create_fire_advisor_agenda = { estate = mages category = { full = DIP loc = Dip name = "Diplomatic" } }
+create_fire_advisor_agenda = { estate = mages category = { full = MIL loc = Mil name = "Military" } }

@@ -433,6 +433,55 @@ new decision form_falkreath = {
 		}
 	}
 }
+new country wrothgar = {
+	inherit = nordic_country
+	primary_culture = haafingarian
+	tag = WRO
+	name = "Wrothgar"
+	adj = "Wrothgarian"
+	color = {
+		0 15 100
+	}
+	starting_reform = tier_1_hold
+	capital = jehanna
+}
+new decision form_wrothgar = {
+	name = "Form Wrothgar"
+	major = yes
+	potential = {
+		is_race = nord
+		capital_scope = {
+			region = wrothgar
+		}
+		NOT = {
+			exists = wrothgar
+			has_reform = tier_1_hold
+		}
+	}
+	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
+		calc_true_if = {
+			amount = 45
+			regions:wrothgar = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+	}
+	provinces_to_highlight = {
+		region = wrothgar
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		form_hold = wrothgar
+		
+		add_government_reform = tier_1_hold
+		regions:wrothgar = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
 new country orkreath = {
 	inherit = kreath_orc_country
 	primary_culture = kreath_orc
@@ -477,6 +526,128 @@ new decision form_orkreath = {
 		regions:kreath = {
 			add_permanent_claim = ROOT
 		}
+	}
+}
+new country orsinium = {
+	inherit = wrothgar_orc_country
+	tag = ORS
+	name = "Orsinium"
+	adj = "Orcish"
+	color = {
+		0 135 15
+	}
+	capital = enclave
+}
+new decision form_orsinium = {
+	name = "Form Orsinium"
+	major = yes
+	potential = {
+		primary_culture = stronghold_orc
+		NOT = {
+			exists = orsinium
+		}  
+	}
+	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
+		owns_core_province = igrun
+		owns_core_province = pandrum
+		owns_core_province = luccin
+		owns_core_province = enclave
+		owns_core_province = agluk
+		owns_core_province = marag
+		owns_core_province = bagrakh
+		owns_core_province = tumnosh
+		owns_core_province = tuul
+		owns_core_province = shar
+		owns_core_province = burska
+		owns_core_province = fharun
+		owns_core_province = murtag
+		capital_scope = {
+			has_province_flag = orc_stronghold
+		}
+	}
+	provinces_to_highlight = {
+		OR = {
+			province_id = igrun
+			province_id = pandrum
+			province_id = luccin
+			province_id = enclave
+			province_id = agluk
+			province_id = marag
+			province_id = bagrakh
+			province_id = tumnosh
+			province_id = tuul
+			province_id = shar
+			province_id = burska
+			province_id = fharun
+			province_id = murtag
+		}
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		change_tag = orsinium
+		swap_free_idea_group = yes
+		regions:wrothgar = {
+			add_permanent_claim = ROOT
+		}
+		capital_scope = {
+			quick_province_modifier = {
+				id = orsinium_city
+				name = "Orsinium"
+				modifier = {
+					local_development_cost_modifier = -0.25
+					tax_income = 12
+					trade_goods_size = 1
+				}
+			}
+		}
+	}
+}
+new country shatul = {
+	inherit = wrothgar_orc_country
+	tag = STL
+	name = "Shatul"
+	adj = "Shatul"
+	color = {
+		124 111 20
+	}
+	capital = tuul
+}
+new decision form_shatul = {
+	name = "Form Shatul"
+	major = yes
+	potential = {
+		OR = {
+			tag = shar
+			tag = tuul
+		}
+		NOT = {
+			exists = shatul
+		}  
+	}
+	allow = {
+		NOT = { has_country_flag = no_formation_allowed }
+		if [tag = shar] {
+			NOT = { exists = tuul }
+		}
+		if [tag = tuul] {
+			NOT = { exists = shar }
+		}
+		owns_core_province = shar
+		owns_core_province = tuul
+	}
+	provinces_to_highlight = {
+		OR = {
+			province_id = tuul
+			province_id = shar
+			owned_by = shar
+			owned_by = tuul
+		}
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		change_tag = shatul
+		swap_free_idea_group = yes
 	}
 }
 new country rift = {
