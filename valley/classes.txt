@@ -67,6 +67,7 @@ new class modifier_definition = {
 		name = string
 		is_percentage = bool
 		trigger = named_trigger
+		base_value = string?
 	}
 	on_create = {
 		when [this:is_percentage == yes] {

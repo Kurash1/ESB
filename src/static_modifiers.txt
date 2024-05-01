@@ -439,8 +439,9 @@ new static_modifier base_values = {
 	global_expedition_speed = 1
 	survey_experience_gain = 1
 	
-	monthly_magicka = 1
-	magicka_gain_modifier = 1
+	foreach $ in modifier_definitions [exists = $:base_value] {
+		$ = $:base_value
+	}
 	
 	cav_to_inf_ratio = 0.2
 	max_absolutism = 30

@@ -1,6 +1,7 @@
 new modifier_definition magicka_gain_modifier = {
 	name = "Magicka Gain Modifier"
 	is_percentage = yes
+	base_value = 1
 }
 new script_variable magicka_gain_var = {
 	tag = "magicka-monthly"
@@ -26,6 +27,7 @@ new script_variable monthly_magicka_from_ruler = {
 new modifier_definition monthly_magicka = {
 	name = "Monthly Magicka"
 	is_percentage = no
+	base_value = 1
 }
 new script_variable monthly_magicka_from_modifier = {
 	tag = "magicka-monthly"
@@ -46,6 +48,21 @@ new script_variable monthly_magicka_var = {
 	}
 }
 
+new modifier_definition max_magicka_modifier = {
+	name = "Max Gain Modifier"
+	is_percentage = yes
+	base_value = 1
+}
+new script_variable max_magicka_modifier_var = {
+	tag = "magicka-monthly"
+	name = "Max Magicka Modifier"
+	calculate = {
+		&max_magicka_modifier_var &= modifier:max_magicka_modifier
+		
+		if [&max_magicka_modifier_var < 0.1] { &max_magicka_modifier_var := 0.1 }
+	}
+}
+
 new script_variable max_magicka_from_development = {
 	tag = "magicka-monthly"
 	name = "Max Magicka from Development"
@@ -53,12 +70,27 @@ new script_variable max_magicka_from_development = {
 		&max_magicka_from_development &= total_development
 	}
 }
-new script_variable max_magicka = {
+new modifier_definition max_magicka = {
+	name = "Max Magicka"
+	is_percentage = no
+	base_value = 100
+}
+new script_variable max_magicka_from_modifier = {
+	tag = "magicka-monthly"
+	name = "Max Magicka from Modifiers"
+	calculate = {
+		&max_magicka_from_modifier &= modifier:max_magicka
+	}
+}
+
+new script_variable max_magicka_var = {
 	tag = "magicka-monthly"
 	name = "Max Magicka"
 	calculate = {
-		&max_magicka := 100 #base
-		&max_magicka += max_magicka_from_development
+		&max_magicka_var := max_magicka_from_modifier
+		&max_magicka_var += max_magicka_from_development
+		
+		&max_magicka_var *= max_magicka_modifier_var
 	}
 }
 
@@ -68,8 +100,12 @@ new script_variable magicka = {
 	calculate = {
 		&magicka += monthly_magicka_var
 		
-		if [&magicka > max_magicka] {
-			&magicka := max_magicka
+		if [&magicka > max_magicka_var] {
+			&magicka := max_magicka_var
 		}
 	}
 }
+
+
+
+
