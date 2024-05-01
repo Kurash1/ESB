@@ -40,26 +40,30 @@ new class survey = {
 					duration = -1
 				}
 				set_country_flag = surveying_*this:id*
-				&survey_progress := 0
-				&survey_progress_percentage := 0
-				
-				surveys:*this:id*:province_group = {
-					ROOT = {
-						export_to_variable = {
-							which = survey_temp
-							value = trigger_value:province_size
-							who = PREV
+				hidden_effect = {
+					&survey_progress := 0
+					&survey_progress_percentage := 0
+					
+					surveys:*this:id*:province_group = {
+						ROOT = {
+							export_to_variable = {
+								which = survey_temp
+								value = trigger_value:province_size
+								who = PREV
+							}
+							
+							if [has_discovered = PREV] {
+								&survey_temp := 0
+							}
+							
+							&survey_length += survey_temp
 						}
-						
-						if [has_discovered = PREV] {
-							&survey_temp := 0
-						}
-						
-						&survey_length += survey_temp
 					}
 				}
 			}
 		}
+		
+		new localisation `survey_{this:id}` = `{this:name}`
 		
 		customizable_localizations:GetActiveSurvey:texts += {
 			{

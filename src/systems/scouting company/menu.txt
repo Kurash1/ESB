@@ -149,8 +149,14 @@ on_actions:on_monthly_pulse += {
 		survey_calculate_expenses
 		survey_calculate_fund_sum
 		
-		survey_calculate_passive_activities
-		
-		survey_calculate_active_survey
+		if [OR = {
+			has_country_modifier = currently_surveying
+			has_country_modifier = currently_passive_surveying
+		}] {
+			survey_calculate_active_survey
+		}
+		else {
+			survey_calculate_passive_activities
+		}
 	}
 }
