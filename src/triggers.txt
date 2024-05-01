@@ -22,7 +22,10 @@ new trigger has_longships = {
 		backup = trigger
 	}
 	transpile = {
-		if [has_dlc = "Domination"] {
+		if [
+			has_dlc = "Domination"
+			ai = no #cus ai can't build them
+		] {
 			num_of_galleass = args:num
 		}
 		else {

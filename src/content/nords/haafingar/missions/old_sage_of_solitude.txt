@@ -7,10 +7,12 @@ mission_trees:solitude += {
 		y = 1
 		required = old_solitude
 		trigger = {
-			any_army = {
-				is_ruler_commanding_unit = yes
-				location = {
-					province_id = solitude
+			if [ai = no] {
+				any_army = {
+					is_ruler_commanding_unit = yes
+					location = {
+						province_id = solitude
+					}
 				}
 			}
 		}

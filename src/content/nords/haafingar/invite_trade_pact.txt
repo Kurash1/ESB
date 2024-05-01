@@ -26,7 +26,7 @@ new diplomatic_action establish_trade_pact_member = {
 	}
 
 	ai_will_do = { # this is a trigger
-		always = yes
+		num_of_free_diplomatic_relations = 1
 	}
 	
 	ai_acceptance = {

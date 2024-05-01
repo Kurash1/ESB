@@ -17,6 +17,9 @@ mission_trees:solitude += {
 		}
 		effect = {
 			add_mercantilism = 10
+			provinces:northwatch = {
+				set_province_flag = ai_desire_development
+			}
 		}
 	}
 }

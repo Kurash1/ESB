@@ -23,7 +23,7 @@ new estate giants = {
 	land_ownership_modifier = {
 		giants_loyalty_modifier = 0.2
 	}
-	base_influence = 5
+	base_influence = 15
 	privileges = {
 		new sponsor_giant_hunts = {
 			name = "Sponsor Giant Hunts"

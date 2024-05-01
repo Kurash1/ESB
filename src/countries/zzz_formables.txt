@@ -28,13 +28,10 @@ new decision form_roscrea = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 60
-			regions:roscrea = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:roscrea = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -77,13 +74,10 @@ new decision form_the_shatter = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 40
-			regions:the_shatter = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:the_shatter = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -126,13 +120,10 @@ new decision form_eastmarch = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 60
-			regions:eastmarch = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:eastmarch = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -168,13 +159,10 @@ new decision form_winterhold = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 50
-			regions:winterhold = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:winterhold = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -217,13 +205,10 @@ new decision form_pale = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 40
-			regions:pale = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:pale = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -269,13 +254,10 @@ new decision form_whiterun = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 50
-			regions:whiterun = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:whiterun = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -318,13 +300,10 @@ new decision form_hjaalmarch = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 40
-			regions:hjaalmarch = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:hjaalmarch = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -356,8 +335,10 @@ new decision form_haafingar = {
 		capital_scope = {
 			region = haafingar
 		}
+		if [ai = no] {
+			NOT = { tag = solitude }
+		}
 		NOT = {
-			tag = solitude
 			exists = haafingar
 			has_reform = tier_1_hold
 		}
@@ -368,13 +349,13 @@ new decision form_haafingar = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 30
-			regions:haafingar = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:haafingar = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		if [ai = yes] { #This is so ai still desires to unite haafingar as solitude
+			always = no
 		}
 	}
 	effect = {
@@ -411,13 +392,10 @@ new decision form_falkreath = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 25
-			regions:kreath = {
-				type = all 
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:kreath = {
+			type = all 
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	provinces_to_highlight = {
@@ -460,13 +438,10 @@ new decision form_wrothgar = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 45
-			regions:wrothgar = {
-				type = all 
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:wrothgar = {
+			type = all 
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	provinces_to_highlight = {
@@ -506,13 +481,10 @@ new decision form_orkreath = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 25
-			regions:kreath = {
-				type = all 
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:kreath = {
+			type = all 
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	provinces_to_highlight = {
@@ -534,7 +506,7 @@ new country orsinium = {
 	name = "Orsinium"
 	adj = "Orcish"
 	color = {
-		0 135 15
+		0 100 0
 	}
 	capital = enclave
 }
@@ -674,13 +646,10 @@ new decision form_the_rift = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 70
-			regions:rift = {
-				type = all 
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:rift = {
+			type = all 
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	provinces_to_highlight = {
@@ -694,5 +663,97 @@ new decision form_the_rift = {
 		regions:rift = {
 			add_permanent_claim = ROOT
 		}
+	}
+}
+new decision form_craglorn = {
+	name = "Form Craglorn"
+	major = yes
+	potential = {
+		primary_culture = duraki
+		NOT = {
+			has_global_flag = formed_craglorn
+		}  
+	}
+	allow = {
+		regions:craglorn = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+	}
+	provinces_to_highlight = {
+		region = craglorn
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		quick_country_modifier = {
+			name = "High Kingdom of the Craglorn"
+			modifier = {
+				governing_capacity_modifier = 0.1
+				diplomatic_reputation = 2
+				diplomats = 1
+			}
+		}
+		new localisation CRAGLORN_COUNTRY = "Craglorn"
+		override_country_name = CRAGLORN_COUNTRY
+		set_government_rank = 3
+		
+		regions:pinewood = {
+			add_permanent_claim = ROOT
+		}
+		set_global_flag = formed_craglorn
+	}
+}
+new decision king_in_the_reach = {
+	name = "Declare King in the Reach"
+	major = yes
+	potential = {
+		primary_culture = reachmen
+		NOT = {
+			has_global_flag = king_in_the_reach
+		}
+	}
+	allow = {
+		owns_or_non_sovereign_subject_of = lost_valley_redoubt
+		owns_or_non_sovereign_subject_of = dread_crone_rock
+		owns_or_non_sovereign_subject_of = karthspire
+		owns_or_non_sovereign_subject_of = markarth
+		owns_or_non_sovereign_subject_of = kolskeggr
+		owns_or_non_sovereign_subject_of = old_hroldan
+		owns_or_non_sovereign_subject_of = sungard
+		owns_or_non_sovereign_subject_of = rebels_cairn
+		owns_or_non_sovereign_subject_of = karthwasten
+		owns_or_non_sovereign_subject_of = karthwatch
+	}
+	provinces_to_highlight = {
+		OR = {
+			province_id = lost_valley_redoubt
+			province_id = dread_crone_rock
+			province_id = karthspire
+			province_id = markarth
+			province_id = kolskeggr
+			province_id = old_hroldan
+			province_id = sungard
+			province_id = rebels_cairn
+			province_id = karthwasten
+			province_id = karthwatch
+		}
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		quick_country_modifier = {
+			name = "King in the Reach"
+			modifier = {
+				governing_capacity_modifier = 0.1
+				manpower_recovery_speed = 0.1
+				land_forcelimit_modifier = 0.1
+			}
+		}
+		set_government_rank = 2
+		
+		regions:reach = {
+			add_permanent_claim = ROOT
+		}
+		set_global_flag = king_in_the_reach
 	}
 }

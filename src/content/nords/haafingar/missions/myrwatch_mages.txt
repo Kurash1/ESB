@@ -8,16 +8,27 @@ mission_trees:solitude += {
 		y = 5
 		trigger = {
 			owns = myrwatch
-			provinces:myrwatch = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
+			if [ai = no] {
+				provinces:myrwatch = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
 				}
+			}
+			else {
+				&ai_fort_mission_timer < 1
 			}
 		}
 		effect = {
+			if [ai = yes] {
+				provinces:myrwatch = {
+					add_building = fort_15th
+				}
+				&ai_fort_mission_timer += 10
+			}
 			provinces:myrwatch = {
 				quick_province_modifier = {
 					name = "Myrwatch Mages"
