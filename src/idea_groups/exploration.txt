@@ -128,6 +128,9 @@ new idea_group expansion_ideas = {
 	bonus = {
 		min_autonomy_in_territories = -0.1
 	}
+	ai_will_do = {
+		factor = 0
+	}
 }
 new idea_group colonial_empire_ideas = {
 	name = "Colonial Empire"
@@ -189,5 +192,8 @@ new idea_group colonial_empire_ideas = {
 	}
 	bonus = {
 		diplomatic_upkeep = 1
+	}
+	ai_will_do = {
+		factor = 0
 	}
 }

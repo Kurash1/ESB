@@ -28,13 +28,10 @@ new decision form_roscrea = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 60
-			regions:roscrea = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:roscrea = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -77,13 +74,10 @@ new decision form_the_shatter = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 40
-			regions:the_shatter = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:the_shatter = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -126,13 +120,10 @@ new decision form_eastmarch = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 60
-			regions:eastmarch = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:eastmarch = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -168,13 +159,10 @@ new decision form_winterhold = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 50
-			regions:winterhold = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:winterhold = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -217,13 +205,10 @@ new decision form_pale = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 40
-			regions:pale = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:pale = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -269,13 +254,10 @@ new decision form_whiterun = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 50
-			regions:whiterun = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:whiterun = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -318,13 +300,10 @@ new decision form_hjaalmarch = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 40
-			regions:hjaalmarch = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:hjaalmarch = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	effect = {
@@ -356,8 +335,10 @@ new decision form_haafingar = {
 		capital_scope = {
 			region = haafingar
 		}
+		if [ai = no] {
+			NOT = { tag = solitude }
+		}
 		NOT = {
-			tag = solitude
 			exists = haafingar
 			has_reform = tier_1_hold
 		}
@@ -368,13 +349,13 @@ new decision form_haafingar = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 30
-			regions:haafingar = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:haafingar = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		if [ai = yes] { #This is so ai still desires to unite haafingar as solitude
+			always = no
 		}
 	}
 	effect = {
@@ -411,13 +392,10 @@ new decision form_falkreath = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 25
-			regions:kreath = {
-				type = all 
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:kreath = {
+			type = all 
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	provinces_to_highlight = {
@@ -460,13 +438,10 @@ new decision form_wrothgar = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 45
-			regions:wrothgar = {
-				type = all 
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:wrothgar = {
+			type = all 
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	provinces_to_highlight = {
@@ -506,13 +481,10 @@ new decision form_orkreath = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 25
-			regions:kreath = {
-				type = all 
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:kreath = {
+			type = all 
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	provinces_to_highlight = {
@@ -674,13 +646,10 @@ new decision form_the_rift = {
 	}
 	allow = {
 		NOT = { has_country_flag = no_formation_allowed }
-		calc_true_if = {
-			amount = 70
-			regions:rift = {
-				type = all 
-				owned_by = ROOT
-				is_core = ROOT
-			}
+		regions:rift = {
+			type = all 
+			owned_by = ROOT
+			is_core = ROOT
 		}
 	}
 	provinces_to_highlight = {

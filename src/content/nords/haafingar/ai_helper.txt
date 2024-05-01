@@ -1,9 +1,9 @@
-on_actions:on_five_year_pulse += {
+on_actions:on_four_year_pulse += {
 	if [OR = { 
 		tag = solitude
 		tag = haafingar
 	}] {
-		&ai_fort_mission_timer -= 2
+		&ai_fort_mission_timer -= 1
 		log = "Ai Five Year Development Helper Attempt"
 		random_owned_province [
 			OR = {
