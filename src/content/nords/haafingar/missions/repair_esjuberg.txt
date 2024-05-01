@@ -7,16 +7,28 @@ mission_trees:solitude += {
 		y = 1
 		required = three_clans_of_solitude
 		trigger = {
-			provinces:esjuberg = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
+			if [ai = no] {
+				provinces:esjuberg = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
 				}
+			}
+			else {
+				&ai_fort_mission_timer < 1
 			}
 		}
 		effect = {
+			if [ai = yes] {
+				provinces:esjuberg = {
+					add_building = fort_15th
+				}
+				&ai_fort_mission_timer += 10
+			}
+			
 			provinces:esjuberg = {
 				add_base_tax = 1
 				add_base_production = 1

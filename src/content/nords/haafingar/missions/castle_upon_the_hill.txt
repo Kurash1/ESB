@@ -8,16 +8,28 @@ mission_trees:solitude += {
 		required = repair_esjuberg
 		trigger = {
 			owns = solitude
-			provinces:solitude = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
+			if [ai = no] {
+				provinces:solitude = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
 				}
+			}
+			else {
+				&ai_fort_mission_timer < 1
 			}
 		}
 		effect = {
+			if [ai = yes] {
+				provinces:solitude = {
+					add_building = fort_15th
+				}
+				&ai_fort_mission_timer += 10
+			}
+			
 			new_custom_tooltip = "The monument §YCastle Dour§! is created in §Y[{provinces:solitude}.GetName]§! at Noteworthy level.\n"
 			
 			hidden_effect = {

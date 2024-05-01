@@ -12,16 +12,28 @@ mission_trees:solitude += {
 				owned_by = ROOT
 			}
 			owns = karthwatch
-			provinces:karthwatch = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
+			if [ai = no] {
+				provinces:karthwatch = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
 				}
+			}
+			else {
+				&ai_fort_mission_timer < 1
 			}
 		}
 		effect = {
+			if [ai = yes] {
+				provinces:karthwatch = {
+					add_building = fort_15th
+				}
+				&ai_fort_mission_timer += 10
+			}
+			
 			provinces:karthwatch = {
 				change_culture = ROOT
 				change_religion = ROOT
@@ -38,7 +50,10 @@ mission_trees:solitude += {
 				}
 				
 				release = karthald
-				create_march = karthald
+				create_subject = {
+					subject_type = march_elector
+					subject = karthald
+				}
 				countries:karthald = {
 					form_hold = karthald
 					add_government_reform = tier_1_hold

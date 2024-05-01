@@ -120,10 +120,29 @@ mission_trees:solitude += {
 			owns = northwatch
 			provinces:northwatch = {
 				development = 15
-				fort_level = 2
+			}
+			if [ai = no] {
+				provinces:northwatch = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+				}
+			}
+			else {
+				&ai_fort_mission_timer < 1
 			}
 		}
 		effect = {
+			if [ai = yes] {
+				provinces:northwatch = {
+					add_building = fort_15th
+				}
+				&ai_fort_mission_timer += 10
+			}
+			
 			country_event = haafingar.1
 			show_event_insights = {
 				tooltip = "This event will allow us to choose the settlment focus for Northwatch."

@@ -90,12 +90,31 @@ The blessing of the steed is a blessing of war, and thus it is only right for th
 			owns = hraggstad
 			provinces:hraggstad = {
 				development = 15
-				fort_level = 2
+			}
+			if [ai = no] {
+				provinces:hraggstad = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+				}
+				&ai_fort_mission_timer < 1
 			}
 			has_adm_advisor_of_level = 1
 			has_mil_advisor_of_level = 1
 		}
 		effect = {
+			if [ai = yes] {
+				provinces:hraggstad = {
+					add_building = fort_15th
+				}
+			}
+			else {
+				&ai_fort_mission_timer += 10
+			}
+			
 			country_event = haafingar.2
 			show_event_insights = {
 				tooltip = "This event will allow us to choose the settlment focus for Hraggstad."

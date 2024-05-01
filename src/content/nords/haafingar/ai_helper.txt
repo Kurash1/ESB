@@ -1,0 +1,28 @@
+on_actions:on_five_year_pulse += {
+	if [OR = { 
+		tag = solitude
+		tag = haafingar
+	}] {
+		&ai_fort_mission_timer -= 2
+		log = "Ai Five Year Development Helper Attempt"
+		random_owned_province [
+			OR = {
+				AND = {
+					has_province_flag = ai_desire_development
+					NOT = { development = 16 }
+				}
+				AND = {
+					has_province_flag = ai_desire_high_development
+					NOT = { development = 31 }
+				}
+			}
+		] {
+			add_random_development = 1
+			log = "Ai Five Year Development Helper Developed [This.GetName]"
+		}
+	}
+}
+new script_variable ai_fort_mission_timer = {
+	name = "Ai Fort Mission Timer"
+	initial_value = 0
+}

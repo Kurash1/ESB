@@ -12,7 +12,9 @@ mission_trees:solitude += {
 		trigger = {
 			army_size = 20
 			num_of_generals = 1
-			faction_in_power = nc_red_wolf
+			if [ai = no] {
+				faction_in_power = nc_red_wolf
+			}
 			mil_power = 300
 		}
 		effect = {
