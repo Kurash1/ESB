@@ -40,7 +40,7 @@ new script_variable monthly_magicka_var = {
 	name = "Monthly Magicka"
 	calculate = {
 		&monthly_magicka_var := monthly_magicka_from_ruler
-		&monthly_magicka_var := monthly_magicka_from_modifier
+		&monthly_magicka_var += monthly_magicka_from_modifier
 		
 		&monthly_magicka_var *= magicka_gain_var
 	}
