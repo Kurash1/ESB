@@ -665,3 +665,95 @@ new decision form_the_rift = {
 		}
 	}
 }
+new decision form_craglorn = {
+	name = "Form Craglorn"
+	major = yes
+	potential = {
+		primary_culture = duraki
+		NOT = {
+			has_global_flag = formed_craglorn
+		}  
+	}
+	allow = {
+		regions:craglorn = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+	}
+	provinces_to_highlight = {
+		region = craglorn
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		quick_country_modifier = {
+			name = "High Kingdom of the Craglorn"
+			modifier = {
+				governing_capacity_modifier = 0.1
+				diplomatic_reputation = 2
+				diplomats = 1
+			}
+		}
+		new localisation CRAGLORN_COUNTRY = "Craglorn"
+		override_country_name = CRAGLORN_COUNTRY
+		set_government_rank = 3
+		
+		regions:pinewood = {
+			add_permanent_claim = ROOT
+		}
+		set_global_flag = formed_craglorn
+	}
+}
+new decision king_in_the_reach = {
+	name = "Declare King in the Reach"
+	major = yes
+	potential = {
+		primary_culture = reachmen
+		NOT = {
+			has_global_flag = king_in_the_reach
+		}
+	}
+	allow = {
+		owns_or_non_sovereign_subject_of = lost_valley_redoubt
+		owns_or_non_sovereign_subject_of = dread_crone_rock
+		owns_or_non_sovereign_subject_of = karthspire
+		owns_or_non_sovereign_subject_of = markarth
+		owns_or_non_sovereign_subject_of = kolskeggr
+		owns_or_non_sovereign_subject_of = old_hroldan
+		owns_or_non_sovereign_subject_of = sungard
+		owns_or_non_sovereign_subject_of = rebels_cairn
+		owns_or_non_sovereign_subject_of = karthwasten
+		owns_or_non_sovereign_subject_of = karthwatch
+	}
+	provinces_to_highlight = {
+		OR = {
+			province_id = lost_valley_redoubt
+			province_id = dread_crone_rock
+			province_id = karthspire
+			province_id = markarth
+			province_id = kolskeggr
+			province_id = old_hroldan
+			province_id = sungard
+			province_id = rebels_cairn
+			province_id = karthwasten
+			province_id = karthwatch
+		}
+		NOT = { owned_by = ROOT }
+	}
+	effect = {
+		quick_country_modifier = {
+			name = "King in the Reach"
+			modifier = {
+				governing_capacity_modifier = 0.1
+				manpower_recovery_speed = 0.1
+				land_forcelimit_modifier = 0.1
+			}
+		}
+		set_government_rank = 2
+		
+		regions:reach = {
+			add_permanent_claim = ROOT
+		}
+		set_global_flag = king_in_the_reach
+	}
+}
