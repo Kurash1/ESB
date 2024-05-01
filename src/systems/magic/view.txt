@@ -1,0 +1,12 @@
+new decision view_magicka_stuff = {
+	name = "View Magicka Stuff"
+	potential = {
+		ai = no
+	}
+	allow = { always = no }
+	effect = {
+		foreach $ in variables [$:tag:contains = "magicka"] {
+			new_custom_tooltip = "{$:name}: [{$}.GetValue]"
+		}
+	}
+}

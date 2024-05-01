@@ -1,0 +1,75 @@
+new modifier_definition magicka_gain_modifier = {
+	name = "Magicka Gain Modifier"
+	is_percentage = yes
+}
+new script_variable magicka_gain_var = {
+	tag = "magicka-monthly"
+	name = "Magicka Gain Modifier"
+	calculate = {
+		&magicka_gain_var &= modifier:magicka_gain_modifier
+		
+		if [&magicka_gain_var < 0.1] { &magicka_gain_var := 0.1 }
+	}
+}
+
+new script_variable monthly_magicka_from_ruler = {
+	tag = "magicka-monthly"
+	name = "Monthly Magicka from Ruler"
+	calculate = {
+		&monthly_magicka_from_ruler &= ADM
+		&monthly_magicka_from_ruler &= DIP
+		&monthly_magicka_from_ruler &= MIL
+		
+		&monthly_magicka_from_ruler *= 0.05
+	}
+}
+new modifier_definition monthly_magicka = {
+	name = "Monthly Magicka"
+	is_percentage = no
+}
+new script_variable monthly_magicka_from_modifier = {
+	tag = "magicka-monthly"
+	name = "Monthly Magicka from Modifiers"
+	calculate = {
+		&monthly_magicka_from_modifier &= modifier:monthly_magicka
+	}
+}
+
+new script_variable monthly_magicka_var = {
+	tag = "magicka-monthly"
+	name = "Monthly Magicka"
+	calculate = {
+		&monthly_magicka_var := monthly_magicka_from_ruler
+		&monthly_magicka_var := monthly_magicka_from_modifier
+		
+		&monthly_magicka_var *= magicka_gain_var
+	}
+}
+
+new script_variable max_magicka_from_development = {
+	tag = "magicka-monthly"
+	name = "Max Magicka from Development"
+	calculate = {
+		&max_magicka_from_development &= total_development
+	}
+}
+new script_variable max_magicka = {
+	tag = "magicka-monthly"
+	name = "Max Magicka"
+	calculate = {
+		&max_magicka := 100 #base
+		&max_magicka += max_magicka_from_development
+	}
+}
+
+new script_variable magicka = {
+	tag = "magicka-monthly"
+	name = "Magicka"
+	calculate = {
+		&magicka += monthly_magicka_var
+		
+		if [&magicka > max_magicka] {
+			&magicka := max_magicka
+		}
+	}
+}
