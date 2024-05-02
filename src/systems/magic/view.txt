@@ -8,5 +8,9 @@ new decision view_magicka_stuff = {
 		foreach $ in variables [$:tag:contains = "magicka"] {
 			new_custom_tooltip = "{$:name}: [{$}.GetValue]"
 		}
+		
+		add_magicka = 10
+		add_magicka = 0
+		add_magicka = -10
 	}
 }
