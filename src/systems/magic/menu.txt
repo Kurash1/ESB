@@ -1,0 +1,47 @@
+interface_files:countrytechnologyview:countrytechnologyview += {
+	guiButtonType = {
+		name = "open_magic_menu"
+		position = { x = (118 + 107 * 2) y = 113 }
+		quadTextureSprite = "GFX_achievement_menu"
+		scripted = yes
+	}
+	iconType = {
+		name = "magic_menu"
+		spriteType = "GFX_empty_custom_mechanic_overlay"
+		position = { x = (575 - 571) y = (110 - 36) }
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "close_magic_menu"
+		position = { x = (864 - 571 - 124) y = (673 - 36 - 124) }
+		quadTextureSprite = "button_type_4"
+		buttonText = "CLOSE"
+		buttonFont = "vic_18"
+		scripted = yes
+	}
+}
+new custom_button open_magic_menu = {
+	tooltip = "Open Magic Menu"
+	potential = {
+		NOT = {
+			open_custom_mechanic
+		}
+	}
+	effect = {
+		set_country_flag = show_magic_menu
+	}
+}
+new custom_icon magic_menu = {
+	potential = {
+		has_country_flag = show_magic_menu
+	}
+}
+new custom_button close_magic_menu = {
+	tooltip = "Close Magic Menu"
+	potential = {
+		has_country_flag = show_magic_menu
+	}
+	effect = {
+		clr_country_flag = show_magic_menu
+	}
+}
