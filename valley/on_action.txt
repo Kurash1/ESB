@@ -88,7 +88,14 @@ new on_action on_yearly_pulse_2 = { }
 new on_action on_yearly_pulse_3 = { }
 new on_action on_yearly_pulse_4 = { }
 new on_action on_yearly_pulse_5 = { }
-new on_action on_bi_yearly_pulse = { }
+new named_effect bi_yearly_events = {
+	800 = 0
+}
+new on_action on_bi_yearly_pulse = {
+	random_events = {
+		bi_yearly_events
+	}
+}
 new on_action on_bi_yearly_pulse_2 = { }
 new on_action on_bi_yearly_pulse_3 = { }
 new on_action on_bi_yearly_pulse_4 = { }
