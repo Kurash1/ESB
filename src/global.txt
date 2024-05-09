@@ -1,3 +1,11 @@
+new named_effect bi_yearly_events = {
+	800 = 0
+}
+on_actions:on_bi_yearly_pulse += {
+	random_events = {
+		bi_yearly_events
+	}
+}
 new run_file add_all_idea_groups = {
 	type = command
 	effect = {
@@ -32,7 +40,7 @@ new localisation IDEA_GROUP_REMOVED_EFFECT = "$EFFECT$"
 new custom_icon custom_mechanic_overlay = {
 	potential = {
 		NOT = {
-			has_country_flag = show_technology
+			open_custom_mechanic
 		}
 	}
 }

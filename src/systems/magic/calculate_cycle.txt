@@ -1,0 +1,15 @@
+on_actions:on_monthly_pulse += {
+	if [ai = no] {
+		calculate_magicka_cycle
+	}
+}
+new named_effect calculate_magicka_cycle = {
+	foreach $ in variables [
+		$:tag:contains = "magicka"
+		$:tag:contains = "monthly"
+	] {
+		$:calculate
+	}
+}
+
+
