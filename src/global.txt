@@ -1,11 +1,3 @@
-new named_effect bi_yearly_events = {
-	800 = 0
-}
-on_actions:on_bi_yearly_pulse += {
-	random_events = {
-		bi_yearly_events
-	}
-}
 new run_file add_all_idea_groups = {
 	type = command
 	effect = {
