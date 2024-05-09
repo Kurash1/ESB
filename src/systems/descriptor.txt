@@ -1,5 +1,5 @@
 new custom_transpile descriptor = {
-	write_formatted_file "descriptor.mod" = {
+	write_file "descriptor.mod" = {
 		version = "2.2.0"
 		picture = "thumbnail.png"
 		replace_path = "common/advisortypes"
@@ -124,7 +124,7 @@ new custom_transpile descriptor = {
 			"New Nations"
 		}
 		name = "ESB"
-		supported_version = "1.37.*"
+		supported_version = "1.36.*"
 		remote_file_id = "3033843064"
 	}
 }
