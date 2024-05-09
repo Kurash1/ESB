@@ -7,16 +7,14 @@ interface_files:countrytechnologyview:countrytechnologyview += {
 	}
 	iconType = {
 		name = "magic_menu"
-		spriteType = "GFX_empty_custom_mechanic_overlay"
+		spriteType = "GFX_magic_custom_mechanic_overlay"
 		position = { x = (575 - 571 - 11) y = (110 - 36 + 2) }
 		scripted = yes
 	}
 	guiButtonType = {
 		name = "close_magic_menu"
-		position = { x = (864 - 571 - 124) y = (280 - 1 - 36 - 124) }
-		quadTextureSprite = "button_type_4"
-		buttonText = "CLOSE"
-		buttonFont = "vic_18"
+		position = { x = 5 y = 86 }
+		quadTextureSprite = "GFX_button_close"
 		scripted = yes
 	}
 }

@@ -3,6 +3,31 @@
 #-- init: Means that it's initialized to the initial_value.
 #-- monthly: Means that the calculate effect is called on_monthly_pulse.
 
+new modifier_definition spell_cost_modifier = {
+	name = "Spell Cost Modifier"
+	is_percentage = yes
+	base_value = 1
+}
+new script_variable spell_cost_modifier_var = {
+	tag = "magicka-monthly"
+	name = "Spell Cost Modifier"
+	calculate = {
+		&spell_cost_modifier_var &= modifier:spell_cost_modifier
+	}
+}
+new script_variable spell_cost_modifier_percent = {
+	tag = "magicka-monthly"
+	name = "Spell Cost Modifier Percentage"
+	calculate = {
+		&spell_cost_modifier_percent := spell_cost_modifier_var
+		&spell_cost_modifier_percent *= 100
+	}
+}
+new script_variable this_spell_cost = {
+	tag = "magicka"
+	name = "Cost for this Spell"
+}
+
 new modifier_definition magicka_gain_modifier = {
 	name = "Magicka Gain Modifier"
 	is_percentage = yes
