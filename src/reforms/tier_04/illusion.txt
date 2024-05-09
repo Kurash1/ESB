@@ -1,0 +1,208 @@
+new diplomatic_action espionage_magic = {
+	name = "Cast Espionage Magic"
+	title = "Cast Espionage Magic"
+	desc = "Add §G15§! to the Spy Network in [From.GetName]
+	This is Modified by §GSpy Network Construction§!
+You Lose §R15.00§! Magicka"
+	tooltip = ""
+	category = covert
+	require_acceptance = no
+
+	potential = {
+		has_government_attribute = has_espionage_magic
+	}
+	trigger = {
+		has_magicka = 15
+	}
+	
+	on_accept = {
+		export_to_variable = {
+			variable_name = espionage_magic_var
+			value = `modifier:spy_offence`
+		}
+		change_variable = {
+			which = espionage_magic_var
+			value = 1
+		}
+	
+		multiply_variable = {
+			which = espionage_magic_var
+			value = 15
+		}
+		
+		while [
+			check_variable = {
+				which = espionage_magic_var
+				value = 1
+			}
+		] {
+			subtract_variable = {
+				which = espionage_magic_var
+				value = 1
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = 1
+			}
+		}
+		add_magicka = -15
+	}
+	
+	ai_will_do = {
+		always = yes
+	}
+}
+new event_modifier illusion_focus_inspire = {
+	name = "Illusion: Inspiration"
+	modifier = {
+		land_morale = 0.1
+	}
+}
+new event_modifier illusion_focus_spy = {
+	name = "Illusion: Espionage"
+	modifier = {
+		spy_offence = 0.25
+	}
+}
+new event_modifier illusion_focus_charm = {
+	name = "Illusion: Charm"
+	modifier = {
+		reduced_liberty_desire = 15
+		global_unrest = -2
+	}
+}
+new government_mechanic illusion_focus_mechanic = {
+	name = "Illusion Focus"
+	interactions = {
+		illusion_spy_button = {
+			name = "Cast Espionage Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_illusion_spy_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = illusion_focus_spy
+				}
+				has_magicka = 25
+			}
+			effect = {
+				add_country_modifier = {
+					name = illusion_focus_spy
+					duration = (365*10)
+				}
+				
+				add_magicka = -25
+			}
+		}
+		illusion_charm_button = {
+			name = "Cast Charm Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_illusion_charm_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = illusion_focus_charm
+				}
+				has_magicka = 50
+			}
+			effect = {
+				add_country_modifier = {
+					name = illusion_focus_charm
+					duration = (365*10)
+				}
+				
+				add_magicka = -50
+			}
+		}
+		illusion_inspire_button = {
+			name = "Cast Inspiration Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+				
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_illusion_inspire_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = illusion_focus_inspire
+				}
+				has_magicka = 75
+			}
+			effect = {
+				add_country_modifier = {
+					name = illusion_focus_inspire
+					duration = (365*10)
+				}
+				
+				add_magicka = -75
+			}
+		}
+	}
+}
+new government_reform tier_4_illusion_focus = {
+	name = "Illusion Focus"
+	desc = ""
+	icon = "profession_scroll"
+	allow_normal_conversion = yes
+	trigger = {
+		sufficient_idea_group_for_magic = illusion_ideas
+	}
+	custom_attributes = {
+		new localisation mechanic_has_espionage_magic_yes = "Unlocks the §YCast Espionage Magic§! Diplomatic Action"
+		has_espionage_magic = yes
+	}
+	modifiers = {
+		spy_offence = 0.2
+	}
+	government_abilities = {
+		illusion_focus_mechanic
+	}
+}

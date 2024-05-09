@@ -1,0 +1,232 @@
+new government_mechanic magical_society_mechanic = {
+	name = "Magical Society"
+	interactions = {
+		society_mana_button = { 
+			name = "Magical Insight"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_mana_magic"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_magicka = 25
+			}
+			effect = {
+				add_magicka = -25
+				
+				add_adm_power = 10
+				add_dip_power = 10
+				add_mil_power = 10
+			}
+		}
+		society_destruction_button = { 
+			name = "Torture Dissidents"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_destruction_2"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_magicka = 25
+				rebel_progress_at_least = { value = 20 }
+			}
+			effect = {
+				add_magicka = -25
+				
+				add_rebel_progress = {
+					value = -50
+				}
+			}
+		}
+		society_restoration_button = { 
+			name = "Cast Healing Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_restoration_1"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_magicka = 50
+				NOT = { manpower_percentage = 0.9 }
+			}
+			effect = {
+				add_magicka = -50
+			
+				add_yearly_manpower = 1
+			}
+		}
+		society_conjuration_button = { 
+			name = "Consult with the Daedra"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_conjuration_secret_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = conjuration_focus_secret
+				}
+				has_magicka = 50
+			}
+			effect = {
+				add_country_modifier = {
+					name = conjuration_focus_secret
+					duration = (365*10)
+				}
+				
+				add_magicka = -50
+			}
+		}
+		society_alteration_button = { 
+			name = "Cast Construction Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_alteration_build_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = alteration_focus_build
+				}
+				has_magicka = 50
+			}
+			effect = {
+				add_country_modifier = {
+					name = alteration_focus_build
+					duration = (365*10)
+				}
+				
+				add_magicka = -50
+			}
+		}
+		society_illusion_button = { 
+			name = "Cast Inspiration Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+				
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_illusion_inspire_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = illusion_focus_inspire
+				}
+				has_magicka = 75
+			}
+			effect = {
+				add_country_modifier = {
+					name = illusion_focus_inspire
+					duration = (365*10)
+				}
+				
+				add_magicka = -75
+			}
+		}
+	}
+}
+new government_reform tier_4_magical_society = {
+	name = "Magical Society"
+	desc = ""
+	icon = "wow_cult"
+	allow_normal_conversion = yes
+	trigger = {
+		sufficient_idea_group_for_magic = arcane_ideas
+		sufficient_idea_group_for_magic = war_magic_ideas
+	}
+	government_abilities = {
+		magical_society_mechanic
+	}
+	modifiers = {
+		all_power_cost = -0.05
+		global_unrest = 5
+	}
+}

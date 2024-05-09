@@ -1,0 +1,165 @@
+new event_modifier conjuration_focus_bound = {
+	name = "Conjuration: Bound Weaponry"
+	modifier = {
+		shock_damage = 10%
+	}
+}
+new event_modifier conjuration_focus_secret = {
+	name = "Conjuration: Daedric Secrets"
+	modifier = {
+		idea_cost = -5%
+	}
+}
+new government_mechanic conjuration_focus_mechanic = {
+	name = "Conjuration Focus"
+	interactions = {
+		conjuration_summon_button = {
+			name = "Summon Reinforcements"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+				
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_conjuration_summon_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				has_magicka = 25
+				NOT = { manpower_percentage = 0.9 }
+			}
+			effect = {
+				add_yearly_manpower = 0.5
+				
+				add_magicka = -25
+			}
+		}
+		conjuration_secret_button = {
+			name = "Consult with the Daedra"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_conjuration_secret_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = conjuration_focus_secret
+				}
+				has_magicka = 50
+			}
+			effect = {
+				add_country_modifier = {
+					name = conjuration_focus_secret
+					duration = (365*10)
+				}
+				
+				add_magicka = -50
+			}
+		}
+		conjuration_bound_button = {
+			name = "Cast Bound Weapon Spells"
+			desc = ""
+			gui = {
+				size = { x = 115 y = 115 }
+				moveable = 0
+
+				# Interaction button, graphics replaced from the interaction icon specification
+				guiButtonType = {
+					name = "government_interaction_button"
+					quadTextureSprite = "GFX_conjuration_bound_button"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+				
+				iconType = {
+					name = "overlay"
+					spriteType = "GFX_magic_focus_interaction_overlay"
+					position = { x = 0 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			trigger = {
+				NOT = {
+					has_country_modifier = conjuration_focus_bound
+				}
+				has_magicka = 75
+			}
+			effect = {
+				add_country_modifier = {
+					name = conjuration_focus_bound
+					duration = (365*10)
+				}
+				
+				add_magicka = -75
+			}
+		}
+	}
+}
+
+new inheritable conjuration_focus_company = {
+	regiments_per_development = 0.01
+	cost_modifier = 0.5
+	cavalry_weight = 0
+	artillery_weight = 0.2
+	trigger = {
+		has_government_attribute = unlock_conjuration_mercs
+	}
+}
+new mercenary_company bladebearer_clan = { name = "Bladebearer Clan" inherit = conjuration_focus_company }
+new mercenary_company bloodwraith_clan = { name = "Bloodwraith Clan" inherit = conjuration_focus_company }
+new mercenary_company deathbringer_clan = { name = "Deathbringer Clan" inherit = conjuration_focus_company }
+new mercenary_company doomdriven_clan = { name = "Doomdriven Clan" inherit = conjuration_focus_company }
+new mercenary_company dreamcarver_clan = { name = "Dreamcarver Clan" inherit = conjuration_focus_company }
+new mercenary_company dremora_clan = { name = "Dremora Clan" inherit = conjuration_focus_company }
+new mercenary_company firescourge_clan = { name = "Firescourge Clan" inherit = conjuration_focus_company }
+new mercenary_company foolskillers_clan = { name = "Foolskillers Clan" inherit = conjuration_focus_company }
+new mercenary_company mindcleaver_clan = { name = "Mindcleaver Clan" inherit = conjuration_focus_company }
+new mercenary_company razorsworn_clan = { name = "Razorsworn Clan" inherit = conjuration_focus_company }
+new mercenary_company remnants_clan = { name = "Remnants Clan" inherit = conjuration_focus_company }
+new mercenary_company ruinblood_clan = { name = "Ruinblood Clan" inherit = conjuration_focus_company }
+new mercenary_company vanquished_clan = { name = "Vanquished Clan" inherit = conjuration_focus_company }
+new government_reform tier_4_conjuration_focus = {
+	name = "Conjuration Focus"
+	desc = ""
+	icon = "conjuration"
+	allow_normal_conversion = yes
+	custom_attributes = {
+		new localisation mechanic_unlock_conjuration_mercs_yes = "Unlocks the hiring of Dremora Clans as Mercenary Companies"
+		unlock_conjuration_mercs = yes
+	}
+	trigger = {
+		sufficient_idea_group_for_magic = conjuration_ideas
+	}
+	modifiers = {
+		morale_damage = 5%
+	}
+	government_abilities = {
+		conjuration_focus_mechanic
+	}
+}
