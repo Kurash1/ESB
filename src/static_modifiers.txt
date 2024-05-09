@@ -439,10 +439,6 @@ new static_modifier base_values = {
 	global_expedition_speed = 1
 	survey_experience_gain = 1
 	
-	foreach $ in modifier_definitions [exists = $:base_value] {
-		$ = $:base_value
-	}
-	
 	cav_to_inf_ratio = 0.2
 	max_absolutism = 30
 	
@@ -1633,9 +1629,15 @@ new static_modifier marine_regiment = {
 	
     regiment_disembark_speed = 2.5
 }
-new static_modifier ruler_adm = { }
-new static_modifier ruler_dip = { }
-new static_modifier ruler_mil = { }
+new static_modifier ruler_adm = {
+	monthly_magicka = 0.03
+}
+new static_modifier ruler_dip = {
+	monthly_magicka = 0.03
+}
+new static_modifier ruler_mil = {
+	monthly_magicka = 0.03
+}
 new static_modifier heir_adm = {
 }
 new static_modifier heir_dip = {

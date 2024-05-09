@@ -10,12 +10,12 @@ interface_files:countrytechnologyview:countrytechnologyview += {
 	iconType = {
 		name = "achievement_menu"
 		spriteType = "GFX_empty_custom_mechanic_overlay"
-		position = { x = (575 - 571 - 11) y = (110 - 36 + 2) }
+		position = { x = (575 - 571) y = (110 - 36) }
 		scripted = yes
 	}
 	guiButtonType = {
 		name = "close_achievement_menu"
-		position = { x = (864 - 571 - 124) y = (280 - 1 - 36 - 124) }
+		position = { x = (864 - 571 - 124) y = (673 - 36 - 124) }
 		quadTextureSprite = "button_type_4"
 		buttonText = "CLOSE"
 		buttonFont = "vic_18"
@@ -23,13 +23,13 @@ interface_files:countrytechnologyview:countrytechnologyview += {
 	}
 	guiButtonType = {
 		name = "prev_achievement_menu"
-		position = { x = (837 - 571 - 124) y = (280 - 36 - 124) }
+		position = { x = (837 - 571 - 124) y = (674 - 36 - 124) }
 		quadTextureSprite = "button_left"
 		scripted = yes
 	}
 	guiButtonType = {
 		name = "next_achievement_menu"
-		position = { x = (1085 - 571 - 124) y = (280 - 36 - 124) }
+		position = { x = (1085 - 571 - 124) y = (674 - 36 - 124) }
 		quadTextureSprite = "button_right"
 		scripted = yes
 	}
@@ -39,7 +39,9 @@ new custom_button open_achievement_menu = {
 	tooltip = "Open Achievements Screen"
 	potential = {
 		NOT = {
-			open_custom_mechanic
+			has_country_flag = show_technology
+			has_country_flag = open_achievement_menu
+			has_country_flag = show_survey_screen
 		}
 	}
 	effect = {
@@ -132,7 +134,7 @@ new effect define_achievement = {
 				spriteType = completed_achievement
 				position = { 
 					x = `{(589+127*achievement_current_x-571)}` 
-					y = `{(174+125*achievement_current_y-36+25)}` 
+					y = `{(174+125*achievement_current_y-36)}` 
 				}
 				scripted = yes
 			}
@@ -140,7 +142,7 @@ new effect define_achievement = {
 				name = `arc_achievement_{achievement_total_num}`
 				position = { 
 					x = `{(620+127*achievement_current_x-571)}` 
-					y = `{(174+125*achievement_current_y-36+25)}` 
+					y = `{(174+125*achievement_current_y-36)}` 
 				}
 				quadTextureSprite = args:icon
 				scripted = yes
@@ -149,7 +151,7 @@ new effect define_achievement = {
 				name = `arc_achievement_{achievement_total_num}_text`
 				position = { 
 					x = `{(593+127*achievement_current_x-571)}` 
-					y = `{(238+125*achievement_current_y-36+25)}` 
+					y = `{(238+125*achievement_current_y-36)}` 
 				}
 				format = centre
 				maxWidth = 120
@@ -201,7 +203,7 @@ new effect define_achievement = {
 			achievement_current_y += 1
 		}
 		
-		when [achievement_current_y == 6] {
+		when [achievement_current_y == 3] {
 			achievement_current_y := 0
 			achievement_current_page += 1
 			

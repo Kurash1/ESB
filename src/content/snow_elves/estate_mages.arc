@@ -9,13 +9,13 @@ new estate mages = {
 		culture_group = snow_elven
 	}
 	country_modifier_happy = {
-		magicka_gain_modifier = 0.30
+		monthly_magicka = 0.30
 		global_unrest = -1
 	}
 	country_modifier_neutral = {
 	}
 	country_modifier_angry = {
-		magicka_gain_modifier = -0.50
+		monthly_magicka = -0.50
 		global_unrest = 2
 	}
 	land_ownership_modifier = {
@@ -51,7 +51,7 @@ new estate mages = {
 			icon = magicka_for_privs
 			influence = 0.10
 			benefits = {
-				magicka_gain_modifier = 0.2
+				monthly_magicka = 0.2
 			}
 			
 		}

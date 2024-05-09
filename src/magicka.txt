@@ -1,0 +1,57 @@
+new effect add_magicka = {
+	args = float
+	transpile = {
+		`add_government_power =` {
+			`mechanic_type = magicka_mechanic`
+			`power_type = magicka`
+			`value = {args}`
+		}
+	}
+}
+new trigger has_magicka = {
+	args = float
+	transpile = {
+		`has_government_power =` {
+			`mechanic_type = magicka_mechanic`
+			`power_type = magicka`
+			`value = {args}`
+		}
+	}
+}
+new government_mechanic magicka_mechanic = {
+	name = "Magicka"
+	powers = {
+		magicka = {
+			name = "Magicka"
+			desc = ""
+			gui = {
+				size = { x = 345 y = 30 }
+				moveable = 0
+				
+				# bar and frame for the power type associated with this interaction (if it's unique to the interaction - if not, these will be hidden)
+				iconType = { 
+					name = "government_power_bar"
+					spriteType = "GFX_magicka_power_bar"
+					position = { x = 34 y = 3 }
+				}	
+
+				# Frame
+				iconType = {
+					name = "government_power_bar_frame"
+					spriteType = "GFX_magicka_frame"
+					position = { x = 27 y = 0 }
+					alwaystransparent = yes
+				}
+			}
+			min = 0
+			max = 100
+			base_monthly_growth = 0.5
+			is_good = yes
+			on_min_reached = {
+				every_owned_province [has_province_modifier = expedition_mage_mod] {
+					remove_province_modifier = expedition_mage_mod
+				}
+			}
+		}
+	}
+}
