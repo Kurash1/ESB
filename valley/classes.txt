@@ -67,6 +67,7 @@ new class modifier_definition = {
 		name = string
 		is_percentage = bool
 		trigger = named_trigger
+		base_value = string?
 	}
 	on_create = {
 		when [this:is_percentage == yes] {
@@ -104,6 +105,9 @@ new class named_float = {
 new class named_int = {
 	args = int
 }
+new class named_bool = {
+	args = bool
+}
 new class naval_doctrine = {
 	id = `{this:id}`
 	list = naval_doctrines
@@ -135,12 +139,19 @@ new class naval_doctrine = {
 }
 new class script_variable = {
 	list = variables
+	default = {
+		tag = ""
+	}
 	args = {
-		initial_value = float
+		initial_value = float?
+		calculate = named_effect?
+		tag = string
 		name = string
 	}
-	on_create = {
-		new localisation `{this:id}` = `{this:name}`
+	simple_transpile = {
+		foreach $ in variables {
+			new localisation `{$:id}` = `{$:name}`
+		}
 	}
 	init = {
 		args = bool
