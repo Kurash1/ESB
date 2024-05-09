@@ -263,7 +263,7 @@ define_achievement = {
 }
 define_achievement = {
 	icon = achievement_hjaalmarch
-	name = "Hjaalmarch March Marching"
+	name = "Hjaalmarch March Marching in March"
 	trigger = {
 		countries:hjaalmarch = {
 			is_march = yes
@@ -277,6 +277,11 @@ define_achievement = {
 		OR = {
 			tag = hjaalmarch
 			overlord_of = hjaalmarch
+		}
+		custom_trigger_tooltip = {
+			new_tooltip = "It is March"
+			is_month = 2
+			NOT = { is_month = 3 }
 		}
 	}
 }

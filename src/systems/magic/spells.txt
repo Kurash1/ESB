@@ -1,3 +1,5 @@
+new named_int current_spell_position_x = 0
+new named_int current_spell_position_y = 0
 new class spell = {
 	list = spells
 	args = {
@@ -8,12 +10,66 @@ new class spell = {
 	}
 	on_create = {
 		interface_files:countrytechnologyview:countrytechnologyview += {
-			guiButtonType = {
-				name = `custom_mechanic_spell_{this:id}`
-				position = { x = 10 y = (100 + spells:count * 37) }
-				quadTextureSprite = "GFX_button_type_246"
+			iconType = {
+				name = `custom_mechanic_spell_background_{this:id}`
+				position = { x = 10 y = (150 + current_spell_position_y * 37) }
+				quadTextureSprite = `"GFX_spell_type_background_{this:type}"`
 				scripted = yes
 			}
+			guiButtonType = {
+				name = `custom_mechanic_spell_{this:id}`
+				position = { x = 17 y = (156 + current_spell_position_y * 37) }
+				quadTextureSprite = `"GFX_spells_{this:id}"`
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = `custom_mechanic_spell_name_{this:id}`
+				position = { x = (10+59+5) y = (150 + 8 + current_spell_position_y * 37) }
+				maxWidth = 175
+				maxHeight = 20
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = `custom_mechanic_spell_type_{this:id}`
+				position = { x = (10+59+5+2) y = (150 + 29 + current_spell_position_y * 37) }
+				maxWidth = 115
+				maxHeight = 20
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = `custom_mechanic_spell_cost_{this:id}`
+				position = { x = (10+59+5) y = (150 + 29 + current_spell_position_y * 37) }
+				format = right
+				maxWidth = 170
+				maxHeight = 20
+				scripted = yes
+			}
+		}
+		
+		new custom_icon `custom_mechanic_spell_background_{this:id}` = {
+			potential = {
+				has_country_flag = show_magic_menu
+			}
+		}
+		new custom_text_box `custom_mechanic_spell_name_{this:id}` = {
+			potential = {
+				has_country_flag = show_magic_menu
+			}
+			name = this:name
+		}
+		new custom_text_box `custom_mechanic_spell_type_{this:id}` = {
+			potential = {
+				has_country_flag = show_magic_menu
+			}
+			name = `{id_to_name = this:type}`
+			tooltip = `This spell is of §Y{id_to_name = this:type}§!`
+		}
+		new custom_text_box `custom_mechanic_spell_cost_{this:id}` = {
+			potential = {
+				has_country_flag = show_magic_menu
+			}
+			name = `{this:cost}£magicka_icon£`
+			tooltip = `This spell costs {this:cost}£magicka_icon£ to cast`
 		}
 		new custom_button `custom_mechanic_spell_{this:id}` = {
 			tooltip = "{this:name}
@@ -39,6 +95,8 @@ This spell costs §Y{this:cost}§! Magicka to cast. This cost is further modifie
 				*this:on_cast*
 			}
 		}
+		
+		current_spell_position_y += 1
 	}
 }
 new spell cast_shields = {
