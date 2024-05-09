@@ -1,9 +1,14 @@
-@arc_exit_file
 interface_files:countrytechnologyview:countrytechnologyview += {
+	iconType = {
+		name = "magic_item_background"
+		position = { x = 11 y = (113 * 2) }
+		quadTextureSprite = "GFX_custom_mechanic_item_background"
+		scripted = yes
+	}
 	guiButtonType = {
 		name = "open_magic_menu"
-		position = { x = (118 + 107 * 2) y = 113 }
-		quadTextureSprite = "GFX_achievement_menu"
+		position = { x = 18 y = (122 + 113) }
+		quadTextureSprite = "GFX_magic_menu"
 		scripted = yes
 	}
 	iconType = {
@@ -17,6 +22,13 @@ interface_files:countrytechnologyview:countrytechnologyview += {
 		position = { x = 5 y = 86 }
 		quadTextureSprite = "GFX_button_close"
 		scripted = yes
+	}
+}
+new custom_icon magic_item_background = {
+	potential = {
+		NOT = {
+			open_custom_mechanic
+		}
 	}
 }
 new custom_button open_magic_menu = {

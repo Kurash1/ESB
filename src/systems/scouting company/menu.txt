@@ -71,6 +71,13 @@ new custom_text_box survey_is_active_survey = {
 	}
 	name = "Currently Surveying:"
 }
+new custom_icon survey_item_background = {
+	potential = {
+		NOT = {
+			open_custom_mechanic
+		}
+	}
+}
 new custom_button open_survey_screen = {
 	tooltip = "Open Survey Screen"
 	potential = {

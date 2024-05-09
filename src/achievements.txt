@@ -188,11 +188,13 @@ define_achievement = {
 }
 define_achievement = {
 	icon = achievement_aalto
-	name = "A Vacnation"
+	name = "The Vacation Nation"
 	trigger = {
-		all_province = {
-			owned_by = ROOT
-			NOT = { has_terrain = hot_springs }
+		NOT = {
+			any_province = {
+				has_terrain = hot_springs
+				NOT = { owned_by = ROOT }
+			}
 		}
 		all_owned_province = {
 			has_terrain = hot_springs
@@ -249,17 +251,32 @@ define_achievement = {
 	icon = achievement_yngvild
 	name = "Allvilds"
 	trigger = {
-		provinces:minedvild; goldvild; lydvild; yngvild; netvild = {
-			owned_by = ROOT
+		foreach $ in provinces [
+			$:name:contains = "vild"
+			$:lake == no
+			$:sea == no
+			$:impassible == no
+		] {
+			owns = $
 		}
 	}
 }
 define_achievement = {
 	icon = achievement_hjaalmarch
-	name = "Hjaal March"
+	name = "Hjaalmarch March Marching"
 	trigger = {
-		countries:hjaal = {
-			march_of = ROOT
+		countries:hjaalmarch = {
+			is_march = yes
+		}
+		countries:hjaalmarch = {
+			has_global_modifier_value = {
+				which = enable_forced_march
+				value = 1
+			}
+		}
+		OR = {
+			tag = hjaalmarch
+			overlord_of = hjaalmarch
 		}
 	}
 }

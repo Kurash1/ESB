@@ -252,12 +252,19 @@ new interface_file countrytechnologyview = {
 			quadTextureSprite = "privilege_technology"
 			scripted = yes
 		}
+		iconType = {
+			name = "survey_item_background"
+			position = { x = 11 y = 113 }
+			quadTextureSprite = "GFX_custom_mechanic_item_background"
+			scripted = yes
+		}
 		guiButtonType = {
 			name = "open_survey_screen"
-			position = { x = 118 y = 113 }
+			position = { x = 18 y = 122 }
 			quadTextureSprite = "GFX_scouting_company_menu"
 			scripted = yes
 		}
+		
 		instantTextBoxType = {
 			name = "window_title"
 			position = { x = 15 y = 78 }
