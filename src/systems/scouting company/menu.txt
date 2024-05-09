@@ -75,9 +75,7 @@ new custom_button open_survey_screen = {
 	tooltip = "Open Survey Screen"
 	potential = {
 		NOT = {
-			has_country_flag = show_technology
-			has_country_flag = open_achievement_menu
-			has_country_flag = show_survey_screen
+			open_custom_mechanic
 		}
 	}
 	trigger = {
