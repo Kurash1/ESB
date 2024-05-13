@@ -210,6 +210,35 @@ define_achievement = {
 	}
 }
 define_achievement = {
+	icon = achievement_hjaalmarch
+	name = "Hjaalmarch March Marching through the Marsh in March"
+	trigger = {
+		countries:hjaalmarch = {
+			is_march = yes
+		}
+		countries:hjaalmarch = {
+			has_global_modifier_value = {
+				which = enable_forced_march
+				value = 1
+			}
+		}
+		OR = {
+			tag = hjaalmarch
+			overlord_of = hjaalmarch
+		}
+		custom_trigger_tooltip = {
+			new_tooltip = "It is March"
+			is_month = 2
+			NOT = { is_month = 3 }
+		}
+		any_army = {
+			location = {
+				has_terrain = marsh
+			}
+		}
+	}
+}
+define_achievement = {
 	icon = achievement_dragonplate
 	name = "Fist of the Dawnstar"
 	trigger = {
@@ -258,30 +287,6 @@ define_achievement = {
 			$:impassible == no
 		] {
 			owns = $
-		}
-	}
-}
-define_achievement = {
-	icon = achievement_hjaalmarch
-	name = "Hjaalmarch March Marching in March"
-	trigger = {
-		countries:hjaalmarch = {
-			is_march = yes
-		}
-		countries:hjaalmarch = {
-			has_global_modifier_value = {
-				which = enable_forced_march
-				value = 1
-			}
-		}
-		OR = {
-			tag = hjaalmarch
-			overlord_of = hjaalmarch
-		}
-		custom_trigger_tooltip = {
-			new_tooltip = "It is March"
-			is_month = 2
-			NOT = { is_month = 3 }
 		}
 	}
 }

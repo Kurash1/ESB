@@ -1,5 +1,10 @@
-new named_int current_spell_position_x = 0
+new named_int SPELL_TOP = 140
+new named_int SPELL_LEFT = 10
+new named_int SPELL_RIGHT = 285
+
+new named_bool current_spell_side = no
 new named_int current_spell_position_y = 0
+
 new class spell = {
 	list = spells
 	args = {
@@ -9,40 +14,81 @@ new class spell = {
 		on_cast = named_effect
 	}
 	on_create = {
-		interface_files:countrytechnologyview:countrytechnologyview += {
-			iconType = {
-				name = `custom_mechanic_spell_background_{this:id}`
-				position = { x = 10 y = (150 + current_spell_position_y * 37) }
-				quadTextureSprite = `"GFX_spell_type_background_{this:type}"`
-				scripted = yes
+		when [current_spell_side == no] {
+			interface_files:countrytechnologyview:countrytechnologyview += {
+				iconType = {
+					name = `custom_mechanic_spell_background_{this:id}`
+					position = { x = (SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + current_spell_position_y) }
+					quadTextureSprite = `"GFX_spell_type_background_{this:type}"`
+					scripted = yes
+				}
+				guiButtonType = {
+					name = `custom_mechanic_spell_{this:id}`
+					position = { x = (7 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 6 + current_spell_position_y) }
+					quadTextureSprite = `"GFX_spells_{this:id}"`
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = `custom_mechanic_spell_name_{this:id}`
+					position = { x = (59+5 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + current_spell_position_y) }
+					maxWidth = 175
+					maxHeight = 20
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = `custom_mechanic_spell_cost_{this:id}`
+					position = { x = (59+5 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 29 + current_spell_position_y) }
+					format = right
+					maxWidth = 170
+					maxHeight = 20
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = `custom_mechanic_spell_type_{this:id}`
+					position = { x = (59+5+2 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 29 + current_spell_position_y) }
+					maxWidth = 115
+					maxHeight = 20
+					scripted = yes
+				}
 			}
-			guiButtonType = {
-				name = `custom_mechanic_spell_{this:id}`
-				position = { x = 17 y = (156 + current_spell_position_y * 37) }
-				quadTextureSprite = `"GFX_spells_{this:id}"`
-				scripted = yes
-			}
-			instantTextBoxType = {
-				name = `custom_mechanic_spell_name_{this:id}`
-				position = { x = (10+59+5) y = (150 + 8 + current_spell_position_y * 37) }
-				maxWidth = 175
-				maxHeight = 20
-				scripted = yes
-			}
-			instantTextBoxType = {
-				name = `custom_mechanic_spell_type_{this:id}`
-				position = { x = (10+59+5+2) y = (150 + 29 + current_spell_position_y * 37) }
-				maxWidth = 115
-				maxHeight = 20
-				scripted = yes
-			}
-			instantTextBoxType = {
-				name = `custom_mechanic_spell_cost_{this:id}`
-				position = { x = (10+59+5) y = (150 + 29 + current_spell_position_y * 37) }
-				format = right
-				maxWidth = 170
-				maxHeight = 20
-				scripted = yes
+		}
+		when_not {
+			interface_files:countrytechnologyview:countrytechnologyview += {
+				iconType = {
+					name = `custom_mechanic_spell_background_{this:id}`
+					position = { x = (SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + current_spell_position_y) }
+					quadTextureSprite = `"GFX_spell_type_background_{this:type}_right"`
+					scripted = yes
+				}
+				guiButtonType = {
+					name = `custom_mechanic_spell_{this:id}`
+					position = { x = (187 + 7 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 6 + current_spell_position_y) }
+					quadTextureSprite = `"GFX_spells_{this:id}"`
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = `custom_mechanic_spell_name_{this:id}`
+					position = { x = (10 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + current_spell_position_y) }
+					format = right
+					maxWidth = 175
+					maxHeight = 20
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = `custom_mechanic_spell_cost_{this:id}`
+					position = { x = (59+5-48 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 29 + current_spell_position_y) }
+					maxWidth = 55
+					maxHeight = 20
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = `custom_mechanic_spell_type_{this:id}`
+					position = { x = (59+5+2 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 29 + current_spell_position_y) }
+					format = right
+					maxWidth = 118
+					maxHeight = 20
+					scripted = yes
+				}
 			}
 		}
 		
@@ -62,7 +108,13 @@ new class spell = {
 				has_country_flag = show_magic_menu
 			}
 			name = `{id_to_name = this:type}`
-			tooltip = `This spell is of §Y{id_to_name = this:type}§!`
+			tooltip = `This spell is of the §Y{id_to_name = this:type}§! Type
+
+§YCountry§! type spells affect the entire country, they can be cast from the spells window. Their cost is often multiplied by the size of your country.
+§YDiplomatic§! type spells affect another country, they can be cast from the diplomatic window. Their cost is often multiplied by the size of the target country.
+§YProvince§! type spells affect a single province, they can be cast from the province window.
+§YRitual§! type spells temporarily inhibit your magicka generation, but result in greater effects once completed, they can be cast from the spells window.
+§YSiege§! type spells affect a siege, they can be cast from the siege window.`
 		}
 		new custom_text_box `custom_mechanic_spell_cost_{this:id}` = {
 			potential = {
@@ -71,46 +123,256 @@ new class spell = {
 			name = `{this:cost}£magicka_icon£`
 			tooltip = `This spell costs {this:cost}£magicka_icon£ to cast`
 		}
-		new custom_button `custom_mechanic_spell_{this:id}` = {
-			tooltip = "{this:name}
--------------
-This spell costs §Y{this:cost}§! Magicka to cast. This cost is further modified by:
-	Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
-			potential = {
-				has_country_flag = show_magic_menu
+		when [
+			OR = {
+				this:type == "country"
+				this:type == "ritual"
 			}
-			trigger =* {
-				variable_arithmetic_trigger = {
-					custom_tooltip = "Have enough magicka to cast this spell."
-					&this_spell_cost &= modifier:spell_cost_modifier
-					&this_spell_cost *= *this:cost*
-					
-					&magicka >= this_spell_cost
+		] {
+			new custom_button `custom_mechanic_spell_{this:id}` = {
+				tooltip = "{this:name}
+	-------------
+	This spell costs §Y{this:cost}§! Magicka to cast. This cost is further modified by:
+		Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
+				potential = {
+					has_country_flag = show_magic_menu
+				}
+				trigger =* {
+					variable_arithmetic_trigger = {
+						custom_tooltip = "Have enough magicka to cast this spell."
+						&this_spell_cost &= modifier:spell_cost_modifier
+						&this_spell_cost *= *this:cost*
+						
+						&magicka >= this_spell_cost
+					}
+				}
+				effect =* {
+					hidden_effect = {
+						add_magicka = -*this:cost*
+					}
+					*this:on_cast*
 				}
 			}
-			effect =* {
-				hidden_effect = {
-					add_magicka = -*this:cost*
+		}
+		when_not {
+			new custom_button `custom_mechanic_spell_{this:id}` = {
+				tooltip = "{this:name}
+	-------------
+	This spell costs §Y{this:cost}§! Magicka to cast. This cost is further modified by:
+		Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
+				potential = {
+					has_country_flag = show_magic_menu
 				}
-				*this:on_cast*
+				trigger =* {
+					variable_arithmetic_trigger = {
+						custom_tooltip = "Have enough magicka to cast this spell."
+						&this_spell_cost &= modifier:spell_cost_modifier
+						&this_spell_cost *= *this:cost*
+						
+						&magicka >= this_spell_cost
+					}
+					custom_trigger_tooltip = {
+						new_tooltip = "This is not a §YCountry§! or §YRitual§! type spell, and thus cannot be cast from this menu."
+						always = no
+					}
+				}
+				effect = { }
 			}
 		}
 		
-		current_spell_position_y += 1
+		current_spell_position_y += 57
 	}
 }
-new spell cast_shields = {
-	name = "Cast Shields"
-	type = country
-	cost = 50
-	on_cast = {
-		quick_country_modifier = {
-			name = "Shield Spells"
-			years = 10
-			modifier = {
-				fire_damage_received = -0.1
-				shock_damage_received = -0.1
+new class spell_header = {
+	list = spell_headers
+	args = {
+		name = string
+	}
+	on_create = {
+		interface_files:countrytechnologyview:countrytechnologyview += {
+			iconType = {
+				name = `custom_mechanic_spell_header_background_{this:id}`
+				position = { x = (65 / 2 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + current_spell_position_y) }
+				quadTextureSprite = "GFX_banner_both_3"
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = `custom_mechanic_spell_header_name_{this:id}`
+				position = { x = (SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + 8 + current_spell_position_y) }
+				maxWidth = 250
+				maxHeight = 57
+				format = center
+				scripted = yes
 			}
 		}
+		
+		new custom_icon `custom_mechanic_spell_header_background_{this:id}` = {
+			potential = {
+				has_country_flag = show_magic_menu
+			}
+		}
+		new custom_text_box `custom_mechanic_spell_header_name_{this:id}` = {
+			potential = {
+				has_country_flag = show_magic_menu
+			}
+			name = this:name
+		}
+		
+		current_spell_position_y += 41
 	}
+}
+
+
+
+new spell_header alteration = {
+	name = "Alteration"
+}
+new spell shield = {
+	name = "Shield"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell armor = {
+	name = "Armor"
+	type = country
+	cost = 50
+	on_cast = { }
+}
+new spell open = {
+	name = "Open"
+	type = diplomatic
+	cost = 25
+	on_cast = { }
+}
+new spell burden = {
+	name = "Burden"
+	type = diplomatic
+	cost = 15
+	on_cast = { }
+}
+new spell feather = {
+	name = "Feather"
+	type = country
+	cost = 15
+	on_cast = { }
+}
+new spell equilibrium = {
+	name = "Equilibrium"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell sea_stride = {
+	name = "Sea Stride"
+	type = country
+	cost = 25
+	on_cast = { }
+}
+new spell water_breathing = {
+	name = "Water Breathing"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header weather_magic = {
+	name = "Weather Magic"
+}
+new spell create_rain = {
+	name = "Create Rain"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell create_winter = {
+	name = "Create Winter"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell create_drought = {
+	name = "Create Drought"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+
+current_spell_position_y := 0
+current_spell_side := yes
+
+new spell_header transmutation = {
+	name = "Transmutation"
+}
+new spell transmute_ore = {
+	name = "Transmute Ore"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header illusion = {
+	name = "Illusion"
+}
+new spell invisibility = {
+	name = "Invisibility"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell frenzy = {
+	name = "Frenzy"
+	type = diplomatic
+	cost = 10
+	on_cast = { }
+}
+new spell calm = {
+	name = "Calm"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell rally = {
+	name = "Rally"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell clairvoyance = {
+	name = "Clairvoyance"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header mind_magic = {
+	name = "Mind Magic"
+}
+new spell cause_madness = {
+	name = "Cause Madness"
+	type = diplomatic
+	cost = 10
+	on_cast = { }
+}
+new spell charm = {
+	name = "Charm"
+	type = diplomatic
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header mysticism = {
+	name = "Mysticism"
+}
+new spell mark_recall = {
+	name = "Mark/Recall"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell dispel = {
+	name = "Dispel"
+	type = country
+	cost = 10
+	on_cast = { }
 }
