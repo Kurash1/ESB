@@ -11,7 +11,6 @@ new class survey = {
 		new custom_button `start_survey_{this:id}` = {
 			tooltip = "Begin Surveying {this:name}"
 			potential =* {
-				has_country_flag = show_survey_screen
 				NOT = {
 					has_country_flag = surveyed_*this:id*
 				}
@@ -74,7 +73,7 @@ new class survey = {
 			}
 		}
 		
-		interface_files:countrytechnologyview:countrytechnologyview += {
+		scouting_company_menu_node += {
 			guiButtonType = {
 				name = `start_survey_{this:id}`
 				position = { x = (this:x) y = (this:y-9) }
@@ -169,9 +168,6 @@ new class scouting_company_idea = {
 		}
 		
 		new custom_icon `scouting_company_idea_{this:id}_back` = {
-			potential =* {
-				has_country_flag = show_survey_screen
-			}
 			frames =* {
 				{
 					frame = 3
@@ -196,9 +192,6 @@ new class scouting_company_idea = {
 		new custom_button `scouting_company_idea_{this:id}` = {
 			tooltip = "§Y{this:name}§!
 {this:desc}"
-			potential =* {
-				has_country_flag = show_survey_screen
-			}
 			trigger =* {
 				hidden_trigger = {
 					OR = {
@@ -243,7 +236,7 @@ new class scouting_company_idea = {
 				}
 			}
 		}
-		interface_files:countrytechnologyview:countrytechnologyview += {
+		scouting_company_menu_node += {
 			iconType = {
 				name = `"scouting_company_idea_{this:id}_back"`
 				position = { 

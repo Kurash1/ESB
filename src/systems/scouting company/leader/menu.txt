@@ -1,6 +1,5 @@
 new custom_icon survey_leader_gender_icon = {
 	potential = {
-		has_country_flag = show_survey_screen
 		has_country_flag = survey_has_scout_master
 	}
 	frames = {
@@ -22,14 +21,12 @@ new custom_icon survey_leader_gender_icon = {
 }
 new custom_text_box survey_leader_name = {
     potential = {
-		has_country_flag = show_survey_screen
 		has_country_flag = survey_has_scout_master
 	}
 	name = "Master: [Root.survey_leader_name.GetName]"
 }
 new custom_text_box survey_has_no_leader = {
     potential = {
-		has_country_flag = show_survey_screen
 		NOT = {
 			has_country_flag = survey_has_scout_master
 		}
@@ -37,38 +34,20 @@ new custom_text_box survey_has_no_leader = {
 	name = "Has no Scout-Master"
 }
 new custom_text_box survey_leader_adm_value = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "[Root.survey_leader_adm.GetValue]"
 }
 new custom_text_box survey_leader_dip_value = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "[Root.survey_leader_dip.GetValue]"
 }
 new custom_text_box survey_leader_mil_value = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "[Root.survey_leader_mil.GetValue]"
 }
 new custom_icon survey_leader_adm_icon = {
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	tooltip = "Administrative Skill: §Y[Root.survey_leader_adm.GetValue]§!"
 }
 new custom_icon survey_leader_dip_icon = {
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	tooltip = "Diplomatic Skill: §Y[Root.survey_leader_dip.GetValue]§!"
 }
 new custom_icon survey_leader_mil_icon = {
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	tooltip = "Military Skill: §Y[Root.survey_leader_mil.GetValue]§!"
 }

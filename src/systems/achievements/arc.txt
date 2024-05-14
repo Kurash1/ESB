@@ -13,32 +13,6 @@ interface_files:countrytechnologyview:countrytechnologyview += {
 		quadTextureSprite = "GFX_achievement_menu"
 		scripted = yes
 	}
-	iconType = {
-		name = "achievement_menu"
-		spriteType = "GFX_empty_custom_mechanic_overlay"
-		position = { x = (575 - 571 - 11) y = (110 - 36 + 2) }
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "close_achievement_menu"
-		position = { x = (864 - 571 - 124) y = (280 - 1 - 36 - 124) }
-		quadTextureSprite = "button_type_4"
-		buttonText = "CLOSE"
-		buttonFont = "vic_18"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "prev_achievement_menu"
-		position = { x = (837 - 571 - 124) y = (280 - 36 - 124) }
-		quadTextureSprite = "button_left"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "next_achievement_menu"
-		position = { x = (1085 - 571 - 124) y = (280 - 36 - 124) }
-		quadTextureSprite = "button_right"
-		scripted = yes
-	}
 }		
 new custom_icon achievement_item_background = {
 	potential = {
@@ -73,20 +47,58 @@ new custom_button open_achievement_menu = {
 		}
 	}
 }
-new custom_button close_achievement_menu = {
-	tooltip = "Close Achievements Screen"
+
+interface_files:countrytechnologyview:countrytechnologyview += {
+	windowType = {
+		name = "achievements_menu"
+		position = { x = 0 y = 0 }
+		scripted = yes
+	}
+}
+new custom_window achievements_menu = {
 	potential = {
 		has_country_flag = open_achievement_menu
 	}
+}
+new named_ui_node achievement_menu_node = interface_files:countrytechnologyview:countrytechnologyview:achievements_menu
+
+achievement_menu_node += {
+	iconType = {
+		name = "achievement_menu"
+		spriteType = "GFX_empty_custom_mechanic_overlay"
+		position = { x = (575 - 571 - 11) y = (110 - 36 + 2) }
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "close_achievement_menu"
+		position = { x = (864 - 571 - 124) y = (280 - 1 - 36 - 124) }
+		quadTextureSprite = "button_type_4"
+		buttonText = "CLOSE"
+		buttonFont = "vic_18"
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "prev_achievement_menu"
+		position = { x = (837 - 571 - 124) y = (280 - 36 - 124) }
+		quadTextureSprite = "button_left"
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "next_achievement_menu"
+		position = { x = (1085 - 571 - 124) y = (280 - 36 - 124) }
+		quadTextureSprite = "button_right"
+		scripted = yes
+	}
+}
+
+new custom_button close_achievement_menu = {
+	tooltip = "Close Achievements Screen"
 	effect = {
 		clr_country_flag = open_achievement_menu
 	}
 }
 new custom_button prev_achievement_menu = {
 	tooltip = "Previous Page"
-	potential = {
-		has_country_flag = open_achievement_menu
-	}
 	effect = {
 		if [has_country_flag = open_achievement_menu_0] {
 			clr_country_flag = open_achievement_menu_0
@@ -102,9 +114,6 @@ new custom_button prev_achievement_menu = {
 }
 new custom_button next_achievement_menu = {
 	tooltip = "Next Page"
-	potential = {
-		has_country_flag = open_achievement_menu
-	}
 	effect = {
 		if [has_country_flag = `open_achievement_menu_{achievement_current_page}`] {
 			clr_country_flag = `open_achievement_menu_{achievement_current_page}`
@@ -118,11 +127,7 @@ new custom_button next_achievement_menu = {
 		}
 	}
 }
-new custom_icon achievement_menu = {
-	potential = {
-		has_country_flag = open_achievement_menu
-	}
-}
+new custom_icon achievement_menu = { }
 
 new named_int achievement_total_num = 0
 new named_int achievement_current_x = 0
@@ -138,7 +143,7 @@ new effect define_achievement = {
 		trigger = trigger
 	}
 	transpile = {
-		interface_files:countrytechnologyview:countrytechnologyview += {
+		achievement_menu_node += {
 			iconType = {
 				name = `arc_achievement_{achievement_total_num}_completed`
 				spriteType = completed_achievement
@@ -224,7 +229,7 @@ new effect define_achievement = {
 new effect create_achievement_page = {
 	args = int
 	transpile = {
-		interface_files:countrytechnologyview:countrytechnologyview += {
+		achievement_menu_node += {
 			instantTextBoxType = {
 				name = `achievement_menu_page_{args}`
 				position = { 

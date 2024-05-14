@@ -1,19 +1,9 @@
 new custom_text_box custom_mechanic_survey_policy_text = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "Scouting Company Policies"
 }
-new custom_icon survey_policy_icon_1 = {
-	potential = {
-		has_country_flag = show_survey_screen
-	}
-}
+new custom_icon survey_policy_icon_1 = { }
 new custom_button survey_policy_button_1 = {
 	tooltip = "Select Recruitment Policy"
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	effect = {
 		country_event = survey_mechanic.1
 	}
@@ -25,9 +15,6 @@ new custom_icon survey_policy_icon_2 = {
 }
 new custom_button survey_policy_button_2 = {
 	tooltip = "Select Funding Amount"
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	effect = {
 		country_event = survey_mechanic.2
 	}
@@ -39,9 +26,6 @@ new custom_icon survey_policy_icon_3 = {
 }
 new custom_button survey_policy_button_3 = {
 	tooltip = "Select Passive Activity"
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	effect = {
 		country_event = survey_mechanic.3
 	}

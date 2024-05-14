@@ -18,7 +18,20 @@ new named_ui_node spell_menu_node = interface_files:countrytechnologyview:countr
 
 new named_bool current_spell_side = no
 new named_int current_spell_position_y = 0
-new named_ui_node current_spell_page = spell_menu_node
+
+spell_menu_node += {
+	windowType = {
+		name = "spells_page_0"
+		position = { x = 0 y = 0 }
+		scripted = yes
+	}
+}
+new custom_window spells_page_0 = {
+	potential = {
+		has_country_flag = show_magic_menu
+	}
+}
+new named_ui_node current_spell_page = spell_menu_node:spells_page_0
 
 new class spell = {
 	list = spells

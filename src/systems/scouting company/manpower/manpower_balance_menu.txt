@@ -1,31 +1,16 @@
 new custom_text_box survey_manpower_menu_text = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "Recruits & Losses"
 }
 new custom_text_box survey_manpower_recruits_text = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "Total Recruits"
 }
 new custom_text_box survey_manpower_recruits = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "§G[This.survey_monthly_recruits.GetValue]§!"
 }
 new custom_text_box survey_manpower_losses_text = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "Total Losses"
 }
 new custom_text_box survey_manpower_losses = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "§R[This.survey_monthly_losses.GetValue]§!"
 	tooltip = "
 Retirements: §Y[This.survey_retirements.GetValue]§!£icon_manpower£
@@ -33,9 +18,6 @@ Resignments: §Y[This.survey_resignments.GetValue]§!£icon_manpower£
 Casualties: §Y[This.survey_casualties.GetValue]§!£icon_manpower£"
 }
 new custom_text_box survey_manpower_sum_text = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "Balance"
 }
 new customizable_localization GetSurveyManpowerSum = {
@@ -61,8 +43,5 @@ new customizable_localization GetSurveyManpowerSum = {
 	}
 }
 new custom_text_box survey_manpower_sum = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "[This.GetSurveyManpowerSum]"
 }

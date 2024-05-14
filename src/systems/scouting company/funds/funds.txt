@@ -1,20 +1,11 @@
 new custom_text_box survey_fund_title = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "Funds"
 }
 new custom_text_box survey_fund_value = {
-    potential = {
-		has_country_flag = show_survey_screen
-	}
 	name = "[This.survey_funds.GetValue]"
 }
 new custom_button survey_fund_add_button_1 = {
 	tooltip = "Add Funds"
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	trigger = {
 		treasury = 1
 	}
@@ -26,9 +17,6 @@ new custom_button survey_fund_add_button_1 = {
 }
 new custom_button survey_fund_add_button_2 = {
 	tooltip = "Add Funds"
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	trigger = {
 		treasury = 10
 	}
@@ -40,9 +28,6 @@ new custom_button survey_fund_add_button_2 = {
 }
 new custom_button survey_fund_add_button_3 = {
 	tooltip = "Add Funds"
-	potential = {
-		has_country_flag = show_survey_screen
-	}
 	trigger = {
 		treasury = 100
 	}
