@@ -2,8 +2,23 @@ new named_int SPELL_TOP = 140
 new named_int SPELL_LEFT = 10
 new named_int SPELL_RIGHT = 285
 
+interface_files:countrytechnologyview:countrytechnologyview += {
+	windowType = {
+		name = "spells_menu"
+		position = { x = 0 y = 0 }
+		scripted = yes
+	}
+}
+new custom_window spells_menu = {
+	potential = {
+		has_country_flag = show_magic_menu
+	}
+}
+new named_ui_node spell_menu_node = interface_files:countrytechnologyview:countrytechnologyview:spells_menu
+
 new named_bool current_spell_side = no
 new named_int current_spell_position_y = 0
+new named_ui_node current_spell_page = spell_menu_node
 
 new class spell = {
 	list = spells
@@ -15,7 +30,7 @@ new class spell = {
 	}
 	on_create = {
 		when [current_spell_side == no] {
-			interface_files:countrytechnologyview:countrytechnologyview += {
+			current_spell_page += {
 				iconType = {
 					name = `custom_mechanic_spell_background_{this:id}`
 					position = { x = (SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + current_spell_position_y) }
@@ -53,7 +68,7 @@ new class spell = {
 			}
 		}
 		when_not {
-			interface_files:countrytechnologyview:countrytechnologyview += {
+			current_spell_page += {
 				iconType = {
 					name = `custom_mechanic_spell_background_{this:id}`
 					position = { x = (SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + current_spell_position_y) }
@@ -92,21 +107,11 @@ new class spell = {
 			}
 		}
 		
-		new custom_icon `custom_mechanic_spell_background_{this:id}` = {
-			potential = {
-				has_country_flag = show_magic_menu
-			}
-		}
+		new custom_icon `custom_mechanic_spell_background_{this:id}` = { }
 		new custom_text_box `custom_mechanic_spell_name_{this:id}` = {
-			potential = {
-				has_country_flag = show_magic_menu
-			}
 			name = this:name
 		}
 		new custom_text_box `custom_mechanic_spell_type_{this:id}` = {
-			potential = {
-				has_country_flag = show_magic_menu
-			}
 			name = `{id_to_name = this:type}`
 			tooltip = `This spell is of the §Y{id_to_name = this:type}§! Type
 
@@ -117,9 +122,6 @@ new class spell = {
 §YSiege§! type spells affect a siege, they can be cast from the siege window.`
 		}
 		new custom_text_box `custom_mechanic_spell_cost_{this:id}` = {
-			potential = {
-				has_country_flag = show_magic_menu
-			}
 			name = `{this:cost}£magicka_icon£`
 			tooltip = `This spell costs {this:cost}£magicka_icon£ to cast`
 		}
@@ -134,9 +136,6 @@ new class spell = {
 	-------------
 	This spell costs §Y{this:cost}§! Magicka to cast. This cost is further modified by:
 		Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
-				potential = {
-					has_country_flag = show_magic_menu
-				}
 				trigger =* {
 					variable_arithmetic_trigger = {
 						custom_tooltip = "Have enough magicka to cast this spell."
@@ -160,9 +159,6 @@ new class spell = {
 	-------------
 	This spell costs §Y{this:cost}§! Magicka to cast. This cost is further modified by:
 		Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
-				potential = {
-					has_country_flag = show_magic_menu
-				}
 				trigger =* {
 					variable_arithmetic_trigger = {
 						custom_tooltip = "Have enough magicka to cast this spell."
@@ -189,7 +185,7 @@ new class spell_header = {
 		name = string
 	}
 	on_create = {
-		interface_files:countrytechnologyview:countrytechnologyview += {
+		current_spell_page += {
 			iconType = {
 				name = `custom_mechanic_spell_header_background_{this:id}`
 				position = { x = (65 / 2 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + current_spell_position_y) }
@@ -206,15 +202,8 @@ new class spell_header = {
 			}
 		}
 		
-		new custom_icon `custom_mechanic_spell_header_background_{this:id}` = {
-			potential = {
-				has_country_flag = show_magic_menu
-			}
-		}
+		new custom_icon `custom_mechanic_spell_header_background_{this:id}` = { }
 		new custom_text_box `custom_mechanic_spell_header_name_{this:id}` = {
-			potential = {
-				has_country_flag = show_magic_menu
-			}
 			name = this:name
 		}
 		

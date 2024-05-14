@@ -54,6 +54,28 @@ new class custom_text_box = {
 		tooltip = string?
 	}
 }
+new class custom_window = {
+	id = `{this:id}`
+	list = custom_windows
+	default = {
+		potential = { }
+	}
+	args = {
+		potential = named_trigger
+	}
+	simple_transpile = {
+		write_file "common/custom_gui/custom_windows.txt" = {
+			foreach $ in custom_windows {
+				custom_window = {
+					name = $
+					potential = {
+						$:potential
+					}
+				}
+			}
+		}
+	}
+}
 new class modifier_definition = {
 	id = `{this:id}`
 	list = modifier_definitions
@@ -107,6 +129,9 @@ new class named_int = {
 }
 new class named_bool = {
 	args = bool
+}
+new class named_ui_node = {
+	args = ui_node
 }
 new class naval_doctrine = {
 	id = `{this:id}`
