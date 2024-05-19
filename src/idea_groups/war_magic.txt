@@ -496,67 +496,6 @@ new idea_group summoning_ideas = {
 		global_regiment_cost = -0.15
 	}
 }
-new idea_group necromancy_ideas = {
-	name = "Necromancy"
-	category = MIL
-	trigger = {
-		full_idea_group = conjuration_ideas
-	}
-	ideas = {
-		{
-			name = "Army of the Dead"
-			desc = "Our frontlines are composed of zombies and skeletons whose sole purpose is tired and delay the enemy while our elite troops watch in amusement "
-			modifier = {
-				global_manpower_modifier = 0.25
-			}
-		}
-		{
-			name = "The Dead do not Suffer"
-			desc = "When zombies and skeletons are the ones who are taking the brunt of fighting we ensure that we can keep our war enthusiasm at an all-time high "
-			modifier = {
-				war_exhaustion = -0.03
-			}
-		}
-		{
-			name = "Skeletal Body Guards"
-			desc = "Every one of our necromancers has several skeletal bodyguards to ensure their survival "
-			modifier = {
-				land_forcelimit_modifier = 0.25
-			}
-		}
-		{
-			name = "State-Sanctioned Necromancy"
-			desc = "The practice of Necromancy is not only legalized but also incentivized, thus cemeteries and graveyards are now part of the state "
-			modifier = {
-				manpower_in_true_faith_provinces = 0.35
-			}
-		}
-		{
-			name = "Recycle our Dead"
-			desc = "Those who die on the battlefield or are unfit to fight anymore can have unfortunate accidents and thus serve our country's purposes once more "
-			modifier = {
-				reinforce_speed = 0.5
-			}
-		}
-		{
-			name = "The Dead Feel no Fear"
-			desc = " The undead unlike a normal soldier will keep fighting against all odds and never retreat nor surrender."
-			modifier = {
-				land_morale_constant = 0.15
-			}
-		}
-		{
-			name = "Relentless Undead"
-			desc = "Even if our army is defeated we can easily raise more dead ready to fight once more "
-			modifier = {
-				recover_army_morale_speed = 0.5
-			}
-		}
-	}
-	bonus = {
-		land_maintenance_modifier = -0.05
-	}
-}
 new idea_group soul_siphon_ideas = {
 	name = "Soul Siphon"
 	category = DIP

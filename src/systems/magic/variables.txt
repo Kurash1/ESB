@@ -3,6 +3,12 @@
 #-- init: Means that it's initialized to the initial_value.
 #-- monthly: Means that the calculate effect is called on_monthly_pulse.
 
+new modifier_definition spells_known = {
+	name = "Spells Known"
+	is_percentage = no
+}
+
+
 new modifier_definition spell_cost_modifier = {
 	name = "Spell Cost Modifier"
 	is_percentage = yes

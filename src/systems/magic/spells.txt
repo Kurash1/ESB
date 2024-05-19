@@ -28,7 +28,7 @@ spell_menu_node += {
 }
 new custom_window spells_page_0 = {
 	potential = {
-		has_country_flag = show_magic_menu
+		&open_spell_page == 0
 	}
 }
 new named_ui_node current_spell_page = spell_menu_node:spells_page_0
@@ -375,6 +375,250 @@ new spell mark_recall = {
 new spell dispel = {
 	name = "Dispel"
 	type = country
+	cost = 10
+	on_cast = { }
+}
+
+spell_menu_node += {
+	windowType = {
+		name = "spells_page_1"
+		position = { x = 0 y = 0 }
+		scripted = yes
+	}
+}
+new custom_window spells_page_1 = {
+	potential = {
+		&open_spell_page == 1
+	}
+}
+current_spell_position_y := 0
+current_spell_side := no
+run_effect = {
+	delete = current_spell_page
+}
+new named_ui_node current_spell_page = spell_menu_node:spells_page_1
+
+new spell_header shadow_magic = {
+	name = "Shadow Magic"
+}
+new spell shadow_travel = {
+	name = "Shadow Travel"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell shadow_gates = {
+	name = "Shadow Gates"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header auramancy = {
+	name = "Auramancy"
+}
+new spell recreate_the_past = {
+	name = "Recreate the Past"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell find_motives = {
+	name = "Find Motives"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header divination = {
+	name = "Divination"
+}
+new spell vision_of_the_tenth_eye = {
+	name = "Vision of the Tenth Eye"
+	type = diplomatic
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header destruction = {
+	name = "Destruction"
+}
+new spell destroy_province = {
+	name = "Destroy Province"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell siege_magic = {
+	name = "Siege Magic"
+	type = siege
+	cost = 10
+	on_cast = { }
+}
+new spell destroy_army = {
+	name = "Destroy Army"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell elemental_runes = {
+	name = "Elemental Runes"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell wall_of_elements = {
+	name = "Wall of Elements"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+
+current_spell_position_y := 0
+current_spell_side := yes
+
+new spell_header dark_magic = {
+	name = "Dark Magic"
+}
+new spell drain_magicka = {
+	name = "Drain Magicka"
+	type = diplomatic
+	cost = 10
+	on_cast = { }
+}
+new spell imprison_dissidents = {
+	name = "Imprison Dissidents"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header blood_magic = {
+	name = "Blood Magic"
+}
+new spell summon_gargoyles = {
+	name = "Summon Gargoyles"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell paralyze_enemies = {
+	name = "Paralyze Enemies"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell drain_life = {
+	name = "Drain Life"
+	type = diplomatic
+	cost = 10
+	on_cast = { }
+}
+new spell sacrifice_people = {
+	name = "Sacrifice People"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header water_magic = {
+	name = "Water Magic"
+}
+new spell read_water_memories = {
+	name = "Read Water Memories"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+
+spell_menu_node += {
+	windowType = {
+		name = "spells_page_2"
+		position = { x = 0 y = 0 }
+		scripted = yes
+	}
+}
+new custom_window spells_page_2 = {
+	potential = {
+		&open_spell_page == 2
+	}
+}
+current_spell_position_y := 0
+current_spell_side := no
+run_effect = {
+	delete = current_spell_page
+}
+new named_ui_node current_spell_page = spell_menu_node:spells_page_2
+
+
+new spell_header conjuration = {
+	name = "Conjuration"
+}
+new spell bound_weapons = {
+	name = "Bound Weapons"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell summon_helpers = {
+	name = "Summon Helpers"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell summon_soldiers = {
+	name = "Summon Soldiers"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell dremora_general = {
+	name = "Dremora General"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell soul_trap = {
+	name = "Soul Trap"
+	type = diplomatic
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header necromancy = {
+	name = "Necromancy"
+}
+new spell raise_the_dead = {
+	name = "Raise the Dead"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell create_black_soul_gems = {
+	name = "Create Black Soul Gems"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell the_path_of_transcendence = {
+	name = "The Path of Transcendence"
+	type = ritual
+	cost = 10
+	on_cast = { }
+}
+
+new spell_header flesh_magic = {
+	name = "Flesh Magic"
+}
+new spell create_flesh_golems = {
+	name = "Create Flesh Golems"
+	type = country
+	cost = 10
+	on_cast = { }
+}
+new spell perfect_the_ruler = {
+	name = "Perfect the Ruler"
+	type = ritual
 	cost = 10
 	on_cast = { }
 }

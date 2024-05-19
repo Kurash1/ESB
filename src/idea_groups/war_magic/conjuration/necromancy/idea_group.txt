@@ -1,0 +1,113 @@
+new modifier_definition manpower_from_casualties_caused = {
+	name = "Manpower from Casualties Caused"
+	is_percentage = yes
+}
+new modifier_definition manpower_from_battle_losses = {
+	name = "Manpower from Battle Losses"
+	is_percentage = yes
+}
+on_actions:on_battle_won_country += {
+	ROOT = {
+		&temp &= modifier:manpower_from_casualties_caused
+		&temp *= land_units_killed
+		
+		while [&temp >= 1000] {
+			&temp -= 1000
+			add_manpower = 1
+		}
+		
+		while [&temp >= 0.001] {
+			&temp -= 0.001
+			add_manpower = 0.001
+		}
+		
+		&temp &= modifier:manpower_from_battle_losses
+		&temp *= land_units_lost
+		
+		while [&temp >= 1000] {
+			&temp -= 1000
+			add_manpower = 1
+		}
+		
+		while [&temp >= 0.001] {
+			&temp -= 0.001
+			add_manpower = 0.001
+		}
+	}
+}
+
+new idea_group necromancy_ideas = {
+	name = "Necromancy"
+	category = MIL
+	trigger = {
+		#full_idea_group = conjuration_ideas
+	}
+	ideas = {
+		{
+			name = "Necromanctic Magic"
+			desc = ""
+			modifier = {
+				spells_known = 3
+				diplomatic_reputation = -4
+				ae_impact = 15%
+			}
+		}
+		{
+			name = "An Army of the Dead"
+			desc = ""
+			modifier = {
+				global_manpower_modifier = 100%
+				land_forcelimit_modifier = 100%
+				global_regiment_cost = -20%
+				no_cost_for_reinforcing = yes
+				
+				capped_by_forcelimit = yes
+				movement_speed = -50%
+				shock_damage = -25%
+				fire_damage = -25%
+			}
+		}
+		{
+			name = "The Dead feel no Fear"
+			desc = ""
+			modifier = {
+				land_morale_constant = 0.25
+				reserves_organisation = 400%
+				morale_damage_received = -50%
+			}
+		}
+		{
+			name = "The Rising Dead"
+			desc = ""
+			modifier = {
+				manpower_from_casualties_caused = 50%
+				manpower_from_battle_losses = 50%
+			}
+		}
+		{
+			name = "Black Soul Gem Trade"
+			desc = ""
+			modifier = {
+				global_trade_power = 10%
+			}
+		}
+		{
+			name = "Undead Work-Force"
+			desc = ""
+			modifier = {
+				goods_line = 1
+			}
+		}
+		{
+			name = "Pursuit of Immortality"
+			desc = ""
+			modifier = {
+				global_monthly_devastation = -0.1
+				magicka_gain_modifier = 10%
+			}
+		}
+	}
+	bonus = {
+		infantry_power = 0.10
+	}
+}
