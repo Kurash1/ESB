@@ -34,12 +34,12 @@ new named_effect populate_agenda_options = {
 	foreach $estate in estates {
 		events:estate_privileges_and_agendas_events.3:options += {
 			{
-				name =* "The Proposal of the *$estate:name*"
-				trigger =* {
-					has_country_flag = *$estate*_present_agenda
+				name = "The Proposal of the {$estate:name}"
+				trigger = {
+					has_country_flag = `{$estate}_present_agenda`
 				}
-				effect =* {
-					start_estate_agenda = *$estate*
+				effect = {
+					start_estate_agenda = $estate
 				}
 			}
 		}

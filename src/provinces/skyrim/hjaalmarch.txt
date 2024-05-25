@@ -993,20 +993,20 @@ new province bromjunaar = {
 				length = 100
 				on_complete = {
 					owner = {
-						give_artifact = {
-							id = morokei
-							name = "Morokei"
-							modifier = {
-								monthly_magicka = 0.5
-							}
-						}
-						give_artifact = {
-							id = tulnir
-							name = "Tulnir"
-							modifier = {
-								fire_damage = 0.1
-							}
-						}
+						#give_artifact = {
+						#	id = morokei
+						#	name = "Morokei"
+						#	modifier = {
+						#		monthly_magicka = 0.5
+						#	}
+						#}
+						#give_artifact = {
+						#	id = tulnir
+						#	name = "Tulnir"
+						#	modifier = {
+						#		fire_damage = 0.1
+						#	}
+						#}
 					}
 				}
 			}

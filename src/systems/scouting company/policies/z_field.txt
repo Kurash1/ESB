@@ -38,7 +38,7 @@ new class survey_passive_activity = {
 		on_apply = named_effect
 		slot = int
 	}
-	on_create = {
+	on_create_with_compile = {
 		this:slot := survey_passive_activities_count
 		
 		new event_modifier `survey_passive_activity_{this:id}` = {
@@ -48,22 +48,20 @@ new class survey_passive_activity = {
 		
 		events:survey_mechanic.3:options += {
 			{
-				name =* "*this:name*"
-				effect =* {
+				name = this:name
+				effect = {
 					when [
-						exists = survey_passive_activities:*this:id*:trigger_tooltip
-						exists = survey_passive_activities:*this:id*:trigger
+						exists = this:trigger_tooltip
+						exists = this:trigger
 					] {
 						conditional_effect = {
-							tooltip = survey_passive_activities:*this:id*:trigger_tooltip
-							trigger = {
-								survey_passive_activities:*this:id*:trigger
-							}
+							tooltip = this:trigger_tooltip
+							trigger = this:trigger
 							effect = {
 								hidden_effect = {
 									clear_passive_activity
 								}
-								apply_passive_activity = *this:id*
+								apply_passive_activity = this
 							}
 						}
 					}
@@ -71,7 +69,7 @@ new class survey_passive_activity = {
 						hidden_effect = {
 							clear_passive_activity
 						}
-						apply_passive_activity = *this:id*
+						apply_passive_activity = this
 					}
 				}
 			}
@@ -80,8 +78,8 @@ new class survey_passive_activity = {
 		custom_icons:survey_policy_icon_3:frames += {
 			{
 				frame = this:icon
-				trigger =* {
-					&survey_policy_3 == *survey_passive_activities_count*
+				trigger = {
+					&survey_policy_3 == survey_passive_activities_count
 				}
 			}
 		}

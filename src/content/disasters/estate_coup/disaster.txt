@@ -1,43 +1,44 @@
 new named_effect estate_coup_disasters = {
+	arc_call_1
 	foreach $ in estates {
 		new disaster `{$}_coup` = {
 			name = "{$:name} Coup"
 			desc = "The {$:name} have grown so powerful they assumed de facto control over our country."
-			potential =* {
-				has_estate = *$*
+			potential = {
+				has_estate = $
 			}
-			can_start =* {
+			can_start = {
 				estate_influence = {
-					estate = *$*
+					estate = $
 					influence = 100
 				}
 			}
-			can_stop =* {
+			can_stop = {
 				NOT = {
 					estate_influence = {
-						estate = *$*
+						estate = $
 						influence = 100
 					}
 				}
 			}
-			down_progress =* {
+			down_progress = {
 				factor = 0
 				modifier = {
 					factor = 1
 					NOT = {
 						estate_influence = {
-							estate = *$*
+							estate = $
 							influence = 100
 						}
 					}
 				}
 			}
-			progress =* {
+			progress = {
 				modifier = {
 					factor = 0.5
 					NOT = {
 						estate_loyalty = {
-							estate = *$*
+							estate = $
 							loyalty = 60
 						}
 					}
@@ -47,7 +48,7 @@ new named_effect estate_coup_disasters = {
 					factor = 0.5
 					NOT = {
 						estate_loyalty = {
-							estate = *$*
+							estate = $
 							loyalty = 50
 						}
 					}
@@ -57,7 +58,7 @@ new named_effect estate_coup_disasters = {
 					factor = 0.5
 					NOT = {
 						estate_loyalty = {
-							estate = *$*
+							estate = $
 							loyalty = 40
 						}
 					}
@@ -67,7 +68,7 @@ new named_effect estate_coup_disasters = {
 					factor = 1
 					NOT = {
 						estate_loyalty = {
-							estate = *$*
+							estate = $
 							loyalty = 30
 						}
 					}
@@ -77,26 +78,27 @@ new named_effect estate_coup_disasters = {
 					factor = 1
 					NOT = {
 						estate_loyalty = {
-							estate = *$*
+							estate = $
 							loyalty = 20
 						}
 					}
 					is_at_war = no
 				}
 			}
-			can_end =* {
+			can_end = {
 				NOT = {
 					estate_influence = {
-						estate = *$*
+						estate = $
 						influence = 90
 					}
 				}
 			}
-			modifier =* {
+			modifier = {
 				global_autonomy = 0.15
 				
-				*$:country_modifier_angry*
+				$:country_modifier_angry
 			}
 		}
 	}
+	arc_call_2
 }

@@ -2,8 +2,8 @@ new effect create_develop_production_agenda = {
 	args = estate
 	transpile = {
 		new agenda `{args}_develop_production` = {
-			name =* "Increase Production Income in [agenda_province.GetName]"
-			desc =* "The *args:name* request that we invest in the prosperity of their lands in [agenda_province.GetName]."
+			name = "Increase Production Income in [agenda_province.GetName]"
+			desc = "The {args:name} request that we invest in the prosperity of their lands in [agenda_province.GetName]."
 			can_select = {
 				capital_scope = {
 					is_state_core = ROOT
@@ -104,25 +104,25 @@ new effect create_develop_production_agenda = {
 					base_production = "province_dip_var" 
 				}
 			} 
-			task_completed_effect =* {
+			task_completed_effect = {
 				add_estate_loyalty = { 
-					estate = *args* 
+					estate = args 
 					loyalty = 10 
 				} 
 				add_prestige = 10 
 			} 
-			failing_effect =* {
+			failing_effect = {
 				event_target:agenda_province = { 
 					if = { 
 						limit = { owned_by = ROOT } 
 						add_named_unrest = { 
-							name = local_*args*_displeased 
+							name = `local_{args}_displeased`
 							value = 5 
 						} 
 					} 
 				} 
 				add_estate_loyalty_modifier = { 
-					estate = *args* 
+					estate = args
 					desc = EST_VAL_AGENDA_DENIED 
 					loyalty = -5 
 					duration = 7300 

@@ -1,3 +1,18 @@
+new named_effect fix_blessings = {
+	arc_call_1
+	foreach $ in blessings {
+		$:ai_will_do +=! {
+			modifier = {
+				factor = 0
+				NOT = {
+					$:potential
+				}
+			}
+		}
+	}
+	arc_call_2
+}
+
 new named_int MAP_WIDTH = 4096
 new named_int MAP_HEIGHT = 2816
 
@@ -20,10 +35,10 @@ new named_effect monuments_for_plebs = {
 		$m:start:history +=! {
 			if [NOT = { has_dlc = "Leviathan" }] {
 				quick_province_modifier = {
-					name =* "*$m:name*"
-					modifier =* {
-						great_projects:*$m:id*:tier_1:province_modifier
-						great_projects:*$m:id*:tier_1:country_modifier
+					name = "{$m:name}"
+					modifier = {
+						$m:tier_1:province_modifier
+						$m:tier_1:country_modifier
 					}
 				}
 			}

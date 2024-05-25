@@ -16,8 +16,8 @@ on_actions:on_battle_won_country += {
 			add_manpower = 1
 		}
 		
-		while [&temp >= 0.001] {
-			&temp -= 0.001
+		while [&temp >= 1] {
+			&temp -= 1
 			add_manpower = 0.001
 		}
 		
@@ -29,8 +29,8 @@ on_actions:on_battle_won_country += {
 			add_manpower = 1
 		}
 		
-		while [&temp >= 0.001] {
-			&temp -= 0.001
+		while [&temp >= 1] {
+			&temp -= 1
 			add_manpower = 0.001
 		}
 	}

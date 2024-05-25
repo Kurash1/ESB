@@ -62,7 +62,7 @@ new effect create_expedition = {
 		frame = int
 		event_picture = string
 		length = int
-		on_complete = effect
+		on_complete = named_effect
 	}
 	transpile = {
 		set_province_flag = expedition_target
@@ -105,7 +105,7 @@ new effect create_expedition = {
 			is_triggered_only = yes
 			options = {
 				name = "Finally"
-				effect =* *args:on_complete*
+				effect = args:on_complete
 			}
 		}
 		

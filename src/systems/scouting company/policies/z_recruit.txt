@@ -37,7 +37,7 @@ new class survey_recruitment_policy = {
 		modifier = modifier
 		slot = int
 	}
-	on_create = {
+	on_create_with_compile = {
 		this:slot := survey_recruitment_policies_count
 		
 		new event_modifier `survey_recruitment_policy_{this:id}` = {
@@ -47,11 +47,11 @@ new class survey_recruitment_policy = {
 		
 		events:survey_mechanic.1:options += {
 			{
-				name =* "*this:name*"
-				effect =* {
+				name = this:name
+				effect = {
 					clear_recruit_policy
 					
-					apply_recruitment_policy = *this:id*
+					apply_recruitment_policy = this
 				}
 			}
 		}
@@ -59,8 +59,8 @@ new class survey_recruitment_policy = {
 		custom_icons:survey_policy_icon_1:frames += {
 			{
 				frame = this:icon
-				trigger =* {
-					&survey_policy_1 == *survey_recruitment_policies_count*
+				trigger = {
+					&survey_policy_1 == survey_recruitment_policies_count
 				}
 			}
 		}
