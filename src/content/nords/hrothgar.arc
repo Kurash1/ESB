@@ -109,7 +109,7 @@ on_actions:on_general_recruited += {
 new incident collapse_of_hrothgar = {
 	name = "Collapse of Hrothgar"
 	immediate = {
-		p@whiterun = {
+		provinces:whiterun = {
 			owner = {
 				if [tag = hrothgar] {
 					emperor = {
@@ -121,7 +121,7 @@ new incident collapse_of_hrothgar = {
 				}
 			}
 		}
-		p@amol = {
+		provinces:amol = {
 			owner = {
 				if [tag = hrothgar] {
 					emperor = {
