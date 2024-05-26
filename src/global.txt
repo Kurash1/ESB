@@ -1,16 +1,23 @@
 new named_effect fix_blessings = {
-	arc_call_1
-	foreach $ in blessings {
-		$:ai_will_do +=! {
+	foreach blessing in blessings {
+		blessing:ai_will_do +=! {
 			modifier = {
 				factor = 0
 				NOT = {
-					$:potential
+					blessing:potential
 				}
 			}
 		}
 	}
-	arc_call_2
+}
+new named_effect fix_new_diplo_actions = {
+	foreach diplo in diplomatic_actions {
+		diplo:trigger +=! {
+			if [ai = no] {
+				diplo:potential
+			}
+		}
+	}
 }
 
 new named_int MAP_WIDTH = 4096
