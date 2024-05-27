@@ -1,0 +1,20 @@
+new script_variable development = {
+	name = "Development"
+}
+
+on_actions:on_startup += {
+	if [tag = black_mountain] { #debug country
+		every_province = {
+			&development &= development
+		}
+	}
+	&development &= total_development
+}
+on_actions:on_monthly_pulse += {
+	if [tag = black_mountain] { #debug country
+		every_province = {
+			&development &= development
+		}
+	}
+	&development &= total_development
+}

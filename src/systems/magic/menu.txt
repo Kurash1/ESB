@@ -40,6 +40,10 @@ new custom_button open_magic_menu = {
 	}
 	effect = {
 		set_country_flag = show_magic_menu
+		
+		hidden_effect = {
+			calculate_spell_costs
+		}
 	}
 }
 new custom_icon magic_menu = {

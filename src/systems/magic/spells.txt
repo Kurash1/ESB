@@ -1,4 +1,4 @@
-new named_int SPELL_TOP = 140
+new named_int SPELL_TOP = 120
 new named_int SPELL_LEFT = 10
 new named_int SPELL_RIGHT = 285
 
@@ -33,15 +33,24 @@ new custom_window spells_page_0 = {
 }
 new named_ui_node current_spell_page = spell_menu_node:spells_page_0
 
+new named_effect calculate_spell_costs = { }
+force_compile = calculate_spell_costs
+
 new class spell = {
 	list = spells
+	default = {
+		scaled = yes
+	}
 	args = {
 		name = string
 		type = string #will be made an enum later
 		cost = float
 		on_cast = named_effect
+		scaled = bool
 	}
 	on_create = {
+		arc_call_1
+		
 		when [current_spell_side == no] {
 			current_spell_page += {
 				iconType = {
@@ -120,6 +129,18 @@ new class spell = {
 			}
 		}
 		
+		calculate_spell_costs += {
+			new script_variable `{this:id}_spell_cost` = {
+				name = "{this:name} Cost"
+			}
+			&`{this:id}_spell_cost` := this:cost
+			&`{this:id}_spell_cost` *= spell_cost_modifier_var
+			when [this:scaled == yes] {
+				&`{this:id}_spell_cost` *= development
+				&`{this:id}_spell_cost` *= 0.01
+			}
+		}
+		
 		new custom_icon `custom_mechanic_spell_background_{this:id}` = { }
 		new custom_text_box `custom_mechanic_spell_name_{this:id}` = {
 			name = this:name
@@ -135,61 +156,59 @@ new class spell = {
 §YSiege§! type spells affect a siege, they can be cast from the siege window.`
 		}
 		new custom_text_box `custom_mechanic_spell_cost_{this:id}` = {
-			name = `{this:cost}£magicka_icon£`
-			tooltip = `This spell costs {this:cost}£magicka_icon£ to cast`
+			name = `[{this:id}_spell_cost.GetValue]£magicka_icon£`
+			tooltip = `This spell costs [{this:id}_spell_cost.GetValue]£magicka_icon£ to cast`
 		}
-		when [
-			OR = {
-				this:type == "country"
-				this:type == "ritual"
+		
+		new custom_button `custom_mechanic_spell_{this:id}` = {
+			tooltip = "{this:name}
+-------------
+This spell has a base cost of §Y{this:cost}§!. This cost is further modified by:
+	Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
+			trigger = {
+				&magicka >= `{this:id}_spell_cost`
 			}
-		] {
-			new custom_button `custom_mechanic_spell_{this:id}` = {
-				tooltip = "{this:name}
-	-------------
-	This spell costs §Y{this:cost}§! Magicka to cast. This cost is further modified by:
-		Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
-				trigger =* {
-					variable_arithmetic_trigger = {
-						custom_tooltip = "Have enough magicka to cast this spell."
-						&this_spell_cost &= modifier:spell_cost_modifier
-						&this_spell_cost *= *this:cost*
-						
-						&magicka >= this_spell_cost
-					}
+			effect = { }
+		}
+		
+		when [this:type == "province"] {
+			custom_buttons:last:effect +=! {
+				capital_scope = {
+					this:on_cast
 				}
-				effect =* {
-					hidden_effect = {
-						add_magicka = -*this:cost*
-					}
-					*this:on_cast*
+			}
+		}
+		
+		when [
+			this:type != "country"
+			this:type != "ritual"
+		] {
+			custom_buttons:last:trigger := {
+				custom_trigger_tooltip = {
+					new_tooltip = "This is not a §YCountry§! or §YRitual§! type spell, and thus cannot be cast from this menu."
+					always = no
 				}
 			}
 		}
 		when_not {
-			new custom_button `custom_mechanic_spell_{this:id}` = {
-				tooltip = "{this:name}
-	-------------
-	This spell costs §Y{this:cost}§! Magicka to cast. This cost is further modified by:
-		Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
-				trigger =* {
-					variable_arithmetic_trigger = {
-						custom_tooltip = "Have enough magicka to cast this spell."
-						&this_spell_cost &= modifier:spell_cost_modifier
-						&this_spell_cost *= *this:cost*
-						
-						&magicka >= this_spell_cost
-					}
-					custom_trigger_tooltip = {
-						new_tooltip = "This is not a §YCountry§! or §YRitual§! type spell, and thus cannot be cast from this menu."
-						always = no
-					}
+			custom_buttons:last:effect +=! {
+				hidden_effect = {
+					add_magicka = (-1 * this:cost)
 				}
-				effect = { }
+				this:on_cast
 			}
 		}
 		
+		when [this:scaled == yes] { custom_buttons:last:tooltip += "
+	Development: §Y[development.GetValue]%§!" }
+		
 		current_spell_position_y += 57
+		
+		when [current_spell_position_y > 700] {
+			create_next_spell_page = yes
+		}
+		
+		arc_call_2
 	}
 }
 new class spell_header = {
@@ -224,401 +243,34 @@ new class spell_header = {
 	}
 }
 
-
-
-new spell_header alteration = {
-	name = "Alteration"
-}
-new spell shield = {
-	name = "Shield"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-new spell armor = {
-	name = "Armor"
-	type = country
-	cost = 50
-	on_cast = { }
-}
-new spell open = {
-	name = "Open"
-	type = diplomatic
-	cost = 25
-	on_cast = { }
-}
-new spell burden = {
-	name = "Burden"
-	type = diplomatic
-	cost = 15
-	on_cast = { }
-}
-new spell feather = {
-	name = "Feather"
-	type = country
-	cost = 15
-	on_cast = { }
-}
-new spell equilibrium = {
-	name = "Equilibrium"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell sea_stride = {
-	name = "Sea Stride"
-	type = country
-	cost = 25
-	on_cast = { }
-}
-new spell water_breathing = {
-	name = "Water Breathing"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header weather_magic = {
-	name = "Weather Magic"
-}
-new spell create_rain = {
-	name = "Create Rain"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-new spell create_winter = {
-	name = "Create Winter"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-new spell create_drought = {
-	name = "Create Drought"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-
-current_spell_position_y := 0
-current_spell_side := yes
-
-new spell_header transmutation = {
-	name = "Transmutation"
-}
-new spell transmute_ore = {
-	name = "Transmute Ore"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header illusion = {
-	name = "Illusion"
-}
-new spell invisibility = {
-	name = "Invisibility"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell frenzy = {
-	name = "Frenzy"
-	type = diplomatic
-	cost = 10
-	on_cast = { }
-}
-new spell calm = {
-	name = "Calm"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell rally = {
-	name = "Rally"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell clairvoyance = {
-	name = "Clairvoyance"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header mind_magic = {
-	name = "Mind Magic"
-}
-new spell cause_madness = {
-	name = "Cause Madness"
-	type = diplomatic
-	cost = 10
-	on_cast = { }
-}
-new spell charm = {
-	name = "Charm"
-	type = diplomatic
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header mysticism = {
-	name = "Mysticism"
-}
-new spell mark_recall = {
-	name = "Mark/Recall"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell dispel = {
-	name = "Dispel"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-
-spell_menu_node += {
-	windowType = {
-		name = "spells_page_1"
-		position = { x = 0 y = 0 }
-		scripted = yes
+new named_int spell_pages = 0
+new effect create_next_spell_page = {
+	args = bool
+	transpile = {
+		when [current_spell_side == yes] {
+			spell_pages += 1
+			spell_menu_node += {
+				windowType = {
+					name = `"spells_page_{spell_pages}"`
+					position = { x = 0 y = 0 }
+					scripted = yes
+				}
+			}
+			new custom_window `spells_page_{spell_pages}` = {
+				potential =* {
+					&open_spell_page == *spell_pages*
+				}
+			}
+			current_spell_position_y := 0
+			current_spell_side := no
+			run_effect = {
+				delete = current_spell_page
+			}
+			new named_ui_node current_spell_page = spell_menu_node:last
+		}
+		when_not {
+			current_spell_position_y := 0
+			current_spell_side := yes
+		}
 	}
-}
-new custom_window spells_page_1 = {
-	potential = {
-		&open_spell_page == 1
-	}
-}
-current_spell_position_y := 0
-current_spell_side := no
-run_effect = {
-	delete = current_spell_page
-}
-new named_ui_node current_spell_page = spell_menu_node:spells_page_1
-
-new spell_header shadow_magic = {
-	name = "Shadow Magic"
-}
-new spell shadow_travel = {
-	name = "Shadow Travel"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell shadow_gates = {
-	name = "Shadow Gates"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header auramancy = {
-	name = "Auramancy"
-}
-new spell recreate_the_past = {
-	name = "Recreate the Past"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell find_motives = {
-	name = "Find Motives"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header divination = {
-	name = "Divination"
-}
-new spell vision_of_the_tenth_eye = {
-	name = "Vision of the Tenth Eye"
-	type = diplomatic
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header destruction = {
-	name = "Destruction"
-}
-new spell destroy_province = {
-	name = "Destroy Province"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-new spell siege_magic = {
-	name = "Siege Magic"
-	type = siege
-	cost = 10
-	on_cast = { }
-}
-new spell destroy_army = {
-	name = "Destroy Army"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-new spell elemental_runes = {
-	name = "Elemental Runes"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-new spell wall_of_elements = {
-	name = "Wall of Elements"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-
-current_spell_position_y := 0
-current_spell_side := yes
-
-new spell_header dark_magic = {
-	name = "Dark Magic"
-}
-new spell drain_magicka = {
-	name = "Drain Magicka"
-	type = diplomatic
-	cost = 10
-	on_cast = { }
-}
-new spell imprison_dissidents = {
-	name = "Imprison Dissidents"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header blood_magic = {
-	name = "Blood Magic"
-}
-new spell summon_gargoyles = {
-	name = "Summon Gargoyles"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell paralyze_enemies = {
-	name = "Paralyze Enemies"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell drain_life = {
-	name = "Drain Life"
-	type = diplomatic
-	cost = 10
-	on_cast = { }
-}
-new spell sacrifice_people = {
-	name = "Sacrifice People"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header water_magic = {
-	name = "Water Magic"
-}
-new spell read_water_memories = {
-	name = "Read Water Memories"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-
-spell_menu_node += {
-	windowType = {
-		name = "spells_page_2"
-		position = { x = 0 y = 0 }
-		scripted = yes
-	}
-}
-new custom_window spells_page_2 = {
-	potential = {
-		&open_spell_page == 2
-	}
-}
-current_spell_position_y := 0
-current_spell_side := no
-run_effect = {
-	delete = current_spell_page
-}
-new named_ui_node current_spell_page = spell_menu_node:spells_page_2
-
-
-new spell_header conjuration = {
-	name = "Conjuration"
-}
-new spell bound_weapons = {
-	name = "Bound Weapons"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell summon_helpers = {
-	name = "Summon Helpers"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell summon_soldiers = {
-	name = "Summon Soldiers"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell dremora_general = {
-	name = "Dremora General"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell soul_trap = {
-	name = "Soul Trap"
-	type = diplomatic
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header necromancy = {
-	name = "Necromancy"
-}
-new spell raise_the_dead = {
-	name = "Raise the Dead"
-	type = province
-	cost = 10
-	on_cast = { }
-}
-new spell create_black_soul_gems = {
-	name = "Create Black Soul Gems"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell the_path_of_transcendence = {
-	name = "The Path of Transcendence"
-	type = ritual
-	cost = 10
-	on_cast = { }
-}
-
-new spell_header flesh_magic = {
-	name = "Flesh Magic"
-}
-new spell create_flesh_golems = {
-	name = "Create Flesh Golems"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell perfect_the_ruler = {
-	name = "Perfect the Ruler"
-	type = ritual
-	cost = 10
-	on_cast = { }
 }

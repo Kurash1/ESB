@@ -1,6 +1,8 @@
 on_actions:on_monthly_pulse += {
 	if [ai = no] {
 		calculate_magicka_cycle
+		
+		calculate_spell_costs
 	}
 }
 new named_effect calculate_magicka_cycle = {

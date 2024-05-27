@@ -1,0 +1,21 @@
+new spell_header weather_magic = {
+	name = "Weather Magic"
+}
+new spell create_rain = {
+	name = "Create Rain"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell create_winter = {
+	name = "Create Winter"
+	type = province
+	cost = 10
+	on_cast = { }
+}
+new spell create_drought = {
+	name = "Create Drought"
+	type = province
+	cost = 10
+	on_cast = { }
+}
