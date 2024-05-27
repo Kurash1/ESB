@@ -34,8 +34,8 @@ new spell open = {
 	type = diplomatic
 	cost = 100
 	on_cast = {
-		add_spy_network_from = {
-			who = ROOT
+		add_spy_network_in = {
+			who = event_target:spell_target
 			value = 25
 		}
 	}
@@ -45,11 +45,13 @@ new spell burden = {
 	type = diplomatic
 	cost = 150
 	on_cast = {
-		quick_country_modifier = {
-			name = "Magically Burdened Soldiers"
-			modifier = {
-				movement_speed = -0.25
-				reinforce_speed = -0.4
+		event_target:spell_target = {
+			quick_country_modifier = {
+				name = "Magically Burdened Soldiers"
+				modifier = {
+					movement_speed = -0.25
+					reinforce_speed = -0.4
+				}
 			}
 		}
 	}
@@ -97,11 +99,12 @@ new spell sea_stride = {
 	name = "Sea Stride"
 	type = country
 	cost = 100
-	on_cast = { }
-}
-new spell water_breathing = {
-	name = "Water Breathing"
-	type = country
-	cost = 100
-	on_cast = { }
+	on_cast = {
+		quick_country_modifier = {
+			name = "Sea Stride"
+			modifier = {
+				movement_speed_in_fleet_modifier = 3
+			}
+		}
+	}
 }
