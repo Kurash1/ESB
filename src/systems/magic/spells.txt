@@ -171,9 +171,19 @@ This spell has a base cost of §Y{this:cost}§!. This cost is further modified b
 			effect = { }
 		}
 		
-		when [this:type == "province"] {
+		when [OR = {
+			this:type == "province"
+			this:type == "siege"
+		}] {
 			custom_buttons:last:effect +=! {
 				capital_scope = {
+					this:on_cast
+				}
+			}
+		}
+		when [this:type == "diplomatic"] {
+			custom_buttons:last:effect +=! {
+				countries:black_mountain = {
 					this:on_cast
 				}
 			}
