@@ -5,8 +5,9 @@ new spell shield = {
 	name = "Shield"
 	type = province
 	cost = 25
+	trigger_tooltip = "have Alteration magic unlocked"
 	trigger = {
-		full_idea_group = alteration_ideas
+		has_idea = alteration_ideas_1
 	}
 	on_cast = {
 		quick_province_modifier = {
@@ -24,7 +25,7 @@ new spell oakflesh = {
 	type = country
 	cost = 200
 	trigger = {
-		full_idea_group = alteration_ideas
+		has_idea = alteration_ideas_1
 		NOT = { has_country_modifier = spell_oakflesh }
 	}
 	on_cast = {
@@ -43,8 +44,9 @@ new spell open = {
 	name = "Open"
 	type = diplomatic
 	cost = 100
+	trigger_tooltip = "have Alteration magic"
 	trigger = {
-		full_idea_group = alteration_ideas
+		has_idea = alteration_ideas_1
 	}
 	on_cast = {
 		add_spy_network_in = {
@@ -57,8 +59,10 @@ new spell burden = {
 	name = "Burden"
 	type = diplomatic
 	cost = 150
+	trigger_tooltip = "have Alteration magic unlocked
+	target cannot be under the effects of Burden"
 	trigger = {
-		full_idea_group = alteration_ideas
+		has_idea = alteration_ideas_1
 		NOT = { event_target:spell_target = { has_country_modifier = spell_burden } }
 	}
 	on_cast = {
@@ -78,9 +82,9 @@ new spell burden = {
 new spell equilibrium = {
 	name = "Equilibrium"
 	type = country
-	cost = 50
+	cost = 25
 	trigger = {
-		full_idea_group = alteration_ideas
+		has_idea = alteration_ideas_1
 	}
 	on_cast = {
 		new_custom_tooltip = "Lose §R50§! of your highest Power Type.
@@ -122,7 +126,7 @@ new spell sea_stride = {
 	type = country
 	cost = 100
 	trigger = {
-		full_idea_group = alteration_ideas
+		has_idea = alteration_ideas_1
 		NOT = { has_country_modifier = spell_sea_stride }
 	}
 	on_cast = {

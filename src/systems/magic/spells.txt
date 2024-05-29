@@ -76,16 +76,18 @@ new named_effect populate_diplomatic_spells = {
 		events:cast_spell.1:options += { {
 			name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
 			effect = {
-				conditional_effect = {
-					tooltip = "§YMagicka ([magicka.GetValue])§! is at least §Y[{$:id}_spell_cost.GetValue] ({$:name} Cost)§!"
-					trigger = {
-						&magicka >= `{$:id}_spell_cost`
-					}
-					effect = {
-						&magicka -= `{$:id}_spell_cost`
-						
-						$:on_cast
-					}
+				if [
+					&magicka >= `{$:id}_spell_cost`
+					$:trigger
+				] {
+					&magicka -= `{$:id}_spell_cost`
+					
+					$:on_cast
+				}
+				else {
+					new_custom_tooltip = "To cast this spell you must fulfill the following conditions:
+	§YMagicka ([magicka.GetValue])§! is at least §Y[{$:id}_spell_cost.GetValue] ({$:name} Cost)§!
+	{$:trigger_tooltip}"
 				}
 			}
 			ai_will_do = {
@@ -119,6 +121,7 @@ new class spell = {
 	list = spells
 	default = {
 		scaled = yes
+		trigger_tooltip = "fulfills spell triggers"
 		trigger = {
 			
 		}
@@ -129,6 +132,7 @@ new class spell = {
 		cost = float
 		on_cast = named_effect
 		scaled = bool
+		trigger_tooltip = string
 		trigger = named_trigger
 	}
 	on_create = {
@@ -265,7 +269,7 @@ This spell has a base cost of §Y{this:cost}§!. This cost is further modified b
 			custom_buttons:last:trigger := {
 				custom_trigger_tooltip = {
 					new_tooltip = "This is not a §YCountry§! or §YRitual§! type spell, and thus cannot be cast from this menu."
-					always = no
+					always = yes
 				}
 			}
 		}

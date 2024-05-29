@@ -1,0 +1,72 @@
+new idea_group alteration_ideas = {
+	name = "Alteration"
+	category = MIL
+	trigger = {
+		#OR = {
+		#	full_idea_group = arcane_ideas
+		#	full_idea_group = war_magic_ideas
+		#}
+	}
+	ideas = {
+		{
+			name = "Alteration Magic"
+			desc = "Unlocks §YShield§! Spell
+Unlocks §YOakflesh§! Spell
+Unlocks §YOpen§! Spell
+Unlocks §YBurden§! Spell
+Unlocks §YEquilibrium§! Spell
+Unlocks §YSea Stride§! Spell"
+			modifier = {
+				spells_known = 6
+			}
+		}
+		{
+			name = "Mage Armor"
+			desc = "Battlemages often wear little to no armour thus magic is required to make sure they do not die with a simple arrow. "
+			modifier = {
+				shock_damage_received = -0.05
+			}
+		}
+		{
+			name = "Atronach"
+			desc = "Some of our mages are so resilient to magical energies they can absorb spells and convert them to magic. "
+			modifier = {
+				fire_damage_received = -0.05
+			}
+		}
+		{
+			name = "Detect Entities"
+			desc = "By altering the way we perceive things we can see those who wish to remain hidden. "
+			modifier = {
+				global_spy_defence = 0.25
+				spy_offence = 0.15
+			}
+		}
+		{
+			name = "Transmutation"
+			desc = "Making less valuable more materials into higher quality ones is a guaranteed economic boost "
+			modifier = {
+				production_efficiency = 0.15
+			}
+		}
+		{
+			name = "Telekinesis"
+			desc = "Having mages assist workers by moving large piles of material and debris with magic allows our factories to run much more efficiently. "
+			modifier = {
+				build_cost = -0.15
+				build_time = -0.25
+			}
+		}
+		{
+			name = "Enhanced Adaptability"
+			desc = "Alteration can be used to make our armies much more suited to their current environment. "
+			modifier = {
+				land_attrition = -0.15
+			}
+		}
+	}
+	bonus = {
+		defensiveness = 0.25
+		siege_ability = 0.25
+	}
+}
