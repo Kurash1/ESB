@@ -4,10 +4,14 @@ new spell_header alteration = {
 new spell shield = {
 	name = "Shield"
 	type = province
-	cost = 100
+	cost = 25
+	trigger = {
+		full_idea_group = alteration_ideas
+	}
 	on_cast = {
 		quick_province_modifier = {
 			name = "Defensive Spells"
+			years = 5
 			modifier = {
 				local_defensiveness = 0.5
 				local_defender_dice_roll_bonus = 1
@@ -15,13 +19,19 @@ new spell shield = {
 		}
 	}
 }
-new spell armor = {
+new spell oakflesh = {
 	name = "Oakflesh"
 	type = country
 	cost = 200
+	trigger = {
+		full_idea_group = alteration_ideas
+		NOT = { has_country_modifier = spell_oakflesh }
+	}
 	on_cast = {
 		quick_country_modifier = {
 			name = "Oakflesh for Soldiers"
+			id = spell_oakflesh
+			years = 5
 			modifier = {
 				fire_damage_received = -0.1
 				shock_damage_received = -0.1
@@ -33,6 +43,9 @@ new spell open = {
 	name = "Open"
 	type = diplomatic
 	cost = 100
+	trigger = {
+		full_idea_group = alteration_ideas
+	}
 	on_cast = {
 		add_spy_network_in = {
 			who = event_target:spell_target
@@ -44,10 +57,16 @@ new spell burden = {
 	name = "Burden"
 	type = diplomatic
 	cost = 150
+	trigger = {
+		full_idea_group = alteration_ideas
+		NOT = { event_target:spell_target = { has_country_modifier = spell_burden } }
+	}
 	on_cast = {
 		event_target:spell_target = {
 			quick_country_modifier = {
 				name = "Magically Burdened Soldiers"
+				id = spell_burden
+				years = 5
 				modifier = {
 					movement_speed = -0.25
 					reinforce_speed = -0.4
@@ -60,6 +79,9 @@ new spell equilibrium = {
 	name = "Equilibrium"
 	type = country
 	cost = 50
+	trigger = {
+		full_idea_group = alteration_ideas
+	}
 	on_cast = {
 		new_custom_tooltip = "Lose §R50§! of your highest Power Type.
 Gain §G25§! of the other two Power Types."
@@ -99,9 +121,15 @@ new spell sea_stride = {
 	name = "Sea Stride"
 	type = country
 	cost = 100
+	trigger = {
+		full_idea_group = alteration_ideas
+		NOT = { has_country_modifier = spell_sea_stride }
+	}
 	on_cast = {
 		quick_country_modifier = {
 			name = "Sea Stride"
+			id = spell_sea_stride
+			years = 5
 			modifier = {
 				movement_speed_in_fleet_modifier = 3
 			}

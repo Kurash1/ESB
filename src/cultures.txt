@@ -135,7 +135,24 @@ new culture_group keptu = {
 		Tuch Obrum Dych Ilcev Bayl Brunnuli Dril Rulmuwo Kog Vereho Vomlol Pinah Erbod Endeg Welin Nanrale Dridvomvac Treroga Trugrognayd Uveza Gur Ergamo Puud Orvete Treyn Walage Doch Pevlen Dog Dandage Ilnyc Nonvemo Olkach Erboda Drinrur Todara Nemlovluc Ralora Bragranbac Wovror Taud Enneda Ber Omveda Bruc Omrafi Wad Erile Kin Arkav Brumroch Dranres Meldich Edemo Povren Olcawa Dilvortad Belrusa Gaiccedvuon Eldin Bor Brubbumi Bad Gedohu Proch Abrari Kac Duldoso Ped Odohe Predluc Osrata Dennan Edlosa Veyrbid Edvaw Pondislug Greglih Drerdirtan Onbus Pal Nuldage Weg Demrenu Waug Uvloz Greg Gralret Vuur Drergan Nuolrig Ivror Tresrac Olcivo Sovril Paduvo Negnulvog Braldeho Elkonbuor Sumdesa Diea Tommuh Hai Arvafa Tuai Elvohi Kitu Dolvov Siho Martane Kofa Trimmewo Sove Wovvavi Ualo Ruldihu Ieate Onbam Eidi Olkave Leia Icraw Huae Egvih Riea Harbon Noge Ilnez Jano Panefu Roro Drevludi Mowe Kandata Uaina Egvizo Eifa Gradotu Eira Trarvuha Jaie Temluwe Hia Rerbone Suae Rerdere Mofu Koldus Heto Kaccivi Relo Todlav Weto Ocdolo Uane Ogmetu Eiaha Aref Iaewi Emdori Tei Suvrov Reia Amdide Siae Nuvvahe Woza Onnut Wewe Tuvles Vena Ilkuz Biza Karkar Uaizi Predriro Uaeme Igmava Aiga Emrele Fuae Nevehi Nei Grerdad Ria Trengen Kama Prurgad Duti Morvevo Levi Emriso Tizo Omvedi Uaeti Grocrig Uaira Necdava Ieaho Nadrewa
 	}
 }
+new culture_group daedra = {
+	name = "Daedra Race"
+	graphical_culture = northamericagfx
+}
 
+new culture dremora = {
+	name = "Dremora"
+	culture_group = daedra
+	male_names = {
+		Akezel Akvilaxu Amkaos Arusax Aruz Atris Bogtro Brosuroth Demis Dezerog Dias Dogas Dothaz Dregas Volar Drozu Druitularg En Erunas Erztiran Firhikh Firikho Fothxura Gelattaz Gilfrex Gniledan Gnilokelo Grel Grexev Hivorate Ifriz Kaluzan Kathutet Kehothar Kmolag Kothutuilk Krrztrrb Kyngogurth Lansh Maneer Methats Nariam Nif Nokvroz Noroth Ofepayl Orran Ranyu Ri Rynkyus Screizzaz Seris Skoria Skrigif Sulazz Sumeer Tachnim Tassovas Telixas Tephilaz Torvesard Tuzunkykz Uldun Vaekar Velehk Verkynvayl Vregas Vyrotesn Xar Xykenaz Ykal Za Zavak Zexamys Zyzazzil
+	}
+	female_names = {
+		Akata Angata Bailakhet Barasatii Belofasa Brolsgerbwd Clorsatari Codaermet Dekamma Doshia Drulshasa Elinzel Ephae Enzir of the Vanquished Ephae Fessitosha Fessoshaz Foshaz Gadrah Gykkah Hadri Hivlota Illitosha Ioloola Iss Issata Jan Jerazzet Jynd Kixathi Kvotai Lirif Lyranth Makilakhet Marruz Mati Mirit Morah Mysissa Olarra Oloshaz Oololash Osata Pynufax Raynia Rykuna Shyn Skriliaa the Guide Ukaezai Uluphae Ulz Un Urata Tephra Vame Velark Velezai Venatari Vesakta Viksax Vintev Vonshala Xigira Xynaa Xyria Zylara Zyr
+	}
+	dynasty_names = {
+		Bladebearer Bloodwraith Deathbringer Doomdriven Dreamcarver Dremora Firescourge Foolkillers Mindcleaver Razorsworn Remnants Ruinblood Vanquished
+	}
+}
 new culture kreath_orc = {
 	name = "Kreath Orc"
 	culture_group = orc

@@ -1,33 +1,44 @@
 new spell_header destruction = {
 	name = "Destruction"
 }
-new spell destroy_province = {
-	name = "Destroy Province"
+new spell frost_storm = {
+	name = "Frost Storm"
 	type = province
-	cost = 10
-	on_cast = { }
+	cost = 100
+	on_cast = {
+		add_devastation = 50
+	}
 }
 new spell siege_magic = {
-	name = "Siege Magic"
+	name = "Fireball"
 	type = siege
-	cost = 10
-	on_cast = { }
+	cost = 100
+	on_cast = {
+		change_siege = 5
+	}
 }
-new spell destroy_army = {
-	name = "Destroy Army"
+new spell chain_lightning = {
+	name = "Chain Lightning"
 	type = province
-	cost = 10
-	on_cast = { }
+	cost = 150
+	on_cast = {
+		kill_units = {
+			who = enemy
+			amount = 5
+		}
+	}
 }
 new spell elemental_runes = {
 	name = "Elemental Runes"
 	type = province
-	cost = 10
-	on_cast = { }
-}
-new spell wall_of_elements = {
-	name = "Wall of Elements"
-	type = province
-	cost = 10
-	on_cast = { }
+	cost = 50
+	on_cast = {
+		quick_province_modifier = {
+			name = "Elemental Runes"
+			modifier = {
+				max_attrition = 2
+				local_hostile_attrition = 2
+			}
+		}
+	}
 }

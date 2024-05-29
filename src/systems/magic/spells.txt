@@ -33,7 +33,9 @@ new custom_window spells_page_0 = {
 }
 new named_ui_node current_spell_page = spell_menu_node:spells_page_0
 
-new named_effect calculate_spell_costs = { }
+new named_effect calculate_spell_costs = {
+	&development &= total_development
+}
 force_compile = calculate_spell_costs
 
 new country_event cast_spell.1 = {
@@ -51,10 +53,16 @@ new country_event cast_spell.1 = {
 				&`{$:id}_spell_cost` := $:cost
 				&`{$:id}_spell_cost` *= spell_cost_modifier_var
 				when [$:scaled == yes] {
+					&development &= {
+						value = total_development
+						who = event_target:spell_target
+					}
 					&`{$:id}_spell_cost` *= development
 					&`{$:id}_spell_cost` *= 0.01
 				}
 			}
+			
+			&development &= total_development
 		}
 	}
 	options = {
@@ -79,6 +87,9 @@ new named_effect populate_diplomatic_spells = {
 						$:on_cast
 					}
 				}
+			}
+			ai_will_do = {
+				factor = 0
 			}
 		} }
 	}
@@ -230,7 +241,7 @@ new class spell = {
 §YSiege§! type spells affect a siege, they can be cast from the siege window.`
 		}
 		new custom_text_box `custom_mechanic_spell_cost_{this:id}` = {
-			name = `[{this:id}_spell_cost.GetValue]`
+			name = `{this:cost}`
 			tooltip = `This spell costs [{this:id}_spell_cost.GetValue]£magicka_icon£ to cast`
 		}
 		

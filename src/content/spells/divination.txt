@@ -4,12 +4,20 @@ new spell_header divination = {
 new spell vision_of_the_tenth_eye = {
 	name = "Vision of the Tenth Eye"
 	type = diplomatic
-	cost = 10
-	on_cast = { }
+	cost = 250
+	on_cast = {
+		event_target:spell_target = {
+			remove_fow = 36
+		}
+	}
 }
 new spell magical_insights = {
 	name = "Magical Insights"
 	type = country
-	cost = 10
-	on_cast = { }
+	cost = 100
+	on_cast = {
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+	}
 }

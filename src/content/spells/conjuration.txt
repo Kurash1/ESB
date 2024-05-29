@@ -4,30 +4,37 @@ new spell_header conjuration = {
 new spell bound_weapons = {
 	name = "Bound Weapons"
 	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell summon_helpers = {
-	name = "Summon Helpers"
-	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell summon_soldiers = {
-	name = "Summon Soldiers"
-	type = country
-	cost = 10
-	on_cast = { }
+	cost = 200
+	on_cast = {
+		quick_country_modifier = {
+			name = "Bound Weaponry for Soldiers"
+			years = 5
+			modifier = {
+				fire_damage = 0.2
+				shock_damage = 0.2
+			}
+		}
+	}
 }
 new spell dremora_general = {
 	name = "Dremora General"
 	type = country
-	cost = 10
-	on_cast = { }
-}
-new spell soul_trap = {
-	name = "Soul Trap"
-	type = diplomatic
-	cost = 10
-	on_cast = { }
+	cost = 150
+	scaled = no
+	on_cast = {
+		quick_country_modifier = {
+			name = "Made a Daedric Pact"
+			years = 10
+			modifier = {
+				diplomatic_reputation = -1
+				global_unrest = 1
+			}
+		}
+		
+		create_general = {
+			tradition = 100
+			add_shock = 2
+			culture = dremora
+		}
+	}
 }
