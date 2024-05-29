@@ -246,7 +246,10 @@ new class spell = {
 		}
 		new custom_text_box `custom_mechanic_spell_cost_{this:id}` = {
 			name = `{this:cost}`
-			tooltip = `This spell costs [{this:id}_spell_cost.GetValue]£magicka_icon£ to cast`
+			tooltip = "This spell costs [{this:id}_spell_cost.GetValue]£magicka_icon£ to cast
+-------------
+This spell has a base cost of §Y{this:cost}§!. This cost is further modified by:
+	Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
 		}
 		
 		new custom_button `custom_mechanic_spell_{this:id}` = {
