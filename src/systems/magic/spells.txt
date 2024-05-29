@@ -1,4 +1,5 @@
 new named_int SPELL_TOP = 120
+new named_int SPELL_START_LEFT = 100
 new named_int SPELL_LEFT = 10
 new named_int SPELL_RIGHT = 285
 
@@ -17,7 +18,7 @@ new custom_window spells_menu = {
 new named_ui_node spell_menu_node = interface_files:countrytechnologyview:countrytechnologyview:spells_menu
 
 new named_bool current_spell_side = no
-new named_int current_spell_position_y = 0
+new named_int current_spell_position_y = SPELL_START_LEFT
 
 spell_menu_node += {
 	windowType = {
@@ -353,7 +354,7 @@ new effect create_next_spell_page = {
 					&open_spell_page == *spell_pages*
 				}
 			}
-			current_spell_position_y := 0
+			current_spell_position_y := SPELL_START_LEFT
 			current_spell_side := no
 			run_effect = {
 				delete = current_spell_page
