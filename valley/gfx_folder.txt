@@ -1,0 +1,75 @@
+new class gfx_folder = {
+	list = gfx_folders
+	default = {
+		include_sub = no
+		restrict_type = dds
+		treat_type = dds
+		name = `{this}`
+		type_info = { }
+	}
+	args = {
+		target = string
+		include_sub = bool
+		restrict_type = string
+		treat_type = string
+		name = effect
+		type_info = effect
+	}
+}
+#internal gfx_folders
+#	special
+#	flags
+new gfx_folder modifiers = {
+	target = gfx/interface/ideas_EU4
+	restrict_type = dds
+	name = `GFX_modifier_{this}`
+}
+new gfx_folder loose = {
+	target = gfx/loose
+	restrict_type = dds
+}
+new gfx_folder event_pictures = {
+	target = gfx/event_pictures/arc
+	restrict_type = dds
+}
+new gfx_folder missions = {
+	target = gfx/interface/missions
+	restrict_type = dds
+}
+new gfx_folder ages = {
+	target = gfx/interface/ages
+	include_sub = yes
+	restrict_type = dds
+	name = `GFX_{this}`
+}
+new gfx_folder buildings = {
+	target = gfx/interface/buildings
+	restrict_type = dds
+	treat_type = tga
+	name = `GFX_{this}`
+	type_info = {
+		loadType = "INGAME"
+	}
+}
+new gfx_folder great_projects = {
+	target = gfx/interface/great_projects
+	restrict_type = dds
+	name = `GFX_great_project_{this}`
+}
+new gfx_folder privileges = {
+	target = gfx/interface/privileges
+	restrict_type = dds
+}
+new gfx_folder holy_orders = {
+	target = gfx/interface/holy_orders
+	restrict_type = dds
+	name = `GFX_holy_order_{this}`
+	type_info = {
+		noOfFrames = 4
+	}
+}
+new gfx_folder government_reforms = {
+	target = gfx/interface/government_reform_icons
+	restrict_type = dds
+	name = `government_reform_{this}`
+}
