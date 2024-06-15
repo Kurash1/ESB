@@ -5,7 +5,6 @@ new spell shield = {
 	name = "Shield"
 	type = province
 	cost = 25
-	trigger_tooltip = "have Alteration magic unlocked"
 	trigger = {
 		has_idea = alteration_ideas_1
 	}
@@ -44,7 +43,6 @@ new spell open = {
 	name = "Open"
 	type = diplomatic
 	cost = 100
-	trigger_tooltip = "have Alteration magic"
 	trigger = {
 		has_idea = alteration_ideas_1
 	}
@@ -59,8 +57,6 @@ new spell burden = {
 	name = "Burden"
 	type = diplomatic
 	cost = 150
-	trigger_tooltip = "have Alteration magic unlocked
-	target cannot be under the effects of Burden"
 	trigger = {
 		has_idea = alteration_ideas_1
 		NOT = { event_target:spell_target = { has_country_modifier = spell_burden } }

@@ -74,31 +74,122 @@ new country_event cast_spell.1 = {
 new named_effect populate_diplomatic_spells = {
 	arc_call_1
 	foreach $ in spells [$:type == "diplomatic"] {
-		events:cast_spell.1:options += { {
-			name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
-			effect = {
-				if [
+		events:cast_spell.1:options += {
+			{
+				name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
+				highlight = yes
+				trigger = {
 					&magicka >= `{$:id}_spell_cost`
 					$:trigger
-				] {
+				}
+				effect = {
 					&magicka -= `{$:id}_spell_cost`
-					
+						
 					$:on_cast
 				}
-				else {
-					new_custom_tooltip = "To cast this spell you must fulfill the following conditions:
-	§YMagicka ([magicka.GetValue])§! is at least §Y[{$:id}_spell_cost.GetValue] ({$:name} Cost)§!
-	{$:trigger_tooltip}"
+				ai_will_do = {
+					factor = 0
 				}
 			}
-			ai_will_do = {
-				factor = 0
+		}
+		events:cast_spell.1:options += {
+			{
+				name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
+				highlight = yes
+				trigger = {
+					NOT = {
+						&magicka >= `{$:id}_spell_cost`
+						$:trigger
+					}
+				}
+				effect = {
+					new_custom_tooltip = "We cannot cast the spell for the following reasons:"
+				}
+				ai_will_do = {
+					factor = 0
+				}
 			}
-		} }
+		}
 	}
 	events:cast_spell.1:options += { {
 		name = "Back"
+	} }
+	arc_call_2
+}
+new country_event cast_spell.2 = {
+	title = "Cast a Spell"
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			variables:spell_cost_modifier_var:calculate
+			
+			foreach $ in spells [$:type == "province"] {
+				new script_variable `{$:id}_spell_cost` = {
+					name = "{$:name} Cost"
+				}
+				&`{$:id}_spell_cost` := $:cost
+				&`{$:id}_spell_cost` *= spell_cost_modifier_var
+				when [$:scaled == yes] {
+					&development &= {
+						value = development
+						who = event_target:spell_target
+					}
+					&`{$:id}_spell_cost` *= development
+					&`{$:id}_spell_cost` *= 0.1
+				}
+			}
+			
+			&development &= total_development
+		}
+	}
+	options = {
+		name = "Back"
 		effect = { }
+	}
+}
+new named_effect populate_province_spells = {
+	arc_call_1
+	foreach $ in spells [$:type == "province"] {
+		events:cast_spell.2:options += {
+			{
+				name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
+				highlight = yes
+				trigger = {
+					&magicka >= `{$:id}_spell_cost`
+					$:trigger
+				}
+				effect = {
+					&magicka -= `{$:id}_spell_cost`
+						
+					$:on_cast
+				}
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+		events:cast_spell.1:options += {
+			{
+				name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
+				highlight = yes
+				trigger = {
+					NOT = {
+						&magicka >= `{$:id}_spell_cost`
+						$:trigger
+					}
+				}
+				effect = {
+					new_custom_tooltip = "We cannot cast the spell for the following reasons:"
+				}
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+	events:cast_spell.2:options += { {
+		name = "Back"
 	} }
 	arc_call_2
 }
@@ -122,7 +213,6 @@ new class spell = {
 	list = spells
 	default = {
 		scaled = yes
-		trigger_tooltip = "fulfills spell triggers"
 		trigger = {
 			
 		}
@@ -133,7 +223,6 @@ new class spell = {
 		cost = float
 		on_cast = named_effect
 		scaled = bool
-		trigger_tooltip = string
 		trigger = named_trigger
 	}
 	on_create = {
@@ -218,7 +307,11 @@ new class spell = {
 		}
 		
 		calculate_spell_costs += {
-			when [this:type != "diplomatic"] {
+			when [
+				this:type != "diplomatic"
+				this:type != "province"
+				this:type != "siege"
+			] {
 				new script_variable `{this:id}_spell_cost` = {
 					name = "{this:name} Cost"
 				}
@@ -239,8 +332,8 @@ new class spell = {
 			name = `{id_to_name = this:type}`
 			tooltip = `This spell is of the §Y{id_to_name = this:type}§! Type
 
-§YCountry§! type spells affect the entire country, they can be cast from the spells window. Their cost is often multiplied by the size of your country.
-§YDiplomatic§! type spells affect another country, they can be cast from the diplomatic window. Their cost is often multiplied by the size of the target country.
+§YCountry§! type spells affect the entire country, they can be cast from the spells window. Their cost is often multiplied by the development of your country.
+§YDiplomatic§! type spells affect another country, they can be cast from the diplomatic window. Their cost is often multiplied by the development of the target country.
 §YProvince§! type spells affect a single province, they can be cast from the province window.
 §YRitual§! type spells temporarily inhibit your magicka generation, but result in greater effects once completed, they can be cast from the spells window.
 §YSiege§! type spells affect a siege, they can be cast from the siege window.`
