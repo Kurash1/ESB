@@ -1,6 +1,6 @@
 new country_event theocracy.2 = {
-	title = "Heir needed in $COUNTRY$"
-	desc = "As we currently have no designated heir for $MONARCHTITLE$ $MONARCH$, we have several options to pick from."
+	title = "The Next Sybil has been found!"
+	desc = "As the position of the next Sybil has been empty for some time, our sisters have performed the 'Exalted Protocol of the Dibellan Sybil' which has revealed to us the home of the next Sybil. [es_theocracy_province.GetName] is where the child lives."
 	picture = ES_THEOCRACY_HEIR_ELECTIONS_eventPicture
 	
 	is_triggered_only = yes
@@ -16,131 +16,48 @@ new country_event theocracy.2 = {
 			random_owned_province = {
 				save_event_target_as = es_theocracy_province
 			}
-			
-			random_neighbor_country = { 
-				limit = {
-					government = monarchy
-					has_regency = no
-					religion = ROOT
-				}
-				save_event_target_as = es_neighbor_country_for_theocracy
-			}
 		}
 	}
 	
 	options = {
 		{
-			name = "A Local Noble"
+			name = "Great!"
 			effect = {
 				define_heir = {
-					age = 35
+					age = 10
+					dynasty = "Nymph-Dance"
+					claim = 100
 					hidden = yes
 					culture = event_target:es_theocracy_province
 					female = yes
 				}
-					
-				add_prestige = 10
-				add_mil_power = 50
-				add_devotion = -10
-				add_legitimacy = -10
-			}
-		}
-		{
-			name = "A Foreign Noble"
-			trigger = {
-				any_neighbor_country = {
-					government = monarchy
-					has_regency = no
-					religion = ROOT
-				}
-			}
-			effect = {
-				random_neighbor_country = { 
-					limit = {
-						government = monarchy
-						has_regency = no
-						religion = ROOT
-					}
-					ROOT = { 
-						define_heir = { 
-							dynasty = PREV 
-							age = 35
-							culture = PREV
-							hidden = yes
-							female = yes
-						} 
-					}
-					add_opinion = { who = ROOT modifier = opinion_theocracy_noble }
-				}
-				
-				add_corruption = -1.5
-				custom_tooltip = es_theocracy.1.b.tooltip
-				add_devotion = -15
-				add_legitimacy = -15
-			}
-		}
-		{
-			name = "A Merchant's Son"
-			effect = {
-				define_heir = {
-					age = 35
-					hidden = yes
-					culture = event_target:es_theocracy_province
-					female = yes
-				}
-				
-				add_years_of_income = 1.0
-				add_mercantilism = 1
-				add_devotion = -10
-				add_legitimacy = -10
-			}
-		}
-		{
-			name = "A Talented Theologian"
-			effect = {
-				define_heir = {
-					age = 35
-					hidden = yes
-					culture = event_target:es_theocracy_province
-					female = yes
-				}
-				
-				add_devotion = 10
-				add_legitimacy = 10
-				random_owned_province = {
-					limit = {
-						NOT = { religion = ROOT }
-					}
-					change_religion = ROOT
-				}
-				add_prestige = -5
-			}
-		}
-		{
-			name = "A Local Preacher"
-			effect = {
-				define_heir = {
-					age = 35
-					hidden = yes
-					culture = event_target:es_theocracy_province
-					female = yes
-				}
-				
-				add_devotion = 15
-				add_legitimacy = 15
-				random_owned_province = {
-					limit = {
-						NOT = { culture = ROOT }
-					}
-					change_culture = ROOT
-				}
-				add_prestige = -10
 			}
 		}
 	}
 	
 	after = {
 		clr_country_flag = in_theocracy_heir_selection
+	}
+}
+
+on_actions:on_startup += {
+	if [has_reform = tier_1_sybildom] {
+		if [religion = nordic_pantheon] {
+			change_personal_deity = dibella
+		}
+		if [religion = the_old_ways] {
+			change_personal_deity = moth
+		}
+	}
+}
+on_actions:on_monarch_death += {
+	if [has_reform = tier_1_sybildom] {
+		if [religion = nordic_pantheon] {
+			change_personal_deity = dibella
+		}
+		if [religion = the_old_ways] {
+			change_personal_deity = moth
+		}
 	}
 }
 
@@ -154,6 +71,10 @@ governments:theocracy:reform_levels:1 += new tier_1_sybildom = {
 	}
 	trigger = {
 		has_reform = tier_1_sybildom
+		OR = {
+			religion = nordic_pantheon
+			religion = the_old_ways
+		}
 	}
 	custom_attributes = {
 		special_election = yes
