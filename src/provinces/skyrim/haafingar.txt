@@ -359,7 +359,7 @@ new province big_sister = {
 		history_owner = icereach_clan
 		religion = reachman_faith
 		culture = reachmen
-		hre = yes
+		
 		history_trade_goods = mag_goods
 	}
 }
@@ -383,7 +383,7 @@ new province small_sister = {
 		history_owner = icereach_clan
 		religion = reachman_faith
 		culture = reachmen
-		hre = yes
+		
 		history_trade_goods = fish
 	}
 }
@@ -1189,9 +1189,9 @@ new province ironback_hideout = {
 }
 new province blackbone_isle = {
 	name = "Blackbone Isle"
-    inherit = wrothgar_inherit
     color = { 130 165 110 }
 	history = {
+		hre = yes
 		history_owner = sea_wing
 		religion = nordic_pantheon
 		culture = haafingarian
@@ -1212,9 +1212,9 @@ new province blackbone_isle = {
 }
 new province volkihar_isle = {
 	name = "Volkihar Isle"
-    inherit = wrothgar_inherit
     color = { 134 128 232 }
 	history = {
+		hre = yes
 		history_owner = sea_wing
 		religion = nordic_pantheon
 		culture = haafingarian
@@ -1235,9 +1235,9 @@ new province volkihar_isle = {
 }
 new province red_mist_isle = {
 	name = "Red Mist Isle"
-    inherit = wrothgar_inherit
     color = { 236 146 157 }
 	history = {
+		hre = yes
 		history_owner = hawk_eye
 		religion = nordic_pantheon
 		culture = haafingarian
@@ -1258,7 +1258,6 @@ new province red_mist_isle = {
 }
 new province galsgik = {
 	name = "Galsgik"
-    inherit = wrothgar_inherit
     color = { 230 250 188 }
 	area = kynes_isles
 	terrain = coastline
@@ -1272,6 +1271,7 @@ new province galsgik = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365 
 	}
 	history = {
+		hre = yes
 		history_owner = hawk_eye
 		religion = nordic_pantheon
 		culture = haafingarian
