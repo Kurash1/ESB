@@ -2,10 +2,10 @@ new idea_group alteration_ideas = {
 	name = "Alteration"
 	category = MIL
 	trigger = {
-		#OR = {
-		#	full_idea_group = arcane_ideas
-		#	full_idea_group = war_magic_ideas
-		#}
+		OR = {
+			full_idea_group = arcane_ideas
+			full_idea_group = war_magic_ideas
+		}
 	}
 	ideas = {
 		{

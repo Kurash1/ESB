@@ -2,7 +2,7 @@ new idea_group hegemonic_ideas = {
 	name = "Hegemonic"
 	category = ADM
 	trigger = {
-		always = no
+		full_idea_group = imperialism_ideas
 	}
 	ideas = {
 		{
@@ -37,7 +37,7 @@ new idea_group hegemonic_ideas = {
 			name = "Imperial Military"
 			desc = "As the dominant military power in the world, it is important that we maintain a strong and well-equipped military. By investing in our imperial military, we can deter potential rivals and maintain order within our territories."
 			modifier = {
-				global_regiment_cost = -0.025
+				global_regiment_cost = -0.05
 			}
 		}
 		{

@@ -1,0 +1,63 @@
+new idea_group logistic_ideas = {
+	name = "Logistic"
+	category = MIL
+	trigger = {
+		full_idea_group = infrastructure_ideas
+	}
+	ideas = {
+		{
+			name = "Supply Caravans"
+			desc = "Our army may carry many provisions with them but even the largest provision is finite. Supply caravans should be able to bring enough resources even in poor areas."
+			modifier = {
+				global_supply_limit_modifier = 40%
+			}
+		}
+		{
+			name = "Sutlers"
+			desc = "Those merchants travel with our armies selling them not only luxury goods but also necessities."
+			modifier = {
+				land_attrition = -10%
+				land_morale_constant = 0.05
+			}
+		}
+		{
+			name = "Provisioning, requisition, and plundering"
+			desc = "The occupied areas can also provide to our armies needs in addition to our own provisions."
+			modifier = {
+				loot_amount = 25%
+			}
+		}
+		{
+			name = "Cisterns, grainaries and kitchen gardens"
+			desc = "By building these in every fort we own we can drag on sieges for quite some time while also providing additional income in peace times."
+			modifier = {
+				defensiveness = 20%
+				global_trade_goods_size_modifier = 5%
+			}
+		}
+		{
+			name = "Stored building materials"
+			desc = "By storing building materials at times they are aviable at a low cost for us we can save a lot of money in construction."
+			modifier = {
+				build_cost = -10%
+			}
+		}
+		{
+			name = "Supply Fleet"
+			desc = "Our navy can rely on a major supply fleet for support"
+			modifier = {
+				naval_attrition = -10%
+			}
+		}
+		{
+			name = "Preserved vegetables and fruits"
+			desc = "Sauerkraut and other long lasting plant products seem to have an affect at mitigating scurvy for our men on sea. Why that is we do not know but it should be utilised."
+			modifier = {
+				transport_attrition = -0.5
+			}
+		}
+	}
+	bonus = {
+		trade_efficiency = 10%
+	}
+}

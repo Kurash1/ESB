@@ -1,0 +1,89 @@
+new idea_group court_ideas = {
+	name = "Court"
+	category = DIP
+	trigger = {
+		full_idea_group = administrative_ideas
+	}
+	ideas = {
+		{
+			name = "Long Echo"
+			desc = "The influence our correspondence carries is unprecedented. A mere word from our head of state is enough to debase and damage the prestige of even the most illustrious dynasties."
+			modifier = {
+				power_projection_from_insults = 1
+				diplomatic_reputation = 1
+			}
+		}
+		{
+			name = "Recognized Hierarchy"
+			desc = "The Estates within our realm must recognize the head of state as the final voice of authority within our court."
+			modifier = {
+				all_estate_loyalty_equilibrium = 0.1
+				loyalty_change_on_revoked = 0.05
+			}
+		}
+		{
+			name = "Welcoming Ceremonies"
+			desc = "We shall entice incoming dignitaries with elaborate ceremonies and displays of power, wealth and prosperity."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Tranquil Coordination"
+			desc = "Our great country will only advance and evolve if all members of the government coordinate in an orderly fashion."
+			modifier = {
+				reform_progress_growth = 0.2
+			}
+		}
+		{
+			name = "Respected Authority"
+			desc = "Our authority carries the weight of our ruler's grandeur. As such it brings with it certainty, prestige and an air of superiority."
+			modifier = {
+				all_estate_possible_privileges = 1
+			}
+		}
+		{
+			name = "Palace of Splendor"
+			desc = "No ruler may be adorned with glory and splendor without commanding a pristine and beautiful court."
+			modifier = {
+				monthly_splendor = 2 
+				estate_interaction_cooldown_modifier = -0.20
+			}
+		}
+		{
+			name = "Court Embassies"
+			desc = "Establishing diplomatic communication posts between us and our allies is a vital addition to our court's influence."
+			modifier = {
+				possible_dip_policy = 1 
+				monarch_diplomatic_power = 1 
+			}
+		}
+	}
+	
+	bonus = {
+		legitimacy = 0.5
+		republican_tradition = 0.2
+		devotion = 0.5
+		imperial_authority = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 0.5
+		modifier = {
+			factor = 1.25
+			num_of_powerful_estates = 3 
+		}
+		modifier = {
+			factor = 1.2
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 1.1 
+			national_focus = DIP 
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { monthly_dip = 8 } 
+		}
+	}
+}
