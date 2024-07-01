@@ -1,0 +1,76 @@
+new named_int IDEA_TOP = 120
+new named_int IDEA_LEFT = 22
+
+interface_files:countrytechnologyview:countrytechnologyview += {
+	windowType = {
+		name = "idea_tree_menu"
+		position = { x = 0 y = 0 }
+		scripted = yes
+	}
+}
+new custom_window idea_tree_menu = {
+	potential = {
+		has_country_flag = show_idea_tree
+	}
+}
+new named_ui_node idea_tree_node = interface_files:countrytechnologyview:countrytechnologyview:idea_tree_menu
+
+new effect add_to_tree = {
+	args = {
+		group = idea_group
+		x = int
+		y = int
+	}
+	transpile = {
+		idea_tree_node += {
+			guiButtonType = {
+				name = `custom_mechanic_idea_tree_{args:group:id}`
+				position = { x = (IDEA_LEFT + args:x * 64) y = (IDEA_TOP + args:y * 64) }
+				quadTextureSprite = `"GFX_idea_{args:group:id}"`
+				scripted = yes
+			}
+		}
+		new custom_button `custom_mechanic_idea_tree_{args:group:id}` = {
+			tooltip = "{args:group:name} £{args:group:category:to_lower}£"
+			potential = {
+				always = yes
+			}
+			trigger = args:group:trigger
+			effect = {
+				add_idea_group = args:group:id
+				
+				new_custom_tooltip = "§Y{args:group:ideas:1:name}§!:
+	{modifier_to_string = args:group:ideas:1:modifier}
+§Y{args:group:ideas:2:name}§!:
+	{modifier_to_string = args:group:ideas:2:modifier}
+§Y{args:group:ideas:3:name}§!:
+	{modifier_to_string = args:group:ideas:3:modifier}
+§Y{args:group:ideas:4:name}§!:
+	{modifier_to_string = args:group:ideas:4:modifier}
+§Y{args:group:ideas:5:name}§!:
+	{modifier_to_string = args:group:ideas:5:modifier}
+§Y{args:group:ideas:6:name}§!:
+	{modifier_to_string = args:group:ideas:6:modifier}
+§Y{args:group:ideas:7:name}§!:
+	{modifier_to_string = args:group:ideas:7:modifier}
+§YBonus§!:
+	{modifier_to_string = args:group:bonus}"
+			}
+		}
+	}
+}
+
+new named_effect create_idea_tree = {
+	#did this so it gets loaded later on
+	
+	new named_int cur_x = 0
+	new named_int cur_y = 0
+	foreach $ig in idea_groups [$ig:category != national] {
+		add_to_tree = { group = $ig x = cur_x y = cur_y }
+		cur_x += 1
+		when [cur_x > 7] {
+			cur_x := 0
+			cur_y += 1
+		}
+	}
+}

@@ -29,6 +29,19 @@ on_actions:on_province_religion_converted += {
 		}
 	}
 }
+run_effect = {
+	DEFINE_MODIFIER = {
+		key = monthly_fanaticism_power
+		text = "Monthly Fanaticism"
+		localisation_key = monthly_fanaticism_power
+		multiplier = 1
+		percent = no
+		is_good = true
+		is_bool = false
+		is_multiplicative = true
+		precision = 1
+	}
+}
 new government_mechanic fanaticism_mechanic = {
 	name = "Fanaticism"
 	powers = {

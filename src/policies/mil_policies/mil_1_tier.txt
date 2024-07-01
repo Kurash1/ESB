@@ -1,87 +1,87 @@
 #all military policies with at least an idea group not available from the start 
-new policy nobel_naval_traditions = {
-	monarch_power = MIL
-	name = "Noble Naval Traditions"
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = maritime_ideas
-	modifier = {
-		max_admiral_maneuver = 1
-		navy_tradition_decay = -0.05
-	}
-}
-new policy the_colonial_nobility_act = {
-	monarch_power = MIL
-	name = "The Colonial Nobility Act"
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = exploration_ideas
-	modifier = {
-		global_manpower_modifier = 0.2
-	}
-}
-new policy the_tenures_abolition_act = {
-	monarch_power = MIL
-	name = "The Tenures Abolition Act"
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = diplomatic_ideas
-	modifier = {
-		diplomats = 1
-		army_tradition = 0.5
-	}
-}
-new policy noble_loyalty_act = {
-	monarch_power = MIL
-	name = "Noble Loyalty Act"
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = spy_ideas
-	modifier = {
-		cavalry_power = 0.10
-		clans_loyalty_modifier = 0.05
-		sons_loyalty_modifier = 0.05
-		nobility_loyalty_modifier = 0.05
-	}
-}
-new policy autonomous_estates = {
-	monarch_power = MIL
-	name = "Autonomous Estates"
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = influence_ideas
-	modifier = {
-		all_estate_loyalty_equilibrium = 0.05
-		vassal_forcelimit_bonus = 1
-	}
-}
-new policy reinforced_galleys = {
-	monarch_power = MIL
-	name = "Reinforced Galleys"
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = galley_ideas
-	modifier = {
-		galley_hull_size_modifier = 0.1
-	}
-}
-new policy reinforced_light_ships = {
-	monarch_power = MIL
-	name = "Reinforced Light Ships"
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = light_ship_ideas
-	modifier = {
-		light_ship_hull_size_modifier = 0.1
-	}
-}
-new policy reinforced_heavy_ships = {
-	monarch_power = MIL
-	name = "Reinforced Heavy Ships"
-	desc = ""
-	group_1 = aristocracy_ideas
-	group_2 = heavy_ship_ideas
-	modifier = {
-		heavy_ship_hull_size_modifier = 0.1	
-	}
-}
+#new policy nobel_naval_traditions = {
+#	monarch_power = MIL
+#	name = "Noble Naval Traditions"
+#	desc = ""
+#	group_1 = aristocracy_ideas
+#	group_2 = maritime_ideas
+#	modifier = {
+#		max_admiral_maneuver = 1
+#		navy_tradition_decay = -0.05
+#	}
+#}
+#new policy the_colonial_nobility_act = {
+#	monarch_power = MIL
+#	name = "The Colonial Nobility Act"
+#	desc = ""
+#	group_1 = aristocracy_ideas
+#	group_2 = exploration_ideas
+#	modifier = {
+#		global_manpower_modifier = 0.2
+#	}
+#}
+#new policy the_tenures_abolition_act = {
+#	monarch_power = MIL
+#	name = "The Tenures Abolition Act"
+#	desc = ""
+#	group_1 = aristocracy_ideas
+#	group_2 = diplomatic_ideas
+#	modifier = {
+#		diplomats = 1
+#		army_tradition = 0.5
+#	}
+#}
+#new policy noble_loyalty_act = {
+#	monarch_power = MIL
+#	name = "Noble Loyalty Act"
+#	desc = ""
+#	group_1 = aristocracy_ideas
+#	group_2 = spy_ideas
+#	modifier = {
+#		cavalry_power = 0.10
+#		clans_loyalty_modifier = 0.05
+#		sons_loyalty_modifier = 0.05
+#		nobility_loyalty_modifier = 0.05
+#	}
+#}
+#new policy autonomous_estates = {
+#	monarch_power = MIL
+#	name = "Autonomous Estates"
+#	desc = ""
+#	group_1 = aristocracy_ideas
+#	group_2 = influence_ideas
+#	modifier = {
+#		all_estate_loyalty_equilibrium = 0.05
+#		vassal_forcelimit_bonus = 1
+#	}
+#}
+#new policy reinforced_galleys = {
+#	monarch_power = MIL
+#	name = "Reinforced Galleys"
+#	desc = ""
+#	group_1 = aristocracy_ideas
+#	group_2 = galley_ideas
+#	modifier = {
+#		galley_hull_size_modifier = 0.1
+#	}
+#}
+#new policy reinforced_light_ships = {
+#	monarch_power = MIL
+#	name = "Reinforced Light Ships"
+#	desc = ""
+#	group_1 = aristocracy_ideas
+#	group_2 = light_ship_ideas
+#	modifier = {
+#		light_ship_hull_size_modifier = 0.1
+#	}
+#}
+#new policy reinforced_heavy_ships = {
+#	monarch_power = MIL
+#	name = "Reinforced Heavy Ships"
+#	desc = ""
+#	group_1 = aristocracy_ideas
+#	group_2 = heavy_ship_ideas
+#	modifier = {
+#		heavy_ship_hull_size_modifier = 0.1	
+#	}
+#}

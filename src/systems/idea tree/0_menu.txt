@@ -1,0 +1,58 @@
+interface_files:countrytechnologyview:countrytechnologyview += {
+	iconType = {
+		name = "idea_item_background"
+		position = { x = 11 y = (113 * 4) }
+		quadTextureSprite = "GFX_custom_mechanic_item_background"
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "open_idea_tree"
+		position = { x = 18 y = (9 + 113 * 4) }
+		quadTextureSprite = "GFX_magic_menu"
+		scripted = yes
+	}
+	iconType = {
+		name = "idea_tree"
+		spriteType = "GFX_magic_custom_mechanic_overlay"
+		position = { x = (575 - 571 - 11) y = (110 - 36 + 2) }
+		scripted = yes
+	}
+	guiButtonType = {
+		name = "close_idea_tree"
+		position = { x = 5 y = 86 }
+		quadTextureSprite = "GFX_button_close"
+		scripted = yes
+	}
+}
+new custom_icon idea_item_background = {
+	potential = {
+		NOT = {
+			open_custom_mechanic
+		}
+	}
+}
+new custom_button open_idea_tree = {
+	tooltip = "Open Idea Tree"
+	potential = {
+		NOT = {
+			open_custom_mechanic
+		}
+	}
+	effect = {
+		set_country_flag = show_idea_tree
+	}
+}
+new custom_icon idea_tree = {
+	potential = {
+		has_country_flag = show_idea_tree
+	}
+}
+new custom_button close_idea_tree = {
+	tooltip = "Close Idea Tree"
+	potential = {
+		has_country_flag = show_idea_tree
+	}
+	effect = {
+		clr_country_flag = show_idea_tree
+	}
+}
