@@ -2,21 +2,20 @@ new idea_group imperialism_ideas = {
 	name = "Imperialism"
 	category = MIL
 	trigger = {
-		full_idea_group = state_administration_ideas
+		full_idea_group = administrative_ideas
 	}
 	ideas = {
 		{
 			name = "The Law of the Force"
 			desc = "We have the right to conquer enemy land because we can."
 			modifier = {
-				core_creation = -0.1
+				core_creation = -0.15
 			}
 		}
 		{
 			name = "Long Tradition"
 			desc = "Our land has a long tradition. We shall put it to use."
 			modifier = {
-				global_unrest = -1
 				years_of_nationalism = -5
 			}
 		}
@@ -53,11 +52,11 @@ new idea_group imperialism_ideas = {
 			name = "Imperial Guard"
 			desc = "The imperial guard consists of just the best soldiers of our land."
 			modifier = {
-				discipline = 0.05
+				discipline = 0.025
 			}
 		}
 	}
 	bonus = {
-		max_absolutism = 10
+		max_absolutism = 15
 	}
 }

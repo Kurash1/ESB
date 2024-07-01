@@ -70,6 +70,7 @@ new idea_group decentralization_ideas = {
 	category = ADM
 	trigger = {
 		full_idea_group = state_administration_ideas
+		NOT = { has_idea_group = centralization_ideas }
 	}
 	ideas = {
 		{
