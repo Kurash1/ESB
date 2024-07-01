@@ -15,6 +15,16 @@ new custom_window idea_tree_menu = {
 }
 new named_ui_node idea_tree_node = interface_files:countrytechnologyview:countrytechnologyview:idea_tree_menu
 
+new effect qq_tooltip_idea = {
+	args = unknown
+	transpile = {
+		new_custom_tooltip = "§Y{args:name}§!:
+	{modifier_to_string = args:modifier}"
+		tooltip = {
+			args:effect
+		}
+	}
+}
 new effect add_to_tree = {
 	default = {
 		shadow = yes
@@ -51,22 +61,22 @@ new effect add_to_tree = {
 			trigger = args:group:trigger
 			effect = {
 				add_idea_group = args:group:id
+				add_idea = `{args:group:id}_1`
+				add_idea = `{args:group:id}_2`
+				add_idea = `{args:group:id}_3`
+				add_idea = `{args:group:id}_4`
+				add_idea = `{args:group:id}_5`
+				add_idea = `{args:group:id}_6`
+				add_idea = `{args:group:id}_7`
 				
-				new_custom_tooltip = "§Y{args:group:ideas:1:name}§!:
-	{modifier_to_string = args:group:ideas:1:modifier}
-§Y{args:group:ideas:2:name}§!:
-	{modifier_to_string = args:group:ideas:2:modifier}
-§Y{args:group:ideas:3:name}§!:
-	{modifier_to_string = args:group:ideas:3:modifier}
-§Y{args:group:ideas:4:name}§!:
-	{modifier_to_string = args:group:ideas:4:modifier}
-§Y{args:group:ideas:5:name}§!:
-	{modifier_to_string = args:group:ideas:5:modifier}
-§Y{args:group:ideas:6:name}§!:
-	{modifier_to_string = args:group:ideas:6:modifier}
-§Y{args:group:ideas:7:name}§!:
-	{modifier_to_string = args:group:ideas:7:modifier}
-§YBonus§!:
+				qq_tooltip_idea = args:group:ideas:1
+				qq_tooltip_idea = args:group:ideas:2
+				qq_tooltip_idea = args:group:ideas:3
+				qq_tooltip_idea = args:group:ideas:4
+				qq_tooltip_idea = args:group:ideas:5
+				qq_tooltip_idea = args:group:ideas:6
+				qq_tooltip_idea = args:group:ideas:7
+				new_custom_tooltip = "§YBonus§!:
 	{modifier_to_string = args:group:bonus}"
 			}
 		}
@@ -198,8 +208,8 @@ new named_effect create_idea_tree = {
 	#add_to_tree = { group = acceptance_ideas x = 7 y = 1 }
 	#draw_line = { 7 0 7 1 }
 	
-	#add_to_tree = { group = engineering_ideas x = 6 y = 2 }
-	#draw_line = { 6 1 6 2 }
+	add_to_tree = { group = engineering_ideas x = 6 y = 2 }
+	draw_line = { 6 1 6 2 }
 	
 	#
 	# Standing Army Ideas
@@ -218,9 +228,9 @@ new named_effect create_idea_tree = {
 	add_to_tree = { group = professionalism_ideas x = 8 y = 2 }
 	draw_line = { 9 1 8 2 }
 	
-	#add_to_tree = { group = marine_ideas x = 9 y = 2 }
-	#draw_line = { 9 1 9 2 }
-	#draw_line = { 9 3 9 2 }
+	add_to_tree = { group = marine_ideas x = 9 y = 2 }
+	draw_line = { 9 1 9 2 }
+	draw_line = { 8 3 9 2 }
 	
 	#
 	# Naval Ideas
@@ -363,5 +373,5 @@ new named_effect create_idea_tree = {
 	add_to_tree = { group = offensive_ideas x = 8 y = 8 }
 	draw_line = { 9 8 8 8 }
 	
-	#add_to_tree = { group = tactic_ideas x = 9 y = 8 }
+	add_to_tree = { group = tactic_ideas x = 9 y = 8 }
 }

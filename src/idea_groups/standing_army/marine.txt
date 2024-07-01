@@ -1,0 +1,131 @@
+new idea_group marine_ideas = {
+	name = "Marine"
+	category = MIL
+	trigger = {
+		OR = {
+			full_idea_group = quality_ideas
+			full_idea_group = naval_ideas
+		}
+	}
+	ideas = {
+		{
+			name = "First to land"
+			desc = "The marines are always the first to land on the beaches they have to secure it for our regular forces!"
+			modifier = {
+				allowed_marine_fraction = 15%
+			}
+			effect = {
+				quick_country_modifier = {
+					name = "First to land"
+					id = marine_1
+					modifier = {
+						is_marine_modifier = yes
+						infantry_power = 20%
+					}
+				}
+			}
+			removed_effect = {
+				remove_country_modifier = marine_1
+			}
+		}
+		{
+			name = "Sea drills"
+			desc = "The engineeers looked for one second at our forts and said this cannot do and then started to draft blueprints."
+			modifier = {
+				navy_tradition = 0.5
+			}
+			effect = {
+				quick_country_modifier = {
+					name = "Sea drills"
+					id = marine_2
+					modifier = {
+						is_marine_modifier = yes
+						drill_gain_modifier = 0.5
+						discipline = 5%
+					}
+				}
+			}
+			removed_effect = {
+				remove_country_modifier = marine_2
+			}
+		}
+		{
+			name = "Ship Hospitals"
+			desc = "The support fleet has dedicated hospital ships ensuring that any given wounded marine is once more ready to fight asap."
+			modifier = {
+				naval_attrition = -10%
+			}
+			effect = {
+				quick_country_modifier = {
+					name = "Ship Hospitals"
+					id = marine_3
+					modifier = {
+						is_marine_modifier = yes
+						reinforce_cost_modifier = -25%
+						reinforce_speed = 50%
+					}
+				}
+			}
+			removed_effect = {
+				remove_country_modifier = marine_3
+			}
+		}
+		{
+			name = "First to climb the walls"
+			desc = "The amphibious forces are now also dedicated to storm down any fort that is in their way."
+			modifier = {
+				siege_ability = 10%
+			}
+			effect = {
+				quick_country_modifier = {
+					name = "First to climb the walls"
+					id = marine_4
+					modifier = {
+						is_marine_modifier = yes
+						assault_fort_ability = 50%
+					}
+				}
+			}
+			removed_effect = {
+				remove_country_modifier = marine_4
+			}
+		}
+		{
+			name = "Naval levies"
+			desc = "Given that we also utilise a huge amount of marines our nobility now also has to provide naval levies in addition to the land based levies."
+			modifier = {
+				global_sailors_modifier = 25%
+			}
+		}
+		{
+			name = "Hardy professionals"
+			desc = "While others may need quite some time to recover from a lost battle these troops only see it as a temporary setback."
+			modifier = {
+				sailors_recovery_speed = 15%
+			}
+		}
+		{
+			name = "As fast as the wind"
+			desc = "Our marines are as fast as the wind that carried them to distant shores."
+			modifier = {
+				movement_speed = 10%
+			}
+			effect = {
+				quick_country_modifier = {
+					name = "As fast as the wind"
+					id = marine_7
+					modifier = {
+						is_marine_modifier = yes
+						regiment_disembark_speed = 2
+					}
+				}
+			}
+			removed_effect = {
+				remove_country_modifier = marine_7
+			}
+		}
+	}
+	bonus = {
+		allowed_marine_fraction = 10%
+	}
+}

@@ -1,0 +1,77 @@
+new unit basic_cannons = {
+	name = "Basic Cannons"
+	desc = ""
+	type = artillery
+	maneuver = 2
+	offensive_morale = 3
+	defensive_morale = 1
+	offensive_fire = 7
+	defensive_fire = 1
+	offensive_shock = 0
+	defensive_shock = 1
+	trigger = {
+		full_idea_group = engineering_ideas
+	}
+}
+
+new idea_group engineering_ideas = {
+	name = "Engineering"
+	category = ADM
+	trigger = {
+		full_idea_group = innovativeness_ideas
+	}
+	ideas = {
+		{
+			name = "Sappers"
+			desc = "The proposal was a bit arcane to us but basically the engineering corps suggested sending down miners under a hostile fort in order to undermine or blow it up. "
+			modifier = {
+				siege_ability = 15%
+			}
+		}
+		{
+			name = "Improved fortifications"
+			desc = "The engineeers looked for one second at our forts and said this cannot do and then started to draft blueprints."
+			modifier = {
+				defensiveness = 15%
+			}
+		}
+		{
+			name = "Treadmill cranes"
+			desc = "Carrying huge stones and large timber is so much easier now."
+			modifier = {
+				build_time = -10%
+			}
+		}
+		{
+			name = "National engineering corps"
+			desc = "The engineers came up with a proposition that would give us access to building more on the same amount of space."
+			modifier = {
+				global_allowed_num_of_buildings = 1
+			}
+		}
+		{
+			name = "Moats, Ditches and Ramparts"
+			desc = "Moats, Ditches and Ramparts you name it we have it our fortresses are mountains to be climbed or broken though not merely simple walls. "
+			modifier = {
+				hostile_attrition = 1
+			}
+		}
+		{
+			name = "Fortified barracks"
+			desc = "Sturdier barracks will make our garrisons more secure thus leading to people being more willing to be conscripted for duty."
+			modifier = {
+				army_line = 1
+			}
+		}
+		{
+			name = "Canoneers"
+			desc = "Our engineers called us stupid for not using cannons outside of our ships and they were right!"
+			modifier = {
+				artillery_power = 10%
+			}
+		}
+	}
+	bonus = {
+		development_cost = -10%
+	}
+}
