@@ -1,0 +1,63 @@
+new idea_group agricultural_ideas = {
+	name = "Agricultural"
+	category = ADM
+	trigger = {
+		full_idea_group = economic_ideas
+	}
+	ideas = {
+		{
+			name = "Crop Rotation"
+			desc = "Rotating through different crops protects our fields from being infertile."
+			modifier = {
+				goods_line = 1
+			}
+		}
+		{
+			name = "Peasants to farmers"
+			desc = "Sure peasants are cheap to do farmwork but certainly not very efficient at it. Properly educated farmers should give us higher yields even if they demand payment for it. After all you cannot eat money although we can surely tax them then."
+			modifier = {
+				production_efficiency = 15%
+			}
+		}
+		{
+			name = "Prosperous villages"
+			desc = "Having liberated the peasantry to proper free farmers even our villages now start to prosper."
+			modifier = {
+				development_cost = -5%
+				global_prosperity_growth = 0.1
+			}
+		}
+		{
+			name = "Grainaries"
+			desc = "Grainaries in every settlement will be of great aid in times of need."
+			modifier = {
+				global_monthly_devastation = -0.25
+			}
+		}
+		{
+			name = "Leading by example"
+			desc = "Our ruler has decided to buy whatever is possible from the farmers of their own crownland rather than from foreign powers or the estates. We hope our regional governors follow in their foot steps."
+			modifier = {
+				state_governing_cost = -10%
+			}
+		}
+		{
+			name = "State dinners"
+			desc = "At these occasions we can show other powers how productive our agriculture is."
+			modifier = {
+				diplomatic_reputation = 1
+			}
+		}
+		{
+			name = "Production surplus"
+			desc = "After passing all these reforms we now have a production surplus so big we ought to sell it abroad."
+			modifier = {
+				merchants = 1
+				trade_line = 1
+			}
+		}
+	}
+	bonus = {
+		development_cost_modifier = -5%
+	}
+}

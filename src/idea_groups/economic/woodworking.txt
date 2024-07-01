@@ -1,0 +1,61 @@
+new idea_group woodworking_ideas = {
+	name = "Woodworking"
+	category = ADM
+	trigger = {
+		full_idea_group = economic_ideas
+	}
+	ideas = {
+		{
+			name = "Shipbuilders"
+			desc = "Ships are made from wood a dedicated workfrorce for it ensures their swift construction."
+			modifier = {
+				global_ship_recruit_speed = -15%
+			}
+		}
+		{
+			name = "Furniture and woodcarving"
+			desc = "Some rich person will surely like to buy these products out of rare woods."
+			modifier = {
+				trade_efficiency = 10%
+			}
+		}
+		{
+			name = "Houses of timber"
+			desc = "Wood is readily aviable so let us build out of it."
+			modifier = {
+				build_cost = -10%
+			}
+		}
+		{
+			name = "Fuel for the furnaces"
+			desc = "Charring more wood into charcoal will make it easier for us to produce steel in greater quantities."
+			modifier = {
+				production_efficiency = 15%
+			}
+		}
+		{
+			name = "Provide free timber"
+			desc = "By providing timber for free to our population they can more easily build proper houses for themselves."
+			modifier = {
+				development_cost_modifier = -5%
+			}
+		}
+		{
+			name = "Carpenter apprentices"
+			desc = "By letting our carpenters educate apprentices future generations of them will be already more experience when they start working on their own."
+			modifier = {
+				build_time = -10%
+			}
+		}
+		{
+			name = "Storages for reconsctruction"
+			desc = "Stored timber for reconsctruction will make rebuilding devastated provinces so much quicker."
+			modifier = {
+				global_monthly_devastation = -0.25
+			}
+		}
+	}
+	bonus = {
+		development_cost = -10%
+	}
+}

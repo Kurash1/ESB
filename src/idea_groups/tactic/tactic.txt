@@ -3,56 +3,58 @@ new idea_group tactic_ideas = {
 	category = MIL
 	ideas = {
 		{
-			name = ""
-			desc = ""
+			name = "Strategic Doctrine"
+			desc = "Our generals are trained in the art of war, enabling us to adapt to various battlefields and opponents. A comprehensive approach to strategy ensures that we are always one step ahead."
 			modifier = {
-				
+				army_tradition = 1
 			}
 		}
 		{
-			name = ""
-			desc = ""
+			name = "Siegecraft"
+			desc = "Mastery of siege warfare allows us to reduce enemy fortresses with efficiency and speed. Engineers and artillery crews work tirelessly to breach even the strongest defenses."
 			modifier = {
-				
+				siege_ability = 15%
 			}
 		}
 		{
-			name = ""
-			desc = ""
+			name = "Coordination and Communication"
+			desc = "Effective communication between our commanders ensures that all parts of our army work together seamlessly. Coordinated attacks and timely reinforcements are crucial to our success."
 			modifier = {
-				
+				movement_speed = 10%
 			}
 		}
 		{
-			name = ""
-			desc = ""
+			name = "Elite Training"
+			desc = "Our elite troops undergo rigorous training, honing their skills to perfection. These soldiers form the backbone of our army, capable of turning the tide of battle."
 			modifier = {
-				
+				drill_gain_modifier = 25%
 			}
 		}
 		{
-			name = ""
-			desc = ""
+			name = "Adaptive Warfare"
+			desc = "We continuously learn and adapt our tactics based on battlefield experiences and enemy strategies. This flexibility allows us to counter any threat with precision."
 			modifier = {
-				
+				army_tradition_from_battle = 0.01
 			}
 		}
 		{
-			name = ""
-			desc = ""
+			name = "Logistics Mastery"
+			desc = "Efficient supply lines and resource management ensure that our armies are well-provisioned and ready for prolonged campaigns. Superior logistics is the key to sustained military operations."
 			modifier = {
-				
+				land_attrition = -10%
 			}
 		}
 		{
-			name = ""
-			desc = ""
+			name = "Combined Arms"
+			desc = "By integrating infantry, cavalry, and artillery into a cohesive fighting force, we can exploit the strengths of each unit type. This combined arms approach overwhelms and outmaneuvers our enemies."
 			modifier = {
-				
+				infantry_power = 5%
+				cavalry_power = 5%
+				artillery_power = 5%
 			}
 		}
 	}
 	bonus = {
-		
+		military_tactics = 0.1
 	}
 }

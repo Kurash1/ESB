@@ -1,0 +1,66 @@
+new idea_group acceptance_ideas = {
+	name = "Acceptance"
+	category = ADM
+	trigger = {
+		full_idea_group = humanist_ideas
+	}
+	ideas = {
+		{
+			name = "Cultural Integration"
+			desc = "Promoting the integration of diverse cultures within our realm strengthens unity and harmony. By encouraging cultural exchange, we create a richer and more cohesive society."
+			modifier = {
+				num_accepted_cultures = 3
+				promote_culture_cost = -25%
+			}
+		}
+		{
+			name = "Religious Harmony"
+			desc = "Through dialogue and mutual respect, we foster a spirit of religious harmony. Different faiths coexist peacefully, contributing to the stability and prosperity of our nation."
+			modifier = {
+				tolerance_own = 2
+				tolerance_heretic = 2
+				tolerance_heathen = 2
+			}
+		}
+		{
+			name = "Inclusive Governance"
+			desc = "Our administration embraces diversity, ensuring that all communities have a voice in the governance of our state. This inclusive approach enhances legitimacy and public trust."
+			modifier = {
+				dip_advisor_cost = -15%
+				advisor_pool = 1
+			}
+		}
+		{
+			name = "Multicultural Festivals"
+			desc = "Celebrating the diverse traditions and customs within our realm through multicultural festivals promotes a sense of belonging and unity among our people."
+			modifier = {
+				global_unrest = -1.5
+			}
+		}
+		{
+			name = "Educational Outreach"
+			desc = "Investing in education for all citizens, regardless of background, promotes understanding and acceptance. Knowledge and enlightenment pave the way for a more tolerant society."
+			modifier = {
+				production_line = 1
+			}
+		}
+		{
+			name = "Social Equality"
+			desc = "We strive for social equality by eliminating discriminatory practices and ensuring equal opportunities for all. Justice and fairness are the pillars of our society."
+			modifier = {
+				years_of_nationalism = -5
+			}
+		}
+		{
+			name = "Unified Identity"
+			desc = "By fostering a unified national identity that respects and includes all cultures and beliefs, we create a strong and resilient nation. This sense of unity is crucial for enduring peace and prosperity."
+			modifier = {
+				global_autonomy = -0.05
+			}
+		}
+	}
+	bonus = {
+		reverse_relation_with_heretic_religion = 15
+		reverse_relation_with_heathen_religion = 15
+	}
+}

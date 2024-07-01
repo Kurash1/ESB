@@ -1,0 +1,62 @@
+new idea_group high_seas_fleet_ideas = {
+	name = "High Seas Fleet"
+	category = DIP
+	trigger = {
+		full_idea_group = naval_ideas
+	}
+	ideas = {
+		{
+			name = "Grande Armada"
+			desc = "According to our admirals a vast armada of heavy ships is needed to secure our dominance over the oceans."
+			modifier = {
+				naval_forcelimit_modifier = 15%
+			}
+		}
+		{
+			name = "Wind and water powered Sawmills"
+			desc = "If we power our sawmills with wind or water power we can build ships far more quickly."
+			modifier = {
+				global_ship_recruit_speed = -15%
+			}
+		}
+		{
+			name = "Crossing the T"
+			desc = "We can bring far more guns to bear if we cross our enemy's T while at the same time reducing damage to our own ships."
+			modifier = {
+				movement_speed_in_fleet_modifier = 1
+			}
+		}
+		{
+			name = "Abandonment of Impressment"
+			desc = "Impressment may give us enough sailors but those sailors are not great sailors. We should rather focus on properly trained sailors that are willing to actually fight and sail."
+			modifier = {
+				naval_morale = 15%
+			}
+		}
+		{
+			name = "Alcohol Tax"
+			desc = "A sizable navy is expensive to maintain. The introduction of a new tax on alcohol should mitigate such concerns."
+			modifier = {
+				naval_maintenance_modifier = -10%
+			}
+		}
+		{
+			name = "Naval Carpenter Guilds"
+			desc = "Spezialised carpenters for just ships alone should ensure our ships are more readily aviable after major engagements."
+			modifier = {
+				navy_line = 1
+			}
+		}
+		{
+			name = "Cannons we need more cannons"
+			desc = "If we do not have enough cannons we just need more since more is always better right?"
+			modifier = {
+				number_of_cannons_modifier = 10%
+				artillery_power = 10%
+			}
+		}
+	}
+	bonus = {
+		navy_tradition = 1
+	}
+}

@@ -1,0 +1,61 @@
+new idea_group montane_ideas = {
+	name = "Montane"
+	category = ADM
+	trigger = {
+		full_idea_group = exploration_ideas
+	}
+	ideas = {
+		{
+			name = "Responsible gold mining"
+			desc = "We realised that just ripping out as much gold as is possible is not good for currency stability."
+			modifier = {
+				monthly_gold_inflation_modifier = -50%
+			}
+		}
+		{
+			name = "Prospectors"
+			desc = "Employed Geologists will help us uncover new ores, lodes and veins."
+			modifier = {
+				goods_line = 1
+			}
+		}
+		{
+			name = "Rich mining towns"
+			desc = "Our miners are getting rich from their now vast incomes and readily spend money into other branches of the economy."
+			modifier = {
+				global_prosperity_growth = 0.1
+			}
+		}
+		{
+			name = "Pensions for widows"
+			desc = "Huge pensions for widows of miners, that died due to accidents in the mines, will increase the loyalty of our people towards us."
+			modifier = {
+				global_unrest = -1
+			}
+		}
+		{
+			name = "Mining tax"
+			desc = "It is only fair if the government also gets a fair share out of the mining operations. After all we invested into these lands in the first place!"
+			modifier = {
+				global_tax_modifier = 10%
+			}
+		}
+		{
+			name = "Expansion of mines and mining towns"
+			desc = "We need to yield more ore out of the ground."
+			modifier = {
+				global_trade_goods_size = 0.5
+			}
+		}
+		{
+			name = "Enchanted Picks and Chisels"
+			desc = "Why only enchant weapons and armour? Our miners asked us for enchanted tools saying it would improve their yields significantly."
+			modifier = {
+				global_trade_goods_size_modifier = 10%
+			}
+		}
+	}
+	bonus = {
+		road_line = 1
+	}
+}

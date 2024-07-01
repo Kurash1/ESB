@@ -1,0 +1,61 @@
+new idea_group support_fleet_ideas = {
+	name = "Support Fleet"
+	category = DIP
+	trigger = {
+		full_idea_group = naval_ideas
+	}
+	ideas = {
+		{
+			name = "Chainlinks"
+			desc = "Chaining our ships together in front of harbours makes it nigh impossible to do a blockade run."
+			modifier = {
+				blockade_efficiency = 50%
+			}
+		}
+		{
+			name = "Coastal fort siege tactics"
+			desc = "Coastal forts can often be supplied via the sea we need to cut of this last life line."
+			modifier = {
+				siege_blockade_progress = 1
+			}
+		}
+		{
+			name = "Naval Artillery and landships"
+			desc = "We noticed that merely blockading coastal forts is not enough if they are well provisioned why not also join in the bombardement of said forts? Another idea we got was putting the same guns our ships have on the shores. Kinda an unsinkable ship in that case!"
+			modifier = {
+				global_naval_barrage_cost = -50%
+			}
+		}
+		{
+			name = "Marines to the front"
+			desc = "Our normal soldiers just dont cut it in amphibious warfare we need a dedicated force for that."
+			modifier = {
+				allowed_marine_fraction = 10%
+			}
+		}
+		{
+			name = "Dedicated landing ships"
+			desc = "If we can design transports that can drive right onto the shore our troops will not have to wade through the shallow water and thus are not such an easy target anymore."
+			modifier = {
+				landing_penalty = -1
+			}
+		}
+		{
+			name = "Maritime training of regulars"
+			desc = "Coming to the conclusion that the marines are to be preferred but are also kinda pricy, we trained our normal soldiers to endure the seas at least a bit better."
+			modifier = {
+				transport_attrition = -50%
+			}
+		}
+		{
+			name = "Stalwart Support"
+			desc = "Given that our fleet is mainly there to support our land troops we cannot allow hostile fleets to wipe ours out of coastal waters."
+			modifier = {
+				own_coast_naval_combat_bonus = 1
+			}
+		}
+	}
+	bonus = {
+		navy_line = 1
+	}
+}

@@ -1,0 +1,61 @@
+new idea_group ship_quality_ideas = {
+	name = "Ship Quality"
+	category = DIP
+	trigger = {
+		full_idea_group = naval_ideas
+	}
+	ideas = {
+		{
+			name = "Superior Craftsmanship"
+			desc = "Investing in skilled shipbuilders and advanced techniques, our ships are constructed with precision and care, resulting in superior performance and reliability."
+			modifier = {
+				ship_durability = 5%
+			}
+		}
+		{
+			name = "Reinforced Hulls"
+			desc = "Using the finest materials and innovative designs, we reinforce our ships' hulls, making them more resistant to damage from enemy fire and harsh sea conditions."
+			modifier = {
+				hull_size_modifier = 10%
+			}
+		}
+		{
+			name = "Enhanced Armaments"
+			desc = "Outfitting our ships with the latest in naval weaponry, we ensure they are well-armed and capable of delivering devastating broadsides in combat."
+			modifier = {
+				number_of_cannons_modifier = 15%
+			}
+		}
+		{
+			name = "Streamlined Designs"
+			desc = "Focusing on streamlined hull designs, our ships cut through the water with ease, improving their speed and fuel efficiency for longer voyages."
+			modifier = {
+				global_ship_recruit_speed = -10%
+			}
+		}
+		{
+			name = "Resilient Sails"
+			desc = "Using the toughest and most durable materials for our sails, we ensure they can withstand strong winds and prolonged use without losing their effectiveness."
+			modifier = {
+				naval_attrition = -15%
+			}
+		}
+		{
+			name = "Improved Living Conditions"
+			desc = "Enhancing the living conditions on our ships, we improve the morale and health of our sailors, leading to more effective and motivated crews."
+			modifier = {
+				naval_morale = 10%
+			}
+		}
+		{
+			name = "Efficient Maintenance"
+			desc = "Establishing rigorous maintenance protocols, our ships are kept in peak condition, reducing the risk of breakdowns and extending their operational life."
+			modifier = {
+				sea_repair = yes
+			}
+		}
+	}
+	bonus = {
+		navy_line = 1
+	}
+}

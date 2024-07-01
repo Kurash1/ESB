@@ -1,0 +1,65 @@
+new idea_group pirate_fleet_ideas = {
+	name = "Pirate Fleet"
+	category = DIP
+	trigger = {
+		OR = {
+			full_idea_group = naval_ideas
+			full_idea_group = maritime_ideas
+		}
+	}
+	ideas = {
+		{
+			name = "Letters of Marque"
+			desc = "If we employ privateers we can seep of the trade of foreign powers."
+			modifier = {
+				privateer_efficiency = 50%
+			}
+		}
+		{
+			name = "Engagement with convoy protections"
+			desc = "We noticed that convoy protection ships are quite a hassle for us our pirate ships have been redesigned to account for that."
+			modifier = {
+				light_ship_power = 15%
+			}
+		}
+		{
+			name = "An Enemy of the gods"
+			desc = "It is of no concern to us if we raid fellow people of faith as long as there is money to be made. It also does not concern us if shores are far away all of them shall be raided if feasible."
+			modifier = {
+				may_perform_slave_raid_on_same_religion = yes
+				coast_raid_range = 1
+			}
+		}
+		{
+			name = "Our flagship flies the Jolly Roger"
+			desc = "Even our flagship flies the flag that instills so much fear in merchants and captains all over the world."
+			modifier = {
+				max_flagships = 1
+			}
+		}
+		{
+			name = "Additional piers for captured ships"
+			desc = "hip capturing is a good way to increase our fleet size at minimal effort of our own. We however now arrived at a point that we do not even know where to park all this ships anymore."
+			modifier = {
+				navy_line = 1
+			}
+		}
+		{
+			name = "Additional Cannons"
+			desc = "Heavy ships are still quite a nuisance for our privateers if we equip them with more cannons they may stand a chance?"
+			modifier = {
+				light_ship_number_of_cannons_modifier = 25%
+			}
+		}
+		{
+			name = "Additional Hull Sheeting"
+			desc = "Likewise a more durable hull sounds like a good idea."
+			modifier = {
+				light_ship_hull_size_modifier = 25%
+			}
+		}
+	}
+	bonus = {
+		naval_forcelimit_modifier = 15%
+	}
+}

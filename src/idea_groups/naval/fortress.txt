@@ -1,0 +1,63 @@
+new idea_group fortress_ideas = {
+	name = "Fortress"
+	category = MIL
+	trigger = {
+		full_idea_group = defensive_ideas
+	}
+	ideas = {
+		{
+			name = "Fortified Foundations"
+			desc = "Laying down robust and resilient foundations, our fortresses are built to withstand the test of time and the fiercest of sieges."
+			modifier = {
+				defensiveness = 50%
+			}
+		}
+		{
+			name = "Improved Barricades"
+			desc = "Enhancing our barricades and walls with reinforced materials, we ensure greater protection against enemy artillery and assaults."
+			modifier = {
+				garrison_damage = 50%
+			}
+		}
+		{
+			name = "Strategic Placement"
+			desc = "Building our fortresses at key strategic points, we control vital routes and chokepoints, making it difficult for enemies to advance."
+			modifier = {
+				rival_border_fort_maintenance = -25%
+			}
+		}
+		{
+			name = "Enhanced Garrisons"
+			desc = "Training and equipping our garrison troops to the highest standards, they are capable of defending our fortresses with unmatched tenacity and skill."
+			modifier = {
+				garrison_size = 25%
+				global_garrison_growth = 50%
+			}
+		}
+		{
+			name = "Artillery Emplacements"
+			desc = "Positioning powerful artillery within our fortifications, we can repel attackers with devastating cannon fire from fortified positions."
+			modifier = {
+				backrow_artillery_damage = 10%
+			}
+		}
+		{
+			name = "Signal Towers"
+			desc = "Erecting signal towers and communication lines, our fortresses can quickly relay information and coordinate defenses across vast distances."
+			modifier = {
+				army_line = 1
+			}
+		}
+		{
+			name = "Fortress Doctrine"
+			desc = "Developing a comprehensive doctrine for the construction, maintenance, and defense of our fortresses, we achieve unparalleled defensive capabilities and ensure the safety of our realm."
+			modifier = {
+				fort_maintenance_modifier = -25%
+				build_cost = -10%
+			}
+		}
+	}
+	bonus = {
+		global_defender_dice_roll_bonus = 1
+	}
+}

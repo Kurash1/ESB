@@ -1,0 +1,62 @@
+new idea_group masonry_ideas = {
+	name = "Masonry"
+	category = ADM
+	trigger = {
+		full_idea_group = economic_ideas
+	}
+	ideas = {
+		{
+			name = "Hardest stone"
+			desc = "Only using the hardest of rock we can find our fortress will surely better withstand any barrage."
+			modifier = {
+				defensiveness = 40%
+			}
+		}
+		{
+			name = "Precut stones and bricks."
+			desc = "Prefabricated bricks in addition to precut stones will standardize constructions and lower build time considerably."
+			modifier = {
+				build_time = -25%
+			}
+		}
+		{
+			name = "Magnum Opus"
+			desc = "Our masons are always eager to build something big together with our architects we say let them."
+			modifier = {
+				build_cost = -10%
+				great_project_upgrade_cost = -25%
+			}
+		}
+		{
+			name = "From the drawing board"
+			desc = "Settlements are now designed from the drawing board."
+			modifier = {
+				development_cost = -10%
+			}
+		}
+		{
+			name = "Powerful guilds"
+			desc = "The masons have become a powerful guild in our country their influence is wide reaching. But they also did not forget who brought them to such heights."
+			modifier = {
+				production_line = 1
+			}
+		}
+		{
+			name = "Roads from stone"
+			desc = "Rather than having these muddy tracks other people call roads our roads are properly built ensuring fast travel within our realm."
+			modifier = {
+				road_line = 1
+			}
+		}
+		{
+			name = "Masons in the army"
+			desc = "When you know how to build with stone you surely also know how to destroy stone right?"
+			modifier = {
+				siege_ability = 20%
+			}
+		}
+	}
+	bonus = {
+		fort_maintenance_modifier = -20%
+	}
+}

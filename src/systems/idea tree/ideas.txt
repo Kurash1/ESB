@@ -173,43 +173,52 @@ new named_effect create_idea_tree = {
 	#
 	# Economic Ideas
 	#
-	add_to_tree = { group = alchemical_ideas x = 4 y = 0 }
-	draw_line = { 5 0 4 0 }
+	add_to_tree = { group = agricultural_ideas x = 4 y = 0 }
+	draw_line = { 5 1 4 0 }
 	
-	add_to_tree = { group = economic_ideas x = 5 y = 0 }
+	add_to_tree = { group = masonry_ideas x = 5 y = 0 }
+	draw_line = { 5 1 5 0 }
 	
-	add_to_tree = { group = treasury_ideas x = 6 y = 0 }
-	draw_line = { 5 0 6 0 }
+	add_to_tree = { group = woodworking_ideas x = 6 y = 0 }
+	draw_line = { 5 1 6 0 }
 	
-	add_to_tree = { group = infrastructure_ideas x = 4 y = 1 }
-	draw_line = { 5 0 4 1 }
+	add_to_tree = { group = alchemical_ideas x = 4 y = 1 }
+	draw_line = { 5 1 4 1 }
 	
-	add_to_tree = { group = smithing_ideas x = 5 y = 1 }
-	draw_line = { 5 0 5 1 }
+	add_to_tree = { group = economic_ideas x = 5 y = 1 }
 	
-	add_to_tree = { group = logistic_ideas x = 3 y = 2 }
-	draw_line = { 4 1 3 2 }
+	add_to_tree = { group = treasury_ideas x = 6 y = 1 }
+	draw_line = { 5 1 6 1 }
 	
-	add_to_tree = { group = weapon_quality_ideas x = 4 y = 2 }
+	add_to_tree = { group = infrastructure_ideas x = 4 y = 2 }
 	draw_line = { 5 1 4 2 }
 	
-	add_to_tree = { group = armour_quality_ideas x = 5 y = 2 }
+	add_to_tree = { group = smithing_ideas x = 5 y = 2 }
 	draw_line = { 5 1 5 2 }
+	
+	add_to_tree = { group = logistic_ideas x = 3 y = 2 }
+	draw_line = { 4 2 3 2 }
+	
+	add_to_tree = { group = weapon_quality_ideas x = 4 y = 3 }
+	draw_line = { 5 2 4 3 }
+	
+	add_to_tree = { group = armour_quality_ideas x = 5 y = 3 }
+	draw_line = { 5 2 5 3 }
 	
 	#
 	# Tolerance Ideas
 	#
-	add_to_tree = { group = humanist_ideas x = 7 y = 0 }
+	add_to_tree = { group = humanist_ideas x = 7 y = 1 }
 	
-	add_to_tree = { group = innovativeness_ideas x = 6 y = 1 }
-	draw_line = { 5 0 6 1 }
-	draw_line = { 7 0 6 1 }
+	add_to_tree = { group = innovativeness_ideas x = 6 y = 2 }
+	draw_line = { 5 1 6 2 }
+	draw_line = { 7 1 6 2 }
 	
-	#add_to_tree = { group = acceptance_ideas x = 7 y = 1 }
-	#draw_line = { 7 0 7 1 }
+	add_to_tree = { group = acceptance_ideas x = 7 y = 0 }
+	draw_line = { 7 1 7 0 }
 	
-	add_to_tree = { group = engineering_ideas x = 6 y = 2 }
-	draw_line = { 6 1 6 2 }
+	add_to_tree = { group = engineering_ideas x = 6 y = 3 }
+	draw_line = { 6 2 6 3 }
 	
 	#
 	# Standing Army Ideas
@@ -235,26 +244,27 @@ new named_effect create_idea_tree = {
 	#
 	# Naval Ideas
 	#
-	#add_to_tree = { group = ship_quality_ideas x = 7 y = 2 }
-	#draw_line = { 8 3 7 2 }
-
-	#add_to_tree = { group = inland_fleet_ideas x = 7 y = 2 }
-	#draw_line = { 8 3 7 3 }
+	add_to_tree = { group = ship_quality_ideas x = 7 y = 2 }
+	draw_line = { 8 3 7 2 }
+	
+	add_to_tree = { group = inland_fleet_ideas x = 7 y = 3 }
+	draw_line = { 8 3 7 3 }
 	
 	add_to_tree = { group = naval_ideas x = 8 y = 3 }
 	
-	#add_to_tree = { group = support_fleet_ideas x = 9 y = 3 }
-	#draw_line = { 8 3 9 3 }
+	add_to_tree = { group = support_fleet_ideas x = 9 y = 3 }
+	draw_line = { 8 3 9 3 }
 	
-	#add_to_tree = { group = pirate_fleet_ideas x = 7 y = 4 }
-	#draw_line = { 8 3 7 4 }
+	add_to_tree = { group = pirate_fleet_ideas x = 7 y = 4 }
+	draw_line = { 8 3 7 4 }
+	draw_line = { 8 5 7 4 }
 	
-	#add_to_tree = { group = merchant_fleet_ideas x = 8 y = 4 }
-	#draw_line = { 8 3 8 4 }
-	#draw_line = { 9 5 8 4 }
+	add_to_tree = { group = merchant_fleet_ideas x = 8 y = 4 }
+	draw_line = { 8 3 8 4 }
+	draw_line = { 9 5 8 4 }
 	
-	#add_to_tree = { group = high_seas_fleet_ideas x = 9 y = 4 }
-	#draw_line = { 8 3 9 4 }
+	add_to_tree = { group = high_seas_fleet_ideas x = 9 y = 4 }
+	draw_line = { 8 3 9 4 }
 	
 	#
 	# Maritime Ideas
@@ -277,8 +287,8 @@ new named_effect create_idea_tree = {
 	add_to_tree = { group = expansion_ideas x = 1 y = 4 }
 	draw_line = { 0 4 1 4 }
 	
-	#add_to_tree = { group = montane_ideas x = 1 y = 5 }
-	#draw_line = { 0 4 1 5 }
+	add_to_tree = { group = montane_ideas x = 1 y = 5 }
+	draw_line = { 0 4 1 5 }
 	
 	#add_to_tree = { group = reclamation_ideas x = 2 y = 2 }
 	#draw_line = { 1 4 2 4 }
@@ -355,14 +365,14 @@ new named_effect create_idea_tree = {
 	#add_to_tree = { group = guerilla_ideas x = 8 y = 6 }
 	#draw_line = { 9 7 8 6 }
 	
-	#add_to_tree = { group = fortress_ideas x = 9 y = 6 }
-	#draw_line = { 9 7 9 6 }
+	add_to_tree = { group = fortress_ideas x = 9 y = 6 }
+	draw_line = { 9 7 9 6 }
 	
 	add_to_tree = { group = extended_campaign_ideas x = 7 y = 7 }
 	draw_line = { 8 8 7 7 }
 	
 	add_to_tree = { group = general_staff_ideas x = 8 y = 7 }
-	draw_line = { 8 9 8 7 }
+	draw_line = { 9 8 8 7 }
 	
 	add_to_tree = { group = defensive_ideas x = 9 y = 7 }
 	draw_line = { 9 8 9 7 }

@@ -1,0 +1,61 @@
+new idea_group inland_fleet_ideas = {
+	name = "Inland Fleet"
+	category = DIP
+	trigger = {
+		full_idea_group = naval_ideas
+	}
+	ideas = {
+		{
+			name = "Improved Oars"
+			desc = "Good oars should improve the ram speed of our galleys."
+			modifier = {
+				galley_power = 10%
+			}
+		}
+		{
+			name = "Riverside Drafts"
+			desc = "Drafting Sailors from fishers and ferrymen living among the rivers increases our aviable manpowerpool."
+			modifier = {
+				global_sailors_modifier = 25%
+			}
+		}
+		{
+			name = "Ram Enthusiasts"
+			desc = "Our Admirals only think of one thing ramming their ship into one of the enemy."
+			modifier = {
+				leader_naval_shock = 1
+			}
+		}
+		{
+			name = "Inland Artillery Support"
+			desc = "Cannons are just as good at support of our ground forces inland as they are on coasts."
+			modifier = {
+				galley_number_of_cannons_modifier = 15%
+			}
+		}
+		{
+			name = "Inland Shipyards"
+			desc = "Establishing shipyards along our rivers and lakes, we build and maintain a formidable inland fleet, ready to respond to any threat or opportunity."
+			modifier = {
+				navy_line = 1
+			}
+		}
+		{
+			name = "Latin Sails"
+			desc = "This new type of sail should make our fleets faster."
+			modifier = {
+				movement_speed_in_fleet_modifier = 1
+			}
+		}
+		{
+			name = "Small speedy ships"
+			desc = "Our ships are small and fast they can easily wriggle themselves out of non favourable battles."
+			modifier = {
+				disengagement_chance = 10%
+			}
+		}
+	}
+	bonus = {
+		naval_morale = 10%
+	}
+}

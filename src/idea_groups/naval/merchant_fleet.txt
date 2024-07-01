@@ -1,0 +1,64 @@
+new idea_group merchant_fleet_ideas = {
+	name = "Merchant Fleet"
+	category = DIP
+	trigger = {
+		OR = {
+			full_idea_group = naval_ideas
+			full_idea_group = trade_ideas
+		}
+	}
+	ideas = {
+		{
+			name = "Protection Fleet"
+			desc = "Protecting our trade should have the utmost priority we need to get the costs for our light ships down."
+			modifier = {
+				light_ship_cost = -15%
+			}
+		}
+		{
+			name = "Protectionist Admirality"
+			desc = "Our Admirals ought to focus on protecting our trade as well."
+			modifier = {
+				leader_naval_manuever = 2
+			}
+		}
+		{
+			name = "Fleets of gold and silver"
+			desc = "Our fleets haul in vast amounts of wealth for our country."
+			modifier = {
+				global_ship_trade_power = 25%
+			}
+		}
+		{
+			name = "Mercantilism is the future"
+			desc = "The new economic theory of mercantilism promises us wealth beyond reckoning."
+			modifier = {
+				mercantilism_cost = -50%
+			}
+		}
+		{
+			name = "At home everywhere"
+			desc = "Due to our massive merchant fleet we are practically at home in every trade node we can reach."
+			modifier = {
+				trade_line = 1
+			}
+		}
+		{
+			name = "Convoy Protection"
+			desc = "Our light ships have been redesigned to protect our mercantile convoys from being raided."
+			modifier = {
+				ship_power_propagation = 25%
+			}
+		}
+		{
+			name = "Deny trade income to our enemies"
+			desc = "We ought to blockade our enemies trade. Doing this we can ensure that their war chest empties far more rapidly than our own."
+			modifier = {
+				embargo_efficiency = 50%
+			}
+		}
+	}
+	bonus = {
+		navy_line = 1
+	}
+}
