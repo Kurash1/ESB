@@ -1,0 +1,64 @@
+new idea_group crusader_ideas = {
+	name = "Crusader"
+	category = MIL
+	trigger = {
+		full_idea_group = religious_ideas
+	}
+	ideas = {
+		{
+			name = "Pious Alliances"
+			desc = "Forging alliances with other faithful leaders strengthens our position and provides us with additional resources and troops for our crusades."
+			modifier = {
+				relation_with_same_religion = 25
+				reverse_relation_with_same_religion = 25
+			}
+		}
+		{
+			name = "Eternal Glory"
+			desc = "Our crusaders believe that their sacrifices will be rewarded with eternal glory, driving them to fight with unmatched courage and determination."
+			modifier = {
+				prestige_from_land = 50%
+				army_tradition_from_battle = 50%
+			}
+		}
+		{
+			name = "Zealous Warriors"
+			desc = "Our soldiers fight with unwavering zeal, driven by a divine purpose. Their devotion to the cause makes them formidable opponents on the battlefield."
+			modifier = {
+				land_morale_constant = 0.15
+			}
+		}
+		{
+			name = "Holy Orders"
+			desc = "Establishing and supporting holy orders provides us with elite warrior monks and knights who are dedicated to our sacred mission."
+			modifier = {
+				tax_line = 1
+			}
+		}
+		{
+			name = "Missionary Zeal"
+			desc = "Our missionaries spread the faith with fervor, converting populations and rallying more support for our holy cause."
+			modifier = {
+				global_missionary_strength = 2%
+			}
+		}
+		{
+			name = "Spiritual Discipline"
+			desc = "Strict spiritual discipline and rigorous training ensure that our crusaders are both devout and skilled, combining faith with martial prowess."
+			modifier = {
+				discipline = 5%
+			}
+		}
+		{
+			name = "Sanctified War"
+			desc = "Blessed by our spiritual leaders, our wars are seen as righteous and just, inspiring our troops and demoralizing our enemies."
+			modifier = {
+				extra_manpower_at_religious_war = yes
+			}
+		}
+	}
+	bonus = {
+		infantry_shock = 0.25
+		cavalry_shock = 0.25
+	}
+}

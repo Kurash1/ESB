@@ -328,9 +328,9 @@ new named_effect create_idea_tree = {
 	#
 	# Mercenary Ideas
 	#
-	#add_to_tree = { group = knightly_ideas x = 3 y = 7 }
-	#draw_line = { 3 6 3 7 }
-	#draw_line = { 3 8 3 7 }
+	add_to_tree = { group = knightly_ideas x = 3 y = 7 }
+	draw_line = { 3 6 3 7 }
+	draw_line = { 3 8 3 7 }
 	
 	add_to_tree = { group = mercenary_ideas x = 3 y = 8 }
 	
@@ -354,16 +354,16 @@ new named_effect create_idea_tree = {
 	#
 	# Religious Ideas
 	#
-	#add_to_tree = { group = crusader_ideas x = 6 y = 7 }
-	#draw_line = { 6 8 6 7 }
+	add_to_tree = { group = crusader_ideas x = 6 y = 7 }
+	draw_line = { 6 8 6 7 }
 	
 	add_to_tree = { group = religious_ideas x = 6 y = 8 }
 	
 	#
 	# Tactic Ideas
 	#
-	#add_to_tree = { group = guerilla_ideas x = 8 y = 6 }
-	#draw_line = { 9 7 8 6 }
+	add_to_tree = { group = guerilla_ideas x = 8 y = 6 }
+	draw_line = { 9 7 8 6 }
 	
 	add_to_tree = { group = fortress_ideas x = 9 y = 6 }
 	draw_line = { 9 7 9 6 }
@@ -383,5 +383,5 @@ new named_effect create_idea_tree = {
 	add_to_tree = { group = offensive_ideas x = 8 y = 8 }
 	draw_line = { 9 8 8 8 }
 	
-	add_to_tree = { group = tactic_ideas x = 9 y = 8 }
+	add_to_tree = { group = strategic_ideas x = 9 y = 8 }
 }

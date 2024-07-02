@@ -1,0 +1,102 @@
+new unit knights = {
+	name = "Knight-Cavalry"
+	desc = "'Knight-Cavalry' represents the epitome of chivalric warfare, combining the speed and agility of mounted soldiers with the formidable discipline and morale of knights. These elite cavalry units excel in shock tactics, breaking enemy lines with their powerful charges while maintaining high morale under fire. Trained under the rigorous traditions of knighthood, they are not only fierce attackers but also resilient defenders, embodying the martial spirit and honor of the knightly orders. Their presence on the battlefield is a testament to the strategic advantage of well-coordinated and heavily armed cavalry, capable of turning the tide of battle in favor of their liege."
+	type = cavalry
+	maneuver = 2
+	offensive_morale = 2
+	defensive_morale = 2
+	offensive_fire = 0
+	defensive_fire = 2
+	offensive_shock = 4
+	defensive_shock = 4
+	trigger = {
+		has_idea = knightly_ideas_2
+	}
+}
+new mercenary_company knightly_order = {
+	name = "Knightly Order"
+	desc = ""
+	regiments_per_development = 0.04
+	cavalry_weight = 0.25
+	artillery_weight = 0
+	cost_modifier = 0.8
+	modifier = {
+		shock_damage = 15%
+	}
+	trigger = {
+		has_idea = knightly_ideas_1
+	}
+}
+make_company_professional = knightly_order
+new idea_group knightly_ideas = {
+	name = "Knightly"
+	category = MIL
+	trigger = {
+		OR = {
+			full_idea_group = mercenary_ideas
+			full_idea_group = feudal_ideas
+		}
+	}
+	ideas = {
+		{
+			name = "Knightly Orders"
+			desc = "Forming knightly orders, we create dedicated groups of elite warriors bound by a shared purpose and rigorous training, ready to defend our realm."
+			modifier = {
+				mercenary_discipline = 10%
+			}
+			effect = {
+				new_custom_tooltip = "Unlocks §YKnightly Order§! Mercenary Company"
+			}
+		}
+		{
+			name = "Chivalric Code"
+			desc = "Upholding the timeless chivalric code, our knights are guided by principles of honor, bravery, and loyalty, inspiring respect and fear on the battlefield."
+			modifier = {
+				prestige = 1
+			}
+			effect = {
+				new_custom_tooltip = "Unlocks §YKnight-Cavalry§! Unit"
+			}
+		}
+		{
+			name = "Mounted Combat Training"
+			desc = "Specializing in mounted combat, our knights are skilled horsemen who can execute devastating charges and maintain superior mobility during engagements."
+			modifier = {
+				cavalry_power = 15%
+			}
+		}
+		{
+			name = "Elite Armorers"
+			desc = "Employing the finest armorers, we equip our knights with superior armor and weaponry, enhancing their protection and combat effectiveness."
+			modifier = {
+				shock_damage_received = -5%
+			}
+		}
+		{
+			name = "Battlefield Tactics"
+			desc = "Studying historical battles and tactics, our knights are adept at employing advanced strategies and formations that give us an edge in combat."
+			modifier = {
+				military_tactics = 0.1
+			}
+		}
+		{
+			name = "Gallant Leadership"
+			desc = "Promoting knights to leadership positions, their valor and strategic acumen inspire our troops and improve our command structure on the battlefield."
+			modifier = {
+				leader_land_shock = 1
+			}
+		}
+		{
+			name = "Knightly Valor"
+			desc = "Celebrating acts of valor and bravery, we instill a culture of heroism among our knights, encouraging them to perform feats of extraordinary courage."
+			modifier = {
+				prestige_from_land = 50%
+				land_morale_constant = 0.2
+			}
+		}
+	}
+	bonus = {
+		cav_to_inf_ratio = 30%
+		cavalry_flanking = 20%
+	}
+}

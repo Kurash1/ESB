@@ -79,12 +79,12 @@ new unit nord_artillery = {
 	type = artillery
 	unit_type = nord
 	maneuver = 1
-	offensive_morale = 2
-	defensive_morale = 2
-	offensive_fire = 4
+	offensive_morale = 0
+	defensive_morale = 3
+	offensive_fire = 0
 	defensive_fire = 2
 	offensive_shock = 0
-	defensive_shock = 1
+	defensive_shock = 2
 }
 
 new technology_group reachman = {
@@ -225,12 +225,12 @@ new unit duraki_artillery = {
 	type = artillery
 	unit_type = duraki
 	maneuver = 1
-	offensive_morale = 2
+	offensive_morale = 0
 	defensive_morale = 2
-	offensive_fire = 4
+	offensive_fire = 0
 	defensive_fire = 2
 	offensive_shock = 0
-	defensive_shock = 0
+	defensive_shock = 2
 }
 
 new technology_group giant = {

@@ -186,193 +186,193 @@ new idea_group destruction_ideas = {
 		siege_ability = 20%
 	}
 }
-new idea_group dark_magic_ideas = {
-	name = "Dark Magic"
-	category = ADM
-	trigger = {
-		full_idea_group = destruction_ideas
-	}
-	ideas = {
-		{
-			name = "Evil Wizards"
-			desc = "Practitioners of Dark Magic have a reputation for being evil wizards."
-			modifier = {
-				diplomatic_reputation = -5
-			}
-		}
-		{
-			name = "Harmful Magic"
-			desc = "It also replicates some of the harmful effects of spells cast by Daedra."
-			modifier = {
-				fire_damage = 0.1
-			}
-		}
-		{
-			name = "Negative Magic"
-			desc = "Dark Magic negates, drains and preys upon the magicka and power of other magic users."
-			modifier = {
-				fire_damage_received = -0.1
-			}
-		}
-		{
-			name = "Imprisonment"
-			desc = "Sorcerers who practice Dark Magic can summon wards that suppress magic and imprison foes in runes."
-			modifier = {
-				defensiveness = 0.25
-			}
-		}
-		{
-			name = "Daedric Runes"
-			desc = "They can also cast offensive spells, such as Daedric runes that explode upon contact with a mortal."
-			modifier = {
-				ae_impact = 0.1
-			}
-		}
-		{
-			name = "Lifesteal"
-			desc = "Dark Magic can be used to drain the life of others to restore the caster's vitality."
-			modifier = {
-				recover_army_morale_speed = 0.5
-				reinforce_speed = 0.5
-			}
-		}
-		{
-			name = "Glenmoril Wyrd"
-			desc = "The witches of Glenmoril Wyrd have been known to perform dark magicka rituals to cure lycanthropy."
-			modifier = {
-				shock_damage = 0.05
-			}
-		}
-	}
-	bonus = {
-		war_exhaustion = -0.02
-	}
-}
-new idea_group blood_magic_ideas = {
-	name = "Blood Magic"
-	category = MIL
-	trigger = {
-		full_idea_group = destruction_ideas
-	}
-	ideas = {
-		{
-			name = "Blood Magic"
-			desc = "Blood Magic is a dark and ancient form of magic."
-			modifier = {
-				improve_relation_modifier = -0.2
-				prestige = 1
-			}
-		}
-		{
-			name = "Drain Life"
-			desc = "Blood Magic can be used for draining life,"
-			modifier = {
-				loot_amount = 0.5
-				available_province_loot = 0.25
-			}
-		}
-		{
-			name = "Reanimation"
-			desc = "Blood Magic can be used for reanimate the dead"
-			modifier = {
-				global_manpower_modifier = 0.15
-			}
-		}
-		{
-			name = "Telekinesis"
-			desc = "Blood Magic can be used for telekinetically lifting others from a distance"
-			modifier = {
-				backrow_artillery_damage = 0.1
-			}
-		}
-		{
-			name = "Gargoyles"
-			desc = "Blood Magic can be used for summoning gargoyles"
-			modifier = {
-				shock_damage = 0.05
-			}
-		}
-		{
-			name = "Paralysis"
-			desc = "Blood Magic can be used for paralyzing others"
-			modifier = {
-				shock_damage_received = -0.025
-				fire_damage_received = -0.025
-			}
-		}
-		{
-			name = "Blood Magic Rituals"
-			desc = "Blood Magic rituals are performed to complete feats of great power. An elven arrow tainted with the blood of a pure-blooded Daughter of Coldharbour becomes a Bloodcursed elven arrow. If fired at the Sun with Auriel's Bow, it is capable of blotting out the Sun for an entire day."
-			modifier = {
-				hostile_attrition = 1.5
-			}
-		}
-	}
-	bonus = {
-		discipline = 0.05
-	}
-}
-new idea_group water_magic_ideas = {
-	name = "Water Magic"
-	category = MIL
-	trigger = {
-		full_idea_group = destruction_ideas
-	}
-	ideas = {
-		{
-			name = "Water Magic"
-			desc = "Water Magic is an obscure and little-known form of magic involving the manipulation of water."
-			modifier = {
-				naval_morale = 0.15
-			}
-		}
-		{
-			name = "Of Memory"
-			desc = "On Tamriel, water is composed of memory. When a mortal dies, his or her memories become water, and in this way all the memories of Tamriel's histories are stored within its waters."
-			modifier = {
-				global_spy_defence = 0.15
-			}
-		}
-		{
-			name = "Dangerous Knowledge"
-			desc = "This fact is considered to be one of the most dangerous secrets about the natural order of the world, and is therefore closely guarded by the Demon of Knowledge Hermaeus Mora."
-			modifier = {
-				idea_cost = -0.025
-			}
-		}
-		{
-			name = "Drought-Fight"
-			desc = "For example, circa 2E 582 the water spirit of Halcyon Lake, a nereid named Lorelia, attempted to twist the natural order by stealing the memories of her mortal followers to prevent the desertification of her lake, forcing the servants of Hermaeus Mora to intervene."
-			modifier = {
-				development_cost = -0.1
-			}
-		}
-		{
-			name = "Water Memories"
-			desc = "The burial grounds of Honor's Rest had memorial pools that allowed one to view the past through the eyes of those involved in the Siege of Orsinium."
-			modifier = {
-				army_tradition_decay = -0.01
-			}
-		}
-		{
-			name = "Sphere of Storms"
-			desc = "The Ayleids of the Strident Coast utilized a weapon called the Sphere of Storms, which manipulated the waters around them to either defend their coastline, or provided for the people such as water crops or speed ships through the sea."
-			modifier = {
-				own_coast_naval_combat_bonus = 1.0
-			}
-		}
-		{
-			name = "Sea giant Magic"
-			desc = "Sea Giants are capable of wielding powerful magic to control water. Examples of such magic include flinging orbs of sea water at their foes and guiding surges of water to crash down on their enemies."
-			modifier = {
-				fire_damage = 0.05
-			}
-		}
-	}
-	bonus = {
-		naval_attrition = -0.15
-	}
-}
+#new idea_group dark_magic_ideas = {
+#	name = "Dark Magic"
+#	category = ADM
+#	trigger = {
+#		full_idea_group = destruction_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Evil Wizards"
+#			desc = "Practitioners of Dark Magic have a reputation for being evil wizards."
+#			modifier = {
+#				diplomatic_reputation = -5
+#			}
+#		}
+#		{
+#			name = "Harmful Magic"
+#			desc = "It also replicates some of the harmful effects of spells cast by Daedra."
+#			modifier = {
+#				fire_damage = 0.1
+#			}
+#		}
+#		{
+#			name = "Negative Magic"
+#			desc = "Dark Magic negates, drains and preys upon the magicka and power of other magic users."
+#			modifier = {
+#				fire_damage_received = -0.1
+#			}
+#		}
+#		{
+#			name = "Imprisonment"
+#			desc = "Sorcerers who practice Dark Magic can summon wards that suppress magic and imprison foes in runes."
+#			modifier = {
+#				defensiveness = 0.25
+#			}
+#		}
+#		{
+#			name = "Daedric Runes"
+#			desc = "They can also cast offensive spells, such as Daedric runes that explode upon contact with a mortal."
+#			modifier = {
+#				ae_impact = 0.1
+#			}
+#		}
+#		{
+#			name = "Lifesteal"
+#			desc = "Dark Magic can be used to drain the life of others to restore the caster's vitality."
+#			modifier = {
+#				recover_army_morale_speed = 0.5
+#				reinforce_speed = 0.5
+#			}
+#		}
+#		{
+#			name = "Glenmoril Wyrd"
+#			desc = "The witches of Glenmoril Wyrd have been known to perform dark magicka rituals to cure lycanthropy."
+#			modifier = {
+#				shock_damage = 0.05
+#			}
+#		}
+#	}
+#	bonus = {
+#		war_exhaustion = -0.02
+#	}
+#}
+#new idea_group blood_magic_ideas = {
+#	name = "Blood Magic"
+#	category = MIL
+#	trigger = {
+#		full_idea_group = destruction_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Blood Magic"
+#			desc = "Blood Magic is a dark and ancient form of magic."
+#			modifier = {
+#				improve_relation_modifier = -0.2
+#				prestige = 1
+#			}
+#		}
+#		{
+#			name = "Drain Life"
+#			desc = "Blood Magic can be used for draining life,"
+#			modifier = {
+#				loot_amount = 0.5
+#				available_province_loot = 0.25
+#			}
+#		}
+#		{
+#			name = "Reanimation"
+#			desc = "Blood Magic can be used for reanimate the dead"
+#			modifier = {
+#				global_manpower_modifier = 0.15
+#			}
+#		}
+#		{
+#			name = "Telekinesis"
+#			desc = "Blood Magic can be used for telekinetically lifting others from a distance"
+#			modifier = {
+#				backrow_artillery_damage = 0.1
+#			}
+#		}
+#		{
+#			name = "Gargoyles"
+#			desc = "Blood Magic can be used for summoning gargoyles"
+#			modifier = {
+#				shock_damage = 0.05
+#			}
+#		}
+#		{
+#			name = "Paralysis"
+#			desc = "Blood Magic can be used for paralyzing others"
+#			modifier = {
+#				shock_damage_received = -0.025
+#				fire_damage_received = -0.025
+#			}
+#		}
+#		{
+#			name = "Blood Magic Rituals"
+#			desc = "Blood Magic rituals are performed to complete feats of great power. An elven arrow tainted with the blood of a pure-blooded Daughter of Coldharbour becomes a Bloodcursed elven arrow. If fired at the Sun with Auriel's Bow, it is capable of blotting out the Sun for an entire day."
+#			modifier = {
+#				hostile_attrition = 1.5
+#			}
+#		}
+#	}
+#	bonus = {
+#		discipline = 0.05
+#	}
+#}
+#new idea_group water_magic_ideas = {
+#	name = "Water Magic"
+#	category = MIL
+#	trigger = {
+#		full_idea_group = destruction_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Water Magic"
+#			desc = "Water Magic is an obscure and little-known form of magic involving the manipulation of water."
+#			modifier = {
+#				naval_morale = 0.15
+#			}
+#		}
+#		{
+#			name = "Of Memory"
+#			desc = "On Tamriel, water is composed of memory. When a mortal dies, his or her memories become water, and in this way all the memories of Tamriel's histories are stored within its waters."
+#			modifier = {
+#				global_spy_defence = 0.15
+#			}
+#		}
+#		{
+#			name = "Dangerous Knowledge"
+#			desc = "This fact is considered to be one of the most dangerous secrets about the natural order of the world, and is therefore closely guarded by the Demon of Knowledge Hermaeus Mora."
+#			modifier = {
+#				idea_cost = -0.025
+#			}
+#		}
+#		{
+#			name = "Drought-Fight"
+#			desc = "For example, circa 2E 582 the water spirit of Halcyon Lake, a nereid named Lorelia, attempted to twist the natural order by stealing the memories of her mortal followers to prevent the desertification of her lake, forcing the servants of Hermaeus Mora to intervene."
+#			modifier = {
+#				development_cost = -0.1
+#			}
+#		}
+#		{
+#			name = "Water Memories"
+#			desc = "The burial grounds of Honor's Rest had memorial pools that allowed one to view the past through the eyes of those involved in the Siege of Orsinium."
+#			modifier = {
+#				army_tradition_decay = -0.01
+#			}
+#		}
+#		{
+#			name = "Sphere of Storms"
+#			desc = "The Ayleids of the Strident Coast utilized a weapon called the Sphere of Storms, which manipulated the waters around them to either defend their coastline, or provided for the people such as water crops or speed ships through the sea."
+#			modifier = {
+#				own_coast_naval_combat_bonus = 1.0
+#			}
+#		}
+#		{
+#			name = "Sea giant Magic"
+#			desc = "Sea Giants are capable of wielding powerful magic to control water. Examples of such magic include flinging orbs of sea water at their foes and guiding surges of water to crash down on their enemies."
+#			modifier = {
+#				fire_damage = 0.05
+#			}
+#		}
+#	}
+#	bonus = {
+#		naval_attrition = -0.15
+#	}
+#}
 new idea_group conjuration_ideas = {
 	name = "Conjuration"
 	category = MIL
@@ -434,189 +434,189 @@ new idea_group conjuration_ideas = {
 		manpower_recovery_speed = 15%
 	}
 }
-new idea_group summoning_ideas = {
-	name = "Summoning"
-	category = MIL
-	trigger = {
-		full_idea_group = conjuration_ideas
-	}
-	ideas = {
-		{
-			name = "Summon Dremora Lords"
-			desc = "they are noted to be one of the few forms of Daedra who prize honour. They have a very militaristic culture, with many ranks and subdivisions within the culture of each clan."
-			modifier = {
-				discipline = 0.05
-			}
-		}
-		{
-			name = "Summon Dremora Generals"
-			desc = " Being highly militaristic if kept in check we can even allow some of them to lead our armies."
-			modifier = {
-				free_leader_pool = 1
-				leader_land_fire = 1
-			}
-		}
-		{
-			name = "Unleash Dregoths"
-			desc = "The Dregoths are fearsome creatures that are guaranteed to inflict heavy casualties on our enemies. "
-			modifier = {
-				infantry_power = 0.1
-			}
-		}
-		{
-			name = "Summon Sentries"
-			desc = "By placing strategic sentries around our country to observe and scout we can find those who wish to bring harm to our nation. "
-			modifier = {
-				global_spy_defence = 0.5
-			}
-		}
-		{
-			name = "Summon Servants"
-			desc = " By summoning beings whose sole purpose is to ease the suffering of our people we can lessen the ravages of war."
-			modifier = {
-				war_exhaustion_cost = -0.30
-			}
-		}
-		{
-			name = "Atronach Shock Troops"
-			desc = "Atronachs are elemental beings far more resistant than the average soldier "
-			modifier = {
-				shock_damage = 0.05
-			}
-		}
-		{
-			name = "Counter Summoning"
-			desc = "To thrive in battle we also need to know how to expel our enemies' summons or even our own should they go astray."
-			modifier = {
-				fire_damage_received = -0.1
-			}
-		}
-	}
-	bonus = {
-		global_regiment_cost = -0.15
-	}
-}
-new idea_group soul_siphon_ideas = {
-	name = "Soul Siphon"
-	category = DIP
-	trigger = {
-		full_idea_group = conjuration_ideas
-	}
-	ideas = {
-		{
-			name = "Petty Soul Gems"
-			desc = "Petty soul gems are the lowliest one can have but it's often used in our internal markets. "
-			modifier = {
-				global_own_trade_power = 0.15
-			}
-		}
-		{
-			name = "Lesser Soul Gems"
-			desc = "Lesser soul gems are more sought after thus we can make considerable amounts of money. "
-			modifier = {
-				global_trade_power = 0.15
-			}
-		}
-		{
-			name = "Common Soul Gems"
-			desc = "Although more valuable common soul gems lie on the delicate balance that the common adventurer can't easily make one and the more experienced ones do not bother with it "
-			modifier = {
-				caravan_power = 0.25
-			}
-		}
-		{
-			name = "Greater Soul Gems"
-			desc = "Greater Soul Gems are very sought after  thus drawing trade towards our nation "
-			modifier = {
-				trade_steering = 0.25
-			}
-		}
-		{
-			name = "Grand Soul Gems"
-			desc = " Grand soul gems are extremely powerful able to replenish or enchant many artefacts"
-			modifier = {
-				global_trade_goods_size_modifier = 0.1
-			}
-		}
-		{
-			name = "Black Soul Gems"
-			desc = "Black soul gems are the only soul gems that contain a humanoid soul, they are highly illegal but we can always look the other way... "
-			modifier = {
-				trade_efficiency = 0.15
-			}
-		}
-		{
-			name = "Azura's Star"
-			desc = " Azura's Star is a fabled soul gem that can be filled with any soul except for humanoid souls to have such an artefact is awe-inspiring "
-			modifier = {
-				prestige_decay = -0.01
-			}
-		}
-	}
-	bonus = {
-		merchants = 1
-	}
-}
-new idea_group flesh_magic_ideas = {
-	name = "Flesh Magic"
-	category = MIL
-	trigger = {
-		full_idea_group = necromancy_ideas
-	}
-	ideas = {
-		{
-			name = "Flesh Magic 1"
-			desc = ""
-			modifier = {
-				manpower_recovery_speed = 0.15
-			}
-		}
-		{
-			name = "Flesh Magic 2"
-			desc = ""
-			modifier = {
-				spy_offence = 0.2
-			}
-		}
-		{
-			name = "Flesh Magic 3"
-			desc = ""
-			modifier = {
-				reinforce_speed = 0.2
-				reinforce_cost_modifier = -0.15
-			}
-		}
-		{
-			name = "Flesh Magic 4"
-			desc = ""
-			modifier = {
-				discipline = 0.1
-				land_morale_constant = -0.1
-			}
-		}
-		{
-			name = "Flesh Magic 5"
-			desc = ""
-			modifier = {
-				global_regiment_cost = -0.1
-			}
-		}
-		{
-			name = "Flesh Magic 6"
-			desc = ""
-			modifier = {
-				global_trade_goods_size_modifier = 0.1
-			}
-		}
-		{
-			name = "Flesh Magic 7"
-			desc = ""
-			modifier = {
-				shock_damage_received = -0.05
-			}
-		}
-	}
-	bonus = {
-		diplomatic_reputation = -1
-	}
-}
+#new idea_group summoning_ideas = {
+#	name = "Summoning"
+#	category = MIL
+#	trigger = {
+#		full_idea_group = conjuration_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Summon Dremora Lords"
+#			desc = "they are noted to be one of the few forms of Daedra who prize honour. They have a very militaristic culture, with many ranks and subdivisions within the culture of each clan."
+#			modifier = {
+#				discipline = 0.05
+#			}
+#		}
+#		{
+#			name = "Summon Dremora Generals"
+#			desc = " Being highly militaristic if kept in check we can even allow some of them to lead our armies."
+#			modifier = {
+#				free_leader_pool = 1
+#				leader_land_fire = 1
+#			}
+#		}
+#		{
+#			name = "Unleash Dregoths"
+#			desc = "The Dregoths are fearsome creatures that are guaranteed to inflict heavy casualties on our enemies. "
+#			modifier = {
+#				infantry_power = 0.1
+#			}
+#		}
+#		{
+#			name = "Summon Sentries"
+#			desc = "By placing strategic sentries around our country to observe and scout we can find those who wish to bring harm to our nation. "
+#			modifier = {
+#				global_spy_defence = 0.5
+#			}
+#		}
+#		{
+#			name = "Summon Servants"
+#			desc = " By summoning beings whose sole purpose is to ease the suffering of our people we can lessen the ravages of war."
+#			modifier = {
+#				war_exhaustion_cost = -0.30
+#			}
+#		}
+#		{
+#			name = "Atronach Shock Troops"
+#			desc = "Atronachs are elemental beings far more resistant than the average soldier "
+#			modifier = {
+#				shock_damage = 0.05
+#			}
+#		}
+#		{
+#			name = "Counter Summoning"
+#			desc = "To thrive in battle we also need to know how to expel our enemies' summons or even our own should they go astray."
+#			modifier = {
+#				fire_damage_received = -0.1
+#			}
+#		}
+#	}
+#	bonus = {
+#		global_regiment_cost = -0.15
+#	}
+#}
+#new idea_group soul_siphon_ideas = {
+#	name = "Soul Siphon"
+#	category = DIP
+#	trigger = {
+#		full_idea_group = conjuration_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Petty Soul Gems"
+#			desc = "Petty soul gems are the lowliest one can have but it's often used in our internal markets. "
+#			modifier = {
+#				global_own_trade_power = 0.15
+#			}
+#		}
+#		{
+#			name = "Lesser Soul Gems"
+#			desc = "Lesser soul gems are more sought after thus we can make considerable amounts of money. "
+#			modifier = {
+#				global_trade_power = 0.15
+#			}
+#		}
+#		{
+#			name = "Common Soul Gems"
+#			desc = "Although more valuable common soul gems lie on the delicate balance that the common adventurer can't easily make one and the more experienced ones do not bother with it "
+#			modifier = {
+#				caravan_power = 0.25
+#			}
+#		}
+#		{
+#			name = "Greater Soul Gems"
+#			desc = "Greater Soul Gems are very sought after  thus drawing trade towards our nation "
+#			modifier = {
+#				trade_steering = 0.25
+#			}
+#		}
+#		{
+#			name = "Grand Soul Gems"
+#			desc = " Grand soul gems are extremely powerful able to replenish or enchant many artefacts"
+#			modifier = {
+#				global_trade_goods_size_modifier = 0.1
+#			}
+#		}
+#		{
+#			name = "Black Soul Gems"
+#			desc = "Black soul gems are the only soul gems that contain a humanoid soul, they are highly illegal but we can always look the other way... "
+#			modifier = {
+#				trade_efficiency = 0.15
+#			}
+#		}
+#		{
+#			name = "Azura's Star"
+#			desc = " Azura's Star is a fabled soul gem that can be filled with any soul except for humanoid souls to have such an artefact is awe-inspiring "
+#			modifier = {
+#				prestige_decay = -0.01
+#			}
+#		}
+#	}
+#	bonus = {
+#		merchants = 1
+#	}
+#}
+#new idea_group flesh_magic_ideas = {
+#	name = "Flesh Magic"
+#	category = MIL
+#	trigger = {
+#		full_idea_group = necromancy_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Flesh Magic 1"
+#			desc = ""
+#			modifier = {
+#				manpower_recovery_speed = 0.15
+#			}
+#		}
+#		{
+#			name = "Flesh Magic 2"
+#			desc = ""
+#			modifier = {
+#				spy_offence = 0.2
+#			}
+#		}
+#		{
+#			name = "Flesh Magic 3"
+#			desc = ""
+#			modifier = {
+#				reinforce_speed = 0.2
+#				reinforce_cost_modifier = -0.15
+#			}
+#		}
+#		{
+#			name = "Flesh Magic 4"
+#			desc = ""
+#			modifier = {
+#				discipline = 0.1
+#				land_morale_constant = -0.1
+#			}
+#		}
+#		{
+#			name = "Flesh Magic 5"
+#			desc = ""
+#			modifier = {
+#				global_regiment_cost = -0.1
+#			}
+#		}
+#		{
+#			name = "Flesh Magic 6"
+#			desc = ""
+#			modifier = {
+#				global_trade_goods_size_modifier = 0.1
+#			}
+#		}
+#		{
+#			name = "Flesh Magic 7"
+#			desc = ""
+#			modifier = {
+#				shock_damage_received = -0.05
+#			}
+#		}
+#	}
+#	bonus = {
+#		diplomatic_reputation = -1
+#	}
+#}

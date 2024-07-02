@@ -61,65 +61,65 @@ new idea_group trade_ideas = {
 		factor = 5
 	}
 }
-new idea_group monopoly_ideas = {
-	name = "Monopoly"
-	category = DIP
-	trigger = {
-		full_idea_group = trade_ideas
-	}
-	ideas = {
-		{
-			name = "Protectionism"
-			desc = "We dont need your goods. You need ours."
-			modifier = {
-				embargo_efficiency = 0.25
-				trade_line = 1
-			}
-		}
-		{
-			name = "Regulations"
-			desc = "We have raised tariffs to help our own business."
-			modifier = {
-				global_foreign_trade_power = -0.15
-			}
-		}
-		{
-			name = "Trade War"
-			desc = "What do you mean they raised their own?!"
-			modifier = {
-				global_own_trade_power = 0.25
-			}
-		}
-		{
-			name = "Death to Spies"
-			desc = "They cant be any foreign spies if they cant pretend to be merchants."
-			modifier = {
-				global_spy_defence = 0.25
-			}
-		}
-		{
-			name = "Mercantilism"
-			desc = "Mercantilism is an economic policy that is designed to maximize the exports and minimize the imports for an economy. It includes measures aimed at accumulating monetary reserves by a positive balance of trade, especially of finished goods."
-			modifier = {
-				mercantilism_cost = -0.2
-			}
-		}
-		{
-			name = "Exclusive Contracts"
-			desc = "Reducing some regulations for friendly countries increases mutual trusts and profits."
-			modifier = {
-				trade_efficiency = 0.1
-			}
-		}
-		{
-			name = "Convoys"
-			desc = "There are too many pirates we have to take care of."
-			modifier = {
-				light_ship_power = 0.1
-			}
-		}
-	}
-	bonus = {
-		global_supply_limit_modifier = 0.15
-	}
-}
+#new idea_group monopoly_ideas = {
+#	name = "Monopoly"
+#	category = DIP
+#	trigger = {
+#		full_idea_group = trade_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Protectionism"
+#			desc = "We dont need your goods. You need ours."
+#			modifier = {
+#				embargo_efficiency = 0.25
+#				trade_line = 1
+#			}
+#		}
+#		{
+#			name = "Regulations"
+#			desc = "We have raised tariffs to help our own business."
+#			modifier = {
+#				global_foreign_trade_power = -0.15
+#			}
+#		}
+#		{
+#			name = "Trade War"
+#			desc = "What do you mean they raised their own?!"
+#			modifier = {
+#				global_own_trade_power = 0.25
+#			}
+#		}
+#		{
+#			name = "Death to Spies"
+#			desc = "They cant be any foreign spies if they cant pretend to be merchants."
+#			modifier = {
+#				global_spy_defence = 0.25
+#			}
+#		}
+#		{
+#			name = "Mercantilism"
+#			desc = "Mercantilism is an economic policy that is designed to maximize the exports and minimize the imports for an economy. It includes measures aimed at accumulating monetary reserves by a positive balance of trade, especially of finished goods."
+#			modifier = {
+#				mercantilism_cost = -0.2
+#			}
+#		}
+#		{
+#			name = "Exclusive Contracts"
+#			desc = "Reducing some regulations for friendly countries increases mutual trusts and profits."
+#			modifier = {
+#				trade_efficiency = 0.1
+#			}
+#		}
+#		{
+#			name = "Convoys"
+#			desc = "There are too many pirates we have to take care of."
+#			modifier = {
+#				light_ship_power = 0.1
+#			}
+#		}
+#	}
+#	bonus = {
+#		global_supply_limit_modifier = 0.15
+#	}
+#}

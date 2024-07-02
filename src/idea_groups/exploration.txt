@@ -132,68 +132,68 @@ new idea_group expansion_ideas = {
 		factor = 0
 	}
 }
-new idea_group colonial_empire_ideas = {
-	name = "Colonial Empire"
-	category = DIP
-	trigger = {
-		full_idea_group = exploration_ideas
-	}
-	ideas = {
-		{
-			name = "Autonomous Adventurers"
-			desc = "We don't need to pay people to discover the land. Independent adventurers will do that for us."
-			modifier = {
-				colonists = 1
-			}
-		}
-		{
-			name = "Colonial Rush"
-			desc = "When space is running out, we need to hurry to get our hands on the best pieces of land."
-			modifier = {
-				governing_capacity_modifier = 0.15
-			}
-		}
-		{
-			name = "More Tariffs"
-			desc = "Through specific laws, we can maximize the profit from the colonies."
-			modifier = {
-				global_tariffs = 0.2
-			}
-		}
-		{
-			name = "Colonial Conscription"
-			desc = "In exchange for our help and money, the colonies will provide us with men in times of war."
-			modifier = {
-				global_sailors_modifier = 0.25
-			}
-		}
-		{
-			name = "Commanding Fleet"
-			desc = "To defend our colonies we need a big fleet."
-			modifier = {
-				naval_forcelimit_modifier = 0.15
-			}
-		}
-		{
-			name = "Faster Infrastructure Development"
-			desc = "As we grow and increase our range of operation, we need to be able to dramatically improve our infrastructure."
-			modifier = {
-				build_cost = -0.2
-				build_time = -0.2
-			}
-		}
-		{
-			name = "Smooth Troop Transport"
-			desc = "To fight our colonial rivals or put down uprisings, we need to transport troops as quickly as possible. That way we can keep everyone in check."
-			modifier = {
-				liberty_desire_from_subject_development = -0.15
-			}
-		}
-	}
-	bonus = {
-		diplomatic_upkeep = 1
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
+#new idea_group colonial_empire_ideas = {
+#	name = "Colonial Empire"
+#	category = DIP
+#	trigger = {
+#		full_idea_group = exploration_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Autonomous Adventurers"
+#			desc = "We don't need to pay people to discover the land. Independent adventurers will do that for us."
+#			modifier = {
+#				colonists = 1
+#			}
+#		}
+#		{
+#			name = "Colonial Rush"
+#			desc = "When space is running out, we need to hurry to get our hands on the best pieces of land."
+#			modifier = {
+#				governing_capacity_modifier = 0.15
+#			}
+#		}
+#		{
+#			name = "More Tariffs"
+#			desc = "Through specific laws, we can maximize the profit from the colonies."
+#			modifier = {
+#				global_tariffs = 0.2
+#			}
+#		}
+#		{
+#			name = "Colonial Conscription"
+#			desc = "In exchange for our help and money, the colonies will provide us with men in times of war."
+#			modifier = {
+#				global_sailors_modifier = 0.25
+#			}
+#		}
+#		{
+#			name = "Commanding Fleet"
+#			desc = "To defend our colonies we need a big fleet."
+#			modifier = {
+#				naval_forcelimit_modifier = 0.15
+#			}
+#		}
+#		{
+#			name = "Faster Infrastructure Development"
+#			desc = "As we grow and increase our range of operation, we need to be able to dramatically improve our infrastructure."
+#			modifier = {
+#				build_cost = -0.2
+#				build_time = -0.2
+#			}
+#		}
+#		{
+#			name = "Smooth Troop Transport"
+#			desc = "To fight our colonial rivals or put down uprisings, we need to transport troops as quickly as possible. That way we can keep everyone in check."
+#			modifier = {
+#				liberty_desire_from_subject_development = -0.15
+#			}
+#		}
+#	}
+#	bonus = {
+#		diplomatic_upkeep = 1
+#	}
+#	ai_will_do = {
+#		factor = 0
+#	}
+#}

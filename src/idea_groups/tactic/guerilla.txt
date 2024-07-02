@@ -1,0 +1,63 @@
+new idea_group guerilla_ideas = {
+	name = "Guerilla"
+	category = MIL
+	trigger = {
+		full_idea_group = defensive_ideas
+	}
+	ideas = {
+		{
+			name = "Ambush Tactics"
+			desc = "Our forces are trained to use the element of surprise, setting up ambushes that inflict maximum damage on the enemy before quickly retreating to safety."
+			modifier = {
+				leader_land_manuever = 2
+			}
+		}
+		{
+			name = "Knowledge of Terrain"
+			desc = "Local knowledge of the landscape gives our guerilla fighters a significant advantage, allowing them to navigate and utilize the terrain to their benefit during engagements."
+			modifier = {
+				land_attrition = -10%
+			}
+		}
+		{
+			name = "Rapid Deployment"
+			desc = "Our troops are equipped and prepared for rapid deployment, enabling them to strike swiftly and then disappear before the enemy can mount a counterattack."
+			modifier = {
+				global_regiment_recruit_speed = -10%
+			}
+		}
+		{
+			name = "Disruption Operations"
+			desc = "Specializing in disrupting enemy supply lines and communication networks, we weaken their ability to sustain prolonged operations and lower their morale."
+			modifier = {
+				spy_offence = 10%
+				rebel_support_efficiency = 50%
+			}
+		}
+		{
+			name = "Camouflage and Concealment"
+			desc = "Our guerilla fighters use advanced camouflage and concealment techniques to blend into their surroundings, making it difficult for the enemy to detect and target them."
+			modifier = {
+				global_spy_defence = 15%
+			}
+		}
+		{
+			name = "Resistance Networks"
+			desc = "Establishing a network of resistance cells throughout occupied territories, we coordinate sabotage and intelligence-gathering operations, continuously undermining enemy control."
+			modifier = {
+				hostile_attrition = 2
+				max_hostile_attrition = 2
+			}
+		}
+		{
+			name = "Psychological Warfare"
+			desc = "Utilizing psychological tactics, we demoralize the enemy and spread fear and confusion among their ranks, reducing their effectiveness in combat."
+			modifier = {
+				morale_damage = 15%
+			}
+		}
+	}
+	bonus = {
+		defensiveness = 25%
+	}
+}

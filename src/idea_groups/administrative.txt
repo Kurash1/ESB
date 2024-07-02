@@ -2,7 +2,7 @@ new idea_group decentralization_ideas = {
 	name = "Decentralization"
 	category = ADM
 	trigger = {
-		full_idea_group = state_administration_ideas
+		full_idea_group = influence_ideas
 		NOT = { has_idea_group = centralization_ideas }
 	}
 	ideas = {
@@ -395,66 +395,67 @@ new idea_group native_ideas = {
 	}
 	ideas = {
 		{
-			name = "Counting Coups"
-			desc = ""
+			name = "Oral Traditions"
+			desc = "Our rich oral traditions preserve history, law, and culture, ensuring that our people remain united and our leaders are well-versed in the wisdom of our ancestors."
 			modifier = {
-				land_morale_constant = 0.1
+				prestige = 0.5
 			}
 		}
 		{
-			name = "Storytelling Tradition"
-			desc = ""
+			name = "Council of Elders"
+			desc = "A council of respected elders provides guidance and resolves disputes, drawing on their experience and knowledge to make decisions for the well-being of the community."
 			modifier = {
-				idea_cost = -0.025
+				advisor_cost = -15%
 			}
 		}
 		{
-			name = "Clan Mothers"
-			desc = ""
+			name = "Tribal Confederation"
+			desc = "Uniting various tribes under a confederation, we maintain our autonomy while cooperating on matters of defense, trade, and diplomacy, creating a strong and flexible alliance."
 			modifier = {
-				production_efficiency = 0.1
+				global_unrest = -1.5
 			}
 		}
 		{
-			name = "Adopt Clan Totems"
-			desc = ""
+			name = "Warrior Society"
+			desc = "Our warriors are not just soldiers but respected members of society who uphold our traditions and protect our people with skill and bravery."
 			modifier = {
-				stability_cost_modifier = -0.1
+				land_morale_constant = 0.2
 			}
 		}
 		{
-			name = "The Little War"
-			desc = ""
+			name = "Resource Stewardship"
+			desc = "Sustainable practices and a deep respect for nature guide our use of resources, ensuring that our lands remain fertile and our waters pure for future generations."
 			modifier = {
-				global_unrest = -2
+				global_trade_goods_size_modifier = 10%
 			}
 		}
 		{
-			name = "War and Peace Chiefs"
-			desc = ""
+			name = "Resilience and Adaptability"
+			desc = "Our society is resilient and adaptable, capable of weathering challenges and changes while maintaining our core values and identity."
 			modifier = {
-				global_manpower_modifier = 0.20
+				idea_cost = -2.5%
 			}
 		}
 		{
-			name = "Great Winter Hunts"
-			desc = ""
+			name = "Spiritual Leadership"
+			desc = "Spiritual leaders play a crucial role in guiding our society, interpreting omens, leading ceremonies, and ensuring harmony between our people and the natural world."
 			modifier = {
-				global_colonial_growth = 25
+				legitimacy = 1
+				republican_tradition = 0.5
+				devotion = 1
+				horde_unity = 1
 			}
 		}
 	}
 	bonus = {
-		manpower_recovery_speed = 0.15
-		prestige_from_land = 1.0
-		diplomatic_upkeep = 1
+		manpower_recovery_speed = 25%
 	}
 }
 new idea_group dynastic_ideas = {
 	name = "Dynastic"
 	category = ADM
 	trigger = {
-		full_idea_group = monarchy_ideas
+		full_idea_group = state_administration_ideas
 	}
 	ideas = {
 		{
@@ -517,7 +518,7 @@ new idea_group absolutistic_ideas = {
 	name = "Absolutistic"
 	category = ADM
 	trigger = {
-		full_idea_group = monarchy_ideas
+		full_idea_group = state_administration_ideas
 	}
 	ideas = {
 		{

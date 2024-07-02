@@ -170,11 +170,6 @@ on_actions:on_grant_estate_land += {
 on_actions:on_general_recruited += {
 	add_army_professionalism = 0.01
 }
-on_actions:on_mercenary_recruited += {
-	FROM = {
-		add_army_professionalism = -0.01
-	}
-}
 on_actions:on_primary_culture_changed += {
 	esb_clear_opinion = yes
 	esb_change_opinion = yes

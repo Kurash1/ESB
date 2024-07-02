@@ -1,3 +1,31 @@
+new named_effect free_merc_company_list = {
+	
+}
+new effect make_company_professional = {
+	args = mercenary_company
+	transpile = {
+		args:desc += "§JThis Mercenary Company costs no §YArmy Professionalism§! when recruited.§!"
+		free_merc_company_list +=! {
+			mercenary_company = args
+		}
+	}
+}
+on_actions:on_mercenary_recruited += {
+	FROM = {
+		if [
+			ROOT = {
+				NOT = {
+					OR = { 
+						free_merc_company_list
+					}
+				}
+			}
+		] {
+			add_army_professionalism = -0.05
+		}
+	}
+}
+
 new named_effect fix_blessings = {
 	foreach blessing in blessings {
 		blessing:ai_will_do +=! {
